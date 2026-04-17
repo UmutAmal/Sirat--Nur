@@ -918,7 +918,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'ಸುಪಾಬೇಸ್‌ನಲ್ಲಿ ಮೇಘ ಕೋಷ್ಟಕಗಳು ಕಾಣೆಯಾಗಿವೆ; ಕಟ್ಟುಗಳ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ';
+      'Supabase‌ನಲ್ಲಿ ಮೇಘ ಕೋಷ್ಟಕಗಳು ಕಾಣೆಯಾಗಿವೆ; ಕಟ್ಟುಗಳ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

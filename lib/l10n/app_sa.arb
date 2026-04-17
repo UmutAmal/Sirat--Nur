@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "सुपाबेस् इत्यत्र मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः",
+  "diagnosticsQuranCloudTablesMissing": "Supabase इत्यत्र मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

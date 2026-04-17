@@ -11702,3 +11702,69 @@
 
 ### Sonraki Adim
 - Kalan l10n technical token borclari: `chatbotLocalNoInfo` icin `[OFFLINE]` ve `diagnosticsQuranCloudTablesMissing` icin `Supabase` korunumu ayri turlarda kapatilacak.
+
+## 2026-04-17 TUR-284 — Preserve Supabase Token in Diagnostics Copy
+
+### Yapilan Islem
+- `diagnosticsQuranCloudTablesMissing` metninde 18 locale'de cevrilerek kaybolan `Supabase` provider token'i birebir korunacak sekilde duzeltildi.
+- `flutter gen-l10n` calistirilip ilgili generated localization siniflari ARB dosyalariyla senkronlandi.
+- Tum `app_*.arb` dosyalari icin diagnostics copy icinde `Supabase` token'inin korunmasini zorunlu kilan regression testi eklendi.
+
+### Kanit
+- Bengali ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bn.arb:270`
+- Urdu ARB ornegi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ur.arb:270`
+- Generated Bengali getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_bn.dart:920`
+- Generated Urdu getter: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ur.dart:919`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2396`
+- Supabase token beklentisi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2412`
+
+### Neden Yapildi
+- `Supabase` bir provider/altyapi proper noun'udur; cevrilmesi diagnostics, destek ve operator arama akisini bozar.
+- Bu degisiklik dini icerik uretmedi veya meal/tafsir metni degistirmedi; sadece teknik provider token'inin birebir korunmasini sagladi.
+- Yeni test, ayni token driftinin baska locale'de tekrar etmesini engelliyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_gu.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_hi.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_kn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ml.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ne.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_or.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_pa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ps.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sd.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ta.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_te.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tt.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ur.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` ilgili generated l10n ciktilari
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Generate: `flutter gen-l10n` PASS
+- Format: `dart format test\arb_ui_localization_test.dart` PASS
+- Odak test: `flutter test test\arb_ui_localization_test.dart` PASS (`69/69`)
+- Token scan: `diagnostics_supabase_missing=0`
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`497/497`)
+
+### Risk Degisimi
+- Diagnostics copy'de Supabase provider adinin cevrilip destek/arama akisini bozmasi riski: `6/25 -> 1/25`
+- Cok dilli technical token driftinin testten kacmasi riski: `6/25 -> 1/25`
+
+### Rollback Plani
+- 18 ARB dosyasindaki `Supabase` token'i onceki locale-specific cevirilerine dondurulur.
+- `flutter gen-l10n` tekrar calistirilir.
+- `arb_ui_localization_test.dart` icindeki Supabase token regression testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Kalan l10n technical token borcu olan `chatbotLocalNoInfo` icin `[OFFLINE]` korunumu ayri minimal turda kapatilacak.

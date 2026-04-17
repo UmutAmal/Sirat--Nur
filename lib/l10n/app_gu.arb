@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "કુરાન સુરાઓ",
   "diagnosticsQuranAyahs": "કુરાન આયહ",
   "diagnosticsQuranJuzMetadata": "કુરાન જુઝ મેટાડેટા",
-  "diagnosticsQuranCloudTablesMissing": "સુપાબેઝમાં મેઘ કોષ્ટકો ખૂટે છે; બંડલ ફોલબેક સક્રિય",
+  "diagnosticsQuranCloudTablesMissing": "Supabaseમાં મેઘ કોષ્ટકો ખૂટે છે; બંડલ ફોલબેક સક્રિય",
   "diagnosticsQuranCloudCheckFailed": "મેઘ તપાસ નિષ્ફળ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

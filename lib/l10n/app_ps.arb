@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "د قرآن سورتونه",
   "diagnosticsQuranAyahs": "د قرانکریم ایاتونه",
   "diagnosticsQuranJuzMetadata": "د قرآن جوز میټاډاټا",
-  "diagnosticsQuranCloudTablesMissing": "د کلاوډ میزونه په سوپا بیس کې ورک شوي؛ بنډل فال بیک فعال",
+  "diagnosticsQuranCloudTablesMissing": "د کلاوډ میزونه په Supabase کې ورک شوي؛ بنډل فال بیک فعال",
   "diagnosticsQuranCloudCheckFailed": "د کلاوډ چک ناکام شو: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

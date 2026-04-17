@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "सुपाबेस मे क्लाउड टेबल गायब; बंडल फॉलबैक सक्रिय",
+  "diagnosticsQuranCloudTablesMissing": "Supabase मे क्लाउड टेबल गायब; बंडल फॉलबैक सक्रिय",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

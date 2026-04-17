@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "कुरान सुराहरू",
   "diagnosticsQuranAyahs": "कुरान आयहहरू",
   "diagnosticsQuranJuzMetadata": "कुरान जुज मेटाडाटा",
-  "diagnosticsQuranCloudTablesMissing": "सुपाबेसमा क्लाउड तालिकाहरू हराइरहेका छन्; बन्डल गरिएको फलब्याक सक्रिय",
+  "diagnosticsQuranCloudTablesMissing": "Supabase मा क्लाउड तालिकाहरू हराइरहेका छन्; बन्डल गरिएको फलब्याक सक्रिय",
   "diagnosticsQuranCloudCheckFailed": "क्लाउड जाँच असफल भयो: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

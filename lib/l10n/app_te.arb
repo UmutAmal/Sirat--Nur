@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "ఖురాన్ సూరాలు",
   "diagnosticsQuranAyahs": "ఖురాన్ అయాలు",
   "diagnosticsQuranJuzMetadata": "ఖురాన్ జుజ్ మెటాడేటా",
-  "diagnosticsQuranCloudTablesMissing": "సుపాబేస్‌లో క్లౌడ్ పట్టికలు లేవు; బండిల్ ఫాల్‌బ్యాక్ యాక్టివ్",
+  "diagnosticsQuranCloudTablesMissing": "Supabase‌లో క్లౌడ్ పట్టికలు లేవు; బండిల్ ఫాల్‌బ్యాక్ యాక్టివ్",
   "diagnosticsQuranCloudCheckFailed": "క్లౌడ్ తనిఖీ విఫలమైంది: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

@@ -919,7 +919,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'సుపాబేస్‌లో క్లౌడ్ పట్టికలు లేవు; బండిల్ ఫాల్‌బ్యాక్ యాక్టివ్';
+      'Supabase‌లో క్లౌడ్ పట్టికలు లేవు; బండిల్ ఫాల్‌బ్యాక్ యాక్టివ్';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

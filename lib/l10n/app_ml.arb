@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "ഖുർആൻ സൂറത്തുകൾ",
   "diagnosticsQuranAyahs": "ഖുർആൻ ആയത്തുകൾ",
   "diagnosticsQuranJuzMetadata": "ഖുർആൻ ജുസ് മെറ്റാഡാറ്റ",
-  "diagnosticsQuranCloudTablesMissing": "സുപാബേസിൽ ക്ലൗഡ് ടേബിളുകൾ കാണുന്നില്ല; ബണ്ടിൽഡ് ഫാൾബാക്ക് സജീവമാണ്",
+  "diagnosticsQuranCloudTablesMissing": "Supabase-ൽ ക്ലൗഡ് ടേബിളുകൾ കാണുന്നില്ല; ബണ്ടിൽഡ് ഫാൾബാക്ക് സജീവമാണ്",
   "diagnosticsQuranCloudCheckFailed": "ക്ലൗഡ് പരിശോധന പരാജയപ്പെട്ടു: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

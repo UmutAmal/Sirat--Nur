@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "କୁରାନ ସୁରା |",
   "diagnosticsQuranAyahs": "କୁରାନ ଆୟାସ୍ |",
   "diagnosticsQuranJuzMetadata": "କୁରାନ ଜୁଜ ମେଟାଡାଟା |",
-  "diagnosticsQuranCloudTablesMissing": "କ୍ଲାଉଡ୍ ଟେବୁଲଗୁଡିକ ସୁପେଜ୍ ରେ ନିଖୋଜ | ବାନ୍ଧିତ ଫଲବ୍ୟାକ୍ ସକ୍ରିୟ |",
+  "diagnosticsQuranCloudTablesMissing": "Supabase ରେ କ୍ଲାଉଡ୍ ଟେବୁଲଗୁଡିକ ନିଖୋଜ | ବାନ୍ଧିତ ଫଲବ୍ୟାକ୍ ସକ୍ରିୟ |",
   "diagnosticsQuranCloudCheckFailed": "କ୍ଲାଉଡ୍ ଯାଞ୍ଚ ବିଫଳ ହେଲା: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

@@ -909,7 +909,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'ኣብ ሱፓባሰ ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።';
+      'ኣብ Supabase ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

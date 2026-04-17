@@ -916,7 +916,7 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Супабазда болыт өстәлләре юк; тупланган кире кайту актив';
+      'Supabase\'та болыт өстәлләре юк; тупланган кире кайту актив';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

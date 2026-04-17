@@ -916,7 +916,7 @@ class AppLocalizationsPs extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'د کلاوډ میزونه په سوپا بیس کې ورک شوي؛ بنډل فال بیک فعال';
+      'د کلاوډ میزونه په Supabase کې ورک شوي؛ بنډل فال بیک فعال';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

@@ -918,7 +918,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'সুপাবেসে ক্লাউড টেবিল অনুপস্থিত; বান্ডিল ফলব্যাক সক্রিয়';
+      'Supabase-এ ক্লাউড টেবিল অনুপস্থিত; বান্ডিল ফলব্যাক সক্রিয়';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

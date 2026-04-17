@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "কুরআনের সূরা",
   "diagnosticsQuranAyahs": "কুরআনের আয়াত",
   "diagnosticsQuranJuzMetadata": "কুরআন জুজ মেটাডাটা",
-  "diagnosticsQuranCloudTablesMissing": "সুপাবেসে ক্লাউড টেবিল অনুপস্থিত; বান্ডিল ফলব্যাক সক্রিয়",
+  "diagnosticsQuranCloudTablesMissing": "Supabase-এ ক্লাউড টেবিল অনুপস্থিত; বান্ডিল ফলব্যাক সক্রিয়",
   "diagnosticsQuranCloudCheckFailed": "ক্লাউড চেক ব্যর্থ হয়েছে: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

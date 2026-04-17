@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "قرآن کی سورتیں۔",
   "diagnosticsQuranAyahs": "قرآنی آیات",
   "diagnosticsQuranJuzMetadata": "قرآن جوز میٹا ڈیٹا",
-  "diagnosticsQuranCloudTablesMissing": "سوپا بیس میں کلاؤڈ ٹیبلز غائب ہیں۔ بنڈل فال بیک فعال",
+  "diagnosticsQuranCloudTablesMissing": "Supabase میں کلاؤڈ ٹیبلز غائب ہیں۔ بنڈل فال بیک فعال",
   "diagnosticsQuranCloudCheckFailed": "کلاؤڈ چیک ناکام ہو گیا: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

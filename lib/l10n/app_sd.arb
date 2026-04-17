@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "قرآن جون سورتون",
   "diagnosticsQuranAyahs": "قرآن جون آيتون",
   "diagnosticsQuranJuzMetadata": "قرآن جوز ميٽاداٽا",
-  "diagnosticsQuranCloudTablesMissing": "سپابيس ۾ Cloud ٽيبل غائب؛ بنڈل fallback فعال",
+  "diagnosticsQuranCloudTablesMissing": "Supabase ۾ Cloud ٽيبل غائب؛ بنڈل fallback فعال",
   "diagnosticsQuranCloudCheckFailed": "ڪلائوڊ چيڪ ناڪام ٿيو: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

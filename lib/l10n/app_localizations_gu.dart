@@ -916,7 +916,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'સુપાબેઝમાં મેઘ કોષ્ટકો ખૂટે છે; બંડલ ફોલબેક સક્રિય';
+      'Supabaseમાં મેઘ કોષ્ટકો ખૂટે છે; બંડલ ફોલબેક સક્રિય';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

@@ -923,7 +923,7 @@ class AppLocalizationsOr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'କ୍ଲାଉଡ୍ ଟେବୁଲଗୁଡିକ ସୁପେଜ୍ ରେ ନିଖୋଜ | ବାନ୍ଧିତ ଫଲବ୍ୟାକ୍ ସକ୍ରିୟ |';
+      'Supabase ରେ କ୍ଲାଉଡ୍ ଟେବୁଲଗୁଡିକ ନିଖୋଜ | ବାନ୍ଧିତ ଫଲବ୍ୟାକ୍ ସକ୍ରିୟ |';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

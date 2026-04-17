@@ -918,7 +918,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'सुपाबेस् इत्यत्र मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः';
+      'Supabase इत्यत्र मेघसारणीः अनुपलब्धाः; bundled fallback सक्रियः';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

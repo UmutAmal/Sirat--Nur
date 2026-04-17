@@ -919,7 +919,7 @@ class AppLocalizationsMl extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'സുപാബേസിൽ ക്ലൗഡ് ടേബിളുകൾ കാണുന്നില്ല; ബണ്ടിൽഡ് ഫാൾബാക്ക് സജീവമാണ്';
+      'Supabase-ൽ ക്ലൗഡ് ടേബിളുകൾ കാണുന്നില്ല; ബണ്ടിൽഡ് ഫാൾബാക്ക് സജീവമാണ്';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

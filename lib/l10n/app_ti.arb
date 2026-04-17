@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "ኣብ ሱፓባሰ ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።",
+  "diagnosticsQuranCloudTablesMissing": "ኣብ Supabase ዝጎደሉ ናይ ደበና ሰደቓታት፤ bundled fallback ንጡፍ እዩ።",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

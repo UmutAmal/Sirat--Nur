@@ -917,7 +917,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'سوپا بیس میں کلاؤڈ ٹیبلز غائب ہیں۔ بنڈل فال بیک فعال';
+      'Supabase میں کلاؤڈ ٹیبلز غائب ہیں۔ بنڈل فال بیک فعال';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

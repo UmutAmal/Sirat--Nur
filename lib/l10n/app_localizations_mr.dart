@@ -917,7 +917,7 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'सुपाबेसमध्ये क्लाउड टेबल गायब; बंडल फॉलबॅक सक्रिय';
+      'Supabase मध्ये क्लाउड टेबल गायब; बंडल फॉलबॅक सक्रिय';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

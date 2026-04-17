@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "குர்ஆன் சூராக்கள்",
   "diagnosticsQuranAyahs": "குர்ஆன் வசனங்கள்",
   "diagnosticsQuranJuzMetadata": "குர்ஆன் ஜுஸ் மெட்டாடேட்டா",
-  "diagnosticsQuranCloudTablesMissing": "சுபாபேஸில் கிளவுட் டேபிள்கள் இல்லை; தொகுக்கப்பட்ட வீழ்ச்சி செயலில்",
+  "diagnosticsQuranCloudTablesMissing": "Supabase-இல் கிளவுட் டேபிள்கள் இல்லை; தொகுக்கப்பட்ட வீழ்ச்சி செயலில்",
   "diagnosticsQuranCloudCheckFailed": "கிளவுட் சரிபார்ப்பு தோல்வியடைந்தது: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

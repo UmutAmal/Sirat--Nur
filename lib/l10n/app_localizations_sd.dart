@@ -916,7 +916,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'سپابيس ۾ Cloud ٽيبل غائب؛ بنڈل fallback فعال';
+      'Supabase ۾ Cloud ٽيبل غائب؛ بنڈل fallback فعال';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

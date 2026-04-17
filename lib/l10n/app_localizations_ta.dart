@@ -923,7 +923,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'சுபாபேஸில் கிளவுட் டேபிள்கள் இல்லை; தொகுக்கப்பட்ட வீழ்ச்சி செயலில்';
+      'Supabase-இல் கிளவுட் டேபிள்கள் இல்லை; தொகுக்கப்பட்ட வீழ்ச்சி செயலில்';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

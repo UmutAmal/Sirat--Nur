@@ -916,7 +916,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'सुपाबेसमा क्लाउड तालिकाहरू हराइरहेका छन्; बन्डल गरिएको फलब्याक सक्रिय';
+      'Supabase मा क्लाउड तालिकाहरू हराइरहेका छन्; बन्डल गरिएको फलब्याक सक्रिय';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

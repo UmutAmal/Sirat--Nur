@@ -2393,6 +2393,29 @@ void main() {
       }
     });
 
+    test('diagnostics copy preserves the Supabase provider token', () {
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final value = arb['diagnosticsQuranCloudTablesMissing'] as String;
+
+        expect(
+          value,
+          contains('Supabase'),
+          reason:
+              '${file.uri.pathSegments.last} translated the Supabase provider token',
+        );
+      }
+    });
+
     test('tafsir status copy preserves the HTTP technical token', () {
       final arbFiles =
           Directory('lib/l10n')

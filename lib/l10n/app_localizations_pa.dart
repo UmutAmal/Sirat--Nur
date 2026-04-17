@@ -917,7 +917,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'ਸੁਪਾਬੇਸ ਵਿੱਚ ਕਲਾਉਡ ਟੇਬਲ ਲਾਪਤਾ; ਬੰਡਲ ਫਾਲਬੈਕ ਕਿਰਿਆਸ਼ੀਲ';
+      'Supabase ਵਿੱਚ ਕਲਾਉਡ ਟੇਬਲ ਲਾਪਤਾ; ਬੰਡਲ ਫਾਲਬੈਕ ਕਿਰਿਆਸ਼ੀਲ';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

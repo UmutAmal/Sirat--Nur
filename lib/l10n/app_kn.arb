@@ -267,7 +267,7 @@
   "diagnosticsQuranSurahs": "ಖುರಾನ್ ಸೂರಾಗಳು",
   "diagnosticsQuranAyahs": "ಕುರಾನ್ ಅಯಾಗಳು",
   "diagnosticsQuranJuzMetadata": "ಖುರಾನ್ ಜುಜ್ ಮೆಟಾಡೇಟಾ",
-  "diagnosticsQuranCloudTablesMissing": "ಸುಪಾಬೇಸ್‌ನಲ್ಲಿ ಮೇಘ ಕೋಷ್ಟಕಗಳು ಕಾಣೆಯಾಗಿವೆ; ಕಟ್ಟುಗಳ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ",
+  "diagnosticsQuranCloudTablesMissing": "Supabase‌ನಲ್ಲಿ ಮೇಘ ಕೋಷ್ಟಕಗಳು ಕಾಣೆಯಾಗಿವೆ; ಕಟ್ಟುಗಳ ಫಾಲ್ಬ್ಯಾಕ್ ಸಕ್ರಿಯವಾಗಿದೆ",
   "diagnosticsQuranCloudCheckFailed": "ಮೇಘ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {
