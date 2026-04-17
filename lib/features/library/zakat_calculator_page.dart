@@ -84,6 +84,24 @@ class ZakatCalculator {
     return value * _zakatRate;
   }
 
+  static double _resolveAggregateNisabValue({
+    required double goldPricePerGram,
+    required double silverPricePerGram,
+  }) {
+    final goldNisabValue = goldPricePerGram > 0
+        ? _goldNisabGrams * goldPricePerGram
+        : 0.0;
+    final silverNisabValue = silverPricePerGram > 0
+        ? _silverNisabGrams * silverPricePerGram
+        : 0.0;
+
+    if (goldNisabValue <= 0) return silverNisabValue;
+    if (silverNisabValue <= 0) return goldNisabValue;
+    return goldNisabValue < silverNisabValue
+        ? goldNisabValue
+        : silverNisabValue;
+  }
+
   static ZakatResult calculateTotal({
     required double goldGrams,
     required double goldPricePerGram,
@@ -94,7 +112,10 @@ class ZakatCalculator {
     required double businessDebts,
     required double investments,
   }) {
-    final nisabValue = _goldNisabGrams * goldPricePerGram;
+    final nisabValue = _resolveAggregateNisabValue(
+      goldPricePerGram: goldPricePerGram,
+      silverPricePerGram: silverPricePerGram,
+    );
     final goldValue = goldGrams * goldPricePerGram;
     final silverValue = silverGrams * silverPricePerGram;
     final netBusiness = (businessInventory - businessDebts)

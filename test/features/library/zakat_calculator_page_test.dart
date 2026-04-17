@@ -9,7 +9,7 @@ void main() {
       goldGrams: 100,
       goldPricePerGram: 70,
       silverGrams: 0,
-      silverPricePerGram: 0.90,
+      silverPricePerGram: 0,
       cashAmount: 0,
       businessInventory: 0,
       businessDebts: 0,
@@ -43,7 +43,7 @@ void main() {
         goldGrams: 0,
         goldPricePerGram: 100,
         silverGrams: 0,
-        silverPricePerGram: 1,
+        silverPricePerGram: 0,
         cashAmount: 0,
         businessInventory: 1000,
         businessDebts: 0,
@@ -59,13 +59,35 @@ void main() {
   );
 
   test(
+    'ZakatCalculator uses the lower sourced nisab when silver price is available',
+    () {
+      final result = ZakatCalculator.calculateTotal(
+        goldGrams: 0,
+        goldPricePerGram: 100,
+        silverGrams: 0,
+        silverPricePerGram: 1,
+        cashAmount: 600,
+        businessInventory: 0,
+        businessDebts: 0,
+        investments: 0,
+      );
+
+      expect(result.nisabValue, 561);
+      expect(result.totalAssets, 600);
+      expect(result.isNisabMet, isTrue);
+      expect(result.cashZakat, 15);
+      expect(result.totalZakat, 15);
+    },
+  );
+
+  test(
     'ZakatCalculator applies rate when combined zakatable assets meet nisab',
     () {
       final result = ZakatCalculator.calculateTotal(
         goldGrams: 40,
         goldPricePerGram: 100,
         silverGrams: 0,
-        silverPricePerGram: 1,
+        silverPricePerGram: 0,
         cashAmount: 3000,
         businessInventory: 2000,
         businessDebts: 500,

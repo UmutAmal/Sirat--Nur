@@ -13948,3 +13948,62 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Zekat sayfasinda kullaniciya nisap kaynagini acik gostermeyen UI copy veya kalan hardcoded/l10n borcu taranacak.
+
+## 2026-04-17 TUR-323 - Zakat Aggregate Nisab Source Selection
+
+### Yapilan Islem
+- TUR-322 sonrasi repo/remote/branch/status yeniden dogrulandi; `master` remote ile senkron ve calisma agaci temizdi.
+- Zekat aggregate nisap degeri artik sadece altin fiyatina bagli degil.
+- Altin fiyatindan ve gumus fiyatindan uretilen pozitif nisap degerleri arasinda dusuk olan seciliyor; yalniz biri girildiyse o deger kullaniliyor.
+- Bu sayede gumus fiyatinin girildigi senaryolarda Diyanet'in "altin veya gumusten fakirlerin menfaatine uygun olan nisap" ilkesi hesap motoruna yansitildi.
+- Dini metin, UI copy, ARB dosyalari ve generated l10n dosyalari degistirilmedi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:97` once aggregate `nisabValue` yalniz `_goldNisabGrams * goldPricePerGram` ile uretiliyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:87` `_resolveAggregateNisabValue` yardimcisi eklendi.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:91` altin fiyatindan pozitif altin nisap degeri uretiliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:94` gumus fiyatindan pozitif gumus nisap degeri uretiliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:98` yalniz tek pozitif kaynak varsa o kaynak kullaniliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:100` iki kaynak da varsa dusuk pozitif nisap degeri seciliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:115` `calculateTotal` aggregate esigi yeni yardimciya baglandi.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:61` gumus fiyati mevcutken dusuk kaynakli nisap degerinin kullanildigini ve `cashZakat=15` sonucunu dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:83` yalniz altin fiyati verilen aggregate senaryonun hala `8018` esigini kullandigini dogruluyor.
+- Kaynak dogrulama: Diyanet Haber `Zekat Verilmesi Gereken Mallar Nelerdir?` satir 151-153 ticaret mallarinda altin veya gumusten fakirlerin menfaatine uygun nisabin esas alinacagini belirtiyor.
+- Kaynak dogrulama: Diyanet Haber ayni metin satir 162-166 para ve diger varliklar icin altin/gumus/ticaret mallariyla birlestirme ilkesini belirtiyor.
+
+### Neden Yapildi
+- TUR-322 gram sabitlerini dogru hale getirdi, fakat aggregate para esigi gumus fiyatini yok saymaya devam ederse girdi mevcut oldugu halde kullaniciya yanlis "nisap alti" sonucu verilebilirdi.
+- Bu risk ozellikle gumus nisabi altin nisabindan dusuk oldugunda kullanici lehine/ibadet hassasiyeti acisindan kritikti.
+- Duzeltme yalniz hesap motorunun nisap secimine dokundu; UI/l10n copy genislemesi bir sonraki daha kontrollu tura birakildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Gumus fiyatinin girildigi aggregate hesaplarda nisap degeri artik kullanilabilir ve kaynakla uyumlu sekilde daha dusuk pozitif esik secilir.
+- Gold-only hesaplama davranisi korundu.
+- Zekat sonucu ve `nisabSummary` artik aktif aggregate nisap kaynagini para degeri olarak daha dogru yansitir.
+
+### Test Sonucu
+- Format: `dart format lib\features\library\zakat_calculator_page.dart test\features\library\zakat_calculator_page_test.dart` PASS
+- Odak test: `flutter test test\features\library\zakat_calculator_page_test.dart --reporter compact` PASS (`10/10`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`545/545`)
+
+### Risk Degisimi
+- Aggregate nisabin gumus fiyatini yok sayma riski: `16/25 -> 2/25`
+- Gold-only hesaplama regresyon riski: `8/25 -> 2/25` (testle sabitlendi)
+- Kalan UI seffaflik riski: hesap sonucu aktif nisap degerini gosteriyor, fakat kullaniciya "80.18g altin / 561g gumus ve bir kamerî yil varsayimi" acik metin olarak henuz gosterilmiyor.
+
+### Rollback Plani
+- `_resolveAggregateNisabValue` yardimcisi kaldirilir.
+- `calculateTotal` tekrar `_goldNisabGrams * goldPricePerGram` ile nisap uretir.
+- Yeni gumus aggregate testi kaldirilir; altin-only test beklentileri eski haline doner.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Zekat UI'inda kaynak/varsayim seffafligi veya mevcut Zekat l10n same-as-English borcu ele alinacak.
