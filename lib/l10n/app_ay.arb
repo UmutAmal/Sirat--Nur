@@ -733,7 +733,7 @@
     }
   },
   "splashTagline": "Islámica Way of Light ukax mä jach’a thakhiwa",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "{reciter} ukatakix {failed} jan walt’ayat surahs ukanakamp apkatañax tukuyatawa ({downloaded}/{total} apkatatawa).",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {
       "reciter": {

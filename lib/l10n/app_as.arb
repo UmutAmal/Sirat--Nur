@@ -733,7 +733,7 @@
     }
   },
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "{reciter} ৰ বাবে ডাউনলোড সমাপ্ত হৈছে {failed} ব্যৰ্থ চুৰাসমূহৰ সৈতে ({downloaded}/{total} ডাউনলোড কৰা হৈছে)।",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {
       "reciter": {

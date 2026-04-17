@@ -1235,7 +1235,7 @@ class AppLocalizationsHr extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'Preuzimanje je završeno za $reciter sa $failed neuspjelih sura ($downloaded/$total preuzeto).';
   }
 
   @override

@@ -1244,7 +1244,7 @@ class AppLocalizationsDv extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return '$reciter އަށް ޑައުންލޯޑް ނިމިފައިވަނީ $failed ނާކާމިޔާބު ސޫރަތްތަކާއެކު ($downloaded/$total ޑައުންލޯޑް ކުރެވިއްޖެ) އެވެ.';
   }
 
   @override

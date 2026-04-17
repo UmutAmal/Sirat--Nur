@@ -1231,7 +1231,7 @@ class AppLocalizationsKri extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'Daunlod dɔn fɔ $reciter wit $failed fayl surahs ($downloaded/$total dɔn dawnlod).';
   }
 
   @override

@@ -1236,7 +1236,7 @@ class AppLocalizationsBho extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return '$reciter खातिर डाउनलोड समाप्त हो गइल जवना में $failed असफल सूरह ($downloaded/$total डाउनलोड हो गइल)।';
   }
 
   @override

@@ -1231,7 +1231,7 @@ class AppLocalizationsMai extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return '$reciter क लेल डाउनलोड समाप्त भ गेल $failed असफल सूरह ($downloaded/$total डाउनलोड कएल गेल) क संग।';
   }
 
   @override

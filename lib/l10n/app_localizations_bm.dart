@@ -1236,7 +1236,7 @@ class AppLocalizationsBm extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'Téléchargement banna $reciter kama ni $failed sura dɛsɛlenw ye ($downloaded/$total telesarse).';
   }
 
   @override

@@ -1236,7 +1236,7 @@ class AppLocalizationsCy extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'Gorffennodd y llwytho i lawr ar gyfer $reciter gyda $failed swrahs wedi methu ($downloaded/$total llwytho i lawr).';
   }
 
   @override

@@ -1242,7 +1242,7 @@ class AppLocalizationsIlo extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'Nalpas ti panag-download para iti $reciter nga addaan kadagiti $failed a napaay a surah ($downloaded/$total nai-download).';
   }
 
   @override

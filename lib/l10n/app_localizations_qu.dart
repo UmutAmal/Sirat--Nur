@@ -1238,7 +1238,7 @@ class AppLocalizationsQu extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return '$reciter kaqpaq uraykachiy tukusqa $failed mana atisqa surahkunawan ($downloaded/$total uraykachisqa).';
   }
 
   @override

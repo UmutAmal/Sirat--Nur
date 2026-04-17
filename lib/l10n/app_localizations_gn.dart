@@ -1238,7 +1238,7 @@ class AppLocalizationsGn extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'Ojegueru opa $reciter-pe g̃uarã umi surah $failed ndoikóiva ndive ($downloaded/$total oñemboguejy).';
   }
 
   @override

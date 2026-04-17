@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "Download ewedde ku {reciter} nga {failed} surahs eziremye ({downloaded}/{total} ziwanuliddwa).",
   "placesLocationRequiredTitle": "Ekifo kyetaagisa",
   "placesLocationRequiredBody": "Sooka oteekewo ekifo olwo emizikiti egy’okumpi, emmere ya halal, n’amasomero g’Obusiraamu bisobole okunoonyezebwa mu butuufu.",
   "placesMapTilesUnavailableTitle": "Tiles za maapu teziriiwo",

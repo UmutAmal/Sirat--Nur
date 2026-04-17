@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "{reciter} kaqpaq uraykachiy tukusqa {failed} mana atisqa surahkunawan ({downloaded}/{total} uraykachisqa).",
   "placesLocationRequiredTitle": "Maypi kasqanmi necesitakun",
   "placesLocationRequiredBody": "Ñawpaqtaqa huk sitiota churay chaynapi qaylla mezquitakunata, halal mikhuykunata, islam escuelakunatapas allinta maskanankupaq.",
   "placesMapTilesUnavailableTitle": "Mapa azulejos mana tarikuq",

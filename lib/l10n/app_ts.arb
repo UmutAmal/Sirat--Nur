@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "Download yi herile eka {reciter} na {failed} ti surah leti tsandzekeke ({downloaded}/{total} yi dawunilodiwile).",
   "placesLocationRequiredTitle": "Ndhawu ya laveka",
   "placesLocationRequiredBody": "Kusungula veka ndzhawu leswaku ti mosque tale kusuhi, swakudya swa halal, na swikolo swa Islam swinga sechiwa kahle.",
   "placesMapTilesUnavailableTitle": "Tithayile ta mepe a ti kumeki",

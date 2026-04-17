@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "ดาวน์โหลดเสร็จสิ้นสำหรับ {reciter} โดยมี {failed} ล้มเหลวใน Surahs ({downloaded}/{total} ดาวน์โหลดแล้ว)",
   "placesLocationRequiredTitle": "จำเป็นต้องระบุตำแหน่ง",
   "placesLocationRequiredBody": "กำหนดสถานที่ก่อนเพื่อให้สามารถค้นหามัสยิดใกล้เคียง อาหารฮาลาล และโรงเรียนสอนศาสนาอิสลามได้อย่างแม่นยำ",
   "placesMapTilesUnavailableTitle": "ชิ้นส่วนแผนที่ไม่พร้อมใช้งาน",

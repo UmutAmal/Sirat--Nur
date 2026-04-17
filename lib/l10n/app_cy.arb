@@ -733,7 +733,7 @@
     }
   },
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "Gorffennodd y llwytho i lawr ar gyfer {reciter} gyda {failed} swrahs wedi methu ({downloaded}/{total} llwytho i lawr).",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {
       "reciter": {

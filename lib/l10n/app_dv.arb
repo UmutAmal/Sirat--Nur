@@ -733,7 +733,7 @@
     }
   },
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "{reciter} އަށް ޑައުންލޯޑް ނިމިފައިވަނީ {failed} ނާކާމިޔާބު ސޫރަތްތަކާއެކު ({downloaded}/{total} ޑައުންލޯޑް ކުރެވިއްޖެ) އެވެ.",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {
       "reciter": {

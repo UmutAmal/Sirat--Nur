@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}နာရီ {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "အစ္စလာမ့်အလင်းလမ်း",
-  "downloadPartiallyFinishedForReciter": "{reciter} အတွက် {failed} မအောင်မြင်သော စူရာဟ်များဖြင့် {reciter} အတွက် ဒေါင်းလုဒ် ပြီးပါပြီ ({downloaded}/{total} ဒေါင်းလုဒ်လုပ်ထားသည်)။",
+  "downloadPartiallyFinishedForReciter": "{reciter} အတွက် {failed} မအောင်မြင်သော စူရာဟ်များဖြင့် ဒေါင်းလုဒ် ပြီးပါပြီ ({downloaded}/{total} ဒေါင်းလုဒ်လုပ်ထားသည်)။",
   "placesLocationRequiredTitle": "တည်နေရာ လိုအပ်သည်။",
   "placesLocationRequiredBody": "တည်နေရာကို ဦးစွာသတ်မှတ်ထားပါက အနီးနားရှိ ဗလီများ၊ ဟလာလ်အစားအစာများနှင့် အစ္စလာမ့်ကျောင်းများကို တိကျစွာရှာဖွေနိုင်ပါသည်။",
   "placesMapTilesUnavailableTitle": "မြေပုံအကွက်များ မရနိုင်ပါ။",

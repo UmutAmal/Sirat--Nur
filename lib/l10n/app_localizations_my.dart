@@ -1243,7 +1243,7 @@ class AppLocalizationsMy extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return '$reciter အတွက် $failed မအောင်မြင်သော စူရာဟ်များဖြင့် $reciter အတွက် ဒေါင်းလုဒ် ပြီးပါပြီ ($downloaded/$total ဒေါင်းလုဒ်လုပ်ထားသည်)။';
+    return '$reciter အတွက် $failed မအောင်မြင်သော စူရာဟ်များဖြင့် ဒေါင်းလုဒ် ပြီးပါပြီ ($downloaded/$total ဒေါင်းလုဒ်လုပ်ထားသည်)။';
   }
 
   @override

@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "Daunlod dɔn fɔ {reciter} wit {failed} fayl surahs ({downloaded}/{total} dɔn dawnlod).",
   "placesLocationRequiredTitle": "Di say we dɛn nid fɔ de",
   "placesLocationRequiredBody": "Set ples fɔs so dat dɛn go ebul fɔ fɛn di moskɛt dɛn we de nia de, halal it, ɛn Islamik skul dɛn kɔrɛkt wan.",
   "placesMapTilesUnavailableTitle": "Map tayl dɛn nɔ de",

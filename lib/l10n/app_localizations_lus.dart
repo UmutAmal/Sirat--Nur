@@ -1240,7 +1240,7 @@ class AppLocalizationsLus extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return '$reciter tan download zawh a ni a, $failed surah a hlawhchham ($downloaded/$total download a ni).';
   }
 
   @override

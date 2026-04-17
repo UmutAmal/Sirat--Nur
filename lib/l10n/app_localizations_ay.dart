@@ -1254,7 +1254,7 @@ class AppLocalizationsAy extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return '$reciter ukatakix $failed jan walt’ayat surahs ukanakamp apkatañax tukuyatawa ($downloaded/$total apkatatawa).';
   }
 
   @override

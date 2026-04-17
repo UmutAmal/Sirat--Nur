@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "Download awie ama {reciter} a {failed} surahs adi nkogu ({downloaded}/{total} a wɔatwe).",
   "placesLocationRequiredTitle": "Beae a wɔhwehwɛ",
   "placesLocationRequiredBody": "Fa beae bi di kan sɛnea ɛbɛyɛ a wobetumi ahwehwɛ asɔredan ahorow a ɛbɛn hɔ, halal nnuan, ne Nkramofo sukuu ahorow mu pɛpɛɛpɛ.",
   "placesMapTilesUnavailableTitle": "Map tiles a wontumi nnya",

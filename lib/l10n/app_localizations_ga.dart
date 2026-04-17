@@ -1234,7 +1234,7 @@ class AppLocalizationsGa extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'Chríochnaigh an íoslódáil do $reciter le $failed surahs teipthe ($downloaded/$total íoslódáil).';
   }
 
   @override

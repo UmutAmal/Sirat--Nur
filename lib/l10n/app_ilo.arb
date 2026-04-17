@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "Nalpas ti panag-download para iti {reciter} nga addaan kadagiti {failed} a napaay a surah ({downloaded}/{total} nai-download).",
   "placesLocationRequiredTitle": "Masapul ti lokasion",
   "placesLocationRequiredBody": "Mangipasdek nga umuna iti lokasion tapno dagiti asideg a moske, halal a taraon, ken dagiti eskuelaan ti Islam ket umiso a mabirokan.",
   "placesMapTilesUnavailableTitle": "Saan a magun-od dagiti baldosa ti mapa",

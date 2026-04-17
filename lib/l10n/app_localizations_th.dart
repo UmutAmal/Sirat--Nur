@@ -1232,7 +1232,7 @@ class AppLocalizationsTh extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'ดาวน์โหลดเสร็จสิ้นสำหรับ $reciter โดยมี $failed ล้มเหลวใน Surahs ($downloaded/$total ดาวน์โหลดแล้ว)';
   }
 
   @override

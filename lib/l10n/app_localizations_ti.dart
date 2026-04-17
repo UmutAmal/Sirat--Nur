@@ -1218,7 +1218,7 @@ class AppLocalizationsTi extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return 'ን $reciter ምስ $failed ዝፈሸላ ሱራታት ($downloaded/$total ዝወረደ) ምውራድ ተዛዚሙ።';
   }
 
   @override

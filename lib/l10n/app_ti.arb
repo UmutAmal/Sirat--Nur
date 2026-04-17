@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "እስላማዊ መንገዲ ብርሃን",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "ን {reciter} ምስ {failed} ዝፈሸላ ሱራታት ({downloaded}/{total} ዝወረደ) ምውራድ ተዛዚሙ።",
   "placesLocationRequiredTitle": "ቦታ የድሊ",
   "placesLocationRequiredBody": "ኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",

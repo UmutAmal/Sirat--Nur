@@ -253,6 +253,63 @@ void main() {
       );
     });
 
+    test('tracks partial download result l10n debt reduction', () {
+      const key = 'downloadPartiallyFinishedForReciter';
+      const localizedLocales = [
+        'ak',
+        'as',
+        'ay',
+        'bho',
+        'bm',
+        'cy',
+        'dv',
+        'ga',
+        'gd',
+        'gn',
+        'hr',
+        'ilo',
+        'kri',
+        'lg',
+        'lus',
+        'mai',
+        'my',
+        'qu',
+        'sa',
+        'th',
+        'ti',
+        'ts',
+        'tw',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: const [key],
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(73));
+      for (final locale in localizedLocales) {
+        expect(
+          localeArbs[locale]![key],
+          isNot(english[key]),
+          reason: 'app_$locale.arb still uses English for $key',
+        );
+      }
+    });
+
     test('tracks settings audio and hadith l10n debt reduction', () {
       const keys = [
         'manageDatasets',

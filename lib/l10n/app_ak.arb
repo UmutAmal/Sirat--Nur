@@ -733,7 +733,7 @@
     }
   },
   "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "Download awie ama {reciter} a {failed} surahs adi nkogu ({downloaded}/{total} a wɔatwe).",
   "@downloadPartiallyFinishedForReciter": {
     "placeholders": {
       "reciter": {

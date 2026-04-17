@@ -1233,7 +1233,7 @@ class AppLocalizationsAs extends AppLocalizations {
     String total,
     String failed,
   ) {
-    return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
+    return '$reciter ৰ বাবে ডাউনলোড সমাপ্ত হৈছে $failed ব্যৰ্থ চুৰাসমূহৰ সৈতে ($downloaded/$total ডাউনলোড কৰা হৈছে)।';
   }
 
   @override

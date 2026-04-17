@@ -749,7 +749,7 @@
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "prayerRemainingMinutes": "{minutes}m",
   "splashTagline": "इस्लामी प्रकाश के तरीका",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "downloadPartiallyFinishedForReciter": "{reciter} क लेल डाउनलोड समाप्त भ गेल {failed} असफल सूरह ({downloaded}/{total} डाउनलोड कएल गेल) क संग।",
   "placesLocationRequiredTitle": "स्थान आवश्यक",
   "placesLocationRequiredBody": "पहिने कोनो स्थान निर्धारित करू जाहि सं नजदीकक मस्जिद, हलाल भोजन, आ इस्लामी स्कूलक सटीक खोज भ सकय.",
   "placesMapTilesUnavailableTitle": "नक्शा टाइल्स अनुपलब्ध",

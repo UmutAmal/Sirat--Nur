@@ -13464,3 +13464,103 @@
 
 ### Sonraki Adim
 - Yeni turda ayni P1 l10n debt kumesinden `diagnosticsQuranCloudJuzMissing` veya en guvenli teknik UI anahtari secilecek; dini icerik veya dogrulanmamis hukum uretilmeyecek.
+
+## 2026-04-17 TUR-315 - Partial Download Result L10n Debt Reduction
+
+### Yapilan Islem
+- AGENTS.md tekrar okundu; repo/remote/branch/status ve `flutter doctor` dogrulandi.
+- Onceki yarim kalan l10n turu devralindi; `downloadPartiallyFinishedForReciter` icin daha once uretilmis 23 locale diff'i incelendi.
+- `app_my.arb` icin arac cikisinin English fallback'e dondugu tespit edildi; kok sebep eski Myanmar degerinde `{reciter}` placeholder'inin iki kez bulunmasiydi. Deger English'e dusurulmeden tek `{reciter}` imzali mevcut lokalize cumleye duzeltildi.
+- `flutter gen-l10n` calistirildi ve 23 locale icin generated runtime getter'lar ARB ile senkronlandi.
+- `test\translate_arb_keys_test.dart` icine `downloadPartiallyFinishedForReciter` icin ayri debt guard'i eklendi: missing/empty `0`, placeholder mismatch `0`, same-as-English ust siniri `73`, 23 locale icin English fallback regresyon yasağı.
+- TUR-314 sonrasi denenip kabul edilmeyen/no-op kalanlar not edildi: `diagnosticsQuranCloudTablesMissing` guvenli diff uretmedi; `diagnosticsQuranCloudJuzMissing` teknik Cloud/bundled/fallback metninde karisik ve riskli adaylar urettigi icin revert edildi; `placesSearchArea`, `placesNetworkError`, `placesLocationRequiredTitle` guvenli diff uretmedi.
+
+### Kanit
+- Runtime kullanim noktasi: `A:\Way of Allah\sirat_i_nur\lib\features\downloads\offline_downloads_page.dart:20`
+- Ak locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb:736`
+- Assamese locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_as.arb:736`
+- Aymara locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:736`
+- Bhojpuri locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bho.arb:736`
+- Bambara locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bm.arb:736`
+- Welsh locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_cy.arb:736`
+- Dhivehi locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_dv.arb:736`
+- Irish locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ga.arb:736`
+- Scottish Gaelic locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_gd.arb:736`
+- Guarani locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_gn.arb:736`
+- Croatian locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_hr.arb:736`
+- Ilocano locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ilo.arb:752`
+- Krio locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_kri.arb:752`
+- Luganda locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lg.arb:752`
+- Mizo/Lushai locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb:752`
+- Maithili locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb:752`
+- Myanmar locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_my.arb:752`
+- Quechua locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_qu.arb:752`
+- Sanskrit locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb:752`
+- Thai locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_th.arb:752`
+- Tigrinya locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb:752`
+- Tsonga locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ts.arb:752`
+- Twi locale ARB: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb:752`
+- Runtime generated getter ornekleri: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ak.dart:1232`, `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_my.dart:1240`, `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_ti.dart:1215`
+- Yeni regresyon testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:256`
+- Read-only l10n report: `Same-as-English locales: 73`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`
+
+### Neden Yapildi
+- `downloadPartiallyFinishedForReciter` false-success onarim zincirinin kullaniciya dogru durumu gosteren kritik snackbar metnidir; indirme tamamlanmis gibi gorunse de basarisiz sure sayisini durustce bildirir.
+- Metin dini hukum, ayet, hadis veya mezhebi icerik uretmiyor; teknik indirme sonucu oldugu icin dar kapsamli ve testlenebilir l10n borcu olarak ele alindi.
+- Dini/teknik belirsizligi olan diagnostics adaylari sahte ceviri uretilmemesi icin kabul edilmedi; guvenli olmayan patch revert edildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ak.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_as.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bho.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bm.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_cy.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_dv.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ga.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_gd.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_gn.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_hr.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ilo.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_kri.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lg.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_lus.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_mai.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_my.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_qu.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_sa.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_th.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ti.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ts.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_tw.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart` icindeki ilgili 23 generated getter
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- `downloadPartiallyFinishedForReciter` icin same-as-English locale sayisi `96/97 civari -> 73` seviyesine indi; kesin mevcut rapor `73`.
+- 23 locale'de kismi indirme sonucu runtime'da birebir English fallback olarak gorunmeyecek.
+- Myanmar degeri artik English fallback degil ve placeholder imzasi tam: `{reciter}`, `{failed}`, `{downloaded}`, `{total}` birer kez korunuyor.
+- Yeni test guard'i bu anahtar icin gelecek ceviri/generation turlarinda hem English fallback regresyonunu hem placeholder bozulmasini yakalar.
+
+### Test Sonucu
+- Diff check: `git diff --check` PASS
+- Read-only debt raporu: `dart run tool\translate_arb_keys.dart --report downloadPartiallyFinishedForReciter` PASS (`Same-as-English locales: 73`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`)
+- Odak test: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\features\downloads\offline_downloads_test.dart --reporter compact` PASS (`114/114`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`536/536`)
+
+### Risk Degisimi
+- Kismi indirme sonucunda 23 locale runtime/UI English fallback riski: `12/25 -> 2/25`
+- Myanmar placeholder mismatch/English fallback riski: `12/25 -> 1/25`
+- Dini icerik dogrulugu riski degismedi; bu tur dini icerik uretmedi.
+
+### Rollback Plani
+- 23 ARB dosyasindaki `downloadPartiallyFinishedForReciter` degerleri onceki English fallback degerine dondurulur; Myanmar icin eski iki `{reciter}` iceren lokalize deger gerekiyorsa ayrica restore edilir.
+- `flutter gen-l10n` calistirilir ve 23 generated runtime getter senkronlanir.
+- `test\translate_arb_keys_test.dart` icindeki `tracks partial download result l10n debt reduction` testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude dependency latest/constraint riski ve kalan l10n same-as-English debt birlikte taranacak; dini icerik dogrulugu icin ayri, kaynakli ve dar kapsamli audit basligi secilecek.
