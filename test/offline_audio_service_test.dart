@@ -308,6 +308,14 @@ void main() {
         );
         expect(
           await OfflineAudioService.downloadSurahAudio(
+            surahNumber: 1,
+            reciterId: 'alafasy',
+            audioUrl: '$validStorageUrl?token=secret',
+          ),
+          isFalse,
+        );
+        expect(
+          await OfflineAudioService.downloadSurahAudio(
             surahNumber: 0,
             reciterId: 'alafasy',
             audioUrl: validStorageUrl,

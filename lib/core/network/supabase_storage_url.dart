@@ -54,13 +54,19 @@ bool isSupabaseStoragePublicUrl(
     return false;
   }
 
-  if (!uri.isScheme('https') ||
-      !baseUri.isScheme('https') ||
+  if (!_isHttpsSupabaseOrigin(baseUri) ||
+      !uri.isScheme('https') ||
+      uri.userInfo.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment ||
       uri.host != baseUri.host) {
     return false;
   }
 
   if (baseUri.hasPort && uri.port != baseUri.port) {
+    return false;
+  }
+  if (!baseUri.hasPort && uri.hasPort) {
     return false;
   }
 
@@ -80,9 +86,21 @@ bool isSupabaseStoragePublicUrl(
 
 Uri _requireHttpsSupabaseBaseUri(String supabaseUrl) {
   final baseUri = Uri.tryParse(supabaseUrl.trim());
-  if (baseUri == null || !baseUri.isScheme('https') || baseUri.host.isEmpty) {
-    throw const FormatException('Supabase Storage public URLs must use HTTPS.');
+  if (baseUri == null || !_isHttpsSupabaseOrigin(baseUri)) {
+    throw const FormatException(
+      'Supabase Storage public URLs must use a clean HTTPS project origin.',
+    );
   }
 
   return baseUri;
+}
+
+bool _isHttpsSupabaseOrigin(Uri uri) {
+  final hasPath = uri.pathSegments.any((segment) => segment.isNotEmpty);
+  return uri.isScheme('https') &&
+      uri.host.isNotEmpty &&
+      uri.userInfo.isEmpty &&
+      !uri.hasQuery &&
+      !uri.hasFragment &&
+      !hasPath;
 }

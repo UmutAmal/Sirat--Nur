@@ -13001,3 +13001,59 @@
 
 ### Sonraki Adim
 - Yeni turda audio storage pipeline disinda kalan yuksek riskli runtime false-success, l10n guard ve dini icerik provenance bosluklari taranacak.
+
+## 2026-04-17 TUR-307 - Supabase Storage Audio URL Sovereignty Guard
+
+### Yapilan Islem
+- Merkezi Supabase Storage public URL helper'i userinfo, query ve fragment iceren runtime URL'leri reddedecek sekilde sertlestirildi.
+- `buildSupabaseStoragePublicUrl` icin Supabase base URL artik temiz HTTPS project origin olmak zorunda.
+- `isSupabaseStoragePublicUrl` base origin'i de ayni temiz origin helper'iyle dogruluyor.
+- Audio sovereignty ve offline Quran download call chain'leri decorated Storage URL'leri motor/Dio katmanina ulastirmadan reddedecek testlerle guvenceye alindi.
+
+### Kanit
+- Storage URL runtime guard'i: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:40`
+- Runtime userinfo/query/fragment reddi: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:57`
+- Base URL temiz origin zorunlulugu: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:87`
+- Ortak HTTPS origin helper'i: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart:98`
+- Supabase base URL negatif testleri: `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:31`
+- Public audio URL negatif testleri: `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart:51`
+- Audio sovereignty decorated URL testi: `A:\Way of Allah\sirat_i_nur\test\audio_sovereignty_service_test.dart:132`
+- Offline Quran download decorated URL testi: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:287`
+
+### Neden Yapildi
+- Onceki `isSupabaseStoragePublicUrl` ayni host ve storage path yapisini gorunce query/fragment/userinfo iceren URL'leri Storage-backed kabul edebilirdi.
+- Bu durum remote audio playback ve offline Quran download kapisinda `?token=secret`, `#secret` veya userinfo tasiyan URL'lerin guvenli kaynak sayilmasina yol acabiliyordu.
+- Audio sovereignty hedefi sadece sahibi oldugumuz Supabase Storage object path'lerini, suslenmemis ve denetlenebilir URL olarak kabul etmeyi gerektiriyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_storage_url.dart`
+- `A:\Way of Allah\sirat_i_nur\test\supabase_storage_url_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\audio_sovereignty_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Sukun, dua, asma ve Quran audio runtime kaynaklari merkezi storage URL guard'indan daha dar geciyor.
+- Decorated Storage URL'ler audio engine veya offline download IO katmanina ulasmadan false olarak donuyor.
+- Existing valid Supabase Storage public URL formatlari calismaya devam ediyor.
+
+### Test Sonucu
+- Odak test: `flutter test test\supabase_storage_url_test.dart` PASS (`4/4`)
+- Odak test: `flutter test test\audio_sovereignty_service_test.dart test\offline_audio_service_test.dart` PASS (`23/23`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`533/533`)
+
+### Risk Degisimi
+- Query/fragment/userinfo iceren decorated Storage URL'nin audio source olarak kabul edilmesi riski: `12/25 -> 2/25`
+- Supabase base URL misconfig'in path/query/fragment ile sessiz normalize edilmesi riski: `10/25 -> 2/25`
+
+### Rollback Plani
+- `_isHttpsSupabaseOrigin` helper'i kaldirilir.
+- `isSupabaseStoragePublicUrl` eski scheme/host/path-only kontrolune dondurulur.
+- `_requireHttpsSupabaseBaseUri` eski HTTPS+host kontrolune dondurulur.
+- Eklenen Storage URL, audio sovereignty ve offline download negatif testleri kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda Places URL guard'larinda empty query/fragment ve public provider bypass ihtimali, ardindan kalan l10n debt raporu dar kapsamli incelenecek.

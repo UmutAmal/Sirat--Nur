@@ -129,6 +129,24 @@ void main() {
       expect(engine.lastAssetPath, isNull);
     });
 
+    test('rejects decorated storage urls before they reach the engine', () async {
+      final engine = FakeSovereignAudioEngine();
+      final service = AudioSovereigntyService(engine: engine);
+
+      final played = await service.playSukun(
+        'rain',
+        cloudSources: {
+          'rain':
+              '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3?token=secret',
+        },
+      );
+
+      expect(played, isFalse);
+      expect(service.isPlaying, isFalse);
+      expect(engine.lastUrl, isNull);
+      expect(engine.lastAssetPath, isNull);
+    });
+
     test('resolves cloud sukun source before local assets', () {
       final service = AudioSovereigntyService(
         engine: FakeSovereignAudioEngine(),
