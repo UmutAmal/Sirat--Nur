@@ -340,15 +340,33 @@ class OfflineAudioService {
 
       final surahNumber = entry.key;
       final url = entry.value;
+      final cancelToken = CancelToken();
       final success = await downloadSurahAudio(
         surahNumber: surahNumber,
         reciterId: reciterId,
         audioUrl: url,
+        cancelToken: cancelToken,
         onProgress: (singleProgress) {
+          if (shouldCancel?.call() == true) {
+            if (!cancelToken.isCancelled) {
+              cancelToken.cancel('Offline Quran audio download canceled');
+            }
+            return;
+          }
+
           final overall = (completed + singleProgress) / total;
           onProgress?.call(overall, surahNumber, total);
         },
       );
+
+      if (cancelToken.isCancelled) {
+        return OfflineDownloadBatchResult(
+          totalSurahs: total,
+          succeededSurahs: succeeded,
+          failedSurahs: List<int>.unmodifiable(failedSurahs),
+          wasCanceled: true,
+        );
+      }
 
       completed++;
       if (success) {
@@ -358,6 +376,15 @@ class OfflineAudioService {
       }
       onSurahComplete?.call(surahNumber, success);
       onProgress?.call(completed / total, surahNumber, total);
+
+      if (shouldCancel?.call() == true) {
+        return OfflineDownloadBatchResult(
+          totalSurahs: total,
+          succeededSurahs: succeeded,
+          failedSurahs: List<int>.unmodifiable(failedSurahs),
+          wasCanceled: true,
+        );
+      }
     }
 
     return OfflineDownloadBatchResult(

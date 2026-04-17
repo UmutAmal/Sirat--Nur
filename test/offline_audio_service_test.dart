@@ -359,6 +359,18 @@ void main() {
       },
     );
 
+    test('downloadAllSurahs wires cancellation into active downloads', () {
+      final source = File(
+        'lib/core/services/offline_audio_service.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('final cancelToken = CancelToken();'));
+      expect(source, contains('cancelToken: cancelToken'));
+      expect(source, contains('cancelToken.cancel('));
+      expect(source, contains('if (cancelToken.isCancelled)'));
+      expect(source, contains('wasCanceled: true'));
+    });
+
     test('getAudioPath rejects unsupported reciters before path building', () {
       expect(
         OfflineAudioService.getAudioPath(1, '../alafasy'),

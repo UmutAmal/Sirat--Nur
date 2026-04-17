@@ -14007,3 +14007,61 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Zekat UI'inda kaynak/varsayim seffafligi veya mevcut Zekat l10n same-as-English borcu ele alinacak.
+
+## 2026-04-17 TUR-324 - Offline Audio In-Flight Cancel Propagation
+
+### Yapilan Islem
+- TUR-323 sonrasi repo/remote/branch/status yeniden dogrulandi; `master` remote ile senkron ve calisma agaci temizdi.
+- Offline Quran audio toplu indirme akisi incelendi.
+- `downloadSurahAudio` zaten `CancelToken` kabul ettigi halde `downloadAllSurahs` aktif sure indirmesine token gecmiyordu.
+- `downloadAllSurahs` her sure icin `CancelToken` olusturacak, progress sirasinda `shouldCancel` true olursa aktif Dio indirmesini iptal edecek sekilde guncellendi.
+- Iptal edilen aktif sure basarisiz sure gibi sayilmadan `wasCanceled: true` sonucu donuyor.
+- Sure tamamlandiktan hemen sonra iptal bayragi gelirse mevcut tamamlanan sure sayilari korunarak batch iptal sonucu donuyor.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:279` `downloadSurahAudio` `CancelToken? cancelToken` destekliyordu.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:343` once `downloadAllSurahs` aktif indirmeye token olusturup gecmiyordu; UI iptali sureler arasinda etkili oluyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:343` her sure icin `CancelToken` olusturuluyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:348` token `downloadSurahAudio` cagrisina geciliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:350` progress sirasinda `shouldCancel` kontrol ediliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:352` aktif Dio indirmesi iptal ediliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:362` token iptal edildiyse mevcut batch `wasCanceled: true` donuyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:380` sure tamamlandiktan sonra gelen iptal bayragi da batch sonucuna yansiyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:362` `downloadAllSurahs` icinde token olusturma, token gecme, cancel cagirma ve canceled result guard'larini kilitliyor.
+
+### Neden Yapildi
+- Kullanici ses dosyalari icin sahte basari ve yarim/yanlis is akisi istemedigini ozellikle belirtti.
+- Iptal dugmesi aktif indirmeyi durdurmuyorsa kullanici "iptal ettim" derken ag ve disk yazimi devam edebilir.
+- Bu durum buyuk Quran audio paketlerinde veri, zaman ve depolama israfina yol acar; ayrica UI durumu ile gercek islem durumu ayrisir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Offline Quran audio iptali aktif sure indirmesine kadar iner.
+- Iptal edilen aktif indirme partial failure gibi raporlanmaz; `wasCanceled` sonucu korunur.
+- Supabase-owned storage URL guard'lari ve MP3 dosya imza validasyonu degismedi.
+- UI copy/l10n degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\core\services\offline_audio_service.dart test\offline_audio_service_test.dart` PASS
+- Odak test: `flutter test test\offline_audio_service_test.dart --reporter compact` PASS (`14/14`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`546/546`)
+
+### Risk Degisimi
+- Offline Quran audio aktif indirme iptalinin gecikmesi riski: `12/25 -> 2/25`
+- Canceled aktif surenin partial failure gibi raporlanma riski: `8/25 -> 2/25`
+- Kalan audio riski: Supabase catalog/provenance kapsami iyi durumda, fakat gercek bucket 114 sure x reciter doluluk denetimi operator tarafinda veriyle periyodik dogrulanmali.
+
+### Rollback Plani
+- `downloadAllSurahs` icindeki `CancelToken` olusturma, token gecme ve canceled return bloklari kaldirilir.
+- `offline_audio_service_test.dart` icindeki cancellation wiring testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio catalog veri dolulugu, Zekat UI seffafligi veya l10n same-as-English borcu taranacak.
