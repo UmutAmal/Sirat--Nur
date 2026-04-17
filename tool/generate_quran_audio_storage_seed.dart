@@ -2,13 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:path/path.dart' as p;
-import 'package:sirat_i_nur/core/network/supabase_storage_url.dart';
 
 import 'quran_audio_file_validation.dart';
 import 'quran_audio_source_validation.dart';
 
 const String _defaultManifestPath = 'build/verified_quran_audio/manifest.json';
 const String _defaultOutputPath = 'content_seed_quran_audio_storage.sql';
+const String _defaultSupabaseProjectUrl =
+    'https://amevotnudldbbwogtrtw.supabase.co';
 const String _defaultBucketName = 'quran-audio';
 const int _surahsPerReciter = 114;
 const Set<String> _expectedReciterIds = {
@@ -31,6 +32,94 @@ String normalizeQuranAudioBucketName(String bucketName) {
     );
   }
   return normalized;
+}
+
+String normalizeSupabaseStorageObjectPath(
+  String storagePath, {
+  String bucketName = _defaultBucketName,
+}) {
+  final normalized = storagePath.trim().replaceAll('\\', '/');
+  if (normalized.isEmpty) {
+    return normalized;
+  }
+
+  final withoutLeadingSlash = normalized.replaceFirst(RegExp(r'^/+'), '');
+  final bucketPrefix = '$bucketName/';
+  if (withoutLeadingSlash.startsWith(bucketPrefix)) {
+    return withoutLeadingSlash.substring(bucketPrefix.length);
+  }
+
+  return withoutLeadingSlash;
+}
+
+String buildSupabaseStoragePublicUrl(
+  String storagePath, {
+  String supabaseUrl = _defaultSupabaseProjectUrl,
+  String bucketName = _defaultBucketName,
+}) {
+  final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
+  final baseUri = _requireHttpsSupabaseBaseUri(supabaseUrl);
+  final encodedSegments = _safeStorageObjectPathSegments(
+    storagePath,
+    bucketName: normalizedBucketName,
+  ).map(Uri.encodeComponent).join('/');
+
+  return '${baseUri.origin}/storage/v1/object/public/$normalizedBucketName/$encodedSegments';
+}
+
+Uri _requireHttpsSupabaseBaseUri(String supabaseUrl) {
+  final baseUri = Uri.tryParse(supabaseUrl.trim());
+  if (baseUri == null || !_isHttpsProjectOrigin(baseUri)) {
+    throw const FormatException(
+      'Supabase Storage public URLs must use a clean HTTPS project origin.',
+    );
+  }
+
+  return baseUri;
+}
+
+bool _isHttpsProjectOrigin(Uri uri) {
+  final hasPath = uri.pathSegments.any((segment) => segment.isNotEmpty);
+  return uri.isScheme('https') &&
+      uri.host.isNotEmpty &&
+      uri.userInfo.isEmpty &&
+      !uri.hasQuery &&
+      !uri.hasFragment &&
+      !hasPath;
+}
+
+List<String> _safeStorageObjectPathSegments(
+  String storagePath, {
+  required String bucketName,
+}) {
+  final normalizedPath = normalizeSupabaseStorageObjectPath(
+    storagePath,
+    bucketName: bucketName,
+  );
+  if (normalizedPath.isEmpty ||
+      normalizedPath.contains('://') ||
+      normalizedPath.contains('?') ||
+      normalizedPath.contains('#')) {
+    throw const FormatException(
+      'Supabase Storage object paths must be clean relative paths.',
+    );
+  }
+
+  final objectSegments = normalizedPath
+      .split('/')
+      .where((segment) => segment.isNotEmpty)
+      .toList();
+  if (objectSegments.isEmpty || _hasUnsafeObjectPathSegments(objectSegments)) {
+    throw const FormatException(
+      'Supabase Storage object paths must not contain traversal segments.',
+    );
+  }
+
+  return objectSegments;
+}
+
+bool _hasUnsafeObjectPathSegments(Iterable<String> segments) {
+  return segments.any((segment) => segment == '.' || segment == '..');
 }
 
 class MirroredAudioFile {

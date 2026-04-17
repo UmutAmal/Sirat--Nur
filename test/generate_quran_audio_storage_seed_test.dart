@@ -2,11 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sirat_i_nur/core/network/supabase_config.dart';
-import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import '../tool/generate_quran_audio_storage_seed.dart';
 import '../tool/quran_audio_file_validation.dart';
 
+const String _defaultSupabaseProjectUrl =
+    'https://amevotnudldbbwogtrtw.supabase.co';
+const String _defaultQuranAudioBucket = 'quran-audio';
 const int _validManifestSizeBytes = 1024;
 const String _validManifestSha256 =
     '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
@@ -16,12 +17,23 @@ void main() {
     test('buildSupabaseStoragePublicUrl derives public bucket URLs', () {
       expect(
         buildSupabaseStoragePublicUrl('quran-audio/alafasy/001.mp3'),
-        '${SupabaseConfig.url}/storage/v1/object/public/${SupabaseConfig.quranAudioBucket}/alafasy/001.mp3',
+        '$_defaultSupabaseProjectUrl/storage/v1/object/public/$_defaultQuranAudioBucket/alafasy/001.mp3',
       );
       expect(
         buildSupabaseStoragePublicUrl('alafasy/001.mp3'),
-        '${SupabaseConfig.url}/storage/v1/object/public/${SupabaseConfig.quranAudioBucket}/alafasy/001.mp3',
+        '$_defaultSupabaseProjectUrl/storage/v1/object/public/$_defaultQuranAudioBucket/alafasy/001.mp3',
       );
+    });
+
+    test('stays executable under dart run without app runtime imports', () {
+      final source = File(
+        'tool/generate_quran_audio_storage_seed.dart',
+      ).readAsStringSync();
+
+      expect(source, isNot(contains("package:sirat_i_nur/core/")));
+      expect(source, isNot(contains("package:supabase_flutter")));
+      expect(source, isNot(contains("package:flutter")));
+      expect(source, isNot(contains("dart:ui")));
     });
 
     test('parseMirroredAudioManifest reads mirrored files safely', () {

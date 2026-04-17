@@ -15626,3 +15626,38 @@
 
 ### Sonraki Adim
 - Yeni dongude mevcut makinede verified Quran audio mirror indirme imkani denenebilir. Bu islem buyuk disk/network kullanir; basarili olursa manifest uretilir. Supabase upload yine `SUPABASE_SERVICE_ROLE_KEY` olmadan yapilamaz.
+
+## 2026-04-18 TUR-359 - Quran Audio Storage Seed Completed
+
+### MASTER Karari
+- Risk: Verified Quran audio mirror basarili olsa bile production database seed dosyasi uretilmeden kalabilirdi. Bu durumda uygulama hala harici audio URL'lerine veya bos cloud kayitlarina bagli sanilabilir ve "sesler bizde" hedefi sahte tamamlanmis olurdu.
+- Kanit: `dart run tool/generate_quran_audio_storage_seed.dart --manifest=build/verified_quran_audio/manifest.json --output=content_seed_quran_audio_storage.sql` once `dart:ui` hatasiyla fail etti. Kök sebep `tool/generate_quran_audio_storage_seed.dart` dosyasinin `lib/core/network/supabase_storage_url.dart` import etmesi, onun da `supabase_flutter` zinciriyle Flutter runtime gerektirmesiydi.
+- Etki: Storage-backed Quran audio rollout durabilir; 684 dosya indirilse bile database tarafinda eksik/harici kaynakli kayit kalabilir.
+- Olasilik: Seed araci release surecinde `dart run` ile calistiriliyor; bu import zinciri her calistirmada yeniden patliyordu.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P0 audio sovereignty release blocker).
+- Rollback plani: `tool/generate_quran_audio_storage_seed.dart`, `test/generate_quran_audio_storage_seed_test.dart`, `test/store_readiness_test.dart`, `tool/check_store_readiness.ps1` ve `content_seed_quran_audio_storage.sql` degisiklikleri revert edilir. Local `build/verified_quran_audio/` artefact'i git disinda kalir.
+
+### BUILDER Degisikligi
+- `tool/generate_quran_audio_storage_seed.dart` saf Dart calisacak hale getirildi; tool artik `package:sirat_i_nur/core/...`, `supabase_flutter`, `package:flutter` veya `dart:ui` import etmiyor.
+- Tool icine Quran audio storage seed icin gerekli HTTPS Supabase origin, bucket path normalizasyonu ve traversal guard'lari eklendi.
+- `content_seed_quran_audio_storage.sql` 684 `quran_surah` storage-backed upsert ile uretildi. `url` kolonu `NULL`, `storage_path` degeri `reciter/NNN.mp3` formatinda; `download.quranicaudio.com` production seed icinde yok.
+- `tool/check_store_readiness.ps1` artik sadece mirror manifestini degil, `content_seed_quran_audio_storage.sql` dosyasinda 684 insert, 684 conflict update ve 684 storage path degerini de kontrol ediyor.
+- `test/generate_quran_audio_storage_seed_test.dart` ve `test/store_readiness_test.dart` bu regression guard'larini kapsayacak sekilde genisletildi.
+
+### Dogrulama Sonucu
+- Local audio mirror: `build\verified_quran_audio\manifest.json` mevcut; `requested=684`, `downloaded=684`, `failed=0`, `files=684`.
+- Local audio files: 684 MP3, toplam yaklasik 11.6 GB, `build\verified_quran_audio\` altinda. Git'e alinmadi.
+- Seed generation: `dart run tool/generate_quran_audio_storage_seed.dart --manifest=build/verified_quran_audio/manifest.json --output=content_seed_quran_audio_storage.sql` PASS; 684 storage-backed row uretildi.
+- Upload dry-run: `dart run tool/upload_quran_audio_storage.dart --manifest=build/verified_quran_audio/manifest.json --supabase-url=https://amevotnudldbbwogtrtw.supabase.co --dry-run` PASS; `files=684`, `bucket=quran-audio`.
+- Readiness dry run: `tool/check_store_readiness.ps1 -SkipFlutterValidation` beklenen sekilde 5 dis blokajla FAIL etti: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, `SUPABASE_SERVICE_ROLE_KEY`. Manifest ve storage seed kontrolleri PASS.
+- Odak testler: `flutter test test/generate_quran_audio_storage_seed_test.dart --reporter compact` PASS (`19/19`), `flutter test test/store_readiness_test.dart --reporter compact` PASS (`9/9`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`600/600`).
+
+### Risk Degisimi
+- Quran audio database seed / dart-run toolchain riski: `20/25 -> 3/25`.
+- Kalan release riski sifir degil: gercek Supabase service-role key olmadan audio upload yapilmadi; gercek prod env ve tile/Overpass provider URL'leri olmadan store artifact "production-ready" olarak isaretlenmedi.
+
+### Sonraki Adim
+- Operator gercek `SUPABASE_SERVICE_ROLE_KEY` verdiginde `dart run tool/upload_quran_audio_storage.dart --manifest=build/verified_quran_audio/manifest.json --supabase-url=$env:SUPABASE_URL` ile 684 dosya Supabase Storage'a yuklenecek.
+- Operator gercek prod `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL` degerlerini verdiginde `tool/check_store_readiness.ps1` tam modda PASS etmeli ve ardindan `tool/build_store_appbundle.ps1` ile gercek store AAB uretilmeli.

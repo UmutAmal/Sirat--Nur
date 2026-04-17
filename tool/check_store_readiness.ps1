@@ -211,6 +211,26 @@ try {
     Add-Failure 'Verified Quran audio mirror manifest is missing; run dart run tool/download_verified_quran_audio.dart before storage upload.'
   }
 
+  $audioStorageSeedPath = Join-Path $repoRoot 'content_seed_quran_audio_storage.sql'
+  if (Test-Path -LiteralPath $audioStorageSeedPath) {
+    $audioStorageSeed = Get-Content -LiteralPath $audioStorageSeedPath -Raw
+    $insertCount = ([regex]::Matches($audioStorageSeed, 'INSERT INTO public\.audio_files')).Count
+    $conflictCount = ([regex]::Matches($audioStorageSeed, 'ON CONFLICT \(type, reciter, surah_number\) DO UPDATE SET')).Count
+    $storagePathValueCount = ([regex]::Matches($audioStorageSeed, "NULL, '[A-Za-z0-9_-]+/[0-9]{3}\.mp3'")).Count
+    if (
+      $insertCount -eq 684 -and
+      $conflictCount -eq 684 -and
+      $storagePathValueCount -eq 684 -and
+      -not $audioStorageSeed.Contains('download.quranicaudio.com')
+    ) {
+      Add-Pass 'Quran audio storage seed is complete: 684 storage-backed upserts.'
+    } else {
+      Add-Failure "Quran audio storage seed is incomplete or not storage-backed: inserts=$insertCount, conflicts=$conflictCount, storage_paths=$storagePathValueCount."
+    }
+  } else {
+    Add-Failure 'Quran audio storage seed is missing; run dart run tool/generate_quran_audio_storage_seed.dart after mirroring audio.'
+  }
+
   if (-not $SkipNetwork) {
     try {
       $privacyUrl = 'https://raw.githubusercontent.com/UmutAmal/Sirat--Nur/master/docs/privacy_policy.md'

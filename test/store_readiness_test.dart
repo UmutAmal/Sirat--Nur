@@ -60,6 +60,28 @@ void main() {
       expect(exactAlarm, contains('prayer time and adhan reminders'));
     });
 
+    test(
+      'generated Quran audio storage seed is complete and storage-backed',
+      () {
+        final storageSeedFile = File('content_seed_quran_audio_storage.sql');
+
+        expect(storageSeedFile.existsSync(), isTrue);
+        final storageSeed = storageSeedFile.readAsStringSync();
+        expect(
+          RegExp(r'INSERT INTO public\.audio_files').allMatches(storageSeed),
+          hasLength(684),
+        );
+        expect(
+          RegExp(
+            r"NULL, '[A-Za-z0-9_-]+/[0-9]{3}\.mp3'",
+          ).allMatches(storageSeed),
+          hasLength(684),
+        );
+        expect(storageSeed, contains('storage_path'));
+        expect(storageSeed, isNot(contains('download.quranicaudio.com')));
+      },
+    );
+
     test('CI uses the current Flutter SDK and full project checks', () {
       final ci = File('.github/workflows/ci.yml').readAsStringSync();
 
@@ -89,9 +111,12 @@ void main() {
 
       expect(script, contains('SUPABASE_SERVICE_ROLE_KEY'));
       expect(script, contains('build/verified_quran_audio/manifest.json'));
+      expect(script, contains('content_seed_quran_audio_storage.sql'));
       expect(script, contains('requested -eq 684'));
       expect(script, contains('files.Count -eq 684'));
+      expect(script, contains('storagePathValueCount -eq 684'));
       expect(script, contains('android.permission.USE_EXACT_ALARM'));
+      expect(script, contains('download.quranicaudio.com'));
       expect(script, contains('Remote privacy policy URL returns HTTP 200'));
       expect(checklist, contains('Google Play Data safety form'));
       expect(checklist, contains('Android exact alarm behavior'));
