@@ -14066,6 +14066,66 @@
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio catalog veri dolulugu, Zekat UI seffafligi veya l10n same-as-English borcu taranacak.
 
+## 2026-04-17 TUR-326 - Zakat Result Shows Nisab Basis
+
+### Yapilan Islem
+- TUR-325 commit/push sonrasi repo/remote/branch/status yeniden dogrulandi; `master` remote ile senkron ve calisma agaci temizdi.
+- Zekat hesaplama UI'i, testleri ve mevcut l10n anahtarlari incelendi.
+- Dinî dayanak tekrar resmi/kurumsal kaynaklarla kontrol edildi:
+  - TDV Zekat Hesaplama: https://zekathesapla.tdv.org/
+  - Diyanet kaynakli ilmihal/vaaz dokumanlari arama sonucunda 80.18 gr altin ve 561 gr gumus nisab bilgisini tekrar dogruladi.
+- Sonuc karti artik yalniz para cinsinden dinamik nisap degerini degil, esas alinan gram esiklerini de gosteriyor.
+- Yeni ARB anahtari acilmadi; 180+ dilde uydurma metin uretmemek icin mevcut `zakatGold` ve `zakatSilver` yerellestirilmis etiketleri kullanildi.
+- Gram formatlama locale-aware yapildi; ornegin TR icin `80,18 g`, EN icin `80.18 g` uretiliyor.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:404` sonuc karti once yalniz `nisabSummary` ile parasal nisap ve varlik toplamlarini gosteriyordu.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:8` dinî nisap yorumunun kaynak bilgisi sadece kod yorumunda kalabiliyordu, kullanici sonuc ekraninda gram dayanaklarini goremiyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:56` `formatZakatGramAmount` gram esigini locale decimal separator ile formatliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:64` `formatZakatNisabBasis` altin/gumus etiketlerini mevcut l10n zincirinden alacak sekilde uretiyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:74` UI satiri 80.18 g altin, 561 g gumus ve 2.5% oran bilgisini tek yerde birlestiriyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:416` sonuc karti nisap ozetinin hemen altinda gram dayanaklarini gosteriyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:159` EN/TR locale formatlarini ve 80.18/561 esiklerinin ekranda kullanilan helper'a girdigini kilitliyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:185` sonuc sayfasinin `formatZakatNisabBasis` helper'ini kullanmaya devam ettigini kaynak snapshot ile koruyor.
+
+### Neden Yapildi
+- Kullanici dinî hesaplarda yanlis veya kapali varsayim istemedigini acikca belirtti.
+- Zekat sonucu para cinsinden dogru olabilir, fakat kullanici hangi nisap gramlarinin kullanildigini gormezse hesap seffafligi eksik kalir.
+- Yeni 180+ locale anahtari acmadan mevcut yerel etiketleri kullanmak, hem localization zincirine sadik kalir hem de dusuk kaynakli dillerde uydurma ceviri riskini artirmaz.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Zekat sonuc karti kullaniciya kaynak gram esiklerini gorunur bicimde verir.
+- Locale decimal separator davranisi dogrulandi.
+- Mevcut hesap motoru, nisap secimi, rate ve ARB kapsami degismedi.
+- Yeni hardcoded Ingilizce UI metni eklenmedi; yalniz sayi, SI birimi ve yuzde sembolu kullanildi.
+
+### Test Sonucu
+- Format: `dart format lib\features\library\zakat_calculator_page.dart test\features\library\zakat_calculator_page_test.dart` PASS
+- Odak test: `flutter test test\features\library\zakat_calculator_page_test.dart --reporter compact` PASS (`11/11`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`548/548`)
+
+### Risk Degisimi
+- Zekat sonucunda nisap dayanaklarinin kullaniciya kapali kalmasi riski: `10/25 -> 2/25`
+- Yeni l10n anahtariyla 180+ dilde uydurma/yarim ceviri uretme riski: `8/25 -> 2/25`
+- Kalan dinî UX riski: Kamerî yil, asli ihtiyac/borc istisnalari ve mezhep farklari hesap formunda henuz ayri aciklama paneli olarak sunulmuyor; bu daha buyuk ve ayri l10n/icerik dogrulama turu gerektirir.
+
+### Rollback Plani
+- `formatZakatGramAmount` ve `formatZakatNisabBasis` helper'lari kaldirilir.
+- Sonuc kartindaki nisap basis `Text` blogu kaldirilir.
+- Yeni Zekat formatter testi ve kaynak snapshot beklentisi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Zekat aciklama paneli, audio catalog veri dolulugu veya l10n same-as-English borcu taranacak.
+
 ## 2026-04-17 TUR-325 - Offline Audio Size Counts Only Managed Verified Files
 
 ### Yapilan Islem

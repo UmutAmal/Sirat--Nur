@@ -53,6 +53,27 @@ String formatZakatMoney(
   ).format(value);
 }
 
+String formatZakatGramAmount(double grams, {String? localeName}) {
+  final hasFraction = grams.truncateToDouble() != grams;
+  final formatter = NumberFormat.decimalPattern(localeName)
+    ..minimumFractionDigits = hasFraction ? 2 : 0
+    ..maximumFractionDigits = hasFraction ? 2 : 0;
+  return formatter.format(grams);
+}
+
+String formatZakatNisabBasis({
+  required String goldLabel,
+  required String silverLabel,
+  String? localeName,
+}) {
+  final gold = formatZakatGramAmount(_goldNisabGrams, localeName: localeName);
+  final silver = formatZakatGramAmount(
+    _silverNisabGrams,
+    localeName: localeName,
+  );
+  return '$goldLabel: $gold g • $silverLabel: $silver g • 2.5%';
+}
+
 /// Comprehensive Zakat Calculator
 class ZakatCalculator {
   static double calculateGoldZakat(double goldGrams, double goldPricePerGram) {
@@ -389,6 +410,23 @@ class _ZakatCalculatorPageState extends State<ZakatCalculatorPage> {
                         color: Theme.of(
                           context,
                         ).colorScheme.onSurface.withValues(alpha: 0.4),
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      formatZakatNisabBasis(
+                        goldLabel: l10n.zakatGold,
+                        silverLabel: l10n.zakatSilver,
+                        localeName: Localizations.localeOf(
+                          context,
+                        ).toLanguageTag(),
+                      ),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: Theme.of(
+                          context,
+                        ).colorScheme.onSurface.withValues(alpha: 0.45),
                       ),
                     ),
                     const SizedBox(height: 16),

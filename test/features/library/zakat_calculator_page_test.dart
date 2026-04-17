@@ -156,6 +156,25 @@ void main() {
     expect(source, isNot(contains('v * rate')));
   });
 
+  test('zakat nisab basis exposes sourced gram thresholds', () {
+    expect(
+      formatZakatNisabBasis(
+        goldLabel: 'Gold',
+        silverLabel: 'Silver',
+        localeName: 'en',
+      ),
+      'Gold: 80.18 g • Silver: 561 g • 2.5%',
+    );
+    expect(
+      formatZakatNisabBasis(
+        goldLabel: 'Altın',
+        silverLabel: 'Gümüş',
+        localeName: 'tr',
+      ),
+      'Altın: 80,18 g • Gümüş: 561 g • 2.5%',
+    );
+  });
+
   test('zakat price fields do not ship stale market defaults', () {
     final source = File(
       'lib/features/library/zakat_calculator_page.dart',
@@ -163,5 +182,6 @@ void main() {
 
     expect(source, isNot(contains("TextEditingController(text: '70')")));
     expect(source, isNot(contains("TextEditingController(text: '0.90')")));
+    expect(source, contains('formatZakatNisabBasis('));
   });
 }
