@@ -5,8 +5,9 @@ import 'package:sirat_i_nur/core/widgets/premium_card.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 const double _zakatRate = 0.025;
-const double _goldNisabGrams = 85.0;
-const double _silverNisabGrams = 595.0;
+// Diyanet/TDV guidance lists nisab as 80.18g gold and 561g silver.
+const double _goldNisabGrams = 80.18;
+const double _silverNisabGrams = 561.0;
 
 const Map<String, String> zakatCurrencySymbols = {
   'USD': r'$',

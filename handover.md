@@ -13890,3 +13890,61 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki en somut dini hesaplama riski olarak Zekat nisap gram sabitlerinin Diyanet/TDV guncel referanslariyla uyumu veya l10n/hardcoded UI borcu taranacak.
+
+## 2026-04-17 TUR-322 - Zakat Nisab Constants Source Alignment
+
+### Yapilan Islem
+- TUR-321 sonrasi repo/remote/branch/status yeniden dogrulandi; `master` remote ile senkron ve calisma agaci temizdi.
+- Zekat hesaplayicisindaki altin/gumus nisap sabitleri kaynakla uyumlu hale getirildi.
+- Altin nisabi `85.0g` yerine `80.18g`, gumus nisabi `595.0g` yerine `561.0g` yapildi.
+- Bu sinirlarin tekrar eski degerlere kaymamasi icin altin ve gumus boundary testleri eklendi.
+- Dini metin, UI copy, localization dosyalari ve audio/prayer/location zincirleri degistirilmedi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:8` once altin nisabi `85.0` olarak sabitti.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:9` once gumus nisabi `595.0` olarak sabitti.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:8` kaynak notu eklendi.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:9` altin nisabi `80.18` olarak guncellendi.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:10` gumus nisabi `561.0` olarak guncellendi.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:7` altin nisab degerinden uretilen para esigini `5612.6` olarak dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:26` `80.17g` altinin nisab alti, `80.18g` altinin nisab siniri oldugunu; `560g` gumusun nisab alti, `561g` gumusun nisab siniri oldugunu dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:39` TUR-321 aggregate nisab testi yeni `8018` esigine gore guncellendi.
+- Kaynak dogrulama: Diyanet Haber `Zekat Verilmesi Gereken Mallar Nelerdir?` satir 136 altin nisabini `80.18g`, satir 142 gumus nisabini `561g` olarak veriyor.
+- Kaynak dogrulama: TDV `zekathesapla.tdv.org` satir 147-150 ticaret malinda borclardan sonra kalan kismin `80,18g` altin degerine ulasmasi gerektigini belirtiyor.
+
+### Neden Yapildi
+- Hesaplama motoru dini/finansal bir karar yardimcisi oldugu icin sinir degerler kaynakla uyumsuz kalamaz.
+- `85g/595g` kullanimi, `80.18g-85g` altin araliginda veya `561g-595g` gumus araliginda olan kullanicilara yanlis "nisap alti" sonucu verebilirdi.
+- Bu tur sadece sabitleri kaynakla hizaladi; daha genis mezhep/bolge ayari tasarimi sonraki dongude ayri etki analizi gerektirir.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Zekat hesaplayicisi Diyanet/TDV tarafindan verilen guncel altin/gumus nisap agirliklariyla hesap yapar.
+- Sinir degerler testle sabitlendi; eski degerlere sessiz regresyon zorlasti.
+- TUR-321 aggregate nisab mantigi korunarak yeni altin nisab degerine adapte edildi.
+
+### Test Sonucu
+- Format: `dart format lib\features\library\zakat_calculator_page.dart test\features\library\zakat_calculator_page_test.dart` PASS
+- Odak test: `flutter test test\features\library\zakat_calculator_page_test.dart --reporter compact` ilk kosuda floating-point exact match nedeniyle FAIL; test beklentisi `closeTo` yapildi.
+- Odak test tekrar: `flutter test test\features\library\zakat_calculator_page_test.dart --reporter compact` PASS (`9/9`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`544/544`)
+
+### Risk Degisimi
+- Zekat altin/gumus nisap sabiti kaynak uyumsuzlugu: `20/25 -> 2/25`
+- Floating-point exact test kirilganligi: `6/25 -> 1/25`
+- Kalan dini hesaplama tasarim notu: mezhep/bolgeye gore nisap kaynagi secimi henuz UI ayari degil; bu daha genis kapsamli urun karari ve kaynak matrisi gerektirir.
+
+### Rollback Plani
+- `_goldNisabGrams` tekrar `85.0`, `_silverNisabGrams` tekrar `595.0` yapilir.
+- Yeni boundary testi kaldirilir ve eski nisab beklentileri geri alinir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Zekat sayfasinda kullaniciya nisap kaynagini acik gostermeyen UI copy veya kalan hardcoded/l10n borcu taranacak.

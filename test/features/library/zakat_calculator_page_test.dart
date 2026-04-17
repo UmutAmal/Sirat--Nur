@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/features/library/zakat_calculator_page.dart';
 
 void main() {
-  test('ZakatCalculator keeps the existing gold nisab calculation', () {
+  test('ZakatCalculator uses sourced gold nisab calculation', () {
     final result = ZakatCalculator.calculateTotal(
       goldGrams: 100,
       goldPricePerGram: 70,
@@ -17,10 +17,23 @@ void main() {
     );
 
     expect(result.isNisabMet, isTrue);
-    expect(result.nisabValue, 5950);
+    expect(result.nisabValue, closeTo(5612.6, 0.0001));
     expect(result.totalAssets, 7000);
     expect(result.goldZakat, 175);
     expect(result.totalZakat, 175);
+  });
+
+  test('ZakatCalculator uses sourced gold and silver nisab boundaries', () {
+    expect(ZakatCalculator.calculateGoldZakat(80.17, 100), 0);
+    expect(
+      ZakatCalculator.calculateGoldZakat(80.18, 100),
+      closeTo(200.45, 0.0001),
+    );
+    expect(ZakatCalculator.calculateSilverZakat(560, 1), 0);
+    expect(
+      ZakatCalculator.calculateSilverZakat(561, 1),
+      closeTo(14.025, 0.0001),
+    );
   });
 
   test(
@@ -37,7 +50,7 @@ void main() {
         investments: 0,
       );
 
-      expect(result.nisabValue, 8500);
+      expect(result.nisabValue, closeTo(8018, 0.0001));
       expect(result.totalAssets, 1000);
       expect(result.isNisabMet, isFalse);
       expect(result.businessZakat, 0);
@@ -59,7 +72,7 @@ void main() {
         investments: 1000,
       );
 
-      expect(result.nisabValue, 8500);
+      expect(result.nisabValue, closeTo(8018, 0.0001));
       expect(result.totalAssets, 9500);
       expect(result.isNisabMet, isTrue);
       expect(result.goldZakat, 100);
