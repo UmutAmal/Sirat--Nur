@@ -29,6 +29,23 @@ void main() {
       expect(gradle, contains('applicationId = "com.umutamal.sirat_i_nur"'));
     });
 
+    test('release builds never fall back to debug signing', () {
+      expect(gradle, isNot(contains('signingConfigs.getByName("debug")')));
+      expect(gradle, contains('create("release")'));
+      expect(gradle, contains('validateStoreReleaseSigning'));
+      expect(gradle, contains('validateStoreReleaseRuntimeConfig'));
+      expect(gradle, contains('SIRAT_UPLOAD_STORE_FILE'));
+      expect(gradle, contains('debug signing is forbidden for release'));
+      expect(gradle, contains('SUPABASE_URL'));
+      expect(gradle, contains('PLACES_TILE_URL_TEMPLATE'));
+    });
+
+    test('release lint remains enabled for store packaging', () {
+      expect(gradle, isNot(contains('checkReleaseBuilds = false')));
+      expect(gradle, contains('checkReleaseBuilds = true'));
+      expect(gradle, contains('abortOnError = true'));
+    });
+
     test(
       'disables Kotlin incremental caches for cross-drive Windows builds',
       () {

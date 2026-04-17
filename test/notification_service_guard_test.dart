@@ -79,4 +79,20 @@ void main() {
       );
     },
   );
+
+  test(
+    'adhan scheduler checks exact alarm permission and has fallback mode',
+    () {
+      final source = File(
+        'lib/core/services/adhan_scheduler_service.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('canScheduleExactNotifications()'));
+      expect(source, contains('requestExactAlarmsPermission()'));
+      expect(source, contains('_resolveAndroidScheduleMode'));
+      expect(source, contains('AndroidScheduleMode.exactAllowWhileIdle'));
+      expect(source, contains('AndroidScheduleMode.inexactAllowWhileIdle'));
+      expect(source, contains('androidScheduleMode: androidScheduleMode'));
+    },
+  );
 }

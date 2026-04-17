@@ -1,0 +1,128 @@
+param(
+  [switch]$NoBuild
+)
+
+$ErrorActionPreference = 'Stop'
+
+$requiredEnvironment = @(
+  'SUPABASE_URL',
+  'SUPABASE_ANON_KEY',
+  'PLACES_TILE_URL_TEMPLATE',
+  'PLACES_OVERPASS_API_URL'
+)
+
+$missing = @()
+foreach ($name in $requiredEnvironment) {
+  if ([string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable($name))) {
+    $missing += $name
+  }
+}
+
+if ($missing.Count -gt 0) {
+  throw "Missing store release environment variables: $($missing -join ', ')"
+}
+
+function Test-BlockedHost {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$HostName,
+    [Parameter(Mandatory = $true)]
+    [string[]]$BlockedHosts
+  )
+
+  $normalizedHost = $HostName.ToLowerInvariant()
+  foreach ($blockedHost in $BlockedHosts) {
+    if ($normalizedHost -eq $blockedHost -or $normalizedHost.EndsWith(".$blockedHost")) {
+      return $true
+    }
+  }
+
+  return $false
+}
+
+function Assert-CleanHttpsUrl {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Name,
+    [Parameter(Mandatory = $true)]
+    [string]$Value,
+    [switch]$DisallowPath
+  )
+
+  try {
+    $uri = [System.Uri]$Value
+  } catch {
+    throw "$Name must be a valid HTTPS URL."
+  }
+
+  $hasPath = -not [string]::IsNullOrWhiteSpace($uri.AbsolutePath) -and $uri.AbsolutePath -ne '/'
+  if (
+    $uri.Scheme -ne 'https' -or
+    [string]::IsNullOrWhiteSpace($uri.Host) -or
+    -not [string]::IsNullOrEmpty($uri.UserInfo) -or
+    -not [string]::IsNullOrEmpty($uri.Query) -or
+    -not [string]::IsNullOrEmpty($uri.Fragment) -or
+    ($DisallowPath -and $hasPath)
+  ) {
+    throw "$Name must be a clean HTTPS URL without user info, query, fragment$(if ($DisallowPath) { ', or path' } else { '' })."
+  }
+
+  return $uri
+}
+
+Assert-CleanHttpsUrl -Name 'SUPABASE_URL' -Value $env:SUPABASE_URL -DisallowPath | Out-Null
+
+$tileTemplate = $env:PLACES_TILE_URL_TEMPLATE.Trim()
+foreach ($token in @('{z}', '{x}', '{y}')) {
+  if (-not $tileTemplate.Contains($token)) {
+    throw "PLACES_TILE_URL_TEMPLATE must include $token."
+  }
+}
+
+$tileProbe = $tileTemplate.Replace('{z}', '0').Replace('{x}', '0').Replace('{y}', '0').Replace('{s}', 'a')
+$tileUri = Assert-CleanHttpsUrl -Name 'PLACES_TILE_URL_TEMPLATE' -Value $tileProbe
+if (Test-BlockedHost -HostName $tileUri.Host -BlockedHosts @('tile.openstreetmap.org', 'tile.openstreetmap.de')) {
+  throw 'PLACES_TILE_URL_TEMPLATE must not point at public OpenStreetMap tile hosts.'
+}
+
+$overpassUri = Assert-CleanHttpsUrl -Name 'PLACES_OVERPASS_API_URL' -Value $env:PLACES_OVERPASS_API_URL
+if (Test-BlockedHost -HostName $overpassUri.Host -BlockedHosts @(
+      'overpass-api.de',
+      'overpass.kumi.systems',
+      'overpass.openstreetmap.fr',
+      'overpass.openstreetmap.ru',
+      'overpass.osm.ch',
+      'overpass.osm.rambler.ru'
+    )) {
+  throw 'PLACES_OVERPASS_API_URL must not point at public Overpass hosts; use an approved proxy or provider.'
+}
+
+$keyProperties = Join-Path $PSScriptRoot '..\android\key.properties'
+if (-not (Test-Path -LiteralPath $keyProperties)) {
+  throw 'Missing android/key.properties. Copy android/key.properties.example and point it at the upload keystore.'
+}
+
+$keyPropertiesContent = Get-Content -LiteralPath $keyProperties -Raw
+foreach ($requiredKey in @('storeFile=', 'storePassword=', 'keyAlias=', 'keyPassword=')) {
+  if (-not $keyPropertiesContent.Contains($requiredKey)) {
+    throw "android/key.properties is missing $requiredKey"
+  }
+}
+
+if ($NoBuild) {
+  Write-Host 'Store release configuration is present.'
+  exit 0
+}
+
+$quranAudioBucket = [Environment]::GetEnvironmentVariable('SUPABASE_QURAN_AUDIO_BUCKET')
+if ([string]::IsNullOrWhiteSpace($quranAudioBucket)) {
+  $quranAudioBucket = 'quran-audio'
+}
+
+flutter build appbundle --release `
+  --dart-define=SUPABASE_URL="$env:SUPABASE_URL" `
+  --dart-define=SUPABASE_ANON_KEY="$env:SUPABASE_ANON_KEY" `
+  --dart-define=SUPABASE_QURAN_AUDIO_BUCKET="$quranAudioBucket" `
+  --dart-define=PLACES_TILE_URL_TEMPLATE="$env:PLACES_TILE_URL_TEMPLATE" `
+  --dart-define=PLACES_OVERPASS_API_URL="$env:PLACES_OVERPASS_API_URL" `
+  --dart-define=GEMINI_API_KEY="$env:GEMINI_API_KEY"

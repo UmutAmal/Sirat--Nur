@@ -49,16 +49,16 @@ No hidden keys are required for normal local development.
 2. `flutter run` -> Instantly functional with bundled/offline-first data.
 
 Production builds must inject Supabase values explicitly when cloud content, Storage audio, or diagnostics should be live. The anon key is intentionally empty by default and must not be committed as a fallback value:
-```bash
-flutter build apk \
-  --dart-define=SUPABASE_URL="$SUPABASE_URL" \
-  --dart-define=SUPABASE_ANON_KEY="$SUPABASE_ANON_KEY" \
-  --dart-define=SUPABASE_QURAN_AUDIO_BUCKET=quran-audio \
-  --dart-define=PLACES_TILE_URL_TEMPLATE="$PLACES_TILE_URL_TEMPLATE" \
-  --dart-define=PLACES_OVERPASS_API_URL="$PLACES_OVERPASS_API_URL"
+```powershell
+.\tool\build_store_appbundle.ps1
 ```
 
 `PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. Production values must be HTTPS tile templates containing `{z}`, `{x}`, and `{y}`, must not carry client-side query tokens or user-info secrets, and must not point directly at public OpenStreetMap tile hosts. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored HTTPS proxy, an approved HTTPS provider, or your own rate-limited HTTPS Overpass-compatible endpoint before enabling nearby search in production. The app refuses known public community Overpass hosts and endpoint URLs containing user info, query strings, or fragments so secrets and unbounded community-service traffic are not shipped in the client.
+
+## Store Release Gates
+Release builds never fall back to the Android debug keystore. Local release packaging reads `android/key.properties`, and CI/release automation may instead provide `SIRAT_UPLOAD_STORE_FILE`, `SIRAT_UPLOAD_STORE_PASSWORD`, `SIRAT_UPLOAD_KEY_ALIAS`, and `SIRAT_UPLOAD_KEY_PASSWORD`. Keep the keystore and `android/key.properties` out of git; use `android/key.properties.example` as the template. If signing is missing, `validateStoreReleaseSigning` fails `bundleRelease`/`assembleRelease` before an unsigned or debug-signed artifact can be uploaded. `validateStoreReleaseRuntimeConfig` also fails direct release packaging when the required runtime `--dart-define` values are missing or unsafe. Use `tool/build_store_appbundle.ps1` for store packaging because it refuses to build when `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, or `PLACES_OVERPASS_API_URL` are missing.
+
+Store policy materials are tracked under `store/`. Keep `docs/privacy_policy.md`, `store/play/data_safety.md`, `store/play/exact_alarm_declaration.md`, `store/play/billing_test_plan.md`, and `store/appstore/app_privacy.md` aligned with code before every release. Exact alarms are used only for user-enabled prayer reminders and adhan alerts; when Android does not allow exact alarms, the scheduler falls back to inexact reminders instead of pretending exact scheduling succeeded.
 
 ## Quran Audio Sovereignty Workflow
 The runtime requires Supabase Storage-backed `storage_path` rows for playable audio. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.

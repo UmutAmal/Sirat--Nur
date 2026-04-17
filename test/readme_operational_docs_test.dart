@@ -62,13 +62,9 @@ void main() {
     });
 
     test('does not publish fake production endpoint placeholders', () {
-      expect(readme, contains('--dart-define=SUPABASE_URL="\$SUPABASE_URL"'));
-      expect(
-        readme,
-        contains(
-          '--dart-define=PLACES_TILE_URL_TEMPLATE="\$PLACES_TILE_URL_TEMPLATE"',
-        ),
-      );
+      expect(readme, contains('.\\tool\\build_store_appbundle.ps1'));
+      expect(readme, contains('SUPABASE_URL'));
+      expect(readme, contains('PLACES_TILE_URL_TEMPLATE'));
       expect(readme, isNot(contains('tiles.example.com')));
       expect(readme, isNot(contains('places-proxy.example.com')));
       expect(readme, isNot(contains('your-project.supabase.co')));
@@ -86,6 +82,23 @@ void main() {
         contains('The app refuses known public community Overpass hosts'),
       );
       expect(readme, contains('user info, query strings, or fragments'));
+    });
+
+    test('documents store release signing and policy gates', () {
+      expect(
+        readme,
+        contains(
+          'Release builds never fall back to the Android debug keystore',
+        ),
+      );
+      expect(readme, contains('android/key.properties.example'));
+      expect(readme, contains('validateStoreReleaseSigning'));
+      expect(readme, contains('tool/build_store_appbundle.ps1'));
+      expect(readme, contains('SUPABASE_ANON_KEY'));
+      expect(readme, contains('PLACES_OVERPASS_API_URL'));
+      expect(readme, contains('store/play/data_safety.md'));
+      expect(readme, contains('store/play/exact_alarm_declaration.md'));
+      expect(readme, contains('falls back to inexact reminders'));
     });
 
     test(

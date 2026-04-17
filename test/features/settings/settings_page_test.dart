@@ -90,7 +90,7 @@ void main() {
 
     expect(
       buildSettingsShareText(l10n),
-      'Sirat-ı Nur uygulamasına göz atın: En kapsamlı İslami yaşam uygulaması! https://siratinur.com',
+      'Sirat-ı Nur uygulamasına göz atın: En kapsamlı İslami yaşam uygulaması! $appWebsiteUrl',
     );
   });
 
@@ -111,7 +111,7 @@ void main() {
 
     expect(
       buildSettingsShareText(l10n),
-      "Découvrez Sirat-ı Nur : l'application ultime pour le mode de vie islamique ! https://siratinur.com",
+      "Découvrez Sirat-ı Nur : l'application ultime pour le mode de vie islamique ! $appWebsiteUrl",
     );
   });
 

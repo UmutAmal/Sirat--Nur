@@ -1,0 +1,13 @@
+# Copy this file to android/key.properties for local release packaging.
+# Never commit android/key.properties or the keystore itself.
+#
+# Environment variable alternatives supported by android/app/build.gradle.kts:
+# SIRAT_UPLOAD_STORE_FILE
+# SIRAT_UPLOAD_STORE_PASSWORD
+# SIRAT_UPLOAD_KEY_ALIAS
+# SIRAT_UPLOAD_KEY_PASSWORD
+
+storeFile=../upload-keystore.jks
+storePassword=replace-with-keystore-password
+keyAlias=sirat-upload
+keyPassword=replace-with-key-password

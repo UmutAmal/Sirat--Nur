@@ -62,7 +62,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
 
       // Listen to purchase updates
       _subscription = _iap.purchaseStream.listen(
-        _onPurchaseUpdate,
+        (purchaseDetails) => unawaited(_onPurchaseUpdate(purchaseDetails)),
         onError: (_) {
           debugPrint('IAP stream error');
           state = state.copyWith(
@@ -88,7 +88,9 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
     }
   }
 
-  void _onPurchaseUpdate(List<PurchaseDetails> purchaseDetailsList) {
+  Future<void> _onPurchaseUpdate(
+    List<PurchaseDetails> purchaseDetailsList,
+  ) async {
     for (final purchase in purchaseDetailsList) {
       if (purchase.productID != kPremiumProductId) continue;
 
@@ -110,7 +112,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
             error: kPremiumPurchaseFailedErrorCode,
           );
           if (purchase.pendingCompletePurchase) {
-            _iap.completePurchase(purchase);
+            await _iap.completePurchase(purchase);
           }
           break;
 
@@ -118,7 +120,7 @@ class PremiumNotifier extends StateNotifier<PremiumState> {
           _cancelRestoreTimeout();
           state = state.copyWith(isLoading: false);
           if (purchase.pendingCompletePurchase) {
-            _iap.completePurchase(purchase);
+            await _iap.completePurchase(purchase);
           }
           break;
       }

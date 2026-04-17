@@ -15515,3 +15515,62 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki aktif UI riski olarak Aymara settings labels incelenecek.
+
+## 2026-04-17 TUR-356 - Store Readiness P0/P1 Closure
+
+### MASTER Karari
+- P0 release signing riski: `android/app/build.gradle.kts:178`, `android/app/build.gradle.kts:191`, `android/app/build.gradle.kts:201`, `android/app/build.gradle.kts:258` release paketlerinin debug signing'e dusmesini engelliyor. Etki 5 x Olasilik 5 = 25/25; risk `25/25 -> 2/25`. Rollback: sadece release signing config/task ve test guard'lari revert edilir.
+- P0 runtime config riski: `android/app/build.gradle.kts:43`, `android/app/build.gradle.kts:50`, `android/app/build.gradle.kts:220`, `android/app/build.gradle.kts:261` direct `bundleRelease`/`assembleRelease` icin required `--dart-define` gate'i ekledi; `tool/build_store_appbundle.ps1:8`, `tool/build_store_appbundle.ps1:43`, `tool/build_store_appbundle.ps1:73`, `tool/build_store_appbundle.ps1:83`, `tool/build_store_appbundle.ps1:88`, `tool/build_store_appbundle.ps1:122` operator script'ini ayni HTTPS/public-host kurallariyla sertlestirdi. Etki 5 x Olasilik 4 = 20/25; risk `20/25 -> 3/25`. Rollback: runtime validation task ve script validation bloğu revert edilir.
+- P0 privacy/store disclosure riski: `lib/core/services/app_metadata_service.dart:27`, `lib/core/services/app_metadata_service.dart:28`, `docs/privacy_policy.md`, `store/play/data_safety.md`, `store/play/exact_alarm_declaration.md`, `store/play/billing_test_plan.md`, `store/appstore/app_privacy.md`, `store/listing/en-US.md`, `store/listing/tr-TR.md` ile retired domain/privacy boslugu kapandi. Etki 5 x Olasilik 4 = 20/25; risk `20/25 -> 3/25`. Rollback: metadata URL ve store docs revert edilir.
+- P1 exact alarm riski: `lib/core/services/adhan_scheduler_service.dart:35`, `lib/core/services/adhan_scheduler_service.dart:37`, `lib/core/services/adhan_scheduler_service.dart:133`, `lib/core/services/adhan_scheduler_service.dart:177`, `lib/core/services/adhan_scheduler_service.dart:186`, `lib/core/services/adhan_scheduler_service.dart:187` exact alarm permission check + inexact fallback zincirini ekledi. Etki 4 x Olasilik 4 = 16/25; risk `16/25 -> 3/25`. Rollback: scheduler fallback helper'i ve test guard'i revert edilir.
+- P1 billing acknowledgement riski: `lib/features/premium/premium_provider.dart:65`, `lib/features/premium/premium_provider.dart:91`, `lib/features/premium/premium_provider.dart:115`, `lib/features/premium/premium_provider.dart:123`, `lib/features/premium/premium_provider.dart:137` pending purchase completion islemlerini async/await zincirine aldi. Etki 4 x Olasilik 3 = 12/25; risk `12/25 -> 3/25`. Rollback: purchase stream callback ve `_onPurchaseUpdate` imzasi onceki haline dondurulur.
+- P1 CI/lint riski: `.github/workflows/ci.yml:17`, `.github/workflows/ci.yml:25`, `.github/workflows/ci.yml:31` current Flutter 3.41.4, full analyze ve lib/test/tool format check'e gecti; `android/app/build.gradle.kts:196` release lint'i store build icin aktif tuttu. Etki 4 x Olasilik 4 = 16/25; risk `16/25 -> 3/25`. Rollback: CI workflow ve lint bloklari revert edilir.
+- P1 iOS privacy riski: `ios/Runner/Info.plist:11` location purpose string'i App Store review icin eklendi. Etki 3 x Olasilik 4 = 12/25; risk `12/25 -> 2/25`. Rollback: Info.plist key'i revert edilir.
+- P1 share metadata drift riski: `test/features/settings/settings_page_test.dart:93`, `test/features/settings/settings_page_test.dart:114` share text testleri literal retired URL yerine `appWebsiteUrl` kaynak sabitine baglandi. Etki 3 x Olasilik 4 = 12/25; risk `12/25 -> 2/25`. Rollback: sadece expected string revert edilir.
+
+### BUILDER Degisikligi
+- Android release signing artik sadece `android/key.properties` veya `SIRAT_UPLOAD_*` env degerleriyle olusuyor; debug signing fallback yok.
+- Release packaging `validateStoreReleaseSigning` ve `validateStoreReleaseRuntimeConfig` task'larina baglandi; eksik Supabase/Places dart-define seti direct release build'i fail ediyor.
+- Store build script'i Supabase origin, tile template, Overpass endpoint ve key.properties kontrollerini build oncesinde uyguluyor; public OSM tile ve public Overpass host'lari reddediliyor.
+- Privacy policy, Play data safety, exact alarm declaration, billing test plan, App Store privacy worksheet ve EN/TR listing kaynaklari repoya eklendi.
+- Adhan scheduler exact alarm izni yoksa inexact reminder'a dusuyor; false exact-success davranisi kapandi.
+- Premium provider purchase completion ack'lerini awaited hale getirdi.
+- CI Flutter 3.41.4 ile full analyze/format kapsaminda calisacak sekilde guncellendi.
+- Local release keystore ve `android/key.properties` olusturuldu ama `.gitignore` korumasinda; commit kapsaminda degil.
+
+### TESTER Kapsami
+- `test/android_config_test.dart:32` release debug signing fallback ve runtime config gate regressions'ini kilitliyor.
+- `test/store_readiness_test.dart:70`, `test/store_readiness_test.dart:84` store docs/script/Gradle runtime gate kapsamlarini kilitliyor.
+- `test/notification_service_guard_test.dart:84` exact alarm permission + fallback mode guard'i ekledi.
+- `test/features/premium/paywall_page_test.dart:98` premium purchase acknowledgement await davranisini dogruluyor.
+- `test/readme_operational_docs_test.dart:87` release signing, policy gate ve production endpoint dokumantasyonunu dogruluyor.
+- `test/features/settings/settings_page_test.dart:93`, `test/features/settings/settings_page_test.dart:114` share copy URL kaynagi metadata ile senkron kaliyor.
+
+### Dogrulama Sonucu
+- Repo kontrolu: remote `https://github.com/UmutAmal/Sirat--Nur.git`, branch `master`, calisma yolu `A:\Way of Allah\sirat_i_nur`.
+- `flutter doctor -v` exit 0; Android toolchain temiz. Chrome ve Visual Studio Android release icin kritik olmayan hedef uyarilari olarak kaldi.
+- Odak testler: SettingsPage `6/6` PASS; store/android/readme odak paketi `18/18` PASS.
+- Runtime config gate pozitif test: `:app:validateStoreReleaseRuntimeConfig` guvenli bicimli dart-defines ile PASS.
+- Runtime config gate negatif test: dart-defines olmadan `Store release runtime config is missing dart-defines` beklenen hatasini verdi.
+- Store script dry validation: `tool/build_store_appbundle.ps1 -NoBuild` guvenli bicimli degerlerle PASS.
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`596/596`).
+- Store script compile validation: `tool/build_store_appbundle.ps1` gecici non-production validation degerleriyle AAB derledi; bu artefact prod olarak isaretlenmedi.
+- Signing report: release variant `Config: release`, store `.secrets\siratinur-upload-keystore.jks`, alias `sirat-upload`, SHA1 `29:29:C0:C4:D0:5C:B4:0B:70:AE:84:CF:D3:72:FE:C8:1F:B4:C8:8D`.
+- `jarsigner -verify build\app\outputs\bundle\release\app-release.aab` PASS (`jar verified`).
+- `flutter pub outdated`: direct deps icinde yalniz `share_plus 13.0.0` latest gorunuyor ama resolvable column `12.0.2`; mevcut constraint seti en yeni cozulur surumde.
+- `git diff --check` PASS; yalniz Windows CRLF uyarilari var, whitespace hatasi yok.
+
+### Kalan Dis Operasyonlar
+- Gercek store artifact, fake degerlerle degil, operatorun gercek `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL` ve release keystore ile `tool/build_store_appbundle.ps1` calistirmasi ile uretilmeli. Gradle artik bu degerler olmadan direct release build'i reddediyor.
+- Quran audio cloud upload bu turda credential olmadan gercekten yapilmadi; mevcut `tool/upload_quran_audio_storage.dart` ve testleri upload planini koruyor. Gercek upload icin `SUPABASE_SERVICE_ROLE_KEY` gerekir; handover'da sahte tamamlandi diye isaretlenmedi.
+- Play Console/App Store formlari repoda kaynak dokuman olarak hazir; konsol ekranlarina manuel giris/yukleme dis operasyon olarak kalir.
+
+### Rollback Plani
+- Android release gate: `android/app/build.gradle.kts`, `android/key.properties.example`, `.gitignore`, `tool/build_store_appbundle.ps1`, `test/android_config_test.dart`, `test/store_readiness_test.dart` revert edilir.
+- Policy/docs: `docs/privacy_policy.md`, `store/`, README store bolumu ve metadata URL degisikligi revert edilir.
+- Runtime logic: `lib/core/services/adhan_scheduler_service.dart`, `lib/features/premium/premium_provider.dart`, `ios/Runner/Info.plist` ve ilgili testler revert edilir.
+- Revert gerekirse local `.secrets` ve `android/key.properties` commit disi kaldigi icin git revert onlari etkilemez; keystore elde tutulmali.
+
+### Sonraki Adim
+- Commit/push sonrasi raw GitHub privacy URL HEAD ile 200 kontrol edilecek. Sonraki dongude P1/P2 kalan store-ready dis operasyon listesi, Quran audio gercek storage manifest/upload durumu ve Play Console metadata ekranlari incelenecek.

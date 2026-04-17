@@ -8,6 +8,8 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Sirat I Nur</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Sirat-i Nur uses your location only while the app is open to calculate local prayer times, Qibla direction, and nearby Islamic places.</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

@@ -93,4 +93,28 @@ void main() {
       greaterThanOrEqualTo(5),
     );
   });
+
+  test(
+    'premium purchase acknowledgements are awaited from async stream work',
+    () {
+      final providerSource = File(
+        'lib/features/premium/premium_provider.dart',
+      ).readAsStringSync();
+
+      expect(providerSource, contains('unawaited(_onPurchaseUpdate'));
+      expect(providerSource, contains('Future<void> _onPurchaseUpdate'));
+      expect(
+        providerSource,
+        contains('await _iap.completePurchase(purchase);'),
+      );
+      final unawaitedAcknowledgements = providerSource
+          .split('\n')
+          .where(
+            (line) =>
+                line.contains('_iap.completePurchase(purchase);') &&
+                !line.trimLeft().startsWith('await '),
+          );
+      expect(unawaitedAcknowledgements, isEmpty);
+    },
+  );
 }

@@ -32,6 +32,10 @@ class AdhanSchedulerService {
         >();
     if (androidPL != null) {
       await androidPL.requestNotificationsPermission();
+      final canScheduleExact = await androidPL.canScheduleExactNotifications();
+      if (canScheduleExact == false) {
+        await androidPL.requestExactAlarmsPermission();
+      }
     }
 
     final iOSPL = _notifications
@@ -126,6 +130,7 @@ class AdhanSchedulerService {
     int prayerIndex = 0;
     final now = TimezoneUtils.nowForTimezone(timezoneName);
     final normalizedLanguageCode = languageCode.trim();
+    final androidScheduleMode = await _resolveAndroidScheduleMode();
 
     for (var entry in dailyPrayers.entries) {
       final notificationId = adhanNotificationId(dayIndex, prayerIndex);
@@ -164,8 +169,21 @@ class AdhanSchedulerService {
             presentSound: true,
           ),
         ),
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        androidScheduleMode: androidScheduleMode,
       );
     }
+  }
+
+  Future<AndroidScheduleMode> _resolveAndroidScheduleMode() async {
+    final androidPL = _notifications
+        .resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin
+        >();
+    final canScheduleExact =
+        await androidPL?.canScheduleExactNotifications() ?? true;
+
+    return canScheduleExact
+        ? AndroidScheduleMode.exactAllowWhileIdle
+        : AndroidScheduleMode.inexactAllowWhileIdle;
   }
 }
