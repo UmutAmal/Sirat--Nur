@@ -766,6 +766,6 @@
   "qiblaLocationRequiredTitle": "Lokacija je potrebna za Qibla",
   "qiblaLocationRequiredBody": "Postavite svoju stvarnu lokaciju prije korištenja Qibla kompasa kako bi se smjer mogao točno izračunati.",
   "placesDataSourceUnavailableTitle": "Podaci o mjestima nedostupni",
-  "placesDataSourceUnavailableBody": "Krajnja tačka podataka o potvrđenim mjestima još nije konfigurirana za ovu izgradnju. Postavite PLACES_OVERPAS_API_URL na odobreni proxy ili provajder prije nego što omogućite pretragu u blizini.",
+  "placesDataSourceUnavailableBody": "Krajnja tačka podataka o potvrđenim mjestima još nije konfigurirana za ovu izgradnju. Postavite PLACES_OVERPASS_API_URL na odobreni proxy ili provajder prije nego što omogućite pretragu u blizini.",
   "tafsirCacheUnavailable": "Provjereni tefsir još nije dostupan van mreže. Sinhronizirajte izvorni skup podataka tafsira prije pregledavanja."
 }

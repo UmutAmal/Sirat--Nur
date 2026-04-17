@@ -11507,3 +11507,49 @@
 ### Sonraki Adim
 - Adhan scheduler icinde gunluk notification id üretiminin past-prayer skip ile cakisip cakismadigi incelenecek.
 - Global city listesi/resolver masquerade guard testleri icin kaynakli coverage taramasi devam edecek.
+
+## 2026-04-17 TUR-280 — Preserve Places Config Token in Bosnian Locale
+
+### Yapilan Islem
+- Bosnian `placesDataSourceUnavailableBody` metnindeki teknik env/config token yazimi duzeltildi.
+- `PLACES_OVERPAS_API_URL` typo'su `PLACES_OVERPASS_API_URL` olarak restore edildi.
+- Tüm ARB dosyalari icin places data-source copy'sinin dogru teknik token'i korudugunu ve eski typo'yu tasimadigini kontrol eden regression testi eklendi.
+
+### Kanit
+- Duzeltilen ARB metni: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bs.arb:769`
+- Duzeltilen generated localization metni: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_bs.dart:1375`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2367`
+- Dogru token guard'i: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2383`
+- Eski typo guard'i: `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart:2389`
+
+### Neden Yapildi
+- Places veri kaynagi bilincli olarak runtime config/proxy uzerinden calismali; kullaniciya/operatore gosterilen teknik token yanlis yazilirsa kurulum hatasi uzar.
+- Bu fix dini veya lokasyon verisi uydurmadi; sadece mevcut teknik konfigurasyon token'inin tum locale'lerde korunmasini sagladi.
+- Regression testi tek locale typo'sunun tekrar sessizce uretilmesini engelliyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_bs.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_bs.dart`
+- `A:\Way of Allah\sirat_i_nur\test\arb_ui_localization_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format test\arb_ui_localization_test.dart` PASS
+- Odak test: `flutter test test\arb_ui_localization_test.dart` PASS (`67/67`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`493/493`)
+
+### Risk Degisimi
+- Places runtime config token'inin locale metninde bozulmasi riski: `10/25 -> 1/25`
+- Tek locale typo'sunun generated l10n ile tekrar yayilmasi riski: `8/25 -> 1/25`
+
+### Rollback Plani
+- `app_bs.arb` ve `app_localizations_bs.dart` icindeki token eski haline alinir.
+- `arb_ui_localization_test.dart` icindeki places technical config token testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Adhan scheduler icinde gunluk notification id uretiminin past-prayer skip ile cakisip cakismadigi incelenecek.
+- L10n technical/proper noun token taramasi, config/env anahtarlari ve provider adlari icin genisletilecek.

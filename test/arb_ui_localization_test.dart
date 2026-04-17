@@ -2364,6 +2364,35 @@ void main() {
       },
     );
 
+    test('places runtime copy preserves technical config tokens', () {
+      final arbFiles =
+          Directory('lib/l10n')
+              .listSync()
+              .whereType<File>()
+              .where((file) => file.path.endsWith('.arb'))
+              .where((file) => file.uri.pathSegments.last.startsWith('app_'))
+              .toList()
+            ..sort((a, b) => a.path.compareTo(b.path));
+
+      for (final file in arbFiles) {
+        final arb = _readArb(file.path);
+        final value = arb['placesDataSourceUnavailableBody'] as String;
+
+        expect(
+          value,
+          contains('PLACES_OVERPASS_API_URL'),
+          reason:
+              '${file.uri.pathSegments.last} changed the PLACES_OVERPASS_API_URL token',
+        );
+        expect(
+          value,
+          isNot(contains('PLACES_OVERPAS_API_URL')),
+          reason:
+              '${file.uri.pathSegments.last} keeps the misspelled PLACES_OVERPAS_API_URL token',
+        );
+      }
+    });
+
     test(
       'tafsir runtime copy stays single-line and preserves placeholders in all locales',
       () {
