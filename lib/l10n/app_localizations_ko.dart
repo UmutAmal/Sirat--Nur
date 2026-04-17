@@ -722,7 +722,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get offlineDownloadManager => '오프라인 다운로드 관리자';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => '대규모 오프라인 오디오 및 데이터세트 팩을 관리하세요.';
 
   @override
   String get freeStorage => '내부 장치 저장 공간을 확보하세요.';
@@ -795,13 +795,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get audioVoice => '오디오 음성';
 
   @override
-  String get audioVoiceMisharyAlafasy => '남성(미샤리 알라파시)';
+  String get audioVoiceMisharyAlafasy => '남성(Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => '남성(압둘바셋)';
+  String get audioVoiceAbdulBaset => '남성(Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => '말레(수다이스)';
+  String get audioVoiceSudais => '남성(Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

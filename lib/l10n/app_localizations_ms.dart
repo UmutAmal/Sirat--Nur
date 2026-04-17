@@ -733,7 +733,8 @@ class AppLocalizationsMs extends AppLocalizations {
   String get offlineDownloadManager => 'Pengurus Muat Turun Luar Talian';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Urus pek audio & set data luar talian yang besar.';
 
   @override
   String get freeStorage => 'Kosongkan storan peranti dalaman.';

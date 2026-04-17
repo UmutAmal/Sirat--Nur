@@ -733,7 +733,8 @@ class AppLocalizationsLt extends AppLocalizations {
   String get offlineDownloadManager => 'Atsisiuntimų tvarkyklė neprisijungus';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Tvarkykite didžiulius neprisijungus pasiekiamus garso ir duomenų rinkinių paketus.';
 
   @override
   String get freeStorage => 'Atlaisvinkite vidinę įrenginio saugyklą.';

@@ -734,7 +734,8 @@ class AppLocalizationsSk extends AppLocalizations {
   String get offlineDownloadManager => 'Správca sťahovania offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Spravujte masívne offline zvukové a dátové sady.';
 
   @override
   String get freeStorage => 'Uvoľnite interné úložisko zariadenia.';
@@ -1046,7 +1047,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Táto zostava stále závisí od neovereného externého zdroja hadísov. Prehliadanie hadísov zostane vypnuté, kým sa zdrojová množina údajov nesynchronizuje.';
+      'Táto zostava stále závisí od neovereného externého zdroja hadísov. Prehliadanie hadísov zostane vypnuté, kým sa nesynchronizuje zdrojová množina údajov.';
 
   @override
   String get paywallUnlockAll =>

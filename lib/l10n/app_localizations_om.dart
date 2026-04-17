@@ -739,10 +739,11 @@ class AppLocalizationsOm extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Paakkii sagalee & kuusaa deetaa sarara ala guddaa bulchuu.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Kuusaa meeshaa keessoo bilisa gochuu.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -809,7 +810,7 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Sagalee Sagalee';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

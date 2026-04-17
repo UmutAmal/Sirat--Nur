@@ -728,7 +728,8 @@ class AppLocalizationsHe extends AppLocalizations {
   String get offlineDownloadManager => 'מנהל הורדות לא מקוון';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'נהל חבילות אודיו ומערך נתונים מסיביות במצב לא מקוון.';
 
   @override
   String get freeStorage => 'פנה אחסון פנימי במכשיר.';
@@ -801,13 +802,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get audioVoice => 'קול אודיו';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'זכר (מישרי אלאפסי)';
+  String get audioVoiceMisharyAlafasy => 'זכר (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'זכר (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'זכר (סודאים)';
+  String get audioVoiceSudais => 'זכר (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

@@ -734,7 +734,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get offlineDownloadManager => 'Автономный менеджер загрузок';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Управляйте огромными пакетами аудио и наборов данных в автономном режиме.';
 
   @override
   String get freeStorage => 'Освободите внутреннюю память устройства.';
@@ -807,13 +808,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get audioVoice => 'Аудио Голос';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Мужской (Мишарий Алафаси)';
+  String get audioVoiceMisharyAlafasy => 'Мужчина (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Мале (АбдулБасет)';
+  String get audioVoiceAbdulBaset => 'Мужчина (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Мале (Судаис)';
+  String get audioVoiceSudais => 'Мужчина (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

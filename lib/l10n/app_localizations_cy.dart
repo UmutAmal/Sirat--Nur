@@ -735,10 +735,11 @@ class AppLocalizationsCy extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Rheoli pecynnau sain a set ddata enfawr all-lein.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Rhyddhau storfa ddyfais fewnol.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -805,16 +806,16 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Llais Clywedol';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Gwryw (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Male (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'Gwryw (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Male (Sudais)';
+  String get audioVoiceSudais => 'Gwryw (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

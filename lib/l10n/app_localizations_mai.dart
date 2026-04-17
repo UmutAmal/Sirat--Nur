@@ -1038,11 +1038,11 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'सत्यापित हदीस संग्रह एखन धरि उपलब्ध नहि अछि';
+      'Verified hadith collections are not available yet';
 
   @override
   String get hadithUnavailableBody =>
-      'ई बिल्ड एखनो एकटा असत्यापित बाहरी हदीस फीड पर निर्भर करैत अछि | हदीस ब्राउजिंग तखन धरि अक्षम रहैत अछि जा धरि कोनो स्रोत डाटासेट सिंक नहि भ\' जाइत अछि.';
+      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
 
   @override
   String get paywallUnlockAll =>

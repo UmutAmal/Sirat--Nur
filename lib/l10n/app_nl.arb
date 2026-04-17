@@ -190,7 +190,7 @@
   "premiumNotFound": "Premium-abonnement niet gevonden.",
   "premiumRefreshError": "Kan premium-abonnementsstatus niet vernieuwen: {error}",
   "offlineDownloadManager": "Offline downloadbeheer",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Beheer enorme offline audio- en datasetpakketten.",
   "freeStorage": "Maak interne apparaatopslag vrij.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

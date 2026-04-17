@@ -733,7 +733,8 @@ class AppLocalizationsFy extends AppLocalizations {
   String get offlineDownloadManager => 'Offline downloadbehearder';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Behear massale offline audio- en datasetpakketten.';
 
   @override
   String get freeStorage => 'Befrijje ynterne apparaat opslach.';
@@ -812,7 +813,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Man (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Man (Sûdais)';
+  String get audioVoiceSudais => 'Man (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

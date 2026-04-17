@@ -208,7 +208,7 @@
   "dbVersion": "DB Version: {version}",
   "dbPath": "Tsela: {path} .",
   "quranCheckFailed": "Tlhahlobo ya Quran e paletšwe: {error}",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Lentšu la Mamelwang",
   "fajrAngle": "Khutlo ya Fajr",
   "ishaAngle": "Isha Khutlo",
   "qiblaCalibration": "Go Lekanya ga Qibla",

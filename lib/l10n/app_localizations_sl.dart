@@ -733,7 +733,8 @@ class AppLocalizationsSl extends AppLocalizations {
   String get offlineDownloadManager => 'Upravitelj prenosov brez povezave';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Upravljajte ogromne pakete zvoka in podatkov brez povezave.';
 
   @override
   String get freeStorage => 'Sprostite notranji pomnilnik naprave.';
@@ -809,7 +810,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get audioVoiceMisharyAlafasy => 'Moški (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'moški (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'Moški (Abdul Basit)';
 
   @override
   String get audioVoiceSudais => 'Moški (Sudais)';

@@ -731,10 +731,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'จัดการชุดเสียงและชุดข้อมูลออฟไลน์ขนาดใหญ่';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'เพิ่มพื้นที่จัดเก็บข้อมูลภายในอุปกรณ์';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -801,16 +801,16 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'เสียง เสียง';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'ชาย (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Male (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'ชาย (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Male (Sudais)';
+  String get audioVoiceSudais => 'ชาย (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

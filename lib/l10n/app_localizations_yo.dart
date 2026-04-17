@@ -730,7 +730,8 @@ class AppLocalizationsYo extends AppLocalizations {
   String get offlineDownloadManager => 'Aisinipo Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Ṣakoso ohun afetigbọ aisinipo nla & awọn akopọ data.';
 
   @override
   String get freeStorage => 'Ṣe igbasilẹ ibi ipamọ ẹrọ inu.';

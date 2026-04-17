@@ -734,7 +734,8 @@ class AppLocalizationsSu extends AppLocalizations {
   String get offlineDownloadManager => 'Manajer Unduh Offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Atur bungkusan audio & set data offline anu ageung.';
 
   @override
   String get freeStorage => 'Ngosongkeun panyimpenan alat internal.';

@@ -810,7 +810,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Audio nga Boses';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

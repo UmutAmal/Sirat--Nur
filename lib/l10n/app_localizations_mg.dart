@@ -736,7 +736,8 @@ class AppLocalizationsMg extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Tantano ny fonosan-peo sy angon-drakitra an-tserasera goavana.';
 
   @override
   String get freeStorage => 'Afaho ny fitahirizana fitaovana anatiny.';

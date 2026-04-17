@@ -736,7 +736,8 @@ class AppLocalizationsEl extends AppLocalizations {
   String get offlineDownloadManager => 'Διαχειριστής λήψεων εκτός σύνδεσης';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Διαχειριστείτε τεράστια πακέτα ήχου και δεδομένων εκτός σύνδεσης.';
 
   @override
   String get freeStorage =>
@@ -816,7 +817,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Άντρας (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Αρσενικό (Sudais)';
+  String get audioVoiceSudais => 'Άντρας (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

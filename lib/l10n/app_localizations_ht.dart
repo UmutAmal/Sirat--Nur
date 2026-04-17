@@ -731,7 +731,7 @@ class AppLocalizationsHt extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'Jere gwo pake odyo ak done ki pa konekte.';
 
   @override
   String get freeStorage => 'Libere depo aparèy entèn yo.';

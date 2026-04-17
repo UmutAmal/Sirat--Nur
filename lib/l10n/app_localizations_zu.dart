@@ -735,7 +735,8 @@ class AppLocalizationsZu extends AppLocalizations {
       'Umphathi Wokulanda Okungaxhunyiwe ku-inthanethi';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Phatha amaphekhi amakhulu omsindo ongaxhunyiwe ku-inthanethi namasethi wedatha.';
 
   @override
   String get freeStorage => 'Khulula isitoreji sedivayisi yangaphakathi.';
@@ -1047,7 +1048,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Lokhu kwakhiwa kusancike kokuphakelayo kwe-hadith yangaphandle engaqinisekisiwe. Ukuphequlula kwe-Hadith kuhlala kuvaliwe kuze kube yilapho isethi yedatha etholakalayo ivunyelaniswa.';
+      'Lesi sakhiwo sisancike kokuphakelayo kwe-hadith yangaphandle engaqinisekisiwe. Ukuphequlula kwe-Hadith kuhlala kuvaliwe kuze kube yilapho isethi yedatha etholakalayo ivunyelaniswa.';
 
   @override
   String get paywallUnlockAll => 'Vula zonke izici zohambo lwakho lokomoya';

@@ -736,7 +736,8 @@ class AppLocalizationsMt extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Immaniġġja pakketti massivi ta\' awdjo u dataset offline.';
 
   @override
   String get freeStorage => 'Illibera l-ħażna interna tal-apparat.';

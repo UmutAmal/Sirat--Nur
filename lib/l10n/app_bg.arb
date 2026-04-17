@@ -190,7 +190,7 @@
   "premiumNotFound": "Премиум абонаментът не е намерен.",
   "premiumRefreshError": "Не можа да се опресни състоянието на премиум абонамента: {error}",
   "offlineDownloadManager": "Офлайн мениджър за изтегляне",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Управлявайте масивни офлайн пакети за аудио и набор от данни.",
   "freeStorage": "Освободете вътрешната памет на устройството.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

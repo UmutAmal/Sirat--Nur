@@ -723,7 +723,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get offlineDownloadManager => 'オフライン ダウンロード マネージャー';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => '大規模なオフライン オーディオおよびデータセット パックを管理します。';
 
   @override
   String get freeStorage => '内部デバイスのストレージを解放します。';
@@ -796,13 +796,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get audioVoice => 'オーディオ音声';
 
   @override
-  String get audioVoiceMisharyAlafasy => '男性（ミシャリー・アラファシー）';
+  String get audioVoiceMisharyAlafasy => '男性 (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => '男性 (アブドゥルバセット)';
+  String get audioVoiceAbdulBaset => '男性 (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => '男性（スーダイス）';
+  String get audioVoiceSudais => '男性 (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

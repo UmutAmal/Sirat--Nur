@@ -809,7 +809,7 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Lentšu la Mamelwang';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

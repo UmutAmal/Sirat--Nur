@@ -190,7 +190,7 @@
   "premiumNotFound": "Assinatura premium não encontrada.",
   "premiumRefreshError": "Não foi possível atualizar o status da assinatura premium: {error}",
   "offlineDownloadManager": "Gerenciador de download off-line",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Gerencie enormes pacotes de áudio e conjuntos de dados off-line.",
   "freeStorage": "Libere armazenamento interno do dispositivo.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

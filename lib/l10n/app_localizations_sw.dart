@@ -733,7 +733,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get offlineDownloadManager => 'Kidhibiti cha Upakuaji Nje ya Mtandao';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Dhibiti vifurushi vikubwa vya sauti nje ya mtandao na seti ya data.';
 
   @override
   String get freeStorage => 'Futa hifadhi ya ndani ya kifaa.';

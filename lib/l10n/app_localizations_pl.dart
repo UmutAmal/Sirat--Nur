@@ -734,7 +734,8 @@ class AppLocalizationsPl extends AppLocalizations {
   String get offlineDownloadManager => 'Menedżer pobierania offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Zarządzaj ogromnymi pakietami audio i zestawów danych w trybie offline.';
 
   @override
   String get freeStorage => 'Zwolnij pamięć wewnętrzną urządzenia.';

@@ -730,7 +730,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get offlineDownloadManager => 'آف لائن ڊائون لوڊ مئنيجر';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'منظم ڪريو وڏي آف لائن آڊيو ۽ ڊيٽا سيٽ پيڪ.';
 
   @override
   String get freeStorage => 'اندروني ڊوائيس اسٽوريج کي خالي ڪريو.';
@@ -803,13 +803,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get audioVoice => 'آڊيو آواز';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'مرد (مشري الافسي)';
+  String get audioVoiceMisharyAlafasy => 'مرد (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'مرد (عبدالباسط)';
+  String get audioVoiceAbdulBaset => 'مرد (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'مرد (سوديس)';
+  String get audioVoiceSudais => 'مرد (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

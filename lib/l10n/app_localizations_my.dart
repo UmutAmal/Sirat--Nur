@@ -740,7 +740,8 @@ class AppLocalizationsMy extends AppLocalizations {
   String get offlineDownloadManager => 'အော့ဖ်လိုင်းဒေါင်းလုဒ်မန်နေဂျာ';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'အော့ဖ်လိုင်းအသံနှင့် ဒေတာအစုံအလင်များကို စီမံပါ။';
 
   @override
   String get freeStorage => 'စက်တွင်း သိုလှောင်ခန်းကို အခမဲ့လုပ်ပါ။';
@@ -813,13 +814,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get audioVoice => 'အသံအသံ';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'ယောကျာ်းလေး (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'အမျိုးသား (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'ယောကျာ်းလေး (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'အမျိုးသား (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'ယောကျာ်းလေး (Sudais)';
+  String get audioVoiceSudais => 'အမျိုးသား (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

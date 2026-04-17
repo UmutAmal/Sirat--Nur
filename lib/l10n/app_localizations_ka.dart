@@ -733,7 +733,8 @@ class AppLocalizationsKa extends AppLocalizations {
   String get offlineDownloadManager => 'ხაზგარეშე ჩამოტვირთვის მენეჯერი';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'მართეთ მასიური ხაზგარეშე აუდიო და მონაცემთა ნაკრები.';
 
   @override
   String get freeStorage => 'გაათავისუფლეთ მოწყობილობის შიდა მეხსიერება.';
@@ -806,13 +807,13 @@ class AppLocalizationsKa extends AppLocalizations {
   String get audioVoice => 'აუდიო ხმა';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'მამაკაცი (მიშარი ალაფასი)';
+  String get audioVoiceMisharyAlafasy => 'მამაკაცი (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'მამაკაცი (აბდულბასეტი)';
+  String get audioVoiceAbdulBaset => 'მამაკაცი (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'მამაკაცი (სუდაისი)';
+  String get audioVoiceSudais => 'მამაკაცი (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

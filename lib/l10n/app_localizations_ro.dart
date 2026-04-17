@@ -737,7 +737,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get offlineDownloadManager => 'Manager de descărcare offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Gestionați pachete masive de sunet și set de date offline.';
 
   @override
   String get freeStorage => 'Eliberați stocarea internă a dispozitivului.';
@@ -816,7 +817,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Bărbat (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Masculin (Sudais)';
+  String get audioVoiceSudais => 'Bărbat (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

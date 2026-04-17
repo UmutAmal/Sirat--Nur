@@ -735,10 +735,11 @@ class AppLocalizationsQu extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Hatun mana tinkisqa uyarina & willay huñu packs kamachiy.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Ukhu dispositivo waqaychayta kacharichiy.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -805,7 +806,7 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Uyarinapaq Kunka';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

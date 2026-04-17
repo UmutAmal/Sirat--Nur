@@ -732,7 +732,8 @@ class AppLocalizationsAf extends AppLocalizations {
   String get offlineDownloadManager => 'Vanlyn aflaaibestuurder';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Bestuur massiewe vanlyn oudio- en datastelpakkette.';
 
   @override
   String get freeStorage => 'Maak interne toestelberging vry.';
@@ -1044,7 +1045,7 @@ class AppLocalizationsAf extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Hierdie bou is steeds afhanklik van \'n ongeverifieerde eksterne hadith-feed. Hadith-blaai bly gedeaktiveer totdat \'n brondatastel gesinkroniseer word.';
+      'Hierdie bou is steeds afhanklik van \'n ongeverifieerde eksterne hadith-voer. Hadith-blaai bly gedeaktiveer totdat \'n brondatastel gesinkroniseer word.';
 
   @override
   String get paywallUnlockAll =>

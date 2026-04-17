@@ -733,7 +733,8 @@ class AppLocalizationsIs extends AppLocalizations {
   String get offlineDownloadManager => 'Ótengdur niðurhalsstjóri';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Hafa umsjón með stórum ótengdum hljóð- og gagnapökkum.';
 
   @override
   String get freeStorage => 'Losaðu um geymslurými tækisins.';

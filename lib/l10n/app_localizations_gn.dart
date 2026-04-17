@@ -736,10 +736,11 @@ class AppLocalizationsGn extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Emohenda audio & conjunto de datos paquete masivo offline rehegua.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Emosãso tembipuru’i ryru ryepypegua.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -806,7 +807,7 @@ class AppLocalizationsGn extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Ñe’ẽ Audio rehegua';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

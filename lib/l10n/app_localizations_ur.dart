@@ -731,7 +731,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get offlineDownloadManager => 'آف لائن ڈاؤن لوڈ مینیجر';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'بڑے پیمانے پر آف لائن آڈیو اور ڈیٹاسیٹ پیک کا نظم کریں۔';
 
   @override
   String get freeStorage => 'اندرونی ڈیوائس اسٹوریج کو خالی کریں۔';
@@ -804,13 +805,13 @@ class AppLocalizationsUr extends AppLocalizations {
   String get audioVoice => 'آڈیو وائس';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'مرد (مشیری الفاسی)';
+  String get audioVoiceMisharyAlafasy => 'مرد (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'مرد (عبدالباسط)';
+  String get audioVoiceAbdulBaset => 'مرد (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'مرد (سدیس)';
+  String get audioVoiceSudais => 'مرد (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

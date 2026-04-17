@@ -734,7 +734,8 @@ class AppLocalizationsCo extends AppLocalizations {
   String get offlineDownloadManager => 'Manager di scaricamentu offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Gestite pacchetti massivi di audio è dataset offline.';
 
   @override
   String get freeStorage => 'Libera u almacenamentu internu di u dispositivu.';
@@ -807,7 +808,7 @@ class AppLocalizationsCo extends AppLocalizations {
   String get audioVoice => 'Voce audio';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Masculinu (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Maschile (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'Maschile (Abdul Basit)';

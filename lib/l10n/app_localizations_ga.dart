@@ -733,10 +733,11 @@ class AppLocalizationsGa extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Bainistigh pacaí ollmhóra fuaime & tacair as líne.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Íoslódáil saor in aisce gléas stórála inmheánach.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -803,16 +804,16 @@ class AppLocalizationsGa extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Guth Fuaime';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Fir (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Male (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'Fir (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Male (Sudais)';
+  String get audioVoiceSudais => 'Fir (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

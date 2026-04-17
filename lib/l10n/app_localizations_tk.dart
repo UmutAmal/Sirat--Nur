@@ -732,7 +732,8 @@ class AppLocalizationsTk extends AppLocalizations {
   String get offlineDownloadManager => 'Oflayn ýükleme dolandyryjysy';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Uly göwrümli awtonom ses we maglumat toplumlaryny dolandyryň.';
 
   @override
   String get freeStorage => 'Içerki enjam saklanyşyny boşadyň.';
@@ -805,7 +806,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get audioVoice => 'Ses sesi';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Erkek (Mişary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Erkek (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'Erkek (Abdul Basit)';

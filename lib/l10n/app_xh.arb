@@ -190,7 +190,7 @@
   "premiumNotFound": "Umrhumo wePrimiyamu awufunyenwanga.",
   "premiumRefreshError": "Ayikwazanga ukuvuselela ubume bomrhumo weprimiyamu: {error}",
   "offlineDownloadManager": "Umphathi wokukhuphela ngaphandle kweintanethi",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Lawula iaudiyo enkulu engaxhunyiwe kwi-intanethi kunye neepakethi zedatha.",
   "freeStorage": "Khulula ugcino lwesixhobo sangaphakathi.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

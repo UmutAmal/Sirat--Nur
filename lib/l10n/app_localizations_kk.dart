@@ -731,7 +731,8 @@ class AppLocalizationsKk extends AppLocalizations {
   String get offlineDownloadManager => 'Офлайн жүктеу менеджері';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Аудио және деректер жиынының ауқымды офлайн пакеттерін басқарыңыз.';
 
   @override
   String get freeStorage => 'Құрылғының ішкі жадын босатыңыз.';
@@ -804,13 +805,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get audioVoice => 'Аудио дауыс';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Ер (Мишари Алафаси)';
+  String get audioVoiceMisharyAlafasy => 'Ер (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'Ер (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Ер (Судайс)';
+  String get audioVoiceSudais => 'Ер (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

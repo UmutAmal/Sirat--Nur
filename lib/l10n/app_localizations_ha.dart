@@ -733,7 +733,8 @@ class AppLocalizationsHa extends AppLocalizations {
   String get offlineDownloadManager => 'Manajan Zazzagewa Ba layi';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Sarrafa manyan fakitin sauti na layi da saitin bayanai.';
 
   @override
   String get freeStorage => 'Haɓaka ma\'ajin na\'urar ciki.';

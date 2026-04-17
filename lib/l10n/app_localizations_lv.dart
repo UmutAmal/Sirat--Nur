@@ -735,7 +735,8 @@ class AppLocalizationsLv extends AppLocalizations {
   String get offlineDownloadManager => 'Bezsaistes lejupielādes pārvaldnieks';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Pārvaldiet apjomīgas bezsaistes audio un datu kopu pakotnes.';
 
   @override
   String get freeStorage => 'Atbrīvojiet ierīces iekšējo krātuvi.';

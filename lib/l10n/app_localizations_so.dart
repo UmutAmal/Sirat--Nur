@@ -734,7 +734,8 @@ class AppLocalizationsSo extends AppLocalizations {
   String get offlineDownloadManager => 'Maamulaha soo dejinta khadka tooska ah';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Maamul maqal-la\'aanta qadla\'aanta aadka u weyn & xidhmooyin kaydinta xogta';
 
   @override
   String get freeStorage => 'Soo deji kaydinta qalabka gudaha';

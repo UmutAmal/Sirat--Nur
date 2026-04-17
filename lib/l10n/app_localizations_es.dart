@@ -737,7 +737,8 @@ class AppLocalizationsEs extends AppLocalizations {
       'Administrador de descargas sin conexión';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Administre paquetes masivos de conjuntos de datos y audio sin conexión.';
 
   @override
   String get freeStorage => 'Libere el almacenamiento interno del dispositivo.';
@@ -810,13 +811,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get audioVoice => 'Voz de audio';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Hombre (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Masculino (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Hombre (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'Masculino (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Hombre (Sudais)';
+  String get audioVoiceSudais => 'Masculino (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

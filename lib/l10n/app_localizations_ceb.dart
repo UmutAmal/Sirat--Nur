@@ -737,7 +737,8 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get offlineDownloadManager => 'Offline nga Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Pagdumala sa daghang mga offline audio & dataset pack.';
 
   @override
   String get freeStorage => 'Libre ang pagtipig sa internal nga aparato.';

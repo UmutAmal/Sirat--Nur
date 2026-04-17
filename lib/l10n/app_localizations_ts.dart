@@ -738,10 +738,12 @@ class AppLocalizationsTs extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Lawula tiphakiti ta mpfumawulo lowukulu wa le handle ka inthanete & dataset.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage =>
+      'Ntshunxa vuhlayiselo bya switirhisiwa swa le ndzeni.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -808,7 +810,7 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Rito ra mpfumawulo';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1049,7 +1051,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Ku aka loku ka ha titshege hi ku phameriwa ka hadith ya le handle leyi nga tiyisisiwangiki. Ku pfula ka Hadith ku tshama ku nga tirhi ku kondza dataset leyi nga na xihlovo yi fambisana.';
+      'Ku aka loku ka ha titshege hi ku phameriwa ka hadith ya le handle leyi nga tiyisisiwangiki. Ku pfula ka Hadith ku tshama ku nga tirhi ku kondza dataset leyi humaka eka xihlovo yi fambisana.';
 
   @override
   String get paywallUnlockAll =>

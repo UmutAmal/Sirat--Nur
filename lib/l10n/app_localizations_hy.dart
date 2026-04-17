@@ -736,7 +736,8 @@ class AppLocalizationsHy extends AppLocalizations {
   String get offlineDownloadManager => 'Անցանց ներբեռնման կառավարիչ';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Կառավարեք հսկայական անցանց աուդիո և տվյալների հավաքածուներ:';
 
   @override
   String get freeStorage => 'Ազատեք սարքի ներքին հիշողությունը:';
@@ -809,13 +810,13 @@ class AppLocalizationsHy extends AppLocalizations {
   String get audioVoice => 'Աուդիո Ձայն';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Արական (Միշարի Ալաֆասի)';
+  String get audioVoiceMisharyAlafasy => 'Տղամարդ (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Արական (ԱբդուլԲասեթ)';
+  String get audioVoiceAbdulBaset => 'Տղամարդ (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Արական (Սուդայ)';
+  String get audioVoiceSudais => 'Տղամարդ (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

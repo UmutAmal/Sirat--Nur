@@ -734,7 +734,8 @@ class AppLocalizationsHu extends AppLocalizations {
   String get offlineDownloadManager => 'Offline letöltéskezelő';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Hatalmas offline hang- és adatkészlet-csomagok kezelése.';
 
   @override
   String get freeStorage => 'Szabadítson fel belső eszköztárhelyet.';
@@ -813,7 +814,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Férfi (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'férfi (szudai)';
+  String get audioVoiceSudais => 'Férfi (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

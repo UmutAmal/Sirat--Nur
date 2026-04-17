@@ -735,7 +735,8 @@ class AppLocalizationsNy extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Konzani mapaketi akuluakulu omvera osalumikizidwa pa intaneti ndi ma dataset.';
 
   @override
   String get freeStorage => 'Tsegulani zosungira mkati mwa chipangizo.';
@@ -808,13 +809,13 @@ class AppLocalizationsNy extends AppLocalizations {
   String get audioVoice => 'Audio Voice';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Amuna (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Male (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'Amuna (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Mwamuna (Sudais)';
+  String get audioVoiceSudais => 'Amuna (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';
@@ -1042,7 +1043,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Zopereka zotsimikizika za hadith sizinapezekebe';
+      'Zopereka zotsimikizika za hadith sizinapezeke';
 
   @override
   String get hadithUnavailableBody =>

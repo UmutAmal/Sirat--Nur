@@ -190,7 +190,7 @@
   "premiumNotFound": "Không tìm thấy đăng ký trả phí.",
   "premiumRefreshError": "Không thể làm mới trạng thái đăng ký trả phí: {error}",
   "offlineDownloadManager": "Trình quản lý tải xuống ngoại tuyến",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Quản lý gói dữ liệu và âm thanh ngoại tuyến lớn.",
   "freeStorage": "Giải phóng bộ nhớ trong của thiết bị.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

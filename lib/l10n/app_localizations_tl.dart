@@ -740,7 +740,8 @@ class AppLocalizationsTl extends AppLocalizations {
   String get offlineDownloadManager => 'Offline na Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Pamahalaan ang napakalaking offline na audio at mga dataset pack.';
 
   @override
   String get freeStorage => 'Magbakante ng panloob na storage ng device.';
@@ -1052,7 +1053,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Nakadepende pa rin ang build na ito sa isang hindi na-verify na external na feed ng hadith. Mananatiling naka-disable ang pag-browse sa Hadith hanggang sa ma-sync ang isang sourced dataset.';
+      'Nakadepende pa rin ang build na ito sa isang hindi na-verify na external na feed ng hadith. Nananatiling naka-disable ang pag-browse sa Hadith hanggang sa ma-sync ang isang sourced dataset.';
 
   @override
   String get paywallUnlockAll =>

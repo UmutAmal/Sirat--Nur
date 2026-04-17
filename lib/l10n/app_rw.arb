@@ -190,7 +190,7 @@
   "premiumNotFound": "Kwiyandikisha kwa premium ntabwo byabonetse.",
   "premiumRefreshError": "Ntushobora kuvugurura status yo kwiyandikisha: {error}",
   "offlineDownloadManager": "Umuyobozi wo gukuramo Offline",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Gucunga amajwi manini ya interineti amajwi & dataset.",
   "freeStorage": "Kuraho ububiko bwimbere.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

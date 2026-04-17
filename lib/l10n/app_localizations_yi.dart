@@ -732,7 +732,8 @@ class AppLocalizationsYi extends AppLocalizations {
   String get offlineDownloadManager => 'אָפפלינע דאַונלאָוד מאַנאַגער';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'פירן מאַסיוו אָפפלינע אַודיאָ און דאַטאַסעט פּאַקס.';
 
   @override
   String get freeStorage => 'פריי ינערלעך מיטל סטאָרידזש.';
@@ -805,13 +806,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get audioVoice => 'אַודיאָ קול';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'זכר (מישאַרי אַלאַפאַסי)';
+  String get audioVoiceMisharyAlafasy => 'זכר (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'זכר (אַבדולבאַסעט)';
+  String get audioVoiceAbdulBaset => 'זכר (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'זכר (סודאַיס)';
+  String get audioVoiceSudais => 'זכר (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';
@@ -1043,7 +1044,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'דעם בויען דעפּענדס נאָך אויף אַן אַנוועראַפייד פונדרויסנדיק האַדיטה פיטער. Hadith בראַוזינג סטייז פאַרקריפּלט ביז אַ סאָורסעד דאַטאַסעט איז סינסעד.';
+      'דעם בויען נאָך דעפּענדס אויף אַן אַנוועראַפייד פונדרויסנדיק האַדיטה פיטער. Hadith בראַוזינג סטייז פאַרקריפּלט ביז אַ סאָורסעד דאַטאַסעט איז סינסעד.';
 
   @override
   String get paywallUnlockAll =>

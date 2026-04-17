@@ -734,7 +734,8 @@ class AppLocalizationsSq extends AppLocalizations {
   String get offlineDownloadManager => 'Menaxheri i shkarkimit jashtë linje';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Menaxho paketat masive të audios dhe të të dhënave jashtë linje.';
 
   @override
   String get freeStorage => 'Lironi hapësirën e brendshme të pajisjes.';

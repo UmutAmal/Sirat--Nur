@@ -731,7 +731,8 @@ class AppLocalizationsEu extends AppLocalizations {
   String get offlineDownloadManager => 'Lineaz kanpoko deskarga kudeatzailea';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Kudeatu lineaz kanpoko audio eta datu multzo masiboak.';
 
   @override
   String get freeStorage => 'Askatu gailuaren barneko biltegia.';
@@ -810,7 +811,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Gizonezkoa (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Gizonezkoa (Sudaia)';
+  String get audioVoiceSudais => 'Gizonezkoa (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

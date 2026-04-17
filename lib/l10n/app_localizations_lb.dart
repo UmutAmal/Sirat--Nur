@@ -734,7 +734,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'Verwalte massiv offline Audio & Dataset Packs.';
 
   @override
   String get freeStorage => 'Befreit intern Gerätspäicherung.';
@@ -807,7 +807,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get audioVoice => 'Audio Stëmm';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Mann (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Männlech (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'Männlech (Abdul Basit)';

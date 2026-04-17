@@ -802,7 +802,7 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Odio Voys';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

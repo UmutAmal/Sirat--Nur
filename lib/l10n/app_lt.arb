@@ -190,7 +190,7 @@
   "premiumNotFound": "Premium prenumerata nerasta.",
   "premiumRefreshError": "Nepavyko atnaujinti aukščiausios kokybės prenumeratos būsenos: {error}",
   "offlineDownloadManager": "Atsisiuntimų tvarkyklė neprisijungus",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Tvarkykite didžiulius neprisijungus pasiekiamus garso ir duomenų rinkinių paketus.",
   "freeStorage": "Atlaisvinkite vidinę įrenginio saugyklą.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

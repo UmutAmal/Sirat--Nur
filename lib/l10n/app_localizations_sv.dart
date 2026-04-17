@@ -731,7 +731,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'Hantera massiva offlineljud- och datapaket.';
 
   @override
   String get freeStorage => 'Frigör intern enhetslagring.';
@@ -810,7 +810,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Man (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Man (sudais)';
+  String get audioVoiceSudais => 'Man (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';
@@ -1043,7 +1043,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Denna konstruktion beror fortfarande på ett overifierat externt hadithflöde. Hadith-surfning förblir inaktiverad tills en källdatauppsättning synkroniseras.';
+      'Denna konstruktion beror fortfarande på ett overifierat externt hadith-flöde. Hadith-surfning förblir inaktiverad tills en källdatauppsättning synkroniseras.';
 
   @override
   String get paywallUnlockAll => 'Lås upp alla funktioner för din andliga resa';

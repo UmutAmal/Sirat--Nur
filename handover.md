@@ -12352,3 +12352,63 @@
 
 ### Sonraki Adim
 - Places provider sozlesmesinden sonra siradaki tarama, hardcoded dini/teknik icerik ve TODO/FIXME/stub kalintilarini yeniden risk skoruna baglayip en yuksek somut bulguyu kapatmak olacak.
+
+## 2026-04-17 TUR-295 — Settings Audio And Hadith L10n Debt Hardening
+
+### Yapilan Islem
+- Settings/audio voice, storage management ve hadis honest-state metinleri icin kalan yuksek gorunurluklu ceviri borcu azaltildi.
+- `manageDatasets`, `freeStorage`, `audioVoice`, `audioVoiceMisharyAlafasy`, `audioVoiceAbdulBaset`, `audioVoiceSudais`, `hadithUnavailableTitle`, `hadithUnavailableBody` anahtarlari tum ARB setinde tekrar işlendi.
+- Reciter isimleri artik ceviri aracinda teknik token olarak korunuyor: `Mishary Alafasy`, `Abdul Basit`, `Sudais`.
+- Hadis unavailable basligi/body ve storage management copy tek satir guard'ina alindi; multiline batch bozulmasi testle yakalandi ve guvenli fallback'e donduruldu.
+- Generated l10n siniflari `flutter gen-l10n` ile yenilendi.
+
+### Kanit
+- Reciter token guard'i: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:844`
+- `manageDatasets` single-line guard'i: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:741`
+- Hadis unavailable single-line guard'i: `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart:827`
+- L10n debt regresyon testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:215`
+- Multiline hadis guard testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:774`
+- Reciter token regresyon testi: `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart:818`
+- Ornek basarili locale cevirisi: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_am.arb:193`, `A:\Way of Allah\sirat_i_nur\lib\l10n\app_am.arb:527`, `A:\Way of Allah\sirat_i_nur\lib\l10n\app_am.arb:758`
+- Belirsiz dusuk kaynak locale icin uydurma yapmadan guvenli EN fallback: `A:\Way of Allah\sirat_i_nur\lib\l10n\app_ay.arb:527`
+
+### Neden Yapildi
+- Yeni taramada 8 yuksek gorunurluklu anahtar icin `same-as-English` borcu 763 olarak olculdu; missing/empty ve placeholder mismatch yoktu.
+- Bu metinler settings, downloads/storage ve hadis ekrani gibi kullanicinin dogrudan gordugu yuzeylerde yer aliyor.
+- Hadis copy'si dini icerik degil, fakat verified dataset hazir degilken kullaniciya durumu durust anlatan urun metni; bu nedenle uydurma dini icerik uretmeden locale copy iyilestirildi.
+- Ilk batch sonrasi `app_ay.arb` hadis basliginda newline urettigi icin arac single-line guard'i genisletildi; belirsiz cikti guvenli EN fallback'e alinip testle kilitlendi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\translate_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\translate_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_*.arb`
+- `A:\Way of Allah\sirat_i_nur\lib\l10n\app_localizations_*.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Secilen 8 anahtar icin l10n debt raporu: `same-as-English 763 -> 590`, `missing/empty=0`, `placeholder mismatch=0`.
+- Desteklenen dillerde settings/audio/hadith unavailable copy daha fazla yerellestirildi.
+- Reciter isimlerinin ceviri tarafindan bozularak yanlis kisiyi isaret etmesi engellendi.
+- Hadis unavailable metinlerinde satir kirigi veya batch debris olusursa testler artik yakaliyor.
+- Belirsiz/az desteklenen locale'lerde uydurma yerine bilincli EN fallback korunuyor.
+
+### Test Sonucu
+- `dart run tool\translate_arb_keys.dart --report manageDatasets freeStorage audioVoice audioVoiceMisharyAlafasy audioVoiceAbdulBaset audioVoiceSudais hadithUnavailableTitle hadithUnavailableBody` PASS (`same-as-English=590`, `missing/empty=0`, `placeholder mismatch=0`)
+- Odak test: `flutter test test\arb_coverage_test.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_religious_localization_test.dart` PASS (`114/114`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`512/512`)
+
+### Risk Degisimi
+- Settings/audio/hadith visible copy'nin yaygin English fallback riski: `16/25 -> 10/25`
+- Reciter isimlerinin ceviri sirasinda bozulmasi riski: `12/25 -> 1/25`
+- Hadis unavailable copy'sinde multiline/batch debris riski: `12/25 -> 1/25`
+
+### Rollback Plani
+- Bu turda degisen ARB ve generated l10n dosyalarindaki ilgili 8 anahtar onceki degerlerine dondurulur.
+- `tool\translate_arb_keys.dart` icindeki reciter token guard'i ve single-line key ekleri geri alinir.
+- `test\translate_arb_keys_test.dart` icindeki TUR-295 regresyonlari kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Kalan l10n borcu icin anahtar bazli tarama surdurulecek; ayni zamanda URL/audio/content pipeline'larinda dis kaynak, false-success ve sessiz fallback riskleri tekrar skorlanacak.

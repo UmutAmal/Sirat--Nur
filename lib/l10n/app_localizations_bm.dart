@@ -732,10 +732,11 @@ class AppLocalizationsBm extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Aw bɛ odio & dataset packs belebelebaw ɲɛnabɔ minnu tɛ ɛntɛrinɛti kan.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Aw bɛ minɛn kɔnɔna marayɔrɔw hɔrɔnya.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -802,7 +803,7 @@ class AppLocalizationsBm extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Kumakan min bɛ fɔ';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1043,7 +1044,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'O jɔli in bɛ da hali bi kɛnɛma hadisi balo dɔ kan min ma sɛgɛsɛgɛ. Hadisiw ɲinini bɛ to ka baara kɛ fo ka se kunnafonisɛbɛn sɔrɔyɔrɔ dɔ ka ɲɔgɔn sɔrɔ.';
+      'O jɔli in bɛ tali Kɛ hali bi kɛnɛma hadisi balo dɔ la min ma Sɛgɛsɛgɛ. Hadisiw ɲinini bɛ to ka baara kɛ fo ka se kunnafonisɛbɛn sɔrɔyɔrɔ dɔ ma min bɛ ɲɔgɔn sɔrɔ.';
 
   @override
   String get paywallUnlockAll =>

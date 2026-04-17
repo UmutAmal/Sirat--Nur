@@ -724,7 +724,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get offlineDownloadManager => 'ካብ መስመር ወጻኢ ዳውንሎድ ማናጀር';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'ዓበይቲ ናይ ኦፍላይን ድምጺ & ዳታሴት ፓክስ ምምሕዳር።';
 
   @override
   String get freeStorage => 'ውሽጣዊ መኽዘን መሳርሒ ነጻ ምግባር።';
@@ -1029,11 +1029,12 @@ class AppLocalizationsTi extends AppLocalizations {
   String get hadithSourcePending => 'ዝተረጋገጸ ምንጪ ኣብ ምጽባይ ይርከብ።';
 
   @override
-  String get hadithUnavailableTitle => 'ዝተረጋገጹ እኩባት ሓዲስ ገና ኣይተረኽበን።';
+  String get hadithUnavailableTitle =>
+      'Verified hadith collections are not available yet';
 
   @override
   String get hadithUnavailableBody =>
-      'እዚ ህንጸት ሕጂ ውን ኣብ ዘይተረጋገጸ ናይ ደገ ሓዲስ መግቢ እዩ ዝምርኮስ። ሓዲስ ምድህሳስ ክሳብ ምንጪ ዳታሴት ዝመሳሰል ስንኩል ኮይኑ ይጸንሕ።';
+      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
 
   @override
   String get paywallUnlockAll => 'ንመንፈሳዊ ጉዕዞኻ ዝኸውን ኩሉ ባህርያት ክፈት';

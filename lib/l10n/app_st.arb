@@ -190,7 +190,7 @@
   "premiumNotFound": "Ngoliso ea Premium ha e fumanehe.",
   "premiumRefreshError": "E hlolehile ho nchafatsa boingoliso ba premium: {error}",
   "offlineDownloadManager": "Offline Download Manager",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Laola liphutheloana tse kholo tsa molumo ntle le inthanete.",
   "freeStorage": "Lokolla polokelo ea sesebelisoa sa kahare.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

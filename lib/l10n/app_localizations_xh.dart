@@ -735,7 +735,8 @@ class AppLocalizationsXh extends AppLocalizations {
       'Umphathi wokukhuphela ngaphandle kweintanethi';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Lawula iaudiyo enkulu engaxhunyiwe kwi-intanethi kunye neepakethi zedatha.';
 
   @override
   String get freeStorage => 'Khulula ugcino lwesixhobo sangaphakathi.';

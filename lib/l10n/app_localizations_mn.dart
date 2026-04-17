@@ -734,7 +734,8 @@ class AppLocalizationsMn extends AppLocalizations {
   String get offlineDownloadManager => 'Офлайн татаж авах менежер';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Офлайн аудио болон өгөгдлийн багц багцуудыг удирдах.';
 
   @override
   String get freeStorage => 'Төхөөрөмжийн дотоод санах ойг суллах.';
@@ -807,13 +808,13 @@ class AppLocalizationsMn extends AppLocalizations {
   String get audioVoice => 'Аудио дуу хоолой';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Эрэгтэй (Мишари Алафаси)';
+  String get audioVoiceMisharyAlafasy => 'Эрэгтэй (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Эрэгтэй (АбдулБасет)';
+  String get audioVoiceAbdulBaset => 'Эрэгтэй (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Эрэгтэй (Судайчууд)';
+  String get audioVoiceSudais => 'Эрэгтэй (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

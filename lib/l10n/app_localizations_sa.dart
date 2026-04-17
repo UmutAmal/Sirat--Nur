@@ -732,7 +732,8 @@ class AppLocalizationsSa extends AppLocalizations {
   String get offlineDownloadManager => 'अफलाइन डाउनलोड प्रबन्धक';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'विशालं ऑफलाइन ऑडियो & डाटासेट् पैक् प्रबन्धयन्तु।';
 
   @override
   String get freeStorage => 'आन्तरिकयन्त्रभण्डारणं मुक्तं कुर्वन्तु।';
@@ -1039,11 +1040,11 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'सत्यापिताः हदीससङ्ग्रहाः अद्यापि न उपलभ्यन्ते';
+      'Verified hadith collections are not available yet';
 
   @override
   String get hadithUnavailableBody =>
-      'इदं बिल्ड् अद्यापि असत्यापितबाह्यहदीसफीड् इत्यस्य उपरि निर्भरं भवति । यावत् स्रोतः दत्तांशसमूहः समन्वयितः न भवति तावत् हदीथ-ब्राउजिंग् अक्षमं तिष्ठति ।';
+      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
 
   @override
   String get paywallUnlockAll =>

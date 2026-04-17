@@ -190,7 +190,7 @@
   "premiumNotFound": "Langganan premium tidak ditemui.",
   "premiumRefreshError": "Tidak dapat memuat semula status langganan premium: {error}",
   "offlineDownloadManager": "Pengurus Muat Turun Luar Talian",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Urus pek audio & set data luar talian yang besar.",
   "freeStorage": "Kosongkan storan peranti dalaman.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

@@ -733,7 +733,8 @@ class AppLocalizationsSm extends AppLocalizations {
   String get offlineDownloadManager => 'Pule o le la\'uina i luga ole laiga';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Pulea tele leo leo & fa\'amaumauga tu\'ufa\'atasi.';
 
   @override
   String get freeStorage => 'Fa\'asa\'oloto le teuina o masini i totonu.';

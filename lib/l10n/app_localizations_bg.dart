@@ -737,7 +737,8 @@ class AppLocalizationsBg extends AppLocalizations {
   String get offlineDownloadManager => 'Офлайн мениджър за изтегляне';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Управлявайте масивни офлайн пакети за аудио и набор от данни.';
 
   @override
   String get freeStorage => 'Освободете вътрешната памет на устройството.';

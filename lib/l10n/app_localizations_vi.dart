@@ -733,7 +733,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get offlineDownloadManager => 'Trình quản lý tải xuống ngoại tuyến';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Quản lý gói dữ liệu và âm thanh ngoại tuyến lớn.';
 
   @override
   String get freeStorage => 'Giải phóng bộ nhớ trong của thiết bị.';

@@ -802,7 +802,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ऑडियो आवाज बा';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

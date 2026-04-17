@@ -732,7 +732,8 @@ class AppLocalizationsDa extends AppLocalizations {
   String get offlineDownloadManager => 'Offline-downloadadministrator';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Administrer massive offline lyd- og datasætpakker.';
 
   @override
   String get freeStorage => 'Frigør intern lagerplads.';
@@ -811,7 +812,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Mand (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Mand (sudais)';
+  String get audioVoiceSudais => 'Mand (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

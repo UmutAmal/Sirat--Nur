@@ -732,7 +732,8 @@ class AppLocalizationsUg extends AppLocalizations {
   String get offlineDownloadManager => 'تورسىز چۈشۈرۈش باشقۇرغۇچى';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'كەڭ كۆلەمدە تورسىز ئاۋاز ۋە سانلىق مەلۇمات بوغچىسىنى باشقۇرۇڭ.';
 
   @override
   String get freeStorage => 'ئىچكى ئۈسكۈنىلەرنى ساقلاشنى ھەقسىز قىلىڭ.';
@@ -805,13 +806,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get audioVoice => 'Audio Voice';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'ئەر (مىشارى ئالافاسى)';
+  String get audioVoiceMisharyAlafasy => 'ئەر (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'ئەر (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'ئەر (سۇدايس)';
+  String get audioVoiceSudais => 'ئەر (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

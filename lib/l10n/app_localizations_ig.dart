@@ -732,7 +732,8 @@ class AppLocalizationsIg extends AppLocalizations {
       'Onye njikwa nbudata na-anọghị n\'ịntanetị';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Jikwaa nnukwu ọdịyo na ntanetị na ngwugwu data.';
 
   @override
   String get freeStorage => 'Hapụ ebe nchekwa ngwaọrụ dị n\'ime.';

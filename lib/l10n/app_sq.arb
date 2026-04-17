@@ -190,7 +190,7 @@
   "premiumNotFound": "Abonimi premium nuk u gjet.",
   "premiumRefreshError": "Statusi i abonimit premium nuk mund të rifreskohej: {error}",
   "offlineDownloadManager": "Menaxheri i shkarkimit jashtë linje",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Menaxho paketat masive të audios dhe të të dhënave jashtë linje.",
   "freeStorage": "Lironi hapësirën e brendshme të pajisjes.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

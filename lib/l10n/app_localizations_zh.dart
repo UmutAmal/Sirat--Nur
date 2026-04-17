@@ -715,7 +715,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get offlineDownloadManager => '离线下载管理器';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => '管理大量离线音频和数据集包。';
 
   @override
   String get freeStorage => '释放内部设备存储空间。';
@@ -788,13 +788,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get audioVoice => '音频 语音';
 
   @override
-  String get audioVoiceMisharyAlafasy => '男（米沙里·阿拉法西）';
+  String get audioVoiceMisharyAlafasy => '男 (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => '男（阿卜杜勒·巴塞特）';
+  String get audioVoiceAbdulBaset => '男 (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => '男性（苏代斯）';
+  String get audioVoiceSudais => '男 (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';
@@ -2356,7 +2356,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get offlineDownloadManager => '离线下载管理器';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => '管理大量离线音频和数据集包。';
 
   @override
   String get freeStorage => '释放内部设备存储空间。';
@@ -2429,13 +2429,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get audioVoice => '音频 语音';
 
   @override
-  String get audioVoiceMisharyAlafasy => '男（米沙里·阿拉法西）';
+  String get audioVoiceMisharyAlafasy => '男 (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => '男（阿卜杜勒·巴塞特）';
+  String get audioVoiceAbdulBaset => '男 (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => '男性（苏代斯）';
+  String get audioVoiceSudais => '男 (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';
@@ -3997,7 +3997,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get offlineDownloadManager => '離線下載管理器';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => '管理大量離線音訊和資料集包。';
 
   @override
   String get freeStorage => '釋放內部設備儲存空間。';
@@ -4070,13 +4070,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get audioVoice => '音訊 語音';
 
   @override
-  String get audioVoiceMisharyAlafasy => '男（米沙裡·阿拉法西）';
+  String get audioVoiceMisharyAlafasy => '男 (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => '男（阿卜杜勒·巴塞特）';
+  String get audioVoiceAbdulBaset => '男 (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => '男性（蘇代斯）';
+  String get audioVoiceSudais => '男 (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

@@ -737,7 +737,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get offlineDownloadManager => 'ஆஃப்லைன் பதிவிறக்க மேலாளர்';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'மிகப்பெரிய ஆஃப்லைன் ஆடியோ & டேட்டாசெட் பேக்குகளை நிர்வகிக்கவும்.';
 
   @override
   String get freeStorage => 'உள் சாதனச் சேமிப்பிடத்தைக் காலியாக்கவும்.';
@@ -810,13 +811,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get audioVoice => 'ஆடியோ குரல்';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'ஆண் (மிஷரி அலஃபாஸி)';
+  String get audioVoiceMisharyAlafasy => 'ஆண் (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'ஆண் (அப்துல்பாசெட்)';
+  String get audioVoiceAbdulBaset => 'ஆண் (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'ஆண் (சுதைஸ்)';
+  String get audioVoiceSudais => 'ஆண் (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

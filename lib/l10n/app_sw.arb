@@ -190,7 +190,7 @@
   "premiumNotFound": "Usajili wa malipo haujapatikana.",
   "premiumRefreshError": "Haikuweza kuonyesha upya hali ya usajili unaolipishwa: {error}",
   "offlineDownloadManager": "Kidhibiti cha Upakuaji Nje ya Mtandao",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Dhibiti vifurushi vikubwa vya sauti nje ya mtandao na seti ya data.",
   "freeStorage": "Futa hifadhi ya ndani ya kifaa.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

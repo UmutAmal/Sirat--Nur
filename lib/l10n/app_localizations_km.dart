@@ -733,7 +733,8 @@ class AppLocalizationsKm extends AppLocalizations {
   String get offlineDownloadManager => 'កម្មវិធីគ្រប់គ្រងការទាញយកក្រៅបណ្តាញ';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'គ្រប់គ្រងកញ្ចប់សំឡេង និងទិន្នន័យក្រៅបណ្តាញដ៏ធំ។';
 
   @override
   String get freeStorage => 'បង្កើនទំហំផ្ទុកឧបករណ៍ខាងក្នុង។';
@@ -812,7 +813,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'ប្រុស (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'ប្រុស (ស៊ុយអែត)';
+  String get audioVoiceSudais => 'ប្រុស (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

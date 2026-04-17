@@ -731,7 +731,8 @@ class AppLocalizationsUz extends AppLocalizations {
   String get offlineDownloadManager => 'Oflayn yuklab olish menejeri';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Katta oflayn audio va maʼlumotlar toʻplamini boshqaring.';
 
   @override
   String get freeStorage => 'Qurilmaning ichki xotirasidan joy boʻshating.';
@@ -1042,7 +1043,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Bu tuzilish hali ham tasdiqlanmagan tashqi hadis tasmasiga bog\'liq. Hadislarni koʻrib chiqish manba maʼlumotlar toʻplami sinxronlanmaguncha oʻchirib qoʻyiladi.';
+      'Bu tuzilish hali ham tasdiqlanmagan tashqi hadis tasmasiga bog\'liq. Hadislarni ko\'rish manba ma\'lumotlar to\'plami sinxronlanmaguncha o\'chirilgan bo\'lib qoladi.';
 
   @override
   String get paywallUnlockAll =>

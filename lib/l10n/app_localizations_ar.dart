@@ -728,7 +728,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get offlineDownloadManager => 'مدير التحميل دون اتصال';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'إدارة حزم الصوت ومجموعات البيانات الضخمة دون اتصال بالإنترنت.';
 
   @override
   String get freeStorage => 'تحرير مساحة التخزين الداخلية للجهاز.';
@@ -801,13 +802,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get audioVoice => 'صوت الصوت';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'ذكر (مشاري العفاسي)';
+  String get audioVoiceMisharyAlafasy => 'ذكر (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'ذكر (عبد الباسط)';
+  String get audioVoiceAbdulBaset => 'ذكر (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'ذكر (السديس)';
+  String get audioVoiceSudais => 'ذكر (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

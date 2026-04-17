@@ -734,7 +734,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get offlineDownloadManager => 'Офлайн-менеджер завантажень';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Керуйте масивними офлайн-пакетами аудіо та наборів даних.';
 
   @override
   String get freeStorage => 'Звільніть внутрішню пам’ять пристрою.';
@@ -807,7 +808,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get audioVoice => 'Аудіо голос';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Самець (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Чоловік (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'Чоловік (Abdul Basit)';
@@ -1041,7 +1042,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Перевірені збірки хадисів поки що недоступні';
+      'Перевірені збірники хадисів поки що недоступні';
 
   @override
   String get hadithUnavailableBody =>

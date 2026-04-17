@@ -212,6 +212,47 @@ void main() {
       );
     });
 
+    test('tracks settings audio and hadith l10n debt reduction', () {
+      const keys = [
+        'manageDatasets',
+        'freeStorage',
+        'audioVoice',
+        'audioVoiceMisharyAlafasy',
+        'audioVoiceAbdulBaset',
+        'audioVoiceSudais',
+        'hadithUnavailableTitle',
+        'hadithUnavailableBody',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(590));
+      for (final key in keys) {
+        expect(
+          localeArbs['am']![key],
+          isNot(english[key]),
+          reason: 'app_am.arb still uses English for $key',
+        );
+      }
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',
@@ -728,6 +769,33 @@ void main() {
       expect(value, 'Bulut kontrolu basarisiz: {error}');
     });
 
+    test('rejects multiline hadith availability output', () {
+      final titleValue = resolveTranslatedArbValue(
+        key: 'hadithUnavailableTitle',
+        source: 'Verified hadith collections are not available yet',
+        currentValue:
+            'ukax mä juk’a pachanakanwa.\nChiqapa hadith apthapitanakax janiw jichhakamax utjkiti',
+        candidate:
+            'ukax mä juk’a pachanakanwa.\nChiqapa hadith apthapitanakax janiw jichhakamax utjkiti',
+      );
+
+      final bodyValue = resolveTranslatedArbValue(
+        key: 'hadithUnavailableBody',
+        source:
+            'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.',
+        currentValue:
+            'Ukax mä jan chiqanchat feed ukaruw atintasi.\nHadith uñakipañax jist’antatawa.',
+        candidate:
+            'Ukax mä jan chiqanchat feed ukaruw atintasi.\nHadith uñakipañax jist’antatawa.',
+      );
+
+      expect(titleValue, 'Verified hadith collections are not available yet');
+      expect(
+        bodyValue,
+        'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.',
+      );
+    });
+
     test('preserves technical provider and config tokens', () {
       final placesValue = resolveTranslatedArbValue(
         key: 'placesDataSourceUnavailableBody',
@@ -745,8 +813,24 @@ void main() {
         candidate: 'Supabase icinde bulut tablolari eksik; paket yedek aktif.',
       );
 
+      final reciterValue = resolveTranslatedArbValue(
+        key: 'audioVoiceMisharyAlafasy',
+        source: 'Male (Mishary Alafasy)',
+        currentValue: 'Male (Mishary Alafasy)',
+        candidate: 'Masculino (Mishary Alafasi)',
+      );
+
+      final localizedReciterValue = resolveTranslatedArbValue(
+        key: 'audioVoiceAbdulBaset',
+        source: 'Male (Abdul Basit)',
+        currentValue: 'Male (Abdul Basit)',
+        candidate: 'Masculino (Abdul Basit)',
+      );
+
       expect(placesValue, contains('PLACES_OVERPASS_API_URL'));
       expect(diagnosticsValue, contains('Supabase'));
+      expect(reciterValue, 'Male (Mishary Alafasy)');
+      expect(localizedReciterValue, 'Masculino (Abdul Basit)');
     });
 
     test('rejects multiline places runtime output', () {

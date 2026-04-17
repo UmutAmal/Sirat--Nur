@@ -738,7 +738,8 @@ class AppLocalizationsCa extends AppLocalizations {
   String get offlineDownloadManager => 'Gestor de descàrregues fora de línia';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Gestioneu paquets massius d\'àudio i conjunts de dades fora de línia.';
 
   @override
   String get freeStorage => 'Allibera l\'emmagatzematge intern del dispositiu.';
@@ -818,7 +819,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Home (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Mascle (Sudais)';
+  String get audioVoiceSudais => 'Home (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

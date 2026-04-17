@@ -736,10 +736,11 @@ class AppLocalizationsBe extends AppLocalizations {
   String get offlineDownloadManager => 'Менеджэр пазасеткавых загрузак';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Кіруйце вялікімі пазасеткавымі пакетамі аўдыя і набораў даных.';
 
   @override
-  String get freeStorage => 'Вызваліце ​​ўнутранае сховішча прылады.';
+  String get freeStorage => 'Вызваліце ўнутранае сховішча прылады.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -809,7 +810,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get audioVoice => 'Аўдыё голас';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Самец (Мішары Алафасы)';
+  String get audioVoiceMisharyAlafasy => 'Мужчына (Mishary Alafasy)';
 
   @override
   String get audioVoiceAbdulBaset => 'Мужчына (Abdul Basit)';

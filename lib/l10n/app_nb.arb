@@ -190,7 +190,7 @@
   "premiumNotFound": "Finner ikke premium-abonnement.",
   "premiumRefreshError": "Kunne ikke oppdatere premium abonnementsstatus: {error}",
   "offlineDownloadManager": "Frakoblet nedlastingsbehandling",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Administrer enorme offline lyd- og datasettpakker.",
   "freeStorage": "Frigjør intern enhetslagring.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

@@ -732,7 +732,8 @@ class AppLocalizationsEt extends AppLocalizations {
   String get offlineDownloadManager => 'Võrguühenduseta allalaadimishaldur';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Hallake tohutuid võrguühenduseta heli- ja andmekomplektide pakette.';
 
   @override
   String get freeStorage => 'Vabastage seadme sisemälu.';

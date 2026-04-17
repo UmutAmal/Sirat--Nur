@@ -190,7 +190,7 @@
   "premiumNotFound": "Wala makit-an ang premium nga suskrisyon.",
   "premiumRefreshError": "Dili ma-refresh ang status sa premium nga subscription: {error}",
   "offlineDownloadManager": "Offline nga Download Manager",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Pagdumala sa daghang mga offline audio & dataset pack.",
   "freeStorage": "Libre ang pagtipig sa internal nga aparato.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

@@ -738,10 +738,11 @@ class AppLocalizationsDv extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'ބޮޑު އޮފްލައިން އޯޑިއޯ & ޑޭޓާސެޓް ޕެކްތައް މެނޭޖްކުރުން.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'އިންޓަރނަލް ޑިވައިސް ސްޓޯރޭޖް މިނިވަންކުރުން.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -808,7 +809,7 @@ class AppLocalizationsDv extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'އޯޑިއޯ ވޮއިސް އެވެ';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';

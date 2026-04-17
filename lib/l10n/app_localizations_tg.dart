@@ -731,7 +731,8 @@ class AppLocalizationsTg extends AppLocalizations {
   String get offlineDownloadManager => 'Менеҷери зеркашии офлайн';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Бастаҳои азими офлайнӣ ва маҷмӯи додаҳоро идора кунед.';
 
   @override
   String get freeStorage => 'Захираи дохилии дастгоҳро холӣ кунед.';
@@ -804,13 +805,13 @@ class AppLocalizationsTg extends AppLocalizations {
   String get audioVoice => 'Овози аудио';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Мард (Мишари Алафаси)';
+  String get audioVoiceMisharyAlafasy => 'Мард (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Мард (АбдулБасет)';
+  String get audioVoiceAbdulBaset => 'Мард (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Мард (Судайс)';
+  String get audioVoiceSudais => 'Мард (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

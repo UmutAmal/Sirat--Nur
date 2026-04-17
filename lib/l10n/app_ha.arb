@@ -190,7 +190,7 @@
   "premiumNotFound": "Ba a sami biyan kuɗi mai ƙima ba.",
   "premiumRefreshError": "Ba za a iya sabunta halin biyan kuɗi mai ƙima ba: {error}",
   "offlineDownloadManager": "Manajan Zazzagewa Ba layi",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Sarrafa manyan fakitin sauti na layi da saitin bayanai.",
   "freeStorage": "Haɓaka ma'ajin na'urar ciki.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

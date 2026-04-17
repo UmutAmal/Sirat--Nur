@@ -732,7 +732,8 @@ class AppLocalizationsEo extends AppLocalizations {
   String get offlineDownloadManager => 'Senkonekta Elŝuta Administranto';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Administri amasajn eksterretejn aŭdajn pakojn kaj datumarojn.';
 
   @override
   String get freeStorage => 'Liberigu internan aparaton-stokadon.';
@@ -802,16 +803,16 @@ class AppLocalizationsEo extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voĉo';
+  String get audioVoice => 'Aŭdio-Voĉo';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Masklo (Mishary Alafasy)';
+  String get audioVoiceMisharyAlafasy => 'Vira (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Masklo (Abdul Basit)';
+  String get audioVoiceAbdulBaset => 'Vira (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'Masklo (Sudais)';
+  String get audioVoiceSudais => 'Vira (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

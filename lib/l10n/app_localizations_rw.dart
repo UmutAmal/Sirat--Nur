@@ -733,7 +733,8 @@ class AppLocalizationsRw extends AppLocalizations {
   String get offlineDownloadManager => 'Umuyobozi wo gukuramo Offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Gucunga amajwi manini ya interineti amajwi & dataset.';
 
   @override
   String get freeStorage => 'Kuraho ububiko bwimbere.';

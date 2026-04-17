@@ -735,10 +735,10 @@ class AppLocalizationsLg extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'Dukanya massive offline audio & dataset packs.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Sumulula okutereka ebyuma eby’omunda.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -805,7 +805,7 @@ class AppLocalizationsLg extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Eddoboozi ly\'amaloboozi';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1048,7 +1048,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Okuzimba kuno kukyasinziira ku feed ya hadith ey’ebweru etakakasiddwa. Okulambula Hadith kusigala nga kulemeseddwa okutuusa nga dataset evuddemu ekwataganye.';
+      'Okuzimba kuno kukyasinziira ku feed ya hadith ey’ebweru etakakasiddwa. Okulambula Hadith kusigala nga kulemesebwa okutuusa nga dataset evuddemu ekwataganye.';
 
   @override
   String get paywallUnlockAll =>

@@ -190,7 +190,7 @@
   "premiumNotFound": "Premium abunə tapılmadı.",
   "premiumRefreshError": "Premium abunə statusunu yeniləmək mümkün olmadı: {error}",
   "offlineDownloadManager": "Offline Download Manager",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Kütləvi oflayn audio və verilənlər bazası paketlərini idarə edin.",
   "freeStorage": "Daxili cihaz yaddaşını boşaltın.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

@@ -731,7 +731,8 @@ class AppLocalizationsAz extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Kütləvi oflayn audio və verilənlər bazası paketlərini idarə edin.';
 
   @override
   String get freeStorage => 'Daxili cihaz yaddaşını boşaltın.';

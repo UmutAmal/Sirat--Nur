@@ -732,7 +732,8 @@ class AppLocalizationsNb extends AppLocalizations {
   String get offlineDownloadManager => 'Frakoblet nedlastingsbehandling';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Administrer enorme offline lyd- og datasettpakker.';
 
   @override
   String get freeStorage => 'Frigjør intern enhetslagring.';

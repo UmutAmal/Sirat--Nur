@@ -190,7 +190,7 @@
   "premiumNotFound": "Premium abonements nav atrasts.",
   "premiumRefreshError": "Nevarēja atsvaidzināt premium abonementa statusu: {error}",
   "offlineDownloadManager": "Bezsaistes lejupielādes pārvaldnieks",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Pārvaldiet apjomīgas bezsaistes audio un datu kopu pakotnes.",
   "freeStorage": "Atbrīvojiet ierīces iekšējo krātuvi.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

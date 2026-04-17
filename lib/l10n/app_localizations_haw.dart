@@ -732,7 +732,8 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get offlineDownloadManager => 'Luna Hoʻoiho Pahemo';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Hoʻoponopono i nā pūʻolo leo hoʻopahemo nui a me ka ʻikepili.';
 
   @override
   String get freeStorage => 'E hoʻokuʻu i ka waihona o loko.';

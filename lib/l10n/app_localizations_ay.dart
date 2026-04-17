@@ -745,7 +745,8 @@ class AppLocalizationsAy extends AppLocalizations {
       'Jan Internetan utjki uka Descarga apnaqiri';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Jach’a offline audio & dataset packs ukanaka apnaqaña.';
 
   @override
   String get freeStorage => 'Dispositivo manqhankir imañanak qhispiyaña.';
@@ -1057,11 +1058,11 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Chiqapa hadith apthapitanakax janiw jichhakamax utjkiti';
+      'Verified hadith collections are not available yet';
 
   @override
   String get hadithUnavailableBody =>
-      'Aka lurawix waliw mä jan chiqapar uñjat anqäx hadith manq’añat dependi. Hadith uñakipañax jan ch’amanchataw qhiparaski, mä fuente de datos ukan sincronización ukar puriñkama.';
+      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
 
   @override
   String get paywallUnlockAll =>

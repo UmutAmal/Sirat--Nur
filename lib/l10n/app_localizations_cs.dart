@@ -733,7 +733,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get offlineDownloadManager => 'Správce stahování offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'Spravujte masivní offline audio a datové sady.';
 
   @override
   String get freeStorage => 'Uvolněte vnitřní úložiště zařízení.';
@@ -812,7 +812,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Muž (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'muž (Sudais)';
+  String get audioVoiceSudais => 'Muž (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

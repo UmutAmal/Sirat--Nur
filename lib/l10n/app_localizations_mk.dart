@@ -733,7 +733,8 @@ class AppLocalizationsMk extends AppLocalizations {
   String get offlineDownloadManager => 'Офлајн менаџер за преземање';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Управувајте со огромни офлајн пакети за аудио и податоци.';
 
   @override
   String get freeStorage => 'Ослободете ја внатрешната меморија на уредот.';
@@ -806,13 +807,13 @@ class AppLocalizationsMk extends AppLocalizations {
   String get audioVoice => 'Аудио глас';
 
   @override
-  String get audioVoiceMisharyAlafasy => 'Машко (Мишари Алафаси)';
+  String get audioVoiceMisharyAlafasy => 'Машко (Mishary Alafasy)';
 
   @override
-  String get audioVoiceAbdulBaset => 'Машко (АбдулБасет)';
+  String get audioVoiceAbdulBaset => 'Машко (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'машки (Судаис)';
+  String get audioVoiceSudais => 'Машко (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

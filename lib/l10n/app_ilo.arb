@@ -208,7 +208,7 @@
   "dbVersion": "Bersion ti DB: {version}",
   "dbPath": "Dalan: {path}.",
   "quranCheckFailed": "Napaay ti panangsukimat ti Quran: {error} .",
-  "audioVoice": "Audio Voice",
+  "audioVoice": "Audio nga Boses",
   "fajrAngle": "Fajr nga Anggulo",
   "ishaAngle": "Isha nga Anggulo",
   "qiblaCalibration": "Kalibrasion ti Qibla",

@@ -190,7 +190,7 @@
   "premiumNotFound": "Premium-tellimust ei leitud.",
   "premiumRefreshError": "Tasulise tellimuse olekut ei saanud värskendada: {error}",
   "offlineDownloadManager": "Võrguühenduseta allalaadimishaldur",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Hallake tohutuid võrguühenduseta heli- ja andmekomplektide pakette.",
   "freeStorage": "Vabastage seadme sisemälu.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

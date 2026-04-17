@@ -732,10 +732,11 @@ class AppLocalizationsAs extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'বৃহৎ অফলাইন অডিঅ\' আৰু ডাটাছেট পেকসমূহ পৰিচালনা কৰক।';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'অভ্যন্তৰীণ ডিভাইচ সংৰক্ষণ মুক্ত কৰক।';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -802,7 +803,7 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'অডিঅ\' ভয়েচ';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1043,7 +1044,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'এই বিল্ড এতিয়াও এটা অপৰীক্ষিত বাহ্যিক হাদীছ ফিডৰ ওপৰত নিৰ্ভৰশীল। এটা উৎস ডাটাছেট সিঙ্ক নকৰালৈকে হাদীছ ব্ৰাউজিং নিষ্ক্ৰিয় হৈ থাকে।';
+      'এই বিল্ড এতিয়াও এটা অপৰীক্ষিত বাহ্যিক হাদীছ ফিডৰ ওপৰত নিৰ্ভৰশীল। এটা উৎস ডাটাছেট সিঙ্ক নোহোৱালৈকে হাদীছ ব্ৰাউজিং নিষ্ক্ৰিয় হৈ থাকে।';
 
   @override
   String get paywallUnlockAll =>

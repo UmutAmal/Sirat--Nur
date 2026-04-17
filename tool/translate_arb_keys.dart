@@ -738,6 +738,7 @@ bool _mustStaySingleLine(String key) {
       key == 'quranAudioSourcesIncomplete' ||
       key == 'adhanNotificationChannelName' ||
       key == 'adhanNotificationChannelDescription' ||
+      key == 'manageDatasets' ||
       key == 'freeStorage' ||
       key == 'downloadPreparing' ||
       key == 'downloadingSurah' ||
@@ -823,6 +824,8 @@ bool _mustStaySingleLine(String key) {
       key == 'tafsirCacheUnavailable' ||
       key == 'premiumProductUnavailable' ||
       key == 'premiumPurchaseFailed' ||
+      key == 'hadithUnavailableTitle' ||
+      key == 'hadithUnavailableBody' ||
       key == 'prayerCompletion' ||
       key == 'streaks' ||
       key == 'dayStreak' ||
@@ -838,6 +841,9 @@ const _protectedTechnicalTokens = [
   'Supabase',
   'PLACES_OVERPASS_API_URL',
   'HTTP',
+  'Mishary Alafasy',
+  'Abdul Basit',
+  'Sudais',
 ];
 
 bool _hasRequiredTechnicalTokens(String translated, String source) {

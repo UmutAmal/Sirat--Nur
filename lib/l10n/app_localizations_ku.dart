@@ -731,7 +731,8 @@ class AppLocalizationsKu extends AppLocalizations {
   String get offlineDownloadManager => 'Rêvebirê Daxistinê negirêdayî';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Pakêtên deng û danezanê yên negirêdayî yên girseyî birêve bibin.';
 
   @override
   String get freeStorage => 'Depoya cîhaza navxweyî azad bikin.';
@@ -810,7 +811,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get audioVoiceAbdulBaset => 'Mêr (Abdul Basit)';
 
   @override
-  String get audioVoiceSudais => 'nêr (Sûdaîs)';
+  String get audioVoiceSudais => 'Mêr (Sudais)';
 
   @override
   String get fajrAngle => 'Fajr Angle';

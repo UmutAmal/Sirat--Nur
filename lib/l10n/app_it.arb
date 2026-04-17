@@ -190,7 +190,7 @@
   "premiumNotFound": "Abbonamento Premium non trovato.",
   "premiumRefreshError": "Impossibile aggiornare lo stato dell'abbonamento premium: {error}",
   "offlineDownloadManager": "Gestore di download offline",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Gestisci enormi pacchetti audio e set di dati offline.",
   "freeStorage": "Libera spazio di archiviazione interno sul dispositivo.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

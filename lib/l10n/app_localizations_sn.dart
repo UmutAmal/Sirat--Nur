@@ -731,7 +731,8 @@ class AppLocalizationsSn extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Maneja';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Tonga mahombe ekunze eaudio & dataset mapaketi.';
 
   @override
   String get freeStorage => 'Sunungura chengetedzo yemukati memudziyo.';
@@ -1042,7 +1043,7 @@ class AppLocalizationsSn extends AppLocalizations {
 
   @override
   String get hadithUnavailableBody =>
-      'Ichi chivakwa chichiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kudzamara dataset yawanikwa yawiriraniswa.';
+      'Kuvaka uku kuchiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kusvikira dataset yawanikwa yawiriraniswa.';
 
   @override
   String get paywallUnlockAll => 'Vhura zvese zverwendo rwako rwemweya';

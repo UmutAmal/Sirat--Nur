@@ -735,7 +735,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get offlineDownloadManager => 'Kaiwhakahaere Tikiake Tuimotu';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Whakahaerehia nga ororongo tuimotu nui me nga kohinga huingararaunga.';
 
   @override
   String get freeStorage => 'Whakakorea te rokiroki taputapu o roto.';

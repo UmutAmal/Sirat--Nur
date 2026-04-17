@@ -190,7 +190,7 @@
   "premiumNotFound": "Premium áskrift fannst ekki.",
   "premiumRefreshError": "Gat ekki endurnýjað úrvalsáskriftarstöðu: {error}",
   "offlineDownloadManager": "Ótengdur niðurhalsstjóri",
-  "manageDatasets": "Manage massive offline audio & dataset packs.",
+  "manageDatasets": "Hafa umsjón með stórum ótengdum hljóð- og gagnapökkum.",
   "freeStorage": "Losaðu um geymslurými tækisins.",
   "quranIntegrity": "Quran Integrity",
   "checkQuranDb": "Check Quran Database",

@@ -732,10 +732,11 @@ class AppLocalizationsSr extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Управљајте великим офлајн аудио пакетима и скуповима података.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Ослободите интерну меморију уређаја.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -802,7 +803,7 @@ class AppLocalizationsSr extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Аудио Глас';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1040,11 +1041,11 @@ class AppLocalizationsSr extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Верификоване збирке хадиса још увек нису доступне';
+      'Провјерене збирке хадиса још нису доступне';
 
   @override
   String get hadithUnavailableBody =>
-      'Ова изградња и даље зависи од непровереног спољног хадиског фееда. Претраживање хадиса остаје онемогућено док се изворни скуп података не синхронизује.';
+      'Ова конструкција и даље зависи од непровереног спољног хадиског фееда. Претраживање хадиса остаје онемогућено док се изворни скуп података не синхронизује.';
 
   @override
   String get paywallUnlockAll =>
