@@ -11213,3 +11213,57 @@
 ### Sonraki Adim
 - Report modunu kullanarak download/diagnostics/chatbot kumesindeki same-as-English locale'ler kucuk ve kalite kapili batch'lere bolunecek.
 - `sync_arb_keys.dart` icin English fallback yazma riski ayrica guard'lanacak veya report-first akisa baglanacak.
+
+## 2026-04-17 TUR-274 — Guard ARB Sync Against English Fallback Seeding
+
+### Yapilan Islem
+- `tool/sync_arb_keys.dart` artik non-English locale dosyalarinda eksik message key icin varsayilan olarak English fallback yazmiyor.
+- Eksik key tespit edilirse script dosya yazmadan once `exitCode = 66` ile duruyor ve etkilenen `app_<locale>.arb` + key listesini stderr'e basiyor.
+- Yalnizca acik `--allow-english-fallback` bayragi verilirse reviewed temporary placeholder olarak English fallback seed edilebiliyor.
+- Script gereksiz dosya churn'unu azaltmak icin line-ending normalize ederek sadece gercek icerik farkinda yaziyor.
+- `test/sync_arb_keys_test.dart` fonksiyonel guard testleriyle eklendi.
+
+### Kanit
+- Allow flag: `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart:4`
+- Blocked fallback toplama: `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart:34`
+- Mutasyon oncesi block cikisi: `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart:55`
+- Sync plan helper: `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart:87`
+- No-op write guard: `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart:144`
+- Plan modeli: `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart:153`
+- Default block testi: `A:\Way of Allah\sirat_i_nur\test\sync_arb_keys_test.dart:23`
+- Explicit allow testi: `A:\Way of Allah\sirat_i_nur\test\sync_arb_keys_test.dart:41`
+- TR kaynak testi: `A:\Way of Allah\sirat_i_nur\test\sync_arb_keys_test.dart:57`
+- No-op write testi: `A:\Way of Allah\sirat_i_nur\test\sync_arb_keys_test.dart:71`
+
+### Neden Yapildi
+- Onceki `sync_arb_keys.dart` davranisi `updated[key] = current.containsKey(key) ? current[key] : entry.value` kalibiyle non-TR locale eksiklerinde dogrudan app_en degerini yazabiliyordu.
+- Translation Engine kurali geregi tum locale'ler kapsamda kalmali, fakat kalite guvencesiz English fallback gercek ceviri gibi uygulamaya girmemeli.
+- Bu patch yeni ceviri uretmiyor; eksik key senaryosunda once gercek ceviri/dry-run rapor akisini zorunlu hale getiriyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\sync_arb_keys.dart`
+- `A:\Way of Allah\sirat_i_nur\test\sync_arb_keys_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Test Sonucu
+- Format: `dart format tool\sync_arb_keys.dart test\sync_arb_keys_test.dart` PASS
+- Odak test: `flutter test test\sync_arb_keys_test.dart --reporter compact` PASS (`4/4`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`487/487`)
+
+### Risk Degisimi
+- `sync_arb_keys.dart` ile non-English locale'lere sessiz English fallback seed etme riski: `16/25 -> 3/25`
+- ARB sync sirasinda gereksiz 180+ dosya churn riski: `12/25 -> 4/25`
+- Tum-locale gercek ceviri borcu: `16/25 -> 16/25` (bu tur sadece fallback footgun kapatildi)
+
+### Rollback Plani
+- `--allow-english-fallback` guard'i ve `blockedEnglishFallbackKeys` akisi kaldirilir.
+- `buildSyncArbFilePlan` onceki dogrudan fallback yazma davranisina sadelestirilir.
+- `test/sync_arb_keys_test.dart` kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- `sync_variant_arb_fallbacks.dart` icin benzer no-op write guard ve source-quality guard'i incelenecek.
+- L10n report ciktilari kullanilarak download/diagnostics/chatbot key'leri icin kaliteli ve kucuk ceviri batch planina gecilecek.
