@@ -12076,3 +12076,62 @@
 
 ### Sonraki Adim
 - Audio pipeline'da siradaki risk `download_verified_quran_audio.dart` mirror sonucunda eksik/failed dosyalar varken operatorun Storage seed uretimine gecmesini engelleyen manifest guard'larinin daha da sertlestirilmesi ve upload dry-run davranisinin tekrar taranmasidir.
+
+## 2026-04-17 TUR-290 — Lock Quran Audio Storage Tools To The Runtime Bucket
+
+### Yapilan Islem
+- `tool\generate_quran_audio_storage_seed.dart` icine `normalizeQuranAudioBucketName` guard'i eklendi.
+- Storage seed generator artik `quran-audio` disinda bucket adi alirsa SQL uretmeden once `ArgumentError` firlatiyor.
+- `tool\upload_quran_audio_storage.dart` ayni guard'i kullanir hale getirildi; upload URL insasi, upload fonksiyonu ve CLI arguman parse akisi yanlis bucket'i erken reddediyor.
+- CLI yardim metinlerinde `--bucket` seceneginin `quran-audio` olmak zorunda oldugu aciklandi.
+- Yanlis bucket kullanimi icin iki regresyon testi eklendi.
+
+### Kanit
+- Bucket normalizer: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:21`
+- Storage seed build guard'i: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:208`
+- Storage seed CLI bucket guard'i: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart:292`
+- Upload URL guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:35`
+- Upload function guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:137`
+- Upload CLI bucket guard'i: `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart:251`
+- Runtime bucket tanimi: `A:\Way of Allah\sirat_i_nur\lib\core\network\supabase_config.dart:27`
+- Schema bucket tanimi: `A:\Way of Allah\sirat_i_nur\content_schema.sql:199`
+- Storage seed bucket testi: `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart:211`
+- Upload bucket testi: `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart:22`
+
+### Neden Yapildi
+- Quran audio runtime `SupabaseConfig.quranAudioBucket` varsayilani ve schema `quran-audio` bucket'i uzerinden calisiyor.
+- Eski CLI `--bucket=<name>` ile Quran sesini yanlis bucket'a yukleyebilir veya yanlis `storage_path` SQL'i uretebilirdi.
+- Bu durumda operator upload basarili sandigi halde uygulama sadece `quran-audio` public URL'lerini kabul ettigi icin sesler kullanici tarafinda calmayabilirdi; bu bir false-success riskiydi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_storage_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\tool\upload_quran_audio_storage.dart`
+- `A:\Way of Allah\sirat_i_nur\test\generate_quran_audio_storage_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\test\upload_quran_audio_storage_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran audio Storage zinciri tek runtime bucket'i olan `quran-audio` ile hizalandi.
+- Yanlis bucket operator hatasi SQL/network yazimindan once deterministik hata verir.
+- Mevcut default komutlar ve runtime path'leri degismedi.
+
+### Test Sonucu
+- Format: `dart format tool\generate_quran_audio_storage_seed.dart tool\upload_quran_audio_storage.dart test\generate_quran_audio_storage_seed_test.dart test\upload_quran_audio_storage_test.dart` PASS
+- Odak test: `flutter test test\generate_quran_audio_storage_seed_test.dart test\upload_quran_audio_storage_test.dart` PASS (`17/17`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`505/505`)
+
+### Risk Degisimi
+- Quran seslerinin yanlis Supabase bucket'ina yuklenip runtime'da calismamasi riski: `12/25 -> 1/25`
+- Yanlis bucket ile storage seed uretilmesi riski: `12/25 -> 1/25`
+
+### Rollback Plani
+- `normalizeQuranAudioBucketName` helper'i kaldirilir.
+- Storage seed ve upload tool icindeki bucket guard cagri noktalari eski serbest bucket davranisina dondurulur.
+- Iki regresyon testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Quran audio import zincirinde geriye kalan somut risk, service role key ile upload aracinin operator ciktilarinda veya URL'lerde gizli bilgi sizdirmedigini ve partial manifestlerin hicbir yoldan production seed'e donusemedigini tekrar taramak olacak.

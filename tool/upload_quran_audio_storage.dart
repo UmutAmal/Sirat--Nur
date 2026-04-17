@@ -32,6 +32,7 @@ Uri buildSupabaseStorageObjectUploadUri({
   required String bucketName,
   required String objectPath,
 }) {
+  final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
   final normalizedObjectPath = objectPath.trim().replaceAll('\\', '/');
   final objectSegments = normalizedObjectPath
       .split('/')
@@ -48,7 +49,7 @@ Uri buildSupabaseStorageObjectUploadUri({
       'storage',
       'v1',
       'object',
-      bucketName,
+      normalizedBucketName,
       ...objectSegments,
     ],
   );
@@ -133,6 +134,7 @@ Future<QuranAudioStorageUploadSummary> uploadMirroredQuranAudioFiles({
   HttpClient? httpClient,
 }) async {
   final rows = files.toList();
+  final normalizedBucketName = normalizeQuranAudioBucketName(bucketName);
   final planFailures = validateMirroredQuranAudioUploadPlan(rows);
   if (planFailures.isNotEmpty) {
     return QuranAudioStorageUploadSummary(
@@ -155,7 +157,7 @@ Future<QuranAudioStorageUploadSummary> uploadMirroredQuranAudioFiles({
       try {
         final uploadUri = buildSupabaseStorageObjectUploadUri(
           supabaseUrl: supabaseUrl,
-          bucketName: bucketName,
+          bucketName: normalizedBucketName,
           objectPath: objectPath,
         );
         final request = await client.postUrl(uploadUri);
@@ -205,7 +207,7 @@ Options:
   --manifest=<path>              Mirror manifest path. Default: $_defaultManifestPath
   --supabase-url=<url>           Supabase project URL. Falls back to SUPABASE_URL env.
   --service-role-key-env=<name>  Env var containing service role key. Default: $_defaultServiceRoleKeyEnv
-  --bucket=<name>                Storage bucket name. Default: $_defaultBucketName
+  --bucket=<name>                Storage bucket name. Must be $_defaultBucketName. Default: $_defaultBucketName
   --no-upsert                    Do not overwrite existing objects.
   --dry-run                      Validate manifest and print upload plan without network writes.
   --help                         Show this help
@@ -246,7 +248,9 @@ Future<void> main(List<String> args) async {
       continue;
     }
     if (arg.startsWith('--bucket=')) {
-      bucketName = arg.substring('--bucket='.length).trim();
+      bucketName = normalizeQuranAudioBucketName(
+        arg.substring('--bucket='.length),
+      );
       continue;
     }
 
@@ -256,6 +260,7 @@ Future<void> main(List<String> args) async {
   if (supabaseUrlRaw == null || supabaseUrlRaw.trim().isEmpty) {
     throw StateError('SUPABASE_URL env or --supabase-url is required.');
   }
+  bucketName = normalizeQuranAudioBucketName(bucketName);
   final supabaseUrl = Uri.parse(supabaseUrlRaw.trim());
   final manifestFile = File(manifestPath);
   if (!manifestFile.existsSync()) {

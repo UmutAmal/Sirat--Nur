@@ -19,6 +19,23 @@ void main() {
       );
     });
 
+    test('rejects non-Quran audio buckets before building upload URLs', () {
+      expect(
+        () => buildSupabaseStorageObjectUploadUri(
+          supabaseUrl: Uri.parse('https://example.supabase.co'),
+          bucketName: 'audio-sukun',
+          objectPath: 'alafasy/001.mp3',
+        ),
+        throwsA(
+          isA<ArgumentError>().having(
+            (error) => error.message,
+            'message',
+            contains('Quran audio uploads must target quran-audio'),
+          ),
+        ),
+      );
+    });
+
     test('builds upload headers with service role key only in headers', () {
       final headers = buildSupabaseStorageUploadHeaders(
         serviceRoleKey: 'service-secret',

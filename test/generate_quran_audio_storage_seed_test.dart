@@ -208,6 +208,27 @@ void main() {
       expect(sql, isNot(contains('download.quranicaudio.com')));
     });
 
+    test('rejects non-Quran audio buckets for storage seed generation', () {
+      expect(
+        () => buildQuranAudioStorageSeedSql([
+          MirroredAudioFile(
+            surahNumber: 1,
+            reciterId: 'alafasy',
+            sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
+            verifiedAt: DateTime.utc(2026, 4, 8, 19, 0, 42),
+            localPath: 'build/verified_quran_audio/alafasy/001.mp3',
+          ),
+        ], bucketName: 'audio-sukun'),
+        throwsA(
+          isA<ArgumentError>().having(
+            (error) => error.message,
+            'message',
+            contains('Quran audio uploads must target quran-audio'),
+          ),
+        ),
+      );
+    });
+
     test('smoke-shaped manifest can be converted into storage-backed SQL', () {
       final tempDir = Directory.systemTemp.createTempSync(
         'sirat_quran_audio_smoke_',
