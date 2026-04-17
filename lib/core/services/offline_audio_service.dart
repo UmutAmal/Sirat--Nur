@@ -6,12 +6,11 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/network/supabase_storage_url.dart'
     as storage_url;
+import 'package:sirat_i_nur/core/services/quran_audio_file_validation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 typedef SurahDownloadProgress =
     void Function(double progress, int surahNumber, int totalSurahs);
-
-const int _mp3HeaderProbeBytes = 16;
 
 class OfflineDownloadBatchResult {
   const OfflineDownloadBatchResult({
@@ -198,14 +197,7 @@ Future<bool> validateDownloadedQuranAudioFile(String filePath) async {
       return false;
     }
 
-    final fileLength = await file.length();
-    if (fileLength <= 0) {
-      await _deleteDownloadedQuranAudioFile(filePath);
-      return false;
-    }
-
-    final header = await _readQuranAudioHeader(file, fileLength);
-    if (!_hasMp3AudioSignature(header)) {
+    if (!hasLikelyMp3Header(file)) {
       await _deleteDownloadedQuranAudioFile(filePath);
       return false;
     }
@@ -214,36 +206,6 @@ Future<bool> validateDownloadedQuranAudioFile(String filePath) async {
   } catch (_) {
     return false;
   }
-}
-
-Future<List<int>> _readQuranAudioHeader(File file, int fileLength) async {
-  final headerLength = fileLength < _mp3HeaderProbeBytes
-      ? fileLength
-      : _mp3HeaderProbeBytes;
-  final bytes = <int>[];
-
-  await for (final chunk in file.openRead(0, headerLength)) {
-    bytes.addAll(chunk);
-  }
-
-  return List<int>.unmodifiable(bytes);
-}
-
-bool _hasMp3AudioSignature(List<int> bytes) {
-  if (bytes.length >= 3 &&
-      bytes[0] == 0x49 &&
-      bytes[1] == 0x44 &&
-      bytes[2] == 0x33) {
-    return true;
-  }
-
-  for (var index = 0; index < bytes.length - 1; index++) {
-    if (bytes[index] == 0xFF && (bytes[index + 1] & 0xE0) == 0xE0) {
-      return true;
-    }
-  }
-
-  return false;
 }
 
 Map<String, Map<int, String>> resolveCloudQuranAudioCatalog(

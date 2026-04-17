@@ -15084,3 +15084,43 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak runtime audio URL secimi, Supabase storage provenance ve external fallback kalintilari taranacak.
+
+## 2026-04-17 TUR-346 - Runtime Quran Audio Validation Uses Shared Strong MP3 Guard
+
+### MASTER Karari
+- Risk: `lib/core/services/offline_audio_service.dart:14` runtime validator yalniz ilk 16 byte'i okuyordu; `lib/core/services/offline_audio_service.dart:208` sadece ID3/frame-sync imzasi aradigi icin 4 byte'lik sahte ID3 dosyasi bile downloaded kabul edilebilirdi.
+- Kanit: `test/offline_audio_service_test.dart:257` once `const [0x49, 0x44, 0x33, 0x04]` dosyasini valid audio olarak bekliyordu; tool/upload tarafinda ise TUR-341/TUR-344 sonrasi `minimumQuranAudioFileBytes` ve frame sequence zorunluydu.
+- Etki: Runtime offline indirme akisi corrupt veya eksik Quran audio dosyasini basarili sayabilir, kullanici offline oynatma aninda sessizlik/hata yasayabilirdi.
+- Olasilik: `validateDownloadedQuranAudioFile` download sonrasi, downloaded catalog sayimi ve toplam boyut hesabi icin ortak karar noktasi olarak kullaniliyor.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1).
+- Rollback kapsami: `lib/core/services/quran_audio_file_validation.dart`, `tool/quran_audio_file_validation.dart`, `lib/core/services/offline_audio_service.dart`, `test/offline_audio_service_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- Saglam MP3/SHA validator `lib/core/services/quran_audio_file_validation.dart:5` altina tek kaynak olarak tasindi.
+- `tool/quran_audio_file_validation.dart:1` artik app icindeki ortak validator'u export eden ince kopru oldu; mirror/upload tool'lari ve runtime ayni kurali kullaniyor.
+- `lib/core/services/offline_audio_service.dart:200` runtime `validateDownloadedQuranAudioFile` artik `hasLikelyMp3Header(file)` kullaniyor; minimum 1024 byte ve ard arda dogru MP3 frame dizisi olmayan dosyalar silinip basarisiz sayiliyor.
+
+### TESTER Kapsami
+- `test/offline_audio_service_test.dart:260` tiny ID3 dosyasinin reddedilip silindigini dogruluyor.
+- Offline catalog ve toplam boyut testleri artik 1024 byte'lik gercek frame sequence fixture'i kullaniyor; 4 byte header sahte basari olmaktan cikarildi.
+- Tool export regresyonu icin `test/quran_audio_file_validation_test.dart`, mirror ve upload odak testleri tekrar calistirildi.
+
+### Test Sonucu
+- Format: `dart format lib\core\services\quran_audio_file_validation.dart tool\quran_audio_file_validation.dart lib\core\services\offline_audio_service.dart test\offline_audio_service_test.dart` PASS
+- Odak test: `flutter test test\quran_audio_file_validation_test.dart test\offline_audio_service_test.dart test\download_verified_quran_audio_test.dart test\upload_quran_audio_storage_test.dart --reporter compact` PASS (`42/42`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`570/570`)
+
+### Risk Degisimi
+- Runtime offline Quran audio false-valid riski: `16/25 -> 3/25`
+- Kalan risk: `validateDownloadedQuranAudioFile` sync header okuma kullaniyor; dosya boyutu kucuk oldugu icin pratik risk dusuk, ama ileride async validator gerekiyorsa ayni ortak modulde eklenmeli.
+
+### Rollback Plani
+- `offline_audio_service.dart` eski 16 byte imza kontrolune dondurulur.
+- Yeni shared validator dosyasi ve tool export koprusu revert edilir.
+- Offline audio fixture/test degisiklikleri revert edilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Quran audio seed/operator schema guards, l10n debt ve runtime content provenance taranacak.

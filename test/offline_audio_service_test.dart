@@ -5,6 +5,21 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
+import 'package:sirat_i_nur/core/services/quran_audio_file_validation.dart';
+
+const int _mpeg1Layer3FrameLength = 417;
+const List<int> _mpeg1Layer3FrameHeader = <int>[0xFF, 0xFB, 0x90, 0x64];
+
+List<int> _quranMp3FixtureBytes() {
+  final bytes = List<int>.filled(minimumQuranAudioFileBytes, 0);
+  bytes.setRange(0, _mpeg1Layer3FrameHeader.length, _mpeg1Layer3FrameHeader);
+  bytes.setRange(
+    _mpeg1Layer3FrameLength,
+    _mpeg1Layer3FrameLength + _mpeg1Layer3FrameHeader.length,
+    _mpeg1Layer3FrameHeader,
+  );
+  return bytes;
+}
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -242,7 +257,7 @@ void main() {
     });
 
     test(
-      'validateDownloadedQuranAudioFile rejects empty and non-audio files',
+      'validateDownloadedQuranAudioFile rejects empty, tiny, and non-audio files',
       () async {
         final tempDir = await Directory.systemTemp.createTemp(
           'sir_audio_validate_',
@@ -250,14 +265,21 @@ void main() {
         addTearDown(() => tempDir.delete(recursive: true));
 
         final emptyFile = File(p.join(tempDir.path, 'empty.mp3'));
+        final tinyHeaderFile = File(p.join(tempDir.path, 'tiny.mp3'));
         final htmlFile = File(p.join(tempDir.path, 'error.mp3'));
         final audioFile = File(p.join(tempDir.path, 'valid.mp3'));
         await emptyFile.writeAsBytes(const []);
+        await tinyHeaderFile.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
         await htmlFile.writeAsString('<html>not audio</html>');
-        await audioFile.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await audioFile.writeAsBytes(_quranMp3FixtureBytes());
 
         expect(await validateDownloadedQuranAudioFile(emptyFile.path), isFalse);
         expect(await emptyFile.exists(), isFalse);
+        expect(
+          await validateDownloadedQuranAudioFile(tinyHeaderFile.path),
+          isFalse,
+        );
+        expect(await tinyHeaderFile.exists(), isFalse);
         expect(await validateDownloadedQuranAudioFile(htmlFile.path), isFalse);
         expect(await htmlFile.exists(), isFalse);
         expect(await validateDownloadedQuranAudioFile(audioFile.path), isTrue);
@@ -290,7 +312,7 @@ void main() {
         final validSurah = File(p.join(audioDir.path, 'alafasy_003.mp3'));
         await emptySurah.writeAsBytes(const []);
         await htmlSurah.writeAsString('<html>not audio</html>');
-        await validSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await validSurah.writeAsBytes(_quranMp3FixtureBytes());
 
         expect(await OfflineAudioService.getDownloadedSurahs('alafasy'), [3]);
         expect(await emptySurah.exists(), isFalse);
@@ -322,9 +344,9 @@ void main() {
         final validSurah = File(p.join(audioDir.path, 'alafasy_001.mp3'));
         final invalidSurah = File(p.join(audioDir.path, 'alafasy_999.mp3'));
         final unknownReciter = File(p.join(audioDir.path, 'unknown_001.mp3'));
-        await validSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
-        await invalidSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
-        await unknownReciter.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await validSurah.writeAsBytes(_quranMp3FixtureBytes());
+        await invalidSurah.writeAsBytes(_quranMp3FixtureBytes());
+        await unknownReciter.writeAsBytes(_quranMp3FixtureBytes());
 
         expect(await OfflineAudioService.getDownloadedSurahs('alafasy'), [1]);
         expect(await validSurah.exists(), isTrue);
@@ -359,15 +381,15 @@ void main() {
         final invalidSurah = File(p.join(audioDir.path, 'alafasy_999.mp3'));
         final nonAudio = File(p.join(audioDir.path, 'notes.txt'));
 
-        await validManaged.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await validManaged.writeAsBytes(_quranMp3FixtureBytes());
         await corruptManaged.writeAsString('<html>not audio</html>');
-        await unknownReciter.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
-        await invalidSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await unknownReciter.writeAsBytes(_quranMp3FixtureBytes());
+        await invalidSurah.writeAsBytes(_quranMp3FixtureBytes());
         await nonAudio.writeAsString('not managed');
 
         expect(
           await OfflineAudioService.getTotalDownloadedSize(),
-          closeTo(4 / (1024 * 1024), 0.000001),
+          closeTo(minimumQuranAudioFileBytes / (1024 * 1024), 0.000001),
         );
         expect(await validManaged.exists(), isTrue);
         expect(await corruptManaged.exists(), isFalse);
