@@ -12831,3 +12831,56 @@
 
 ### Sonraki Adim
 - Yeni turda offline audio/download integrity, Supabase audio mirror operasyonu ve kalan high-risk l10n debt guvenli sekilde taranacak.
+
+## 2026-04-17 TUR-304 - Runtime Quran Audio MP3 Signature Validation
+
+### Yapilan Islem
+- Runtime offline Quran audio dosya validasyonu, sadece dosya var/boyut > 0 kontrolunden MP3 imza kontrolune yukseltildi.
+- ID3 ve MPEG frame-sync imzasi olmayan `.mp3` dosyalari corrupt kabul edilip cihazdan siliniyor.
+- `downloadSurahAudio`, `isAudioDownloaded` ve `getDownloadedSurahs` zaten ayni validator'u kullandigi icin runtime indirme, varlik kontrolu ve katalog sayimi ayni guvenceye baglandi.
+- Offline audio testleri HTML hata payload'i ve corrupt katalog dosyasi senaryolarini kapsayacak sekilde guncellendi.
+
+### Kanit
+- Header probe sabiti: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:14`
+- Runtime audio validator: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:170`
+- Header okuma: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:195`
+- MP3 imza kontrolu: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:208`
+- Download sonrasi validator kullanimi: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:308`
+- Katalog sayiminda validator kullanimi: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:386`
+- Empty/non-audio validator testi: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:229`
+- HTML payload silme beklentisi: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:245`
+- Corrupt catalog dosyasi testi: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:253`
+
+### Neden Yapildi
+- Onceki validator sadece dosyanin varligini ve boyutunun 0'dan buyuk olmasini kontrol ediyordu.
+- Supabase Storage veya network katmani HTML/JSON hata sayfasi dondururse bu payload `.mp3` olarak kaydedilip indirildi sayilabilirdi.
+- Kullaniciya "downloaded" gorunen ama oynatilamayacak bozuk Kur'an ses dosyasi false-success ve offline playback guven riski olusturuyordu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Bozuk veya non-audio payload'lar artik indirildi sayilmiyor.
+- Katalog sayimi corrupt dosyalari otomatik temizleyerek kullaniciya dogru downloaded surah sayisi gosteriyor.
+- Existing Supabase Storage ownership ve provenance guard'lari korunuyor; external runtime audio fallback eklenmedi.
+
+### Test Sonucu
+- Odak test: `flutter test test\offline_audio_service_test.dart test\quran_audio_file_validation_test.dart` PASS (`15/15`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`527/527`)
+
+### Risk Degisimi
+- HTML/bozuk payload'in offline Quran audio olarak indirildi sayilmasi riski: `16/25 -> 2/25`
+- Corrupt local MP3 dosyasinin downloaded katalogunda kalmasi riski: `12/25 -> 2/25`
+
+### Rollback Plani
+- `_mp3HeaderProbeBytes`, `_readQuranAudioHeader` ve `_hasMp3AudioSignature` kaldirilir.
+- `validateDownloadedQuranAudioFile` eski boyut-only kontrole dondurulur.
+- HTML/corrupt audio test beklentileri eski empty-only kapsama dondurulur.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Yeni turda Quran audio mirror/upload tool zinciri ve kalan l10n debt, uydurma ceviri yapmadan guvenli guard'larla taranacak.
