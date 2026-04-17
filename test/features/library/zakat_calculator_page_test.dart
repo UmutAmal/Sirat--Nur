@@ -23,6 +23,73 @@ void main() {
     expect(result.totalZakat, 175);
   });
 
+  test(
+    'ZakatCalculator does not report business zakat below aggregate nisab',
+    () {
+      final result = ZakatCalculator.calculateTotal(
+        goldGrams: 0,
+        goldPricePerGram: 100,
+        silverGrams: 0,
+        silverPricePerGram: 1,
+        cashAmount: 0,
+        businessInventory: 1000,
+        businessDebts: 0,
+        investments: 0,
+      );
+
+      expect(result.nisabValue, 8500);
+      expect(result.totalAssets, 1000);
+      expect(result.isNisabMet, isFalse);
+      expect(result.businessZakat, 0);
+      expect(result.totalZakat, 0);
+    },
+  );
+
+  test(
+    'ZakatCalculator applies rate when combined zakatable assets meet nisab',
+    () {
+      final result = ZakatCalculator.calculateTotal(
+        goldGrams: 40,
+        goldPricePerGram: 100,
+        silverGrams: 0,
+        silverPricePerGram: 1,
+        cashAmount: 3000,
+        businessInventory: 2000,
+        businessDebts: 500,
+        investments: 1000,
+      );
+
+      expect(result.nisabValue, 8500);
+      expect(result.totalAssets, 9500);
+      expect(result.isNisabMet, isTrue);
+      expect(result.goldZakat, 100);
+      expect(result.cashZakat, 75);
+      expect(result.businessZakat, 37.5);
+      expect(result.investmentZakat, 25);
+      expect(result.totalZakat, 237.5);
+    },
+  );
+
+  test(
+    'ZakatCalculator does not let excess business debt create negative assets',
+    () {
+      final result = ZakatCalculator.calculateTotal(
+        goldGrams: 0,
+        goldPricePerGram: 100,
+        silverGrams: 0,
+        silverPricePerGram: 1,
+        cashAmount: 0,
+        businessInventory: 100,
+        businessDebts: 250,
+        investments: 0,
+      );
+
+      expect(result.totalAssets, 0);
+      expect(result.businessZakat, 0);
+      expect(result.totalZakat, 0);
+    },
+  );
+
   test('ZakatCalculatorPage renders results from a local snapshot', () {
     final source = File(
       'lib/features/library/zakat_calculator_page.dart',

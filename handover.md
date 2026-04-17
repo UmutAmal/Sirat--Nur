@@ -13829,3 +13829,64 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki somut risk olarak hardcoded UI copy veya audio/Supabase storage provenance hattindan kanitli tek yuzey secilecek.
+
+## 2026-04-17 TUR-321 - Zakat Aggregate Nisab Guard
+
+### Yapilan Islem
+- AGENTS dongusu repo/remote/branch/status ile yeniden dogrulandi; calisma agaci temizdi.
+- `flutter doctor` calistirildi; Android toolchain saglam, Chrome/Visual Studio eksikleri web/Windows hedefleri icin bloklayici olmayan ortam notu olarak degerlendirildi.
+- Zekat hesaplayicisinda ticaret kalemi icin nisap alti false-positive riski kapatildi.
+- Ticari borclar stok degerini asarsa toplam zekata tabi varlik negatiflenmiyor; net ticaret varligi `0` altina dusurulmuyor.
+- Zekata tabi toplam varliklar birlikte nisaba ulasiyorsa hesaplama tum pozitif zekata tabi kalemlere ayni oranla uygulanacak sekilde duzeltildi.
+- Dini metin icerigi degistirilmedi; sadece hesaplama mantigi ve test kapsami guncellendi.
+
+### Kanit
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:75` once `calculateBusinessZakat` yalniz `inventoryValue - debts` uzerinden oran uyguluyordu; nisap kontrolu `calculateTotal` icinde ticaret kalemine baglanmiyordu.
+- Kök risk: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:83` eski toplam varlik hesabi ticari borc stogu asarsa varlik tabanini negatife cekebiliyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:96` nisap degeri tek sabit uzerinden uretiliyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:99` net ticaret varligi `0..infinity` araligina aliniyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:102` toplam zekata tabi varlik tabani altin, gumus, nakit, net ticaret ve yatirimlardan kuruluyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:105` altin/gumus/aggregate nisap kosullari ayrildi, `isNisabMet` bunlarin birlesik sonucuna baglandi.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart:111` nisap saglanmadan kalemlere zekat orani uygulanmiyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:26` nisap alti ticaret varligi icin zekatin `0` kaldigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:48` birlesik zekata tabi varliklar nisabi gecince oran uygulandigini dogruluyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart:73` ticari borcun toplam varligi negatife cekmesini engelliyor.
+- Kaynak dogrulama: Diyanet Haber `Zekat Verilmesi Gereken Mallar Nelerdir?` satir 149-156 ticaret mallarinda nisap ve %2,5 ilkesini; satir 162-166 para/ticaret/altin/gumus birlestirme ilkesini belirtiyor.
+- Kaynak dogrulama: TDV `zekathesapla.tdv.org` satir 147-150 ticaret malinda borclardan sonra kalan kismin 80,18 gr altin degerine ulasmasi ve %2,5 verilmesi gerektigini belirtiyor.
+
+### Neden Yapildi
+- Kullanici, dini/finansal hesaplamalarda bolge veya uygulama kafasina gore yanlis sonuc uretilmemesi gerektigini ozellikle vurguladi.
+- Eski akista `businessInventory=1000`, `goldPricePerGram=100` gibi nisap alti bir senaryo `businessZakat=25` uretebiliyordu; bu false-positive ibadet/finans riskiydi.
+- Duzeltme, toplam varlik nisabi saglanmadan "zekat borcu var" algisi ureten hesap sonucunu engelliyor.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\features\library\zakat_calculator_page.dart`
+- `A:\Way of Allah\sirat_i_nur\test\features\library\zakat_calculator_page_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Nisap altinda ticari stok bulunan kullanicilar artik pozitif ticaret zekati gormeyecek.
+- Nakit, ticaret, yatirim ve maden varliklari birlikte nisaba ulasinca sonuc bolunmus kalemlerde tutarli sekilde hesaplanacak.
+- Ticari borcun stoktan fazla oldugu durumda toplam varlik tabani negatiflenmeyecek.
+- UI copy, localization dosyalari, Quran/audio/prayer/location zincirleri degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\features\library\zakat_calculator_page.dart test\features\library\zakat_calculator_page_test.dart` PASS
+- Odak test: `flutter test test\features\library\zakat_calculator_page_test.dart --reporter compact` PASS (`8/8`)
+- Diff check: `git diff --check` PASS (yalniz CRLF warning)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`543/543`)
+
+### Risk Degisimi
+- Zekat ticaret kalemi nisap alti false-positive riski: `20/25 -> 3/25`
+- Ticari borcun toplam varligi negatife cekme riski: `12/25 -> 2/25`
+- Dini hesaplama kaynak uyumu icin kalan not: mevcut proje sabitleri `85g/595g` standardini koruyor; Diyanet/TDV guncel metinlerinde `80,18g/561g` geciyor. Bu fark yeni turda ayri kanitli risk olarak ele alinmali, cunku degistirmek mevcut test ve urun varsayimini etkiler.
+
+### Rollback Plani
+- `zakat_calculator_page.dart` icindeki `_zakatRate`, `_goldNisabGrams`, `_silverNisabGrams` sabitleri ve aggregate nisab hesabi kaldirilip onceki kategori bazli hesaplara donulur.
+- `zakat_calculator_page_test.dart` icindeki uc yeni edge-case testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki en somut dini hesaplama riski olarak Zekat nisap gram sabitlerinin Diyanet/TDV guncel referanslariyla uyumu veya l10n/hardcoded UI borcu taranacak.
