@@ -442,6 +442,26 @@ void main() {
       },
     );
 
+    test('Aymara prayer method and name copy avoids known machine debris', () {
+      final arb = _readArb('lib/l10n/app_ay.arb');
+      const staleValues = {
+        'madhab': ['Método Jurídico', 'ukax mä juk’a pachanakanwa'],
+        'dhuhr': ['ukat juk’ampinaka'],
+        'maghrib': ['ukax mä juk’a pachanakanwa'],
+      };
+
+      for (final entry in staleValues.entries) {
+        for (final fragment in entry.value) {
+          expect(
+            arb[entry.key],
+            isNot(contains(fragment)),
+            reason:
+                'app_ay.arb has known prayer/method debris for ${entry.key}',
+          );
+        }
+      }
+    });
+
     test(
       'priority locales do not fall back to English for diagnostics labels',
       () {

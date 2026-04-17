@@ -15377,3 +15377,49 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; kalan Aymara aktif UI debris tablosundan bir sonraki risk olarak `loading`/`downloading` status metinleri veya `maghrib` prayer label secilecek.
+
+## 2026-04-17 TUR-353 - Aymara Prayer Method And Maghrib/Dhuhr Labels Cleaned
+
+### MASTER Karari
+- Risk: Aymara locale'de prayer-facing metinler karisik makine ceviri/debris tasiyordu: `madhab`, `dhuhr`, `maghrib`.
+- Kanit: `lib/l10n/app_ay.arb:17` `Asr Método Jurídico ukax...`, `lib/l10n/app_ay.arb:22` `Dhuhr ukat juk’ampinaka`, `lib/l10n/app_ay.arb:24` `Maghrib ukax...`; generated runtime karsiliklari `lib/l10n/app_localizations_ay.dart:57`, `lib/l10n/app_localizations_ay.dart:72`, `lib/l10n/app_localizations_ay.dart:78`.
+- Aktif kullanim: `lib/features/settings/settings_page.dart:74` `l10n.madhab`; `lib/core/utils/prayer_name_localization.dart:13` `l10n.dhuhr`; `lib/core/utils/prayer_name_localization.dart:17` `l10n.maghrib`; home/tracker prayer rows ayni label zincirini kullaniyor (`lib/features/home/home_page.dart:244`, `lib/features/home/home_page.dart:246`, `lib/features/tracker/tracker_page.dart:350`, `lib/features/tracker/tracker_page.dart:354`).
+- Kok neden: Prayer/method label'lari icin otomatik ceviri baglami yanlis yakalandi; `dhuhr` "and more" gibi genel UI suffix'ine, `madhab` ise Ispanyolca teknik ifade + Aymara debris karisimina kaydi.
+- Etki: Namaz vakti ve Asr fikhi yontemi gibi hassas dini/hesaplama yuzeyleri yanlis veya sacma gorunuyor.
+- Olasilik: Home prayer rows, tracker ve settings sayfalari aktif runtime yuzeyleri.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1).
+- Rollback kapsami: `lib/l10n/app_ay.arb`, `lib/l10n/app_localizations_ay.dart`, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/l10n/app_ay.arb:17`, `lib/l10n/app_ay.arb:22`, `lib/l10n/app_ay.arb:24` guvenilir fallback'e cekildi: `Asr Juristic Method`, `Dhuhr`, `Maghrib`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_ay.dart:57`, `lib/l10n/app_localizations_ay.dart:72`, `lib/l10n/app_localizations_ay.dart:78` senkronlandi.
+- `tool/translate_arb_keys.dart:686` prayer method/name wrong-context guard'i eklendi.
+- `tool/translate_arb_keys.dart:704` bu dar key seti `madhab`, `dhuhr`, `maghrib` ile sinirlandi.
+- `tool/translate_arb_keys.dart:746` `Método Jurídico` ve `ukat juk’ampinaka` debris fragmentleri tekrar kabul edilmemek uzere listelendi.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:791` `madhab`, `dhuhr`, `maghrib` icin bilinen debris current/candidate degerlerinin kaynak fallback'e dondugunu dogruluyor.
+- `test/arb_ui_localization_test.dart:445` Aymara prayer/method label'larinda `Método Jurídico`, `ukat juk’ampinaka` ve `ukax mä juk’a pachanakanwa` fragmentlerinin geri gelmemesini dogruluyor.
+- Manuel tarama: `rg -n "(Asr Método Jurídico|Dhuhr ukat juk’ampinaka|Maghrib ukax mä juk’a pachanakanwa)" lib\l10n\app_ay.arb lib\l10n\app_localizations_ay.dart` eslesme dondurmedi.
+- Debt raporu: `dart run tool\translate_arb_keys.dart --report madhab dhuhr maghrib` same-as-English `316`, missing/empty `0`, placeholder mismatch `0`. Aymara bu uc hassas key'de sahte ceviri yerine EN/canonical fallback kullaniyor.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`49/49`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`75/75`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- Diff hijyeni: `git diff --check` PASS; yalniz Windows CRLF uyarilari goruldu, whitespace hatasi yok.
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`580/580`)
+
+### Risk Degisimi
+- Aymara prayer/method active UI debris riski: `16/25 -> 2/25`
+- Kalan risk: Aymara status/action copy icinde `loading`, `downloading`, `downloadComplete`, `analytics`, `ibadahTracker`, `liveTv`, settings/diagnostics metinlerinde debris devam ediyor. Sonraki turda runtime sikligi ve kullanici etkisine gore secilecek.
+
+### Rollback Plani
+- `madhab`, `dhuhr`, `maghrib` Aymara ARB/generated degerleri onceki commit'e dondurulur.
+- Prayer method/name guard'i ve iki test guard'i revert edilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki yuksek risk olarak Aymara runtime status metinleri (`loading`, `downloading`, `downloadComplete`) ve home dashboard labels (`analytics`, `ibadahTracker`, `liveTv`) karsilastirilacak.

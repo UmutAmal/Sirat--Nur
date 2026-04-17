@@ -54,7 +54,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get method => 'Jakhuña thakhi';
 
   @override
-  String get madhab => 'Asr Método Jurídico ukax mä juk’a pachanakanwa';
+  String get madhab => 'Asr Juristic Method';
 
   @override
   String get surahs => 'Surahanaka';
@@ -69,13 +69,13 @@ class AppLocalizationsAy extends AppLocalizations {
   String get sunrise => 'Inti jalsu';
 
   @override
-  String get dhuhr => 'Dhuhr ukat juk’ampinaka';
+  String get dhuhr => 'Dhuhr';
 
   @override
   String get asr => 'Asr';
 
   @override
-  String get maghrib => 'Maghrib ukax mä juk’a pachanakanwa';
+  String get maghrib => 'Maghrib';
 
   @override
   String get isha => 'Isha';

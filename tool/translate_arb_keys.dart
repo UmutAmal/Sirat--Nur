@@ -683,6 +683,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, _knownQuranAudioSourceStatusDebris);
   }
 
+  if (_isPrayerMethodOrNameKey(key)) {
+    return _containsAny(value, _knownPrayerMethodOrNameDebris);
+  }
+
   if (key == 'splashTagline') {
     return _containsAny(value, _knownSplashTaglineTranslationDebris) ||
         _englishFallbackComparisonToken(
@@ -695,6 +699,10 @@ bool _hasKnownWrongContext(String key, String value) {
 
 bool _isDownloadCopyKey(String key) {
   return key.toLowerCase().contains('download');
+}
+
+bool _isPrayerMethodOrNameKey(String key) {
+  return const {'madhab', 'dhuhr', 'maghrib'}.contains(key);
 }
 
 const _knownDownloadTranslationDebris = [
@@ -734,6 +742,8 @@ const _knownGeneralTranslationDebris = [
   'Ukax mä juk’a pachanakanwa',
   'ukax mä juk’a pachanakanwa',
 ];
+
+const _knownPrayerMethodOrNameDebris = ['Método Jurídico', 'ukat juk’ampinaka'];
 
 const _knownQuranAudioSourceStatusDebris = [
   'Refresh cloud seed',

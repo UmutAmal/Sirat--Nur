@@ -788,6 +788,33 @@ void main() {
       expect(quranValue, 'Quran');
     });
 
+    test('rejects known prayer method and name debris', () {
+      final madhabValue = resolveTranslatedArbValue(
+        key: 'madhab',
+        source: 'Asr Juristic Method',
+        currentValue: 'Asr Método Jurídico ukax mä juk’a pachanakanwa',
+        candidate: 'Asr Método Jurídico ukax mä juk’a pachanakanwa',
+      );
+
+      final dhuhrValue = resolveTranslatedArbValue(
+        key: 'dhuhr',
+        source: 'Dhuhr',
+        currentValue: 'Dhuhr ukat juk’ampinaka',
+        candidate: 'Dhuhr ukat juk’ampinaka',
+      );
+
+      final maghribValue = resolveTranslatedArbValue(
+        key: 'maghrib',
+        source: 'Maghrib',
+        currentValue: 'Maghrib ukax mä juk’a pachanakanwa',
+        candidate: 'Maghrib ukax mä juk’a pachanakanwa',
+      );
+
+      expect(madhabValue, 'Asr Juristic Method');
+      expect(dhuhrValue, 'Dhuhr');
+      expect(maghribValue, 'Maghrib');
+    });
+
     test('rejects wrong-context splash tagline output', () {
       const source = 'Islamic Way of Light';
 
