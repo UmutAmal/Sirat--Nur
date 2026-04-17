@@ -12186,3 +12186,51 @@
 
 ### Sonraki Adim
 - Audio import hattindan sonra l10n tarafindaki kalan low-resource English fallback borcu ve Places/Supabase diagnostics copy icin sahte ceviri uretmeden yeni rapor/guard turu acilacak.
+
+## 2026-04-17 TUR-292 — Produce Verified Release APK After Full Validation
+
+### Yapilan Islem
+- Repo ve ortam dogrulama dongusu tekrar calistirildi.
+- `AGENTS.md` guncel dosyadan yeniden okundu ve bu tur icin tek write source'un `A:\Way of Allah\sirat_i_nur` oldugu teyit edildi.
+- `flutter analyze`, full `flutter test` ve `flutter build apk --release` sirasiyla calistirildi.
+- Release APK ciktisi dogrulandi, dosya boyutu ve SHA-256 hash'i kayda alindi.
+
+### Kanit
+- Remote dogrulama: `git remote -v` -> `https://github.com/UmutAmal/Sirat--Nur.git`
+- Branch dogrulama: `git branch --show-current` -> `master`
+- Temiz baslangic durumu: `git status -sb` -> `## master...origin/master`
+- APK yolu: `A:\Way of Allah\sirat_i_nur\build\app\outputs\flutter-apk\app-release.apk`
+- APK boyutu: `92,665,981` byte
+- APK SHA-256: `4D6363CCAF9F1F85FA5049BA0128394F3442CD88FBE3F261E8D36545E98A5583`
+
+### Neden Yapildi
+- Kullanici dogrudan APK istedi; cikti sadece build klasorunde uretilerek kaynak gecmisine ikili artefact eklenmedi.
+- Analyze ve full test gecmeden release APK verilirse eski risk dongusu kapatilmis sayilmazdi.
+- APK hash'i ileride Antigravity/Codex devrinde ayni artefactin dogrulanabilmesi icin kaydedildi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Android release paketi yerelde hazir.
+- Build artefacti kaynak kontrol disinda kaldigi icin repo temizligi ve senkron kurali korunuyor.
+- Bir sonraki ajan APK'nin dosya yolunu ve hash'ini session memory'e guvenmeden `handover.md` uzerinden bulabilir.
+
+### Test Sonucu
+- `flutter doctor -v` PASS for Android toolchain; Chrome ve Visual Studio eksikleri Android APK icin bloklayici degil.
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`506/506`)
+- Release build: `flutter build apk --release` PASS (`Built build\app\outputs\flutter-apk\app-release.apk (88.4MB)`)
+
+### Risk Degisimi
+- Dogrulanmamis APK artefacti verme riski: `12/25 -> 1/25`
+- Analyze/test gecmeden release build paylasma riski: `16/25 -> 1/25`
+- Build klasorundeki ikili dosyayi yanlislikla repo gecmisine alma riski: `10/25 -> 1/25`
+
+### Rollback Plani
+- APK artefacti sadece `build\app\outputs\flutter-apk\app-release.apk` konumundan silinir.
+- Bu handover kaydi append-only oldugu icin silinmez; gerekiyorsa yeni bir revert/iptal kaydi eklenir.
+- Release build tekrar alinmadan once `flutter analyze` ve full `flutter test` yeniden calistirilir.
+
+### Sonraki Adim
+- L10n tarafindaki kalan low-resource English fallback borcu ve Places/Supabase diagnostics copy icin sahte ceviri uretmeden yeni analiz/guard turu acilacak.
