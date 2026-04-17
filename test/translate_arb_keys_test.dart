@@ -723,6 +723,44 @@ void main() {
       expect(value, 'Total zakat');
     });
 
+    test(
+      'preserves stronger download action labels over weak forced output',
+      () {
+        final italianValue = resolveTranslatedArbValue(
+          key: 'downloadAction',
+          source: 'Download',
+          currentValue: 'Scarica',
+          candidate: 'Scaricamento',
+        );
+
+        final hindiValue = resolveTranslatedArbValue(
+          key: 'downloadAction',
+          source: 'Download',
+          currentValue: 'डाउनलोड करें',
+          candidate: 'डाउनलोड करना',
+        );
+
+        final polishValue = resolveTranslatedArbValue(
+          key: 'downloadAction',
+          source: 'Download',
+          currentValue: 'Pobierz',
+          candidate: 'Pobierać',
+        );
+
+        final aymaraValue = resolveTranslatedArbValue(
+          key: 'downloadAction',
+          source: 'Download',
+          currentValue: 'Ukax mä juk’a pachanakanwa',
+          candidate: 'Apaqaña',
+        );
+
+        expect(italianValue, 'Scarica');
+        expect(hindiValue, 'डाउनलोड करें');
+        expect(polishValue, 'Pobierz');
+        expect(aymaraValue, 'Apaqaña');
+      },
+    );
+
     test('rejects wrong-context splash tagline output', () {
       const source = 'Islamic Way of Light';
 

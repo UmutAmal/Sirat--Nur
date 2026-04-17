@@ -15246,3 +15246,45 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak download/audio localization same-as-English borcu, kullaniciya gorunen operator jargonu ve runtime source availability mesajlari taranacak.
+
+## 2026-04-17 TUR-350 - Download Action L10n Guard Preserves Strong Button Labels
+
+### MASTER Karari
+- Risk: `downloadAction` aktif offline audio popup menusu uzerinde kullaniliyor (`lib/features/downloads/offline_downloads_page.dart:328`), fakat otomatik `--force downloadAction` denemesi iyi mevcut buton etiketlerini daha zayif isim/masdar bicimlerine cevirebildi.
+- Kanit: Batch impact simülasyonunda `app_hi.arb` `डाउनलोड करें -> डाउनलोड करना`, `app_it.arb` `Scarica -> Scaricamento`, `app_pl.arb` `Pobierz -> Pobierać`, `app_uz.arb` `Yuklab oling -> Yuklab olish` gibi zayiflamalar uretti; ayni raporda `downloadAction` same-as-English borcu `70` olarak degismedi.
+- Kok neden: `Download` tek basina hem eylem hem isim olarak okunabiliyor; `--force` mevcut temiz ceviriyi de adayla ezmeye calisiyordu.
+- Etki: Indirme butonu bazi dillerde eylem cagrisi yerine durum/isim gibi gorunebilir ve ilerideki l10n batch'leri kaliteyi geriletebilirdi.
+- Olasilik: `translate_arb_keys.dart` l10n borc dongulerinde aktif kullaniliyor; `downloadAction` daha once risk listesinde ve UI'da aktif.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/arb_ui_localization_test.dart`, `lib/l10n/app_ay.arb`, `lib/l10n/app_localizations_ay.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `tool/translate_arb_keys.dart:562` candidate kabulunden once mevcut temiz ceviriyi degerlendiren koruma eklendi.
+- `tool/translate_arb_keys.dart:605` `downloadAction` icin temiz mevcut deger varsa bilinen zayif forced adaylari reddeden `_shouldPreferExistingTranslation` yardimcisi eklendi.
+- `tool/translate_arb_keys.dart:720` bilinen zayif downloadAction adaylari listelendi: Hindi masdar, Italyanca isim, Lehce infinitive, Mizo uzun isimlesmis ifade, Sanskrit/Hindi karisimi ve Ozbek isimlesmis form.
+- `lib/l10n/app_ay.arb:393` eski anlamsiz Aymara `Ukax mä juk’a pachanakanwa` yerine daha net `Apaqaña` eylem etiketi yazildi; `flutter gen-l10n` ile `app_localizations_ay.dart:1229` senkronlandi.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:727` forced zayif adaylar geldiginde Italyanca/Hindi/Lehce temiz mevcut degerlerin korundugunu, Aymara temiz adayin ise kabul edildigini dogruluyor.
+- `test/arb_ui_localization_test.dart:2138` tum `app_*.arb` dosyalarinda `downloadAction` icin bilinen zayif forced kalintilarin geri gelmemesini dogruluyor.
+- `dart run tool\translate_arb_keys.dart --report downloadAction` sonucu: same-as-English `70`, missing/empty `0`, placeholder mismatch `0`. Bu tur borcu yapay olarak azaltmadi; kalite regresyonunu engelledi.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`47/47`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`73/73`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- Diff hijyeni: `git diff --check` PASS; yalniz Windows CRLF uyarilari goruldu, whitespace hatasi yok.
+
+### Risk Degisimi
+- `--force downloadAction` iyi buton cevirilerini zayif adaylarla ezme riski: `12/25 -> 2/25`
+- `downloadAction` same-as-English borcu: `70` olarak kaldi; dusuk kaynak dillerde uydurma yapilmadi.
+- Aymara `downloadAction` bilinen zayif ifade riski: `8/25 -> 2/25`
+
+### Rollback Plani
+- `_shouldPreferExistingTranslation` yardimcisi, zayif aday listesi ve iki test guard'i revert edilir.
+- `app_ay.arb` ve generated `app_localizations_ay.dart` onceki degerlerine dondurulur.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; `downloadAction` borcu yapay azaltma olmadan kalacak, siradaki dar risk olarak diger download sonucu metinleri ve Aymara'daki baska ayni zayif kalintilar (`settings`, `page`, `downloads`) aktif UI kullanimina gore taranacak.

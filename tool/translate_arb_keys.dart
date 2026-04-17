@@ -551,13 +551,30 @@ String resolveTranslatedArbValue({
     source: source,
   );
 
+  final existingValue = currentValue;
+  if (existingValue is String) {
+    final processedExistingValue = _postProcessTranslation(
+      key: key,
+      translated: existingValue,
+      source: source,
+    );
+
+    if (_shouldPreferExistingTranslation(
+      key: key,
+      source: source,
+      existing: processedExistingValue,
+      candidate: processedCandidate,
+    )) {
+      return processedExistingValue;
+    }
+  }
+
   if (_isUsableTranslationCandidate(key, source, processedCandidate)) {
     if (!_isEnglishFallbackEquivalent(processedCandidate, source)) {
       return processedCandidate;
     }
   }
 
-  final existingValue = currentValue;
   if (existingValue is String) {
     final processedExistingValue = _postProcessTranslation(
       key: key,
@@ -583,6 +600,24 @@ String resolveTranslatedArbValue({
   }
 
   return _normalizeProperNames(source);
+}
+
+bool _shouldPreferExistingTranslation({
+  required String key,
+  required String source,
+  required String existing,
+  required String candidate,
+}) {
+  if (key != 'downloadAction') {
+    return false;
+  }
+
+  if (!_isUsableTranslationCandidate(key, source, existing) ||
+      _isEnglishFallbackEquivalent(existing, source)) {
+    return false;
+  }
+
+  return _containsAny(candidate, _knownWeakDownloadActionCandidates);
 }
 
 bool _isEnglishFallbackEquivalent(String value, String source) {
@@ -680,6 +715,15 @@ const _knownDownloadTranslationDebris = [
   'резюме',
   'Ռեզյում',
   'რეზიუმ',
+];
+
+const _knownWeakDownloadActionCandidates = [
+  'डाउनलोड करना',
+  'Scaricamento',
+  'Internet atanga thil lachhawng',
+  'Pobierać',
+  'अवाहरन',
+  'Yuklab olish',
 ];
 
 const _knownQuranAudioSourceStatusDebris = [

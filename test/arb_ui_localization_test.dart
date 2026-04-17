@@ -2135,6 +2135,36 @@ void main() {
       }
     });
 
+    test('download action copy avoids known weak forced translations', () {
+      const staleFragments = [
+        'Ukax mä juk’a pachanakanwa',
+        'डाउनलोड करना',
+        'Scaricamento',
+        'Internet atanga thil lachhawng',
+        'Pobierać',
+        'अवाहरन',
+      ];
+
+      for (final file
+          in Directory('lib/l10n').listSync().whereType<File>().where(
+            (file) =>
+                file.path.endsWith('.arb') &&
+                file.uri.pathSegments.last.startsWith('app_'),
+          )) {
+        final arb = _readArb(file.path);
+        final value = arb['downloadAction'] as String;
+
+        for (final fragment in staleFragments) {
+          expect(
+            value,
+            isNot(contains(fragment)),
+            reason:
+                '${file.uri.pathSegments.last} has weak downloadAction "$fragment"',
+          );
+        }
+      }
+    });
+
     test(
       'safe priority locales do not fall back to English for chatbot offline copy',
       () {

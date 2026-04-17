@@ -1226,7 +1226,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Ukax mä juk’a pachanakanwa';
+  String get downloadAction => 'Apaqaña';
 
   @override
   String get resumeDownload => 'Uka apsuñatakix sarantaskakiniwa';
