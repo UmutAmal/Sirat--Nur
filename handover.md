@@ -14541,3 +14541,52 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak l10n debt, religious content guards ve runtime config/asset eksikleri taranacak.
+
+## 2026-04-17 TUR-333 - Quran Asset Integrity Guard Covers Every Ayah
+
+### Yapilan Islem
+- TUR-332 commit/push sonrasi repo tekrar dogrulandi: remote `origin`, branch `master`, status temiz ve remote ile senkrondu.
+- Yeni dongude `flutter doctor` calistirildi; Android/Flutter zinciri saglikli, Chrome/Visual Studio eksikleri web/Windows hedefleri icin non-blocking olarak not edildi.
+- Analytics l10n debt icin `prayerCompletion`, `streaks`, `dayStreak` raporu alindi; 199 same-as-English borcu goruldu.
+- `dart run tool/translate_arb_keys.dart prayerCompletion streaks dayStreak` calistirildi; guvenlik guard'lari tum dosyalari `Unchanged` birakti, bu nedenle sahte/uydurma ceviri commit'e zorlanmadi.
+- Dini icerik onceligi geregi `assets/data/full_quran.json` ve `assets/data/surahs.json` icin tam kapsamli asset integrity guard'i eklendi.
+- Guard artik 114 sure, 6236 ayet, global ayah number benzersizligi, `numberInSurah` sirasi, 1-30 juz araligi, bos olmayan Arapca/TR/EN metin ve placeholder/debris yoklugunu test ediyor.
+- Lightweight `surahs.json` indeksi artik full Quran asset ayet sayilari ve revelationType degerleriyle birebir hizali olmak zorunda.
+
+### Kanit
+- Kok risk: `A:\Way of Allah\sirat_i_nur\test\bundled_quran_asset_test.dart:27` once yalniz kritik birkac ayet ornegi ve seed chain esitligi korunuyordu; tum ayetlerde bos/debris icerik icin bagimsiz guard yoktu.
+- Fix: `A:\Way of Allah\sirat_i_nur\test\bundled_quran_asset_test.dart:74` her bundled ayetin Arapca metin, TR/EN meal, juz, sira ve placeholder/debris kontrolleri eklendi.
+- Fix: `A:\Way of Allah\sirat_i_nur\test\bundled_quran_asset_test.dart:125` `surahs.json` lightweight indeksinin `full_quran.json` ayet sayilariyla hizasi test edildi.
+
+### Neden Yapildi
+- Kullanici dini iceriklerin once dogru ve sacma placeholder metinlerden arinmis olmasini istiyor; ceviri veya UI iyilestirmesi bundan sonra anlamli.
+- Quran asset'leri uygulamanin offline temel dini icerigidir; tek bir bos/dummy ayet bile yuksek guven riski olusturur.
+- Bu patch icerigi degistirmez; dogru icerigin yanlislikla bozulmasini testle engeller.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\test\bundled_quran_asset_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Quran asset pipeline icin kapsamli regresyon guvencesi eklendi.
+- `surahs.json` ile `full_quran.json` arasinda sessiz ayet sayisi drift'i olursa test fail edecek.
+- L10n araci unsupported/nadir locale icin sahte ceviri uretmedigi icin bu turda ARB dosyalari degistirilmedi.
+
+### Test Sonucu
+- Format: `dart format test\bundled_quran_asset_test.dart` PASS
+- Odak test: `flutter test test\bundled_quran_asset_test.dart --reporter compact` PASS (`4/4`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`560/560`)
+
+### Risk Degisimi
+- Quran asset'lerinde bos, dummy veya placeholder ayetin sessizce ship edilmesi riski: `12/25 -> 2/25`
+- `surahs.json` indeksinin full Quran ayet sayilarindan sapmasi riski: `10/25 -> 2/25`
+- Kalan risk: Meallerin semantik/dini dogrulugu ayrica resmi kaynak karsilastirma audit'i gerektirir; mevcut patch yapisal ve debris guard'idir.
+
+### Rollback Plani
+- `bundled_quran_asset_test.dart` icindeki iki yeni integrity testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak Quran/tafsir semantik kaynak guard'i, l10n debt ve runtime config yuzeyleri taranacak.
