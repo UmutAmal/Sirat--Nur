@@ -300,6 +300,40 @@ void main() {
     );
 
     test(
+      'getDownloadedSurahs ignores invalid managed-looking surah numbers',
+      () async {
+        final tempDir = await Directory.systemTemp.createTemp(
+          'sir_audio_invalid_catalog_',
+        );
+        addTearDown(() => tempDir.delete(recursive: true));
+
+        const channel = MethodChannel('plugins.flutter.io/path_provider');
+        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+            .setMockMethodCallHandler(channel, (_) async => tempDir.path);
+        addTearDown(
+          () => TestDefaultBinaryMessengerBinding
+              .instance
+              .defaultBinaryMessenger
+              .setMockMethodCallHandler(channel, null),
+        );
+
+        final audioDir = Directory(p.join(tempDir.path, 'quran_audio'));
+        await audioDir.create(recursive: true);
+        final validSurah = File(p.join(audioDir.path, 'alafasy_001.mp3'));
+        final invalidSurah = File(p.join(audioDir.path, 'alafasy_999.mp3'));
+        final unknownReciter = File(p.join(audioDir.path, 'unknown_001.mp3'));
+        await validSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await invalidSurah.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+        await unknownReciter.writeAsBytes(const [0x49, 0x44, 0x33, 0x04]);
+
+        expect(await OfflineAudioService.getDownloadedSurahs('alafasy'), [1]);
+        expect(await validSurah.exists(), isTrue);
+        expect(await invalidSurah.exists(), isTrue);
+        expect(await unknownReciter.exists(), isTrue);
+      },
+    );
+
+    test(
       'getTotalDownloadedSize counts only managed verified quran audio files',
       () async {
         final tempDir = await Directory.systemTemp.createTemp(

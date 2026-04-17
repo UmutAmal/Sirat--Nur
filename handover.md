@@ -14489,3 +14489,55 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak audio catalog veri dolulugu, Zekat UI seffafligi veya l10n same-as-English borcu taranacak.
+
+## 2026-04-17 TUR-332 - Offline Downloaded Surah Count Rejects Invalid Managed-Looking Files
+
+### Yapilan Islem
+- TUR-331 commit/push sonrasi repo tekrar dogrulandi: remote `origin`, branch `master`, status temiz ve remote ile senkrondu.
+- Yeni dongude `flutter doctor -v` calistirildi; Android/Flutter zinciri saglikli, Chrome/Visual Studio eksikleri web/Windows hedefleri icin non-blocking olarak not edildi.
+- Offline audio status sayimi incelendi.
+- `getDownloadedSurahs` artik dosya adini sadece reciter prefix'i ve `.mp3` uzantisiyle degil, uygulamanin yonettigi Quran audio dosya adi guard'i ile de kontrol ediyor.
+- Parse edilen sure numarasi 1-114 araliginda degilse indirilmis sayisina eklenmiyor.
+- Ayni sure iki farkli valid gorunumle klasore karismis olsa bile sayac duplicate eklemiyor.
+
+### Kanit
+- Kok risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:434` once `getDownloadedSurahs` yalniz `${reciterId}_` prefix'i ve `.mp3` uzantisina bakiyordu.
+- Kok risk: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:445` once parse edilebilen her integer indirilmis sure listesine eklenebiliyordu.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:434` sayim akisi artik `_isManagedDownloadedQuranAudioFileName` guard'ini kullaniyor.
+- Fix: `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart:448` sayaca ekleme once `_isValidQuranSurahNumber` ve duplicate kontrolunden geciyor.
+- Test: `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart:303` valid audio imzali `alafasy_999.mp3` ve unknown reciter dosyalarinin sayimi sisirmedigini dogruluyor.
+
+### Neden Yapildi
+- Offline download ekranindaki indirilmis sure sayisi kullanicinin cihazinda gercekten yonetilen 1-114 Quran audio dosyalarini temsil etmeli.
+- Klasore karismis valid imzali ama gecersiz numarali dosya false completion ve yanlis offline durum algisi olusturabilir.
+- TUR-325 boyut hesabini sertlestirmisti; bu tur ayni guvenlik mantigini sayim yuzeyine de tasidi.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\lib\core\services\offline_audio_service.dart`
+- `A:\Way of Allah\sirat_i_nur\test\offline_audio_service_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Offline Quran audio sayaci corrupt olmayan ama gecersiz managed-looking dosyalari indirilmis saymiyor.
+- Gecerli dosyalar korunuyor; bilinmeyen veya gecersiz dosyalar veri kaybi riskini onlemek icin silinmeden yok sayiliyor.
+- Indirme, silme, URL ownership ve Supabase Storage davranisi degismedi.
+
+### Test Sonucu
+- Format: `dart format lib\core\services\offline_audio_service.dart test\offline_audio_service_test.dart` PASS
+- Odak test: `flutter test test\offline_audio_service_test.dart --reporter compact` PASS (`17/17`)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`558/558`)
+
+### Risk Degisimi
+- Offline audio sayacinin gecersiz sure numarali dosyalarla sisirilmesi riski: `10/25 -> 2/25`
+- Offline download completion UI'nin yanlis count uzerinden kullaniciyi yaniltma riski: `8/25 -> 2/25`
+- Kalan risk: Eski surumlerden kalmis non-padded ama 1-114 arasi dosyalar backward compatibility icin hala sayilabilir; future turda migration kaniti bulunursa daha sert format kuralina gecilebilir.
+
+### Rollback Plani
+- `getDownloadedSurahs` icindeki `_isManagedDownloadedQuranAudioFileName`, `_isValidQuranSurahNumber` ve duplicate kontrolu kaldirilir.
+- `offline_audio_service_test.dart` icindeki invalid managed-looking sayim testi kaldirilir.
+- Handover append-only oldugu icin silinmez; revert kaydi yeni tur olarak eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki risk olarak l10n debt, religious content guards ve runtime config/asset eksikleri taranacak.

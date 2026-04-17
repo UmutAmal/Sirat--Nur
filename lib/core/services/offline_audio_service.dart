@@ -431,7 +431,8 @@ class OfflineAudioService {
     for (final entity in files) {
       if (entity is! File) continue;
       final fileName = p.basename(entity.path);
-      if (!fileName.startsWith('${reciterId}_') || !fileName.endsWith('.mp3')) {
+      if (!_isManagedDownloadedQuranAudioFileName(fileName) ||
+          !fileName.startsWith('${reciterId}_')) {
         continue;
       }
       if (!await validateDownloadedQuranAudioFile(entity.path)) {
@@ -442,7 +443,9 @@ class OfflineAudioService {
           .replaceFirst('${reciterId}_', '')
           .replaceFirst('.mp3', '');
       final surahNumber = int.tryParse(surahPart);
-      if (surahNumber != null) {
+      if (surahNumber != null &&
+          _isValidQuranSurahNumber(surahNumber) &&
+          !downloaded.contains(surahNumber)) {
         downloaded.add(surahNumber);
       }
     }
