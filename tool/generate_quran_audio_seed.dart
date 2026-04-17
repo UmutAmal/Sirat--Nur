@@ -4,6 +4,9 @@ import 'dart:io';
 const String sourceApiBaseUrl =
     'https://api.quran.com/api/v4/chapter_recitations';
 const String outputFileName = 'content_seed_quran_audio.sql';
+const String mirrorSeedAbortMessage =
+    'content_seed_quran_audio.sql is mirror input only; generate and apply '
+    'content_seed_quran_audio_storage.sql after Storage upload.';
 
 const Map<String, Map<String, Object>> reciters = {
   'abdul_basit_mujawwad': {
@@ -42,6 +45,12 @@ Future<void> main() async {
       )
       ..writeln('-- Source API base: $sourceApiBaseUrl/{chapter_recitation_id}')
       ..writeln('-- Verified at: $verifiedAt')
+      ..writeln('BEGIN;')
+      ..writeln('DO \$\$')
+      ..writeln('BEGIN')
+      ..writeln("  RAISE EXCEPTION '${_escapeSql(mirrorSeedAbortMessage)}';")
+      ..writeln('END')
+      ..writeln('\$\$;')
       ..writeln();
 
     var totalRows = 0;
@@ -89,6 +98,8 @@ Future<void> main() async {
       );
       buffer.writeln();
     }
+
+    buffer.writeln('ROLLBACK;');
 
     final file = File(outputFileName);
     await file.writeAsString(buffer.toString());

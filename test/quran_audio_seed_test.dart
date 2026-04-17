@@ -78,5 +78,20 @@ void main() {
       expect(seed, contains("'quran_surah', 'Surah 1'"));
       expect(seed, contains(', NULL, 1, NULL,'));
     });
+
+    test('fails fast when accidentally applied as a runtime database seed', () {
+      final seed = seedFile.readAsStringSync();
+      final generator = File(
+        'tool/generate_quran_audio_seed.dart',
+      ).readAsStringSync();
+      const abortMessage =
+          'content_seed_quran_audio.sql is mirror input only; generate and apply';
+
+      expect(seed, contains('BEGIN;'));
+      expect(seed, contains("RAISE EXCEPTION '$abortMessage"));
+      expect(seed.trimRight(), endsWith('ROLLBACK;'));
+      expect(generator, contains('mirrorSeedAbortMessage'));
+      expect(generator, contains(abortMessage));
+    });
   });
 }

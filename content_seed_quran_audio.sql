@@ -4,6 +4,12 @@
 -- Generate runtime rows with tool/generate_quran_audio_storage_seed.dart
 -- Source API base: https://api.quran.com/api/v4/chapter_recitations/{chapter_recitation_id}
 -- Verified at: 2026-04-08T19:00:42.228933Z
+BEGIN;
+DO $$
+BEGIN
+  RAISE EXCEPTION 'content_seed_quran_audio.sql is mirror input only; generate and apply content_seed_quran_audio_storage.sql after Storage upload.';
+END
+$$;
 
 INSERT INTO public.audio_files (
   type, title, url, storage_path, surah_number, duration_seconds, reciter, language, source, verified_at
@@ -8908,3 +8914,5 @@ INSERT INTO public.audio_files (
   verified_at = EXCLUDED.verified_at;
 
 -- Verified reciter 'shuraim' from Sa`ud ash-Shuraym via https://api.quran.com/api/v4/chapter_recitations/10
+
+ROLLBACK;

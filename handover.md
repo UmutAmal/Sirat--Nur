@@ -12023,3 +12023,56 @@
 
 ### Sonraki Adim
 - Quran audio sahiplik zincirinde bir sonraki risk `content_seed_quran_audio.sql` dosyasinin operator tarafindan yanlislikla runtime seed gibi uygulanmasi ihtimalidir; bunu SQL seviyesinde daha zor yanlis kullanilir hale getirme veya ayrik mirror manifest formatina tasima secenekleri degerlendirilecek.
+
+## 2026-04-17 TUR-289 — Make Quran Audio Mirror Seed Fail Fast If Misapplied
+
+### Yapilan Islem
+- `content_seed_quran_audio.sql` dosyasinin basina `BEGIN` + `RAISE EXCEPTION` guard'i eklendi.
+- Dosyanin sonuna `ROLLBACK;` eklendi; SQL runner hatadan sonra devam etmeye calissa bile ayni transaction kirlenmis kalir ve en sonda geri alinir.
+- `tool\generate_quran_audio_seed.dart` ayni fail-fast guard'i uretir hale getirildi; dosya yeniden generate edilirse koruma kaybolmayacak.
+- `quran_audio_seed_test.dart` icine seed ve generator icin regresyon testi eklendi.
+
+### Kanit
+- Generator abort mesaji: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart:7`
+- Generator `RAISE EXCEPTION` yazimi: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart:51`
+- Generator `ROLLBACK` yazimi: `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart:102`
+- Committed seed fail-fast exception: `A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql:10`
+- Committed seed rollback: `A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql:8918`
+- Regression testi: `A:\Way of Allah\sirat_i_nur\test\quran_audio_seed_test.dart:82`
+
+### Neden Yapildi
+- `content_seed_quran_audio.sql` mirror input olarak tutuluyor; icindeki satirlar dis mirror URL'leri ve `NULL storage_path` iceriyor.
+- Onceki halde dosya dokumantasyonla uyariliyordu ama yanlislikla SQL editorunde calistirilirse `public.audio_files` tablosuna runtime icin uygun olmayan external URL satirlari yazabilirdi.
+- Runtime kodu dis URL'leri kullanmasa bile veritabanini kirletmek ileride operator hatasi, diagnostik karmaşa ve Storage'a gecis sirasinda false-confidence riski doguruyordu.
+
+### Degistirilen Dosyalar
+- `A:\Way of Allah\sirat_i_nur\content_seed_quran_audio.sql`
+- `A:\Way of Allah\sirat_i_nur\tool\generate_quran_audio_seed.dart`
+- `A:\Way of Allah\sirat_i_nur\test\quran_audio_seed_test.dart`
+- `A:\Way of Allah\sirat_i_nur\handover.md`
+
+### Etki
+- Mirror seed artik varsayilan haliyle uygulandiginda kendini durdurur; runtime icin dogru dosya Storage upload sonrasi uretilen `content_seed_quran_audio_storage.sql` olarak kalir.
+- Mirror parser ve download tool halen committed seed icindeki 684 satiri okuyabiliyor; odak test bunu dogruladi.
+- Generator yeniden calistirilirse fail-fast guvenligi korunur.
+
+### Test Sonucu
+- Format: `dart format tool\generate_quran_audio_seed.dart test\quran_audio_seed_test.dart` PASS
+- Odak test: `flutter test test\quran_audio_seed_test.dart test\download_verified_quran_audio_test.dart` PASS (`12/12`)
+- `git diff --check` PASS (yalniz LF -> CRLF uyari mesaji)
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test` PASS (`503/503`)
+
+### Risk Degisimi
+- Mirror SQL'in yanlislikla runtime seed gibi uygulanip `audio_files` tablosunu external URL + `NULL storage_path` ile kirletmesi riski: `12/25 -> 1/25`
+- Generator rerun sonrasi guard'in kaybolmasi riski: `8/25 -> 1/25`
+
+### Rollback Plani
+- `content_seed_quran_audio.sql` basindaki `BEGIN` / `DO $$` / `RAISE EXCEPTION` blogu ve sondaki `ROLLBACK;` kaldirilir.
+- `tool\generate_quran_audio_seed.dart` icindeki `mirrorSeedAbortMessage` ve guard yazimlari kaldirilir.
+- `test\quran_audio_seed_test.dart` icindeki fail-fast regresyon testi kaldirilir.
+- Handover append-only oldugu icin revert kaydi eklenir.
+- `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Audio pipeline'da siradaki risk `download_verified_quran_audio.dart` mirror sonucunda eksik/failed dosyalar varken operatorun Storage seed uretimine gecmesini engelleyen manifest guard'larinin daha da sertlestirilmesi ve upload dry-run davranisinin tekrar taranmasidir.
