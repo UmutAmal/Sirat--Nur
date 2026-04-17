@@ -15469,3 +15469,49 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki aktif UI riski olarak Aymara home/dashboard labels (`analytics`, `ibadahTracker`, `liveTv`) incelenecek.
+
+## 2026-04-17 TUR-355 - Aymara Home Dashboard Labels Cleaned
+
+### MASTER Karari
+- Risk: Aymara locale'de home/dashboard hizli giris ve sayfa basliklarinda aktif `liveTv`, `ibadahTracker`, `analytics` label'lari karisik Ispanyolca + Aymara debris tasiyordu.
+- Kanit: `lib/l10n/app_ay.arb:82` `TV en vivo ukax...`, `lib/l10n/app_ay.arb:87` `Ibadah ukax...`, `lib/l10n/app_ay.arb:298` `Análisis ukax...`; generated runtime karsiliklari `lib/l10n/app_localizations_ay.dart:344`, `lib/l10n/app_localizations_ay.dart:359`, `lib/l10n/app_localizations_ay.dart:985`.
+- Aktif kullanim: Home quick items `lib/features/home/home_page.dart:415`, `lib/features/home/home_page.dart:416`, `lib/features/home/home_page.dart:418`; sayfa basliklari `lib/features/analytics/analytics_page.dart:15`, `lib/features/tracker/tracker_page.dart:109`, `lib/features/tv/live_tv_page.dart:248`.
+- Kok neden: Dusuk kaynak Aymara otomatik ceviri kisa feature label'larini karisik dil ve genel "buyuk gosterim" cumlesine donusturdu.
+- Etki: Ana ekranda ve feature appbar'larinda kullaniciya guven vermeyen, sacma/metin karisimi UI gorunuyor.
+- Olasilik: Home quick items ve sayfa basliklari app icinde sik gorunen yuzeyler.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1).
+- Rollback kapsami: `lib/l10n/app_ay.arb`, `lib/l10n/app_localizations_ay.dart`, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/arb_ui_localization_test.dart`, bu handover kaydi.
+
+### BUILDER Degisikligi
+- `lib/l10n/app_ay.arb:82`, `lib/l10n/app_ay.arb:87`, `lib/l10n/app_ay.arb:298` guvenilir fallback'e cekildi: `Live TV`, `Ibadah Tracker`, `Analytics`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_ay.dart:344`, `lib/l10n/app_localizations_ay.dart:359`, `lib/l10n/app_localizations_ay.dart:985` senkronlandi.
+- `tool/translate_arb_keys.dart:682` home/dashboard label wrong-context guard'i eklendi.
+- `tool/translate_arb_keys.dart:720` key seti `analytics`, `ibadahTracker`, `liveTv` ile sinirlandi.
+- `tool/translate_arb_keys.dart:766` `ukax mä jach’a uñacht’äwiwa` home label debris fragmenti tekrar kabul edilmemek uzere listelendi.
+
+### TESTER Kapsami
+- `test/translate_arb_keys_test.dart:845` `liveTv`, `ibadahTracker`, `analytics` icin bilinen debris current/candidate degerlerinin kaynak fallback'e dondugunu dogruluyor.
+- `test/arb_ui_localization_test.dart:487` Aymara home/dashboard label'larinda `TV en vivo`, `Análisis`, `ukax mä jach’a uñacht’äwiwa`, `ukax mä juk’a pachanakanwa` fragmentlerinin geri gelmemesini dogruluyor.
+- Debt raporu: `dart run tool\translate_arb_keys.dart --report liveTv ibadahTracker analytics` same-as-English `269`, missing/empty `0`, placeholder mismatch `0`. Aymara bu uc label'da sahte ceviri yerine EN fallback kullaniyor.
+- Geniş debris taramasi hâlâ baska Aymara borclari oldugunu gosterdi (`dataStorage`, `shareApp`, `audioVoice`, `hadithCollections`, `chatbotGreeting`, `sukunMixerSubtitle` vb.); bu tur sadece aktif home/dashboard label scope'u kapatti.
+
+### Test Sonucu
+- Format: `dart format tool\translate_arb_keys.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart` PASS
+- L10n generate: `flutter gen-l10n` PASS
+- Odak testler: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS (`51/51`), `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS (`77/77`), `flutter test test\arb_coverage_test.dart --reporter compact` PASS (`4/4`)
+- Diff hijyeni: `git diff --check` PASS; yalniz Windows CRLF uyarilari goruldu, whitespace hatasi yok.
+- `flutter analyze` PASS (`No issues found!`)
+- Full test: `flutter test --reporter compact` PASS (`584/584`)
+
+### Risk Degisimi
+- Aymara home/dashboard label debris riski: `12/25 -> 2/25`
+- Kalan risk: Aymara settings, diagnostics, library, chatbot ve calendar yuzeylerinde debris izleri devam ediyor. Sonraki turda aktif settings labels (`dataStorage`, `shareApp`, `audioVoice`, `lightMode`) veya library labels (`hadithCollections`, `sukunMixerSubtitle`) risk skoruna gore secilecek.
+
+### Rollback Plani
+- `liveTv`, `ibadahTracker`, `analytics` Aymara ARB/generated degerleri onceki commit'e dondurulur.
+- Home dashboard guard'i ve iki test guard'i revert edilir.
+- Handover append-only oldugu icin silinmez; revert gerekirse yeni tur olarak kaydedilir.
+- `flutter gen-l10n`, `flutter analyze` ve full `flutter test` tekrar calistirilir.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude repo tekrar dogrulanacak; siradaki aktif UI riski olarak Aymara settings labels incelenecek.

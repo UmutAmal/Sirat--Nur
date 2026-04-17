@@ -341,7 +341,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get namesOfAllah => 'Allah ukan sutinakapax';
 
   @override
-  String get liveTv => 'TV en vivo ukax mä jach’a uñacht’äwiwa';
+  String get liveTv => 'Live TV';
 
   @override
   String get watchLive => 'Uñtapxam Live';
@@ -356,7 +356,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get openInYoutube => 'YouTube ukan jist’aratawa';
 
   @override
-  String get ibadahTracker => 'Ibadah ukax mä juk’a pachanakanwa';
+  String get ibadahTracker => 'Ibadah Tracker';
 
   @override
   String get fasting => 'Ayunaña';
@@ -982,7 +982,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get library => 'Ullañuta';
 
   @override
-  String get analytics => 'Análisis ukax mä juk’a pachanakanwa';
+  String get analytics => 'Analytics';
 
   @override
   String get dailyDuas => 'Sapa uru Duas';

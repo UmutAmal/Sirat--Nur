@@ -842,6 +842,33 @@ void main() {
       expect(downloadCompleteValue, 'Download Complete');
     });
 
+    test('rejects known Aymara home dashboard debris', () {
+      final liveTvValue = resolveTranslatedArbValue(
+        key: 'liveTv',
+        source: 'Live TV',
+        currentValue: 'TV en vivo ukax mä jach’a uñacht’äwiwa',
+        candidate: 'TV en vivo ukax mä jach’a uñacht’äwiwa',
+      );
+
+      final ibadahTrackerValue = resolveTranslatedArbValue(
+        key: 'ibadahTracker',
+        source: 'Ibadah Tracker',
+        currentValue: 'Ibadah ukax mä juk’a pachanakanwa',
+        candidate: 'Ibadah ukax mä juk’a pachanakanwa',
+      );
+
+      final analyticsValue = resolveTranslatedArbValue(
+        key: 'analytics',
+        source: 'Analytics',
+        currentValue: 'Análisis ukax mä juk’a pachanakanwa',
+        candidate: 'Análisis ukax mä juk’a pachanakanwa',
+      );
+
+      expect(liveTvValue, 'Live TV');
+      expect(ibadahTrackerValue, 'Ibadah Tracker');
+      expect(analyticsValue, 'Analytics');
+    });
+
     test('rejects wrong-context splash tagline output', () {
       const source = 'Islamic Way of Light';
 

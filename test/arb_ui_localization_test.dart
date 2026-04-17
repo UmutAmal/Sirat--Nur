@@ -484,6 +484,26 @@ void main() {
       }
     });
 
+    test('Aymara home dashboard labels avoid known machine debris', () {
+      final arb = _readArb('lib/l10n/app_ay.arb');
+      const staleValues = {
+        'liveTv': ['TV en vivo', 'ukax mä jach’a uñacht’äwiwa'],
+        'ibadahTracker': ['ukax mä juk’a pachanakanwa'],
+        'analytics': ['Análisis', 'ukax mä juk’a pachanakanwa'],
+      };
+
+      for (final entry in staleValues.entries) {
+        for (final fragment in entry.value) {
+          expect(
+            arb[entry.key],
+            isNot(contains(fragment)),
+            reason:
+                'app_ay.arb has known home dashboard debris for ${entry.key}',
+          );
+        }
+      }
+    });
+
     test(
       'priority locales do not fall back to English for diagnostics labels',
       () {

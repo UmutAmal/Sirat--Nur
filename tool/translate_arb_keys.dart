@@ -679,6 +679,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, _knownRuntimeStatusDebris);
   }
 
+  if (_isHomeDashboardLabelKey(key)) {
+    return _containsAny(value, _knownHomeDashboardLabelDebris);
+  }
+
   if (_isDownloadCopyKey(key)) {
     return _containsAny(value, _knownDownloadTranslationDebris);
   }
@@ -711,6 +715,10 @@ bool _isPrayerMethodOrNameKey(String key) {
 
 bool _isRuntimeStatusKey(String key) {
   return const {'loading', 'downloading'}.contains(key);
+}
+
+bool _isHomeDashboardLabelKey(String key) {
+  return const {'analytics', 'ibadahTracker', 'liveTv'}.contains(key);
 }
 
 const _knownDownloadTranslationDebris = [
@@ -754,6 +762,8 @@ const _knownGeneralTranslationDebris = [
 const _knownPrayerMethodOrNameDebris = ['Método Jurídico', 'ukat juk’ampinaka'];
 
 const _knownRuntimeStatusDebris = ['Ukax mä...'];
+
+const _knownHomeDashboardLabelDebris = ['ukax mä jach’a uñacht’äwiwa'];
 
 const _knownQuranAudioSourceStatusDebris = [
   'Refresh cloud seed',
