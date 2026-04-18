@@ -15722,3 +15722,32 @@
 
 ### Sonraki Adim
 - Siradaki dongude production Supabase schema/seed durumu ve Cloudflare/GitHub Quran audio provider URL'leri icin canli dogrulama/uygulama akisi kapatilacak. Supabase MCP `codex mcp list` cikisinda `supabase enabled OAuth` durumunda.
+## 2026-04-18 TUR-362 - Quran Audio Distribution Upload Gate Added
+
+### MASTER Karari
+- Risk: Quran audio icin yeni mimari karar Cloudflare R2 + GitHub Releases bolunmus dagitimiydi, ancak repoda bu dagitimi gercek upload'a donusturen ve store readiness icin kanit ureten operator araci yoktu. Manuel upload, eksik dosya, yanlis provider, dry-run'i gercek sanma veya GitHub asset adi cakismasi riski tasiyordu.
+- Kanit: TUR-360 sonrasi `tool/check_store_readiness.ps1` yalniz partition boyutu ve env sekli kontrol ediyordu; `tool/upload_quran_audio_storage.dart` ise eski Supabase Storage yoluna aitti. Cloudflare/GitHub icin `wrangler r2 object put`, `gh release upload`, plan JSON'u veya real upload summary guard'i yoktu.
+- Etki: "Sesler bizde" hedefi sahte tamamlanabilir; store-ready kontrolu gercek provider upload kaniti olmadan gecmeye yaklasabilir.
+- Olasilik: 684 MP3 ve 11.6 GB katalog manuel yuklemeye birakilirsa hata olasiligi yuksek.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P0 audio distribution release blocker).
+- Rollback plani: `tool/quran_audio_distribution_plan.dart`, `tool/upload_quran_audio_distribution.ps1`, `test/quran_audio_distribution_plan_test.dart`, `test/store_readiness_test.dart`, `tool/check_store_readiness.ps1`, README ve `store/release_checklist.md` degisiklikleri revert edilir. Local `build/quran_audio_distribution_upload_*.json` git disinda kalir.
+
+### BUILDER Degisikligi
+- `tool/quran_audio_distribution_plan.dart` eklendi. Verified manifesti parse eder, lokal MP3 dosyalarini size/sha/mp3 header ile dogrular, `abdul_basit_murattal` icin GitHub Releases partition'i ve diger 570 dosya icin Cloudflare R2 partition'i uretir.
+- `tool/upload_quran_audio_distribution.ps1` eklendi. Dry-run modunda plan ve summary yazar; real modda `npx --yes wrangler@latest r2 object put` ile Cloudflare R2'ye, `gh release upload` ile GitHub Releases'a yukler. GitHub asset adlari `abdul_basit_murattal_001.mp3` formatinda sahnelenir.
+- `tool/check_store_readiness.ps1` artik `build/quran_audio_distribution_upload_summary.json` dosyasini ister; `dry_run=true` ozetleri store-ready saymaz. Real summary icin Cloudflare `uploaded=570`, GitHub `uploaded=114` beklenir.
+- README ve `store/release_checklist.md` Cloudflare/GitHub upload komutlarini ve `QURAN_AUDIO_CLOUDFLARE_BUCKET` operator girdisini belgeledi.
+- `test/quran_audio_distribution_plan_test.dart` provider routing, Cloudflare byte cap ve GitHub asset adi guard'larini ekledi.
+
+### Dogrulama Sonucu
+- Tool dry-run: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\upload_quran_audio_distribution.ps1 -DryRun` PASS; `cloudflare=570`, `github=114`, `failures=0`, dry-run summary uretildi.
+- Store checker: dry-run summary'yi bilerek FAIL etti; mesaj `Quran audio distribution upload summary is a dry-run`.
+- Odak testler: `flutter test test/readme_operational_docs_test.dart test/quran_audio_distribution_plan_test.dart test/store_readiness_test.dart --reporter compact` PASS (`18/18`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`609/609`).
+
+### Risk Degisimi
+- Cloudflare/GitHub Quran audio upload orchestration riski: `20/25 -> 6/25`. Kalan risk gercek Cloudflare hesabinda R2 bucket, GitHub release ve production CDN URL'leri olusturulmadigi icin dis operasyon olarak devam ediyor; checker artik dry-run'i gercek kabul etmiyor.
+
+### Sonraki Adim
+- Gercek Cloudflare R2 bucket ve public/custom domain belirlendiginde `tool/upload_quran_audio_distribution.ps1 -CloudflareBucket <bucket> -GithubReleaseTag quran-audio-v1` calistirilacak. Ardindan `QURAN_AUDIO_CLOUDFLARE_BASE_URL` ve `QURAN_AUDIO_GITHUB_URL_TEMPLATE` live URL'leri checker/build gate'e verilecek. Supabase production schema/seed eksigi hala store-ready blokajidir.

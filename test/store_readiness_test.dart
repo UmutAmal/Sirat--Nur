@@ -28,6 +28,8 @@ void main() {
         'store/listing/tr-TR.md',
         'tool/check_store_readiness.ps1',
         'tool/build_store_appbundle.ps1',
+        'tool/quran_audio_distribution_plan.dart',
+        'tool/upload_quran_audio_distribution.ps1',
       ]) {
         final file = File(path);
         expect(file.existsSync(), isTrue, reason: '$path must exist');
@@ -110,12 +112,19 @@ void main() {
     test('store readiness checker refuses hidden external blockers', () {
       final script = File('tool/check_store_readiness.ps1').readAsStringSync();
       final checklist = File('store/release_checklist.md').readAsStringSync();
+      final uploadScript = File(
+        'tool/upload_quran_audio_distribution.ps1',
+      ).readAsStringSync();
 
       expect(script, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(script, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
       expect(script, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
       expect(script, contains('build/verified_quran_audio/manifest.json'));
       expect(script, contains('content_seed_quran_audio_storage.sql'));
+      expect(
+        script,
+        contains('build/quran_audio_distribution_upload_summary.json'),
+      );
       expect(script, contains('requested -eq 684'));
       expect(script, contains('files.Count -eq 684'));
       expect(script, contains("file.reciter -eq 'abdul_basit_murattal'"));
@@ -131,11 +140,19 @@ void main() {
       expect(script, contains('download.quranicaudio.com'));
       expect(script, contains('-UseBasicParsing'));
       expect(script, contains('Remote privacy policy URL returns HTTP 200'));
+      expect(
+        script,
+        contains('Quran audio distribution upload summary is complete'),
+      );
       expect(checklist, contains('Google Play Data safety form'));
       expect(checklist, contains('Android exact alarm behavior'));
       expect(checklist, contains('Apple App Privacy details'));
       expect(checklist, contains('requested=684'));
       expect(checklist, contains('jarsigner -verify'));
+      expect(checklist, contains('QURAN_AUDIO_CLOUDFLARE_BUCKET'));
+      expect(uploadScript, contains('npx --yes wrangler@latest r2 object put'));
+      expect(uploadScript, contains('gh release upload'));
+      expect(uploadScript, contains(r'dry_run = $false'));
     });
 
     test('Gradle release packaging refuses missing runtime dart-defines', () {

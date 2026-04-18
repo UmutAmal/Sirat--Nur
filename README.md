@@ -77,7 +77,11 @@ dart run tool/generate_quran_audio_storage_seed.dart \
   --output=content_seed_quran_audio_storage.sql
 ```
 
-3. Upload the mirrored MP3 files to the selected first-party distribution providers. Keep `abdul_basit_murattal` as the GitHub overflow partition and all other reciters as the Cloudflare partition. The readiness checker proves this partition keeps Cloudflare below 10 GB.
+3. Upload the mirrored MP3 files to the selected first-party distribution providers. First produce the provider split plan, then keep `abdul_basit_murattal` as the GitHub overflow partition and all other reciters as the Cloudflare partition. The upload script validates the manifest and writes `build/quran_audio_distribution_upload_summary.json`; the readiness checker rejects dry-run or missing summaries so provider upload cannot be marked complete by documentation alone.
+```powershell
+.\tool\upload_quran_audio_distribution.ps1 -DryRun
+.\tool\upload_quran_audio_distribution.ps1 -CloudflareBucket <r2-bucket-name> -GithubReleaseTag quran-audio-v1
+```
 
 4. Apply `content_schema.sql` first, then apply the generated storage seed. The generator rejects incomplete or failed mirror manifests, so a partial download cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
 

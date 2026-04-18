@@ -43,6 +43,8 @@ These values must exist only on the release machine or secure CI secret store:
 - `PLACES_OVERPASS_API_URL`
 - `QURAN_AUDIO_CLOUDFLARE_BASE_URL`
 - `QURAN_AUDIO_GITHUB_URL_TEMPLATE`
+- `QURAN_AUDIO_CLOUDFLARE_BUCKET` for the upload operator script, or pass
+  `-CloudflareBucket` explicitly
 - Optional: `GEMINI_API_KEY`
 
 No secret value may be committed to git, pasted into documentation, or embedded
@@ -68,6 +70,16 @@ dart run tool/generate_quran_audio_storage_seed.dart --manifest=build/verified_q
   must report this partition below 10 GB.
 - GitHub Releases overflow partition: complete `abdul_basit_murattal` set
   with 114 files.
+- Use the tracked upload gate so the release has machine-readable evidence:
+
+```powershell
+.\tool\upload_quran_audio_distribution.ps1 -DryRun
+.\tool\upload_quran_audio_distribution.ps1 -CloudflareBucket <r2-bucket-name> -GithubReleaseTag quran-audio-v1
+```
+
+The real upload must write
+`build/quran_audio_distribution_upload_summary.json` with `dry_run=false`,
+Cloudflare `uploaded=570`, and GitHub `uploaded=114`.
 
 4. Apply `content_schema.sql`, then apply `content_seed_quran_audio_storage.sql`
 to the production Supabase project.
@@ -108,6 +120,7 @@ not be used for production seeding.
 - `flutter test --reporter compact` output.
 - Store AAB path and size.
 - `jarsigner` verification output.
-- Cloudflare/GitHub Quran audio upload summary.
+- Cloudflare/GitHub Quran audio upload summary:
+  `build/quran_audio_distribution_upload_summary.json`.
 - Play Console/App Store Connect screenshots or exported notes showing policy
   forms were completed from the tracked worksheets.

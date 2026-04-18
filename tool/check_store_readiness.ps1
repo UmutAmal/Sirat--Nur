@@ -271,6 +271,29 @@ try {
     Add-Failure 'Quran audio storage seed is missing; run dart run tool/generate_quran_audio_storage_seed.dart after mirroring audio.'
   }
 
+  $distributionSummaryPath = Join-Path $repoRoot 'build/quran_audio_distribution_upload_summary.json'
+  if (Test-Path -LiteralPath $distributionSummaryPath) {
+    try {
+      $distributionSummary = Get-Content -LiteralPath $distributionSummaryPath -Raw | ConvertFrom-Json
+      if ($distributionSummary.dry_run -eq $true) {
+        Add-Failure 'Quran audio distribution upload summary is a dry-run; run tool/upload_quran_audio_distribution.ps1 without -DryRun after real provider uploads.'
+      } elseif (
+        $distributionSummary.cloudflare.files -eq 570 -and
+        $distributionSummary.cloudflare.uploaded -eq 570 -and
+        $distributionSummary.github.files -eq 114 -and
+        $distributionSummary.github.uploaded -eq 114
+      ) {
+        Add-Pass 'Quran audio distribution upload summary is complete: Cloudflare 570 files, GitHub 114 files.'
+      } else {
+        Add-Failure "Quran audio distribution upload summary is incomplete: Cloudflare $($distributionSummary.cloudflare.uploaded)/$($distributionSummary.cloudflare.files), GitHub $($distributionSummary.github.uploaded)/$($distributionSummary.github.files)."
+      }
+    } catch {
+      Add-Failure 'Quran audio distribution upload summary is not valid JSON.'
+    }
+  } else {
+    Add-Failure 'Quran audio distribution upload summary is missing; run tool/upload_quran_audio_distribution.ps1 after Cloudflare/GitHub uploads.'
+  }
+
   if (-not $SkipNetwork) {
     try {
       $privacyUrl = 'https://raw.githubusercontent.com/UmutAmal/Sirat--Nur/master/docs/privacy_policy.md'
