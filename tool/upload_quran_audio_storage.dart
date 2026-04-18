@@ -96,7 +96,7 @@ Usage:
 
 Options:
   --manifest=<path>              Mirror manifest path. Default: $_defaultManifestPath
-  --bucket=<name>                Storage bucket name. Must be $_defaultBucketName. Default: $_defaultBucketName
+  --bucket=<name>                Storage path namespace. Must be $_defaultBucketName. Default: $_defaultBucketName
   --dry-run                      Validate manifest and print upload plan without network writes.
   --help                         Show this help
 ''');

@@ -15838,3 +15838,29 @@
 
 ### Sonraki Adim
 - Siradaki dongude store-ready dis blokajlar haric kalan ic riskler icin tarama surdurulecek; ozellikle generated SQL/source consistency ve release checker mesajlarinda stale mimari kalintilari aranacak.
+## 2026-04-18 TUR-366 - Retired Quran Supabase Public URL Helper Removed
+
+### MASTER Karari
+- Risk: Quran audio generator icinde `buildSupabaseStoragePublicUrl` helper'i kalmisti. Runtime artik Cloudflare/GitHub dagitim URL'lerini kullandigi halde bu helper Quran icin Supabase public object URL uretmeye devam edebiliyordu.
+- Kanit: `tool/generate_quran_audio_storage_seed.dart` icinde hardcoded Supabase project URL ve `/storage/v1/object/public/quran-audio/...` ureten helper vardi; `test/generate_quran_audio_storage_seed_test.dart` bunu bekliyordu.
+- Etki: Sonraki ajan/operator eski helper'i yeniden kullanip Quran MP3'leri Supabase Storage public URL zincirine baglayabilir.
+- Olasilik: Helper public top-level fonksiyondu ve testle korunuyordu; yanlis tekrar kullanim ihtimali orta seviyedeydi.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 stale audio architecture helper).
+- Rollback plani: `tool/generate_quran_audio_storage_seed.dart`, `tool/upload_quran_audio_storage.dart`, `test/generate_quran_audio_storage_seed_test.dart`, `test/upload_quran_audio_storage_test.dart` degisiklikleri revert edilir.
+
+### BUILDER Degisikligi
+- `buildSupabaseStoragePublicUrl`, hardcoded Supabase project URL ve bu helper'a ait URL/path segment guard'lari kaldirildi.
+- Generator ve legacy validation shim `--bucket` help metinleri "Storage path namespace" olarak guncellendi.
+- Testler eski Supabase public URL helper'ini beklemeyi birakti ve namespace hata mesajini koruyor.
+
+### Dogrulama Sonucu
+- Stale grep: `rg "buildSupabaseStoragePublicUrl|Supabase Storage public URLs|Target bucket|target Supabase Storage bucket|Quran audio uploads must target|Storage bucket name"` ilgili Quran tool/test/seed dosyalarinda sonuc dondurmedi.
+- Odak testler: `flutter test test/generate_quran_audio_storage_seed_test.dart test/upload_quran_audio_storage_test.dart test/store_readiness_test.dart --reporter compact` PASS (`33/33`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`603/603`).
+
+### Risk Degisimi
+- Retired Quran Supabase public URL helper riski: `12/25 -> 1/25`.
+
+### Sonraki Adim
+- Store-ready ic risk taramasi devam: kalan gercek blokajlar production env/secret, Cloudflare-GitHub real upload summary ve Supabase real apply summary oldugu icin dis operasyon olarak isaretli kalacak; repo icinde stale helper/string kalintilari aranmaya devam edilecek.

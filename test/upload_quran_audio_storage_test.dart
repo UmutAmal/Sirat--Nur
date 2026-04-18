@@ -48,7 +48,7 @@ void main() {
           isA<ArgumentError>().having(
             (error) => error.message,
             'message',
-            contains('Quran audio uploads must target quran-audio'),
+            contains('Quran audio path namespace must be quran-audio'),
           ),
         ),
       );

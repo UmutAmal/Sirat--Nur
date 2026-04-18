@@ -5,26 +5,12 @@ import 'package:flutter_test/flutter_test.dart';
 import '../tool/generate_quran_audio_storage_seed.dart';
 import '../tool/quran_audio_file_validation.dart';
 
-const String _defaultSupabaseProjectUrl =
-    'https://amevotnudldbbwogtrtw.supabase.co';
-const String _defaultQuranAudioBucket = 'quran-audio';
 const int _validManifestSizeBytes = 1024;
 const String _validManifestSha256 =
     '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
 
 void main() {
   group('generate_quran_audio_storage_seed tool', () {
-    test('buildSupabaseStoragePublicUrl derives public bucket URLs', () {
-      expect(
-        buildSupabaseStoragePublicUrl('quran-audio/alafasy/001.mp3'),
-        '$_defaultSupabaseProjectUrl/storage/v1/object/public/$_defaultQuranAudioBucket/alafasy/001.mp3',
-      );
-      expect(
-        buildSupabaseStoragePublicUrl('alafasy/001.mp3'),
-        '$_defaultSupabaseProjectUrl/storage/v1/object/public/$_defaultQuranAudioBucket/alafasy/001.mp3',
-      );
-    });
-
     test('stays executable under dart run without app runtime imports', () {
       final source = File(
         'tool/generate_quran_audio_storage_seed.dart',
@@ -475,7 +461,7 @@ void main() {
           isA<ArgumentError>().having(
             (error) => error.message,
             'message',
-            contains('Quran audio uploads must target quran-audio'),
+            contains('Quran audio path namespace must be quran-audio'),
           ),
         ),
       );
