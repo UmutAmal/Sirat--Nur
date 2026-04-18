@@ -15751,3 +15751,33 @@
 
 ### Sonraki Adim
 - Gercek Cloudflare R2 bucket ve public/custom domain belirlendiginde `tool/upload_quran_audio_distribution.ps1 -CloudflareBucket <bucket> -GithubReleaseTag quran-audio-v1` calistirilacak. Ardindan `QURAN_AUDIO_CLOUDFLARE_BASE_URL` ve `QURAN_AUDIO_GITHUB_URL_TEMPLATE` live URL'leri checker/build gate'e verilecek. Supabase production schema/seed eksigi hala store-ready blokajidir.
+## 2026-04-18 TUR-363 - Supabase Content Apply Gate Added
+
+### MASTER Karari
+- Risk: Supabase production schema/seed uygulamasi store-ready akista elle yapilacak bir adim olarak kaliyordu. Checker public tablo/env sekli gorebiliyordu, fakat `content_schema.sql`, `seed.sql`, Quran surah/ayah seed'leri ve `content_seed_quran_audio_storage.sql` gercek production DB'ye uygulandi mi diye makine-okunur kanit istemiyordu.
+- Kanit: TUR-362 sonunda store-ready blokaji "Supabase production schema/seed eksigi" olarak kaldi. `tool/check_store_readiness.ps1` icinde `build/supabase_content_apply_summary.json` veya `files_applied` kontrolu yoktu; README `content_schema.sql` ve storage seed'i genel ifade ile anlatiyordu.
+- Etki: Eksik tablo/seed durumu operator tarafinda tamamlandi sanilabilir; Quran audio metadata, ayah/surah ve content tablolarinin production'da eksik kalmasi store build oncesi yakalanmayabilir.
+- Olasilik: Supabase live REST kontrolunde once `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` tablolari `404/PGRST205` donmustu; schema/seed adimi aktif dis operasyon olarak duruyor.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P0 store readiness data blocker).
+- Rollback plani: `tool/apply_supabase_content_bundle.ps1`, `tool/check_store_readiness.ps1`, README, `store/release_checklist.md`, `test/store_readiness_test.dart` ve `test/readme_operational_docs_test.dart` degisiklikleri revert edilir. Local `build/supabase_content_apply_summary.json` git disinda kalir.
+
+### BUILDER Degisikligi
+- `tool/apply_supabase_content_bundle.ps1` eklendi. Required SQL dosyalari var mi diye kontrol eder, destructive `DROP TABLE`/`TRUNCATE`/`DELETE FROM` kaliplarini reddeder, dry-run summary yazar ve real modda `npx --yes supabase db query --db-url ... --file ...` ile dosyalari sirali uygular.
+- `tool/check_store_readiness.ps1` artik `build/supabase_content_apply_summary.json` dosyasini ister; `dry_run=true` ozetleri store-ready saymaz ve required SQL dosyalari `files_applied` altinda yoksa fail eder.
+- README ve `store/release_checklist.md` Supabase production apply adimini `SUPABASE_DB_URL` secret'i, dry-run ve real apply komutlariyla belgeledi.
+- `test/store_readiness_test.dart` apply script/checker guard'larini, `test/readme_operational_docs_test.dart` README operasyon dokumanini koruyacak sekilde genisletildi.
+
+### Dogrulama Sonucu
+- Repo dogrulama: remote `https://github.com/UmutAmal/Sirat--Nur.git`, branch `master`, primary path `A:\Way of Allah\sirat_i_nur`.
+- `flutter doctor` sonucu: Flutter stable 3.41.4, Android toolchain ve connected device PASS. Chrome ve Visual Studio eksikleri web/Windows hedefleri icin FAIL; Android store hattini durduran kritik hata degil.
+- Tool dry-run: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\apply_supabase_content_bundle.ps1 -DryRun` PASS; planned=5, missing_optional=2, `build/supabase_content_apply_summary.json` `dry_run=true` olarak yazildi.
+- Store checker: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\check_store_readiness.ps1 -SkipFlutterValidation` beklenen sekilde 8 blokajla FAIL etti; yeni blokaj `Supabase content apply summary is a dry-run`.
+- Odak testler: `flutter test test/store_readiness_test.dart test/readme_operational_docs_test.dart --reporter compact` PASS (`15/15`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`609/609`).
+
+### Risk Degisimi
+- Supabase schema/seed false-success riski: `20/25 -> 6/25`. Kalan risk gercek `SUPABASE_DB_URL` secret'i ile production apply henuz calistirilmadigi icin dis operasyon olarak devam ediyor; checker dry-run'i gercek kabul etmiyor.
+
+### Sonraki Adim
+- Gercek release shell/CI ortaminda `SUPABASE_DB_URL` secret'i set edilip `tool/apply_supabase_content_bundle.ps1` real modda calistirilacak. Ardindan `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, Places endpointleri ve Quran audio Cloudflare/GitHub URL'leri ile `tool/check_store_readiness.ps1` tekrar calistirilacak.

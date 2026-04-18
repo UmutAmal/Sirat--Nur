@@ -294,6 +294,35 @@ try {
     Add-Failure 'Quran audio distribution upload summary is missing; run tool/upload_quran_audio_distribution.ps1 after Cloudflare/GitHub uploads.'
   }
 
+  $supabaseApplySummaryPath = Join-Path $repoRoot 'build/supabase_content_apply_summary.json'
+  if (Test-Path -LiteralPath $supabaseApplySummaryPath) {
+    try {
+      $supabaseApplySummary = Get-Content -LiteralPath $supabaseApplySummaryPath -Raw | ConvertFrom-Json
+      $requiredSupabaseFiles = @(
+        'content_schema.sql',
+        'seed.sql',
+        'content_seed_quran_surahs.sql',
+        'content_seed_quran_ayahs.sql',
+        'content_seed_quran_audio_storage.sql'
+      )
+      $appliedFiles = @($supabaseApplySummary.files_applied)
+      $missingAppliedFiles = @(
+        $requiredSupabaseFiles | Where-Object { $appliedFiles -notcontains $_ }
+      )
+      if ($supabaseApplySummary.dry_run -eq $true) {
+        Add-Failure 'Supabase content apply summary is a dry-run; run tool/apply_supabase_content_bundle.ps1 without -DryRun after applying production SQL.'
+      } elseif ($missingAppliedFiles.Count -eq 0) {
+        Add-Pass 'Supabase content apply summary includes schema, core seed, Quran surah/ayah seed, and Quran audio seed.'
+      } else {
+        Add-Failure "Supabase content apply summary is missing required applied files: $($missingAppliedFiles -join ', ')."
+      }
+    } catch {
+      Add-Failure 'Supabase content apply summary is not valid JSON.'
+    }
+  } else {
+    Add-Failure 'Supabase content apply summary is missing; run tool/apply_supabase_content_bundle.ps1 after applying production SQL.'
+  }
+
   if (-not $SkipNetwork) {
     try {
       $privacyUrl = 'https://raw.githubusercontent.com/UmutAmal/Sirat--Nur/master/docs/privacy_policy.md'

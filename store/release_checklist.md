@@ -39,6 +39,7 @@ These values must exist only on the release machine or secure CI secret store:
 - Upload keystore referenced by `android/key.properties`
 - `SUPABASE_URL`
 - `SUPABASE_PUBLISHABLE_KEY` (legacy `SUPABASE_ANON_KEY` is still accepted)
+- `SUPABASE_DB_URL` for applying production content schema/seed SQL
 - `PLACES_TILE_URL_TEMPLATE`
 - `PLACES_OVERPASS_API_URL`
 - `QURAN_AUDIO_CLOUDFLARE_BASE_URL`
@@ -81,8 +82,17 @@ The real upload must write
 `build/quran_audio_distribution_upload_summary.json` with `dry_run=false`,
 Cloudflare `uploaded=570`, and GitHub `uploaded=114`.
 
-4. Apply `content_schema.sql`, then apply `content_seed_quran_audio_storage.sql`
-to the production Supabase project.
+4. Apply `content_schema.sql`, core seed data, Quran surah/ayah seed data, and
+`content_seed_quran_audio_storage.sql` to the production Supabase project with
+the tracked apply gate:
+
+```powershell
+.\tool\apply_supabase_content_bundle.ps1 -DryRun
+.\tool\apply_supabase_content_bundle.ps1
+```
+
+The real apply must write `build/supabase_content_apply_summary.json` with
+`dry_run=false` and every required SQL file listed under `files_applied`.
 
 The mirror is complete only when the manifest has `requested=684`,
 `files=684`, and zero failures. Partial manifests are development-only and must

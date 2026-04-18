@@ -28,6 +28,7 @@ void main() {
         'store/listing/tr-TR.md',
         'tool/check_store_readiness.ps1',
         'tool/build_store_appbundle.ps1',
+        'tool/apply_supabase_content_bundle.ps1',
         'tool/quran_audio_distribution_plan.dart',
         'tool/upload_quran_audio_distribution.ps1',
       ]) {
@@ -115,6 +116,9 @@ void main() {
       final uploadScript = File(
         'tool/upload_quran_audio_distribution.ps1',
       ).readAsStringSync();
+      final supabaseApplyScript = File(
+        'tool/apply_supabase_content_bundle.ps1',
+      ).readAsStringSync();
 
       expect(script, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(script, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
@@ -125,6 +129,7 @@ void main() {
         script,
         contains('build/quran_audio_distribution_upload_summary.json'),
       );
+      expect(script, contains('build/supabase_content_apply_summary.json'));
       expect(script, contains('requested -eq 684'));
       expect(script, contains('files.Count -eq 684'));
       expect(script, contains("file.reciter -eq 'abdul_basit_murattal'"));
@@ -144,6 +149,10 @@ void main() {
         script,
         contains('Quran audio distribution upload summary is complete'),
       );
+      expect(
+        script,
+        contains('Supabase content apply summary includes schema'),
+      );
       expect(checklist, contains('Google Play Data safety form'));
       expect(checklist, contains('Android exact alarm behavior'));
       expect(checklist, contains('Apple App Privacy details'));
@@ -153,6 +162,10 @@ void main() {
       expect(uploadScript, contains('npx --yes wrangler@latest r2 object put'));
       expect(uploadScript, contains('gh release upload'));
       expect(uploadScript, contains(r'dry_run = $false'));
+      expect(supabaseApplyScript, contains('npx --yes supabase db query'));
+      expect(supabaseApplyScript, contains('content_schema.sql'));
+      expect(supabaseApplyScript, contains('content_seed_quran_ayahs.sql'));
+      expect(supabaseApplyScript, contains('SUPABASE_DB_URL'));
     });
 
     test('Gradle release packaging refuses missing runtime dart-defines', () {

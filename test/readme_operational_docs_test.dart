@@ -41,6 +41,10 @@ void main() {
       expect(readme, contains('Every file row must include `size_bytes`'));
       expect(readme, contains('64-character `sha256` checksum'));
       expect(readme, contains('first-party distribution providers'));
+      expect(readme, contains('.\\tool\\apply_supabase_content_bundle.ps1'));
+      expect(readme, contains('SUPABASE_DB_URL'));
+      expect(readme, contains('build/supabase_content_apply_summary.json'));
+      expect(readme, contains('files_applied'));
       expect(
         readme,
         contains('rejects old manifests that do not include this evidence'),
