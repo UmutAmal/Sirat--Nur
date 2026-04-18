@@ -15696,3 +15696,29 @@
 - Supabase tarafinda `content_schema.sql`, `seed.sql`, `content_seed_quran_surahs.sql`, `content_seed_quran_ayahs.sql`, `content_seed_quran_audio_storage.sql` ve ilgili `duas/asmas/hadith/tafsir` seed kaynaklari production projeye uygulanmali; sonra checker 7 tablo fail'ini kapatmali.
 - Cloudflare tarafinda 5 kâri partition upload scripti/manifesti eklenecek ve `QURAN_AUDIO_CLOUDFLARE_BASE_URL` gercek domain ile dogrulanacak.
 - GitHub tarafinda `abdul_basit_murattal` 114 MP3 release asset olarak yuklenecek ve `QURAN_AUDIO_GITHUB_URL_TEMPLATE` gercek release tag ile dogrulanacak.
+## 2026-04-18 TUR-361 - Store Readiness Privacy Probe Hardened
+
+### MASTER Karari
+- Risk: `tool/check_store_readiness.ps1` remote privacy policy kontrolu Windows PowerShell altinda `Invoke-WebRequest` icin `-UseBasicParsing` kullanmadigindan, GitHub raw URL erisilebilir olsa bile `Nesne basvurusu bir nesnenin ornegine ayarlanmadi` gibi dogrudan aksiyona donusmeyen bir hata uretebiliyordu.
+- Kanit: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\check_store_readiness.ps1 -SkipFlutterValidation` ilk calismada privacy URL icin false diagnostic uretti; ayni URL `Invoke-WebRequest -UseBasicParsing -Method Head` ile HTTP 200 dondu.
+- Etki: Release operatoru gercek blokajlar ile checker runtime uyumsuzlugunu ayiramaz; store-ready kararinda guven azalir.
+- Olasilik: Checker dokumanda Windows PowerShell ile calistirilabiliyor; bu makinede tekrarlandi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 release gate diagnostic reliability).
+- Rollback plani: `tool/check_store_readiness.ps1` icindeki `-UseBasicParsing` ekini ve `test/store_readiness_test.dart` guard'ini revert etmek yeterlidir.
+
+### BUILDER Degisikligi
+- `tool/check_store_readiness.ps1` remote privacy policy `HEAD` isteginde `Invoke-WebRequest -UseBasicParsing` kullanacak sekilde sertlestirildi.
+- `test/store_readiness_test.dart` checker'in `-UseBasicParsing` guard'ini koruyacak sekilde genisletildi.
+
+### Dogrulama Sonucu
+- Odak test: `flutter test test/store_readiness_test.dart --reporter compact` PASS (`9/9`).
+- Store checker: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\check_store_readiness.ps1 -SkipFlutterValidation` beklenen sekilde 6 gercek dis blokajla FAIL etti; privacy policy URL artik `Remote privacy policy URL returns HTTP 200` PASS.
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`606/606`).
+
+### Risk Degisimi
+- Store readiness privacy false diagnostic riski: `12/25 -> 2/25`.
+- Kalan store-ready blokajlar: `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, `QURAN_AUDIO_CLOUDFLARE_BASE_URL`, `QURAN_AUDIO_GITHUB_URL_TEMPLATE` runtime env/provider degerleri gercek production kaynaklariyla set edilmeli.
+
+### Sonraki Adim
+- Siradaki dongude production Supabase schema/seed durumu ve Cloudflare/GitHub Quran audio provider URL'leri icin canli dogrulama/uygulama akisi kapatilacak. Supabase MCP `codex mcp list` cikisinda `supabase enabled OAuth` durumunda.

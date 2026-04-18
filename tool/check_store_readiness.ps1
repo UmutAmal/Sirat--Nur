@@ -274,7 +274,7 @@ try {
   if (-not $SkipNetwork) {
     try {
       $privacyUrl = 'https://raw.githubusercontent.com/UmutAmal/Sirat--Nur/master/docs/privacy_policy.md'
-      $response = Invoke-WebRequest -Uri $privacyUrl -Method Head -TimeoutSec 30
+      $response = Invoke-WebRequest -UseBasicParsing -Uri $privacyUrl -Method Head -TimeoutSec 30
       if ($response.StatusCode -eq 200) {
         Add-Pass 'Remote privacy policy URL returns HTTP 200.'
       } else {

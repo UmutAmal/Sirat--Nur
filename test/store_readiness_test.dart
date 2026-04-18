@@ -129,6 +129,7 @@ void main() {
       expect(script, contains('storagePathValueCount -eq 684'));
       expect(script, contains('android.permission.USE_EXACT_ALARM'));
       expect(script, contains('download.quranicaudio.com'));
+      expect(script, contains('-UseBasicParsing'));
       expect(script, contains('Remote privacy policy URL returns HTTP 200'));
       expect(checklist, contains('Google Play Data safety form'));
       expect(checklist, contains('Android exact alarm behavior'));
