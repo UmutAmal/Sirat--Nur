@@ -12,7 +12,7 @@ The guiding philosophy of this rewrite was: **"100% Functionality, Zero Placehol
 4. **The 189-Language Matrix**: Using a highly optimized Dart translation automation script, we generated 192 localized `.arb` files dynamically translating the English localization map into every supported standard language code, giving the app massive global reach instantly.
 5. **Geospatial Independence**: Google Maps was removed due to API key barriers and replaced with **flutter_map**. Production builds must provide a verified tile source instead of relying on public demo tile servers.
 6. **Permanent Live TV**: YouTube iframe widgets with expiring `videoId` strings were thrown out. We integrated raw channel WebViews, meaning the Mekkah/Madinah live feeds will auto-resolve regardless of the current active broadcast URL.
-7. **The 109-Point "No Dummy" Sweep**: A massive sweep eradicated placeholder UIs. Paywall purchase buttons route through the platform in-app purchase flow and only persist premium entitlement after a purchased or restored store update. "Daily Verses" actively read the day of the year to pull from `daily_ayat_data.dart`. The Qibla Offset slider actually mathematically alters the user's GPS magnetometer vector. Audio voice selectors use verified Supabase Storage-backed rows instead of direct third-party MP3 playback.
+7. **The 109-Point "No Dummy" Sweep**: A massive sweep eradicated placeholder UIs. Paywall purchase buttons route through the platform in-app purchase flow and only persist premium entitlement after a purchased or restored store update. "Daily Verses" actively read the day of the year to pull from `daily_ayat_data.dart`. The Qibla Offset slider actually mathematically alters the user's GPS magnetometer vector. Audio voice selectors use verified storage-path rows and first-party distribution endpoints instead of direct third-party MP3 playback.
 
 ## Core Architecture
 - **Framework**: Flutter (Dart)
@@ -48,7 +48,7 @@ No hidden keys are required for normal local development.
 1. `flutter pub get`
 2. `flutter run` -> Instantly functional with bundled/offline-first data.
 
-Production builds must inject Supabase values explicitly when cloud content, Storage audio, or diagnostics should be live. The anon key is intentionally empty by default and must not be committed as a fallback value:
+Production builds must inject Supabase values explicitly when cloud content or diagnostics should be live. Use `SUPABASE_PUBLISHABLE_KEY` for the client-side key; legacy `SUPABASE_ANON_KEY` is still accepted for older local environments. No Supabase client key may be committed as a fallback value:
 ```powershell
 .\tool\build_store_appbundle.ps1
 ```
@@ -56,40 +56,30 @@ Production builds must inject Supabase values explicitly when cloud content, Sto
 `PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. Production values must be HTTPS tile templates containing `{z}`, `{x}`, and `{y}`, must not carry client-side query tokens or user-info secrets, and must not point directly at public OpenStreetMap tile hosts. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored HTTPS proxy, an approved HTTPS provider, or your own rate-limited HTTPS Overpass-compatible endpoint before enabling nearby search in production. The app refuses known public community Overpass hosts and endpoint URLs containing user info, query strings, or fragments so secrets and unbounded community-service traffic are not shipped in the client.
 
 ## Store Release Gates
-Release builds never fall back to the Android debug keystore. Local release packaging reads `android/key.properties`, and CI/release automation may instead provide `SIRAT_UPLOAD_STORE_FILE`, `SIRAT_UPLOAD_STORE_PASSWORD`, `SIRAT_UPLOAD_KEY_ALIAS`, and `SIRAT_UPLOAD_KEY_PASSWORD`. Keep the keystore and `android/key.properties` out of git; use `android/key.properties.example` as the template. If signing is missing, `validateStoreReleaseSigning` fails `bundleRelease`/`assembleRelease` before an unsigned or debug-signed artifact can be uploaded. `validateStoreReleaseRuntimeConfig` also fails direct release packaging when the required runtime `--dart-define` values are missing or unsafe. Run `tool/check_store_readiness.ps1` before every upload; it refuses to mark the app ready when production env vars, upload signing, Quran audio mirror evidence, service-role upload readiness, or the public privacy URL are missing. Use `tool/build_store_appbundle.ps1` for store packaging because it refuses to build when `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, or `PLACES_OVERPASS_API_URL` are missing.
+Release builds never fall back to the Android debug keystore. Local release packaging reads `android/key.properties`, and CI/release automation may instead provide `SIRAT_UPLOAD_STORE_FILE`, `SIRAT_UPLOAD_STORE_PASSWORD`, `SIRAT_UPLOAD_KEY_ALIAS`, and `SIRAT_UPLOAD_KEY_PASSWORD`. Keep the keystore and `android/key.properties` out of git; use `android/key.properties.example` as the template. If signing is missing, `validateStoreReleaseSigning` fails `bundleRelease`/`assembleRelease` before an unsigned or debug-signed artifact can be uploaded. `validateStoreReleaseRuntimeConfig` also fails direct release packaging when the required runtime `--dart-define` values are missing or unsafe. Run `tool/check_store_readiness.ps1` before every upload; it refuses to mark the app ready when production env vars, upload signing, Quran audio mirror evidence, Cloudflare/GitHub Quran audio distribution config, or the public privacy URL are missing. Use `tool/build_store_appbundle.ps1` for store packaging because it refuses to build when `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY` (or legacy `SUPABASE_ANON_KEY`), `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, `QURAN_AUDIO_CLOUDFLARE_BASE_URL`, or `QURAN_AUDIO_GITHUB_URL_TEMPLATE` are missing.
 
 Store policy materials are tracked under `store/`. Keep `docs/privacy_policy.md`, `store/release_checklist.md`, `store/play/data_safety.md`, `store/play/exact_alarm_declaration.md`, `store/play/billing_test_plan.md`, and `store/appstore/app_privacy.md` aligned with code before every release. Exact alarms are used only for user-enabled prayer reminders and adhan alerts; when Android does not allow exact alarms, the scheduler falls back to inexact reminders instead of pretending exact scheduling succeeded.
 
 ## Quran Audio Sovereignty Workflow
-The runtime requires Supabase Storage-backed `storage_path` rows for playable audio. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks. Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded to the `quran-audio` bucket.
+The runtime requires verified `storage_path` rows and first-party distribution endpoints for playable Quran audio. Supabase stores only metadata/path rows; the 11.6 GB Quran MP3 catalog is not uploaded to Supabase Storage. The planned split is Cloudflare R2/CDN for every reciter except `abdul_basit_murattal`, and GitHub Releases for the complete `abdul_basit_murattal` overflow set. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks.
 
-The mirror manifest is the integrity contract between download, upload, and seed generation. Every file row must include `size_bytes` and a 64-character `sha256` checksum produced by `tool/download_verified_quran_audio.dart`. `tool/upload_quran_audio_storage.dart --dry-run` rejects missing files, MP3 shape failures, size mismatches, and checksum mismatches before any network write. `tool/generate_quran_audio_storage_seed.dart` rejects old manifests that do not include this evidence, so regenerate `build/verified_quran_audio/manifest.json` after pulling changes that update the manifest schema.
+The mirror manifest is the integrity contract between download, provider upload, and seed generation. Every file row must include `size_bytes` and a 64-character `sha256` checksum produced by `tool/download_verified_quran_audio.dart`. `tool/generate_quran_audio_storage_seed.dart` rejects old manifests that do not include this evidence, so regenerate `build/verified_quran_audio/manifest.json` after pulling changes that update the manifest schema.
 
 1. Mirror the verified source audio locally:
 ```bash
 dart run tool/download_verified_quran_audio.dart --overwrite
 ```
 
-2. Validate the upload plan without writing to Storage:
-```bash
-dart run tool/upload_quran_audio_storage.dart \
-  --manifest=build/verified_quran_audio/manifest.json \
-  --dry-run
-```
-
-3. Upload the mirrored MP3 files with a service-role key stored in the environment, never in command history:
-```bash
-dart run tool/upload_quran_audio_storage.dart --manifest=build/verified_quran_audio/manifest.json
-```
-
-4. Generate the storage-backed database seed from the completed manifest:
+2. Validate the generated storage-path database seed:
 ```bash
 dart run tool/generate_quran_audio_storage_seed.dart \
   --manifest=build/verified_quran_audio/manifest.json \
   --output=content_seed_quran_audio_storage.sql
 ```
 
-5. Apply `content_schema.sql` first, then apply the generated storage seed. The generator rejects incomplete or failed mirror manifests, so a partial download cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
+3. Upload the mirrored MP3 files to the selected first-party distribution providers. Keep `abdul_basit_murattal` as the GitHub overflow partition and all other reciters as the Cloudflare partition. The readiness checker proves this partition keeps Cloudflare below 10 GB.
+
+4. Apply `content_schema.sql` first, then apply the generated storage seed. The generator rejects incomplete or failed mirror manifests, so a partial download cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
 
 ---
 *Generated for Codex and future AI iterations to understand the absolute structural integrity of the V2 codebase.*

@@ -42,9 +42,10 @@ val hasReleaseSigningCredentials =
 
 val requiredStoreDartDefines = listOf(
     "SUPABASE_URL",
-    "SUPABASE_ANON_KEY",
     "PLACES_TILE_URL_TEMPLATE",
-    "PLACES_OVERPASS_API_URL"
+    "PLACES_OVERPASS_API_URL",
+    "QURAN_AUDIO_CLOUDFLARE_BASE_URL",
+    "QURAN_AUDIO_GITHUB_URL_TEMPLATE"
 )
 
 fun decodeDartDefines(rawDefines: String): Map<String, String> {
@@ -152,6 +153,25 @@ fun isValidOverpassEndpoint(endpoint: String): Boolean {
     return isCleanHttpsUrl(trimmed) && !isBlockedOverpassHost(uri.host)
 }
 
+fun isValidGithubQuranAudioTemplate(template: String): Boolean {
+    val trimmed = template.trim()
+    if (
+        trimmed.isEmpty() ||
+        !trimmed.contains("{reciter}") ||
+        !trimmed.contains("{surah}")
+    ) {
+        return false
+    }
+
+    val probeUrl = trimmed
+        .replace("{reciter}", "abdul_basit_murattal")
+        .replace("{surah}", "001")
+        .replace("{file}", "001.mp3")
+        .replace("{path}", "abdul_basit_murattal/001.mp3")
+
+    return isCleanHttpsUrl(probeUrl)
+}
+
 android {
     namespace = "com.umutamal.sirat_i_nur"
     compileSdk = flutter.compileSdkVersion
@@ -231,12 +251,32 @@ tasks.register("validateStoreReleaseRuntimeConfig") {
         if (missingDefines.isNotEmpty()) {
             throw GradleException(
                 "Store release runtime config is missing dart-defines: ${missingDefines.joinToString(", ")}. " +
-                    "Use tool/build_store_appbundle.ps1 so production Supabase and Places endpoints are injected."
+                    "Use tool/build_store_appbundle.ps1 so production Supabase, Places, and Quran audio endpoints are injected."
+            )
+        }
+
+        if (
+            dartDefines["SUPABASE_PUBLISHABLE_KEY"]?.trim().isNullOrEmpty() &&
+            dartDefines["SUPABASE_ANON_KEY"]?.trim().isNullOrEmpty()
+        ) {
+            throw GradleException(
+                "Store release runtime config is missing dart-defines: SUPABASE_PUBLISHABLE_KEY " +
+                    "(or legacy SUPABASE_ANON_KEY)."
             )
         }
 
         if (!isCleanHttpsUrl(dartDefines.getValue("SUPABASE_URL"), allowPath = false)) {
             throw GradleException("SUPABASE_URL must be a clean HTTPS project origin without user info, path, query, or fragment.")
+        }
+
+        if (!isCleanHttpsUrl(dartDefines.getValue("QURAN_AUDIO_CLOUDFLARE_BASE_URL"))) {
+            throw GradleException("QURAN_AUDIO_CLOUDFLARE_BASE_URL must be a clean HTTPS base URL without user info, query, or fragment.")
+        }
+
+        if (!isValidGithubQuranAudioTemplate(dartDefines.getValue("QURAN_AUDIO_GITHUB_URL_TEMPLATE"))) {
+            throw GradleException(
+                "QURAN_AUDIO_GITHUB_URL_TEMPLATE must be a clean HTTPS URL template and include {reciter} and {surah}."
+            )
         }
 
         if (!isValidTileTemplate(dartDefines.getValue("PLACES_TILE_URL_TEMPLATE"))) {

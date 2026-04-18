@@ -95,9 +95,11 @@ void main() {
       final script = File('tool/build_store_appbundle.ps1').readAsStringSync();
 
       expect(script, contains('SUPABASE_URL'));
-      expect(script, contains('SUPABASE_ANON_KEY'));
+      expect(script, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(script, contains('PLACES_TILE_URL_TEMPLATE'));
       expect(script, contains('PLACES_OVERPASS_API_URL'));
+      expect(script, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
+      expect(script, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
       expect(script, contains('android/key.properties'));
       expect(script, contains('Assert-CleanHttpsUrl'));
       expect(script, contains('tile.openstreetmap.org'));
@@ -109,11 +111,21 @@ void main() {
       final script = File('tool/check_store_readiness.ps1').readAsStringSync();
       final checklist = File('store/release_checklist.md').readAsStringSync();
 
-      expect(script, contains('SUPABASE_SERVICE_ROLE_KEY'));
+      expect(script, contains('SUPABASE_PUBLISHABLE_KEY'));
+      expect(script, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
+      expect(script, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
       expect(script, contains('build/verified_quran_audio/manifest.json'));
       expect(script, contains('content_seed_quran_audio_storage.sql'));
       expect(script, contains('requested -eq 684'));
       expect(script, contains('files.Count -eq 684'));
+      expect(script, contains("file.reciter -eq 'abdul_basit_murattal'"));
+      expect(
+        script,
+        contains('Cloudflare Quran audio partition is below 10 GB'),
+      );
+      expect(script, contains('Supabase public table is reachable'));
+      expect(script, contains('quran_surahs'));
+      expect(script, contains('tafsir_entries'));
       expect(script, contains('storagePathValueCount -eq 684'));
       expect(script, contains('android.permission.USE_EXACT_ALARM'));
       expect(script, contains('download.quranicaudio.com'));
@@ -132,6 +144,9 @@ void main() {
       expect(gradle, contains('decodeDartDefines'));
       expect(gradle, contains('validateStoreReleaseRuntimeConfig'));
       expect(gradle, contains('Store release runtime config is missing'));
+      expect(gradle, contains('SUPABASE_PUBLISHABLE_KEY'));
+      expect(gradle, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
+      expect(gradle, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
       expect(gradle, contains('no public OpenStreetMap tile host'));
       expect(gradle, contains('must not use a public Overpass host'));
     });

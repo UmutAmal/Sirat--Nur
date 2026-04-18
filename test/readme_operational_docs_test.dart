@@ -6,30 +6,30 @@ void main() {
   group('README operational documentation', () {
     final readme = File('README.md').readAsStringSync();
 
-    test('documents the Quran audio storage import order', () {
+    test('documents the Quran audio distribution import order', () {
       final downloadIndex = readme.indexOf(
         'dart run tool/download_verified_quran_audio.dart',
-      );
-      final uploadIndex = readme.indexOf(
-        'dart run tool/upload_quran_audio_storage.dart',
       );
       final seedIndex = readme.indexOf(
         'dart run tool/generate_quran_audio_storage_seed.dart',
       );
+      final distributionIndex = readme.indexOf(
+        'Upload the mirrored MP3 files to the selected first-party distribution providers',
+      );
 
       expect(downloadIndex, isNot(-1));
-      expect(uploadIndex, greaterThan(downloadIndex));
-      expect(seedIndex, greaterThan(uploadIndex));
+      expect(seedIndex, greaterThan(downloadIndex));
+      expect(distributionIndex, greaterThan(seedIndex));
       expect(
         readme,
         contains(
-          'Do not apply `content_seed_quran_audio_storage.sql` before the matching MP3 files are uploaded',
+          'Supabase stores only metadata/path rows; the 11.6 GB Quran MP3 catalog is not uploaded to Supabase Storage',
         ),
       );
       expect(
         readme,
         contains(
-          'The runtime requires Supabase Storage-backed `storage_path` rows for playable audio',
+          'Cloudflare R2/CDN for every reciter except `abdul_basit_murattal`',
         ),
       );
       expect(
@@ -40,12 +40,7 @@ void main() {
       );
       expect(readme, contains('Every file row must include `size_bytes`'));
       expect(readme, contains('64-character `sha256` checksum'));
-      expect(
-        readme,
-        contains(
-          'rejects missing files, MP3 shape failures, size mismatches, and checksum mismatches',
-        ),
-      );
+      expect(readme, contains('first-party distribution providers'));
       expect(
         readme,
         contains('rejects old manifests that do not include this evidence'),
@@ -64,11 +59,18 @@ void main() {
     test('does not publish fake production endpoint placeholders', () {
       expect(readme, contains('.\\tool\\build_store_appbundle.ps1'));
       expect(readme, contains('SUPABASE_URL'));
+      expect(readme, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(readme, contains('PLACES_TILE_URL_TEMPLATE'));
+      expect(readme, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
+      expect(readme, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
       expect(readme, isNot(contains('tiles.example.com')));
       expect(readme, isNot(contains('places-proxy.example.com')));
       expect(readme, isNot(contains('your-project.supabase.co')));
       expect(readme, isNot(contains('--dart-define=SUPABASE_URL=https://')));
+      expect(
+        readme,
+        isNot(contains('--dart-define=SUPABASE_PUBLISHABLE_KEY=sb_')),
+      );
       expect(readme, isNot(contains('--dart-define=SUPABASE_ANON_KEY=sb_')));
     });
 
@@ -94,7 +96,7 @@ void main() {
       expect(readme, contains('android/key.properties.example'));
       expect(readme, contains('validateStoreReleaseSigning'));
       expect(readme, contains('tool/build_store_appbundle.ps1'));
-      expect(readme, contains('SUPABASE_ANON_KEY'));
+      expect(readme, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(readme, contains('PLACES_OVERPASS_API_URL'));
       expect(readme, contains('store/play/data_safety.md'));
       expect(readme, contains('store/play/exact_alarm_declaration.md'));

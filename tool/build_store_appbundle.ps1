@@ -6,9 +6,10 @@ $ErrorActionPreference = 'Stop'
 
 $requiredEnvironment = @(
   'SUPABASE_URL',
-  'SUPABASE_ANON_KEY',
   'PLACES_TILE_URL_TEMPLATE',
-  'PLACES_OVERPASS_API_URL'
+  'PLACES_OVERPASS_API_URL',
+  'QURAN_AUDIO_CLOUDFLARE_BASE_URL',
+  'QURAN_AUDIO_GITHUB_URL_TEMPLATE'
 )
 
 $missing = @()
@@ -20,6 +21,14 @@ foreach ($name in $requiredEnvironment) {
 
 if ($missing.Count -gt 0) {
   throw "Missing store release environment variables: $($missing -join ', ')"
+}
+
+$supabaseClientKey = [Environment]::GetEnvironmentVariable('SUPABASE_PUBLISHABLE_KEY')
+if ([string]::IsNullOrWhiteSpace($supabaseClientKey)) {
+  $supabaseClientKey = [Environment]::GetEnvironmentVariable('SUPABASE_ANON_KEY')
+}
+if ([string]::IsNullOrWhiteSpace($supabaseClientKey)) {
+  throw 'Missing store release environment variable: SUPABASE_PUBLISHABLE_KEY (or legacy SUPABASE_ANON_KEY).'
 }
 
 function Test-BlockedHost {
@@ -72,6 +81,18 @@ function Assert-CleanHttpsUrl {
 
 Assert-CleanHttpsUrl -Name 'SUPABASE_URL' -Value $env:SUPABASE_URL -DisallowPath | Out-Null
 
+Assert-CleanHttpsUrl -Name 'QURAN_AUDIO_CLOUDFLARE_BASE_URL' -Value $env:QURAN_AUDIO_CLOUDFLARE_BASE_URL | Out-Null
+
+$githubTemplate = $env:QURAN_AUDIO_GITHUB_URL_TEMPLATE.Trim()
+if (
+  -not $githubTemplate.Contains('{reciter}') -or
+  -not $githubTemplate.Contains('{surah}')
+) {
+  throw 'QURAN_AUDIO_GITHUB_URL_TEMPLATE must include {reciter} and {surah}.'
+}
+$githubProbe = $githubTemplate.Replace('{reciter}', 'abdul_basit_murattal').Replace('{surah}', '001').Replace('{file}', '001.mp3').Replace('{path}', 'abdul_basit_murattal/001.mp3')
+Assert-CleanHttpsUrl -Name 'QURAN_AUDIO_GITHUB_URL_TEMPLATE' -Value $githubProbe | Out-Null
+
 $tileTemplate = $env:PLACES_TILE_URL_TEMPLATE.Trim()
 foreach ($token in @('{z}', '{x}', '{y}')) {
   if (-not $tileTemplate.Contains($token)) {
@@ -121,8 +142,10 @@ if ([string]::IsNullOrWhiteSpace($quranAudioBucket)) {
 
 flutter build appbundle --release `
   --dart-define=SUPABASE_URL="$env:SUPABASE_URL" `
-  --dart-define=SUPABASE_ANON_KEY="$env:SUPABASE_ANON_KEY" `
+  --dart-define=SUPABASE_PUBLISHABLE_KEY="$supabaseClientKey" `
   --dart-define=SUPABASE_QURAN_AUDIO_BUCKET="$quranAudioBucket" `
   --dart-define=PLACES_TILE_URL_TEMPLATE="$env:PLACES_TILE_URL_TEMPLATE" `
   --dart-define=PLACES_OVERPASS_API_URL="$env:PLACES_OVERPASS_API_URL" `
+  --dart-define=QURAN_AUDIO_CLOUDFLARE_BASE_URL="$env:QURAN_AUDIO_CLOUDFLARE_BASE_URL" `
+  --dart-define=QURAN_AUDIO_GITHUB_URL_TEMPLATE="$env:QURAN_AUDIO_GITHUB_URL_TEMPLATE" `
   --dart-define=GEMINI_API_KEY="$env:GEMINI_API_KEY"

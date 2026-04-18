@@ -15661,3 +15661,38 @@
 ### Sonraki Adim
 - Operator gercek `SUPABASE_SERVICE_ROLE_KEY` verdiginde `dart run tool/upload_quran_audio_storage.dart --manifest=build/verified_quran_audio/manifest.json --supabase-url=$env:SUPABASE_URL` ile 684 dosya Supabase Storage'a yuklenecek.
 - Operator gercek prod `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL` degerlerini verdiginde `tool/check_store_readiness.ps1` tam modda PASS etmeli ve ardindan `tool/build_store_appbundle.ps1` ile gercek store AAB uretilmeli.
+
+## 2026-04-18 TUR-360 - Provider-Neutral Quran Audio Distribution
+
+### MASTER Karari
+- Risk: TUR-359'daki Supabase Storage upload hedefi, Supabase Free Storage kotasi ve kullanici karariyla uyumsuz kaldi. Quran audio 11.6 GB oldugu icin Supabase yalniz metadata/DB icin kullanilmali; audio dagitimi Cloudflare + GitHub bolunmus provider modeliyle yapilmali.
+- Kanit: Local manifest 684 MP3 ve yaklasik 11.6 GB. `abdul_basit_murattal` ayrildiginda Cloudflare'da kalan audio partition yaklasik 8.40 GB oluyor ve 10 GB altinda kaliyor. Verilen `sb_publishable_...` key ile Supabase Auth health `200` verdi; `daily_content`, `live_tv_channels`, `education_categories`, `education_topics` public REST'ten okunuyor. `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` ise `404/PGRST205` dondu; schema/seed henuz production Supabase'e uygulanmamis.
+- Etki: Uygulama eski haliyle Quran audio URL'lerini Supabase Storage'a cevirecekti; bu hem kota hem mimari hedefe aykiri. Supabase schema eksigi store-ready sanilirse Quran, dua, asma, hadith ve tafsir cloud yuzeyleri eksik kalir.
+- Olasilik: Release build ve runtime her audio row'da bu resolver'i kullanir; Supabase table eksigi verilen aktif projede hemen goruldu.
+- Risk skoru: Etki 5 x Olasilik 5 = 25/25 (P0 release architecture blocker).
+- Rollback plani: `lib/core/network/quran_audio_distribution_url.dart`, `lib/core/services/offline_audio_service.dart`, `lib/core/network/supabase_config.dart`, `android/app/build.gradle.kts`, `tool/build_store_appbundle.ps1`, `tool/check_store_readiness.ps1`, README/checklist ve ilgili test degisiklikleri revert edilir. Bu rollback Supabase Storage kota riskini geri getirir.
+
+### BUILDER Degisikligi
+- `lib/core/network/quran_audio_distribution_url.dart` eklendi. Kural: `abdul_basit_murattal` GitHub release URL template'ine, diger kâriler Cloudflare base URL + `reciter/NNN.mp3` path'ine gider. Unsafe path, mismatch surah, user-info/query/fragment URL'leri reddedilir.
+- `lib/core/services/offline_audio_service.dart` Quran `storage_path` row'larini artik Supabase Storage'a degil provider-neutral Cloudflare/GitHub resolver'a ceviriyor. Sukun/Dua/Asma gibi kucuk Supabase Storage audio yuzeyleri korunuyor.
+- `lib/core/network/supabase_config.dart` yeni Supabase publishable key modelini destekliyor: `SUPABASE_PUBLISHABLE_KEY` birincil, legacy `SUPABASE_ANON_KEY` fallback.
+- `android/app/build.gradle.kts` ve `tool/build_store_appbundle.ps1` store release icin `SUPABASE_PUBLISHABLE_KEY`, `QURAN_AUDIO_CLOUDFLARE_BASE_URL`, `QURAN_AUDIO_GITHUB_URL_TEMPLATE` kapilarini ekledi.
+- `tool/check_store_readiness.ps1` artik Supabase service-role audio upload beklemiyor; bunun yerine Cloudflare partition < 10 GB, GitHub overflow `abdul_basit_murattal` 114 dosya, Quran seed 684 row ve Supabase public table erisimi kontrollerini yapiyor.
+- README ve `store/release_checklist.md` Supabase=hafif DB/metadata, Cloudflare=ana Quran audio, GitHub=`abdul_basit_murattal` overflow olacak sekilde guncellendi.
+
+### Dogrulama Sonucu
+- Supabase live check: Verilen publishable key ile `auth/v1/health` PASS (`200`). Public REST PASS tablolar: `daily_content`, `live_tv_channels`, `education_categories`, `education_topics`. Eksik/erisilemeyen tablolar: `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` (`404/PGRST205`).
+- Readiness dry run (gecici fake Cloudflare/Places URL'leri + verilen Supabase publishable key): PASS olanlar: env sekli, keystore, manifest 684/684, GitHub overflow 114 dosya, Cloudflare partition 8.40 GB, Quran seed 684 row, privacy URL. FAIL olanlar: 7 eksik Supabase public tablo.
+- Store build config dry run: `tool/build_store_appbundle.ps1 -NoBuild` verilen Supabase URL/key ve gecici guvenli sekilli endpointlerle PASS.
+- Odak testler: `flutter test test/quran_audio_distribution_url_test.dart --reporter compact` PASS (`5/5`); `flutter test test/offline_audio_service_test.dart --reporter compact` PASS (`18/18`); Supabase/store/readme/android/quran guard odak paketi PASS (`26/26`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`606/606`).
+
+### Risk Degisimi
+- Quran audio Supabase Storage kota/mimari riski: `25/25 -> 4/25`. Kalan risk: gercek Cloudflare/GitHub upload ve gercek URL'ler henuz verilmedi.
+- Supabase runtime key riski: `16/25 -> 6/25`; key calisiyor, fakat production schema/seed eksigi store-ready blocker olarak kaldi.
+
+### Sonraki Adim
+- Supabase tarafinda `content_schema.sql`, `seed.sql`, `content_seed_quran_surahs.sql`, `content_seed_quran_ayahs.sql`, `content_seed_quran_audio_storage.sql` ve ilgili `duas/asmas/hadith/tafsir` seed kaynaklari production projeye uygulanmali; sonra checker 7 tablo fail'ini kapatmali.
+- Cloudflare tarafinda 5 kâri partition upload scripti/manifesti eklenecek ve `QURAN_AUDIO_CLOUDFLARE_BASE_URL` gercek domain ile dogrulanacak.
+- GitHub tarafinda `abdul_basit_murattal` 114 MP3 release asset olarak yuklenecek ve `QURAN_AUDIO_GITHUB_URL_TEMPLATE` gercek release tag ile dogrulanacak.

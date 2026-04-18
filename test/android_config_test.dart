@@ -37,7 +37,10 @@ void main() {
       expect(gradle, contains('SIRAT_UPLOAD_STORE_FILE'));
       expect(gradle, contains('debug signing is forbidden for release'));
       expect(gradle, contains('SUPABASE_URL'));
+      expect(gradle, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(gradle, contains('PLACES_TILE_URL_TEMPLATE'));
+      expect(gradle, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
+      expect(gradle, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
     });
 
     test('release lint remains enabled for store packaging', () {

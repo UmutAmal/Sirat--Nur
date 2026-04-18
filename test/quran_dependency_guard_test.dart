@@ -48,7 +48,7 @@ void main() {
       bundledMp3Files,
       isEmpty,
       reason:
-          'Runtime Quran audio must come from downloaded files or Supabase Storage-backed rows, not bundled assets.',
+          'Runtime Quran audio must come from downloaded files or first-party distribution rows, not bundled assets.',
     );
   });
 }

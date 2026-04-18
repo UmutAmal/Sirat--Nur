@@ -143,9 +143,10 @@ try {
 
   $requiredEnvironment = @(
     'SUPABASE_URL',
-    'SUPABASE_ANON_KEY',
     'PLACES_TILE_URL_TEMPLATE',
-    'PLACES_OVERPASS_API_URL'
+    'PLACES_OVERPASS_API_URL',
+    'QURAN_AUDIO_CLOUDFLARE_BASE_URL',
+    'QURAN_AUDIO_GITHUB_URL_TEMPLATE'
   )
   foreach ($name in $requiredEnvironment) {
     if ([string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable($name))) {
@@ -155,9 +156,33 @@ try {
     }
   }
 
+  $supabaseClientKey = [Environment]::GetEnvironmentVariable('SUPABASE_PUBLISHABLE_KEY')
+  if ([string]::IsNullOrWhiteSpace($supabaseClientKey)) {
+    $supabaseClientKey = [Environment]::GetEnvironmentVariable('SUPABASE_ANON_KEY')
+  }
+  if ([string]::IsNullOrWhiteSpace($supabaseClientKey)) {
+    Add-Failure 'SUPABASE_PUBLISHABLE_KEY or legacy SUPABASE_ANON_KEY is missing; store builds must inject a client-side Supabase key.'
+  } else {
+    Add-Pass 'Supabase client key is set.'
+  }
+
   $supabaseUrl = [Environment]::GetEnvironmentVariable('SUPABASE_URL')
   if (-not [string]::IsNullOrWhiteSpace($supabaseUrl)) {
     Test-CleanHttpsUrl -Name 'SUPABASE_URL' -Value $supabaseUrl -DisallowPath | Out-Null
+  }
+
+  $quranCloudflareBaseUrl = [Environment]::GetEnvironmentVariable('QURAN_AUDIO_CLOUDFLARE_BASE_URL')
+  if (-not [string]::IsNullOrWhiteSpace($quranCloudflareBaseUrl)) {
+    Test-CleanHttpsUrl -Name 'QURAN_AUDIO_CLOUDFLARE_BASE_URL' -Value $quranCloudflareBaseUrl | Out-Null
+  }
+
+  $quranGithubTemplate = [Environment]::GetEnvironmentVariable('QURAN_AUDIO_GITHUB_URL_TEMPLATE')
+  if (-not [string]::IsNullOrWhiteSpace($quranGithubTemplate)) {
+    if (-not $quranGithubTemplate.Contains('{reciter}') -or -not $quranGithubTemplate.Contains('{surah}')) {
+      Add-Failure 'QURAN_AUDIO_GITHUB_URL_TEMPLATE must include {reciter} and {surah}.'
+    }
+    $githubProbe = $quranGithubTemplate.Replace('{reciter}', 'abdul_basit_murattal').Replace('{surah}', '001').Replace('{file}', '001.mp3').Replace('{path}', 'abdul_basit_murattal/001.mp3')
+    Test-CleanHttpsUrl -Name 'QURAN_AUDIO_GITHUB_URL_TEMPLATE' -Value $githubProbe | Out-Null
   }
 
   $tileTemplate = [Environment]::GetEnvironmentVariable('PLACES_TILE_URL_TEMPLATE')
@@ -189,12 +214,6 @@ try {
     }
   }
 
-  if ([string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable('SUPABASE_SERVICE_ROLE_KEY'))) {
-    Add-Failure 'SUPABASE_SERVICE_ROLE_KEY is missing; Quran audio cannot be uploaded to Supabase Storage from this machine.'
-  } else {
-    Add-Pass 'SUPABASE_SERVICE_ROLE_KEY is set for storage upload.'
-  }
-
   $audioManifestPath = Join-Path $repoRoot 'build/verified_quran_audio/manifest.json'
   if (Test-Path -LiteralPath $audioManifestPath) {
     try {
@@ -203,6 +222,27 @@ try {
         Add-Pass 'Verified Quran audio mirror manifest is complete: 684/684 files, no failures.'
       } else {
         Add-Failure "Verified Quran audio mirror manifest is incomplete: requested=$($audioManifest.requested), files=$($audioManifest.files.Count), failed=$($audioManifest.failed.Count)."
+      }
+
+      $cloudflareAudioBytes = [int64]0
+      $githubMurattalRows = 0
+      foreach ($file in $audioManifest.files) {
+        if ($file.reciter -eq 'abdul_basit_murattal') {
+          $githubMurattalRows += 1
+        } else {
+          $cloudflareAudioBytes += [int64]$file.size_bytes
+        }
+      }
+      $tenGbBytes = [int64]10 * 1024 * 1024 * 1024
+      if ($githubMurattalRows -eq 114) {
+        Add-Pass 'GitHub overflow partition is complete: abdul_basit_murattal has 114 files.'
+      } else {
+        Add-Failure "GitHub overflow partition is incomplete: abdul_basit_murattal files=$githubMurattalRows."
+      }
+      if ($cloudflareAudioBytes -lt $tenGbBytes) {
+        Add-Pass "Cloudflare Quran audio partition is below 10 GB: $([math]::Round($cloudflareAudioBytes / 1GB, 2)) GB."
+      } else {
+        Add-Failure "Cloudflare Quran audio partition exceeds 10 GB: $([math]::Round($cloudflareAudioBytes / 1GB, 2)) GB."
       }
     } catch {
       Add-Failure 'Verified Quran audio mirror manifest is not valid JSON.'
@@ -242,6 +282,41 @@ try {
       }
     } catch {
       Add-Failure "Remote privacy policy URL is not reachable: $($_.Exception.Message)"
+    }
+
+    if (
+      -not [string]::IsNullOrWhiteSpace($supabaseUrl) -and
+      -not [string]::IsNullOrWhiteSpace($supabaseClientKey)
+    ) {
+      $supabaseHeaders = @{
+        apikey = $supabaseClientKey
+        Authorization = "Bearer $supabaseClientKey"
+      }
+      foreach ($tableName in @(
+          'daily_content',
+          'live_tv_channels',
+          'education_categories',
+          'education_topics',
+          'audio_files',
+          'duas',
+          'asma_ul_husna',
+          'quran_surahs',
+          'quran_ayahs',
+          'tafsir_entries',
+          'hadiths'
+        )) {
+        try {
+          $tableUri = "$supabaseUrl/rest/v1/$tableName`?select=id&limit=1"
+          $tableResponse = Invoke-WebRequest -Uri $tableUri -Headers $supabaseHeaders -Method Get -TimeoutSec 30 -SkipHttpErrorCheck
+          if ($tableResponse.StatusCode -eq 200) {
+            Add-Pass "Supabase public table is reachable: $tableName."
+          } else {
+            Add-Failure "Supabase public table is not reachable: $tableName returned HTTP $($tableResponse.StatusCode)."
+          }
+        } catch {
+          Add-Failure "Supabase public table is not reachable: $tableName ($($_.Exception.Message))"
+        }
+      }
     }
   }
 

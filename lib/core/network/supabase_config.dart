@@ -4,14 +4,14 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 ///
 /// Keys are injected via `--dart-define` at build time for best-practice
 /// security. The public project URL has a development default because it is
-/// used to construct public Storage URLs, but the anon key must never be
+/// used to construct public Storage URLs, but the client key must never be
 /// committed as a fallback value.
 ///
-/// Production builds should use:
+/// Production builds should use the client-side publishable key:
 /// ```
 /// flutter build apk \
 ///   --dart-define=SUPABASE_URL="$SUPABASE_URL" \
-///   --dart-define=SUPABASE_ANON_KEY="$SUPABASE_ANON_KEY"
+///   --dart-define=SUPABASE_PUBLISHABLE_KEY="$SUPABASE_PUBLISHABLE_KEY"
 /// ```
 class SupabaseConfig {
   static const String credentialsMissingErrorCode =
@@ -22,7 +22,19 @@ class SupabaseConfig {
     defaultValue: 'https://amevotnudldbbwogtrtw.supabase.co',
   );
 
-  static const String anonKey = String.fromEnvironment('SUPABASE_ANON_KEY');
+  static const String _publishableKey = String.fromEnvironment(
+    'SUPABASE_PUBLISHABLE_KEY',
+  );
+
+  static const String _legacyAnonKey = String.fromEnvironment(
+    'SUPABASE_ANON_KEY',
+  );
+
+  static const String publishableKey = _publishableKey == ''
+      ? _legacyAnonKey
+      : _publishableKey;
+
+  static const String anonKey = publishableKey;
 
   static const String quranAudioBucket = String.fromEnvironment(
     'SUPABASE_QURAN_AUDIO_BUCKET',

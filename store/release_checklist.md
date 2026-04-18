@@ -28,7 +28,7 @@ Run this before every store upload:
 ```
 
 The checker intentionally fails if production environment variables, upload
-signing, Quran audio mirror evidence, or the public privacy policy are missing.
+signing, Quran audio mirror/distribution evidence, or the public privacy policy are missing.
 Do not bypass it by using a raw `flutter build` command.
 
 ## Required Local Secrets
@@ -38,10 +38,11 @@ These values must exist only on the release machine or secure CI secret store:
 - `android/key.properties`
 - Upload keystore referenced by `android/key.properties`
 - `SUPABASE_URL`
-- `SUPABASE_ANON_KEY`
-- `SUPABASE_SERVICE_ROLE_KEY`
+- `SUPABASE_PUBLISHABLE_KEY` (legacy `SUPABASE_ANON_KEY` is still accepted)
 - `PLACES_TILE_URL_TEMPLATE`
 - `PLACES_OVERPASS_API_URL`
+- `QURAN_AUDIO_CLOUDFLARE_BASE_URL`
+- `QURAN_AUDIO_GITHUB_URL_TEMPLATE`
 - Optional: `GEMINI_API_KEY`
 
 No secret value may be committed to git, pasted into documentation, or embedded
@@ -55,17 +56,18 @@ in Dart source.
 dart run tool/download_verified_quran_audio.dart --overwrite
 ```
 
-2. Upload the complete mirror to Supabase Storage:
-
-```powershell
-dart run tool/upload_quran_audio_storage.dart --manifest=build/verified_quran_audio/manifest.json
-```
-
-3. Generate the storage-backed seed:
+2. Generate the storage-path seed:
 
 ```powershell
 dart run tool/generate_quran_audio_storage_seed.dart --manifest=build/verified_quran_audio/manifest.json --output=content_seed_quran_audio_storage.sql
 ```
+
+3. Upload the complete mirror to first-party distribution providers:
+
+- Cloudflare partition: every reciter except `abdul_basit_murattal`; checker
+  must report this partition below 10 GB.
+- GitHub Releases overflow partition: complete `abdul_basit_murattal` set
+  with 114 files.
 
 4. Apply `content_schema.sql`, then apply `content_seed_quran_audio_storage.sql`
 to the production Supabase project.
@@ -106,6 +108,6 @@ not be used for production seeding.
 - `flutter test --reporter compact` output.
 - Store AAB path and size.
 - `jarsigner` verification output.
-- Supabase audio upload summary.
+- Cloudflare/GitHub Quran audio upload summary.
 - Play Console/App Store Connect screenshots or exported notes showing policy
   forms were completed from the tracked worksheets.

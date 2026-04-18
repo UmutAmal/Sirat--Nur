@@ -6,6 +6,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/network/supabase_storage_url.dart'
     as storage_url;
+import 'package:sirat_i_nur/core/network/quran_audio_distribution_url.dart';
 import 'package:sirat_i_nur/core/services/quran_audio_file_validation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -35,9 +36,35 @@ class OfflineDownloadBatchResult {
 String? resolvePlayableCloudAudioUrl(
   Map<String, dynamic> row, {
   String bucketName = SupabaseConfig.quranAudioBucket,
+  String quranCloudflareBaseUrl =
+      QuranAudioDistributionConfig.cloudflareBaseUrl,
+  String quranGithubUrlTemplate =
+      QuranAudioDistributionConfig.githubUrlTemplate,
 }) {
   final storagePath = row['storage_path']?.toString().trim();
   if (storagePath != null && storagePath.isNotEmpty) {
+    final type = row['type']?.toString().trim().toLowerCase();
+    if (type == 'quran_surah') {
+      final reciterId = row['reciter']?.toString().trim();
+      final surahNumber = switch (row['surah_number']) {
+        int value => value,
+        num value => value.toInt(),
+        String value => int.tryParse(value),
+        _ => null,
+      };
+      if (reciterId == null || surahNumber == null) {
+        return null;
+      }
+
+      return resolveQuranAudioDistributionUrl(
+        reciterId: reciterId,
+        surahNumber: surahNumber,
+        storagePath: storagePath,
+        cloudflareBaseUrl: quranCloudflareBaseUrl,
+        githubUrlTemplate: quranGithubUrlTemplate,
+      );
+    }
+
     try {
       return storage_url.buildSupabaseStoragePublicUrl(
         storagePath,
@@ -95,6 +122,10 @@ String buildSupabaseStoragePublicUrl(
 Map<int, String> resolveCloudQuranSurahUrls(
   List<Map<String, dynamic>> rows, {
   required String reciterId,
+  String quranCloudflareBaseUrl =
+      QuranAudioDistributionConfig.cloudflareBaseUrl,
+  String quranGithubUrlTemplate =
+      QuranAudioDistributionConfig.githubUrlTemplate,
 }) {
   final urls = <int, String>{};
 
@@ -123,7 +154,11 @@ Map<int, String> resolveCloudQuranSurahUrls(
       continue;
     }
 
-    final url = resolvePlayableCloudAudioUrl(row);
+    final url = resolvePlayableCloudAudioUrl(
+      row,
+      quranCloudflareBaseUrl: quranCloudflareBaseUrl,
+      quranGithubUrlTemplate: quranGithubUrlTemplate,
+    );
     if (url == null) {
       continue;
     }
@@ -172,10 +207,15 @@ bool _isManagedDownloadedQuranAudioFileName(String fileName) {
   return false;
 }
 
-bool _isDownloadableQuranAudioUrl(String audioUrl) {
-  return storage_url.isSupabaseStoragePublicUrl(
-    audioUrl,
-    bucketNames: const {SupabaseConfig.quranAudioBucket},
+bool _isDownloadableQuranAudioUrl(
+  String audioUrl, {
+  required String reciterId,
+  required int surahNumber,
+}) {
+  return isExpectedQuranAudioDistributionUrl(
+    audioUrl: audioUrl,
+    reciterId: reciterId,
+    surahNumber: surahNumber,
   );
 }
 
@@ -209,12 +249,21 @@ Future<bool> validateDownloadedQuranAudioFile(String filePath) async {
 }
 
 Map<String, Map<int, String>> resolveCloudQuranAudioCatalog(
-  List<Map<String, dynamic>> rows,
-) {
+  List<Map<String, dynamic>> rows, {
+  String quranCloudflareBaseUrl =
+      QuranAudioDistributionConfig.cloudflareBaseUrl,
+  String quranGithubUrlTemplate =
+      QuranAudioDistributionConfig.githubUrlTemplate,
+}) {
   final catalog = <String, Map<int, String>>{};
 
   for (final reciterId in OfflineReciters.reciters.keys) {
-    final surahUrls = resolveCloudQuranSurahUrls(rows, reciterId: reciterId);
+    final surahUrls = resolveCloudQuranSurahUrls(
+      rows,
+      reciterId: reciterId,
+      quranCloudflareBaseUrl: quranCloudflareBaseUrl,
+      quranGithubUrlTemplate: quranGithubUrlTemplate,
+    );
     if (surahUrls.isNotEmpty) {
       catalog[reciterId] = surahUrls;
     }
@@ -272,7 +321,11 @@ class OfflineAudioService {
     final normalizedAudioUrl = audioUrl.trim();
     if (!_isValidQuranSurahNumber(surahNumber) ||
         !_isSupportedOfflineReciter(reciterId) ||
-        !_isDownloadableQuranAudioUrl(normalizedAudioUrl)) {
+        !_isDownloadableQuranAudioUrl(
+          normalizedAudioUrl,
+          reciterId: reciterId,
+          surahNumber: surahNumber,
+        )) {
       return false;
     }
 
