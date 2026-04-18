@@ -74,8 +74,16 @@ void main() {
         expect(schema, contains('unique (collection_id, hadith_number)'));
         expect(
           schema,
+          isNot(
+            contains(
+              "insert into storage.buckets (id, name, public)\nvalues ('quran-audio', 'quran-audio', true)",
+            ),
+          ),
+        );
+        expect(
+          schema,
           contains(
-            "insert into storage.buckets (id, name, public)\nvalues ('quran-audio', 'quran-audio', true)",
+            "update storage.buckets\nset public = false\nwhere id = 'quran-audio';",
           ),
         );
         expect(
@@ -154,9 +162,13 @@ void main() {
       expect(schema, contains('create policy "Public read audio files"'));
       expect(
         schema,
-        contains('create policy "Public read quran audio bucket"'),
+        contains('drop policy if exists "Public read quran audio bucket"'),
       );
-      expect(schema, contains("using (bucket_id = 'quran-audio');"));
+      expect(
+        schema,
+        isNot(contains('create policy "Public read quran audio bucket"')),
+      );
+      expect(schema, isNot(contains("using (bucket_id = 'quran-audio');")));
       expect(
         schema,
         contains('create policy "Public read sukun audio bucket"'),

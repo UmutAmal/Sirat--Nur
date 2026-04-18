@@ -15781,3 +15781,31 @@
 
 ### Sonraki Adim
 - Gercek release shell/CI ortaminda `SUPABASE_DB_URL` secret'i set edilip `tool/apply_supabase_content_bundle.ps1` real modda calistirilacak. Ardindan `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, Places endpointleri ve Quran audio Cloudflare/GitHub URL'leri ile `tool/check_store_readiness.ps1` tekrar calistirilacak.
+## 2026-04-18 TUR-364 - Legacy Supabase Quran Audio Upload Path Retired
+
+### MASTER Karari
+- Risk: Quran audio icin karar Cloudflare/GitHub dagitimi olmasina ragmen repoda eski Supabase Storage network upload CLI'i ve `content_schema.sql` icinde public `quran-audio` bucket/policy kurulumu duruyordu.
+- Kanit: `tool/upload_quran_audio_storage.dart` real modda `HttpClient.postUrl` ile Supabase Storage'a MP3 yazabiliyordu; `content_schema.sql` `storage.buckets` icine `quran-audio` bucket'ini `public=true` yapip `Public read quran audio bucket` policy'si olusturuyordu.
+- Etki: Operator veya sonraki ajan yanlis araci calistirip 11.6 GB Quran MP3 katalogunu Supabase Storage'a yukleyebilir; Supabase hafif metadata hedefi ve Cloudflare/GitHub dagitim karari bozulur.
+- Olasilik: Dosya adi ve eski testler araci hala gecerli upload araci gibi gosteriyordu; store-ready islemlerinde ses katalogu aktif konu oldugu icin yanlis kullanma olasiligi yuksek.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 audio sovereignty/storage cost blocker).
+- Rollback plani: `content_schema.sql`, `tool/upload_quran_audio_storage.dart`, `tool/generate_quran_audio_storage_seed.dart`, `test/content_schema_test.dart`, `test/generate_quran_audio_storage_seed_test.dart`, `test/upload_quran_audio_storage_test.dart` degisiklikleri revert edilir.
+
+### BUILDER Degisikligi
+- `content_schema.sql` artik `quran-audio` Supabase Storage bucket'ini public olarak olusturmuyor; varsa `public=false` yapar ve eski public read policy'sini dusurur. Sukun/Dua/Adhan/Asma gibi hafif audio bucket'lari aynen korunur.
+- `tool/upload_quran_audio_storage.dart` network upload kodundan arindirildi; `HttpClient`, `postUrl`, service-role optionlari ve real upload akisi kaldirildi. Dosya artik sadece legacy dry-run/manifest validation shim olarak kalir ve Cloudflare/GitHub upload aracina yonlendirir.
+- `tool/generate_quran_audio_storage_seed.dart` seed yorumlari Supabase Storage hedefi yerine provider-neutral `storage_path` namespace ve Cloudflare/GitHub distribution summary sartini anlatacak sekilde guncellendi.
+- Testler eski public bucket/policy ve network upload kodunun geri gelmesini reddedecek sekilde guncellendi.
+
+### Dogrulama Sonucu
+- Odak testler: `flutter test test/upload_quran_audio_storage_test.dart test/quran_audio_distribution_plan_test.dart test/content_schema_test.dart test/generate_quran_audio_storage_seed_test.dart --reporter compact` PASS (`30/30`).
+- CLI help: `dart run tool/upload_quran_audio_storage.dart --help` PASS; cikti "Supabase Storage Quran audio uploads are retired" mesajini ve `tool/upload_quran_audio_distribution.ps1` yonlendirmesini gosteriyor.
+- Supabase apply dry-run: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\apply_supabase_content_bundle.ps1 -DryRun` PASS; planned=5, destructive SQL guard yeni `content_schema.sql` ile geciyor.
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`604/604`).
+
+### Risk Degisimi
+- Legacy Supabase Quran audio upload riski: `16/25 -> 3/25`. Kalan risk, gercek Cloudflare/GitHub upload ve production URL secret'lari dis operasyon olarak henuz tamamlanmadigi icin devam ediyor; ancak repo artik Supabase Storage'a Quran MP3 yukleme yolu sunmuyor.
+
+### Sonraki Adim
+- Siradaki ic dongude store-ready dis operasyonlari haric kalan kod/icerik riskleri taranacak; ozellikle content seed completeness, live Supabase REST tablo kapsami ve release checker'in dis kanitlari yeniden skorlanacak.

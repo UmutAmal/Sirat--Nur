@@ -24,55 +24,26 @@ List<int> _quranMp3FixtureBytes() {
 
 void main() {
   group('upload_quran_audio_storage tool', () {
-    test('builds Supabase object upload URLs without embedding secrets', () {
-      final uri = buildSupabaseStorageObjectUploadUri(
-        supabaseUrl: Uri.parse('https://example.supabase.co'),
-        bucketName: 'quran-audio',
-        objectPath: 'alafasy/001.mp3',
-      );
+    test('CLI refuses retired Supabase Storage network uploads', () {
+      final source = File(
+        'tool/upload_quran_audio_storage.dart',
+      ).readAsStringSync();
 
       expect(
-        uri.toString(),
-        'https://example.supabase.co/storage/v1/object/quran-audio/alafasy/001.mp3',
+        source,
+        contains('Supabase Storage Quran audio uploads are retired'),
       );
+      expect(source, contains('tool/upload_quran_audio_distribution.ps1'));
+      expect(source, isNot(contains('HttpClient')));
+      expect(source, isNot(contains('postUrl')));
+      expect(source, isNot(contains('--supabase-url')));
+      expect(source, isNot(contains('--service-role-key-env')));
+      expect(source, isNot(contains('--no-upsert')));
     });
 
-    test('rejects unsafe Supabase project upload URLs', () {
-      for (final rawUrl in const [
-        'http://example.supabase.co',
-        'https://service@example.supabase.co',
-        'https://example.com',
-        'https://example.supabase.co:8443',
-        'https://example.supabase.co/storage/v1',
-        'https://example.supabase.co?apikey=secret',
-        'https://example.supabase.co#',
-        'https://example.supabase.co#secret',
-      ]) {
-        expect(
-          () => buildSupabaseStorageObjectUploadUri(
-            supabaseUrl: Uri.parse(rawUrl),
-            bucketName: 'quran-audio',
-            objectPath: 'alafasy/001.mp3',
-          ),
-          throwsA(
-            isA<ArgumentError>().having(
-              (error) => error.message,
-              'message',
-              contains('HTTPS Supabase project origin'),
-            ),
-          ),
-          reason: rawUrl,
-        );
-      }
-    });
-
-    test('rejects non-Quran audio buckets before building upload URLs', () {
+    test('rejects non-Quran audio namespaces before validation', () {
       expect(
-        () => buildSupabaseStorageObjectUploadUri(
-          supabaseUrl: Uri.parse('https://example.supabase.co'),
-          bucketName: 'audio-sukun',
-          objectPath: 'alafasy/001.mp3',
-        ),
+        () => normalizeQuranAudioBucketName('audio-sukun'),
         throwsA(
           isA<ArgumentError>().having(
             (error) => error.message,
@@ -81,38 +52,6 @@ void main() {
           ),
         ),
       );
-    });
-
-    test('rejects unsafe object paths before building upload URLs', () {
-      for (final objectPath in const [
-        '',
-        '../secret.mp3',
-        'alafasy/../001.mp3',
-        'https://cdn.example.com/alafasy/001.mp3',
-        'alafasy/001.mp3?token=secret',
-        'alafasy/001.mp3#secret',
-      ]) {
-        expect(
-          () => buildSupabaseStorageObjectUploadUri(
-            supabaseUrl: Uri.parse('https://example.supabase.co'),
-            bucketName: 'quran-audio',
-            objectPath: objectPath,
-          ),
-          throwsArgumentError,
-          reason: objectPath,
-        );
-      }
-    });
-
-    test('builds upload headers with service role key only in headers', () {
-      final headers = buildSupabaseStorageUploadHeaders(
-        serviceRoleKey: 'service-secret',
-      );
-
-      expect(headers[HttpHeaders.authorizationHeader], 'Bearer service-secret');
-      expect(headers['apikey'], 'service-secret');
-      expect(headers[HttpHeaders.contentTypeHeader], 'audio/mpeg');
-      expect(headers['x-upsert'], 'true');
     });
 
     test('derives storage object paths from verified mirror rows', () {
@@ -282,37 +221,6 @@ void main() {
       ]);
 
       expect(failures, const ['../001.mp3: unsafe storage object path']);
-    });
-
-    test('upload aborts before network when local files are invalid', () async {
-      final summary = await uploadMirroredQuranAudioFiles(
-        files: [
-          MirroredAudioFile(
-            surahNumber: 1,
-            reciterId: 'alafasy',
-            sourceUrl: 'https://api.quran.com/api/v4/chapter_recitations/7',
-            verifiedAt: DateTime.utc(2026, 4, 8),
-            localPath: 'missing/001.mp3',
-            sizeBytes: _validManifestSizeBytes,
-            sha256: _validManifestSha256,
-          ),
-        ],
-        supabaseUrl: Uri.parse('https://example.supabase.co'),
-        serviceRoleKey: 'service-secret',
-      );
-
-      expect(summary.requested, 1);
-      expect(summary.uploaded, 0);
-      expect(summary.failed, const ['alafasy/001.mp3: missing local file']);
-    });
-
-    test('sanitizes upload failures before printing operator output', () {
-      final message = describeQuranAudioStorageUploadFailure(
-        const SocketException('private upload host failure'),
-      );
-
-      expect(message, 'network error');
-      expect(message, isNot(contains('private upload host')));
     });
   });
 }

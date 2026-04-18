@@ -432,7 +432,7 @@ void main() {
       expect(
         sql,
         contains(
-          'Apply only after all matching MP3 files are uploaded to the target Supabase Storage bucket.',
+          'Apply only after the Cloudflare/GitHub Quran audio distribution summary is complete.',
         ),
       );
       expect(sql, contains('DEVELOPMENT-ONLY PARTIAL SEED'));

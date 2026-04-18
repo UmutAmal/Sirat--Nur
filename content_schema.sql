@@ -195,10 +195,12 @@ on public.audio_files
 for select
 using (true);
 
-insert into storage.buckets (id, name, public)
-values ('quran-audio', 'quran-audio', true)
-on conflict (id) do update
-set public = excluded.public;
+-- Quran MP3 files are distributed through first-party Cloudflare/GitHub
+-- endpoints. Supabase keeps metadata/path rows only, so any legacy Quran
+-- Storage bucket must not stay public.
+update storage.buckets
+set public = false
+where id = 'quran-audio';
 
 insert into storage.buckets (id, name, public)
 values ('audio-sukun', 'audio-sukun', true)
@@ -221,10 +223,6 @@ on conflict (id) do update
 set public = excluded.public;
 
 drop policy if exists "Public read quran audio bucket" on storage.objects;
-create policy "Public read quran audio bucket"
-on storage.objects
-for select
-using (bucket_id = 'quran-audio');
 
 drop policy if exists "Public read sukun audio bucket" on storage.objects;
 create policy "Public read sukun audio bucket"
