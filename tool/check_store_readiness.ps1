@@ -263,12 +263,12 @@ try {
       $storagePathValueCount -eq 684 -and
       -not $audioStorageSeed.Contains('download.quranicaudio.com')
     ) {
-      Add-Pass 'Quran audio storage seed is complete: 684 storage-backed upserts.'
+      Add-Pass 'Quran audio path seed is complete: 684 provider-neutral storage_path upserts.'
     } else {
-      Add-Failure "Quran audio storage seed is incomplete or not storage-backed: inserts=$insertCount, conflicts=$conflictCount, storage_paths=$storagePathValueCount."
+      Add-Failure "Quran audio path seed is incomplete or not provider-neutral: inserts=$insertCount, conflicts=$conflictCount, storage_paths=$storagePathValueCount."
     }
   } else {
-    Add-Failure 'Quran audio storage seed is missing; run dart run tool/generate_quran_audio_storage_seed.dart after mirroring audio.'
+    Add-Failure 'Quran audio path seed is missing; run dart run tool/generate_quran_audio_storage_seed.dart after mirroring audio.'
   }
 
   $distributionSummaryPath = Join-Path $repoRoot 'build/quran_audio_distribution_upload_summary.json'

@@ -28,7 +28,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('OfflineReciters helpers', () {
-    test('maps storage-backed cloud quran rows into a surah url index', () {
+    test('maps provider-neutral cloud quran rows into a surah url index', () {
       final urls = resolveCloudQuranSurahUrls(
         const [
           {

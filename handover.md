@@ -15809,3 +15809,32 @@
 
 ### Sonraki Adim
 - Siradaki ic dongude store-ready dis operasyonlari haric kalan kod/icerik riskleri taranacak; ozellikle content seed completeness, live Supabase REST tablo kapsami ve release checker'in dis kanitlari yeniden skorlanacak.
+## 2026-04-18 TUR-365 - Quran Audio Path Seed Terminology Aligned
+
+### MASTER Karari
+- Risk: TUR-364 ile Supabase Storage Quran MP3 upload yolu kaldirilmasina ragmen generated `content_seed_quran_audio_storage.sql`, store checker ve test adlari hala "Supabase Storage bucket" / "storage-backed" dilini kullaniyordu.
+- Kanit: `content_seed_quran_audio_storage.sql` ilk satirlarda `Target bucket: quran-audio` ve `Apply only after all matching MP3 files are uploaded to the target Supabase Storage bucket.` yorumlarini tasiyordu. `tool/check_store_readiness.ps1` PASS mesaji `684 storage-backed upserts` diyordu.
+- Etki: Operator/ajan dokumani okuyup Quran MP3 hedefini tekrar Supabase Storage sanabilir; Cloudflare/GitHub mimari karari ile seed/checker dili celisir.
+- Olasilik: Checker ve seed dosyasi release sirasinda dogrudan okunuyor; yanlis dilin tekrar yanlis operasyon uretme ihtimali orta-yuksek.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 release operation clarity).
+- Rollback plani: `content_seed_quran_audio_storage.sql`, `tool/check_store_readiness.ps1`, `tool/generate_quran_audio_storage_seed.dart`, `test/store_readiness_test.dart`, `test/generate_quran_audio_storage_seed_test.dart`, `test/offline_audio_service_test.dart` degisiklikleri revert edilir.
+
+### BUILDER Degisikligi
+- `content_seed_quran_audio_storage.sql` yeniden uretildi; header artik `Distribution namespace: quran-audio` ve Cloudflare/GitHub distribution summary sartini bildiriyor.
+- `tool/generate_quran_audio_storage_seed.dart` runtime cikti mesaji provider-neutral audio path rows olacak sekilde guncellendi.
+- `tool/check_store_readiness.ps1` PASS/FAIL mesajlari Quran audio path seed ve provider-neutral `storage_path` terimleriyle guncellendi.
+- Test adlari ve guard'lar Quran icin provider-neutral terimleri kullanacak sekilde guncellendi; Sukun gibi hafif Supabase Storage yuzeyleri bilincli olarak degismedi.
+
+### Dogrulama Sonucu
+- Seed regenerate: `dart run tool/generate_quran_audio_storage_seed.dart` PASS; 684 provider-neutral audio path row yazdi.
+- Stale grep: `rg "storage-backed|Supabase Storage bucket|Target bucket|target Supabase Storage bucket|Quran audio storage seed is complete|not storage-backed"` sadece Sukun Supabase Storage test adlarinda bilincli kalan kullanimlari dondurdu.
+- Odak testler: `flutter test test/store_readiness_test.dart test/generate_quran_audio_storage_seed_test.dart test/offline_audio_service_test.dart --reporter compact` PASS (`46/46`).
+- Store checker: `tool/check_store_readiness.ps1 -SkipFlutterValidation` beklenen 8 dis blokajla FAIL etti; Quran seed PASS mesaji artik provider-neutral.
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`604/604`).
+
+### Risk Degisimi
+- Quran audio seed/checker terminology drift riski: `12/25 -> 2/25`.
+
+### Sonraki Adim
+- Siradaki dongude store-ready dis blokajlar haric kalan ic riskler icin tarama surdurulecek; ozellikle generated SQL/source consistency ve release checker mesajlarinda stale mimari kalintilari aranacak.

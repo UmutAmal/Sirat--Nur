@@ -154,11 +154,9 @@ void main() {
       );
     });
 
-    test(
-      'rejects partial manifests by default for production storage seeds',
-      () {
-        expect(
-          () => parseMirroredAudioManifest('''
+    test('rejects partial manifests by default for production path seeds', () {
+      expect(
+        () => parseMirroredAudioManifest('''
 {
   "requested": 1,
   "downloaded": 1,
@@ -177,16 +175,15 @@ void main() {
   ]
 }
 '''),
-          throwsA(
-            isA<FormatException>().having(
-              (error) => error.message,
-              'message',
-              contains('complete Quran audio catalog'),
-            ),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('complete Quran audio catalog'),
           ),
-        );
-      },
-    );
+        ),
+      );
+    });
 
     test('rejects manifests with failed audio downloads', () {
       expect(
@@ -415,7 +412,7 @@ void main() {
       );
     });
 
-    test('buildQuranAudioStorageSeedSql creates storage-backed upserts', () {
+    test('buildQuranAudioStorageSeedSql creates provider-neutral upserts', () {
       final sql = buildQuranAudioStorageSeedSql([
         MirroredAudioFile(
           surahNumber: 1,
@@ -461,7 +458,7 @@ void main() {
       expect(sql, isNot(contains(r'build\verified_quran_audio')));
     });
 
-    test('rejects non-Quran audio buckets for storage seed generation', () {
+    test('rejects non-Quran audio namespaces for path seed generation', () {
       expect(
         () => buildQuranAudioStorageSeedSql([
           MirroredAudioFile(
@@ -484,7 +481,7 @@ void main() {
       );
     });
 
-    test('smoke-shaped manifest can be converted into storage-backed SQL', () {
+    test('smoke-shaped manifest can be converted into path SQL', () {
       final tempDir = Directory.systemTemp.createTempSync(
         'sirat_quran_audio_smoke_',
       );

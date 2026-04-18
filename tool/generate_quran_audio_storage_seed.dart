@@ -485,6 +485,6 @@ Future<void> main(List<String> args) async {
   final outputFile = File(outputPath);
   await outputFile.writeAsString(sql);
   stdout.writeln(
-    'Generated ${outputFile.path} with ${files.length} storage-backed audio rows.',
+    'Generated ${outputFile.path} with ${files.length} provider-neutral audio path rows.',
   );
 }

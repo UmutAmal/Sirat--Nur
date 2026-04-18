@@ -64,7 +64,7 @@ void main() {
     });
 
     test(
-      'generated Quran audio storage seed is complete and storage-backed',
+      'generated Quran audio path seed is complete and provider-neutral',
       () {
         final storageSeedFile = File('content_seed_quran_audio_storage.sql');
 
@@ -141,6 +141,7 @@ void main() {
       expect(script, contains('quran_surahs'));
       expect(script, contains('tafsir_entries'));
       expect(script, contains('storagePathValueCount -eq 684'));
+      expect(script, contains('Quran audio path seed is complete'));
       expect(script, contains('android.permission.USE_EXACT_ALARM'));
       expect(script, contains('download.quranicaudio.com'));
       expect(script, contains('-UseBasicParsing'));
