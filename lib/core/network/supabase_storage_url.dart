@@ -35,8 +35,8 @@ String buildSupabaseStoragePublicUrl(
 bool isSupabaseStoragePublicUrl(
   String source, {
   String supabaseUrl = SupabaseConfig.url,
+  // Quran MP3s are distributed through Cloudflare/GitHub, not Supabase Storage.
   Set<String> bucketNames = const {
-    SupabaseConfig.quranAudioBucket,
     SupabaseConfig.sukunAudioBucket,
     SupabaseConfig.duaAudioBucket,
     SupabaseConfig.adhanAudioBucket,

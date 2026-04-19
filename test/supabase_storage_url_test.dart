@@ -69,7 +69,7 @@ void main() {
       }
     });
 
-    test('recognizes only configured public audio storage URLs', () {
+    test('recognizes only configured non-Quran public audio storage URLs', () {
       expect(
         isSupabaseStoragePublicUrl(
           '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
@@ -83,6 +83,12 @@ void main() {
       expect(
         isSupabaseStoragePublicUrl(
           '${SupabaseConfig.url}/storage/v1/object/public/random-bucket/rain.mp3',
+        ),
+        isFalse,
+      );
+      expect(
+        isSupabaseStoragePublicUrl(
+          '${SupabaseConfig.url}/storage/v1/object/public/quran-audio/alafasy/001.mp3',
         ),
         isFalse,
       );

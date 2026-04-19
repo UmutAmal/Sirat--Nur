@@ -15864,3 +15864,30 @@
 
 ### Sonraki Adim
 - Store-ready ic risk taramasi devam: kalan gercek blokajlar production env/secret, Cloudflare-GitHub real upload summary ve Supabase real apply summary oldugu icin dis operasyon olarak isaretli kalacak; repo icinde stale helper/string kalintilari aranmaya devam edilecek.
+## 2026-04-19 TUR-367 - Retired Quran Storage Playback Trust Removed
+
+### MASTER Karari
+- Risk: Quran MP3 dagitimi Cloudflare/GitHub olarak emekli edilmis Supabase Storage yolundan ayrildi; ancak genel remote audio guven kontrolu `quran-audio` bucket public URL'lerini hala kabul ediyordu.
+- Kanit: `lib/core/network/supabase_storage_url.dart:35` default `bucketNames` listesinde `SupabaseConfig.quranAudioBucket` vardi; `lib/core/services/audio_player_service.dart:45` ve `lib/core/services/audio_sovereignty_service.dart:24` bu helper'a guvenerek remote audio oynatma karari veriyordu.
+- Etki: Yanlis/miras bir `quran-audio` Supabase public URL'si Sukun veya genel remote playback yuzeyinden tekrar guvenilir sayilabilir; Cloudflare/GitHub dagitim karari zayiflar.
+- Olasilik: `isSupabaseStoragePublicUrl` merkezi gate oldugu icin tek yanlis tablo satiri veya stale URL playback'e kadar ilerleyebilirdi.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 stale audio trust boundary).
+- Rollback plani: `lib/core/network/supabase_storage_url.dart`, `test/supabase_storage_url_test.dart`, `test/audio_sovereignty_service_test.dart` degisiklikleri revert edilir.
+
+### BUILDER Degisikligi
+- `isSupabaseStoragePublicUrl` default guvenilir bucket listesinden `quran-audio` cikarildi; Sukun/Dua/Adhan/Asma hafif Supabase Storage bucket'lari korunuyor.
+- `test/supabase_storage_url_test.dart` artik `quran-audio` public URL'lerini default guvenilir storage URL saymiyor.
+- `test/audio_sovereignty_service_test.dart` Sukun playback'e emekli Quran Storage URL'si verilirse engine'e ulasmadan reddedildigini dogruluyor.
+
+### Dogrulama Sonucu
+- Odak testler: `flutter test test/supabase_storage_url_test.dart test/audio_sovereignty_service_test.dart --reporter compact` PASS (`16/16`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`604/604`).
+- Store checker: `tool/check_store_readiness.ps1 -SkipFlutterValidation` bu patch oncesi beklenen 8 dis blokajla FAIL etti; bu turda kod ici stale playback trust riski kapatildi, dis secret/upload/apply blokajlari sahte kapatilmadi.
+
+### Risk Degisimi
+- Retired Quran Supabase Storage playback trust riski: `12/25 -> 2/25`.
+- Kalan store-ready blokajlar dis operasyon: `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, Places tile/Overpass endpointleri, Quran Cloudflare/GitHub URL'leri, gercek Quran audio upload summary ve gercek Supabase content apply summary.
+
+### Sonraki Adim
+- Siradaki dongude `SUPABASE_QURAN_AUDIO_BUCKET` adlandirmasi ve Quran Storage URL builder default'lari taranacak; store-ready dis blokajlar gercek secret/provider olmadan sahte gecirilmeyecek.
