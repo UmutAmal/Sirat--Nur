@@ -15944,3 +15944,28 @@
 
 ### Sonraki Adim
 - Siradaki dongude hardcoded/fallback dini icerik ve store readiness dis blokajlari ayrimi yeniden taranacak; gercek provider/secret olmadan store-ready PASS uretilmeyecek.
+## 2026-04-19 TUR-370 - GitHub Quran Audio Overflow Uploaded
+
+### MASTER Karari
+- Risk: `abdul_basit_murattal` overflow parcasi GitHub Releases'a yuklenmeden Quran audio dagitim mimarisi eksik kalir ve store-ready audio ownership kaniti tamamlanamaz.
+- Kanit: `tool/quran_audio_distribution_plan.dart` `abdul_basit_murattal` reciter'ini GitHub overflow olarak ayiriyor; dry-run plan `github.files=114`, `github.bytes≈2.41 GB`, `validation_failures=0` verdi. `gh release view quran-audio-v1 --repo UmutAmal/Sirat--Nur` ilk kontrolde `release not found` dondu.
+- Etki: GitHub URL template'i set edilse bile release assetleri yoksa `abdul_basit_murattal` offline indirme/streaming URL'leri 404 verebilir.
+- Olasilik: Release yoktu; upload yapilmazsa kesin runtime eksigi olusurdu.
+- Risk skoru: Etki 5 x Olasilik 5 = 25/25 (P0 external audio distribution blocker).
+- Rollback plani: GitHub release `quran-audio-v1` veya ilgili release assetleri GitHub uzerinden silinir; repo kod degisikligi yoktur.
+
+### BUILDER/DEVOPS Degisikligi
+- `gh release create quran-audio-v1 --repo UmutAmal/Sirat--Nur` ile release olusturuldu.
+- `build/quran_audio_distribution_upload_plan.json` icindeki GitHub partition kullanilarak `abdul_basit_murattal_001.mp3` ... `abdul_basit_murattal_114.mp3` assetleri `gh release upload --clobber` ile yuklendi.
+- GitHub release URL: `https://github.com/UmutAmal/Sirat--Nur/releases/tag/quran-audio-v1`.
+
+### Dogrulama Sonucu
+- GitHub remote verification: release tag `quran-audio-v1`, asset_count `114`, first asset `abdul_basit_murattal_001.mp3`, last asset `abdul_basit_murattal_114.mp3`.
+- Store checker: `tool/check_store_readiness.ps1 -SkipFlutterValidation` beklenen sekilde 8 blokajla FAIL ediyor; GitHub assetleri yuklendi fakat `build/quran_audio_distribution_upload_summary.json` hala dry-run ve Cloudflare upload tamamlanmadan store-ready sayilmiyor.
+
+### Risk Degisimi
+- GitHub Quran overflow upload riski: `25/25 -> 2/25`.
+- Kalan audio distribution riski: Cloudflare R2 570 dosya upload'u ve gercek `QURAN_AUDIO_CLOUDFLARE_BASE_URL` CDN/public URL dogrulamasi bekliyor.
+
+### Sonraki Adim
+- Cloudflare icin `wrangler login` veya `CLOUDFLARE_API_TOKEN`, R2 bucket adi ve public/custom domain base URL saglaninca `tool/upload_quran_audio_distribution.ps1` gercek Cloudflare upload icin calistirilacak. GitHub tarafi tamam oldugu icin gerekirse script/summary GitHub assetlerini yeniden dogrulayacak.
