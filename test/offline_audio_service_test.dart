@@ -263,6 +263,28 @@ void main() {
       expect(url, isNull);
     });
 
+    test('requires an explicit Supabase bucket for non-Quran storage rows', () {
+      final withoutBucket = resolvePlayableCloudAudioUrl(const {
+        'type': 'sukun',
+        'storage_path': 'audio-sukun/rain.mp3',
+        'source': 'Verified Sukun Source',
+        'verified_at': '2026-04-15T00:00:00Z',
+      });
+
+      final withBucket = resolvePlayableCloudAudioUrl(const {
+        'type': 'sukun',
+        'storage_path': 'audio-sukun/rain.mp3',
+        'source': 'Verified Sukun Source',
+        'verified_at': '2026-04-15T00:00:00Z',
+      }, bucketName: SupabaseConfig.sukunAudioBucket);
+
+      expect(withoutBucket, isNull);
+      expect(
+        withBucket,
+        '${SupabaseConfig.url}/storage/v1/object/public/audio-sukun/rain.mp3',
+      );
+    });
+
     test(
       'skips unsafe storage paths instead of crashing cloud audio mapping',
       () {

@@ -15919,3 +15919,28 @@
 
 ### Sonraki Adim
 - Siradaki dongude kalan runtime helperlerde `buildSupabaseStoragePublicUrl` default/usage ve genel hardcoded dini icerik fallback'leri yeniden taranacak; dis provider/secret eksikleri sahte PASS yapilmayacak.
+## 2026-04-19 TUR-369 - Non-Quran Storage Bucket Resolution Made Explicit
+
+### MASTER Karari
+- Risk: `resolvePlayableCloudAudioUrl` Quran disi `storage_path` satirlarini default namespace ile Supabase public URL'ye cevirebiliyordu. TUR-368 isimlendirmeyi duzeltti, fakat genel fallback davranisi hala acik bucket niyeti olmadan URL uretebilirdi.
+- Kanit: `lib/core/services/offline_audio_service.dart:38` default `bucketName` degeri vardi; `lib/core/services/offline_audio_service.dart:69` Quran disi satirlar icin `storage_url.buildSupabaseStoragePublicUrl(...)` cagiriyordu.
+- Etki: Yanlis tipli veya eksik bucket baglamli bir cloud audio satiri, acik hedef belirtilmeden Supabase Storage URL'sine donusebilir; "false playable" riski artar.
+- Olasilik: `resolvePlayableCloudAudioUrl` public helper ve testlerde genel cloud row cozumu icin kullaniliyor; eksik bucket baglami ileride kolayca gozden kacabilir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25 (P2 audio trust-boundary hardening).
+- Rollback plani: `lib/core/services/offline_audio_service.dart` ve `test/offline_audio_service_test.dart` degisiklikleri revert edilir.
+
+### BUILDER Degisikligi
+- Quran disi `storage_path` satirlari icin `bucketName` artik bos ise `null` doner; Supabase Storage URL'si sadece acik bucket verildiginde uretilir.
+- `normalizeStorageObjectPath` ve offline service `buildSupabaseStoragePublicUrl` wrapper'lari `required bucketName` kullanir; varsayilan Quran namespace'iyle URL uretme yolu kapatildi.
+- `test/offline_audio_service_test.dart` non-Quran storage row'un bucketsiz reddedildigini, `audio-sukun` bucket'i acik verildiginde ise dogru URL urettigini dogrular.
+
+### Dogrulama Sonucu
+- Odak test: `flutter test test/offline_audio_service_test.dart --reporter compact` PASS (`19/19`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`605/605`).
+
+### Risk Degisimi
+- Non-Quran storage bucket inference riski: `9/25 -> 1/25`.
+
+### Sonraki Adim
+- Siradaki dongude hardcoded/fallback dini icerik ve store readiness dis blokajlari ayrimi yeniden taranacak; gercek provider/secret olmadan store-ready PASS uretilmeyecek.

@@ -35,7 +35,7 @@ class OfflineDownloadBatchResult {
 
 String? resolvePlayableCloudAudioUrl(
   Map<String, dynamic> row, {
-  String bucketName = SupabaseConfig.quranAudioPathNamespace,
+  String bucketName = '',
   String quranCloudflareBaseUrl =
       QuranAudioDistributionConfig.cloudflareBaseUrl,
   String quranGithubUrlTemplate =
@@ -63,6 +63,10 @@ String? resolvePlayableCloudAudioUrl(
         cloudflareBaseUrl: quranCloudflareBaseUrl,
         githubUrlTemplate: quranGithubUrlTemplate,
       );
+    }
+
+    if (bucketName.trim().isEmpty) {
+      return null;
     }
 
     try {
@@ -99,7 +103,7 @@ bool hasVerifiedCloudAudioProvenance(Map<String, dynamic> row) {
 
 String normalizeStorageObjectPath(
   String storagePath, {
-  String bucketName = SupabaseConfig.quranAudioPathNamespace,
+  required String bucketName,
 }) {
   return storage_url.normalizeSupabaseStorageObjectPath(
     storagePath,
@@ -110,7 +114,7 @@ String normalizeStorageObjectPath(
 String buildSupabaseStoragePublicUrl(
   String storagePath, {
   String supabaseUrl = SupabaseConfig.url,
-  String bucketName = SupabaseConfig.quranAudioPathNamespace,
+  required String bucketName,
 }) {
   return storage_url.buildSupabaseStoragePublicUrl(
     storagePath,
