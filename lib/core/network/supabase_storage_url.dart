@@ -2,7 +2,7 @@ import 'package:sirat_i_nur/core/network/supabase_config.dart';
 
 String normalizeSupabaseStorageObjectPath(
   String storagePath, {
-  String bucketName = SupabaseConfig.quranAudioBucket,
+  String bucketName = SupabaseConfig.quranAudioPathNamespace,
 }) {
   final normalized = storagePath.trim().replaceAll('\\', '/');
   if (normalized.isEmpty) {
@@ -21,7 +21,7 @@ String normalizeSupabaseStorageObjectPath(
 String buildSupabaseStoragePublicUrl(
   String storagePath, {
   String supabaseUrl = SupabaseConfig.url,
-  String bucketName = SupabaseConfig.quranAudioBucket,
+  required String bucketName,
 }) {
   final baseUri = _requireHttpsSupabaseBaseUri(supabaseUrl);
   final encodedSegments = _safeStorageObjectPathSegments(

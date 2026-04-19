@@ -36,10 +36,16 @@ class SupabaseConfig {
 
   static const String anonKey = publishableKey;
 
-  static const String quranAudioBucket = String.fromEnvironment(
-    'SUPABASE_QURAN_AUDIO_BUCKET',
-    defaultValue: 'quran-audio',
+  static const String quranAudioPathNamespace = String.fromEnvironment(
+    'QURAN_AUDIO_PATH_NAMESPACE',
+    defaultValue: String.fromEnvironment(
+      'SUPABASE_QURAN_AUDIO_BUCKET',
+      defaultValue: 'quran-audio',
+    ),
   );
+
+  // Backward-compatible alias. Quran MP3s are no longer stored in Supabase.
+  static const String quranAudioBucket = quranAudioPathNamespace;
 
   static const String sukunAudioBucket = String.fromEnvironment(
     'SUPABASE_SUKUN_AUDIO_BUCKET',

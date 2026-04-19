@@ -15891,3 +15891,31 @@
 
 ### Sonraki Adim
 - Siradaki dongude `SUPABASE_QURAN_AUDIO_BUCKET` adlandirmasi ve Quran Storage URL builder default'lari taranacak; store-ready dis blokajlar gercek secret/provider olmadan sahte gecirilmeyecek.
+## 2026-04-19 TUR-368 - Quran Audio Namespace Build Define Aligned
+
+### MASTER Karari
+- Risk: Store build script Quran audio icin hala `SUPABASE_QURAN_AUDIO_BUCKET` dart-define'i uretiyordu. Quran MP3 mimarisi artik Supabase Storage bucket degil, Cloudflare/GitHub dagitimina bagli provider-neutral `storage_path` namespace kullanir.
+- Kanit: `tool/build_store_appbundle.ps1:146` `--dart-define=SUPABASE_QURAN_AUDIO_BUCKET=...` geciyordu; `lib/core/network/supabase_config.dart:39` runtime config de ayni eski isimden okuyordu.
+- Etki: Release operatoru veya sonraki ajan `quran-audio` degerini tekrar Supabase Storage bucket hedefi sanabilir; TUR-364/TUR-367 ile kapatilan mimari drift yeniden acilabilir.
+- Olasilik: Build script store release hattinda dogrudan kullaniliyor ve README release komutlari bunu oneriyor.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 release configuration naming drift).
+- Rollback plani: `lib/core/network/supabase_config.dart`, `lib/core/network/supabase_storage_url.dart`, `lib/core/services/offline_audio_service.dart`, `tool/build_store_appbundle.ps1`, `test/store_readiness_test.dart` degisiklikleri revert edilir.
+
+### BUILDER Degisikligi
+- `SupabaseConfig.quranAudioPathNamespace` eklendi; yeni `QURAN_AUDIO_PATH_NAMESPACE` dart-define'ini okur ve eski `SUPABASE_QURAN_AUDIO_BUCKET` sadece geriye uyumlu fallback olarak kalir.
+- Store build script artik `--dart-define=QURAN_AUDIO_PATH_NAMESPACE=...` uretir, eski bucket dart-define'ini uretmez ve namespace'in seed ile uyumlu `quran-audio` olmasini zorunlu kilar.
+- Runtime helper default'lari eski bucket adindan yeni path namespace adina tasindi; hafif Supabase Storage bucket'lari etkilenmedi.
+- `test/store_readiness_test.dart` yeni build define'i ve eski bucket dart-define'inin geri gelmemesini guard ediyor.
+
+### Dogrulama Sonucu
+- Odak testler: `flutter test test/store_readiness_test.dart test/supabase_storage_url_test.dart test/offline_audio_service_test.dart --reporter compact` PASS (`32/32`).
+- Build config probe: `tool/build_store_appbundle.ps1 -NoBuild` sahte ama temiz HTTPS release env'leri ve `QURAN_AUDIO_PATH_NAMESPACE=quran-audio` ile PASS (`Store release configuration is present.`).
+- `flutter analyze` PASS (`No issues found!`).
+- Full test: `flutter test --reporter compact` PASS (`604/604`).
+
+### Risk Degisimi
+- Quran audio release config naming drift riski: `12/25 -> 2/25`.
+- Kalan store-ready blokajlar hala dis operasyon: gercek Supabase runtime env/key, Places provider endpointleri, Cloudflare/GitHub real upload ve Supabase real content apply summary.
+
+### Sonraki Adim
+- Siradaki dongude kalan runtime helperlerde `buildSupabaseStoragePublicUrl` default/usage ve genel hardcoded dini icerik fallback'leri yeniden taranacak; dis provider/secret eksikleri sahte PASS yapilmayacak.

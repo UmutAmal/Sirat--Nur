@@ -135,15 +135,21 @@ if ($NoBuild) {
   exit 0
 }
 
-$quranAudioBucket = [Environment]::GetEnvironmentVariable('SUPABASE_QURAN_AUDIO_BUCKET')
-if ([string]::IsNullOrWhiteSpace($quranAudioBucket)) {
-  $quranAudioBucket = 'quran-audio'
+$quranAudioPathNamespace = [Environment]::GetEnvironmentVariable('QURAN_AUDIO_PATH_NAMESPACE')
+if ([string]::IsNullOrWhiteSpace($quranAudioPathNamespace)) {
+  $quranAudioPathNamespace = [Environment]::GetEnvironmentVariable('SUPABASE_QURAN_AUDIO_BUCKET')
+}
+if ([string]::IsNullOrWhiteSpace($quranAudioPathNamespace)) {
+  $quranAudioPathNamespace = 'quran-audio'
+}
+if ($quranAudioPathNamespace -ne 'quran-audio') {
+  throw 'QURAN_AUDIO_PATH_NAMESPACE must be quran-audio so it matches the verified audio_files.storage_path seed.'
 }
 
 flutter build appbundle --release `
   --dart-define=SUPABASE_URL="$env:SUPABASE_URL" `
   --dart-define=SUPABASE_PUBLISHABLE_KEY="$supabaseClientKey" `
-  --dart-define=SUPABASE_QURAN_AUDIO_BUCKET="$quranAudioBucket" `
+  --dart-define=QURAN_AUDIO_PATH_NAMESPACE="$quranAudioPathNamespace" `
   --dart-define=PLACES_TILE_URL_TEMPLATE="$env:PLACES_TILE_URL_TEMPLATE" `
   --dart-define=PLACES_OVERPASS_API_URL="$env:PLACES_OVERPASS_API_URL" `
   --dart-define=QURAN_AUDIO_CLOUDFLARE_BASE_URL="$env:QURAN_AUDIO_CLOUDFLARE_BASE_URL" `

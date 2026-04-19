@@ -103,6 +103,11 @@ void main() {
       expect(script, contains('PLACES_OVERPASS_API_URL'));
       expect(script, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
       expect(script, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
+      expect(script, contains('QURAN_AUDIO_PATH_NAMESPACE'));
+      expect(
+        script,
+        isNot(contains('--dart-define=SUPABASE_QURAN_AUDIO_BUCKET')),
+      );
       expect(script, contains('android/key.properties'));
       expect(script, contains('Assert-CleanHttpsUrl'));
       expect(script, contains('tile.openstreetmap.org'));
