@@ -28,7 +28,7 @@ bool isQiblaSensorUnavailableError(Object error) {
 }
 
 bool hasQiblaLocation(SettingsState settings) {
-  return settings.latitude != null && settings.longitude != null;
+  return hasValidLocationCoordinates(settings.latitude, settings.longitude);
 }
 
 class QiblaPage extends ConsumerStatefulWidget {
@@ -51,7 +51,9 @@ class _QiblaPageState extends ConsumerState<QiblaPage> {
     final latitude = settings.latitude;
     final longitude = settings.longitude;
 
-    if (latitude == null || longitude == null) {
+    if (latitude == null ||
+        longitude == null ||
+        !hasValidLocationCoordinates(latitude, longitude)) {
       content = _buildLocationRequiredState(context, l10n);
     } else {
       final qiblaStream = ref.watch(qiblaSensorProvider);

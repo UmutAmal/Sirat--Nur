@@ -190,6 +190,16 @@ void main() {
       expect(hasQiblaLocation(SettingsState(latitude: 41.0082)), isFalse);
       expect(hasQiblaLocation(SettingsState(longitude: 28.9784)), isFalse);
       expect(
+        hasQiblaLocation(SettingsState(latitude: 91.0, longitude: 28.9784)),
+        isFalse,
+      );
+      expect(
+        hasQiblaLocation(
+          SettingsState(latitude: 41.0082, longitude: double.nan),
+        ),
+        isFalse,
+      );
+      expect(
         hasQiblaLocation(SettingsState(latitude: 41.0082, longitude: 28.9784)),
         isTrue,
       );

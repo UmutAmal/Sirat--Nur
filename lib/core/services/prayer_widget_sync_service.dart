@@ -18,7 +18,9 @@ class PrayerWidgetSyncService {
   }) {
     final latitude = settings.latitude;
     final longitude = settings.longitude;
-    if (latitude == null || longitude == null) {
+    if (latitude == null ||
+        longitude == null ||
+        !hasValidLocationCoordinates(latitude, longitude)) {
       return null;
     }
 

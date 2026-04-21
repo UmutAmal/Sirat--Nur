@@ -71,7 +71,9 @@ class PrayerNotificationCoordinator {
       try {
         final latitude = settings.latitude;
         final longitude = settings.longitude;
-        if (latitude == null || longitude == null) {
+        if (latitude == null ||
+            longitude == null ||
+            !hasValidLocationCoordinates(latitude, longitude)) {
           await _scheduler.clearScheduledAdhans();
         } else {
           await _scheduler.scheduleAdhans(
@@ -99,10 +101,24 @@ class PrayerNotificationCoordinator {
   @visibleForTesting
   static String settingsFingerprint(SettingsState? settings) {
     if (settings == null) return 'null';
+    final latitude = settings.latitude;
+    final longitude = settings.longitude;
+    final latitudeFingerprint =
+        latitude != null &&
+            longitude != null &&
+            hasValidLocationCoordinates(latitude, longitude)
+        ? latitude.toStringAsFixed(6)
+        : 'null';
+    final longitudeFingerprint =
+        latitude != null &&
+            longitude != null &&
+            hasValidLocationCoordinates(latitude, longitude)
+        ? longitude.toStringAsFixed(6)
+        : 'null';
 
     return [
-      settings.latitude?.toStringAsFixed(6) ?? 'null',
-      settings.longitude?.toStringAsFixed(6) ?? 'null',
+      latitudeFingerprint,
+      longitudeFingerprint,
       settings.calculationMethod,
       settings.madhab,
       settings.timezone ?? 'null',

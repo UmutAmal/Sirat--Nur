@@ -21,6 +21,14 @@ void main() {
       expect(entity, isNull);
     });
 
+    test('returns null when stored location coordinates are invalid', () {
+      final entity = service.buildPrayerTimesEntity(
+        SettingsState(latitude: double.nan, longitude: 28.9784),
+      );
+
+      expect(entity, isNull);
+    });
+
     test(
       'uses timezone-aware reference date for widget prayer calculations',
       () {

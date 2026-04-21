@@ -35,7 +35,9 @@ PrayerTimesData? buildPrayerTimesData(
   final lat = settings.latitude;
   final lng = settings.longitude;
 
-  if (lat == null || lng == null) return null;
+  if (lat == null || lng == null || !hasValidLocationCoordinates(lat, lng)) {
+    return null;
+  }
 
   final resolvedTimezone = TimezoneUtils.resolveTimezoneName(
     timezoneName: settings.timezone,

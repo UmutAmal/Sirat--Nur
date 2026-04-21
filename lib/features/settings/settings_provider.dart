@@ -46,6 +46,42 @@ String normalizeAudioVoice(String voice) {
   }
 }
 
+bool isValidLatitude(double? latitude) {
+  return latitude != null &&
+      latitude.isFinite &&
+      latitude >= -90.0 &&
+      latitude <= 90.0;
+}
+
+bool isValidLongitude(double? longitude) {
+  return longitude != null &&
+      longitude.isFinite &&
+      longitude >= -180.0 &&
+      longitude <= 180.0;
+}
+
+bool hasValidLocationCoordinates(double? latitude, double? longitude) {
+  return isValidLatitude(latitude) && isValidLongitude(longitude);
+}
+
+void _assertValidLocationCoordinates(double latitude, double longitude) {
+  if (!isValidLatitude(latitude)) {
+    throw ArgumentError.value(
+      latitude,
+      'latitude',
+      'Latitude must be finite and between -90 and 90 degrees.',
+    );
+  }
+
+  if (!isValidLongitude(longitude)) {
+    throw ArgumentError.value(
+      longitude,
+      'longitude',
+      'Longitude must be finite and between -180 and 180 degrees.',
+    );
+  }
+}
+
 class SettingsState {
   final String calculationMethod;
   final String madhab;
@@ -133,7 +169,30 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   final SharedPreferences _prefs;
 
   SettingsNotifier(this._prefs) : super(_loadSettingsState(_prefs)) {
+    _repairStoredLocation();
     _repairStoredTimezone();
+  }
+
+  void _repairStoredLocation() {
+    final storedLatitude = _prefs.getDouble('latitude');
+    final storedLongitude = _prefs.getDouble('longitude');
+    final hasAnyStoredLocation =
+        storedLatitude != null ||
+        storedLongitude != null ||
+        _prefs.getString('locationName') != null ||
+        _prefs.getString('countryCode') != null ||
+        _prefs.getString('timezone') != null;
+
+    if (!hasAnyStoredLocation ||
+        hasValidLocationCoordinates(storedLatitude, storedLongitude)) {
+      return;
+    }
+
+    unawaited(_prefs.remove('latitude'));
+    unawaited(_prefs.remove('longitude'));
+    unawaited(_prefs.remove('locationName'));
+    unawaited(_prefs.remove('countryCode'));
+    unawaited(_prefs.remove('timezone'));
   }
 
   void _repairStoredTimezone() {
@@ -216,6 +275,16 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     String? timezone,
     String? countryCode,
   }) async {
+    _assertValidLocationCoordinates(lat, lng);
+    final normalizedName = name.trim();
+    if (normalizedName.isEmpty) {
+      throw ArgumentError.value(
+        name,
+        'name',
+        'Location name must not be empty.',
+      );
+    }
+
     final normalizedCountryCode = _normalizeOptionalCountryCode(countryCode);
     final normalizedTimezone = TimezoneUtils.resolveTimezoneName(
       timezoneName: timezone,
@@ -232,7 +301,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
 
     await _prefs.setDouble('latitude', lat);
     await _prefs.setDouble('longitude', lng);
-    await _prefs.setString('locationName', name);
+    await _prefs.setString('locationName', normalizedName);
     await _prefs.setString('calculationMethod', profile.calculationMethod);
     await _prefs.setString('madhab', profile.madhab);
     await _prefs.setDouble('fajrAngle', fajrAngle);
@@ -254,7 +323,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
       ishaAngle: ishaAngle,
       latitude: lat,
       longitude: lng,
-      locationName: name,
+      locationName: normalizedName,
       countryCode: normalizedCountryCode,
       timezone: normalizedTimezone,
     );
@@ -298,10 +367,16 @@ SettingsState _loadSettingsState(SharedPreferences prefs) {
   final (defaultFajrAngle, defaultIshaAngle) = _defaultAnglesForMethod(
     storedMethod,
   );
-  final latitude = prefs.getDouble('latitude');
-  final longitude = prefs.getDouble('longitude');
+  final storedLatitude = prefs.getDouble('latitude');
+  final storedLongitude = prefs.getDouble('longitude');
+  final hasValidLocation = hasValidLocationCoordinates(
+    storedLatitude,
+    storedLongitude,
+  );
+  final latitude = hasValidLocation ? storedLatitude : null;
+  final longitude = hasValidLocation ? storedLongitude : null;
   final timezone = TimezoneUtils.resolveTimezoneName(
-    timezoneName: prefs.getString('timezone'),
+    timezoneName: hasValidLocation ? prefs.getString('timezone') : null,
     latitude: latitude,
     longitude: longitude,
   );
@@ -323,8 +398,10 @@ SettingsState _loadSettingsState(SharedPreferences prefs) {
     languageCode: prefs.getString('languageCode'),
     latitude: latitude,
     longitude: longitude,
-    locationName: prefs.getString('locationName'),
-    countryCode: prefs.getString('countryCode'),
+    locationName: hasValidLocation ? prefs.getString('locationName') : null,
+    countryCode: hasValidLocation
+        ? _normalizeOptionalCountryCode(prefs.getString('countryCode'))
+        : null,
     timezone: timezone,
     isDarkMode: prefs.getBool('isDarkMode') ?? true,
   );

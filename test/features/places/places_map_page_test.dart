@@ -25,6 +25,18 @@ void main() {
         resolvePlacesMapAvailability(missingLocation, tileUrlTemplate: ''),
         PlacesMapAvailability.locationRequired,
       );
+      final invalidLocation = SettingsState(
+        latitude: 999.0,
+        longitude: 28.9795,
+      );
+      expect(resolvePlacesAnchor(invalidLocation), isNull);
+      expect(
+        resolvePlacesMapAvailability(
+          invalidLocation,
+          tileUrlTemplate: 'https://tiles.provider.invalid/{z}/{x}/{y}.png',
+        ),
+        PlacesMapAvailability.locationRequired,
+      );
 
       final configuredLocation = SettingsState(
         latitude: 41.0151,
@@ -110,6 +122,13 @@ void main() {
     expect(
       resolvePlacesDataAvailability(
         missingLocation,
+        overpassApiUrl: 'https://overpass.example/api',
+      ),
+      PlacesDataAvailability.locationRequired,
+    );
+    expect(
+      resolvePlacesDataAvailability(
+        SettingsState(latitude: 41.0151, longitude: double.nan),
         overpassApiUrl: 'https://overpass.example/api',
       ),
       PlacesDataAvailability.locationRequired,

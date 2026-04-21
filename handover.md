@@ -16197,3 +16197,37 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi siradaki risk taramasi: Supabase gercek tablo/seed blokajlari yetki gerektiriyor; yetki yokken sahte summary uretilmeyecek. Yetki gerektirmeyen alanlarda hardcoded runtime string, Appium smoke, offline/audio edge ve store-readiness guard taramasi surdurulecek.
+## 2026-04-22 TUR-378 - Invalid Location Coordinates Blocked Before Prayer/Qibla/Places Use
+
+### MASTER Karari
+- Risk: SharedPreferences veya future UI paths bozuk koordinat (`latitude=999`, `longitude=NaN`, partial lat/lng) saklarsa `SettingsState` bu degerleri tasiyabiliyordu. Bu durum prayer time, widget sync, adhan notification, qibla ve places call-chain'lerine gecip yanlis ibadet vakti/kible hesaplari veya runtime hata riski uretiyordu.
+- Kanit: `SettingsNotifier.updateLocation` latitude/longitude range kontrolu yapmiyordu; `_loadSettingsState` `prefs.getDouble('latitude')` ve `prefs.getDouble('longitude')` degerlerini dogrudan state'e yaziyordu. `PrayerTimesService`, `PrayerWidgetSyncService`, `PrayerNotificationCoordinator`, `QiblaPage` ve `PlacesMapPage` yalniz null kontrolu yapiyordu.
+- Kullanici etkisi: Bozuk konum verisi olursa uygulama kullaniciya yanlis namaz vakti/kible/yer sonucu gosterebilir. Bu dini dogruluk acisindan yuksek etki tasir.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 religious/location correctness).
+- Rollback plani: `settings_provider.dart`, `places_map_page.dart`, prayer/qibla servis guard'lari ve ilgili test diff'leri geri alinabilir; rollback bozuk koordinatin tekrar state'e girmesine izin verir.
+
+### BUILDER Degisikligi
+- `isValidLatitude`, `isValidLongitude`, `hasValidLocationCoordinates` helper'lari eklendi.
+- `SettingsNotifier.updateLocation` artik finite/range disi koordinatlari ve bos konum adini `ArgumentError` ile reddediyor; storage'a yazmiyor.
+- `_loadSettingsState` invalid/partial koordinatlari `null` konuma dusuruyor; konum gecersizse `locationName`, `countryCode` ve `timezone` state'e tasinmiyor.
+- `SettingsNotifier` boot sirasinda invalid stored location key'lerini SharedPreferences'tan temizliyor.
+- Places, PrayerTimes, PrayerWidgetSync, PrayerNotificationCoordinator ve Qibla helper'lari invalid koordinati missing location gibi ele aliyor.
+- Notification fingerprint invalid koordinatlari `null|null` olarak normalize ediyor; bozuk degerler schedule path'ine gitmiyor.
+
+### TESTER Degisikligi
+- `test/settings_provider_test.dart` invalid koordinat validator, invalid saved prefs repair ve `updateLocation` rejection guard'lari eklendi.
+- `test/features/places/places_map_page_test.dart` invalid koordinatin Istanbul veya map anchor fallback'ine donmemesini dogruluyor.
+- `test/prayer_times_service_test.dart` ve `test/prayer_widget_sync_service_test.dart` invalid koordinatta hesap uretmemeyi dogruluyor.
+- `test/features/qibla/qibla_page_test.dart` invalid koordinatin qibla location olarak kabul edilmemesini dogruluyor.
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\settings_provider_test.dart test\features\places\places_map_page_test.dart test\prayer_times_service_test.dart test\prayer_widget_sync_service_test.dart test\features\qibla\qibla_page_test.dart --reporter compact` PASS.
+- Full analyze: `flutter analyze` PASS, no issues.
+- Full regression: `flutter test --reporter compact` PASS, 612/612.
+
+### Risk Degisimi
+- Invalid coordinate religious/location correctness risk: `15/25 -> 3/25`.
+- Kalan risk: Kullanici tarafinda konum izni/veri kaynagi yoksa uygulama zaten honest empty state gosteriyor; bu tur sadece bozuk koordinatin hesap zincirine sizmasini kapatti.
+
+### Sonraki Adim
+- Commit/push sonrasi siradaki dongu: store-readiness/Supabase blokajlari yetki gerektiriyor; bunun disinda Appium smoke ve sessiz catch/error-state taramasi surdurulecek.

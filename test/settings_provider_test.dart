@@ -57,6 +57,16 @@ void main() {
       expect(state.qiblaSmoothingEnabled, true);
     });
 
+    test('location coordinate validators reject invalid coordinates', () {
+      expect(hasValidLocationCoordinates(41.0082, 28.9784), isTrue);
+      expect(hasValidLocationCoordinates(null, 28.9784), isFalse);
+      expect(hasValidLocationCoordinates(41.0082, null), isFalse);
+      expect(hasValidLocationCoordinates(91.0, 28.9784), isFalse);
+      expect(hasValidLocationCoordinates(41.0082, 181.0), isFalse);
+      expect(hasValidLocationCoordinates(double.nan, 28.9784), isFalse);
+      expect(hasValidLocationCoordinates(41.0082, double.infinity), isFalse);
+    });
+
     test('copyWith creates a new instance with updated values', () {
       final state = SettingsState();
       final updated = state.copyWith(
@@ -144,6 +154,31 @@ void main() {
       expect(prefs.getString('timezone'), 'Europe/Istanbul');
     });
 
+    test('drops and repairs invalid saved coordinates', () async {
+      SharedPreferences.setMockInitialValues({
+        'latitude': 999.0,
+        'longitude': 28.9784,
+        'locationName': 'Impossible Place',
+        'countryCode': 'TR',
+        'timezone': 'Europe/Istanbul',
+      });
+      prefs = await SharedPreferences.getInstance();
+
+      final notifier = SettingsNotifier(prefs);
+      await Future<void>.delayed(Duration.zero);
+
+      expect(notifier.state.latitude, isNull);
+      expect(notifier.state.longitude, isNull);
+      expect(notifier.state.locationName, isNull);
+      expect(notifier.state.countryCode, isNull);
+      expect(notifier.state.timezone, isNull);
+      expect(prefs.containsKey('latitude'), isFalse);
+      expect(prefs.containsKey('longitude'), isFalse);
+      expect(prefs.containsKey('locationName'), isFalse);
+      expect(prefs.containsKey('countryCode'), isFalse);
+      expect(prefs.containsKey('timezone'), isFalse);
+    });
+
     test(
       'updateLocation persists timezone and country in state and storage',
       () async {
@@ -164,6 +199,32 @@ void main() {
         expect(notifier.state.madhab, hanafiMadhab);
         expect(prefs.getString('countryCode'), 'TR');
         expect(prefs.getString('timezone'), 'Europe/Istanbul');
+      },
+    );
+
+    test(
+      'updateLocation rejects impossible coordinates and blank names',
+      () async {
+        final notifier = SettingsNotifier(prefs);
+
+        await expectLater(
+          notifier.updateLocation(91.0, 28.9784, 'Invalid latitude'),
+          throwsArgumentError,
+        );
+        await expectLater(
+          notifier.updateLocation(41.0082, 181.0, 'Invalid longitude'),
+          throwsArgumentError,
+        );
+        await expectLater(
+          notifier.updateLocation(41.0082, 28.9784, '   '),
+          throwsArgumentError,
+        );
+
+        expect(notifier.state.latitude, isNull);
+        expect(notifier.state.longitude, isNull);
+        expect(prefs.containsKey('latitude'), isFalse);
+        expect(prefs.containsKey('longitude'), isFalse);
+        expect(prefs.containsKey('locationName'), isFalse);
       },
     );
 

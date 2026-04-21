@@ -83,6 +83,16 @@ void main() {
 
     test('buildPrayerTimesData returns null until a real location is set', () {
       expect(buildPrayerTimesData(SettingsState()), isNull);
+      expect(
+        buildPrayerTimesData(SettingsState(latitude: 91.0, longitude: 28.9784)),
+        isNull,
+      );
+      expect(
+        buildPrayerTimesData(
+          SettingsState(latitude: 41.0082, longitude: double.infinity),
+        ),
+        isNull,
+      );
     });
 
     test('buildPrayerTimesData mirrors centralized tomorrow-fajr logic', () {
