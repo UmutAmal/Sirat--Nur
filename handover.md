@@ -15998,3 +15998,38 @@
 
 ### Sonraki Adim
 - Store-ready kalan 5 blokaj: `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, ve gercek Supabase content apply summary. Audio dagitim summary artik gercek ve complete.
+## 2026-04-22 TUR-372 - Appium First Launch Exact Alarm Hijack Fixed
+
+### Yapilan Islem
+- Appium Android UI smoke hattina eklendi: `appium --version` 3.3.0, `uiautomator2` driver 7.1.2, emulator `Medium_Phone_API_36.1`.
+- Appium server icin eksik `ANDROID_HOME` / `ANDROID_SDK_ROOT` user environment degerleri `C:\Users\UMUT\AppData\Local\Android\sdk` olarak ayarlandi.
+- Appium ilk smoke testinde uygulama ilk acilista `com.android.settings/.spa.SpaActivity` icindeki `Alarms & reminders` ekranina atliyordu.
+- Kok sebep `lib/core/services/adhan_scheduler_service.dart` icindeki `requestPermissions()` metodunun bootstrap sirasinda `requestExactAlarmsPermission()` cagirip Android sistem ayarini acmasiydi.
+- `requestExactAlarmsPermission()` otomatik bootstrap akistan kaldirildi; scheduler exact izin varsa `exactAllowWhileIdle`, yoksa mevcut `_resolveAndroidScheduleMode()` ile `inexactAllowWhileIdle` fallback kullanmaya devam ediyor.
+- `test/notification_service_guard_test.dart` guard'i guncellendi: scheduler bootstrap sirasinda exact alarm ayar ekranini acacak API cagrisi icermemeli.
+
+### Neden Yapildi
+- Appium kaniti: ilk test screenshot'i `build/appium-smoke.png` Android Settings `Alarms & reminders` ekraninda kaldi; kullanici onboarding yerine sistem ayarinda basliyordu.
+- Kullanici etkisi: ilk acilis guveni ve onboarding akisi kiriliyor, Android sistem metinleri lokalizasyon disinda gorunuyor, store review'da agresif izin isteme olarak algilanabilir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 first-launch permission hijack).
+- Rollback plani: `lib/core/services/adhan_scheduler_service.dart` ve `test/notification_service_guard_test.dart` onceki commit'e geri alinabilir; Appium sadece yeniden riskin geri geldigini dogrular.
+
+### Degistirilen Dosyalar
+- `lib/core/services/adhan_scheduler_service.dart`
+- `test/notification_service_guard_test.dart`
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\notification_service_guard_test.dart test\prayer_notification_coordinator_test.dart --reporter compact` PASS, 13/13.
+- Debug APK: `flutter build apk --debug` PASS.
+- Appium after-fix smoke: activity `.MainActivity`, `containsSettings=False`, `containsAlarmSettings=False`, source saved `build/appium-smoke-after-exact-alarm-fix-source.xml`, screenshot saved `build/appium-smoke-after-exact-alarm-fix.png`.
+- Appium after-fix UI proof: onboarding screen shows `Welcome to Sirat-i Nur` and `Next`; no Android settings hijack.
+- Logcat proof: no `FATAL EXCEPTION` or app crash from `com.umutamal.sirat_i_nur`; app force-stop lines are Appium session cleanup.
+- `flutter analyze` PASS.
+- `flutter test --reporter compact` PASS, 605/605.
+
+### Risk Degisimi
+- First-launch exact alarm hijack: `16/25 -> 2/25`.
+- Kalan notification risk: exact alarm izni olmayan cihazlarda adhan reminder zamanlamasi Android tarafindan inexact fallback ile calisir; bu store declaration ve kullanici bilgilendirme akisi icinde takip edilmeli.
+
+### Sonraki Adim
+- Appium ile onboarding sonrasi ana ekran, location permission, prayer/location update ve bottom navigation smoke akislari siradaki UI risk taramasina alinacak. Store-ready kalan blokajlar halen Supabase env/content apply ve Places tile/Overpass endpoint konularidir.

@@ -32,10 +32,6 @@ class AdhanSchedulerService {
         >();
     if (androidPL != null) {
       await androidPL.requestNotificationsPermission();
-      final canScheduleExact = await androidPL.canScheduleExactNotifications();
-      if (canScheduleExact == false) {
-        await androidPL.requestExactAlarmsPermission();
-      }
     }
 
     final iOSPL = _notifications
