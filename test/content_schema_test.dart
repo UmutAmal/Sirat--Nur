@@ -6,123 +6,190 @@ void main() {
   group('content_schema.sql', () {
     final schemaFile = File('content_schema.sql');
 
-    test(
-      'defines public duas, asma, quran and audio tables for cloud-first content',
-      () {
-        final schema = schemaFile.readAsStringSync();
+    test('defines public runtime, quran and audio tables for cloud-first content', () {
+      final schema = schemaFile.readAsStringSync();
 
-        expect(schemaFile.existsSync(), isTrue);
-        expect(schema, contains('create table if not exists public.duas'));
-        expect(
-          schema,
-          contains('create table if not exists public.asma_ul_husna'),
-        );
-        expect(
-          schema,
-          contains('create table if not exists public.quran_surahs'),
-        );
-        expect(
-          schema,
-          contains('create table if not exists public.quran_ayahs'),
-        );
-        expect(
-          schema,
-          contains('create table if not exists public.tafsir_entries'),
-        );
-        expect(schema, contains('create table if not exists public.hadiths'));
-        expect(
-          schema,
-          contains('create table if not exists public.audio_files'),
-        );
-        expect(schema, contains('storage_path text'));
-        expect(
-          schema,
+      expect(schemaFile.existsSync(), isTrue);
+      expect(
+        schema,
+        contains('create table if not exists public.daily_content'),
+      );
+      expect(
+        schema,
+        contains('create table if not exists public.live_tv_channels'),
+      );
+      expect(
+        schema,
+        contains('create table if not exists public.education_categories'),
+      );
+      expect(
+        schema,
+        contains('create table if not exists public.education_topics'),
+      );
+      expect(schema, contains('create table if not exists public.duas'));
+      expect(
+        schema,
+        contains('create table if not exists public.asma_ul_husna'),
+      );
+      expect(
+        schema,
+        contains('create table if not exists public.quran_surahs'),
+      );
+      expect(schema, contains('create table if not exists public.quran_ayahs'));
+      expect(
+        schema,
+        contains('create table if not exists public.tafsir_entries'),
+      );
+      expect(schema, contains('create table if not exists public.hadiths'));
+      expect(schema, contains('create table if not exists public.audio_files'));
+      expect(schema, contains('storage_path text'));
+      expect(
+        schema,
+        contains(
+          'alter table public.daily_content\nadd column if not exists verified_at timestamptz;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'create unique index if not exists daily_content_display_date_unique_idx',
+        ),
+      );
+      expect(schema, contains('short_label text not null unique'));
+      expect(
+        schema,
+        contains(
+          'create unique index if not exists live_tv_channels_short_label_unique_idx',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.education_categories\nadd column if not exists source text;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.education_topics\nadd column if not exists verified_at timestamptz;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.duas\nadd column if not exists storage_path text;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.asma_ul_husna\nadd column if not exists storage_path text;',
+        ),
+      );
+      expect(schema, contains('surah_number smallint'));
+      expect(schema, contains('juz_number smallint'));
+      expect(schema, contains('tafsir_source text not null'));
+      expect(schema, contains('tafsir_text text not null'));
+      expect(schema, contains('source_license text'));
+      expect(
+        schema,
+        contains('unique (surah_number, ayah_number, tafsir_source)'),
+      );
+      expect(schema, contains('collection_id text not null'));
+      expect(schema, contains('book text not null'));
+      expect(
+        schema,
+        contains('hadith_number integer not null check (hadith_number > 0)'),
+      );
+      expect(
+        schema,
+        contains('text_ar text not null check (length(trim(text_ar)) > 0)'),
+      );
+      expect(schema, contains('text_tr text'));
+      expect(schema, contains('text_en text'));
+      expect(schema, contains('narrator text'));
+      expect(schema, contains('grade text'));
+      expect(schema, contains('source_license text'));
+      expect(schema, contains('unique (collection_id, hadith_number)'));
+      expect(
+        schema,
+        isNot(
           contains(
-            'alter table public.duas\nadd column if not exists storage_path text;',
+            "insert into storage.buckets (id, name, public)\nvalues ('quran-audio', 'quran-audio', true)",
           ),
-        );
-        expect(
-          schema,
-          contains(
-            'alter table public.asma_ul_husna\nadd column if not exists storage_path text;',
-          ),
-        );
-        expect(schema, contains('surah_number smallint'));
-        expect(schema, contains('juz_number smallint'));
-        expect(schema, contains('tafsir_source text not null'));
-        expect(schema, contains('tafsir_text text not null'));
-        expect(schema, contains('source_license text'));
-        expect(
-          schema,
-          contains('unique (surah_number, ayah_number, tafsir_source)'),
-        );
-        expect(schema, contains('collection_id text not null'));
-        expect(schema, contains('book text not null'));
-        expect(
-          schema,
-          contains('hadith_number integer not null check (hadith_number > 0)'),
-        );
-        expect(
-          schema,
-          contains('text_ar text not null check (length(trim(text_ar)) > 0)'),
-        );
-        expect(schema, contains('text_tr text'));
-        expect(schema, contains('text_en text'));
-        expect(schema, contains('narrator text'));
-        expect(schema, contains('grade text'));
-        expect(schema, contains('source_license text'));
-        expect(schema, contains('unique (collection_id, hadith_number)'));
-        expect(
-          schema,
-          isNot(
-            contains(
-              "insert into storage.buckets (id, name, public)\nvalues ('quran-audio', 'quran-audio', true)",
-            ),
-          ),
-        );
-        expect(
-          schema,
-          contains(
-            "update storage.buckets\nset public = false\nwhere id = 'quran-audio';",
-          ),
-        );
-        expect(
-          schema,
-          contains(
-            "insert into storage.buckets (id, name, public)\nvalues ('audio-sukun', 'audio-sukun', true)",
-          ),
-        );
-        expect(
-          schema,
-          contains(
-            "insert into storage.buckets (id, name, public)\nvalues ('audio-dua', 'audio-dua', true)",
-          ),
-        );
-        expect(
-          schema,
-          contains(
-            "insert into storage.buckets (id, name, public)\nvalues ('audio-adhan', 'audio-adhan', true)",
-          ),
-        );
-        expect(
-          schema,
-          contains(
-            "insert into storage.buckets (id, name, public)\nvalues ('audio-asma', 'audio-asma', true)",
-          ),
-        );
-        expect(
-          schema,
-          contains(
-            'create unique index if not exists audio_files_quran_surah_unique_idx',
-          ),
-        );
-        expect(schema, contains('verified_at timestamptz not null'));
-      },
-    );
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          "update storage.buckets\nset public = false\nwhere id = 'quran-audio';",
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          "insert into storage.buckets (id, name, public)\nvalues ('audio-sukun', 'audio-sukun', true)",
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          "insert into storage.buckets (id, name, public)\nvalues ('audio-dua', 'audio-dua', true)",
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          "insert into storage.buckets (id, name, public)\nvalues ('audio-adhan', 'audio-adhan', true)",
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          "insert into storage.buckets (id, name, public)\nvalues ('audio-asma', 'audio-asma', true)",
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'create unique index if not exists audio_files_quran_surah_unique_idx',
+        ),
+      );
+      expect(schema, contains('verified_at timestamptz not null'));
+    });
 
     test('enables RLS and public select policies for all content tables', () {
       final schema = schemaFile.readAsStringSync();
 
+      expect(
+        schema,
+        contains('alter table public.daily_content enable row level security;'),
+      );
+      expect(schema, contains('create policy "Public read daily content"'));
+      expect(
+        schema,
+        contains(
+          'alter table public.live_tv_channels enable row level security;',
+        ),
+      );
+      expect(schema, contains('create policy "Public read live tv channels"'));
+      expect(
+        schema,
+        contains(
+          'alter table public.education_categories enable row level security;',
+        ),
+      );
+      expect(
+        schema,
+        contains('create policy "Public read education categories"'),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.education_topics enable row level security;',
+        ),
+      );
+      expect(schema, contains('create policy "Public read education topics"'));
       expect(
         schema,
         contains('alter table public.duas enable row level security;'),

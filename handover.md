@@ -16341,3 +16341,37 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan yeni dongude cloud-only UI error states ve release checker blokajlari taranacak.
+## 2026-04-22 TUR-383 - Supabase Core Seed Contract Hardened
+
+### MASTER Karari
+- Risk: `seed.sql` `daily_content`, `live_tv_channels`, `education_categories` ve `education_topics` tablolarina yaziyordu; ancak `content_schema.sql` bu dort runtime tabloyu kurmuyordu. Temiz Supabase apply hattinda `seed.sql` tablo yok hatasiyla kirilabilirdi.
+- Ek icerik riski: `seed.sql` icindeki egitim satirlari `source`/`verified_at` tasimiyor ve icinde daha once reddedilmis icerik marker'lari vardi (`6666`, `Islami Erdemenler`, `Allah korsu`). Bu satirlara sahte provenance eklemek dini icerik dogrulama kuralini ihlal ederdi.
+- Ek runtime riski: `dailyAyatProvider` `verified_at` olmayan daily ayet satirlarini reddediyor; eski `seed.sql` daily rows `verified_at` tasimadigi icin seed uygulansa bile ana ekran "daily ayat unavailable" kalabilirdi.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P1/P0 store apply + religious content integrity).
+- Rollback plani: `content_schema.sql`, `seed.sql`, `tool/apply_supabase_content_bundle.ps1`, `tool/check_store_readiness.ps1`, README/checklist ve ilgili test diff'leri geri alinabilir.
+
+### BUILDER Degisikligi
+- `content_schema.sql` temiz DB icin `daily_content`, `live_tv_channels`, `education_categories`, `education_topics` tablolarini, indexlerini, RLS ve public select policy'lerini kuracak sekilde genisletildi.
+- Existing DB migration guvenligi icin `daily_content.verified_at`, `education_categories.source`, `education_categories.verified_at`, `education_topics.source`, `education_topics.verified_at` kolonlari `add column if not exists` ile eklendi.
+- `seed.sql` tekrar oynatilabilir hale getirildi: live TV satirlari `ON CONFLICT (short_label) DO UPDATE` kullanir.
+- Dogrulanmamis dini egitim seed satirlari `seed.sql` icinden cikarildi; egitim icerigi ancak sourced manifest ile `source` ve `verified_at` tasidiginda runtime tarafindan gorunur.
+- Daily ayet seed'i hardcoded Arabic/TR/EN metinden kurtarildi; artik `content_seed_quran_surahs.sql` + `content_seed_quran_ayahs.sql` uygulandiktan sonra `public.quran_ayahs` icindeki verified text ve `verified_at` degerlerinden turetilir.
+- `tool/apply_supabase_content_bundle.ps1` sirasi `content_schema.sql -> quran surahs -> quran ayahs -> quran audio paths -> seed.sql -> hadith -> tafsir` olarak duzeltildi.
+- `tool/check_store_readiness.ps1` summary dosyasinda required SQL dosyalarinin ayni sirayla uygulanmis olmasini kontrol eder; yanlis sirayi false-success kabul etmez.
+
+### TESTER Degisikligi
+- `test/content_schema_test.dart` core runtime tablolarini, migration kolonlarini, unique indexleri ve RLS policy'lerini guard'liyor.
+- `test/seed_sql_test.dart` eklendi; production seed'in unverified education insert'lerini ve bilinen bozuk marker'lari tasimadigini, daily ayetleri verified Quran seed tablolarindan turettigini, live TV'yi duplicate yerine upsert ettigini dogruluyor.
+- `test/store_readiness_test.dart` Supabase apply order ve readiness order-fail guard'ini dogruluyor.
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\content_schema_test.dart test\store_readiness_test.dart test\seed_sql_test.dart --reporter compact` PASS, 14/14.
+
+### Risk Degisimi
+- Clean Supabase core seed apply risk: `20/25 -> 6/25`.
+- Unverified education seed content risk: `20/25 -> 3/25`.
+- Daily ayat seed without provenance risk: `16/25 -> 4/25`.
+- Kalan risk: `content_seed_hadith.sql` ve `content_seed_tafsir.sql` halen verified manifest olmadan uretilemez; Supabase real apply icin `SUPABASE_DB_URL` veya access token yok. Bu tur sahte hadis/tefsir veya fake apply summary uretmedi.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan yeni dongude live TV row filtering ve diagnostics/store checker derin taramasi surdurulecek.

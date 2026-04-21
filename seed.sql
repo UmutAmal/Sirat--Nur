@@ -1,127 +1,101 @@
--- Auto-generated Seed SQL
-INSERT INTO public.live_tv_channels (short_label, title, subtitle, embed_url, fallback_embed_url, external_url, muted_by_default, sort_order) VALUES (
-'Makkah', 'Makkah Al-Mukarramah', 'Live from Masjid al-Haram', 'https://www.youtube.com/embed/live_stream?channel=UCKJooOkz2wzQ_ofz_yX1_5A&autoplay=1&mute=1&playsinline=1', 'https://www.youtube-nocookie.com/embed/live_stream?channel=UCKJooOkz2wzQ_ofz_yX1_5A&autoplay=1&mute=1&playsinline=1', 'https://www.youtube.com/channel/UCKJooOkz2wzQ_ofz_yX1_5A/live', true, 0);
-INSERT INTO public.live_tv_channels (short_label, title, subtitle, embed_url, fallback_embed_url, external_url, muted_by_default, sort_order) VALUES (
-'Madinah', 'Al-Madinah Al-Munawwarah', 'Live from Masjid an-Nabawi', 'https://www.youtube.com/embed/live_stream?channel=UCos6Hg8mF5P01sO8fQ7v7WA&autoplay=1&mute=1&playsinline=1', 'https://www.youtube-nocookie.com/embed/live_stream?channel=UCos6Hg8mF5P01sO8fQ7v7WA&autoplay=1&mute=1&playsinline=1', 'https://www.youtube.com/channel/UCos6Hg8mF5P01sO8fQ7v7WA/live', true, 1);
-INSERT INTO public.education_categories (id, title, title_en, icon, description, description_en, sort_order) VALUES (
-'iman', 'İman Esasları', 'Articles of Faith', '✋', 'İslam inancının temel maddeleri', 'The fundamental beliefs of Islam', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'iman_1', 'iman', 'Allah''a İman', 'Belief in Allah', 'İslam inancının temeli, tek ve benzersiz olan Allah''a inanmaktır. Müminler şunu ikrar eder: Allah birdir, O''ndan başka ilah yoktur. Allah ezeli ve ebedidir, doğmamış ve doğurmamıştır. Allah''ın ne benzeri ne de ortağı vardır. Allah her şeyi işitir, görür ve bilir. Allah her şeye kadirdir.', 'The foundation of Islamic belief is believing in the one and unique Allah. Believers declare: Allah is one, there is no god but Him. Allah is eternal and everlasting, He begets not nor is He begotten. Allah has no partner or equal.', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'iman_2', 'iman', 'Meleklere İman', 'Belief in Angels', 'Müminler, görünmeyen varlıklar olan meleklere inanır. Melekler Allah''ın emirlerini yerine getiren varlıklardır. Önemli Melekler: Cebrail (vahiy), Mikail (rızık), İsrafil (sûr), Azrael (can alma).', 'Believers believe in angels, the unseen beings. Angels are beings who carry out Allah''s commands. Important Angels: Jibril (revelation), Mikail (sustenance), Israfil (trumpet), Azrael (death).', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'iman_3', 'iman', 'Kitaplara İman', 'Belief in Divine Books', 'Müminler, Allah''ın peygamberlerine gönderdiği tüm ilahi kitaplara inanır: Tevrat, Zebur, İncil ve son olarak Kuran-ı Kerim. Kuran, önceki kitapları neshetti ve son ilahi kitaptır.', 'Believers believe in all divine books sent to prophets: Torah, Psalms, Gospel, and finally the Quran. The Quran abrogated previous books and is the final divine revelation.', 2) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'iman_4', 'iman', 'Peygamberlere İman', 'Belief in Prophets', 'Müminler, tüm peygamberlere inanır. İslam''a göre 25 peygamberin ismi Kuran''da geçer. En önemlileri: Adem, Nuh, İbrahim, Musa, İsa ve son peygamber Hz. Muhammed (s.a.v).', 'Believers believe in all prophets. Islam recognizes 25 prophets mentioned in the Quran. The most important: Adam, Noah, Abraham, Moses, Jesus, and the final prophet Muhammad (peace be upon him).', 3) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'iman_5', 'iman', 'Ahirete İman', 'Belief in the Afterlife', 'İslam inancının temel taşlarından biri ahirete inanmaktır. Kıyamet günü tüm insanlar diriltilecek ve hesaba çekilecektir. İyi müminler cennete, kötüler cehenneme gidecektir.', 'One of the fundamental beliefs in Islam is belief in the afterlife. On the Day of Judgment, all humans will be resurrected and held accountable. The righteous will go to Paradise, the wicked to Hell.', 4) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'iman_6', 'iman', 'Kadere İman', 'Belief in Qadar (Destiny)', 'Kadere inanmak, İslam inancının altı esasının sonuncusudur. Allah''ın her şeyi ezelde bilmesi ve takdir etmesi. Kul, kendi fiillerinden sorumludur.', 'Belief in Qadar (destiny) is the sixth article of Islamic faith. Allah''s eternal knowledge and decree of all things. People are responsible for their own actions.', 5) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_categories (id, title, title_en, icon, description, description_en, sort_order) VALUES (
-'islam', 'İslamın Şartları', 'Pillars of Islam', '🕌', 'İslamın beş şartı', 'The five pillars of Islam', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'shahada', 'islam', 'Şehadet', 'Testimony (Shahada)', 'İslamın birinci şartı: "Eşhedü en la ilahe illallah ve eşhedü enne Muhammeden resulullah" (Şahitlik ederim ki Allah''tan başka ilah yoktur ve şahitlik ederim ki Muhammed Allah''ın resulüdür).', 'The first pillar of Islam: "I bear witness that there is no god but Allah and I bear witness that Muhammad is the Messenger of Allah".', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'salat', 'islam', 'Namaz', 'Prayer (Salat)', 'Namaz, Müslümanların günde beş vakit kıldığı farz ibadettir: Sabah (2 rekât), Öğle (4 rekât), İkindi (4 rekât), Akşam (3 rekât), Yatsı (4 rekât).', 'Prayer is the obligatory worship performed five times daily: Fajr (2 rakat), Dhuhr (4 rakat), Asr (4 rakat), Maghrib (3 rakat), Isha (4 rakat).', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'zakat', 'islam', 'Zekat', 'Zakat (Almsgiving)', 'Zekat, Müslümanların mallarının bir kısmını ihtiyaç sahiplerine vermesidir. Nisab: Altın 85 gram, Gümüş 595 gram. Oran: %2.5 (40''ta bir).', 'Zakat is giving a portion of one''s wealth to those in need. Nisab: Gold 85 grams, Silver 595 grams. Rate: 2.5% (1/40).', 2) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'sawm', 'islam', 'Oruç', 'Fasting (Ramadan)', 'Ramazan orucu, her yıl Ramazan ayında tutulur. Oruç; imsak vaktinden iftar vaktine kadar yemek, içmek ve cinsel ilişkiden uzak durmaktır.', 'Fasting in Ramadan is performed every year. Fasting means abstaining from food, drink, and sexual relations from dawn (imsak) to sunset (iftar).', 3) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'hajj', 'islam', 'Hac', 'Hajj (Pilgrimage)', 'Hac, Müslümanların Kabe''yi ziyaret etmesidir. Şartları: Müslüman olmak, ergin olmak, akıllı olmak, hür olmak ve gücü yetmek. Zilhicce ayının 8-12. günleri yapılır.', 'Hajj is visiting the Kaaba. Conditions: Being Muslim, adult, sane, free, and able. Performed on 8th-12th of Dhul Hijjah.', 4) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_categories (id, title, title_en, icon, description, description_en, sort_order) VALUES (
-'seerah', 'Peygamber Efendimiz', 'Prophet Muhammad', 'ﷺ', 'Hz. Muhammed''in hayatı', 'Life of Prophet Muhammad', 2) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'seerah_1', 'seerah', 'Hz. Muhammed''in Doğumu', 'Birth of Prophet Muhammad', 'Hz. Muhammed (s.a.v), Miladi 570 yılında Mekke''de doğdu. Babası Abdullah, annesi Amine''dir. "Fil yılı" olarak da bilinir.', 'Prophet Muhammad (peace be upon him) was born in 570 CE in Mecca. His father was Abdullah, his mother was Amina. Also known as the "Year of the Elephant".', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'seerah_2', 'seerah', 'İlk Vahiy', 'First Revelation', '610 yılında Ramazan ayında Hira mağarasında ilk vahiy geldi. Cebrail meleği "Oku!" (Iqra!) emriyle geldi. 23 yıl boyunca toplam 114 sure indirildi.', 'In 610 CE during Ramadan, the first revelation came in the Cave of Hira. The Angel Jibril came with the command "Read!" (Iqra!). Over 23 years, 114 surahs were revealed.', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'seerah_3', 'seerah', 'Veda Haccı', 'Farewell Pilgrimage', '632 yılında yapılan Veda Haccı, Hz. Muhammed''in son haccıdır. Peygamber şöyle buyurdu: "Ey insanlar! Rabbiniz birdir. Üstünlük takvadadır (Allah korkusundadır).".', 'The Farewell Pilgrimage in 632 CE was the Prophet''s final Hajj. The Prophet said: "O people! Your Lord is one. Superiority is by Taqwa (fear of Allah).".', 2) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_categories (id, title, title_en, icon, description, description_en, sort_order) VALUES (
-'fiqh', 'Fıkıh', 'Islamic Jurisprudence', '📜', 'İslam hukuku ve ibadetler', 'Islamic law and worship', 3) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'fiqh_1', 'fiqh', 'Abdest', 'Ablution (Wudu)', 'Abdest, namaz öncesi alınan temizliktir. Farz kısımlar: Yüzü yıkamak, dirseklere kadar kolları yıkamak, başı meshetmek, ayakları topuklara kadar yıkamak.', 'Ablution (Wudu) is purification before prayer. Obligatory parts: Washing the face, washing arms to elbows, wetting the head, washing feet to ankles.', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'fiqh_2', 'fiqh', 'Cenaze Namazı', 'Funeral Prayer (Janazah)', 'Cenaze namazı, vefat etmiş Müslüman için kılınan toplu ibadettir. 4 tekbirden oluşur. Cenazenin Müslüman, yıkanmış ve kefenlenmiş olması şarttır.', 'Funeral prayer is a collective worship for a deceased Muslim. Consists of 4 takbirs. The deceased must be Muslim, washed, and shrouded.', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_categories (id, title, title_en, icon, description, description_en, sort_order) VALUES (
-'history', 'İslam Tarihi', 'Islamic History', '🏛️', 'İslam tarihi ve medeniyeti', 'Islamic history and civilization', 4) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'history_1', 'history', 'İslamın Doğuşu', 'Rise of Islam', 'İslam, 7. yüzyılda Arabistan''da ortaya çıkmıştır. 610''da ilk vahiy, 622''de Hicret (Medine''ye göç), 630''da Mekke''nin fethi, 632''de Peygamberin vefatı.', 'Islam emerged in Arabia in the 7th century. 610: First revelation, 622: Hijra (migration to Medina), 630: Conquest of Mecca, 632: Death of the Prophet.', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'history_2', 'history', 'Endülüs Medeniyeti', 'Andalusian Civilization', 'Endülüs, 711-1492 yılları arasında Müslüman yönetiminde kaldı. Kurtuba, Gırnata, Sevilla önemli şehirlerdi. Bilim, tıp, felsefe alanlarında büyük gelişmeler yaşandı.', 'Andalus was under Muslim rule from 711-1492. Cordoba, Granada, Seville were important cities. Great developments in science, medicine, and philosophy.', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'history_3', 'history', 'Osmanlı İmparatorluğu', 'Ottoman Empire', 'Osmanlı İmparatorluğu 1299-1922 arasında hüküm sürmüştür. 1453''te İstanbul''un fethi, Kanuni Sultan Süleyman dönemi (1520-1566) en parlak dönemdir.', 'The Ottoman Empire ruled from 1299-1922. The conquest of Istanbul in 1453, and the reign of Suleiman the Magnificent (1520-1566) was the golden age.', 2) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_categories (id, title, title_en, icon, description, description_en, sort_order) VALUES (
-'ahlak', 'İslam Ahlakı', 'Islamic Ethics', '🌟', 'İslami değerler ve erdemler', 'Islamic values and virtues', 5) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'ahlak_1', 'ahlak', 'İslami Erdemenler', 'Islamic Virtues', 'Temel erdemler: Takva (Allah korsu), İslam (barış), İhsan (iyilik), Sabır, Şükür. Mümin, insanların kendisine güvendiği kimsedir.', 'Core virtues: Taqwa (consciousness of Allah), Islam (peace), Ihsan (excellence), Patience, Gratitude. A believer is one whom people trust.', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'ahlak_2', 'ahlak', 'Günahlardan Kaçınma', 'Avoiding Sins', 'Büyük günahlar: Şirk (ortak koşmak), adam öldürmek, zina, faiz yemek, yetim hakkı yemek, ana-babaya isyan. Tövbe: Günahı terk etmek, pişman olmak.', 'Major sins: Shirk (polytheism), murder, fornication, consuming interest, oppressing orphans, disobeying parents. Repentance: Abandon sin, feel remorse.', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'ahlak_3', 'ahlak', 'Toplumsal İlişkiler', 'Social Relationships', 'Komşuluk hakları: İyilik etmek, rahatsız etmemek, ziyaretine gitmek. Selamı yaymak, insanlarla güzel geçinmek, affetmeyi bilmek.', 'Neighbor rights: Doing good, not disturbing, visiting. Spreading peace, living well with people, knowing how to forgive.', 2) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_categories (id, title, title_en, icon, description, description_en, sort_order) VALUES (
-'mesajlar', 'İslami Mesajlar', 'Islamic Messages', '💬', 'Önemli hadisler ve dualar', 'Important hadiths and prayers', 6) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'mesaj_1', 'mesajlar', 'Önemli Hadisler', 'Important Hadiths', '"İman yetmiş küsur şubedir." "İlim öğrenmek her Müslümana farzdır." "Namaz, dinin direğidir." "Cennet annelerin ayakları altındadır."', '"Faith has over seventy branches." "Seeking knowledge is obligatory upon every Muslim." "Prayer is the pillar of religion." "Paradise lies under mothers'' feet."', 0) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'mesaj_2', 'mesajlar', 'Kuran Hakkında', 'About the Quran', 'Kuran-ı Kerim, 23 yılda peyderpey inmiştir. 114 sure, 6666 ayet vardır. Hiçbir harfi değiştirilmemiştir. En uzun sure Bakara, en kısa sure Kevserdir.', 'The Quran was revealed gradually over 23 years. 114 surahs, 6666 verses. Not a single letter has been changed. Longest: Al-Bakarah, shortest: Al-Kawthar.', 1) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.education_topics (id, category_id, title, title_en, content, content_en, sort_order) VALUES (
-'mesaj_3', 'mesajlar', 'Müslümanın Günlüğü', 'Daily Routine of a Muslim', 'Sabah namazı, gün içinde zikir ve tesbih, öğle ve ikindi namazları, akşam şükür, yatsı namazı ve gece duası. Her an Bismillah demeyi unutmamak.', 'Morning prayer, dhikr throughout the day, noon and afternoon prayers, evening gratitude, night prayer and supplication. Not forgetting Bismillah at all times.', 2) ON CONFLICT (id) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ', 'Rahman ve Rahim olan Allah''ın adıyla.', 'In the name of Allah, the Most Gracious, the Most Merciful.', 'Al-Fatihah 1:1', CURRENT_DATE + INTERVAL '2 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ', 'Allah, O''ndan başka ilah yoktur. O, Hayy ve Kayyum''dur. O''nu ne uyuklama tutar ne de uyku.', 'Allah - there is no deity except Him, the Ever-Living, the Sustainer. Neither drowsiness nor sleep overtakes Him.', 'Al-Baqarah 2:255', CURRENT_DATE + INTERVAL '3 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا', 'Allah hiçbir kişiye gücünün üstünde yük yüklemez.', 'Allah does not burden a soul beyond that it can bear.', 'Al-Baqarah 2:286', CURRENT_DATE + INTERVAL '4 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ', 'Gevşemeyin, üzülmeyin; eğer inanıyorsanız, üstün olan sizsiniz.', 'Do not lose heart, nor be sad, for you will be superior if you are believers.', 'Ali Imran 3:139', CURRENT_DATE + INTERVAL '5 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'وَٱعْبُدُوا۟ ٱللَّهَ وَلَا تُشْرِكُوا۟ بِهِۦ شَيْـًٔا ۖ وَبِٱلْوَٰلِدَيْنِ إِحْسَٰنًا', 'Allah''a ibadet edin ve O''na hiçbir şeyi ortak koşmayın. Ana-babaya iyilik edin.', 'Worship Allah and associate nothing with Him, and to parents do good.', 'An-Nisa 4:36', CURRENT_DATE + INTERVAL '6 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ', 'De ki: Namazım, ibadetlerim, hayatım ve ölümüm alemlerin Rabbi Allah içindir.', 'Say: My prayer, my sacrifice, my life and my death are all for Allah, the Lord of the worlds.', 'Al-An''am 6:162', CURRENT_DATE + INTERVAL '7 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'إِنَّ رَحْمَتَ ٱللَّهِ قَرِيبٌ مِّنَ ٱلْمُحْسِنِينَ', 'Muhakkak ki Allah''ın rahmeti iyilik edenlere yakındır.', 'Indeed, the mercy of Allah is near to the doers of good.', 'Al-A''raf 7:56', CURRENT_DATE + INTERVAL '8 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'وَلَا تَا۟يْـَٔسُوا۟ مِن رَّوْحِ ٱللَّهِ ۖ إِنَّهُۥ لَا يَا۟يْـَٔسُ مِن رَّوْحِ ٱللَّهِ إِلَّا ٱلْقَوْمُ ٱلْكَٰفِرُونَ', 'Allah''ın rahmetinden ümit kesmeyiniz. Çünkü kafir topluluktan başkası Allah''ın rahmetinden ümit kesmez.', 'Do not despair of the mercy of Allah. Indeed, no one despairs of the mercy of Allah except the disbelieving people.', 'Yusuf 12:87', CURRENT_DATE + INTERVAL '9 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ', 'Eğer şükrederseniz, elbette size nimetimi artırırım.', 'If you are grateful, I will surely increase you in favor.', 'Ibrahim 14:7', CURRENT_DATE + INTERVAL '10 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'إِنَّ ٱللَّهَ يَأْمُرُ بِٱلْعَدْلِ وَٱلْإِحْسَٰنِ', 'Muhakkak ki Allah adaleti ve iyiliği emreder.', 'Indeed, Allah commands justice and good conduct.', 'An-Nahl 16:90', CURRENT_DATE + INTERVAL '11 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'وَقَضَىٰ رَبُّكَ أَلَّا تَعْبُدُوٓا۟ إِلَّآ إِيَّاهُ وَبِٱلْوَٰلِدَيْنِ إِحْسَٰنًا', 'Rabbin, yalnız kendisine ibadet etmenizi ve anne-babaya iyilik yapmanızı emretmiştir.', 'Your Lord has decreed that you worship none but Him, and that you be kind to parents.', 'Al-Isra 17:23', CURRENT_DATE + INTERVAL '12 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'رَبَّنَآ ءَاتِنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا', 'Rabbimiz! Bize katından bir rahmet ver ve bize işimizden bir yol göster.', 'Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance.', 'Al-Kahf 18:10', CURRENT_DATE + INTERVAL '13 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'رَّبِّ زِدْنِى عِلْمًا', 'Rabbim! İlmimi artır.', 'My Lord, increase me in knowledge.', 'Ta-Ha 20:114', CURRENT_DATE + INTERVAL '14 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبْحَٰنَكَ إِنِّى كُنتُ مِنَ ٱلظَّٰلِمِينَ', 'Senden başka ilah yoktur. Seni tenzih ederim. Ben gerçekten zalimlerden oldum.', 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.', 'Al-Anbiya 21:87', CURRENT_DATE + INTERVAL '15 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'رَّبِّ ٱغْفِرْ وَٱرْحَمْ وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ', 'Rabbim! Bağışla, merhamet et. Sen merhamet edenlerin en hayırlısısın.', 'My Lord, forgive and have mercy, for You are the best of the merciful.', 'Al-Mu''minun 23:118', CURRENT_DATE + INTERVAL '16 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ', 'Allah, göklerin ve yerin nurudur.', 'Allah is the Light of the heavens and the earth.', 'An-Nur 24:35', CURRENT_DATE + INTERVAL '17 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'رَبَّنَا هَبْ لَنَا مِنْ أَزْوَٰجِنَا وَذُرِّيَّٰتِنَا قُرَّةَ أَعْيُنٍ', 'Rabbimiz! Eşlerimizden ve soyumuzdan bize göz aydınlığı olacak kimseler ver.', 'Our Lord, grant us from among our spouses and offspring comfort to our eyes.', 'Al-Furqan 25:74', CURRENT_DATE + INTERVAL '18 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'رَبِّ إِنِّى لِمَآ أَنزَلْتَ إِلَىَّ مِنْ خَيْرٍ فَقِيرٌ', 'Rabbim! Doğrusu bana indireceğin her hayra muhtacım.', 'My Lord, indeed I am, for whatever good You send down to me, in need.', 'Al-Qasas 28:24', CURRENT_DATE + INTERVAL '19 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا', 'O''nun ayetlerinden biri de sizin için nefsinizden eşler yaratmasıdır ki onlara huzur bulasınız.', 'And of His signs is that He created for you from yourselves mates that you may find tranquillity in them.', 'Ar-Rum 30:21', CURRENT_DATE + INTERVAL '20 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'سَلَٰمٌ قَوْلًا مِّن رَّبٍّ رَّحِيمٍ', '"Selam!" Rahim olan Rabb''in sözüdür.', '"Peace!" - a word from a Merciful Lord.', 'Ya-Sin 36:58', CURRENT_DATE + INTERVAL '21 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'قُلْ يَٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ', 'De ki: Ey kendilerinin aleyhine aşırı giden kullarım! Allah''ın rahmetinden umut kesmeyiniz.', 'Say: O My servants who have transgressed against themselves, do not despair of the mercy of Allah.', 'Az-Zumar 39:53', CURRENT_DATE + INTERVAL '22 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَٰمُوا۟ تَتَنَزَّلُ عَلَيْهِمُ ٱلْمَلَٰٓئِكَةُ', '"Rabbimiz Allah''tır" deyip sonra dosdoğru olanlara melekler iner.', 'Indeed, those who have said "Our Lord is Allah" and then remained firm - the angels descend upon them.', 'Fussilat 41:30', CURRENT_DATE + INTERVAL '23 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا ﴿٥﴾ إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا', 'Şüphesiz zorlukla beraber kolaylık vardır. Gerçekten zorlukla beraber kolaylık vardır.', 'For indeed, with hardship comes ease. Indeed, with hardship comes ease.', 'Ash-Sharh 94:5-6', CURRENT_DATE + INTERVAL '24 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'قُلْ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمْ يَلِدْ وَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ', 'De ki: O Allah birdir. Allah Samed''dir. Doğurmamıştır ve doğmamıştır. Ve hiçbir şey O''nun dengi olmamıştır.', 'Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.', 'Al-Ikhlas 112:1-4', CURRENT_DATE + INTERVAL '25 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ', 'De ki: Sabahın Rabbine sığınırım. Yarattığı şeylerin şerrinden.', 'Say: I seek refuge in the Lord of daybreak. From the evil of that which He created.', 'Al-Falaq 113:1-5', CURRENT_DATE + INTERVAL '26 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ', 'De ki: İnsanların Rabbine sığınırım. İnsanların Melikine. İnsanların İlahına.', 'Say: I seek refuge in the Lord of mankind. The Sovereign of mankind. The God of mankind.', 'An-Nas 114:1-6', CURRENT_DATE + INTERVAL '27 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'هُوَ ٱللَّهُ ٱلَّذِى لَآ إِلَٰهَ إِلَّا هُوَ ۖ عَٰلِمُ ٱلْغَيْبِ وَٱلشَّهَٰدَةِ ۖ هُوَ ٱلرَّحْمَٰنُ ٱلرَّحِيمُ', 'O Allah''tır ki, O''ndan başka ilah yoktur. Gaybı da, görüneni de bilendir. O, Rahman ve Rahim''dir.', 'He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Most Gracious, the Most Merciful.', 'Al-Hashr 59:22-24', CURRENT_DATE + INTERVAL '28 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'تَبَٰرَكَ ٱلَّذِى بِيَدِهِ ٱلْمُلْكُ وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ', 'Mülk elinde olan ne yücedir! O her şeye gücü yetendir.', 'Blessed is He in whose hand is dominion, and He is over all things competent.', 'Al-Mulk 67:1', CURRENT_DATE + INTERVAL '29 day') ON CONFLICT (display_date) DO NOTHING;
-INSERT INTO public.daily_content (content_type, content_ar, content_tr, content_en, reference, display_date) VALUES (
-'ayat', 'إِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ ﴿١﴾ وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ ﴿٢﴾ لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ', 'Şüphesiz biz onu Kadir Gecesi''nde indirdik. Kadir Gecesi''nin ne olduğunu sen nereden bileceksin? Kadir Gecesi bin aydan hayırlıdır.', 'Indeed, We sent it down during the Night of Decree. And what can make you know what the Night of Decree is? The Night of Decree is better than a thousand months.', 'Al-Qadr 97:1-5', CURRENT_DATE + INTERVAL '30 day') ON CONFLICT (display_date) DO NOTHING;
+-- Core runtime seed SQL.
+-- Keep this file limited to rows that can be replayed safely in production.
+-- Religious education content must be imported from sourced manifests that
+-- provide source and verified_at; unverified lesson text is intentionally not
+-- seeded here.
+
+INSERT INTO public.live_tv_channels (
+  short_label,
+  title,
+  subtitle,
+  embed_url,
+  fallback_embed_url,
+  external_url,
+  muted_by_default,
+  sort_order
+) VALUES (
+  'Makkah',
+  'Makkah Al-Mukarramah',
+  'Live from Masjid al-Haram',
+  'https://www.youtube.com/embed/live_stream?channel=UCKJooOkz2wzQ_ofz_yX1_5A&autoplay=1&mute=1&playsinline=1',
+  'https://www.youtube-nocookie.com/embed/live_stream?channel=UCKJooOkz2wzQ_ofz_yX1_5A&autoplay=1&mute=1&playsinline=1',
+  'https://www.youtube.com/channel/UCKJooOkz2wzQ_ofz_yX1_5A/live',
+  true,
+  0
+) ON CONFLICT (short_label) DO UPDATE SET
+  title = EXCLUDED.title,
+  subtitle = EXCLUDED.subtitle,
+  embed_url = EXCLUDED.embed_url,
+  fallback_embed_url = EXCLUDED.fallback_embed_url,
+  external_url = EXCLUDED.external_url,
+  muted_by_default = EXCLUDED.muted_by_default,
+  sort_order = EXCLUDED.sort_order;
+
+INSERT INTO public.live_tv_channels (
+  short_label,
+  title,
+  subtitle,
+  embed_url,
+  fallback_embed_url,
+  external_url,
+  muted_by_default,
+  sort_order
+) VALUES (
+  'Madinah',
+  'Al-Madinah Al-Munawwarah',
+  'Live from Masjid an-Nabawi',
+  'https://www.youtube.com/embed/live_stream?channel=UCos6Hg8mF5P01sO8fQ7v7WA&autoplay=1&mute=1&playsinline=1',
+  'https://www.youtube-nocookie.com/embed/live_stream?channel=UCos6Hg8mF5P01sO8fQ7v7WA&autoplay=1&mute=1&playsinline=1',
+  'https://www.youtube.com/channel/UCos6Hg8mF5P01sO8fQ7v7WA/live',
+  true,
+  1
+) ON CONFLICT (short_label) DO UPDATE SET
+  title = EXCLUDED.title,
+  subtitle = EXCLUDED.subtitle,
+  embed_url = EXCLUDED.embed_url,
+  fallback_embed_url = EXCLUDED.fallback_embed_url,
+  external_url = EXCLUDED.external_url,
+  muted_by_default = EXCLUDED.muted_by_default,
+  sort_order = EXCLUDED.sort_order;
+
+WITH daily_ayat_seed(surah_number, ayah_number, reference, display_date) AS (
+  VALUES
+    (2, 201, 'Al-Baqarah 2:201', CURRENT_DATE + INTERVAL '0 day'),
+    (2, 286, 'Al-Baqarah 2:286', CURRENT_DATE + INTERVAL '1 day'),
+    (3, 8, 'Ali Imran 3:8', CURRENT_DATE + INTERVAL '2 day'),
+    (14, 40, 'Ibrahim 14:40', CURRENT_DATE + INTERVAL '3 day'),
+    (17, 24, 'Al-Isra 17:24', CURRENT_DATE + INTERVAL '4 day'),
+    (20, 114, 'Ta-Ha 20:114', CURRENT_DATE + INTERVAL '5 day'),
+    (23, 118, 'Al-Mu''minun 23:118', CURRENT_DATE + INTERVAL '6 day'),
+    (25, 74, 'Al-Furqan 25:74', CURRENT_DATE + INTERVAL '7 day')
+)
+INSERT INTO public.daily_content (
+  content_type,
+  content_ar,
+  content_tr,
+  content_en,
+  reference,
+  display_date,
+  verified_at
+)
+SELECT
+  'ayat',
+  ayah.text_ar,
+  ayah.text_tr,
+  ayah.text_en,
+  seed.reference,
+  seed.display_date::date,
+  ayah.verified_at
+FROM daily_ayat_seed seed
+JOIN public.quran_surahs surah
+  ON surah.surah_number = seed.surah_number
+JOIN public.quran_ayahs ayah
+  ON ayah.surah_id = surah.id
+  AND ayah.ayah_number = seed.ayah_number
+ON CONFLICT (display_date) DO UPDATE SET
+  content_type = EXCLUDED.content_type,
+  content_ar = EXCLUDED.content_ar,
+  content_tr = EXCLUDED.content_tr,
+  content_en = EXCLUDED.content_en,
+  reference = EXCLUDED.reference,
+  verified_at = EXCLUDED.verified_at;

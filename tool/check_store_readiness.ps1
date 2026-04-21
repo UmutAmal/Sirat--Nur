@@ -300,10 +300,10 @@ try {
       $supabaseApplySummary = Get-Content -LiteralPath $supabaseApplySummaryPath -Raw | ConvertFrom-Json
       $requiredSupabaseFiles = @(
         'content_schema.sql',
-        'seed.sql',
         'content_seed_quran_surahs.sql',
         'content_seed_quran_ayahs.sql',
         'content_seed_quran_audio_storage.sql',
+        'seed.sql',
         'content_seed_hadith.sql',
         'content_seed_tafsir.sql'
       )
@@ -311,14 +311,29 @@ try {
       $missingAppliedFiles = @(
         $requiredSupabaseFiles | Where-Object { $appliedFiles -notcontains $_ }
       )
+      $lastAppliedIndex = -1
+      $appliedOrderIsValid = $true
+      foreach ($requiredFile in $requiredSupabaseFiles) {
+        $currentIndex = [array]::IndexOf($appliedFiles, $requiredFile)
+        if ($currentIndex -lt 0) {
+          continue
+        }
+        if ($currentIndex -lt $lastAppliedIndex) {
+          $appliedOrderIsValid = $false
+          break
+        }
+        $lastAppliedIndex = $currentIndex
+      }
       $missingOptionalFiles = @($supabaseApplySummary.missing_optional_files)
       if ($missingOptionalFiles.Count -gt 0) {
         Add-Failure "Supabase content apply summary still marks production seed files as optional/missing: $($missingOptionalFiles -join ', ')."
       }
       if ($supabaseApplySummary.dry_run -eq $true) {
         Add-Failure 'Supabase content apply summary is a dry-run; run tool/apply_supabase_content_bundle.ps1 without -DryRun after applying production SQL.'
+      } elseif (-not $appliedOrderIsValid) {
+        Add-Failure 'Supabase content apply summary order is invalid; schema, Quran surah/ayah seed, Quran audio seed, core seed, hadith seed, and tafsir seed must be applied in order.'
       } elseif ($missingAppliedFiles.Count -eq 0) {
-        Add-Pass 'Supabase content apply summary includes schema, core seed, Quran surah/ayah seed, Quran audio seed, hadith seed, and tafsir seed.'
+        Add-Pass 'Supabase content apply summary includes schema, Quran surah/ayah seed, Quran audio seed, core seed, hadith seed, and tafsir seed.'
       } else {
         Add-Failure "Supabase content apply summary is missing required applied files: $($missingAppliedFiles -join ', ')."
       }

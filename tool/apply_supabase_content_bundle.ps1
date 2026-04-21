@@ -10,10 +10,10 @@ $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
 
 $requiredSqlFiles = @(
   'content_schema.sql',
-  'seed.sql',
   'content_seed_quran_surahs.sql',
   'content_seed_quran_ayahs.sql',
   'content_seed_quran_audio_storage.sql',
+  'seed.sql',
   'content_seed_hadith.sql',
   'content_seed_tafsir.sql'
 )

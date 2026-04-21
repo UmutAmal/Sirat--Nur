@@ -173,6 +173,10 @@ void main() {
         script,
         contains('Supabase content apply summary includes schema'),
       );
+      expect(
+        script,
+        contains('Supabase content apply summary order is invalid'),
+      );
       expect(checklist, contains('Google Play Data safety form'));
       expect(checklist, contains('Android exact alarm behavior'));
       expect(checklist, contains('Apple App Privacy details'));
@@ -189,6 +193,10 @@ void main() {
       expect(supabaseApplyScript, contains('content_seed_tafsir.sql'));
       expect(supabaseApplyScript, contains('SUPABASE_DB_URL'));
       expect(supabaseApplyScript, isNot(contains(r'$optionalSqlFiles')));
+      expect(
+        supabaseApplyScript.indexOf("'content_seed_quran_ayahs.sql'"),
+        lessThan(supabaseApplyScript.indexOf("'seed.sql'")),
+      );
     });
 
     test('Gradle release packaging refuses missing runtime dart-defines', () {

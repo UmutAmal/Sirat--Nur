@@ -95,9 +95,9 @@ The real upload must write
 `build/quran_audio_distribution_upload_summary.json` with `dry_run=false`,
 Cloudflare `uploaded=570`, and GitHub `uploaded=114`.
 
-4. Apply `content_schema.sql`, core seed data, Quran surah/ayah seed data, and
-`content_seed_quran_audio_storage.sql` to the production Supabase project with
-the tracked apply gate:
+4. Apply `content_schema.sql`, Quran surah/ayah seed data,
+`content_seed_quran_audio_storage.sql`, and then core seed data to the
+production Supabase project with the tracked apply gate:
 
 ```powershell
 .\tool\apply_supabase_content_bundle.ps1 -DryRun
