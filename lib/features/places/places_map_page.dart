@@ -140,6 +140,8 @@ bool _hostMatchesAny(String host, List<String> blockedHosts) {
   );
 }
 
+const _openStreetMapCopyrightUri = 'https://www.openstreetmap.org/copyright';
+
 String buildOverpassPlacesQuery({
   required LatLng center,
   required PlaceCategory category,
@@ -612,6 +614,14 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
                 TileLayer(
                   urlTemplate: tileUrlTemplate,
                   userAgentPackageName: 'com.umutamal.sirat_i_nur',
+                ),
+                SimpleAttributionWidget(
+                  source: const Text('OpenStreetMap contributors'),
+                  backgroundColor: Colors.white.withValues(alpha: 0.82),
+                  onTap: () => launchExternalUri(
+                    context,
+                    Uri.parse(_openStreetMapCopyrightUri),
+                  ),
                 ),
                 MarkerLayer(
                   markers: [

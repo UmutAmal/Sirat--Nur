@@ -16093,3 +16093,48 @@
 
 ### Sonraki Adim
 - Supabase production schema/seed real apply icin CLI access token veya DB URL olmadan DDL/DML uygulanamiyor. Cloudflare Worker ile Places tile/Overpass endpointleri uretilebilir; Supabase apply yetkisi gelince `tool/apply_supabase_content_bundle.ps1` real modda calistirilacak ve checker yeniden kosulacak.
+## 2026-04-22 TUR-375 - Places Cloudflare Proxy and Visible Map Attribution
+
+### MASTER Karari
+- Risk: Store-ready `PLACES_TILE_URL_TEMPLATE` ve `PLACES_OVERPASS_API_URL` runtime config degerleri yoktu; uygulama dogrudan public OSM tile/Overpass hostlarini reddediyor, bu dogru guvenlik kapisi ama production Places akisini kapali birakiyordu.
+- Kanit: `tool/check_store_readiness.ps1` bilinen Supabase/audio env ile `PLACES_TILE_URL_TEMPLATE is missing` ve `PLACES_OVERPASS_API_URL is missing` blokajlarini verdi. `lib/features/places/places_map_page.dart` `TileLayer` altinda gorunur attribution katmani da yoktu.
+- Arastirma: OSMF tile policy public tile sunucularinin SLA vermedigini, visible attribution ve cache zorunlulugunu belirtiyor; Overpass public docs yuksek hacimli app backend kullaniminda kendi instance/provider oneriyor. Bu nedenle app'i dogrudan public hostlara baglamak yerine project-owned Worker URL'leri, cache ve sorgu sekli siniri secildi.
+- Kullanici etkisi: Places ekrani store build'de endpoint eksigi nedeniyle kapali kalir veya yanlis endpoint verilirse servis limiti/lisans/attribution riski dogar.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 production Places endpoint blocker).
+- Rollback plani: `infra/cloudflare/places-proxy/*`, `lib/features/places/places_map_page.dart`, `test/cloudflare_places_proxy_test.dart`, `test/features/places/places_map_page_test.dart`, `test/store_readiness_test.dart` onceki commit'e geri alinabilir; Cloudflare Worker `sirat-nur-places-proxy` dashboard/wrangler ile silinebilir.
+
+### BUILDER Degisikligi
+- `infra/cloudflare/places-proxy` altina Cloudflare Worker eklendi.
+- Worker endpointleri:
+  - `/health` saglik kontrolu.
+  - `/tiles/{z}/{x}/{y}.png` valid XYZ PNG tile koordinatlari disindakileri reddeder, upstream'e stable `Sirat-i-Nur-Places-Proxy/1.0` user-agent ile gider ve 604800 saniye cache uygular.
+  - `/overpass` sadece POST kabul eder, query boyutunu 8192 byte ile sinirlar, yalniz app'in urettigi mosque/halal food/Islamic education Overpass query sekillerini kabul eder, radius'u 5000 metre ile sinirlar ve SHA-256 cache key ile 3600 saniye cache uygular.
+- `wrangler.jsonc` varsayilan Worker env:
+  - `TILE_UPSTREAM_TEMPLATE=https://tile.openstreetmap.org/{z}/{x}/{y}.png`
+  - `OVERPASS_UPSTREAM_URL=https://overpass.kumi.systems/api/interpreter`
+- `PlacesMapPage` map katmanina gorunur `SimpleAttributionWidget` eklendi: `OpenStreetMap contributors` ve `https://www.openstreetmap.org/copyright`.
+- `test/cloudflare_places_proxy_test.dart` ile Worker'in route, cache, user-agent, CORS, query validation ve narrow proxy guard'lari eklendi.
+- `test/store_readiness_test.dart` store release guard'i Cloudflare Places proxy dosyalarini takip ediyor.
+
+### Deployment
+- Cloudflare Wrangler auth dogrulandi: `umutamal@hotmail.com`, account id `c934a78105635201c5cab29c5ae7b5a1`.
+- Worker deploy edildi: `https://sirat-nur-places-proxy.umutamal.workers.dev`
+- Current Version ID: `83c7a5fa-3cab-497d-b0db-01b9ff9d4b13`.
+
+### Dogrulama Sonucu
+- `npx --yes wrangler@latest deploy ... --dry-run` PASS.
+- Targeted tests: `flutter test test\cloudflare_places_proxy_test.dart test\features\places\places_map_page_test.dart test\store_readiness_test.dart --reporter compact` PASS.
+- Canli Worker health: `GET /health` PASS, `{ ok: true, service: "sirat-nur-places-proxy" }`.
+- Canli tile: `GET /tiles/0/0/0.png` PASS, HTTP 200, `Content-Type=image/png`, `X-Sirat-Cache=HIT`, `bytes=6924`.
+- Canli Overpass: app formatindaki Istanbul cami sorgusu `POST /overpass` PASS, HTTP 200, `Content-Type=application/json; charset=utf-8`, `elements=55`.
+- Negatif Overpass guard: `[timeout:999];node(1);out;` sekilli serbest sorgu HTTP 400 ve `Overpass query shape is not allowed` dondu.
+- Store checker with production env and `-SkipFlutterValidation`: Places env artik PASS; blokaj sayisi `12 -> 8`.
+- Kalan 8 blokaj: Supabase content apply summary dry-run, `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` public table HTTP 404.
+
+### Risk Degisimi
+- Places production runtime endpoint eksigi: `16/25 -> 3/25`.
+- Kalan Places riski: Public community upstreamler SLA garantisi vermez. Worker URL stable kalacak sekilde ileride paid/self-hosted upstream'e gecilebilir; attribution gorunur tutulmali.
+
+### Sonraki Adim
+- Tam validation: `flutter analyze` ve `flutter test --reporter compact` calistirilacak.
+- Ardindan commit/push sonrasi siradaki en yuksek risk Supabase production schema/seed real apply olacak. Bu adim icin mevcut makinede Supabase CLI access token veya `SUPABASE_DB_URL` yok; sahte summary yazilmayacak.

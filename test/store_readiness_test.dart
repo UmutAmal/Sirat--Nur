@@ -31,6 +31,9 @@ void main() {
         'tool/apply_supabase_content_bundle.ps1',
         'tool/quran_audio_distribution_plan.dart',
         'tool/upload_quran_audio_distribution.ps1',
+        'infra/cloudflare/places-proxy/README.md',
+        'infra/cloudflare/places-proxy/wrangler.jsonc',
+        'infra/cloudflare/places-proxy/src/index.js',
       ]) {
         final file = File(path);
         expect(file.existsSync(), isTrue, reason: '$path must exist');
@@ -107,6 +110,10 @@ void main() {
       expect(
         script,
         isNot(contains('--dart-define=SUPABASE_QURAN_AUDIO_BUCKET')),
+      );
+      expect(
+        File('infra/cloudflare/places-proxy/README.md').readAsStringSync(),
+        contains('https://<worker>/tiles/{z}/{x}/{y}.png'),
       );
       expect(script, contains('android/key.properties'));
       expect(script, contains('Assert-CleanHttpsUrl'));

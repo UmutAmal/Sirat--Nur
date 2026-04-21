@@ -301,6 +301,17 @@ void main() {
     expect(source, isNot(contains('_error!')));
   });
 
+  test('PlacesMapPage keeps visible OpenStreetMap attribution on the map', () {
+    final source = File(
+      'lib/features/places/places_map_page.dart',
+    ).readAsStringSync();
+
+    expect(source, contains('SimpleAttributionWidget'));
+    expect(source, contains('OpenStreetMap contributors'));
+    expect(source, contains('https://www.openstreetmap.org/copyright'));
+    expect(source, contains('launchExternalUri'));
+  });
+
   testWidgets(
     'PlacesMapPage shows an honest location-required state without saved location',
     (tester) async {
