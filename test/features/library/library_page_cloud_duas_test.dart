@@ -102,8 +102,17 @@ void main() {
           'title': 'Faith Basics',
           'title_en': 'Basics',
           'icon': '🕌',
+          'source': 'https://islamansiklopedisi.org.tr',
+          'verified_at': '2026-04-17T00:00:00Z',
         },
-        {'id': '7', 'title': 'Numeric id', 'title_en': '', 'icon': '📚'},
+        {
+          'id': '7',
+          'title': 'Numeric id',
+          'title_en': '',
+          'icon': '📚',
+          'source': 'https://islamansiklopedisi.org.tr',
+          'verified_at': '2026-04-17T00:00:00Z',
+        },
       ]);
     });
 
@@ -133,10 +142,34 @@ void main() {
             'title': 'Prayer',
             'title_en': 'Salah',
             'content': 'Verified lesson body',
+            'source': 'https://islamansiklopedisi.org.tr',
+            'verified_at': '2026-04-17T00:00:00Z',
           },
         ]);
       },
     );
+
+    test('sanitized education rows remain safe after a second pass', () {
+      final categories = resolveEducationCategories([
+        {
+          'id': 'faith',
+          'title': 'Faith Basics',
+          'source': 'https://islamansiklopedisi.org.tr',
+          'verified_at': '2026-04-17T00:00:00Z',
+        },
+      ]);
+      final topics = resolveEducationTopics([
+        {
+          'title': 'Prayer',
+          'content': 'Verified lesson body',
+          'source': 'https://islamansiklopedisi.org.tr',
+          'verified_at': '2026-04-17T00:00:00Z',
+        },
+      ]);
+
+      expect(resolveEducationCategories(categories), categories);
+      expect(resolveEducationTopics(topics), topics);
+    });
   });
 
   testWidgets('LibraryPage uses cloud dua data when provider resolves', (

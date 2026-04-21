@@ -16317,3 +16317,27 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi siradaki dongu: sessiz catch/error-state ve Supabase fallback davranislari taranacak; yetki gerektirmeyen dogrulanabilir P1/P2 riskler once kapatilacak.
+## 2026-04-22 TUR-382 - Education Cloud Sanitizers Made Idempotent
+
+### MASTER Karari
+- Risk: Library egitim akisi gercek provider yolunda dogrulanmis Supabase kategorilerini ve topic'lerini ikinci kez sanitize ederken tum satirlari dusuruyordu.
+- Kanit: `lib/core/providers/supabase_providers.dart` `educationCategoriesProvider` satirlarinda raw cloud rows `resolveEducationCategories(...)` ile sanitize ediliyor; `lib/features/library/library_page.dart` data branch'i ayni kategori listesini tekrar `resolveEducationCategories(...)` icinden geciriyor. Eski sanitizer ciktisi `source`/`verified_at` tasimadigi icin ikinci pass `_hasVerifiedCloudContentProvenance` kontrolunde tum satirlari eleyebiliyordu. Topic akisi icin ayni pattern `educationTopicsProvider` ve `_EducationView` tarafinda vardi.
+- Kullanici etkisi: Store checker egitim tablolari reachable olsa bile Islam egitimi bolumu "no results" gibi gorunebilir; bu cloud content akisini fiilen kirardi.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 cloud content visibility).
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/features/library/library_page_cloud_duas_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Egitim sanitizer'lari normalize edilmis `source` ve `verified_at` provenance alanlarini ciktida koruyacak sekilde guncellendi.
+- `_hasVerifiedCloudContentProvenance` tekil source/verified_at okuyucularina baglandi; hem `source/reference` hem `verified_at/verifiedAt` varyantlari normalize ediliyor.
+- Sanitizer ciktisinin ikinci sanitizer pass'inden gecince ayni kalmasini dogrulayan regression testi eklendi.
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\features\library\library_page_cloud_duas_test.dart --reporter compact` PASS, 17/17.
+- Provider regression: `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS, 8/8.
+
+### Risk Degisimi
+- Education cloud content self-filter risk: `16/25 -> 3/25`.
+- Kalan risk: Supabase production seed/apply yetkisi ve gercek verified egitim icerigi ayri store-readiness konusudur; bu tur runtime kodunun dogrulanmis satirlari yanlislikla dusurmesini kapatti.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan yeni dongude cloud-only UI error states ve release checker blokajlari taranacak.
