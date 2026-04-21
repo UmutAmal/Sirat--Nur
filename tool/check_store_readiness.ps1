@@ -144,11 +144,30 @@ function Assert-SupabaseTableMinimumCount {
       Add-Failure "Supabase public table has insufficient rows: $Description ($actualCount/$MinimumCount)."
     }
   } catch {
+    $errorDetail = $_.ErrorDetails.Message
+    if ([string]::IsNullOrWhiteSpace($errorDetail) -and $_.Exception.Response -and $_.Exception.Response.Content) {
+      try {
+        $errorDetail = $_.Exception.Response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+      } catch {
+        $errorDetail = ''
+      }
+    }
+    if (-not [string]::IsNullOrWhiteSpace($errorDetail)) {
+      $errorDetail = ($errorDetail -replace '\s+', ' ').Trim()
+    }
     $response = $_.Exception.Response
     if ($response -and $response.StatusCode) {
-      Add-Failure "Supabase public table is not reachable: $TableName returned HTTP $([int]$response.StatusCode)."
+      $message = "Supabase public table count check failed: $TableName returned HTTP $([int]$response.StatusCode)"
+      if (-not [string]::IsNullOrWhiteSpace($errorDetail)) {
+        $message = "${message}: $errorDetail"
+      }
+      Add-Failure $message
     } else {
-      Add-Failure "Supabase public table is not reachable: $TableName ($($_.Exception.Message))"
+      $message = "Supabase public table count check failed: $TableName ($($_.Exception.Message))"
+      if (-not [string]::IsNullOrWhiteSpace($errorDetail)) {
+        $message = "${message}: $errorDetail"
+      }
+      Add-Failure $message
     }
   }
 }

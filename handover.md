@@ -16459,3 +16459,31 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan live content runtime tarafinda eksik veri mesajlari ve diagnostics row kalitesi taranacak.
+## 2026-04-22 TUR-387 - Supabase Readiness Error Details Exposed
+
+### MASTER Karari
+- Risk: TUR-386 sonrasi row-count gate dogru calisti, fakat Supabase REST 400/404 cevaplarinda script sadece HTTP kodunu yazarsa operator hangi kolon veya tablonun eksik oldugunu goremez. Bu da real apply/repair sirasinda gereksiz tahmin ve gecikme yaratir.
+- Kanit: `tool/check_store_readiness.ps1 -SkipFlutterValidation` calismasinda once `daily_content returned HTTP 400` gibi yetersiz bilgi uretiyordu; manuel REST govdesi ayni hatanin `column daily_content.verified_at does not exist` oldugunu gosterdi.
+- Kullanici etkisi: Store hazirlik bloklari dogru yakalansa bile cozum icin gereken schema detayi kaybolabilir; devralan kisi ayni hatayi tekrar kazmak zorunda kalir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 release diagnostics/actionability).
+- Rollback plani: `tool/check_store_readiness.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `Assert-SupabaseTableMinimumCount(...)` catch blogu artik `ErrorDetails.Message` okur.
+- `ErrorDetails.Message` bos kalirsa `HttpResponseMessage.Content.ReadAsStringAsync().GetAwaiter().GetResult()` ile response body okunur.
+- Hata metni tek satira normalize edilir ve `Supabase public table count check failed` mesaji icine eklenir.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` error-detail body okuma ve yeni failure prefix guard'larini dogrular.
+
+### Dogrulama Sonucu
+- PowerShell parse: PASS.
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Store readiness smoke: `tool/check_store_readiness.ps1 -SkipFlutterValidation` expected FAIL, 12 blocker. Artik `daily_content.verified_at` ve `education_categories.source` eksik kolonlarini, ayrica `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` eksik tablolarini acikca yaziyor.
+
+### Risk Degisimi
+- Release diagnostics blind HTTP-code risk: `12/25 -> 3/25`.
+- Kalan risk: Supabase real schema/content apply halen yapilmamis; fake apply summary veya sahte dini seed uretilmedi.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan Supabase apply bundle ve runtime diagnostics arasindaki schema uyumu taranacak.

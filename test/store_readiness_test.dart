@@ -154,6 +154,9 @@ void main() {
       expect(script, contains("Prefer = 'count=exact'"));
       expect(script, contains('Content-Range'));
       expect(script, contains('Supabase public table has required rows'));
+      expect(script, contains('Supabase public table count check failed'));
+      expect(script, contains('ErrorDetails.Message'));
+      expect(script, contains('ReadAsStringAsync().GetAwaiter().GetResult()'));
       expect(script, contains('-UseBasicParsing -Uri \$tableUri'));
       expect(script, contains('\$_.Exception.Response'));
       expect(script, isNot(contains('-SkipHttpErrorCheck')));
