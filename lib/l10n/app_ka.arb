@@ -1,6 +1,7 @@
 {
   "@@locale": "ka",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "სინათლის ისლამური გზა",
   "home": "მთავარი",
   "quran": "ყურანი",
   "qibla": "ქიბლა",
@@ -23,6 +24,22 @@
   "asr": "ასრ",
   "maghrib": "მაღრიბი",
   "isha": "იშა",
+  "prayerNotificationTitle": "დროა {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ლოცვის დროა {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "მონაცემთა და შენახვა",
   "clearCache": "ქეშის გასუფთავება",
   "cacheClearedSuccess": "ქეში წარმატებით გაიწმინდა",
@@ -34,6 +51,7 @@
   "currentLocation": "მიმდინარე მდებარეობა (GPS)",
   "locationServiceDisabled": "მდებარეობის სერვისი გამორთულია.",
   "locationPermissionDenied": "მდებარეობის ნებართვა უარყოფილია.",
+  "locationDetectionFailed": "თქვენი მდებარეობის აღმოჩენა ვერ მოხერხდა. გთხოვთ, აირჩიოთ ქალაქი ხელით ან სცადოთ ხელახლა.",
   "citiesCount": "{count} ქალაქები",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "შედეგი ვერ მოიძებნა",
   "loading": "იტვირთება...",
   "error": "შეცდომა",
+  "appErrorOccurred": "მოხდა შეცდომა",
+  "appUnknownError": "უცნობი შეცდომა",
+  "quranLoadFailed": "ყურანის შინაარსი ვერ ჩაიტვირთა. გთხოვთ, სცადოთ ხელახლა.",
   "retry": "ხელახლა სცადეთ",
+  "refreshAction": "განაახლეთ",
   "cancel": "გაუქმება",
   "save": "შენახვა",
   "delete": "წაშლა",
@@ -57,17 +79,78 @@
   "yes": "დიახ",
   "no": "არა",
   "surah": "სურა",
+  "ayahLabel": "აია {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "ჯუზი",
   "page": "გვერდი",
   "reading": "კითხვა",
   "recitation": "რეციდიცია",
   "translation": "თარგმანი",
   "tafsir": "ტაფსირი",
+  "tafsirLoading": "ტაფსირის ჩატვირთვა...",
+  "tafsirSourceLabel": "ტაფსირის წყარო",
+  "tafsirNoSurahFound": "ამ სურისთვის ტაფსირი ვერ მოიძებნა.",
+  "tafsirNoAyahFound": "აია {ayah}-ისთვის ტაფსირი ვერ მოიძებნა.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ვერ ჩაიტვირთა.",
+  "tafsirNoTextForAyah": "ამ აიისთვის ტაფსირის ტექსტი არ არის.",
+  "tafsirDownloadingProgress": "ტაფსირის ჩამოტვირთვა {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "იტვირთება tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir წყარომ დააბრუნა HTTP {statusCode} შეცდომა.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "არჩეული tafsir წყარო არ დააბრუნა ჩანაწერები.",
+  "tafsirCacheUnavailable": "დადასტურებული tafsir ჯერ არ არის ხელმისაწვდომი ხაზგარეშე. დაათვალიერეთ წყაროდან მიღებული tafsir მონაცემთა ნაკრების სინქრონიზაცია.",
   "bookmarks": "სანიშნეები",
   "addBookmark": "დაამატეთ სანიშნე",
   "removeBookmark": "ამოიღეთ სანიშნე",
   "lastRead": "ბოლო წაკითხვა",
   "dailyZikr": "ყოველდღიური ზიკრი",
+  "duaMeaning1": "სხვები ლოცულობენ: „უფალო ჩვენო, მოგვეცი სიკეთე ამქვეყნადაც და ამქვეყნიურშიც და დაგვიფარე ცეცხლის ტანჯვისგან“.",
+  "duaMeaning2": "ღმერთი არც ერთ სულს არ იტვირთავს იმაზე მეტს, რისი ატანა შეუძლია: თითოეული იძენს სიკეთეს, რაც გააკეთა და იტანჯება თავის ცუდზე - „უფალო, ნუ დაგვიშავებ საქმეს, თუ დავივიწყებთ ან შეცდომებს დავუშვებთ. უფალო, ნუ დაგვტვირთავ ჩვენ, როგორც შენ დატვირთე ჩვენზე ადრე. უფალო, ნუ დაგვტვირთავ იმაზე მეტს, ვიდრე გვაქვს ძალა. შეგვიწყალე, შეგვიწყალე და შეგვიწყალე. შენ ხარ ჩვენი მფარველი, ამიტომ დაგვეხმარე ურწმუნოების წინააღმდეგ.",
+  "duaMeaning3": "\"უფალო ჩვენო, ნუ მისცე უფლება ჩვენს გულებს გადაუხვევს მას შემდეგ, რაც შენ გვიხელმძღვანელე. მოგვეცი შენი წყალობა: შენ ხარ მარად მომცემი.",
+  "duaMeaning4": "უფალო, მიეცი, რომ მე და ჩემმა შთამომავლობამ გავაგრძელოთ ლოცვა. უფალო, მიიღე ჩემი თხოვნა.",
+  "duaMeaning5": "და ჩამოწიე ფრთა მათ მიმართ თავმდაბლობით სიკეთით და უთხარი: „უფალო, შემიწყალე ისინი, როგორც ისინი ზრუნავდნენ ჩემზე, როცა პატარა ვიყავი“.",
+  "duaMeaning6": "ამაღლებული იყოს ღმერთი, ვინც ჭეშმარიტად აკონტროლებს. [წინასწარმეტყველო], ნუ იჩქარებ წაკითხვას გამოცხადების დასრულებამდე, არამედ უთხარი: „უფალო, გამაძლიერე ცოდნაში!“",
+  "duaMeaning7": "უთხარი [წინასწარმეტყველს]: „უფალო, აპატიე და შეიწყალე: შენ ყველაზე მოწყალე ხარ“.",
+  "duaMeaning8": "ისინი, ვინც ლოცულობენ: „უფალო ჩვენო, მოგვცეს სიხარული ჩვენს მეუღლეებსა და შთამომავლობაში. გაგვაჩინე კარგი მაგალითი მათთვის, ვინც იცის შენი“.",
   "morningZikr": "დილის ზიქრი",
   "eveningZikr": "საღამოს ზიქრი",
   "tasbih": "ტასბიჰ",
@@ -88,6 +171,26 @@
   "fasting": "მარხვა",
   "quranReading": "ყურანის კითხვა",
   "prayers": "ლოცვები",
+  "prayerRemainingHoursMinutes": "{hours}სთ {minutes}წთ",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}მ",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "დჰიქრის გრაფი",
   "weeklyProgress": "ყოველკვირეული პროგრესი",
   "monthlyProgress": "ყოველთვიური პროგრესი",
@@ -101,6 +204,14 @@
   "ramadan": "რამადანი",
   "eidAlFitr": "ეიდ ალ-ფიტრ",
   "eidAlAdha": "ეიდ ალ-ადჰა",
+  "islamicNewYear": "ისლამური ახალი წელი",
+  "mawlidAnNabi": "მავლიდ ან-ნაბი",
+  "specialDayDateRamadanStart": "1 რამადანი",
+  "specialDayDateLaylatAlQadr": "27 რამადანი",
+  "specialDayDateEidAlFitr": "1 შავვალი",
+  "specialDayDateEidAlAdha": "10 დულ ჰიჯა",
+  "specialDayDateIslamicNewYear": "1 მუჰარამი",
+  "specialDayDateMawlidAnNabi": "12 რაბი ალ-ავვალი",
   "laylatAlQadr": "ლეილათ ალ-კადრი",
   "qiblaDirection": "Qibla მიმართულება",
   "compass": "კომპასი",
@@ -108,6 +219,19 @@
   "north": "ჩრდილოეთი",
   "qiblaFound": "ქიბლა ნაპოვნია!",
   "turnDevice": "მოაბრუნეთ თქვენი მოწყობილობა ქიბლასკენ",
+  "qiblaCompassErrorDetails": "კომპასის შეცდომა: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე.",
+  "qiblaLocationRequiredTitle": "მდებარეობა საჭიროა Qibla-სთვის",
+  "qiblaLocationRequiredBody": "დააყენეთ თქვენი რეალური მდებარეობა Qibla კომპასის გამოყენებამდე, რათა მიმართულება ზუსტად გამოითვალოს.",
+  "adhanNotificationChannelName": "ადანის შეტყობინებები",
+  "adhanNotificationChannelDescription": "ლოცვის დრო აფრთხილებს ადანის ხმით.",
   "notifications": "შეტყობინებები",
   "prayerNotifications": "ლოცვის შეტყობინებები",
   "enableNotifications": "ჩართეთ შეტყობინებები",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "სამიზნეების რაოდენობა: {target}",
   "tapToCount": "შეეხეთ დასათვლელად",
+  "zikrCompletedMashAllah": "დასრულდა! მაშალაჰ",
+  "zikrMeaningSubhanAllah": "ალაჰი მაღლა დგას ყოველგვარ არასრულყოფილებაზე.",
+  "zikrMeaningAlhamdulillah": "ყველა დიდება ალაჰს ეკუთვნის.",
+  "zikrMeaningAllahuAkbar": "ალაჰი უდიდესია.",
+  "zikrMeaningLaIlahaIllallah": "არ არსებობს ღმერთი გარდა ალაჰისა.",
+  "zikrMeaningAstaghfirullah": "მე ვთხოვ ალაჰის პატიებას.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "არ არსებობს ძალა და ძალა, გარდა ალლაჰის მეშვეობით.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "აუდიო ხმა",
+  "audioVoiceMisharyAlafasy": "მამაკაცი (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "მამაკაცი (Abdul Basit)",
+  "audioVoiceSudais": "მამაკაცი (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "ქიბლას კალიბრაცია",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "საჭიროა კალიბრაცია. დაატრიალეთ მოწყობილობა ფიგურაში-8.",
   "dailyVerse": "ყოველდღიური ლექსი",
+  "dailyVerseUnavailableTitle": "ყოველდღიური ლექსი მიუწვდომელია",
+  "dailyVerseUnavailableBody": "დადასტურებული ყოველდღიური ლექსის შინაარსი ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. დაუკავშირდით ღრუბლოვან წყაროს ან დაარეგულირეთ დადასტურებული ქეში.",
   "todaysIbadah": "დღევანდელი იბადა",
   "quickAccess": "სწრაფი წვდომა",
   "assistant": "ასისტენტი",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "დადასტურებული დუა ჯერ არ არის ხელმისაწვდომი",
+  "duaUnavailableBody": "დადასტურებული ყოველდღიური დუაები ჯერ არ არის სინქრონიზებული ამ მოწყობილობასთან. დაუკავშირდით ღრუბლოვან წყაროს, რომ ჩატვირთოთ მოპოვებული დუები დაუდასტურებელი სარეზერვო ნაცვლად.",
+  "duaCategoryQuranic": "ყურანის დუა",
+  "duaCategoryMorningEvening": "დილა და საღამო",
+  "duaCategoryTasbih": "ტასბიჰ",
+  "duaCategoryProtection": "დაცვა",
+  "duaCategoryBeginning": "საწყისები",
+  "duaCategorySleep": "დაიძინე",
+  "duaCategoryFoodDrink": "საკვები და სასმელი",
+  "duaCategoryForgiveness": "პატიება",
+  "duaCategoryHome": "მთავარი",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "ისლამური განათლება",
   "sukunAudioTitle": "სუკუნის ხმები",
   "hadithCollections": "ჰადიდების კრებულები",
+  "hadithSourcePending": "დადასტურებული წყარო ელოდება",
+  "hadithUnavailableTitle": "დადასტურებული ჰადისის კრებულები ჯერ არ არის ხელმისაწვდომი",
+  "hadithUnavailableBody": "ეს კონსტრუქცია ჯერ კიდევ დამოკიდებულია დაუმოწმებელ გარე ჰადისის არხზე. ჰადისების დათვალიერება გათიშული რჩება მანამ, სანამ არ მოხდება მონაცემთა ნაკრების სინქრონიზაცია.",
   "paywallUnlockAll": "გახსენით ყველა ფუნქცია თქვენი სულიერი მოგზაურობისთვის",
+  "premiumProductUnavailable": "პრემიუმ პროდუქტი ამჟამად არ არის ხელმისაწვდომი. გთხოვთ, სცადოთ მოგვიანებით.",
+  "premiumPurchaseFailed": "შესყიდვა ვერ დასრულდა. გთხოვთ, სცადოთ ხელახლა.",
   "paywallFeature1Title": "ნერვული ასისტენტი პლუსი",
   "paywallFeature1Desc": "ულიმიტო AI-ზე მომუშავე კითხვა-პასუხი",
   "paywallFeature2Title": "შეუზღუდავი ხაზგარეშე",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "ჩამოტვირთვა დასრულდა {reciter}-ისთვის {failed} წარუმატებელი სურებით (ჩამოტვირთულია {downloaded}/{total}).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "წაშლილია ოფლაინ ფაილები {reciter}-ისთვის.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "ქსელის შეცდომა. გთხოვთ, სცადოთ ხელახლა.",
+  "placesLocationRequiredTitle": "საჭიროა ადგილმდებარეობა",
+  "placesLocationRequiredBody": "ჯერ დააყენეთ მდებარეობა, რათა ზუსტად მოძებნოთ ახლომდებარე მეჩეთები, ჰალალის საკვები და ისლამური სკოლები.",
+  "placesMapTilesUnavailableTitle": "რუკის ფილები მიუწვდომელია",
+  "placesMapTilesUnavailableBody": "დადასტურებული რუკის ფილა წყარო ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ადგილები კვლავ შეიძლება ჩაიტვირთოს თქვენი შენახული მდებარეობიდან.",
+  "placesDataSourceUnavailableTitle": "ადგილების მონაცემები მიუწვდომელია",
+  "placesDataSourceUnavailableBody": "დადასტურებული ადგილების მონაცემების ბოლო წერტილი ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ძიების ჩართვამდე დააყენეთ PLACES_OVERPASS_API_URL დამტკიცებულ პროქსი ან პროვაიდერი.",
   "unknownPlaceName": "უცნობი სახელი",
   "islamicPlaceFallback": "ისლამური ადგილი",
-  "prayerNotificationTitle": "დროა {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "ლოცვის დროა {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "დადასტურებული დუა ჯერ არ არის ხელმისაწვდომი",
-  "duaUnavailableBody": "დადასტურებული ყოველდღიური დუაები ჯერ არ არის სინქრონიზებული ამ მოწყობილობასთან. დაუკავშირდით ღრუბლოვან წყაროს, რომ ჩატვირთოთ მოპოვებული დუები დაუდასტურებელი სარეზერვო ნაცვლად.",
-  "duaCategoryQuranic": "ყურანის დუა",
-  "duaCategoryMorningEvening": "დილა და საღამო",
-  "duaCategoryTasbih": "ტასბიჰ",
-  "duaCategoryProtection": "დაცვა",
-  "duaCategoryBeginning": "საწყისები",
-  "duaCategorySleep": "დაიძინე",
-  "duaCategoryFoodDrink": "საკვები და სასმელი",
-  "duaCategoryForgiveness": "პატიება",
-  "duaCategoryHome": "მთავარი",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "დადასტურებული წყარო ელოდება",
-  "hadithUnavailableTitle": "დადასტურებული ჰადისის კრებულები ჯერ არ არის ხელმისაწვდომი",
-  "hadithUnavailableBody": "ეს კონსტრუქცია ჯერ კიდევ დამოკიდებულია დაუმოწმებელ გარე ჰადისის არხზე. ჰადისების დათვალიერება გათიშული რჩება მანამ, სანამ არ მოხდება მონაცემთა ნაკრების სინქრონიზაცია.",
-  "appErrorOccurred": "მოხდა შეცდომა",
-  "appUnknownError": "უცნობი შეცდომა",
-  "qiblaCompassErrorDetails": "კომპასის შეცდომა: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "დასრულდა! მაშალაჰ",
-  "zikrMeaningSubhanAllah": "ალაჰი მაღლა დგას ყოველგვარ არასრულყოფილებაზე.",
-  "zikrMeaningAlhamdulillah": "ყველა დიდება ალაჰს ეკუთვნის.",
-  "zikrMeaningAllahuAkbar": "ალაჰი უდიდესია.",
-  "zikrMeaningLaIlahaIllallah": "არ არსებობს ღმერთი გარდა ალაჰისა.",
-  "zikrMeaningAstaghfirullah": "მე ვთხოვ ალაჰის პატიებას.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "არ არსებობს ძალა და ძალა, გარდა ალლაჰის მეშვეობით.",
   "asmaMeaning1": "კეთილმსახური",
   "asmaMeaning2": "მოწყალე",
   "asmaMeaning3": "მეფე / მარადიული უფალი",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "მარადიული",
   "asmaMeaning97": "მემკვიდრე",
   "asmaMeaning98": "ყველაზე მართალი მეგზური",
-  "asmaMeaning99": "პაციენტი ერთი",
-  "duaMeaning1": "სხვები ლოცულობენ: „უფალო ჩვენო, მოგვეცი სიკეთე ამქვეყნადაც და ამქვეყნიურშიც და დაგვიფარე ცეცხლის ტანჯვისგან“.",
-  "duaMeaning2": "ღმერთი არც ერთ სულს არ იტვირთავს იმაზე მეტს, რისი ატანა შეუძლია: თითოეული იძენს სიკეთეს, რაც გააკეთა და იტანჯება თავის ცუდზე - „უფალო, ნუ დაგვიშავებ საქმეს, თუ დავივიწყებთ ან შეცდომებს დავუშვებთ. უფალო, ნუ დაგვტვირთავ ჩვენ, როგორც შენ დატვირთე ჩვენზე ადრე. უფალო, ნუ დაგვტვირთავ იმაზე მეტს, ვიდრე გვაქვს ძალა. შეგვიწყალე, შეგვიწყალე და შეგვიწყალე. შენ ხარ ჩვენი მფარველი, ამიტომ დაგვეხმარე ურწმუნოების წინააღმდეგ.",
-  "duaMeaning3": "\"უფალო ჩვენო, ნუ მისცე უფლება ჩვენს გულებს გადაუხვევს მას შემდეგ, რაც შენ გვიხელმძღვანელე. მოგვეცი შენი წყალობა: შენ ხარ მარად მომცემი.",
-  "duaMeaning4": "უფალო, მიეცი, რომ მე და ჩემმა შთამომავლობამ გავაგრძელოთ ლოცვა. უფალო, მიიღე ჩემი თხოვნა.",
-  "duaMeaning5": "და ჩამოწიე ფრთა მათ მიმართ თავმდაბლობით სიკეთით და უთხარი: „უფალო, შემიწყალე ისინი, როგორც ისინი ზრუნავდნენ ჩემზე, როცა პატარა ვიყავი“.",
-  "duaMeaning6": "ამაღლებული იყოს ღმერთი, ვინც ჭეშმარიტად აკონტროლებს. [წინასწარმეტყველო], ნუ იჩქარებ წაკითხვას გამოცხადების დასრულებამდე, არამედ უთხარი: „უფალო, გამაძლიერე ცოდნაში!“",
-  "duaMeaning7": "უთხარი [წინასწარმეტყველს]: „უფალო, აპატიე და შეიწყალე: შენ ყველაზე მოწყალე ხარ“.",
-  "duaMeaning8": "ისინი, ვინც ლოცულობენ: „უფალო ჩვენო, მოგვცეს სიხარული ჩვენს მეუღლეებსა და შთამომავლობაში. გაგვაჩინე კარგი მაგალითი მათთვის, ვინც იცის შენი“.",
-  "islamicNewYear": "ისლამური ახალი წელი",
-  "mawlidAnNabi": "მავლიდ ან-ნაბი",
-  "specialDayDateRamadanStart": "1 რამადანი",
-  "specialDayDateLaylatAlQadr": "27 რამადანი",
-  "specialDayDateEidAlFitr": "1 შავვალი",
-  "specialDayDateEidAlAdha": "10 დულ ჰიჯა",
-  "specialDayDateIslamicNewYear": "1 მუჰარამი",
-  "specialDayDateMawlidAnNabi": "12 რაბი ალ-ავვალი",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "განაახლეთ",
-  "ayahLabel": "აია {ayah}",
-  "tafsirLoading": "ტაფსირის ჩატვირთვა...",
-  "tafsirSourceLabel": "ტაფსირის წყარო",
-  "tafsirNoSurahFound": "ამ სურისთვის ტაფსირი ვერ მოიძებნა.",
-  "tafsirNoAyahFound": "აია {ayah}-ისთვის ტაფსირი ვერ მოიძებნა.",
-  "tafsirLoadFailed": "Tafsir ვერ ჩაიტვირთა.",
-  "tafsirNoTextForAyah": "ამ აიისთვის ტაფსირის ტექსტი არ არის.",
-  "tafsirDownloadingProgress": "ტაფსირის ჩამოტვირთვა {current}/{total}",
-  "tafsirLoadingProgress": "იტვირთება tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir წყარომ დააბრუნა HTTP {statusCode} შეცდომა.",
-  "tafsirNoEntriesReturned": "არჩეული tafsir წყარო არ დააბრუნა ჩანაწერები.",
-  "premiumProductUnavailable": "პრემიუმ პროდუქტი ამჟამად არ არის ხელმისაწვდომი. გთხოვთ, სცადოთ მოგვიანებით.",
-  "premiumPurchaseFailed": "შესყიდვა ვერ დასრულდა. გთხოვთ, სცადოთ ხელახლა.",
-  "prayerRemainingHoursMinutes": "{hours}სთ {minutes}წთ",
-  "prayerRemainingMinutes": "{minutes}მ",
-  "splashTagline": "სინათლის ისლამური გზა",
-  "downloadPartiallyFinishedForReciter": "ჩამოტვირთვა დასრულდა {reciter}-ისთვის {failed} წარუმატებელი სურებით (ჩამოტვირთულია {downloaded}/{total}).",
-  "placesLocationRequiredTitle": "საჭიროა ადგილმდებარეობა",
-  "placesLocationRequiredBody": "ჯერ დააყენეთ მდებარეობა, რათა ზუსტად მოძებნოთ ახლომდებარე მეჩეთები, ჰალალის საკვები და ისლამური სკოლები.",
-  "placesMapTilesUnavailableTitle": "რუკის ფილები მიუწვდომელია",
-  "placesMapTilesUnavailableBody": "დადასტურებული რუკის ფილა წყარო ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ადგილები კვლავ შეიძლება ჩაიტვირთოს თქვენი შენახული მდებარეობიდან.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "მამაკაცი (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "მამაკაცი (Abdul Basit)",
-  "audioVoiceSudais": "მამაკაცი (Sudais)",
-  "qiblaSensorUnavailable": "კომპასის სენსორი მიუწვდომელია ამ მოწყობილობაზე.",
-  "adhanNotificationChannelName": "ადანის შეტყობინებები",
-  "adhanNotificationChannelDescription": "ლოცვის დრო აფრთხილებს ადანის ხმით.",
-  "quranLoadFailed": "ყურანის შინაარსი ვერ ჩაიტვირთა. გთხოვთ, სცადოთ ხელახლა.",
-  "locationDetectionFailed": "თქვენი მდებარეობის აღმოჩენა ვერ მოხერხდა. გთხოვთ, აირჩიოთ ქალაქი ხელით ან სცადოთ ხელახლა.",
-  "qiblaLocationRequiredTitle": "მდებარეობა საჭიროა Qibla-სთვის",
-  "qiblaLocationRequiredBody": "დააყენეთ თქვენი რეალური მდებარეობა Qibla კომპასის გამოყენებამდე, რათა მიმართულება ზუსტად გამოითვალოს.",
-  "placesDataSourceUnavailableTitle": "ადგილების მონაცემები მიუწვდომელია",
-  "placesDataSourceUnavailableBody": "დადასტურებული ადგილების მონაცემების ბოლო წერტილი ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. ახლომდებარე ძიების ჩართვამდე დააყენეთ PLACES_OVERPASS_API_URL დამტკიცებულ პროქსი ან პროვაიდერი.",
-  "tafsirCacheUnavailable": "დადასტურებული tafsir ჯერ არ არის ხელმისაწვდომი ხაზგარეშე. დაათვალიერეთ წყაროდან მიღებული tafsir მონაცემთა ნაკრების სინქრონიზაცია."
+  "asmaMeaning99": "პაციენტი ერთი"
 }

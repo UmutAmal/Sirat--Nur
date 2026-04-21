@@ -960,6 +960,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get dailyVerse => 'နေ့စဉ်ကျမ်းပိုဒ်';
 
   @override
+  String get dailyVerseUnavailableTitle => 'နေ့စဥ်စာပိုဒ်ကို မရနိုင်ပါ။';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော နေ့စဉ်ကျမ်းပိုဒ်အကြောင်းအရာကို မသတ်မှတ်ရသေးပါ။ cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ သို့မဟုတ် ရှာဖွေခြင်းမပြုမီ အတည်ပြုထားသော ကက်ရှ်တစ်ခုကို စင့်ခ်လုပ်ပါ။';
+
+  @override
   String get todaysIbadah => 'ယနေ့ အီဗဒ';
 
   @override

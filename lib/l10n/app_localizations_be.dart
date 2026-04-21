@@ -956,6 +956,13 @@ class AppLocalizationsBe extends AppLocalizations {
   String get dailyVerse => 'Штодзённы верш';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Штодзённы верш недаступны';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Праверанае штодзённае змесціва вершаў яшчэ не наладжана для гэтай зборкі. Перад праглядам падключыцеся да воблачнай крыніцы або сінхранізуйце правераны кэш.';
+
+  @override
   String get todaysIbadah => 'Сённяшні ібадах';
 
   @override

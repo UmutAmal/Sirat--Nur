@@ -954,6 +954,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get dailyVerse => 'Napi vers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Napi vers nem érhető el';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Az ellenőrzött napi verstartalom még nincs konfigurálva ehhez a buildhez. Böngészés előtt csatlakozzon a felhőforráshoz, vagy szinkronizáljon egy ellenőrzött gyorsítótárat.';
+
+  @override
   String get todaysIbadah => 'A mai Ibadah';
 
   @override

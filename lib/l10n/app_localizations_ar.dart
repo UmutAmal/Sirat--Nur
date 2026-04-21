@@ -948,6 +948,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dailyVerse => 'الآية اليومية';
 
   @override
+  String get dailyVerseUnavailableTitle => 'الآية اليومية غير متوفرة';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'لم يتم تكوين محتوى الآية اليومية التي تم التحقق منها لهذا الإصدار بعد. اتصل بالمصدر السحابي أو قم بمزامنة ذاكرة التخزين المؤقت التي تم التحقق منها قبل التصفح.';
+
+  @override
   String get todaysIbadah => 'عبادة اليوم';
 
   @override

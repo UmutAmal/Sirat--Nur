@@ -1,6 +1,7 @@
 {
   "@@locale": "be",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Ісламскі шлях святла",
   "home": "дадому",
   "quran": "Каран",
   "qibla": "Кібла",
@@ -23,6 +24,22 @@
   "asr": "Аср",
   "maghrib": "Магрыб",
   "isha": "Іша",
+  "prayerNotificationTitle": "Час для {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Прыйшоў час маліцца {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Даныя і захоўванне",
   "clearCache": "Ачысціць кэш",
   "cacheClearedSuccess": "Кэш паспяхова ачышчаны",
@@ -34,6 +51,7 @@
   "currentLocation": "Бягучае месцазнаходжанне (GPS)",
   "locationServiceDisabled": "Служба вызначэння месцазнаходжання адключана.",
   "locationPermissionDenied": "У дазволе на вызначэнне месцазнаходжання адмоўлена.",
+  "locationDetectionFailed": "Не ўдалося вызначыць ваша месцазнаходжанне. Выберыце горад уручную або паўтарыце спробу.",
   "citiesCount": "{count} гарадоў",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Вынікаў не знойдзена",
   "loading": "Загрузка...",
   "error": "Памылка",
+  "appErrorOccurred": "Адбылася памылка",
+  "appUnknownError": "Невядомая памылка",
+  "quranLoadFailed": "Не ўдалося загрузіць змест Карана. Калі ласка, паспрабуйце яшчэ раз.",
   "retry": "Паўтарыць",
+  "refreshAction": "Абнавіць",
   "cancel": "Адмяніць",
   "save": "Захаваць",
   "delete": "Выдаліць",
@@ -57,17 +79,78 @@
   "yes": "так",
   "no": "няма",
   "surah": "Сура",
+  "ayahLabel": "Айя {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "жуз",
   "page": "старонка",
   "reading": "Чытанне",
   "recitation": "Дэкламацыя",
   "translation": "Пераклад",
   "tafsir": "Тафсір",
+  "tafsirLoading": "Загрузка тафсіра...",
+  "tafsirSourceLabel": "Крыніца тафсір",
+  "tafsirNoSurahFound": "Для гэтай суры тафсір не знойдзены.",
+  "tafsirNoAyahFound": "Не знойдзены тафсір для аята {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Не ўдалося загрузіць Tafsir.",
+  "tafsirNoTextForAyah": "Няма тэксту тафсіра для гэтага аята.",
+  "tafsirDownloadingProgress": "Спампоўка тафсіра {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Загрузка тафсіра {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Крыніца Tafsir вярнула памылку HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Выбраная крыніца тафсіра не дала запісаў.",
+  "tafsirCacheUnavailable": "Правераны тафсір пакуль недаступны ў аўтаномным рэжыме. Перад праглядам сінхранізуйце атрыманы набор даных тафсір.",
   "bookmarks": "Закладкі",
   "addBookmark": "Дадаць закладку",
   "removeBookmark": "Выдаліць закладку",
   "lastRead": "Апошняе чытанне",
   "dailyZikr": "Штодзённы зікр",
+  "duaMeaning1": "іншыя моляцца: «Госпадзе наш, дай нам дабра ў гэтым свеце і ў будучыні, і захавай нас ад пакут агню».",
+  "duaMeaning2": "Бог не абцяжарвае ніводную душу большым цяжарам, чым яна можа вынесці: кожная набывае тое, што зрабіла добрае, і церпіць ад дрэннага: «Пане, не дай нам адказнасці, калі мы забываемся або робім памылкі». Пане, не абцяжарвай нас, як Ты абцяжарваў тых, хто быў перад намі. Госпадзе, не абцяжарвай нас большым цяжарам, чым маем сілы. Прабач нас, прабач нас і памілуй нас. Ты наш абаронца, таму дапамажы нам супраць няверуючых».",
+  "duaMeaning3": "«Наш Пане, не дазваляй нашым сэрцам адхіляцца пасля таго, як Ты вядзеш нас. Дай нам Тваю міласэрнасць: Ты Вечна Даючы.",
+  "duaMeaning4": "Госпадзе, дай, каб я і нашчадкі мае працягвалі малітву. Пане наш, прымі маю просьбу.",
+  "duaMeaning5": "і апусці крыло сваё ў пакоры да іх у дабрыні і скажы: \"Госпадзе, змілуйся над імі, як яны клапаціліся пра мяне, калі я быў малы\".",
+  "duaMeaning6": "праслаўлены Бог, той, хто сапраўды кіруе. [Прарок], не спяшайцеся чытаць, перш чым адкрыцьцё цалкам завершана, але скажы: \"Госпадзе, павяліч мяне ў ведах!\"",
+  "duaMeaning7": "Скажы [Прарок]: «Госпадзе, прабач і памілуй: Ты міласэрнейшы з усіх».",
+  "duaMeaning8": "тых, хто моліцца: «Пане наш, дай нам радасць у нашых сужэнцах і нашчадках». Зрабі нас добрым прыкладам для тых, хто ведае пра Цябе».",
   "morningZikr": "Ранішні зікр",
   "eveningZikr": "Вячэрні зікр",
   "tasbih": "тасбіх",
@@ -88,6 +171,26 @@
   "fasting": "Галаданне",
   "quranReading": "Чытанне Карана",
   "prayers": "Малітвы",
+  "prayerRemainingHoursMinutes": "{hours}г {minutes}хв",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}м",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Граф Зікр",
   "weeklyProgress": "Штотыднёвы прагрэс",
   "monthlyProgress": "Штомесячны прагрэс",
@@ -101,6 +204,14 @@
   "ramadan": "Рамадан",
   "eidAlFitr": "Ід аль-Фітр",
   "eidAlAdha": "Ід аль-Адха",
+  "islamicNewYear": "Ісламскі Новы год",
+  "mawlidAnNabi": "Маўлід ан-Набі",
+  "specialDayDateRamadanStart": "1 Рамадан",
+  "specialDayDateLaylatAlQadr": "27 Рамадан",
+  "specialDayDateEidAlFitr": "1 Шаўваль",
+  "specialDayDateEidAlAdha": "10 зуль хіджа",
+  "specialDayDateIslamicNewYear": "1 Мухаррам",
+  "specialDayDateMawlidAnNabi": "12 Рабі аль-Авваль",
   "laylatAlQadr": "Лейлат Аль-Кадр",
   "qiblaDirection": "Напрамак Кіблы",
   "compass": "компас",
@@ -108,6 +219,19 @@
   "north": "Поўнач",
   "qiblaFound": "Кібла знойдзена!",
   "turnDevice": "Павярніце прыладу тварам да Кіблы",
+  "qiblaCompassErrorDetails": "Памылка компаса: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Датчык компаса недаступны на гэтай прыладзе.",
+  "qiblaLocationRequiredTitle": "Для Qibla патрабуецца месцазнаходжанне",
+  "qiblaLocationRequiredBody": "Усталюйце сваё фактычнае месцазнаходжанне перад выкарыстаннем компаса Qibla, каб можна было дакладна вылічыць кірунак.",
+  "adhanNotificationChannelName": "Апавяшчэнні аб азане",
+  "adhanNotificationChannelDescription": "Абвесткі пра час малітвы з гукам азана.",
   "notifications": "Апавяшчэнні",
   "prayerNotifications": "Малітоўныя апавяшчэнні",
   "enableNotifications": "Уключыць апавяшчэнні",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Мэтавая колькасць: {target}",
   "tapToCount": "Націсніце, каб палічыць",
+  "zikrCompletedMashAllah": "Завершана! Машаллах",
+  "zikrMeaningSubhanAllah": "Алах значна вышэй за ўсякую недасканаласць.",
+  "zikrMeaningAlhamdulillah": "Уся хвала належыць Алаху.",
+  "zikrMeaningAllahuAkbar": "Алах найвялікшы.",
+  "zikrMeaningLaIlahaIllallah": "Няма бога, акрамя Алаха.",
+  "zikrMeaningAstaghfirullah": "Я шукаю прабачэння ў Алаха.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Няма ўлады і сілы, акрамя як праз Алаха.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Аўдыё голас",
+  "audioVoiceMisharyAlafasy": "Мужчына (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Мужчына (Abdul Basit)",
+  "audioVoiceSudais": "Мужчына (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Каліброўка Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Патрабуецца каліброўка. Павярніце прыладу на малюнку-8.",
   "dailyVerse": "Штодзённы верш",
+  "dailyVerseUnavailableTitle": "Штодзённы верш недаступны",
+  "dailyVerseUnavailableBody": "Праверанае штодзённае змесціва вершаў яшчэ не наладжана для гэтай зборкі. Перад праглядам падключыцеся да воблачнай крыніцы або сінхранізуйце правераны кэш.",
   "todaysIbadah": "Сённяшні ібадах",
   "quickAccess": "Хуткі доступ",
   "assistant": "Памочнік",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Правераныя дуа пакуль недаступныя",
+  "duaUnavailableBody": "Правераныя штодзённыя дуа яшчэ не сінхранізаваны з гэтай прыладай. Падключыцеся да воблачнай крыніцы, каб загрузіць дуа з крыніцы замест неправеранага запаснога варыянту.",
+  "duaCategoryQuranic": "Каранічная дуа",
+  "duaCategoryMorningEvening": "Раніцай і вечарам",
+  "duaCategoryTasbih": "тасбіх",
+  "duaCategoryProtection": "Ахова",
+  "duaCategoryBeginning": "Пачаткі",
+  "duaCategorySleep": "спаць",
+  "duaCategoryFoodDrink": "Ежа і напоі",
+  "duaCategoryForgiveness": "Дараванне",
+  "duaCategoryHome": "дадому",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Ісламская адукацыя",
   "sukunAudioTitle": "Гукавыя пейзажы Sukun",
   "hadithCollections": "Зборнікі хадысаў",
+  "hadithSourcePending": "Чакаецца пацверджаная крыніца",
+  "hadithUnavailableTitle": "Правераныя зборнікі хадзісаў пакуль недаступныя",
+  "hadithUnavailableBody": "Гэтая зборка па-ранейшаму залежыць ад неправеранай знешняй стужкі хадысаў. Прагляд хадысаў застаецца адключаным, пакуль не будзе сінхранізаваны зыходны набор даных.",
   "paywallUnlockAll": "Разблакіруйце ўсе функцыі для вашага духоўнага падарожжа",
+  "premiumProductUnavailable": "Прэміяльны прадукт зараз недаступны. Паўтарыце спробу пазней.",
+  "premiumPurchaseFailed": "Купля не можа быць завершана. Калі ласка, паспрабуйце яшчэ раз.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Неабмежаваная колькасць пытанняў і адказаў на базе AI",
   "paywallFeature2Title": "Неабмежаваны аўтаномны рэжым",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Спампоўка завершана для {reciter} з {failed} няўдалымі сурамі ({downloaded}/{total} спампавана).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Выдалены пазасеткавыя файлы для {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Памылка сеткі. Калі ласка, паспрабуйце яшчэ раз.",
+  "placesLocationRequiredTitle": "Патрабуецца месцазнаходжанне",
+  "placesLocationRequiredBody": "Спачатку ўсталюйце месцазнаходжанне, каб можна было дакладна шукаць бліжэйшыя мячэці, халяльную ежу і ісламскія школы.",
+  "placesMapTilesUnavailableTitle": "Пліткі карты недаступныя",
+  "placesMapTilesUnavailableBody": "Правераная крыніца пліткі карты яшчэ не настроена для гэтай зборкі. Месцы паблізу могуць загружацца з вашага захаванага месцазнаходжання.",
+  "placesDataSourceUnavailableTitle": "Даныя аб месцах недаступныя",
+  "placesDataSourceUnavailableBody": "Правераная канчатковая кропка даных аб месцах яшчэ не настроена для гэтай зборкі. Усталюйце PLACES_OVERPASS_API_URL на зацверджаны проксі або пастаўшчыка, перш чым уключыць пошук паблізу.",
   "unknownPlaceName": "Невядомае імя",
   "islamicPlaceFallback": "Ісламскае месца",
-  "prayerNotificationTitle": "Час для {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Прыйшоў час маліцца {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Правераныя дуа пакуль недаступныя",
-  "duaUnavailableBody": "Правераныя штодзённыя дуа яшчэ не сінхранізаваны з гэтай прыладай. Падключыцеся да воблачнай крыніцы, каб загрузіць дуа з крыніцы замест неправеранага запаснога варыянту.",
-  "duaCategoryQuranic": "Каранічная дуа",
-  "duaCategoryMorningEvening": "Раніцай і вечарам",
-  "duaCategoryTasbih": "тасбіх",
-  "duaCategoryProtection": "Ахова",
-  "duaCategoryBeginning": "Пачаткі",
-  "duaCategorySleep": "спаць",
-  "duaCategoryFoodDrink": "Ежа і напоі",
-  "duaCategoryForgiveness": "Дараванне",
-  "duaCategoryHome": "дадому",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Чакаецца пацверджаная крыніца",
-  "hadithUnavailableTitle": "Правераныя зборнікі хадзісаў пакуль недаступныя",
-  "hadithUnavailableBody": "Гэтая зборка па-ранейшаму залежыць ад неправеранай знешняй стужкі хадысаў. Прагляд хадысаў застаецца адключаным, пакуль не будзе сінхранізаваны зыходны набор даных.",
-  "appErrorOccurred": "Адбылася памылка",
-  "appUnknownError": "Невядомая памылка",
-  "qiblaCompassErrorDetails": "Памылка компаса: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Завершана! Машаллах",
-  "zikrMeaningSubhanAllah": "Алах значна вышэй за ўсякую недасканаласць.",
-  "zikrMeaningAlhamdulillah": "Уся хвала належыць Алаху.",
-  "zikrMeaningAllahuAkbar": "Алах найвялікшы.",
-  "zikrMeaningLaIlahaIllallah": "Няма бога, акрамя Алаха.",
-  "zikrMeaningAstaghfirullah": "Я шукаю прабачэння ў Алаха.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Няма ўлады і сілы, акрамя як праз Алаха.",
   "asmaMeaning1": "The Beneficent",
   "asmaMeaning2": "Міласэрны",
   "asmaMeaning3": "Кароль / Вечны Гасподзь",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Вечны",
   "asmaMeaning97": "Спадчыннік",
   "asmaMeaning98": "The Most Righteous Guide",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "іншыя моляцца: «Госпадзе наш, дай нам дабра ў гэтым свеце і ў будучыні, і захавай нас ад пакут агню».",
-  "duaMeaning2": "Бог не абцяжарвае ніводную душу большым цяжарам, чым яна можа вынесці: кожная набывае тое, што зрабіла добрае, і церпіць ад дрэннага: «Пане, не дай нам адказнасці, калі мы забываемся або робім памылкі». Пане, не абцяжарвай нас, як Ты абцяжарваў тых, хто быў перад намі. Госпадзе, не абцяжарвай нас большым цяжарам, чым маем сілы. Прабач нас, прабач нас і памілуй нас. Ты наш абаронца, таму дапамажы нам супраць няверуючых».",
-  "duaMeaning3": "«Наш Пане, не дазваляй нашым сэрцам адхіляцца пасля таго, як Ты вядзеш нас. Дай нам Тваю міласэрнасць: Ты Вечна Даючы.",
-  "duaMeaning4": "Госпадзе, дай, каб я і нашчадкі мае працягвалі малітву. Пане наш, прымі маю просьбу.",
-  "duaMeaning5": "і апусці крыло сваё ў пакоры да іх у дабрыні і скажы: \"Госпадзе, змілуйся над імі, як яны клапаціліся пра мяне, калі я быў малы\".",
-  "duaMeaning6": "праслаўлены Бог, той, хто сапраўды кіруе. [Прарок], не спяшайцеся чытаць, перш чым адкрыцьцё цалкам завершана, але скажы: \"Госпадзе, павяліч мяне ў ведах!\"",
-  "duaMeaning7": "Скажы [Прарок]: «Госпадзе, прабач і памілуй: Ты міласэрнейшы з усіх».",
-  "duaMeaning8": "тых, хто моліцца: «Пане наш, дай нам радасць у нашых сужэнцах і нашчадках». Зрабі нас добрым прыкладам для тых, хто ведае пра Цябе».",
-  "islamicNewYear": "Ісламскі Новы год",
-  "mawlidAnNabi": "Маўлід ан-Набі",
-  "specialDayDateRamadanStart": "1 Рамадан",
-  "specialDayDateLaylatAlQadr": "27 Рамадан",
-  "specialDayDateEidAlFitr": "1 Шаўваль",
-  "specialDayDateEidAlAdha": "10 зуль хіджа",
-  "specialDayDateIslamicNewYear": "1 Мухаррам",
-  "specialDayDateMawlidAnNabi": "12 Рабі аль-Авваль",
-  "refreshAction": "Абнавіць",
-  "ayahLabel": "Айя {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Загрузка тафсіра...",
-  "tafsirSourceLabel": "Крыніца тафсір",
-  "tafsirNoSurahFound": "Для гэтай суры тафсір не знойдзены.",
-  "tafsirNoAyahFound": "Не знойдзены тафсір для аята {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Не ўдалося загрузіць Tafsir.",
-  "tafsirNoTextForAyah": "Няма тэксту тафсіра для гэтага аята.",
-  "tafsirDownloadingProgress": "Спампоўка тафсіра {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Загрузка тафсіра {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Крыніца Tafsir вярнула памылку HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Выбраная крыніца тафсіра не дала запісаў.",
-  "premiumProductUnavailable": "Прэміяльны прадукт зараз недаступны. Паўтарыце спробу пазней.",
-  "premiumPurchaseFailed": "Купля не можа быць завершана. Калі ласка, паспрабуйце яшчэ раз.",
-  "prayerRemainingHoursMinutes": "{hours}г {minutes}хв",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}м",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Ісламскі шлях святла",
-  "downloadPartiallyFinishedForReciter": "Спампоўка завершана для {reciter} з {failed} няўдалымі сурамі ({downloaded}/{total} спампавана).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Патрабуецца месцазнаходжанне",
-  "placesLocationRequiredBody": "Спачатку ўсталюйце месцазнаходжанне, каб можна было дакладна шукаць бліжэйшыя мячэці, халяльную ежу і ісламскія школы.",
-  "placesMapTilesUnavailableTitle": "Пліткі карты недаступныя",
-  "placesMapTilesUnavailableBody": "Правераная крыніца пліткі карты яшчэ не настроена для гэтай зборкі. Месцы паблізу могуць загружацца з вашага захаванага месцазнаходжання.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Мужчына (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Мужчына (Abdul Basit)",
-  "audioVoiceSudais": "Мужчына (Sudais)",
-  "qiblaSensorUnavailable": "Датчык компаса недаступны на гэтай прыладзе.",
-  "adhanNotificationChannelName": "Апавяшчэнні аб азане",
-  "adhanNotificationChannelDescription": "Абвесткі пра час малітвы з гукам азана.",
-  "quranLoadFailed": "Не ўдалося загрузіць змест Карана. Калі ласка, паспрабуйце яшчэ раз.",
-  "locationDetectionFailed": "Не ўдалося вызначыць ваша месцазнаходжанне. Выберыце горад уручную або паўтарыце спробу.",
-  "qiblaLocationRequiredTitle": "Для Qibla патрабуецца месцазнаходжанне",
-  "qiblaLocationRequiredBody": "Усталюйце сваё фактычнае месцазнаходжанне перад выкарыстаннем компаса Qibla, каб можна было дакладна вылічыць кірунак.",
-  "placesDataSourceUnavailableTitle": "Даныя аб месцах недаступныя",
-  "placesDataSourceUnavailableBody": "Правераная канчатковая кропка даных аб месцах яшчэ не настроена для гэтай зборкі. Усталюйце PLACES_OVERPASS_API_URL на зацверджаны проксі або пастаўшчыка, перш чым уключыць пошук паблізу.",
-  "tafsirCacheUnavailable": "Правераны тафсір пакуль недаступны ў аўтаномным рэжыме. Перад праглядам сінхранізуйце атрыманы набор даных тафсір."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

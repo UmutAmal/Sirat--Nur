@@ -1,6 +1,7 @@
 {
   "@@locale": "is",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Íslamskur leið ljóssins",
   "home": "Heim",
   "quran": "Kóraninn",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tími fyrir {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Það er kominn tími til að biðja {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Gögn og geymsla",
   "clearCache": "Hreinsaðu skyndiminni",
   "cacheClearedSuccess": "Skyndiminni var hreinsað",
@@ -34,6 +51,7 @@
   "currentLocation": "Núverandi staðsetning (GPS)",
   "locationServiceDisabled": "Staðsetningarþjónusta er óvirk.",
   "locationPermissionDenied": "Staðsetningarheimild hafnað.",
+  "locationDetectionFailed": "Gat ekki greint staðsetningu þína. Vinsamlegast veldu borg handvirkt eða reyndu aftur.",
   "citiesCount": "{count} borgir",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Engar niðurstöður fundust",
   "loading": "Hleður...",
   "error": "Villa",
+  "appErrorOccurred": "Villa kom upp",
+  "appUnknownError": "Óþekkt villa",
+  "quranLoadFailed": "Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur.",
   "retry": "Reyndu aftur",
+  "refreshAction": "Endurnýja",
   "cancel": "Hætta við",
   "save": "Vista",
   "delete": "Eyða",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nei",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Bls",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Hleður tafsir...",
+  "tafsirSourceLabel": "Tafsir heimild",
+  "tafsirNoSurahFound": "Enginn tafsir fannst fyrir þessa surah.",
+  "tafsirNoAyahFound": "Enginn tafsir fannst fyrir ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Ekki tókst að hlaða Tafsir.",
+  "tafsirNoTextForAyah": "Enginn tafsir texti fyrir þessa ayah.",
+  "tafsirDownloadingProgress": "Sækir tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Hleður tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir uppspretta skilaði HTTP {statusCode} villu.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Valin tafsir heimild skilaði engum færslum.",
+  "tafsirCacheUnavailable": "Staðfest tafsir er ekki enn í boði án nettengingar. Samstilltu gagnasett af tafsir áður en þú vafrar.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Bæta við bókamerki",
   "removeBookmark": "Fjarlægja bókamerki",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "aðrir biðja: „Drottinn vor, gef oss gott í þessum heimi og í hinu síðara, og verndar oss fyrir kvölum Eldsins.",
+  "duaMeaning2": "Guð íþyngir ekki neinni sál með meiru en hún getur borið: hver ávinningur af því góða sem hún hefur gert, og þjáist af því slæma- ‘Drottinn, ekki taka okkur til verks ef við gleymum eða gerum mistök. Drottinn, íþyngtu okkur ekki eins og þú lagðir byrðar á þá sem voru á undan okkur. Drottinn, íþyngdu okkur ekki meira en við höfum styrk til að bera. Fyrirgef oss, fyrirgef oss og miskunna þú oss. Þú ert verndari okkar, svo hjálpaðu okkur gegn hinum vantrúuðu.'",
+  "duaMeaning3": "„Drottinn vor, láttu hjörtu okkar ekki víkja eftir að þú hefur leiðbeint okkur. Gefðu okkur miskunn þína: Þú ert alltaf að gefa.",
+  "duaMeaning4": "Drottinn, gef að ég og afkvæmi mitt megum halda uppi bæninni. Drottinn vor, þiggðu beiðni mína.",
+  "duaMeaning5": "og sæktu væng þinn í auðmýkt í garð þeirra í góðvild og segðu: 'Drottinn, miskunna þú þeim, eins og þeim þótti vænt um mig þegar ég var lítill.'",
+  "duaMeaning6": "Upphafinn sé Guð, sá sem sannarlega ræður. [Spámaður], flýttu þér ekki að segja áður en opinberunin er að fullu lokið heldur segðu: ‚Herra, aukið mig að þekkingu!'",
+  "duaMeaning7": "Segðu [spámann], ‚Drottinn, fyrirgefðu og miskunnaðu þér: Þú ert miskunnsamastur allra.'",
+  "duaMeaning8": "þeir sem biðja: ‚Drottinn vor, gef oss gleði yfir maka okkar og afkvæmi. Gerðu okkur gott fordæmi fyrir þá sem þekkja þig.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Fastandi",
   "quranReading": "Kóran lestur",
   "prayers": "Bænir",
+  "prayerRemainingHoursMinutes": "{hours}klst {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Vikulegar framfarir",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Íslamskt nýár",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla átt",
   "compass": "Áttaviti",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla fannst!",
   "turnDevice": "Snúðu tækinu þínu til að snúa að Qibla",
+  "qiblaCompassErrorDetails": "Áttavitavilla: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Áttavitaskynjari er ekki tiltækur á þessu tæki.",
+  "qiblaLocationRequiredTitle": "Staðsetning krafist fyrir Qibla",
+  "qiblaLocationRequiredBody": "Stilltu raunverulega staðsetningu þína áður en þú notar Qibla áttavitann svo hægt sé að reikna stefnuna nákvæmlega.",
+  "adhanNotificationChannelName": "Adhan tilkynningar",
+  "adhanNotificationChannelDescription": "Bænatímaviðvaranir með adhan hljóði.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Markfjöldi: {target}",
   "tapToCount": "Ýttu til að telja",
+  "zikrCompletedMashAllah": "Lokið! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah er langt yfir hverri ófullkomleika.",
+  "zikrMeaningAlhamdulillah": "Allt lof tilheyrir Allah.",
+  "zikrMeaningAllahuAkbar": "Allah er hinn mesti.",
+  "zikrMeaningLaIlahaIllallah": "Það er enginn guð nema Allah.",
+  "zikrMeaningAstaghfirullah": "Ég bið Allah fyrirgefningar.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Það er enginn kraftur og enginn styrkur nema í gegnum Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Hljóðrödd",
+  "audioVoiceMisharyAlafasy": "Karlkyns (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Karlkyns (Abdul Basit)",
+  "audioVoiceSudais": "Karlkyns (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla kvörðun",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kvörðun krafist. Snúðu tækinu á mynd-8.",
   "dailyVerse": "Daglegt vers",
+  "dailyVerseUnavailableTitle": "Daglegt vers ekki tiltækt",
+  "dailyVerseUnavailableBody": "Staðfest daglegt vers innihald er ekki stillt fyrir þessa smíði ennþá. Tengstu við skýjagjafann eða samstilltu staðfest skyndiminni áður en þú vafrar.",
   "todaysIbadah": "Ibadah í dag",
   "quickAccess": "Fljótur aðgangur",
   "assistant": "Aðstoðarmaður",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Staðfest duas eru ekki tiltæk ennþá",
+  "duaUnavailableBody": "Staðfest dagleg duas hafa ekki verið samstillt við þetta tæki ennþá. Tengstu við skýjagjafann til að hlaða upprunnin duas í stað óstaðfestrar vara.",
+  "duaCategoryQuranic": "Kóranísk dúa",
+  "duaCategoryMorningEvening": "Morgun & kvöld",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Vörn",
+  "duaCategoryBeginning": "Upphaf",
+  "duaCategorySleep": "Sofðu",
+  "duaCategoryFoodDrink": "Matur & drykkur",
+  "duaCategoryForgiveness": "Fyrirgefning",
+  "duaCategoryHome": "Heim",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Íslamsk menntun",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith söfn",
+  "hadithSourcePending": "Staðfest heimild í bið",
+  "hadithUnavailableTitle": "Staðfest hadith söfn eru ekki tiltæk ennþá",
+  "hadithUnavailableBody": "Þessi smíði er enn háð óstaðfestu utanaðkomandi hadith straumi. Hadith vafra er óvirkt þar til gagnasett er samstillt.",
   "paywallUnlockAll": "Opnaðu alla eiginleika fyrir andlega ferð þína",
+  "premiumProductUnavailable": "Premium vara er ekki fáanleg eins og er. Vinsamlegast reyndu aftur síðar.",
+  "premiumPurchaseFailed": "Ekki tókst að ganga frá kaupum. Vinsamlegast reyndu aftur.",
   "paywallFeature1Title": "Taugaaðstoðarmaður Plus",
   "paywallFeature1Desc": "Ótakmarkað AI-knúið Q&A",
   "paywallFeature2Title": "Ótakmarkað án nettengingar",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Niðurhali lokið fyrir {reciter} með {failed} misheppnuðum súrum ({downloaded}/{total} niðurhalað).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Eyddum ónettengdum skrám fyrir {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Netvilla. Vinsamlegast reyndu aftur.",
+  "placesLocationRequiredTitle": "Staðsetning krafist",
+  "placesLocationRequiredBody": "Veldu staðsetningu fyrst svo hægt sé að leita nákvæmlega í moskum, halal-mat og íslömskum skólum í nágrenninu.",
+  "placesMapTilesUnavailableTitle": "Kortaflísar ekki tiltækar",
+  "placesMapTilesUnavailableBody": "Staðfestur kortaflisuppspretta er ekki stilltur fyrir þessa smíði ennþá. Nálægir staðir geta samt hlaðið inn frá vistaða staðsetningu þinni.",
+  "placesDataSourceUnavailableTitle": "Gögn um staði eru ekki tiltæk",
+  "placesDataSourceUnavailableBody": "Staðfestur gagnaendapunktur er ekki stilltur fyrir þessa byggingu ennþá. Stilltu PLACES_OVERPASS_API_URL á samþykktan umboðsmann eða þjónustuaðila áður en þú kveikir á nærliggjandi leit.",
   "unknownPlaceName": "Óþekkt nafn",
   "islamicPlaceFallback": "Íslamskur staður",
-  "prayerNotificationTitle": "Tími fyrir {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Það er kominn tími til að biðja {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Staðfest duas eru ekki tiltæk ennþá",
-  "duaUnavailableBody": "Staðfest dagleg duas hafa ekki verið samstillt við þetta tæki ennþá. Tengstu við skýjagjafann til að hlaða upprunnin duas í stað óstaðfestrar vara.",
-  "duaCategoryQuranic": "Kóranísk dúa",
-  "duaCategoryMorningEvening": "Morgun & kvöld",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Vörn",
-  "duaCategoryBeginning": "Upphaf",
-  "duaCategorySleep": "Sofðu",
-  "duaCategoryFoodDrink": "Matur & drykkur",
-  "duaCategoryForgiveness": "Fyrirgefning",
-  "duaCategoryHome": "Heim",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Staðfest heimild í bið",
-  "hadithUnavailableTitle": "Staðfest hadith söfn eru ekki tiltæk ennþá",
-  "hadithUnavailableBody": "Þessi smíði er enn háð óstaðfestu utanaðkomandi hadith straumi. Hadith vafra er óvirkt þar til gagnasett er samstillt.",
-  "appErrorOccurred": "Villa kom upp",
-  "appUnknownError": "Óþekkt villa",
-  "qiblaCompassErrorDetails": "Áttavitavilla: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Lokið! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah er langt yfir hverri ófullkomleika.",
-  "zikrMeaningAlhamdulillah": "Allt lof tilheyrir Allah.",
-  "zikrMeaningAllahuAkbar": "Allah er hinn mesti.",
-  "zikrMeaningLaIlahaIllallah": "Það er enginn guð nema Allah.",
-  "zikrMeaningAstaghfirullah": "Ég bið Allah fyrirgefningar.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Það er enginn kraftur og enginn styrkur nema í gegnum Allah.",
   "asmaMeaning1": "The Beneficent",
   "asmaMeaning2": "Hinn miskunnsami",
   "asmaMeaning3": "Konungurinn / Eilífi Drottinn",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Hinn eilífi",
   "asmaMeaning97": "Erfinginn",
   "asmaMeaning98": "Réttlátasti leiðarvísirinn",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "aðrir biðja: „Drottinn vor, gef oss gott í þessum heimi og í hinu síðara, og verndar oss fyrir kvölum Eldsins.",
-  "duaMeaning2": "Guð íþyngir ekki neinni sál með meiru en hún getur borið: hver ávinningur af því góða sem hún hefur gert, og þjáist af því slæma- ‘Drottinn, ekki taka okkur til verks ef við gleymum eða gerum mistök. Drottinn, íþyngtu okkur ekki eins og þú lagðir byrðar á þá sem voru á undan okkur. Drottinn, íþyngdu okkur ekki meira en við höfum styrk til að bera. Fyrirgef oss, fyrirgef oss og miskunna þú oss. Þú ert verndari okkar, svo hjálpaðu okkur gegn hinum vantrúuðu.'",
-  "duaMeaning3": "„Drottinn vor, láttu hjörtu okkar ekki víkja eftir að þú hefur leiðbeint okkur. Gefðu okkur miskunn þína: Þú ert alltaf að gefa.",
-  "duaMeaning4": "Drottinn, gef að ég og afkvæmi mitt megum halda uppi bæninni. Drottinn vor, þiggðu beiðni mína.",
-  "duaMeaning5": "og sæktu væng þinn í auðmýkt í garð þeirra í góðvild og segðu: 'Drottinn, miskunna þú þeim, eins og þeim þótti vænt um mig þegar ég var lítill.'",
-  "duaMeaning6": "Upphafinn sé Guð, sá sem sannarlega ræður. [Spámaður], flýttu þér ekki að segja áður en opinberunin er að fullu lokið heldur segðu: ‚Herra, aukið mig að þekkingu!'",
-  "duaMeaning7": "Segðu [spámann], ‚Drottinn, fyrirgefðu og miskunnaðu þér: Þú ert miskunnsamastur allra.'",
-  "duaMeaning8": "þeir sem biðja: ‚Drottinn vor, gef oss gleði yfir maka okkar og afkvæmi. Gerðu okkur gott fordæmi fyrir þá sem þekkja þig.",
-  "islamicNewYear": "Íslamskt nýár",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Endurnýja",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Hleður tafsir...",
-  "tafsirSourceLabel": "Tafsir heimild",
-  "tafsirNoSurahFound": "Enginn tafsir fannst fyrir þessa surah.",
-  "tafsirNoAyahFound": "Enginn tafsir fannst fyrir ayah {ayah}.",
-  "tafsirLoadFailed": "Ekki tókst að hlaða Tafsir.",
-  "tafsirNoTextForAyah": "Enginn tafsir texti fyrir þessa ayah.",
-  "tafsirDownloadingProgress": "Sækir tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Hleður tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir uppspretta skilaði HTTP {statusCode} villu.",
-  "tafsirNoEntriesReturned": "Valin tafsir heimild skilaði engum færslum.",
-  "premiumProductUnavailable": "Premium vara er ekki fáanleg eins og er. Vinsamlegast reyndu aftur síðar.",
-  "premiumPurchaseFailed": "Ekki tókst að ganga frá kaupum. Vinsamlegast reyndu aftur.",
-  "prayerRemainingHoursMinutes": "{hours}klst {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Íslamskur leið ljóssins",
-  "downloadPartiallyFinishedForReciter": "Niðurhali lokið fyrir {reciter} með {failed} misheppnuðum súrum ({downloaded}/{total} niðurhalað).",
-  "placesLocationRequiredTitle": "Staðsetning krafist",
-  "placesLocationRequiredBody": "Veldu staðsetningu fyrst svo hægt sé að leita nákvæmlega í moskum, halal-mat og íslömskum skólum í nágrenninu.",
-  "placesMapTilesUnavailableTitle": "Kortaflísar ekki tiltækar",
-  "placesMapTilesUnavailableBody": "Staðfestur kortaflisuppspretta er ekki stilltur fyrir þessa smíði ennþá. Nálægir staðir geta samt hlaðið inn frá vistaða staðsetningu þinni.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Karlkyns (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Karlkyns (Abdul Basit)",
-  "audioVoiceSudais": "Karlkyns (Sudais)",
-  "qiblaSensorUnavailable": "Áttavitaskynjari er ekki tiltækur á þessu tæki.",
-  "adhanNotificationChannelName": "Adhan tilkynningar",
-  "adhanNotificationChannelDescription": "Bænatímaviðvaranir með adhan hljóði.",
-  "quranLoadFailed": "Ekki var hægt að hlaða efni Kóransins. Vinsamlegast reyndu aftur.",
-  "locationDetectionFailed": "Gat ekki greint staðsetningu þína. Vinsamlegast veldu borg handvirkt eða reyndu aftur.",
-  "qiblaLocationRequiredTitle": "Staðsetning krafist fyrir Qibla",
-  "qiblaLocationRequiredBody": "Stilltu raunverulega staðsetningu þína áður en þú notar Qibla áttavitann svo hægt sé að reikna stefnuna nákvæmlega.",
-  "placesDataSourceUnavailableTitle": "Gögn um staði eru ekki tiltæk",
-  "placesDataSourceUnavailableBody": "Staðfestur gagnaendapunktur er ekki stilltur fyrir þessa byggingu ennþá. Stilltu PLACES_OVERPASS_API_URL á samþykktan umboðsmann eða þjónustuaðila áður en þú kveikir á nærliggjandi leit.",
-  "tafsirCacheUnavailable": "Staðfest tafsir er ekki enn í boði án nettengingar. Samstilltu gagnasett af tafsir áður en þú vafrar."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

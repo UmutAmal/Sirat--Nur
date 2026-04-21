@@ -954,6 +954,13 @@ class AppLocalizationsNl extends AppLocalizations {
   String get dailyVerse => 'Dagelijks vers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Dagelijks vers niet beschikbaar';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Geverifieerde dagelijkse versinhoud is nog niet geconfigureerd voor deze build. Maak verbinding met de cloudbron of synchroniseer een geverifieerde cache voordat u gaat browsen.';
+
+  @override
   String get todaysIbadah => 'Vandaag Ibadah';
 
   @override

@@ -952,6 +952,13 @@ class AppLocalizationsBs extends AppLocalizations {
   String get dailyVerse => 'Daily Verse';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Dnevni stih nedostupan';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Provjereni dnevni sadržaj stihova još nije konfiguriran za ovu verziju. Povežite se s izvorom u oblaku ili sinhronizirajte potvrđenu keš memoriju prije pregledavanja.';
+
+  @override
   String get todaysIbadah => 'Danas je Ibadah';
 
   @override

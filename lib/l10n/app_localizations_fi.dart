@@ -953,6 +953,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get dailyVerse => 'Päivittäinen jae';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Päivittäinen jae ei ole saatavilla';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Vahvistettua päivittäistä säkeistöä ei ole vielä määritetty tälle versiolle. Yhdistä pilvilähteeseen tai synkronoi vahvistettu välimuisti ennen selaamista.';
+
+  @override
   String get todaysIbadah => 'Tämän päivän Ibadah';
 
   @override

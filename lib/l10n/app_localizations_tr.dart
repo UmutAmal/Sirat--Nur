@@ -951,6 +951,13 @@ class AppLocalizationsTr extends AppLocalizations {
   String get dailyVerse => 'Günün Ayeti';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Günün ayeti kullanılamıyor';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Bu sürüm için doğrulanmış günlük ayet içeriği henüz yapılandırılmadı. Gezinmeden önce bulut kaynağına bağlanın veya doğrulanmış bir önbelleği senkronlayın.';
+
+  @override
   String get todaysIbadah => 'Bugünün İbadeti';
 
   @override

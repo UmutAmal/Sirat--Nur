@@ -1,6 +1,7 @@
 {
   "@@locale": "lb",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamesche Wee vum Liicht",
   "home": "Doheem",
   "quran": "Koran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Zäit fir {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Et ass Zäit {prayerName} ze bieden.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Daten & Stockage",
   "clearCache": "Cache läschen",
   "cacheClearedSuccess": "Cache erfollegräich geläscht",
@@ -34,6 +51,7 @@
   "currentLocation": "Aktuelle Location (GPS)",
   "locationServiceDisabled": "Location Service ass behënnert.",
   "locationPermissionDenied": "Location Erlaabnis refuséiert.",
+  "locationDetectionFailed": "Konnt Är Positioun net entdecken. Wielt w.e.g. eng Stad manuell oder probéiert nach eng Kéier.",
   "citiesCount": "{count} Stied",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Keng Resultater fonnt",
   "loading": "Lueden...",
   "error": "Feeler",
+  "appErrorOccurred": "E Feeler ass geschitt",
+  "appUnknownError": "Onbekannt Feeler",
+  "quranLoadFailed": "Koran Inhalt konnt net gelueden ginn. Probéiert w.e.g. nach eng Kéier.",
   "retry": "Nach eng Kéier probéieren",
+  "refreshAction": "Erfrëschen",
   "cancel": "Ofbriechen",
   "save": "Späicheren",
   "delete": "Läschen",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nee",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Säit",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Lueden tafsir ...",
+  "tafsirSourceLabel": "Tafsir Quell",
+  "tafsirNoSurahFound": "Keen Tafsir fonnt fir dës Surah.",
+  "tafsirNoAyahFound": "Keen Tafsir fonnt fir ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir konnt net gelueden ginn.",
+  "tafsirNoTextForAyah": "Keen Tafsir Text fir dës Ayah.",
+  "tafsirDownloadingProgress": "Eroflueden tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir Quell huet en HTTP {statusCode} Feeler zréckginn.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Der gewielter tafsir Quell huet keng Entréen zréck.",
+  "tafsirCacheUnavailable": "Verifizéiert Tafsir ass nach net offline verfügbar. Synchroniséiert e sourced tafsir Dataset virum Surfen.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Bookmark addéieren",
   "removeBookmark": "Bookmark läschen",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "anerer bieden: \"Eisen Här, gëff eis gutt an dëser Welt an am Hierscht, a schützt eis virun der Péng vum Feier.\"",
+  "duaMeaning2": "Gott belaascht keng Séil mat méi wéi se droen kann: jidderee kritt wat gutt et gemaach huet, a leid säi Schlecht - Här, huelt eis net op d'Aufgab wa mir vergiessen oder Feeler maachen. Här, belaascht eis net wéi Dir déi virun eis belaascht hutt. Här, belaascht eis net mat méi wéi mir Kraaft hunn ze droen. Entschëllegt eis, verzeien eis, a Barmhäerzegkeet op eis. Dir sidd eise Protecteur, also hëllef eis géint déi Ongleeweg.'",
+  "duaMeaning3": "\"Eisen Här, loosst eis Häerzer net ofwäichen nodeems Dir eis guidéiert hutt. Gëff eis Är Barmhäerzegkeet: Dir sidd deen ëmmer Gëff.",
+  "duaMeaning4": "Här, gitt datt ech a meng Nofolger d'Gebied weiderhalen. Eiser Här, akzeptéiert meng Demande.",
+  "duaMeaning5": "an dréckt Äre Fligel an Demut a Frëndlechkeet vis-à-vis vun hinnen a seet: ‘Här, barmhäerzlech mat hinnen, sou wéi si fir mech gesuergt hunn, wéi ech kleng war.",
+  "duaMeaning6": "Erhéicht sief Gott, deen, dee wierklech an der Kontroll ass. [Prophéit], presséiert net ze recitéieren ier d'Offenbarung komplett fäerdeg ass, awer sot: 'Här, vergréissert mech a Wëssen!'",
+  "duaMeaning7": "Sot [Prophéit], 'Här, verzeien a Barmhäerzegkeet: Dir sidd de Barmhäerzlechste vun allem.'",
+  "duaMeaning8": "déi biede: 'Eisen Här, gitt eis Freed an eise Ehepartner an Nofolger. Maacht eis gutt Beispiller fir déi, déi Iech bewosst sinn.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Fasten",
   "quranReading": "Koran Liesung",
   "prayers": "Gebieder",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Wochemaart Fortschrëtt",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamescht Neit Joer",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Schauer",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Richtung",
   "compass": "Kompass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla fonnt!",
   "turnDevice": "Maacht Ären Apparat fir de Qibla ze konfrontéieren",
+  "qiblaCompassErrorDetails": "Kompassfehler: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompasssensor ass op dësem Apparat net verfügbar.",
+  "qiblaLocationRequiredTitle": "Plaz néideg fir Qibla",
+  "qiblaLocationRequiredBody": "Setzt Är aktuell Positioun ier Dir de Qibla Kompass benotzt, sou datt d'Richtung genau berechent ka ginn.",
+  "adhanNotificationChannelName": "Adhan Notifikatiounen",
+  "adhanNotificationChannelDescription": "Gebiedszäit Alarmer mat Adhan Sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Zilzuel: {target}",
   "tapToCount": "Tippen fir ze zielen",
+  "zikrCompletedMashAllah": "Ofgeschloss! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah ass wäit iwwer all Imperfektioun.",
+  "zikrMeaningAlhamdulillah": "All Luef gehéiert dem Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ass dee Groussste.",
+  "zikrMeaningLaIlahaIllallah": "Et gëtt kee Gott ausser Allah.",
+  "zikrMeaningAstaghfirullah": "Ech sichen dem Allah seng Verzeiung.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Et gëtt keng Kraaft a keng Kraaft ausser duerch Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Stëmm",
+  "audioVoiceMisharyAlafasy": "Männlech (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Männlech (Abdul Basit)",
+  "audioVoiceSudais": "Männlech (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Kalibrierung",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrierung erfuerderlech. Rotéiert Apparat an Figur-8.",
   "dailyVerse": "Deeglech Vers",
+  "dailyVerseUnavailableTitle": "Deeglech Vers net verfügbar",
+  "dailyVerseUnavailableBody": "Verifizéiert alldeegleche Versinhalt ass nach net fir dëse Build konfiguréiert. Connectéiert mat der Cloudquell oder synchroniséiert e verifizéierte Cache virum Surfen.",
   "todaysIbadah": "Haut ass Ibadah",
   "quickAccess": "Schnell Zougang",
   "assistant": "Assistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verifizéiert Duas sinn nach net verfügbar",
+  "duaUnavailableBody": "Verifizéiert alldeeglech Duas goufen nach net mat dësem Apparat synchroniséiert. Connectéiert mat der Wollekquell fir Quelle Duas ze lueden amplaz vun engem onverifizéierte Réckfall.",
+  "duaCategoryQuranic": "Koran dua",
+  "duaCategoryMorningEvening": "Moien & Owend",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Schutz",
+  "duaCategoryBeginning": "Ufank",
+  "duaCategorySleep": "Schlof",
+  "duaCategoryFoodDrink": "Iessen & Drénken",
+  "duaCategoryForgiveness": "Verzeiung",
+  "duaCategoryHome": "Doheem",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamesch Educatioun",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith Kollektiounen",
+  "hadithSourcePending": "Verifizéiert Quell erwaard",
+  "hadithUnavailableTitle": "Verifizéiert Hadith Sammlungen sinn nach net verfügbar",
+  "hadithUnavailableBody": "Dëse Bau hänkt nach vun engem onverifizéierten externen Hadith Feed of. Hadith Surfen bleift behënnert bis e sourced Dataset synchroniséiert ass.",
   "paywallUnlockAll": "Spär all Feature fir Är spirituell Rees",
+  "premiumProductUnavailable": "Premium Produkt ass elo net verfügbar. Probéiert w.e.g. méi spéit nach eng Kéier.",
+  "premiumPurchaseFailed": "Kaf konnt net ofgeschloss ginn. Probéiert w.e.g. nach eng Kéier.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Onlimitéiert AI-ugedriwwen Q&A",
   "paywallFeature2Title": "Onlimitéiert Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download fäerdeg fir {reciter} mat {failed} gescheitert Surahs ({downloaded}/{total} erofgelueden).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Offline Dateie fir {reciter} geläscht.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Netzfehler. Probéiert w.e.g. nach eng Kéier.",
+  "placesLocationRequiredTitle": "Plaz néideg",
+  "placesLocationRequiredBody": "Setzt eng Plaz fir d'éischt sou datt Emgéigend Moscheeën, Halal Iessen, an islamesch Schoule präzis gesicht kënne ginn.",
+  "placesMapTilesUnavailableTitle": "Kaart Fliesen net verfügbar",
+  "placesMapTilesUnavailableBody": "Eng verifizéiert Kaartfliesquell ass nach net fir dëse Build konfiguréiert. Nopesch Plazen kënnen nach ëmmer vun Ärer gespäichert Plaz lueden.",
+  "placesDataSourceUnavailableTitle": "Plaze Donnéeën net sinn",
+  "placesDataSourceUnavailableBody": "E verifizéiert Plaze Datenendpunkt ass nach net fir dëse Bau konfiguréiert. Setzt PLACES_OVERPASS_API_URL op e genehmegt Proxy oder Provider ier Dir Emgéigend Sich aktivéiert.",
   "unknownPlaceName": "Onbekannt Numm",
   "islamicPlaceFallback": "Islamesch Plaz",
-  "prayerNotificationTitle": "Zäit fir {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Et ass Zäit {prayerName} ze bieden.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verifizéiert Duas sinn nach net verfügbar",
-  "duaUnavailableBody": "Verifizéiert alldeeglech Duas goufen nach net mat dësem Apparat synchroniséiert. Connectéiert mat der Wollekquell fir Quelle Duas ze lueden amplaz vun engem onverifizéierte Réckfall.",
-  "duaCategoryQuranic": "Koran dua",
-  "duaCategoryMorningEvening": "Moien & Owend",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Schutz",
-  "duaCategoryBeginning": "Ufank",
-  "duaCategorySleep": "Schlof",
-  "duaCategoryFoodDrink": "Iessen & Drénken",
-  "duaCategoryForgiveness": "Verzeiung",
-  "duaCategoryHome": "Doheem",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verifizéiert Quell erwaard",
-  "hadithUnavailableTitle": "Verifizéiert Hadith Sammlungen sinn nach net verfügbar",
-  "hadithUnavailableBody": "Dëse Bau hänkt nach vun engem onverifizéierten externen Hadith Feed of. Hadith Surfen bleift behënnert bis e sourced Dataset synchroniséiert ass.",
-  "appErrorOccurred": "E Feeler ass geschitt",
-  "appUnknownError": "Onbekannt Feeler",
-  "qiblaCompassErrorDetails": "Kompassfehler: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ofgeschloss! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah ass wäit iwwer all Imperfektioun.",
-  "zikrMeaningAlhamdulillah": "All Luef gehéiert dem Allah.",
-  "zikrMeaningAllahuAkbar": "Allah ass dee Groussste.",
-  "zikrMeaningLaIlahaIllallah": "Et gëtt kee Gott ausser Allah.",
-  "zikrMeaningAstaghfirullah": "Ech sichen dem Allah seng Verzeiung.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Et gëtt keng Kraaft a keng Kraaft ausser duerch Allah.",
   "asmaMeaning1": "The Beneficent",
   "asmaMeaning2": "Den Barmhäerzlechen",
   "asmaMeaning3": "De Kinnek / Éiwege Här",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Den Éiwege",
   "asmaMeaning97": "The Iheritor",
   "asmaMeaning98": "The Most Gerecht Guide",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "anerer bieden: \"Eisen Här, gëff eis gutt an dëser Welt an am Hierscht, a schützt eis virun der Péng vum Feier.\"",
-  "duaMeaning2": "Gott belaascht keng Séil mat méi wéi se droen kann: jidderee kritt wat gutt et gemaach huet, a leid säi Schlecht - Här, huelt eis net op d'Aufgab wa mir vergiessen oder Feeler maachen. Här, belaascht eis net wéi Dir déi virun eis belaascht hutt. Här, belaascht eis net mat méi wéi mir Kraaft hunn ze droen. Entschëllegt eis, verzeien eis, a Barmhäerzegkeet op eis. Dir sidd eise Protecteur, also hëllef eis géint déi Ongleeweg.'",
-  "duaMeaning3": "\"Eisen Här, loosst eis Häerzer net ofwäichen nodeems Dir eis guidéiert hutt. Gëff eis Är Barmhäerzegkeet: Dir sidd deen ëmmer Gëff.",
-  "duaMeaning4": "Här, gitt datt ech a meng Nofolger d'Gebied weiderhalen. Eiser Här, akzeptéiert meng Demande.",
-  "duaMeaning5": "an dréckt Äre Fligel an Demut a Frëndlechkeet vis-à-vis vun hinnen a seet: ‘Här, barmhäerzlech mat hinnen, sou wéi si fir mech gesuergt hunn, wéi ech kleng war.",
-  "duaMeaning6": "Erhéicht sief Gott, deen, dee wierklech an der Kontroll ass. [Prophéit], presséiert net ze recitéieren ier d'Offenbarung komplett fäerdeg ass, awer sot: 'Här, vergréissert mech a Wëssen!'",
-  "duaMeaning7": "Sot [Prophéit], 'Här, verzeien a Barmhäerzegkeet: Dir sidd de Barmhäerzlechste vun allem.'",
-  "duaMeaning8": "déi biede: 'Eisen Här, gitt eis Freed an eise Ehepartner an Nofolger. Maacht eis gutt Beispiller fir déi, déi Iech bewosst sinn.",
-  "islamicNewYear": "Islamescht Neit Joer",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Schauer",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Erfrëschen",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Lueden tafsir ...",
-  "tafsirSourceLabel": "Tafsir Quell",
-  "tafsirNoSurahFound": "Keen Tafsir fonnt fir dës Surah.",
-  "tafsirNoAyahFound": "Keen Tafsir fonnt fir ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir konnt net gelueden ginn.",
-  "tafsirNoTextForAyah": "Keen Tafsir Text fir dës Ayah.",
-  "tafsirDownloadingProgress": "Eroflueden tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir Quell huet en HTTP {statusCode} Feeler zréckginn.",
-  "tafsirNoEntriesReturned": "Der gewielter tafsir Quell huet keng Entréen zréck.",
-  "premiumProductUnavailable": "Premium Produkt ass elo net verfügbar. Probéiert w.e.g. méi spéit nach eng Kéier.",
-  "premiumPurchaseFailed": "Kaf konnt net ofgeschloss ginn. Probéiert w.e.g. nach eng Kéier.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamesche Wee vum Liicht",
-  "downloadPartiallyFinishedForReciter": "Download fäerdeg fir {reciter} mat {failed} gescheitert Surahs ({downloaded}/{total} erofgelueden).",
-  "placesLocationRequiredTitle": "Plaz néideg",
-  "placesLocationRequiredBody": "Setzt eng Plaz fir d'éischt sou datt Emgéigend Moscheeën, Halal Iessen, an islamesch Schoule präzis gesicht kënne ginn.",
-  "placesMapTilesUnavailableTitle": "Kaart Fliesen net verfügbar",
-  "placesMapTilesUnavailableBody": "Eng verifizéiert Kaartfliesquell ass nach net fir dëse Build konfiguréiert. Nopesch Plazen kënnen nach ëmmer vun Ärer gespäichert Plaz lueden.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Männlech (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Männlech (Abdul Basit)",
-  "audioVoiceSudais": "Männlech (Sudais)",
-  "qiblaSensorUnavailable": "Kompasssensor ass op dësem Apparat net verfügbar.",
-  "adhanNotificationChannelName": "Adhan Notifikatiounen",
-  "adhanNotificationChannelDescription": "Gebiedszäit Alarmer mat Adhan Sound.",
-  "quranLoadFailed": "Koran Inhalt konnt net gelueden ginn. Probéiert w.e.g. nach eng Kéier.",
-  "locationDetectionFailed": "Konnt Är Positioun net entdecken. Wielt w.e.g. eng Stad manuell oder probéiert nach eng Kéier.",
-  "qiblaLocationRequiredTitle": "Plaz néideg fir Qibla",
-  "qiblaLocationRequiredBody": "Setzt Är aktuell Positioun ier Dir de Qibla Kompass benotzt, sou datt d'Richtung genau berechent ka ginn.",
-  "placesDataSourceUnavailableTitle": "Plaze Donnéeën net sinn",
-  "placesDataSourceUnavailableBody": "E verifizéiert Plaze Datenendpunkt ass nach net fir dëse Bau konfiguréiert. Setzt PLACES_OVERPASS_API_URL op e genehmegt Proxy oder Provider ier Dir Emgéigend Sich aktivéiert.",
-  "tafsirCacheUnavailable": "Verifizéiert Tafsir ass nach net offline verfügbar. Synchroniséiert e sourced tafsir Dataset virum Surfen."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

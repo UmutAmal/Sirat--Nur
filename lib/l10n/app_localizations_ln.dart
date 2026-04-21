@@ -956,6 +956,13 @@ class AppLocalizationsLn extends AppLocalizations {
   String get dailyVerse => 'Vɛrsɛ ya mokolo na mokolo';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Vɛrsɛ ya mokolo na mokolo ezali te';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Contenu ya verset ya mokolo na mokolo oyo e vérifié e configuré nanu te pona kotonga oyo. Bo sangana na source ya cloud to bo synchroniser cache vérifié avant ya ko naviguer.';
+
+  @override
   String get todaysIbadah => 'Ibadah ya lelo';
 
   @override

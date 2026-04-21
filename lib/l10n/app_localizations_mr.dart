@@ -951,6 +951,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get dailyVerse => 'दैनिक श्लोक';
 
   @override
+  String get dailyVerseUnavailableTitle => 'दैनिक श्लोक अनुपलब्ध';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'या बिल्डसाठी सत्यापित दैनिक श्लोक सामग्री अद्याप कॉन्फिगर केलेली नाही. क्लाउड स्त्रोताशी कनेक्ट करा किंवा ब्राउझिंग करण्यापूर्वी सत्यापित कॅशे सिंक करा.';
+
+  @override
   String get todaysIbadah => 'आजचा इबादा';
 
   @override

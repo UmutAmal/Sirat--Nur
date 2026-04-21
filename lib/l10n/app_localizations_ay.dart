@@ -967,6 +967,14 @@ class AppLocalizationsAy extends AppLocalizations {
   String get dailyVerse => 'Sapa uru Versículo';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Sapa uru jiskʼa tʼaqax janiw utjkiti';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.';
+
+  @override
   String get todaysIbadah => 'Jichhürunakanx Ibadah';
 
   @override

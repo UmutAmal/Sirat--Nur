@@ -929,6 +929,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get dailyVerse => '每日诗歌';
 
   @override
+  String get dailyVerseUnavailableTitle => '每日经文不可用';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      '尚未为此版本配置已验证的每日经文内容。在浏览之前连接到云源或同步经过验证的缓存。';
+
+  @override
   String get todaysIbadah => '今天的伊巴达';
 
   @override
@@ -2570,6 +2577,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get dailyVerse => '每日诗歌';
 
   @override
+  String get dailyVerseUnavailableTitle => '每日经文不可用';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      '尚未为此版本配置已验证的每日经文内容。在浏览之前连接到云源或同步经过验证的缓存。';
+
+  @override
   String get todaysIbadah => '今天的伊巴达';
 
   @override
@@ -4209,6 +4223,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get dailyVerse => '每日詩歌';
+
+  @override
+  String get dailyVerseUnavailableTitle => '每日經文不可用';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      '尚未為此版本配置已驗證的每日經文內容。在瀏覽之前連接到雲端來源或同步經過驗證的快取。';
 
   @override
   String get todaysIbadah => '今天的伊巴達';

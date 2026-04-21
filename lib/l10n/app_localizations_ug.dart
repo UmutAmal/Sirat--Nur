@@ -952,6 +952,14 @@ class AppLocalizationsUg extends AppLocalizations {
   String get dailyVerse => 'كۈندىلىك ئايەت';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'كۈندىلىك ئايەتنى ئىشلەتكىلى بولمايدۇ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'دەلىللەنگەن كۈندىلىك ئايەت مەزمۇنى بۇ قۇرۇلۇش ئۈچۈن تېخى تەڭشەلمىگەن. بۇلۇت مەنبەسىگە ئۇلاڭ ياكى كۆرۈشتىن بۇرۇن دەلىللەنگەن غەملەكنى ماسقەدەملەڭ.';
+
+  @override
   String get todaysIbadah => 'بۈگۈنكى ئىبادا';
 
   @override

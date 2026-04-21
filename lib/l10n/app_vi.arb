@@ -1,6 +1,7 @@
 {
   "@@locale": "vi",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Con đường ánh sáng Hồi giáo",
   "home": "Trang chủ",
   "quran": "Kinh Qur'an",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Đã đến lúc dành cho {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Đã đến lúc cầu nguyện {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Dữ liệu & Lưu trữ",
   "clearCache": "Xóa bộ nhớ đệm",
   "cacheClearedSuccess": "Đã xóa bộ nhớ đệm thành công",
@@ -34,6 +51,7 @@
   "currentLocation": "Vị trí hiện tại (GPS)",
   "locationServiceDisabled": "Dịch vụ định vị bị vô hiệu hóa.",
   "locationPermissionDenied": "Quyền vị trí bị từ chối.",
+  "locationDetectionFailed": "Không thể phát hiện vị trí của bạn. Vui lòng chọn thành phố theo cách thủ công hoặc thử lại.",
   "citiesCount": "{count} thành phố",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Không tìm thấy kết quả nào",
   "loading": "Đang tải...",
   "error": "Lỗi",
+  "appErrorOccurred": "Đã xảy ra lỗi",
+  "appUnknownError": "Lỗi không xác định",
+  "quranLoadFailed": "Không thể tải nội dung Kinh Qur'an. Vui lòng thử lại.",
   "retry": "Thử lại",
+  "refreshAction": "Làm mới",
   "cancel": "Hủy",
   "save": "Lưu",
   "delete": "Xóa",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Không",
   "surah": "Chương",
+  "ayahLabel": "Ôi {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juzʾ",
   "page": "Trang",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Đang tải tafsir...",
+  "tafsirSourceLabel": "nguồn Tafsir",
+  "tafsirNoSurahFound": "Không tìm thấy tafsir cho surah này.",
+  "tafsirNoAyahFound": "Không tìm thấy tafsir cho ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Không thể tải Tafsir.",
+  "tafsirNoTextForAyah": "Không có văn bản tafsir cho ayah này.",
+  "tafsirDownloadingProgress": "Đang tải xuống tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Đang tải tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Nguồn Tafsir trả về lỗi HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Nguồn tafsir đã chọn không trả lại mục nào.",
+  "tafsirCacheUnavailable": "Tafsir đã được xác minh chưa khả dụng ngoại tuyến. Đồng bộ hóa tập dữ liệu tafsir có nguồn gốc trước khi duyệt.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Thêm dấu trang",
   "removeBookmark": "Xóa dấu trang",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "những người khác cầu nguyện: ‘Lạy Chúa, xin ban cho chúng con những điều tốt lành ở đời này và Đời sau, và bảo vệ chúng con khỏi sự hành hạ của Lửa.’",
+  "duaMeaning2": "Thiên Chúa không tạo gánh nặng cho bất kỳ linh hồn nào nhiều hơn mức nó có thể chịu đựng: mỗi người đạt được bất cứ điều tốt nào họ đã làm và chịu đựng những điều tồi tệ của mình- ‘Lạy Chúa, đừng bắt chúng con phải làm việc nếu chúng con quên hoặc phạm sai lầm. Lạy Chúa, xin đừng tạo gánh nặng cho chúng con như Ngài đã gánh nặng cho những người đi trước chúng con. Lạy Chúa, xin đừng tạo gánh nặng cho chúng con nhiều hơn sức chúng con có thể chịu đựng được. Xin tha thứ cho chúng tôi, tha thứ cho chúng tôi và thương xót chúng tôi. Bạn là Người bảo vệ của chúng tôi, vì vậy hãy giúp chúng tôi chống lại những kẻ không tin tưởng.'",
+  "duaMeaning3": "‘Lạy Chúa, xin đừng để lòng chúng con chệch hướng sau khi Chúa hướng dẫn chúng con. Xin ban cho chúng con lòng thương xót của Chúa: Chúa là Đấng Hằng Cho.",
+  "duaMeaning4": "Lạy Chúa, xin cho con và con cháu con có thể tiếp tục cầu nguyện. Lạy Chúa, xin chấp nhận lời cầu xin của con.",
+  "duaMeaning5": "và khiêm nhường hạ cánh xuống họ với lòng nhân từ và nói: ‘Lạy Chúa, xin thương xót họ, như họ đã chăm sóc con khi con còn nhỏ.’",
+  "duaMeaning6": "tôn cao thay Đức Chúa Trời, Đấng thực sự nắm quyền kiểm soát. [Tiên tri], đừng vội đọc thuộc lòng trước khi sự mặc khải hoàn toàn trọn vẹn mà hãy nói: ‘Lạy Chúa, xin gia tăng kiến ​​thức cho con!’",
+  "duaMeaning7": "Hãy nói [Tiên tri]: ‘Lạy Chúa, xin tha thứ và thương xót: Ngài là Đấng có lòng thương xót nhất.’",
+  "duaMeaning8": "những người cầu nguyện: ‘Lạy Chúa, xin ban cho chúng con niềm vui nơi vợ chồng và con cái chúng con. Xin hãy làm cho chúng con trở thành những tấm gương tốt cho những ai biết đến Ngài’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Nhịn chay",
   "quranReading": "Đọc Kinh Qur'an",
   "prayers": "Các buổi cầu nguyện",
+  "prayerRemainingHoursMinutes": "{hours} giờ {minutes} phút",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes} phút",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Tiến độ hàng tuần",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Năm mới Hồi giáo",
+  "mawlidAnNabi": "Mawlid Kandili",
+  "specialDayDateRamadanStart": "1 tháng Ramadan",
+  "specialDayDateLaylatAlQadr": "Tháng Ramadan 27",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhu al-Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Hướng Qibla",
   "compass": "La bàn",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Đã tìm thấy hướng Qibla!",
   "turnDevice": "Xoay thiết bị của bạn về hướng Qibla",
+  "qiblaCompassErrorDetails": "Lỗi la bàn: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Cảm biến la bàn không khả dụng trên thiết bị này.",
+  "qiblaLocationRequiredTitle": "Vị trí cần thiết cho Qibla",
+  "qiblaLocationRequiredBody": "Đặt vị trí thực tế của bạn trước khi sử dụng la bàn Qibla để có thể tính toán hướng chính xác.",
+  "adhanNotificationChannelName": "Thông báo Adhan",
+  "adhanNotificationChannelDescription": "Cảnh báo thời gian cầu nguyện với âm thanh adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Số mục tiêu: {target}",
   "tapToCount": "Nhấn để đếm",
+  "zikrCompletedMashAllah": "Hoàn thành! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah vượt xa mọi sự không hoàn hảo.",
+  "zikrMeaningAlhamdulillah": "Mọi lời khen ngợi đều thuộc về Allah.",
+  "zikrMeaningAllahuAkbar": "Allah là Đấng vĩ đại nhất.",
+  "zikrMeaningLaIlahaIllallah": "Không có thần nào ngoài Allah.",
+  "zikrMeaningAstaghfirullah": "Tôi tìm kiếm sự tha thứ của Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Không có sức mạnh và sức mạnh nào ngoại trừ thông qua Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Giọng nói âm thanh",
+  "audioVoiceMisharyAlafasy": "Nam (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Nam (Abdul Basit)",
+  "audioVoiceSudais": "Nam (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Hiệu chỉnh Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Cần hiệu chuẩn. Xoay thiết bị trong hình 8.",
   "dailyVerse": "Câu thơ hàng ngày",
+  "dailyVerseUnavailableTitle": "Câu thơ hàng ngày không có sẵn",
+  "dailyVerseUnavailableBody": "Nội dung câu thơ hàng ngày đã được xác minh chưa được định cấu hình cho bản dựng này. Kết nối với nguồn đám mây hoặc đồng bộ hóa bộ đệm đã được xác minh trước khi duyệt.",
   "todaysIbadah": "Ibadah ngày nay",
   "quickAccess": "Truy cập nhanh",
   "assistant": "Trợ lý",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Bộ đôi đã được xác minh chưa có sẵn",
+  "duaUnavailableBody": "Bộ đôi hàng ngày đã được xác minh chưa được đồng bộ hóa với thiết bị này. Kết nối với nguồn đám mây để tải các bản song ca có nguồn gốc thay vì bản dự phòng chưa được xác minh.",
+  "duaCategoryQuranic": "Kinh Qur'an dua",
+  "duaCategoryMorningEvening": "Sáng & Tối",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Sự bảo vệ",
+  "duaCategoryBeginning": "Sự khởi đầu",
+  "duaCategorySleep": "Ngủ",
+  "duaCategoryFoodDrink": "Đồ ăn & Đồ uống",
+  "duaCategoryForgiveness": "sự tha thứ",
+  "duaCategoryHome": "Trang chủ",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Giáo dục Hồi giáo",
   "sukunAudioTitle": "Âm thanh Sukun",
   "hadithCollections": "Bộ sưu tập Hadith",
+  "hadithSourcePending": "Nguồn đã được xác minh đang chờ xử lý",
+  "hadithUnavailableTitle": "Bộ sưu tập hadith đã được xác minh chưa có sẵn",
+  "hadithUnavailableBody": "Bản dựng này vẫn phụ thuộc vào nguồn cấp dữ liệu hadith bên ngoài chưa được xác minh. Trình duyệt Hadith vẫn bị vô hiệu hóa cho đến khi tập dữ liệu có nguồn gốc được đồng bộ hóa.",
   "paywallUnlockAll": "Mở khóa tất cả các tính năng cho hành trình tâm linh của bạn",
+  "premiumProductUnavailable": "Sản phẩm cao cấp hiện không có sẵn. Vui lòng thử lại sau.",
+  "premiumPurchaseFailed": "Không thể hoàn tất việc mua hàng. Vui lòng thử lại.",
   "paywallFeature1Title": "Trợ lý thần kinh Plus",
   "paywallFeature1Desc": "Hỏi đáp được hỗ trợ bởi AI không giới hạn",
   "paywallFeature2Title": "Ngoại tuyến không giới hạn",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Đã hoàn tất tải xuống cho {reciter} với {failed} surah không thành công ({downloaded}/{total} đã tải xuống).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Đã xóa tệp ngoại tuyến cho {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Lỗi mạng. Vui lòng thử lại.",
+  "placesLocationRequiredTitle": "Yêu cầu vị trí",
+  "placesLocationRequiredBody": "Trước tiên hãy đặt vị trí để có thể tìm kiếm chính xác các nhà thờ Hồi giáo, đồ ăn halal và trường học Hồi giáo gần đó.",
+  "placesMapTilesUnavailableTitle": "Ô bản đồ không có sẵn",
+  "placesMapTilesUnavailableBody": "Nguồn ô bản đồ đã được xác minh chưa được định cấu hình cho bản dựng này. Các địa điểm lân cận vẫn có thể tải từ vị trí đã lưu của bạn.",
+  "placesDataSourceUnavailableTitle": "Dữ liệu địa điểm không có sẵn",
+  "placesDataSourceUnavailableBody": "Điểm cuối dữ liệu địa điểm đã xác minh chưa được định cấu hình cho bản dựng này. Đặt PLACES_OVERPASS_API_URL thành proxy hoặc nhà cung cấp được phê duyệt trước khi bật tìm kiếm lân cận.",
   "unknownPlaceName": "Tên không xác định",
   "islamicPlaceFallback": "Địa điểm Hồi giáo",
-  "prayerNotificationTitle": "Đã đến lúc dành cho {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Đã đến lúc cầu nguyện {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Bộ đôi đã được xác minh chưa có sẵn",
-  "duaUnavailableBody": "Bộ đôi hàng ngày đã được xác minh chưa được đồng bộ hóa với thiết bị này. Kết nối với nguồn đám mây để tải các bản song ca có nguồn gốc thay vì bản dự phòng chưa được xác minh.",
-  "duaCategoryQuranic": "Kinh Qur'an dua",
-  "duaCategoryMorningEvening": "Sáng & Tối",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Sự bảo vệ",
-  "duaCategoryBeginning": "Sự khởi đầu",
-  "duaCategorySleep": "Ngủ",
-  "duaCategoryFoodDrink": "Đồ ăn & Đồ uống",
-  "duaCategoryForgiveness": "sự tha thứ",
-  "duaCategoryHome": "Trang chủ",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Nguồn đã được xác minh đang chờ xử lý",
-  "hadithUnavailableTitle": "Bộ sưu tập hadith đã được xác minh chưa có sẵn",
-  "hadithUnavailableBody": "Bản dựng này vẫn phụ thuộc vào nguồn cấp dữ liệu hadith bên ngoài chưa được xác minh. Trình duyệt Hadith vẫn bị vô hiệu hóa cho đến khi tập dữ liệu có nguồn gốc được đồng bộ hóa.",
-  "appErrorOccurred": "Đã xảy ra lỗi",
-  "appUnknownError": "Lỗi không xác định",
-  "qiblaCompassErrorDetails": "Lỗi la bàn: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Hoàn thành! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah vượt xa mọi sự không hoàn hảo.",
-  "zikrMeaningAlhamdulillah": "Mọi lời khen ngợi đều thuộc về Allah.",
-  "zikrMeaningAllahuAkbar": "Allah là Đấng vĩ đại nhất.",
-  "zikrMeaningLaIlahaIllallah": "Không có thần nào ngoài Allah.",
-  "zikrMeaningAstaghfirullah": "Tôi tìm kiếm sự tha thứ của Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Không có sức mạnh và sức mạnh nào ngoại trừ thông qua Allah.",
   "asmaMeaning1": "Người có lợi",
   "asmaMeaning2": "Người nhân hậu",
   "asmaMeaning3": "Vua / Chúa vĩnh cửu",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Người vĩnh cửu",
   "asmaMeaning97": "Người thừa kế",
   "asmaMeaning98": "Hướng dẫn chính đáng nhất",
-  "asmaMeaning99": "Đấng Kiên nhẫn, không vội trừng phạt và hành xử với sự khoan dung hoàn hảo.",
-  "duaMeaning1": "những người khác cầu nguyện: ‘Lạy Chúa, xin ban cho chúng con những điều tốt lành ở đời này và Đời sau, và bảo vệ chúng con khỏi sự hành hạ của Lửa.’",
-  "duaMeaning2": "Thiên Chúa không tạo gánh nặng cho bất kỳ linh hồn nào nhiều hơn mức nó có thể chịu đựng: mỗi người đạt được bất cứ điều tốt nào họ đã làm và chịu đựng những điều tồi tệ của mình- ‘Lạy Chúa, đừng bắt chúng con phải làm việc nếu chúng con quên hoặc phạm sai lầm. Lạy Chúa, xin đừng tạo gánh nặng cho chúng con như Ngài đã gánh nặng cho những người đi trước chúng con. Lạy Chúa, xin đừng tạo gánh nặng cho chúng con nhiều hơn sức chúng con có thể chịu đựng được. Xin tha thứ cho chúng tôi, tha thứ cho chúng tôi và thương xót chúng tôi. Bạn là Người bảo vệ của chúng tôi, vì vậy hãy giúp chúng tôi chống lại những kẻ không tin tưởng.'",
-  "duaMeaning3": "‘Lạy Chúa, xin đừng để lòng chúng con chệch hướng sau khi Chúa hướng dẫn chúng con. Xin ban cho chúng con lòng thương xót của Chúa: Chúa là Đấng Hằng Cho.",
-  "duaMeaning4": "Lạy Chúa, xin cho con và con cháu con có thể tiếp tục cầu nguyện. Lạy Chúa, xin chấp nhận lời cầu xin của con.",
-  "duaMeaning5": "và khiêm nhường hạ cánh xuống họ với lòng nhân từ và nói: ‘Lạy Chúa, xin thương xót họ, như họ đã chăm sóc con khi con còn nhỏ.’",
-  "duaMeaning6": "tôn cao thay Đức Chúa Trời, Đấng thực sự nắm quyền kiểm soát. [Tiên tri], đừng vội đọc thuộc lòng trước khi sự mặc khải hoàn toàn trọn vẹn mà hãy nói: ‘Lạy Chúa, xin gia tăng kiến ​​thức cho con!’",
-  "duaMeaning7": "Hãy nói [Tiên tri]: ‘Lạy Chúa, xin tha thứ và thương xót: Ngài là Đấng có lòng thương xót nhất.’",
-  "duaMeaning8": "những người cầu nguyện: ‘Lạy Chúa, xin ban cho chúng con niềm vui nơi vợ chồng và con cái chúng con. Xin hãy làm cho chúng con trở thành những tấm gương tốt cho những ai biết đến Ngài’.",
-  "islamicNewYear": "Năm mới Hồi giáo",
-  "mawlidAnNabi": "Mawlid Kandili",
-  "specialDayDateRamadanStart": "1 tháng Ramadan",
-  "specialDayDateLaylatAlQadr": "Tháng Ramadan 27",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhu al-Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Làm mới",
-  "ayahLabel": "Ôi {ayah}",
-  "tafsirLoading": "Đang tải tafsir...",
-  "tafsirSourceLabel": "nguồn Tafsir",
-  "tafsirNoSurahFound": "Không tìm thấy tafsir cho surah này.",
-  "tafsirNoAyahFound": "Không tìm thấy tafsir cho ayah {ayah}.",
-  "tafsirLoadFailed": "Không thể tải Tafsir.",
-  "tafsirNoTextForAyah": "Không có văn bản tafsir cho ayah này.",
-  "tafsirDownloadingProgress": "Đang tải xuống tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Đang tải tafsir {current}/{total}",
-  "tafsirApiStatusError": "Nguồn Tafsir trả về lỗi HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Nguồn tafsir đã chọn không trả lại mục nào.",
-  "premiumProductUnavailable": "Sản phẩm cao cấp hiện không có sẵn. Vui lòng thử lại sau.",
-  "premiumPurchaseFailed": "Không thể hoàn tất việc mua hàng. Vui lòng thử lại.",
-  "prayerRemainingHoursMinutes": "{hours} giờ {minutes} phút",
-  "prayerRemainingMinutes": "{minutes} phút",
-  "splashTagline": "Con đường ánh sáng Hồi giáo",
-  "downloadPartiallyFinishedForReciter": "Đã hoàn tất tải xuống cho {reciter} với {failed} surah không thành công ({downloaded}/{total} đã tải xuống).",
-  "placesLocationRequiredTitle": "Yêu cầu vị trí",
-  "placesLocationRequiredBody": "Trước tiên hãy đặt vị trí để có thể tìm kiếm chính xác các nhà thờ Hồi giáo, đồ ăn halal và trường học Hồi giáo gần đó.",
-  "placesMapTilesUnavailableTitle": "Ô bản đồ không có sẵn",
-  "placesMapTilesUnavailableBody": "Nguồn ô bản đồ đã được xác minh chưa được định cấu hình cho bản dựng này. Các địa điểm lân cận vẫn có thể tải từ vị trí đã lưu của bạn.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Nam (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Nam (Abdul Basit)",
-  "audioVoiceSudais": "Nam (Sudais)",
-  "qiblaSensorUnavailable": "Cảm biến la bàn không khả dụng trên thiết bị này.",
-  "adhanNotificationChannelName": "Thông báo Adhan",
-  "adhanNotificationChannelDescription": "Cảnh báo thời gian cầu nguyện với âm thanh adhan.",
-  "quranLoadFailed": "Không thể tải nội dung Kinh Qur'an. Vui lòng thử lại.",
-  "locationDetectionFailed": "Không thể phát hiện vị trí của bạn. Vui lòng chọn thành phố theo cách thủ công hoặc thử lại.",
-  "qiblaLocationRequiredTitle": "Vị trí cần thiết cho Qibla",
-  "qiblaLocationRequiredBody": "Đặt vị trí thực tế của bạn trước khi sử dụng la bàn Qibla để có thể tính toán hướng chính xác.",
-  "placesDataSourceUnavailableTitle": "Dữ liệu địa điểm không có sẵn",
-  "placesDataSourceUnavailableBody": "Điểm cuối dữ liệu địa điểm đã xác minh chưa được định cấu hình cho bản dựng này. Đặt PLACES_OVERPASS_API_URL thành proxy hoặc nhà cung cấp được phê duyệt trước khi bật tìm kiếm lân cận.",
-  "tafsirCacheUnavailable": "Tafsir đã được xác minh chưa khả dụng ngoại tuyến. Đồng bộ hóa tập dữ liệu tafsir có nguồn gốc trước khi duyệt."
+  "asmaMeaning99": "Đấng Kiên nhẫn, không vội trừng phạt và hành xử với sự khoan dung hoàn hảo."
 }

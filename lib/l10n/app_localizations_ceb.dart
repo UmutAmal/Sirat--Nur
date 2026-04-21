@@ -957,6 +957,14 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get dailyVerse => 'Adlaw-adlaw nga Bersikulo';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Adlaw-adlaw nga bersikulo dili magamit';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ang na-verify nga inadlaw nga sulud sa bersikulo wala pa gi-configure para sa kini nga pagtukod. Sumpaysumpaya ang tinubdan sa panganod o i-sync ang usa ka na-verify nga cache sa dili pa mag-browse.';
+
+  @override
   String get todaysIbadah => 'Ibadah karon';
 
   @override

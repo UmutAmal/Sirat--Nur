@@ -1,6 +1,7 @@
 {
   "@@locale": "lo",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "ວິ​ທີ​ການ​ອິດ​ສະ​ລາມ​ຂອງ​ແສງ​ສະ​ຫວ່າງ​",
   "home": "ບ້ານ",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "ອິຊາ",
+  "prayerNotificationTitle": "ເວລາສຳລັບ {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ມັນແມ່ນເວລາທີ່ຈະອະທິຖານ {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "ຂໍ້ມູນ & ການເກັບຮັກສາ",
   "clearCache": "ລຶບລ້າງແຄດ",
   "cacheClearedSuccess": "ລ້າງແຄດສຳເລັດແລ້ວ",
@@ -34,6 +51,7 @@
   "currentLocation": "ສະຖານທີ່ປັດຈຸບັນ (GPS)",
   "locationServiceDisabled": "ບໍລິການສະຖານທີ່ຖືກປິດໃຊ້ງານ.",
   "locationPermissionDenied": "ການອະນຸຍາດສະຖານທີ່ຖືກປະຕິເສດ.",
+  "locationDetectionFailed": "ບໍ່ສາມາດກວດພົບສະຖານທີ່ຂອງທ່ານໄດ້. ກະລຸນາເລືອກເມືອງດ້ວຍຕົນເອງ ຫຼືລອງໃໝ່ອີກ.",
   "citiesCount": "{count} ເມືອງ",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "ບໍ່ພົບຜົນການຊອກຫາ",
   "loading": "ກຳລັງໂຫລດ...",
   "error": "ຜິດພາດ",
+  "appErrorOccurred": "ເກີດຄວາມຜິດພາດຂຶ້ນ",
+  "appUnknownError": "ຄວາມຜິດພາດທີ່ບໍ່ຮູ້ຈັກ",
+  "quranLoadFailed": "ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ.",
   "retry": "ລອງໃໝ່",
+  "refreshAction": "ໂຫຼດຂໍ້ມູນຄືນໃໝ່",
   "cancel": "ຍົກເລີກ",
   "save": "ບັນທຶກ",
   "delete": "ລຶບ",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "ບໍ່",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "ໜ້າ",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "ກຳລັງໂຫລດ tafsir...",
+  "tafsirSourceLabel": "ແຫຼ່ງ Tafsir",
+  "tafsirNoSurahFound": "ບໍ່ພົບ tafsir ສໍາລັບ Surah ນີ້.",
+  "tafsirNoAyahFound": "ບໍ່ພົບ tafsir ສໍາລັບ ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "ບໍ່ສາມາດໂຫຼດ Tafsir ໄດ້.",
+  "tafsirNoTextForAyah": "ບໍ່ມີຂໍ້ຄວາມ tafsir ສໍາລັບ ayah ນີ້.",
+  "tafsirDownloadingProgress": "ກຳລັງດາວໂຫລດ tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "ກຳລັງໂຫລດ tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "ແຫຼ່ງ Tafsir ຕອບ HTTP {statusCode} ຂໍ້ຜິດພາດ.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "ແຫຼ່ງ tafsir ທີ່ເລືອກສົ່ງຄືນບໍ່ມີລາຍການ.",
+  "tafsirCacheUnavailable": "tafsir ທີ່ຢັ້ງຢືນແລ້ວແມ່ນຍັງບໍ່ມີໃຫ້ອອບລາຍເທື່ອ. ຊິ້ງຂໍ້ມູນຊຸດຂໍ້ມູນ tafsir ທີ່ມາກ່ອນການທ່ອງເວັບ.",
   "bookmarks": "Bookmarks",
   "addBookmark": "ເພີ່ມບຸກມາກ",
   "removeBookmark": "ເອົາບຸກມາກອອກ",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "ຄົນອື່ນອະທິຖານວ່າ, 'ພຣະຜູ້ເປັນເຈົ້າຂອງພວກເຮົາ, ໃຫ້ພວກເຮົາມີຄວາມດີໃນໂລກນີ້ແລະໃນໂລກນີ້, ແລະປົກປ້ອງພວກເຮົາຈາກການທໍລະມານຂອງໄຟ.'",
+  "duaMeaning2": "ພະເຈົ້າ​ບໍ່​ໄດ້​ຮັບ​ພາລະ​ໜັກ​ເກີນ​ກວ່າ​ທີ່​ຈະ​ທົນ​ໄດ້: ແຕ່​ລະ​ຄົນ​ຈະ​ໄດ້​ຜົນ​ດີ​ອັນ​ໃດ​ກໍ​ຕາມ​ທີ່​ໄດ້​ເຮັດ ແລະ​ທົນ​ທຸກ​ກັບ​ຄວາມ​ຊົ່ວ— ‘ພະອົງ​ເຈົ້າ​ເອີຍ ຢ່າ​ເອົາ​ພວກ​ເຮົາ​ໄປ​ເຮັດ​ວຽກ ຖ້າ​ເຮົາ​ລືມ​ຫຼື​ເຮັດ​ຜິດ. ພະອົງ​ເຈົ້າ​ເອີຍ, ຂໍ​ຢ່າ​ແບກ​ພາລະ​ພວກ​ເຮົາ ດັ່ງ​ທີ່​ພຣະອົງ​ໄດ້​ແບກ​ພາລະ​ພວກ​ທີ່​ຢູ່​ຕໍ່ໜ້າ​ພວກ​ເຮົາ. ພຣະ​ອົງ​ເຈົ້າ, ຢ່າ​ພາ​ລະ​ພວກ​ເຮົາ​ຫລາຍ​ກວ່າ​ທີ່​ພວກ​ເຮົາ​ມີ​ຄວາມ​ເຂັ້ມ​ແຂງ​ທີ່​ຈະ​ຮັບ​ເອົາ. ຂໍ​ອະ​ໄພ​ພວກ​ເຮົາ, ໃຫ້​ອະ​ໄພ​ພວກ​ເຮົາ, ແລະ​ມີ​ຄວາມ​ເມດ​ຕາ​ພວກ​ເຮົາ. ທ່ານ​ເປັນ​ຜູ້​ປົກ​ປ້ອງ​ຂອງ​ພວກ​ເຮົາ, ດັ່ງ​ນັ້ນ​ຊ່ວຍ​ພວກ​ເຮົາ​ຕໍ່​ຕ້ານ​ພວກ​ທີ່​ບໍ່​ເຊື່ອ.",
+  "duaMeaning3": "‘ອົງພຣະ​ຜູ້​ເປັນເຈົ້າ​ຂອງ​ພວກເຮົາ ຂໍ​ຢ່າ​ໃຫ້​ໃຈ​ຂອງ​ພວກ​ເຮົາ​ຫລົງ​ທາງ​ຫລັງ​ຈາກ​ພຣະອົງ​ໄດ້​ຊີ້​ນຳ​ພວກ​ເຮົາ. ມອບຄວາມເມດຕາຂອງເຈົ້າໃຫ້ພວກເຮົາ: ເຈົ້າເປັນຜູ້ໃຫ້.",
+  "duaMeaning4": "ພຣະຜູ້ເປັນເຈົ້າ, ຂໍໃຫ້ຂ້າພະເຈົ້າແລະລູກຫລານຂອງຂ້າພະເຈົ້າສາມາດຮັກສາຄໍາອະທິຖານ. ພຣະຜູ້ເປັນເຈົ້າຂອງພວກເຮົາ, ຍອມຮັບຄໍາຮ້ອງຂໍຂອງຂ້ອຍ.",
+  "duaMeaning5": "ແລະ​ຫຼຸດ​ປີກ​ຂອງ​ເຈົ້າ​ລົງ​ໃນ​ຄວາມ​ຖ່ອມ​ຕົວ​ຕໍ່​ພວກ​ເຂົາ​ດ້ວຍ​ຄວາມ​ເມດຕາ ແລະ​ເວົ້າ​ວ່າ, ‘ພະອົງ​ເຈົ້າ​ເອີຍ ຂໍ​ຊົງ​ໂຜດ​ເມດຕາ​ພວກ​ເຂົາ ເໝືອນ​ດັ່ງ​ທີ່​ພວກ​ເຂົາ​ເປັນ​ຫ່ວງ​ຂ້ອຍ​ຕອນ​ຍັງ​ນ້ອຍ.’",
+  "duaMeaning6": "ພຣະເຈົ້າ​ຊົງ​ໂຜດ​ປະທານ​ໃຫ້​ແກ່​ຜູ້​ທີ່​ມີ​ອຳນາດ​ຢ່າງ​ແທ້ຈິງ. [ສາດ​ສະ​ດາ], ຢ່າ​ຟ້າວ​ບັນ​ຍາຍ​ກ່ອນ​ການ​ເປີດ​ເຜີຍ​ຈະ​ສຳ​ເລັດ​ຢ່າງ​ເຕັມ​ທີ່ ແຕ່​ຈົ່ງ​ເວົ້າ​ວ່າ, ‘ພຣະ​ຜູ້​ເປັນ​ເຈົ້າ, ຈົ່ງ​ເພີ່ມ​ຄວາມ​ຮູ້​ໃຫ້​ຂ້າ​ພະ​ເຈົ້າ!’",
+  "duaMeaning7": "ເວົ້າ [ສາດສະດາ], 'ພຣະອົງເຈົ້າ, ໃຫ້ອະໄພແລະມີຄວາມເມດຕາ: ທ່ານມີຄວາມເມດຕາທີ່ສຸດ.'",
+  "duaMeaning8": "ຜູ້​ທີ່​ອະທິດຖານ​ວ່າ, ‘ອົງພຣະ​ຜູ້​ເປັນເຈົ້າ​ຂອງ​ພວກ​ຂ້ານ້ອຍ​ເອີຍ, ຂໍ​ໃຫ້​ພວກ​ຂ້ານ້ອຍ​ມີ​ຄວາມສຸກ​ໃນ​ຄູ່​ສົມລົດ ແລະ​ລູກ​ຫລານ​ຂອງ​ພວກເຮົາ. ເຮັດ​ໃຫ້​ພວກ​ເຮົາ​ເປັນ​ຕົວ​ຢ່າງ​ທີ່​ດີ​ຕໍ່​ຜູ້​ທີ່​ຮູ້​ຈັກ​ທ່ານ.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "ການອົດອາຫານ",
   "quranReading": "ການ​ອ່ານ Quran​",
   "prayers": "ອະທິຖານ",
+  "prayerRemainingHoursMinutes": "{hours}ຊມ {minutes}ນທ",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "ຄວາມຄືບຫນ້າປະຈໍາອາທິດ",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "ປີໃຫມ່ອິດສະລາມ",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 ຊົວແວວ",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "ທິດ​ທາງ Qibla",
   "compass": "ເຂັມທິດ",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "ພົບ Qibla!",
   "turnDevice": "ປ່ຽນອຸປະກອນຂອງທ່ານໃຫ້ປະເຊີນກັບ Qibla",
+  "qiblaCompassErrorDetails": "ເຂັມທິດຜິດພາດ: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.",
+  "qiblaLocationRequiredTitle": "ສະຖານທີ່ຕ້ອງການສໍາລັບ Qibla",
+  "qiblaLocationRequiredBody": "ຕັ້ງຄ່າສະຖານທີ່ຕົວຈິງຂອງເຈົ້າກ່ອນທີ່ຈະໃຊ້ເຂັມທິດ Qibla ເພື່ອໃຫ້ທິດທາງສາມາດຄິດໄລ່ໄດ້ຢ່າງຖືກຕ້ອງ.",
+  "adhanNotificationChannelName": "ການແຈ້ງເຕືອນ Adhan",
+  "adhanNotificationChannelDescription": "ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "ຈຳນວນເປົ້າໝາຍ: {target}",
   "tapToCount": "ແຕະເພື່ອນັບ",
+  "zikrCompletedMashAllah": "ສຳເລັດແລ້ວ! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah ແມ່ນຢູ່ເຫນືອຄວາມບໍ່ສົມບູນແບບ.",
+  "zikrMeaningAlhamdulillah": "ຄໍາສັນລະເສີນທັງຫມົດເປັນຂອງ Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ແມ່ນຍິ່ງໃຫຍ່ທີ່ສຸດ.",
+  "zikrMeaningLaIlahaIllallah": "ບໍ່ມີພຣະເຈົ້າແຕ່ Allah.",
+  "zikrMeaningAstaghfirullah": "ຂ້າພະເຈົ້າຊອກຫາການໃຫ້ອະໄພ Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ບໍ່ມີພະລັງງານແລະບໍ່ມີຄວາມເຂັ້ມແຂງຍົກເວັ້ນໂດຍຜ່ານ Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "ສຽງສຽງ",
+  "audioVoiceMisharyAlafasy": "ຜູ້ຊາຍ (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "ຜູ້ຊາຍ (Abdul Basit)",
+  "audioVoiceSudais": "ຜູ້ຊາຍ (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "ການ​ປັບ Qibla​",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "ຕ້ອງການການປັບທຽບ. ໝຸນອຸປະກອນໃນຮູບ-8.",
   "dailyVerse": "ຂໍ້ພຣະຄໍາພີປະຈໍາວັນ",
+  "dailyVerseUnavailableTitle": "ບໍ່ມີຂໍ້ພຣະຄໍາພີປະຈໍາວັນ",
+  "dailyVerseUnavailableBody": "ເນື້ອໃນຂໍ້ພຣະຄໍາພີປະຈຳວັນທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນໄດ້ກຳນົດຄ່າສຳລັບການສ້າງນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວ ຫຼື ຊິງຄ໌ແຄສທີ່ຢືນຢັນແລ້ວກ່ອນທີ່ຈະຊອກຫາ.",
   "todaysIbadah": "Ibadah ມື້ນີ້",
   "quickAccess": "ການເຂົ້າເຖິງດ່ວນ",
   "assistant": "ຜູ້ຊ່ວຍ",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "duas ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ສາມາດໃຊ້ໄດ້ເທື່ອ",
+  "duaUnavailableBody": "ຢືນຢັນ duas ປະຈໍາວັນຍັງບໍ່ໄດ້ຖືກຊິງຄ໌ກັບອຸປະກອນນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວເພື່ອໂຫຼດ duas ທີ່ມາແທນການທົດແທນທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "ເຊົ້າ ແລະ ແລງ",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "ການປົກປ້ອງ",
+  "duaCategoryBeginning": "ເລີ່ມຕົ້ນ",
+  "duaCategorySleep": "ນອນ",
+  "duaCategoryFoodDrink": "ອາຫານ ແລະ ເຄື່ອງດື່ມ",
+  "duaCategoryForgiveness": "ການໃຫ້ອະໄພ",
+  "duaCategoryHome": "ບ້ານ",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "ການສຶກສາອິດສະລາມ",
   "sukunAudioTitle": "ສຸກັນ ສຽງສະຫວັນ",
   "hadithCollections": "ການເກັບກໍາ Hadith",
+  "hadithSourcePending": "ຢືນຢັນແຫຼ່ງທີ່ລໍຖ້າຢູ່",
+  "hadithUnavailableTitle": "ຄໍເລັກຊັນ hadith ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ",
+  "hadithUnavailableBody": "ການກໍ່ສ້າງນີ້ຍັງຂຶ້ນກັບອາຫານ hadith ພາຍນອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ. ການ​ຊອກ​ຫາ Hadith ຈະ​ປິດ​ການ​ໃຊ້​ງານ​ຈົນ​ກ​່​ວາ​ຊຸດ​ຂໍ້​ມູນ​ທີ່​ມາ​ໄດ້​ຖືກ​ຊິງ​.",
   "paywallUnlockAll": "ປົດລັອກຄຸນສົມບັດທັງໝົດສຳລັບການເດີນທາງທາງວິນຍານຂອງທ່ານ",
+  "premiumProductUnavailable": "ສິນຄ້າພຣີມຽມບໍ່ມີໃຫ້ໃນຕອນນີ້. ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ.",
+  "premiumPurchaseFailed": "ບໍ່ສາມາດສຳເລັດການຊື້ໄດ້. ກະລຸນາລອງອີກຄັ້ງ.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "ຖາມ-ຕອບແບບບໍ່ຈຳກັດ AI",
   "paywallFeature2Title": "ອອບໄລນ໌ບໍ່ຈຳກັດ",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "ການດາວໂຫຼດສຳເລັດແລ້ວສຳລັບ {reciter} ກັບ {failed} ລົ້ມເຫລວ Surah ({downloaded}/{total} ດາວໂຫຼດແລ້ວ).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "ລຶບໄຟລ໌ອອບລາຍສຳລັບ {reciter} ແລ້ວ.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "ເຄືອຂ່າຍຜິດພາດ. ກະລຸນາລອງອີກຄັ້ງ.",
+  "placesLocationRequiredTitle": "ຕ້ອງການສະຖານທີ່",
+  "placesLocationRequiredBody": "ກຳນົດສະຖານທີ່ກ່ອນເພື່ອຄົ້ນຫາວັດວາອາຮາມ, ອາຫານຮາລາ ແລະໂຮງຮຽນອິດສະລາມທີ່ຢູ່ໃກ້ຄຽງ.",
+  "placesMapTilesUnavailableTitle": "ແຜ່ນແຜນທີ່ບໍ່ສາມາດໃຊ້ໄດ້",
+  "placesMapTilesUnavailableBody": "ແຫຼ່ງທີ່ມາຂອງກະເບື້ອງແຜນທີ່ທີ່ຢືນຢັນແລ້ວຍັງບໍ່ທັນໄດ້ກຳນົດຄ່າສຳລັບການສ້າງນີ້ເທື່ອ. ສະຖານທີ່ໃກ້ຄຽງຍັງສາມາດໂຫລດຈາກສະຖານທີ່ທີ່ທ່ານບັນທຶກໄວ້.",
+  "placesDataSourceUnavailableTitle": "ບໍ່ມີຂໍ້ມູນສະຖານທີ່",
+  "placesDataSourceUnavailableBody": "ຈຸດສິ້ນສຸດຂໍ້ມູນສະຖານທີ່ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ໄດ້ຖືກຕັ້ງຄ່າສໍາລັບການກໍ່ສ້າງນີ້ເທື່ອ. ຕັ້ງ PLACES_OVERPASS_API_URL ເປັນພຣັອກຊີ ຫຼືຜູ້ໃຫ້ບໍລິການທີ່ໄດ້ຮັບອະນຸມັດກ່ອນທີ່ຈະເປີດໃຊ້ການຄົ້ນຫາທີ່ຢູ່ໃກ້ຄຽງ.",
   "unknownPlaceName": "ຊື່ທີ່ບໍ່ຮູ້ຈັກ",
   "islamicPlaceFallback": "ສະຖານທີ່ອິດສະລາມ",
-  "prayerNotificationTitle": "ເວລາສຳລັບ {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "ມັນແມ່ນເວລາທີ່ຈະອະທິຖານ {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "duas ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ສາມາດໃຊ້ໄດ້ເທື່ອ",
-  "duaUnavailableBody": "ຢືນຢັນ duas ປະຈໍາວັນຍັງບໍ່ໄດ້ຖືກຊິງຄ໌ກັບອຸປະກອນນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວເພື່ອໂຫຼດ duas ທີ່ມາແທນການທົດແທນທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "ເຊົ້າ ແລະ ແລງ",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "ການປົກປ້ອງ",
-  "duaCategoryBeginning": "ເລີ່ມຕົ້ນ",
-  "duaCategorySleep": "ນອນ",
-  "duaCategoryFoodDrink": "ອາຫານ ແລະ ເຄື່ອງດື່ມ",
-  "duaCategoryForgiveness": "ການໃຫ້ອະໄພ",
-  "duaCategoryHome": "ບ້ານ",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "ຢືນຢັນແຫຼ່ງທີ່ລໍຖ້າຢູ່",
-  "hadithUnavailableTitle": "ຄໍເລັກຊັນ hadith ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນມີໃຫ້ເທື່ອ",
-  "hadithUnavailableBody": "ການກໍ່ສ້າງນີ້ຍັງຂຶ້ນກັບອາຫານ hadith ພາຍນອກທີ່ບໍ່ໄດ້ຮັບການຢືນຢັນ. ການ​ຊອກ​ຫາ Hadith ຈະ​ປິດ​ການ​ໃຊ້​ງານ​ຈົນ​ກ​່​ວາ​ຊຸດ​ຂໍ້​ມູນ​ທີ່​ມາ​ໄດ້​ຖືກ​ຊິງ​.",
-  "appErrorOccurred": "ເກີດຄວາມຜິດພາດຂຶ້ນ",
-  "appUnknownError": "ຄວາມຜິດພາດທີ່ບໍ່ຮູ້ຈັກ",
-  "qiblaCompassErrorDetails": "ເຂັມທິດຜິດພາດ: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "ສຳເລັດແລ້ວ! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah ແມ່ນຢູ່ເຫນືອຄວາມບໍ່ສົມບູນແບບ.",
-  "zikrMeaningAlhamdulillah": "ຄໍາສັນລະເສີນທັງຫມົດເປັນຂອງ Allah.",
-  "zikrMeaningAllahuAkbar": "Allah ແມ່ນຍິ່ງໃຫຍ່ທີ່ສຸດ.",
-  "zikrMeaningLaIlahaIllallah": "ບໍ່ມີພຣະເຈົ້າແຕ່ Allah.",
-  "zikrMeaningAstaghfirullah": "ຂ້າພະເຈົ້າຊອກຫາການໃຫ້ອະໄພ Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "ບໍ່ມີພະລັງງານແລະບໍ່ມີຄວາມເຂັ້ມແຂງຍົກເວັ້ນໂດຍຜ່ານ Allah.",
   "asmaMeaning1": "ຜູ້ມີຜົນປະໂຫຍດ",
   "asmaMeaning2": "ຜູ້ມີເມດຕາ",
   "asmaMeaning3": "ກະສັດ / ພຣະຜູ້ເປັນເຈົ້ານິລັນດອນ",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "ອັນນິລັນດອນ",
   "asmaMeaning97": "ຜູ້ສືບທອດ",
   "asmaMeaning98": "ຄູ່ມືທີ່ຖືກຕ້ອງທີ່ສຸດ",
-  "asmaMeaning99": "ຄົນເຈັບຄົນເຈັບ",
-  "duaMeaning1": "ຄົນອື່ນອະທິຖານວ່າ, 'ພຣະຜູ້ເປັນເຈົ້າຂອງພວກເຮົາ, ໃຫ້ພວກເຮົາມີຄວາມດີໃນໂລກນີ້ແລະໃນໂລກນີ້, ແລະປົກປ້ອງພວກເຮົາຈາກການທໍລະມານຂອງໄຟ.'",
-  "duaMeaning2": "ພະເຈົ້າ​ບໍ່​ໄດ້​ຮັບ​ພາລະ​ໜັກ​ເກີນ​ກວ່າ​ທີ່​ຈະ​ທົນ​ໄດ້: ແຕ່​ລະ​ຄົນ​ຈະ​ໄດ້​ຜົນ​ດີ​ອັນ​ໃດ​ກໍ​ຕາມ​ທີ່​ໄດ້​ເຮັດ ແລະ​ທົນ​ທຸກ​ກັບ​ຄວາມ​ຊົ່ວ— ‘ພະອົງ​ເຈົ້າ​ເອີຍ ຢ່າ​ເອົາ​ພວກ​ເຮົາ​ໄປ​ເຮັດ​ວຽກ ຖ້າ​ເຮົາ​ລືມ​ຫຼື​ເຮັດ​ຜິດ. ພະອົງ​ເຈົ້າ​ເອີຍ, ຂໍ​ຢ່າ​ແບກ​ພາລະ​ພວກ​ເຮົາ ດັ່ງ​ທີ່​ພຣະອົງ​ໄດ້​ແບກ​ພາລະ​ພວກ​ທີ່​ຢູ່​ຕໍ່ໜ້າ​ພວກ​ເຮົາ. ພຣະ​ອົງ​ເຈົ້າ, ຢ່າ​ພາ​ລະ​ພວກ​ເຮົາ​ຫລາຍ​ກວ່າ​ທີ່​ພວກ​ເຮົາ​ມີ​ຄວາມ​ເຂັ້ມ​ແຂງ​ທີ່​ຈະ​ຮັບ​ເອົາ. ຂໍ​ອະ​ໄພ​ພວກ​ເຮົາ, ໃຫ້​ອະ​ໄພ​ພວກ​ເຮົາ, ແລະ​ມີ​ຄວາມ​ເມດ​ຕາ​ພວກ​ເຮົາ. ທ່ານ​ເປັນ​ຜູ້​ປົກ​ປ້ອງ​ຂອງ​ພວກ​ເຮົາ, ດັ່ງ​ນັ້ນ​ຊ່ວຍ​ພວກ​ເຮົາ​ຕໍ່​ຕ້ານ​ພວກ​ທີ່​ບໍ່​ເຊື່ອ.",
-  "duaMeaning3": "‘ອົງພຣະ​ຜູ້​ເປັນເຈົ້າ​ຂອງ​ພວກເຮົາ ຂໍ​ຢ່າ​ໃຫ້​ໃຈ​ຂອງ​ພວກ​ເຮົາ​ຫລົງ​ທາງ​ຫລັງ​ຈາກ​ພຣະອົງ​ໄດ້​ຊີ້​ນຳ​ພວກ​ເຮົາ. ມອບຄວາມເມດຕາຂອງເຈົ້າໃຫ້ພວກເຮົາ: ເຈົ້າເປັນຜູ້ໃຫ້.",
-  "duaMeaning4": "ພຣະຜູ້ເປັນເຈົ້າ, ຂໍໃຫ້ຂ້າພະເຈົ້າແລະລູກຫລານຂອງຂ້າພະເຈົ້າສາມາດຮັກສາຄໍາອະທິຖານ. ພຣະຜູ້ເປັນເຈົ້າຂອງພວກເຮົາ, ຍອມຮັບຄໍາຮ້ອງຂໍຂອງຂ້ອຍ.",
-  "duaMeaning5": "ແລະ​ຫຼຸດ​ປີກ​ຂອງ​ເຈົ້າ​ລົງ​ໃນ​ຄວາມ​ຖ່ອມ​ຕົວ​ຕໍ່​ພວກ​ເຂົາ​ດ້ວຍ​ຄວາມ​ເມດຕາ ແລະ​ເວົ້າ​ວ່າ, ‘ພະອົງ​ເຈົ້າ​ເອີຍ ຂໍ​ຊົງ​ໂຜດ​ເມດຕາ​ພວກ​ເຂົາ ເໝືອນ​ດັ່ງ​ທີ່​ພວກ​ເຂົາ​ເປັນ​ຫ່ວງ​ຂ້ອຍ​ຕອນ​ຍັງ​ນ້ອຍ.’",
-  "duaMeaning6": "ພຣະເຈົ້າ​ຊົງ​ໂຜດ​ປະທານ​ໃຫ້​ແກ່​ຜູ້​ທີ່​ມີ​ອຳນາດ​ຢ່າງ​ແທ້ຈິງ. [ສາດ​ສະ​ດາ], ຢ່າ​ຟ້າວ​ບັນ​ຍາຍ​ກ່ອນ​ການ​ເປີດ​ເຜີຍ​ຈະ​ສຳ​ເລັດ​ຢ່າງ​ເຕັມ​ທີ່ ແຕ່​ຈົ່ງ​ເວົ້າ​ວ່າ, ‘ພຣະ​ຜູ້​ເປັນ​ເຈົ້າ, ຈົ່ງ​ເພີ່ມ​ຄວາມ​ຮູ້​ໃຫ້​ຂ້າ​ພະ​ເຈົ້າ!’",
-  "duaMeaning7": "ເວົ້າ [ສາດສະດາ], 'ພຣະອົງເຈົ້າ, ໃຫ້ອະໄພແລະມີຄວາມເມດຕາ: ທ່ານມີຄວາມເມດຕາທີ່ສຸດ.'",
-  "duaMeaning8": "ຜູ້​ທີ່​ອະທິດຖານ​ວ່າ, ‘ອົງພຣະ​ຜູ້​ເປັນເຈົ້າ​ຂອງ​ພວກ​ຂ້ານ້ອຍ​ເອີຍ, ຂໍ​ໃຫ້​ພວກ​ຂ້ານ້ອຍ​ມີ​ຄວາມສຸກ​ໃນ​ຄູ່​ສົມລົດ ແລະ​ລູກ​ຫລານ​ຂອງ​ພວກເຮົາ. ເຮັດ​ໃຫ້​ພວກ​ເຮົາ​ເປັນ​ຕົວ​ຢ່າງ​ທີ່​ດີ​ຕໍ່​ຜູ້​ທີ່​ຮູ້​ຈັກ​ທ່ານ.",
-  "islamicNewYear": "ປີໃຫມ່ອິດສະລາມ",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 ຊົວແວວ",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "ໂຫຼດຂໍ້ມູນຄືນໃໝ່",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "ກຳລັງໂຫລດ tafsir...",
-  "tafsirSourceLabel": "ແຫຼ່ງ Tafsir",
-  "tafsirNoSurahFound": "ບໍ່ພົບ tafsir ສໍາລັບ Surah ນີ້.",
-  "tafsirNoAyahFound": "ບໍ່ພົບ tafsir ສໍາລັບ ayah {ayah}.",
-  "tafsirLoadFailed": "ບໍ່ສາມາດໂຫຼດ Tafsir ໄດ້.",
-  "tafsirNoTextForAyah": "ບໍ່ມີຂໍ້ຄວາມ tafsir ສໍາລັບ ayah ນີ້.",
-  "tafsirDownloadingProgress": "ກຳລັງດາວໂຫລດ tafsir {current}/{total}",
-  "tafsirLoadingProgress": "ກຳລັງໂຫລດ tafsir {current}/{total}",
-  "tafsirApiStatusError": "ແຫຼ່ງ Tafsir ຕອບ HTTP {statusCode} ຂໍ້ຜິດພາດ.",
-  "tafsirNoEntriesReturned": "ແຫຼ່ງ tafsir ທີ່ເລືອກສົ່ງຄືນບໍ່ມີລາຍການ.",
-  "premiumProductUnavailable": "ສິນຄ້າພຣີມຽມບໍ່ມີໃຫ້ໃນຕອນນີ້. ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ.",
-  "premiumPurchaseFailed": "ບໍ່ສາມາດສຳເລັດການຊື້ໄດ້. ກະລຸນາລອງອີກຄັ້ງ.",
-  "prayerRemainingHoursMinutes": "{hours}ຊມ {minutes}ນທ",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "ວິ​ທີ​ການ​ອິດ​ສະ​ລາມ​ຂອງ​ແສງ​ສະ​ຫວ່າງ​",
-  "downloadPartiallyFinishedForReciter": "ການດາວໂຫຼດສຳເລັດແລ້ວສຳລັບ {reciter} ກັບ {failed} ລົ້ມເຫລວ Surah ({downloaded}/{total} ດາວໂຫຼດແລ້ວ).",
-  "placesLocationRequiredTitle": "ຕ້ອງການສະຖານທີ່",
-  "placesLocationRequiredBody": "ກຳນົດສະຖານທີ່ກ່ອນເພື່ອຄົ້ນຫາວັດວາອາຮາມ, ອາຫານຮາລາ ແລະໂຮງຮຽນອິດສະລາມທີ່ຢູ່ໃກ້ຄຽງ.",
-  "placesMapTilesUnavailableTitle": "ແຜ່ນແຜນທີ່ບໍ່ສາມາດໃຊ້ໄດ້",
-  "placesMapTilesUnavailableBody": "ແຫຼ່ງທີ່ມາຂອງກະເບື້ອງແຜນທີ່ທີ່ຢືນຢັນແລ້ວຍັງບໍ່ທັນໄດ້ກຳນົດຄ່າສຳລັບການສ້າງນີ້ເທື່ອ. ສະຖານທີ່ໃກ້ຄຽງຍັງສາມາດໂຫລດຈາກສະຖານທີ່ທີ່ທ່ານບັນທຶກໄວ້.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "ຜູ້ຊາຍ (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "ຜູ້ຊາຍ (Abdul Basit)",
-  "audioVoiceSudais": "ຜູ້ຊາຍ (Sudais)",
-  "qiblaSensorUnavailable": "ເຊັນເຊີເຂັມທິດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນນີ້.",
-  "adhanNotificationChannelName": "ການແຈ້ງເຕືອນ Adhan",
-  "adhanNotificationChannelDescription": "ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan.",
-  "quranLoadFailed": "ເນື້ອຫາ Quran ບໍ່ສາມາດໂຫລດໄດ້. ກະລຸນາລອງອີກຄັ້ງ.",
-  "locationDetectionFailed": "ບໍ່ສາມາດກວດພົບສະຖານທີ່ຂອງທ່ານໄດ້. ກະລຸນາເລືອກເມືອງດ້ວຍຕົນເອງ ຫຼືລອງໃໝ່ອີກ.",
-  "qiblaLocationRequiredTitle": "ສະຖານທີ່ຕ້ອງການສໍາລັບ Qibla",
-  "qiblaLocationRequiredBody": "ຕັ້ງຄ່າສະຖານທີ່ຕົວຈິງຂອງເຈົ້າກ່ອນທີ່ຈະໃຊ້ເຂັມທິດ Qibla ເພື່ອໃຫ້ທິດທາງສາມາດຄິດໄລ່ໄດ້ຢ່າງຖືກຕ້ອງ.",
-  "placesDataSourceUnavailableTitle": "ບໍ່ມີຂໍ້ມູນສະຖານທີ່",
-  "placesDataSourceUnavailableBody": "ຈຸດສິ້ນສຸດຂໍ້ມູນສະຖານທີ່ທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ໄດ້ຖືກຕັ້ງຄ່າສໍາລັບການກໍ່ສ້າງນີ້ເທື່ອ. ຕັ້ງ PLACES_OVERPASS_API_URL ເປັນພຣັອກຊີ ຫຼືຜູ້ໃຫ້ບໍລິການທີ່ໄດ້ຮັບອະນຸມັດກ່ອນທີ່ຈະເປີດໃຊ້ການຄົ້ນຫາທີ່ຢູ່ໃກ້ຄຽງ.",
-  "tafsirCacheUnavailable": "tafsir ທີ່ຢັ້ງຢືນແລ້ວແມ່ນຍັງບໍ່ມີໃຫ້ອອບລາຍເທື່ອ. ຊິ້ງຂໍ້ມູນຊຸດຂໍ້ມູນ tafsir ທີ່ມາກ່ອນການທ່ອງເວັບ."
+  "asmaMeaning99": "ຄົນເຈັບຄົນເຈັບ"
 }

@@ -950,6 +950,13 @@ class AppLocalizationsTt extends AppLocalizations {
   String get dailyVerse => 'Көндәлек шигырь';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Көндәлек шигырь юк';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Тикшерелгән көндәлек шигырь эчтәлеге бу төзелеш өчен конфигурацияләнмәгән. Болыт чыганагына тоташыгыз яки караганчы расланган кэшны синхронлагыз.';
+
+  @override
   String get todaysIbadah => 'Бүгенге Ибада';
 
   @override

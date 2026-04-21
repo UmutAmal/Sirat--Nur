@@ -952,6 +952,13 @@ class AppLocalizationsNn extends AppLocalizations {
   String get dailyVerse => 'Daglig vers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Dagsvers utilgjengelig';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verifisert daglig versinnhold er ikke konfigurert for denne versjonen ennå. Koble til skykilden eller synkroniser en bekreftet cache før du surfer.';
+
+  @override
   String get todaysIbadah => 'Dagens Ibadah';
 
   @override

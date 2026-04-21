@@ -955,6 +955,14 @@ class AppLocalizationsQu extends AppLocalizations {
   String get dailyVerse => 'Sapa punchaw Versiculo';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Sapa punchaw versiculo mana tarikunchu';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Chiqaqchasqa sapa p\'unchaw versiculokuna manaraqmi kay ruwanapaq wakichisqachu. Puyu pukyuta tinkiy utaq chiqaqchasqa waqaychasqata tinkiy manaraq maskachkaspa.';
+
+  @override
   String get todaysIbadah => 'Kunan punchaw Ibadah';
 
   @override

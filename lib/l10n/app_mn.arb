@@ -1,6 +1,7 @@
 {
   "@@locale": "mn",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Исламын гэрлийн зам",
   "home": "Гэр",
   "quran": "Коран",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Аср",
   "maghrib": "Магриб",
   "isha": "Иша",
+  "prayerNotificationTitle": "{prayerName} цаг",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} залбирах цаг боллоо.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Өгөгдөл ба Хадгалалт",
   "clearCache": "Кэшийг цэвэрлэх",
   "cacheClearedSuccess": "Кэшийг амжилттай арилгалаа",
@@ -34,6 +51,7 @@
   "currentLocation": "Одоогийн байршил (GPS)",
   "locationServiceDisabled": "Байршлын үйлчилгээ идэвхгүй байна.",
   "locationPermissionDenied": "Байршлын зөвшөөрлийг үгүйсгэв.",
+  "locationDetectionFailed": "Таны байршлыг илрүүлж чадсангүй. Гараар хот сонгох эсвэл дахин оролдоно уу.",
   "citiesCount": "{count} хотууд",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Үр дүн олдсонгүй",
   "loading": "Ачааж байна...",
   "error": "Алдаа",
+  "appErrorOccurred": "Алдаа гарлаа",
+  "appUnknownError": "Үл мэдэгдэх алдаа",
+  "quranLoadFailed": "Коран судрын агуулгыг ачаалж чадсангүй. Дахин оролдоно уу.",
   "retry": "Дахин оролдоно уу",
+  "refreshAction": "Сэргээх",
   "cancel": "Цуцлах",
   "save": "Хадгалах",
   "delete": "Устгах",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Үгүй",
   "surah": "Сура",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Жуз",
   "page": "Хуудас",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Тафсирыг ачаалж байна...",
+  "tafsirSourceLabel": "Тафсир эх сурвалж",
+  "tafsirNoSurahFound": "Энэ судрын тафсир олдсонгүй.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Тафсирыг ачаалж чадсангүй.",
+  "tafsirNoTextForAyah": "Энэ шүлэгт тафсир текст байхгүй.",
+  "tafsirDownloadingProgress": "Тафсир татаж байна {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Тафсирыг ачаалж байна {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Тафсир эх сурвалж HTTP {statusCode} алдаа буцаасан.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Сонгогдсон тафсир эх сурвалж ямар ч оруулга ирүүлээгүй.",
+  "tafsirCacheUnavailable": "Баталгаажсан тафсир хараахан офлайнаар байхгүй байна. Хайлтын өмнө эх сурвалжийн тафсир датасетийг синк хийнэ үү.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Хавчуурга нэмэх",
   "removeBookmark": "Хавчуурга устгах",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "бусад нь: \"Эзэн минь, бидэнд энэ ертөнц болон хойд ертөнцөд сайн сайхныг өгч, биднийг галын зовлонгоос хамгаалаач\" гэж залбирдаг.",
+  "duaMeaning2": "Бурхан ямар ч сүнсэнд дааж чадахаас илүүг даатгадаггүй: хүн бүр хийсэн сайн зүйлээ хүртэж, муугаар нь зовдог- \"Эзэн минь, хэрэв бид мартсан эсвэл алдаа гаргавал биднийг хариуцлага хүлээхгүй. Эзэн минь, та бидний өмнөх хүмүүст дарамт учруулсан шигээ биднийг бүү ачаал. Эзэн минь, бидний тэсвэрлэх хүчнээс илүүг бидэнд бүү үүрүүлээрэй. Биднийг өршөөж, өршөөж, өршөөгөөч. Та бол бидний хамгаалагч, тиймээс үл итгэгчдийн эсрэг бидэнд туслаач.\"",
+  "duaMeaning3": "\"Эзэн минь, биднийг удирдсаны дараа бидний зүрх сэтгэлийг бүү хазайлгаг. Өршөөл нигүүлслээ бидэнд өгөөч: Та бол үргэлж Өгөгч мөн.",
+  "duaMeaning4": "Эзэн минь, намайг болон миний үр удамд залбирлыг үргэлжлүүлэхийг зөвшөөрөөч. Эзэн минь ээ, миний хүсэлтийг хүлээн ав.",
+  "duaMeaning5": "Тэдэнд эелдэг зөөлөн байдлаар далавчаа доошлуулж, \"Эзэн, намайг бага байхад тэд намайг халамжилж байсан шиг тэднийг өршөөгөөч\" гэж хэл.",
+  "duaMeaning6": "үнэхээр захирдаг Бурхан өргөмжлөгдсөн. [Бошиглогч], илчлэлт бүрэн дуусаагүй байхад унших гэж бүү яар, харин \"Эзэн, миний мэдлэгийг нэмэгдүүл!\" гэж хэл.",
+  "duaMeaning7": "“Эзэн, өршөөгөөч, өршөөгөөч: Та бол хамгийн нигүүлсэнгүй нь” гэж хэл.",
+  "duaMeaning8": "\"Эзэн минь, бидний хань ижил, үр удамд баяр баясгаланг өгөөч\" гэж залбирдаг хүмүүс. Таныг мэддэг хүмүүст бидэнд сайн үлгэр жишээ болгоорой”.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Мацаг барих",
   "quranReading": "Коран уншлага",
   "prayers": "Залбирал",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Долоо хоног тутмын ахиц дэвшил",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Исламын шинэ жил",
+  "mawlidAnNabi": "Мавлид ан-Наби",
+  "specialDayDateRamadanStart": "1 Рамадан",
+  "specialDayDateLaylatAlQadr": "27 Рамадан",
+  "specialDayDateEidAlFitr": "1 Шаввал",
+  "specialDayDateEidAlAdha": "10 Зул Хижжа",
+  "specialDayDateIslamicNewYear": "1 Мухаррам",
+  "specialDayDateMawlidAnNabi": "12 Раби аль-Аввал",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Кибла чиглэл",
   "compass": "Луужин",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Кибла олдсон!",
   "turnDevice": "Төхөөрөмжөө Кибла руу эргүүлээрэй",
+  "qiblaCompassErrorDetails": "Луужингийн алдаа: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.",
+  "qiblaLocationRequiredTitle": "Киблагийн хувьд байршил шаардлагатай",
+  "qiblaLocationRequiredBody": "Чиблагийн луужин ашиглахын өмнө өөрийн бодит байршлыг тохируулснаар чиглэлийг үнэн зөв тооцоолох боломжтой болно.",
+  "adhanNotificationChannelName": "Азаны мэдэгдлүүд",
+  "adhanNotificationChannelDescription": "Залбирлын цагийг азаны дуугаар дохио өгдөг.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Зорилтот тоо: {target}",
   "tapToCount": "Тоолохын тулд товшино уу",
+  "zikrCompletedMashAllah": "Дууслаа! МашАллах",
+  "zikrMeaningSubhanAllah": "Аллах бүх төгс бус байдлаас хол байдаг.",
+  "zikrMeaningAlhamdulillah": "Бүх магтаал Аллахад хамаатай.",
+  "zikrMeaningAllahuAkbar": "Аллах бол хамгийн агуу.",
+  "zikrMeaningLaIlahaIllallah": "Аллахаас өөр бурхан байхгүй.",
+  "zikrMeaningAstaghfirullah": "Би Аллахаас өршөөл гуйж байна.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Аллахаас өөр хүч чадал, хүч чадал байхгүй.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Аудио дуу хоолой",
+  "audioVoiceMisharyAlafasy": "Эрэгтэй (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Эрэгтэй (Abdul Basit)",
+  "audioVoiceSudais": "Эрэгтэй (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Кибла тохируулга",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Шалгалт тохируулга хийх шаардлагатай. Зураг-8 дээрх төхөөрөмжийг эргүүл.",
   "dailyVerse": "Өдөр тутмын шүлэг",
+  "dailyVerseUnavailableTitle": "Өдөр тутмын шүлгийг ашиглах боломжгүй",
+  "dailyVerseUnavailableBody": "Баталгаажсан өдөр тутмын шүлгийн агуулгыг энэ бүтээцэд хараахан тохируулаагүй байна. Үзэхээсээ өмнө үүлэн эх сурвалжтай холбогдох эсвэл баталгаажуулсан кэшийг синк хийнэ үү.",
   "todaysIbadah": "Өнөөдрийн Ибада",
   "quickAccess": "Түргэн нэвтрэх",
   "assistant": "Туслах",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Баталгаажсан дуга хараахан байхгүй байна",
+  "duaUnavailableBody": "Баталгаажсан өдөр тутмын дулаа энэ төхөөрөмжид хараахан синк хийгдээгүй байна. Баталгаажаагүй нөөцийн оронд эх сурвалжаас авсан дуусыг ачаалахын тулд үүлэн эх сурвалжтай холбогдоно уу.",
+  "duaCategoryQuranic": "Коран судрын залбирал",
+  "duaCategoryMorningEvening": "Өглөө ба орой",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Хамгаалалт",
+  "duaCategoryBeginning": "Эхлэл",
+  "duaCategorySleep": "Унтах",
+  "duaCategoryFoodDrink": "Хоол, ундаа",
+  "duaCategoryForgiveness": "Өршөөл",
+  "duaCategoryHome": "Гэр",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Исламын боловсрол",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Хадисын цуглуулга",
+  "hadithSourcePending": "Баталгаажсан эх сурвалж хүлээгдэж байна",
+  "hadithUnavailableTitle": "Баталгаажсан хадис цуглуулгууд хараахан байхгүй байна",
+  "hadithUnavailableBody": "Энэ бүтэц нь батлагдаагүй гадны хадис тэжээлээс хамааралтай хэвээр байна. Эх сурвалжийн өгөгдлийн багцыг синк хийх хүртэл Хадис үзэх нь идэвхгүй хэвээр байна.",
   "paywallUnlockAll": "Сүнслэг аялалынхаа бүх функцийг нээ",
+  "premiumProductUnavailable": "Дээд зэрэглэлийн бүтээгдэхүүн одоогоор байхгүй байна. Дараа дахин оролдоно уу.",
+  "premiumPurchaseFailed": "Худалдан авалтыг дуусгаж чадсангүй. Дахин оролдоно уу.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Хязгааргүй хиймэл оюун ухаанаар ажилладаг асуулт, хариулт",
   "paywallFeature2Title": "Хязгааргүй офлайн",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter}-д {failed} бүтэлгүйтсэн сурагуудыг татаж авч дууслаа ({downloaded}/{total} татагдсан).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter}-д зориулсан офлайн файлуудыг устгасан.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Сүлжээний алдаа. Дахин оролдоно уу.",
+  "placesLocationRequiredTitle": "Байршил шаардлагатай",
+  "placesLocationRequiredBody": "Ойролцоох лалын сүм, халал хоол, исламын сургуулийг үнэн зөв хайж олохын тулд эхлээд байршлыг тогтооно уу.",
+  "placesMapTilesUnavailableTitle": "Газрын зургийн хавтан ашиглах боломжгүй",
+  "placesMapTilesUnavailableBody": "Баталгаажсан газрын зургийн хавтангийн эх сурвалжийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох газруудыг таны хадгалсан байршлаас ачаалах боломжтой хэвээр байна.",
+  "placesDataSourceUnavailableTitle": "Газрын мэдээлэл боломжгүй",
+  "placesDataSourceUnavailableBody": "Баталгаажсан газруудын өгөгдлийн төгсгөлийн цэгийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох хайлтыг идэвхжүүлэхийн өмнө PLACES_OVERPASS_API_URL-г зөвшөөрөгдсөн прокси эсвэл үйлчилгээ үзүүлэгч рүү тохируулна уу.",
   "unknownPlaceName": "Үл мэдэгдэх нэр",
   "islamicPlaceFallback": "Исламын газар",
-  "prayerNotificationTitle": "{prayerName} цаг",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} залбирах цаг боллоо.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Баталгаажсан дуга хараахан байхгүй байна",
-  "duaUnavailableBody": "Баталгаажсан өдөр тутмын дулаа энэ төхөөрөмжид хараахан синк хийгдээгүй байна. Баталгаажаагүй нөөцийн оронд эх сурвалжаас авсан дуусыг ачаалахын тулд үүлэн эх сурвалжтай холбогдоно уу.",
-  "duaCategoryQuranic": "Коран судрын залбирал",
-  "duaCategoryMorningEvening": "Өглөө ба орой",
-  "duaCategoryTasbih": "Тасбих",
-  "duaCategoryProtection": "Хамгаалалт",
-  "duaCategoryBeginning": "Эхлэл",
-  "duaCategorySleep": "Унтах",
-  "duaCategoryFoodDrink": "Хоол, ундаа",
-  "duaCategoryForgiveness": "Өршөөл",
-  "duaCategoryHome": "Гэр",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Баталгаажсан эх сурвалж хүлээгдэж байна",
-  "hadithUnavailableTitle": "Баталгаажсан хадис цуглуулгууд хараахан байхгүй байна",
-  "hadithUnavailableBody": "Энэ бүтэц нь батлагдаагүй гадны хадис тэжээлээс хамааралтай хэвээр байна. Эх сурвалжийн өгөгдлийн багцыг синк хийх хүртэл Хадис үзэх нь идэвхгүй хэвээр байна.",
-  "appErrorOccurred": "Алдаа гарлаа",
-  "appUnknownError": "Үл мэдэгдэх алдаа",
-  "qiblaCompassErrorDetails": "Луужингийн алдаа: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Дууслаа! МашАллах",
-  "zikrMeaningSubhanAllah": "Аллах бүх төгс бус байдлаас хол байдаг.",
-  "zikrMeaningAlhamdulillah": "Бүх магтаал Аллахад хамаатай.",
-  "zikrMeaningAllahuAkbar": "Аллах бол хамгийн агуу.",
-  "zikrMeaningLaIlahaIllallah": "Аллахаас өөр бурхан байхгүй.",
-  "zikrMeaningAstaghfirullah": "Би Аллахаас өршөөл гуйж байна.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Аллахаас өөр хүч чадал, хүч чадал байхгүй.",
   "asmaMeaning1": "The Beneficent",
   "asmaMeaning2": "Энэрэнгүй",
   "asmaMeaning3": "Хаан / Мөнхийн Эзэн",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Мөнхийн Нэгэн",
   "asmaMeaning97": "Өв залгамжлагч",
   "asmaMeaning98": "Хамгийн зөвт хөтөч",
-  "asmaMeaning99": "The Patent One",
-  "duaMeaning1": "бусад нь: \"Эзэн минь, бидэнд энэ ертөнц болон хойд ертөнцөд сайн сайхныг өгч, биднийг галын зовлонгоос хамгаалаач\" гэж залбирдаг.",
-  "duaMeaning2": "Бурхан ямар ч сүнсэнд дааж чадахаас илүүг даатгадаггүй: хүн бүр хийсэн сайн зүйлээ хүртэж, муугаар нь зовдог- \"Эзэн минь, хэрэв бид мартсан эсвэл алдаа гаргавал биднийг хариуцлага хүлээхгүй. Эзэн минь, та бидний өмнөх хүмүүст дарамт учруулсан шигээ биднийг бүү ачаал. Эзэн минь, бидний тэсвэрлэх хүчнээс илүүг бидэнд бүү үүрүүлээрэй. Биднийг өршөөж, өршөөж, өршөөгөөч. Та бол бидний хамгаалагч, тиймээс үл итгэгчдийн эсрэг бидэнд туслаач.\"",
-  "duaMeaning3": "\"Эзэн минь, биднийг удирдсаны дараа бидний зүрх сэтгэлийг бүү хазайлгаг. Өршөөл нигүүлслээ бидэнд өгөөч: Та бол үргэлж Өгөгч мөн.",
-  "duaMeaning4": "Эзэн минь, намайг болон миний үр удамд залбирлыг үргэлжлүүлэхийг зөвшөөрөөч. Эзэн минь ээ, миний хүсэлтийг хүлээн ав.",
-  "duaMeaning5": "Тэдэнд эелдэг зөөлөн байдлаар далавчаа доошлуулж, \"Эзэн, намайг бага байхад тэд намайг халамжилж байсан шиг тэднийг өршөөгөөч\" гэж хэл.",
-  "duaMeaning6": "үнэхээр захирдаг Бурхан өргөмжлөгдсөн. [Бошиглогч], илчлэлт бүрэн дуусаагүй байхад унших гэж бүү яар, харин \"Эзэн, миний мэдлэгийг нэмэгдүүл!\" гэж хэл.",
-  "duaMeaning7": "“Эзэн, өршөөгөөч, өршөөгөөч: Та бол хамгийн нигүүлсэнгүй нь” гэж хэл.",
-  "duaMeaning8": "\"Эзэн минь, бидний хань ижил, үр удамд баяр баясгаланг өгөөч\" гэж залбирдаг хүмүүс. Таныг мэддэг хүмүүст бидэнд сайн үлгэр жишээ болгоорой”.",
-  "islamicNewYear": "Исламын шинэ жил",
-  "mawlidAnNabi": "Мавлид ан-Наби",
-  "specialDayDateRamadanStart": "1 Рамадан",
-  "specialDayDateLaylatAlQadr": "27 Рамадан",
-  "specialDayDateEidAlFitr": "1 Шаввал",
-  "specialDayDateEidAlAdha": "10 Зул Хижжа",
-  "specialDayDateIslamicNewYear": "1 Мухаррам",
-  "specialDayDateMawlidAnNabi": "12 Раби аль-Аввал",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Сэргээх",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Тафсирыг ачаалж байна...",
-  "tafsirSourceLabel": "Тафсир эх сурвалж",
-  "tafsirNoSurahFound": "Энэ судрын тафсир олдсонгүй.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
-  "tafsirLoadFailed": "Тафсирыг ачаалж чадсангүй.",
-  "tafsirNoTextForAyah": "Энэ шүлэгт тафсир текст байхгүй.",
-  "tafsirDownloadingProgress": "Тафсир татаж байна {current}/{total}",
-  "tafsirLoadingProgress": "Тафсирыг ачаалж байна {current}/{total}",
-  "tafsirApiStatusError": "Тафсир эх сурвалж HTTP {statusCode} алдаа буцаасан.",
-  "tafsirNoEntriesReturned": "Сонгогдсон тафсир эх сурвалж ямар ч оруулга ирүүлээгүй.",
-  "premiumProductUnavailable": "Дээд зэрэглэлийн бүтээгдэхүүн одоогоор байхгүй байна. Дараа дахин оролдоно уу.",
-  "premiumPurchaseFailed": "Худалдан авалтыг дуусгаж чадсангүй. Дахин оролдоно уу.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Исламын гэрлийн зам",
-  "downloadPartiallyFinishedForReciter": "{reciter}-д {failed} бүтэлгүйтсэн сурагуудыг татаж авч дууслаа ({downloaded}/{total} татагдсан).",
-  "placesLocationRequiredTitle": "Байршил шаардлагатай",
-  "placesLocationRequiredBody": "Ойролцоох лалын сүм, халал хоол, исламын сургуулийг үнэн зөв хайж олохын тулд эхлээд байршлыг тогтооно уу.",
-  "placesMapTilesUnavailableTitle": "Газрын зургийн хавтан ашиглах боломжгүй",
-  "placesMapTilesUnavailableBody": "Баталгаажсан газрын зургийн хавтангийн эх сурвалжийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох газруудыг таны хадгалсан байршлаас ачаалах боломжтой хэвээр байна.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Эрэгтэй (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Эрэгтэй (Abdul Basit)",
-  "audioVoiceSudais": "Эрэгтэй (Sudais)",
-  "qiblaSensorUnavailable": "Энэ төхөөрөмж дээр луужин мэдрэгч боломжгүй байна.",
-  "adhanNotificationChannelName": "Азаны мэдэгдлүүд",
-  "adhanNotificationChannelDescription": "Залбирлын цагийг азаны дуугаар дохио өгдөг.",
-  "quranLoadFailed": "Коран судрын агуулгыг ачаалж чадсангүй. Дахин оролдоно уу.",
-  "locationDetectionFailed": "Таны байршлыг илрүүлж чадсангүй. Гараар хот сонгох эсвэл дахин оролдоно уу.",
-  "qiblaLocationRequiredTitle": "Киблагийн хувьд байршил шаардлагатай",
-  "qiblaLocationRequiredBody": "Чиблагийн луужин ашиглахын өмнө өөрийн бодит байршлыг тохируулснаар чиглэлийг үнэн зөв тооцоолох боломжтой болно.",
-  "placesDataSourceUnavailableTitle": "Газрын мэдээлэл боломжгүй",
-  "placesDataSourceUnavailableBody": "Баталгаажсан газруудын өгөгдлийн төгсгөлийн цэгийг энэ бүтээцэд хараахан тохируулаагүй байна. Ойролцоох хайлтыг идэвхжүүлэхийн өмнө PLACES_OVERPASS_API_URL-г зөвшөөрөгдсөн прокси эсвэл үйлчилгээ үзүүлэгч рүү тохируулна уу.",
-  "tafsirCacheUnavailable": "Баталгаажсан тафсир хараахан офлайнаар байхгүй байна. Хайлтын өмнө эх сурвалжийн тафсир датасетийг синк хийнэ үү."
+  "asmaMeaning99": "The Patent One"
 }

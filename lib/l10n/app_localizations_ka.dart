@@ -953,6 +953,13 @@ class AppLocalizationsKa extends AppLocalizations {
   String get dailyVerse => 'ყოველდღიური ლექსი';
 
   @override
+  String get dailyVerseUnavailableTitle => 'ყოველდღიური ლექსი მიუწვდომელია';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'დადასტურებული ყოველდღიური ლექსის შინაარსი ჯერ არ არის კონფიგურირებული ამ კონსტრუქციისთვის. დაუკავშირდით ღრუბლოვან წყაროს ან დაარეგულირეთ დადასტურებული ქეში.';
+
+  @override
   String get todaysIbadah => 'დღევანდელი იბადა';
 
   @override

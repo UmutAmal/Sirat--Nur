@@ -953,6 +953,13 @@ class AppLocalizationsHr extends AppLocalizations {
   String get dailyVerse => 'Dnevni stih';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Dnevni stih nije dostupan';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Potvrđeni dnevni sadržaj stihova još nije konfiguriran za ovu verziju. Povežite se s izvorom oblaka ili sinkronizirajte potvrđenu predmemoriju prije pregledavanja.';
+
+  @override
   String get todaysIbadah => 'Današnji ibadet';
 
   @override

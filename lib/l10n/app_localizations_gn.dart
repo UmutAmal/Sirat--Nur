@@ -956,6 +956,13 @@ class AppLocalizationsGn extends AppLocalizations {
   String get dailyVerse => 'Versíkulo Diario rehegua';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Versíkulo ára ha ára ndojeguerekói';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Contenido verso ára ha ára ojehechaukáva noñemohendaporãi gueteri ko ñemopu’ãme g̃uarã. Embojoaju arai ypykue ndive térã embojoaju peteĩ caché ojehechakuaáva ehesa’ỹijo mboyve.';
+
+  @override
   String get todaysIbadah => 'Ko árape Ibadah';
 
   @override

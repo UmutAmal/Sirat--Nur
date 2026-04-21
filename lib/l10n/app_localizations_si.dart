@@ -951,6 +951,13 @@ class AppLocalizationsSi extends AppLocalizations {
   String get dailyVerse => 'දෛනික පදය';
 
   @override
+  String get dailyVerseUnavailableTitle => 'දෛනික පදය නොමැත';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'සත්‍යාපිත දෛනික පද අන්තර්ගතය තවමත් මෙම ගොඩනැගීම සඳහා වින්‍යාස කර නොමැත. බ්‍රවුස් කිරීමට පෙර වලාකුළු මූලාශ්‍රය වෙත සම්බන්ධ වන්න හෝ සත්‍යාපිත හැඹිලියක් සමමුහුර්ත කරන්න.';
+
+  @override
   String get todaysIbadah => 'අද ඉබාදා';
 
   @override

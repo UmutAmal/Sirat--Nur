@@ -949,6 +949,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get dailyVerse => 'ورځنی آیت';
 
   @override
+  String get dailyVerseUnavailableTitle => 'ورځنی آیت شتون نلري';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'د تایید شوي ورځني آیت منځپانګې لاهم د دې جوړونې لپاره ندي ترتیب شوي. د بادل سرچینې سره وصل شئ یا د لټون کولو دمخه یو تایید شوی کیچ ترکیب کړئ.';
+
+  @override
   String get todaysIbadah => 'د نن ورځې عبادت';
 
   @override

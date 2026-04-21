@@ -1,6 +1,7 @@
 {
   "@@locale": "ps",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "د اسلام د رڼا لار",
   "home": "کور",
   "quran": "قرآن",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "عصر",
   "maghrib": "ماښام",
   "isha": "ایشا",
+  "prayerNotificationTitle": "د {prayerName} لپاره وخت",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "دا د لمانځه وخت دی {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "ډاټا او ذخیره کول",
   "clearCache": "کیچ پاک کړئ",
   "cacheClearedSuccess": "زیرمه په بریالیتوب سره پاکه شوه",
@@ -34,6 +51,7 @@
   "currentLocation": "اوسنی ځای (GPS)",
   "locationServiceDisabled": "د ځای خدمت غیر فعال دی.",
   "locationPermissionDenied": "د ځای اجازه رد شوه.",
+  "locationDetectionFailed": "ستاسو ځای نشی معلومولی. مهرباني وکړئ په لاسي ډول یو ښار وټاکئ یا بیا هڅه وکړئ.",
   "citiesCount": "{count} ښارونه",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "هیڅ پایله ونه موندل شوه",
   "loading": "بار کول...",
   "error": "تېروتنه",
+  "appErrorOccurred": "یوه تېروتنه رامنځته شوه",
+  "appUnknownError": "نامعلومه تېروتنه",
+  "quranLoadFailed": "د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ.",
   "retry": "بیا هڅه وکړئ",
+  "refreshAction": "تازه کړئ",
   "cancel": "لغوه کړئ",
   "save": "خوندي کړئ",
   "delete": "ړنګول",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "نه",
   "surah": "سورت",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "جوز",
   "page": "پاڼه",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "د تفسیر بارول...",
+  "tafsirSourceLabel": "د تفسیر سرچینه",
+  "tafsirNoSurahFound": "د دې سورت لپاره هیڅ تفسیر ندی موندل شوی.",
+  "tafsirNoAyahFound": "د آیت {ayah} لپاره هیڅ تفسیر ونه موندل شو.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "تفسير نشي پورته کولى.",
+  "tafsirNoTextForAyah": "د دې آيت لپاره د تفسیر متن نشته.",
+  "tafsirDownloadingProgress": "د تفسیر ډاونلوډ کول {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "د تفسیر بارول {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "د تفسیر سرچینې د HTTP {statusCode} تېروتنه راوګرځوله.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "د تفسير غوره شوې سرچينه هيڅ داخله نه ده راګرځولې.",
+  "tafsirCacheUnavailable": "تصدیق شوی تفسیر لا تر اوسه آفلاین شتون نلري. د لټون کولو دمخه د منبع شوي تفسیر ډیټاسیټ همغږي کړئ.",
   "bookmarks": "Bookmarks",
   "addBookmark": "بک مارک اضافه کړئ",
   "removeBookmark": "بک مارک لرې کړئ",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "نور دا دعا کوي چې ای زموږ ربه موږ ته په دنیا او آخرت کې خیر راکړه او د اور له عذابه مو وساته.",
+  "duaMeaning2": "خدای په هیڅ نفس باندې د هغه له توان څخه ډیر بار نه اچوي: هر یو هر هغه څه ترلاسه کوي چې ښه یې کړي وي، او خپل بد یې زیانمن کړي - ای ربه، که موږ هیر کړو یا غلطی وکړو نو موږ ته مه ورکوه. ربه، پر موږ مه باروه لکه څنګه چې تا له موږ څخه مخکې پر خلکو بار کړی و. ربه، موږ له هغه څخه ډیر بار مه راکوه چې موږ یې د زغملو توان لرو. موږ ته بښنه وکړه، موږ ته بښنه وکړه او په موږ رحم وکړه. ته زموږ ساتونکی یې، نو د کافرانو په مقابل کې له موږ سره مرسته وکړه.»",
+  "duaMeaning3": "\"زموږ ربه، زموږ زړونه مه پریږده وروسته له دې چې تا موږ ته لارښوونه وکړه. موږ ته خپل رحم راکړه: ته تل ورکونکی یې.",
+  "duaMeaning4": "ربه، اجازه راکړه چې زه او زما اولادونه لمونځ ادا کړم. زموږ ربه، زما غوښتنه قبول کړه.",
+  "duaMeaning5": "او په مهربانۍ سره د هغوی په وړاندې خپل وزر ښکته کړه او ووایه: ربه، په دوی رحم وکړه لکه څنګه چې دوی زما په کوچنیوالي کې زما پالنه کوله.",
+  "duaMeaning6": "خدای پاک دی، هغه څوک چې په ریښتیا کنټرول لري. [رسول الله] مخکې له دې چې وحی بشپړ شي په تلاوت کې بېړه مه کوه، بلکې ووایه: ای ربه زما په علم کې زیاتوالی را کړه!",
+  "duaMeaning7": "ووایه: ربه، بښنه وکړه او رحم وکړه، ته تر ټولو زیات رحم کوونکی یې.",
+  "duaMeaning8": "هغه څوک چې دعا کوي، \"ای ربه، موږ ته زموږ په میړه او اولاد کې خوښي راکړه. موږ د هغو کسانو لپاره ښه مثالونه جوړ کړه څوک چې تاسو پوهیږي.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "روژه",
   "quranReading": "د قرآن تلاوت",
   "prayers": "دعاګانې",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "د اونۍ پرمختګ",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "نوی اسلامي کال",
+  "mawlidAnNabi": "میلاد النبی",
+  "specialDayDateRamadanStart": "۱ـ روژه",
+  "specialDayDateLaylatAlQadr": "27 رمضان",
+  "specialDayDateEidAlFitr": "۱ د شوال",
+  "specialDayDateEidAlAdha": "۱۰ ذوالحجې",
+  "specialDayDateIslamicNewYear": "۱ محرم",
+  "specialDayDateMawlidAnNabi": "۱۲ ربیع الاول",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "د قبلې طرف",
   "compass": "کمپاس",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "قبله وموندله!",
   "turnDevice": "خپل وسیله قبلې ته مخامخ کړئ",
+  "qiblaCompassErrorDetails": "د کمپاس تېروتنه: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "په دې وسیله د کمپاس سینسر شتون نلري.",
+  "qiblaLocationRequiredTitle": "د قبلې لپاره ځای اړین دی",
+  "qiblaLocationRequiredBody": "د قبلې کمپاس کارولو دمخه خپل اصلي ځای وټاکئ ترڅو سمت په دقیق ډول محاسبه شي.",
+  "adhanNotificationChannelName": "د اذان خبرتیاوې",
+  "adhanNotificationChannelDescription": "د اذان په غږ سره د لمانځه وخت خبرتیا.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "د هدف شمیره: {target}",
   "tapToCount": "د شمیرلو لپاره ټایپ کړئ",
+  "zikrCompletedMashAllah": "بشپړ شو! ماشاءالله",
+  "zikrMeaningSubhanAllah": "الله جل جلاله له هر عیب څخه لوړ دی.",
+  "zikrMeaningAlhamdulillah": "ټول ستاينه د الله لره ده.",
+  "zikrMeaningAllahuAkbar": "الله لوی دی.",
+  "zikrMeaningLaIlahaIllallah": "له الله پرته بل معبود نشته.",
+  "zikrMeaningAstaghfirullah": "زه د الله تعالی څخه بخښنه غواړم.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "د الله جل جلاله له لاری پرته هیڅ ځواک او قوت نشته.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "د غږ غږ",
+  "audioVoiceMisharyAlafasy": "نارینه (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "نارینه (Abdul Basit)",
+  "audioVoiceSudais": "نارینه (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "د قبلې انډول",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "کیلیبریشن ته اړتیا ده. وسیله په 8 شکل کې وګرځوئ.",
   "dailyVerse": "ورځنی آیت",
+  "dailyVerseUnavailableTitle": "ورځنی آیت شتون نلري",
+  "dailyVerseUnavailableBody": "د تایید شوي ورځني آیت منځپانګې لاهم د دې جوړونې لپاره ندي ترتیب شوي. د بادل سرچینې سره وصل شئ یا د لټون کولو دمخه یو تایید شوی کیچ ترکیب کړئ.",
   "todaysIbadah": "د نن ورځې عبادت",
   "quickAccess": "چټک لاسرسی",
   "assistant": "معاون",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "تایید شوي دعاګانې لاهم شتون نلري",
+  "duaUnavailableBody": "تایید شوي ورځني دعاګانې لا تر اوسه دې وسیله سره همغږي شوي ندي. د بادل سرچینې سره وصل شئ ترڅو د غیر تصدیق شوي فال بیک پرځای د سرچینې شوي دعا بار کړئ.",
+  "duaCategoryQuranic": "قرآنی دعا",
+  "duaCategoryMorningEvening": "سهار او ماښام",
+  "duaCategoryTasbih": "تسبیح",
+  "duaCategoryProtection": "ساتنه",
+  "duaCategoryBeginning": "پیل",
+  "duaCategorySleep": "خوب",
+  "duaCategoryFoodDrink": "خواړه او څښاک",
+  "duaCategoryForgiveness": "بخښنه",
+  "duaCategoryHome": "کور",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "اسلامي زده کړه",
   "sukunAudioTitle": "د سوکون غږونه",
   "hadithCollections": "د حدیثو ټولګه",
+  "hadithSourcePending": "تایید شوې سرچینه پاتې ده",
+  "hadithUnavailableTitle": "د حدیثو تصدیق شوي ټولګه لا تر اوسه شتون نلري",
+  "hadithUnavailableBody": "دا جوړښت لاهم په غیر تصدیق شوي بهرني حدیث فیډ پورې اړه لري. د حدیث لټون کول غیر فعال پاتې کیږي تر هغه چې سرچینه شوي ډیټاسیټ همغږي نشي.",
   "paywallUnlockAll": "ستاسو د روحاني سفر لپاره ټولې ځانګړتیاوې خلاص کړئ",
+  "premiumProductUnavailable": "پریمیم محصول همدا اوس شتون نلري. مهرباني وکړئ وروسته بیا هڅه وکړئ.",
+  "premiumPurchaseFailed": "پیرود بشپړ نه شو. مهرباني وکړئ بیا هڅه وکړئ.",
   "paywallFeature1Title": "د عصبي اسسټنټ پلس",
   "paywallFeature1Desc": "لامحدود AI ځواک لرونکي پوښتنې او ځوابونه",
   "paywallFeature2Title": "لامحدود آف لائن",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "ډاونلوډ بشپړ شو د {reciter} لپاره د {failed} ناکام سورتونو سره ({downloaded}/{total} ډاونلوډ شوی).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "د {reciter} لپاره آف لائن فایلونه حذف شوي.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "د شبکې تېروتنه. مهرباني وکړئ بیا هڅه وکړئ.",
+  "placesLocationRequiredTitle": "ځای اړین دی",
+  "placesLocationRequiredBody": "لومړی ځای وټاکئ ترڅو نږدې جوماتونه، حلال خواړه، او اسلامي ښوونځي په سمه توګه وپلټل شي.",
+  "placesMapTilesUnavailableTitle": "د نقشې ټایلونه شتون نلري",
+  "placesMapTilesUnavailableBody": "د دې جوړونې لپاره د تایید شوي نقشې ټایل سرچینه لا نه ده ترتیب شوې. نږدې ځایونه لاهم ستاسو له خوندي شوي ځای څخه بار کولی شي.",
+  "placesDataSourceUnavailableTitle": "د ځایونو ډاټا شتون نلري",
+  "placesDataSourceUnavailableBody": "د تایید شوي ځایونو ډیټا پای ټکی لاهم د دې جوړونې لپاره نه دی ترتیب شوی. د نږدې لټون فعالولو دمخه PLACES_OVERPASS_API_URL یو منظور شوي پراکسي یا چمتو کونکي ته تنظیم کړئ.",
   "unknownPlaceName": "نامعلوم نوم",
   "islamicPlaceFallback": "اسلامي ځای",
-  "prayerNotificationTitle": "د {prayerName} لپاره وخت",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "دا د لمانځه وخت دی {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "تایید شوي دعاګانې لاهم شتون نلري",
-  "duaUnavailableBody": "تایید شوي ورځني دعاګانې لا تر اوسه دې وسیله سره همغږي شوي ندي. د بادل سرچینې سره وصل شئ ترڅو د غیر تصدیق شوي فال بیک پرځای د سرچینې شوي دعا بار کړئ.",
-  "duaCategoryQuranic": "قرآنی دعا",
-  "duaCategoryMorningEvening": "سهار او ماښام",
-  "duaCategoryTasbih": "تسبیح",
-  "duaCategoryProtection": "ساتنه",
-  "duaCategoryBeginning": "پیل",
-  "duaCategorySleep": "خوب",
-  "duaCategoryFoodDrink": "خواړه او څښاک",
-  "duaCategoryForgiveness": "بخښنه",
-  "duaCategoryHome": "کور",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "تایید شوې سرچینه پاتې ده",
-  "hadithUnavailableTitle": "د حدیثو تصدیق شوي ټولګه لا تر اوسه شتون نلري",
-  "hadithUnavailableBody": "دا جوړښت لاهم په غیر تصدیق شوي بهرني حدیث فیډ پورې اړه لري. د حدیث لټون کول غیر فعال پاتې کیږي تر هغه چې سرچینه شوي ډیټاسیټ همغږي نشي.",
-  "appErrorOccurred": "یوه تېروتنه رامنځته شوه",
-  "appUnknownError": "نامعلومه تېروتنه",
-  "qiblaCompassErrorDetails": "د کمپاس تېروتنه: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "بشپړ شو! ماشاءالله",
-  "zikrMeaningSubhanAllah": "الله جل جلاله له هر عیب څخه لوړ دی.",
-  "zikrMeaningAlhamdulillah": "ټول ستاينه د الله لره ده.",
-  "zikrMeaningAllahuAkbar": "الله لوی دی.",
-  "zikrMeaningLaIlahaIllallah": "له الله پرته بل معبود نشته.",
-  "zikrMeaningAstaghfirullah": "زه د الله تعالی څخه بخښنه غواړم.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "د الله جل جلاله له لاری پرته هیڅ ځواک او قوت نشته.",
   "asmaMeaning1": "رحم کوونکی",
   "asmaMeaning2": "رحم کوونکی",
   "asmaMeaning3": "پاچا / ابدي رب",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "تلپاتې",
   "asmaMeaning97": "د وارثانو",
   "asmaMeaning98": "ترټولو غوره لارښود",
-  "asmaMeaning99": "مریض یو",
-  "duaMeaning1": "نور دا دعا کوي چې ای زموږ ربه موږ ته په دنیا او آخرت کې خیر راکړه او د اور له عذابه مو وساته.",
-  "duaMeaning2": "خدای په هیڅ نفس باندې د هغه له توان څخه ډیر بار نه اچوي: هر یو هر هغه څه ترلاسه کوي چې ښه یې کړي وي، او خپل بد یې زیانمن کړي - ای ربه، که موږ هیر کړو یا غلطی وکړو نو موږ ته مه ورکوه. ربه، پر موږ مه باروه لکه څنګه چې تا له موږ څخه مخکې پر خلکو بار کړی و. ربه، موږ له هغه څخه ډیر بار مه راکوه چې موږ یې د زغملو توان لرو. موږ ته بښنه وکړه، موږ ته بښنه وکړه او په موږ رحم وکړه. ته زموږ ساتونکی یې، نو د کافرانو په مقابل کې له موږ سره مرسته وکړه.»",
-  "duaMeaning3": "\"زموږ ربه، زموږ زړونه مه پریږده وروسته له دې چې تا موږ ته لارښوونه وکړه. موږ ته خپل رحم راکړه: ته تل ورکونکی یې.",
-  "duaMeaning4": "ربه، اجازه راکړه چې زه او زما اولادونه لمونځ ادا کړم. زموږ ربه، زما غوښتنه قبول کړه.",
-  "duaMeaning5": "او په مهربانۍ سره د هغوی په وړاندې خپل وزر ښکته کړه او ووایه: ربه، په دوی رحم وکړه لکه څنګه چې دوی زما په کوچنیوالي کې زما پالنه کوله.",
-  "duaMeaning6": "خدای پاک دی، هغه څوک چې په ریښتیا کنټرول لري. [رسول الله] مخکې له دې چې وحی بشپړ شي په تلاوت کې بېړه مه کوه، بلکې ووایه: ای ربه زما په علم کې زیاتوالی را کړه!",
-  "duaMeaning7": "ووایه: ربه، بښنه وکړه او رحم وکړه، ته تر ټولو زیات رحم کوونکی یې.",
-  "duaMeaning8": "هغه څوک چې دعا کوي، \"ای ربه، موږ ته زموږ په میړه او اولاد کې خوښي راکړه. موږ د هغو کسانو لپاره ښه مثالونه جوړ کړه څوک چې تاسو پوهیږي.",
-  "islamicNewYear": "نوی اسلامي کال",
-  "mawlidAnNabi": "میلاد النبی",
-  "specialDayDateRamadanStart": "۱ـ روژه",
-  "specialDayDateLaylatAlQadr": "27 رمضان",
-  "specialDayDateEidAlFitr": "۱ د شوال",
-  "specialDayDateEidAlAdha": "۱۰ ذوالحجې",
-  "specialDayDateIslamicNewYear": "۱ محرم",
-  "specialDayDateMawlidAnNabi": "۱۲ ربیع الاول",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "تازه کړئ",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "د تفسیر بارول...",
-  "tafsirSourceLabel": "د تفسیر سرچینه",
-  "tafsirNoSurahFound": "د دې سورت لپاره هیڅ تفسیر ندی موندل شوی.",
-  "tafsirNoAyahFound": "د آیت {ayah} لپاره هیڅ تفسیر ونه موندل شو.",
-  "tafsirLoadFailed": "تفسير نشي پورته کولى.",
-  "tafsirNoTextForAyah": "د دې آيت لپاره د تفسیر متن نشته.",
-  "tafsirDownloadingProgress": "د تفسیر ډاونلوډ کول {current}/{total}",
-  "tafsirLoadingProgress": "د تفسیر بارول {current}/{total}",
-  "tafsirApiStatusError": "د تفسیر سرچینې د HTTP {statusCode} تېروتنه راوګرځوله.",
-  "tafsirNoEntriesReturned": "د تفسير غوره شوې سرچينه هيڅ داخله نه ده راګرځولې.",
-  "premiumProductUnavailable": "پریمیم محصول همدا اوس شتون نلري. مهرباني وکړئ وروسته بیا هڅه وکړئ.",
-  "premiumPurchaseFailed": "پیرود بشپړ نه شو. مهرباني وکړئ بیا هڅه وکړئ.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "د اسلام د رڼا لار",
-  "downloadPartiallyFinishedForReciter": "ډاونلوډ بشپړ شو د {reciter} لپاره د {failed} ناکام سورتونو سره ({downloaded}/{total} ډاونلوډ شوی).",
-  "placesLocationRequiredTitle": "ځای اړین دی",
-  "placesLocationRequiredBody": "لومړی ځای وټاکئ ترڅو نږدې جوماتونه، حلال خواړه، او اسلامي ښوونځي په سمه توګه وپلټل شي.",
-  "placesMapTilesUnavailableTitle": "د نقشې ټایلونه شتون نلري",
-  "placesMapTilesUnavailableBody": "د دې جوړونې لپاره د تایید شوي نقشې ټایل سرچینه لا نه ده ترتیب شوې. نږدې ځایونه لاهم ستاسو له خوندي شوي ځای څخه بار کولی شي.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "نارینه (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "نارینه (Abdul Basit)",
-  "audioVoiceSudais": "نارینه (Sudais)",
-  "qiblaSensorUnavailable": "په دې وسیله د کمپاس سینسر شتون نلري.",
-  "adhanNotificationChannelName": "د اذان خبرتیاوې",
-  "adhanNotificationChannelDescription": "د اذان په غږ سره د لمانځه وخت خبرتیا.",
-  "quranLoadFailed": "د قرآن محتوا نشي پورته کولی. مهرباني وکړئ بیا هڅه وکړئ.",
-  "locationDetectionFailed": "ستاسو ځای نشی معلومولی. مهرباني وکړئ په لاسي ډول یو ښار وټاکئ یا بیا هڅه وکړئ.",
-  "qiblaLocationRequiredTitle": "د قبلې لپاره ځای اړین دی",
-  "qiblaLocationRequiredBody": "د قبلې کمپاس کارولو دمخه خپل اصلي ځای وټاکئ ترڅو سمت په دقیق ډول محاسبه شي.",
-  "placesDataSourceUnavailableTitle": "د ځایونو ډاټا شتون نلري",
-  "placesDataSourceUnavailableBody": "د تایید شوي ځایونو ډیټا پای ټکی لاهم د دې جوړونې لپاره نه دی ترتیب شوی. د نږدې لټون فعالولو دمخه PLACES_OVERPASS_API_URL یو منظور شوي پراکسي یا چمتو کونکي ته تنظیم کړئ.",
-  "tafsirCacheUnavailable": "تصدیق شوی تفسیر لا تر اوسه آفلاین شتون نلري. د لټون کولو دمخه د منبع شوي تفسیر ډیټاسیټ همغږي کړئ."
+  "asmaMeaning99": "مریض یو"
 }

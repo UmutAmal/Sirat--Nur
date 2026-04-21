@@ -1,6 +1,7 @@
 {
   "@@locale": "my",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "အစ္စလာမ့်အလင်းလမ်း",
   "home": "အိမ်",
   "quran": "ကုရ်အာန်",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "အိရှာ",
+  "prayerNotificationTitle": "{prayerName} အတွက် အချိန်",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ဆုတောင်းရန် အချိန်တန်ပြီ {prayerName}။",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "ဒေတာနှင့် သိုလှောင်မှု",
   "clearCache": "Cache ကိုရှင်းလင်းပါ။",
   "cacheClearedSuccess": "Cache ကို အောင်မြင်စွာ ရှင်းလင်းပြီးပါပြီ။",
@@ -34,6 +51,7 @@
   "currentLocation": "လက်ရှိတည်နေရာ (GPS)",
   "locationServiceDisabled": "တည်နေရာဝန်ဆောင်မှုကို ပိတ်ထားသည်။",
   "locationPermissionDenied": "တည်နေရာခွင့်ပြုချက်ကို ငြင်းဆိုထားသည်။",
+  "locationDetectionFailed": "သင့်တည်နေရာကို ရှာမတွေ့ပါ။ မြို့ကို ကိုယ်တိုင်ရွေးချယ်ပါ သို့မဟုတ် ထပ်စမ်းကြည့်ပါ။",
   "citiesCount": "{count} မြို့များ",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "ရလဒ်များမတွေ့ပါ။",
   "loading": "ဖွင့်နေသည်...",
   "error": "အမှား",
+  "appErrorOccurred": "အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။",
+  "appUnknownError": "အမည်မသိ အမှား",
+  "quranLoadFailed": "ကုရ်အာန်အကြောင်းအရာကို တင်၍မရပါ။ ထပ်စမ်းကြည့်ပါ။",
   "retry": "ပြန်ကြိုးစားပါ။",
+  "refreshAction": "ပြန်လည်စတင်ပါ။",
   "cancel": "မလုပ်တော့",
   "save": "သိမ်းဆည်းပါ။",
   "delete": "ဖျက်ပါ။",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "မရှိ",
   "surah": "စူရဟ်",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "စာမျက်နှာ",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "တက်ဖ်ဆာကို ဖွင့်နေသည်...",
+  "tafsirSourceLabel": "Tafsir အရင်းအမြစ်",
+  "tafsirNoSurahFound": "ဤစူရာဟ်အတွက် tafsir မတွေ့ပါ။",
+  "tafsirNoAyahFound": "ayah {ayah} အတွက် tafsir မတွေ့ပါ။",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ကို တင်၍မရပါ။",
+  "tafsirNoTextForAyah": "ဤအာယာအတွက် tafsir စာသားမရှိပါ။",
+  "tafsirDownloadingProgress": "tafsir {current}/{total} ကို ဒေါင်းလုဒ်လုပ်နေသည်",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "တက်ဖ်ဆာ {current}/{total} ကို ဖွင့်နေသည်",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir အရင်းအမြစ်သည် HTTP {statusCode} အမှားတစ်ခုကို ပြန်ပေးခဲ့သည်။",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "ရွေးချယ်ထားသော tafsir ရင်းမြစ်သည် ထည့်သွင်းခြင်းမရှိပါ။",
+  "tafsirCacheUnavailable": "အတည်ပြုထားသော tafsir ကို အော့ဖ်လိုင်းတွင် မရရှိနိုင်သေးပါ။ ရှာဖွေခြင်းမပြုမီ အရင်းအမြစ်ရရှိထားသော tafsir ဒေတာအတွဲကို စင့်ခ်လုပ်ပါ။",
   "bookmarks": "Bookmarks",
   "addBookmark": "လိပ်စာထည့်ပါ။",
   "removeBookmark": "လိပ်စာကို ဖယ်ရှားပါ။",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "အချို့က ''အရှင်ဘုရား၊ ဤလောက၌လည်းကောင်း၊ နောင်တမလွန်ဘ၀၌လည်းကောင်း ငါတို့အား ကျေးဇူးပြု၍ မီးဘေးဒဏ်မှ ကာကွယ်စောင့်ရှောက်တော်မူပါ''ဟု ဆုတောင်းကြသည်။",
+  "duaMeaning2": "ဘုရားသခင်သည် မိမိခံနိုင်ရည်ထက် ပိုသောစိတ်ဝိညာဉ်ကို ဝန်ထုပ်ဝန်ပိုးမဖြစ်စေပါ- လူတိုင်းသည် ကောင်းမှုပြုသမျှကို ရရှိကြပြီး မကောင်းမှုကို ခံစားရသည်- 'သခင်၊ ငါတို့သည် မေ့လျော့ခြင်း သို့မဟုတ် အမှားလုပ်မိပါက ငါတို့ကို တာဝန်မယူပါနှင့်။ သခင်၊ ကိုယ်တော်သည် အကျွန်ုပ်တို့ရှေ့၌ရှိသောသူတို့ကို ဝန်တင်တော်မူသကဲ့သို့၊ သခင်၊ ငါတို့ကိုခံနိုင်ရည်ရှိသည်ထက် ပို၍ဝန်ထုပ်ဝန်ပိုးမဖြစ်ပါနှင့်။ ခွင့်လွှတ်ပါ၊ ခွင့်လွှတ်ပါ၊ ကျွန်ုပ်တို့ကို သနားပါ။ ကိုယ်တော်သည် အကျွန်ုပ်တို့ကို အကာအကွယ်ပေးတော်မူသောကြောင့်၊",
+  "duaMeaning3": "‘အကျွန်ုပ်တို့၏သခင်၊ ကိုယ်တော်သည် အကျွန်ုပ်တို့ကို လမ်းပြပြီးနောက် အကျွန်ုပ်တို့၏ စိတ်နှလုံးကို မလွှဲမရှောင်ပါနှင့်။ ကိုယ်တော်၏ကရုဏာကို ကျွန်ုပ်တို့အား ပေးသနားတော်မူပါ- ကိုယ်တော်သည် အစဉ်ပေးတော်မူသောအရှင်ဖြစ်တော်မူ၏။",
+  "duaMeaning4": "အရှင်ဘုရား၊ အကျွန်ုပ်နှင့် အမျိုးအနွယ်တို့သည် ဆုတောင်းပဌနာပြုခြင်းငှာ၊ သခင်၊ ကျွန်ုပ်၏တောင်းဆိုချက်ကို လက်ခံပါ။",
+  "duaMeaning5": "ကြင်​နာ​မှု​ရှိ​၍​အ​တောင်​ပံ​ကို​နှိမ့်​ချ​၍ ``အ​ရှင်၊ ကျွန်​တော်​ငယ်​ရွယ်​စဉ်​က​သူ​တို့​သည်​အ​ကျွန်ုပ်​ကို​ဂ​ရု​စိုက်​ကြ​သည့်​အ​တိုင်း သနား​တော်​မူ​ပါ​စေ'' ဟု​လျှောက်​၏။",
+  "duaMeaning6": "စစ်မှန်သော အုပ်စိုးရှင် ဘုရားသခင်ဖြစ်တော်မူစေသတည်း။ [ပရောဖက်]၊ ဗျာဒိတ်တော်မပြီးသေးမီ ရွတ်ဆိုရန် အလျင်စလိုမလုပ်ပါနှင့်၊ 'သခင်၊ အကျွန်ုပ်ကို အသိပညာတိုးပွားစေပါ'ဟု လျှောက်ပါ။",
+  "duaMeaning7": "[နဗီတမန်တော်]၊ သခင်၊ ခွင့်လွှတ်တော်မူပါ၊ ကရုဏာတော်ရှိတော်မူပါ။",
+  "duaMeaning8": "ငါတို့၏သခင်၊ ငါတို့၏အိမ်ထောင်ဖက်နှင့် အမျိုးအနွယ်၌ ရွှင်လန်းစေတော်မူပါ။ ကိုယ်တော်ကို သိသောသူတို့အား ကျွန်ုပ်တို့အား စံနမူနာကောင်းများ ပေးတော်မူပါ။'",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "အစာရှောင်ခြင်း။",
   "quranReading": "ကုရ်အာန်ဖတ်ခြင်း။",
   "prayers": "ဆရာတော်များ",
+  "prayerRemainingHoursMinutes": "{hours}နာရီ {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "အပတ်စဉ်တိုးတက်မှု",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "အစ္စလာမ့်နှစ်သစ်ကူး",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "ရမ်ဇာန်လ ၁",
+  "specialDayDateLaylatAlQadr": "၂၇ ရမ်ဇာန်",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla ဦးတည်ချက်",
   "compass": "သံလိုက်အိမ်မြှောင်",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla ကို တွေ့ရှိခဲ့သည်။",
   "turnDevice": "Qibla ကို ရင်ဆိုင်ရန် သင့်စက်ကို လှည့်ပါ။",
+  "qiblaCompassErrorDetails": "သံလိုက်အိမ်မြှောင် အမှား- {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "သံလိုက်အိမ်မြှောင်အာရုံခံကိရိယာကို ဤစက်ပစ္စည်းတွင် မရရှိနိုင်ပါ။",
+  "qiblaLocationRequiredTitle": "Qibla အတွက် တည်နေရာ လိုအပ်သည်။",
+  "qiblaLocationRequiredBody": "Qibla သံလိုက်အိမ်မြှောင်ကို အသုံးမပြုမီ သင်၏အမှန်တကယ်တည်နေရာကို သတ်မှတ်၍ ဦးတည်ချက်ကို တိကျစွာ တွက်ချက်နိုင်သည်။",
+  "adhanNotificationChannelName": "Adhan အသိပေးချက်များ",
+  "adhanNotificationChannelDescription": "အဒ်ဟန်အသံဖြင့် ဆုတောင်းချိန်သတိပေးချက်။",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "ပစ်မှတ်အရေအတွက်- {target}",
   "tapToCount": "ရေတွက်ရန် တို့ပါ။",
+  "zikrCompletedMashAllah": "ပြီးပါပြီ။ MashAllah",
+  "zikrMeaningSubhanAllah": "အလ္လာဟ်အရှင်မြတ်သည် မပြည့်စုံမှုတိုင်းထက် သာလွန်တော်မူ၏။",
+  "zikrMeaningAlhamdulillah": "ချီးမွမ်းခြင်းအားလုံးသည် အလ္လာဟ်အရှင်မြတ်နှင့်သက်ဆိုင်သည်။",
+  "zikrMeaningAllahuAkbar": "အလ္လာဟ်အရှင်မြတ်သည် အကြီးမြတ်ဆုံးဖြစ်သည်။",
+  "zikrMeaningLaIlahaIllallah": "အလ္လာဟ်အရှင်မြတ်မှတပါး ဘုရားမရှိ။",
+  "zikrMeaningAstaghfirullah": "အလ္လာဟ်အရှင်မြတ်ရဲ့ ခွင့်လွှတ်မှုကို ငါရှာတယ်။",
+  "zikrMeaningLaHawlaWaLaQuwwata": "အလ္လာဟ်အရှင်မြတ်အားဖြင့်မှတပါး တန်ခိုးနှင့် တန်ခိုးမရှိပေ။",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "အသံအသံ",
+  "audioVoiceMisharyAlafasy": "အမျိုးသား (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "အမျိုးသား (Abdul Basit)",
+  "audioVoiceSudais": "အမျိုးသား (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "ချိန်ညှိမှု လိုအပ်သည်။ ပုံ-8 တွင် စက်ကိုလှည့်ပါ။",
   "dailyVerse": "နေ့စဉ်ကျမ်းပိုဒ်",
+  "dailyVerseUnavailableTitle": "နေ့စဥ်စာပိုဒ်ကို မရနိုင်ပါ။",
+  "dailyVerseUnavailableBody": "ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော နေ့စဉ်ကျမ်းပိုဒ်အကြောင်းအရာကို မသတ်မှတ်ရသေးပါ။ cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ သို့မဟုတ် ရှာဖွေခြင်းမပြုမီ အတည်ပြုထားသော ကက်ရှ်တစ်ခုကို စင့်ခ်လုပ်ပါ။",
   "todaysIbadah": "ယနေ့ အီဗဒ",
   "quickAccess": "အမြန်ဝင်ရောက်ပါ။",
   "assistant": "လက်ထောက်",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "အတည်ပြုထားသော duas များကို မရရှိနိုင်သေးပါ။",
+  "duaUnavailableBody": "အတည်ပြုထားသော နေ့စဉ် duas ကို ဤစက်ပစ္စည်းသို့ စင့်ခ်မလုပ်ရသေးပါ။ အတည်မပြုရသေးသော တုံ့ပြန်မှုအစား အရင်းအမြစ်မှ duas ကို တင်ရန် cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ။",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "မနက်ပိုင်း ညပိုင်း",
+  "duaCategoryTasbih": "တက်ဗိ",
+  "duaCategoryProtection": "အကာအကွယ်",
+  "duaCategoryBeginning": "အစပိုင်း",
+  "duaCategorySleep": "အိပ်ပါ။",
+  "duaCategoryFoodDrink": "အစားအသောက်နှင့် သောက်စရာ",
+  "duaCategoryForgiveness": "ခွင့်လွှတ်ပါ။",
+  "duaCategoryHome": "အိမ်",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "အစ္စလာမ့်ပညာရေး",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith စုဆောင်းမှုများ",
+  "hadithSourcePending": "အတည်ပြုပြီးသော အရင်းအမြစ်ကို ဆိုင်းငံ့ထားသည်။",
+  "hadithUnavailableTitle": "အတည်ပြုထားသော hadith စုဆောင်းမှုများကို မရရှိနိုင်သေးပါ။",
+  "hadithUnavailableBody": "ဤတည်ဆောက်မှုသည် အတည်မပြုရသေးသော ပြင်ပဟဒီးသ်အဒ်အပေါ် မူတည်နေသေးသည်။ ရင်းမြစ်ဒေတာအစုံကို ထပ်တူပြုသည့်အချိန်အထိ Hadith ရှာဖွေခြင်းကို ပိတ်ထားသည်။",
   "paywallUnlockAll": "သင်၏ဝိညာဉ်ရေးခရီးအတွက် အင်္ဂါရပ်အားလုံးကို လော့ခ်ဖွင့်ပါ။",
+  "premiumProductUnavailable": "ပရီမီယံထုတ်ကုန်ကို ယခုမရနိုင်ပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။",
+  "premiumPurchaseFailed": "ဝယ်ယူမှု မပြီးမြောက်နိုင်ခဲ့ပါ။ ထပ်စမ်းကြည့်ပါ။",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "အကန့်အသတ်မရှိ AI-ပါဝါ အမေးအဖြေ",
   "paywallFeature2Title": "အကန့်အသတ်မရှိ အော့ဖ်လိုင်း",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} အတွက် {failed} မအောင်မြင်သော စူရာဟ်များဖြင့် ဒေါင်းလုဒ် ပြီးပါပြီ ({downloaded}/{total} ဒေါင်းလုဒ်လုပ်ထားသည်)။",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} အတွက် အော့ဖ်လိုင်းဖိုင်များကို ဖျက်ထားသည်။",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "ကွန်ရက် အမှားအယွင်း ထပ်စမ်းကြည့်ပါ။",
+  "placesLocationRequiredTitle": "တည်နေရာ လိုအပ်သည်။",
+  "placesLocationRequiredBody": "တည်နေရာကို ဦးစွာသတ်မှတ်ထားပါက အနီးနားရှိ ဗလီများ၊ ဟလာလ်အစားအစာများနှင့် အစ္စလာမ့်ကျောင်းများကို တိကျစွာရှာဖွေနိုင်ပါသည်။",
+  "placesMapTilesUnavailableTitle": "မြေပုံအကွက်များ မရနိုင်ပါ။",
+  "placesMapTilesUnavailableBody": "ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော မြေပုံအကွက်အရင်းအမြစ်ကို မသတ်မှတ်ရသေးပါ။ အနီးတဝိုက်ရှိ နေရာများသည် သင်သိမ်းဆည်းထားသော တည်နေရာမှ စတင်နိုင်သေးသည်။",
+  "placesDataSourceUnavailableTitle": "နေရာများ ဒေတာ မရနိုင်ပါ။",
+  "placesDataSourceUnavailableBody": "ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော နေရာများဒေတာ အဆုံးမှတ်ကို မသတ်မှတ်ရသေးပါ။ အနီးနားရှိ ရှာဖွေမှုကို မဖွင့်မီ PLACES_OVERPASS_API_URL အား အတည်ပြုထားသော ပရောက်စီ သို့မဟုတ် ဝန်ဆောင်မှုပေးသူအဖြစ် သတ်မှတ်ပါ။",
   "unknownPlaceName": "အမည်မသိ",
   "islamicPlaceFallback": "အစ္စလာမ့်နေရာ",
-  "prayerNotificationTitle": "{prayerName} အတွက် အချိန်",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "ဆုတောင်းရန် အချိန်တန်ပြီ {prayerName}။",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "အတည်ပြုထားသော duas များကို မရရှိနိုင်သေးပါ။",
-  "duaUnavailableBody": "အတည်ပြုထားသော နေ့စဉ် duas ကို ဤစက်ပစ္စည်းသို့ စင့်ခ်မလုပ်ရသေးပါ။ အတည်မပြုရသေးသော တုံ့ပြန်မှုအစား အရင်းအမြစ်မှ duas ကို တင်ရန် cloud အရင်းအမြစ်သို့ ချိတ်ဆက်ပါ။",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "မနက်ပိုင်း ညပိုင်း",
-  "duaCategoryTasbih": "တက်ဗိ",
-  "duaCategoryProtection": "အကာအကွယ်",
-  "duaCategoryBeginning": "အစပိုင်း",
-  "duaCategorySleep": "အိပ်ပါ။",
-  "duaCategoryFoodDrink": "အစားအသောက်နှင့် သောက်စရာ",
-  "duaCategoryForgiveness": "ခွင့်လွှတ်ပါ။",
-  "duaCategoryHome": "အိမ်",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "အတည်ပြုပြီးသော အရင်းအမြစ်ကို ဆိုင်းငံ့ထားသည်။",
-  "hadithUnavailableTitle": "အတည်ပြုထားသော hadith စုဆောင်းမှုများကို မရရှိနိုင်သေးပါ။",
-  "hadithUnavailableBody": "ဤတည်ဆောက်မှုသည် အတည်မပြုရသေးသော ပြင်ပဟဒီးသ်အဒ်အပေါ် မူတည်နေသေးသည်။ ရင်းမြစ်ဒေတာအစုံကို ထပ်တူပြုသည့်အချိန်အထိ Hadith ရှာဖွေခြင်းကို ပိတ်ထားသည်။",
-  "appErrorOccurred": "အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။",
-  "appUnknownError": "အမည်မသိ အမှား",
-  "qiblaCompassErrorDetails": "သံလိုက်အိမ်မြှောင် အမှား- {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "ပြီးပါပြီ။ MashAllah",
-  "zikrMeaningSubhanAllah": "အလ္လာဟ်အရှင်မြတ်သည် မပြည့်စုံမှုတိုင်းထက် သာလွန်တော်မူ၏။",
-  "zikrMeaningAlhamdulillah": "ချီးမွမ်းခြင်းအားလုံးသည် အလ္လာဟ်အရှင်မြတ်နှင့်သက်ဆိုင်သည်။",
-  "zikrMeaningAllahuAkbar": "အလ္လာဟ်အရှင်မြတ်သည် အကြီးမြတ်ဆုံးဖြစ်သည်။",
-  "zikrMeaningLaIlahaIllallah": "အလ္လာဟ်အရှင်မြတ်မှတပါး ဘုရားမရှိ။",
-  "zikrMeaningAstaghfirullah": "အလ္လာဟ်အရှင်မြတ်ရဲ့ ခွင့်လွှတ်မှုကို ငါရှာတယ်။",
-  "zikrMeaningLaHawlaWaLaQuwwata": "အလ္လာဟ်အရှင်မြတ်အားဖြင့်မှတပါး တန်ခိုးနှင့် တန်ခိုးမရှိပေ။",
   "asmaMeaning1": "အကျိုးပြုသူ",
   "asmaMeaning2": "ကရုဏာတော်ရှင်",
   "asmaMeaning3": "ဘုရင်/ထာဝရသခင်",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "ထာဝရဘုရား",
   "asmaMeaning97": "အမွေဆက်ခံသူ",
   "asmaMeaning98": "အဖြောင့်မတ်ဆုံးလမ်းညွှန်",
-  "asmaMeaning99": "လူနာတစ်ဦး",
-  "duaMeaning1": "အချို့က ''အရှင်ဘုရား၊ ဤလောက၌လည်းကောင်း၊ နောင်တမလွန်ဘ၀၌လည်းကောင်း ငါတို့အား ကျေးဇူးပြု၍ မီးဘေးဒဏ်မှ ကာကွယ်စောင့်ရှောက်တော်မူပါ''ဟု ဆုတောင်းကြသည်။",
-  "duaMeaning2": "ဘုရားသခင်သည် မိမိခံနိုင်ရည်ထက် ပိုသောစိတ်ဝိညာဉ်ကို ဝန်ထုပ်ဝန်ပိုးမဖြစ်စေပါ- လူတိုင်းသည် ကောင်းမှုပြုသမျှကို ရရှိကြပြီး မကောင်းမှုကို ခံစားရသည်- 'သခင်၊ ငါတို့သည် မေ့လျော့ခြင်း သို့မဟုတ် အမှားလုပ်မိပါက ငါတို့ကို တာဝန်မယူပါနှင့်။ သခင်၊ ကိုယ်တော်သည် အကျွန်ုပ်တို့ရှေ့၌ရှိသောသူတို့ကို ဝန်တင်တော်မူသကဲ့သို့၊ သခင်၊ ငါတို့ကိုခံနိုင်ရည်ရှိသည်ထက် ပို၍ဝန်ထုပ်ဝန်ပိုးမဖြစ်ပါနှင့်။ ခွင့်လွှတ်ပါ၊ ခွင့်လွှတ်ပါ၊ ကျွန်ုပ်တို့ကို သနားပါ။ ကိုယ်တော်သည် အကျွန်ုပ်တို့ကို အကာအကွယ်ပေးတော်မူသောကြောင့်၊",
-  "duaMeaning3": "‘အကျွန်ုပ်တို့၏သခင်၊ ကိုယ်တော်သည် အကျွန်ုပ်တို့ကို လမ်းပြပြီးနောက် အကျွန်ုပ်တို့၏ စိတ်နှလုံးကို မလွှဲမရှောင်ပါနှင့်။ ကိုယ်တော်၏ကရုဏာကို ကျွန်ုပ်တို့အား ပေးသနားတော်မူပါ- ကိုယ်တော်သည် အစဉ်ပေးတော်မူသောအရှင်ဖြစ်တော်မူ၏။",
-  "duaMeaning4": "အရှင်ဘုရား၊ အကျွန်ုပ်နှင့် အမျိုးအနွယ်တို့သည် ဆုတောင်းပဌနာပြုခြင်းငှာ၊ သခင်၊ ကျွန်ုပ်၏တောင်းဆိုချက်ကို လက်ခံပါ။",
-  "duaMeaning5": "ကြင်​နာ​မှု​ရှိ​၍​အ​တောင်​ပံ​ကို​နှိမ့်​ချ​၍ ``အ​ရှင်၊ ကျွန်​တော်​ငယ်​ရွယ်​စဉ်​က​သူ​တို့​သည်​အ​ကျွန်ုပ်​ကို​ဂ​ရု​စိုက်​ကြ​သည့်​အ​တိုင်း သနား​တော်​မူ​ပါ​စေ'' ဟု​လျှောက်​၏။",
-  "duaMeaning6": "စစ်မှန်သော အုပ်စိုးရှင် ဘုရားသခင်ဖြစ်တော်မူစေသတည်း။ [ပရောဖက်]၊ ဗျာဒိတ်တော်မပြီးသေးမီ ရွတ်ဆိုရန် အလျင်စလိုမလုပ်ပါနှင့်၊ 'သခင်၊ အကျွန်ုပ်ကို အသိပညာတိုးပွားစေပါ'ဟု လျှောက်ပါ။",
-  "duaMeaning7": "[နဗီတမန်တော်]၊ သခင်၊ ခွင့်လွှတ်တော်မူပါ၊ ကရုဏာတော်ရှိတော်မူပါ။",
-  "duaMeaning8": "ငါတို့၏သခင်၊ ငါတို့၏အိမ်ထောင်ဖက်နှင့် အမျိုးအနွယ်၌ ရွှင်လန်းစေတော်မူပါ။ ကိုယ်တော်ကို သိသောသူတို့အား ကျွန်ုပ်တို့အား စံနမူနာကောင်းများ ပေးတော်မူပါ။'",
-  "islamicNewYear": "အစ္စလာမ့်နှစ်သစ်ကူး",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "ရမ်ဇာန်လ ၁",
-  "specialDayDateLaylatAlQadr": "၂၇ ရမ်ဇာန်",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "ပြန်လည်စတင်ပါ။",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "တက်ဖ်ဆာကို ဖွင့်နေသည်...",
-  "tafsirSourceLabel": "Tafsir အရင်းအမြစ်",
-  "tafsirNoSurahFound": "ဤစူရာဟ်အတွက် tafsir မတွေ့ပါ။",
-  "tafsirNoAyahFound": "ayah {ayah} အတွက် tafsir မတွေ့ပါ။",
-  "tafsirLoadFailed": "Tafsir ကို တင်၍မရပါ။",
-  "tafsirNoTextForAyah": "ဤအာယာအတွက် tafsir စာသားမရှိပါ။",
-  "tafsirDownloadingProgress": "tafsir {current}/{total} ကို ဒေါင်းလုဒ်လုပ်နေသည်",
-  "tafsirLoadingProgress": "တက်ဖ်ဆာ {current}/{total} ကို ဖွင့်နေသည်",
-  "tafsirApiStatusError": "Tafsir အရင်းအမြစ်သည် HTTP {statusCode} အမှားတစ်ခုကို ပြန်ပေးခဲ့သည်။",
-  "tafsirNoEntriesReturned": "ရွေးချယ်ထားသော tafsir ရင်းမြစ်သည် ထည့်သွင်းခြင်းမရှိပါ။",
-  "premiumProductUnavailable": "ပရီမီယံထုတ်ကုန်ကို ယခုမရနိုင်ပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။",
-  "premiumPurchaseFailed": "ဝယ်ယူမှု မပြီးမြောက်နိုင်ခဲ့ပါ။ ထပ်စမ်းကြည့်ပါ။",
-  "prayerRemainingHoursMinutes": "{hours}နာရီ {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "အစ္စလာမ့်အလင်းလမ်း",
-  "downloadPartiallyFinishedForReciter": "{reciter} အတွက် {failed} မအောင်မြင်သော စူရာဟ်များဖြင့် ဒေါင်းလုဒ် ပြီးပါပြီ ({downloaded}/{total} ဒေါင်းလုဒ်လုပ်ထားသည်)။",
-  "placesLocationRequiredTitle": "တည်နေရာ လိုအပ်သည်။",
-  "placesLocationRequiredBody": "တည်နေရာကို ဦးစွာသတ်မှတ်ထားပါက အနီးနားရှိ ဗလီများ၊ ဟလာလ်အစားအစာများနှင့် အစ္စလာမ့်ကျောင်းများကို တိကျစွာရှာဖွေနိုင်ပါသည်။",
-  "placesMapTilesUnavailableTitle": "မြေပုံအကွက်များ မရနိုင်ပါ။",
-  "placesMapTilesUnavailableBody": "ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော မြေပုံအကွက်အရင်းအမြစ်ကို မသတ်မှတ်ရသေးပါ။ အနီးတဝိုက်ရှိ နေရာများသည် သင်သိမ်းဆည်းထားသော တည်နေရာမှ စတင်နိုင်သေးသည်။",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "အမျိုးသား (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "အမျိုးသား (Abdul Basit)",
-  "audioVoiceSudais": "အမျိုးသား (Sudais)",
-  "qiblaSensorUnavailable": "သံလိုက်အိမ်မြှောင်အာရုံခံကိရိယာကို ဤစက်ပစ္စည်းတွင် မရရှိနိုင်ပါ။",
-  "adhanNotificationChannelName": "Adhan အသိပေးချက်များ",
-  "adhanNotificationChannelDescription": "အဒ်ဟန်အသံဖြင့် ဆုတောင်းချိန်သတိပေးချက်။",
-  "quranLoadFailed": "ကုရ်အာန်အကြောင်းအရာကို တင်၍မရပါ။ ထပ်စမ်းကြည့်ပါ။",
-  "locationDetectionFailed": "သင့်တည်နေရာကို ရှာမတွေ့ပါ။ မြို့ကို ကိုယ်တိုင်ရွေးချယ်ပါ သို့မဟုတ် ထပ်စမ်းကြည့်ပါ။",
-  "qiblaLocationRequiredTitle": "Qibla အတွက် တည်နေရာ လိုအပ်သည်။",
-  "qiblaLocationRequiredBody": "Qibla သံလိုက်အိမ်မြှောင်ကို အသုံးမပြုမီ သင်၏အမှန်တကယ်တည်နေရာကို သတ်မှတ်၍ ဦးတည်ချက်ကို တိကျစွာ တွက်ချက်နိုင်သည်။",
-  "placesDataSourceUnavailableTitle": "နေရာများ ဒေတာ မရနိုင်ပါ။",
-  "placesDataSourceUnavailableBody": "ဤတည်ဆောက်မှုအတွက် အတည်ပြုထားသော နေရာများဒေတာ အဆုံးမှတ်ကို မသတ်မှတ်ရသေးပါ။ အနီးနားရှိ ရှာဖွေမှုကို မဖွင့်မီ PLACES_OVERPASS_API_URL အား အတည်ပြုထားသော ပရောက်စီ သို့မဟုတ် ဝန်ဆောင်မှုပေးသူအဖြစ် သတ်မှတ်ပါ။",
-  "tafsirCacheUnavailable": "အတည်ပြုထားသော tafsir ကို အော့ဖ်လိုင်းတွင် မရရှိနိုင်သေးပါ။ ရှာဖွေခြင်းမပြုမီ အရင်းအမြစ်ရရှိထားသော tafsir ဒေတာအတွဲကို စင့်ခ်လုပ်ပါ။"
+  "asmaMeaning99": "လူနာတစ်ဦး"
 }

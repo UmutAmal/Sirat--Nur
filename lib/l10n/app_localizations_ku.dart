@@ -951,6 +951,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get dailyVerse => 'Ayeta rojane';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ayeta rojane ne berdest e';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Naveroka ayeta rojane ya piştrastkirî hîn ji bo vê çêkirinê nehatiye mîheng kirin. Berî gerokê bi çavkaniya ewr ve girêdin an cacheyek pejirandî hevdeng bikin.';
+
+  @override
   String get todaysIbadah => 'Îbadeta îro ye';
 
   @override

@@ -1,6 +1,7 @@
 {
   "@@locale": "la",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Via lux islamica",
   "home": "Home",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tempus {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Tempus est orare {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Storage",
   "clearCache": "Patet Cache",
   "cacheClearedSuccess": "Cache purgata feliciter",
@@ -34,6 +51,7 @@
   "currentLocation": "Current Location (GPS)",
   "locationServiceDisabled": "Locus est religio erret.",
   "locationPermissionDenied": "Locus permissu negavit.",
+  "locationDetectionFailed": "Non locum tuum deprehendere. Elige civitatem tincidunt vel rursum.",
   "citiesCount": "{count} urbes",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Eventus inventus",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Error occurrit",
+  "appUnknownError": "Error ignotus",
+  "quranLoadFailed": "Quran contentus non oneratus. Quaeso, iterum conare.",
   "retry": "Retry",
+  "refreshAction": "Renovare",
   "cancel": "Cancel",
   "save": "Servare",
   "delete": "Delere",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "No",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Page",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Loading tafsir...",
+  "tafsirSourceLabel": "Tafsir fons",
+  "tafsirNoSurahFound": "Nulla tafsir inventa est pro surah hoc.",
+  "tafsirNoAyahFound": "Nulla tafsir inventa est pro ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir non oneratus.",
+  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirDownloadingProgress": "Download tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir fons errorem HTTP {statusCode} reddidit.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Electus fons tafsir ingressus nullos reddidit.",
+  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset ante pasco.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Aufer Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "alii orant, 'domine, da nobis bona in hoc saeculo et in futuro, et a tormento ignis nos defende.'",
+  "duaMeaning2": "Deus animam quamlibet non gravat plus quam ferre potest: quisque lucratur quidquid boni fecit et suum malum patitur: Dominus, si obliviscimur vel peccamus, non incumbere debemus. Domine, noli nos onerare, sicut ante nos gravasti. Domine, noli nos onerare plus quam nos sustinere. Ignosce nobis, dimitte nobis, et miserere nobis. Protector noster es tu, adiuva nos contra infideles.'",
+  "duaMeaning3": "'Domine, ne deviant corda nostra postquam tu duxisti nos'. Da nobis misericordiam tuam.",
+  "duaMeaning4": "presta domine ut ego et progenies mea servet orationem . Domine, suscipe deprecationem meam.",
+  "duaMeaning5": "et cornu tuum humiliter in eis benigne depone et dic, 'Domine, miserere eorum, sicut me curabant cum essem parvulus.'",
+  "duaMeaning6": "Deus excelsus, qui vere est in potestate. [Propheta], ante revelationem plene completam non ruere recitare sed dic, Domine, auge me in scientia!",
+  "duaMeaning7": "Dic [Prophet], 'Domine, dimitte et miserere: Tu es omnium clementissimus.'",
+  "duaMeaning8": "qui orant, 'Domine, in coniugibus et prole nostro da nobis laetitiam'. Bona nobis exempla fac his qui Tui conscii sunt.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ieiunium",
   "quranReading": "Quran Lectio",
   "prayers": "Orationes",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Weekly Progress",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "islamica New Year",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Directio",
   "compass": "Compass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla reperit!",
   "turnDevice": "Verte fabrica ad faciem Qibla",
+  "qiblaCompassErrorDetails": "Errorem circumde: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensorem Compass est in hac fabrica unavailable.",
+  "qiblaLocationRequiredTitle": "Locus requisiti Qibla",
+  "qiblaLocationRequiredBody": "Pone actualem locum tuum antequam Qibla circumdabit utens directio accurate computari potest.",
+  "adhanNotificationChannelName": "Adhan Suspendisse",
+  "adhanNotificationChannelDescription": "Orationis tempus summis cum adhan sono.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Scopum comitem: {target}",
   "tapToCount": "ICTUS numerare",
+  "zikrCompletedMashAllah": "Completur! Mashallah",
+  "zikrMeaningSubhanAllah": "Allah longe super omnem imperfectionem.",
+  "zikrMeaningAlhamdulillah": "Laus Allah.",
+  "zikrMeaningAllahuAkbar": "Allah Maximus est.",
+  "zikrMeaningLaIlahaIllallah": "Non est deus nisi Allah.",
+  "zikrMeaningAstaghfirullah": "Veniam peto Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Non est virtus et non virtus nisi per Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Voice",
+  "audioVoiceMisharyAlafasy": "Masculum (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Masculum (Abdul Basit)",
+  "audioVoiceSudais": "Masculum (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibratio requiritur. Rotate notae in-8 fig.",
   "dailyVerse": "Quotidie Versus",
+  "dailyVerseUnavailableTitle": "Cotidiana versum unavailable",
+  "dailyVerseUnavailableBody": "Verifica- tus cotidianus versus contentus non configuratur pro hoc aedificato adhuc. Coniungere ad fontem vel sync nubem certificatum cache ante pasco.",
   "todaysIbadah": "Hodie Ibadah",
   "quickAccess": "Velox Access",
   "assistant": "Suffragium",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verified duas non sunt available adhuc",
+  "duaUnavailableBody": "Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas in loco non ficta fallback oriatur, ut oneremus.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Mane & Vespere",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Praesidium",
+  "duaCategoryBeginning": "Initia",
+  "duaCategorySleep": "Somnus",
+  "duaCategoryFoodDrink": "Cibum & potum",
+  "duaCategoryForgiveness": "remissio",
+  "duaCategoryHome": "Home",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Education islamica",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith Collections",
+  "hadithSourcePending": "Verificatur fons pendente",
+  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
+  "hadithUnavailableBody": "Hoc constructum adhuc pendet ab absque verificatione externa hadith cibarium. Hadith pasco debilis manet donec fons dataset syncedtur.",
   "paywallUnlockAll": "Reserare omnia features pro spirituali itinere",
+  "premiumProductUnavailable": "Magnum productum est non available nunc. Mox iterum conare.",
+  "premiumPurchaseFailed": "Emptio perfici non potuit. Quaeso, iterum conare.",
   "paywallFeature1Title": "Neural Suffragium Plus",
   "paywallFeature1Desc": "IMMODERATUS AI-Lorem Q &",
   "paywallFeature2Title": "Infinitus Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download finita est pro {reciter} cum {failed} surahs defecit ({downloaded}/{total} receptae sunt).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Documenta offline deleta pro {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Retis error. Quaeso, iterum conare.",
+  "placesLocationRequiredTitle": "Locus requiratur",
+  "placesLocationRequiredBody": "Locum primum tam prope meschitis, cibus halal, et schola islamica accurate investigari possunt.",
+  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableBody": "Fons tegularum chartarum certificatus non configuratur ad hoc adhuc constructum. Loca vicina adhuc onerare possunt ex loco servato tuo.",
+  "placesDataSourceUnavailableTitle": "Loca notitia unavailable",
+  "placesDataSourceUnavailableBody": "Loca veri- ta notitia terminorum non configuratur ad hoc adhuc constructum. PLACES_OVERPASS_API_URL ad probatum procuratorem vel provisorem pone antequam inquisitionem proximam capias.",
   "unknownPlaceName": "Nomen ignotum",
   "islamicPlaceFallback": "Macometi Place",
-  "prayerNotificationTitle": "Tempus {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Tempus est orare {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verified duas non sunt available adhuc",
-  "duaUnavailableBody": "Verificatur quotidie duas duas notae adhuc huic notae non synced. Coniunge ad fontem nubem ut duas in loco non ficta fallback oriatur, ut oneremus.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Mane & Vespere",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Praesidium",
-  "duaCategoryBeginning": "Initia",
-  "duaCategorySleep": "Somnus",
-  "duaCategoryFoodDrink": "Cibum & potum",
-  "duaCategoryForgiveness": "remissio",
-  "duaCategoryHome": "Home",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verificatur fons pendente",
-  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
-  "hadithUnavailableBody": "Hoc constructum adhuc pendet ab absque verificatione externa hadith cibarium. Hadith pasco debilis manet donec fons dataset syncedtur.",
-  "appErrorOccurred": "Error occurrit",
-  "appUnknownError": "Error ignotus",
-  "qiblaCompassErrorDetails": "Errorem circumde: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Completur! Mashallah",
-  "zikrMeaningSubhanAllah": "Allah longe super omnem imperfectionem.",
-  "zikrMeaningAlhamdulillah": "Laus Allah.",
-  "zikrMeaningAllahuAkbar": "Allah Maximus est.",
-  "zikrMeaningLaIlahaIllallah": "Non est deus nisi Allah.",
-  "zikrMeaningAstaghfirullah": "Veniam peto Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Non est virtus et non virtus nisi per Allah.",
   "asmaMeaning1": "Beneficent",
   "asmaMeaning2": "Misericors",
   "asmaMeaning3": "Rex / Dominus aeterne",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "In aeternum",
   "asmaMeaning97": "Hereditarius",
   "asmaMeaning98": "The justissime Guide",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "alii orant, 'domine, da nobis bona in hoc saeculo et in futuro, et a tormento ignis nos defende.'",
-  "duaMeaning2": "Deus animam quamlibet non gravat plus quam ferre potest: quisque lucratur quidquid boni fecit et suum malum patitur: Dominus, si obliviscimur vel peccamus, non incumbere debemus. Domine, noli nos onerare, sicut ante nos gravasti. Domine, noli nos onerare plus quam nos sustinere. Ignosce nobis, dimitte nobis, et miserere nobis. Protector noster es tu, adiuva nos contra infideles.'",
-  "duaMeaning3": "'Domine, ne deviant corda nostra postquam tu duxisti nos'. Da nobis misericordiam tuam.",
-  "duaMeaning4": "presta domine ut ego et progenies mea servet orationem . Domine, suscipe deprecationem meam.",
-  "duaMeaning5": "et cornu tuum humiliter in eis benigne depone et dic, 'Domine, miserere eorum, sicut me curabant cum essem parvulus.'",
-  "duaMeaning6": "Deus excelsus, qui vere est in potestate. [Propheta], ante revelationem plene completam non ruere recitare sed dic, Domine, auge me in scientia!",
-  "duaMeaning7": "Dic [Prophet], 'Domine, dimitte et miserere: Tu es omnium clementissimus.'",
-  "duaMeaning8": "qui orant, 'Domine, in coniugibus et prole nostro da nobis laetitiam'. Bona nobis exempla fac his qui Tui conscii sunt.",
-  "islamicNewYear": "islamica New Year",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Renovare",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir fons",
-  "tafsirNoSurahFound": "Nulla tafsir inventa est pro surah hoc.",
-  "tafsirNoAyahFound": "Nulla tafsir inventa est pro ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir non oneratus.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
-  "tafsirDownloadingProgress": "Download tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir fons errorem HTTP {statusCode} reddidit.",
-  "tafsirNoEntriesReturned": "Electus fons tafsir ingressus nullos reddidit.",
-  "premiumProductUnavailable": "Magnum productum est non available nunc. Mox iterum conare.",
-  "premiumPurchaseFailed": "Emptio perfici non potuit. Quaeso, iterum conare.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Via lux islamica",
-  "downloadPartiallyFinishedForReciter": "Download finita est pro {reciter} cum {failed} surahs defecit ({downloaded}/{total} receptae sunt).",
-  "placesLocationRequiredTitle": "Locus requiratur",
-  "placesLocationRequiredBody": "Locum primum tam prope meschitis, cibus halal, et schola islamica accurate investigari possunt.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "Fons tegularum chartarum certificatus non configuratur ad hoc adhuc constructum. Loca vicina adhuc onerare possunt ex loco servato tuo.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Masculum (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Masculum (Abdul Basit)",
-  "audioVoiceSudais": "Masculum (Sudais)",
-  "qiblaSensorUnavailable": "Sensorem Compass est in hac fabrica unavailable.",
-  "adhanNotificationChannelName": "Adhan Suspendisse",
-  "adhanNotificationChannelDescription": "Orationis tempus summis cum adhan sono.",
-  "quranLoadFailed": "Quran contentus non oneratus. Quaeso, iterum conare.",
-  "locationDetectionFailed": "Non locum tuum deprehendere. Elige civitatem tincidunt vel rursum.",
-  "qiblaLocationRequiredTitle": "Locus requisiti Qibla",
-  "qiblaLocationRequiredBody": "Pone actualem locum tuum antequam Qibla circumdabit utens directio accurate computari potest.",
-  "placesDataSourceUnavailableTitle": "Loca notitia unavailable",
-  "placesDataSourceUnavailableBody": "Loca veri- ta notitia terminorum non configuratur ad hoc adhuc constructum. PLACES_OVERPASS_API_URL ad probatum procuratorem vel provisorem pone antequam inquisitionem proximam capias.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset ante pasco."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

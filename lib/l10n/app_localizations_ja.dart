@@ -940,6 +940,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get dailyVerse => '日々の詩';
 
   @override
+  String get dailyVerseUnavailableTitle => '毎日の詩は利用できません';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      '検証済みの日次詩コンテンツがこのビルド用にまだ構成されていません。閲覧する前に、クラウド ソースに接続するか、検証済みのキャッシュを同期してください。';
+
+  @override
   String get todaysIbadah => '今日のイバダ';
 
   @override

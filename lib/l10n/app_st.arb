@@ -1,6 +1,7 @@
 {
   "@@locale": "st",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Tsela ea Boislamo ea Leseli",
   "home": "Lehae",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Nako ea {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ke nako ea ho rapela {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Lintlha le Polokelo",
   "clearCache": "Hlakola Cache",
   "cacheClearedSuccess": "Cache e hlakotsoe ka katleho",
@@ -34,6 +51,7 @@
   "currentLocation": "Sebaka sa Hajoale (GPS)",
   "locationServiceDisabled": "Ts'ebeletso ea sebaka e koetsoe.",
   "locationPermissionDenied": "Tumello ea sebaka e hanetsoe.",
+  "locationDetectionFailed": "Ha e khone ho bona sebaka sa hau. Ka kopo, khetha toropo ka bouena kapa u leke hape.",
   "citiesCount": "{count} litoropo",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ha ho liphetho tse fumanoeng",
   "loading": "E ea kenya...",
   "error": "Phoso",
+  "appErrorOccurred": "Phoso e etsahetse",
+  "appUnknownError": "Phoso e sa tsejoeng",
+  "quranLoadFailed": "Likahare tsa Quran ha lia khona ho kenngoa. Ka kopo, leka hape.",
   "retry": "Leka hape",
+  "refreshAction": "Hlasimolla",
   "cancel": "Hlakola",
   "save": "Boloka",
   "delete": "Hlakola",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Che",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Leqephe",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "E kenya tafsir...",
+  "tafsirSourceLabel": "Mohloli oa Tafsir",
+  "tafsirNoSurahFound": "Ha ho tafsir e fumanoeng bakeng sa surah ena.",
+  "tafsirNoAyahFound": "Ha ho tafsir e fumanoeng ea ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ha e khone ho kengoa.",
+  "tafsirNoTextForAyah": "Ha ho mongolo oa tafsir bakeng sa ayah ena.",
+  "tafsirDownloadingProgress": "E khoasolla tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "E kenya tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Mohloli oa Tafsir o khutlisitse phoso ea HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Mohloli o khethiloeng oa tafsir ha oa khutlisa mangolo.",
+  "tafsirCacheUnavailable": "Tafsir e netefalitsoeng ha e fumanehe kantle ho Marang-rang. Ikamahanya le pokello ea data ea tafsir pele u e bala.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Kenya Bookmark",
   "removeBookmark": "Tlosa Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "ba bang ba re: ‘Mong’a rona, re fe tse molemo lefatšeng lena le ka ho sa Feleng, ’me u re sireletse kotlong ea mollo.",
+  "duaMeaning2": "Allah ha A imetse moea ofe kapa ofe ka tse fetang tseo o ka li jarang: e mong le e mong o fumana molemo ofe kapa ofe oo o o entseng, 'me o hlaheloa ke bobe ba oona - \"Morena, u se ke ua re nka re lebetse kapa re etsa liphoso. Morena, u se ke ua re imetsa joalo ka ha u ne u imetsa ba neng ba le pele ho rona. Morena, u se ke ua re imetsa ka matla a fetang ao re nang le 'ona. U re tšoarele, u re tšoarele, u re hauhele. U Mosireletsi oa rona, kahoo re thuse khahlanong le ba sa lumeleng.’",
+  "duaMeaning3": "‘Mong’a rona, u se ke ua lumella lipelo tsa rona ho kheloha ka mor’a hore u re tataise. U re fe mohau oa Hao: U Ea fanang ka mehla.",
+  "duaMeaning4": "Morena, etsa hore nna le bana ba ka re boloke thapelo. Morena oa rona, amohela kopo ea ka.",
+  "duaMeaning5": "mme o theolele lepheo la hao ka boikokobetso ho bona ka mosa mme o re, ‘Morena, ba hauhele, jwalokaha ba ile ba ntlhokomela ha ke sa le monyenyane.’",
+  "duaMeaning6": "ho phahamisoe Molimo, ea laolang ka ’nete. [Moprofeta], u se ke ua potlakela ho pheta-pheta pele tšenolo e phethahala ka botlalo empa u re, ‘Morena, nkekeletse tsebong!",
+  "duaMeaning7": "E-re [Moprofeta], ‘Morena, tšoarela ’me u hauhele: U le mohau ho feta bohle.’",
+  "duaMeaning8": "ba rapelang ba re: ‘Morena oa rona, re thabise ka har’a balekane ba rōna le bana ba rōna. Re etse mehlala e metle ho ba O tsebang’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ho itima dijo",
   "quranReading": "Ho Bala Koran",
   "prayers": "Lithapelo",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Tsoelo-pele ea Beke",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Selemo se Secha sa Maislamo",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Tataiso ea Qibla",
   "compass": "Sesupa-tsela",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla e fumanoe!",
   "turnDevice": "Fetolela sesebelisoa sa hau ho shebana le Qibla",
+  "qiblaCompassErrorDetails": "Phoso ea sesupa-tsela: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Compass sensor ha e fumanehe sesebelisoa sena.",
+  "qiblaLocationRequiredTitle": "Sebaka se hlokahalang bakeng sa Qibla",
+  "qiblaLocationRequiredBody": "Beha sebaka sa hau sa 'nete pele u sebelisa sesupa-tsela sa Qibla e le hore tataiso e ka baloa ka nepo.",
+  "adhanNotificationChannelName": "Litsebiso tsa Adhan",
+  "adhanNotificationChannelDescription": "Litemoso tsa nako ea thapelo ka molumo oa adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Palo ea sepheo: {target}",
   "tapToCount": "Tlanya ho bala",
+  "zikrCompletedMashAllah": "E phethiloe! MashaAllah",
+  "zikrMeaningSubhanAllah": "Allah o phahametse ho se phethahale hohle.",
+  "zikrMeaningAlhamdulillah": "Thoriso eohle ke ea Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ke E moholo.",
+  "zikrMeaningLaIlahaIllallah": "Ha ho molimo haese Allah.",
+  "zikrMeaningAstaghfirullah": "Ke kopa tšoarelo ho Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ha ho matla le matla haese ka Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Lentsoe la Audio",
+  "audioVoiceMisharyAlafasy": "Monna (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Monna (Abdul Basit)",
+  "audioVoiceSudais": "Monna (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Ho hlokahala ho lekanya. Fetola sesebelisoa setšoantšong-8.",
   "dailyVerse": "Temana ea Letsatsi le Letsatsi",
+  "dailyVerseUnavailableTitle": "Temana ea letsatsi le letsatsi ha e fumanehe",
+  "dailyVerseUnavailableBody": "Litemana tsa letsatsi le letsatsi tse netefalitsoeng ha li so lokisetsoe moaho ona hajoale. Hokela mohloling oa leru kapa amahanya cache e netefalitsoeng pele u e bala.",
   "todaysIbadah": "Ibadah ea kajeno",
   "quickAccess": "Ho fihlella ka Potlako",
   "assistant": "Mothusi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Li-dua tse netefalitsoeng ha li so fumanehe",
+  "duaUnavailableBody": "Li-dua tse netefalitsoeng tsa letsatsi le letsatsi ha li so hokahanngoa sesebelisoa sena. Hokela mohloling oa cloud ho kenya li-duas ho e-na le mokhoa o sa netefatsoang.",
+  "duaCategoryQuranic": "Dua ea Quran",
+  "duaCategoryMorningEvening": "Hoseng le Mantsiboea",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Tshireletso",
+  "duaCategoryBeginning": "Qalo",
+  "duaCategorySleep": "Robala",
+  "duaCategoryFoodDrink": "Lijo & Lino",
+  "duaCategoryForgiveness": "Tšoarelo",
+  "duaCategoryHome": "Lehae",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Thuto ea Boislamo",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Lipokello tsa Hadith",
+  "hadithSourcePending": "Mohloli o netefalitsoeng o ntse o emetse",
+  "hadithUnavailableTitle": "Lipokello tsa hadith tse netefalitsoeng ha li so fumanehe",
+  "hadithUnavailableBody": "Kaho ena e ntse e itšetlehile ka phepelo ea hadith e sa netefatsoang. Mokhoa oa ho bala oa Hadith o lula o koalehile ho fihlela dataset ea mohloli o hokahanngoa.",
   "paywallUnlockAll": "Notlolla likarolo tsohle tsa leeto la hau la moea",
+  "premiumProductUnavailable": "Sehlahisoa sa Premium ha se fumanehe hona joale. Ka kopo, leka hape hamorao.",
+  "premiumPurchaseFailed": "Theko ha e ea phethoa. Ka kopo, leka hape.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Q&A e se nang moeli e tsamaisoang ke AI",
   "paywallFeature2Title": "Unlimited Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "E felile bakeng sa {reciter} ka {failed} li-surah tse hlōlehileng ({downloaded}/{total} li jarollotsoe).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "E hlakotsoe lifaele tse kantle ho Marang-rang tsa {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Phoso ea marang-rang. Ka kopo, leka hape.",
+  "placesLocationRequiredTitle": "Ho hlokahala sebaka",
+  "placesLocationRequiredBody": "Beha sebaka pele e le hore li-mosque tse haufi, lijo tsa halal le likolo tsa Mamoseleme li ka batlisisoa ka nepo.",
+  "placesMapTilesUnavailableTitle": "Lithaele tsa 'mapa ha li fumanehe",
+  "placesMapTilesUnavailableBody": "Mohloli o netefalitsoeng oa lithaele ha o so lokisoe molemong oa moaho ona hajoale. Libaka tse haufi li ntse li ka bula ho tsoa sebakeng sa hau se bolokiloeng.",
+  "placesDataSourceUnavailableTitle": "Lintlha tsa libaka ha li fumanehe",
+  "placesDataSourceUnavailableBody": "Qetello ea lintlha tsa libaka tse netefalitsoeng ha e so lokisoe molemong oa moaho ona hajoale. Beha PLACES_OVERPASS_API_URL ho moemeli kapa mofani ea lumelletsoeng pele o lumella patlo e haufi.",
   "unknownPlaceName": "Lebitso le sa Tsejweng",
   "islamicPlaceFallback": "Sebaka sa Maislamo",
-  "prayerNotificationTitle": "Nako ea {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ke nako ea ho rapela {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Li-dua tse netefalitsoeng ha li so fumanehe",
-  "duaUnavailableBody": "Li-dua tse netefalitsoeng tsa letsatsi le letsatsi ha li so hokahanngoa sesebelisoa sena. Hokela mohloling oa cloud ho kenya li-duas ho e-na le mokhoa o sa netefatsoang.",
-  "duaCategoryQuranic": "Dua ea Quran",
-  "duaCategoryMorningEvening": "Hoseng le Mantsiboea",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Tshireletso",
-  "duaCategoryBeginning": "Qalo",
-  "duaCategorySleep": "Robala",
-  "duaCategoryFoodDrink": "Lijo & Lino",
-  "duaCategoryForgiveness": "Tšoarelo",
-  "duaCategoryHome": "Lehae",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Mohloli o netefalitsoeng o ntse o emetse",
-  "hadithUnavailableTitle": "Lipokello tsa hadith tse netefalitsoeng ha li so fumanehe",
-  "hadithUnavailableBody": "Kaho ena e ntse e itšetlehile ka phepelo ea hadith e sa netefatsoang. Mokhoa oa ho bala oa Hadith o lula o koalehile ho fihlela dataset ea mohloli o hokahanngoa.",
-  "appErrorOccurred": "Phoso e etsahetse",
-  "appUnknownError": "Phoso e sa tsejoeng",
-  "qiblaCompassErrorDetails": "Phoso ea sesupa-tsela: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "E phethiloe! MashaAllah",
-  "zikrMeaningSubhanAllah": "Allah o phahametse ho se phethahale hohle.",
-  "zikrMeaningAlhamdulillah": "Thoriso eohle ke ea Allah.",
-  "zikrMeaningAllahuAkbar": "Allah ke E moholo.",
-  "zikrMeaningLaIlahaIllallah": "Ha ho molimo haese Allah.",
-  "zikrMeaningAstaghfirullah": "Ke kopa tšoarelo ho Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ha ho matla le matla haese ka Allah.",
   "asmaMeaning1": "Molemohi",
   "asmaMeaning2": "Ba Mohau",
   "asmaMeaning3": "Morena / Morena wa ka ho sa Feleng",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ya sa Feleng",
   "asmaMeaning97": "Mojalefa",
   "asmaMeaning98": "Motataisi ea lokileng ka ho Fetisisa",
-  "asmaMeaning99": "Mokudi",
-  "duaMeaning1": "ba bang ba re: ‘Mong’a rona, re fe tse molemo lefatšeng lena le ka ho sa Feleng, ’me u re sireletse kotlong ea mollo.",
-  "duaMeaning2": "Allah ha A imetse moea ofe kapa ofe ka tse fetang tseo o ka li jarang: e mong le e mong o fumana molemo ofe kapa ofe oo o o entseng, 'me o hlaheloa ke bobe ba oona - \"Morena, u se ke ua re nka re lebetse kapa re etsa liphoso. Morena, u se ke ua re imetsa joalo ka ha u ne u imetsa ba neng ba le pele ho rona. Morena, u se ke ua re imetsa ka matla a fetang ao re nang le 'ona. U re tšoarele, u re tšoarele, u re hauhele. U Mosireletsi oa rona, kahoo re thuse khahlanong le ba sa lumeleng.’",
-  "duaMeaning3": "‘Mong’a rona, u se ke ua lumella lipelo tsa rona ho kheloha ka mor’a hore u re tataise. U re fe mohau oa Hao: U Ea fanang ka mehla.",
-  "duaMeaning4": "Morena, etsa hore nna le bana ba ka re boloke thapelo. Morena oa rona, amohela kopo ea ka.",
-  "duaMeaning5": "mme o theolele lepheo la hao ka boikokobetso ho bona ka mosa mme o re, ‘Morena, ba hauhele, jwalokaha ba ile ba ntlhokomela ha ke sa le monyenyane.’",
-  "duaMeaning6": "ho phahamisoe Molimo, ea laolang ka ’nete. [Moprofeta], u se ke ua potlakela ho pheta-pheta pele tšenolo e phethahala ka botlalo empa u re, ‘Morena, nkekeletse tsebong!",
-  "duaMeaning7": "E-re [Moprofeta], ‘Morena, tšoarela ’me u hauhele: U le mohau ho feta bohle.’",
-  "duaMeaning8": "ba rapelang ba re: ‘Morena oa rona, re thabise ka har’a balekane ba rōna le bana ba rōna. Re etse mehlala e metle ho ba O tsebang’.",
-  "islamicNewYear": "Selemo se Secha sa Maislamo",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Hlasimolla",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "E kenya tafsir...",
-  "tafsirSourceLabel": "Mohloli oa Tafsir",
-  "tafsirNoSurahFound": "Ha ho tafsir e fumanoeng bakeng sa surah ena.",
-  "tafsirNoAyahFound": "Ha ho tafsir e fumanoeng ea ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir ha e khone ho kengoa.",
-  "tafsirNoTextForAyah": "Ha ho mongolo oa tafsir bakeng sa ayah ena.",
-  "tafsirDownloadingProgress": "E khoasolla tafsir {current}/{total}",
-  "tafsirLoadingProgress": "E kenya tafsir {current}/{total}",
-  "tafsirApiStatusError": "Mohloli oa Tafsir o khutlisitse phoso ea HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Mohloli o khethiloeng oa tafsir ha oa khutlisa mangolo.",
-  "premiumProductUnavailable": "Sehlahisoa sa Premium ha se fumanehe hona joale. Ka kopo, leka hape hamorao.",
-  "premiumPurchaseFailed": "Theko ha e ea phethoa. Ka kopo, leka hape.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Tsela ea Boislamo ea Leseli",
-  "downloadPartiallyFinishedForReciter": "E felile bakeng sa {reciter} ka {failed} li-surah tse hlōlehileng ({downloaded}/{total} li jarollotsoe).",
-  "placesLocationRequiredTitle": "Ho hlokahala sebaka",
-  "placesLocationRequiredBody": "Beha sebaka pele e le hore li-mosque tse haufi, lijo tsa halal le likolo tsa Mamoseleme li ka batlisisoa ka nepo.",
-  "placesMapTilesUnavailableTitle": "Lithaele tsa 'mapa ha li fumanehe",
-  "placesMapTilesUnavailableBody": "Mohloli o netefalitsoeng oa lithaele ha o so lokisoe molemong oa moaho ona hajoale. Libaka tse haufi li ntse li ka bula ho tsoa sebakeng sa hau se bolokiloeng.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Monna (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Monna (Abdul Basit)",
-  "audioVoiceSudais": "Monna (Sudais)",
-  "qiblaSensorUnavailable": "Compass sensor ha e fumanehe sesebelisoa sena.",
-  "adhanNotificationChannelName": "Litsebiso tsa Adhan",
-  "adhanNotificationChannelDescription": "Litemoso tsa nako ea thapelo ka molumo oa adhan.",
-  "quranLoadFailed": "Likahare tsa Quran ha lia khona ho kenngoa. Ka kopo, leka hape.",
-  "locationDetectionFailed": "Ha e khone ho bona sebaka sa hau. Ka kopo, khetha toropo ka bouena kapa u leke hape.",
-  "qiblaLocationRequiredTitle": "Sebaka se hlokahalang bakeng sa Qibla",
-  "qiblaLocationRequiredBody": "Beha sebaka sa hau sa 'nete pele u sebelisa sesupa-tsela sa Qibla e le hore tataiso e ka baloa ka nepo.",
-  "placesDataSourceUnavailableTitle": "Lintlha tsa libaka ha li fumanehe",
-  "placesDataSourceUnavailableBody": "Qetello ea lintlha tsa libaka tse netefalitsoeng ha e so lokisoe molemong oa moaho ona hajoale. Beha PLACES_OVERPASS_API_URL ho moemeli kapa mofani ea lumelletsoeng pele o lumella patlo e haufi.",
-  "tafsirCacheUnavailable": "Tafsir e netefalitsoeng ha e fumanehe kantle ho Marang-rang. Ikamahanya le pokello ea data ea tafsir pele u e bala."
+  "asmaMeaning99": "Mokudi"
 }

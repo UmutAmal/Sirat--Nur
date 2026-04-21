@@ -1,6 +1,7 @@
 {
   "@@locale": "el",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Ισλαμικός Δρόμος του Φωτός",
   "home": "Σπίτι",
   "quran": "Κοράνι",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Μαγκρίμπ",
   "isha": "Isha",
+  "prayerNotificationTitle": "Ώρα για {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Είναι ώρα να προσευχηθείτε {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Δεδομένα & Αποθήκευση",
   "clearCache": "Εκκαθάριση προσωρινής μνήμης",
   "cacheClearedSuccess": "Η προσωρινή μνήμη διαγράφηκε με επιτυχία",
@@ -34,6 +51,7 @@
   "currentLocation": "Τρέχουσα τοποθεσία (GPS)",
   "locationServiceDisabled": "Η υπηρεσία τοποθεσίας είναι απενεργοποιημένη.",
   "locationPermissionDenied": "Η άδεια τοποθεσίας απορρίφθηκε.",
+  "locationDetectionFailed": "Δεν ήταν δυνατός ο εντοπισμός της τοποθεσίας σας. Επιλέξτε μια πόλη με μη αυτόματο τρόπο ή δοκιμάστε ξανά.",
   "citiesCount": "{count} πόλεις",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Δεν βρέθηκαν αποτελέσματα",
   "loading": "Φόρτωση...",
   "error": "Σφάλμα",
+  "appErrorOccurred": "Παρουσιάστηκε σφάλμα",
+  "appUnknownError": "Άγνωστο σφάλμα",
+  "quranLoadFailed": "Δεν ήταν δυνατή η φόρτωση του περιεχομένου του Κορανίου. Δοκιμάστε ξανά.",
   "retry": "Δοκιμάζω πάλι",
+  "refreshAction": "Ανανέωση",
   "cancel": "Ματαίωση",
   "save": "Εκτός",
   "delete": "Διαγραφή",
@@ -57,17 +79,78 @@
   "yes": "Ναί",
   "no": "Οχι",
   "surah": "Σούρα",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Σελίδα",
   "reading": "Ανάγνωση",
   "recitation": "Απαγγελία",
   "translation": "Μετάφραση",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Φόρτωση tafsir...",
+  "tafsirSourceLabel": "Πηγή Tafsir",
+  "tafsirNoSurahFound": "Δεν βρέθηκε tafsir για αυτήν τη σούρα.",
+  "tafsirNoAyahFound": "Δεν βρέθηκε tafsir για το ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Δεν ήταν δυνατή η φόρτωση του Tafsir.",
+  "tafsirNoTextForAyah": "Δεν υπάρχει κείμενο tafsir για αυτό το ayah.",
+  "tafsirDownloadingProgress": "Λήψη tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Φόρτωση tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Η πηγή Tafsir επέστρεψε ένα σφάλμα HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Η επιλεγμένη πηγή tafsir δεν επέστρεψε καταχωρήσεις.",
+  "tafsirCacheUnavailable": "Το επαληθευμένο tafsir δεν είναι ακόμη διαθέσιμο εκτός σύνδεσης. Συγχρονίστε ένα σύνολο δεδομένων tafsir προέλευσης πριν από την περιήγηση.",
   "bookmarks": "Σελιδοδείκτες",
   "addBookmark": "Προσθήκη σελιδοδείκτη",
   "removeBookmark": "Κατάργηση σελιδοδείκτη",
   "lastRead": "Τελευταία Ανάγνωση",
   "dailyZikr": "Καθημερινό Ζικρ",
+  "duaMeaning1": "Άλλοι προσεύχονται, «Κύριέ μας, δώσε μας το καλό στον κόσμο και στο επέκεινα, και προστάτεψε μας από το μαρτύριο της φωτιάς».",
+  "duaMeaning2": "Ο Θεός δεν επιβαρύνει καμία ψυχή με περισσότερα από όσα μπορεί να αντέξει: ο καθένας κερδίζει ό,τι καλό έχει κάνει, και υποφέρει το κακό του - «Κύριε, μη μας αναγκάσεις αν ξεχάσουμε ή κάνουμε λάθη. Κύριε, μη μας φορτώνεις όπως φόρτωσες αυτούς που ήταν πριν από εμάς. Κύριε, μη μας φορτώνεις με περισσότερα από όσα έχουμε δύναμη να αντέξουμε. Συγχώρεσέ μας, συγχώρεσέ μας και ελέησέ μας. Είσαι ο Προστάτης μας, βοήθησέ μας λοιπόν ενάντια στους απίστους».",
+  "duaMeaning3": "«Κύριέ μας, μην αφήσεις τις καρδιές μας να παρεκκλίνουν αφού μας καθοδήγησες. Χάρισέ μας το έλεός Σου: Εσύ είσαι ο Πάντα Δίνοντας.",
+  "duaMeaning4": "Κύριε, δώσε εγώ και οι απόγονοί μου να συνεχίσουμε την προσευχή. Κύριε μας, δέξου το αίτημά μου.",
+  "duaMeaning5": "και χαμήλωσε το φτερό σου με ταπεινοφροσύνη απέναντί ​​τους με καλοσύνη και πες: «Κύριε, ελέησε τους, όπως με φρόντισαν όταν ήμουν μικρός».",
+  "duaMeaning6": "ύψιστος ο Θεός, αυτός που έχει αληθινά τον έλεγχο. [Προφήτη], μη βιαστείς να απαγγείλεις πριν ολοκληρωθεί η αποκάλυψη, αλλά πες, «Κύριε, αύξησέ με σε γνώση!»",
+  "duaMeaning7": "Πες [Προφήτης], “Κύριε, συγχώρεσε και ελέησε: Είσαι ο πιο ελεήμων από όλους”.",
+  "duaMeaning8": "όσοι προσεύχονται: «Κύριέ μας, δώσε μας χαρά για τους συζύγους και τους απογόνους μας». Κάντε μας καλά παραδείγματα για όσους σας γνωρίζουν».",
   "morningZikr": "Πρωινό Ζικρ",
   "eveningZikr": "Εσπερινός Ζικρ",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Νηστεία",
   "quranReading": "Ανάγνωση Κορανίου",
   "prayers": "Προσευχές",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}λ",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Ντικρ Κόμη",
   "weeklyProgress": "Εβδομαδιαία Πρόοδος",
   "monthlyProgress": "Μηνιαία Πρόοδος",
@@ -101,6 +204,14 @@
   "ramadan": "Ραμαζάνι",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Ισλαμική Πρωτοχρονιά",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ραμαζάνι",
+  "specialDayDateLaylatAlQadr": "27 Ραμαζάνι",
+  "specialDayDateEidAlFitr": "1 Σαουάλ",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Μουχαράμ",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Κατεύθυνση Qibla",
   "compass": "Πυξίδα",
@@ -108,6 +219,19 @@
   "north": "Βόρειος",
   "qiblaFound": "Η Qibla βρέθηκε!",
   "turnDevice": "Γυρίστε τη συσκευή σας προς την Qibla",
+  "qiblaCompassErrorDetails": "Σφάλμα πυξίδας: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή.",
+  "qiblaLocationRequiredTitle": "Απαιτείται τοποθεσία για Qibla",
+  "qiblaLocationRequiredBody": "Ορίστε την πραγματική θέση σας πριν χρησιμοποιήσετε την πυξίδα Qibla, ώστε η κατεύθυνση να μπορεί να υπολογιστεί με ακρίβεια.",
+  "adhanNotificationChannelName": "Ειδοποιήσεις Adhan",
+  "adhanNotificationChannelDescription": "Ειδοποιήσεις ώρας προσευχής με ήχο αντάν.",
   "notifications": "Ειδοποιήσεις",
   "prayerNotifications": "Ειδοποιήσεις προσευχής",
   "enableNotifications": "Ενεργοποίηση Ειδοποιήσεων",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Πλήθος στόχων: {target}",
   "tapToCount": "Πατήστε για μέτρηση",
+  "zikrCompletedMashAllah": "Ολοκληρώθηκε το! MashAllah",
+  "zikrMeaningSubhanAllah": "Ο Αλλάχ είναι πολύ πάνω από κάθε ατέλεια.",
+  "zikrMeaningAlhamdulillah": "Όλος ο έπαινος ανήκει στον Αλλάχ.",
+  "zikrMeaningAllahuAkbar": "Ο Αλλάχ είναι ο Μεγαλύτερος.",
+  "zikrMeaningLaIlahaIllallah": "Δεν υπάρχει θεός εκτός από τον Αλλάχ.",
+  "zikrMeaningAstaghfirullah": "Ζητώ τη συγχώρεση του Αλλάχ.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Δεν υπάρχει δύναμη και δύναμη παρά μόνο μέσω του Αλλάχ.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Φωνή ήχου",
+  "audioVoiceMisharyAlafasy": "Άντρας (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Άντρας (Abdul Basit)",
+  "audioVoiceSudais": "Άντρας (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Βαθμονόμηση Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Απαιτείται βαθμονόμηση. Περιστρέψτε τη συσκευή στο σχήμα-8.",
   "dailyVerse": "Καθημερινός Στίχος",
+  "dailyVerseUnavailableTitle": "Ο καθημερινός στίχος δεν είναι διαθέσιμος",
+  "dailyVerseUnavailableBody": "Το επαληθευμένο καθημερινό περιεχόμενο στίχων δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Συνδεθείτε στην πηγή cloud ή συγχρονίστε μια επαληθευμένη κρυφή μνήμη πριν από την περιήγηση.",
   "todaysIbadah": "Η σημερινή Ibadah",
   "quickAccess": "Γρήγορη πρόσβαση",
   "assistant": "Βοηθός",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Οι επαληθευμένες ντους δεν είναι ακόμα διαθέσιμες",
+  "duaUnavailableBody": "Οι επαληθευμένες καθημερινές δέες δεν έχουν συγχρονιστεί ακόμα με αυτήν τη συσκευή. Συνδεθείτε στην πηγή cloud για να φορτώσετε duas που προέρχονται αντί για μη επαληθευμένη εναλλακτική.",
+  "duaCategoryQuranic": "Κορανική ντουέτα",
+  "duaCategoryMorningEvening": "Πρωί & Βράδυ",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Προστασία",
+  "duaCategoryBeginning": "Αρχές",
+  "duaCategorySleep": "Υπνος",
+  "duaCategoryFoodDrink": "Φαγητό & Ποτό",
+  "duaCategoryForgiveness": "Συγχώρεση",
+  "duaCategoryHome": "Σπίτι",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Ισλαμική Παιδεία",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Συλλογές Χαντίθ",
+  "hadithSourcePending": "Η επαληθευμένη πηγή εκκρεμεί",
+  "hadithUnavailableTitle": "Οι επαληθευμένες συλλογές χαντίθ δεν είναι ακόμη διαθέσιμες",
+  "hadithUnavailableBody": "Αυτή η κατασκευή εξακολουθεί να εξαρτάται από μια μη επαληθευμένη εξωτερική ροή χαντίθ. Η περιήγηση στα Hadith παραμένει απενεργοποιημένη έως ότου συγχρονιστεί ένα σύνολο δεδομένων προέλευσης.",
   "paywallUnlockAll": "Ξεκλειδώστε όλες τις δυνατότητες για το πνευματικό σας ταξίδι",
+  "premiumProductUnavailable": "Το premium προϊόν δεν είναι διαθέσιμο αυτήν τη στιγμή. Δοκιμάστε ξανά αργότερα.",
+  "premiumPurchaseFailed": "Δεν ήταν δυνατή η ολοκλήρωση της αγοράς. Δοκιμάστε ξανά.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Απεριόριστες ερωτήσεις και απαντήσεις με τεχνητή νοημοσύνη",
   "paywallFeature2Title": "Απεριόριστα εκτός σύνδεσης",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Η λήψη ολοκληρώθηκε για {reciter} με {failed} αποτυχημένες σούρες ({downloaded}/{total} κατέβηκε).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Διαγράφηκαν αρχεία εκτός σύνδεσης για {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Σφάλμα δικτύου. Δοκιμάστε ξανά.",
+  "placesLocationRequiredTitle": "Απαιτείται τοποθεσία",
+  "placesLocationRequiredBody": "Ορίστε πρώτα μια τοποθεσία, ώστε τα κοντινά τζαμιά, το φαγητό χαλάλ και τα ισλαμικά σχολεία να μπορούν να αναζητηθούν με ακρίβεια.",
+  "placesMapTilesUnavailableTitle": "Τα πλακίδια χάρτη δεν είναι διαθέσιμα",
+  "placesMapTilesUnavailableBody": "Μια επαληθευμένη πηγή πλακιδίων χάρτη δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Τα κοντινά μέρη μπορούν ακόμα να φορτώσουν από την αποθηκευμένη τοποθεσία σας.",
+  "placesDataSourceUnavailableTitle": "Τα δεδομένα μερών δεν είναι διαθέσιμα",
+  "placesDataSourceUnavailableBody": "Ένα επαληθευμένο τελικό σημείο δεδομένων τοποθεσιών δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Ορίστε το PLACES_OVERPASS_API_URL σε έναν εγκεκριμένο διακομιστή μεσολάβησης ή πάροχο προτού ενεργοποιήσετε την κοντινή αναζήτηση.",
   "unknownPlaceName": "Άγνωστο Όνομα",
   "islamicPlaceFallback": "Ισλαμικός τόπος",
-  "prayerNotificationTitle": "Ώρα για {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Είναι ώρα να προσευχηθείτε {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Οι επαληθευμένες ντους δεν είναι ακόμα διαθέσιμες",
-  "duaUnavailableBody": "Οι επαληθευμένες καθημερινές δέες δεν έχουν συγχρονιστεί ακόμα με αυτήν τη συσκευή. Συνδεθείτε στην πηγή cloud για να φορτώσετε duas που προέρχονται αντί για μη επαληθευμένη εναλλακτική.",
-  "duaCategoryQuranic": "Κορανική ντουέτα",
-  "duaCategoryMorningEvening": "Πρωί & Βράδυ",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Προστασία",
-  "duaCategoryBeginning": "Αρχές",
-  "duaCategorySleep": "Υπνος",
-  "duaCategoryFoodDrink": "Φαγητό & Ποτό",
-  "duaCategoryForgiveness": "Συγχώρεση",
-  "duaCategoryHome": "Σπίτι",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Η επαληθευμένη πηγή εκκρεμεί",
-  "hadithUnavailableTitle": "Οι επαληθευμένες συλλογές χαντίθ δεν είναι ακόμη διαθέσιμες",
-  "hadithUnavailableBody": "Αυτή η κατασκευή εξακολουθεί να εξαρτάται από μια μη επαληθευμένη εξωτερική ροή χαντίθ. Η περιήγηση στα Hadith παραμένει απενεργοποιημένη έως ότου συγχρονιστεί ένα σύνολο δεδομένων προέλευσης.",
-  "appErrorOccurred": "Παρουσιάστηκε σφάλμα",
-  "appUnknownError": "Άγνωστο σφάλμα",
-  "qiblaCompassErrorDetails": "Σφάλμα πυξίδας: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ολοκληρώθηκε το! MashAllah",
-  "zikrMeaningSubhanAllah": "Ο Αλλάχ είναι πολύ πάνω από κάθε ατέλεια.",
-  "zikrMeaningAlhamdulillah": "Όλος ο έπαινος ανήκει στον Αλλάχ.",
-  "zikrMeaningAllahuAkbar": "Ο Αλλάχ είναι ο Μεγαλύτερος.",
-  "zikrMeaningLaIlahaIllallah": "Δεν υπάρχει θεός εκτός από τον Αλλάχ.",
-  "zikrMeaningAstaghfirullah": "Ζητώ τη συγχώρεση του Αλλάχ.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Δεν υπάρχει δύναμη και δύναμη παρά μόνο μέσω του Αλλάχ.",
   "asmaMeaning1": "Ο Ευεργέτης",
   "asmaMeaning2": "Ο Ελεήμων",
   "asmaMeaning3": "Ο Βασιλιάς / Αιώνιος Κύριος",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ο Αιώνιος",
   "asmaMeaning97": "Ο κληρονόμος",
   "asmaMeaning98": "Ο πιο δίκαιος οδηγός",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "Άλλοι προσεύχονται, «Κύριέ μας, δώσε μας το καλό στον κόσμο και στο επέκεινα, και προστάτεψε μας από το μαρτύριο της φωτιάς».",
-  "duaMeaning2": "Ο Θεός δεν επιβαρύνει καμία ψυχή με περισσότερα από όσα μπορεί να αντέξει: ο καθένας κερδίζει ό,τι καλό έχει κάνει, και υποφέρει το κακό του - «Κύριε, μη μας αναγκάσεις αν ξεχάσουμε ή κάνουμε λάθη. Κύριε, μη μας φορτώνεις όπως φόρτωσες αυτούς που ήταν πριν από εμάς. Κύριε, μη μας φορτώνεις με περισσότερα από όσα έχουμε δύναμη να αντέξουμε. Συγχώρεσέ μας, συγχώρεσέ μας και ελέησέ μας. Είσαι ο Προστάτης μας, βοήθησέ μας λοιπόν ενάντια στους απίστους».",
-  "duaMeaning3": "«Κύριέ μας, μην αφήσεις τις καρδιές μας να παρεκκλίνουν αφού μας καθοδήγησες. Χάρισέ μας το έλεός Σου: Εσύ είσαι ο Πάντα Δίνοντας.",
-  "duaMeaning4": "Κύριε, δώσε εγώ και οι απόγονοί μου να συνεχίσουμε την προσευχή. Κύριε μας, δέξου το αίτημά μου.",
-  "duaMeaning5": "και χαμήλωσε το φτερό σου με ταπεινοφροσύνη απέναντί ​​τους με καλοσύνη και πες: «Κύριε, ελέησε τους, όπως με φρόντισαν όταν ήμουν μικρός».",
-  "duaMeaning6": "ύψιστος ο Θεός, αυτός που έχει αληθινά τον έλεγχο. [Προφήτη], μη βιαστείς να απαγγείλεις πριν ολοκληρωθεί η αποκάλυψη, αλλά πες, «Κύριε, αύξησέ με σε γνώση!»",
-  "duaMeaning7": "Πες [Προφήτης], “Κύριε, συγχώρεσε και ελέησε: Είσαι ο πιο ελεήμων από όλους”.",
-  "duaMeaning8": "όσοι προσεύχονται: «Κύριέ μας, δώσε μας χαρά για τους συζύγους και τους απογόνους μας». Κάντε μας καλά παραδείγματα για όσους σας γνωρίζουν».",
-  "islamicNewYear": "Ισλαμική Πρωτοχρονιά",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ραμαζάνι",
-  "specialDayDateLaylatAlQadr": "27 Ραμαζάνι",
-  "specialDayDateEidAlFitr": "1 Σαουάλ",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Μουχαράμ",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Ανανέωση",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Φόρτωση tafsir...",
-  "tafsirSourceLabel": "Πηγή Tafsir",
-  "tafsirNoSurahFound": "Δεν βρέθηκε tafsir για αυτήν τη σούρα.",
-  "tafsirNoAyahFound": "Δεν βρέθηκε tafsir για το ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Δεν ήταν δυνατή η φόρτωση του Tafsir.",
-  "tafsirNoTextForAyah": "Δεν υπάρχει κείμενο tafsir για αυτό το ayah.",
-  "tafsirDownloadingProgress": "Λήψη tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Φόρτωση tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Η πηγή Tafsir επέστρεψε ένα σφάλμα HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Η επιλεγμένη πηγή tafsir δεν επέστρεψε καταχωρήσεις.",
-  "premiumProductUnavailable": "Το premium προϊόν δεν είναι διαθέσιμο αυτήν τη στιγμή. Δοκιμάστε ξανά αργότερα.",
-  "premiumPurchaseFailed": "Δεν ήταν δυνατή η ολοκλήρωση της αγοράς. Δοκιμάστε ξανά.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}λ",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Ισλαμικός Δρόμος του Φωτός",
-  "downloadPartiallyFinishedForReciter": "Η λήψη ολοκληρώθηκε για {reciter} με {failed} αποτυχημένες σούρες ({downloaded}/{total} κατέβηκε).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Απαιτείται τοποθεσία",
-  "placesLocationRequiredBody": "Ορίστε πρώτα μια τοποθεσία, ώστε τα κοντινά τζαμιά, το φαγητό χαλάλ και τα ισλαμικά σχολεία να μπορούν να αναζητηθούν με ακρίβεια.",
-  "placesMapTilesUnavailableTitle": "Τα πλακίδια χάρτη δεν είναι διαθέσιμα",
-  "placesMapTilesUnavailableBody": "Μια επαληθευμένη πηγή πλακιδίων χάρτη δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Τα κοντινά μέρη μπορούν ακόμα να φορτώσουν από την αποθηκευμένη τοποθεσία σας.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Άντρας (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Άντρας (Abdul Basit)",
-  "audioVoiceSudais": "Άντρας (Sudais)",
-  "qiblaSensorUnavailable": "Ο αισθητήρας πυξίδας δεν είναι διαθέσιμος σε αυτήν τη συσκευή.",
-  "adhanNotificationChannelName": "Ειδοποιήσεις Adhan",
-  "adhanNotificationChannelDescription": "Ειδοποιήσεις ώρας προσευχής με ήχο αντάν.",
-  "quranLoadFailed": "Δεν ήταν δυνατή η φόρτωση του περιεχομένου του Κορανίου. Δοκιμάστε ξανά.",
-  "locationDetectionFailed": "Δεν ήταν δυνατός ο εντοπισμός της τοποθεσίας σας. Επιλέξτε μια πόλη με μη αυτόματο τρόπο ή δοκιμάστε ξανά.",
-  "qiblaLocationRequiredTitle": "Απαιτείται τοποθεσία για Qibla",
-  "qiblaLocationRequiredBody": "Ορίστε την πραγματική θέση σας πριν χρησιμοποιήσετε την πυξίδα Qibla, ώστε η κατεύθυνση να μπορεί να υπολογιστεί με ακρίβεια.",
-  "placesDataSourceUnavailableTitle": "Τα δεδομένα μερών δεν είναι διαθέσιμα",
-  "placesDataSourceUnavailableBody": "Ένα επαληθευμένο τελικό σημείο δεδομένων τοποθεσιών δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Ορίστε το PLACES_OVERPASS_API_URL σε έναν εγκεκριμένο διακομιστή μεσολάβησης ή πάροχο προτού ενεργοποιήσετε την κοντινή αναζήτηση.",
-  "tafsirCacheUnavailable": "Το επαληθευμένο tafsir δεν είναι ακόμη διαθέσιμο εκτός σύνδεσης. Συγχρονίστε ένα σύνολο δεδομένων tafsir προέλευσης πριν από την περιήγηση."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

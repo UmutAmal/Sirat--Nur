@@ -951,6 +951,13 @@ class AppLocalizationsSn extends AppLocalizations {
   String get dailyVerse => 'Daily Verse';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Vhesi rezuva nezuva hariwanikwi';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verified daily verse content haisati yagadzirirwa ichi chivakwa. Batanidza kune gore sosi kana sync cache yakasimbiswa usati wabhurawuza.';
+
+  @override
   String get todaysIbadah => 'Nhasi Ibadah';
 
   @override

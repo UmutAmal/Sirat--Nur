@@ -959,6 +959,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get dailyVerse => 'Keeyyata Guyyaa Guyyaa';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Keeyyata guyyaa guyyaa hin argamne';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Qabiyyeen keeyyata guyyaa mirkanaa\'e ammallee ijaarsa kanaaf hin qindaa\'in. Madda duumessaa waliin walqabsiisi ykn osoo hin daawwatin dura kaachota mirkanaa\'e walsimsiisi.';
+
+  @override
   String get todaysIbadah => 'Ibada har\'aa';
 
   @override

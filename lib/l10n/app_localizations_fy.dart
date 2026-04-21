@@ -953,6 +953,13 @@ class AppLocalizationsFy extends AppLocalizations {
   String get dailyVerse => 'Deistich fers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Deistich fers net beskikber';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ferifiearre deistige fers ynhâld is noch net ynsteld foar dizze build. Ferbine mei de wolkboarne of syngronisearje in ferifiearre cache foardat jo blêdzje.';
+
+  @override
   String get todaysIbadah => 'Hjoed Ibadah';
 
   @override

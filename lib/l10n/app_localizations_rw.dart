@@ -953,6 +953,14 @@ class AppLocalizationsRw extends AppLocalizations {
   String get dailyVerse => 'Umurongo wa buri munsi';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Umurongo wa buri munsi ntushobora kuboneka';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Kugenzura imirongo ya buri munsi ntabwo yashyizweho kubwubu. Ihuze isoko yibicu cyangwa uhuze cache yagenzuwe mbere yo gushakisha.';
+
+  @override
   String get todaysIbadah => 'Uyu munsi Ibadah';
 
   @override

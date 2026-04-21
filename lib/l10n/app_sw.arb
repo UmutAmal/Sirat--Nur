@@ -1,6 +1,7 @@
 {
   "@@locale": "sw",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Njia ya Kiislamu ya Nuru",
   "home": "Nyumbani",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magharibi",
   "isha": "Isha",
+  "prayerNotificationTitle": "Muda wa {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ni wakati wa kuomba {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data na Hifadhi",
   "clearCache": "Futa Cache",
   "cacheClearedSuccess": "Akiba imefutwa",
@@ -34,6 +51,7 @@
   "currentLocation": "Eneo la Sasa (GPS)",
   "locationServiceDisabled": "Huduma ya eneo imezimwa.",
   "locationPermissionDenied": "Ruhusa ya eneo imekataliwa.",
+  "locationDetectionFailed": "Haikuweza kutambua eneo lako. Tafadhali chagua jiji wewe mwenyewe au ujaribu tena.",
   "citiesCount": "{count} miji",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Hakuna matokeo yaliyopatikana",
   "loading": "Inapakia...",
   "error": "Hitilafu",
+  "appErrorOccurred": "Hitilafu imetokea",
+  "appUnknownError": "Hitilafu isiyojulikana",
+  "quranLoadFailed": "Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena.",
   "retry": "Jaribu tena",
+  "refreshAction": "Onyesha upya",
   "cancel": "Ghairi",
   "save": "Hifadhi",
   "delete": "Futa",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Hapana",
   "surah": "Sura",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Ukurasa",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Inapakia tafsir...",
+  "tafsirSourceLabel": "Chanzo cha Tafsir",
+  "tafsirNoSurahFound": "Hakuna tafsir iliyopatikana kwa surah hii.",
+  "tafsirNoAyahFound": "Hakuna tafsir iliyopatikana ya ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir haikuweza kupakiwa.",
+  "tafsirNoTextForAyah": "Hakuna maandishi ya tafsir kwa aya hii.",
+  "tafsirDownloadingProgress": "Inapakua tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Inapakia tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Chanzo cha Tafsir kilileta hitilafu ya HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Chanzo cha tafsir kilichochaguliwa hakikurejesha maingizo.",
+  "tafsirCacheUnavailable": "Tafsir iliyothibitishwa bado haipatikani nje ya mtandao. Sawazisha mkusanyiko wa data wa tafsir kabla ya kuvinjari.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Ongeza Alamisho",
   "removeBookmark": "Ondoa Alamisho",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "wengine huomba, ‘Mola wetu, tupe mema duniani na Akhera, na utulinde na adhabu ya Moto.",
+  "duaMeaning2": "Mwenyezi Mungu haikalifishi nafsi yoyote zaidi ya inavyoweza kustahimili, kila mmoja anapata wema wowote alioufanya, na anapata ubaya wake, ‘Mola Mlezi, usituchukulie tukisahau au kukosea. Ewe Mola, usitutwishe kama ulivyowatwika waliokuwa kabla yetu. Bwana, usitulemee zaidi ya uwezo wetu wa kustahimili. Utusamehe, utusamehe, na utuhurumie. Wewe ndiye Mlinzi wetu, basi tusaidie dhidi ya makafiri.",
+  "duaMeaning3": "‘Mola wetu, usizipotoe nyoyo zetu baada ya wewe kutuongoza. Utupe rehema Yako: Wewe ndiwe Mtoaji daima.",
+  "duaMeaning4": "Mola wangu nijaalie mimi na dhuria wangu tushike Sala. Mola wetu, ukubali ombi langu.",
+  "duaMeaning5": "na uwainamishie bawa lako kwa unyenyekevu na useme, ‘Mola, warehemu, kama walivyonijali nilipokuwa mdogo.",
+  "duaMeaning6": "atukuzwe Mungu, ambaye kweli anatawala. [Mtume], usikimbilie kusoma kabla wahyi haujakamilika, bali sema, ‘Mola wangu, niongezee elimu!",
+  "duaMeaning7": "Sema [Mtume]: ‘Mola wangu, samehe na urehemu: Wewe ni mwingi wa kurehemu.",
+  "duaMeaning8": "wanaoomba: Mola wetu Mlezi, tupe furaha katika wake zetu na watoto wetu. Tufanyie mifano mizuri kwa wale wanaokufahamu wewe’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Kufunga",
   "quranReading": "Kusoma Quran",
   "prayers": "Maombi",
+  "prayerRemainingHoursMinutes": "{hours}saa {minutes}dakika",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Maendeleo ya Wiki",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Mwaka Mpya wa Kiislamu",
+  "mawlidAnNabi": "Maulid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadhani",
+  "specialDayDateLaylatAlQadr": "27 Ramadhani",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Mwelekeo wa Qibla",
   "compass": "Dira",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla imepatikana!",
   "turnDevice": "Geuza kifaa chako kielekee Qibla",
+  "qiblaCompassErrorDetails": "Hitilafu ya dira: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kihisi cha dira hakipatikani kwenye kifaa hiki.",
+  "qiblaLocationRequiredTitle": "Mahali panahitajika kwa Qibla",
+  "qiblaLocationRequiredBody": "Weka eneo lako halisi kabla ya kutumia dira ya Qibla ili mwelekeo uweze kuhesabiwa kwa usahihi.",
+  "adhanNotificationChannelName": "Arifa za Adhana",
+  "adhanNotificationChannelDescription": "Tahadhari za wakati wa maombi na sauti ya adhana.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Idadi ya walengwa: {target}",
   "tapToCount": "Gusa ili kuhesabu",
+  "zikrCompletedMashAllah": "Imekamilika! MashAllah",
+  "zikrMeaningSubhanAllah": "Mwenyezi Mungu yu mbali sana juu ya kila upungufu.",
+  "zikrMeaningAlhamdulillah": "Sifa njema zote ni za Mwenyezi Mungu.",
+  "zikrMeaningAllahuAkbar": "Mwenyezi Mungu ndiye Mkubwa.",
+  "zikrMeaningLaIlahaIllallah": "Hapana mungu ila Mwenyezi Mungu.",
+  "zikrMeaningAstaghfirullah": "Naomba msamaha kwa Mwenyezi Mungu.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Hakuna nguvu wala nguvu ila kwa Mwenyezi Mungu.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Sauti ya Sauti",
+  "audioVoiceMisharyAlafasy": "Mwanaume (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mwanaume (Abdul Basit)",
+  "audioVoiceSudais": "Mwanaume (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Urekebishaji wa Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Urekebishaji unahitajika. Zungusha kifaa katika takwimu-8.",
   "dailyVerse": "Mstari wa kila siku",
+  "dailyVerseUnavailableTitle": "Aya ya kila siku haipatikani",
+  "dailyVerseUnavailableBody": "Maudhui ya aya ya kila siku yaliyothibitishwa bado hayajasanidiwa kwa muundo huu. Unganisha kwenye chanzo cha wingu au usawazishe akiba iliyothibitishwa kabla ya kuvinjari.",
   "todaysIbadah": "Ibada ya leo",
   "quickAccess": "Ufikiaji wa Haraka",
   "assistant": "Msaidizi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Dua zilizothibitishwa bado hazipatikani",
+  "duaUnavailableBody": "Dua za kila siku zilizothibitishwa bado hazijasawazishwa kwenye kifaa hiki. Unganisha kwenye chanzo cha wingu ili kupakia dua zilizotoka badala ya njia mbadala ambayo haijathibitishwa.",
+  "duaCategoryQuranic": "Dua ya Quran",
+  "duaCategoryMorningEvening": "Asubuhi na Jioni",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ulinzi",
+  "duaCategoryBeginning": "Mwanzo",
+  "duaCategorySleep": "Kulala",
+  "duaCategoryFoodDrink": "Chakula na Vinywaji",
+  "duaCategoryForgiveness": "Msamaha",
+  "duaCategoryHome": "Nyumbani",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Elimu ya Kiislamu",
   "sukunAudioTitle": "Picha za Sukun",
   "hadithCollections": "Makusanyo ya Hadith",
+  "hadithSourcePending": "Chanzo kilichothibitishwa kinasubiri",
+  "hadithUnavailableTitle": "Mkusanyiko wa Hadith zilizothibitishwa bado hazipatikani",
+  "hadithUnavailableBody": "Muundo huu bado unategemea mlisho wa Hadith wa nje ambao haujathibitishwa. Uvinjari wa Hadith husalia kuzimwa hadi mkusanyiko wa data uliopatikana ulandanishwe.",
   "paywallUnlockAll": "Fungua vipengele vyote vya safari yako ya kiroho",
+  "premiumProductUnavailable": "Bidhaa ya kulipia haipatikani kwa sasa. Tafadhali jaribu tena baadaye.",
+  "premiumPurchaseFailed": "Ununuzi haukuweza kukamilika. Tafadhali jaribu tena.",
   "paywallFeature1Title": "Msaidizi wa Neural Plus",
   "paywallFeature1Desc": "Maswali na Majibu yanayoendeshwa na AI bila kikomo",
   "paywallFeature2Title": "Unlimited Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Upakuaji umekamilika kwa {reciter} na {failed} surah zilizoshindwa ({downloaded}/{total} zimepakuliwa).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Faili za nje ya mtandao zimefutwa za {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Hitilafu ya mtandao. Tafadhali jaribu tena.",
+  "placesLocationRequiredTitle": "Mahali panahitajika",
+  "placesLocationRequiredBody": "Weka eneo kwanza ili misikiti iliyo karibu, chakula cha halali na shule za Kiislamu zitafutwe kwa usahihi.",
+  "placesMapTilesUnavailableTitle": "Vigae vya ramani hazipatikani",
+  "placesMapTilesUnavailableBody": "Chanzo cha kigae cha ramani kilichothibitishwa bado hakijasanidiwa kwa muundo huu. Maeneo ya karibu bado yanaweza kupakia kutoka eneo lako lililohifadhiwa.",
+  "placesDataSourceUnavailableTitle": "Data ya maeneo haipatikani",
+  "placesDataSourceUnavailableBody": "Mwisho wa data ya maeneo yaliyothibitishwa bado haujasanidiwa kwa muundo huu. Weka PLACES_OVERPASS_API_URL iwe proksi au mtoa huduma aliyeidhinishwa kabla ya kuwezesha utafutaji ulio karibu.",
   "unknownPlaceName": "Jina lisilojulikana",
   "islamicPlaceFallback": "Mahali pa Kiislamu",
-  "prayerNotificationTitle": "Muda wa {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ni wakati wa kuomba {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Dua zilizothibitishwa bado hazipatikani",
-  "duaUnavailableBody": "Dua za kila siku zilizothibitishwa bado hazijasawazishwa kwenye kifaa hiki. Unganisha kwenye chanzo cha wingu ili kupakia dua zilizotoka badala ya njia mbadala ambayo haijathibitishwa.",
-  "duaCategoryQuranic": "Dua ya Quran",
-  "duaCategoryMorningEvening": "Asubuhi na Jioni",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Ulinzi",
-  "duaCategoryBeginning": "Mwanzo",
-  "duaCategorySleep": "Kulala",
-  "duaCategoryFoodDrink": "Chakula na Vinywaji",
-  "duaCategoryForgiveness": "Msamaha",
-  "duaCategoryHome": "Nyumbani",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Chanzo kilichothibitishwa kinasubiri",
-  "hadithUnavailableTitle": "Mkusanyiko wa Hadith zilizothibitishwa bado hazipatikani",
-  "hadithUnavailableBody": "Muundo huu bado unategemea mlisho wa Hadith wa nje ambao haujathibitishwa. Uvinjari wa Hadith husalia kuzimwa hadi mkusanyiko wa data uliopatikana ulandanishwe.",
-  "appErrorOccurred": "Hitilafu imetokea",
-  "appUnknownError": "Hitilafu isiyojulikana",
-  "qiblaCompassErrorDetails": "Hitilafu ya dira: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Imekamilika! MashAllah",
-  "zikrMeaningSubhanAllah": "Mwenyezi Mungu yu mbali sana juu ya kila upungufu.",
-  "zikrMeaningAlhamdulillah": "Sifa njema zote ni za Mwenyezi Mungu.",
-  "zikrMeaningAllahuAkbar": "Mwenyezi Mungu ndiye Mkubwa.",
-  "zikrMeaningLaIlahaIllallah": "Hapana mungu ila Mwenyezi Mungu.",
-  "zikrMeaningAstaghfirullah": "Naomba msamaha kwa Mwenyezi Mungu.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Hakuna nguvu wala nguvu ila kwa Mwenyezi Mungu.",
   "asmaMeaning1": "Mwingi wa Rehema",
   "asmaMeaning2": "Mwenye Rehema",
   "asmaMeaning3": "Mfalme / Bwana wa Milele",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Yule wa Milele",
   "asmaMeaning97": "Mrithi",
   "asmaMeaning98": "Mwongozo Muadilifu",
-  "asmaMeaning99": "Yule Mgonjwa",
-  "duaMeaning1": "wengine huomba, ‘Mola wetu, tupe mema duniani na Akhera, na utulinde na adhabu ya Moto.",
-  "duaMeaning2": "Mwenyezi Mungu haikalifishi nafsi yoyote zaidi ya inavyoweza kustahimili, kila mmoja anapata wema wowote alioufanya, na anapata ubaya wake, ‘Mola Mlezi, usituchukulie tukisahau au kukosea. Ewe Mola, usitutwishe kama ulivyowatwika waliokuwa kabla yetu. Bwana, usitulemee zaidi ya uwezo wetu wa kustahimili. Utusamehe, utusamehe, na utuhurumie. Wewe ndiye Mlinzi wetu, basi tusaidie dhidi ya makafiri.",
-  "duaMeaning3": "‘Mola wetu, usizipotoe nyoyo zetu baada ya wewe kutuongoza. Utupe rehema Yako: Wewe ndiwe Mtoaji daima.",
-  "duaMeaning4": "Mola wangu nijaalie mimi na dhuria wangu tushike Sala. Mola wetu, ukubali ombi langu.",
-  "duaMeaning5": "na uwainamishie bawa lako kwa unyenyekevu na useme, ‘Mola, warehemu, kama walivyonijali nilipokuwa mdogo.",
-  "duaMeaning6": "atukuzwe Mungu, ambaye kweli anatawala. [Mtume], usikimbilie kusoma kabla wahyi haujakamilika, bali sema, ‘Mola wangu, niongezee elimu!",
-  "duaMeaning7": "Sema [Mtume]: ‘Mola wangu, samehe na urehemu: Wewe ni mwingi wa kurehemu.",
-  "duaMeaning8": "wanaoomba: Mola wetu Mlezi, tupe furaha katika wake zetu na watoto wetu. Tufanyie mifano mizuri kwa wale wanaokufahamu wewe’.",
-  "islamicNewYear": "Mwaka Mpya wa Kiislamu",
-  "mawlidAnNabi": "Maulid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadhani",
-  "specialDayDateLaylatAlQadr": "27 Ramadhani",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Onyesha upya",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Inapakia tafsir...",
-  "tafsirSourceLabel": "Chanzo cha Tafsir",
-  "tafsirNoSurahFound": "Hakuna tafsir iliyopatikana kwa surah hii.",
-  "tafsirNoAyahFound": "Hakuna tafsir iliyopatikana ya ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir haikuweza kupakiwa.",
-  "tafsirNoTextForAyah": "Hakuna maandishi ya tafsir kwa aya hii.",
-  "tafsirDownloadingProgress": "Inapakua tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Inapakia tafsir {current}/{total}",
-  "tafsirApiStatusError": "Chanzo cha Tafsir kilileta hitilafu ya HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Chanzo cha tafsir kilichochaguliwa hakikurejesha maingizo.",
-  "premiumProductUnavailable": "Bidhaa ya kulipia haipatikani kwa sasa. Tafadhali jaribu tena baadaye.",
-  "premiumPurchaseFailed": "Ununuzi haukuweza kukamilika. Tafadhali jaribu tena.",
-  "prayerRemainingHoursMinutes": "{hours}saa {minutes}dakika",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Njia ya Kiislamu ya Nuru",
-  "downloadPartiallyFinishedForReciter": "Upakuaji umekamilika kwa {reciter} na {failed} surah zilizoshindwa ({downloaded}/{total} zimepakuliwa).",
-  "placesLocationRequiredTitle": "Mahali panahitajika",
-  "placesLocationRequiredBody": "Weka eneo kwanza ili misikiti iliyo karibu, chakula cha halali na shule za Kiislamu zitafutwe kwa usahihi.",
-  "placesMapTilesUnavailableTitle": "Vigae vya ramani hazipatikani",
-  "placesMapTilesUnavailableBody": "Chanzo cha kigae cha ramani kilichothibitishwa bado hakijasanidiwa kwa muundo huu. Maeneo ya karibu bado yanaweza kupakia kutoka eneo lako lililohifadhiwa.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Mwanaume (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Mwanaume (Abdul Basit)",
-  "audioVoiceSudais": "Mwanaume (Sudais)",
-  "qiblaSensorUnavailable": "Kihisi cha dira hakipatikani kwenye kifaa hiki.",
-  "adhanNotificationChannelName": "Arifa za Adhana",
-  "adhanNotificationChannelDescription": "Tahadhari za wakati wa maombi na sauti ya adhana.",
-  "quranLoadFailed": "Maudhui ya Quran hayakuweza kupakiwa. Tafadhali jaribu tena.",
-  "locationDetectionFailed": "Haikuweza kutambua eneo lako. Tafadhali chagua jiji wewe mwenyewe au ujaribu tena.",
-  "qiblaLocationRequiredTitle": "Mahali panahitajika kwa Qibla",
-  "qiblaLocationRequiredBody": "Weka eneo lako halisi kabla ya kutumia dira ya Qibla ili mwelekeo uweze kuhesabiwa kwa usahihi.",
-  "placesDataSourceUnavailableTitle": "Data ya maeneo haipatikani",
-  "placesDataSourceUnavailableBody": "Mwisho wa data ya maeneo yaliyothibitishwa bado haujasanidiwa kwa muundo huu. Weka PLACES_OVERPASS_API_URL iwe proksi au mtoa huduma aliyeidhinishwa kabla ya kuwezesha utafutaji ulio karibu.",
-  "tafsirCacheUnavailable": "Tafsir iliyothibitishwa bado haipatikani nje ya mtandao. Sawazisha mkusanyiko wa data wa tafsir kabla ya kuvinjari."
+  "asmaMeaning99": "Yule Mgonjwa"
 }

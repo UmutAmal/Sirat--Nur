@@ -954,6 +954,13 @@ class AppLocalizationsSu extends AppLocalizations {
   String get dailyVerse => 'Ayat poean';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ayat poean teu sadia';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Eusi ayat poean anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Sambungkeun ka sumber awan atanapi singkronkeun cache anu diverifikasi sateuacan browsing.';
+
+  @override
   String get todaysIbadah => 'Ibadah ayeuna';
 
   @override

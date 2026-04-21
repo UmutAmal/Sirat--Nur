@@ -1,6 +1,7 @@
 {
   "@@locale": "hu",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Iszlám Fényút",
   "home": "Otthon",
   "quran": "Korán",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Ideje a {prayerName} számára",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ideje imádkozni: {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Adatok és tárolás",
   "clearCache": "Törölje a gyorsítótárat",
   "cacheClearedSuccess": "A gyorsítótár sikeresen törölve",
@@ -34,6 +51,7 @@
   "currentLocation": "Jelenlegi hely (GPS)",
   "locationServiceDisabled": "A helymeghatározási szolgáltatás le van tiltva.",
   "locationPermissionDenied": "Helymeghatározási engedély megtagadva.",
+  "locationDetectionFailed": "Nem sikerült észlelni a tartózkodási helyét. Válasszon várost manuálisan, vagy próbálja újra.",
   "citiesCount": "{count} város",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Nincs találat",
   "loading": "Betöltés...",
   "error": "Hiba",
+  "appErrorOccurred": "Hiba történt",
+  "appUnknownError": "Ismeretlen hiba",
+  "quranLoadFailed": "A Korán tartalmat nem sikerült betölteni. Kérjük, próbálja újra.",
   "retry": "Próbálja újra",
+  "refreshAction": "Frissítés",
   "cancel": "Mégse",
   "save": "Mentés",
   "delete": "Törölje",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nem",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "oldal",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsir betöltése...",
+  "tafsirSourceLabel": "Tafsir forrás",
+  "tafsirNoSurahFound": "Ehhez a szúrához nem találtak tafsírt.",
+  "tafsirNoAyahFound": "Nem található tafsir ayah {ayah} számára.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "A Tafsirt nem sikerült betölteni.",
+  "tafsirNoTextForAyah": "Nincs tafsir szöveg ehhez az ayahhoz.",
+  "tafsirDownloadingProgress": "Tafsir letöltése {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tafsir betöltése {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "A Tafsir forrás HTTP {statusCode} hibát adott vissza.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "A kiválasztott tafsir-forrás nem adott vissza bejegyzést.",
+  "tafsirCacheUnavailable": "Az ellenőrzött tafsir még nem érhető el offline módban. Böngészés előtt szinkronizáljon egy forrásból származó tafsir adatkészletet.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Könyvjelző hozzáadása",
   "removeBookmark": "Könyvjelző eltávolítása",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "mások így imádkoznak: „Uram, adj nekünk jót ezen a világon és a túlvilágon, és óvj meg minket a Tűz gyötrelmétől.”",
+  "duaMeaning2": "Isten egyetlen lelket sem terhel többel, mint amennyit elbír: mindenki elnyeri azt a jót, amit tett, és elszenvedi a rosszat – „Uram, ne vígy minket a feladatra, ha elfelejtünk vagy hibázunk. Uram, ne terhelj minket úgy, ahogy az előttünk állókat. Uram, ne terhelj minket többel, mint amennyi erőnk van elviselni. Bocsáss meg nekünk, bocsáss meg nekünk, és könyörülj rajtunk. Te vagy a Védelmezőnk, úgyhogy segíts minket a hitetlenekkel szemben.",
+  "duaMeaning3": "„Uram, ne hagyd, hogy szívünk elfajuljon, miután vezettél minket. Add meg nekünk irgalmadat: Te vagy az örökkévaló.",
+  "duaMeaning4": "Uram, add, hogy én és utódaim folytathassuk az imát. Urunk, fogadd el kérésemet.",
+  "duaMeaning5": "és engedd le szárnyadat alázattal feléjük, és mondd: „Uram, könyörülj rajtuk, ahogyan ők is törődtek velem, amikor kicsi voltam.”",
+  "duaMeaning6": "magasztos legyen Isten, aki valóban irányít. [Próféta], ne rohanj szavalni, mielőtt a kinyilatkoztatás teljesen befejeződött, hanem mondd: „Uram, gyarapíts tudásomban!”",
+  "duaMeaning7": "Mondd [Próféta]: „Uram, bocsáss meg és irgalmazz: Te vagy a legkönyörületesebb mindenek között.”",
+  "duaMeaning8": "akik így imádkoznak: Urunk, adj nekünk örömet házastársunkban és utódainkban. Tégy jó példát azoknak, akik tisztában vannak veled.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Böjtölés",
   "quranReading": "Korán olvasás",
   "prayers": "Imák",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}p",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}p",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Heti haladás",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Iszlám újév",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla irány",
   "compass": "Iránytű",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla megtalálta!",
   "turnDevice": "Fordítsa a készüléket a Qibla felé",
+  "qiblaCompassErrorDetails": "Iránytű hiba: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Az iránytűérzékelő nem érhető el ezen az eszközön.",
+  "qiblaLocationRequiredTitle": "Hely szükséges a Qibla számára",
+  "qiblaLocationRequiredBody": "A Qibla iránytű használata előtt állítsa be a tényleges tartózkodási helyét, hogy az irányt pontosan ki lehessen számítani.",
+  "adhanNotificationChannelName": "Adhan értesítések",
+  "adhanNotificationChannelDescription": "Az imaidő figyelmeztetések adhan hanggal.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Célszám: {target}",
   "tapToCount": "Koppintson a számláláshoz",
+  "zikrCompletedMashAllah": "Elkészült! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah minden tökéletlenség felett áll.",
+  "zikrMeaningAlhamdulillah": "Minden dicséret Allahot illeti.",
+  "zikrMeaningAllahuAkbar": "Allah a Legnagyobb.",
+  "zikrMeaningLaIlahaIllallah": "Nincs más isten, csak Allah.",
+  "zikrMeaningAstaghfirullah": "Allah bocsánatát kérem.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nincs hatalom és nincs erő, csak Allah által.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Voice",
+  "audioVoiceMisharyAlafasy": "Férfi (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Férfi (Abdul Basit)",
+  "audioVoiceSudais": "Férfi (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla kalibráció",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrálás szükséges. Forgassa el az eszközt a 8. ábrán.",
   "dailyVerse": "Napi vers",
+  "dailyVerseUnavailableTitle": "Napi vers nem érhető el",
+  "dailyVerseUnavailableBody": "Az ellenőrzött napi verstartalom még nincs konfigurálva ehhez a buildhez. Böngészés előtt csatlakozzon a felhőforráshoz, vagy szinkronizáljon egy ellenőrzött gyorsítótárat.",
   "todaysIbadah": "A mai Ibadah",
   "quickAccess": "Gyors hozzáférés",
   "assistant": "Helyettes",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ellenőrzött duák még nem érhetők el",
+  "duaUnavailableBody": "Az ellenőrzött napi duák még nincsenek szinkronizálva ezzel az eszközzel. Csatlakozzon a felhőforráshoz a forrásból származó duák betöltéséhez az ellenőrizetlen tartalék helyett.",
+  "duaCategoryQuranic": "Korán dua",
+  "duaCategoryMorningEvening": "Reggel & Este",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Védelem",
+  "duaCategoryBeginning": "Kezdetek",
+  "duaCategorySleep": "Alvás",
+  "duaCategoryFoodDrink": "Étel és ital",
+  "duaCategoryForgiveness": "Megbocsátás",
+  "duaCategoryHome": "Otthon",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Iszlám oktatás",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadísz gyűjtemények",
+  "hadithSourcePending": "Ellenőrzött forrás függőben",
+  "hadithUnavailableTitle": "Az ellenőrzött hadíszgyűjtemények még nem állnak rendelkezésre",
+  "hadithUnavailableBody": "Ez a build továbbra is egy ellenőrizetlen külső hadísz hírfolyamtól függ. A hadísz-böngészés le van tiltva a forrásból származó adatkészlet szinkronizálásáig.",
   "paywallUnlockAll": "Oldja fel az összes funkciót spirituális utazásához",
+  "premiumProductUnavailable": "Prémium termék jelenleg nem elérhető. Kérjük, próbálja újra később.",
+  "premiumPurchaseFailed": "A vásárlást nem lehetett befejezni. Kérjük, próbálja újra.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Korlátlan AI-alapú kérdések és válaszok",
   "paywallFeature2Title": "Korlátlan offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "A letöltés befejeződött {reciter} {failed} sikertelen szúrákkal ({downloaded}/{total} letöltve).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "A {reciter} offline fájljai törölve.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Hálózati hiba. Kérjük, próbálja újra.",
+  "placesLocationRequiredTitle": "Helyszín szükséges",
+  "placesLocationRequiredBody": "Először állítson be egy helyet, hogy a közeli mecsetek, halal ételek és iszlám iskolák pontosan megkereshetők legyenek.",
+  "placesMapTilesUnavailableTitle": "A térképlapok nem érhetők el",
+  "placesMapTilesUnavailableBody": "Ellenőrzött térképmozaik forrás még nincs konfigurálva ehhez a buildhez. A közeli helyek továbbra is betölthetők az Ön mentett helyéről.",
+  "placesDataSourceUnavailableTitle": "A helyadatok nem érhetők el",
+  "placesDataSourceUnavailableBody": "Ellenőrzött helyek adatvégpontja még nincs konfigurálva ehhez a buildhez. A közeli keresés engedélyezése előtt állítsa be a PLACES_OVERPASS_API_URL-t egy jóváhagyott proxyra vagy szolgáltatóra.",
   "unknownPlaceName": "Ismeretlen név",
   "islamicPlaceFallback": "Iszlám hely",
-  "prayerNotificationTitle": "Ideje a {prayerName} számára",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ideje imádkozni: {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ellenőrzött duák még nem érhetők el",
-  "duaUnavailableBody": "Az ellenőrzött napi duák még nincsenek szinkronizálva ezzel az eszközzel. Csatlakozzon a felhőforráshoz a forrásból származó duák betöltéséhez az ellenőrizetlen tartalék helyett.",
-  "duaCategoryQuranic": "Korán dua",
-  "duaCategoryMorningEvening": "Reggel & Este",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Védelem",
-  "duaCategoryBeginning": "Kezdetek",
-  "duaCategorySleep": "Alvás",
-  "duaCategoryFoodDrink": "Étel és ital",
-  "duaCategoryForgiveness": "Megbocsátás",
-  "duaCategoryHome": "Otthon",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Ellenőrzött forrás függőben",
-  "hadithUnavailableTitle": "Az ellenőrzött hadíszgyűjtemények még nem állnak rendelkezésre",
-  "hadithUnavailableBody": "Ez a build továbbra is egy ellenőrizetlen külső hadísz hírfolyamtól függ. A hadísz-böngészés le van tiltva a forrásból származó adatkészlet szinkronizálásáig.",
-  "appErrorOccurred": "Hiba történt",
-  "appUnknownError": "Ismeretlen hiba",
-  "qiblaCompassErrorDetails": "Iránytű hiba: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Elkészült! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah minden tökéletlenség felett áll.",
-  "zikrMeaningAlhamdulillah": "Minden dicséret Allahot illeti.",
-  "zikrMeaningAllahuAkbar": "Allah a Legnagyobb.",
-  "zikrMeaningLaIlahaIllallah": "Nincs más isten, csak Allah.",
-  "zikrMeaningAstaghfirullah": "Allah bocsánatát kérem.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Nincs hatalom és nincs erő, csak Allah által.",
   "asmaMeaning1": "A jótékony",
   "asmaMeaning2": "A kegyes",
   "asmaMeaning3": "A király / Örökkévaló Úr",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Az örökkévaló",
   "asmaMeaning97": "Az örökös",
   "asmaMeaning98": "A legigazságosabb útmutató",
-  "asmaMeaning99": "A beteg",
-  "duaMeaning1": "mások így imádkoznak: „Uram, adj nekünk jót ezen a világon és a túlvilágon, és óvj meg minket a Tűz gyötrelmétől.”",
-  "duaMeaning2": "Isten egyetlen lelket sem terhel többel, mint amennyit elbír: mindenki elnyeri azt a jót, amit tett, és elszenvedi a rosszat – „Uram, ne vígy minket a feladatra, ha elfelejtünk vagy hibázunk. Uram, ne terhelj minket úgy, ahogy az előttünk állókat. Uram, ne terhelj minket többel, mint amennyi erőnk van elviselni. Bocsáss meg nekünk, bocsáss meg nekünk, és könyörülj rajtunk. Te vagy a Védelmezőnk, úgyhogy segíts minket a hitetlenekkel szemben.",
-  "duaMeaning3": "„Uram, ne hagyd, hogy szívünk elfajuljon, miután vezettél minket. Add meg nekünk irgalmadat: Te vagy az örökkévaló.",
-  "duaMeaning4": "Uram, add, hogy én és utódaim folytathassuk az imát. Urunk, fogadd el kérésemet.",
-  "duaMeaning5": "és engedd le szárnyadat alázattal feléjük, és mondd: „Uram, könyörülj rajtuk, ahogyan ők is törődtek velem, amikor kicsi voltam.”",
-  "duaMeaning6": "magasztos legyen Isten, aki valóban irányít. [Próféta], ne rohanj szavalni, mielőtt a kinyilatkoztatás teljesen befejeződött, hanem mondd: „Uram, gyarapíts tudásomban!”",
-  "duaMeaning7": "Mondd [Próféta]: „Uram, bocsáss meg és irgalmazz: Te vagy a legkönyörületesebb mindenek között.”",
-  "duaMeaning8": "akik így imádkoznak: Urunk, adj nekünk örömet házastársunkban és utódainkban. Tégy jó példát azoknak, akik tisztában vannak veled.",
-  "islamicNewYear": "Iszlám újév",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Frissítés",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Tafsir betöltése...",
-  "tafsirSourceLabel": "Tafsir forrás",
-  "tafsirNoSurahFound": "Ehhez a szúrához nem találtak tafsírt.",
-  "tafsirNoAyahFound": "Nem található tafsir ayah {ayah} számára.",
-  "tafsirLoadFailed": "A Tafsirt nem sikerült betölteni.",
-  "tafsirNoTextForAyah": "Nincs tafsir szöveg ehhez az ayahhoz.",
-  "tafsirDownloadingProgress": "Tafsir letöltése {current}/{total}",
-  "tafsirLoadingProgress": "Tafsir betöltése {current}/{total}",
-  "tafsirApiStatusError": "A Tafsir forrás HTTP {statusCode} hibát adott vissza.",
-  "tafsirNoEntriesReturned": "A kiválasztott tafsir-forrás nem adott vissza bejegyzést.",
-  "premiumProductUnavailable": "Prémium termék jelenleg nem elérhető. Kérjük, próbálja újra később.",
-  "premiumPurchaseFailed": "A vásárlást nem lehetett befejezni. Kérjük, próbálja újra.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}p",
-  "prayerRemainingMinutes": "{minutes}p",
-  "splashTagline": "Iszlám Fényút",
-  "downloadPartiallyFinishedForReciter": "A letöltés befejeződött {reciter} {failed} sikertelen szúrákkal ({downloaded}/{total} letöltve).",
-  "placesLocationRequiredTitle": "Helyszín szükséges",
-  "placesLocationRequiredBody": "Először állítson be egy helyet, hogy a közeli mecsetek, halal ételek és iszlám iskolák pontosan megkereshetők legyenek.",
-  "placesMapTilesUnavailableTitle": "A térképlapok nem érhetők el",
-  "placesMapTilesUnavailableBody": "Ellenőrzött térképmozaik forrás még nincs konfigurálva ehhez a buildhez. A közeli helyek továbbra is betölthetők az Ön mentett helyéről.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Férfi (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Férfi (Abdul Basit)",
-  "audioVoiceSudais": "Férfi (Sudais)",
-  "qiblaSensorUnavailable": "Az iránytűérzékelő nem érhető el ezen az eszközön.",
-  "adhanNotificationChannelName": "Adhan értesítések",
-  "adhanNotificationChannelDescription": "Az imaidő figyelmeztetések adhan hanggal.",
-  "quranLoadFailed": "A Korán tartalmat nem sikerült betölteni. Kérjük, próbálja újra.",
-  "locationDetectionFailed": "Nem sikerült észlelni a tartózkodási helyét. Válasszon várost manuálisan, vagy próbálja újra.",
-  "qiblaLocationRequiredTitle": "Hely szükséges a Qibla számára",
-  "qiblaLocationRequiredBody": "A Qibla iránytű használata előtt állítsa be a tényleges tartózkodási helyét, hogy az irányt pontosan ki lehessen számítani.",
-  "placesDataSourceUnavailableTitle": "A helyadatok nem érhetők el",
-  "placesDataSourceUnavailableBody": "Ellenőrzött helyek adatvégpontja még nincs konfigurálva ehhez a buildhez. A közeli keresés engedélyezése előtt állítsa be a PLACES_OVERPASS_API_URL-t egy jóváhagyott proxyra vagy szolgáltatóra.",
-  "tafsirCacheUnavailable": "Az ellenőrzött tafsir még nem érhető el offline módban. Böngészés előtt szinkronizáljon egy forrásból származó tafsir adatkészletet."
+  "asmaMeaning99": "A beteg"
 }

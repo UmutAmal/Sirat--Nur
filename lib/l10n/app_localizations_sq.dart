@@ -955,6 +955,13 @@ class AppLocalizationsSq extends AppLocalizations {
   String get dailyVerse => 'Vargu i përditshëm';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Vargu ditor i padisponueshëm';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Përmbajtja e verifikuar ditore e vargjeve nuk është konfiguruar ende për këtë ndërtim. Lidhu me burimin cloud ose sinkronizoni një memorie të verifikuar përpara shfletimit.';
+
+  @override
   String get todaysIbadah => 'Ibadeti i sotëm';
 
   @override

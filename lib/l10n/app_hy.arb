@@ -1,6 +1,7 @@
 {
   "@@locale": "hy",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Լույսի իսլամական ճանապարհ",
   "home": "Տուն",
   "quran": "Ղուրան",
   "qibla": "Քիբլա",
@@ -23,6 +24,22 @@
   "asr": "Ասր",
   "maghrib": "Մաղրիբ",
   "isha": "Իշա",
+  "prayerNotificationTitle": "{prayerName}-ի ժամանակը",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ժամանակն է աղոթելու {prayerName}:",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Տվյալներ և պահեստավորում",
   "clearCache": "Մաքրել քեշը",
   "cacheClearedSuccess": "Քեշը հաջողությամբ մաքրվեց",
@@ -34,6 +51,7 @@
   "currentLocation": "Ընթացիկ գտնվելու վայրը (GPS)",
   "locationServiceDisabled": "Տեղադրության ծառայությունն անջատված է:",
   "locationPermissionDenied": "Տեղադրության թույլտվությունը մերժվել է:",
+  "locationDetectionFailed": "Չհաջողվեց հայտնաբերել ձեր գտնվելու վայրը: Ընտրեք քաղաքը ձեռքով կամ նորից փորձեք:",
   "citiesCount": "{count} քաղաքներ",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ոչ մի արդյունք չի գտնվել",
   "loading": "Բեռնվում է...",
   "error": "Սխալ",
+  "appErrorOccurred": "Սխալ է տեղի ունեցել",
+  "appUnknownError": "Անհայտ սխալ",
+  "quranLoadFailed": "Ղուրանի բովանդակությունը չհաջողվեց բեռնել: Խնդրում ենք կրկին փորձել:",
   "retry": "Կրկին փորձեք",
+  "refreshAction": "Թարմացնել",
   "cancel": "Չեղարկել",
   "save": "Պահպանել",
   "delete": "Ջնջել",
@@ -57,17 +79,78 @@
   "yes": "Այո՛",
   "no": "Ոչ",
   "surah": "Սուրա",
+  "ayahLabel": "Այահ {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Ջուզ",
   "page": "Էջ",
   "reading": "Ընթերցանություն",
   "recitation": "Ասմունք",
   "translation": "Թարգմանություն",
   "tafsir": "Թաֆսիր",
+  "tafsirLoading": "Թաֆսիրի բեռնում...",
+  "tafsirSourceLabel": "Թաֆսիրի աղբյուրը",
+  "tafsirNoSurahFound": "Այս սուրայի համար թաֆսիր չի գտնվել:",
+  "tafsirNoAyahFound": "Այա {ayah}-ի համար թաֆսիր չի գտնվել:",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Թաֆսիրը չհաջողվեց բեռնել:",
+  "tafsirNoTextForAyah": "Այս այայի համար թաֆսիր տեքստ չկա:",
+  "tafsirDownloadingProgress": "Ներբեռնվում է {current}/{total} tafsir",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Բեռնվում է տեքստ {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir աղբյուրը վերադարձրեց HTTP {statusCode} սխալ:",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ընտրված թաֆսիրի աղբյուրը ոչ մի գրառում չի վերադարձրել:",
+  "tafsirCacheUnavailable": "Ստուգված տաֆսիրը դեռ հասանելի չէ անցանց: Զննարկումից առաջ համաժամեցեք աղբյուրից ստացված թաֆսիրի տվյալների հավաքածուն:",
   "bookmarks": "Էջանիշեր",
   "addBookmark": "Ավելացնել էջանիշ",
   "removeBookmark": "Հեռացնել էջանիշը",
   "lastRead": "Վերջին ընթերցումը",
   "dailyZikr": "Ամենօրյա Զիքր",
+  "duaMeaning1": "մյուսներն աղոթում են. «Տեր մեր, տուր մեզ բարիք այս աշխարհում և հանդերձյալ կյանքում և պահպանիր մեզ կրակի տանջանքներից»:",
+  "duaMeaning2": "Աստված ոչ մի հոգու չի ծանրաբեռնում ավելին, քան կարող է տանել. յուրաքանչյուրը շահում է ինչ լավ բան է արել, և տառապում է իր վատը. Տե՛ր, մի՛ ծանրաբեռնիր մեզ, ինչպես դու ծանրաբեռնեցիր մեզնից առաջ գտնվողներին: Տեր, մի ծանրաբեռնիր մեզ ավելին, քան մենք ուժ ունենք տանելու: Ներիր մեզ, ներիր մեզ և ողորմիր մեզ: Դու մեր Պաշտպանն ես, ուստի օգնիր մեզ անհավատների դեմ»:",
+  "duaMeaning3": "«Մեր Տեր, թույլ մի տուր, որ մեր սրտերը շեղվեն այն բանից հետո, երբ դու առաջնորդեցիր մեզ: Տո՛ւր մեզ Քո ողորմությունը. Դու ես Հավերժ Տվողը:",
+  "duaMeaning4": "Տեր, թույլ տուր, որ ես և իմ սերունդը շարունակենք աղոթքը: Տեր մեր, ընդունիր իմ խնդրանքը։",
+  "duaMeaning5": "և խոնարհությամբ թեւդ իջեցրու նրանց հանդեպ՝ բարությամբ և ասա.",
+  "duaMeaning6": "բարձր է Աստված, ով իսկապես տիրապետում է: [Մարգարե], մի շտապիր կարդալ նախքան հայտնության ամբողջական ավարտը, այլ ասա. «Տե՛ր, ավելացրո՛ւ ինձ գիտելիքը»:",
+  "duaMeaning7": "Ասա [Մարգարե]. «Տե՛ր, ներիր և ողորմիր, դու բոլորից ողորմած ես»:",
+  "duaMeaning8": "նրանք, ովքեր աղոթում են. «Տեր մեր, ուրախություն տուր մեզ մեր ամուսիններով և սերունդներով»: Մեզ լավ օրինակ դարձրու նրանց համար, ովքեր տեղյակ են քեզանից»:",
   "morningZikr": "Առավոտյան Զիքր",
   "eveningZikr": "Երեկոյան Զիքր",
   "tasbih": "Թասբիհ",
@@ -88,6 +171,26 @@
   "fasting": "Պահք",
   "quranReading": "Ղուրանի ընթերցանություն",
   "prayers": "Աղոթքներ",
+  "prayerRemainingHoursMinutes": "{hours}ժ {minutes}ր",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Դիքր կոմս",
   "weeklyProgress": "Շաբաթական առաջընթաց",
   "monthlyProgress": "Ամսական առաջընթաց",
@@ -101,6 +204,14 @@
   "ramadan": "Ռամադան",
   "eidAlFitr": "Էիդ Ալ-Ֆիտր",
   "eidAlAdha": "Կուրբան բայրամ",
+  "islamicNewYear": "Իսլամական Նոր տարի",
+  "mawlidAnNabi": "Մավլիդ ան-Նաբի",
+  "specialDayDateRamadanStart": "1 Ռամադան",
+  "specialDayDateLaylatAlQadr": "27 Ռամադան",
+  "specialDayDateEidAlFitr": "1 Շավվալ",
+  "specialDayDateEidAlAdha": "10 Դուլ Հիջա",
+  "specialDayDateIslamicNewYear": "1 Մուհարամ",
+  "specialDayDateMawlidAnNabi": "12 Ռաբի ալ-Ավալ",
   "laylatAlQadr": "Լեյլաթ Ալ-Քադր",
   "qiblaDirection": "Քիբլայի ուղղություն",
   "compass": "Կողմնացույց",
@@ -108,6 +219,19 @@
   "north": "Հյուսիսային",
   "qiblaFound": "Քիբլան գտնվեց:",
   "turnDevice": "Ձեր սարքը դարձրեք դեպի Քիբլան",
+  "qiblaCompassErrorDetails": "Կողմնացույցի սխալ՝ {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Կողմնացույցի սենսորն անհասանելի է այս սարքում:",
+  "qiblaLocationRequiredTitle": "Քիբլայի համար անհրաժեշտ գտնվելու վայրը",
+  "qiblaLocationRequiredBody": "Նախքան Qibla կողմնացույցն օգտագործելը սահմանեք ձեր իրական գտնվելու վայրը, որպեսզի ուղղությունը ճշգրիտ հաշվարկվի:",
+  "adhanNotificationChannelName": "Ադանի ծանուցումներ",
+  "adhanNotificationChannelDescription": "Աղոթքի ժամանակի ահազանգերը ադանի ձայնով:",
   "notifications": "Ծանուցումներ",
   "prayerNotifications": "Աղոթքի ծանուցումներ",
   "enableNotifications": "Միացնել ծանուցումները",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Թիրախների քանակը՝ {target}",
   "tapToCount": "Հպեք՝ հաշվելու համար",
+  "zikrCompletedMashAllah": "Ավարտված է ՄաշԱլլահ",
+  "zikrMeaningSubhanAllah": "Ալլահը շատ վեր է ամեն անկատարությունից:",
+  "zikrMeaningAlhamdulillah": "Ամբողջ փառքը պատկանում է Ալլահին:",
+  "zikrMeaningAllahuAkbar": "Ալլահը ամենամեծն է:",
+  "zikrMeaningLaIlahaIllallah": "Ալլահից բացի այլ աստված չկա:",
+  "zikrMeaningAstaghfirullah": "Ես Ալլահի ներում եմ խնդրում:",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Չկա ուժ և ուժ, բացի Ալլահի միջոցով:",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Աուդիո Ձայն",
+  "audioVoiceMisharyAlafasy": "Տղամարդ (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Տղամարդ (Abdul Basit)",
+  "audioVoiceSudais": "Տղամարդ (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Պահանջվում է չափորոշում: Պտտեցնել սարքը նկար-8-ում:",
   "dailyVerse": "Ամենօրյա հատված",
+  "dailyVerseUnavailableTitle": "Ամենօրյա հատվածը անհասանելի է",
+  "dailyVerseUnavailableBody": "Ստուգված ամենօրյա չափածո բովանդակությունը դեռ կազմաձևված չէ այս նախագծման համար: Զննարկումից առաջ միացեք ամպային աղբյուրին կամ համաժամացրեք հաստատված քեշը:",
   "todaysIbadah": "Այսօրվա Իբադան",
   "quickAccess": "Արագ մուտք",
   "assistant": "Օգնական",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ստուգված դուաները դեռ հասանելի չեն",
+  "duaUnavailableBody": "Ստուգված ամենօրյա դուաները դեռ չեն համաժամացվել այս սարքի հետ: Միացեք ամպային աղբյուրին՝ չստուգված հետադարձի փոխարեն բեռնելու աղբյուրից ստացված դուաները:",
+  "duaCategoryQuranic": "Ղուրանի դուտա",
+  "duaCategoryMorningEvening": "Առավոտ և երեկո",
+  "duaCategoryTasbih": "Թասբիհ",
+  "duaCategoryProtection": "Պաշտպանություն",
+  "duaCategoryBeginning": "սկիզբներ",
+  "duaCategorySleep": "Քնել",
+  "duaCategoryFoodDrink": "Սնունդ և խմիչք",
+  "duaCategoryForgiveness": "Ներողամտություն",
+  "duaCategoryHome": "Տուն",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Իսլամական կրթություն",
   "sukunAudioTitle": "Սուկունի հնչյուններ",
   "hadithCollections": "Հադիսների հավաքածուներ",
+  "hadithSourcePending": "Ստուգված աղբյուրը սպասվում է",
+  "hadithUnavailableTitle": "Հադիսների ստուգված հավաքածուները դեռ հասանելի չեն",
+  "hadithUnavailableBody": "Այս կառուցումը դեռևս կախված է չստուգված արտաքին հադիսների հոսքից: Հադիսների զննարկումն անջատված է մնում այնքան ժամանակ, քանի դեռ աղբյուրի տվյալների բազան չի համաժամացվում:",
   "paywallUnlockAll": "Բացեք բոլոր հնարավորությունները ձեր հոգևոր ճանապարհորդության համար",
+  "premiumProductUnavailable": "Պրեմիում ապրանքն այս պահին հասանելի չէ: Խնդրում ենք փորձել ավելի ուշ:",
+  "premiumPurchaseFailed": "Գնումը չի կարող ավարտվել: Խնդրում ենք կրկին փորձել:",
   "paywallFeature1Title": "Նյարդային օգնական Plus",
   "paywallFeature1Desc": "Անսահմանափակ AI-ով աշխատող Q&A",
   "paywallFeature2Title": "Անսահմանափակ անցանց",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Ներբեռնումն ավարտվեց {reciter}-ի համար {failed} ձախողված սուրաներով ({downloaded}/{total} ներբեռնված):",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Ջնջվել են անցանց ֆայլերը {reciter}-ի համար:",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Ցանցի սխալ. Խնդրում ենք կրկին փորձել:",
+  "placesLocationRequiredTitle": "Պահանջվում է գտնվելու վայրը",
+  "placesLocationRequiredBody": "Նախ տեղադրեք տեղ, որպեսզի մոտակա մզկիթները, հալալ սնունդը և իսլամական դպրոցները ճշգրիտ որոնվեն:",
+  "placesMapTilesUnavailableTitle": "Քարտեզի սալիկներն անհասանելի են",
+  "placesMapTilesUnavailableBody": "Քարտեզի սալիկի հաստատված աղբյուրը դեռ կազմաձևված չէ այս կառուցման համար: Մոտակա վայրերը դեռ կարող են բեռնվել ձեր պահված վայրից:",
+  "placesDataSourceUnavailableTitle": "Վայրերի տվյալները անհասանելի են",
+  "placesDataSourceUnavailableBody": "Հաստատված վայրերի տվյալների վերջնակետը դեռ կազմաձևված չէ այս կառուցման համար: Սահմանեք PLACES_OVERPASS_API_URL-ը հաստատված վստահված անձի կամ մատակարարի՝ նախքան մոտակա որոնումը միացնելը:",
   "unknownPlaceName": "Անհայտ անուն",
   "islamicPlaceFallback": "Իսլամական վայր",
-  "prayerNotificationTitle": "{prayerName}-ի ժամանակը",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ժամանակն է աղոթելու {prayerName}:",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ստուգված դուաները դեռ հասանելի չեն",
-  "duaUnavailableBody": "Ստուգված ամենօրյա դուաները դեռ չեն համաժամացվել այս սարքի հետ: Միացեք ամպային աղբյուրին՝ չստուգված հետադարձի փոխարեն բեռնելու աղբյուրից ստացված դուաները:",
-  "duaCategoryQuranic": "Ղուրանի դուտա",
-  "duaCategoryMorningEvening": "Առավոտ և երեկո",
-  "duaCategoryTasbih": "Թասբիհ",
-  "duaCategoryProtection": "Պաշտպանություն",
-  "duaCategoryBeginning": "սկիզբներ",
-  "duaCategorySleep": "Քնել",
-  "duaCategoryFoodDrink": "Սնունդ և խմիչք",
-  "duaCategoryForgiveness": "Ներողամտություն",
-  "duaCategoryHome": "Տուն",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Ստուգված աղբյուրը սպասվում է",
-  "hadithUnavailableTitle": "Հադիսների ստուգված հավաքածուները դեռ հասանելի չեն",
-  "hadithUnavailableBody": "Այս կառուցումը դեռևս կախված է չստուգված արտաքին հադիսների հոսքից: Հադիսների զննարկումն անջատված է մնում այնքան ժամանակ, քանի դեռ աղբյուրի տվյալների բազան չի համաժամացվում:",
-  "appErrorOccurred": "Սխալ է տեղի ունեցել",
-  "appUnknownError": "Անհայտ սխալ",
-  "qiblaCompassErrorDetails": "Կողմնացույցի սխալ՝ {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ավարտված է ՄաշԱլլահ",
-  "zikrMeaningSubhanAllah": "Ալլահը շատ վեր է ամեն անկատարությունից:",
-  "zikrMeaningAlhamdulillah": "Ամբողջ փառքը պատկանում է Ալլահին:",
-  "zikrMeaningAllahuAkbar": "Ալլահը ամենամեծն է:",
-  "zikrMeaningLaIlahaIllallah": "Ալլահից բացի այլ աստված չկա:",
-  "zikrMeaningAstaghfirullah": "Ես Ալլահի ներում եմ խնդրում:",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Չկա ուժ և ուժ, բացի Ալլահի միջոցով:",
   "asmaMeaning1": "Բարեգործը",
   "asmaMeaning2": "Ողորմածը",
   "asmaMeaning3": "Թագավորը / Հավերժական Տերը",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Հավիտենականը",
   "asmaMeaning97": "Ժառանգողը",
   "asmaMeaning98": "Ամենաարդար առաջնորդը",
-  "asmaMeaning99": "Հիվանդը",
-  "duaMeaning1": "մյուսներն աղոթում են. «Տեր մեր, տուր մեզ բարիք այս աշխարհում և հանդերձյալ կյանքում և պահպանիր մեզ կրակի տանջանքներից»:",
-  "duaMeaning2": "Աստված ոչ մի հոգու չի ծանրաբեռնում ավելին, քան կարող է տանել. յուրաքանչյուրը շահում է ինչ լավ բան է արել, և տառապում է իր վատը. Տե՛ր, մի՛ ծանրաբեռնիր մեզ, ինչպես դու ծանրաբեռնեցիր մեզնից առաջ գտնվողներին: Տեր, մի ծանրաբեռնիր մեզ ավելին, քան մենք ուժ ունենք տանելու: Ներիր մեզ, ներիր մեզ և ողորմիր մեզ: Դու մեր Պաշտպանն ես, ուստի օգնիր մեզ անհավատների դեմ»:",
-  "duaMeaning3": "«Մեր Տեր, թույլ մի տուր, որ մեր սրտերը շեղվեն այն բանից հետո, երբ դու առաջնորդեցիր մեզ: Տո՛ւր մեզ Քո ողորմությունը. Դու ես Հավերժ Տվողը:",
-  "duaMeaning4": "Տեր, թույլ տուր, որ ես և իմ սերունդը շարունակենք աղոթքը: Տեր մեր, ընդունիր իմ խնդրանքը։",
-  "duaMeaning5": "և խոնարհությամբ թեւդ իջեցրու նրանց հանդեպ՝ բարությամբ և ասա.",
-  "duaMeaning6": "բարձր է Աստված, ով իսկապես տիրապետում է: [Մարգարե], մի շտապիր կարդալ նախքան հայտնության ամբողջական ավարտը, այլ ասա. «Տե՛ր, ավելացրո՛ւ ինձ գիտելիքը»:",
-  "duaMeaning7": "Ասա [Մարգարե]. «Տե՛ր, ներիր և ողորմիր, դու բոլորից ողորմած ես»:",
-  "duaMeaning8": "նրանք, ովքեր աղոթում են. «Տեր մեր, ուրախություն տուր մեզ մեր ամուսիններով և սերունդներով»: Մեզ լավ օրինակ դարձրու նրանց համար, ովքեր տեղյակ են քեզանից»:",
-  "islamicNewYear": "Իսլամական Նոր տարի",
-  "mawlidAnNabi": "Մավլիդ ան-Նաբի",
-  "specialDayDateRamadanStart": "1 Ռամադան",
-  "specialDayDateLaylatAlQadr": "27 Ռամադան",
-  "specialDayDateEidAlFitr": "1 Շավվալ",
-  "specialDayDateEidAlAdha": "10 Դուլ Հիջա",
-  "specialDayDateIslamicNewYear": "1 Մուհարամ",
-  "specialDayDateMawlidAnNabi": "12 Ռաբի ալ-Ավալ",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Թարմացնել",
-  "ayahLabel": "Այահ {ayah}",
-  "tafsirLoading": "Թաֆսիրի բեռնում...",
-  "tafsirSourceLabel": "Թաֆսիրի աղբյուրը",
-  "tafsirNoSurahFound": "Այս սուրայի համար թաֆսիր չի գտնվել:",
-  "tafsirNoAyahFound": "Այա {ayah}-ի համար թաֆսիր չի գտնվել:",
-  "tafsirLoadFailed": "Թաֆսիրը չհաջողվեց բեռնել:",
-  "tafsirNoTextForAyah": "Այս այայի համար թաֆսիր տեքստ չկա:",
-  "tafsirDownloadingProgress": "Ներբեռնվում է {current}/{total} tafsir",
-  "tafsirLoadingProgress": "Բեռնվում է տեքստ {current}/{total}",
-  "tafsirApiStatusError": "Tafsir աղբյուրը վերադարձրեց HTTP {statusCode} սխալ:",
-  "tafsirNoEntriesReturned": "Ընտրված թաֆսիրի աղբյուրը ոչ մի գրառում չի վերադարձրել:",
-  "premiumProductUnavailable": "Պրեմիում ապրանքն այս պահին հասանելի չէ: Խնդրում ենք փորձել ավելի ուշ:",
-  "premiumPurchaseFailed": "Գնումը չի կարող ավարտվել: Խնդրում ենք կրկին փորձել:",
-  "prayerRemainingHoursMinutes": "{hours}ժ {minutes}ր",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Լույսի իսլամական ճանապարհ",
-  "downloadPartiallyFinishedForReciter": "Ներբեռնումն ավարտվեց {reciter}-ի համար {failed} ձախողված սուրաներով ({downloaded}/{total} ներբեռնված):",
-  "placesLocationRequiredTitle": "Պահանջվում է գտնվելու վայրը",
-  "placesLocationRequiredBody": "Նախ տեղադրեք տեղ, որպեսզի մոտակա մզկիթները, հալալ սնունդը և իսլամական դպրոցները ճշգրիտ որոնվեն:",
-  "placesMapTilesUnavailableTitle": "Քարտեզի սալիկներն անհասանելի են",
-  "placesMapTilesUnavailableBody": "Քարտեզի սալիկի հաստատված աղբյուրը դեռ կազմաձևված չէ այս կառուցման համար: Մոտակա վայրերը դեռ կարող են բեռնվել ձեր պահված վայրից:",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Տղամարդ (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Տղամարդ (Abdul Basit)",
-  "audioVoiceSudais": "Տղամարդ (Sudais)",
-  "qiblaSensorUnavailable": "Կողմնացույցի սենսորն անհասանելի է այս սարքում:",
-  "adhanNotificationChannelName": "Ադանի ծանուցումներ",
-  "adhanNotificationChannelDescription": "Աղոթքի ժամանակի ահազանգերը ադանի ձայնով:",
-  "quranLoadFailed": "Ղուրանի բովանդակությունը չհաջողվեց բեռնել: Խնդրում ենք կրկին փորձել:",
-  "locationDetectionFailed": "Չհաջողվեց հայտնաբերել ձեր գտնվելու վայրը: Ընտրեք քաղաքը ձեռքով կամ նորից փորձեք:",
-  "qiblaLocationRequiredTitle": "Քիբլայի համար անհրաժեշտ գտնվելու վայրը",
-  "qiblaLocationRequiredBody": "Նախքան Qibla կողմնացույցն օգտագործելը սահմանեք ձեր իրական գտնվելու վայրը, որպեսզի ուղղությունը ճշգրիտ հաշվարկվի:",
-  "placesDataSourceUnavailableTitle": "Վայրերի տվյալները անհասանելի են",
-  "placesDataSourceUnavailableBody": "Հաստատված վայրերի տվյալների վերջնակետը դեռ կազմաձևված չէ այս կառուցման համար: Սահմանեք PLACES_OVERPASS_API_URL-ը հաստատված վստահված անձի կամ մատակարարի՝ նախքան մոտակա որոնումը միացնելը:",
-  "tafsirCacheUnavailable": "Ստուգված տաֆսիրը դեռ հասանելի չէ անցանց: Զննարկումից առաջ համաժամեցեք աղբյուրից ստացված թաֆսիրի տվյալների հավաքածուն:"
+  "asmaMeaning99": "Հիվանդը"
 }

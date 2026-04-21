@@ -947,6 +947,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get dailyVerse => 'פסוק יומי';
 
   @override
+  String get dailyVerseUnavailableTitle => 'פסוק יומי אינו זמין';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'תוכן פסוק יומי מאומת עדיין לא מוגדר עבור המבנה הזה. התחבר למקור הענן או סנכרן מטמון מאומת לפני הגלישה.';
+
+  @override
   String get todaysIbadah => 'איבאדה של היום';
 
   @override

@@ -953,6 +953,13 @@ class AppLocalizationsLt extends AppLocalizations {
   String get dailyVerse => 'Dienos eilėraštis';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Dienos eilutė nepasiekiama';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Patvirtintas kasdienis eilėraščių turinys šiai versijai dar nesukonfigūruotas. Prieš naršydami prisijunkite prie debesies šaltinio arba sinchronizuokite patvirtintą talpyklą.';
+
+  @override
   String get todaysIbadah => 'Šiandien Ibada';
 
   @override

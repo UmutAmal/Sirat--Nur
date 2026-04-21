@@ -952,6 +952,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get dailyVerse => 'ದೈನಂದಿನ ಪದ್ಯ';
 
   @override
+  String get dailyVerseUnavailableTitle => 'ದೈನಂದಿನ ಪದ್ಯ ಲಭ್ಯವಿಲ್ಲ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ಪರಿಶೀಲಿಸಿದ ದೈನಂದಿನ ಪದ್ಯದ ವಿಷಯವನ್ನು ಈ ನಿರ್ಮಾಣಕ್ಕಾಗಿ ಇನ್ನೂ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ. ಬ್ರೌಸ್ ಮಾಡುವ ಮೊದಲು ಕ್ಲೌಡ್ ಮೂಲಕ್ಕೆ ಸಂಪರ್ಕಪಡಿಸಿ ಅಥವಾ ಪರಿಶೀಲಿಸಿದ ಸಂಗ್ರಹವನ್ನು ಸಿಂಕ್ ಮಾಡಿ.';
+
+  @override
   String get todaysIbadah => 'ಇಂದಿನ ಇಬಾದಾ';
 
   @override

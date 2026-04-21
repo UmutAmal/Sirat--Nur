@@ -942,6 +942,13 @@ class AppLocalizationsAm extends AppLocalizations {
   String get dailyVerse => 'ዕለታዊ ጥቅስ';
 
   @override
+  String get dailyVerseUnavailableTitle => 'ዕለታዊ ጥቅስ አይገኝም';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'የተረጋገጠ ዕለታዊ ጥቅስ ይዘት ለዚህ ግንባታ ገና አልተዋቀረም። ከማሰስዎ በፊት ከደመናው ምንጭ ጋር ይገናኙ ወይም የተረጋገጠ መሸጎጫ ያመሳስሉ።';
+
+  @override
   String get todaysIbadah => 'የዛሬው ኢባዳ';
 
   @override

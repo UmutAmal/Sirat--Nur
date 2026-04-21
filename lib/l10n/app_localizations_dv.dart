@@ -958,6 +958,14 @@ class AppLocalizationsDv extends AppLocalizations {
   String get dailyVerse => 'ދުވަހުން ދުވަހަށް އާޔަތް';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'ދުވަހުން ދުވަހަށް އާޔަތް ނުލިބެއެވެ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ވެރިފައިޑް ޑެއިލީ އާޔަތް ކޮންޓެންޓް މި ބިލްޑަށް އަދި ކޮންފިގްރޭޓް ކުރެވިފައެއް ނުވެއެވެ. ބްރައުޒް ކުރުމުގެ ކުރިން ކްލައުޑް ސޯސް އާއި ގުޅުން ނުވަތަ ވެރިފައިޑް ކެޝް އެއް ސިންކް ކުރުން.';
+
+  @override
   String get todaysIbadah => 'މިއަދުގެ އިބާދާ...';
 
   @override

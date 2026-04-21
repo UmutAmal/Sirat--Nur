@@ -2200,6 +2200,18 @@ abstract class AppLocalizations {
   /// **'Daily Verse'**
   String get dailyVerse;
 
+  /// No description provided for @dailyVerseUnavailableTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily verse unavailable'**
+  String get dailyVerseUnavailableTitle;
+
+  /// No description provided for @dailyVerseUnavailableBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.'**
+  String get dailyVerseUnavailableBody;
+
   /// No description provided for @todaysIbadah.
   ///
   /// In en, this message translates to:

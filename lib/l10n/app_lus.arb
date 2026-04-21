@@ -1,6 +1,7 @@
 {
   "@@locale": "lus",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamic Way of Light",
   "home": "In lamah",
   "quran": "Quran a ni",
   "qibla": "Qibla a ni",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib a ni",
   "isha": "Isha chuan",
+  "prayerNotificationTitle": "{prayerName} hun hman a ni.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} tawngtai a hun ta.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Storage a ni",
   "clearCache": "Cache tihfai rawh",
   "cacheClearedSuccess": "Cache chu hlawhtling takin a clear ta",
@@ -34,6 +51,7 @@
   "currentLocation": "Tuna a awmna hmun (GPS) .",
   "locationServiceDisabled": "Location service chu tihtawp a ni.",
   "locationPermissionDenied": "Hmun phalna pek a ni lo.",
+  "locationDetectionFailed": "I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Results hmuh tur a awm lo",
   "loading": "Loading mek a ni...",
   "error": "Thil tihsual a awm",
+  "appErrorOccurred": "Error a awm a",
+  "appUnknownError": "Thil tihsual hriat loh",
+  "quranLoadFailed": "Quran content a load thei lo. Khawngaihin han lo try leh teh.",
   "retry": "Ti leh rawh",
+  "refreshAction": "Refresh leh rawh",
   "cancel": "Cancel rawh",
   "save": "Save rawh",
   "delete": "Delete rawh",
@@ -57,17 +79,78 @@
   "yes": "Ni e",
   "no": "Ni lo",
   "surah": "Surah chuan",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Page",
   "reading": "Chhiar tur",
   "recitation": "Recitation neih a ni",
   "translation": "Lehlin a ni",
   "tafsir": "Tafsir a ni",
+  "tafsirLoading": "Loading tafsir a ni...",
+  "tafsirSourceLabel": "Tafsir atanga lo chhuak a ni",
+  "tafsirNoSurahFound": "He surah atan hian tafsir hmuh tur a awm lo.",
+  "tafsirNoAyahFound": "Ayah {ayah} tan tafsir hmuh tur a awm lo.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir chu a phur thei lo.",
+  "tafsirNoTextForAyah": "He ayah atan hian tafsir text a awm lo.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir source chuan HTTP {statusCode} error a rawn pe leh a.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Tafsir source thlan chuan entry a rawn pe lo.",
+  "tafsirCacheUnavailable": "Verified tafsir hi offline ah a la awm lo. Browse hmain sourced tafsir dataset chu sync hmasa phawt ang che.",
   "bookmarks": "Bookmarks te pawh a awm",
   "addBookmark": "Bookmark tih a ni",
   "removeBookmark": "Bookmark chu paih chhuak rawh",
   "lastRead": "Chhiar hnuhnung ber",
   "dailyZikr": "Nitin Zikr",
+  "duaMeaning1": "mi dangte chuan, ‘Kan Lalpa, khawvel leh a tawpah thil tha min pe la, Mei hrehawmna lakah min venghim rawh,’ tiin an tawngtai thin.",
+  "duaMeaning2": "Pathian chuan thlarau tu mah phurrit aia tam a phur lo: mi tinin an thil tha tih apiang an hlawh chhuak a, a chhe zawng zawng an tuar bawk- ‘ Lalpa, kan theihnghilh emaw, kan tihsual emaw chuan hna min thawk suh. Lalpa, kan hmaa mite phurrit i phurh ang khan min phur suh. Lalpa, phurrit kan neih aia tam min phur suh. Min ngaidam la, min ngaidam la, min khawngaih rawh. Kan Vênghimtu i ni a, ringlote lakah min pui rawh.’",
+  "duaMeaning3": "‘Kan Lalpa, min kaihhruai hnuah kan thinlung hi kal bo suh. I khawngaihna min pe rawh: Nang hi Pe rengtu i ni.",
+  "duaMeaning4": "Lalpa, kei leh ka thlahte hian tawngtaina hi kan zawm zel theih nan phalsak rawh. Kan Lalpa, ka ngenna hi pawm rawh.",
+  "duaMeaning5": "tin, ngilnei takin an chungah inngaitlawm takin i thla kha han hniam la, ‘Lalpa, ka naupan laia min ngaihsak ang khan khawngaih rawh,’ ti rawh.",
+  "duaMeaning6": "Pathian, thunun thei tak chu chawimawiin awm rawh se. [Zâwlnei], thupuan chu a famkim hmain chhiar hmanhmawh suh la, ‘Lalpa, hriatnaah min tipung rawh!’ ti zawk rawh.",
+  "duaMeaning7": "[Zâwlnei], ‘Lalpa, ngaidam la, khawngaih rawh: Nang hi mi zawng zawng zînga khawngaihtu ber i ni,’ ti rawh.",
+  "duaMeaning8": "‘Kan Lalpa, kan nupui/pasal leh fate chungah lawmna min pe rawh’ tia tawngtai thinte. Nangmah hretute tan entawn tur tha tak min siam ang che’.",
   "morningZikr": "Zing Zikr",
   "eveningZikr": "Zanlai Zikr",
   "tasbih": "Tasbih a ni",
@@ -88,6 +171,26 @@
   "fasting": "Chaw nghei",
   "quranReading": "Quran chhiar dan tur",
   "prayers": "Tawngtaina",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Kar tin Hmasawnna",
   "monthlyProgress": "Thla tin Hmasawnna",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan thlaah a ni",
   "eidAlFitr": "Eid Al-Fitr a ni a",
   "eidAlAdha": "Eid Al-Adha neih a ni",
+  "islamicNewYear": "Islamic kum thar a ni",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan a ni",
+  "specialDayDateLaylatAlQadr": "27 Ramadan-ah a ni",
+  "specialDayDateEidAlFitr": "1 Shawwal a ni",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah a ni",
+  "specialDayDateIslamicNewYear": "1 Muharram a ni",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal-a chuan a ziak a",
   "laylatAlQadr": "Laylat Al-Qadr chuan a rawn ti a",
   "qiblaDirection": "Qibla Direction a ni",
   "compass": "Compass a ni",
@@ -108,6 +219,19 @@
   "north": "Hmar lam",
   "qiblaFound": "Qibla a hmu ta!",
   "turnDevice": "I device chu Qibla lam hawiin her rawh",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "He device ah hian Compass sensor a awm lo.",
+  "qiblaLocationRequiredTitle": "Qibla tan hmun mamawh a ni",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Hriattirna",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Hriattirna te",
   "prayerNotifications": "Tawngtai Hriattirna",
   "enableNotifications": "Notifications te chu enable rawh",
@@ -166,6 +290,13 @@
   "newTarget": "Target thar a ni",
   "targetCount": "Target: {target} tih a ni.",
   "tapToCount": "Tap la, chhiar rawh",
+  "zikrCompletedMashAllah": "A zo tawh! MashAllah chuan a rawn ti a",
+  "zikrMeaningSubhanAllah": "Allah hi famkim lohna zawng zawng aiin a chungnung zawk daih a ni.",
+  "zikrMeaningAlhamdulillah": "Fakna zawng zawng hi Allah ta a ni.",
+  "zikrMeaningAllahuAkbar": "Allah hi a Ropui ber a ni.",
+  "zikrMeaningLaIlahaIllallah": "Allah tih loh chu pathian dang a awm lo.",
+  "zikrMeaningAstaghfirullah": "Allah ngaihdamna ka dil a ni.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Allah kaltlanga tih loh chu thiltihtheihna leh chakna a awm lo.",
   "dailyChecklist": "Nitin Checklist",
   "qazaDebt": "Qaza (Leiba) 1.1.",
   "resetQazaData": "Qaza Data chu reset rawh",
@@ -209,6 +340,9 @@
   "dbPath": "Kawng: {path}.",
   "quranCheckFailed": "Quran check a hlawhchham: {error}",
   "audioVoice": "Audio Voice hmanga tih a ni",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle a ni",
   "ishaAngle": "Isha Angle chuan a rawn ti a",
   "qiblaCalibration": "Qibla Calibration tih a ni",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Qibla zawng turin rotate rawh",
   "calibrationRequiredFigure8": "Calibration a ngai a ni. Figure-8-a device chu rotate rawh.",
   "dailyVerse": "Nitin Châng",
+  "dailyVerseUnavailableTitle": "Nitin chang a awm lo",
+  "dailyVerseUnavailableBody": "Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.",
   "todaysIbadah": "Vawiin kan Ibadah",
   "quickAccess": "Quick Access a ni",
   "assistant": "Tanpuitu",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verified duas hi a la awm lo",
+  "duaUnavailableBody": "Verified daily duas hi he device ah hian sync a la ni lo. Unverified fallback ai chuan sourced duas load turin cloud source ah connect rawh.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Zing & Zanlai",
+  "duaCategoryTasbih": "Tasbih a ni",
+  "duaCategoryProtection": "Hriselna atana venhimna",
+  "duaCategoryBeginning": "A bul tanna",
+  "duaCategorySleep": "Mu",
+  "duaCategoryFoodDrink": "Ei leh in tur",
+  "duaCategoryForgiveness": "Ngaihdamna",
+  "duaCategoryHome": "In",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamic Zirna",
   "sukunAudioTitle": "Sukun Soundscapes te pawh a awm",
   "hadithCollections": "Hadith khawlkhawm te",
+  "hadithSourcePending": "Verified source a awm mek a ni",
+  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
+  "hadithUnavailableBody": "This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.",
   "paywallUnlockAll": "I thlarau lam zinkawng atan feature zawng zawng unlock rawh",
+  "premiumProductUnavailable": "Tunah hian Premium product a awm lo. Nakinah han lo en leh teh.",
+  "premiumPurchaseFailed": "Purchase pawh a zo thei lo. Khawngaihin han lo try leh teh.",
   "paywallFeature1Title": "Neural Assistant Plus a ni bawk",
   "paywallFeature1Desc": "AI hmanga Q&A tihkhawtlai loh",
   "paywallFeature2Title": "Offline a awm lo",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} tan download zawh a ni a, {failed} surah a hlawhchham ({downloaded}/{total} download a ni).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Network tihsual a awm. Khawngaihin han lo try leh teh.",
+  "placesLocationRequiredTitle": "Hmun a ngai a ni",
+  "placesLocationRequiredBody": "Mosque hnai tak tak, halal food, leh Islamic school te dik taka zawn theih nan hmun siam hmasa phawt ang che.",
+  "placesMapTilesUnavailableTitle": "Map tiles a awm lo",
+  "placesMapTilesUnavailableBody": "He build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.",
+  "placesDataSourceUnavailableTitle": "Data awm lohna hmunah a dah",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Hming hriat loh",
   "islamicPlaceFallback": "Islamic Hmun a ni",
-  "prayerNotificationTitle": "{prayerName} hun hman a ni.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} tawngtai a hun ta.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verified duas hi a la awm lo",
-  "duaUnavailableBody": "Verified daily duas hi he device ah hian sync a la ni lo. Unverified fallback ai chuan sourced duas load turin cloud source ah connect rawh.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Zing & Zanlai",
-  "duaCategoryTasbih": "Tasbih a ni",
-  "duaCategoryProtection": "Hriselna atana venhimna",
-  "duaCategoryBeginning": "A bul tanna",
-  "duaCategorySleep": "Mu",
-  "duaCategoryFoodDrink": "Ei leh in tur",
-  "duaCategoryForgiveness": "Ngaihdamna",
-  "duaCategoryHome": "In",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verified source a awm mek a ni",
-  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
-  "hadithUnavailableBody": "This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.",
-  "appErrorOccurred": "Error a awm a",
-  "appUnknownError": "Thil tihsual hriat loh",
-  "qiblaCompassErrorDetails": "Compass error: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "A zo tawh! MashAllah chuan a rawn ti a",
-  "zikrMeaningSubhanAllah": "Allah hi famkim lohna zawng zawng aiin a chungnung zawk daih a ni.",
-  "zikrMeaningAlhamdulillah": "Fakna zawng zawng hi Allah ta a ni.",
-  "zikrMeaningAllahuAkbar": "Allah hi a Ropui ber a ni.",
-  "zikrMeaningLaIlahaIllallah": "Allah tih loh chu pathian dang a awm lo.",
-  "zikrMeaningAstaghfirullah": "Allah ngaihdamna ka dil a ni.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Allah kaltlanga tih loh chu thiltihtheihna leh chakna a awm lo.",
   "asmaMeaning1": "Thil hlawkthlak tak",
   "asmaMeaning2": "Khawngaihtu",
   "asmaMeaning3": "Lal / Chatuan Lalpa",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Chatuan mi",
   "asmaMeaning97": "Ro luahtu chu",
   "asmaMeaning98": "Kaihhruaina Dik Ber",
-  "asmaMeaning99": "Damlo pakhat",
-  "duaMeaning1": "mi dangte chuan, ‘Kan Lalpa, khawvel leh a tawpah thil tha min pe la, Mei hrehawmna lakah min venghim rawh,’ tiin an tawngtai thin.",
-  "duaMeaning2": "Pathian chuan thlarau tu mah phurrit aia tam a phur lo: mi tinin an thil tha tih apiang an hlawh chhuak a, a chhe zawng zawng an tuar bawk- ‘ Lalpa, kan theihnghilh emaw, kan tihsual emaw chuan hna min thawk suh. Lalpa, kan hmaa mite phurrit i phurh ang khan min phur suh. Lalpa, phurrit kan neih aia tam min phur suh. Min ngaidam la, min ngaidam la, min khawngaih rawh. Kan Vênghimtu i ni a, ringlote lakah min pui rawh.’",
-  "duaMeaning3": "‘Kan Lalpa, min kaihhruai hnuah kan thinlung hi kal bo suh. I khawngaihna min pe rawh: Nang hi Pe rengtu i ni.",
-  "duaMeaning4": "Lalpa, kei leh ka thlahte hian tawngtaina hi kan zawm zel theih nan phalsak rawh. Kan Lalpa, ka ngenna hi pawm rawh.",
-  "duaMeaning5": "tin, ngilnei takin an chungah inngaitlawm takin i thla kha han hniam la, ‘Lalpa, ka naupan laia min ngaihsak ang khan khawngaih rawh,’ ti rawh.",
-  "duaMeaning6": "Pathian, thunun thei tak chu chawimawiin awm rawh se. [Zâwlnei], thupuan chu a famkim hmain chhiar hmanhmawh suh la, ‘Lalpa, hriatnaah min tipung rawh!’ ti zawk rawh.",
-  "duaMeaning7": "[Zâwlnei], ‘Lalpa, ngaidam la, khawngaih rawh: Nang hi mi zawng zawng zînga khawngaihtu ber i ni,’ ti rawh.",
-  "duaMeaning8": "‘Kan Lalpa, kan nupui/pasal leh fate chungah lawmna min pe rawh’ tia tawngtai thinte. Nangmah hretute tan entawn tur tha tak min siam ang che’.",
-  "islamicNewYear": "Islamic kum thar a ni",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan a ni",
-  "specialDayDateLaylatAlQadr": "27 Ramadan-ah a ni",
-  "specialDayDateEidAlFitr": "1 Shawwal a ni",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah a ni",
-  "specialDayDateIslamicNewYear": "1 Muharram a ni",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal-a chuan a ziak a",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh leh rawh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Loading tafsir a ni...",
-  "tafsirSourceLabel": "Tafsir atanga lo chhuak a ni",
-  "tafsirNoSurahFound": "He surah atan hian tafsir hmuh tur a awm lo.",
-  "tafsirNoAyahFound": "Ayah {ayah} tan tafsir hmuh tur a awm lo.",
-  "tafsirLoadFailed": "Tafsir chu a phur thei lo.",
-  "tafsirNoTextForAyah": "He ayah atan hian tafsir text a awm lo.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir source chuan HTTP {statusCode} error a rawn pe leh a.",
-  "tafsirNoEntriesReturned": "Tafsir source thlan chuan entry a rawn pe lo.",
-  "premiumProductUnavailable": "Tunah hian Premium product a awm lo. Nakinah han lo en leh teh.",
-  "premiumPurchaseFailed": "Purchase pawh a zo thei lo. Khawngaihin han lo try leh teh.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "{reciter} tan download zawh a ni a, {failed} surah a hlawhchham ({downloaded}/{total} download a ni).",
-  "placesLocationRequiredTitle": "Hmun a ngai a ni",
-  "placesLocationRequiredBody": "Mosque hnai tak tak, halal food, leh Islamic school te dik taka zawn theih nan hmun siam hmasa phawt ang che.",
-  "placesMapTilesUnavailableTitle": "Map tiles a awm lo",
-  "placesMapTilesUnavailableBody": "He build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "He device ah hian Compass sensor a awm lo.",
-  "adhanNotificationChannelName": "Adhan Hriattirna",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Quran content a load thei lo. Khawngaihin han lo try leh teh.",
-  "locationDetectionFailed": "I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh.",
-  "qiblaLocationRequiredTitle": "Qibla tan hmun mamawh a ni",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Data awm lohna hmunah a dah",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
-  "tafsirCacheUnavailable": "Verified tafsir hi offline ah a la awm lo. Browse hmain sourced tafsir dataset chu sync hmasa phawt ang che."
+  "asmaMeaning99": "Damlo pakhat"
 }

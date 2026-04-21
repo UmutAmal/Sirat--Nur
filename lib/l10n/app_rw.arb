@@ -1,6 +1,7 @@
 {
   "@@locale": "rw",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Inzira yumucyo wa kisilamu",
   "home": "Murugo",
   "quran": "Qor'an",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Igihe cyo {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Igihe kirageze cyo gusenga {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Ububiko & Ububiko",
   "clearCache": "Kuraho Cache",
   "cacheClearedSuccess": "Ubwihisho bwakuweho neza",
@@ -34,6 +51,7 @@
   "currentLocation": "Aho uherereye (GPS)",
   "locationServiceDisabled": "Serivisi yaho irahagarikwa.",
   "locationPermissionDenied": "Uruhushya rwaho rwanze.",
+  "locationDetectionFailed": "Could not detect your location. Please choose a city manually or try again.",
   "citiesCount": "{count} imigi",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Nta bisubizo byabonetse",
   "loading": "Kuremera ...",
   "error": "Ikosa",
+  "appErrorOccurred": "Habayeho ikosa",
+  "appUnknownError": "Ikosa ritazwi",
+  "quranLoadFailed": "Ibirimo Qor'ani ntibishobora kuremerwa. Nyamuneka gerageza.",
   "retry": "Ongera ugerageze",
+  "refreshAction": "Ongera",
   "cancel": "Kureka",
   "save": "Bika",
   "delete": "Siba",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Oya",
   "surah": "Surat",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Urupapuro",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Gutwara tafsir ...",
+  "tafsirSourceLabel": "Inkomoko ya Tafsir",
+  "tafsirNoSurahFound": "Nta tafsir wabonetse kuriyi sura.",
+  "tafsirNoAyahFound": "Nta tafsir yabonetse kuri ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ntiyashoboraga kuremererwa.",
+  "tafsirNoTextForAyah": "Nta nyandiko ya tafsir kuriyi ayah.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Inkomoko ya Tafsir yagaruye ikosa rya HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Inkomoko yatoranijwe ya tafsir yagarutse nta byinjira.",
+  "tafsirCacheUnavailable": "Tafsir yemejwe ntishobora kuboneka kumurongo. Gereranya na tafsir dataset ikomoka mbere yo gushakisha.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Ongeraho Ikimenyetso",
   "removeBookmark": "Kuraho Ikimenyetso",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "abandi basenga bati: 'Mwami wacu, duhe ibyiza muri iyi si ndetse no mu mperuka, kandi uturinde ububabare bw'umuriro.'",
+  "duaMeaning2": "Imana ntiremerera umuntu uwo ari we wese ibirenze ibyo ishobora kwihanganira: buri wese yunguka icyiza cyose yakoze, kandi akababara- 'Mwami, ntutujyane kumurimo niba twibagiwe cyangwa dukora amakosa. Mwami, ntuturemere nkuko waremereye abatubanjirije. Mwami, ntuturemere ibirenze ibyo dufite imbaraga zo kwihanganira. Utubabarire, utubabarire, kandi utugirire impuhwe. Uri Umurinzi, rero udufashe kurwanya abatizera. '",
+  "duaMeaning3": "'Mwami wacu, ntukemere ko imitima yacu itandukira umaze kutuyobora. Duhe imbabazi zawe: Uritanga Iteka.",
+  "duaMeaning4": "Nyagasani, mpa njye n'abazabakomokaho gukomeza amasengesho. Mwami wacu, emera icyifuzo cyanjye.",
+  "duaMeaning5": "manura ibaba ryawe wicishe bugufi ubagirire neza ubabwire uti: 'Mwami, ubagirire impuhwe, nk'uko banyitayeho nkiri muto.'",
+  "duaMeaning6": "Imana ikuzwe, niwe uyobora rwose. [Umuhanuzi], ntukihutire gusoma mbere yuko ihishurwa ryuzuye ariko vuga uti: 'Mwami, nyongerera ubumenyi!'",
+  "duaMeaning7": "Vuga [Umuhanuzi], 'Mwami, ubabarire kandi ugirire imbabazi: uri umunyembabazi muri bose.'",
+  "duaMeaning8": "abasenga, 'Mwami wacu, duhe umunezero mu bashakanye no ku rubyaro rwacu. Utugire ingero nziza kubakuzi '.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Kwiyiriza ubusa",
   "quranReading": "Gusoma Korowani",
   "prayers": "Amasengesho",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Iterambere rya buri cyumweru",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Umwaka mushya wa kisilamu",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramazani",
+  "specialDayDateLaylatAlQadr": "27 Ramazani",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Icyerekezo cya Qibla",
   "compass": "Compass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla yabonetse!",
   "turnDevice": "Hindura igikoresho cyawe kugirango uhangane na Qibla",
+  "qiblaCompassErrorDetails": "Ikosa rya compass: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho.",
+  "qiblaLocationRequiredTitle": "Ahantu hakenewe Qibla",
+  "qiblaLocationRequiredBody": "Shiraho aho uherereye mbere yo gukoresha Qibla compas kugirango icyerekezo kibare neza.",
+  "adhanNotificationChannelName": "Amatangazo ya Adhan",
+  "adhanNotificationChannelDescription": "Igihe cyamasengesho kiburira hamwe nijwi rya adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Kubara intego: {target}",
   "tapToCount": "Kanda kubara",
+  "zikrCompletedMashAllah": "Byarangiye! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah aruta kure cyane kudatungana.",
+  "zikrMeaningAlhamdulillah": "Ibisingizo byose ni ibya Allah.",
+  "zikrMeaningAllahuAkbar": "Allah niwe Ukomeye.",
+  "zikrMeaningLaIlahaIllallah": "Nta yindi mana ibaho uretse Allah.",
+  "zikrMeaningAstaghfirullah": "Ndashaka imbabazi za Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nta mbaraga n'imbaraga keretse binyuze kuri Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Ijwi",
+  "audioVoiceMisharyAlafasy": "Umugabo (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Umugabo (Abdul Basit)",
+  "audioVoiceSudais": "Umugabo (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration irakenewe. Kuzenguruka igikoresho mumashusho-8.",
   "dailyVerse": "Umurongo wa buri munsi",
+  "dailyVerseUnavailableTitle": "Umurongo wa buri munsi ntushobora kuboneka",
+  "dailyVerseUnavailableBody": "Kugenzura imirongo ya buri munsi ntabwo yashyizweho kubwubu. Ihuze isoko yibicu cyangwa uhuze cache yagenzuwe mbere yo gushakisha.",
   "todaysIbadah": "Uyu munsi Ibadah",
   "quickAccess": "Kubona Byihuse",
   "assistant": "Umufasha",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duas yemejwe ntabwo iraboneka",
+  "duaUnavailableBody": "Kugenzura duas buri munsi ntabwo byahujwe niki gikoresho kugeza ubu. Ihuze nigicu kugirango utware duas ikomoka aho gusubira inyuma.",
+  "duaCategoryQuranic": "Qor'an dua",
+  "duaCategoryMorningEvening": "Igitondo & nimugoroba",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Kurinda",
+  "duaCategoryBeginning": "Intangiriro",
+  "duaCategorySleep": "Sinzira",
+  "duaCategoryFoodDrink": "Ibiryo & Ibinyobwa",
+  "duaCategoryForgiveness": "Kubabarira",
+  "duaCategoryHome": "Murugo",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Uburezi bwa kisilamu",
   "sukunAudioTitle": "Sukun",
   "hadithCollections": "Ibyegeranyo bya Hadithi",
+  "hadithSourcePending": "Inkomoko yemejwe itegereje",
+  "hadithUnavailableTitle": "Ibyegeranyo bya Hadithi byemejwe ntibiraboneka",
+  "hadithUnavailableBody": "Iyi nyubako iracyaterwa nigaburo rya Hadithi yo hanze itagenzuwe. Gushakisha Hadith bigumaho kugeza igihe dataset ikomoka.",
   "paywallUnlockAll": "Fungura ibintu byose byurugendo rwawe rwumwuka",
+  "premiumProductUnavailable": "Igicuruzwa cyiza ntikiboneka nonaha. Nyamuneka gerageza nyuma.",
+  "premiumPurchaseFailed": "Kugura ntibishobora kurangira. Nyamuneka gerageza.",
   "paywallFeature1Title": "Umufasha wa Neural Wongeyeho",
   "paywallFeature1Desc": "Imipaka itagira imipaka ikoreshwa na Q&A",
   "paywallFeature2Title": "Imipaka itagira imipaka",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Gusiba dosiye kumurongo kuri {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Ikosa ry'urusobe. Nyamuneka gerageza.",
+  "placesLocationRequiredTitle": "Ahantu hasabwa",
+  "placesLocationRequiredBody": "Shiraho ahantu mbere kugirango imisigiti iri hafi, ibiryo bya halale, n'amashuri ya kisilamu birashobora gushakishwa neza.",
+  "placesMapTilesUnavailableTitle": "Ikarita yerekana ikarita",
+  "placesMapTilesUnavailableBody": "Ikarita yagenzuwe neza ntabwo yashyizweho kugirango yubake. Ahantu hegereye harashobora gutwarwa aho wabitswe.",
+  "placesDataSourceUnavailableTitle": "Shyira amakuru ataboneka",
+  "placesDataSourceUnavailableBody": "Ahantu hagenzuwe amakuru yanyuma ntabwo yashyizweho kugirango yubake. Shyira PLACES_OVERPASS_API_URL kuri proksi yemewe cyangwa uyitanga mbere yo gushakisha hafi.",
   "unknownPlaceName": "Izina ritazwi",
   "islamicPlaceFallback": "Ahantu h'ubuyisilamu",
-  "prayerNotificationTitle": "Igihe cyo {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Igihe kirageze cyo gusenga {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duas yemejwe ntabwo iraboneka",
-  "duaUnavailableBody": "Kugenzura duas buri munsi ntabwo byahujwe niki gikoresho kugeza ubu. Ihuze nigicu kugirango utware duas ikomoka aho gusubira inyuma.",
-  "duaCategoryQuranic": "Qor'an dua",
-  "duaCategoryMorningEvening": "Igitondo & nimugoroba",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Kurinda",
-  "duaCategoryBeginning": "Intangiriro",
-  "duaCategorySleep": "Sinzira",
-  "duaCategoryFoodDrink": "Ibiryo & Ibinyobwa",
-  "duaCategoryForgiveness": "Kubabarira",
-  "duaCategoryHome": "Murugo",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Inkomoko yemejwe itegereje",
-  "hadithUnavailableTitle": "Ibyegeranyo bya Hadithi byemejwe ntibiraboneka",
-  "hadithUnavailableBody": "Iyi nyubako iracyaterwa nigaburo rya Hadithi yo hanze itagenzuwe. Gushakisha Hadith bigumaho kugeza igihe dataset ikomoka.",
-  "appErrorOccurred": "Habayeho ikosa",
-  "appUnknownError": "Ikosa ritazwi",
-  "qiblaCompassErrorDetails": "Ikosa rya compass: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Byarangiye! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah aruta kure cyane kudatungana.",
-  "zikrMeaningAlhamdulillah": "Ibisingizo byose ni ibya Allah.",
-  "zikrMeaningAllahuAkbar": "Allah niwe Ukomeye.",
-  "zikrMeaningLaIlahaIllallah": "Nta yindi mana ibaho uretse Allah.",
-  "zikrMeaningAstaghfirullah": "Ndashaka imbabazi za Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Nta mbaraga n'imbaraga keretse binyuze kuri Allah.",
   "asmaMeaning1": "Umugiraneza",
   "asmaMeaning2": "Nyirimpuhwe",
   "asmaMeaning3": "Umwami / Umwami w'iteka",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Uhoraho",
   "asmaMeaning97": "Umurage",
   "asmaMeaning98": "Umuyobozi Ukiranuka",
-  "asmaMeaning99": "Umurwayi",
-  "duaMeaning1": "abandi basenga bati: 'Mwami wacu, duhe ibyiza muri iyi si ndetse no mu mperuka, kandi uturinde ububabare bw'umuriro.'",
-  "duaMeaning2": "Imana ntiremerera umuntu uwo ari we wese ibirenze ibyo ishobora kwihanganira: buri wese yunguka icyiza cyose yakoze, kandi akababara- 'Mwami, ntutujyane kumurimo niba twibagiwe cyangwa dukora amakosa. Mwami, ntuturemere nkuko waremereye abatubanjirije. Mwami, ntuturemere ibirenze ibyo dufite imbaraga zo kwihanganira. Utubabarire, utubabarire, kandi utugirire impuhwe. Uri Umurinzi, rero udufashe kurwanya abatizera. '",
-  "duaMeaning3": "'Mwami wacu, ntukemere ko imitima yacu itandukira umaze kutuyobora. Duhe imbabazi zawe: Uritanga Iteka.",
-  "duaMeaning4": "Nyagasani, mpa njye n'abazabakomokaho gukomeza amasengesho. Mwami wacu, emera icyifuzo cyanjye.",
-  "duaMeaning5": "manura ibaba ryawe wicishe bugufi ubagirire neza ubabwire uti: 'Mwami, ubagirire impuhwe, nk'uko banyitayeho nkiri muto.'",
-  "duaMeaning6": "Imana ikuzwe, niwe uyobora rwose. [Umuhanuzi], ntukihutire gusoma mbere yuko ihishurwa ryuzuye ariko vuga uti: 'Mwami, nyongerera ubumenyi!'",
-  "duaMeaning7": "Vuga [Umuhanuzi], 'Mwami, ubabarire kandi ugirire imbabazi: uri umunyembabazi muri bose.'",
-  "duaMeaning8": "abasenga, 'Mwami wacu, duhe umunezero mu bashakanye no ku rubyaro rwacu. Utugire ingero nziza kubakuzi '.",
-  "islamicNewYear": "Umwaka mushya wa kisilamu",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramazani",
-  "specialDayDateLaylatAlQadr": "27 Ramazani",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Ongera",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Gutwara tafsir ...",
-  "tafsirSourceLabel": "Inkomoko ya Tafsir",
-  "tafsirNoSurahFound": "Nta tafsir wabonetse kuriyi sura.",
-  "tafsirNoAyahFound": "Nta tafsir yabonetse kuri ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir ntiyashoboraga kuremererwa.",
-  "tafsirNoTextForAyah": "Nta nyandiko ya tafsir kuriyi ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Inkomoko ya Tafsir yagaruye ikosa rya HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Inkomoko yatoranijwe ya tafsir yagarutse nta byinjira.",
-  "premiumProductUnavailable": "Igicuruzwa cyiza ntikiboneka nonaha. Nyamuneka gerageza nyuma.",
-  "premiumPurchaseFailed": "Kugura ntibishobora kurangira. Nyamuneka gerageza.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Inzira yumucyo wa kisilamu",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Ahantu hasabwa",
-  "placesLocationRequiredBody": "Shiraho ahantu mbere kugirango imisigiti iri hafi, ibiryo bya halale, n'amashuri ya kisilamu birashobora gushakishwa neza.",
-  "placesMapTilesUnavailableTitle": "Ikarita yerekana ikarita",
-  "placesMapTilesUnavailableBody": "Ikarita yagenzuwe neza ntabwo yashyizweho kugirango yubake. Ahantu hegereye harashobora gutwarwa aho wabitswe.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Umugabo (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Umugabo (Abdul Basit)",
-  "audioVoiceSudais": "Umugabo (Sudais)",
-  "qiblaSensorUnavailable": "Rukuruzi ya Compass ntishobora kuboneka kuri iki gikoresho.",
-  "adhanNotificationChannelName": "Amatangazo ya Adhan",
-  "adhanNotificationChannelDescription": "Igihe cyamasengesho kiburira hamwe nijwi rya adhan.",
-  "quranLoadFailed": "Ibirimo Qor'ani ntibishobora kuremerwa. Nyamuneka gerageza.",
-  "locationDetectionFailed": "Could not detect your location. Please choose a city manually or try again.",
-  "qiblaLocationRequiredTitle": "Ahantu hakenewe Qibla",
-  "qiblaLocationRequiredBody": "Shiraho aho uherereye mbere yo gukoresha Qibla compas kugirango icyerekezo kibare neza.",
-  "placesDataSourceUnavailableTitle": "Shyira amakuru ataboneka",
-  "placesDataSourceUnavailableBody": "Ahantu hagenzuwe amakuru yanyuma ntabwo yashyizweho kugirango yubake. Shyira PLACES_OVERPASS_API_URL kuri proksi yemewe cyangwa uyitanga mbere yo gushakisha hafi.",
-  "tafsirCacheUnavailable": "Tafsir yemejwe ntishobora kuboneka kumurongo. Gereranya na tafsir dataset ikomoka mbere yo gushakisha."
+  "asmaMeaning99": "Umurwayi"
 }

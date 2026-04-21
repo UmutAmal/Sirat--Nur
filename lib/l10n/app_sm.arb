@@ -1,6 +1,7 @@
 {
   "@@locale": "sm",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Ala faa-Islam o le Malamalama",
   "home": "Aiga",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Taimi mo {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ua oo i le taimi e tatalo ai {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Fa'amatalaga & Teuina",
   "clearCache": "Fa'amama Cache",
   "cacheClearedSuccess": "Ua manuia le kilia o le cache",
@@ -34,6 +51,7 @@
   "currentLocation": "Nofoaga o iai nei (GPS)",
   "locationServiceDisabled": "Ua le atoatoa le auaunaga mo nofoaga.",
   "locationPermissionDenied": "Te'ena le faatagaga mo nofoaga.",
+  "locationDetectionFailed": "Le mafai ona iloa lou nofoaga. Faamolemole filifili ma le lima se aai pe toe taumafai.",
   "citiesCount": "{count} aai",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Leai se fa'ai'uga na maua",
   "loading": "utaina...",
   "error": "Sese",
+  "appErrorOccurred": "Ua tupu se mea sese",
+  "appUnknownError": "Sese le iloa",
+  "quranLoadFailed": "E le mafai ona utaina mataupu o le Quran. Fa'amolemole toe taumafai.",
   "retry": "Toe taumafai",
+  "refreshAction": "Toe faafou",
   "cancel": "Fa'aleaogaina",
   "save": "Faasaoina",
   "delete": "Aveese",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Leai",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Itulau",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tu'u tafsir...",
+  "tafsirSourceLabel": "Punavai Tafsir",
+  "tafsirNoSurahFound": "Leai se tafsir na maua mo lenei surah.",
+  "tafsirNoAyahFound": "Leai se tafsir na maua mo ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Sa le mafai ona utaina Tafsir.",
+  "tafsirNoTextForAyah": "Leai se tusitusiga tafsir mo lenei papa.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Na toe fa'afo'i mai e le puna Tafsir se HTTP {statusCode} sese.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "O le puna tafsir ua filifilia e leai ni fa'amaumauga.",
+  "tafsirCacheUnavailable": "Fa'amaonia tafsir e le'o maua tuimotu. Fa'asa'o se fa'amatalaga fa'amatalaga fa'apogai a'o le'i su'esu'e.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Fa'aopoopo le Fa'ailoga",
   "removeBookmark": "Aveese Faailoga Tusi",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "o isi e tatalo, ‘Lo matou Alii e, ia e foa’i mai ia i matou le lelei i lenei lalolagi ma le olaga a sau, ma ia e puipuia i matou mai le puapuaga o le afi.",
+  "duaMeaning2": "E le mamafa e le Atua se agaga i se mea e sili atu nai lo le mea e mafai ona ia gafatia: e maua e le tagata lava ia so o se mea lelei na ia faia, ma e mafatia i ona leaga-‘Le Alii e, aua e te faatiga ia i matou pe a galo pe faia mea sese. Le Ali‘i e, ‘aua ‘e te fa‘atigāina i matou e pei ‘ona e fa‘atigāina i ē na muamua ‘iā te i matou. Le Ali‘i e, ‘aua ‘e te fa‘atigāina i matou i mea e sili atu nai lo o le malosi ‘ua matou amoina. Ia e faamagalo mai ia i matou, ia e faamagalo mai ia i matou, ma ia e alofa mai ia i matou. O oe o lo matou Puipui, o lea ia fesoasoani mai ia i matou e tetee atu i e le talitonu.’",
+  "duaMeaning3": "‘Lo matou Ali‘i e, ‘aua ne‘i fa‘ate‘a‘eseina o matou loto pe a uma ‘ona e ta‘ita‘iina i matou. Foai mai ia i matou lou alofa mutimutivale: O oe o le Foa’i Mai.",
+  "duaMeaning4": "Le Alii e, ia e foaʻi mai ia te aʻu ma laʻu fanau ona tausia le tatalo. Le Alii e, talia mai la’u talosaga.",
+  "duaMeaning5": "ma tuu ifo lou apaau i le lotomaualalo ia i latou i le agalelei ma faapea atu, ‘Le Alii e, ia e alofa mai ia te i latou, e pei ona latou tausia a’u a o ou itiiti.",
+  "duaMeaning6": "ia faaeaina le Atua, o lē e pule moni lava. [Perofeta], aua e te faanatinati e tauloto a o lei atoatoa le faaaliga ae ia faapea atu, ‘Le Alii e, ia faateleina lo’u malamalama!’",
+  "duaMeaning7": "Fai atu ia [Perofeta], ‘Le Alii e, ia e faamagalo ma alofa mai: o oe lava e sili ona alofa mutimutivale i mea uma.’",
+  "duaMeaning8": "o ē tatalo, ‘Lo matou Ali‘i e, ia e foa‘i mai le ‘oli‘oli i o matou taitoalua ma a matou fānau. Ia fai i matou ma fa'aa'oa'oga lelei ia i latou o lo'o iloa oe'.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Anapogi",
   "quranReading": "Faitauina o le Quran",
   "prayers": "Tatalo",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Alualu i Vaiaso",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Tausaga Fou Islama",
+  "mawlidAnNabi": "Maulid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Sāwalu",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muarama",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Ituaiga Qibla",
   "compass": "Tapasa",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Ua maua Qibla!",
   "turnDevice": "Liliu lau masini e faasaga i le Qibla",
+  "qiblaCompassErrorDetails": "Sese tapasa: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "E le o maua le masini tapasa i lenei masini.",
+  "qiblaLocationRequiredTitle": "Manaomia nofoaga mo Qibla",
+  "qiblaLocationRequiredBody": "Seti lou nofoaga sa'o a'o le'i fa'aogaina le tapasa Qibla ina ia mafai ona fa'atatau tonu le itu.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Talosaga taimi tatalo ma le leo azan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Faitauga fa'atatau: {target}",
   "tapToCount": "Tap e faitau",
+  "zikrCompletedMashAllah": "Ua mae'a! MashAllah",
+  "zikrMeaningSubhanAllah": "E sili mamao atu Allah i mea le atoatoa uma.",
+  "zikrMeaningAlhamdulillah": "O viiga uma e ia Allah.",
+  "zikrMeaningAllahuAkbar": "O Allah le Silisiliese.",
+  "zikrMeaningLaIlahaIllallah": "E leai se atua na o Allah.",
+  "zikrMeaningAstaghfirullah": "Ou te sailia le faamagaloga a le Atua.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "E leai se malosi ma leai se malosi vagana ai e ala mai ia Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Leo Leo",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "E mana'omia le fa'avasegaina. Su'e le masini ile ata-8.",
   "dailyVerse": "Fuaiupu i Aso Taitasi",
+  "dailyVerseUnavailableTitle": "E le maua le fuaiupu i aso taitasi",
+  "dailyVerseUnavailableBody": "E le'i fa'atulagaina le anotusi o fuaiupu i aso ta'itasi mo lenei faufale. Fa'afeso'ota'i ile puna o ao pe fa'amaopoopo se fa'aoga fa'amaonia a'o le'i su'esu'e.",
   "todaysIbadah": "Ibadah i aso nei",
   "quickAccess": "Avanoa vave",
   "assistant": "Fesoasoani",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "E le'o avanoa nei duas fa'amaonia",
+  "duaUnavailableBody": "E le'i fa'asa'o le duas fa'amaonia i aso uma i lenei masini. Fa'afeso'ota'i i le puna o ao e fa'amomoli mai ai duas ae le o se fa'afouga e le'i fa'amaonia.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Taeao & Afiafi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Puipuiga",
+  "duaCategoryBeginning": "Amataga",
+  "duaCategorySleep": "Moe",
+  "duaCategoryFoodDrink": "Mea'ai & Meainu",
+  "duaCategoryForgiveness": "Fa'amagalo",
+  "duaCategoryHome": "Aiga",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Aoaoga Islama",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Tu'ufa'atasiga o Hadith",
+  "hadithSourcePending": "O lo'o fa'atali le puna fa'amaonia",
+  "hadithUnavailableTitle": "E le'i maua ni fa'aputuga o hadith fa'amaonia",
+  "hadithUnavailableBody": "O lenei fausiaina o loʻo faʻalagolago pea i luga o se fafaga hadith fafo e leʻi faʻamaonia. E tumau le fa'aletonu o su'esu'ega o Hadith se'ia o'o ina fa'amaopoopo se fa'amaumauga.",
   "paywallUnlockAll": "Tatala vaega uma mo lau malaga faaleagaga",
+  "premiumProductUnavailable": "O oloa fa'apitoa e le'o maua i le taimi nei. Faamolemole toe taumafai mulimuli ane.",
+  "premiumPurchaseFailed": "Sa le mafai ona mae'a le fa'atau. Fa'amolemole toe taumafai.",
   "paywallFeature1Title": "Fesoasoani Neural Plus",
   "paywallFeature1Desc": "Q&A e leai se gataaga e fa'amalosia ai le AI",
   "paywallFeature2Title": "E le gata i luga ole Initaneti",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Ua mae'a le la'uina mo {reciter} ma {failed} surah e le'i manuia ({downloaded}/{total} na sii mai).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Ave'ese faila e lē faaaogāina ai le initaneti mo {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Sese feso'otaiga. Fa'amolemole toe taumafai.",
+  "placesLocationRequiredTitle": "Manaomia nofoaga",
+  "placesLocationRequiredBody": "Fa'atulaga muamua se nofoaga ina ia mafai ona su'esu'e sa'o faletapuai lata ane, mea'ai halal, ma a'oga Isalama.",
+  "placesMapTilesUnavailableTitle": "E le o avanoa pepa fa'afanua",
+  "placesMapTilesUnavailableBody": "E le'i fa'atulagaina se fa'apogai o fa'afanua fa'amaonia mo lenei faufale. O nofoaga lata ane e mafai lava ona la'u mai lou nofoaga sefe.",
+  "placesDataSourceUnavailableTitle": "Le avanoa fa'amatalaga nofoaga",
+  "placesDataSourceUnavailableBody": "E le'i fa'atulagaina se nofoaga fa'amautu fa'amaumauga mo lenei faufale. Seti le PLACES_OVERPASS_API_URL i se sui po'o se kamupani fa'amaonia a'o le'i fa'agasolo su'esu'ega lata ane.",
   "unknownPlaceName": "Le Igoa",
   "islamicPlaceFallback": "Nofoaga Isalama",
-  "prayerNotificationTitle": "Taimi mo {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ua oo i le taimi e tatalo ai {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "E le'o avanoa nei duas fa'amaonia",
-  "duaUnavailableBody": "E le'i fa'asa'o le duas fa'amaonia i aso uma i lenei masini. Fa'afeso'ota'i i le puna o ao e fa'amomoli mai ai duas ae le o se fa'afouga e le'i fa'amaonia.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Taeao & Afiafi",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Puipuiga",
-  "duaCategoryBeginning": "Amataga",
-  "duaCategorySleep": "Moe",
-  "duaCategoryFoodDrink": "Mea'ai & Meainu",
-  "duaCategoryForgiveness": "Fa'amagalo",
-  "duaCategoryHome": "Aiga",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "O lo'o fa'atali le puna fa'amaonia",
-  "hadithUnavailableTitle": "E le'i maua ni fa'aputuga o hadith fa'amaonia",
-  "hadithUnavailableBody": "O lenei fausiaina o loʻo faʻalagolago pea i luga o se fafaga hadith fafo e leʻi faʻamaonia. E tumau le fa'aletonu o su'esu'ega o Hadith se'ia o'o ina fa'amaopoopo se fa'amaumauga.",
-  "appErrorOccurred": "Ua tupu se mea sese",
-  "appUnknownError": "Sese le iloa",
-  "qiblaCompassErrorDetails": "Sese tapasa: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ua mae'a! MashAllah",
-  "zikrMeaningSubhanAllah": "E sili mamao atu Allah i mea le atoatoa uma.",
-  "zikrMeaningAlhamdulillah": "O viiga uma e ia Allah.",
-  "zikrMeaningAllahuAkbar": "O Allah le Silisiliese.",
-  "zikrMeaningLaIlahaIllallah": "E leai se atua na o Allah.",
-  "zikrMeaningAstaghfirullah": "Ou te sailia le faamagaloga a le Atua.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "E leai se malosi ma leai se malosi vagana ai e ala mai ia Allah.",
   "asmaMeaning1": "Le Alofa",
   "asmaMeaning2": "Le Alofa Mutimutivale",
   "asmaMeaning3": "Le Tupu / Alii Faavavau",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "O Le Faavavau",
   "asmaMeaning97": "O le Suli",
   "asmaMeaning98": "Le Ta'ita'i Sili Amiotonu",
-  "asmaMeaning99": "O Le Onosa'i",
-  "duaMeaning1": "o isi e tatalo, ‘Lo matou Alii e, ia e foa’i mai ia i matou le lelei i lenei lalolagi ma le olaga a sau, ma ia e puipuia i matou mai le puapuaga o le afi.",
-  "duaMeaning2": "E le mamafa e le Atua se agaga i se mea e sili atu nai lo le mea e mafai ona ia gafatia: e maua e le tagata lava ia so o se mea lelei na ia faia, ma e mafatia i ona leaga-‘Le Alii e, aua e te faatiga ia i matou pe a galo pe faia mea sese. Le Ali‘i e, ‘aua ‘e te fa‘atigāina i matou e pei ‘ona e fa‘atigāina i ē na muamua ‘iā te i matou. Le Ali‘i e, ‘aua ‘e te fa‘atigāina i matou i mea e sili atu nai lo o le malosi ‘ua matou amoina. Ia e faamagalo mai ia i matou, ia e faamagalo mai ia i matou, ma ia e alofa mai ia i matou. O oe o lo matou Puipui, o lea ia fesoasoani mai ia i matou e tetee atu i e le talitonu.’",
-  "duaMeaning3": "‘Lo matou Ali‘i e, ‘aua ne‘i fa‘ate‘a‘eseina o matou loto pe a uma ‘ona e ta‘ita‘iina i matou. Foai mai ia i matou lou alofa mutimutivale: O oe o le Foa’i Mai.",
-  "duaMeaning4": "Le Alii e, ia e foaʻi mai ia te aʻu ma laʻu fanau ona tausia le tatalo. Le Alii e, talia mai la’u talosaga.",
-  "duaMeaning5": "ma tuu ifo lou apaau i le lotomaualalo ia i latou i le agalelei ma faapea atu, ‘Le Alii e, ia e alofa mai ia te i latou, e pei ona latou tausia a’u a o ou itiiti.",
-  "duaMeaning6": "ia faaeaina le Atua, o lē e pule moni lava. [Perofeta], aua e te faanatinati e tauloto a o lei atoatoa le faaaliga ae ia faapea atu, ‘Le Alii e, ia faateleina lo’u malamalama!’",
-  "duaMeaning7": "Fai atu ia [Perofeta], ‘Le Alii e, ia e faamagalo ma alofa mai: o oe lava e sili ona alofa mutimutivale i mea uma.’",
-  "duaMeaning8": "o ē tatalo, ‘Lo matou Ali‘i e, ia e foa‘i mai le ‘oli‘oli i o matou taitoalua ma a matou fānau. Ia fai i matou ma fa'aa'oa'oga lelei ia i latou o lo'o iloa oe'.",
-  "islamicNewYear": "Tausaga Fou Islama",
-  "mawlidAnNabi": "Maulid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Sāwalu",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muarama",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Toe faafou",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Tu'u tafsir...",
-  "tafsirSourceLabel": "Punavai Tafsir",
-  "tafsirNoSurahFound": "Leai se tafsir na maua mo lenei surah.",
-  "tafsirNoAyahFound": "Leai se tafsir na maua mo ayah {ayah}.",
-  "tafsirLoadFailed": "Sa le mafai ona utaina Tafsir.",
-  "tafsirNoTextForAyah": "Leai se tusitusiga tafsir mo lenei papa.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Na toe fa'afo'i mai e le puna Tafsir se HTTP {statusCode} sese.",
-  "tafsirNoEntriesReturned": "O le puna tafsir ua filifilia e leai ni fa'amaumauga.",
-  "premiumProductUnavailable": "O oloa fa'apitoa e le'o maua i le taimi nei. Faamolemole toe taumafai mulimuli ane.",
-  "premiumPurchaseFailed": "Sa le mafai ona mae'a le fa'atau. Fa'amolemole toe taumafai.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Ala faa-Islam o le Malamalama",
-  "downloadPartiallyFinishedForReciter": "Ua mae'a le la'uina mo {reciter} ma {failed} surah e le'i manuia ({downloaded}/{total} na sii mai).",
-  "placesLocationRequiredTitle": "Manaomia nofoaga",
-  "placesLocationRequiredBody": "Fa'atulaga muamua se nofoaga ina ia mafai ona su'esu'e sa'o faletapuai lata ane, mea'ai halal, ma a'oga Isalama.",
-  "placesMapTilesUnavailableTitle": "E le o avanoa pepa fa'afanua",
-  "placesMapTilesUnavailableBody": "E le'i fa'atulagaina se fa'apogai o fa'afanua fa'amaonia mo lenei faufale. O nofoaga lata ane e mafai lava ona la'u mai lou nofoaga sefe.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "E le o maua le masini tapasa i lenei masini.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Talosaga taimi tatalo ma le leo azan.",
-  "quranLoadFailed": "E le mafai ona utaina mataupu o le Quran. Fa'amolemole toe taumafai.",
-  "locationDetectionFailed": "Le mafai ona iloa lou nofoaga. Faamolemole filifili ma le lima se aai pe toe taumafai.",
-  "qiblaLocationRequiredTitle": "Manaomia nofoaga mo Qibla",
-  "qiblaLocationRequiredBody": "Seti lou nofoaga sa'o a'o le'i fa'aogaina le tapasa Qibla ina ia mafai ona fa'atatau tonu le itu.",
-  "placesDataSourceUnavailableTitle": "Le avanoa fa'amatalaga nofoaga",
-  "placesDataSourceUnavailableBody": "E le'i fa'atulagaina se nofoaga fa'amautu fa'amaumauga mo lenei faufale. Seti le PLACES_OVERPASS_API_URL i se sui po'o se kamupani fa'amaonia a'o le'i fa'agasolo su'esu'ega lata ane.",
-  "tafsirCacheUnavailable": "Fa'amaonia tafsir e le'o maua tuimotu. Fa'asa'o se fa'amatalaga fa'amatalaga fa'apogai a'o le'i su'esu'e."
+  "asmaMeaning99": "O Le Onosa'i"
 }

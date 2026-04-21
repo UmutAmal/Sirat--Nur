@@ -953,6 +953,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get dailyVerse => 'दैनिक छंद के बा';
 
   @override
+  String get dailyVerseUnavailableTitle => 'दैनिक छंद अनुपलब्ध बा';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'सत्यापन कइल गइल दैनिक छंद सामग्री एह बिल्ड खातिर अबहीं ले कॉन्फ़िगर नइखे कइल गइल। ब्राउजिंग से पहिले क्लाउड स्रोत से कनेक्ट करीं भा कवनो सत्यापन कैश के सिंक करीं.';
+
+  @override
   String get todaysIbadah => 'आज के इबादा के बा';
 
   @override

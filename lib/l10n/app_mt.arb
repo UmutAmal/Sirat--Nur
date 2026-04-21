@@ -1,6 +1,7 @@
 {
   "@@locale": "mt",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Mod Iżlamiku tad-Dawl",
   "home": "Dar",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Ħin għal {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Wasal iż-żmien li nitolbu {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Dejta u Ħażna",
   "clearCache": "Ċar Cache",
   "cacheClearedSuccess": "Il-cache tnaddaf b'suċċess",
@@ -34,6 +51,7 @@
   "currentLocation": "Post kurrenti (GPS)",
   "locationServiceDisabled": "Is-servizz tal-lokazzjoni huwa diżattivat.",
   "locationPermissionDenied": "Permess għall-post miċħud.",
+  "locationDetectionFailed": "Ma setgħetx tiskopri l-lokalità tiegħek. Jekk jogħġbok agħżel belt manwalment jew erġa' pprova.",
   "citiesCount": "{count} bliet",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ma nstab l-ebda riżultat",
   "loading": "Tagħbija...",
   "error": "Żball",
+  "appErrorOccurred": "Sar żball",
+  "appUnknownError": "Żball mhux magħruf",
+  "quranLoadFailed": "Il-kontenut tal-Quran ma setax jitgħabba. Jekk jogħġbok erġa' pprova.",
   "retry": "Ipprova mill-ġdid",
+  "refreshAction": "Aġġorna",
   "cancel": "Ikkanċella",
   "save": "Ħlief",
   "delete": "Ħassar",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nru",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Paġna",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tagħbija tafsir...",
+  "tafsirSourceLabel": "sors Tafsir",
+  "tafsirNoSurahFound": "L-ebda tafsir ma nstab għal din is-surah.",
+  "tafsirNoAyahFound": "L-ebda tafsir ma nstab għal ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ma setax jitgħabba.",
+  "tafsirNoTextForAyah": "Nru tafsir test għal dan ayah.",
+  "tafsirDownloadingProgress": "Niżżel tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tagħbija tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Is-sors Tafsir irritorna żball HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Is-sors ta' tafsir magħżul ma rritorna l-ebda dħul.",
+  "tafsirCacheUnavailable": "Tafsir ivverifikat għadu mhux disponibbli offline. Issinkronizza sett tad-dejta ta' tafsir li ġej qabel ma tibbrawżja.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Żid Bookmark",
   "removeBookmark": "Neħħi Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "oħrajn jitolbu, ‘Mulej tagħna, agħtina l-ġid f’din id-dinja u f’hawn ta’ wara, u ħarisna mit-turment tan-Nar.’",
+  "duaMeaning2": "Alla ma jgħabbi l-ebda ruħ b’aktar minn dak li jiflaħ: kull wieħed jikseb kull ġid li jkun għamel, u jbati l-ħażin tiegħu- ‘Mulej, teħodnix f’xogħol jekk ninsew jew niżbaljaw. Mulej, tgħabbinix bħalma int għabbit lil dawk ta’ qabilna. Mulej, tgħabbinix b’aktar milli għandna s-saħħa x’niġorru. Aħfirna, aħfrilna, u ħniena minna. Int il-​Protettur tagħna, allura għinna kontra dawk li ma jemmnux.’",
+  "duaMeaning3": "‘Mulej tagħna, tħallix qalbna tiddevja wara li Inti tkun ggwidatna. Agħtina l-ħniena Tiegħek: Int Dak li Dejjem Tagħti.",
+  "duaMeaning4": "Mulej, agħti li jien u nisli nżommu t-talb. Sidna, aċċetta t-talba tiegħi.",
+  "duaMeaning5": "u baxxi ġwenħajk bl-umiltà lejhom bil-qalb tajba u għid, ‘Mulej, ħenn minnhom, bħalma kienu jieħdu ħsiebi meta kont żgħir.’",
+  "duaMeaning6": "għola jkun Alla, dak li tassew għandu kontroll. [Profeta], tgħaġġlax biex tirreċita qabel ir-rivelazzjoni tkun kompluta għal kollox imma għid, ‘Mulej, ikabbarni fl-għarfien!’",
+  "duaMeaning7": "Għid [Profeta], ‘Mulej, aħfer u ħniena: Inti l-aktar ħanin minn kulħadd.’",
+  "duaMeaning8": "dawk li jitolbu, ‘Mulej tagħna, agħtina l-ferħ fil-miżżewġin u n-nisel tagħna. Agħmilna eżempji tajbin għal dawk li huma konxji minnek’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Sawm",
   "quranReading": "Qari tal-Quran",
   "prayers": "Talb",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Progress ta' kull ġimgħa",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Is-Sena l-Ġdida Iżlamika",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Direzzjoni tal-Qibla",
   "compass": "Boxxla",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla misjuba!",
   "turnDevice": "Dawwar it-tagħmir tiegħek biex tiffaċċja l-Qibla",
+  "qiblaCompassErrorDetails": "Żball fil-boxxla: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat.",
+  "qiblaLocationRequiredTitle": "Post meħtieġ għall-Qibla",
+  "qiblaLocationRequiredBody": "Issettja l-post attwali tiegħek qabel tuża l-boxxla Qibla sabiex id-direzzjoni tkun tista 'tiġi kkalkulata b'mod preċiż.",
+  "adhanNotificationChannelName": "Notifiki Adhan",
+  "adhanNotificationChannelDescription": "Twissijiet tal-ħin tat-talb b'ħoss adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Għadd fil-mira: {target}",
   "tapToCount": "Tektek biex tgħodd",
+  "zikrCompletedMashAllah": "Tlesti! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah huwa ferm ogħla minn kull imperfezzjoni.",
+  "zikrMeaningAlhamdulillah": "It-tifħir kollu jappartjeni lil Alla.",
+  "zikrMeaningAllahuAkbar": "Allah huwa l-Akbar.",
+  "zikrMeaningLaIlahaIllallah": "M'hemm l-ebda alla ħlief Alla.",
+  "zikrMeaningAstaghfirullah": "Infittex il-maħfra ta’ Alla.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "M'hemm l-ebda qawwa u l-ebda saħħa ħlief permezz ta 'Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Leħen Awdjo",
+  "audioVoiceMisharyAlafasy": "Raġel (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Raġel (Abdul Basit)",
+  "audioVoiceSudais": "Raġel (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Kalibrazzjoni",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrazzjoni meħtieġa. Dawwar l-apparat fil-figura-8.",
   "dailyVerse": "Vers ta 'Kuljum",
+  "dailyVerseUnavailableTitle": "Poeżiji ta' kuljum mhux disponibbli",
+  "dailyVerseUnavailableBody": "Il-kontenut tal-vers ta' kuljum ivverifikat għadu mhux ikkonfigurat għal din il-bini. Qabbad mas-sors tas-sħab jew issinkronizza cache verifikata qabel ma tibbrawżja.",
   "todaysIbadah": "Ibadah tal-lum",
   "quickAccess": "Aċċess malajr",
   "assistant": "Assistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duas verifikati għadhom mhumiex disponibbli",
+  "duaUnavailableBody": "Duas ta' kuljum ivverifikati għadhom ma ġewx issinkronizzati ma' dan l-apparat. Qabbad mas-sors tas-sħab biex tagħbija duas minn sorsi minflok riżerva mhux verifikata.",
+  "duaCategoryQuranic": "Dua Koraniku",
+  "duaCategoryMorningEvening": "Filgħodu u Filgħaxija",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protezzjoni",
+  "duaCategoryBeginning": "Bidu",
+  "duaCategorySleep": "Irqad",
+  "duaCategoryFoodDrink": "Ikel u Xorb",
+  "duaCategoryForgiveness": "Maħfra",
+  "duaCategoryHome": "Dar",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Edukazzjoni Iżlamika",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Kollezzjonijiet Hadith",
+  "hadithSourcePending": "Sors ivverifikat pendenti",
+  "hadithUnavailableTitle": "Il-kollezzjonijiet verifikati tal-hadith għadhom mhumiex disponibbli",
+  "hadithUnavailableBody": "Din il-bini għadha tiddependi fuq għalf hadith estern mhux ivverifikat. L-ibbrawżjar tal-Hadith jibqa' diżattivat sakemm sett ta' data misjub jiġi sinkronizzat.",
   "paywallUnlockAll": "Nisfruttaw il-karatteristiċi kollha għall-vjaġġ spiritwali tiegħek",
+  "premiumProductUnavailable": "Prodott premium mhuwiex disponibbli bħalissa. Jekk jogħġbok erġa' pprova aktar tard.",
+  "premiumPurchaseFailed": "Ix-xiri ma setax jitlesta. Jekk jogħġbok erġa' pprova.",
   "paywallFeature1Title": "Assistent newrali Plus",
   "paywallFeature1Desc": "Q&A bla limitu mħaddma bl-AI",
   "paywallFeature2Title": "Offline bla limitu",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "It-tniżżil lest għal {reciter} bi {failed} surahs falluti ({downloaded}/{total} imniżżla).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Fajls offline mħassra għal {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Żball tan-netwerk. Jekk jogħġbok erġa' pprova.",
+  "placesLocationRequiredTitle": "Post meħtieġ",
+  "placesLocationRequiredBody": "Issettja post l-ewwel sabiex moskej fil-qrib, ikel halal, u skejjel Iżlamiċi jkunu jistgħu jiġu mfittxija b'mod preċiż.",
+  "placesMapTilesUnavailableTitle": "Madum tal-mappa mhux disponibbli",
+  "placesMapTilesUnavailableBody": "Sors tal-madum tal-mappa vverifikat għadu mhux ikkonfigurat għal din il-bini. Postijiet fil-qrib xorta jistgħu jgħabbu mill-lokalità salvata tiegħek.",
+  "placesDataSourceUnavailableTitle": "Id-data tal-postijiet mhix disponibbli",
+  "placesDataSourceUnavailableBody": "Punt finali tad-dejta tal-postijiet verifikati għadu mhux ikkonfigurat għal din il-bini. Issettja PLACES_OVERPASS_API_URL għal proxy jew fornitur approvat qabel ma tippermetti t-tfittxija fil-qrib.",
   "unknownPlaceName": "Isem Mhux Magħruf",
   "islamicPlaceFallback": "Post Iżlamiku",
-  "prayerNotificationTitle": "Ħin għal {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Wasal iż-żmien li nitolbu {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duas verifikati għadhom mhumiex disponibbli",
-  "duaUnavailableBody": "Duas ta' kuljum ivverifikati għadhom ma ġewx issinkronizzati ma' dan l-apparat. Qabbad mas-sors tas-sħab biex tagħbija duas minn sorsi minflok riżerva mhux verifikata.",
-  "duaCategoryQuranic": "Dua Koraniku",
-  "duaCategoryMorningEvening": "Filgħodu u Filgħaxija",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Protezzjoni",
-  "duaCategoryBeginning": "Bidu",
-  "duaCategorySleep": "Irqad",
-  "duaCategoryFoodDrink": "Ikel u Xorb",
-  "duaCategoryForgiveness": "Maħfra",
-  "duaCategoryHome": "Dar",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Sors ivverifikat pendenti",
-  "hadithUnavailableTitle": "Il-kollezzjonijiet verifikati tal-hadith għadhom mhumiex disponibbli",
-  "hadithUnavailableBody": "Din il-bini għadha tiddependi fuq għalf hadith estern mhux ivverifikat. L-ibbrawżjar tal-Hadith jibqa' diżattivat sakemm sett ta' data misjub jiġi sinkronizzat.",
-  "appErrorOccurred": "Sar żball",
-  "appUnknownError": "Żball mhux magħruf",
-  "qiblaCompassErrorDetails": "Żball fil-boxxla: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Tlesti! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah huwa ferm ogħla minn kull imperfezzjoni.",
-  "zikrMeaningAlhamdulillah": "It-tifħir kollu jappartjeni lil Alla.",
-  "zikrMeaningAllahuAkbar": "Allah huwa l-Akbar.",
-  "zikrMeaningLaIlahaIllallah": "M'hemm l-ebda alla ħlief Alla.",
-  "zikrMeaningAstaghfirullah": "Infittex il-maħfra ta’ Alla.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "M'hemm l-ebda qawwa u l-ebda saħħa ħlief permezz ta 'Allah.",
   "asmaMeaning1": "Il-Benefiċjenti",
   "asmaMeaning2": "Il-Ħniena",
   "asmaMeaning3": "The King / Eternal Lord",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "The Everlasting One",
   "asmaMeaning97": "Il-Werriet",
   "asmaMeaning98": "L-Aktar Gwida Ġust",
-  "asmaMeaning99": "Il-Pazjent Wieħed",
-  "duaMeaning1": "oħrajn jitolbu, ‘Mulej tagħna, agħtina l-ġid f’din id-dinja u f’hawn ta’ wara, u ħarisna mit-turment tan-Nar.’",
-  "duaMeaning2": "Alla ma jgħabbi l-ebda ruħ b’aktar minn dak li jiflaħ: kull wieħed jikseb kull ġid li jkun għamel, u jbati l-ħażin tiegħu- ‘Mulej, teħodnix f’xogħol jekk ninsew jew niżbaljaw. Mulej, tgħabbinix bħalma int għabbit lil dawk ta’ qabilna. Mulej, tgħabbinix b’aktar milli għandna s-saħħa x’niġorru. Aħfirna, aħfrilna, u ħniena minna. Int il-​Protettur tagħna, allura għinna kontra dawk li ma jemmnux.’",
-  "duaMeaning3": "‘Mulej tagħna, tħallix qalbna tiddevja wara li Inti tkun ggwidatna. Agħtina l-ħniena Tiegħek: Int Dak li Dejjem Tagħti.",
-  "duaMeaning4": "Mulej, agħti li jien u nisli nżommu t-talb. Sidna, aċċetta t-talba tiegħi.",
-  "duaMeaning5": "u baxxi ġwenħajk bl-umiltà lejhom bil-qalb tajba u għid, ‘Mulej, ħenn minnhom, bħalma kienu jieħdu ħsiebi meta kont żgħir.’",
-  "duaMeaning6": "għola jkun Alla, dak li tassew għandu kontroll. [Profeta], tgħaġġlax biex tirreċita qabel ir-rivelazzjoni tkun kompluta għal kollox imma għid, ‘Mulej, ikabbarni fl-għarfien!’",
-  "duaMeaning7": "Għid [Profeta], ‘Mulej, aħfer u ħniena: Inti l-aktar ħanin minn kulħadd.’",
-  "duaMeaning8": "dawk li jitolbu, ‘Mulej tagħna, agħtina l-ferħ fil-miżżewġin u n-nisel tagħna. Agħmilna eżempji tajbin għal dawk li huma konxji minnek’.",
-  "islamicNewYear": "Is-Sena l-Ġdida Iżlamika",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Aġġorna",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Tagħbija tafsir...",
-  "tafsirSourceLabel": "sors Tafsir",
-  "tafsirNoSurahFound": "L-ebda tafsir ma nstab għal din is-surah.",
-  "tafsirNoAyahFound": "L-ebda tafsir ma nstab għal ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir ma setax jitgħabba.",
-  "tafsirNoTextForAyah": "Nru tafsir test għal dan ayah.",
-  "tafsirDownloadingProgress": "Niżżel tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Tagħbija tafsir {current}/{total}",
-  "tafsirApiStatusError": "Is-sors Tafsir irritorna żball HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Is-sors ta' tafsir magħżul ma rritorna l-ebda dħul.",
-  "premiumProductUnavailable": "Prodott premium mhuwiex disponibbli bħalissa. Jekk jogħġbok erġa' pprova aktar tard.",
-  "premiumPurchaseFailed": "Ix-xiri ma setax jitlesta. Jekk jogħġbok erġa' pprova.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Mod Iżlamiku tad-Dawl",
-  "downloadPartiallyFinishedForReciter": "It-tniżżil lest għal {reciter} bi {failed} surahs falluti ({downloaded}/{total} imniżżla).",
-  "placesLocationRequiredTitle": "Post meħtieġ",
-  "placesLocationRequiredBody": "Issettja post l-ewwel sabiex moskej fil-qrib, ikel halal, u skejjel Iżlamiċi jkunu jistgħu jiġu mfittxija b'mod preċiż.",
-  "placesMapTilesUnavailableTitle": "Madum tal-mappa mhux disponibbli",
-  "placesMapTilesUnavailableBody": "Sors tal-madum tal-mappa vverifikat għadu mhux ikkonfigurat għal din il-bini. Postijiet fil-qrib xorta jistgħu jgħabbu mill-lokalità salvata tiegħek.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Raġel (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Raġel (Abdul Basit)",
-  "audioVoiceSudais": "Raġel (Sudais)",
-  "qiblaSensorUnavailable": "Is-sensor tal-boxxla mhux disponibbli fuq dan l-apparat.",
-  "adhanNotificationChannelName": "Notifiki Adhan",
-  "adhanNotificationChannelDescription": "Twissijiet tal-ħin tat-talb b'ħoss adhan.",
-  "quranLoadFailed": "Il-kontenut tal-Quran ma setax jitgħabba. Jekk jogħġbok erġa' pprova.",
-  "locationDetectionFailed": "Ma setgħetx tiskopri l-lokalità tiegħek. Jekk jogħġbok agħżel belt manwalment jew erġa' pprova.",
-  "qiblaLocationRequiredTitle": "Post meħtieġ għall-Qibla",
-  "qiblaLocationRequiredBody": "Issettja l-post attwali tiegħek qabel tuża l-boxxla Qibla sabiex id-direzzjoni tkun tista 'tiġi kkalkulata b'mod preċiż.",
-  "placesDataSourceUnavailableTitle": "Id-data tal-postijiet mhix disponibbli",
-  "placesDataSourceUnavailableBody": "Punt finali tad-dejta tal-postijiet verifikati għadu mhux ikkonfigurat għal din il-bini. Issettja PLACES_OVERPASS_API_URL għal proxy jew fornitur approvat qabel ma tippermetti t-tfittxija fil-qrib.",
-  "tafsirCacheUnavailable": "Tafsir ivverifikat għadu mhux disponibbli offline. Issinkronizza sett tad-dejta ta' tafsir li ġej qabel ma tibbrawżja."
+  "asmaMeaning99": "Il-Pazjent Wieħed"
 }

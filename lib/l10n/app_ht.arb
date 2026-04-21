@@ -1,6 +1,7 @@
 {
   "@@locale": "ht",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Fason Limyè Islamik",
   "home": "Lakay",
   "quran": "Koran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tan pou {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Li lè pou nou priye {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Done & Depo",
   "clearCache": "Klè Cache",
   "cacheClearedSuccess": "Cache netwaye avèk siksè",
@@ -34,6 +51,7 @@
   "currentLocation": "Kote aktyèl (GPS)",
   "locationServiceDisabled": "Sèvis kote yo enfim.",
   "locationPermissionDenied": "Pèmisyon kote yo refize.",
+  "locationDetectionFailed": "Pa t 'kapab detekte kote ou ye a. Tanpri chwazi yon vil manyèlman oswa eseye ankò.",
   "citiesCount": "{count} vil yo",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Pa gen rezilta yo jwenn",
   "loading": "Chaje...",
   "error": "Erè",
+  "appErrorOccurred": "Yon erè te fèt",
+  "appUnknownError": "Erè enkoni",
+  "quranLoadFailed": "Kontni koran pa t 'kapab chaje. Tanpri eseye ankò.",
   "retry": "Eseye ankò",
+  "refreshAction": "Rafrechi",
   "cancel": "Anile",
   "save": "Sove",
   "delete": "Efase",
@@ -57,17 +79,78 @@
   "yes": "Wi",
   "no": "Non",
   "surah": "Sura",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Paj",
   "reading": "Lekti",
   "recitation": "Resitasyon",
   "translation": "Tradiksyon",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Chaje tafsir...",
+  "tafsirSourceLabel": "Tafsir sous",
+  "tafsirNoSurahFound": "Yo pa jwenn okenn tafsir pou soure sa a.",
+  "tafsirNoAyahFound": "Yo pa jwenn okenn tafsir pou ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir pa t 'kapab chaje.",
+  "tafsirNoTextForAyah": "Pa gen tèks tafsir pou ayah sa a.",
+  "tafsirDownloadingProgress": "Telechaje tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Chaje tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Sous Tafsir te retounen yon erè HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Sous tafsir ki te chwazi a pa retounen okenn antre.",
+  "tafsirCacheUnavailable": "Tafsir verifye poko disponib offline. Senkronize yon seri done tafsir souse anvan ou navige.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Ajoute Bookmark",
   "removeBookmark": "Retire Bookmark",
   "lastRead": "Dènye lekti",
   "dailyZikr": "Zikr chak jou",
+  "duaMeaning1": "lòt moun priye, ‘Senyè nou, ban nou sa ki byen nan monn sa a ak nan apre a, epi pwoteje nou kont touman dife a.’",
+  "duaMeaning2": "Bondye pa chaje okenn nanm ak plis pase sa li kapab pote: chak genyen kèlkeswa sa ki byen li te fè, epi soufri mal li yo- ‘ Granmèt, pa pran nou nan travay si nou bliye oswa fè erè. Senyè, pa chaje nou tankou ou te chaje moun ki te devan nou yo. Senyè, pa chaje nou plis pase fòs nou genyen pou nou sipòte. Padone nou, padone nou, gen pitye pou nou. Ou se Pwotektè nou, donk ede nou kont moun ki pa kwayan yo.’",
+  "duaMeaning3": "‘Seyè nou, pa kite kè nou devye apre ou fin gide nou. Fè nou mizèrikòd ou: se ou ki tout tan tout tan bay.",
+  "duaMeaning4": "Senyè, fè pou mwen menm ak desandan mwen yo ka kontinye priyè a. Seyè nou an, aksepte demann mwen an.",
+  "duaMeaning5": "epi bese zèl ou avèk imilite anvè yo ak jantiyès epi di: ‘Seyè, gen pitye pou yo, menm jan yo te pran swen m lè m te piti.",
+  "duaMeaning6": "Egzalte se pou Bondye, sila a ki vrèman nan kontwòl. [Pwofèt], pa kouri resite anvan revelasyon an fini nèt, men di, ‘Seyè, ogmante konesans mwen!’",
+  "duaMeaning7": "Di [Pwofèt], ‘Seyè, padone epi gen mizèrikòd: Ou se pi mizèrikòd nan tout.’",
+  "duaMeaning8": "moun ki priye, ‘Senyè nou, ban nou lajwa nan konjwen nou yo ak pitit pitit nou yo. Fè nou bon egzanp pou moun ki konnen w’.",
   "morningZikr": "Maten Zikr",
   "eveningZikr": "Aswè Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Jèn",
   "quranReading": "Lekti koran",
   "prayers": "Lapriyè",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Konte",
   "weeklyProgress": "Pwogrè chak semèn",
   "monthlyProgress": "Pwogrè chak mwa",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Nouvèl Ane Islamik",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Direksyon Qibla",
   "compass": "Bousòl",
@@ -108,6 +219,19 @@
   "north": "Nò",
   "qiblaFound": "Qibla jwenn!",
   "turnDevice": "Vire aparèy ou an pou fè fas a Qibla",
+  "qiblaCompassErrorDetails": "Erè konpa: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Capteur konpa pa disponib sou aparèy sa a.",
+  "qiblaLocationRequiredTitle": "Kote obligatwa pou Qibla",
+  "qiblaLocationRequiredBody": "Mete pozisyon aktyèl ou anvan ou sèvi ak konpa Qibla pou direksyon an ka kalkile avèk presizyon.",
+  "adhanNotificationChannelName": "Adhan Notifikasyon",
+  "adhanNotificationChannelDescription": "Alèt tan lapriyè ak son adhan.",
   "notifications": "Notifikasyon",
   "prayerNotifications": "Notifikasyon lapriyè",
   "enableNotifications": "Pèmèt Notifikasyon yo",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Kantite sib: {target}",
   "tapToCount": "Tape pou konte",
+  "zikrCompletedMashAllah": "Konplete! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah pi wo pase tout enpèfeksyon.",
+  "zikrMeaningAlhamdulillah": "Tout lwanj se pou Allah.",
+  "zikrMeaningAllahuAkbar": "Allah se pi gran an.",
+  "zikrMeaningLaIlahaIllallah": "Pa gen okenn bondye men Allah.",
+  "zikrMeaningAstaghfirullah": "Mwen chache padon Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Pa gen okenn pouvwa ak pa gen fòs eksepte nan Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Odyo Vwa",
+  "audioVoiceMisharyAlafasy": "Gason (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Gason (Abdul Basit)",
+  "audioVoiceSudais": "Gason (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Kalibrasyon",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrasyon obligatwa. Wotasyon aparèy nan figi-8.",
   "dailyVerse": "Vèsè chak jou",
+  "dailyVerseUnavailableTitle": "Vèsè chak jou pa disponib",
+  "dailyVerseUnavailableBody": "Kontni vèsè chak jou verifye poko configuré pou konstriksyon sa a. Konekte ak sous nwaj la oswa senkronize yon kachèt verifye anvan ou navige.",
   "todaysIbadah": "Jodi a Ibadah",
   "quickAccess": "Aksè rapid",
   "assistant": "Asistan",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Dous verifye yo poko disponib",
+  "duaUnavailableBody": "Duas chak jou verifye yo poko senkronize ak aparèy sa a. Konekte ak sous nwaj la pou chaje duas ki soti olye pou yo yon repitasyon ki pa verifye.",
+  "duaCategoryQuranic": "Koranik dua",
+  "duaCategoryMorningEvening": "Maten & Aswè",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Pwoteksyon",
+  "duaCategoryBeginning": "Kòmansman",
+  "duaCategorySleep": "Dòmi",
+  "duaCategoryFoodDrink": "Manje & Bwè",
+  "duaCategoryForgiveness": "padon",
+  "duaCategoryHome": "Lakay",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Edikasyon Islamik",
   "sukunAudioTitle": "Soukun Soundscapes",
   "hadithCollections": "Koleksyon Hadith",
+  "hadithSourcePending": "Sous verifye annatant",
+  "hadithUnavailableTitle": "Koleksyon adit verifye yo poko disponib",
+  "hadithUnavailableBody": "Konstriksyon sa a toujou depann de yon manje adit ekstèn ki pa verifye. Navigasyon Hadith rete enfim jiskaske yon seri done sous senkronize.",
   "paywallUnlockAll": "Debloke tout karakteristik pou vwayaj espirityèl ou",
+  "premiumProductUnavailable": "Pwodwi Premium pa disponib kounye a. Tanpri eseye ankò pita.",
+  "premiumPurchaseFailed": "Achte pa t 'kapab fini. Tanpri eseye ankò.",
   "paywallFeature1Title": "Neural Asistan Plus",
   "paywallFeature1Desc": "Q&A san limit ki mache ak AI",
   "paywallFeature2Title": "San limit Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Téléchargement fini pou {reciter} ak {failed} sourate ki echwe ({downloaded}/{total} telechaje).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Efase fichye offline pou {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Erè rezo a. Tanpri eseye ankò.",
+  "placesLocationRequiredTitle": "Kote obligatwa",
+  "placesLocationRequiredBody": "Mete yon kote an premye pou moske ki tou pre, manje halal, ak lekòl Islamik yo ka fouye avèk presizyon.",
+  "placesMapTilesUnavailableTitle": "Kat mozayik pa disponib",
+  "placesMapTilesUnavailableBody": "Yon sous mozayik kat jeyografik verifye poko configuré pou konstriksyon sa a. Kote ki tou pre yo ka toujou chaje nan kote ou te sove yo.",
+  "placesDataSourceUnavailableTitle": "Kote done yo pa disponib",
+  "placesDataSourceUnavailableBody": "Yon pwen final done kote verifye poko konfigirasyon pou konstriksyon sa a. Mete PLACES_OVERPASS_API_URL sou yon proxy oswa yon founisè apwouve anvan ou pèmèt rechèch ki tou pre.",
   "unknownPlaceName": "Non enkoni",
   "islamicPlaceFallback": "Kote Islamik",
-  "prayerNotificationTitle": "Tan pou {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Li lè pou nou priye {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Dous verifye yo poko disponib",
-  "duaUnavailableBody": "Duas chak jou verifye yo poko senkronize ak aparèy sa a. Konekte ak sous nwaj la pou chaje duas ki soti olye pou yo yon repitasyon ki pa verifye.",
-  "duaCategoryQuranic": "Koranik dua",
-  "duaCategoryMorningEvening": "Maten & Aswè",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Pwoteksyon",
-  "duaCategoryBeginning": "Kòmansman",
-  "duaCategorySleep": "Dòmi",
-  "duaCategoryFoodDrink": "Manje & Bwè",
-  "duaCategoryForgiveness": "padon",
-  "duaCategoryHome": "Lakay",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Sous verifye annatant",
-  "hadithUnavailableTitle": "Koleksyon adit verifye yo poko disponib",
-  "hadithUnavailableBody": "Konstriksyon sa a toujou depann de yon manje adit ekstèn ki pa verifye. Navigasyon Hadith rete enfim jiskaske yon seri done sous senkronize.",
-  "appErrorOccurred": "Yon erè te fèt",
-  "appUnknownError": "Erè enkoni",
-  "qiblaCompassErrorDetails": "Erè konpa: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Konplete! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah pi wo pase tout enpèfeksyon.",
-  "zikrMeaningAlhamdulillah": "Tout lwanj se pou Allah.",
-  "zikrMeaningAllahuAkbar": "Allah se pi gran an.",
-  "zikrMeaningLaIlahaIllallah": "Pa gen okenn bondye men Allah.",
-  "zikrMeaningAstaghfirullah": "Mwen chache padon Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Pa gen okenn pouvwa ak pa gen fòs eksepte nan Allah.",
   "asmaMeaning1": "Benefisyan yo",
   "asmaMeaning2": "Mizèrikòd la",
   "asmaMeaning3": "Wa a / Seyè ki p'ap janm fini an",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Eternel la",
   "asmaMeaning97": "Eritye a",
   "asmaMeaning98": "Gid ki pi jis",
-  "asmaMeaning99": "Pasyan Youn nan",
-  "duaMeaning1": "lòt moun priye, ‘Senyè nou, ban nou sa ki byen nan monn sa a ak nan apre a, epi pwoteje nou kont touman dife a.’",
-  "duaMeaning2": "Bondye pa chaje okenn nanm ak plis pase sa li kapab pote: chak genyen kèlkeswa sa ki byen li te fè, epi soufri mal li yo- ‘ Granmèt, pa pran nou nan travay si nou bliye oswa fè erè. Senyè, pa chaje nou tankou ou te chaje moun ki te devan nou yo. Senyè, pa chaje nou plis pase fòs nou genyen pou nou sipòte. Padone nou, padone nou, gen pitye pou nou. Ou se Pwotektè nou, donk ede nou kont moun ki pa kwayan yo.’",
-  "duaMeaning3": "‘Seyè nou, pa kite kè nou devye apre ou fin gide nou. Fè nou mizèrikòd ou: se ou ki tout tan tout tan bay.",
-  "duaMeaning4": "Senyè, fè pou mwen menm ak desandan mwen yo ka kontinye priyè a. Seyè nou an, aksepte demann mwen an.",
-  "duaMeaning5": "epi bese zèl ou avèk imilite anvè yo ak jantiyès epi di: ‘Seyè, gen pitye pou yo, menm jan yo te pran swen m lè m te piti.",
-  "duaMeaning6": "Egzalte se pou Bondye, sila a ki vrèman nan kontwòl. [Pwofèt], pa kouri resite anvan revelasyon an fini nèt, men di, ‘Seyè, ogmante konesans mwen!’",
-  "duaMeaning7": "Di [Pwofèt], ‘Seyè, padone epi gen mizèrikòd: Ou se pi mizèrikòd nan tout.’",
-  "duaMeaning8": "moun ki priye, ‘Senyè nou, ban nou lajwa nan konjwen nou yo ak pitit pitit nou yo. Fè nou bon egzanp pou moun ki konnen w’.",
-  "islamicNewYear": "Nouvèl Ane Islamik",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Rafrechi",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Chaje tafsir...",
-  "tafsirSourceLabel": "Tafsir sous",
-  "tafsirNoSurahFound": "Yo pa jwenn okenn tafsir pou soure sa a.",
-  "tafsirNoAyahFound": "Yo pa jwenn okenn tafsir pou ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir pa t 'kapab chaje.",
-  "tafsirNoTextForAyah": "Pa gen tèks tafsir pou ayah sa a.",
-  "tafsirDownloadingProgress": "Telechaje tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Chaje tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Sous Tafsir te retounen yon erè HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Sous tafsir ki te chwazi a pa retounen okenn antre.",
-  "premiumProductUnavailable": "Pwodwi Premium pa disponib kounye a. Tanpri eseye ankò pita.",
-  "premiumPurchaseFailed": "Achte pa t 'kapab fini. Tanpri eseye ankò.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Fason Limyè Islamik",
-  "downloadPartiallyFinishedForReciter": "Téléchargement fini pou {reciter} ak {failed} sourate ki echwe ({downloaded}/{total} telechaje).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Kote obligatwa",
-  "placesLocationRequiredBody": "Mete yon kote an premye pou moske ki tou pre, manje halal, ak lekòl Islamik yo ka fouye avèk presizyon.",
-  "placesMapTilesUnavailableTitle": "Kat mozayik pa disponib",
-  "placesMapTilesUnavailableBody": "Yon sous mozayik kat jeyografik verifye poko configuré pou konstriksyon sa a. Kote ki tou pre yo ka toujou chaje nan kote ou te sove yo.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Gason (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Gason (Abdul Basit)",
-  "audioVoiceSudais": "Gason (Sudais)",
-  "qiblaSensorUnavailable": "Capteur konpa pa disponib sou aparèy sa a.",
-  "adhanNotificationChannelName": "Adhan Notifikasyon",
-  "adhanNotificationChannelDescription": "Alèt tan lapriyè ak son adhan.",
-  "quranLoadFailed": "Kontni koran pa t 'kapab chaje. Tanpri eseye ankò.",
-  "locationDetectionFailed": "Pa t 'kapab detekte kote ou ye a. Tanpri chwazi yon vil manyèlman oswa eseye ankò.",
-  "qiblaLocationRequiredTitle": "Kote obligatwa pou Qibla",
-  "qiblaLocationRequiredBody": "Mete pozisyon aktyèl ou anvan ou sèvi ak konpa Qibla pou direksyon an ka kalkile avèk presizyon.",
-  "placesDataSourceUnavailableTitle": "Kote done yo pa disponib",
-  "placesDataSourceUnavailableBody": "Yon pwen final done kote verifye poko konfigirasyon pou konstriksyon sa a. Mete PLACES_OVERPASS_API_URL sou yon proxy oswa yon founisè apwouve anvan ou pèmèt rechèch ki tou pre.",
-  "tafsirCacheUnavailable": "Tafsir verifye poko disponib offline. Senkronize yon seri done tafsir souse anvan ou navige."
+  "asmaMeaning99": "Pasyan Youn nan"
 }

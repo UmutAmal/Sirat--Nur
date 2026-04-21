@@ -1,6 +1,7 @@
 {
   "@@locale": "ti",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "እስላማዊ መንገዲ ብርሃን",
   "home": "ገዛ",
   "quran": "ቁርኣን",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "ኣስር",
   "maghrib": "መግሪብ",
   "isha": "ኢሻ",
+  "prayerNotificationTitle": "ግዜ ን {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} ንጸሎት ግዜ እዩ።",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared successfully",
@@ -34,6 +51,7 @@
   "currentLocation": "Current Location (GPS)",
   "locationServiceDisabled": "ኣገልግሎት ኣቀማምጣ ተሰናኺሉ ኣሎ።",
   "locationPermissionDenied": "ናይ ቦታ ፍቓድ ተኸልኪሉ።",
+  "locationDetectionFailed": "ኣቀማምጣኻ ክፈልጥ ኣይከኣለን። በጃኹም ብኢድኩም ከተማ ምረጹ ወይ ድማ እንደገና ፈትኑ።",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "ዝኾነ ውጽኢት ኣይተረኽበን።",
   "loading": "ኣብ ምጽዓን...",
   "error": "ጌጋ",
+  "appErrorOccurred": "ጌጋ ኣጋጢሙ",
+  "appUnknownError": "ዘይፍለጥ ጌጋ",
+  "quranLoadFailed": "ትሕዝቶ ቁርኣን ክጽዓን ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።",
   "retry": "Retry",
+  "refreshAction": "ምሕዳስ",
   "cancel": "Cancel",
   "save": "Save",
   "delete": "ምድምሳስ",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "አይኮንን",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Page",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "ኣብ ምጽዓን tafsir...",
+  "tafsirSourceLabel": "ታፍሲር ምንጪ",
+  "tafsirNoSurahFound": "ነዛ ሱራ ዝኸውን ተፍሲር ኣይተረኽበን።",
+  "tafsirNoAyahFound": "ንኣያ {ayah} ዝኾነ ታፍሲር ኣይተረኽበን።",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "ታፍሲር ክጽዓን ኣይከኣለን።",
+  "tafsirNoTextForAyah": "ነዚ ኣያሕ ዝኸውን ታፍሲር ጽሑፍ የለን።",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "ምንጪ ታፍሲር ናይ HTTP {statusCode} ጌጋ መሊሱ።",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "እቲ ዝተመርጸ ምንጪ ታፍሲር ዝኾነ ምእታው ኣይመለሰን።",
+  "tafsirCacheUnavailable": "Verified tafsir ገና ካብ መስመር ወጻኢ ኣይርከብን። ቅድሚ ምድህሳስ ምንጪ ዘለዎ tafsir ዳታሴት ምትእስሳር።",
   "bookmarks": "Bookmarks",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "ካልኦት ድማ ‘ጐይታና ኣብ ዓለምን ኣብ ኣኼራን ሰናይ ሃበና፡ ካብ ስቓይ ሓዊ ሓልወና’ ኢሎም ይጽልዩ።",
+  "duaMeaning2": "እግዚኣብሄር ንዝኾነት ነፍሲ ካብቲ ክትጻወሮ እትኽእል ንላዕሊ ኣይጽዕናን እዩ: ነፍሲ ወከፍ ዝገበሮ ሰናይ ይረክብ: ሕማቕ ድማ ይሳቐ- ‘ ጎይታ እንተረሲዕና ወይ እንተተጋግና ኣብ ዕማም ኣይትውሰደና። ጎይታ ከምቲ ነቶም ቅድሜና ዝሰከምካዮም ኣይትጾረና። ጎይታ ካብቲ ክንስከሞ ዘለና ሓይሊ ንላዕሊ ኣይትጽዕነና። ይቕረ ግበረልና፡ ይቕረ ግበረልና፡ ምሕረት ግበረልና። ንስኻ ሓላዊና ኢኻ እሞ ኣንጻር ካፍር ሓግዘና።’ ኢሉ መለሰሉ።",
+  "duaMeaning3": "‘ጐይታና ድሕሪ ምምራሕካ ልብና ከይትዘልል። ምሕረትካ ሃበና: ንስኻ ወትሩ ወሃቢ ኢኻ።",
+  "duaMeaning4": "ጎይታ ኣነን ዘርኣይን ጸሎት ክንቅጽል ፍቐደለይ። ጎይታና ንሕቶይ ተቐበል።",
+  "duaMeaning5": "ብትሕትና ድማ ክንፍኻ ብሕያውነት ናብኦም ኣውሪድካ ‘ጐይታይ ከምቲ ንእሽቶይ ከለኹ ዝሓልዩኒ ምሓሮም’ በሎም።",
+  "duaMeaning6": "እቲ ብሓቂ ዝቆጻጸር ኣምላኽ ልዕል ይበል። [ነቢይ]፣ እቲ ምግላጽ ምሉእ ብምሉእ ከይተዛዘመ ንምንባብ ኣይትሃወኽ እምበር ‘ጐይታይ ብፍልጠት ኣዕብየኒ!’ በል።",
+  "duaMeaning7": "[ነቢይ] በል፡ ‘ጐይታይ ይቕረ በለን ምሓርን፡ ንስኻ ካብ ኩሉ መሓሪ ኢኻ።’",
+  "duaMeaning8": "እቶም ‘ጐይታና ኣብ መጻምድትናን ዘርእናን ሓጐስ ሃበና። ነቶም ብዛዕባኻ ዝፈልጡ ጽቡቕ ኣብነት ግበረና’።",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Fasting",
   "quranReading": "Quran Reading",
   "prayers": "Prayers",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Weekly Progress",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "እስላማዊ ሓድሽ ዓመት",
+  "mawlidAnNabi": "ማውሊድ ኣን-ናቢ",
+  "specialDayDateRamadanStart": "1 ሮሞዳን",
+  "specialDayDateLaylatAlQadr": "27 ሮሞዳን",
+  "specialDayDateEidAlFitr": "1 ሻውዋል",
+  "specialDayDateEidAlAdha": "10 ዙል ሂጃ",
+  "specialDayDateIslamicNewYear": "1 ሙሓረም",
+  "specialDayDateMawlidAnNabi": "12 ረቢ ኣልኣውዋል",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "ኣንፈት ቂብላ",
   "compass": "Compass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla found!",
   "turnDevice": "Turn your device to face the Qibla",
+  "qiblaCompassErrorDetails": "ናይ ኮምፓስ ጌጋ፡ {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።",
+  "qiblaLocationRequiredTitle": "ንቂብላ ዘድሊ ቦታ",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "ኣድሃን መፍለጢታት",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "ንምቑጻር ጠውቕ",
+  "zikrCompletedMashAllah": "ተዛዚሙ! ማሽኣላህ",
+  "zikrMeaningSubhanAllah": "ኣላህ ልዕሊ ኩሉ ዘይፍጽምና ኣዝዩ እዩ።",
+  "zikrMeaningAlhamdulillah": "ኩሉ ምስጋና ናይ ኣላህ እዩ።",
+  "zikrMeaningAllahuAkbar": "ኣላህ እቲ ዝዓበየ እዩ።",
+  "zikrMeaningLaIlahaIllallah": "ብዘይካ ኣላህ ካልእ ኣምላኽ የለን።",
+  "zikrMeaningAstaghfirullah": "ካብ ኣላህ ይቕሬታ ​​እደሊ ኣለኹ።",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ብዘይካ ብኣሏህ ሓይልን ሓይልን የለን።",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "ድምጺ ድምጺ",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "ቂብላ ምዕቃን",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8.",
   "dailyVerse": "መዓልታዊ ጥቕሲ",
+  "dailyVerseUnavailableTitle": "መዓልታዊ ጥቕሲ ኣይርከብን።",
+  "dailyVerseUnavailableBody": "ዝተረጋገጸ መዓልታዊ ጥቕሲ ትሕዝቶ ገና ነዚ ህንጸት ኣይተዋቕረን። ቅድሚ ምድህሳስ ምስቲ ምንጪ ደበና ምትእስሳር ወይ ዝተረጋገጸ መኽዘን ምትእስሳር።",
   "todaysIbadah": "ናይ ሎሚ ኢባዳ",
   "quickAccess": "ቅልጡፍ ምብጻሕ",
   "assistant": "ሓጋዚ",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "ዝተረጋገጹ ዱዓታት ገና ኣይተረኽቡን።",
+  "duaUnavailableBody": "ዝተረጋገጹ መዓልታዊ ዱዓታት ክሳብ ሕጂ ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።",
+  "duaCategoryQuranic": "ቁርኣናዊ ዱዓ",
+  "duaCategoryMorningEvening": "ንግሆ & ምሸት",
+  "duaCategoryTasbih": "ታስቢህ",
+  "duaCategoryProtection": "ምክልኻል",
+  "duaCategoryBeginning": "መጀመርታ",
+  "duaCategorySleep": "ደቅስ",
+  "duaCategoryFoodDrink": "መግቢን መስተን።",
+  "duaCategoryForgiveness": "ይቕሬታ",
+  "duaCategoryHome": "ገዛ",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "እስላማዊ ትምህርቲ",
   "sukunAudioTitle": "ሱኩን ሳውንድስኬፕስ",
   "hadithCollections": "እኩባት ሓዲስ",
+  "hadithSourcePending": "ዝተረጋገጸ ምንጪ ኣብ ምጽባይ ይርከብ።",
+  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
+  "hadithUnavailableBody": "This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.",
   "paywallUnlockAll": "ንመንፈሳዊ ጉዕዞኻ ዝኸውን ኩሉ ባህርያት ክፈት",
+  "premiumProductUnavailable": "ፕሪምየም ፍርያት ኣብዚ ሕጂ እዋን የለን። በጃኹም ድሒርኩም ደጊምኩም ፈትኑ።",
+  "premiumPurchaseFailed": "ዕድጊ ክዛዘም ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።",
   "paywallFeature1Title": "ኒውራል ኣሲስተንት ፕላስ",
   "paywallFeature1Desc": "ደረት ኣልቦ ብAI ዝሰርሕ ሕቶን መልስን",
   "paywallFeature2Title": "ደረት ኣልቦ ካብ መስመር ወጻኢ",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "ን {reciter} ምስ {failed} ዝፈሸላ ሱራታት ({downloaded}/{total} ዝወረደ) ምውራድ ተዛዚሙ።",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "ናይ መርበብ ጌጋ። በጃኹም ደጊምኩም ፈትኑ።",
+  "placesLocationRequiredTitle": "ቦታ የድሊ",
+  "placesLocationRequiredBody": "ኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።",
+  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableBody": "ዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።",
+  "placesDataSourceUnavailableTitle": "ዳታ ኣብ ዘይርከብ ቦታ የቐምጥ",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "ዘይፍለጥ ስም",
   "islamicPlaceFallback": "እስላማዊ ቦታ",
-  "prayerNotificationTitle": "ግዜ ን {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} ንጸሎት ግዜ እዩ።",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "ዝተረጋገጹ ዱዓታት ገና ኣይተረኽቡን።",
-  "duaUnavailableBody": "ዝተረጋገጹ መዓልታዊ ዱዓታት ክሳብ ሕጂ ምስዚ መሳርሒ ኣይተሰማምዑን። ኣብ ክንዲ ዘይተረጋገጸ ምምላስ ምምላስ ምንጪ ዘለዎም ዱዓታት ንምጽዓን ምስቲ ምንጪ ደበና ምትእስሳር።",
-  "duaCategoryQuranic": "ቁርኣናዊ ዱዓ",
-  "duaCategoryMorningEvening": "ንግሆ & ምሸት",
-  "duaCategoryTasbih": "ታስቢህ",
-  "duaCategoryProtection": "ምክልኻል",
-  "duaCategoryBeginning": "መጀመርታ",
-  "duaCategorySleep": "ደቅስ",
-  "duaCategoryFoodDrink": "መግቢን መስተን።",
-  "duaCategoryForgiveness": "ይቕሬታ",
-  "duaCategoryHome": "ገዛ",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "ዝተረጋገጸ ምንጪ ኣብ ምጽባይ ይርከብ።",
-  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
-  "hadithUnavailableBody": "This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.",
-  "appErrorOccurred": "ጌጋ ኣጋጢሙ",
-  "appUnknownError": "ዘይፍለጥ ጌጋ",
-  "qiblaCompassErrorDetails": "ናይ ኮምፓስ ጌጋ፡ {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "ተዛዚሙ! ማሽኣላህ",
-  "zikrMeaningSubhanAllah": "ኣላህ ልዕሊ ኩሉ ዘይፍጽምና ኣዝዩ እዩ።",
-  "zikrMeaningAlhamdulillah": "ኩሉ ምስጋና ናይ ኣላህ እዩ።",
-  "zikrMeaningAllahuAkbar": "ኣላህ እቲ ዝዓበየ እዩ።",
-  "zikrMeaningLaIlahaIllallah": "ብዘይካ ኣላህ ካልእ ኣምላኽ የለን።",
-  "zikrMeaningAstaghfirullah": "ካብ ኣላህ ይቕሬታ ​​እደሊ ኣለኹ።",
-  "zikrMeaningLaHawlaWaLaQuwwata": "ብዘይካ ብኣሏህ ሓይልን ሓይልን የለን።",
   "asmaMeaning1": "እቲ ገባሪ ሰናይ",
   "asmaMeaning2": "መሓሪ",
   "asmaMeaning3": "ንጉስ / ዘለኣለማዊ ጎይታ",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "እቲ ዘለኣለማዊ",
   "asmaMeaning97": "እቲ ወራሲ",
   "asmaMeaning98": "እቲ ኣዝዩ ጻድቕ መምርሒ",
-  "asmaMeaning99": "እቲ ሕሙም ዝኾነ",
-  "duaMeaning1": "ካልኦት ድማ ‘ጐይታና ኣብ ዓለምን ኣብ ኣኼራን ሰናይ ሃበና፡ ካብ ስቓይ ሓዊ ሓልወና’ ኢሎም ይጽልዩ።",
-  "duaMeaning2": "እግዚኣብሄር ንዝኾነት ነፍሲ ካብቲ ክትጻወሮ እትኽእል ንላዕሊ ኣይጽዕናን እዩ: ነፍሲ ወከፍ ዝገበሮ ሰናይ ይረክብ: ሕማቕ ድማ ይሳቐ- ‘ ጎይታ እንተረሲዕና ወይ እንተተጋግና ኣብ ዕማም ኣይትውሰደና። ጎይታ ከምቲ ነቶም ቅድሜና ዝሰከምካዮም ኣይትጾረና። ጎይታ ካብቲ ክንስከሞ ዘለና ሓይሊ ንላዕሊ ኣይትጽዕነና። ይቕረ ግበረልና፡ ይቕረ ግበረልና፡ ምሕረት ግበረልና። ንስኻ ሓላዊና ኢኻ እሞ ኣንጻር ካፍር ሓግዘና።’ ኢሉ መለሰሉ።",
-  "duaMeaning3": "‘ጐይታና ድሕሪ ምምራሕካ ልብና ከይትዘልል። ምሕረትካ ሃበና: ንስኻ ወትሩ ወሃቢ ኢኻ።",
-  "duaMeaning4": "ጎይታ ኣነን ዘርኣይን ጸሎት ክንቅጽል ፍቐደለይ። ጎይታና ንሕቶይ ተቐበል።",
-  "duaMeaning5": "ብትሕትና ድማ ክንፍኻ ብሕያውነት ናብኦም ኣውሪድካ ‘ጐይታይ ከምቲ ንእሽቶይ ከለኹ ዝሓልዩኒ ምሓሮም’ በሎም።",
-  "duaMeaning6": "እቲ ብሓቂ ዝቆጻጸር ኣምላኽ ልዕል ይበል። [ነቢይ]፣ እቲ ምግላጽ ምሉእ ብምሉእ ከይተዛዘመ ንምንባብ ኣይትሃወኽ እምበር ‘ጐይታይ ብፍልጠት ኣዕብየኒ!’ በል።",
-  "duaMeaning7": "[ነቢይ] በል፡ ‘ጐይታይ ይቕረ በለን ምሓርን፡ ንስኻ ካብ ኩሉ መሓሪ ኢኻ።’",
-  "duaMeaning8": "እቶም ‘ጐይታና ኣብ መጻምድትናን ዘርእናን ሓጐስ ሃበና። ነቶም ብዛዕባኻ ዝፈልጡ ጽቡቕ ኣብነት ግበረና’።",
-  "islamicNewYear": "እስላማዊ ሓድሽ ዓመት",
-  "mawlidAnNabi": "ማውሊድ ኣን-ናቢ",
-  "specialDayDateRamadanStart": "1 ሮሞዳን",
-  "specialDayDateLaylatAlQadr": "27 ሮሞዳን",
-  "specialDayDateEidAlFitr": "1 ሻውዋል",
-  "specialDayDateEidAlAdha": "10 ዙል ሂጃ",
-  "specialDayDateIslamicNewYear": "1 ሙሓረም",
-  "specialDayDateMawlidAnNabi": "12 ረቢ ኣልኣውዋል",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "ምሕዳስ",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "ኣብ ምጽዓን tafsir...",
-  "tafsirSourceLabel": "ታፍሲር ምንጪ",
-  "tafsirNoSurahFound": "ነዛ ሱራ ዝኸውን ተፍሲር ኣይተረኽበን።",
-  "tafsirNoAyahFound": "ንኣያ {ayah} ዝኾነ ታፍሲር ኣይተረኽበን።",
-  "tafsirLoadFailed": "ታፍሲር ክጽዓን ኣይከኣለን።",
-  "tafsirNoTextForAyah": "ነዚ ኣያሕ ዝኸውን ታፍሲር ጽሑፍ የለን።",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "ምንጪ ታፍሲር ናይ HTTP {statusCode} ጌጋ መሊሱ።",
-  "tafsirNoEntriesReturned": "እቲ ዝተመርጸ ምንጪ ታፍሲር ዝኾነ ምእታው ኣይመለሰን።",
-  "premiumProductUnavailable": "ፕሪምየም ፍርያት ኣብዚ ሕጂ እዋን የለን። በጃኹም ድሒርኩም ደጊምኩም ፈትኑ።",
-  "premiumPurchaseFailed": "ዕድጊ ክዛዘም ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "እስላማዊ መንገዲ ብርሃን",
-  "downloadPartiallyFinishedForReciter": "ን {reciter} ምስ {failed} ዝፈሸላ ሱራታት ({downloaded}/{total} ዝወረደ) ምውራድ ተዛዚሙ።",
-  "placesLocationRequiredTitle": "ቦታ የድሊ",
-  "placesLocationRequiredBody": "ኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "ዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "ኣብዚ መሳርሒ ኮምፓስ ሴንሰር የለን።",
-  "adhanNotificationChannelName": "ኣድሃን መፍለጢታት",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "ትሕዝቶ ቁርኣን ክጽዓን ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።",
-  "locationDetectionFailed": "ኣቀማምጣኻ ክፈልጥ ኣይከኣለን። በጃኹም ብኢድኩም ከተማ ምረጹ ወይ ድማ እንደገና ፈትኑ።",
-  "qiblaLocationRequiredTitle": "ንቂብላ ዘድሊ ቦታ",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "ዳታ ኣብ ዘይርከብ ቦታ የቐምጥ",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
-  "tafsirCacheUnavailable": "Verified tafsir ገና ካብ መስመር ወጻኢ ኣይርከብን። ቅድሚ ምድህሳስ ምንጪ ዘለዎ tafsir ዳታሴት ምትእስሳር።"
+  "asmaMeaning99": "እቲ ሕሙም ዝኾነ"
 }

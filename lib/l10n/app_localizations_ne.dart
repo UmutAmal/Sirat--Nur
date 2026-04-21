@@ -950,6 +950,13 @@ class AppLocalizationsNe extends AppLocalizations {
   String get dailyVerse => 'दैनिक पद';
 
   @override
+  String get dailyVerseUnavailableTitle => 'दैनिक पद उपलब्ध छैन';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'यो निर्माणको लागि प्रमाणित दैनिक पद सामग्री अझै कन्फिगर गरिएको छैन। क्लाउड स्रोतमा जडान गर्नुहोस् वा ब्राउज गर्नु अघि प्रमाणित क्यास सिंक गर्नुहोस्।';
+
+  @override
   String get todaysIbadah => 'आजको इबादह';
 
   @override

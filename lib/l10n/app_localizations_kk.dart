@@ -951,6 +951,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get dailyVerse => 'Күнделікті өлең';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Күнделікті өлең қолжетімді емес';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Тексерілген күнделікті өлең мазмұны бұл құрастыру үшін әлі конфигурацияланбаған. Шолудан бұрын бұлт көзіне қосылыңыз немесе тексерілген кэшті синхрондаңыз.';
+
+  @override
   String get todaysIbadah => 'Бүгінгі ибадат';
 
   @override

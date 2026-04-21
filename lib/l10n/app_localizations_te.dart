@@ -953,6 +953,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get dailyVerse => 'రోజువారీ పద్యం';
 
   @override
+  String get dailyVerseUnavailableTitle => 'రోజువారీ పద్యం అందుబాటులో లేదు';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ఈ బిల్డ్ కోసం ధృవీకరించబడిన రోజువారీ పద్య కంటెంట్ ఇంకా కాన్ఫిగర్ చేయబడలేదు. బ్రౌజ్ చేయడానికి ముందు క్లౌడ్ సోర్స్‌కి కనెక్ట్ చేయండి లేదా ధృవీకరించబడిన కాష్‌ని సింక్ చేయండి.';
+
+  @override
   String get todaysIbadah => 'నేటి ఇబాదా';
 
   @override

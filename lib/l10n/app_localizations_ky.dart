@@ -956,6 +956,13 @@ class AppLocalizationsKy extends AppLocalizations {
   String get dailyVerse => 'Daily Verse';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Күнүмдүк аят жеткиликсиз';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Текшерилген күнүмдүк аят мазмуну азырынча бул куруу үчүн конфигурациялана элек. Серептөөдөн мурун булут булагына туташыңыз же текшерилген кэшти шайкештириңиз.';
+
+  @override
   String get todaysIbadah => 'Бүгүнкү Ибадат';
 
   @override

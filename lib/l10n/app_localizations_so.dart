@@ -954,6 +954,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get dailyVerse => 'Aayadda Maalinlaha ah';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Aayad maalinle ah lama heli karo';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Macluumaadka aayadda maalinlaha ah ee la xaqiijiyay weli looma habeynin dhismahan. Ku xidh isha daruuraha ama isku xidh kayd la xaqiijiyay ka hor inta aanad baadhin.';
+
+  @override
   String get todaysIbadah => 'Cibaado maanta';
 
   @override

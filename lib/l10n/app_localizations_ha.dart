@@ -953,6 +953,13 @@ class AppLocalizationsHa extends AppLocalizations {
   String get dailyVerse => 'Aya ta Yau';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Babu wata aya ta yau da kullum';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ba a saita ingantaccen abun cikin ayar yau da kullun don wannan ginin ba tukuna. Haɗa zuwa tushen gajimare ko daidaita cache da aka tabbatar kafin lilo.';
+
+  @override
   String get todaysIbadah => 'Ibadar yau';
 
   @override

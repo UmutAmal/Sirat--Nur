@@ -952,6 +952,13 @@ class AppLocalizationsIg extends AppLocalizations {
   String get dailyVerse => 'Amaokwu kwa ụbọchị';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Amaghị amaokwu kwa ụbọchị';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ahazibeghị ọdịnaya amaokwu kwa ụbọchị ka ọ rụọ ọrụ a. Jikọọ na isi iyi igwe ojii ma ọ bụ mekọrịta cache enwetara tupu ị chọgharịa.';
+
+  @override
   String get todaysIbadah => 'Ibada nke taa';
 
   @override

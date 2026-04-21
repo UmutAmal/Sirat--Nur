@@ -1,6 +1,7 @@
 {
   "@@locale": "ha",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Hanyar Hasken Musulunci",
   "home": "Gida",
   "quran": "Alqur'ani",
   "qibla": "Alqibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Lokacin {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Lokaci yayi da za a yi addu'a {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Bayanai & Ajiya",
   "clearCache": "Share Cache",
   "cacheClearedSuccess": "An share cache cikin nasara",
@@ -34,6 +51,7 @@
   "currentLocation": "Wuri na Yanzu (GPS)",
   "locationServiceDisabled": "An kashe sabis na wurin.",
   "locationPermissionDenied": "An ƙi izinin wurin.",
+  "locationDetectionFailed": "An kasa gano wurin ku. Da fatan za a zaɓi birni da hannu ko a sake gwadawa.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ba a sami sakamako ba",
   "loading": "Ana lodawa...",
   "error": "Kuskure",
+  "appErrorOccurred": "An sami kuskure",
+  "appUnknownError": "Kuskuren da ba a sani ba",
+  "quranLoadFailed": "An kasa loda abun cikin Al-Qur'ani. Da fatan za a sake gwadawa.",
   "retry": "Sake gwadawa",
+  "refreshAction": "Sake sabuntawa",
   "cancel": "Soke",
   "save": "Ajiye",
   "delete": "Share",
@@ -57,17 +79,78 @@
   "yes": "Ee",
   "no": "A'a",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Shafi",
   "reading": "Karatu",
   "recitation": "Karatun",
   "translation": "Fassara",
   "tafsir": "Tafsiri",
+  "tafsirLoading": "Ana loda tafsir...",
+  "tafsirSourceLabel": "tushen Tafsiri",
+  "tafsirNoSurahFound": "Ba a sami tafsirin wannan sura ba.",
+  "tafsirNoAyahFound": "Babu tafsirin da aka samu na ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "An kasa loda Tafsiri.",
+  "tafsirNoTextForAyah": "Babu rubutun tafsiri na wannan aya.",
+  "tafsirDownloadingProgress": "Ana sauke tafsiri {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Ana loda tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tushen Tafsir ya dawo da kuskuren HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Madogarar tafsirin da aka zaɓa ba ta dawo ba.",
+  "tafsirCacheUnavailable": "Babu tabbacin tafsirin har yanzu. Daidaita saitin bayanan tafsir da aka samo asali kafin lilo.",
   "bookmarks": "Alamomi",
   "addBookmark": "Æ˜ara Alamar",
   "removeBookmark": "Cire Alamar",
   "lastRead": "Karatun Karshe",
   "dailyZikr": "Zikiri kullum",
+  "duaMeaning1": "wasu kuma suna cewa, ‘Ya Ubangijinmu, Ka bamu abu mai kyau a duniya da lahira, kuma ka kare mu daga azabar wuta.",
+  "duaMeaning2": "Allah ba Ya kallafa wa wani rai fiye da abin da zai iya dauka: kowanne yana samun duk abin da ya aikata na alheri, kuma yana shan wahalarsa – ‘Ya Ubangiji, kada ka dauke mu a kan aiki idan muka manta ko muka yi kuskure. Ya Ubangiji kada ka dora mu kamar yadda Ka dora wa wadanda suka gabace mu nauyi. Ya Ubangiji, kada ka yi mana nauyi fiye da yadda muke da ƙarfin ɗauka. Ka gafarta mana, ka gafarta mana, kuma ka yi mana rahama. Kai ne Majiɓincinmu, sai ka taimake mu a kan kafirai.",
+  "duaMeaning3": "‘Ya Ubangijinmu kada ka karkatar da zukatanmu bayan ka shiryar da mu. Ka ba mu rahamarKa: Kai ne Mai bayarwa.",
+  "duaMeaning4": "Ya Ubangiji ka ba ni da zuriyata mu tsai da sallah. Ubangijinmu, ka karɓi roƙota.",
+  "duaMeaning5": "Kuma ka sassauta fikafikanka a kansu da kyautatawa, kuma ka ce: ‘Ya Ubangiji!",
+  "duaMeaning6": "Tsarki ya tabbata ga Allah, Wanda ya kasance mai iko da gaskiya. (Annabi) kada ka yi gaggawar karantawa kafin wahayi ya cika, amma ka ce: ‘Ya Ubangiji ka kara mini ilimi!",
+  "duaMeaning7": "Ka ce [Annabi], ‘Ya Ubangiji, Ka yi gafara kuma ka yi rahama, Kai ne Mafi rahamar kowa.",
+  "duaMeaning8": "wadanda suke cewa: ‘Ya Ubangijinmu! Ka sanya mana misalai masu kyau ga waxanda suka san Ka’.",
   "morningZikr": "Zikirin safe",
   "eveningZikr": "Zikirin maraice",
   "tasbih": "Tasbihi",
@@ -88,6 +171,26 @@
   "fasting": "Azumi",
   "quranReading": "Karatun Alqur'ani",
   "prayers": "Addu'a",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Æ˜ididdiga na Dhikr",
   "weeklyProgress": "Ci gaban mako-mako",
   "monthlyProgress": "Ci gaban wata-wata",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Sabuwar Shekarar Musulunci",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Zul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
   "laylatAlQadr": "Lailatul Kadri",
   "qiblaDirection": "Hanyar Qibla",
   "compass": "Kamfas",
@@ -108,6 +219,19 @@
   "north": "Arewa",
   "qiblaFound": "Qibla samu!",
   "turnDevice": "Juya na'urarka don fuskantar alÆ™ibla",
+  "qiblaCompassErrorDetails": "Kuskuren Compass: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Babu firikwensin Compass akan wannan na'urar.",
+  "qiblaLocationRequiredTitle": "Wurin da ake buƙata don alƙibla",
+  "qiblaLocationRequiredBody": "Saita ainihin wurinka kafin amfani da kamfas ɗin alƙibla domin a iya ƙididdige alkibla daidai.",
+  "adhanNotificationChannelName": "Sanarwar Adhan",
+  "adhanNotificationChannelDescription": "Ana faɗakar da lokacin sallah tare da sautin adhan.",
   "notifications": "Sanarwa",
   "prayerNotifications": "Sanarwa Addu'a",
   "enableNotifications": "Kunna Fadakarwa",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Manufar: {target}",
   "tapToCount": "Matsa don ƙidaya",
+  "zikrCompletedMashAllah": "An kammala! MashaAllah",
+  "zikrMeaningSubhanAllah": "Lalle ne Allah Yã kasance a kan kõwane azzãlumai.",
+  "zikrMeaningAlhamdulillah": "Dukkan godiya ta tabbata ga Allah.",
+  "zikrMeaningAllahuAkbar": "Allah shi ne mafi girma.",
+  "zikrMeaningLaIlahaIllallah": "Bãbu abin bautãwa fãce Allah.",
+  "zikrMeaningAstaghfirullah": "Ina neman gafarar Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Babu karfi babu karfi sai ta Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Muryar Sauti",
+  "audioVoiceMisharyAlafasy": "Namiji (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Namiji (Abdul Basit)",
+  "audioVoiceSudais": "Namiji (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Ana buƙatar daidaitawa. Juya na'urar a adadi-8.",
   "dailyVerse": "Aya ta Yau",
+  "dailyVerseUnavailableTitle": "Babu wata aya ta yau da kullum",
+  "dailyVerseUnavailableBody": "Ba a saita ingantaccen abun cikin ayar yau da kullun don wannan ginin ba tukuna. Haɗa zuwa tushen gajimare ko daidaita cache da aka tabbatar kafin lilo.",
   "todaysIbadah": "Ibadar yau",
   "quickAccess": "Saurin Shiga",
   "assistant": "Mataimaki",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Babu tabbacin duas tukuna",
+  "duaUnavailableBody": "Tabbatar da duas na yau da kullun ba a daidaita su da wannan na'urar ba tukuna. Haɗa zuwa tushen gajimare don loda duas da aka samo maimakon faɗuwar da ba a tabbatar ba.",
+  "duaCategoryQuranic": "Qur'ani dua",
+  "duaCategoryMorningEvening": "Safiya & Maraice",
+  "duaCategoryTasbih": "Tasbihi",
+  "duaCategoryProtection": "Kariya",
+  "duaCategoryBeginning": "Farko",
+  "duaCategorySleep": "Barci",
+  "duaCategoryFoodDrink": "Abinci & Abin sha",
+  "duaCategoryForgiveness": "Gafara",
+  "duaCategoryHome": "Gida",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Ilimin Musulunci",
   "sukunAudioTitle": "Sukun Sauti",
   "hadithCollections": "Tarin Hadisai",
+  "hadithSourcePending": "Tabbatar da tushe yana jiran",
+  "hadithUnavailableTitle": "Ba a samu ingantattun tarin hadisai ba tukuna",
+  "hadithUnavailableBody": "Wannan ginin har yanzu ya dogara da ingantaccen abinci na hadisi na waje. Ana kashe binciken hadisi har sai an daidaita saitin bayanan da aka samo asali.",
   "paywallUnlockAll": "Buɗe duk fasalulluka don tafiya ta ruhaniya",
+  "premiumProductUnavailable": "Babu samfura mai ƙima a yanzu. Da fatan za a sake gwadawa daga baya.",
+  "premiumPurchaseFailed": "An kasa kammala siyan. Da fatan za a sake gwadawa.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Q&A mai ƙarfin AI mara iyaka",
   "paywallFeature2Title": "Unlimited Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "An gama saukewa don {reciter} tare da {failed} surorin da suka kasa ({downloaded}/{total} zazzage).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Kuskuren hanyar sadarwa. Da fatan za a sake gwadawa.",
+  "placesLocationRequiredTitle": "Wurin da ake buƙata",
+  "placesLocationRequiredBody": "Saita wuri da farko don a iya bincika masallatai da ke kusa, abinci na halal, da makarantun islamiyya daidai.",
+  "placesMapTilesUnavailableTitle": "Babu fale-falen taswira",
+  "placesMapTilesUnavailableBody": "Ba a saita ingantaccen tushen tayal taswira don wannan ginin ba tukuna. Wuraren da ke kusa za su iya ɗauka daga wurin da aka ajiye.",
+  "placesDataSourceUnavailableTitle": "Babu bayanan wuraren",
+  "placesDataSourceUnavailableBody": "Ba a saita madaidaitan wuraren ƙarshen bayanan don wannan ginin ba tukuna. Saita PLACES_OVERPASS_API_URL zuwa amintaccen wakili ko mai bayarwa kafin kunna bincike na kusa.",
   "unknownPlaceName": "Sunan da ba a sani ba",
   "islamicPlaceFallback": "Wurin Musulunci",
-  "prayerNotificationTitle": "Lokacin {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Lokaci yayi da za a yi addu'a {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Babu tabbacin duas tukuna",
-  "duaUnavailableBody": "Tabbatar da duas na yau da kullun ba a daidaita su da wannan na'urar ba tukuna. Haɗa zuwa tushen gajimare don loda duas da aka samo maimakon faɗuwar da ba a tabbatar ba.",
-  "duaCategoryQuranic": "Qur'ani dua",
-  "duaCategoryMorningEvening": "Safiya & Maraice",
-  "duaCategoryTasbih": "Tasbihi",
-  "duaCategoryProtection": "Kariya",
-  "duaCategoryBeginning": "Farko",
-  "duaCategorySleep": "Barci",
-  "duaCategoryFoodDrink": "Abinci & Abin sha",
-  "duaCategoryForgiveness": "Gafara",
-  "duaCategoryHome": "Gida",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Tabbatar da tushe yana jiran",
-  "hadithUnavailableTitle": "Ba a samu ingantattun tarin hadisai ba tukuna",
-  "hadithUnavailableBody": "Wannan ginin har yanzu ya dogara da ingantaccen abinci na hadisi na waje. Ana kashe binciken hadisi har sai an daidaita saitin bayanan da aka samo asali.",
-  "appErrorOccurred": "An sami kuskure",
-  "appUnknownError": "Kuskuren da ba a sani ba",
-  "qiblaCompassErrorDetails": "Kuskuren Compass: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "An kammala! MashaAllah",
-  "zikrMeaningSubhanAllah": "Lalle ne Allah Yã kasance a kan kõwane azzãlumai.",
-  "zikrMeaningAlhamdulillah": "Dukkan godiya ta tabbata ga Allah.",
-  "zikrMeaningAllahuAkbar": "Allah shi ne mafi girma.",
-  "zikrMeaningLaIlahaIllallah": "Bãbu abin bautãwa fãce Allah.",
-  "zikrMeaningAstaghfirullah": "Ina neman gafarar Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Babu karfi babu karfi sai ta Allah.",
   "asmaMeaning1": "Mai Amfani",
   "asmaMeaning2": "Mai rahama",
   "asmaMeaning3": "Sarki /Ubangiji Madawwami",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Mai Dawwama",
   "asmaMeaning97": "Magado",
   "asmaMeaning98": "Mafi Adalci Jagora",
-  "asmaMeaning99": "Mai haƙuri",
-  "duaMeaning1": "wasu kuma suna cewa, ‘Ya Ubangijinmu, Ka bamu abu mai kyau a duniya da lahira, kuma ka kare mu daga azabar wuta.",
-  "duaMeaning2": "Allah ba Ya kallafa wa wani rai fiye da abin da zai iya dauka: kowanne yana samun duk abin da ya aikata na alheri, kuma yana shan wahalarsa – ‘Ya Ubangiji, kada ka dauke mu a kan aiki idan muka manta ko muka yi kuskure. Ya Ubangiji kada ka dora mu kamar yadda Ka dora wa wadanda suka gabace mu nauyi. Ya Ubangiji, kada ka yi mana nauyi fiye da yadda muke da ƙarfin ɗauka. Ka gafarta mana, ka gafarta mana, kuma ka yi mana rahama. Kai ne Majiɓincinmu, sai ka taimake mu a kan kafirai.",
-  "duaMeaning3": "‘Ya Ubangijinmu kada ka karkatar da zukatanmu bayan ka shiryar da mu. Ka ba mu rahamarKa: Kai ne Mai bayarwa.",
-  "duaMeaning4": "Ya Ubangiji ka ba ni da zuriyata mu tsai da sallah. Ubangijinmu, ka karɓi roƙota.",
-  "duaMeaning5": "Kuma ka sassauta fikafikanka a kansu da kyautatawa, kuma ka ce: ‘Ya Ubangiji!",
-  "duaMeaning6": "Tsarki ya tabbata ga Allah, Wanda ya kasance mai iko da gaskiya. (Annabi) kada ka yi gaggawar karantawa kafin wahayi ya cika, amma ka ce: ‘Ya Ubangiji ka kara mini ilimi!",
-  "duaMeaning7": "Ka ce [Annabi], ‘Ya Ubangiji, Ka yi gafara kuma ka yi rahama, Kai ne Mafi rahamar kowa.",
-  "duaMeaning8": "wadanda suke cewa: ‘Ya Ubangijinmu! Ka sanya mana misalai masu kyau ga waxanda suka san Ka’.",
-  "islamicNewYear": "Sabuwar Shekarar Musulunci",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Zul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
-  "refreshAction": "Sake sabuntawa",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Ana loda tafsir...",
-  "tafsirSourceLabel": "tushen Tafsiri",
-  "tafsirNoSurahFound": "Ba a sami tafsirin wannan sura ba.",
-  "tafsirNoAyahFound": "Babu tafsirin da aka samu na ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "An kasa loda Tafsiri.",
-  "tafsirNoTextForAyah": "Babu rubutun tafsiri na wannan aya.",
-  "tafsirDownloadingProgress": "Ana sauke tafsiri {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Ana loda tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tushen Tafsir ya dawo da kuskuren HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Madogarar tafsirin da aka zaɓa ba ta dawo ba.",
-  "premiumProductUnavailable": "Babu samfura mai ƙima a yanzu. Da fatan za a sake gwadawa daga baya.",
-  "premiumPurchaseFailed": "An kasa kammala siyan. Da fatan za a sake gwadawa.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Hanyar Hasken Musulunci",
-  "downloadPartiallyFinishedForReciter": "An gama saukewa don {reciter} tare da {failed} surorin da suka kasa ({downloaded}/{total} zazzage).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Wurin da ake buƙata",
-  "placesLocationRequiredBody": "Saita wuri da farko don a iya bincika masallatai da ke kusa, abinci na halal, da makarantun islamiyya daidai.",
-  "placesMapTilesUnavailableTitle": "Babu fale-falen taswira",
-  "placesMapTilesUnavailableBody": "Ba a saita ingantaccen tushen tayal taswira don wannan ginin ba tukuna. Wuraren da ke kusa za su iya ɗauka daga wurin da aka ajiye.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Namiji (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Namiji (Abdul Basit)",
-  "audioVoiceSudais": "Namiji (Sudais)",
-  "qiblaSensorUnavailable": "Babu firikwensin Compass akan wannan na'urar.",
-  "adhanNotificationChannelName": "Sanarwar Adhan",
-  "adhanNotificationChannelDescription": "Ana faɗakar da lokacin sallah tare da sautin adhan.",
-  "quranLoadFailed": "An kasa loda abun cikin Al-Qur'ani. Da fatan za a sake gwadawa.",
-  "locationDetectionFailed": "An kasa gano wurin ku. Da fatan za a zaɓi birni da hannu ko a sake gwadawa.",
-  "qiblaLocationRequiredTitle": "Wurin da ake buƙata don alƙibla",
-  "qiblaLocationRequiredBody": "Saita ainihin wurinka kafin amfani da kamfas ɗin alƙibla domin a iya ƙididdige alkibla daidai.",
-  "placesDataSourceUnavailableTitle": "Babu bayanan wuraren",
-  "placesDataSourceUnavailableBody": "Ba a saita madaidaitan wuraren ƙarshen bayanan don wannan ginin ba tukuna. Saita PLACES_OVERPASS_API_URL zuwa amintaccen wakili ko mai bayarwa kafin kunna bincike na kusa.",
-  "tafsirCacheUnavailable": "Babu tabbacin tafsirin har yanzu. Daidaita saitin bayanan tafsir da aka samo asali kafin lilo."
+  "asmaMeaning99": "Mai haƙuri"
 }

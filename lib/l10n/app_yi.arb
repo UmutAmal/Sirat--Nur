@@ -1,6 +1,7 @@
 {
   "@@locale": "yi",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "יסלאַמיק וועג פון ליכט",
   "home": "היים",
   "quran": "קווראַן",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "מאַהריב",
   "isha": "ישא",
+  "prayerNotificationTitle": "צייט פֿאַר {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "עס איז צייט צו דאַוונען {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "דאַטאַ & סטאָרידזש",
   "clearCache": "קלאָר קאַש",
   "cacheClearedSuccess": "קאַש קלירד הצלחה",
@@ -34,6 +51,7 @@
   "currentLocation": "קראַנט אָרט (GPS)",
   "locationServiceDisabled": "אָרט דינסט איז פאַרקריפּלט.",
   "locationPermissionDenied": "אָרט דערלויבעניש געלייקנט.",
+  "locationDetectionFailed": "קען נישט דעטעקט דיין אָרט. ביטע קלייַבן אַ שטאָט מאַניואַלי אָדער פּרובירן ווידער.",
   "citiesCount": "{count} שטעט",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "קיין רעזולטאטן געפונען",
   "loading": "לאָדן...",
   "error": "טעות",
+  "appErrorOccurred": "א טעות איז פארגעקומען",
+  "appUnknownError": "אומבאַקאַנט טעות",
+  "quranLoadFailed": "קווראַן אינהאַלט קען נישט זיין לאָודיד. ביטע פּרוּווט ווידער.",
   "retry": "פרובירט ווידער",
+  "refreshAction": "דערפרישן",
   "cancel": "באָטל מאַכן",
   "save": "היט",
   "delete": "ויסמעקן",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "ניין",
   "surah": "סוראַה",
+  "ayahLabel": "יאָ {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "בלאַט",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "לאָודינג טאַפסיר ...",
+  "tafsirSourceLabel": "טפסיר מקור",
+  "tafsirNoSurahFound": "קיין טאַפסיר געפונען פֿאַר דעם סוראַה.",
+  "tafsirNoAyahFound": "קיין טאַפסיר געפונען פֿאַר ייַאַה {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "טאפסיר האט נישט געקאנט באלאדן.",
+  "tafsirNoTextForAyah": "קיין טאַפסיר טעקסט פֿאַר דעם ייַאַה.",
+  "tafsirDownloadingProgress": "דאַונלאָודינג טאַפסיר {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "לאָודינג טאַפסיר {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir מקור האָט אומגעקערט אַן HTTP {statusCode} טעות.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "דער אויסגעקליבטער טאַפסיר מקור האָט ניט אומגעקערט קיין איינסן.",
+  "tafsirCacheUnavailable": "וועראַפייד טאַפסיר איז נישט בנימצא אָפפלינע נאָך. סינק אַ מקור דאַטאַבייס איידער בראַוזינג.",
   "bookmarks": "Bookmarks",
   "addBookmark": "לייג לייענ - צייכן",
   "removeBookmark": "אַראָפּנעמען לייענ - צייכן",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "אנדערע דאַוונען, 'אונדזער האר, געבן אונדז גוט אין דעם וועלט און אין די לעבעאַפטער, און באַשיצן אונדז פון די מאַטערן פון די פייער.'",
+  "duaMeaning2": "גאָט טוט ניט מאַסע קיין נשמה מיט מער ווי עס קענען טראָגן: יעדער גיינז וועלכער גוט עס האט געטאן, און סאַפערז זייַן שלעכט - 'האר, טאָן ניט נעמען אונדז צו אַרבעט אויב מיר פאַרגעסן אָדער מאַכן מיסטייקס. האר, טאָן ניט מאַסע אונדז ווי איר בערד די פֿאַר אונדז. האר, טאָן ניט מאַסע אונדז מיט מער ווי מיר האָבן שטאַרקייַט צו טראָגן. מוחל אונדז, מוחל אונדז, און האָבן רחמנות אויף אונדז. איר זענט אונדזער פּראָטעקטאָר, אַזוי העלפֿן אונדז קעגן די דיסבעליעווערס.",
+  "duaMeaning3": "'אונדזער האר, טאָן ניט לאָזן אונדזער הערצער אָפּנייגן נאָך איר האָבן גיידיד אונדז. שענק אונדז דיין רחמנות: איר זענט דער שטענדיק געבן.",
+  "duaMeaning4": "האר, שענקען אַז איך און מיין זאמען זאלן האַלטן די תפילה. אונדזער האר, אָננעמען מיין בקשה.",
+  "duaMeaning5": "און לאָז אַראָפּ דיין פליגל אין עניוות צו זיי אין גוטהאַרציקייַט און זאָגן, 'האר, האָבן רחמנות אויף זיי, פּונקט ווי זיי האָבן זאָרגן פֿאַר מיר ווען איך בין קליין.'",
+  "duaMeaning6": "דערהויבן איז גאָט, דער איינער וואס איז באמת אין קאָנטראָל. [נביא], טאָן ניט קאַמיש צו זאָגן איידער די התגלות איז גאָר גאַנץ אָבער זאָגן, 'האר, פאַרגרעסערן מיר אין וויסן!'",
+  "duaMeaning7": "זאָגן [נביא], 'האר, מוחל און האָבן רחמנות: דו ביסט דער ראַכמאָנעסדיק פון אַלע.'",
+  "duaMeaning8": "די וואס דאַוונען, 'אונדזער האר, געבן אונדז פרייד אין אונדזער ספּאַוסאַז און זאמען. מאַכן אונדז גוטע ביישפילן צו די וואס זענען אַווער פון איר.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "פאסטן",
   "quranReading": "קוראַן לייענען",
   "prayers": "תפילות",
+  "prayerRemainingHoursMinutes": "{hours}ה {minutes}ם",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}מ",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "וויקלי פּראָגרעס",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "יסלאַמיק ניו יאָר",
+  "mawlidAnNabi": "מוליד אן נאבי",
+  "specialDayDateRamadanStart": "1 ראַמאַדאַן",
+  "specialDayDateLaylatAlQadr": "27 ראַמאַדאַן",
+  "specialDayDateEidAlFitr": "1 שאָוואַל",
+  "specialDayDateEidAlAdha": "10 דהל היג'א",
+  "specialDayDateIslamicNewYear": "1 מוהארם",
+  "specialDayDateMawlidAnNabi": "12 רבי אל-אווואל",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Direction",
   "compass": "קאָמפּאַס",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "קיבלאַ געפונען!",
   "turnDevice": "קער דיין מיטל צו די Qibla",
+  "qiblaCompassErrorDetails": "קאָמפּאַס טעות: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל.",
+  "qiblaLocationRequiredTitle": "אָרט פארלאנגט פֿאַר קיבלאַ",
+  "qiblaLocationRequiredBody": "שטעלן דיין פאַקטיש אָרט איידער ניצן די Qibla קאָמפּאַס אַזוי די ריכטונג קענען זיין קאַלקיאַלייטיד אַקיעראַטלי.",
+  "adhanNotificationChannelName": "אַדהאַן נאָוטאַפאַקיישאַנז",
+  "adhanNotificationChannelDescription": "תפילה צייט אַלערץ מיט אַדהאַן געזונט.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "ציל ציילן: {target}",
   "tapToCount": "צאַפּן צו ציילן",
+  "zikrCompletedMashAllah": "געענדיקט! מאַשאַלאַ",
+  "zikrMeaningSubhanAllah": "אַלאַ איז ווייַט אויבן יעדער ימפּערפעקשאַן.",
+  "zikrMeaningAlhamdulillah": "אַלע לויב געהערט צו אַלאַ.",
+  "zikrMeaningAllahuAkbar": "אַלאַ איז דער גרעסטער.",
+  "zikrMeaningLaIlahaIllallah": "עס איז קיין גאָט אָבער אַלאַ.",
+  "zikrMeaningAstaghfirullah": "איך זוכן אַלאַ ס מחילה.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "עס איז קיין מאַכט און קיין שטאַרקייַט אַחוץ דורך אַלאַ.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "אַודיאָ קול",
+  "audioVoiceMisharyAlafasy": "זכר (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
+  "audioVoiceSudais": "זכר (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "קיבלאַ קאַלאַבריישאַן",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "קאַלאַבריישאַן פארלאנגט. דרייען די מיטל אין פיגור-8.",
   "dailyVerse": "טעגלעך ווערס",
+  "dailyVerseUnavailableTitle": "טעגלעך פסוק ניט בנימצא",
+  "dailyVerseUnavailableBody": "וועריפיעד טעגלעך פסוק אינהאַלט איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. פאַרבינדן צו די וואָלקן מקור אָדער סינק אַ וועראַפייד קאַש איידער בראַוזינג.",
   "todaysIbadah": "היינטיגע איבאדא",
   "quickAccess": "שנעל אַקסעס",
   "assistant": "אַססיסטאַנט",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "וועריפיעד דואַס זענען נישט בנימצא נאָך",
+  "duaUnavailableBody": "וועריפיעד טעגלעך דואַס זענען נישט סינסעד צו דעם מיטל נאָך. קאָננעקט צו די וואָלקן מקור צו לאָדן סאָרסעד דואַס אַנשטאָט פון אַן אַנוועראַפייד פאַלבאַק.",
+  "duaCategoryQuranic": "קווראַניק דואַ",
+  "duaCategoryMorningEvening": "מאָרגן & אָוונט",
+  "duaCategoryTasbih": "טאַסביה",
+  "duaCategoryProtection": "שוץ",
+  "duaCategoryBeginning": "אָנהייב",
+  "duaCategorySleep": "שלאָף",
+  "duaCategoryFoodDrink": "עסנוואַרג & טרינקען",
+  "duaCategoryForgiveness": "מחילה",
+  "duaCategoryHome": "היים",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "יסלאַמיק בילדונג",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "האַדיטה זאַמלונגען",
+  "hadithSourcePending": "וועראַפייד מקור פּענדינג",
+  "hadithUnavailableTitle": "וועריפיעד האַדיטה זאַמלונגען זענען נישט בנימצא נאָך",
+  "hadithUnavailableBody": "דעם בויען נאָך דעפּענדס אויף אַן אַנוועראַפייד פונדרויסנדיק האַדיטה פיטער. Hadith בראַוזינג סטייז פאַרקריפּלט ביז אַ סאָורסעד דאַטאַסעט איז סינסעד.",
   "paywallUnlockAll": "ופשליסן אַלע פֿעיִקייטן פֿאַר דיין רוחניות נסיעה",
+  "premiumProductUnavailable": "פּרעמיום פּראָדוקט איז ניט בנימצא רעכט איצט. ביטע פּרובירן ווידער שפּעטער.",
+  "premiumPurchaseFailed": "קויפן קען נישט זיין געענדיקט. ביטע פּרוּווט ווידער.",
   "paywallFeature1Title": "נעוראַל אַססיסטאַנט פּלוס",
   "paywallFeature1Desc": "אַנלימאַטאַד AI-Powered Q&A",
   "paywallFeature2Title": "אַנלימאַטאַד אָפפלינע",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "די אראפקאפיע איז געענדיקט פֿאַר {reciter} מיט {failed} דורכפאַל סוראַהס ({downloaded}/{total} דאַונלאָודיד).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "אויסגעמעקט אָפפלינע טעקעס פֿאַר {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "נעץ טעות. ביטע פּרוּווט ווידער.",
+  "placesLocationRequiredTitle": "אָרט פארלאנגט",
+  "placesLocationRequiredBody": "שטעלן אַ אָרט ערשטער אַזוי נירביי מאָסקוועס, האַלאַל עסנוואַרג און יסלאַמיק שולן קענען זיין געזוכט אַקיעראַטלי.",
+  "placesMapTilesUnavailableTitle": "מאַפּע טיילז אַנאַוויילאַבאַל",
+  "placesMapTilesUnavailableBody": "א וועראַפייד מאַפּע קאַכל מקור איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. נעאַרבי ערטער קענען נאָך לאָדן פֿון דיין געראטעוועט אָרט.",
+  "placesDataSourceUnavailableTitle": "ערטער דאַטן אַנאַוויילאַבאַל",
+  "placesDataSourceUnavailableBody": "א וועראַפייד ערטער דאַטן ענדפּוינט איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. שטעלן PLACES_OVERPASS_API_URL צו אַ באוויליקט פראקסי אָדער שפּייַזער איידער איר געבן נירביי זוכן.",
   "unknownPlaceName": "אומבאַקאַנט נאָמען",
   "islamicPlaceFallback": "יסלאַמיק אָרט",
-  "prayerNotificationTitle": "צייט פֿאַר {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "עס איז צייט צו דאַוונען {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "וועריפיעד דואַס זענען נישט בנימצא נאָך",
-  "duaUnavailableBody": "וועריפיעד טעגלעך דואַס זענען נישט סינסעד צו דעם מיטל נאָך. קאָננעקט צו די וואָלקן מקור צו לאָדן סאָרסעד דואַס אַנשטאָט פון אַן אַנוועראַפייד פאַלבאַק.",
-  "duaCategoryQuranic": "קווראַניק דואַ",
-  "duaCategoryMorningEvening": "מאָרגן & אָוונט",
-  "duaCategoryTasbih": "טאַסביה",
-  "duaCategoryProtection": "שוץ",
-  "duaCategoryBeginning": "אָנהייב",
-  "duaCategorySleep": "שלאָף",
-  "duaCategoryFoodDrink": "עסנוואַרג & טרינקען",
-  "duaCategoryForgiveness": "מחילה",
-  "duaCategoryHome": "היים",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "וועראַפייד מקור פּענדינג",
-  "hadithUnavailableTitle": "וועריפיעד האַדיטה זאַמלונגען זענען נישט בנימצא נאָך",
-  "hadithUnavailableBody": "דעם בויען נאָך דעפּענדס אויף אַן אַנוועראַפייד פונדרויסנדיק האַדיטה פיטער. Hadith בראַוזינג סטייז פאַרקריפּלט ביז אַ סאָורסעד דאַטאַסעט איז סינסעד.",
-  "appErrorOccurred": "א טעות איז פארגעקומען",
-  "appUnknownError": "אומבאַקאַנט טעות",
-  "qiblaCompassErrorDetails": "קאָמפּאַס טעות: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "געענדיקט! מאַשאַלאַ",
-  "zikrMeaningSubhanAllah": "אַלאַ איז ווייַט אויבן יעדער ימפּערפעקשאַן.",
-  "zikrMeaningAlhamdulillah": "אַלע לויב געהערט צו אַלאַ.",
-  "zikrMeaningAllahuAkbar": "אַלאַ איז דער גרעסטער.",
-  "zikrMeaningLaIlahaIllallah": "עס איז קיין גאָט אָבער אַלאַ.",
-  "zikrMeaningAstaghfirullah": "איך זוכן אַלאַ ס מחילה.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "עס איז קיין מאַכט און קיין שטאַרקייַט אַחוץ דורך אַלאַ.",
   "asmaMeaning1": "די וווילטויק",
   "asmaMeaning2": "דער רחמנותדיקער",
   "asmaMeaning3": "דער מלך / אייביק האר",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "די ייביק",
   "asmaMeaning97": "דער ינכעריטאָר",
   "asmaMeaning98": "דער מערסט צדיקים גייד",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "אנדערע דאַוונען, 'אונדזער האר, געבן אונדז גוט אין דעם וועלט און אין די לעבעאַפטער, און באַשיצן אונדז פון די מאַטערן פון די פייער.'",
-  "duaMeaning2": "גאָט טוט ניט מאַסע קיין נשמה מיט מער ווי עס קענען טראָגן: יעדער גיינז וועלכער גוט עס האט געטאן, און סאַפערז זייַן שלעכט - 'האר, טאָן ניט נעמען אונדז צו אַרבעט אויב מיר פאַרגעסן אָדער מאַכן מיסטייקס. האר, טאָן ניט מאַסע אונדז ווי איר בערד די פֿאַר אונדז. האר, טאָן ניט מאַסע אונדז מיט מער ווי מיר האָבן שטאַרקייַט צו טראָגן. מוחל אונדז, מוחל אונדז, און האָבן רחמנות אויף אונדז. איר זענט אונדזער פּראָטעקטאָר, אַזוי העלפֿן אונדז קעגן די דיסבעליעווערס.",
-  "duaMeaning3": "'אונדזער האר, טאָן ניט לאָזן אונדזער הערצער אָפּנייגן נאָך איר האָבן גיידיד אונדז. שענק אונדז דיין רחמנות: איר זענט דער שטענדיק געבן.",
-  "duaMeaning4": "האר, שענקען אַז איך און מיין זאמען זאלן האַלטן די תפילה. אונדזער האר, אָננעמען מיין בקשה.",
-  "duaMeaning5": "און לאָז אַראָפּ דיין פליגל אין עניוות צו זיי אין גוטהאַרציקייַט און זאָגן, 'האר, האָבן רחמנות אויף זיי, פּונקט ווי זיי האָבן זאָרגן פֿאַר מיר ווען איך בין קליין.'",
-  "duaMeaning6": "דערהויבן איז גאָט, דער איינער וואס איז באמת אין קאָנטראָל. [נביא], טאָן ניט קאַמיש צו זאָגן איידער די התגלות איז גאָר גאַנץ אָבער זאָגן, 'האר, פאַרגרעסערן מיר אין וויסן!'",
-  "duaMeaning7": "זאָגן [נביא], 'האר, מוחל און האָבן רחמנות: דו ביסט דער ראַכמאָנעסדיק פון אַלע.'",
-  "duaMeaning8": "די וואס דאַוונען, 'אונדזער האר, געבן אונדז פרייד אין אונדזער ספּאַוסאַז און זאמען. מאַכן אונדז גוטע ביישפילן צו די וואס זענען אַווער פון איר.",
-  "islamicNewYear": "יסלאַמיק ניו יאָר",
-  "mawlidAnNabi": "מוליד אן נאבי",
-  "specialDayDateRamadanStart": "1 ראַמאַדאַן",
-  "specialDayDateLaylatAlQadr": "27 ראַמאַדאַן",
-  "specialDayDateEidAlFitr": "1 שאָוואַל",
-  "specialDayDateEidAlAdha": "10 דהל היג'א",
-  "specialDayDateIslamicNewYear": "1 מוהארם",
-  "specialDayDateMawlidAnNabi": "12 רבי אל-אווואל",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "דערפרישן",
-  "ayahLabel": "יאָ {ayah}",
-  "tafsirLoading": "לאָודינג טאַפסיר ...",
-  "tafsirSourceLabel": "טפסיר מקור",
-  "tafsirNoSurahFound": "קיין טאַפסיר געפונען פֿאַר דעם סוראַה.",
-  "tafsirNoAyahFound": "קיין טאַפסיר געפונען פֿאַר ייַאַה {ayah}.",
-  "tafsirLoadFailed": "טאפסיר האט נישט געקאנט באלאדן.",
-  "tafsirNoTextForAyah": "קיין טאַפסיר טעקסט פֿאַר דעם ייַאַה.",
-  "tafsirDownloadingProgress": "דאַונלאָודינג טאַפסיר {current}/{total}",
-  "tafsirLoadingProgress": "לאָודינג טאַפסיר {current}/{total}",
-  "tafsirApiStatusError": "Tafsir מקור האָט אומגעקערט אַן HTTP {statusCode} טעות.",
-  "tafsirNoEntriesReturned": "דער אויסגעקליבטער טאַפסיר מקור האָט ניט אומגעקערט קיין איינסן.",
-  "premiumProductUnavailable": "פּרעמיום פּראָדוקט איז ניט בנימצא רעכט איצט. ביטע פּרובירן ווידער שפּעטער.",
-  "premiumPurchaseFailed": "קויפן קען נישט זיין געענדיקט. ביטע פּרוּווט ווידער.",
-  "prayerRemainingHoursMinutes": "{hours}ה {minutes}ם",
-  "prayerRemainingMinutes": "{minutes}מ",
-  "splashTagline": "יסלאַמיק וועג פון ליכט",
-  "downloadPartiallyFinishedForReciter": "די אראפקאפיע איז געענדיקט פֿאַר {reciter} מיט {failed} דורכפאַל סוראַהס ({downloaded}/{total} דאַונלאָודיד).",
-  "placesLocationRequiredTitle": "אָרט פארלאנגט",
-  "placesLocationRequiredBody": "שטעלן אַ אָרט ערשטער אַזוי נירביי מאָסקוועס, האַלאַל עסנוואַרג און יסלאַמיק שולן קענען זיין געזוכט אַקיעראַטלי.",
-  "placesMapTilesUnavailableTitle": "מאַפּע טיילז אַנאַוויילאַבאַל",
-  "placesMapTilesUnavailableBody": "א וועראַפייד מאַפּע קאַכל מקור איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. נעאַרבי ערטער קענען נאָך לאָדן פֿון דיין געראטעוועט אָרט.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "זכר (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
-  "audioVoiceSudais": "זכר (Sudais)",
-  "qiblaSensorUnavailable": "קאָמפּאַס סענסער איז ניט בנימצא אויף דעם מיטל.",
-  "adhanNotificationChannelName": "אַדהאַן נאָוטאַפאַקיישאַנז",
-  "adhanNotificationChannelDescription": "תפילה צייט אַלערץ מיט אַדהאַן געזונט.",
-  "quranLoadFailed": "קווראַן אינהאַלט קען נישט זיין לאָודיד. ביטע פּרוּווט ווידער.",
-  "locationDetectionFailed": "קען נישט דעטעקט דיין אָרט. ביטע קלייַבן אַ שטאָט מאַניואַלי אָדער פּרובירן ווידער.",
-  "qiblaLocationRequiredTitle": "אָרט פארלאנגט פֿאַר קיבלאַ",
-  "qiblaLocationRequiredBody": "שטעלן דיין פאַקטיש אָרט איידער ניצן די Qibla קאָמפּאַס אַזוי די ריכטונג קענען זיין קאַלקיאַלייטיד אַקיעראַטלי.",
-  "placesDataSourceUnavailableTitle": "ערטער דאַטן אַנאַוויילאַבאַל",
-  "placesDataSourceUnavailableBody": "א וועראַפייד ערטער דאַטן ענדפּוינט איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. שטעלן PLACES_OVERPASS_API_URL צו אַ באוויליקט פראקסי אָדער שפּייַזער איידער איר געבן נירביי זוכן.",
-  "tafsirCacheUnavailable": "וועראַפייד טאַפסיר איז נישט בנימצא אָפפלינע נאָך. סינק אַ מקור דאַטאַבייס איידער בראַוזינג."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

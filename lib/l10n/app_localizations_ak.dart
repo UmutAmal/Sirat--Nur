@@ -953,6 +953,13 @@ class AppLocalizationsAk extends AppLocalizations {
   String get dailyVerse => 'Daa Nkyekyɛm';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Da biara da nkyekyem a enni hɔ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Wɔnnya nhyehyɛɛ da biara da nkyekyem mu nsɛm a wɔagye atom ama saa ɔdan yi. Fa wo ho to cloud source no so anaa sync cache a wɔagye atom ansa na woakɔ browse.';
+
+  @override
   String get todaysIbadah => 'Ɛnnɛ Ibadah';
 
   @override

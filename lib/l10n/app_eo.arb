@@ -1,6 +1,7 @@
 {
   "@@locale": "eo",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islama Vojo de Lumo",
   "home": "Hejmo",
   "quran": "Korano",
   "qibla": "Ĉiblo",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tempo por {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Estas tempo preĝi {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datumoj kaj Stokado",
   "clearCache": "Malplenigi Kaŝmemoron",
   "cacheClearedSuccess": "Kaŝmemoro malpleniĝis sukcese",
@@ -34,6 +51,7 @@
   "currentLocation": "Nuna Loko (GPS)",
   "locationServiceDisabled": "Loka servo estas malŝaltita.",
   "locationPermissionDenied": "Lokpermeso malakceptita.",
+  "locationDetectionFailed": "Ne eblis detekti vian lokon. Bonvolu elekti urbon permane aŭ provi denove.",
   "citiesCount": "{count} urboj",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Neniuj rezultoj trovitaj",
   "loading": "Ŝargante...",
   "error": "Eraro",
+  "appErrorOccurred": "Eraro okazis",
+  "appUnknownError": "Nekonata eraro",
+  "quranLoadFailed": "Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove.",
   "retry": "Reprovi",
+  "refreshAction": "Refreŝigi",
   "cancel": "Nuligi",
   "save": "Konservu",
   "delete": "Forigi",
@@ -57,17 +79,78 @@
   "yes": "Jes",
   "no": "Ne",
   "surah": "Surao",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Paĝo",
   "reading": "Legado",
   "recitation": "Deklamado",
   "translation": "Traduko",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Ŝarĝante tafsir...",
+  "tafsirSourceLabel": "Tafsir fonto",
+  "tafsirNoSurahFound": "Neniu tafsir trovita por ĉi tiu surao.",
+  "tafsirNoAyahFound": "Neniu tafsir trovita por aya {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ne povis esti ŝargita.",
+  "tafsirNoTextForAyah": "Neniu tafsir-teksto por ĉi tiu ajah.",
+  "tafsirDownloadingProgress": "Elŝutante tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Ŝarĝante tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir-fonto resendis HTTP {statusCode} eraron.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "La elektita tafsir-fonto resendis neniujn enskribojn.",
+  "tafsirCacheUnavailable": "Kontrolita tafsir ankoraŭ ne haveblas eksterrete. Sinkronigi fontan tafsir-datumaron antaŭ foliumi.",
   "bookmarks": "Legosignoj",
   "addBookmark": "Aldonu legosignon",
   "removeBookmark": "Forigi legosignon",
   "lastRead": "Lasta Legita",
   "dailyZikr": "Ĉiutaga Zikr",
+  "duaMeaning1": "aliaj preĝas: ‘Nia Sinjoro, donu al ni bonon en ĉi tiu mondo kaj en la Ĉi-poste, kaj protektu nin kontraŭ la turmento de la Fajro.’",
+  "duaMeaning2": "Dio ne ŝarĝas neniun animon per pli ol ĝi povas elporti: ĉiu gajnas kian bonon, kiun ĝi faris, kaj suferas sian malbonon- ‘Sinjoro, ne zorgu nin, se ni forgesas aŭ faras erarojn. Sinjoro, ne ŝarĝu nin kiel Vi ŝarĝis tiujn antaŭ ni. Sinjoro, ne ŝarĝu nin per pli ol ni havas forton por elporti. Pardonu nin, pardonu nin kaj kompatu nin. Vi estas nia Protektanto, do helpu nin kontraŭ la nekredantoj.’",
+  "duaMeaning3": "‘Nia Sinjoro, ne lasu niajn korojn deflankiĝi post kiam Vi gvidis nin. Donu al ni Vian kompaton: Vi estas la Ĉiam Donanta.",
+  "duaMeaning4": "Sinjoro, donu, ke mi kaj mia idaro daŭrigu la preĝon. Nia Sinjoro, akceptu mian peton.",
+  "duaMeaning5": "kaj malaltigu vian flugilon en humileco al ili en bonkoreco, kaj diru: 'Sinjoro, kompatu ilin, kiel ili zorgis pri mi kiam mi estis malgranda.'",
+  "duaMeaning6": "altigita estu Dio, Tiu, kiu vere regas. [Profeto], ne rapidu deklami antaŭ ol la revelacio estas plene kompleta, sed diru: 'Sinjoro, pliigu min en scio!'",
+  "duaMeaning7": "Diru [Profeto]: 'Sinjoro, pardonu kaj kompatu: Vi estas la plej kompatema el ĉiuj.'",
+  "duaMeaning8": "tiuj, kiuj preĝas, ‘Nia Sinjoro, donu al ni ĝojon pri niaj geedzoj kaj idaro. Faru al ni bonajn ekzemplojn al tiuj, kiuj konscias pri Vi’.",
   "morningZikr": "Matene Zikr",
   "eveningZikr": "Vespere Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Fastado",
   "quranReading": "Legado de la Korano",
   "prayers": "Preĝoj",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Grafo",
   "weeklyProgress": "Semajna Progreso",
   "monthlyProgress": "Monata Progreso",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadano",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islama Novjaro",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadano",
+  "specialDayDateLaylatAlQadr": "27 Ramadano",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharam",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Kibla Direkto",
   "compass": "Kompaso",
@@ -108,6 +219,19 @@
   "north": "Nordo",
   "qiblaFound": "Ĉiblo trovita!",
   "turnDevice": "Turnu vian aparaton por alfronti la Kiblon",
+  "qiblaCompassErrorDetails": "Kompaseraro: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompasa sensilo ne disponeblas en ĉi tiu aparato.",
+  "qiblaLocationRequiredTitle": "Loko necesa por Ĉiblo",
+  "qiblaLocationRequiredBody": "Agordu vian realan lokon antaŭ ol uzi la Qibla kompason, por ke la direkto estu precize kalkulita.",
+  "adhanNotificationChannelName": "Adhan Sciigoj",
+  "adhanNotificationChannelDescription": "Atentigoj de preĝa tempo per adhan sono.",
   "notifications": "Sciigoj",
   "prayerNotifications": "Preĝaj Sciigoj",
   "enableNotifications": "Ebligu Sciigojn",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Celnombro: {target}",
   "tapToCount": "Frapu por kalkuli",
+  "zikrCompletedMashAllah": "Kompletigita! Maŝalaho",
+  "zikrMeaningSubhanAllah": "Alaho estas multe super ĉiu neperfekteco.",
+  "zikrMeaningAlhamdulillah": "Ĉiu laŭdo apartenas al Alaho.",
+  "zikrMeaningAllahuAkbar": "Alaho estas la Plej Granda.",
+  "zikrMeaningLaIlahaIllallah": "Ne ekzistas dio krom Alaho.",
+  "zikrMeaningAstaghfirullah": "Mi serĉas la pardonon de Alaho.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ne ekzistas potenco kaj forto krom per Alaho.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Aŭdio-Voĉo",
+  "audioVoiceMisharyAlafasy": "Vira (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Vira (Abdul Basit)",
+  "audioVoiceSudais": "Vira (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Kalibrado",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrado bezonata. Rotu aparaton en figuro-8.",
   "dailyVerse": "Ĉiutaga Verso",
+  "dailyVerseUnavailableTitle": "Ĉiutaga verso nedisponebla",
+  "dailyVerseUnavailableBody": "Kontrolita ĉiutaga versa enhavo ankoraŭ ne estas agordita por ĉi tiu konstruo. Konekti al la nuba fonto aŭ sinkronigi kontrolitan kaŝmemoron antaŭ foliumi.",
   "todaysIbadah": "Hodiaŭ Ibadah",
   "quickAccess": "Rapida Aliro",
   "assistant": "Asistanto",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Kontrolitaj duoj ankoraŭ ne haveblas",
+  "duaUnavailableBody": "Konfirmitaj ĉiutagaj duoj ankoraŭ ne estis sinkronigitaj kun ĉi tiu aparato. Konektiĝu al la nuba fonto por ŝargi fontan duason anstataŭ nekontrolita falo.",
+  "duaCategoryQuranic": "Korana dua",
+  "duaCategoryMorningEvening": "Mateno & Vespero",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protekto",
+  "duaCategoryBeginning": "Komencoj",
+  "duaCategorySleep": "Dormu",
+  "duaCategoryFoodDrink": "Manĝaĵo & Trinkaĵo",
+  "duaCategoryForgiveness": "Pardono",
+  "duaCategoryHome": "Hejmo",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islama Eduko",
   "sukunAudioTitle": "Sukun Sonpejzaĝoj",
   "hadithCollections": "Hadith-Kolektoj",
+  "hadithSourcePending": "Atendata kontrolita fonto",
+  "hadithUnavailableTitle": "Kontrolitaj hadito-kolektoj ankoraŭ ne haveblas",
+  "hadithUnavailableBody": "Ĉi tiu konstruo daŭre dependas de nekontrolita ekstera hadito-fluo. Hadith-retumado restas malŝaltita ĝis fontita datumaro estas sinkronigita.",
   "paywallUnlockAll": "Malŝlosu ĉiujn funkciojn por via spirita vojaĝo",
+  "premiumProductUnavailable": "Premium-produkto ne haveblas nun. Bonvolu provi denove poste.",
+  "premiumPurchaseFailed": "Aĉeto ne povis esti finita. Bonvolu provi denove.",
   "paywallFeature1Title": "Neŭrala Asistanto Plus",
   "paywallFeature1Desc": "Senlimaj demandoj kaj respondoj de AI",
   "paywallFeature2Title": "Senlima Senrete",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Elŝuto finiĝis por {reciter} kun {failed} malsukcesaj suraoj ({downloaded}/{total} elŝutita).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Forigitaj senkonektaj dosieroj por {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Reta eraro. Bonvolu provi denove.",
+  "placesLocationRequiredTitle": "Loko bezonata",
+  "placesLocationRequiredBody": "Unue starigu lokon, por ke proksimaj moskeoj, halala manĝaĵo kaj islamaj lernejoj estu precize serĉataj.",
+  "placesMapTilesUnavailableTitle": "Mapo-kaheloj nedisponeblaj",
+  "placesMapTilesUnavailableBody": "Kontrolita mapo-fonto ankoraŭ ne estas agordita por ĉi tiu konstruo. Proksimaj lokoj ankoraŭ povas ŝargi de via konservita loko.",
+  "placesDataSourceUnavailableTitle": "Lokaj datumoj nedisponeblaj",
+  "placesDataSourceUnavailableBody": "Kontrolita loko-finpunkto ankoraŭ ne estas agordita por ĉi tiu konstruo. Agordu PLACES_OVERPASS_API_URL al aprobita prokurilo aŭ provizanto antaŭ ebligi proksiman serĉon.",
   "unknownPlaceName": "Nekonata Nomo",
   "islamicPlaceFallback": "Islama Loko",
-  "prayerNotificationTitle": "Tempo por {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Estas tempo preĝi {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Kontrolitaj duoj ankoraŭ ne haveblas",
-  "duaUnavailableBody": "Konfirmitaj ĉiutagaj duoj ankoraŭ ne estis sinkronigitaj kun ĉi tiu aparato. Konektiĝu al la nuba fonto por ŝargi fontan duason anstataŭ nekontrolita falo.",
-  "duaCategoryQuranic": "Korana dua",
-  "duaCategoryMorningEvening": "Mateno & Vespero",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Protekto",
-  "duaCategoryBeginning": "Komencoj",
-  "duaCategorySleep": "Dormu",
-  "duaCategoryFoodDrink": "Manĝaĵo & Trinkaĵo",
-  "duaCategoryForgiveness": "Pardono",
-  "duaCategoryHome": "Hejmo",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Atendata kontrolita fonto",
-  "hadithUnavailableTitle": "Kontrolitaj hadito-kolektoj ankoraŭ ne haveblas",
-  "hadithUnavailableBody": "Ĉi tiu konstruo daŭre dependas de nekontrolita ekstera hadito-fluo. Hadith-retumado restas malŝaltita ĝis fontita datumaro estas sinkronigita.",
-  "appErrorOccurred": "Eraro okazis",
-  "appUnknownError": "Nekonata eraro",
-  "qiblaCompassErrorDetails": "Kompaseraro: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Kompletigita! Maŝalaho",
-  "zikrMeaningSubhanAllah": "Alaho estas multe super ĉiu neperfekteco.",
-  "zikrMeaningAlhamdulillah": "Ĉiu laŭdo apartenas al Alaho.",
-  "zikrMeaningAllahuAkbar": "Alaho estas la Plej Granda.",
-  "zikrMeaningLaIlahaIllallah": "Ne ekzistas dio krom Alaho.",
-  "zikrMeaningAstaghfirullah": "Mi serĉas la pardonon de Alaho.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ne ekzistas potenco kaj forto krom per Alaho.",
   "asmaMeaning1": "La Bonfaranto",
   "asmaMeaning2": "La Kompatema",
   "asmaMeaning3": "La Reĝo / Eterna Sinjoro",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "La Eterna Unu",
   "asmaMeaning97": "La Heredanto",
   "asmaMeaning98": "La Plej Justa Gvidilo",
-  "asmaMeaning99": "La Paciento Unu",
-  "duaMeaning1": "aliaj preĝas: ‘Nia Sinjoro, donu al ni bonon en ĉi tiu mondo kaj en la Ĉi-poste, kaj protektu nin kontraŭ la turmento de la Fajro.’",
-  "duaMeaning2": "Dio ne ŝarĝas neniun animon per pli ol ĝi povas elporti: ĉiu gajnas kian bonon, kiun ĝi faris, kaj suferas sian malbonon- ‘Sinjoro, ne zorgu nin, se ni forgesas aŭ faras erarojn. Sinjoro, ne ŝarĝu nin kiel Vi ŝarĝis tiujn antaŭ ni. Sinjoro, ne ŝarĝu nin per pli ol ni havas forton por elporti. Pardonu nin, pardonu nin kaj kompatu nin. Vi estas nia Protektanto, do helpu nin kontraŭ la nekredantoj.’",
-  "duaMeaning3": "‘Nia Sinjoro, ne lasu niajn korojn deflankiĝi post kiam Vi gvidis nin. Donu al ni Vian kompaton: Vi estas la Ĉiam Donanta.",
-  "duaMeaning4": "Sinjoro, donu, ke mi kaj mia idaro daŭrigu la preĝon. Nia Sinjoro, akceptu mian peton.",
-  "duaMeaning5": "kaj malaltigu vian flugilon en humileco al ili en bonkoreco, kaj diru: 'Sinjoro, kompatu ilin, kiel ili zorgis pri mi kiam mi estis malgranda.'",
-  "duaMeaning6": "altigita estu Dio, Tiu, kiu vere regas. [Profeto], ne rapidu deklami antaŭ ol la revelacio estas plene kompleta, sed diru: 'Sinjoro, pliigu min en scio!'",
-  "duaMeaning7": "Diru [Profeto]: 'Sinjoro, pardonu kaj kompatu: Vi estas la plej kompatema el ĉiuj.'",
-  "duaMeaning8": "tiuj, kiuj preĝas, ‘Nia Sinjoro, donu al ni ĝojon pri niaj geedzoj kaj idaro. Faru al ni bonajn ekzemplojn al tiuj, kiuj konscias pri Vi’.",
-  "islamicNewYear": "Islama Novjaro",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadano",
-  "specialDayDateLaylatAlQadr": "27 Ramadano",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharam",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Refreŝigi",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Ŝarĝante tafsir...",
-  "tafsirSourceLabel": "Tafsir fonto",
-  "tafsirNoSurahFound": "Neniu tafsir trovita por ĉi tiu surao.",
-  "tafsirNoAyahFound": "Neniu tafsir trovita por aya {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir ne povis esti ŝargita.",
-  "tafsirNoTextForAyah": "Neniu tafsir-teksto por ĉi tiu ajah.",
-  "tafsirDownloadingProgress": "Elŝutante tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Ŝarĝante tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tafsir-fonto resendis HTTP {statusCode} eraron.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "La elektita tafsir-fonto resendis neniujn enskribojn.",
-  "premiumProductUnavailable": "Premium-produkto ne haveblas nun. Bonvolu provi denove poste.",
-  "premiumPurchaseFailed": "Aĉeto ne povis esti finita. Bonvolu provi denove.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Islama Vojo de Lumo",
-  "downloadPartiallyFinishedForReciter": "Elŝuto finiĝis por {reciter} kun {failed} malsukcesaj suraoj ({downloaded}/{total} elŝutita).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Loko bezonata",
-  "placesLocationRequiredBody": "Unue starigu lokon, por ke proksimaj moskeoj, halala manĝaĵo kaj islamaj lernejoj estu precize serĉataj.",
-  "placesMapTilesUnavailableTitle": "Mapo-kaheloj nedisponeblaj",
-  "placesMapTilesUnavailableBody": "Kontrolita mapo-fonto ankoraŭ ne estas agordita por ĉi tiu konstruo. Proksimaj lokoj ankoraŭ povas ŝargi de via konservita loko.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Vira (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Vira (Abdul Basit)",
-  "audioVoiceSudais": "Vira (Sudais)",
-  "qiblaSensorUnavailable": "Kompasa sensilo ne disponeblas en ĉi tiu aparato.",
-  "adhanNotificationChannelName": "Adhan Sciigoj",
-  "adhanNotificationChannelDescription": "Atentigoj de preĝa tempo per adhan sono.",
-  "quranLoadFailed": "Korano-enhavo ne povis esti ŝargita. Bonvolu provi denove.",
-  "locationDetectionFailed": "Ne eblis detekti vian lokon. Bonvolu elekti urbon permane aŭ provi denove.",
-  "qiblaLocationRequiredTitle": "Loko necesa por Ĉiblo",
-  "qiblaLocationRequiredBody": "Agordu vian realan lokon antaŭ ol uzi la Qibla kompason, por ke la direkto estu precize kalkulita.",
-  "placesDataSourceUnavailableTitle": "Lokaj datumoj nedisponeblaj",
-  "placesDataSourceUnavailableBody": "Kontrolita loko-finpunkto ankoraŭ ne estas agordita por ĉi tiu konstruo. Agordu PLACES_OVERPASS_API_URL al aprobita prokurilo aŭ provizanto antaŭ ebligi proksiman serĉon.",
-  "tafsirCacheUnavailable": "Kontrolita tafsir ankoraŭ ne haveblas eksterrete. Sinkronigi fontan tafsir-datumaron antaŭ foliumi."
+  "asmaMeaning99": "La Paciento Unu"
 }

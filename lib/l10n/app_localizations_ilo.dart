@@ -960,6 +960,14 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get dailyVerse => 'Inaldaw a Bersikulo';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Inaldaw a bersikulo a saan a magun-odan';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ti naberipikado nga inaldaw a linaon ti bersikulo ket saan pay a naikonfigura para iti daytoy a panagbangon. Agkonekta iti gubuayan ti ulep wenno i-sync ti naberipikado a cache sakbay nga ag-browse.';
+
+  @override
   String get todaysIbadah => 'Ibadah ita nga aldaw';
 
   @override

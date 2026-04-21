@@ -1,6 +1,7 @@
 {
   "@@locale": "de",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamischer Weg des Lichts",
   "home": "Startseite",
   "quran": "Koran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Zeit für {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Es ist Zeit, {prayerName} zu beten.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Daten & Speicherung",
   "clearCache": "Cache leeren",
   "cacheClearedSuccess": "Cache erfolgreich geleert",
@@ -34,6 +51,7 @@
   "currentLocation": "Aktueller Standort (GPS)",
   "locationServiceDisabled": "Der Standortdienst ist deaktiviert.",
   "locationPermissionDenied": "Standortberechtigung verweigert.",
+  "locationDetectionFailed": "Ihr Standort konnte nicht ermittelt werden. Bitte wählen Sie manuell eine Stadt aus oder versuchen Sie es erneut.",
   "citiesCount": "{count} Städte",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Keine Ergebnisse gefunden",
   "loading": "Laden...",
   "error": "Fehler",
+  "appErrorOccurred": "Es ist ein Fehler aufgetreten",
+  "appUnknownError": "Unbekannter Fehler",
+  "quranLoadFailed": "Koraninhalte konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
   "retry": "Wiederholen",
+  "refreshAction": "Aktualisieren",
   "cancel": "Abbrechen",
   "save": "Speichern",
   "delete": "Löschen",
@@ -57,17 +79,78 @@
   "yes": "Ja",
   "no": "Nein",
   "surah": "Sure",
+  "ayahLabel": "Vers {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juzʾ",
   "page": "Seite",
   "reading": "Lektüre",
   "recitation": "Rezitation",
   "translation": "Übersetzung",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsir wird geladen...",
+  "tafsirSourceLabel": "Tafsir-Quelle",
+  "tafsirNoSurahFound": "Für diese Sure wurde kein Tafsir gefunden.",
+  "tafsirNoAyahFound": "Für Ayah {ayah} wurde kein Tafsir gefunden.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir konnte nicht geladen werden.",
+  "tafsirNoTextForAyah": "Für diese Ayah gibt es keinen Tafsir-Text.",
+  "tafsirDownloadingProgress": "Tafsir wird heruntergeladen {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tafsir wird geladen {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Die Tafsir-Quelle hat einen HTTP-Fehler {statusCode} zurückgegeben.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Die ausgewählte Tafsir-Quelle hat keine Einträge zurückgegeben.",
+  "tafsirCacheUnavailable": "Verifizierter Tafsir ist noch nicht offline verfügbar. Synchronisieren Sie einen Tafsir-Datensatz mit Quellen, bevor Sie ihn durchsuchen.",
   "bookmarks": "Lesezeichen",
   "addBookmark": "Lesezeichen hinzufügen",
   "removeBookmark": "Lesezeichen entfernen",
   "lastRead": "Zuletzt gelesen",
   "dailyZikr": "Tägliches Zikr",
+  "duaMeaning1": "andere beten: „Unser Herr, gib uns Gutes in dieser Welt und im Jenseits und beschütze uns vor der Qual des Feuers.“",
+  "duaMeaning2": "Allah belastet keine Seele über ihr Vermögen hinaus. Ihr kommt zugute, was sie erworben hat, und ihr fällt zur Last, was sie begangen hat. Unser Herr, zieh uns nicht zur Rechenschaft, wenn wir vergessen oder Fehler machen. Unser Herr, lege uns keine Last auf, wie Du sie denen vor uns auferlegt hast. Unser Herr, belaste uns nicht mit dem, wozu wir keine Kraft haben. Verzeih uns, vergib uns und erbarme Dich unser. Du bist unser Schutzherr; hilf uns gegen das ungläubige Volk.",
+  "duaMeaning3": "„Unser Herr, lass unsere Herzen nicht abweichen, nachdem Du uns geführt hast.“ Schenke uns Deine Barmherzigkeit: Du bist der Immer Gebende.",
+  "duaMeaning4": "Herr, schenke mir und meinen Nachkommen, dass wir weiterhin beten. Unser Herr, nimm meine Bitte an.",
+  "duaMeaning5": "und senke deinen Flügel in Demut und Güte zu ihnen und sprich: „Herr, erbarme dich ihrer, so wie sie sich um mich gekümmert haben, als ich klein war.“",
+  "duaMeaning6": "Gepriesen sei Gott, derjenige, der wirklich die Kontrolle hat. [Prophet], beeilen Sie sich nicht mit der Rezitation, bevor die Offenbarung vollständig vollständig ist, sondern sagen Sie: „Herr, vermehre mein Wissen!“",
+  "duaMeaning7": "Sag [Prophet]: „Herr, vergib und erbarme dich: Du bist der Barmherzigste von allen.“",
+  "duaMeaning8": "diejenigen, die beten: „Unser Herr, schenke uns Freude an unseren Ehepartnern und Nachkommen.“ Gib uns ein gutes Beispiel für diejenigen, die Dich kennen.",
   "morningZikr": "Morgen Zikr",
   "eveningZikr": "Abend-Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Fasten",
   "quranReading": "Koranlesung",
   "prayers": "Gebete",
+  "prayerRemainingHoursMinutes": "{hours} Std. {minutes} Min.",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes} Min.",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr-Zählung",
   "weeklyProgress": "Wochenfortschritt",
   "monthlyProgress": "Monatlicher Fortschritt",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamisches Neujahr",
+  "mawlidAnNabi": "Mawlid Kandili",
+  "specialDayDateRamadanStart": "1. Ramadan",
+  "specialDayDateLaylatAlQadr": "27. Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhu al-Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla-Richtung",
   "compass": "Kompass",
@@ -108,6 +219,19 @@
   "north": "Norden",
   "qiblaFound": "Qibla gefunden!",
   "turnDevice": "Drehen Sie Ihr Gerät so, dass es der Qibla zugewandt ist",
+  "qiblaCompassErrorDetails": "Kompassfehler: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Der Kompasssensor ist auf diesem Gerät nicht verfügbar.",
+  "qiblaLocationRequiredTitle": "Standort für Qibla erforderlich",
+  "qiblaLocationRequiredBody": "Stellen Sie Ihren tatsächlichen Standort ein, bevor Sie den Qibla-Kompass verwenden, damit die Richtung genau berechnet werden kann.",
+  "adhanNotificationChannelName": "Adhan-Benachrichtigungen",
+  "adhanNotificationChannelDescription": "Gebetszeitwarnungen mit Adhan-Sound.",
   "notifications": "Benachrichtigungen",
   "prayerNotifications": "Gebetsbenachrichtigungen",
   "enableNotifications": "Benachrichtigungen aktivieren",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Zielanzahl: {target}",
   "tapToCount": "Zum Zählen tippen",
+  "zikrCompletedMashAllah": "Vollendet! MaschAllah",
+  "zikrMeaningSubhanAllah": "Allah steht weit über jeder Unvollkommenheit.",
+  "zikrMeaningAlhamdulillah": "Alles Lob gebührt Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ist der Größte.",
+  "zikrMeaningLaIlahaIllallah": "Es gibt keinen Gott außer Allah.",
+  "zikrMeaningAstaghfirullah": "Ich bitte Allah um Vergebung.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Es gibt keine Macht und keine Stärke außer durch Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audiostimme",
+  "audioVoiceMisharyAlafasy": "Männlich (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Männlich (Abdul Basit)",
+  "audioVoiceSudais": "Männlich (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla-Kalibrierung",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrierung erforderlich. Drehen Sie das Gerät in Abbildung 8.",
   "dailyVerse": "Täglicher Vers",
+  "dailyVerseUnavailableTitle": "Täglicher Vers nicht verfügbar",
+  "dailyVerseUnavailableBody": "Verifizierter täglicher Versinhalt ist für diesen Build noch nicht konfiguriert. Stellen Sie vor dem Surfen eine Verbindung zur Cloud-Quelle her oder synchronisieren Sie einen verifizierten Cache.",
   "todaysIbadah": "Die heutige Ibadah",
   "quickAccess": "Schnellzugriff",
   "assistant": "Assistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verifizierte Duas sind noch nicht verfügbar",
+  "duaUnavailableBody": "Verifizierte tägliche Duas wurden noch nicht mit diesem Gerät synchronisiert. Stellen Sie eine Verbindung zur Cloud-Quelle her, um Quell-Duas anstelle eines nicht verifizierten Fallbacks zu laden.",
+  "duaCategoryQuranic": "Koran-Dua",
+  "duaCategoryMorningEvening": "Morgens und abends",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Schutz",
+  "duaCategoryBeginning": "Anfänge",
+  "duaCategorySleep": "Schlafen",
+  "duaCategoryFoodDrink": "Essen & Trinken",
+  "duaCategoryForgiveness": "Vergebung",
+  "duaCategoryHome": "Heim",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamische Bildung",
   "sukunAudioTitle": "Sukun-Klanglandschaften",
   "hadithCollections": "Hadith-Sammlungen",
+  "hadithSourcePending": "Verifizierte Quelle steht noch aus",
+  "hadithUnavailableTitle": "Verifizierte Hadith-Sammlungen sind noch nicht verfügbar",
+  "hadithUnavailableBody": "Dieser Build hängt immer noch von einem ungeprüften externen Hadith-Feed ab. Das Durchsuchen von Hadithen bleibt deaktiviert, bis ein Quelldatensatz synchronisiert wird.",
   "paywallUnlockAll": "Schalten Sie alle Funktionen für Ihre spirituelle Reise frei",
+  "premiumProductUnavailable": "Das Premiumprodukt ist derzeit nicht verfügbar. Bitte versuchen Sie es später noch einmal.",
+  "premiumPurchaseFailed": "Der Kauf konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
   "paywallFeature1Title": "Neuronaler Assistent Plus",
   "paywallFeature1Desc": "Unbegrenzte KI-gestützte Fragen und Antworten",
   "paywallFeature2Title": "Unbegrenzt offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download abgeschlossen für {reciter} mit {failed} fehlgeschlagenen Suren ({downloaded}/{total} heruntergeladen).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Offlinedateien für {reciter} gelöscht.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Netzwerkfehler. Bitte versuchen Sie es erneut.",
+  "placesLocationRequiredTitle": "Standort erforderlich",
+  "placesLocationRequiredBody": "Legen Sie zunächst einen Standort fest, damit in der Nähe befindliche Moscheen, Halal-Essen und islamische Schulen genau gesucht werden können.",
+  "placesMapTilesUnavailableTitle": "Kartenkacheln nicht verfügbar",
+  "placesMapTilesUnavailableBody": "Für diesen Build ist noch keine verifizierte Kartenkachelquelle konfiguriert. Orte in der Nähe können weiterhin von Ihrem gespeicherten Standort geladen werden.",
+  "placesDataSourceUnavailableTitle": "Ortsdaten nicht verfügbar",
+  "placesDataSourceUnavailableBody": "Für diesen Build ist noch kein Datenendpunkt für verifizierte Orte konfiguriert. Legen Sie PLACES_OVERPASS_API_URL auf einen zugelassenen Proxy oder Anbieter fest, bevor Sie die Suche in der Nähe aktivieren.",
   "unknownPlaceName": "Unbekannter Name",
   "islamicPlaceFallback": "Islamischer Ort",
-  "prayerNotificationTitle": "Zeit für {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Es ist Zeit, {prayerName} zu beten.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verifizierte Duas sind noch nicht verfügbar",
-  "duaUnavailableBody": "Verifizierte tägliche Duas wurden noch nicht mit diesem Gerät synchronisiert. Stellen Sie eine Verbindung zur Cloud-Quelle her, um Quell-Duas anstelle eines nicht verifizierten Fallbacks zu laden.",
-  "duaCategoryQuranic": "Koran-Dua",
-  "duaCategoryMorningEvening": "Morgens und abends",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Schutz",
-  "duaCategoryBeginning": "Anfänge",
-  "duaCategorySleep": "Schlafen",
-  "duaCategoryFoodDrink": "Essen & Trinken",
-  "duaCategoryForgiveness": "Vergebung",
-  "duaCategoryHome": "Heim",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verifizierte Quelle steht noch aus",
-  "hadithUnavailableTitle": "Verifizierte Hadith-Sammlungen sind noch nicht verfügbar",
-  "hadithUnavailableBody": "Dieser Build hängt immer noch von einem ungeprüften externen Hadith-Feed ab. Das Durchsuchen von Hadithen bleibt deaktiviert, bis ein Quelldatensatz synchronisiert wird.",
-  "appErrorOccurred": "Es ist ein Fehler aufgetreten",
-  "appUnknownError": "Unbekannter Fehler",
-  "qiblaCompassErrorDetails": "Kompassfehler: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Vollendet! MaschAllah",
-  "zikrMeaningSubhanAllah": "Allah steht weit über jeder Unvollkommenheit.",
-  "zikrMeaningAlhamdulillah": "Alles Lob gebührt Allah.",
-  "zikrMeaningAllahuAkbar": "Allah ist der Größte.",
-  "zikrMeaningLaIlahaIllallah": "Es gibt keinen Gott außer Allah.",
-  "zikrMeaningAstaghfirullah": "Ich bitte Allah um Vergebung.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Es gibt keine Macht und keine Stärke außer durch Allah.",
   "asmaMeaning1": "Der Allerbarmer, der allen Geschöpfen in dieser Welt Barmherzigkeit erweist.",
   "asmaMeaning2": "Der besonders Barmherzige, der den Gläubigen im Jenseits grenzenlose Gnade und Güte schenkt.",
   "asmaMeaning3": "Der König, dem Schöpfung, Besitz und Herrschaft uneingeschränkt gehören.",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Der Bleibende, dessen Dasein ewig fortbesteht.",
   "asmaMeaning97": "Der Erbe, dem alles nach dem Vergehen der Geschöpfe bleibt.",
   "asmaMeaning98": "Der Führer zur Rechtschaffenheit, der alles mit vollkommener Weisheit leitet.",
-  "asmaMeaning99": "Der Geduldige, der nicht zur Strafe eilt und in vollkommener Nachsicht handelt.",
-  "duaMeaning1": "andere beten: „Unser Herr, gib uns Gutes in dieser Welt und im Jenseits und beschütze uns vor der Qual des Feuers.“",
-  "duaMeaning2": "Allah belastet keine Seele über ihr Vermögen hinaus. Ihr kommt zugute, was sie erworben hat, und ihr fällt zur Last, was sie begangen hat. Unser Herr, zieh uns nicht zur Rechenschaft, wenn wir vergessen oder Fehler machen. Unser Herr, lege uns keine Last auf, wie Du sie denen vor uns auferlegt hast. Unser Herr, belaste uns nicht mit dem, wozu wir keine Kraft haben. Verzeih uns, vergib uns und erbarme Dich unser. Du bist unser Schutzherr; hilf uns gegen das ungläubige Volk.",
-  "duaMeaning3": "„Unser Herr, lass unsere Herzen nicht abweichen, nachdem Du uns geführt hast.“ Schenke uns Deine Barmherzigkeit: Du bist der Immer Gebende.",
-  "duaMeaning4": "Herr, schenke mir und meinen Nachkommen, dass wir weiterhin beten. Unser Herr, nimm meine Bitte an.",
-  "duaMeaning5": "und senke deinen Flügel in Demut und Güte zu ihnen und sprich: „Herr, erbarme dich ihrer, so wie sie sich um mich gekümmert haben, als ich klein war.“",
-  "duaMeaning6": "Gepriesen sei Gott, derjenige, der wirklich die Kontrolle hat. [Prophet], beeilen Sie sich nicht mit der Rezitation, bevor die Offenbarung vollständig vollständig ist, sondern sagen Sie: „Herr, vermehre mein Wissen!“",
-  "duaMeaning7": "Sag [Prophet]: „Herr, vergib und erbarme dich: Du bist der Barmherzigste von allen.“",
-  "duaMeaning8": "diejenigen, die beten: „Unser Herr, schenke uns Freude an unseren Ehepartnern und Nachkommen.“ Gib uns ein gutes Beispiel für diejenigen, die Dich kennen.",
-  "islamicNewYear": "Islamisches Neujahr",
-  "mawlidAnNabi": "Mawlid Kandili",
-  "specialDayDateRamadanStart": "1. Ramadan",
-  "specialDayDateLaylatAlQadr": "27. Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhu al-Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
-  "refreshAction": "Aktualisieren",
-  "ayahLabel": "Vers {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Tafsir wird geladen...",
-  "tafsirSourceLabel": "Tafsir-Quelle",
-  "tafsirNoSurahFound": "Für diese Sure wurde kein Tafsir gefunden.",
-  "tafsirNoAyahFound": "Für Ayah {ayah} wurde kein Tafsir gefunden.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir konnte nicht geladen werden.",
-  "tafsirNoTextForAyah": "Für diese Ayah gibt es keinen Tafsir-Text.",
-  "tafsirDownloadingProgress": "Tafsir wird heruntergeladen {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Tafsir wird geladen {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Die Tafsir-Quelle hat einen HTTP-Fehler {statusCode} zurückgegeben.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Die ausgewählte Tafsir-Quelle hat keine Einträge zurückgegeben.",
-  "premiumProductUnavailable": "Das Premiumprodukt ist derzeit nicht verfügbar. Bitte versuchen Sie es später noch einmal.",
-  "premiumPurchaseFailed": "Der Kauf konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
-  "prayerRemainingHoursMinutes": "{hours} Std. {minutes} Min.",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes} Min.",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Islamischer Weg des Lichts",
-  "downloadPartiallyFinishedForReciter": "Download abgeschlossen für {reciter} mit {failed} fehlgeschlagenen Suren ({downloaded}/{total} heruntergeladen).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Standort erforderlich",
-  "placesLocationRequiredBody": "Legen Sie zunächst einen Standort fest, damit in der Nähe befindliche Moscheen, Halal-Essen und islamische Schulen genau gesucht werden können.",
-  "placesMapTilesUnavailableTitle": "Kartenkacheln nicht verfügbar",
-  "placesMapTilesUnavailableBody": "Für diesen Build ist noch keine verifizierte Kartenkachelquelle konfiguriert. Orte in der Nähe können weiterhin von Ihrem gespeicherten Standort geladen werden.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Männlich (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Männlich (Abdul Basit)",
-  "audioVoiceSudais": "Männlich (Sudais)",
-  "qiblaSensorUnavailable": "Der Kompasssensor ist auf diesem Gerät nicht verfügbar.",
-  "adhanNotificationChannelName": "Adhan-Benachrichtigungen",
-  "adhanNotificationChannelDescription": "Gebetszeitwarnungen mit Adhan-Sound.",
-  "quranLoadFailed": "Koraninhalte konnten nicht geladen werden. Bitte versuchen Sie es erneut.",
-  "locationDetectionFailed": "Ihr Standort konnte nicht ermittelt werden. Bitte wählen Sie manuell eine Stadt aus oder versuchen Sie es erneut.",
-  "qiblaLocationRequiredTitle": "Standort für Qibla erforderlich",
-  "qiblaLocationRequiredBody": "Stellen Sie Ihren tatsächlichen Standort ein, bevor Sie den Qibla-Kompass verwenden, damit die Richtung genau berechnet werden kann.",
-  "placesDataSourceUnavailableTitle": "Ortsdaten nicht verfügbar",
-  "placesDataSourceUnavailableBody": "Für diesen Build ist noch kein Datenendpunkt für verifizierte Orte konfiguriert. Legen Sie PLACES_OVERPASS_API_URL auf einen zugelassenen Proxy oder Anbieter fest, bevor Sie die Suche in der Nähe aktivieren.",
-  "tafsirCacheUnavailable": "Verifizierter Tafsir ist noch nicht offline verfügbar. Synchronisieren Sie einen Tafsir-Datensatz mit Quellen, bevor Sie ihn durchsuchen."
+  "asmaMeaning99": "Der Geduldige, der nicht zur Strafe eilt und in vollkommener Nachsicht handelt."
 }

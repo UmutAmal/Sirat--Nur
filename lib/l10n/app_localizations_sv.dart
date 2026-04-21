@@ -950,6 +950,13 @@ class AppLocalizationsSv extends AppLocalizations {
   String get dailyVerse => 'Dagsvers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Daglig vers ej tillgänglig';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verifierat dagligt versinnehåll är inte konfigurerat för denna version ännu. Anslut till molnkällan eller synkronisera en verifierad cache innan du surfar.';
+
+  @override
   String get todaysIbadah => 'Dagens Ibadah';
 
   @override

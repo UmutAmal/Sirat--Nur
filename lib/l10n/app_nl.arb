@@ -1,6 +1,7 @@
 {
   "@@locale": "nl",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamitische Weg van Licht",
   "home": "Thuis",
   "quran": "Koran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghreb",
   "isha": "Isja",
+  "prayerNotificationTitle": "Tijd voor {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Het is tijd om {prayerName} te bidden.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Gegevens en opslag",
   "clearCache": "Cache wissen",
   "cacheClearedSuccess": "Cache is succesvol gewist",
@@ -34,6 +51,7 @@
   "currentLocation": "Huidige locatie (GPS)",
   "locationServiceDisabled": "Locatieservice is uitgeschakeld.",
   "locationPermissionDenied": "Locatietoestemming geweigerd.",
+  "locationDetectionFailed": "Kan uw locatie niet detecteren. Kies handmatig een stad of probeer het opnieuw.",
   "citiesCount": "{count} steden",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Geen resultaten gevonden",
   "loading": "Laden...",
   "error": "Fout",
+  "appErrorOccurred": "Er is een fout opgetreden",
+  "appUnknownError": "Onbekende fout",
+  "quranLoadFailed": "Koraninhoud kon niet worden geladen. Probeer het opnieuw.",
   "retry": "Opnieuw proberen",
+  "refreshAction": "Vernieuwen",
   "cancel": "Annuleren",
   "save": "Redden",
   "delete": "Verwijderen",
@@ -57,17 +79,78 @@
   "yes": "Ja",
   "no": "Nee",
   "surah": "Soera",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Pagina",
   "reading": "Lezing",
   "recitation": "Recitatie",
   "translation": "Vertaling",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsir laden...",
+  "tafsirSourceLabel": "Tafsir-bron",
+  "tafsirNoSurahFound": "Geen tafsir gevonden voor deze soera.",
+  "tafsirNoAyahFound": "Geen tafsir gevonden voor ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir kan niet worden geladen.",
+  "tafsirNoTextForAyah": "Geen tafsir-tekst voor deze ayah.",
+  "tafsirDownloadingProgress": "Tafsir downloaden {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tafsir laden {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "De Tafsir-bron heeft een HTTP {statusCode}-fout geretourneerd.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "De geselecteerde tafsirbron heeft geen gegevens geretourneerd.",
+  "tafsirCacheUnavailable": "Geverifieerde tafsir is nog niet offline beschikbaar. Synchroniseer een afkomstige tafsir-dataset voordat u gaat browsen.",
   "bookmarks": "Bladwijzers",
   "addBookmark": "Voeg bladwijzer toe",
   "removeBookmark": "Bladwijzer verwijderen",
   "lastRead": "Laatst gelezen",
   "dailyZikr": "Dagelijkse Zikr",
+  "duaMeaning1": "Anderen bidden: ‘Onze Heer, geef ons het goede in deze wereld en in het Hiernamaals, en bescherm ons tegen de kwelling van het Vuur.’",
+  "duaMeaning2": "God belast geen enkele ziel met meer dan zij kan dragen: ieder verkrijgt al het goede dat hij heeft gedaan, en lijdt onder zijn slechte daden. ‘Heer, reken ons niet aan als we vergeten of fouten maken. Heer, belast ons niet zoals U degenen vóór ons belastte. Heer, belast ons niet met meer dan we kracht hebben om te dragen. Vergeef ons, vergeef ons en heb medelijden met ons. Jij bent onze Beschermer, dus help ons tegen de ongelovigen.’",
+  "duaMeaning3": "‘Onze Heer, laat ons hart niet afwijken nadat U ons heeft geleid. Schenk ons ​​Uw genade: U bent de Altijd Gevende.",
+  "duaMeaning4": "Heer, geef dat ik en mijn nakomelingen het gebed mogen voortzetten. Onze Heer, accepteer mijn verzoek.",
+  "duaMeaning5": "en laat uw vleugel in nederigheid en vriendelijkheid naar hen neerslaan en zeg: ‘Heer, heb medelijden met hen, net zoals zij voor mij zorgden toen ik klein was.’",
+  "duaMeaning6": "Verheven zij God, degene die werkelijk de controle heeft. [Profeet], haast je niet om te reciteren voordat de openbaring volledig voltooid is, maar zeg: ‘Heer, vermeerder mij in kennis!’",
+  "duaMeaning7": "Zeg [Profeet]: ‘Heer, vergeef en heb genade: U bent de meest barmhartige van allemaal.’",
+  "duaMeaning8": "degenen die bidden: ‘Onze Heer, schenk ons ​​vreugde in onze echtgenoten en nakomelingen. Maak ons ​​goede voorbeelden voor degenen die zich van U bewust zijn’.",
   "morningZikr": "Ochtend Zikr",
   "eveningZikr": "Avond Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Vasten",
   "quranReading": "Koran lezen",
   "prayers": "Gebeden",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr-graaf",
   "weeklyProgress": "Wekelijkse voortgang",
   "monthlyProgress": "Maandelijkse voortgang",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamitisch Nieuwjaar",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhoel Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla-richting",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "Noorden",
   "qiblaFound": "Qibla gevonden!",
   "turnDevice": "Draai uw apparaat naar de Qibla gericht",
+  "qiblaCompassErrorDetails": "Kompasfout: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompassensor is niet beschikbaar op dit apparaat.",
+  "qiblaLocationRequiredTitle": "Locatie vereist voor Qibla",
+  "qiblaLocationRequiredBody": "Stel uw werkelijke locatie in voordat u het Qibla-kompas gebruikt, zodat de richting nauwkeurig kan worden berekend.",
+  "adhanNotificationChannelName": "Adhan-meldingen",
+  "adhanNotificationChannelDescription": "Gebedstijdwaarschuwingen met adhan-geluid.",
   "notifications": "Meldingen",
   "prayerNotifications": "Gebedsmeldingen",
   "enableNotifications": "Meldingen inschakelen",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Doelaantal: {target}",
   "tapToCount": "Tik om te tellen",
+  "zikrCompletedMashAllah": "Voltooid! MasAllah",
+  "zikrMeaningSubhanAllah": "Allah is ver boven elke onvolmaaktheid.",
+  "zikrMeaningAlhamdulillah": "Alle lof behoort aan Allah.",
+  "zikrMeaningAllahuAkbar": "Allah is de Grootste.",
+  "zikrMeaningLaIlahaIllallah": "Er is geen god dan Allah.",
+  "zikrMeaningAstaghfirullah": "Ik zoek de vergiffenis van Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Er is geen macht en geen kracht behalve door Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio-stem",
+  "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Man (Abdul Basit)",
+  "audioVoiceSudais": "Man (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla-kalibratie",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibratie vereist. Draai het apparaat in figuur 8.",
   "dailyVerse": "Dagelijks vers",
+  "dailyVerseUnavailableTitle": "Dagelijks vers niet beschikbaar",
+  "dailyVerseUnavailableBody": "Geverifieerde dagelijkse versinhoud is nog niet geconfigureerd voor deze build. Maak verbinding met de cloudbron of synchroniseer een geverifieerde cache voordat u gaat browsen.",
   "todaysIbadah": "Vandaag Ibadah",
   "quickAccess": "Snelle toegang",
   "assistant": "Assistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Er zijn nog geen geverifieerde dua's beschikbaar",
+  "duaUnavailableBody": "Geverifieerde dagelijkse dua's zijn nog niet met dit apparaat gesynchroniseerd. Maak verbinding met de cloudbron om afkomstige dua's te laden in plaats van een niet-geverifieerde terugval.",
+  "duaCategoryQuranic": "Koranische dua",
+  "duaCategoryMorningEvening": "Ochtend & Avond",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Bescherming",
+  "duaCategoryBeginning": "Begin",
+  "duaCategorySleep": "Slaap",
+  "duaCategoryFoodDrink": "Eten en drinken",
+  "duaCategoryForgiveness": "Vergiffenis",
+  "duaCategoryHome": "Thuis",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamitisch onderwijs",
   "sukunAudioTitle": "Sukun-geluidslandschappen",
   "hadithCollections": "Hadith-collecties",
+  "hadithSourcePending": "Geverifieerde bron in behandeling",
+  "hadithUnavailableTitle": "Geverifieerde hadith-collecties zijn nog niet beschikbaar",
+  "hadithUnavailableBody": "Deze build is nog steeds afhankelijk van een niet-geverifieerde externe hadith-feed. Het bladeren door Hadith blijft uitgeschakeld totdat een afkomstige dataset is gesynchroniseerd.",
   "paywallUnlockAll": "Ontgrendel alle functies voor je spirituele reis",
+  "premiumProductUnavailable": "Premiumproduct is momenteel niet beschikbaar. Probeer het later opnieuw.",
+  "premiumPurchaseFailed": "Aankoop kon niet worden voltooid. Probeer het opnieuw.",
   "paywallFeature1Title": "Neurale Assistent Plus",
   "paywallFeature1Desc": "Onbeperkte, door AI aangedreven vraag-en-antwoordsessies",
   "paywallFeature2Title": "Onbeperkt offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download voltooid voor {reciter} met {failed} mislukte soera's ({downloaded}/{total} gedownload).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Offline bestanden verwijderd voor {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Netwerkfout. Probeer het opnieuw.",
+  "placesLocationRequiredTitle": "Locatie vereist",
+  "placesLocationRequiredBody": "Stel eerst een locatie in, zodat nabijgelegen moskeeën, halal voedsel en islamitische scholen nauwkeurig kunnen worden doorzocht.",
+  "placesMapTilesUnavailableTitle": "Kaarttegels niet beschikbaar",
+  "placesMapTilesUnavailableBody": "Er is nog geen geverifieerde kaarttegelbron geconfigureerd voor deze build. Plaatsen in de buurt kunnen nog steeds worden geladen vanaf uw opgeslagen locatie.",
+  "placesDataSourceUnavailableTitle": "Plaatsgegevens niet beschikbaar",
+  "placesDataSourceUnavailableBody": "Er is nog geen geverifieerd gegevenseindpunt voor plaatsen geconfigureerd voor deze build. Stel PLACES_OVERPASS_API_URL in op een goedgekeurde proxy of provider voordat u zoeken in de buurt inschakelt.",
   "unknownPlaceName": "Onbekende naam",
   "islamicPlaceFallback": "Islamitische plaats",
-  "prayerNotificationTitle": "Tijd voor {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Het is tijd om {prayerName} te bidden.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Er zijn nog geen geverifieerde dua's beschikbaar",
-  "duaUnavailableBody": "Geverifieerde dagelijkse dua's zijn nog niet met dit apparaat gesynchroniseerd. Maak verbinding met de cloudbron om afkomstige dua's te laden in plaats van een niet-geverifieerde terugval.",
-  "duaCategoryQuranic": "Koranische dua",
-  "duaCategoryMorningEvening": "Ochtend & Avond",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Bescherming",
-  "duaCategoryBeginning": "Begin",
-  "duaCategorySleep": "Slaap",
-  "duaCategoryFoodDrink": "Eten en drinken",
-  "duaCategoryForgiveness": "Vergiffenis",
-  "duaCategoryHome": "Thuis",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Geverifieerde bron in behandeling",
-  "hadithUnavailableTitle": "Geverifieerde hadith-collecties zijn nog niet beschikbaar",
-  "hadithUnavailableBody": "Deze build is nog steeds afhankelijk van een niet-geverifieerde externe hadith-feed. Het bladeren door Hadith blijft uitgeschakeld totdat een afkomstige dataset is gesynchroniseerd.",
-  "appErrorOccurred": "Er is een fout opgetreden",
-  "appUnknownError": "Onbekende fout",
-  "qiblaCompassErrorDetails": "Kompasfout: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Voltooid! MasAllah",
-  "zikrMeaningSubhanAllah": "Allah is ver boven elke onvolmaaktheid.",
-  "zikrMeaningAlhamdulillah": "Alle lof behoort aan Allah.",
-  "zikrMeaningAllahuAkbar": "Allah is de Grootste.",
-  "zikrMeaningLaIlahaIllallah": "Er is geen god dan Allah.",
-  "zikrMeaningAstaghfirullah": "Ik zoek de vergiffenis van Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Er is geen macht en geen kracht behalve door Allah.",
   "asmaMeaning1": "De Weldadige",
   "asmaMeaning2": "De Barmhartige",
   "asmaMeaning3": "De Koning / Eeuwige Heer",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "De eeuwige",
   "asmaMeaning97": "De erfgenaam",
   "asmaMeaning98": "De meest rechtvaardige gids",
-  "asmaMeaning99": "De patiënt",
-  "duaMeaning1": "Anderen bidden: ‘Onze Heer, geef ons het goede in deze wereld en in het Hiernamaals, en bescherm ons tegen de kwelling van het Vuur.’",
-  "duaMeaning2": "God belast geen enkele ziel met meer dan zij kan dragen: ieder verkrijgt al het goede dat hij heeft gedaan, en lijdt onder zijn slechte daden. ‘Heer, reken ons niet aan als we vergeten of fouten maken. Heer, belast ons niet zoals U degenen vóór ons belastte. Heer, belast ons niet met meer dan we kracht hebben om te dragen. Vergeef ons, vergeef ons en heb medelijden met ons. Jij bent onze Beschermer, dus help ons tegen de ongelovigen.’",
-  "duaMeaning3": "‘Onze Heer, laat ons hart niet afwijken nadat U ons heeft geleid. Schenk ons ​​Uw genade: U bent de Altijd Gevende.",
-  "duaMeaning4": "Heer, geef dat ik en mijn nakomelingen het gebed mogen voortzetten. Onze Heer, accepteer mijn verzoek.",
-  "duaMeaning5": "en laat uw vleugel in nederigheid en vriendelijkheid naar hen neerslaan en zeg: ‘Heer, heb medelijden met hen, net zoals zij voor mij zorgden toen ik klein was.’",
-  "duaMeaning6": "Verheven zij God, degene die werkelijk de controle heeft. [Profeet], haast je niet om te reciteren voordat de openbaring volledig voltooid is, maar zeg: ‘Heer, vermeerder mij in kennis!’",
-  "duaMeaning7": "Zeg [Profeet]: ‘Heer, vergeef en heb genade: U bent de meest barmhartige van allemaal.’",
-  "duaMeaning8": "degenen die bidden: ‘Onze Heer, schenk ons ​​vreugde in onze echtgenoten en nakomelingen. Maak ons ​​goede voorbeelden voor degenen die zich van U bewust zijn’.",
-  "islamicNewYear": "Islamitisch Nieuwjaar",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhoel Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Vernieuwen",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Tafsir laden...",
-  "tafsirSourceLabel": "Tafsir-bron",
-  "tafsirNoSurahFound": "Geen tafsir gevonden voor deze soera.",
-  "tafsirNoAyahFound": "Geen tafsir gevonden voor ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir kan niet worden geladen.",
-  "tafsirNoTextForAyah": "Geen tafsir-tekst voor deze ayah.",
-  "tafsirDownloadingProgress": "Tafsir downloaden {current}/{total}",
-  "tafsirLoadingProgress": "Tafsir laden {current}/{total}",
-  "tafsirApiStatusError": "De Tafsir-bron heeft een HTTP {statusCode}-fout geretourneerd.",
-  "tafsirNoEntriesReturned": "De geselecteerde tafsirbron heeft geen gegevens geretourneerd.",
-  "premiumProductUnavailable": "Premiumproduct is momenteel niet beschikbaar. Probeer het later opnieuw.",
-  "premiumPurchaseFailed": "Aankoop kon niet worden voltooid. Probeer het opnieuw.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamitische Weg van Licht",
-  "downloadPartiallyFinishedForReciter": "Download voltooid voor {reciter} met {failed} mislukte soera's ({downloaded}/{total} gedownload).",
-  "placesLocationRequiredTitle": "Locatie vereist",
-  "placesLocationRequiredBody": "Stel eerst een locatie in, zodat nabijgelegen moskeeën, halal voedsel en islamitische scholen nauwkeurig kunnen worden doorzocht.",
-  "placesMapTilesUnavailableTitle": "Kaarttegels niet beschikbaar",
-  "placesMapTilesUnavailableBody": "Er is nog geen geverifieerde kaarttegelbron geconfigureerd voor deze build. Plaatsen in de buurt kunnen nog steeds worden geladen vanaf uw opgeslagen locatie.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Man (Abdul Basit)",
-  "audioVoiceSudais": "Man (Sudais)",
-  "qiblaSensorUnavailable": "Kompassensor is niet beschikbaar op dit apparaat.",
-  "adhanNotificationChannelName": "Adhan-meldingen",
-  "adhanNotificationChannelDescription": "Gebedstijdwaarschuwingen met adhan-geluid.",
-  "quranLoadFailed": "Koraninhoud kon niet worden geladen. Probeer het opnieuw.",
-  "locationDetectionFailed": "Kan uw locatie niet detecteren. Kies handmatig een stad of probeer het opnieuw.",
-  "qiblaLocationRequiredTitle": "Locatie vereist voor Qibla",
-  "qiblaLocationRequiredBody": "Stel uw werkelijke locatie in voordat u het Qibla-kompas gebruikt, zodat de richting nauwkeurig kan worden berekend.",
-  "placesDataSourceUnavailableTitle": "Plaatsgegevens niet beschikbaar",
-  "placesDataSourceUnavailableBody": "Er is nog geen geverifieerd gegevenseindpunt voor plaatsen geconfigureerd voor deze build. Stel PLACES_OVERPASS_API_URL in op een goedgekeurde proxy of provider voordat u zoeken in de buurt inschakelt.",
-  "tafsirCacheUnavailable": "Geverifieerde tafsir is nog niet offline beschikbaar. Synchroniseer een afkomstige tafsir-dataset voordat u gaat browsen."
+  "asmaMeaning99": "De patiënt"
 }

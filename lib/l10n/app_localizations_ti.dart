@@ -942,6 +942,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get dailyVerse => 'መዓልታዊ ጥቕሲ';
 
   @override
+  String get dailyVerseUnavailableTitle => 'መዓልታዊ ጥቕሲ ኣይርከብን።';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ዝተረጋገጸ መዓልታዊ ጥቕሲ ትሕዝቶ ገና ነዚ ህንጸት ኣይተዋቕረን። ቅድሚ ምድህሳስ ምስቲ ምንጪ ደበና ምትእስሳር ወይ ዝተረጋገጸ መኽዘን ምትእስሳር።';
+
+  @override
   String get todaysIbadah => 'ናይ ሎሚ ኢባዳ';
 
   @override

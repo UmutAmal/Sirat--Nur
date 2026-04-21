@@ -955,6 +955,13 @@ class AppLocalizationsCy extends AppLocalizations {
   String get dailyVerse => 'Pennill Dyddiol';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Pennill dyddiol ddim ar gael';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Nid yw cynnwys pennill dyddiol wedi\'i ddilysu wedi\'i ffurfweddu ar gyfer y llun hwn eto. Cysylltwch â ffynhonnell y cwmwl neu cysoni storfa wedi\'i dilysu cyn pori.';
+
+  @override
   String get todaysIbadah => 'Ibadah heddiw';
 
   @override

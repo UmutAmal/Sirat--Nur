@@ -953,6 +953,13 @@ class AppLocalizationsSw extends AppLocalizations {
   String get dailyVerse => 'Mstari wa kila siku';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Aya ya kila siku haipatikani';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Maudhui ya aya ya kila siku yaliyothibitishwa bado hayajasanidiwa kwa muundo huu. Unganisha kwenye chanzo cha wingu au usawazishe akiba iliyothibitishwa kabla ya kuvinjari.';
+
+  @override
   String get todaysIbadah => 'Ibada ya leo';
 
   @override

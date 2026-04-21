@@ -1,6 +1,7 @@
 {
   "@@locale": "so",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Habka Iftiinka Islaamka",
   "home": "Guriga",
   "quran": "Quraanka",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Casr",
   "maghrib": "Magrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Waqtiga {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Waa waqtigii la tukan lahaa {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Xogta & Kaydinta",
   "clearCache": "Nadiifi Cache",
   "cacheClearedSuccess": "Cache si guul leh ayaa loo nadiifiyay",
@@ -34,6 +51,7 @@
   "currentLocation": "Goobta Hadda (GPS)",
   "locationServiceDisabled": "Adeegga goobta waa naafo",
   "locationPermissionDenied": "Ogolaanshiyaha goobta waa la diiday.",
+  "locationDetectionFailed": "Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Wax natiijooyin ah lama helin",
   "loading": "Soodejinaya...",
   "error": "Khalad",
+  "appErrorOccurred": "Khalad ayaa dhacay",
+  "appUnknownError": "Khalad aan la garanayn",
+  "quranLoadFailed": "Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale",
   "retry": "Isku day",
+  "refreshAction": "Dib u cusboonaysii",
   "cancel": "Jooji",
   "save": "Badbaadin",
   "delete": "Tirtir",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Maya",
   "surah": "Suurad",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Bogga",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Soodejinaya tafsiir...",
+  "tafsirSourceLabel": "isha Tafsiir",
+  "tafsirNoSurahFound": "Tafsiir looma helin suuraddan.",
+  "tafsirNoAyahFound": "Wax tafsiir ah looma helin aayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsiir lama rari karo",
+  "tafsirNoTextForAyah": "Ma jiro qoraal tafsiir ah oo loogu talagalay aayaddan.",
+  "tafsirDownloadingProgress": "Soo dejinta tafsiir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Soodejinaya tafsiir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Isha Tafsiirka ayaa soo celisay khalad HTTP {statusCode}",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Isha tafsiir ee la xushay ma soo celin wax gelinta",
+  "tafsirCacheUnavailable": "Tafsiir la xaqiijiyay weli lama heli karo offline. Isku xidh xogta tafsiirka laga soo xigtay ka hor inta aanad baadhin",
   "bookmarks": "Bookmarks",
   "addBookmark": "Ku dar Bookmark",
   "removeBookmark": "Ka saar Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "Qaar kale waxay ku baryaayaan ‘Eebbow na sii wanaag adduun iyo aakhiraba, naga ilaali cadaabka naarta.",
+  "duaMeaning2": "Eebbana kuma cusleeyo nafta wax ka badan oo ay qaadi karto: mid kastaa wuxuu kasbaday wixii wanaag ahaa ee uu falay, xumaantiisana wuu ku dhacaa- ‘Rabbiyow ha na qaban haddaynu hilmaanno ama aynu khaladno. Rabbiyow, ha nagu cuslayn sidii aad kuwii naga horreeyey noogu cuslaysay. Rabbiyow, ha nagu culaysin wax ka badan inta aan haysanno itaal aan ku qaadno. Na cafi, na cafi, oo noo naxariiso. adigaa gargaarahannaga ah ee naga gargaar gaalada.",
+  "duaMeaning3": "‘Eebbow yuusan quluubtayada ka leexan markaad na hanuunisay ka dib. Na sii naxariistaada adaa wax bixiya.",
+  "duaMeaning4": "Rabbiyow, ina siin aniga iyo farcankayga aan tukanno salaadda. Rabbiyow, baryadayda aqbal.",
+  "duaMeaning5": "oo hoos u deji baalkaaga adigoo u khushuucsan xaggooda si naxariis leh, oo waxaad ku tidhaahdaa, Rabbiyow u naxariiso siday ii danayn jireen markaan yaraa.",
+  "duaMeaning6": "Eebaa nasahane ee ah kan wax maamula. [Nabiyow], ha ku degdegin inaad wax akhrido ka hor intuusan waxyigu dhammayn ee waxaad dhahdaa, ‘Rabbiyow ii kordhi cilmiga!",
+  "duaMeaning7": "Waxaad dhahdaa [Nabiga], ‘Eebow dambi dhaaf oo u naxariiso, adaa naxariis badane.",
+  "duaMeaning8": "Kuwa tukanaya, ‘Eebbow, na sii farxadda xaasaskeenna iyo carruurteenna. Nooga yeel tusaale wanaagsan kuwa ku baraarugsan’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Soonka",
   "quranReading": "Quraan Akhriska",
   "prayers": "Ducada",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Horumarka Todobaadlaha ah",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Sanadka Cusub ee Islaamka",
+  "mawlidAnNabi": "Mawliid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadaan",
+  "specialDayDateLaylatAlQadr": "27 Ramadaan",
+  "specialDayDateEidAlFitr": "1 Shawaal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muxaram",
+  "specialDayDateMawlidAnNabi": "12 Rabii al-Awal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Jihada Qibla",
   "compass": "Compass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla la helay!",
   "turnDevice": "U rog qalabkaaga si aad u wajahdo Qiblada",
+  "qiblaCompassErrorDetails": "Cilad kambaska: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Dareemaha Compass lagama heli karo qalabkan.",
+  "qiblaLocationRequiredTitle": "Meesha loo baahan yahay Qibla",
+  "qiblaLocationRequiredBody": "Deji goobtaada dhabta ah ka hor intaadan isticmaalin kombuyuutarka Qibla si jihada loo xisaabiyo si sax ah.",
+  "adhanNotificationChannelName": "Ogeysiinta Adhan",
+  "adhanNotificationChannelDescription": "Waqtiga salaadda wuxuu ku baraarujinayaa dhawaaqa adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Tirada bartilmaameedka: {target}",
   "tapToCount": "Taabo si aad u tiriso",
+  "zikrCompletedMashAllah": "Dhammaystiran! Maasha Allaah",
+  "zikrMeaningSubhanAllah": "Eebbana waa ka sarreeyaa cillad kasta.",
+  "zikrMeaningAlhamdulillah": "Mahad oo dhan Allaah ayaa iska leh.",
+  "zikrMeaningAllahuAkbar": "Allaah ayaa u weyn.",
+  "zikrMeaningLaIlahaIllallah": "Allaah mooyee ilaah kale ma jiro.",
+  "zikrMeaningAstaghfirullah": "Allaah ayaan danbi dhaaf waydiisanayaa.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Awood iyo xoogna ma jiro Allaah mooyee.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Codka Maqalka",
+  "audioVoiceMisharyAlafasy": "Lab (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lab (Abdul Basit)",
+  "audioVoiceSudais": "Lab (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Qalabaynta ayaa loo baahan yahay. Ku wareeji qalabka sawirka-8.",
   "dailyVerse": "Aayadda Maalinlaha ah",
+  "dailyVerseUnavailableTitle": "Aayad maalinle ah lama heli karo",
+  "dailyVerseUnavailableBody": "Macluumaadka aayadda maalinlaha ah ee la xaqiijiyay weli looma habeynin dhismahan. Ku xidh isha daruuraha ama isku xidh kayd la xaqiijiyay ka hor inta aanad baadhin.",
   "todaysIbadah": "Cibaado maanta",
   "quickAccess": "Helitaanka Degdegga ah",
   "assistant": "Kaaliyaha",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duco la xaqiijiyay wali lama hayo",
+  "duaUnavailableBody": "Duas maalinle ah oo la xaqiijiyay weli lama midin qalabkan. Ku xidh isha daruuraha si aad ugu shubto duas laga keenay halkii aad ka ahaan lahayd dib u dhac aan la xaqiijin.",
+  "duaCategoryQuranic": "ducada quraanka",
+  "duaCategoryMorningEvening": "Subax & Fiid",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ilaalinta",
+  "duaCategoryBeginning": "Bilawga",
+  "duaCategorySleep": "Hurdo",
+  "duaCategoryFoodDrink": "Cunto & Cabbitaan",
+  "duaCategoryForgiveness": "Cafiska",
+  "duaCategoryHome": "Guriga",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Barashada Islaamka",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Ururinta Xadiiska",
+  "hadithSourcePending": "Isha la xaqiijiyay",
+  "hadithUnavailableTitle": "Ururinta xadiisyada la xaqiijiyay wali lama hayo",
+  "hadithUnavailableBody": "Dhismahani wuxuu weli ku xiran yahay quudinta xadiiska dibadda ah ee aan la xaqiijin. Baadhitaanka xadiisku waxa uu ahaanayaa mid naafo ah ilaa xogta laga soo xigtay la isku dhejiyo.",
   "paywallUnlockAll": "Fur dhammaan sifooyinka safarkaaga ruuxiga ah",
+  "premiumProductUnavailable": "Alaabta qaaliga ah lama heli karo hadda Fadlan isku day mar kale hadhow",
+  "premiumPurchaseFailed": "Iibka waa la dhammayn kari waayay Fadlan isku day mar kale",
   "paywallFeature1Title": "Kaaliyaha Neural Plus",
   "paywallFeature1Desc": "Q&A aan xadidnayn oo AI ku shaqeeya",
   "paywallFeature2Title": "Aan xad lahayn",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Soodejintu way dhammaatay {reciter} leh {failed} suuradaha fashilmay ({downloaded}/{total} la soo dejiyay).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Faylasha qad la'aanta ee la tirtiray ee {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Cilada shabakada Fadlan isku day mar kale",
+  "placesLocationRequiredTitle": "Goobta loo baahan yahay",
+  "placesLocationRequiredBody": "Marka hore deji meel u dhow masaajidda, cuntada xalaasha ah, iyo dugsiyada islaamiga ah si sax ah loogu baadho.",
+  "placesMapTilesUnavailableTitle": "Duubabka khariidadu lama heli karo",
+  "placesMapTilesUnavailableBody": "Isha foornada khariidad ee la xaqiijiyay wali looma habeynin dhismahan. Meelaha u dhow weli way ka soo rari karaan goobtaada kaydsan.",
+  "placesDataSourceUnavailableTitle": "Xogta meelaha lama heli karo",
+  "placesDataSourceUnavailableBody": "Meesha la xaqiijiyay barta dhamaadka xogta looma habeynin dhismahan wali. Deji PLACES_OVERPASS_API_URL wakiil ama bixiye la ansixiyay ka hor inta aanad awood u gelin raadinta dhow.",
   "unknownPlaceName": "Magaca Aan La Aqoon",
   "islamicPlaceFallback": "Goobta Islaamka",
-  "prayerNotificationTitle": "Waqtiga {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Waa waqtigii la tukan lahaa {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duco la xaqiijiyay wali lama hayo",
-  "duaUnavailableBody": "Duas maalinle ah oo la xaqiijiyay weli lama midin qalabkan. Ku xidh isha daruuraha si aad ugu shubto duas laga keenay halkii aad ka ahaan lahayd dib u dhac aan la xaqiijin.",
-  "duaCategoryQuranic": "ducada quraanka",
-  "duaCategoryMorningEvening": "Subax & Fiid",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Ilaalinta",
-  "duaCategoryBeginning": "Bilawga",
-  "duaCategorySleep": "Hurdo",
-  "duaCategoryFoodDrink": "Cunto & Cabbitaan",
-  "duaCategoryForgiveness": "Cafiska",
-  "duaCategoryHome": "Guriga",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Isha la xaqiijiyay",
-  "hadithUnavailableTitle": "Ururinta xadiisyada la xaqiijiyay wali lama hayo",
-  "hadithUnavailableBody": "Dhismahani wuxuu weli ku xiran yahay quudinta xadiiska dibadda ah ee aan la xaqiijin. Baadhitaanka xadiisku waxa uu ahaanayaa mid naafo ah ilaa xogta laga soo xigtay la isku dhejiyo.",
-  "appErrorOccurred": "Khalad ayaa dhacay",
-  "appUnknownError": "Khalad aan la garanayn",
-  "qiblaCompassErrorDetails": "Cilad kambaska: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Dhammaystiran! Maasha Allaah",
-  "zikrMeaningSubhanAllah": "Eebbana waa ka sarreeyaa cillad kasta.",
-  "zikrMeaningAlhamdulillah": "Mahad oo dhan Allaah ayaa iska leh.",
-  "zikrMeaningAllahuAkbar": "Allaah ayaa u weyn.",
-  "zikrMeaningLaIlahaIllallah": "Allaah mooyee ilaah kale ma jiro.",
-  "zikrMeaningAstaghfirullah": "Allaah ayaan danbi dhaaf waydiisanayaa.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Awood iyo xoogna ma jiro Allaah mooyee.",
   "asmaMeaning1": "Ka Faa'iidayso",
   "asmaMeaning2": "Raxmaana",
   "asmaMeaning3": "Boqorka / Rabbi daa'imka ah",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Midka Aakhiro",
   "asmaMeaning97": "Dhaxalka",
   "asmaMeaning98": "Tusaha ugu Xaqsan",
-  "asmaMeaning99": "Kan Bukaanka ah",
-  "duaMeaning1": "Qaar kale waxay ku baryaayaan ‘Eebbow na sii wanaag adduun iyo aakhiraba, naga ilaali cadaabka naarta.",
-  "duaMeaning2": "Eebbana kuma cusleeyo nafta wax ka badan oo ay qaadi karto: mid kastaa wuxuu kasbaday wixii wanaag ahaa ee uu falay, xumaantiisana wuu ku dhacaa- ‘Rabbiyow ha na qaban haddaynu hilmaanno ama aynu khaladno. Rabbiyow, ha nagu cuslayn sidii aad kuwii naga horreeyey noogu cuslaysay. Rabbiyow, ha nagu culaysin wax ka badan inta aan haysanno itaal aan ku qaadno. Na cafi, na cafi, oo noo naxariiso. adigaa gargaarahannaga ah ee naga gargaar gaalada.",
-  "duaMeaning3": "‘Eebbow yuusan quluubtayada ka leexan markaad na hanuunisay ka dib. Na sii naxariistaada adaa wax bixiya.",
-  "duaMeaning4": "Rabbiyow, ina siin aniga iyo farcankayga aan tukanno salaadda. Rabbiyow, baryadayda aqbal.",
-  "duaMeaning5": "oo hoos u deji baalkaaga adigoo u khushuucsan xaggooda si naxariis leh, oo waxaad ku tidhaahdaa, Rabbiyow u naxariiso siday ii danayn jireen markaan yaraa.",
-  "duaMeaning6": "Eebaa nasahane ee ah kan wax maamula. [Nabiyow], ha ku degdegin inaad wax akhrido ka hor intuusan waxyigu dhammayn ee waxaad dhahdaa, ‘Rabbiyow ii kordhi cilmiga!",
-  "duaMeaning7": "Waxaad dhahdaa [Nabiga], ‘Eebow dambi dhaaf oo u naxariiso, adaa naxariis badane.",
-  "duaMeaning8": "Kuwa tukanaya, ‘Eebbow, na sii farxadda xaasaskeenna iyo carruurteenna. Nooga yeel tusaale wanaagsan kuwa ku baraarugsan’.",
-  "islamicNewYear": "Sanadka Cusub ee Islaamka",
-  "mawlidAnNabi": "Mawliid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadaan",
-  "specialDayDateLaylatAlQadr": "27 Ramadaan",
-  "specialDayDateEidAlFitr": "1 Shawaal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muxaram",
-  "specialDayDateMawlidAnNabi": "12 Rabii al-Awal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Dib u cusboonaysii",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Soodejinaya tafsiir...",
-  "tafsirSourceLabel": "isha Tafsiir",
-  "tafsirNoSurahFound": "Tafsiir looma helin suuraddan.",
-  "tafsirNoAyahFound": "Wax tafsiir ah looma helin aayah {ayah}.",
-  "tafsirLoadFailed": "Tafsiir lama rari karo",
-  "tafsirNoTextForAyah": "Ma jiro qoraal tafsiir ah oo loogu talagalay aayaddan.",
-  "tafsirDownloadingProgress": "Soo dejinta tafsiir {current}/{total}",
-  "tafsirLoadingProgress": "Soodejinaya tafsiir {current}/{total}",
-  "tafsirApiStatusError": "Isha Tafsiirka ayaa soo celisay khalad HTTP {statusCode}",
-  "tafsirNoEntriesReturned": "Isha tafsiir ee la xushay ma soo celin wax gelinta",
-  "premiumProductUnavailable": "Alaabta qaaliga ah lama heli karo hadda Fadlan isku day mar kale hadhow",
-  "premiumPurchaseFailed": "Iibka waa la dhammayn kari waayay Fadlan isku day mar kale",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Habka Iftiinka Islaamka",
-  "downloadPartiallyFinishedForReciter": "Soodejintu way dhammaatay {reciter} leh {failed} suuradaha fashilmay ({downloaded}/{total} la soo dejiyay).",
-  "placesLocationRequiredTitle": "Goobta loo baahan yahay",
-  "placesLocationRequiredBody": "Marka hore deji meel u dhow masaajidda, cuntada xalaasha ah, iyo dugsiyada islaamiga ah si sax ah loogu baadho.",
-  "placesMapTilesUnavailableTitle": "Duubabka khariidadu lama heli karo",
-  "placesMapTilesUnavailableBody": "Isha foornada khariidad ee la xaqiijiyay wali looma habeynin dhismahan. Meelaha u dhow weli way ka soo rari karaan goobtaada kaydsan.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Lab (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Lab (Abdul Basit)",
-  "audioVoiceSudais": "Lab (Sudais)",
-  "qiblaSensorUnavailable": "Dareemaha Compass lagama heli karo qalabkan.",
-  "adhanNotificationChannelName": "Ogeysiinta Adhan",
-  "adhanNotificationChannelDescription": "Waqtiga salaadda wuxuu ku baraarujinayaa dhawaaqa adhan.",
-  "quranLoadFailed": "Waxa ku jira Quraanka lama rari karo Fadlan isku day mar kale",
-  "locationDetectionFailed": "Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale.",
-  "qiblaLocationRequiredTitle": "Meesha loo baahan yahay Qibla",
-  "qiblaLocationRequiredBody": "Deji goobtaada dhabta ah ka hor intaadan isticmaalin kombuyuutarka Qibla si jihada loo xisaabiyo si sax ah.",
-  "placesDataSourceUnavailableTitle": "Xogta meelaha lama heli karo",
-  "placesDataSourceUnavailableBody": "Meesha la xaqiijiyay barta dhamaadka xogta looma habeynin dhismahan wali. Deji PLACES_OVERPASS_API_URL wakiil ama bixiye la ansixiyay ka hor inta aanad awood u gelin raadinta dhow.",
-  "tafsirCacheUnavailable": "Tafsiir la xaqiijiyay weli lama heli karo offline. Isku xidh xogta tafsiirka laga soo xigtay ka hor inta aanad baadhin"
+  "asmaMeaning99": "Kan Bukaanka ah"
 }

@@ -955,6 +955,13 @@ class AppLocalizationsXh extends AppLocalizations {
   String get dailyVerse => 'Ivesi yemihla ngemihla';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ivesi yemihla ngemihla ayifumaneki';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Umxholo wevesi yemihla ngemihla oqinisekisiweyo awumiselwanga kolu lwakhiwo okwangoku. Qhagamshela kumthombo welifu okanye ungqamanise i-cache eqinisekisiweyo phambi kokukhangela.';
+
+  @override
   String get todaysIbadah => 'Namhlanje Ibadah';
 
   @override

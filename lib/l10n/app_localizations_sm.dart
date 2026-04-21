@@ -953,6 +953,13 @@ class AppLocalizationsSm extends AppLocalizations {
   String get dailyVerse => 'Fuaiupu i Aso Taitasi';
 
   @override
+  String get dailyVerseUnavailableTitle => 'E le maua le fuaiupu i aso taitasi';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'E le\'i fa\'atulagaina le anotusi o fuaiupu i aso ta\'itasi mo lenei faufale. Fa\'afeso\'ota\'i ile puna o ao pe fa\'amaopoopo se fa\'aoga fa\'amaonia a\'o le\'i su\'esu\'e.';
+
+  @override
   String get todaysIbadah => 'Ibadah i aso nei';
 
   @override

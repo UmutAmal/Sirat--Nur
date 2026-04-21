@@ -1,6 +1,7 @@
 {
   "@@locale": "haw",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Ala Islam o ka Malamalama",
   "home": "Home",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "ʻO Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Ka manawa no {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ʻO ka manawa kēia e pule ai iā {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "ʻIkepili & Waihona",
   "clearCache": "Holoi huna",
   "cacheClearedSuccess": "Holoi ʻia ka waihona",
@@ -34,6 +51,7 @@
   "currentLocation": "Kahi o kēia manawa (GPS)",
   "locationServiceDisabled": "Ua pio ka lawelawe wahi.",
   "locationPermissionDenied": "Ua hōʻole ʻia ka ʻae wahi.",
+  "locationDetectionFailed": "ʻAʻole hiki ke ʻike i kou wahi. E ʻoluʻolu e koho lima i ke kūlanakauhale a i ʻole e hoʻāʻo hou.",
   "citiesCount": "{count} kūlanakauhale",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "ʻAʻohe hopena i loaʻa",
   "loading": "Ke hoʻouka nei...",
   "error": "Kuhihewa",
+  "appErrorOccurred": "Ua hewa",
+  "appUnknownError": "Kupa ʻike ʻole ʻia",
+  "quranLoadFailed": "ʻAʻole hiki ke hoʻouka ʻia ka ʻike Quran. E ʻoluʻolu e hoʻāʻo hou.",
   "retry": "E hoao hou",
+  "refreshAction": "Hōʻano hou",
   "cancel": "Hoʻopau",
   "save": "Mālama",
   "delete": "Holoi",
@@ -57,17 +79,78 @@
   "yes": "ʻAe",
   "no": "ʻAʻole",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "ʻO Juz",
   "page": "ʻAoʻao",
   "reading": "Heluhelu",
   "recitation": "Heluhelu",
   "translation": "Unuhi",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Ke hoʻouka nei i ka tafsir...",
+  "tafsirSourceLabel": "Kumu Tafsir",
+  "tafsirNoSurahFound": "ʻAʻohe tafsir i loaʻa no kēia surah.",
+  "tafsirNoAyahFound": "ʻAʻohe tafsir i loaʻa no ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "ʻAʻole hiki ke hoʻouka ʻia ʻo Tafsir.",
+  "tafsirNoTextForAyah": "ʻAʻohe kikokikona tafsir no kēia papa.",
+  "tafsirDownloadingProgress": "Hoʻoiho ʻia ka tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Ke hoʻouka nei i ka tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Ua hoʻihoʻi mai ke kumu Tafsir i kahi hewa HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "ʻAʻole i hoʻihoʻi mai ke kumu tafsir i koho ʻia.",
+  "tafsirCacheUnavailable": "ʻAʻole loaʻa ka tafsir i hōʻoia ʻia ma waho. E hoʻopaʻa i kahi waihona tafsir kumu ma mua o ka nānā ʻana.",
   "bookmarks": "Nā kaha puke",
   "addBookmark": "Hoʻohui i ka Bookmark",
   "removeBookmark": "Wehe i ka Bookmark",
   "lastRead": "Heluhelu hope",
   "dailyZikr": "Zikr i kēlā me kēia lā",
+  "duaMeaning1": "pule kekahi, 'E ko makou Haku, e haawi mai ia makou i ka maikai ma keia ao a ma keia hope aku, a e hoomalu mai ia makou i ka eha o ke ahi.'",
+  "duaMeaning2": "ʻAʻole kaumaha ke Akua i kekahi ʻuhane ma mua o ka mea hiki iā ia ke hoʻomanawanui: loaʻa i kēlā me kēia mea ka maikaʻi āna i hana ai, a ʻeha hoʻi i kāna ʻino - 'E ka Haku, mai lawe ʻoe iā mākou i ka hana inā hoʻopoina mākou a hana hewa paha. E ka Haku, mai hookaumaha oe ia makou e like me kou hookaumaha ana i ka poe mamua o makou. E ka Haku, mai hookaumaha oe ia makou me ka oi aku mamua o ko makou ikaika e amo ai. E kala mai, e kala mai, a e aloha mai ia makou. ʻO ʻoe nō ko mākou Mālama, no laila e kōkua mai iā mākou i ka poʻe hoʻomaloka.",
+  "duaMeaning3": "E ko makou Haku, mai hoohuli oe i ko makou naau mahope o kou alakai ana ia makou. E hāʻawi mai iā mākou i kou aloha: ʻO ʻoe ka mea hāʻawi mau.",
+  "duaMeaning4": "E ka Haku, e haawi mai ia'u a me ka'u poe mamo e malama i ka pule. E ko makou Haku, e maliu mai oe i ka'u noi.",
+  "duaMeaning5": "a e hoʻohaʻahaʻa i kou ʻēheu iā lākou me ka lokomaikaʻi, a e ʻōlelo aku, 'E ka Haku, e aloha mai ʻoe iā lākou, e like me ko lākou mālama ʻana mai iaʻu i koʻu wā liʻiliʻi.'",
+  "duaMeaning6": "e hookiekieia'e ke Akua, ka mea nana e hoomalu. [Pula], mai wikiwiki e heluhelu ma mua o ka pau ʻana o ka hōʻike, akā e ʻōlelo aku, 'E ka Haku, hoʻonui iaʻu i ka ʻike!'",
+  "duaMeaning7": "E ʻī aku [Pūlana], ‘E ka Haku, e kala mai a e aloha mai: ʻO ʻoe ke aloha nui loa i nā mea a pau.’",
+  "duaMeaning8": "ka poe e pule ana, E ka Haku, e haawi mai ia makou i ka olioli iloko o na wahine a me na keiki a makou. E hoolilo mai oe ia makou i kumu hoohalike no ka poe ike ia oe.",
   "morningZikr": "Kakahiaka Zikr",
   "eveningZikr": "Zikr ahiahi",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "hookeai",
   "quranReading": "Heluhelu Quran",
   "prayers": "Pule",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Helu Dhikr",
   "weeklyProgress": "Holomua o ka pule",
   "monthlyProgress": "Holomua o ka mahina",
@@ -101,6 +204,14 @@
   "ramadan": "Lamadana",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Makahiki Hou Islam",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Sāwalu",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharama",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Kuhikuhi Qibla",
   "compass": "Pāpana",
@@ -108,6 +219,19 @@
   "north": "Ke akau",
   "qiblaFound": "Loaʻa iā Qibla!",
   "turnDevice": "E hoʻohuli i kāu kelepona e alo i ka Qibla",
+  "qiblaCompassErrorDetails": "Kuwahe ka panana panana: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa.",
+  "qiblaLocationRequiredTitle": "Pono kahi wahi no Qibla",
+  "qiblaLocationRequiredBody": "E hoʻonoho i kou wahi maoli ma mua o ka hoʻohana ʻana i ka panana Qibla i hiki ke helu pololei ʻia ke kuhikuhi.",
+  "adhanNotificationChannelName": "Hoolaha Adhan",
+  "adhanNotificationChannelDescription": "ʻO nā mākaʻikaʻi manawa pule me ke kani adhan.",
   "notifications": "Hoolaha",
   "prayerNotifications": "Hoolaha Pule",
   "enableNotifications": "E ho'ā i nā hoʻolaha",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Ka helu kuhi: {target}",
   "tapToCount": "Kaomi no ka helu ʻana",
+  "zikrCompletedMashAllah": "Ua pau! MashAllah",
+  "zikrMeaningSubhanAllah": "ʻO ke Akua ma mua o nā hemahema a pau.",
+  "zikrMeaningAlhamdulillah": "No Allah ka mahalo.",
+  "zikrMeaningAllahuAkbar": "ʻO Allah ka Mea Nui.",
+  "zikrMeaningLaIlahaIllallah": "ʻAʻohe akua ʻo Allah wale nō.",
+  "zikrMeaningAstaghfirullah": "ʻImi au i ke kala ʻana o ke Akua.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "ʻAʻohe mana a ʻaʻohe ikaika ke ʻole ma ke Akua.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Leo Leo",
+  "audioVoiceMisharyAlafasy": "Kāne (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Kāne (Abdul Basit)",
+  "audioVoiceSudais": "Kāne (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Pono ka calibration. E hoʻololi i ka mea hana ma ka helu-8.",
   "dailyVerse": "Paukū o kēlā me kēia lā",
+  "dailyVerseUnavailableTitle": "ʻAʻole loaʻa ka pauku o kēlā me kēia lā",
+  "dailyVerseUnavailableBody": "ʻAʻole i hoʻonohonoho ʻia ka ʻikepili pauku i kēlā me kēia lā no kēia kūkulu ʻana. Hoʻohui i ke kumu ao a hoʻopaʻa i kahi huna huna i hōʻoia ʻia ma mua o ka mākaʻikaʻi ʻana.",
   "todaysIbadah": "ʻO ka Ibadah i kēia lā",
   "quickAccess": "Komo wikiwiki",
   "assistant": "Kokua",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "ʻAʻole loaʻa nā duas i hōʻoia ʻia",
+  "duaUnavailableBody": "ʻAʻole i hoʻopaʻa ʻia nā ʻelua i kēlā me kēia lā i kēia hāmeʻa. Hoʻohui i ke kumu ao e hoʻouka i nā kumu ʻelua ma mua o kahi hāʻule hōʻoia ʻole.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Kakahiaka & ahiahi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Palekana",
+  "duaCategoryBeginning": "Hoomaka",
+  "duaCategorySleep": "Moe",
+  "duaCategoryFoodDrink": "ʻAi a me ka mea inu",
+  "duaCategoryForgiveness": "kala kala",
+  "duaCategoryHome": "Home",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Hoʻonaʻauao Islam",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Nā Hōʻiliʻili Hadith",
+  "hadithSourcePending": "Ke kali nei ke kumu i hōʻoia ʻia",
+  "hadithUnavailableTitle": "ʻAʻole i loaʻa nā hōʻiliʻili hadith i hōʻoia ʻia",
+  "hadithUnavailableBody": "Ke hilinaʻi nei kēia kūkulu ʻana i kahi hānai hadith waho i hōʻoia ʻole ʻia. Paʻa ʻole ka nānā ʻana i ka Hadith a hiki i ka hoʻonohonoho ʻia ʻana o kahi ʻikepili kumu.",
   "paywallUnlockAll": "Wehe i nā hiʻohiʻona a pau no kāu huakaʻi uhane",
+  "premiumProductUnavailable": "ʻAʻole loaʻa ka huahana premium i kēia manawa. E ʻoluʻolu e hoʻāʻo hou ma hope.",
+  "premiumPurchaseFailed": "ʻAʻole hiki ke hoʻopau ʻia ke kūʻai. E ʻoluʻolu e hoʻāʻo hou.",
   "paywallFeature1Title": "Kokua Neural Plus",
   "paywallFeature1Desc": "Q&A me ka mana ʻole o AI",
   "paywallFeature2Title": "Pahemo palena ʻole",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Hoʻopau ʻia ka hoʻoili ʻana no {reciter} me {failed} hāʻule nā kiʻi ({downloaded}/{total} i hoʻoiho ʻia).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Holoi ʻia nā faila hoʻopahemo no {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Kuwaho pūnaewele. E ʻoluʻolu e hoʻāʻo hou.",
+  "placesLocationRequiredTitle": "Pono kahi wahi",
+  "placesLocationRequiredBody": "E hoʻonohonoho mua i kahi i hiki ke ʻimi pololei ʻia nā hale pule kokoke, nā meaʻai halal, a me nā kula Islam.",
+  "placesMapTilesUnavailableTitle": "ʻAʻole loaʻa nā kile palapala",
+  "placesMapTilesUnavailableBody": "ʻAʻole i hoʻonohonoho ʻia kahi kumu kile palapala ʻāina i hoʻopaʻa ʻia no kēia kūkulu ʻana. Hiki ke hoʻouka ʻia nā wahi kokoke mai kou wahi i mālama ʻia.",
+  "placesDataSourceUnavailableTitle": "Loaʻa ʻole ka ʻikepili wahi",
+  "placesDataSourceUnavailableBody": "ʻAʻole i hoʻonohonoho ʻia kahi ʻikepili wahi i hōʻoia ʻia no kēia kūkulu ʻana. E hoʻonoho iā PLACES_OVERPASS_API_URL i kahi koho koho a mea hoʻolako i ʻāpono ʻia ma mua o ka hoʻā ʻana i ka hulina kokoke.",
   "unknownPlaceName": "Inoa ʻike ʻole",
   "islamicPlaceFallback": "Wahi Islama",
-  "prayerNotificationTitle": "Ka manawa no {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "ʻO ka manawa kēia e pule ai iā {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "ʻAʻole loaʻa nā duas i hōʻoia ʻia",
-  "duaUnavailableBody": "ʻAʻole i hoʻopaʻa ʻia nā ʻelua i kēlā me kēia lā i kēia hāmeʻa. Hoʻohui i ke kumu ao e hoʻouka i nā kumu ʻelua ma mua o kahi hāʻule hōʻoia ʻole.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Kakahiaka & ahiahi",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Palekana",
-  "duaCategoryBeginning": "Hoomaka",
-  "duaCategorySleep": "Moe",
-  "duaCategoryFoodDrink": "ʻAi a me ka mea inu",
-  "duaCategoryForgiveness": "kala kala",
-  "duaCategoryHome": "Home",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Ke kali nei ke kumu i hōʻoia ʻia",
-  "hadithUnavailableTitle": "ʻAʻole i loaʻa nā hōʻiliʻili hadith i hōʻoia ʻia",
-  "hadithUnavailableBody": "Ke hilinaʻi nei kēia kūkulu ʻana i kahi hānai hadith waho i hōʻoia ʻole ʻia. Paʻa ʻole ka nānā ʻana i ka Hadith a hiki i ka hoʻonohonoho ʻia ʻana o kahi ʻikepili kumu.",
-  "appErrorOccurred": "Ua hewa",
-  "appUnknownError": "Kupa ʻike ʻole ʻia",
-  "qiblaCompassErrorDetails": "Kuwahe ka panana panana: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ua pau! MashAllah",
-  "zikrMeaningSubhanAllah": "ʻO ke Akua ma mua o nā hemahema a pau.",
-  "zikrMeaningAlhamdulillah": "No Allah ka mahalo.",
-  "zikrMeaningAllahuAkbar": "ʻO Allah ka Mea Nui.",
-  "zikrMeaningLaIlahaIllallah": "ʻAʻohe akua ʻo Allah wale nō.",
-  "zikrMeaningAstaghfirullah": "ʻImi au i ke kala ʻana o ke Akua.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "ʻAʻohe mana a ʻaʻohe ikaika ke ʻole ma ke Akua.",
   "asmaMeaning1": "Ka Mea Aloha",
   "asmaMeaning2": "Ka Mea Aloha",
   "asmaMeaning3": "Ka Moi / Haku mau loa",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ka Mea Mau loa",
   "asmaMeaning97": "Ka Hooilina",
   "asmaMeaning98": "Ke Alakai Pono Loa",
-  "asmaMeaning99": "Ka Mea Hoomanawanui",
-  "duaMeaning1": "pule kekahi, 'E ko makou Haku, e haawi mai ia makou i ka maikai ma keia ao a ma keia hope aku, a e hoomalu mai ia makou i ka eha o ke ahi.'",
-  "duaMeaning2": "ʻAʻole kaumaha ke Akua i kekahi ʻuhane ma mua o ka mea hiki iā ia ke hoʻomanawanui: loaʻa i kēlā me kēia mea ka maikaʻi āna i hana ai, a ʻeha hoʻi i kāna ʻino - 'E ka Haku, mai lawe ʻoe iā mākou i ka hana inā hoʻopoina mākou a hana hewa paha. E ka Haku, mai hookaumaha oe ia makou e like me kou hookaumaha ana i ka poe mamua o makou. E ka Haku, mai hookaumaha oe ia makou me ka oi aku mamua o ko makou ikaika e amo ai. E kala mai, e kala mai, a e aloha mai ia makou. ʻO ʻoe nō ko mākou Mālama, no laila e kōkua mai iā mākou i ka poʻe hoʻomaloka.",
-  "duaMeaning3": "E ko makou Haku, mai hoohuli oe i ko makou naau mahope o kou alakai ana ia makou. E hāʻawi mai iā mākou i kou aloha: ʻO ʻoe ka mea hāʻawi mau.",
-  "duaMeaning4": "E ka Haku, e haawi mai ia'u a me ka'u poe mamo e malama i ka pule. E ko makou Haku, e maliu mai oe i ka'u noi.",
-  "duaMeaning5": "a e hoʻohaʻahaʻa i kou ʻēheu iā lākou me ka lokomaikaʻi, a e ʻōlelo aku, 'E ka Haku, e aloha mai ʻoe iā lākou, e like me ko lākou mālama ʻana mai iaʻu i koʻu wā liʻiliʻi.'",
-  "duaMeaning6": "e hookiekieia'e ke Akua, ka mea nana e hoomalu. [Pula], mai wikiwiki e heluhelu ma mua o ka pau ʻana o ka hōʻike, akā e ʻōlelo aku, 'E ka Haku, hoʻonui iaʻu i ka ʻike!'",
-  "duaMeaning7": "E ʻī aku [Pūlana], ‘E ka Haku, e kala mai a e aloha mai: ʻO ʻoe ke aloha nui loa i nā mea a pau.’",
-  "duaMeaning8": "ka poe e pule ana, E ka Haku, e haawi mai ia makou i ka olioli iloko o na wahine a me na keiki a makou. E hoolilo mai oe ia makou i kumu hoohalike no ka poe ike ia oe.",
-  "islamicNewYear": "Makahiki Hou Islam",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Sāwalu",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharama",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Hōʻano hou",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Ke hoʻouka nei i ka tafsir...",
-  "tafsirSourceLabel": "Kumu Tafsir",
-  "tafsirNoSurahFound": "ʻAʻohe tafsir i loaʻa no kēia surah.",
-  "tafsirNoAyahFound": "ʻAʻohe tafsir i loaʻa no ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "ʻAʻole hiki ke hoʻouka ʻia ʻo Tafsir.",
-  "tafsirNoTextForAyah": "ʻAʻohe kikokikona tafsir no kēia papa.",
-  "tafsirDownloadingProgress": "Hoʻoiho ʻia ka tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Ke hoʻouka nei i ka tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Ua hoʻihoʻi mai ke kumu Tafsir i kahi hewa HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "ʻAʻole i hoʻihoʻi mai ke kumu tafsir i koho ʻia.",
-  "premiumProductUnavailable": "ʻAʻole loaʻa ka huahana premium i kēia manawa. E ʻoluʻolu e hoʻāʻo hou ma hope.",
-  "premiumPurchaseFailed": "ʻAʻole hiki ke hoʻopau ʻia ke kūʻai. E ʻoluʻolu e hoʻāʻo hou.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Ala Islam o ka Malamalama",
-  "downloadPartiallyFinishedForReciter": "Hoʻopau ʻia ka hoʻoili ʻana no {reciter} me {failed} hāʻule nā kiʻi ({downloaded}/{total} i hoʻoiho ʻia).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Pono kahi wahi",
-  "placesLocationRequiredBody": "E hoʻonohonoho mua i kahi i hiki ke ʻimi pololei ʻia nā hale pule kokoke, nā meaʻai halal, a me nā kula Islam.",
-  "placesMapTilesUnavailableTitle": "ʻAʻole loaʻa nā kile palapala",
-  "placesMapTilesUnavailableBody": "ʻAʻole i hoʻonohonoho ʻia kahi kumu kile palapala ʻāina i hoʻopaʻa ʻia no kēia kūkulu ʻana. Hiki ke hoʻouka ʻia nā wahi kokoke mai kou wahi i mālama ʻia.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Kāne (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Kāne (Abdul Basit)",
-  "audioVoiceSudais": "Kāne (Sudais)",
-  "qiblaSensorUnavailable": "ʻAʻole loaʻa ka mea ʻike panana panana ma kēia hāmeʻa.",
-  "adhanNotificationChannelName": "Hoolaha Adhan",
-  "adhanNotificationChannelDescription": "ʻO nā mākaʻikaʻi manawa pule me ke kani adhan.",
-  "quranLoadFailed": "ʻAʻole hiki ke hoʻouka ʻia ka ʻike Quran. E ʻoluʻolu e hoʻāʻo hou.",
-  "locationDetectionFailed": "ʻAʻole hiki ke ʻike i kou wahi. E ʻoluʻolu e koho lima i ke kūlanakauhale a i ʻole e hoʻāʻo hou.",
-  "qiblaLocationRequiredTitle": "Pono kahi wahi no Qibla",
-  "qiblaLocationRequiredBody": "E hoʻonoho i kou wahi maoli ma mua o ka hoʻohana ʻana i ka panana Qibla i hiki ke helu pololei ʻia ke kuhikuhi.",
-  "placesDataSourceUnavailableTitle": "Loaʻa ʻole ka ʻikepili wahi",
-  "placesDataSourceUnavailableBody": "ʻAʻole i hoʻonohonoho ʻia kahi ʻikepili wahi i hōʻoia ʻia no kēia kūkulu ʻana. E hoʻonoho iā PLACES_OVERPASS_API_URL i kahi koho koho a mea hoʻolako i ʻāpono ʻia ma mua o ka hoʻā ʻana i ka hulina kokoke.",
-  "tafsirCacheUnavailable": "ʻAʻole loaʻa ka tafsir i hōʻoia ʻia ma waho. E hoʻopaʻa i kahi waihona tafsir kumu ma mua o ka nānā ʻana."
+  "asmaMeaning99": "Ka Mea Hoomanawanui"
 }

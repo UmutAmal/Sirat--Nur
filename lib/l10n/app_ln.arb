@@ -1,6 +1,7 @@
 {
   "@@locale": "ln",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Nzela ya Pole ya Islam",
   "home": "Ndako",
   "quran": "Coran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib, oyo ezali",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tango ya {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ezali tango ya kosambela {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Ba Données & Bobombi",
   "clearCache": "Bolongola Cache",
   "cacheClearedSuccess": "Cache elongolamaki malamu",
@@ -34,6 +51,7 @@
   "currentLocation": "Esika ya lelo (GPS) .",
   "locationServiceDisabled": "Service ya esika ezali désactivé.",
   "locationPermissionDenied": "Ndingisa ya esika eboyamaki.",
+  "locationDetectionFailed": "Ekokaki te ko détecter esika ozali. Svp pona engumba moko na maboko to meka lisusu.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Libunga moko esalemaki",
+  "appUnknownError": "Libunga eyebani te",
+  "quranLoadFailed": "Contenu ya Coran ekokaki kozala chargé te. Svp meka lisusu.",
   "retry": "Meká lisusu",
+  "refreshAction": "Refresh",
   "cancel": "Kolongola",
   "save": "Kobikisa",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Te",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Lokasa",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Ezali ko charger tafsir...",
+  "tafsirSourceLabel": "Liziba ya Tafsir",
+  "tafsirNoSurahFound": "Tafsir moko te ezwami mpo na surah oyo.",
+  "tafsirNoAyahFound": "Tafsir moko te ezwami mpo na ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ekokaki kozala na chargement te.",
+  "tafsirNoTextForAyah": "Texte ya tafsir te pona ayah oyo.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Liziba ya Tafsir ezongisaki libunga ya HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Source ya tafsir oyo eponami ezongisaki ba entrées te.",
+  "tafsirCacheUnavailable": "Verifié tafsir ezali nanu te hors ligne. Sync ensemble ya ba données ya tafsir sourced avant ya ko naviguer.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Bakisa Marque-page",
   "removeBookmark": "Longola Marque-pages",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "basusu basambelaka, ‘Nkolo na biso, pesa biso bolamu na mokili mpe na sima, mpe batela biso na minyoko ya Mɔtɔ.’",
+  "duaMeaning2": "Nzambe azali kopesa molimo moko te kilo koleka oyo ekoki komema: moto na moto azali kozwa bolamu nyonso oyo asali, mpe azali konyokwama mabe na yango- ‘ Nkolo, kozwa biso na mokumba te soki tobosani to tosali mabunga. Nkolo, kopesa biso kilo te ndenge opesaki ba oyo bazalaki liboso na biso. Nkolo, kopesa biso kilo te koleka oyo tozali na makasi ya komema. Limbisa biso, limbisa biso, mpe yokela biso mawa. Ozali Mobateli na biso, yango wana salisá biso na bato oyo bazangi kondima.’",
+  "duaMeaning3": "‘Nkolo na biso, kotika te mitema na biso epengwisa sima na Yo kotambwisa biso. Pesa biso ngolu na Yo: Ozali Mopesi Toujours.",
+  "duaMeaning4": "Nkolo, pesa ngai ná bana na ngai tókoba losambo. Nkolo na biso, ndima bosenga na ngai.",
+  "duaMeaning5": "mpe kitisá lipapu na yo na komikitisa epai na bango na boboto mpe lobá ete, ‘Nkolo, yokela bango mawa, kaka ndenge bazalaki kobatela ngai ntango nazalaki moke.’",
+  "duaMeaning6": "atombwama Nzambe, ye oyo azali mpenza na bokonzi. [Mosakoli], kokende mbangumbangu te mpo na kotánga liboso ete emoniseli esila mpenza kasi loba ete, ‘Nkolo, bakisá ngai boyebi!’",
+  "duaMeaning7": "Loba [Mosakoli], ‘Nkolo, limbisa mpe yoka mawa: Ozali na mawa koleka nyonso.’",
+  "duaMeaning8": "baoyo bazali kobondela, ‘Nkolo na biso, pesá biso esengo kati na balongani mpe bana na biso. Sala biso bandakisa malamu na baye bayebi Yo’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Kokila bilei",
   "quranReading": "Botangi ya Coran",
   "prayers": "Mabondeli",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Bokóli ya Pɔsɔ na Pɔsɔ",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Mobu ya sika ya Islam",
+  "mawlidAnNabi": "Mawlid an-Nabi, oyo azali",
+  "specialDayDateRamadanStart": "1 Mokolo ya Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Mokolo ya Ramadan",
+  "specialDayDateEidAlFitr": "1 Moto oyo azali Shawwal",
+  "specialDayDateEidAlAdha": "10 Zul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Moharram, Mokonzi ya mboka",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal azali moto ya mayele",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Direction ya kosala",
   "compass": "Boussole ya kosala",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla ezwami!",
   "turnDevice": "Bambolá aparɛyi na yo mpo etala Qibla",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Capteur ya boussole ezali te na appareil oyo.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "Finá mpo na kotánga",
+  "zikrCompletedMashAllah": "Esili! MashAllah azali moto ya mayele",
+  "zikrMeaningSubhanAllah": "Allah azali mosika likolo ya bozangi kokoka nyonso.",
+  "zikrMeaningAlhamdulillah": "Masanzoli nionso ezali ya Allah.",
+  "zikrMeaningAllahuAkbar": "Allah azali Monene.",
+  "zikrMeaningLaIlahaIllallah": "Nzambe moko te azali kaka Allah.",
+  "zikrMeaningAstaghfirullah": "Nazali koluka bolimbisi ya Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nguya pe makasi ezali te longola se na nzela ya Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Mongongo ya Audio",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Calibration ya Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Esengeli kosala calibration. Bambolá esaleli oyo ezali na elilingi-8.",
   "dailyVerse": "Vɛrsɛ ya mokolo na mokolo",
+  "dailyVerseUnavailableTitle": "Vɛrsɛ ya mokolo na mokolo ezali te",
+  "dailyVerseUnavailableBody": "Contenu ya verset ya mokolo na mokolo oyo e vérifié e configuré nanu te pona kotonga oyo. Bo sangana na source ya cloud to bo synchroniser cache vérifié avant ya ko naviguer.",
   "todaysIbadah": "Ibadah ya lelo",
   "quickAccess": "Kokɔta Noki",
   "assistant": "Molandi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ba duas vérifiés ezali nanu te",
+  "duaUnavailableBody": "Ba duas ya mokolo na mokolo oyo e vérifié e synchronisé nanu na dispositif oyo te. Connecter na source ya cloud pona ko charger ba duas sourced au lieu ya fallback oyo e vérifié te.",
+  "duaCategoryQuranic": "Dua ya Coran",
+  "duaCategoryMorningEvening": "Tongo & Pokwa",
+  "duaCategoryTasbih": "Tasbih, oyo azali",
+  "duaCategoryProtection": "Bobateli",
+  "duaCategoryBeginning": "Ebandeli",
+  "duaCategorySleep": "Mpongi",
+  "duaCategoryFoodDrink": "Bilei & Masanga",
+  "duaCategoryForgiveness": "Bolimbisi",
+  "duaCategoryHome": "Ndako",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Boyekoli ya Islam",
   "sukunAudioTitle": "Sukun Ba paysages sonores",
   "hadithCollections": "Ba Collections ya Hadith",
+  "hadithSourcePending": "Source vérifiée ezali kozela",
+  "hadithUnavailableTitle": "Ba collections ya hadith vérifié ezali nanu te",
+  "hadithUnavailableBody": "Kotonga oyo etali kaka alimentation ya hadith ya libanda oyo e vérifié te. Navigation ya Hadith etikalaka désactivé kino ensemble ya ba données sourced ekozala synchronisée.",
   "paywallUnlockAll": "Fungola makambo nyonso mpo na mobembo na yo ya molimo",
+  "premiumProductUnavailable": "Produit premium ezali te sikoyo. Svp meka lisusu sima.",
+  "premiumPurchaseFailed": "Kosomba ekokaki kosila te. Svp meka lisusu.",
   "paywallFeature1Title": "Assistant neuronaux Plus",
   "paywallFeature1Desc": "Q&A oyo esalemi na AI oyo ezangi ndelo",
   "paywallFeature2Title": "Ezali na ndelo te Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Elongolami ba fichiers hors ligne pona {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Libunga ya réseau. Svp meka lisusu.",
+  "placesLocationRequiredTitle": "Esika esengeli kozala",
+  "placesLocationRequiredBody": "Botia esika liboso po ba mosquées ya pembeni, biloko ya kolia ya halal, na ba écoles islamiques ekoki kolukama na bosikisiki.",
+  "placesMapTilesUnavailableTitle": "Carreaux ya carte ezali te",
+  "placesMapTilesUnavailableBody": "Source ya carreaux ya carte oyo e vérifié e configuré nanu te pona botongi oyo. Bisika ya penepene ekoki kaka ko charger uta na esika oyo obombi.",
+  "placesDataSourceUnavailableTitle": "Ezali kotya ba données oyo ezali te",
+  "placesDataSourceUnavailableBody": "Point d'arrêt ya ba données ya places vérifié e configuré nanu te pona construction oyo. Botia PLACES_OVERPASS_API_URL na proxy to mopesi oyo endimami yambo ya kofungola boluki ya penepene.",
   "unknownPlaceName": "Kombo eyebani te",
   "islamicPlaceFallback": "Esika ya Islam",
-  "prayerNotificationTitle": "Tango ya {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ezali tango ya kosambela {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ba duas vérifiés ezali nanu te",
-  "duaUnavailableBody": "Ba duas ya mokolo na mokolo oyo e vérifié e synchronisé nanu na dispositif oyo te. Connecter na source ya cloud pona ko charger ba duas sourced au lieu ya fallback oyo e vérifié te.",
-  "duaCategoryQuranic": "Dua ya Coran",
-  "duaCategoryMorningEvening": "Tongo & Pokwa",
-  "duaCategoryTasbih": "Tasbih, oyo azali",
-  "duaCategoryProtection": "Bobateli",
-  "duaCategoryBeginning": "Ebandeli",
-  "duaCategorySleep": "Mpongi",
-  "duaCategoryFoodDrink": "Bilei & Masanga",
-  "duaCategoryForgiveness": "Bolimbisi",
-  "duaCategoryHome": "Ndako",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Source vérifiée ezali kozela",
-  "hadithUnavailableTitle": "Ba collections ya hadith vérifié ezali nanu te",
-  "hadithUnavailableBody": "Kotonga oyo etali kaka alimentation ya hadith ya libanda oyo e vérifié te. Navigation ya Hadith etikalaka désactivé kino ensemble ya ba données sourced ekozala synchronisée.",
-  "appErrorOccurred": "Libunga moko esalemaki",
-  "appUnknownError": "Libunga eyebani te",
-  "qiblaCompassErrorDetails": "Compass error: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Esili! MashAllah azali moto ya mayele",
-  "zikrMeaningSubhanAllah": "Allah azali mosika likolo ya bozangi kokoka nyonso.",
-  "zikrMeaningAlhamdulillah": "Masanzoli nionso ezali ya Allah.",
-  "zikrMeaningAllahuAkbar": "Allah azali Monene.",
-  "zikrMeaningLaIlahaIllallah": "Nzambe moko te azali kaka Allah.",
-  "zikrMeaningAstaghfirullah": "Nazali koluka bolimbisi ya Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Nguya pe makasi ezali te longola se na nzela ya Allah.",
   "asmaMeaning1": "Moto oyo azali na litomba",
   "asmaMeaning2": "Moto ya mawa",
   "asmaMeaning3": "Mokonzi / Nkolo ya seko",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Moto ya seko",
   "asmaMeaning97": "Mosangoli ya libula",
   "asmaMeaning98": "Motambwisi oyo eleki sembo",
-  "asmaMeaning99": "Mobɛli oyo",
-  "duaMeaning1": "basusu basambelaka, ‘Nkolo na biso, pesa biso bolamu na mokili mpe na sima, mpe batela biso na minyoko ya Mɔtɔ.’",
-  "duaMeaning2": "Nzambe azali kopesa molimo moko te kilo koleka oyo ekoki komema: moto na moto azali kozwa bolamu nyonso oyo asali, mpe azali konyokwama mabe na yango- ‘ Nkolo, kozwa biso na mokumba te soki tobosani to tosali mabunga. Nkolo, kopesa biso kilo te ndenge opesaki ba oyo bazalaki liboso na biso. Nkolo, kopesa biso kilo te koleka oyo tozali na makasi ya komema. Limbisa biso, limbisa biso, mpe yokela biso mawa. Ozali Mobateli na biso, yango wana salisá biso na bato oyo bazangi kondima.’",
-  "duaMeaning3": "‘Nkolo na biso, kotika te mitema na biso epengwisa sima na Yo kotambwisa biso. Pesa biso ngolu na Yo: Ozali Mopesi Toujours.",
-  "duaMeaning4": "Nkolo, pesa ngai ná bana na ngai tókoba losambo. Nkolo na biso, ndima bosenga na ngai.",
-  "duaMeaning5": "mpe kitisá lipapu na yo na komikitisa epai na bango na boboto mpe lobá ete, ‘Nkolo, yokela bango mawa, kaka ndenge bazalaki kobatela ngai ntango nazalaki moke.’",
-  "duaMeaning6": "atombwama Nzambe, ye oyo azali mpenza na bokonzi. [Mosakoli], kokende mbangumbangu te mpo na kotánga liboso ete emoniseli esila mpenza kasi loba ete, ‘Nkolo, bakisá ngai boyebi!’",
-  "duaMeaning7": "Loba [Mosakoli], ‘Nkolo, limbisa mpe yoka mawa: Ozali na mawa koleka nyonso.’",
-  "duaMeaning8": "baoyo bazali kobondela, ‘Nkolo na biso, pesá biso esengo kati na balongani mpe bana na biso. Sala biso bandakisa malamu na baye bayebi Yo’.",
-  "islamicNewYear": "Mobu ya sika ya Islam",
-  "mawlidAnNabi": "Mawlid an-Nabi, oyo azali",
-  "specialDayDateRamadanStart": "1 Mokolo ya Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Mokolo ya Ramadan",
-  "specialDayDateEidAlFitr": "1 Moto oyo azali Shawwal",
-  "specialDayDateEidAlAdha": "10 Zul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Moharram, Mokonzi ya mboka",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal azali moto ya mayele",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Ezali ko charger tafsir...",
-  "tafsirSourceLabel": "Liziba ya Tafsir",
-  "tafsirNoSurahFound": "Tafsir moko te ezwami mpo na surah oyo.",
-  "tafsirNoAyahFound": "Tafsir moko te ezwami mpo na ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir ekokaki kozala na chargement te.",
-  "tafsirNoTextForAyah": "Texte ya tafsir te pona ayah oyo.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Liziba ya Tafsir ezongisaki libunga ya HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Source ya tafsir oyo eponami ezongisaki ba entrées te.",
-  "premiumProductUnavailable": "Produit premium ezali te sikoyo. Svp meka lisusu sima.",
-  "premiumPurchaseFailed": "Kosomba ekokaki kosila te. Svp meka lisusu.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Nzela ya Pole ya Islam",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Esika esengeli kozala",
-  "placesLocationRequiredBody": "Botia esika liboso po ba mosquées ya pembeni, biloko ya kolia ya halal, na ba écoles islamiques ekoki kolukama na bosikisiki.",
-  "placesMapTilesUnavailableTitle": "Carreaux ya carte ezali te",
-  "placesMapTilesUnavailableBody": "Source ya carreaux ya carte oyo e vérifié e configuré nanu te pona botongi oyo. Bisika ya penepene ekoki kaka ko charger uta na esika oyo obombi.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Capteur ya boussole ezali te na appareil oyo.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Contenu ya Coran ekokaki kozala chargé te. Svp meka lisusu.",
-  "locationDetectionFailed": "Ekokaki te ko détecter esika ozali. Svp pona engumba moko na maboko to meka lisusu.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Ezali kotya ba données oyo ezali te",
-  "placesDataSourceUnavailableBody": "Point d'arrêt ya ba données ya places vérifié e configuré nanu te pona construction oyo. Botia PLACES_OVERPASS_API_URL na proxy to mopesi oyo endimami yambo ya kofungola boluki ya penepene.",
-  "tafsirCacheUnavailable": "Verifié tafsir ezali nanu te hors ligne. Sync ensemble ya ba données ya tafsir sourced avant ya ko naviguer."
+  "asmaMeaning99": "Mobɛli oyo"
 }

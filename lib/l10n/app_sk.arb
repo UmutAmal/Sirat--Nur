@@ -1,6 +1,7 @@
 {
   "@@locale": "sk",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamská cesta svetla",
   "home": "Domov",
   "quran": "Korán",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Čas na {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Je čas modliť sa {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Dáta a úložisko",
   "clearCache": "Vymazať vyrovnávaciu pamäť",
   "cacheClearedSuccess": "Vyrovnávacia pamäť bola úspešne vymazaná",
@@ -34,6 +51,7 @@
   "currentLocation": "Aktuálna poloha (GPS)",
   "locationServiceDisabled": "Služba určovania polohy je zakázaná.",
   "locationPermissionDenied": "Povolenie na umiestnenie bolo odmietnuté.",
+  "locationDetectionFailed": "Nepodarilo sa zistiť vašu polohu. Vyberte mesto ručne alebo to skúste znova.",
   "citiesCount": "{count} miest",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Nenašli sa žiadne výsledky",
   "loading": "Načítava sa...",
   "error": "Chyba",
+  "appErrorOccurred": "Vyskytla sa chyba",
+  "appUnknownError": "Neznáma chyba",
+  "quranLoadFailed": "Obsah Koránu sa nepodarilo načítať. Skúste to znova.",
   "retry": "Skúste to znova",
+  "refreshAction": "Obnoviť",
   "cancel": "Zrušiť",
   "save": "Uložiť",
   "delete": "Odstrániť",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nie",
   "surah": "súra",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Stránka",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Načítava sa tafsir...",
+  "tafsirSourceLabel": "Zdroj Tafsir",
+  "tafsirNoSurahFound": "Pre túto súru sa nenašiel žiadny tafsir.",
+  "tafsirNoAyahFound": "Pre ayah {ayah} sa nenašiel žiadny tafsir.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir sa nepodarilo načítať.",
+  "tafsirNoTextForAyah": "Pre tento ayah nie je žiadny text tafsir.",
+  "tafsirDownloadingProgress": "Sťahuje sa tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Načítava sa tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Zdroj Tafsir vrátil chybu HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Vybraný zdroj tafsir nevrátil žiadne záznamy.",
+  "tafsirCacheUnavailable": "Overený tafsir zatiaľ nie je dostupný offline. Pred prehliadaním synchronizujte zdrojovú množinu údajov tafsir.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Pridať záložku",
   "removeBookmark": "Odstrániť záložku",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "iní sa modlia: ‚Pane náš, daj nám dobro v tomto svete i v onom svete a ochraňuj nás pred mučením ohňa.‘",
+  "duaMeaning2": "Boh nezaťažuje žiadnu dušu viac, než dokáže uniesť: každá získa všetko dobré, čo urobila, a znáša svoje zlé – ‚Pane, neber nás do úlohy, ak zabudneme alebo urobíme chyby. Pane, nezaťažuj nás tak, ako si zaťažil tých pred nami. Pane, nezaťažuj nás viac, ako máme síl uniesť. Odpusť nám, odpusť nám a zmiluj sa nad nami. Si náš ochranca, tak nám pomôž proti neveriacim.",
+  "duaMeaning3": "„Náš Pane, nedovoľ, aby sa naše srdcia odchýlili po tom, čo si nás viedol. Udeľ nám svoje milosrdenstvo: Ty si večný.",
+  "duaMeaning4": "Pane, daj, aby som ja a moje potomstvo pokračovali v modlitbe. Pane náš, prijmi moju prosbu.",
+  "duaMeaning5": "a sklop svoje krídlo v pokore voči nim v láskavosti a povedz: ‚Pane, zmiluj sa nad nimi, ako sa oni starali o mňa, keď som bol malý.‘",
+  "duaMeaning6": "nech je vyvýšený Boh, ten, ktorý skutočne vládne. [Prorok], neponáhľaj sa recitovať pred úplným dokončením zjavenia, ale povedz: ‚Pane, rozmnož ma v poznaní!‘",
+  "duaMeaning7": "Povedz [Prorokovi]: ‚Pane, odpusť a zmiluj sa: Ty si najmilosrdnejší zo všetkých.‘",
+  "duaMeaning8": "tí, ktorí sa modlia: ‚Pane náš, daj nám radosť z našich manželov a potomkov. Daj nám dobrý príklad pre tých, ktorí Ťa poznajú.\"",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Pôst",
   "quranReading": "Čítanie Koránu",
   "prayers": "Modlitby",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Týždenný pokrok",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamský Nový rok",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1. ramadán",
+  "specialDayDateLaylatAlQadr": "27 Ramadán",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Smer Qibla",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla nájdená!",
   "turnDevice": "Otočte svoje zariadenie smerom k Qibla",
+  "qiblaCompassErrorDetails": "Chyba kompasu: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Snímač kompasu nie je v tomto zariadení k dispozícii.",
+  "qiblaLocationRequiredTitle": "Miesto požadované pre Qibla",
+  "qiblaLocationRequiredBody": "Pred použitím kompasu Qibla nastavte svoju skutočnú polohu, aby bolo možné presne vypočítať smer.",
+  "adhanNotificationChannelName": "Upozornenia Adhan",
+  "adhanNotificationChannelDescription": "Upozorňuje na čas modlitby zvukom adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Cieľový počet: {target}",
   "tapToCount": "Klepnutím počítajte",
+  "zikrCompletedMashAllah": "Dokončené! MashAllah",
+  "zikrMeaningSubhanAllah": "Alah je vysoko nad každou nedokonalosťou.",
+  "zikrMeaningAlhamdulillah": "Všetka chvála patrí Alahovi.",
+  "zikrMeaningAllahuAkbar": "Alah je najväčší.",
+  "zikrMeaningLaIlahaIllallah": "Niet boha okrem Alaha.",
+  "zikrMeaningAstaghfirullah": "Žiadam Alaha o odpustenie.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Neexistuje žiadna sila a žiadna sila, iba cez Alaha.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Zvukový hlas",
+  "audioVoiceMisharyAlafasy": "Muž (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Muž (Abdul Basit)",
+  "audioVoiceSudais": "Muž (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kalibrácia Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Vyžaduje sa kalibrácia. Otočte zariadenie na obrázku-8.",
   "dailyVerse": "Denný verš",
+  "dailyVerseUnavailableTitle": "Denný verš nie je k dispozícii",
+  "dailyVerseUnavailableBody": "Overený denný obsah veršov ešte nie je pre túto zostavu nakonfigurovaný. Pred prehliadaním sa pripojte ku cloudovému zdroju alebo synchronizujte overenú vyrovnávaciu pamäť.",
   "todaysIbadah": "Dnešný Ibadah",
   "quickAccess": "Rýchly prístup",
   "assistant": "asistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Overené duá zatiaľ nie sú k dispozícii",
+  "duaUnavailableBody": "Overené denné duá zatiaľ neboli synchronizované do tohto zariadenia. Pripojte sa ku cloudovému zdroju a načítajte duas zo zdrojov namiesto neoverenej zálohy.",
+  "duaCategoryQuranic": "Dua koránu",
+  "duaCategoryMorningEvening": "Ráno a večer",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ochrana",
+  "duaCategoryBeginning": "Začiatky",
+  "duaCategorySleep": "Spánok",
+  "duaCategoryFoodDrink": "Jedlo a pitie",
+  "duaCategoryForgiveness": "Odpustenie",
+  "duaCategoryHome": "Domov",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamská výchova",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadísové zbierky",
+  "hadithSourcePending": "Čaká sa na overený zdroj",
+  "hadithUnavailableTitle": "Overené zbierky hadísov zatiaľ nie sú k dispozícii",
+  "hadithUnavailableBody": "Táto zostava stále závisí od neovereného externého zdroja hadísov. Prehliadanie hadísov zostane vypnuté, kým sa nesynchronizuje zdrojová množina údajov.",
   "paywallUnlockAll": "Odomknite všetky funkcie pre svoju duchovnú cestu",
+  "premiumProductUnavailable": "Prémiový produkt nie je momentálne dostupný. Skúste to znova neskôr.",
+  "premiumPurchaseFailed": "Nákup nebolo možné dokončiť. Skúste to znova.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Neobmedzené otázky a odpovede poháňané AI",
   "paywallFeature2Title": "Neobmedzený režim offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Sťahovanie pre {reciter} bolo dokončené s {failed} neúspešnými súrami (stiahnuté sú {downloaded}/{total}).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Boli odstránené offline súbory pre {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Chyba siete. Skúste to znova.",
+  "placesLocationRequiredTitle": "Vyžaduje sa miesto",
+  "placesLocationRequiredBody": "Najprv nastavte polohu, aby ste mohli presne vyhľadať blízke mešity, halal jedlo a islamské školy.",
+  "placesMapTilesUnavailableTitle": "Dlaždice mapy nie sú k dispozícii",
+  "placesMapTilesUnavailableBody": "Overený zdroj dlaždíc mapy ešte nie je nakonfigurovaný pre túto zostavu. Miesta v okolí sa stále môžu načítať z vašej uloženej polohy.",
+  "placesDataSourceUnavailableTitle": "Údaje o miestach nie sú k dispozícii",
+  "placesDataSourceUnavailableBody": "Pre túto zostavu ešte nie je nakonfigurovaný koncový bod údajov overených miest. Pred povolením vyhľadávania v okolí nastavte PLACES_OVERPASS_API_URL na schváleného proxy alebo poskytovateľa.",
   "unknownPlaceName": "Neznáme meno",
   "islamicPlaceFallback": "Islamské miesto",
-  "prayerNotificationTitle": "Čas na {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Je čas modliť sa {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Overené duá zatiaľ nie sú k dispozícii",
-  "duaUnavailableBody": "Overené denné duá zatiaľ neboli synchronizované do tohto zariadenia. Pripojte sa ku cloudovému zdroju a načítajte duas zo zdrojov namiesto neoverenej zálohy.",
-  "duaCategoryQuranic": "Dua koránu",
-  "duaCategoryMorningEvening": "Ráno a večer",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Ochrana",
-  "duaCategoryBeginning": "Začiatky",
-  "duaCategorySleep": "Spánok",
-  "duaCategoryFoodDrink": "Jedlo a pitie",
-  "duaCategoryForgiveness": "Odpustenie",
-  "duaCategoryHome": "Domov",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Čaká sa na overený zdroj",
-  "hadithUnavailableTitle": "Overené zbierky hadísov zatiaľ nie sú k dispozícii",
-  "hadithUnavailableBody": "Táto zostava stále závisí od neovereného externého zdroja hadísov. Prehliadanie hadísov zostane vypnuté, kým sa nesynchronizuje zdrojová množina údajov.",
-  "appErrorOccurred": "Vyskytla sa chyba",
-  "appUnknownError": "Neznáma chyba",
-  "qiblaCompassErrorDetails": "Chyba kompasu: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Dokončené! MashAllah",
-  "zikrMeaningSubhanAllah": "Alah je vysoko nad každou nedokonalosťou.",
-  "zikrMeaningAlhamdulillah": "Všetka chvála patrí Alahovi.",
-  "zikrMeaningAllahuAkbar": "Alah je najväčší.",
-  "zikrMeaningLaIlahaIllallah": "Niet boha okrem Alaha.",
-  "zikrMeaningAstaghfirullah": "Žiadam Alaha o odpustenie.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Neexistuje žiadna sila a žiadna sila, iba cez Alaha.",
   "asmaMeaning1": "The Beneficent",
   "asmaMeaning2": "Milosrdný",
   "asmaMeaning3": "Kráľ / Večný Pán",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Večný",
   "asmaMeaning97": "Dedič",
   "asmaMeaning98": "Najspravodlivejší sprievodca",
-  "asmaMeaning99": "Pacient One",
-  "duaMeaning1": "iní sa modlia: ‚Pane náš, daj nám dobro v tomto svete i v onom svete a ochraňuj nás pred mučením ohňa.‘",
-  "duaMeaning2": "Boh nezaťažuje žiadnu dušu viac, než dokáže uniesť: každá získa všetko dobré, čo urobila, a znáša svoje zlé – ‚Pane, neber nás do úlohy, ak zabudneme alebo urobíme chyby. Pane, nezaťažuj nás tak, ako si zaťažil tých pred nami. Pane, nezaťažuj nás viac, ako máme síl uniesť. Odpusť nám, odpusť nám a zmiluj sa nad nami. Si náš ochranca, tak nám pomôž proti neveriacim.",
-  "duaMeaning3": "„Náš Pane, nedovoľ, aby sa naše srdcia odchýlili po tom, čo si nás viedol. Udeľ nám svoje milosrdenstvo: Ty si večný.",
-  "duaMeaning4": "Pane, daj, aby som ja a moje potomstvo pokračovali v modlitbe. Pane náš, prijmi moju prosbu.",
-  "duaMeaning5": "a sklop svoje krídlo v pokore voči nim v láskavosti a povedz: ‚Pane, zmiluj sa nad nimi, ako sa oni starali o mňa, keď som bol malý.‘",
-  "duaMeaning6": "nech je vyvýšený Boh, ten, ktorý skutočne vládne. [Prorok], neponáhľaj sa recitovať pred úplným dokončením zjavenia, ale povedz: ‚Pane, rozmnož ma v poznaní!‘",
-  "duaMeaning7": "Povedz [Prorokovi]: ‚Pane, odpusť a zmiluj sa: Ty si najmilosrdnejší zo všetkých.‘",
-  "duaMeaning8": "tí, ktorí sa modlia: ‚Pane náš, daj nám radosť z našich manželov a potomkov. Daj nám dobrý príklad pre tých, ktorí Ťa poznajú.\"",
-  "islamicNewYear": "Islamský Nový rok",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1. ramadán",
-  "specialDayDateLaylatAlQadr": "27 Ramadán",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Obnoviť",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Načítava sa tafsir...",
-  "tafsirSourceLabel": "Zdroj Tafsir",
-  "tafsirNoSurahFound": "Pre túto súru sa nenašiel žiadny tafsir.",
-  "tafsirNoAyahFound": "Pre ayah {ayah} sa nenašiel žiadny tafsir.",
-  "tafsirLoadFailed": "Tafsir sa nepodarilo načítať.",
-  "tafsirNoTextForAyah": "Pre tento ayah nie je žiadny text tafsir.",
-  "tafsirDownloadingProgress": "Sťahuje sa tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Načítava sa tafsir {current}/{total}",
-  "tafsirApiStatusError": "Zdroj Tafsir vrátil chybu HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Vybraný zdroj tafsir nevrátil žiadne záznamy.",
-  "premiumProductUnavailable": "Prémiový produkt nie je momentálne dostupný. Skúste to znova neskôr.",
-  "premiumPurchaseFailed": "Nákup nebolo možné dokončiť. Skúste to znova.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamská cesta svetla",
-  "downloadPartiallyFinishedForReciter": "Sťahovanie pre {reciter} bolo dokončené s {failed} neúspešnými súrami (stiahnuté sú {downloaded}/{total}).",
-  "placesLocationRequiredTitle": "Vyžaduje sa miesto",
-  "placesLocationRequiredBody": "Najprv nastavte polohu, aby ste mohli presne vyhľadať blízke mešity, halal jedlo a islamské školy.",
-  "placesMapTilesUnavailableTitle": "Dlaždice mapy nie sú k dispozícii",
-  "placesMapTilesUnavailableBody": "Overený zdroj dlaždíc mapy ešte nie je nakonfigurovaný pre túto zostavu. Miesta v okolí sa stále môžu načítať z vašej uloženej polohy.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Muž (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Muž (Abdul Basit)",
-  "audioVoiceSudais": "Muž (Sudais)",
-  "qiblaSensorUnavailable": "Snímač kompasu nie je v tomto zariadení k dispozícii.",
-  "adhanNotificationChannelName": "Upozornenia Adhan",
-  "adhanNotificationChannelDescription": "Upozorňuje na čas modlitby zvukom adhan.",
-  "quranLoadFailed": "Obsah Koránu sa nepodarilo načítať. Skúste to znova.",
-  "locationDetectionFailed": "Nepodarilo sa zistiť vašu polohu. Vyberte mesto ručne alebo to skúste znova.",
-  "qiblaLocationRequiredTitle": "Miesto požadované pre Qibla",
-  "qiblaLocationRequiredBody": "Pred použitím kompasu Qibla nastavte svoju skutočnú polohu, aby bolo možné presne vypočítať smer.",
-  "placesDataSourceUnavailableTitle": "Údaje o miestach nie sú k dispozícii",
-  "placesDataSourceUnavailableBody": "Pre túto zostavu ešte nie je nakonfigurovaný koncový bod údajov overených miest. Pred povolením vyhľadávania v okolí nastavte PLACES_OVERPASS_API_URL na schváleného proxy alebo poskytovateľa.",
-  "tafsirCacheUnavailable": "Overený tafsir zatiaľ nie je dostupný offline. Pred prehliadaním synchronizujte zdrojovú množinu údajov tafsir."
+  "asmaMeaning99": "Pacient One"
 }

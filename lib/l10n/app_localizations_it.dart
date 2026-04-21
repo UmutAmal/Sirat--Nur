@@ -960,6 +960,14 @@ class AppLocalizationsIt extends AppLocalizations {
   String get dailyVerse => 'Versetto quotidiano';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Versetto giornaliero non disponibile';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Il contenuto del versetto giornaliero verificato non è ancora configurato per questa build. Connettiti all\'origine cloud o sincronizza una cache verificata prima di navigare.';
+
+  @override
   String get todaysIbadah => 'L\'Ibadah di oggi';
 
   @override

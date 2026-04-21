@@ -955,6 +955,13 @@ class AppLocalizationsNy extends AppLocalizations {
   String get dailyVerse => 'Ndime yatsiku ndi tsiku';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ndime yatsiku ndi tsiku palibe';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Zomwe zatsimikizika zatsiku ndi tsiku sizinakhazikitsidwe kuti zikhale zomangidwa pano. Lumikizani ku mtambo kapena kulunzanitsa kache yotsimikizika musanasakatu.';
+
+  @override
   String get todaysIbadah => 'Lero Ibadah';
 
   @override

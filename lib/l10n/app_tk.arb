@@ -1,6 +1,7 @@
 {
   "@@locale": "tk",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Yslamyň ýagtylyk ýoly",
   "home": "Öý",
   "quran": "Kuran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magrib",
   "isha": "Işa",
+  "prayerNotificationTitle": "{prayerName} wagty",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} doga etmegiň wagty geldi.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Maglumat we ammar",
   "clearCache": "Keşi arassalaň",
   "cacheClearedSuccess": "Keş üstünlikli arassalandy",
@@ -34,6 +51,7 @@
   "currentLocation": "Häzirki ýerleşýän ýeri (GPS)",
   "locationServiceDisabled": "Locationerleşiş hyzmaty ýapyk",
   "locationPermissionDenied": "Locationerleşmek üçin rugsat berilmedi",
+  "locationDetectionFailed": "Locationeriňizi anyklap bilmedim El bilen şäheri saýlaň ýa-da gaýtadan synanyşyň.",
   "citiesCount": "{count} şäherler",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Netije tapylmady",
   "loading": "Adingüklenýär ...",
   "error": "Roralňyşlyk",
+  "appErrorOccurred": "Erroralňyşlyk ýüze çykdy",
+  "appUnknownError": "Näbelli ýalňyşlyk",
+  "quranLoadFailed": "Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
   "retry": "Gaýtadan synanyşyň",
+  "refreshAction": "Täzele",
   "cancel": "Elatyr",
   "save": "Saklaň",
   "delete": "Öçür",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": ".Ok",
   "surah": "Sura",
+  "ayahLabel": "Aýýa {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Sahypa",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsir ýüklenýär ...",
+  "tafsirSourceLabel": "Tafsir çeşmesi",
+  "tafsirNoSurahFound": "Bu süre üçin tafsir tapylmady.",
+  "tafsirNoAyahFound": "Aýah {ayah} üçin tafsir tapylmady.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ýüklenip bilmedi.",
+  "tafsirNoTextForAyah": "Bu aýat üçin tafsir teksti ýok.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir çeşmesi, HTTP {statusCode} säwligini yzyna gaýtardy.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Saýlanan tafsir çeşmesi hiç hili ýazgy yzyna gaýtarmady.",
+  "tafsirCacheUnavailable": "Barlanylan tafsir entek awtonom görnüşde elýeterli däl. Göz aýlamazdan ozal berlen tafsir maglumat toplumyny sinhronlaň.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Bellik goşuň",
   "removeBookmark": "Belligi aýyryň",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "beýlekiler: \"Rebbimiz, bize bu dünýäde we ahyretde ýagşylyk bersin we bizi ot azabyndan gora\" diýýärler.",
+  "duaMeaning2": "Hudaý hiç bir jany göterip biläýjekden köp ýüklemeýär: her kim eden ýagşylygyny gazanýar we erbetligine duçar bolýar - “Lorda Reb, ýatdan çykarsaň ýa-da ýalňyşsak, bize jogapkärçilik çekme. Lorda Reb, öňkülerimizi ýükleýşiň ýaly bize ýükleme. Lorda Reb, götermäge güýjümizden has köp ýükleme. Bagyşla, bagyşla we bize rehim et. Sen biziň goragçymyz, kapyrlara garşy bize kömek et \".",
+  "duaMeaning3": "«Lorda Reb, bize ýol görkezeniňden soň ýüregimiziň sowmagyna ýol berme. Rehim-şepagatyňy ber: Sen hemişe berýärsiň.",
+  "duaMeaning4": "Lorda Reb, meniň we nesillerimiň dogasyny dowam etdirmegine rugsat ber. Rebbimiz, haýyşymy kabul et.",
+  "duaMeaning5": "olara hoşniýetlilik bilen ganatyňyzy aşak salyň we: Lord Lorda Reb, kiçijik wagtym maňa ideg edişleri ýaly, olara rehim et! “diýiň.",
+  "duaMeaning6": "hakykatdanam gözegçilikde saklaýan Hudaý beýik bolsun. [Pygamber], wahy doly gutarmanka okamaga howlukma, ýöne: Lorda Reb, meni bilimde artdyr!",
+  "duaMeaning7": "[Pygambere] aýdyň: «Lorda Reb, bagyşla we rehim et: Sen hemmelerden iň rehimdarsyň».",
+  "duaMeaning8": "“Rebbimiz, är-aýallarymyzda we nesillerimizde bize şatlyk beriň. Seni tanaýanlara bize gowy görelde görkez ».",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Oraza",
   "quranReading": "Kuran okamak",
   "prayers": "Doga",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Hepdelik ösüş",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Yslam Täze ýyly",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Remezan",
+  "specialDayDateLaylatAlQadr": "27 Remezan",
+  "specialDayDateEidAlFitr": "1 Şawal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijja",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla ugry",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla tapyldy!",
   "turnDevice": "Enjamyňyzy “Qibla” -a öwüriň",
+  "qiblaCompassErrorDetails": "Kompas ýalňyşlygy: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompass datçigi bu enjamda elýeterli däl.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "“Qibla” kompasyny ulanmazdan ozal hakyky ýeriňizi kesgitläň, ugry takyk hasaplap bolar.",
+  "adhanNotificationChannelName": "Adhan habarnamalary",
+  "adhanNotificationChannelDescription": "Adhan sesi bilen doga wagty duýduryşlary.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Maksat sany: {target}",
   "tapToCount": "Hasaplamak üçin basyň",
+  "zikrCompletedMashAllah": "Tamamlandy! MaşAllah",
+  "zikrMeaningSubhanAllah": "Allah her bir kemçilikden ýokarydyr.",
+  "zikrMeaningAlhamdulillah": "Hemme öwgi Allaha degişlidir.",
+  "zikrMeaningAllahuAkbar": "Allah iň beýikdir.",
+  "zikrMeaningLaIlahaIllallah": "Alladan başga hudaý ýok.",
+  "zikrMeaningAstaghfirullah": "Allanyň bagyşlamagyny soraýaryn.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Alladan başga güýç we güýç ýok.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Ses sesi",
+  "audioVoiceMisharyAlafasy": "Erkek (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Erkek (Abdul Basit)",
+  "audioVoiceSudais": "Erkek (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kibla kalibrlemesi",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrleme zerur. Enjamy 8-nji suratda aýlaň.",
   "dailyVerse": "Gündelik aýat",
+  "dailyVerseUnavailableTitle": "Gündelik aýat elýeterli däl",
+  "dailyVerseUnavailableBody": "Barlanylan gündelik aýat mazmuny entek bu gurluş üçin düzülenok. Bulut çeşmesine birikdiriň ýa-da göz aýlamazdan ozal tassyklanan keşi sinhronlaň.",
   "todaysIbadah": "Şu günki Ibada",
   "quickAccess": "Çalt giriş",
   "assistant": "Kömekçi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Barlanylan dualar entek elýeterli däl",
+  "duaUnavailableBody": "Barlanylan gündelik dualar entek bu enjam bilen sinhronlanmady. Barlanmadyk yza gaýtmagyň ýerine bulut çeşmesine birikdiriň.",
+  "duaCategoryQuranic": "Kuran dua",
+  "duaCategoryMorningEvening": "Irden we agşam",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Gorag",
+  "duaCategoryBeginning": "Başlangyçlar",
+  "duaCategorySleep": "Uka",
+  "duaCategoryFoodDrink": "Iýmit we içgi",
+  "duaCategoryForgiveness": "Bagyşlamak",
+  "duaCategoryHome": "Öý",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Yslam bilimi",
   "sukunAudioTitle": "Sukun sesleri",
   "hadithCollections": "Hadys ýygyndylary",
+  "hadithSourcePending": "Barlanylan çeşme garaşylýar",
+  "hadithUnavailableTitle": "Barlanylan hadys ýygyndylary entek elýeterli däl",
+  "hadithUnavailableBody": "Bu gurluş henizem tassyklanmadyk daşarky hadys iýmitine baglydyr. Hadyslara göz aýlamak, maglumat bazasy sinhronlanýança ýapyk bolýar.",
   "paywallUnlockAll": "Ruhy syýahatyňyz üçin ähli aýratynlyklary açyň",
+  "premiumProductUnavailable": "Premium önüm häzirki wagtda elýeterli däl. Soňrak synanyşyň.",
+  "premiumPurchaseFailed": "Satyn alyp bolmady. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
   "paywallFeature1Title": "Neýr kömekçisi plýus",
   "paywallFeature1Desc": "Çäklendirilmedik AI bilen işleýän sorag-jogap",
   "paywallFeature2Title": "Çäklendirilmedik oflayn",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} üçin awtonom faýllar öçürildi.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Tor ýalňyşlygy. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
+  "placesLocationRequiredTitle": "Locationerleşýän ýeri",
+  "placesLocationRequiredBody": "Ilki bilen golaýdaky metjitleri, halal naharlary we yslam mekdeplerini takyk gözläp tapmak üçin bir ýer belläň.",
+  "placesMapTilesUnavailableTitle": "Karta plitalary elýeterli däl",
+  "placesMapTilesUnavailableBody": "Barlanylan karta kafel çeşmesi entek bu gurluş üçin düzülenok. Byakyn ýerler henizem saklanan ýeriňizden ýükläp biler.",
+  "placesDataSourceUnavailableTitle": "Maglumatlary elýeterli däl",
+  "placesDataSourceUnavailableBody": "Barlanan ýerler maglumat nokady bu gurluş üçin entek düzülenok. Nearbyakyn gözlegleri açmazdan ozal PLACES_OVERPASS_API_URL tassyklanan proksi ýa-da üpjün edijä düzüň.",
   "unknownPlaceName": "Näbelli",
   "islamicPlaceFallback": "Yslam ýeri",
-  "prayerNotificationTitle": "{prayerName} wagty",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} doga etmegiň wagty geldi.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Barlanylan dualar entek elýeterli däl",
-  "duaUnavailableBody": "Barlanylan gündelik dualar entek bu enjam bilen sinhronlanmady. Barlanmadyk yza gaýtmagyň ýerine bulut çeşmesine birikdiriň.",
-  "duaCategoryQuranic": "Kuran dua",
-  "duaCategoryMorningEvening": "Irden we agşam",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Gorag",
-  "duaCategoryBeginning": "Başlangyçlar",
-  "duaCategorySleep": "Uka",
-  "duaCategoryFoodDrink": "Iýmit we içgi",
-  "duaCategoryForgiveness": "Bagyşlamak",
-  "duaCategoryHome": "Öý",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Barlanylan çeşme garaşylýar",
-  "hadithUnavailableTitle": "Barlanylan hadys ýygyndylary entek elýeterli däl",
-  "hadithUnavailableBody": "Bu gurluş henizem tassyklanmadyk daşarky hadys iýmitine baglydyr. Hadyslara göz aýlamak, maglumat bazasy sinhronlanýança ýapyk bolýar.",
-  "appErrorOccurred": "Erroralňyşlyk ýüze çykdy",
-  "appUnknownError": "Näbelli ýalňyşlyk",
-  "qiblaCompassErrorDetails": "Kompas ýalňyşlygy: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Tamamlandy! MaşAllah",
-  "zikrMeaningSubhanAllah": "Allah her bir kemçilikden ýokarydyr.",
-  "zikrMeaningAlhamdulillah": "Hemme öwgi Allaha degişlidir.",
-  "zikrMeaningAllahuAkbar": "Allah iň beýikdir.",
-  "zikrMeaningLaIlahaIllallah": "Alladan başga hudaý ýok.",
-  "zikrMeaningAstaghfirullah": "Allanyň bagyşlamagyny soraýaryn.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Alladan başga güýç we güýç ýok.",
   "asmaMeaning1": "Peýdaly",
   "asmaMeaning2": "Rehimdar",
   "asmaMeaning3": "Patyşa / Baky Reb",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Baky",
   "asmaMeaning97": "Mirasçy",
   "asmaMeaning98": "Iň dogry gollanma",
-  "asmaMeaning99": "Sabyrly",
-  "duaMeaning1": "beýlekiler: \"Rebbimiz, bize bu dünýäde we ahyretde ýagşylyk bersin we bizi ot azabyndan gora\" diýýärler.",
-  "duaMeaning2": "Hudaý hiç bir jany göterip biläýjekden köp ýüklemeýär: her kim eden ýagşylygyny gazanýar we erbetligine duçar bolýar - “Lorda Reb, ýatdan çykarsaň ýa-da ýalňyşsak, bize jogapkärçilik çekme. Lorda Reb, öňkülerimizi ýükleýşiň ýaly bize ýükleme. Lorda Reb, götermäge güýjümizden has köp ýükleme. Bagyşla, bagyşla we bize rehim et. Sen biziň goragçymyz, kapyrlara garşy bize kömek et \".",
-  "duaMeaning3": "«Lorda Reb, bize ýol görkezeniňden soň ýüregimiziň sowmagyna ýol berme. Rehim-şepagatyňy ber: Sen hemişe berýärsiň.",
-  "duaMeaning4": "Lorda Reb, meniň we nesillerimiň dogasyny dowam etdirmegine rugsat ber. Rebbimiz, haýyşymy kabul et.",
-  "duaMeaning5": "olara hoşniýetlilik bilen ganatyňyzy aşak salyň we: Lord Lorda Reb, kiçijik wagtym maňa ideg edişleri ýaly, olara rehim et! “diýiň.",
-  "duaMeaning6": "hakykatdanam gözegçilikde saklaýan Hudaý beýik bolsun. [Pygamber], wahy doly gutarmanka okamaga howlukma, ýöne: Lorda Reb, meni bilimde artdyr!",
-  "duaMeaning7": "[Pygambere] aýdyň: «Lorda Reb, bagyşla we rehim et: Sen hemmelerden iň rehimdarsyň».",
-  "duaMeaning8": "“Rebbimiz, är-aýallarymyzda we nesillerimizde bize şatlyk beriň. Seni tanaýanlara bize gowy görelde görkez ».",
-  "islamicNewYear": "Yslam Täze ýyly",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Remezan",
-  "specialDayDateLaylatAlQadr": "27 Remezan",
-  "specialDayDateEidAlFitr": "1 Şawal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijja",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Täzele",
-  "ayahLabel": "Aýýa {ayah}",
-  "tafsirLoading": "Tafsir ýüklenýär ...",
-  "tafsirSourceLabel": "Tafsir çeşmesi",
-  "tafsirNoSurahFound": "Bu süre üçin tafsir tapylmady.",
-  "tafsirNoAyahFound": "Aýah {ayah} üçin tafsir tapylmady.",
-  "tafsirLoadFailed": "Tafsir ýüklenip bilmedi.",
-  "tafsirNoTextForAyah": "Bu aýat üçin tafsir teksti ýok.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir çeşmesi, HTTP {statusCode} säwligini yzyna gaýtardy.",
-  "tafsirNoEntriesReturned": "Saýlanan tafsir çeşmesi hiç hili ýazgy yzyna gaýtarmady.",
-  "premiumProductUnavailable": "Premium önüm häzirki wagtda elýeterli däl. Soňrak synanyşyň.",
-  "premiumPurchaseFailed": "Satyn alyp bolmady. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Yslamyň ýagtylyk ýoly",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Locationerleşýän ýeri",
-  "placesLocationRequiredBody": "Ilki bilen golaýdaky metjitleri, halal naharlary we yslam mekdeplerini takyk gözläp tapmak üçin bir ýer belläň.",
-  "placesMapTilesUnavailableTitle": "Karta plitalary elýeterli däl",
-  "placesMapTilesUnavailableBody": "Barlanylan karta kafel çeşmesi entek bu gurluş üçin düzülenok. Byakyn ýerler henizem saklanan ýeriňizden ýükläp biler.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Erkek (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Erkek (Abdul Basit)",
-  "audioVoiceSudais": "Erkek (Sudais)",
-  "qiblaSensorUnavailable": "Kompass datçigi bu enjamda elýeterli däl.",
-  "adhanNotificationChannelName": "Adhan habarnamalary",
-  "adhanNotificationChannelDescription": "Adhan sesi bilen doga wagty duýduryşlary.",
-  "quranLoadFailed": "Gurhanyň mazmuny ýüklenip bilinmedi. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
-  "locationDetectionFailed": "Locationeriňizi anyklap bilmedim El bilen şäheri saýlaň ýa-da gaýtadan synanyşyň.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "“Qibla” kompasyny ulanmazdan ozal hakyky ýeriňizi kesgitläň, ugry takyk hasaplap bolar.",
-  "placesDataSourceUnavailableTitle": "Maglumatlary elýeterli däl",
-  "placesDataSourceUnavailableBody": "Barlanan ýerler maglumat nokady bu gurluş üçin entek düzülenok. Nearbyakyn gözlegleri açmazdan ozal PLACES_OVERPASS_API_URL tassyklanan proksi ýa-da üpjün edijä düzüň.",
-  "tafsirCacheUnavailable": "Barlanylan tafsir entek awtonom görnüşde elýeterli däl. Göz aýlamazdan ozal berlen tafsir maglumat toplumyny sinhronlaň."
+  "asmaMeaning99": "Sabyrly"
 }

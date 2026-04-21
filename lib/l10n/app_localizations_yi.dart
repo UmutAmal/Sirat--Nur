@@ -952,6 +952,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get dailyVerse => 'טעגלעך ווערס';
 
   @override
+  String get dailyVerseUnavailableTitle => 'טעגלעך פסוק ניט בנימצא';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'וועריפיעד טעגלעך פסוק אינהאַלט איז נישט קאַנפיגיערד פֿאַר דעם בויען נאָך. פאַרבינדן צו די וואָלקן מקור אָדער סינק אַ וועראַפייד קאַש איידער בראַוזינג.';
+
+  @override
   String get todaysIbadah => 'היינטיגע איבאדא';
 
   @override

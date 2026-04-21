@@ -1,6 +1,7 @@
 {
   "@@locale": "qu",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamic Way of Light",
   "home": "Wasi",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magrib sutiyuq runa",
   "isha": "Isha",
+  "prayerNotificationTitle": "{prayerName} nisqapaq pacha.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} mañakuy pachaña.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datos & Waqaychay",
   "clearCache": "Cache nisqa chuyanchay",
   "cacheClearedSuccess": "Cache allinta chuyanchasqa",
@@ -34,6 +51,7 @@
   "currentLocation": "Kunan Maypi kasqan (GPS) .",
   "locationServiceDisabled": "Maypi tarikuy servicioqa mana llamk'achisqa kachkan.",
   "locationPermissionDenied": "Maypi kasqanmanta permisota mana chaskisqachu.",
+  "locationDetectionFailed": "Mana maypi kasqaykita riqsiyta atirqanchu. Ama hina kaspa, makiwan huk llaqtata akllay icha musuqmanta kallpachakuy.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Huk pantaymi rikurirqa",
+  "appUnknownError": "Mana riqsisqa pantay",
+  "quranLoadFailed": "Quranpa contenidonqa manam cargayta atirqakuchu. Ama hina kaspa, hukmanta kallpachakuy.",
   "retry": "Wakmanta kallpachakuy",
+  "refreshAction": "Refresh",
   "cancel": "Sayachiy",
   "save": "Waqaychay",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Manam",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "P’anqa",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Cargando tafsir...",
+  "tafsirSourceLabel": "Tafsir pukyuta",
+  "tafsirNoSurahFound": "Mana tafsir tarisqachu kay surahpaq.",
+  "tafsirNoAyahFound": "Mana tafsir tarisqachu ayah {ayah} nisqapaq.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir mana cargayta atirqankuchu.",
+  "tafsirNoTextForAyah": "Mana tafsir texto kay ayahpaq.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir pukyuta HTTP {statusCode} pantayta kutichirqa.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Akllasqa tafsir pukyuta mana qillqasqakunata kutichirqanchu.",
+  "tafsirCacheUnavailable": "Verified tafsir manaraqmi mana internetpi tarikunchu. Manaraq maskachkaspa huk pukyuta tafsir willay huñuta tinkiy.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Marcadorta yapay",
   "removeBookmark": "Marcadorta hurquy",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "wakintaq mañakunku: ‘Señorniyku, kay pachapipas, qhepa p’unchaypipas allinta qowayku, Nina ñak’ariymantataq amachawayku’, nispa.",
+  "duaMeaning2": "Diosqa manan mayqen almatapas q’epichinchu aguantay atisqanmanta aswan askhawan: sapankankun ima allin ruwasqantapas ganan, mana allin ruwasqantapas ñak’arinmi- ‘ Señor, ama hap’iwaykuchu llank’anaman qonqaspa otaq pantaspaqa. Señor, ama q’epiykuchu imaynan ñawpaqniykupi kaqkunaman q’epicharqanki hinata. Wiraqocha, ama q'epichiwayku kallpayoq kasqaykumantaqa. Pampachaykuwayku, pampachawayku, khuyapayawayku. Qanmi kanki Amachaqniyku, chaymi yanapawayku mana iñiqkunamanta’, nispa.",
+  "duaMeaning3": "‘Señorniyku, ama sonqoykuta karunchawaykuchu pusawasqayku qhepaman. Khuyapayakuyniykita qowayku: Qanmi kanki Wiñaypaq Qoq.",
+  "duaMeaning4": "Señor, qoykuway ñoqapas mirayniypas mañakuyta hinalla ruwananchispaq. Apunchik, mañakusqayta chaskikuy.",
+  "duaMeaning5": "hinaspataq raphraykita uraykachiy k’umuykukuspa paykunaman sumaq sonqowan niy: ‘Señor, khuyapayay paykunata, imaynan huch’uyllaraq kashaqtiy cuidawarqanku hinata’, nispa.",
+  "duaMeaning6": "hatunchasqa kachun Dios, cheqaqtapuni kamachikuq. [Profeta], ama apuraychu rimayta manaraq revelacion hunt’asqa kashaqtin aswanpas niy: ‘¡Señor, yachayniypi yapaykuway!’, nispa.",
+  "duaMeaning7": "[Profeta] niy: ‘Señor, pampachay, khuyapayay, qanmi kanki llapanmanta aswan khuyapayakuq’, nispa.",
+  "duaMeaning8": "‘Señorniyku, esposaykupi, mirayniykupipas kusichiwayku’, nispa mañakuqkuna. Allin ejemplokunata ruwawayku Qanmanta musyakuqkunapaq’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ayuno",
   "quranReading": "Quran Ñawinchay",
   "prayers": "Mañakuykuna",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Sapa semana Progreso",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islam musuq wata",
+  "mawlidAnNabi": "Mawlid an-Nabi sutiyuq runa",
+  "specialDayDateRamadanStart": "1 Ramadán killapi",
+  "specialDayDateLaylatAlQadr": "27 Ramadán killapi",
+  "specialDayDateEidAlFitr": "1 Shawwal sutiyuq runa",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah nisqa",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal sutiyuq runa",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Dirección",
   "compass": "Brújula nisqa",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla tarisqa!",
   "turnDevice": "Dispositivoykita Qiblaman qhawarinaykipaq muyuchiy",
+  "qiblaCompassErrorDetails": "Brújula pantasqa: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kay aparatopiqa mana brújula sensor nisqa kanchu.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "Yupanaykipaq ñit’iy",
+  "zikrCompletedMashAllah": "¡Tukusqaña! MashAllah sutiyuq runa",
+  "zikrMeaningSubhanAllah": "Allahqa tukuy mana hunt’asqa kaymanta aswan hatunmi.",
+  "zikrMeaningAlhamdulillah": "Tukuy yupaychayqa Allahpaqmi.",
+  "zikrMeaningAllahuAkbar": "Allahmi Aswan Hatun.",
+  "zikrMeaningLaIlahaIllallah": "Manam kanchu dios aswanqa Allah.",
+  "zikrMeaningAstaghfirullah": "Allahpa pampachaynintam maskani.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Manan kanchu atiypas, manan kallpapas kanchu, aswanpas Allah nisqawanmi.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Uyarinapaq Kunka",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibración",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibración nisqa ruwaymi necesitakun. Siqi-8 nisqapi aparatota muyuchiy.",
   "dailyVerse": "Sapa punchaw Versiculo",
+  "dailyVerseUnavailableTitle": "Sapa punchaw versiculo mana tarikunchu",
+  "dailyVerseUnavailableBody": "Chiqaqchasqa sapa p'unchaw versiculokuna manaraqmi kay ruwanapaq wakichisqachu. Puyu pukyuta tinkiy utaq chiqaqchasqa waqaychasqata tinkiy manaraq maskachkaspa.",
   "todaysIbadah": "Kunan punchaw Ibadah",
   "quickAccess": "Utqaylla Yaykuna",
   "assistant": "Yanapaq",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verified duas manaraqmi kanchu",
+  "duaUnavailableBody": "Chiqaqchasqa sapa p'unchaw duas manaraq kay dispositivoman tinkisqachu. Puyu pukyuta tinkiy pukyuta duakuna karganapaq mana chiqaqchasqa urmaymantaqa.",
+  "duaCategoryQuranic": "Quranmanta dua",
+  "duaCategoryMorningEvening": "Paqarin & Chisi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Amachay",
+  "duaCategoryBeginning": "Qallariykuna",
+  "duaCategorySleep": "Puñuy",
+  "duaCategoryFoodDrink": "Mikhuy & Upyana",
+  "duaCategoryForgiveness": "Pampachay",
+  "duaCategoryHome": "Wasi",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Educación Islámica nisqa",
   "sukunAudioTitle": "Sukun Paisajes de sonido",
   "hadithCollections": "Hadith Huñusqakuna",
+  "hadithSourcePending": "Chiqapchasqa pukyuta pendiente",
+  "hadithUnavailableTitle": "Chiqapchasqa hadith huñusqakunaqa manaraqmi kanchu",
+  "hadithUnavailableBody": "Kay ruwayqa kunankamapas mana chiqapchasqa hawa hadith mikhuymantam hapipakun. Hadith maskayqa mana llamk'achisqa qhipan huk pukyuta willay huñu tinkisqa kanankama.",
   "paywallUnlockAll": "Espiritual puriyniykipaq llapa ruwaykunata kichay",
+  "premiumProductUnavailable": "Premium nisqa ruruqa manam kunan pachaqa kanchu. Ama hina kaspa, qhipaman hukmanta kallpachakuy.",
+  "premiumPurchaseFailed": "Rantinakuyqa manam tukusqachu karqa. Ama hina kaspa, hukmanta kallpachakuy.",
   "paywallFeature1Title": "Yanapakuq Neural Plus",
   "paywallFeature1Desc": "Mana k'itiyuq AI-wan kallpachasqa Q&A",
   "paywallFeature2Title": "Mana k'uchuyuq Mana tinkisqa",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} kaqpaq uraykachiy tukusqa {failed} mana atisqa surahkunawan ({downloaded}/{total} uraykachisqa).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} kaqpaq mana tinkisqa willañiqikunata qullusqa.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Llika pantasqa. Ama hina kaspa, hukmanta kallpachakuy.",
+  "placesLocationRequiredTitle": "Maypi kasqanmi necesitakun",
+  "placesLocationRequiredBody": "Ñawpaqtaqa huk sitiota churay chaynapi qaylla mezquitakunata, halal mikhuykunata, islam escuelakunatapas allinta maskanankupaq.",
+  "placesMapTilesUnavailableTitle": "Mapa azulejos mana tarikuq",
+  "placesMapTilesUnavailableBody": "Huk chiqapchasqa mapa azulejo pukyuta manaraqmi kay ruranapaq wakichisqachu. Hichpallapi kaq sitiokunaqa waqaychasqa kasqaykimantaraqmi cargayta atinku.",
+  "placesDataSourceUnavailableTitle": "Mana tarikuq willakuykunata churan",
+  "placesDataSourceUnavailableBody": "Huk chiqaqchasqa kitikuna willay tukukuyqa manaraqmi kay ruwanapaq wakichisqachu. PLACES_OVERPASS_API_URL huk aprobasqa proxyman utaq quqman churay manaraq qaylla maskana atichichkaspa.",
   "unknownPlaceName": "Mana riqsisqa Suti",
   "islamicPlaceFallback": "Islamic Lugar",
-  "prayerNotificationTitle": "{prayerName} nisqapaq pacha.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} mañakuy pachaña.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verified duas manaraqmi kanchu",
-  "duaUnavailableBody": "Chiqaqchasqa sapa p'unchaw duas manaraq kay dispositivoman tinkisqachu. Puyu pukyuta tinkiy pukyuta duakuna karganapaq mana chiqaqchasqa urmaymantaqa.",
-  "duaCategoryQuranic": "Quranmanta dua",
-  "duaCategoryMorningEvening": "Paqarin & Chisi",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Amachay",
-  "duaCategoryBeginning": "Qallariykuna",
-  "duaCategorySleep": "Puñuy",
-  "duaCategoryFoodDrink": "Mikhuy & Upyana",
-  "duaCategoryForgiveness": "Pampachay",
-  "duaCategoryHome": "Wasi",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Chiqapchasqa pukyuta pendiente",
-  "hadithUnavailableTitle": "Chiqapchasqa hadith huñusqakunaqa manaraqmi kanchu",
-  "hadithUnavailableBody": "Kay ruwayqa kunankamapas mana chiqapchasqa hawa hadith mikhuymantam hapipakun. Hadith maskayqa mana llamk'achisqa qhipan huk pukyuta willay huñu tinkisqa kanankama.",
-  "appErrorOccurred": "Huk pantaymi rikurirqa",
-  "appUnknownError": "Mana riqsisqa pantay",
-  "qiblaCompassErrorDetails": "Brújula pantasqa: {error} .",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "¡Tukusqaña! MashAllah sutiyuq runa",
-  "zikrMeaningSubhanAllah": "Allahqa tukuy mana hunt’asqa kaymanta aswan hatunmi.",
-  "zikrMeaningAlhamdulillah": "Tukuy yupaychayqa Allahpaqmi.",
-  "zikrMeaningAllahuAkbar": "Allahmi Aswan Hatun.",
-  "zikrMeaningLaIlahaIllallah": "Manam kanchu dios aswanqa Allah.",
-  "zikrMeaningAstaghfirullah": "Allahpa pampachaynintam maskani.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Manan kanchu atiypas, manan kallpapas kanchu, aswanpas Allah nisqawanmi.",
   "asmaMeaning1": "Allin sunquyuq",
   "asmaMeaning2": "Khuyapayakuq",
   "asmaMeaning3": "Rey / Wiñay Wiñay Apu",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Wiñaypaq kaq",
   "asmaMeaning97": "Heredero nisqa",
   "asmaMeaning98": "Aswan chanin pusaq",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "wakintaq mañakunku: ‘Señorniyku, kay pachapipas, qhepa p’unchaypipas allinta qowayku, Nina ñak’ariymantataq amachawayku’, nispa.",
-  "duaMeaning2": "Diosqa manan mayqen almatapas q’epichinchu aguantay atisqanmanta aswan askhawan: sapankankun ima allin ruwasqantapas ganan, mana allin ruwasqantapas ñak’arinmi- ‘ Señor, ama hap’iwaykuchu llank’anaman qonqaspa otaq pantaspaqa. Señor, ama q’epiykuchu imaynan ñawpaqniykupi kaqkunaman q’epicharqanki hinata. Wiraqocha, ama q'epichiwayku kallpayoq kasqaykumantaqa. Pampachaykuwayku, pampachawayku, khuyapayawayku. Qanmi kanki Amachaqniyku, chaymi yanapawayku mana iñiqkunamanta’, nispa.",
-  "duaMeaning3": "‘Señorniyku, ama sonqoykuta karunchawaykuchu pusawasqayku qhepaman. Khuyapayakuyniykita qowayku: Qanmi kanki Wiñaypaq Qoq.",
-  "duaMeaning4": "Señor, qoykuway ñoqapas mirayniypas mañakuyta hinalla ruwananchispaq. Apunchik, mañakusqayta chaskikuy.",
-  "duaMeaning5": "hinaspataq raphraykita uraykachiy k’umuykukuspa paykunaman sumaq sonqowan niy: ‘Señor, khuyapayay paykunata, imaynan huch’uyllaraq kashaqtiy cuidawarqanku hinata’, nispa.",
-  "duaMeaning6": "hatunchasqa kachun Dios, cheqaqtapuni kamachikuq. [Profeta], ama apuraychu rimayta manaraq revelacion hunt’asqa kashaqtin aswanpas niy: ‘¡Señor, yachayniypi yapaykuway!’, nispa.",
-  "duaMeaning7": "[Profeta] niy: ‘Señor, pampachay, khuyapayay, qanmi kanki llapanmanta aswan khuyapayakuq’, nispa.",
-  "duaMeaning8": "‘Señorniyku, esposaykupi, mirayniykupipas kusichiwayku’, nispa mañakuqkuna. Allin ejemplokunata ruwawayku Qanmanta musyakuqkunapaq’.",
-  "islamicNewYear": "Islam musuq wata",
-  "mawlidAnNabi": "Mawlid an-Nabi sutiyuq runa",
-  "specialDayDateRamadanStart": "1 Ramadán killapi",
-  "specialDayDateLaylatAlQadr": "27 Ramadán killapi",
-  "specialDayDateEidAlFitr": "1 Shawwal sutiyuq runa",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah nisqa",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal sutiyuq runa",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Cargando tafsir...",
-  "tafsirSourceLabel": "Tafsir pukyuta",
-  "tafsirNoSurahFound": "Mana tafsir tarisqachu kay surahpaq.",
-  "tafsirNoAyahFound": "Mana tafsir tarisqachu ayah {ayah} nisqapaq.",
-  "tafsirLoadFailed": "Tafsir mana cargayta atirqankuchu.",
-  "tafsirNoTextForAyah": "Mana tafsir texto kay ayahpaq.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir pukyuta HTTP {statusCode} pantayta kutichirqa.",
-  "tafsirNoEntriesReturned": "Akllasqa tafsir pukyuta mana qillqasqakunata kutichirqanchu.",
-  "premiumProductUnavailable": "Premium nisqa ruruqa manam kunan pachaqa kanchu. Ama hina kaspa, qhipaman hukmanta kallpachakuy.",
-  "premiumPurchaseFailed": "Rantinakuyqa manam tukusqachu karqa. Ama hina kaspa, hukmanta kallpachakuy.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamic Way of Light",
-  "downloadPartiallyFinishedForReciter": "{reciter} kaqpaq uraykachiy tukusqa {failed} mana atisqa surahkunawan ({downloaded}/{total} uraykachisqa).",
-  "placesLocationRequiredTitle": "Maypi kasqanmi necesitakun",
-  "placesLocationRequiredBody": "Ñawpaqtaqa huk sitiota churay chaynapi qaylla mezquitakunata, halal mikhuykunata, islam escuelakunatapas allinta maskanankupaq.",
-  "placesMapTilesUnavailableTitle": "Mapa azulejos mana tarikuq",
-  "placesMapTilesUnavailableBody": "Huk chiqapchasqa mapa azulejo pukyuta manaraqmi kay ruranapaq wakichisqachu. Hichpallapi kaq sitiokunaqa waqaychasqa kasqaykimantaraqmi cargayta atinku.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Kay aparatopiqa mana brújula sensor nisqa kanchu.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Quranpa contenidonqa manam cargayta atirqakuchu. Ama hina kaspa, hukmanta kallpachakuy.",
-  "locationDetectionFailed": "Mana maypi kasqaykita riqsiyta atirqanchu. Ama hina kaspa, makiwan huk llaqtata akllay icha musuqmanta kallpachakuy.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Mana tarikuq willakuykunata churan",
-  "placesDataSourceUnavailableBody": "Huk chiqaqchasqa kitikuna willay tukukuyqa manaraqmi kay ruwanapaq wakichisqachu. PLACES_OVERPASS_API_URL huk aprobasqa proxyman utaq quqman churay manaraq qaylla maskana atichichkaspa.",
-  "tafsirCacheUnavailable": "Verified tafsir manaraqmi mana internetpi tarikunchu. Manaraq maskachkaspa huk pukyuta tafsir willay huñuta tinkiy."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

@@ -958,6 +958,13 @@ class AppLocalizationsBg extends AppLocalizations {
   String get dailyVerse => 'Ежедневен стих';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ежедневният стих не е наличен';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Провереното ежедневно стихово съдържание все още не е конфигурирано за тази компилация. Свържете се с облачния източник или синхронизирайте проверен кеш преди сърфиране.';
+
+  @override
   String get todaysIbadah => 'Днес е ибадах';
 
   @override

@@ -1,6 +1,7 @@
 {
   "@@locale": "yo",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islam Way of Light",
   "home": "Ile",
   "quran": "Al-Qur’an",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Àkókò fún {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "O to akoko lati gbadura {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Ibi ipamọ",
   "clearCache": "Ko kaṣe kuro",
   "cacheClearedSuccess": "Kaṣe nu daradara",
@@ -34,6 +51,7 @@
   "currentLocation": "Ibi lọwọlọwọ (GPS)",
   "locationServiceDisabled": "Iṣẹ agbegbe jẹ alaabo.",
   "locationPermissionDenied": "Ti kọ igbanilaaye ipo.",
+  "locationDetectionFailed": "Ko le ri ipo rẹ. Jọwọ yan ilu kan pẹlu ọwọ tabi gbiyanju lẹẹkansi.",
   "citiesCount": "{count} ilu",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ko si esi ri",
   "loading": "Nkojọpọ...",
   "error": "Asise",
+  "appErrorOccurred": "Aṣiṣe kan ṣẹlẹ",
+  "appUnknownError": "Aṣiṣe aimọ",
+  "quranLoadFailed": "Akoonu Al-Qur’an ko le ṣe kojọpọ. Jọwọ gbiyanju lẹẹkansi.",
   "retry": "Tun gbiyanju",
+  "refreshAction": "Tuntun",
   "cancel": "Fagilee",
   "save": "Fipamọ",
   "delete": "Paarẹ",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Rara",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Oju-iwe",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Nkojọpọ tafsir...",
+  "tafsirSourceLabel": "Tafsir orisun",
+  "tafsirNoSurahFound": "A ko ri tafsiri fun surah yi.",
+  "tafsirNoAyahFound": "Ko si tafsir ti a rii fun ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ko le ṣe kojọpọ.",
+  "tafsirNoTextForAyah": "Ko si ọrọ tafsir fun ayah yii.",
+  "tafsirDownloadingProgress": "Gbigba tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Nkojọpọ tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Orisun Tafsir da aṣiṣe HTTP {statusCode} pada.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Orisun tafsir ti a yan ko da awọn titẹ sii.",
+  "tafsirCacheUnavailable": "Tafsir ti o ni idaniloju ko si ni aisinipo sibẹsibẹ. Muṣiṣẹpọ dataset tafsir ti o ti jade ṣaaju lilọ kiri ayelujara.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Fi Bukumaaki kun",
   "removeBookmark": "Yọ Bukumaaki kuro",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "awọn miiran n gbadura pe, ‘Oluwa wa, fun wa ni oore ni aye ati ni ọla, ki o si daabo bo wa lọwọ iya ina.",
+  "duaMeaning2": "Ọlọ́run kìí fi ohun tí ó pọ̀ ju ohun tí ó lè rù lọ: ọ̀kọ̀ọ̀kan ń jèrè ohun rere tí ó ṣe, ó sì ń jìyà búburú rẹ̀- ‘Olúwa, má ṣe mú wa lọ́wọ́ sí iṣẹ́ tí a bá gbàgbé tàbí àṣìṣe. Oluwa, mase di eru wa bi O ti di eru awon ti o wa niwaju wa. Oluwa, maṣe di ẹrù wa lara ju ti a ni agbara lati ru. Dariji wa, dariji wa, ki o si ṣãnu fun wa. Iwọ ni Oludaabobo wa, nitori naa ran wa lọwọ lori awọn alaigbagbọ.",
+  "duaMeaning3": "‘Oluwa wa, ma je ki okan wa ya leyin ti O ti se amona wa. Fun wa l‘anu Re: Iwo l‘O nfun wa titi.",
+  "duaMeaning4": "Oluwa, je ki emi ati awon omo mi le ma tesiwaju ninu adura naa. Oluwa wa, gba ebe mi.",
+  "duaMeaning5": "kí o sì sọ ìyẹ́ apá rẹ rẹlẹ̀ ní ìrẹ̀lẹ̀ sí wọn ní inú rere, kí o sì wí pé, ‘Olúwa, ṣàánú wọn, gẹ́gẹ́ bí wọ́n ti ṣe ìtọ́jú mi nígbà tí mo wà ní kékeré.",
+  "duaMeaning6": "gbega ni fun Ọlọhun, ẹni ti o ni iṣakoso nitootọ. [Anabi], maṣe yara lati ka ki iṣipaya naa to pe ni kikun ṣugbọn sọ pe, ‘Oluwa, fun mi ni imọ siwaju sii!’",
+  "duaMeaning7": "Sọ [Annabi] pe, ‘Oluwa, dariji ki o si ṣãnu: Iwọ ni alaanu ju gbogbo lọ.",
+  "duaMeaning8": "àwọn tí ń gbàdúrà pé, ‘Olúwa wa, fún wa ní ayọ̀ nínú àwọn aya àti àwọn ọmọ wa. Ṣe apẹẹrẹ rere fun awọn ti o mọ Ọ’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Gbigba awẹ",
   "quranReading": "Al-Qur’an kika",
   "prayers": "Adura",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Ilọsiwaju osẹ",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islam odun titun",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Itọsọna",
   "compass": "Kompasi",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla ri!",
   "turnDevice": "Yipada ẹrọ rẹ lati dojukọ Qibla",
+  "qiblaCompassErrorDetails": "Aṣiṣe Kompasi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompasi sensọ ko si lori ẹrọ yi.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Awọn iwifunni Adhan",
+  "adhanNotificationChannelDescription": "Awọn itaniji akoko adura pẹlu ohun adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Iwọn ibi-afẹde: {target}",
   "tapToCount": "Fọwọ ba lati ka",
+  "zikrCompletedMashAllah": "Ti pari! MashaAllah",
+  "zikrMeaningSubhanAllah": "Allāhu ga ju gbogbo àìpé lọ.",
+  "zikrMeaningAlhamdulillah": "Gbogbo iyin ti Olohun ni.",
+  "zikrMeaningAllahuAkbar": "Allāhu ni Alájùlọ.",
+  "zikrMeaningLaIlahaIllallah": "Kosi Olorun miran ayafi Allah.",
+  "zikrMeaningAstaghfirullah": "Mo wa aforiji Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ko si agbara ati agbara ayafi ti Olohun.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Ohun Ohun",
+  "audioVoiceMisharyAlafasy": "Okunrin (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Okunrin (Abdul Basit)",
+  "audioVoiceSudais": "Okunrin (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Iṣatunṣe Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Odiwọn nilo. Yiyi ẹrọ ni nọmba-8.",
   "dailyVerse": "Ẹsẹ Ojoojumọ",
+  "dailyVerseUnavailableTitle": "Ẹsẹ ojoojumọ ko si",
+  "dailyVerseUnavailableBody": "Akoonu ẹsẹ ojoojumọ ti a ti rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Sopọ si orisun awọsanma tabi muuṣiṣẹpọ kaṣe ti o daju ṣaaju lilọ kiri ayelujara.",
   "todaysIbadah": "Ibada loni",
   "quickAccess": "Wiwọle yara yara",
   "assistant": "Iranlọwọ",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Awọn duas ti a rii daju ko si sibẹsibẹ",
+  "duaUnavailableBody": "Awọn duas ojoojumọ ti a rii daju ko ti muuṣiṣẹpọ si ẹrọ yii sibẹsibẹ. Sopọ si orisun awọsanma lati ṣajọpọ duas ti o ti jade dipo idasẹhin ti a ko rii daju.",
+  "duaCategoryQuranic": "Al-Qur’an dua",
+  "duaCategoryMorningEvening": "Owurọ & Aṣalẹ",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Idaabobo",
+  "duaCategoryBeginning": "Awọn ibẹrẹ",
+  "duaCategorySleep": "Orun",
+  "duaCategoryFoodDrink": "Ounje & mimu",
+  "duaCategoryForgiveness": "Idariji",
+  "duaCategoryHome": "Ile",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Ẹkọ Islam",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Awọn akojọpọ Hadith",
+  "hadithSourcePending": "Wadi orisun ni isunmọtosi ni",
+  "hadithUnavailableTitle": "Awọn akojọpọ hadith ti o ni idaniloju ko si sibẹsibẹ",
+  "hadithUnavailableBody": "Kọ yii tun da lori ifunni hadith ita ti a ko rii daju. Lilọ kiri ayelujara Hadith duro ni alaabo titi ti ipilẹ data ti o ti muṣiṣẹpọ.",
   "paywallUnlockAll": "Ṣii gbogbo awọn ẹya fun irin-ajo ti ẹmi rẹ",
+  "premiumProductUnavailable": "Ọja Ere ko si ni bayi. Jọwọ gbiyanju lẹẹkansi nigbamii.",
+  "premiumPurchaseFailed": "A ko le pari rira. Jọwọ gbiyanju lẹẹkansi.",
   "paywallFeature1Title": "Oluranlọwọ nkankikan Plus",
   "paywallFeature1Desc": "Q&A ailopin AI-agbara",
   "paywallFeature2Title": "Aisinipo ailopin",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Igbasilẹ ti pari fun {reciter} pẹlu {failed} surah ti o kuna ({downloaded}/{total} ti ṣe igbasilẹ).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Parẹ awọn faili aisinipo fun {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Aṣiṣe nẹtiwọki. Jọwọ gbiyanju lẹẹkansi.",
+  "placesLocationRequiredTitle": "Ibi ti a beere",
+  "placesLocationRequiredBody": "Ṣeto ipo akọkọ ki awọn mọṣalaṣi nitosi, ounjẹ halal, ati awọn ile-iwe Islam le ṣe wa ni pipe.",
+  "placesMapTilesUnavailableTitle": "Awọn alẹmọ maapu ko si",
+  "placesMapTilesUnavailableBody": "Orisun tile maapu ti a ti rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Awọn aaye to wa nitosi tun le ṣajọpọ lati ipo ti o fipamọ.",
+  "placesDataSourceUnavailableTitle": "Awọn aaye data ko si",
+  "placesDataSourceUnavailableBody": "Ojuami ipari data ti a rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Ṣeto PLACES_OVERPASS_API_URL si aṣoju tabi olupese ti a fọwọsi ṣaaju ṣiṣe wiwa nitosi.",
   "unknownPlaceName": "Orukọ Aimọ",
   "islamicPlaceFallback": "Ibi Islam",
-  "prayerNotificationTitle": "Àkókò fún {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "O to akoko lati gbadura {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Awọn duas ti a rii daju ko si sibẹsibẹ",
-  "duaUnavailableBody": "Awọn duas ojoojumọ ti a rii daju ko ti muuṣiṣẹpọ si ẹrọ yii sibẹsibẹ. Sopọ si orisun awọsanma lati ṣajọpọ duas ti o ti jade dipo idasẹhin ti a ko rii daju.",
-  "duaCategoryQuranic": "Al-Qur’an dua",
-  "duaCategoryMorningEvening": "Owurọ & Aṣalẹ",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Idaabobo",
-  "duaCategoryBeginning": "Awọn ibẹrẹ",
-  "duaCategorySleep": "Orun",
-  "duaCategoryFoodDrink": "Ounje & mimu",
-  "duaCategoryForgiveness": "Idariji",
-  "duaCategoryHome": "Ile",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Wadi orisun ni isunmọtosi ni",
-  "hadithUnavailableTitle": "Awọn akojọpọ hadith ti o ni idaniloju ko si sibẹsibẹ",
-  "hadithUnavailableBody": "Kọ yii tun da lori ifunni hadith ita ti a ko rii daju. Lilọ kiri ayelujara Hadith duro ni alaabo titi ti ipilẹ data ti o ti muṣiṣẹpọ.",
-  "appErrorOccurred": "Aṣiṣe kan ṣẹlẹ",
-  "appUnknownError": "Aṣiṣe aimọ",
-  "qiblaCompassErrorDetails": "Aṣiṣe Kompasi: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ti pari! MashaAllah",
-  "zikrMeaningSubhanAllah": "Allāhu ga ju gbogbo àìpé lọ.",
-  "zikrMeaningAlhamdulillah": "Gbogbo iyin ti Olohun ni.",
-  "zikrMeaningAllahuAkbar": "Allāhu ni Alájùlọ.",
-  "zikrMeaningLaIlahaIllallah": "Kosi Olorun miran ayafi Allah.",
-  "zikrMeaningAstaghfirullah": "Mo wa aforiji Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ko si agbara ati agbara ayafi ti Olohun.",
   "asmaMeaning1": "Alanfani",
   "asmaMeaning2": "Alaanu",
   "asmaMeaning3": "Oba / Oluwa ayeraye",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ẹni Ayérayé",
   "asmaMeaning97": "Ajogún",
   "asmaMeaning98": "Itọsọna Olododo Julọ",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "awọn miiran n gbadura pe, ‘Oluwa wa, fun wa ni oore ni aye ati ni ọla, ki o si daabo bo wa lọwọ iya ina.",
-  "duaMeaning2": "Ọlọ́run kìí fi ohun tí ó pọ̀ ju ohun tí ó lè rù lọ: ọ̀kọ̀ọ̀kan ń jèrè ohun rere tí ó ṣe, ó sì ń jìyà búburú rẹ̀- ‘Olúwa, má ṣe mú wa lọ́wọ́ sí iṣẹ́ tí a bá gbàgbé tàbí àṣìṣe. Oluwa, mase di eru wa bi O ti di eru awon ti o wa niwaju wa. Oluwa, maṣe di ẹrù wa lara ju ti a ni agbara lati ru. Dariji wa, dariji wa, ki o si ṣãnu fun wa. Iwọ ni Oludaabobo wa, nitori naa ran wa lọwọ lori awọn alaigbagbọ.",
-  "duaMeaning3": "‘Oluwa wa, ma je ki okan wa ya leyin ti O ti se amona wa. Fun wa l‘anu Re: Iwo l‘O nfun wa titi.",
-  "duaMeaning4": "Oluwa, je ki emi ati awon omo mi le ma tesiwaju ninu adura naa. Oluwa wa, gba ebe mi.",
-  "duaMeaning5": "kí o sì sọ ìyẹ́ apá rẹ rẹlẹ̀ ní ìrẹ̀lẹ̀ sí wọn ní inú rere, kí o sì wí pé, ‘Olúwa, ṣàánú wọn, gẹ́gẹ́ bí wọ́n ti ṣe ìtọ́jú mi nígbà tí mo wà ní kékeré.",
-  "duaMeaning6": "gbega ni fun Ọlọhun, ẹni ti o ni iṣakoso nitootọ. [Anabi], maṣe yara lati ka ki iṣipaya naa to pe ni kikun ṣugbọn sọ pe, ‘Oluwa, fun mi ni imọ siwaju sii!’",
-  "duaMeaning7": "Sọ [Annabi] pe, ‘Oluwa, dariji ki o si ṣãnu: Iwọ ni alaanu ju gbogbo lọ.",
-  "duaMeaning8": "àwọn tí ń gbàdúrà pé, ‘Olúwa wa, fún wa ní ayọ̀ nínú àwọn aya àti àwọn ọmọ wa. Ṣe apẹẹrẹ rere fun awọn ti o mọ Ọ’.",
-  "islamicNewYear": "Islam odun titun",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Tuntun",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Nkojọpọ tafsir...",
-  "tafsirSourceLabel": "Tafsir orisun",
-  "tafsirNoSurahFound": "A ko ri tafsiri fun surah yi.",
-  "tafsirNoAyahFound": "Ko si tafsir ti a rii fun ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir ko le ṣe kojọpọ.",
-  "tafsirNoTextForAyah": "Ko si ọrọ tafsir fun ayah yii.",
-  "tafsirDownloadingProgress": "Gbigba tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Nkojọpọ tafsir {current}/{total}",
-  "tafsirApiStatusError": "Orisun Tafsir da aṣiṣe HTTP {statusCode} pada.",
-  "tafsirNoEntriesReturned": "Orisun tafsir ti a yan ko da awọn titẹ sii.",
-  "premiumProductUnavailable": "Ọja Ere ko si ni bayi. Jọwọ gbiyanju lẹẹkansi nigbamii.",
-  "premiumPurchaseFailed": "A ko le pari rira. Jọwọ gbiyanju lẹẹkansi.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islam Way of Light",
-  "downloadPartiallyFinishedForReciter": "Igbasilẹ ti pari fun {reciter} pẹlu {failed} surah ti o kuna ({downloaded}/{total} ti ṣe igbasilẹ).",
-  "placesLocationRequiredTitle": "Ibi ti a beere",
-  "placesLocationRequiredBody": "Ṣeto ipo akọkọ ki awọn mọṣalaṣi nitosi, ounjẹ halal, ati awọn ile-iwe Islam le ṣe wa ni pipe.",
-  "placesMapTilesUnavailableTitle": "Awọn alẹmọ maapu ko si",
-  "placesMapTilesUnavailableBody": "Orisun tile maapu ti a ti rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Awọn aaye to wa nitosi tun le ṣajọpọ lati ipo ti o fipamọ.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Okunrin (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Okunrin (Abdul Basit)",
-  "audioVoiceSudais": "Okunrin (Sudais)",
-  "qiblaSensorUnavailable": "Kompasi sensọ ko si lori ẹrọ yi.",
-  "adhanNotificationChannelName": "Awọn iwifunni Adhan",
-  "adhanNotificationChannelDescription": "Awọn itaniji akoko adura pẹlu ohun adhan.",
-  "quranLoadFailed": "Akoonu Al-Qur’an ko le ṣe kojọpọ. Jọwọ gbiyanju lẹẹkansi.",
-  "locationDetectionFailed": "Ko le ri ipo rẹ. Jọwọ yan ilu kan pẹlu ọwọ tabi gbiyanju lẹẹkansi.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Awọn aaye data ko si",
-  "placesDataSourceUnavailableBody": "Ojuami ipari data ti a rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Ṣeto PLACES_OVERPASS_API_URL si aṣoju tabi olupese ti a fọwọsi ṣaaju ṣiṣe wiwa nitosi.",
-  "tafsirCacheUnavailable": "Tafsir ti o ni idaniloju ko si ni aisinipo sibẹsibẹ. Muṣiṣẹpọ dataset tafsir ti o ti jade ṣaaju lilọ kiri ayelujara."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

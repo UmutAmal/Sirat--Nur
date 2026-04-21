@@ -956,6 +956,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get dailyVerse => 'Andininy isan\'andro';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Andininy isan\'andro tsy misy';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ny votoatin\'ny andininy isan\'andro voamarina dia tsy mbola voarafitra ho an\'ity fananganana ity. Mifandraisa amin\'ny loharano rahona na ampifanaraho cache voamarina alohan\'ny hivezivezena.';
+
+  @override
   String get todaysIbadah => 'Ibadah anio';
 
   @override

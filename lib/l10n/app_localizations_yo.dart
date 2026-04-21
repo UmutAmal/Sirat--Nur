@@ -949,6 +949,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get dailyVerse => 'Ẹsẹ Ojoojumọ';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ẹsẹ ojoojumọ ko si';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Akoonu ẹsẹ ojoojumọ ti a ti rii daju ko ni tunto fun kikọ yii sibẹsibẹ. Sopọ si orisun awọsanma tabi muuṣiṣẹpọ kaṣe ti o daju ṣaaju lilọ kiri ayelujara.';
+
+  @override
   String get todaysIbadah => 'Ibada loni';
 
   @override

@@ -1,6 +1,7 @@
 {
   "@@locale": "ga",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Bealach an tSolais Ioslamach",
   "home": "Baile",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Íse",
+  "prayerNotificationTitle": "Am le haghaidh {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Tá sé in am guí {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Sonraí & Stóráil",
   "clearCache": "Glan Taisce",
   "cacheClearedSuccess": "Glanadh an taisce go rathúil",
@@ -34,6 +51,7 @@
   "currentLocation": "Suíomh Reatha (GPS)",
   "locationServiceDisabled": "Tá an tseirbhís suímh díchumasaithe.",
   "locationPermissionDenied": "Diúltaíodh cead suímh.",
+  "locationDetectionFailed": "Níorbh fhéidir do shuíomh a bhrath. Roghnaigh cathair de láimh nó bain triail eile as.",
   "citiesCount": "{count} cathracha",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Tharla earráid",
+  "appUnknownError": "Earráid anaithnid",
+  "quranLoadFailed": "Níorbh fhéidir ábhar an Quran a lódáil. Bain triail eile as.",
   "retry": "Bain triail eile as",
+  "refreshAction": "Refresh",
   "cancel": "Cealaigh",
   "save": "Sábháil",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Tá",
   "no": "Níl",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Leathanach",
   "reading": "Léamh",
   "recitation": "Aithriseoireacht",
   "translation": "Aistriúchán",
   "tafsir": "Taisceir",
+  "tafsirLoading": "tafsir á lódáil...",
+  "tafsirSourceLabel": "Foinse tafsir",
+  "tafsirNoSurahFound": "Níor aimsíodh aon tafsir don surah seo.",
+  "tafsirNoAyahFound": "Níor aimsíodh aon tafsir le haghaidh ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Níorbh fhéidir Tafsir a lódáil.",
+  "tafsirNoTextForAyah": "Gan téacs tafsir don ayah seo.",
+  "tafsirDownloadingProgress": "Tasir á íoslódáil {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tasir á lódáil {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Chuir foinse Tafsir earráid HTTP {statusCode} ar ais.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Níor chuir an fhoinse tafsir roghnaithe aon iontrálacha ar ais.",
+  "tafsirCacheUnavailable": "Níl tafsir deimhnithe ar fáil as líne fós. Sioncronaigh tacar sonraí tafsir foinsithe roimh bhrabhsáil.",
   "bookmarks": "Leabharmharcanna",
   "addBookmark": "Cuir Leabharmharc leis",
   "removeBookmark": "Bain Leabharmharc",
   "lastRead": "Léamh Deireanach",
   "dailyZikr": "Zikr laethúil",
+  "duaMeaning1": "guíonn daoine eile, ‘A Thiarna, tabhair dúinn maitheas sa saol seo agus sa saol ina dhiaidh seo, agus cosnaigh sinn ó phian na Tine.’",
+  "duaMeaning2": "Ní chuireann Dia ualach ar aon anam le níos mó ná mar is féidir leis a iompar: gnóthaíonn gach duine cibé maith a rinne sé, agus fulaingíonn sé a olc - ‘ A Thiarna, ná tabhair faoi chúram sinn má dhéanaimid dearmad nó botúin a dhéanamh. A Thiarna, ná bíodh an t-ualach orainn mar a chuir tú ualach orthu siúd atá os ár gcomhair. A Thiarna, ná bíodh an t-ualach ort níos mó ná an neart atá againn le hiompar. Maith dúinn, maith dúinn, agus déan trócaire orainn. Is tusa ár gCosantóirí, mar sin cuidigh linn i gcoinne na ndíchreidmhigh.'",
+  "duaMeaning3": "‘A Thiarna, ná lig ár gcroíthe ar leataobh tar éis duit sinn a threorú. Deonaigh dúinn do thrócaire: Is tusa an té a thugann riamh.",
+  "duaMeaning4": "A Thiarna, deonaigh go gcoimeádfaidh mise agus mo sliocht an urnaí. A Thiarna, glac le m’iarratas.",
+  "duaMeaning5": "agus ísligh do sciathán go humhal leo i gcineáltas agus abair, ‘A Thiarna, déan trócaire orthu, mar a thug siad aire dom nuair a bhí mé beag.’",
+  "duaMeaning6": "Ardaithe go raibh Dia, an té atá i gceannas go fírinneach. [Fáidh], ná déan deifir chun aithris a dhéanamh sula mbeidh an nochtadh iomlán iomlán ach abair, ‘A Thiarna, méadaigh in eolas mé!’",
+  "duaMeaning7": "Abair [Fáidh], ‘A Thiarna, maith agus déan trócaire: Is tú an té is trócaire ar fad’.",
+  "duaMeaning8": "iad siúd a guí, ‘A Thiarna, déan áthas orainn inár gcéilí agus inár sliocht. Déan samplaí maithe dúinn dóibh siúd atá ar an eolas fút’.",
   "morningZikr": "Maidin Zikr",
   "eveningZikr": "Tráthnóna Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Troscadh",
   "quranReading": "Léamh Quran",
   "prayers": "Paidreacha",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Comhaireamh Dhikr",
   "weeklyProgress": "Dul Chun Cinn Seachtainiúil",
   "monthlyProgress": "Dul Chun Cinn Míosúil",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Athbhliain Ioslamach",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Seabhall",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muirram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Treo Qibla",
   "compass": "Compás",
@@ -108,6 +219,19 @@
   "north": "Thuaidh",
   "qiblaFound": "Fuair ​​​​Qibla!",
   "turnDevice": "Cas ar do ghléas chun aghaidh a thabhairt ar an Qibla",
+  "qiblaCompassErrorDetails": "Earráid chompáis: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Níl braiteoir compáis ar fáil ar an ngléas seo.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Fógraí",
   "prayerNotifications": "Fógraí Urnaí",
   "enableNotifications": "Cumasaigh Fógraí",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Comhaireamh sprice: {target}",
   "tapToCount": "Tapáil chun comhaireamh",
+  "zikrCompletedMashAllah": "Críochnaithe! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah i bhfad os cionn gach imperfection.",
+  "zikrMeaningAlhamdulillah": "Baineann gach moladh le Allah.",
+  "zikrMeaningAllahuAkbar": "Is é Allah an ceann is mó.",
+  "zikrMeaningLaIlahaIllallah": "Níl aon dia ann ach Allah.",
+  "zikrMeaningAstaghfirullah": "Lorgaím maithiúnas Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Níl aon chumhacht agus aon neart ach amháin trí Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Guth Fuaime",
+  "audioVoiceMisharyAlafasy": "Fir (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Fir (Abdul Basit)",
+  "audioVoiceSudais": "Fir (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Calabrú Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calabrú ag teastáil. Rothlaigh gléas i bhfigiúr-8.",
   "dailyVerse": "Rann Laethúil",
+  "dailyVerseUnavailableTitle": "Níl véarsa laethúil ar fáil",
+  "dailyVerseUnavailableBody": "Níl ábhar véarsa laethúil fíoraithe cumraithe don leagan seo fós. Ceangail leis an bhfoinse néil nó sioncronaigh taisce fíoraithe roimh bhrabhsáil.",
   "todaysIbadah": "Ibadah an lae inniu",
   "quickAccess": "Rochtain Thapa",
   "assistant": "Cúntóir",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Níl dus deimhnithe ar fáil go fóill",
+  "duaUnavailableBody": "Níor sioncronaíodh dus laethúil fíoraithe leis an ngléas seo fós. Ceangail leis an bhfoinse néil chun duas foinsithe a lódáil in ionad aisghnó neamhfhíoraithe.",
+  "duaCategoryQuranic": "Dua Quranic",
+  "duaCategoryMorningEvening": "Maidin & Tráthnóna",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Cosaint",
+  "duaCategoryBeginning": "Tús",
+  "duaCategorySleep": "Codladh",
+  "duaCategoryFoodDrink": "Bia & Deoch",
+  "duaCategoryForgiveness": "Maithiúnas",
+  "duaCategoryHome": "Baile",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Oideachas Ioslamach",
   "sukunAudioTitle": "Fuaimrian Sukun",
   "hadithCollections": "Bailiúcháin de hadith saor in aisce,",
+  "hadithSourcePending": "Foinse deimhnithe ar feitheamh",
+  "hadithUnavailableTitle": "Níl bailiúcháin hadith fíoraithe ar fáil go fóill",
+  "hadithUnavailableBody": "Braitheann an tógáil seo fós ar bheathú hadith seachtrach neamhfhíoraithe. Fanann brabhsáil Hadith díchumasaithe go dtí go sioncronófar tacar sonraí foinseach.",
   "paywallUnlockAll": "Díghlasáil gach gné do do thuras spioradálta",
+  "premiumProductUnavailable": "Níl an táirge préimhe ar fáil faoi láthair. Bain triail eile as ar ball.",
+  "premiumPurchaseFailed": "Níorbh fhéidir an ceannach a chur i gcrích. Bain triail eile as.",
   "paywallFeature1Title": "Cúntóir Néarúil Plus",
   "paywallFeature1Desc": "Ceisteanna & Freagraí neamhtheoranta faoi chumhacht AI",
   "paywallFeature2Title": "Gan teorainn As Líne",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Chríochnaigh an íoslódáil do {reciter} le {failed} surahs teipthe ({downloaded}/{total} íoslódáil).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Scriosadh comhaid as líne le haghaidh {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Earráid líonra. Bain triail eile as.",
+  "placesLocationRequiredTitle": "Suíomh ag teastáil",
+  "placesLocationRequiredBody": "Socraigh suíomh ar dtús ionas gur féidir moscanna in aice láimhe, bia halal, agus scoileanna Ioslamacha a chuardach go cruinn.",
+  "placesMapTilesUnavailableTitle": "Níl fáil ar thíleanna léarscáile",
+  "placesMapTilesUnavailableBody": "Níl foinse tíl léarscáile fíoraithe cumraithe don tógáil seo fós. Is féidir le háiteanna in aice láimhe lódáil fós ó do shuíomh sábháilte.",
+  "placesDataSourceUnavailableTitle": "Níl sonraí faoi áiteanna ar fáil",
+  "placesDataSourceUnavailableBody": "Níl críochphointe sonraí áiteanna fíoraithe cumraithe don leagan seo fós. Socraigh PLACES_OVERPASS_API_URL chuig seachfhreastalaí nó soláthraí ceadaithe roimh duit cuardach in aice láimhe a chumasú.",
   "unknownPlaceName": "Ainm Anaithnid",
   "islamicPlaceFallback": "Áit Ioslamach",
-  "prayerNotificationTitle": "Am le haghaidh {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Tá sé in am guí {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Níl dus deimhnithe ar fáil go fóill",
-  "duaUnavailableBody": "Níor sioncronaíodh dus laethúil fíoraithe leis an ngléas seo fós. Ceangail leis an bhfoinse néil chun duas foinsithe a lódáil in ionad aisghnó neamhfhíoraithe.",
-  "duaCategoryQuranic": "Dua Quranic",
-  "duaCategoryMorningEvening": "Maidin & Tráthnóna",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Cosaint",
-  "duaCategoryBeginning": "Tús",
-  "duaCategorySleep": "Codladh",
-  "duaCategoryFoodDrink": "Bia & Deoch",
-  "duaCategoryForgiveness": "Maithiúnas",
-  "duaCategoryHome": "Baile",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Foinse deimhnithe ar feitheamh",
-  "hadithUnavailableTitle": "Níl bailiúcháin hadith fíoraithe ar fáil go fóill",
-  "hadithUnavailableBody": "Braitheann an tógáil seo fós ar bheathú hadith seachtrach neamhfhíoraithe. Fanann brabhsáil Hadith díchumasaithe go dtí go sioncronófar tacar sonraí foinseach.",
-  "appErrorOccurred": "Tharla earráid",
-  "appUnknownError": "Earráid anaithnid",
-  "qiblaCompassErrorDetails": "Earráid chompáis: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Críochnaithe! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah i bhfad os cionn gach imperfection.",
-  "zikrMeaningAlhamdulillah": "Baineann gach moladh le Allah.",
-  "zikrMeaningAllahuAkbar": "Is é Allah an ceann is mó.",
-  "zikrMeaningLaIlahaIllallah": "Níl aon dia ann ach Allah.",
-  "zikrMeaningAstaghfirullah": "Lorgaím maithiúnas Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Níl aon chumhacht agus aon neart ach amháin trí Allah.",
   "asmaMeaning1": "An Tairbhí",
   "asmaMeaning2": "An Trócaireach",
   "asmaMeaning3": "An Rí / Tiarna Síoraí",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "An tAon Síoraí",
   "asmaMeaning97": "An tOidhreadóir",
   "asmaMeaning98": "An Treoir is Cearta",
-  "asmaMeaning99": "An tOthar a hAon",
-  "duaMeaning1": "guíonn daoine eile, ‘A Thiarna, tabhair dúinn maitheas sa saol seo agus sa saol ina dhiaidh seo, agus cosnaigh sinn ó phian na Tine.’",
-  "duaMeaning2": "Ní chuireann Dia ualach ar aon anam le níos mó ná mar is féidir leis a iompar: gnóthaíonn gach duine cibé maith a rinne sé, agus fulaingíonn sé a olc - ‘ A Thiarna, ná tabhair faoi chúram sinn má dhéanaimid dearmad nó botúin a dhéanamh. A Thiarna, ná bíodh an t-ualach orainn mar a chuir tú ualach orthu siúd atá os ár gcomhair. A Thiarna, ná bíodh an t-ualach ort níos mó ná an neart atá againn le hiompar. Maith dúinn, maith dúinn, agus déan trócaire orainn. Is tusa ár gCosantóirí, mar sin cuidigh linn i gcoinne na ndíchreidmhigh.'",
-  "duaMeaning3": "‘A Thiarna, ná lig ár gcroíthe ar leataobh tar éis duit sinn a threorú. Deonaigh dúinn do thrócaire: Is tusa an té a thugann riamh.",
-  "duaMeaning4": "A Thiarna, deonaigh go gcoimeádfaidh mise agus mo sliocht an urnaí. A Thiarna, glac le m’iarratas.",
-  "duaMeaning5": "agus ísligh do sciathán go humhal leo i gcineáltas agus abair, ‘A Thiarna, déan trócaire orthu, mar a thug siad aire dom nuair a bhí mé beag.’",
-  "duaMeaning6": "Ardaithe go raibh Dia, an té atá i gceannas go fírinneach. [Fáidh], ná déan deifir chun aithris a dhéanamh sula mbeidh an nochtadh iomlán iomlán ach abair, ‘A Thiarna, méadaigh in eolas mé!’",
-  "duaMeaning7": "Abair [Fáidh], ‘A Thiarna, maith agus déan trócaire: Is tú an té is trócaire ar fad’.",
-  "duaMeaning8": "iad siúd a guí, ‘A Thiarna, déan áthas orainn inár gcéilí agus inár sliocht. Déan samplaí maithe dúinn dóibh siúd atá ar an eolas fút’.",
-  "islamicNewYear": "Athbhliain Ioslamach",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Seabhall",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muirram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "tafsir á lódáil...",
-  "tafsirSourceLabel": "Foinse tafsir",
-  "tafsirNoSurahFound": "Níor aimsíodh aon tafsir don surah seo.",
-  "tafsirNoAyahFound": "Níor aimsíodh aon tafsir le haghaidh ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Níorbh fhéidir Tafsir a lódáil.",
-  "tafsirNoTextForAyah": "Gan téacs tafsir don ayah seo.",
-  "tafsirDownloadingProgress": "Tasir á íoslódáil {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Tasir á lódáil {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Chuir foinse Tafsir earráid HTTP {statusCode} ar ais.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Níor chuir an fhoinse tafsir roghnaithe aon iontrálacha ar ais.",
-  "premiumProductUnavailable": "Níl an táirge préimhe ar fáil faoi láthair. Bain triail eile as ar ball.",
-  "premiumPurchaseFailed": "Níorbh fhéidir an ceannach a chur i gcrích. Bain triail eile as.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Bealach an tSolais Ioslamach",
-  "downloadPartiallyFinishedForReciter": "Chríochnaigh an íoslódáil do {reciter} le {failed} surahs teipthe ({downloaded}/{total} íoslódáil).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Suíomh ag teastáil",
-  "placesLocationRequiredBody": "Socraigh suíomh ar dtús ionas gur féidir moscanna in aice láimhe, bia halal, agus scoileanna Ioslamacha a chuardach go cruinn.",
-  "placesMapTilesUnavailableTitle": "Níl fáil ar thíleanna léarscáile",
-  "placesMapTilesUnavailableBody": "Níl foinse tíl léarscáile fíoraithe cumraithe don tógáil seo fós. Is féidir le háiteanna in aice láimhe lódáil fós ó do shuíomh sábháilte.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Fir (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Fir (Abdul Basit)",
-  "audioVoiceSudais": "Fir (Sudais)",
-  "qiblaSensorUnavailable": "Níl braiteoir compáis ar fáil ar an ngléas seo.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Níorbh fhéidir ábhar an Quran a lódáil. Bain triail eile as.",
-  "locationDetectionFailed": "Níorbh fhéidir do shuíomh a bhrath. Roghnaigh cathair de láimh nó bain triail eile as.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Níl sonraí faoi áiteanna ar fáil",
-  "placesDataSourceUnavailableBody": "Níl críochphointe sonraí áiteanna fíoraithe cumraithe don leagan seo fós. Socraigh PLACES_OVERPASS_API_URL chuig seachfhreastalaí nó soláthraí ceadaithe roimh duit cuardach in aice láimhe a chumasú.",
-  "tafsirCacheUnavailable": "Níl tafsir deimhnithe ar fáil as líne fós. Sioncronaigh tacar sonraí tafsir foinsithe roimh bhrabhsáil."
+  "asmaMeaning99": "An tOthar a hAon"
 }

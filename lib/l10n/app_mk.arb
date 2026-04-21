@@ -1,6 +1,7 @@
 {
   "@@locale": "mk",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Исламски пат на светлината",
   "home": "Дома",
   "quran": "Куранот",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Аср",
   "maghrib": "Магриб",
   "isha": "Иша",
+  "prayerNotificationTitle": "Време за {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Време е да се молиме {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Податоци и складирање",
   "clearCache": "Исчистете го кешот",
   "cacheClearedSuccess": "Кешот е успешно исчистен",
@@ -34,6 +51,7 @@
   "currentLocation": "Тековна локација (GPS)",
   "locationServiceDisabled": "Услугата за локација е оневозможена.",
   "locationPermissionDenied": "Дозволата за локација е одбиена.",
+  "locationDetectionFailed": "Не може да се открие вашата локација. Изберете град рачно или обидете се повторно.",
   "citiesCount": "{count} градови",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Не се пронајдени резултати",
   "loading": "Се вчитува...",
   "error": "Грешка",
+  "appErrorOccurred": "Се појави грешка",
+  "appUnknownError": "Непозната грешка",
+  "quranLoadFailed": "Содржината на Куранот не можеше да се вчита. Ве молиме обидете се повторно.",
   "retry": "Обидете се повторно",
+  "refreshAction": "Освежи",
   "cancel": "Откажи",
   "save": "Зачувај",
   "delete": "Избриши",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "бр",
   "surah": "Сура",
+  "ayahLabel": "Аја {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Џуз",
   "page": "Страница",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Се вчитува тафсирот...",
+  "tafsirSourceLabel": "Извор на тафсир",
+  "tafsirNoSurahFound": "Не е пронајден тефсир за оваа сура.",
+  "tafsirNoAyahFound": "Не е пронајден тафсир за аја {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Тафсирот не можеше да се вчита.",
+  "tafsirNoTextForAyah": "Нема тафсирски текст за овој аја.",
+  "tafsirDownloadingProgress": "Се презема тафсир {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Се вчитува тефсирот {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Изворот на Тафсир врати HTTP {statusCode} грешка.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Избраниот извор на тафсир не врати записи.",
+  "tafsirCacheUnavailable": "Потврдениот тафсир сè уште не е достапен офлајн. Синхронизирајте изворна база на податоци за тафсири пред да прелистувате.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Додадете обележувач",
   "removeBookmark": "Отстранете го обележувачот",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "други се молат: „Господару наш, дај ни добро на овој свет и на Ахирет и заштити нè од измачувањето на огнот“.",
+  "duaMeaning2": "Бог не оптоварува ниту една душа со повеќе отколку што може да поднесе: секоја добива што и да е добро што го направила, а трпи лошо - „Господи, не нè земај на задача ако заборавиме или направиме грешки. Господи, не оптоварувај нè како што ги оптоваруваше оние пред нас. Господи, не оптоварувај нè со повеќе отколку што имаме сила да поднесеме. Прости ни, прости ни и помилуј нѐ. Ти си наш Заштитник, затоа помогни ни против неверниците.",
+  "duaMeaning3": "„Господару наш, не дозволувај нашите срца да отстапуваат откако Ти нѐ упати. Дарувај ни ја Твојата милост: Ти си секогаш Давател.",
+  "duaMeaning4": "Господи, дај јас и моето потомство да ја одржуваме молитвата. Господи наш, прими го моето барање.",
+  "duaMeaning5": "и спушти го своето крило со понизност кон нив во љубезност и кажи: „Господи, помилуј ги, како што се грижеа за мене кога бев мал“.",
+  "duaMeaning6": "возвишен да е Бог, Кој навистина владее. [Пророку], не брзај да рецитираш пред да заврши откровението, туку кажи: „Господи, зголеми ми го знаењето!“",
+  "duaMeaning7": "Кажи [Пророк]: „Господи, прости и помилуј: Ти си најмилосрден од сите“.",
+  "duaMeaning8": "оние кои се молат: „Господи наш, дај ни радост во нашите сопружници и потомци. Направи ни добар пример за оние кои се свесни за Тебе“.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Постот",
   "quranReading": "Читање Куран",
   "prayers": "Молитви",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Неделен напредок",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Исламска Нова Година",
+  "mawlidAnNabi": "Мевлид ан-Наби",
+  "specialDayDateRamadanStart": "1 Рамазан",
+  "specialDayDateLaylatAlQadr": "27 Рамазан",
+  "specialDayDateEidAlFitr": "1 Шавал",
+  "specialDayDateEidAlAdha": "10 дул Хиџа",
+  "specialDayDateIslamicNewYear": "1 Мухарам",
+  "specialDayDateMawlidAnNabi": "12 Раби ал-Авал",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Насока Кибла",
   "compass": "Компас",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Пронајдена Кибла!",
   "turnDevice": "Свртете го вашиот уред свртен кон Кибла",
+  "qiblaCompassErrorDetails": "Грешка на компасот: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Сензорот за компас е недостапен на овој уред.",
+  "qiblaLocationRequiredTitle": "Потребна е локација за Qibla",
+  "qiblaLocationRequiredBody": "Поставете ја вашата вистинска локација пред да го користите компасот Qibla за да може точно да се пресмета насоката.",
+  "adhanNotificationChannelName": "Известувања за Азан",
+  "adhanNotificationChannelDescription": "Предупредува за време на молитвата со звук на азан.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Целен број: {target}",
   "tapToCount": "Допрете за броење",
+  "zikrCompletedMashAllah": "Завршено! МашАлах",
+  "zikrMeaningSubhanAllah": "Алах е далеку над секоја несовршеност.",
+  "zikrMeaningAlhamdulillah": "Сите пофалби му припаѓаат на Аллах.",
+  "zikrMeaningAllahuAkbar": "Аллах е најголем.",
+  "zikrMeaningLaIlahaIllallah": "Нема бог освен Алах.",
+  "zikrMeaningAstaghfirullah": "Барам прошка од Аллах.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Нема сила и сила освен преку Аллах.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Аудио глас",
+  "audioVoiceMisharyAlafasy": "Машко (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Машко (Abdul Basit)",
+  "audioVoiceSudais": "Машко (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Калибрација на Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Потребна е калибрација. Завртете го уредот на слика-8.",
   "dailyVerse": "Дневен стих",
+  "dailyVerseUnavailableTitle": "Дневниот стих е недостапен",
+  "dailyVerseUnavailableBody": "Потврдената дневна содржина на стих сè уште не е конфигурирана за оваа верзија. Поврзете се со изворот на облак или синхронизирајте потврдена кеш пред да прелистувате.",
   "todaysIbadah": "Денешниот Ибаде",
   "quickAccess": "Брз пристап",
   "assistant": "асистент",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Потврдените дуи сè уште не се достапни",
+  "duaUnavailableBody": "Потврдените дневни дуа сè уште не се синхронизирани со уредов. Поврзете се со изворот на облак за да ги вчитате изворните дуа наместо непроверена резервна копија.",
+  "duaCategoryQuranic": "Куранска дуа",
+  "duaCategoryMorningEvening": "Наутро и навечер",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Заштита",
+  "duaCategoryBeginning": "Почетоци",
+  "duaCategorySleep": "Спиј",
+  "duaCategoryFoodDrink": "Храна и пијалок",
+  "duaCategoryForgiveness": "Простување",
+  "duaCategoryHome": "Дома",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Исламско образование",
   "sukunAudioTitle": "Сукунски звуци",
   "hadithCollections": "Збирки на хадиси",
+  "hadithSourcePending": "Потврден извор е на чекање",
+  "hadithUnavailableTitle": "Потврдени збирки на хадиси сè уште не се достапни",
+  "hadithUnavailableBody": "Оваа конструкција сè уште зависи од непроверена надворешна храна за хадис. Прелистувањето хадиси останува оневозможено додека не се синхронизира изворната база на податоци.",
   "paywallUnlockAll": "Отклучете ги сите функции за вашето духовно патување",
+  "premiumProductUnavailable": "Премиум производ не е достапен во моментов. Обидете се повторно подоцна.",
+  "premiumPurchaseFailed": "Купувањето не може да се заврши. Ве молиме обидете се повторно.",
   "paywallFeature1Title": "Неврален асистент плус",
   "paywallFeature1Desc": "Прашања и одговори со неограничена вештачка интелигенција",
   "paywallFeature2Title": "Неограничено офлајн",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Преземањето заврши за {reciter} со {failed} неуспешни сура ({downloaded}/{total} преземени).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Избришани офлајн датотеки за {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Мрежна грешка. Ве молиме обидете се повторно.",
+  "placesLocationRequiredTitle": "Потребна е локација",
+  "placesLocationRequiredBody": "Прво поставете локација за да може прецизно да се пребаруваат џамиите, халал храната и исламските училишта во близина.",
+  "placesMapTilesUnavailableTitle": "Плочките на картата се недостапни",
+  "placesMapTilesUnavailableBody": "Потврден извор на плочка од карта сè уште не е конфигуриран за оваа верзија. Местата во близина сè уште може да се вчитаат од вашата зачувана локација.",
+  "placesDataSourceUnavailableTitle": "Податоците за местата се недостапни",
+  "placesDataSourceUnavailableBody": "Потврдена крајна точка за податоци за места сè уште не е конфигурирана за оваа верзија. Поставете PLACES_OVERPASS_API_URL на одобрен прокси или добавувач пред да овозможите пребарување во близина.",
   "unknownPlaceName": "Непознато име",
   "islamicPlaceFallback": "Исламско место",
-  "prayerNotificationTitle": "Време за {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Време е да се молиме {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Потврдените дуи сè уште не се достапни",
-  "duaUnavailableBody": "Потврдените дневни дуа сè уште не се синхронизирани со уредов. Поврзете се со изворот на облак за да ги вчитате изворните дуа наместо непроверена резервна копија.",
-  "duaCategoryQuranic": "Куранска дуа",
-  "duaCategoryMorningEvening": "Наутро и навечер",
-  "duaCategoryTasbih": "Тасбих",
-  "duaCategoryProtection": "Заштита",
-  "duaCategoryBeginning": "Почетоци",
-  "duaCategorySleep": "Спиј",
-  "duaCategoryFoodDrink": "Храна и пијалок",
-  "duaCategoryForgiveness": "Простување",
-  "duaCategoryHome": "Дома",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Потврден извор е на чекање",
-  "hadithUnavailableTitle": "Потврдени збирки на хадиси сè уште не се достапни",
-  "hadithUnavailableBody": "Оваа конструкција сè уште зависи од непроверена надворешна храна за хадис. Прелистувањето хадиси останува оневозможено додека не се синхронизира изворната база на податоци.",
-  "appErrorOccurred": "Се појави грешка",
-  "appUnknownError": "Непозната грешка",
-  "qiblaCompassErrorDetails": "Грешка на компасот: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Завршено! МашАлах",
-  "zikrMeaningSubhanAllah": "Алах е далеку над секоја несовршеност.",
-  "zikrMeaningAlhamdulillah": "Сите пофалби му припаѓаат на Аллах.",
-  "zikrMeaningAllahuAkbar": "Аллах е најголем.",
-  "zikrMeaningLaIlahaIllallah": "Нема бог освен Алах.",
-  "zikrMeaningAstaghfirullah": "Барам прошка од Аллах.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Нема сила и сила освен преку Аллах.",
   "asmaMeaning1": "Добриот",
   "asmaMeaning2": "Милостивиот",
   "asmaMeaning3": "Кралот / Вечниот Господ",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Вечниот",
   "asmaMeaning97": "The Inheritor",
   "asmaMeaning98": "Најправедниот водич",
-  "asmaMeaning99": "Пациентот Еден",
-  "duaMeaning1": "други се молат: „Господару наш, дај ни добро на овој свет и на Ахирет и заштити нè од измачувањето на огнот“.",
-  "duaMeaning2": "Бог не оптоварува ниту една душа со повеќе отколку што може да поднесе: секоја добива што и да е добро што го направила, а трпи лошо - „Господи, не нè земај на задача ако заборавиме или направиме грешки. Господи, не оптоварувај нè како што ги оптоваруваше оние пред нас. Господи, не оптоварувај нè со повеќе отколку што имаме сила да поднесеме. Прости ни, прости ни и помилуј нѐ. Ти си наш Заштитник, затоа помогни ни против неверниците.",
-  "duaMeaning3": "„Господару наш, не дозволувај нашите срца да отстапуваат откако Ти нѐ упати. Дарувај ни ја Твојата милост: Ти си секогаш Давател.",
-  "duaMeaning4": "Господи, дај јас и моето потомство да ја одржуваме молитвата. Господи наш, прими го моето барање.",
-  "duaMeaning5": "и спушти го своето крило со понизност кон нив во љубезност и кажи: „Господи, помилуј ги, како што се грижеа за мене кога бев мал“.",
-  "duaMeaning6": "возвишен да е Бог, Кој навистина владее. [Пророку], не брзај да рецитираш пред да заврши откровението, туку кажи: „Господи, зголеми ми го знаењето!“",
-  "duaMeaning7": "Кажи [Пророк]: „Господи, прости и помилуј: Ти си најмилосрден од сите“.",
-  "duaMeaning8": "оние кои се молат: „Господи наш, дај ни радост во нашите сопружници и потомци. Направи ни добар пример за оние кои се свесни за Тебе“.",
-  "islamicNewYear": "Исламска Нова Година",
-  "mawlidAnNabi": "Мевлид ан-Наби",
-  "specialDayDateRamadanStart": "1 Рамазан",
-  "specialDayDateLaylatAlQadr": "27 Рамазан",
-  "specialDayDateEidAlFitr": "1 Шавал",
-  "specialDayDateEidAlAdha": "10 дул Хиџа",
-  "specialDayDateIslamicNewYear": "1 Мухарам",
-  "specialDayDateMawlidAnNabi": "12 Раби ал-Авал",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Освежи",
-  "ayahLabel": "Аја {ayah}",
-  "tafsirLoading": "Се вчитува тафсирот...",
-  "tafsirSourceLabel": "Извор на тафсир",
-  "tafsirNoSurahFound": "Не е пронајден тефсир за оваа сура.",
-  "tafsirNoAyahFound": "Не е пронајден тафсир за аја {ayah}.",
-  "tafsirLoadFailed": "Тафсирот не можеше да се вчита.",
-  "tafsirNoTextForAyah": "Нема тафсирски текст за овој аја.",
-  "tafsirDownloadingProgress": "Се презема тафсир {current}/{total}",
-  "tafsirLoadingProgress": "Се вчитува тефсирот {current}/{total}",
-  "tafsirApiStatusError": "Изворот на Тафсир врати HTTP {statusCode} грешка.",
-  "tafsirNoEntriesReturned": "Избраниот извор на тафсир не врати записи.",
-  "premiumProductUnavailable": "Премиум производ не е достапен во моментов. Обидете се повторно подоцна.",
-  "premiumPurchaseFailed": "Купувањето не може да се заврши. Ве молиме обидете се повторно.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Исламски пат на светлината",
-  "downloadPartiallyFinishedForReciter": "Преземањето заврши за {reciter} со {failed} неуспешни сура ({downloaded}/{total} преземени).",
-  "placesLocationRequiredTitle": "Потребна е локација",
-  "placesLocationRequiredBody": "Прво поставете локација за да може прецизно да се пребаруваат џамиите, халал храната и исламските училишта во близина.",
-  "placesMapTilesUnavailableTitle": "Плочките на картата се недостапни",
-  "placesMapTilesUnavailableBody": "Потврден извор на плочка од карта сè уште не е конфигуриран за оваа верзија. Местата во близина сè уште може да се вчитаат од вашата зачувана локација.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Машко (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Машко (Abdul Basit)",
-  "audioVoiceSudais": "Машко (Sudais)",
-  "qiblaSensorUnavailable": "Сензорот за компас е недостапен на овој уред.",
-  "adhanNotificationChannelName": "Известувања за Азан",
-  "adhanNotificationChannelDescription": "Предупредува за време на молитвата со звук на азан.",
-  "quranLoadFailed": "Содржината на Куранот не можеше да се вчита. Ве молиме обидете се повторно.",
-  "locationDetectionFailed": "Не може да се открие вашата локација. Изберете град рачно или обидете се повторно.",
-  "qiblaLocationRequiredTitle": "Потребна е локација за Qibla",
-  "qiblaLocationRequiredBody": "Поставете ја вашата вистинска локација пред да го користите компасот Qibla за да може точно да се пресмета насоката.",
-  "placesDataSourceUnavailableTitle": "Податоците за местата се недостапни",
-  "placesDataSourceUnavailableBody": "Потврдена крајна точка за податоци за места сè уште не е конфигурирана за оваа верзија. Поставете PLACES_OVERPASS_API_URL на одобрен прокси или добавувач пред да овозможите пребарување во близина.",
-  "tafsirCacheUnavailable": "Потврдениот тафсир сè уште не е достапен офлајн. Синхронизирајте изворна база на податоци за тафсири пред да прелистувате."
+  "asmaMeaning99": "Пациентот Еден"
 }

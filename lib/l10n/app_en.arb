@@ -424,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8.",
   "dailyVerse": "Daily Verse",
+  "dailyVerseUnavailableTitle": "Daily verse unavailable",
+  "dailyVerseUnavailableBody": "Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.",
   "todaysIbadah": "Today's Ibadah",
   "quickAccess": "Quick Access",
   "assistant": "Assistant",

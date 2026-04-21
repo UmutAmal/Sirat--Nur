@@ -1,6 +1,7 @@
 {
   "@@locale": "ml",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "ഇസ്ലാമിക വെളിച്ചത്തിൻ്റെ വഴി",
   "home": "വീട്",
   "quran": "ഖുർആൻ",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "അസർ",
   "maghrib": "മഗ്‌രിബ്",
   "isha": "ഇഷ",
+  "prayerNotificationTitle": "{prayerName} എന്നതിനുള്ള സമയം",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} പ്രാർത്ഥിക്കാനുള്ള സമയമാണിത്.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "ഡാറ്റയും സംഭരണവും",
   "clearCache": "കാഷെ മായ്‌ക്കുക",
   "cacheClearedSuccess": "കാഷെ വിജയകരമായി മായ്ച്ചു",
@@ -34,6 +51,7 @@
   "currentLocation": "നിലവിലെ സ്ഥാനം (GPS)",
   "locationServiceDisabled": "ലൊക്കേഷൻ സേവനം പ്രവർത്തനരഹിതമാക്കി.",
   "locationPermissionDenied": "ലൊക്കേഷൻ അനുമതി നിഷേധിച്ചു.",
+  "locationDetectionFailed": "നിങ്ങളുടെ സ്ഥാനം കണ്ടെത്താനായില്ല. ഒരു നഗരം നേരിട്ട് തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ വീണ്ടും ശ്രമിക്കുക.",
   "citiesCount": "{count} നഗരങ്ങൾ",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "ഫലങ്ങളൊന്നും കണ്ടെത്തിയില്ല",
   "loading": "ലോഡ് ചെയ്യുന്നു...",
   "error": "പിശക്",
+  "appErrorOccurred": "ഒരു പിശക് സംഭവിച്ചു",
+  "appUnknownError": "അജ്ഞാത പിശക്",
+  "quranLoadFailed": "ഖുറാൻ ഉള്ളടക്കം ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
   "retry": "വീണ്ടും ശ്രമിക്കുക",
+  "refreshAction": "പുതുക്കുക",
   "cancel": "റദ്ദാക്കുക",
   "save": "സംരക്ഷിക്കുക",
   "delete": "ഇല്ലാതാക്കുക",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "ഇല്ല",
   "surah": "സൂറ",
+  "ayahLabel": "ആയഹ് {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "ജൂസ്",
   "page": "പേജ്",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "തഫ്സീർ ലോഡ് ചെയ്യുന്നു...",
+  "tafsirSourceLabel": "തഫ്സീർ ഉറവിടം",
+  "tafsirNoSurahFound": "ഈ സൂറത്തിന് തഫ്സീറൊന്നും കണ്ടെത്തിയില്ല.",
+  "tafsirNoAyahFound": "ആയത്ത് {ayah} എന്നതിനായി തഫ്സീറൊന്നും കണ്ടെത്തിയില്ല.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "തഫ്സീർ ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.",
+  "tafsirNoTextForAyah": "ഈ ആയത്തിന് തഫ്സീർ വാചകമില്ല.",
+  "tafsirDownloadingProgress": "തഫ്സീർ ഡൗൺലോഡ് ചെയ്യുന്നു {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "തഫ്സീർ ലോഡ് ചെയ്യുന്നു {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "തഫ്സീർ ഉറവിടം ഒരു HTTP {statusCode} പിശക് നൽകി.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "തിരഞ്ഞെടുത്ത തഫ്സീർ ഉറവിടം എൻട്രികളൊന്നും നൽകിയിട്ടില്ല.",
+  "tafsirCacheUnavailable": "പരിശോധിച്ച തഫ്സീർ ഇതുവരെ ഓഫ്‌ലൈനിൽ ലഭ്യമല്ല. ബ്രൗസുചെയ്യുന്നതിന് മുമ്പ് ഒരു ഉറവിട തഫ്‌സിർ ഡാറ്റാസെറ്റ് സമന്വയിപ്പിക്കുക.",
   "bookmarks": "Bookmarks",
   "addBookmark": "ബുക്ക്മാർക്ക് ചേർക്കുക",
   "removeBookmark": "ബുക്ക്മാർക്ക് നീക്കം ചെയ്യുക",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "മറ്റുചിലർ പ്രാർത്ഥിക്കുന്നു, ‘ഞങ്ങളുടെ നാഥാ, ഞങ്ങൾക്ക് ഇഹത്തിലും പരത്തിലും നന്മ നൽകേണമേ, നരകശിക്ഷയിൽ നിന്ന് ഞങ്ങളെ കാത്തുരക്ഷിക്കണമേ.",
+  "duaMeaning2": "ഒരു ആത്മാവിനും സഹിക്കാവുന്നതിലധികം ദൈവം ഭാരപ്പെടുത്തുന്നില്ല: ഓരോരുത്തർക്കും താൻ ചെയ്ത നന്മകൾ നേടുകയും അതിൻ്റെ ദോഷം അനുഭവിക്കുകയും ചെയ്യുന്നു- 'കർത്താവേ, ഞങ്ങൾ മറക്കുകയോ തെറ്റുകൾ വരുത്തുകയോ ചെയ്താൽ ഞങ്ങളെ കുറ്റപ്പെടുത്തരുത്. നാഥാ, ഞങ്ങളുടെ മുമ്പുള്ളവരെ നീ ഭാരപ്പെടുത്തിയത് പോലെ ഞങ്ങൾക്കും ഭാരമാകരുതേ. കർത്താവേ, ഞങ്ങൾക്കു താങ്ങാനുള്ള ശക്തിയേക്കാൾ കൂടുതൽ ഭാരം ചുമത്തരുതേ. ഞങ്ങളോട് ക്ഷമിക്കേണമേ, ഞങ്ങളോട് ക്ഷമിക്കേണമേ, ഞങ്ങളോട് കരുണ കാണിക്കണമേ. നീയാണ് ഞങ്ങളുടെ സംരക്ഷകൻ, അതിനാൽ അവിശ്വാസികൾക്കെതിരെ ഞങ്ങളെ സഹായിക്കൂ.",
+  "duaMeaning3": "‘ഞങ്ങളുടെ നാഥാ, നീ ഞങ്ങളെ നേർവഴിയിലാക്കിയതിന് ശേഷം ഞങ്ങളുടെ ഹൃദയങ്ങൾ വ്യതിചലിക്കരുതേ. നിൻ്റെ കാരുണ്യം ഞങ്ങൾക്ക് നൽകേണമേ: നീ എന്നും നൽകുന്നവനാണ്.",
+  "duaMeaning4": "കർത്താവേ, ഞാനും എൻ്റെ സന്തതികളും പ്രാർത്ഥന നിലനിർത്താൻ അനുവദിക്കണമേ. ഞങ്ങളുടെ നാഥാ, എൻ്റെ അപേക്ഷ സ്വീകരിക്കണമേ.",
+  "duaMeaning5": "അവരോട് ദയയോടെ നിങ്ങളുടെ ചിറക് താഴ്ത്തുക, 'കർത്താവേ, അവർ എന്നെ ചെറുപ്പത്തിൽ പരിപാലിച്ചതുപോലെ അവരോട് കരുണ കാണിക്കണമേ' എന്ന് പറയുക.",
+  "duaMeaning6": "യഥാർത്ഥത്തിൽ നിയന്ത്രിക്കുന്ന ദൈവം ഉന്നതനായിരിക്കട്ടെ. [പ്രവാചകൻ], വെളിപാട് പൂർണമാകുന്നതിന് മുമ്പ് പാരായണം ചെയ്യാൻ തിരക്കുകൂട്ടരുത്, എന്നാൽ 'കർത്താവേ, എനിക്ക് അറിവ് വർദ്ധിപ്പിക്കേണമേ!'",
+  "duaMeaning7": "[പ്രവാചകൻ] പറയുക, ‘കർത്താവേ, ക്ഷമിക്കുകയും കരുണ കാണിക്കുകയും ചെയ്യേണമേ: നീ എല്ലാവരിലും ഏറ്റവും കരുണയുള്ളവനാണ്.",
+  "duaMeaning8": "ഞങ്ങളുടെ രക്ഷിതാവേ, ഞങ്ങളുടെ ഇണകളിലും സന്തതികളിലും ഞങ്ങൾക്ക് സന്തോഷം നൽകേണമേ എന്ന് പ്രാർത്ഥിക്കുന്നവർ. നിന്നെ അറിയുന്നവർക്ക് ഞങ്ങളെ നല്ല മാതൃകയാക്കേണമേ.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "ഉപവാസം",
   "quranReading": "ഖുർആൻ വായന",
   "prayers": "പ്രാർത്ഥനകൾ",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}മി",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "പ്രതിവാര പുരോഗതി",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "ഇസ്ലാമിക പുതുവർഷം",
+  "mawlidAnNabi": "മൗലിദ് നബി",
+  "specialDayDateRamadanStart": "1 റമദാൻ",
+  "specialDayDateLaylatAlQadr": "27 റമദാൻ",
+  "specialDayDateEidAlFitr": "1 ശവ്വാൽ",
+  "specialDayDateEidAlAdha": "10 ദുൽ ഹിജ്ജ",
+  "specialDayDateIslamicNewYear": "1 മുഹറം",
+  "specialDayDateMawlidAnNabi": "12 റാബി അൽ അവ്വൽ",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "ഖിബ്ല ദിശ",
   "compass": "കോമ്പസ്",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "ഖിബ്ല കണ്ടെത്തി!",
   "turnDevice": "നിങ്ങളുടെ ഉപകരണം ഖിബ്ലയ്ക്ക് അഭിമുഖമായി തിരിക്കുക",
+  "qiblaCompassErrorDetails": "കോമ്പസ് പിശക്: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല.",
+  "qiblaLocationRequiredTitle": "ഖിബ്ലയ്ക്ക് ആവശ്യമായ സ്ഥലം",
+  "qiblaLocationRequiredBody": "ഖിബ്ല കോമ്പസ് ഉപയോഗിക്കുന്നതിന് മുമ്പ് നിങ്ങളുടെ യഥാർത്ഥ സ്ഥാനം സജ്ജമാക്കുക, അങ്ങനെ ദിശ കൃത്യമായി കണക്കാക്കാം.",
+  "adhanNotificationChannelName": "അധാൻ അറിയിപ്പുകൾ",
+  "adhanNotificationChannelDescription": "അദാൻ ശബ്ദത്തോടുകൂടിയ പ്രാർത്ഥന സമയ അലേർട്ടുകൾ.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "ടാർഗെറ്റ് എണ്ണം: {target}",
   "tapToCount": "എണ്ണാൻ ടാപ്പ് ചെയ്യുക",
+  "zikrCompletedMashAllah": "പൂർത്തിയായി! മാഷാ അല്ലാഹ്",
+  "zikrMeaningSubhanAllah": "എല്ലാ അപൂർണതകൾക്കും അതീതനാണ് അല്ലാഹു.",
+  "zikrMeaningAlhamdulillah": "എല്ലാ സ്തുതിയും അല്ലാഹുവിനാണ്.",
+  "zikrMeaningAllahuAkbar": "അല്ലാഹുവാണ് ഏറ്റവും വലിയവൻ.",
+  "zikrMeaningLaIlahaIllallah": "അല്ലാഹുവല്ലാതെ ഒരു ദൈവവുമില്ല.",
+  "zikrMeaningAstaghfirullah": "ഞാൻ അല്ലാഹുവിനോട് പാപമോചനം തേടുന്നു.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "അല്ലാഹുവിലൂടെയല്ലാതെ ഒരു ശക്തിയും ശക്തിയുമില്ല.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "ഓഡിയോ വോയ്സ്",
+  "audioVoiceMisharyAlafasy": "പുരുഷൻ (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "പുരുഷൻ (Abdul Basit)",
+  "audioVoiceSudais": "പുരുഷൻ (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "ഖിബ്ല കാലിബ്രേഷൻ",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "കാലിബ്രേഷൻ ആവശ്യമാണ്. ചിത്രം-8-ൽ ഉപകരണം തിരിക്കുക.",
   "dailyVerse": "ദൈനംദിന വാക്യം",
+  "dailyVerseUnavailableTitle": "പ്രതിദിന വാക്യം ലഭ്യമല്ല",
+  "dailyVerseUnavailableBody": "ഈ ബിൽഡിനായി പരിശോധിച്ച പ്രതിദിന വാക്യ ഉള്ളടക്കം ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. ബ്രൗസുചെയ്യുന്നതിന് മുമ്പ് ക്ലൗഡ് ഉറവിടത്തിലേക്ക് കണക്റ്റുചെയ്യുക അല്ലെങ്കിൽ പരിശോധിച്ചുറപ്പിച്ച കാഷെ സമന്വയിപ്പിക്കുക.",
   "todaysIbadah": "ഇന്നത്തെ ഇബാദത്ത്",
   "quickAccess": "ദ്രുത പ്രവേശനം",
   "assistant": "അസിസ്റ്റൻ്റ്",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "പരിശോധിച്ച ദുആകൾ ഇതുവരെ ലഭ്യമല്ല",
+  "duaUnavailableBody": "പരിശോധിച്ചുറപ്പിച്ച പ്രതിദിന ദുആകൾ ഇതുവരെ ഈ ഉപകരണത്തിലേക്ക് സമന്വയിപ്പിച്ചിട്ടില്ല. പരിശോധിച്ചുറപ്പിക്കാത്ത ഫാൾബാക്കിന് പകരം സോഴ്‌സ് ചെയ്‌ത ദുആകൾ ലോഡുചെയ്യാൻ ക്ലൗഡ് ഉറവിടത്തിലേക്ക് കണക്റ്റുചെയ്യുക.",
+  "duaCategoryQuranic": "ഖുർആൻ ദുആ",
+  "duaCategoryMorningEvening": "രാവിലെയും വൈകുന്നേരവും",
+  "duaCategoryTasbih": "തസ്ബിഹ്",
+  "duaCategoryProtection": "സംരക്ഷണം",
+  "duaCategoryBeginning": "തുടക്കം",
+  "duaCategorySleep": "ഉറങ്ങുക",
+  "duaCategoryFoodDrink": "ഭക്ഷണവും പാനീയവും",
+  "duaCategoryForgiveness": "ക്ഷമാപണം",
+  "duaCategoryHome": "വീട്",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "ഇസ്ലാമിക വിദ്യാഭ്യാസം",
   "sukunAudioTitle": "സുകുൻ സൗണ്ട്സ്കേപ്പുകൾ",
   "hadithCollections": "ഹദീസ് ശേഖരങ്ങൾ",
+  "hadithSourcePending": "പരിശോധിച്ച ഉറവിടം തീർച്ചപ്പെടുത്തിയിട്ടില്ല",
+  "hadithUnavailableTitle": "പരിശോധിച്ച ഹദീസ് ശേഖരങ്ങൾ ഇതുവരെ ലഭ്യമല്ല",
+  "hadithUnavailableBody": "ഈ ബിൽഡ് ഇപ്പോഴും സ്ഥിരീകരിക്കാത്ത ഒരു ബാഹ്യ ഹദീസ് ഫീഡിനെ ആശ്രയിച്ചിരിക്കുന്നു. ഒരു ഉറവിട ഡാറ്റാസെറ്റ് സമന്വയിപ്പിക്കുന്നതുവരെ ഹദീസ് ബ്രൗസിംഗ് പ്രവർത്തനരഹിതമായി തുടരും.",
   "paywallUnlockAll": "നിങ്ങളുടെ ആത്മീയ യാത്രയ്ക്കുള്ള എല്ലാ സവിശേഷതകളും അൺലോക്ക് ചെയ്യുക",
+  "premiumProductUnavailable": "പ്രീമിയം ഉൽപ്പന്നം ഇപ്പോൾ ലഭ്യമല്ല. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
+  "premiumPurchaseFailed": "വാങ്ങൽ പൂർത്തിയാക്കാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
   "paywallFeature1Title": "ന്യൂറൽ അസിസ്റ്റൻ്റ് പ്ലസ്",
   "paywallFeature1Desc": "അൺലിമിറ്റഡ് AI- പവർഡ് Q&A",
   "paywallFeature2Title": "അൺലിമിറ്റഡ് ഓഫ്‌ലൈൻ",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} എന്നതിനായി {failed} പരാജയപ്പെട്ട സൂറത്തുകൾക്കൊപ്പം ഡൗൺലോഡ് പൂർത്തിയായി ({downloaded}/{total} ഡൗൺലോഡ് ചെയ്തു).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} എന്നതിനായുള്ള ഓഫ്‌ലൈൻ ഫയലുകൾ ഇല്ലാതാക്കി.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "നെറ്റ്‌വർക്ക് പിശക്. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
+  "placesLocationRequiredTitle": "സ്ഥലം ആവശ്യമാണ്",
+  "placesLocationRequiredBody": "അടുത്തുള്ള മസ്ജിദുകൾ, ഹലാൽ ഭക്ഷണം, ഇസ്ലാമിക് സ്കൂളുകൾ എന്നിവ കൃത്യമായി തിരയാൻ കഴിയുന്ന തരത്തിൽ ആദ്യം ഒരു സ്ഥലം സജ്ജമാക്കുക.",
+  "placesMapTilesUnavailableTitle": "മാപ്പ് ടൈലുകൾ ലഭ്യമല്ല",
+  "placesMapTilesUnavailableBody": "ഈ ബിൽഡിനായി പരിശോധിച്ച മാപ്പ് ടൈൽ ഉറവിടം ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. നിങ്ങളുടെ സംരക്ഷിച്ച ലൊക്കേഷനിൽ നിന്ന് സമീപ സ്ഥലങ്ങൾക്ക് തുടർന്നും ലോഡ് ചെയ്യാൻ കഴിയും.",
+  "placesDataSourceUnavailableTitle": "സ്ഥലങ്ങളുടെ ഡാറ്റ ലഭ്യമല്ല",
+  "placesDataSourceUnavailableBody": "ഈ ബിൽഡിനായി പരിശോധിച്ച സ്ഥലങ്ങളുടെ ഡാറ്റ എൻഡ്‌പോയിൻ്റ് ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. സമീപത്തുള്ള തിരയൽ പ്രവർത്തനക്ഷമമാക്കുന്നതിന് മുമ്പ് PLACES_OVERPASS_API_URL ഒരു അംഗീകൃത പ്രോക്സി അല്ലെങ്കിൽ ദാതാവായി സജ്ജമാക്കുക.",
   "unknownPlaceName": "അജ്ഞാത നാമം",
   "islamicPlaceFallback": "ഇസ്ലാമിക സ്ഥലം",
-  "prayerNotificationTitle": "{prayerName} എന്നതിനുള്ള സമയം",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} പ്രാർത്ഥിക്കാനുള്ള സമയമാണിത്.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "പരിശോധിച്ച ദുആകൾ ഇതുവരെ ലഭ്യമല്ല",
-  "duaUnavailableBody": "പരിശോധിച്ചുറപ്പിച്ച പ്രതിദിന ദുആകൾ ഇതുവരെ ഈ ഉപകരണത്തിലേക്ക് സമന്വയിപ്പിച്ചിട്ടില്ല. പരിശോധിച്ചുറപ്പിക്കാത്ത ഫാൾബാക്കിന് പകരം സോഴ്‌സ് ചെയ്‌ത ദുആകൾ ലോഡുചെയ്യാൻ ക്ലൗഡ് ഉറവിടത്തിലേക്ക് കണക്റ്റുചെയ്യുക.",
-  "duaCategoryQuranic": "ഖുർആൻ ദുആ",
-  "duaCategoryMorningEvening": "രാവിലെയും വൈകുന്നേരവും",
-  "duaCategoryTasbih": "തസ്ബിഹ്",
-  "duaCategoryProtection": "സംരക്ഷണം",
-  "duaCategoryBeginning": "തുടക്കം",
-  "duaCategorySleep": "ഉറങ്ങുക",
-  "duaCategoryFoodDrink": "ഭക്ഷണവും പാനീയവും",
-  "duaCategoryForgiveness": "ക്ഷമാപണം",
-  "duaCategoryHome": "വീട്",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "പരിശോധിച്ച ഉറവിടം തീർച്ചപ്പെടുത്തിയിട്ടില്ല",
-  "hadithUnavailableTitle": "പരിശോധിച്ച ഹദീസ് ശേഖരങ്ങൾ ഇതുവരെ ലഭ്യമല്ല",
-  "hadithUnavailableBody": "ഈ ബിൽഡ് ഇപ്പോഴും സ്ഥിരീകരിക്കാത്ത ഒരു ബാഹ്യ ഹദീസ് ഫീഡിനെ ആശ്രയിച്ചിരിക്കുന്നു. ഒരു ഉറവിട ഡാറ്റാസെറ്റ് സമന്വയിപ്പിക്കുന്നതുവരെ ഹദീസ് ബ്രൗസിംഗ് പ്രവർത്തനരഹിതമായി തുടരും.",
-  "appErrorOccurred": "ഒരു പിശക് സംഭവിച്ചു",
-  "appUnknownError": "അജ്ഞാത പിശക്",
-  "qiblaCompassErrorDetails": "കോമ്പസ് പിശക്: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "പൂർത്തിയായി! മാഷാ അല്ലാഹ്",
-  "zikrMeaningSubhanAllah": "എല്ലാ അപൂർണതകൾക്കും അതീതനാണ് അല്ലാഹു.",
-  "zikrMeaningAlhamdulillah": "എല്ലാ സ്തുതിയും അല്ലാഹുവിനാണ്.",
-  "zikrMeaningAllahuAkbar": "അല്ലാഹുവാണ് ഏറ്റവും വലിയവൻ.",
-  "zikrMeaningLaIlahaIllallah": "അല്ലാഹുവല്ലാതെ ഒരു ദൈവവുമില്ല.",
-  "zikrMeaningAstaghfirullah": "ഞാൻ അല്ലാഹുവിനോട് പാപമോചനം തേടുന്നു.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "അല്ലാഹുവിലൂടെയല്ലാതെ ഒരു ശക്തിയും ശക്തിയുമില്ല.",
   "asmaMeaning1": "ദി ബെനിഫിയൻ്റ്",
   "asmaMeaning2": "ദയയുള്ളവൻ",
   "asmaMeaning3": "രാജാവ് / നിത്യനാഥൻ",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "ശാശ്വതമായ ഒന്ന്",
   "asmaMeaning97": "The Inheritor",
   "asmaMeaning98": "ഏറ്റവും നീതിയുള്ള വഴികാട്ടി",
-  "asmaMeaning99": "രോഗി",
-  "duaMeaning1": "മറ്റുചിലർ പ്രാർത്ഥിക്കുന്നു, ‘ഞങ്ങളുടെ നാഥാ, ഞങ്ങൾക്ക് ഇഹത്തിലും പരത്തിലും നന്മ നൽകേണമേ, നരകശിക്ഷയിൽ നിന്ന് ഞങ്ങളെ കാത്തുരക്ഷിക്കണമേ.",
-  "duaMeaning2": "ഒരു ആത്മാവിനും സഹിക്കാവുന്നതിലധികം ദൈവം ഭാരപ്പെടുത്തുന്നില്ല: ഓരോരുത്തർക്കും താൻ ചെയ്ത നന്മകൾ നേടുകയും അതിൻ്റെ ദോഷം അനുഭവിക്കുകയും ചെയ്യുന്നു- 'കർത്താവേ, ഞങ്ങൾ മറക്കുകയോ തെറ്റുകൾ വരുത്തുകയോ ചെയ്താൽ ഞങ്ങളെ കുറ്റപ്പെടുത്തരുത്. നാഥാ, ഞങ്ങളുടെ മുമ്പുള്ളവരെ നീ ഭാരപ്പെടുത്തിയത് പോലെ ഞങ്ങൾക്കും ഭാരമാകരുതേ. കർത്താവേ, ഞങ്ങൾക്കു താങ്ങാനുള്ള ശക്തിയേക്കാൾ കൂടുതൽ ഭാരം ചുമത്തരുതേ. ഞങ്ങളോട് ക്ഷമിക്കേണമേ, ഞങ്ങളോട് ക്ഷമിക്കേണമേ, ഞങ്ങളോട് കരുണ കാണിക്കണമേ. നീയാണ് ഞങ്ങളുടെ സംരക്ഷകൻ, അതിനാൽ അവിശ്വാസികൾക്കെതിരെ ഞങ്ങളെ സഹായിക്കൂ.",
-  "duaMeaning3": "‘ഞങ്ങളുടെ നാഥാ, നീ ഞങ്ങളെ നേർവഴിയിലാക്കിയതിന് ശേഷം ഞങ്ങളുടെ ഹൃദയങ്ങൾ വ്യതിചലിക്കരുതേ. നിൻ്റെ കാരുണ്യം ഞങ്ങൾക്ക് നൽകേണമേ: നീ എന്നും നൽകുന്നവനാണ്.",
-  "duaMeaning4": "കർത്താവേ, ഞാനും എൻ്റെ സന്തതികളും പ്രാർത്ഥന നിലനിർത്താൻ അനുവദിക്കണമേ. ഞങ്ങളുടെ നാഥാ, എൻ്റെ അപേക്ഷ സ്വീകരിക്കണമേ.",
-  "duaMeaning5": "അവരോട് ദയയോടെ നിങ്ങളുടെ ചിറക് താഴ്ത്തുക, 'കർത്താവേ, അവർ എന്നെ ചെറുപ്പത്തിൽ പരിപാലിച്ചതുപോലെ അവരോട് കരുണ കാണിക്കണമേ' എന്ന് പറയുക.",
-  "duaMeaning6": "യഥാർത്ഥത്തിൽ നിയന്ത്രിക്കുന്ന ദൈവം ഉന്നതനായിരിക്കട്ടെ. [പ്രവാചകൻ], വെളിപാട് പൂർണമാകുന്നതിന് മുമ്പ് പാരായണം ചെയ്യാൻ തിരക്കുകൂട്ടരുത്, എന്നാൽ 'കർത്താവേ, എനിക്ക് അറിവ് വർദ്ധിപ്പിക്കേണമേ!'",
-  "duaMeaning7": "[പ്രവാചകൻ] പറയുക, ‘കർത്താവേ, ക്ഷമിക്കുകയും കരുണ കാണിക്കുകയും ചെയ്യേണമേ: നീ എല്ലാവരിലും ഏറ്റവും കരുണയുള്ളവനാണ്.",
-  "duaMeaning8": "ഞങ്ങളുടെ രക്ഷിതാവേ, ഞങ്ങളുടെ ഇണകളിലും സന്തതികളിലും ഞങ്ങൾക്ക് സന്തോഷം നൽകേണമേ എന്ന് പ്രാർത്ഥിക്കുന്നവർ. നിന്നെ അറിയുന്നവർക്ക് ഞങ്ങളെ നല്ല മാതൃകയാക്കേണമേ.",
-  "islamicNewYear": "ഇസ്ലാമിക പുതുവർഷം",
-  "mawlidAnNabi": "മൗലിദ് നബി",
-  "specialDayDateRamadanStart": "1 റമദാൻ",
-  "specialDayDateLaylatAlQadr": "27 റമദാൻ",
-  "specialDayDateEidAlFitr": "1 ശവ്വാൽ",
-  "specialDayDateEidAlAdha": "10 ദുൽ ഹിജ്ജ",
-  "specialDayDateIslamicNewYear": "1 മുഹറം",
-  "specialDayDateMawlidAnNabi": "12 റാബി അൽ അവ്വൽ",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "പുതുക്കുക",
-  "ayahLabel": "ആയഹ് {ayah}",
-  "tafsirLoading": "തഫ്സീർ ലോഡ് ചെയ്യുന്നു...",
-  "tafsirSourceLabel": "തഫ്സീർ ഉറവിടം",
-  "tafsirNoSurahFound": "ഈ സൂറത്തിന് തഫ്സീറൊന്നും കണ്ടെത്തിയില്ല.",
-  "tafsirNoAyahFound": "ആയത്ത് {ayah} എന്നതിനായി തഫ്സീറൊന്നും കണ്ടെത്തിയില്ല.",
-  "tafsirLoadFailed": "തഫ്സീർ ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല.",
-  "tafsirNoTextForAyah": "ഈ ആയത്തിന് തഫ്സീർ വാചകമില്ല.",
-  "tafsirDownloadingProgress": "തഫ്സീർ ഡൗൺലോഡ് ചെയ്യുന്നു {current}/{total}",
-  "tafsirLoadingProgress": "തഫ്സീർ ലോഡ് ചെയ്യുന്നു {current}/{total}",
-  "tafsirApiStatusError": "തഫ്സീർ ഉറവിടം ഒരു HTTP {statusCode} പിശക് നൽകി.",
-  "tafsirNoEntriesReturned": "തിരഞ്ഞെടുത്ത തഫ്സീർ ഉറവിടം എൻട്രികളൊന്നും നൽകിയിട്ടില്ല.",
-  "premiumProductUnavailable": "പ്രീമിയം ഉൽപ്പന്നം ഇപ്പോൾ ലഭ്യമല്ല. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
-  "premiumPurchaseFailed": "വാങ്ങൽ പൂർത്തിയാക്കാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}മി",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "ഇസ്ലാമിക വെളിച്ചത്തിൻ്റെ വഴി",
-  "downloadPartiallyFinishedForReciter": "{reciter} എന്നതിനായി {failed} പരാജയപ്പെട്ട സൂറത്തുകൾക്കൊപ്പം ഡൗൺലോഡ് പൂർത്തിയായി ({downloaded}/{total} ഡൗൺലോഡ് ചെയ്തു).",
-  "placesLocationRequiredTitle": "സ്ഥലം ആവശ്യമാണ്",
-  "placesLocationRequiredBody": "അടുത്തുള്ള മസ്ജിദുകൾ, ഹലാൽ ഭക്ഷണം, ഇസ്ലാമിക് സ്കൂളുകൾ എന്നിവ കൃത്യമായി തിരയാൻ കഴിയുന്ന തരത്തിൽ ആദ്യം ഒരു സ്ഥലം സജ്ജമാക്കുക.",
-  "placesMapTilesUnavailableTitle": "മാപ്പ് ടൈലുകൾ ലഭ്യമല്ല",
-  "placesMapTilesUnavailableBody": "ഈ ബിൽഡിനായി പരിശോധിച്ച മാപ്പ് ടൈൽ ഉറവിടം ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. നിങ്ങളുടെ സംരക്ഷിച്ച ലൊക്കേഷനിൽ നിന്ന് സമീപ സ്ഥലങ്ങൾക്ക് തുടർന്നും ലോഡ് ചെയ്യാൻ കഴിയും.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "പുരുഷൻ (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "പുരുഷൻ (Abdul Basit)",
-  "audioVoiceSudais": "പുരുഷൻ (Sudais)",
-  "qiblaSensorUnavailable": "ഈ ഉപകരണത്തിൽ കോമ്പസ് സെൻസർ ലഭ്യമല്ല.",
-  "adhanNotificationChannelName": "അധാൻ അറിയിപ്പുകൾ",
-  "adhanNotificationChannelDescription": "അദാൻ ശബ്ദത്തോടുകൂടിയ പ്രാർത്ഥന സമയ അലേർട്ടുകൾ.",
-  "quranLoadFailed": "ഖുറാൻ ഉള്ളടക്കം ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
-  "locationDetectionFailed": "നിങ്ങളുടെ സ്ഥാനം കണ്ടെത്താനായില്ല. ഒരു നഗരം നേരിട്ട് തിരഞ്ഞെടുക്കുക അല്ലെങ്കിൽ വീണ്ടും ശ്രമിക്കുക.",
-  "qiblaLocationRequiredTitle": "ഖിബ്ലയ്ക്ക് ആവശ്യമായ സ്ഥലം",
-  "qiblaLocationRequiredBody": "ഖിബ്ല കോമ്പസ് ഉപയോഗിക്കുന്നതിന് മുമ്പ് നിങ്ങളുടെ യഥാർത്ഥ സ്ഥാനം സജ്ജമാക്കുക, അങ്ങനെ ദിശ കൃത്യമായി കണക്കാക്കാം.",
-  "placesDataSourceUnavailableTitle": "സ്ഥലങ്ങളുടെ ഡാറ്റ ലഭ്യമല്ല",
-  "placesDataSourceUnavailableBody": "ഈ ബിൽഡിനായി പരിശോധിച്ച സ്ഥലങ്ങളുടെ ഡാറ്റ എൻഡ്‌പോയിൻ്റ് ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. സമീപത്തുള്ള തിരയൽ പ്രവർത്തനക്ഷമമാക്കുന്നതിന് മുമ്പ് PLACES_OVERPASS_API_URL ഒരു അംഗീകൃത പ്രോക്സി അല്ലെങ്കിൽ ദാതാവായി സജ്ജമാക്കുക.",
-  "tafsirCacheUnavailable": "പരിശോധിച്ച തഫ്സീർ ഇതുവരെ ഓഫ്‌ലൈനിൽ ലഭ്യമല്ല. ബ്രൗസുചെയ്യുന്നതിന് മുമ്പ് ഒരു ഉറവിട തഫ്‌സിർ ഡാറ്റാസെറ്റ് സമന്വയിപ്പിക്കുക."
+  "asmaMeaning99": "രോഗി"
 }

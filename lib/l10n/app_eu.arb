@@ -1,6 +1,7 @@
 {
   "@@locale": "eu",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Argiaren Bide Islamikoa",
   "home": "Hasiera",
   "quran": "Korana",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magreb",
   "isha": "Isha",
+  "prayerNotificationTitle": "{prayerName} egiteko ordua",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} otoitz egiteko garaia da.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datuak eta biltegiratzea",
   "clearCache": "Garbitu cachea",
   "cacheClearedSuccess": "Cachea behar bezala garbitu da",
@@ -34,6 +51,7 @@
   "currentLocation": "Uneko kokapena (GPS)",
   "locationServiceDisabled": "Kokapen zerbitzua desgaituta dago.",
   "locationPermissionDenied": "Kokapen-baimena ukatu da.",
+  "locationDetectionFailed": "Ezin izan da zure kokapena hauteman. Aukeratu hiri bat eskuz edo saiatu berriro.",
   "citiesCount": "{count} hiriak",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ez da emaitzarik aurkitu",
   "loading": "Kargatzen...",
   "error": "Errorea",
+  "appErrorOccurred": "Errore bat gertatu da",
+  "appUnknownError": "Errore ezezaguna",
+  "quranLoadFailed": "Ezin izan da Koranaren edukia kargatu. Mesedez, saiatu berriro.",
   "retry": "Saiatu berriro",
+  "refreshAction": "Freskatu",
   "cancel": "Utzi",
   "save": "Gorde",
   "delete": "Ezabatu",
@@ -57,17 +79,78 @@
   "yes": "Bai",
   "no": "Ez",
   "surah": "Sura",
+  "ayahLabel": "Aiah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Orria",
   "reading": "Irakurketa",
   "recitation": "Errezitazioa",
   "translation": "Itzulpena",
   "tafsir": "Tafsir",
+  "tafsirLoading": "tafsir kargatzen...",
+  "tafsirSourceLabel": "Tafsir iturria",
+  "tafsirNoSurahFound": "Ez da tafsir aurkitu sura honetarako.",
+  "tafsirNoAyahFound": "Ez da tafsir aurkitu ayah {ayah}rentzat.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ezin izan da kargatu.",
+  "tafsirNoTextForAyah": "Ez dago tafsir testurik aiah honetarako.",
+  "tafsirDownloadingProgress": "tafsir deskargatzen {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tafsir {current}/{total} kargatzen",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir iturburuak HTTP {statusCode} errore bat itzuli du.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Hautatutako tafsir iturburuak ez du sarrerarik itzuli.",
+  "tafsirCacheUnavailable": "Egiaztatutako tafsir ez dago oraindik lineaz kanpo erabilgarri. Sinkronizatu iturriko tafsir datu-multzo bat arakatu aurretik.",
   "bookmarks": "Laster-markak",
   "addBookmark": "Gehitu laster-marka",
   "removeBookmark": "Kendu laster-marka",
   "lastRead": "Azken Irakurketa",
   "dailyZikr": "Eguneko Zikr",
+  "duaMeaning1": "beste batzuk otoitz egiten dute: «Gure Jauna, eman iezaguzu ona mundu honetan eta hemendik aurrera, eta babes gaitzazu Suaren oinazeetatik».",
+  "duaMeaning2": "Jainkoak ez du kargatzen arimarik jasan dezakeena baino gehiago: bakoitzak irabazten du egin duen edozein on, eta bere txarra jasaten du- ‘Jauna, ez gaitzazu ardurarik hartu ahazten edo huts egiten badugu. Jauna, ez gaitzazu zamatu gure aurrekoak zamatu dituzun bezala. Jauna, ez gaitzazu kargatu bear ditugun indarrak baino gehiago. Barkatu, barka iezaguzu, eta erruki gaitzazu. Gure Babeslea zara, beraz, lagundu iezaguzu sinesgabeen aurka».",
+  "duaMeaning3": "‘Gure Jauna, ez utzi gure bihotzak desbideratu Gu gidatu gaituzunean. Emaiguzu zure errukia: Zu zara beti ematen duena.",
+  "duaMeaning4": "Jauna, eman ezazu nik eta nire ondorengoek otoitzarekin jarrai dezagun. Gure Jauna, onartu nire eskaria.",
+  "duaMeaning5": "eta jaitsi zure hegala apaltasunez haienganako ontasunez, eta esan: «Jauna, erruki izan haietaz, txikia nintzenean zaindu ninduten bezala».",
+  "duaMeaning6": "goratua izan bedi Jainkoa, egiazki menperatzen duena. [Profeta], ez zaitez presarik errezitatzera errebelazioa guztiz osatu baino lehen, baina esan: ‘Jauna, handitu nazazu ezagutzan!’",
+  "duaMeaning7": "Esan [Profeta]: «Jauna, barkatu eta erruki izan: Zu zara guz- tietan errukitsuena».",
+  "duaMeaning8": "otoitz egiten dutenek: ‘Gure Jauna, eman iezaguzu poza gure ezkontide eta ondorengoengan. Egin iezaguzu adibide onak Zutaz jabetzen direnentzat’.",
   "morningZikr": "Goizean Zikr",
   "eveningZikr": "Arratsaldeko Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Baraualdia",
   "quranReading": "Koranaren irakurketa",
   "prayers": "Otoitzak",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Kondea",
   "weeklyProgress": "Asteroko Aurrerapena",
   "monthlyProgress": "Hileko Aurrerapena",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadana",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Urte Berri Islamikoa",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadana",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Zuzendaritza",
   "compass": "Iparrorratza",
@@ -108,6 +219,19 @@
   "north": "Ipar",
   "qiblaFound": "Qibla aurkitu!",
   "turnDevice": "Biratu gailua Qiblari begira",
+  "qiblaCompassErrorDetails": "Iparrorratza errorea: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Iparrorratza sentsorea ez dago erabilgarri gailu honetan.",
+  "qiblaLocationRequiredTitle": "Qiblarako beharrezkoa den kokapena",
+  "qiblaLocationRequiredBody": "Ezarri zure benetako kokapena Qibla iparrorratza erabili aurretik, norabidea zehaztasunez kalkulatu ahal izateko.",
+  "adhanNotificationChannelName": "Adhan jakinarazpenak",
+  "adhanNotificationChannelDescription": "Otoitz denbora alertak adhan soinuarekin.",
   "notifications": "Jakinarazpenak",
   "prayerNotifications": "Otoitz jakinarazpenak",
   "enableNotifications": "Gaitu Jakinarazpenak",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Helburu-kopurua: {target}",
   "tapToCount": "Sakatu zenbatzeko",
+  "zikrCompletedMashAllah": "Osatua! MashAllah",
+  "zikrMeaningSubhanAllah": "Ala inperfekzio guztien gainetik dago.",
+  "zikrMeaningAlhamdulillah": "Laudorio guztiak Allahrenak dira.",
+  "zikrMeaningAllahuAkbar": "Ala Handiena da.",
+  "zikrMeaningLaIlahaIllallah": "Ez dago Jainkorik Ala baino.",
+  "zikrMeaningAstaghfirullah": "Alaren barkamena bilatzen dut.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ez dago botererik eta indarrik Ala bidez izan ezik.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Ahotsa",
+  "audioVoiceMisharyAlafasy": "Gizonezkoa (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Gizonezkoa (Abdul Basit)",
+  "audioVoiceSudais": "Gizonezkoa (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Kalibrazioa",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrazioa behar da. Biratu gailua-8 irudian.",
   "dailyVerse": "Eguneko Bertsoa",
+  "dailyVerseUnavailableTitle": "Eguneroko bertsoa ez dago erabilgarri",
+  "dailyVerseUnavailableBody": "Egiaztatutako eguneroko bertso-edukia ez dago konfiguratuta oraindik konfigurazio honetarako. Konektatu hodeiko iturrira edo sinkronizatu egiaztatutako cache bat arakatu aurretik.",
   "todaysIbadah": "Gaur Ibadah",
   "quickAccess": "Sarbide azkarra",
   "assistant": "Laguntzailea",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Egiaztatutako duak ez daude eskuragarri oraindik",
+  "duaUnavailableBody": "Egiaztatutako eguneroko duak ez dira oraindik sinkronizatu gailu honekin. Konektatu hodeiko iturburura iturriko duak kargatzeko, egiaztatu gabeko ordezkapen baten ordez.",
+  "duaCategoryQuranic": "Koranikoa dua",
+  "duaCategoryMorningEvening": "Goizez eta arratsaldez",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Babesa",
+  "duaCategoryBeginning": "Hastapenak",
+  "duaCategorySleep": "Lo egin",
+  "duaCategoryFoodDrink": "Janaria eta edaria",
+  "duaCategoryForgiveness": "Barkamena",
+  "duaCategoryHome": "Hasiera",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Hezkuntza Islamikoa",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith Bildumak",
+  "hadithSourcePending": "Egiaztatutako iturria zain dago",
+  "hadithUnavailableTitle": "Egiaztatutako hadith bildumak ez daude eskuragarri oraindik",
+  "hadithUnavailableBody": "Eraikuntza hau egiaztatu gabeko kanpoko hadith jario baten menpe dago oraindik. Hadith arakatzea desgaituta egongo da jatorriko datu-multzo bat sinkronizatu arte.",
   "paywallUnlockAll": "Desblokeatu eginbide guztiak zure bidaia espiritualerako",
+  "premiumProductUnavailable": "Premium produktua ez dago eskuragarri une honetan. Saiatu berriro geroago.",
+  "premiumPurchaseFailed": "Ezin izan da erosketa burutu. Mesedez, saiatu berriro.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "AI bidezko galdera-erantzun mugagabeak",
   "paywallFeature2Title": "Lineaz kanpo mugarik gabe",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Deskarga amaitu da {reciter} {failed} huts egin duten surahekin ({downloaded}/{total} deskargatu da).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Lineaz kanpoko fitxategiak ezabatu dira {reciter} erabiltzailearentzako.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Sareko errorea. Mesedez, saiatu berriro.",
+  "placesLocationRequiredTitle": "Kokapena beharrezkoa",
+  "placesLocationRequiredBody": "Ezarri kokapen bat lehenik, inguruko meskitak, janari halal eta eskola islamiarrak zehatz-mehatz bilatu ahal izateko.",
+  "placesMapTilesUnavailableTitle": "Maparen lauzak ez daude erabilgarri",
+  "placesMapTilesUnavailableBody": "Egiaztatutako mapa-lauza-iturburua ez dago konfiguratuta oraindik konfigurazio honetarako. Inguruko tokiek gordetako kokapenetik karga daitezke oraindik.",
+  "placesDataSourceUnavailableTitle": "Tokien datuak ez daude erabilgarri",
+  "placesDataSourceUnavailableBody": "Egiaztatutako lekuen datuen amaiera-puntua ez dago konfiguratuta oraindik konfigurazio honetarako. Ezarri PLACES_OVERPASS_API_URL onartutako proxy edo hornitzaile batean inguruko bilaketa gaitu aurretik.",
   "unknownPlaceName": "Izen ezezaguna",
   "islamicPlaceFallback": "Leku Islamikoa",
-  "prayerNotificationTitle": "{prayerName} egiteko ordua",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} otoitz egiteko garaia da.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Egiaztatutako duak ez daude eskuragarri oraindik",
-  "duaUnavailableBody": "Egiaztatutako eguneroko duak ez dira oraindik sinkronizatu gailu honekin. Konektatu hodeiko iturburura iturriko duak kargatzeko, egiaztatu gabeko ordezkapen baten ordez.",
-  "duaCategoryQuranic": "Koranikoa dua",
-  "duaCategoryMorningEvening": "Goizez eta arratsaldez",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Babesa",
-  "duaCategoryBeginning": "Hastapenak",
-  "duaCategorySleep": "Lo egin",
-  "duaCategoryFoodDrink": "Janaria eta edaria",
-  "duaCategoryForgiveness": "Barkamena",
-  "duaCategoryHome": "Hasiera",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Egiaztatutako iturria zain dago",
-  "hadithUnavailableTitle": "Egiaztatutako hadith bildumak ez daude eskuragarri oraindik",
-  "hadithUnavailableBody": "Eraikuntza hau egiaztatu gabeko kanpoko hadith jario baten menpe dago oraindik. Hadith arakatzea desgaituta egongo da jatorriko datu-multzo bat sinkronizatu arte.",
-  "appErrorOccurred": "Errore bat gertatu da",
-  "appUnknownError": "Errore ezezaguna",
-  "qiblaCompassErrorDetails": "Iparrorratza errorea: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Osatua! MashAllah",
-  "zikrMeaningSubhanAllah": "Ala inperfekzio guztien gainetik dago.",
-  "zikrMeaningAlhamdulillah": "Laudorio guztiak Allahrenak dira.",
-  "zikrMeaningAllahuAkbar": "Ala Handiena da.",
-  "zikrMeaningLaIlahaIllallah": "Ez dago Jainkorik Ala baino.",
-  "zikrMeaningAstaghfirullah": "Alaren barkamena bilatzen dut.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ez dago botererik eta indarrik Ala bidez izan ezik.",
   "asmaMeaning1": "Onuragarria",
   "asmaMeaning2": "Errukialduna",
   "asmaMeaning3": "Erregea / Eternal Lord",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Betikoa",
   "asmaMeaning97": "Oinordekoa",
   "asmaMeaning98": "Gidarik zintzoena",
-  "asmaMeaning99": "Pazientea",
-  "duaMeaning1": "beste batzuk otoitz egiten dute: «Gure Jauna, eman iezaguzu ona mundu honetan eta hemendik aurrera, eta babes gaitzazu Suaren oinazeetatik».",
-  "duaMeaning2": "Jainkoak ez du kargatzen arimarik jasan dezakeena baino gehiago: bakoitzak irabazten du egin duen edozein on, eta bere txarra jasaten du- ‘Jauna, ez gaitzazu ardurarik hartu ahazten edo huts egiten badugu. Jauna, ez gaitzazu zamatu gure aurrekoak zamatu dituzun bezala. Jauna, ez gaitzazu kargatu bear ditugun indarrak baino gehiago. Barkatu, barka iezaguzu, eta erruki gaitzazu. Gure Babeslea zara, beraz, lagundu iezaguzu sinesgabeen aurka».",
-  "duaMeaning3": "‘Gure Jauna, ez utzi gure bihotzak desbideratu Gu gidatu gaituzunean. Emaiguzu zure errukia: Zu zara beti ematen duena.",
-  "duaMeaning4": "Jauna, eman ezazu nik eta nire ondorengoek otoitzarekin jarrai dezagun. Gure Jauna, onartu nire eskaria.",
-  "duaMeaning5": "eta jaitsi zure hegala apaltasunez haienganako ontasunez, eta esan: «Jauna, erruki izan haietaz, txikia nintzenean zaindu ninduten bezala».",
-  "duaMeaning6": "goratua izan bedi Jainkoa, egiazki menperatzen duena. [Profeta], ez zaitez presarik errezitatzera errebelazioa guztiz osatu baino lehen, baina esan: ‘Jauna, handitu nazazu ezagutzan!’",
-  "duaMeaning7": "Esan [Profeta]: «Jauna, barkatu eta erruki izan: Zu zara guz- tietan errukitsuena».",
-  "duaMeaning8": "otoitz egiten dutenek: ‘Gure Jauna, eman iezaguzu poza gure ezkontide eta ondorengoengan. Egin iezaguzu adibide onak Zutaz jabetzen direnentzat’.",
-  "islamicNewYear": "Urte Berri Islamikoa",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadana",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Freskatu",
-  "ayahLabel": "Aiah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "tafsir kargatzen...",
-  "tafsirSourceLabel": "Tafsir iturria",
-  "tafsirNoSurahFound": "Ez da tafsir aurkitu sura honetarako.",
-  "tafsirNoAyahFound": "Ez da tafsir aurkitu ayah {ayah}rentzat.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir ezin izan da kargatu.",
-  "tafsirNoTextForAyah": "Ez dago tafsir testurik aiah honetarako.",
-  "tafsirDownloadingProgress": "tafsir deskargatzen {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Tafsir {current}/{total} kargatzen",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tafsir iturburuak HTTP {statusCode} errore bat itzuli du.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Hautatutako tafsir iturburuak ez du sarrerarik itzuli.",
-  "premiumProductUnavailable": "Premium produktua ez dago eskuragarri une honetan. Saiatu berriro geroago.",
-  "premiumPurchaseFailed": "Ezin izan da erosketa burutu. Mesedez, saiatu berriro.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Argiaren Bide Islamikoa",
-  "downloadPartiallyFinishedForReciter": "Deskarga amaitu da {reciter} {failed} huts egin duten surahekin ({downloaded}/{total} deskargatu da).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Kokapena beharrezkoa",
-  "placesLocationRequiredBody": "Ezarri kokapen bat lehenik, inguruko meskitak, janari halal eta eskola islamiarrak zehatz-mehatz bilatu ahal izateko.",
-  "placesMapTilesUnavailableTitle": "Maparen lauzak ez daude erabilgarri",
-  "placesMapTilesUnavailableBody": "Egiaztatutako mapa-lauza-iturburua ez dago konfiguratuta oraindik konfigurazio honetarako. Inguruko tokiek gordetako kokapenetik karga daitezke oraindik.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Gizonezkoa (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Gizonezkoa (Abdul Basit)",
-  "audioVoiceSudais": "Gizonezkoa (Sudais)",
-  "qiblaSensorUnavailable": "Iparrorratza sentsorea ez dago erabilgarri gailu honetan.",
-  "adhanNotificationChannelName": "Adhan jakinarazpenak",
-  "adhanNotificationChannelDescription": "Otoitz denbora alertak adhan soinuarekin.",
-  "quranLoadFailed": "Ezin izan da Koranaren edukia kargatu. Mesedez, saiatu berriro.",
-  "locationDetectionFailed": "Ezin izan da zure kokapena hauteman. Aukeratu hiri bat eskuz edo saiatu berriro.",
-  "qiblaLocationRequiredTitle": "Qiblarako beharrezkoa den kokapena",
-  "qiblaLocationRequiredBody": "Ezarri zure benetako kokapena Qibla iparrorratza erabili aurretik, norabidea zehaztasunez kalkulatu ahal izateko.",
-  "placesDataSourceUnavailableTitle": "Tokien datuak ez daude erabilgarri",
-  "placesDataSourceUnavailableBody": "Egiaztatutako lekuen datuen amaiera-puntua ez dago konfiguratuta oraindik konfigurazio honetarako. Ezarri PLACES_OVERPASS_API_URL onartutako proxy edo hornitzaile batean inguruko bilaketa gaitu aurretik.",
-  "tafsirCacheUnavailable": "Egiaztatutako tafsir ez dago oraindik lineaz kanpo erabilgarri. Sinkronizatu iturriko tafsir datu-multzo bat arakatu aurretik."
+  "asmaMeaning99": "Pazientea"
 }

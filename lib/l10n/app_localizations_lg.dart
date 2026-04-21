@@ -956,6 +956,14 @@ class AppLocalizationsLg extends AppLocalizations {
   String get dailyVerse => 'Olunyiriri lwa Buli lunaku';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Olunyiriri lwa buli lunaku teruliiwo';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ebirimu ennyiriri eza buli lunaku ebikakasibwa tebinnaba kutegekebwa kuzimba kuno. Yunga ku nsibuko y\'ekire oba kwataganya cache ekakasiddwa nga tonnagenda.';
+
+  @override
   String get todaysIbadah => 'Ibadah ya leero';
 
   @override

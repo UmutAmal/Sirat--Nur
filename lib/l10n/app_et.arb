@@ -1,6 +1,7 @@
 {
   "@@locale": "et",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islami valguse tee",
   "home": "Kodu",
   "quran": "Koraan",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Aeg {prayerName} jaoks",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "On aeg palvetada {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Andmed ja salvestusruum",
   "clearCache": "Tühjenda vahemälu",
   "cacheClearedSuccess": "Vahemälu tühjendamine õnnestus",
@@ -34,6 +51,7 @@
   "currentLocation": "Praegune asukoht (GPS)",
   "locationServiceDisabled": "Asukohateenus on keelatud.",
   "locationPermissionDenied": "Asukoha luba keelatud.",
+  "locationDetectionFailed": "Teie asukohta ei õnnestunud tuvastada. Valige linn käsitsi või proovige uuesti.",
   "citiesCount": "{count} linna",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Tulemusi ei leitud",
   "loading": "Laadimine...",
   "error": "Viga",
+  "appErrorOccurred": "Ilmnes viga",
+  "appUnknownError": "Tundmatu viga",
+  "quranLoadFailed": "Koraani sisu ei saanud laadida. Palun proovi uuesti.",
   "retry": "Proovi uuesti",
+  "refreshAction": "Värskenda",
   "cancel": "Tühista",
   "save": "Salvesta",
   "delete": "Kustuta",
@@ -57,17 +79,78 @@
   "yes": "Jah",
   "no": "Ei",
   "surah": "Suura",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Lehekülg",
   "reading": "Lugemine",
   "recitation": "Ettelugemine",
   "translation": "Tõlge",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsiiri laadimine...",
+  "tafsirSourceLabel": "Tafsiri allikas",
+  "tafsirNoSurahFound": "Selle suura jaoks tafsiiri ei leitud.",
+  "tafsirNoAyahFound": "Ayah jaoks ei leitud tafsiiri {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsirit ei saanud laadida.",
+  "tafsirNoTextForAyah": "Selle ayah jaoks pole tafsir-teksti.",
+  "tafsirDownloadingProgress": "Tafsiiri allalaadimine {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tafsiiri laadimine {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsiri allikas tagastas HTTP {statusCode} vea.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Valitud tafsiiri allikas ei tagastanud ühtegi kirjet.",
+  "tafsirCacheUnavailable": "Kinnitatud tafsir pole veel võrguühenduseta saadaval. Enne sirvimist sünkroonige pärit tafsiri andmestik.",
   "bookmarks": "Järjehoidjad",
   "addBookmark": "Lisa järjehoidja",
   "removeBookmark": "Eemalda järjehoidja",
   "lastRead": "Viimane lugemine",
   "dailyZikr": "Igapäevane Zikr",
+  "duaMeaning1": "teised palvetavad: \"Meie Issand, anna meile head selles maailmas ja teispoolsuses ning kaitse meid tulepiinade eest.\"",
+  "duaMeaning2": "Jumal ei koorma ühtki hinge rohkemaga, kui ta suudab kanda: igaüks võidab kõike, mida ta on teinud, ja kannatab selle halba – „Issand, ära võta meid ülesandeks, kui me unustame või teeme vigu. Issand, ära koorma meid nii, nagu sa koormasid neid, kes olid enne meid. Issand, ära koorma meid rohkemaga, kui meil on jõudu kanda. Anna meile andeks, anna meile andeks ja halasta meie peale. Sa oled meie kaitsja, nii et aita meid uskmatute vastu.",
+  "duaMeaning3": "„Meie Issand, ära lase meie südamel kõrvale kalduda pärast seda, kui oled meid juhatanud. Andke meile oma halastus: sina oled alati andev.",
+  "duaMeaning4": "Issand, anna, et mina ja mu järglased võiksime palvet jätkata. Meie Issand, võta minu palve vastu.",
+  "duaMeaning5": "ja langetage oma tiib alandlikkuses nende vastu helduses ja öelge: \"Issand, halasta nende peale, nii nagu nad hoolisid minust, kui ma olin väike.\"",
+  "duaMeaning6": "ülendatud olgu Jumal, see, kes tõesti kontrollib. [Prohvet], ära torma lugema enne, kui ilmutus on täielikult lõpule jõudnud, vaid ütle: „Issand, suurenda mind teadmistes!”",
+  "duaMeaning7": "Öelge [prohvet]: \"Issand, anna andeks ja halasta: sina oled kõige halastavam.\"",
+  "duaMeaning8": "need, kes palvetavad: „Issand, anna meile rõõmu meie abikaasadest ja järglastest. Tee meid heaks eeskujuks neile, kes on sinust teadlikud.",
   "morningZikr": "Hommik Zikr",
   "eveningZikr": "Õhtu Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Paastumine",
   "quranReading": "Koraani lugemine",
   "prayers": "Palved",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}min",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikri krahv",
   "weeklyProgress": "Nädala edenemine",
   "monthlyProgress": "Igakuine edusammud",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadaan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islami uusaasta",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 ramadaan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla suund",
   "compass": "Kompass",
@@ -108,6 +219,19 @@
   "north": "Põhja",
   "qiblaFound": "Qibla leitud!",
   "turnDevice": "Pöörake seade Qibla poole",
+  "qiblaCompassErrorDetails": "Kompassi viga: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompassi andur pole selles seadmes saadaval.",
+  "qiblaLocationRequiredTitle": "Qibla jaoks vajalik asukoht",
+  "qiblaLocationRequiredBody": "Enne Qibla kompassi kasutamist määrake oma tegelik asukoht, et suunda saaks täpselt arvutada.",
+  "adhanNotificationChannelName": "Adhani teatised",
+  "adhanNotificationChannelDescription": "Palveaja hoiatused adhani heliga.",
   "notifications": "Märguanded",
   "prayerNotifications": "Palveteated",
   "enableNotifications": "Luba märguanded",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Eesmärk: {target}",
   "tapToCount": "Puudutage loendamiseks",
+  "zikrCompletedMashAllah": "Lõpetatud! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah on kaugelt üle kõigist ebatäiuslikkusest.",
+  "zikrMeaningAlhamdulillah": "Kogu kiitus kuulub Allahile.",
+  "zikrMeaningAllahuAkbar": "Allah on Suurim.",
+  "zikrMeaningLaIlahaIllallah": "Ei ole jumalat peale Allahi.",
+  "zikrMeaningAstaghfirullah": "Ma otsin Jumalalt andestust.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Pole jõudu ega jõudu, välja arvatud Allahi kaudu.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Heli hääl",
+  "audioVoiceMisharyAlafasy": "Mees (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mees (Abdul Basit)",
+  "audioVoiceSudais": "Mees (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla kalibreerimine",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Vajalik kalibreerimine. Pöörake seadet joonisel-8.",
   "dailyVerse": "Igapäevane salm",
+  "dailyVerseUnavailableTitle": "Igapäevane salm pole saadaval",
+  "dailyVerseUnavailableBody": "Kinnitatud igapäevane salmi sisu pole selle järgu jaoks veel konfigureeritud. Enne sirvimist looge ühendus pilveallikaga või sünkroonige kinnitatud vahemälu.",
   "todaysIbadah": "Tänane Ibadah",
   "quickAccess": "Kiire juurdepääs",
   "assistant": "Assistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Kinnitatud duad pole veel saadaval",
+  "duaUnavailableBody": "Kinnitatud igapäevaseid duasid pole veel selle seadmega sünkroonitud. Ühendage pilveallikaga, et laadida lähtestatud duasid kinnitamata varu asemel.",
+  "duaCategoryQuranic": "Koraani dua",
+  "duaCategoryMorningEvening": "Hommik & Õhtu",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Kaitse",
+  "duaCategoryBeginning": "Algused",
+  "duaCategorySleep": "Magama",
+  "duaCategoryFoodDrink": "Söök ja jook",
+  "duaCategoryForgiveness": "Andestus",
+  "duaCategoryHome": "Kodu",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islami haridus",
   "sukunAudioTitle": "Sukuni helimaastikud",
   "hadithCollections": "Hadithide kollektsioonid",
+  "hadithSourcePending": "Kinnitatud allikas on ootel",
+  "hadithUnavailableTitle": "Kontrollitud hadithide kollektsioonid pole veel saadaval",
+  "hadithUnavailableBody": "See ehitamine sõltub endiselt kontrollimata välisest hadithivoost. Hadith-sirvimine jääb keelatuks, kuni lähteandmestik sünkroonitakse.",
   "paywallUnlockAll": "Avage oma vaimseks teekonnaks kõik funktsioonid",
+  "premiumProductUnavailable": "Premium toode pole praegu saadaval. Proovige hiljem uuesti.",
+  "premiumPurchaseFailed": "Ostmist ei saanud lõpule viia. Palun proovi uuesti.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Piiramatu AI-toega Q&A",
   "paywallFeature2Title": "Piiramatu võrguühenduseta",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} jaoks on allalaadimine lõpetatud {failed} ebaõnnestunud suuratega ({downloaded}/{total} on alla laaditud).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Kustutatud võrguühenduseta failid {reciter} jaoks.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Võrgu viga. Palun proovi uuesti.",
+  "placesLocationRequiredTitle": "Vajalik asukoht",
+  "placesLocationRequiredBody": "Esmalt määrake asukoht, et läheduses olevaid mošeesid, halal-toitu ja islamikoole saaks täpselt otsida.",
+  "placesMapTilesUnavailableTitle": "Kaardiplaadid pole saadaval",
+  "placesMapTilesUnavailableBody": "Kinnitatud kaardipaani allikat pole selle järgu jaoks veel konfigureeritud. Läheduses olevaid kohti saab siiski laadida teie salvestatud asukohast.",
+  "placesDataSourceUnavailableTitle": "Kohtade andmed pole saadaval",
+  "placesDataSourceUnavailableBody": "Kinnitatud kohtade andmete lõpp-punkt pole selle järgu jaoks veel konfigureeritud. Enne läheduses asuva otsingu lubamist määrake PLACES_OVERPASS_API_URL kinnitatud puhverserverile või pakkujale.",
   "unknownPlaceName": "Tundmatu nimi",
   "islamicPlaceFallback": "Islami koht",
-  "prayerNotificationTitle": "Aeg {prayerName} jaoks",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "On aeg palvetada {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Kinnitatud duad pole veel saadaval",
-  "duaUnavailableBody": "Kinnitatud igapäevaseid duasid pole veel selle seadmega sünkroonitud. Ühendage pilveallikaga, et laadida lähtestatud duasid kinnitamata varu asemel.",
-  "duaCategoryQuranic": "Koraani dua",
-  "duaCategoryMorningEvening": "Hommik & Õhtu",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Kaitse",
-  "duaCategoryBeginning": "Algused",
-  "duaCategorySleep": "Magama",
-  "duaCategoryFoodDrink": "Söök ja jook",
-  "duaCategoryForgiveness": "Andestus",
-  "duaCategoryHome": "Kodu",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Kinnitatud allikas on ootel",
-  "hadithUnavailableTitle": "Kontrollitud hadithide kollektsioonid pole veel saadaval",
-  "hadithUnavailableBody": "See ehitamine sõltub endiselt kontrollimata välisest hadithivoost. Hadith-sirvimine jääb keelatuks, kuni lähteandmestik sünkroonitakse.",
-  "appErrorOccurred": "Ilmnes viga",
-  "appUnknownError": "Tundmatu viga",
-  "qiblaCompassErrorDetails": "Kompassi viga: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Lõpetatud! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah on kaugelt üle kõigist ebatäiuslikkusest.",
-  "zikrMeaningAlhamdulillah": "Kogu kiitus kuulub Allahile.",
-  "zikrMeaningAllahuAkbar": "Allah on Suurim.",
-  "zikrMeaningLaIlahaIllallah": "Ei ole jumalat peale Allahi.",
-  "zikrMeaningAstaghfirullah": "Ma otsin Jumalalt andestust.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Pole jõudu ega jõudu, välja arvatud Allahi kaudu.",
   "asmaMeaning1": "Kasulik",
   "asmaMeaning2": "Armuline",
   "asmaMeaning3": "Kuningas / Igavene Issand",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Igavene",
   "asmaMeaning97": "Pärija",
   "asmaMeaning98": "Kõige õigem teejuht",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "teised palvetavad: \"Meie Issand, anna meile head selles maailmas ja teispoolsuses ning kaitse meid tulepiinade eest.\"",
-  "duaMeaning2": "Jumal ei koorma ühtki hinge rohkemaga, kui ta suudab kanda: igaüks võidab kõike, mida ta on teinud, ja kannatab selle halba – „Issand, ära võta meid ülesandeks, kui me unustame või teeme vigu. Issand, ära koorma meid nii, nagu sa koormasid neid, kes olid enne meid. Issand, ära koorma meid rohkemaga, kui meil on jõudu kanda. Anna meile andeks, anna meile andeks ja halasta meie peale. Sa oled meie kaitsja, nii et aita meid uskmatute vastu.",
-  "duaMeaning3": "„Meie Issand, ära lase meie südamel kõrvale kalduda pärast seda, kui oled meid juhatanud. Andke meile oma halastus: sina oled alati andev.",
-  "duaMeaning4": "Issand, anna, et mina ja mu järglased võiksime palvet jätkata. Meie Issand, võta minu palve vastu.",
-  "duaMeaning5": "ja langetage oma tiib alandlikkuses nende vastu helduses ja öelge: \"Issand, halasta nende peale, nii nagu nad hoolisid minust, kui ma olin väike.\"",
-  "duaMeaning6": "ülendatud olgu Jumal, see, kes tõesti kontrollib. [Prohvet], ära torma lugema enne, kui ilmutus on täielikult lõpule jõudnud, vaid ütle: „Issand, suurenda mind teadmistes!”",
-  "duaMeaning7": "Öelge [prohvet]: \"Issand, anna andeks ja halasta: sina oled kõige halastavam.\"",
-  "duaMeaning8": "need, kes palvetavad: „Issand, anna meile rõõmu meie abikaasadest ja järglastest. Tee meid heaks eeskujuks neile, kes on sinust teadlikud.",
-  "islamicNewYear": "Islami uusaasta",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 ramadaan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Värskenda",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Tafsiiri laadimine...",
-  "tafsirSourceLabel": "Tafsiri allikas",
-  "tafsirNoSurahFound": "Selle suura jaoks tafsiiri ei leitud.",
-  "tafsirNoAyahFound": "Ayah jaoks ei leitud tafsiiri {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsirit ei saanud laadida.",
-  "tafsirNoTextForAyah": "Selle ayah jaoks pole tafsir-teksti.",
-  "tafsirDownloadingProgress": "Tafsiiri allalaadimine {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Tafsiiri laadimine {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tafsiri allikas tagastas HTTP {statusCode} vea.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Valitud tafsiiri allikas ei tagastanud ühtegi kirjet.",
-  "premiumProductUnavailable": "Premium toode pole praegu saadaval. Proovige hiljem uuesti.",
-  "premiumPurchaseFailed": "Ostmist ei saanud lõpule viia. Palun proovi uuesti.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}min",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Islami valguse tee",
-  "downloadPartiallyFinishedForReciter": "{reciter} jaoks on allalaadimine lõpetatud {failed} ebaõnnestunud suuratega ({downloaded}/{total} on alla laaditud).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Vajalik asukoht",
-  "placesLocationRequiredBody": "Esmalt määrake asukoht, et läheduses olevaid mošeesid, halal-toitu ja islamikoole saaks täpselt otsida.",
-  "placesMapTilesUnavailableTitle": "Kaardiplaadid pole saadaval",
-  "placesMapTilesUnavailableBody": "Kinnitatud kaardipaani allikat pole selle järgu jaoks veel konfigureeritud. Läheduses olevaid kohti saab siiski laadida teie salvestatud asukohast.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Mees (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Mees (Abdul Basit)",
-  "audioVoiceSudais": "Mees (Sudais)",
-  "qiblaSensorUnavailable": "Kompassi andur pole selles seadmes saadaval.",
-  "adhanNotificationChannelName": "Adhani teatised",
-  "adhanNotificationChannelDescription": "Palveaja hoiatused adhani heliga.",
-  "quranLoadFailed": "Koraani sisu ei saanud laadida. Palun proovi uuesti.",
-  "locationDetectionFailed": "Teie asukohta ei õnnestunud tuvastada. Valige linn käsitsi või proovige uuesti.",
-  "qiblaLocationRequiredTitle": "Qibla jaoks vajalik asukoht",
-  "qiblaLocationRequiredBody": "Enne Qibla kompassi kasutamist määrake oma tegelik asukoht, et suunda saaks täpselt arvutada.",
-  "placesDataSourceUnavailableTitle": "Kohtade andmed pole saadaval",
-  "placesDataSourceUnavailableBody": "Kinnitatud kohtade andmete lõpp-punkt pole selle järgu jaoks veel konfigureeritud. Enne läheduses asuva otsingu lubamist määrake PLACES_OVERPASS_API_URL kinnitatud puhverserverile või pakkujale.",
-  "tafsirCacheUnavailable": "Kinnitatud tafsir pole veel võrguühenduseta saadaval. Enne sirvimist sünkroonige pärit tafsiri andmestik."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

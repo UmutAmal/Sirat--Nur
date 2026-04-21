@@ -951,6 +951,13 @@ class AppLocalizationsFa extends AppLocalizations {
   String get dailyVerse => 'آیه روزانه';
 
   @override
+  String get dailyVerseUnavailableTitle => 'آیه روزانه در دسترس نیست';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'محتوای آیه روزانه تأیید شده هنوز برای این ساخت پیکربندی نشده است. قبل از مرور به منبع ابری متصل شوید یا یک حافظه پنهان تأیید شده را همگام کنید.';
+
+  @override
   String get todaysIbadah => 'عبادت امروز';
 
   @override

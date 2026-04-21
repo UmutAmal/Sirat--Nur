@@ -1,6 +1,7 @@
 {
   "@@locale": "gn",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Tape Islámica Tesape rehegua",
   "home": "Óga",
   "quran": "Corán rehegua",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magrib rehegua",
   "isha": "Isha",
+  "prayerNotificationTitle": "Aravo {prayerName} rehegua.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Oguahẽma ára ñañembo'e haguã {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datos & Ñeñongatuha",
   "clearCache": "Emopotĩ Caché",
   "cacheClearedSuccess": "Caché oñembogue porã",
@@ -34,6 +51,7 @@
   "currentLocation": "Moõpa oĩ ko’áĝa (GPS) .",
   "locationServiceDisabled": "Servicio de ubicación oñembogue.",
   "locationPermissionDenied": "Oñembotove permiso ubicación rehegua.",
+  "locationDetectionFailed": "Ndaikatúi ohechakuaa moõpa reime. Eiporavo peteĩ táva nde po rupive térã eñeha’ã jey.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Oiko peteĩ jejavy",
+  "appUnknownError": "Ojejavy ndojekuaáiva",
+  "quranLoadFailed": "Ndaikatúi ojekarga contenido Corán rehegua. Eñeha’ã jey.",
   "retry": "Eñeha’ã jey",
+  "refreshAction": "Refresh",
   "cancel": "Heja",
   "save": "Pysyrõ",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "heẽ",
   "no": "nahániri",
   "surah": "Surah rehegua",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Página",
   "reading": "Moñe'ẽrã",
   "recitation": "Recitación rehegua",
   "translation": "Ñembohasaha",
   "tafsir": "Tafsir rehegua",
+  "tafsirLoading": "Ojekarga hína tafsir...",
+  "tafsirSourceLabel": "Tafsir fuente",
+  "tafsirNoSurahFound": "Ndaipóri tafsir ojejuhúva ko surah-pe guarã.",
+  "tafsirNoAyahFound": "Ndaipóri tafsir ojejuhúva ayah {ayah}-pe g̃uarã.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ndaikatúi ojekarga.",
+  "tafsirNoTextForAyah": "Ndaipóri texto tafsir ko ayah-pe guarã.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir ypykue ombojevy peteĩ HTTP {statusCode} jejavy.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Pe tafsir ypykue ojeporavóva ndoguerúi mba’eveichagua jeike.",
+  "tafsirCacheUnavailable": "Verificado tafsir ndojeguerekói gueteri offline. Embojoaju peteĩ tafsir datokuéra ryru oúva eheka mboyve.",
   "bookmarks": "Marcadores rehegua",
   "addBookmark": "Ombojoapy Marcador",
   "removeBookmark": "Oipe’a Marcador",
   "lastRead": "Moñe’ẽrã paha",
   "dailyZikr": "Ára ha ára Zikr",
+  "duaMeaning1": "ambue katu oñembo’e: ‘Ñande Ruvicha, eme’ẽ oréve mba’eporã ko yvy ape ári ha ára pahápe, ha oreñangareko Tata jehasa’asýgui’.",
+  "duaMeaning2": "Ñandejára ndoipyhyi mba’eveichagua ánga hetave ikatúvagui oaguanta: peteĩteĩ ogana oimeraẽ mba’e porã ojapova’ekue, ha ohasa asy ivaíva- ‘ Ñandejára, ani oregueraha tembiaporãme ñanderesarái térã jajavýramo. Ñandejára, ani orembopy’a rasy rembohasa haguéicha umi ore mboyveguápe. Ñandejára, ani orembopy’a rasy hetave mba’e roguerekóvagui rogueropu’aka haĝua. Oreperdona, oreperdona ha oreporiahuvereko. Nde ningo ore Protector, upévare orepytyvõ umi ndogueroviáivape’.",
+  "duaMeaning3": "‘Ore Ruvicha, ani reheja ore korasõ ojedesvia ore sãmbyhy rire. Eme’ẽ oréve Ne poriahuvereko: Nde ha’e pe Ome’ẽva Akóinte.",
+  "duaMeaning4": "Ñandejára, eme’ẽ chéve che ha che ñemoñare tosegi pe ñembo’e. Ñande Ruvicha, eguerohory che mba’ejerure.",
+  "duaMeaning5": "ha emboguejy nde pepo ñemomirĩme hesekuéra py’aporãme ha ere: ‘Ñandejára, eiporiahuvereko chupekuéra, ha’ekuéra oñangareko haguéicha cherehe che michĩrõ guare’.",
+  "duaMeaning6": "toñemomba’eguasu Tupã, pe añetehápe oisãmbyhýva. [Profeta], ani pejejapura pe’recita pe revelación oñecompleta mboyve ha katu peje: ‘¡Señor, chembohetave mba’ekuaa!’.",
+  "duaMeaning7": "Ere [Profeta]: ‘Ñandejára, eperdona ha eiporiahuvereko: Nde ningo pe poriahuverekovéva opa mba’égui’.",
+  "duaMeaning8": "umi oñembo’éva, ‘Ñande Ruvicha, eme’ẽ ñandéve vy’a ñane ména térã ñane rembireko ha ñane ñemoñarekuérape. Ejapo oréve techapyrã porã umi nde consciente-pe’.",
   "morningZikr": "Pyhareve Zikr",
   "eveningZikr": "Ka’aru Zikr",
   "tasbih": "Tasbih rehegua",
@@ -88,6 +171,26 @@
   "fasting": "Ayuno",
   "quranReading": "Corán Moñe’ẽrã",
   "prayers": "Ñembo’e",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Conteo rehegua",
   "weeklyProgress": "Progreso Semána rehegua",
   "monthlyProgress": "Progreso Mensual rehegua",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadán-pe",
   "eidAlFitr": "Eid Al-Fitr rehegua",
   "eidAlAdha": "Eid Al-Adha rehegua",
+  "islamicNewYear": "Ary Pyahu Islámico rehegua",
+  "mawlidAnNabi": "Mawlid peteĩ-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadán-pe",
+  "specialDayDateLaylatAlQadr": "27 Ramadán-pe",
+  "specialDayDateEidAlFitr": "1 Shawwal rehegua",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah rehegua",
+  "specialDayDateIslamicNewYear": "1 Muharram rehegua",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal rehegua",
   "laylatAlQadr": "Laylat Al-Qadr rehegua",
   "qiblaDirection": "Qibla Dirección rehegua",
   "compass": "Brújula rehegua",
@@ -108,6 +219,19 @@
   "north": "Yvatévo",
   "qiblaFound": "¡Qibla ojejuhu!",
   "turnDevice": "Embojere nde tembipuru embohovake hag̃ua Qibla",
+  "qiblaCompassErrorDetails": "Brújula jejavy: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensor brújula rehegua ndojeguerekói ko tembipuru’ípe.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Marandukuéra",
   "prayerNotifications": "Ñembo’e Ñe’ẽmondo",
   "enableNotifications": "Emboguata Marandukuéra",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Jepapa ojehupytyséva: {target} .",
   "tapToCount": "Epoko reipapa hag̃ua",
+  "zikrCompletedMashAllah": "¡Oñemohu'ãma! MashAllah rehegua",
+  "zikrMeaningSubhanAllah": "Allah oĩ mombyry opa imperfección ári.",
+  "zikrMeaningAlhamdulillah": "Opaite ñemomorã ha’e Allah mba’e.",
+  "zikrMeaningAllahuAkbar": "Allah ha’e pe Tuichavéva.",
+  "zikrMeaningLaIlahaIllallah": "Ndaipóri tupã ndaha'éirõ Allah.",
+  "zikrMeaningAstaghfirullah": "Aheka Allah-pe perdón.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ndaipóri pu’aka ha mbarete ndaha’éiramo Allah rupive.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Ñe’ẽ Audio rehegua",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibración rehegua",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibración oñeikotevẽva. Ojere dispositivo figura-8-pe.",
   "dailyVerse": "Versíkulo Diario rehegua",
+  "dailyVerseUnavailableTitle": "Versíkulo ára ha ára ndojeguerekói",
+  "dailyVerseUnavailableBody": "Contenido verso ára ha ára ojehechaukáva noñemohendaporãi gueteri ko ñemopu’ãme g̃uarã. Embojoaju arai ypykue ndive térã embojoaju peteĩ caché ojehechakuaáva ehesa’ỹijo mboyve.",
   "todaysIbadah": "Ko árape Ibadah",
   "quickAccess": "Ojeike Pya’e",
   "assistant": "Pytyvõhára",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Umi duas verificado ndojeguerekói gueteri",
+  "duaUnavailableBody": "Umi duas diario ojehechaukáva noñembojoajúi gueteri ko tembipuru’ípe. Embojoaju arai fuente-pe ekargávo duas fuente-gui peteĩ fallback ndojehecháiva rangue.",
+  "duaCategoryQuranic": "Dua Corán rehegua",
+  "duaCategoryMorningEvening": "Pyhareve & Ka'aru",
+  "duaCategoryTasbih": "Tasbih rehegua",
+  "duaCategoryProtection": "Ñangareko rehegua",
+  "duaCategoryBeginning": "Ñepyrũrã",
+  "duaCategorySleep": "Ke",
+  "duaCategoryFoodDrink": "Tembi’u & Mba’e’yru",
+  "duaCategoryForgiveness": "Ñembyasy",
+  "duaCategoryHome": "Óga",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Tekombo’e Islámica rehegua",
   "sukunAudioTitle": "Sukun Paisajes Sonidos rehegua",
   "hadithCollections": "Hadith Ñembyatykuéra",
+  "hadithSourcePending": "Fuente verificada pendiente",
+  "hadithUnavailableTitle": "Umi colección de hadith verificado ndojeguerekói gueteri",
+  "hadithUnavailableBody": "Ko ñemopu’ã odepende gueteri peteĩ feed hadith externo ndojehecháiva rehe. Hadith jeheka opyta oñemboykéva oñembojoaju peve peteĩ datokuéra ryru fuente-gui.",
   "paywallUnlockAll": "Edesblokea opa mba’e nde viaje espiritual-pe ĝuarã",
+  "premiumProductUnavailable": "Producto premium ndojeguerekói ko'ágãite. Eñeha’ã jey upe rire.",
+  "premiumPurchaseFailed": "Ndikatúi oñemohu'ã jogua. Eñeha’ã jey.",
   "paywallFeature1Title": "Asistente Neural Plus rehegua",
   "paywallFeature1Desc": "Q&A AI-pe oñemombaretéva ilimitado",
   "paywallFeature2Title": "Ilimitado Offline-pe",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Ojegueru opa {reciter}-pe g̃uarã umi surah {failed} ndoikóiva ndive ({downloaded}/{total} oñemboguejy).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Oñembogue umi vore osẽva línea-gui {reciter}-pe g̃uarã.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Red jejavy. Eñeha’ã jey.",
+  "placesLocationRequiredTitle": "Ubicación oñeikotevẽva",
+  "placesLocationRequiredBody": "Oñemohenda raẽ peteĩ tenda ikatu haguã ojeheka hekopete umi mezquita hi’aguĩva, tembi’u halal ha mbo’ehao islámico.",
+  "placesMapTilesUnavailableTitle": "Mapa azulejos ndojeguerekói",
+  "placesMapTilesUnavailableBody": "Peteĩ fuente azulejo mapa rehegua oñembohekopyréva noñembohekopyrýi gueteri ko ñemopu’ãme g̃uarã. Umi tenda hi’aguĩva ikatu gueteri okargá nde tenda reñongatuva’ekuégui.",
+  "placesDataSourceUnavailableTitle": "Omoĩ dato ndojeguerekóiva",
+  "placesDataSourceUnavailableBody": "Peteĩ punto paha dato tenda rehegua oñembohekopyréva noñembohekopyrýi gueteri ko ñemopu’ãme g̃uarã. Emohenda PLACES_OVERPASS_API_URL peteĩ proxy térã proveedor oñemoneĩvape emboguata mboyve jeheka hi’aguĩva.",
   "unknownPlaceName": "Ndojekuaáiva Téra",
   "islamicPlaceFallback": "Lugar Islámico rehegua",
-  "prayerNotificationTitle": "Aravo {prayerName} rehegua.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Oguahẽma ára ñañembo'e haguã {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Umi duas verificado ndojeguerekói gueteri",
-  "duaUnavailableBody": "Umi duas diario ojehechaukáva noñembojoajúi gueteri ko tembipuru’ípe. Embojoaju arai fuente-pe ekargávo duas fuente-gui peteĩ fallback ndojehecháiva rangue.",
-  "duaCategoryQuranic": "Dua Corán rehegua",
-  "duaCategoryMorningEvening": "Pyhareve & Ka'aru",
-  "duaCategoryTasbih": "Tasbih rehegua",
-  "duaCategoryProtection": "Ñangareko rehegua",
-  "duaCategoryBeginning": "Ñepyrũrã",
-  "duaCategorySleep": "Ke",
-  "duaCategoryFoodDrink": "Tembi’u & Mba’e’yru",
-  "duaCategoryForgiveness": "Ñembyasy",
-  "duaCategoryHome": "Óga",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Fuente verificada pendiente",
-  "hadithUnavailableTitle": "Umi colección de hadith verificado ndojeguerekói gueteri",
-  "hadithUnavailableBody": "Ko ñemopu’ã odepende gueteri peteĩ feed hadith externo ndojehecháiva rehe. Hadith jeheka opyta oñemboykéva oñembojoaju peve peteĩ datokuéra ryru fuente-gui.",
-  "appErrorOccurred": "Oiko peteĩ jejavy",
-  "appUnknownError": "Ojejavy ndojekuaáiva",
-  "qiblaCompassErrorDetails": "Brújula jejavy: {error} .",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "¡Oñemohu'ãma! MashAllah rehegua",
-  "zikrMeaningSubhanAllah": "Allah oĩ mombyry opa imperfección ári.",
-  "zikrMeaningAlhamdulillah": "Opaite ñemomorã ha’e Allah mba’e.",
-  "zikrMeaningAllahuAkbar": "Allah ha’e pe Tuichavéva.",
-  "zikrMeaningLaIlahaIllallah": "Ndaipóri tupã ndaha'éirõ Allah.",
-  "zikrMeaningAstaghfirullah": "Aheka Allah-pe perdón.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ndaipóri pu’aka ha mbarete ndaha’éiramo Allah rupive.",
   "asmaMeaning1": "Pe Beneficioso",
   "asmaMeaning2": "Pe Poriahuverekoha",
   "asmaMeaning3": "Mburuvicha guasu / Ñandejára opave’ỹva",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Pe Ipaveʼỹva",
   "asmaMeaning97": "Pe Heredero",
   "asmaMeaning98": "Pe Guía Hekojojavéva",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "ambue katu oñembo’e: ‘Ñande Ruvicha, eme’ẽ oréve mba’eporã ko yvy ape ári ha ára pahápe, ha oreñangareko Tata jehasa’asýgui’.",
-  "duaMeaning2": "Ñandejára ndoipyhyi mba’eveichagua ánga hetave ikatúvagui oaguanta: peteĩteĩ ogana oimeraẽ mba’e porã ojapova’ekue, ha ohasa asy ivaíva- ‘ Ñandejára, ani oregueraha tembiaporãme ñanderesarái térã jajavýramo. Ñandejára, ani orembopy’a rasy rembohasa haguéicha umi ore mboyveguápe. Ñandejára, ani orembopy’a rasy hetave mba’e roguerekóvagui rogueropu’aka haĝua. Oreperdona, oreperdona ha oreporiahuvereko. Nde ningo ore Protector, upévare orepytyvõ umi ndogueroviáivape’.",
-  "duaMeaning3": "‘Ore Ruvicha, ani reheja ore korasõ ojedesvia ore sãmbyhy rire. Eme’ẽ oréve Ne poriahuvereko: Nde ha’e pe Ome’ẽva Akóinte.",
-  "duaMeaning4": "Ñandejára, eme’ẽ chéve che ha che ñemoñare tosegi pe ñembo’e. Ñande Ruvicha, eguerohory che mba’ejerure.",
-  "duaMeaning5": "ha emboguejy nde pepo ñemomirĩme hesekuéra py’aporãme ha ere: ‘Ñandejára, eiporiahuvereko chupekuéra, ha’ekuéra oñangareko haguéicha cherehe che michĩrõ guare’.",
-  "duaMeaning6": "toñemomba’eguasu Tupã, pe añetehápe oisãmbyhýva. [Profeta], ani pejejapura pe’recita pe revelación oñecompleta mboyve ha katu peje: ‘¡Señor, chembohetave mba’ekuaa!’.",
-  "duaMeaning7": "Ere [Profeta]: ‘Ñandejára, eperdona ha eiporiahuvereko: Nde ningo pe poriahuverekovéva opa mba’égui’.",
-  "duaMeaning8": "umi oñembo’éva, ‘Ñande Ruvicha, eme’ẽ ñandéve vy’a ñane ména térã ñane rembireko ha ñane ñemoñarekuérape. Ejapo oréve techapyrã porã umi nde consciente-pe’.",
-  "islamicNewYear": "Ary Pyahu Islámico rehegua",
-  "mawlidAnNabi": "Mawlid peteĩ-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadán-pe",
-  "specialDayDateLaylatAlQadr": "27 Ramadán-pe",
-  "specialDayDateEidAlFitr": "1 Shawwal rehegua",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah rehegua",
-  "specialDayDateIslamicNewYear": "1 Muharram rehegua",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal rehegua",
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Ojekarga hína tafsir...",
-  "tafsirSourceLabel": "Tafsir fuente",
-  "tafsirNoSurahFound": "Ndaipóri tafsir ojejuhúva ko surah-pe guarã.",
-  "tafsirNoAyahFound": "Ndaipóri tafsir ojejuhúva ayah {ayah}-pe g̃uarã.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir ndaikatúi ojekarga.",
-  "tafsirNoTextForAyah": "Ndaipóri texto tafsir ko ayah-pe guarã.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tafsir ypykue ombojevy peteĩ HTTP {statusCode} jejavy.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Pe tafsir ypykue ojeporavóva ndoguerúi mba’eveichagua jeike.",
-  "premiumProductUnavailable": "Producto premium ndojeguerekói ko'ágãite. Eñeha’ã jey upe rire.",
-  "premiumPurchaseFailed": "Ndikatúi oñemohu'ã jogua. Eñeha’ã jey.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Tape Islámica Tesape rehegua",
-  "downloadPartiallyFinishedForReciter": "Ojegueru opa {reciter}-pe g̃uarã umi surah {failed} ndoikóiva ndive ({downloaded}/{total} oñemboguejy).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Ubicación oñeikotevẽva",
-  "placesLocationRequiredBody": "Oñemohenda raẽ peteĩ tenda ikatu haguã ojeheka hekopete umi mezquita hi’aguĩva, tembi’u halal ha mbo’ehao islámico.",
-  "placesMapTilesUnavailableTitle": "Mapa azulejos ndojeguerekói",
-  "placesMapTilesUnavailableBody": "Peteĩ fuente azulejo mapa rehegua oñembohekopyréva noñembohekopyrýi gueteri ko ñemopu’ãme g̃uarã. Umi tenda hi’aguĩva ikatu gueteri okargá nde tenda reñongatuva’ekuégui.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Sensor brújula rehegua ndojeguerekói ko tembipuru’ípe.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Ndaikatúi ojekarga contenido Corán rehegua. Eñeha’ã jey.",
-  "locationDetectionFailed": "Ndaikatúi ohechakuaa moõpa reime. Eiporavo peteĩ táva nde po rupive térã eñeha’ã jey.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Omoĩ dato ndojeguerekóiva",
-  "placesDataSourceUnavailableBody": "Peteĩ punto paha dato tenda rehegua oñembohekopyréva noñembohekopyrýi gueteri ko ñemopu’ãme g̃uarã. Emohenda PLACES_OVERPASS_API_URL peteĩ proxy térã proveedor oñemoneĩvape emboguata mboyve jeheka hi’aguĩva.",
-  "tafsirCacheUnavailable": "Verificado tafsir ndojeguerekói gueteri offline. Embojoaju peteĩ tafsir datokuéra ryru oúva eheka mboyve."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

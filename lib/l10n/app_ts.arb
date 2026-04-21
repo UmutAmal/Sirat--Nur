@@ -1,6 +1,7 @@
 {
   "@@locale": "ts",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Ndlela ya Vuislem ya Ku Vonakala",
   "home": "Kaya",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Nkarhi wa {prayerName}.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "I nkarhi wo khongela {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Vuhlayiselo",
   "clearCache": "Hlawula Cache",
   "cacheClearedSuccess": "Cache yi basisiwile hi ndlela leyi humelelaka",
@@ -34,6 +51,7 @@
   "currentLocation": "Ndhawu ya sweswi (GPS) .",
   "locationServiceDisabled": "Vukorhokeri bya ndhawu byi pfaleriwile.",
   "locationPermissionDenied": "Mpfumelelo wa ndhawu wu ariwile.",
+  "locationDetectionFailed": "A swi swi kotanga ku vona ndhawu ya wena. Hi kombela u hlawula doroba hi voko kutani u ringeta nakambe.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Ku humelerile xihoxo",
+  "appUnknownError": "Xihoxo lexi nga tiviwiki",
+  "quranLoadFailed": "Swilo leswi nga endzeni ka Quran a swi nga ta layichiwa. Hi kombela u ringeta nakambe.",
   "retry": "Ringeta nakambe",
+  "refreshAction": "Refresh",
   "cancel": "Khansela",
   "save": "Hlayisa",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "E-e",
   "surah": "Surah ya xirhendzevutani",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Yuz",
   "page": "Tluka",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Ku layicha tafsir...",
+  "tafsirSourceLabel": "Xihlovo xa Tafsir",
+  "tafsirNoSurahFound": "Ku hava tafsir leyi kumiweke eka surah leyi.",
+  "tafsirNoAyahFound": "Ku hava tafsir leyi kumiweke ya ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir a yi nga swi koti ku layicha.",
+  "tafsirNoTextForAyah": "Ku hava tsalwa ra tafsir ra ayah leyi.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Xihlovo xa Tafsir xi vuyise xihoxo xa HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Xihlovo xa tafsir lexi hlawuriweke a xi vuyisanga na swilo leswi nghenisiweke.",
+  "tafsirCacheUnavailable": "Verified tafsir a yi kumeki offline ku fikela sweswi. Fambisanisa dataset ya tafsir leyi nga na xihlovo u nga si pfula.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Engetelani Buku-nkulu",
   "removeBookmark": "Susa Buku-xikombiso",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "van’wana va khongela va ku, ‘Hosi ya hina, hi nyike leswinene emisaveni leyi ni le ku nga heriki, u hi sirhelela eka ku xanisiwa ka Ndzilo.’",
+  "duaMeaning2": "Xikwembu a xi tiki moya-xiviri wihi na wihi hi swo tlula leswi wu nga swi tiyiselaka: un’wana ni un’wana u vuyeriwa hi leswinene leswi wu swi endleke, naswona u xaniseka hi vubihi bya wona- ‘ Hosi, u nga hi teki entirhweni loko hi rivala kumbe hi endla swihoxo. Hosi, u nga hi tiki hi ndzhwalo tani hi leswi u nga tikisela lava nga emahlweni ka hina. Hosi, u nga hi tiki hi ndzhwalo ku tlula leswi hi nga na matimba yo rhwala. Hi rivalele, hi rivalele, u hi twela vusiwana. U Musirheleri wa hina, kutani hi pfune ku lwisana ni lava nga pfumeriki.’",
+  "duaMeaning3": "‘Hosi ya hina, u nga pfumeleli timbilu ta hina ti hambuka endzhaku ka loko U hi kongomise. Hi nyike tintswalo ta Wena: Hi wena Munyiki wa Nkarhi hinkwawo.",
+  "duaMeaning4": "Hosi, ndzi pfumelele leswaku mina ni vana va mina hi hambeta hi khongela. Hosi ya hina, amukela xikombelo xa mina.",
+  "duaMeaning5": "u ehlisa ripapa ra wena hi ku titsongahata eka vona hi musa u ku, ‘Hosi, va twele vusiwana, hilaha va ndzi khathalelaka hakona loko ndza ha ri ntsongo.’",
+  "duaMeaning6": "a ku tlakusiwe Xikwembu, lexi lawulaka hakunene. [Muprofeta], u nga hatliseli ku hlaya nhlavutelo yi nga si hetiseka hi ku helela kambe u ku, ‘Hosi, ndzi engetele vutivi!’",
+  "duaMeaning7": "Vula [Muprofeta], ‘Hosi, rivalela u tlhela u twela vusiwana: U ni tintswalo ku tlula hinkwavo.’",
+  "duaMeaning8": "lava khongelaka va ku, ‘Hosi ya hina, hi nyike ntsako eka vanghana va hina va vukati ni vana va hina. Hi endle swikombiso leswinene eka lava va Ku tivaka’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ku titsona swakudya",
   "quranReading": "Ku Hlaya ka Quran",
   "prayers": "Swikhongelo",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Nhluvuko wa Vhiki na Vhiki",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Lembe Lerintshwa ra Vuislem",
+  "mawlidAnNabi": "Mawlid na Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan hi siku ra vumune",
+  "specialDayDateEidAlFitr": "1 Xihlamusela-marito xa Shawwal",
+  "specialDayDateEidAlAdha": "10 Xihul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal, u vula leswaku",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Nkongomiso",
   "compass": "Khampasi",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla yi kumiwile!",
   "turnDevice": "Pfuxeta xitirhisiwa xa wena leswaku xi langutana na Qibla",
+  "qiblaCompassErrorDetails": "Xihoxo xa khampasi: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Compass sensor a yi kumeki eka xitirhisiwa lexi.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "Thepha ku hlayela",
+  "zikrCompletedMashAllah": "Ku hetiwile! MashAllah, loyi a nga",
+  "zikrMeaningSubhanAllah": "Allah u le henhla swinene ka ku nga hetiseki kun’wana ni kun’wana.",
+  "zikrMeaningAlhamdulillah": "Ku dzunisiwa hinkwako i ka Allah.",
+  "zikrMeaningAllahuAkbar": "Allah hi yena Lonkulu.",
+  "zikrMeaningLaIlahaIllallah": "A ku na xikwembu handle ka Allah.",
+  "zikrMeaningAstaghfirullah": "Ndzi lava ku rivaleriwa ka Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "A ku na matimba na matimba handle ka hi Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Rito ra mpfumawulo",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Ku Kalibhara ka Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Ku kalibhara ka laveka. Jikisa xitirhisiwa eka xifaniso xa-8.",
   "dailyVerse": "Ndzimana ya Siku na Siku",
+  "dailyVerseUnavailableTitle": "Ndzimana ya siku na siku a yi kumeki",
+  "dailyVerseUnavailableBody": "Nhundzu ya tindzimana ta siku na siku leyi tiyisisiweke a yi si lulamisiwa eka ku aka loku ku fikela sweswi. Hlanganisa na xihlovo xa xigwitsirisi kutani u fambisana na cache leyi tiyisisiweke u nga si pfula.",
   "todaysIbadah": "Ibadah ya namuntlha",
   "quickAccess": "Mfikelelo wa Xihatla",
   "assistant": "Mpfuneto",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ti duas leti tiyisisiweke a ti se kumeka",
+  "duaUnavailableBody": "Ti duas ta siku na siku leti tiyisisiweke a ti si hlanganisiwa na xitirhisiwa lexi. Hlanganisa na xihlovo xa mapapa ku layicha ti duas leti humaka eka xihlovo ematshan’wini ya fallback leyi nga tiyisisiwangiki.",
+  "duaCategoryQuranic": "Dua ya Quranic",
+  "duaCategoryMorningEvening": "Mixo & Madyambu",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Nsirhelelo",
+  "duaCategoryBeginning": "Masungulo",
+  "duaCategorySleep": "Etlela",
+  "duaCategoryFoodDrink": "Swakudya & Swinwiwa",
+  "duaCategoryForgiveness": "Ku rivalela",
+  "duaCategoryHome": "Kaya",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Dyondzo ya Vuislem",
   "sukunAudioTitle": "Sukun Swifaniso swa Mimpfumawulo",
   "hadithCollections": "Nhlengeleto wa Tihadith",
+  "hadithSourcePending": "Xihlovo lexi tiyisisiweke xi yimerile",
+  "hadithUnavailableTitle": "Nhlengeleto wa hadith lowu tiyisisiweke a wu si kumeka",
+  "hadithUnavailableBody": "Ku aka loku ka ha titshege hi ku phameriwa ka hadith ya le handle leyi nga tiyisisiwangiki. Ku pfula ka Hadith ku tshama ku nga tirhi ku kondza dataset leyi humaka eka xihlovo yi fambisana.",
   "paywallUnlockAll": "Pfula swihlawulekisi hinkwaswo swa riendzo ra wena ra moya",
+  "premiumProductUnavailable": "Premium product ayi kumeki sweswi. Hi kombela u ringeta nakambe endzhaku.",
+  "premiumPurchaseFailed": "Ku xava a ku swi kotanga ku hetiwa. Hi kombela u ringeta nakambe.",
   "paywallFeature1Title": "Mupfuni wa Tinyiyo Plus",
   "paywallFeature1Desc": "Q&A leyi nga pimiwangiki leyi fambiwaka hi AI",
   "paywallFeature2Title": "Leswi nga riki na swipimelo Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download yi herile eka {reciter} na {failed} ti surah leti tsandzekeke ({downloaded}/{total} yi dawunilodiwile).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Ku susiwile tifayela ta le handle ka inthanete ta {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Xihoxo xa netiweke. Hi kombela u ringeta nakambe.",
+  "placesLocationRequiredTitle": "Ndhawu ya laveka",
+  "placesLocationRequiredBody": "Kusungula veka ndzhawu leswaku ti mosque tale kusuhi, swakudya swa halal, na swikolo swa Islam swinga sechiwa kahle.",
+  "placesMapTilesUnavailableTitle": "Tithayile ta mepe a ti kumeki",
+  "placesMapTilesUnavailableBody": "Xihlovo xa tile ya mepe lexi tiyisisiweke a xi si lulamisiwa eka ku aka loku ku fikela sweswi. Tindhawu ta le kusuhi ta ha kota ku layicha ku suka endhawini ya wena leyi hlayisiweke.",
+  "placesDataSourceUnavailableTitle": "Swi veka data leyi nga kumeki",
+  "placesDataSourceUnavailableBody": "Ndhawu yo hetelela ya datha ya tindhawu leyi tiyisisiweke a yi lulamisiwanga eka ku aka loku ku fikela sweswi. Seta PLACES_OVERPASS_API_URL eka vuyimeri lebyi pfumeleriweke kumbe muphakeri u nga si pfumelela ku lavisisa ka le kusuhi.",
   "unknownPlaceName": "Vito leri nga tiviwiki",
   "islamicPlaceFallback": "Ndhawu ya Vuislem",
-  "prayerNotificationTitle": "Nkarhi wa {prayerName}.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "I nkarhi wo khongela {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ti duas leti tiyisisiweke a ti se kumeka",
-  "duaUnavailableBody": "Ti duas ta siku na siku leti tiyisisiweke a ti si hlanganisiwa na xitirhisiwa lexi. Hlanganisa na xihlovo xa mapapa ku layicha ti duas leti humaka eka xihlovo ematshan’wini ya fallback leyi nga tiyisisiwangiki.",
-  "duaCategoryQuranic": "Dua ya Quranic",
-  "duaCategoryMorningEvening": "Mixo & Madyambu",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Nsirhelelo",
-  "duaCategoryBeginning": "Masungulo",
-  "duaCategorySleep": "Etlela",
-  "duaCategoryFoodDrink": "Swakudya & Swinwiwa",
-  "duaCategoryForgiveness": "Ku rivalela",
-  "duaCategoryHome": "Kaya",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Xihlovo lexi tiyisisiweke xi yimerile",
-  "hadithUnavailableTitle": "Nhlengeleto wa hadith lowu tiyisisiweke a wu si kumeka",
-  "hadithUnavailableBody": "Ku aka loku ka ha titshege hi ku phameriwa ka hadith ya le handle leyi nga tiyisisiwangiki. Ku pfula ka Hadith ku tshama ku nga tirhi ku kondza dataset leyi humaka eka xihlovo yi fambisana.",
-  "appErrorOccurred": "Ku humelerile xihoxo",
-  "appUnknownError": "Xihoxo lexi nga tiviwiki",
-  "qiblaCompassErrorDetails": "Xihoxo xa khampasi: {error} .",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ku hetiwile! MashAllah, loyi a nga",
-  "zikrMeaningSubhanAllah": "Allah u le henhla swinene ka ku nga hetiseki kun’wana ni kun’wana.",
-  "zikrMeaningAlhamdulillah": "Ku dzunisiwa hinkwako i ka Allah.",
-  "zikrMeaningAllahuAkbar": "Allah hi yena Lonkulu.",
-  "zikrMeaningLaIlahaIllallah": "A ku na xikwembu handle ka Allah.",
-  "zikrMeaningAstaghfirullah": "Ndzi lava ku rivaleriwa ka Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "A ku na matimba na matimba handle ka hi Allah.",
   "asmaMeaning1": "La Vuyerisaka",
   "asmaMeaning2": "Loyi a nga ni Tintswalo",
   "asmaMeaning3": "Hosi / Hosi leyi nga heriki",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Loyi A Nga Heriki",
   "asmaMeaning97": "Mudyandzhaka",
   "asmaMeaning98": "Nkongomiso Lowu Lulama Ngopfu",
-  "asmaMeaning99": "Loyi Muvabyi",
-  "duaMeaning1": "van’wana va khongela va ku, ‘Hosi ya hina, hi nyike leswinene emisaveni leyi ni le ku nga heriki, u hi sirhelela eka ku xanisiwa ka Ndzilo.’",
-  "duaMeaning2": "Xikwembu a xi tiki moya-xiviri wihi na wihi hi swo tlula leswi wu nga swi tiyiselaka: un’wana ni un’wana u vuyeriwa hi leswinene leswi wu swi endleke, naswona u xaniseka hi vubihi bya wona- ‘ Hosi, u nga hi teki entirhweni loko hi rivala kumbe hi endla swihoxo. Hosi, u nga hi tiki hi ndzhwalo tani hi leswi u nga tikisela lava nga emahlweni ka hina. Hosi, u nga hi tiki hi ndzhwalo ku tlula leswi hi nga na matimba yo rhwala. Hi rivalele, hi rivalele, u hi twela vusiwana. U Musirheleri wa hina, kutani hi pfune ku lwisana ni lava nga pfumeriki.’",
-  "duaMeaning3": "‘Hosi ya hina, u nga pfumeleli timbilu ta hina ti hambuka endzhaku ka loko U hi kongomise. Hi nyike tintswalo ta Wena: Hi wena Munyiki wa Nkarhi hinkwawo.",
-  "duaMeaning4": "Hosi, ndzi pfumelele leswaku mina ni vana va mina hi hambeta hi khongela. Hosi ya hina, amukela xikombelo xa mina.",
-  "duaMeaning5": "u ehlisa ripapa ra wena hi ku titsongahata eka vona hi musa u ku, ‘Hosi, va twele vusiwana, hilaha va ndzi khathalelaka hakona loko ndza ha ri ntsongo.’",
-  "duaMeaning6": "a ku tlakusiwe Xikwembu, lexi lawulaka hakunene. [Muprofeta], u nga hatliseli ku hlaya nhlavutelo yi nga si hetiseka hi ku helela kambe u ku, ‘Hosi, ndzi engetele vutivi!’",
-  "duaMeaning7": "Vula [Muprofeta], ‘Hosi, rivalela u tlhela u twela vusiwana: U ni tintswalo ku tlula hinkwavo.’",
-  "duaMeaning8": "lava khongelaka va ku, ‘Hosi ya hina, hi nyike ntsako eka vanghana va hina va vukati ni vana va hina. Hi endle swikombiso leswinene eka lava va Ku tivaka’.",
-  "islamicNewYear": "Lembe Lerintshwa ra Vuislem",
-  "mawlidAnNabi": "Mawlid na Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan hi siku ra vumune",
-  "specialDayDateEidAlFitr": "1 Xihlamusela-marito xa Shawwal",
-  "specialDayDateEidAlAdha": "10 Xihul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal, u vula leswaku",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Ku layicha tafsir...",
-  "tafsirSourceLabel": "Xihlovo xa Tafsir",
-  "tafsirNoSurahFound": "Ku hava tafsir leyi kumiweke eka surah leyi.",
-  "tafsirNoAyahFound": "Ku hava tafsir leyi kumiweke ya ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir a yi nga swi koti ku layicha.",
-  "tafsirNoTextForAyah": "Ku hava tsalwa ra tafsir ra ayah leyi.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Xihlovo xa Tafsir xi vuyise xihoxo xa HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Xihlovo xa tafsir lexi hlawuriweke a xi vuyisanga na swilo leswi nghenisiweke.",
-  "premiumProductUnavailable": "Premium product ayi kumeki sweswi. Hi kombela u ringeta nakambe endzhaku.",
-  "premiumPurchaseFailed": "Ku xava a ku swi kotanga ku hetiwa. Hi kombela u ringeta nakambe.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Ndlela ya Vuislem ya Ku Vonakala",
-  "downloadPartiallyFinishedForReciter": "Download yi herile eka {reciter} na {failed} ti surah leti tsandzekeke ({downloaded}/{total} yi dawunilodiwile).",
-  "placesLocationRequiredTitle": "Ndhawu ya laveka",
-  "placesLocationRequiredBody": "Kusungula veka ndzhawu leswaku ti mosque tale kusuhi, swakudya swa halal, na swikolo swa Islam swinga sechiwa kahle.",
-  "placesMapTilesUnavailableTitle": "Tithayile ta mepe a ti kumeki",
-  "placesMapTilesUnavailableBody": "Xihlovo xa tile ya mepe lexi tiyisisiweke a xi si lulamisiwa eka ku aka loku ku fikela sweswi. Tindhawu ta le kusuhi ta ha kota ku layicha ku suka endhawini ya wena leyi hlayisiweke.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Compass sensor a yi kumeki eka xitirhisiwa lexi.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Swilo leswi nga endzeni ka Quran a swi nga ta layichiwa. Hi kombela u ringeta nakambe.",
-  "locationDetectionFailed": "A swi swi kotanga ku vona ndhawu ya wena. Hi kombela u hlawula doroba hi voko kutani u ringeta nakambe.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Swi veka data leyi nga kumeki",
-  "placesDataSourceUnavailableBody": "Ndhawu yo hetelela ya datha ya tindhawu leyi tiyisisiweke a yi lulamisiwanga eka ku aka loku ku fikela sweswi. Seta PLACES_OVERPASS_API_URL eka vuyimeri lebyi pfumeleriweke kumbe muphakeri u nga si pfumelela ku lavisisa ka le kusuhi.",
-  "tafsirCacheUnavailable": "Verified tafsir a yi kumeki offline ku fikela sweswi. Fambisanisa dataset ya tafsir leyi nga na xihlovo u nga si pfula."
+  "asmaMeaning99": "Loyi Muvabyi"
 }

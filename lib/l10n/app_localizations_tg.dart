@@ -951,6 +951,13 @@ class AppLocalizationsTg extends AppLocalizations {
   String get dailyVerse => 'Сурати ҳаррӯза';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ояти ҳаррӯза дастрас нест';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Мундариҷаи тасдиқшудаи ҳаррӯза барои ин сохтмон ҳанӯз танзим нашудааст. Пеш аз дидан ба манбаи абр пайваст шавед ё кэши тасдиқшударо ҳамоҳанг созед.';
+
+  @override
   String get todaysIbadah => 'Ибодати имрӯза';
 
   @override

@@ -1,6 +1,7 @@
 {
   "@@locale": "mi",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Te Ara Ihirama o te Marama",
   "home": "Kainga",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Ko Asr",
   "maghrib": "Maghrib",
   "isha": "Iha",
+  "prayerNotificationTitle": "Te wa mo {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Kua tae ki te wa ki te inoi {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Raraunga me te Rokiroki",
   "clearCache": "Ūkui Keteroki",
   "cacheClearedSuccess": "I tutuki pai te keteroki",
@@ -34,6 +51,7 @@
   "currentLocation": "Wāhi o nāianei (GPS)",
   "locationServiceDisabled": "Kua monoa te ratonga tauwāhi.",
   "locationPermissionDenied": "I whakakorehia te whakaaetanga waahi.",
+  "locationDetectionFailed": "Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Karekau he hua i kitea",
   "loading": "Uta ana...",
   "error": "Hapa",
+  "appErrorOccurred": "I puta he hapa",
+  "appUnknownError": "Hapa kore mohio",
+  "quranLoadFailed": "Kaore i taea te utaina nga ihirangi Quran. Me ngana ano.",
   "retry": "Ngana ano",
+  "refreshAction": "Tāmata",
   "cancel": "Whakakore",
   "save": "Tiaki",
   "delete": "Mukua",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Kao",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Whārangi",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Uta ana tafsir...",
+  "tafsirSourceLabel": "puna Tafsir",
+  "tafsirNoSurahFound": "Kaore i kitea he tafsir mo tenei surah.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Kaore i taea te utaina a Tafsir.",
+  "tafsirNoTextForAyah": "Karekau he tuhinga tafsir mo tenei papa.",
+  "tafsirDownloadingProgress": "E tango ana i te tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "I whakahokia e te puna Tafsir he hapa HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ko te puna tafsir i tohua kaore he whakaurunga.",
+  "tafsirCacheUnavailable": "Ko te tafsir kua whakamanahia kaore i te waatea tuimotu. Tukutahia he huinga raraunga tafsir i mua i te tirotiro.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Tāpiri Tohuwāhi",
   "removeBookmark": "Tango Tohuwāhi",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "ko etahi e inoi ana, ‘E to matou Ariki, homai he pai ki a matou i tenei ao, a muri ake nei, tiakina matou i te mamae o te ahi.’",
+  "duaMeaning2": "Eita te Atua e faateimaha i te hoê varua hau atu i ta ’na e nehenehe e amo: e noaa i te taata tataitahi te maitai ta ’na i rave, e te mauiui i to ’na ino- ‘E te Fatu, eiaha e faahapa ia matou mai te peu e e mo‘ehia matou e e hape. E te Ariki, kaua e whakataimahatia matou e koe, me tau i whakataimaha ai ki o ratou mua. E te Ariki, kaua e whakauaua mai ki a matou i nga mea e taea ana e matou. Murua matou, murua matou, tohungia matou. Ko koe to matou Tiaki, no reira awhinatia matou ki te whawhai ki te hunga whakaponokore.",
+  "duaMeaning3": "'E to matou Ariki, kei kotiti ke o matou ngakau i muri i tau arahi i a matou. Tukua mai ki a matou tou atawhai: Ko koe te Kaiwhiwhi.",
+  "duaMeaning4": "E te Ariki, tukua matou ko aku uri kia mau tonu te inoi. E to matou Ariki, whakaae mai ki taku inoi.",
+  "duaMeaning5": "a ka whakaiti i tou parirau i runga i te ngakau mahaki ki a ratou i runga i te atawhai, ka mea, ‘E te Ariki, kia aroha ki a ratou, me ratou i tiaki i ahau i toku tamarikitanga.",
+  "duaMeaning6": "kia whakanuia te Atua, ko ia nei te tino tikanga. [Peropheta], eiaha e ru i te tai‘o hou te heheuraa e hope roa a parau ai, ‘E te Fatu, faarahi i to ’u ite!’",
+  "duaMeaning7": "Mea atu [te Peropheta], ‘E te Fatu, e faaore mai i te hara e e aroha mai: o oe tei hau atu i te aroha i te mau mea atoa.’",
+  "duaMeaning8": "te hunga e inoi ana, ‘E to matou Ariki, homai ki a matou te hari i roto i o matou hoa wahine me o matou uri. Meinga matou hei tauira pai ki te hunga e mohio ana ki a Koe’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Te nohopuku",
   "quranReading": "Panui Quran",
   "prayers": "Nga Karakia",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Te ahunga whakamua o ia wiki",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Tau Hou Islamic",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Hawwara",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharama",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Aronga Qibla",
   "compass": "Kāpehu",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Kua kitea a Kibla!",
   "turnDevice": "Hurihia to taputapu kia anga atu ki te Qibla",
+  "qiblaCompassErrorDetails": "Hapa kāpehu: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Karekau te pūoko kāpehu i te wātea ki tēnei pūrere.",
+  "qiblaLocationRequiredTitle": "Ko te waahi e hiahiatia ana mo Qibla",
+  "qiblaLocationRequiredBody": "Tautuhia to waahi tuturu i mua i te whakamahi i te kapehu Qibla kia tika ai te tatau i te ahunga.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Matohi wa inoi me te tangi azan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Tatau whainga: {target}",
   "tapToCount": "Tap ki te tatau",
+  "zikrCompletedMashAllah": "Kua oti! MashAllah",
+  "zikrMeaningSubhanAllah": "Kei runga ake a Allah i nga ngoikoretanga katoa.",
+  "zikrMeaningAlhamdulillah": "Ma Allah nga mihi katoa.",
+  "zikrMeaningAllahuAkbar": "Ko Allah te Mea Nui.",
+  "zikrMeaningLaIlahaIllallah": "Karekau he atua engari ko Allah.",
+  "zikrMeaningAstaghfirullah": "E rapu ana ahau i te murunga hara a Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Karekau he kaha me te kaha engari ma Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Reo Ororongo",
+  "audioVoiceMisharyAlafasy": "Tane (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Tane (Abdul Basit)",
+  "audioVoiceSudais": "Tane (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Whakatau Kipi",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "E hiahiatia ana te whakatikatika. Hurihia te taputapu ki te ahua-8.",
   "dailyVerse": "Te whiti o ia ra",
+  "dailyVerseUnavailableTitle": "Karekau i te waatea te irava o ia ra",
+  "dailyVerseUnavailableBody": "Kaore ano kia whirihorahia nga ihirangi irava ia ra mo tenei hanga. Hono atu ki te puna kapua ka tukutahi ranei i tetahi keteroki kua manatoko i mua i te tirotiro.",
   "todaysIbadah": "Ko Ibadah i tenei ra",
   "quickAccess": "Uru Tere",
   "assistant": "Kaiāwhina",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ko nga rua kua whakamanahia kaore ano kia waatea",
+  "duaUnavailableBody": "Ko nga rua kua whakamanahia ia ra kaore ano kia tukutahia ki tenei taputapu. Hono atu ki te puna kapua ki te uta i nga rua i puta mai hei utu mo te hokinga whakamuri.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Ata me te ahiahi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Parenga",
+  "duaCategoryBeginning": "Nga timatanga",
+  "duaCategorySleep": "Moe mai",
+  "duaCategoryFoodDrink": "Kai me te Inu",
+  "duaCategoryForgiveness": "Te murunga hara",
+  "duaCategoryHome": "Kainga",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Mātauranga Ihirama",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Kohinga Hadith",
+  "hadithSourcePending": "Kei te tarewa te puna manatoko",
+  "hadithUnavailableTitle": "Ko nga kohinga hadith kua whakamanahia kaore ano kia waatea",
+  "hadithUnavailableBody": "Kei te whakawhirinaki tonu tenei hanga ki te whangai hadith o waho kaore i whakamanahia. Ka noho monohia te tirotiro Hadith tae noa ki te tukutahia he huinga raraunga puna.",
   "paywallUnlockAll": "Wewetehia nga ahuatanga katoa mo to haerenga wairua",
+  "premiumProductUnavailable": "Ko te hua utu nui kaore i te waatea inaianei. Me ngana ano i muri mai.",
+  "premiumPurchaseFailed": "Kāore i taea te hoko. Me ngana ano.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Uiuinga-a-AI mutunga kore",
   "paywallFeature2Title": "Tuimotu mutunga kore",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Kua oti te tango mo {reciter} me te {failed} i rahua nga surah ({downloaded}/{total} kua tikiakehia).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Kua mukua nga konae tuimotu mo {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Hapa whatunga. Me ngana ano.",
+  "placesLocationRequiredTitle": "Wāhi e hiahiatia ana",
+  "placesLocationRequiredBody": "Whakatakotoria he waahi i te tuatahi kia taea te rapu tika i nga whare karakia e tata ana, nga kai hara, me nga kura Ihirama.",
+  "placesMapTilesUnavailableTitle": "Karekau nga taera mapi i te waatea",
+  "placesMapTilesUnavailableBody": "Kaore ano kia whirihorahia he puna taera mapi mo tenei hanga. Ka taea tonu e nga waahi tata te uta mai i to waahi kua tiakina.",
+  "placesDataSourceUnavailableTitle": "Ko nga raraunga waahi kaore i te waatea",
+  "placesDataSourceUnavailableBody": "Kaore ano kia whirihorahia he waahi mutunga raraunga mo tenei hanga. Tautuhia te PLACES_OVERPASS_API_URL ki tetahi takawaenga kua whakaaetia, kaiwhakarato ranei i mua i te whakaahei rapunga tata.",
   "unknownPlaceName": "Ingoa Kaore i mohiotia",
   "islamicPlaceFallback": "Wahi Ihirama",
-  "prayerNotificationTitle": "Te wa mo {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Kua tae ki te wa ki te inoi {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ko nga rua kua whakamanahia kaore ano kia waatea",
-  "duaUnavailableBody": "Ko nga rua kua whakamanahia ia ra kaore ano kia tukutahia ki tenei taputapu. Hono atu ki te puna kapua ki te uta i nga rua i puta mai hei utu mo te hokinga whakamuri.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Ata me te ahiahi",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Parenga",
-  "duaCategoryBeginning": "Nga timatanga",
-  "duaCategorySleep": "Moe mai",
-  "duaCategoryFoodDrink": "Kai me te Inu",
-  "duaCategoryForgiveness": "Te murunga hara",
-  "duaCategoryHome": "Kainga",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Kei te tarewa te puna manatoko",
-  "hadithUnavailableTitle": "Ko nga kohinga hadith kua whakamanahia kaore ano kia waatea",
-  "hadithUnavailableBody": "Kei te whakawhirinaki tonu tenei hanga ki te whangai hadith o waho kaore i whakamanahia. Ka noho monohia te tirotiro Hadith tae noa ki te tukutahia he huinga raraunga puna.",
-  "appErrorOccurred": "I puta he hapa",
-  "appUnknownError": "Hapa kore mohio",
-  "qiblaCompassErrorDetails": "Hapa kāpehu: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Kua oti! MashAllah",
-  "zikrMeaningSubhanAllah": "Kei runga ake a Allah i nga ngoikoretanga katoa.",
-  "zikrMeaningAlhamdulillah": "Ma Allah nga mihi katoa.",
-  "zikrMeaningAllahuAkbar": "Ko Allah te Mea Nui.",
-  "zikrMeaningLaIlahaIllallah": "Karekau he atua engari ko Allah.",
-  "zikrMeaningAstaghfirullah": "E rapu ana ahau i te murunga hara a Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Karekau he kaha me te kaha engari ma Allah.",
   "asmaMeaning1": "Te Manaakitanga",
   "asmaMeaning2": "Te Aroha",
   "asmaMeaning3": "Ko te Kingi / Ariki Mutungare",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ko te Mea Tuturu",
   "asmaMeaning97": "Te Kaiwhiwhi",
   "asmaMeaning98": "Te Arataki Tino Tika",
-  "asmaMeaning99": "Te Manawanui",
-  "duaMeaning1": "ko etahi e inoi ana, ‘E to matou Ariki, homai he pai ki a matou i tenei ao, a muri ake nei, tiakina matou i te mamae o te ahi.’",
-  "duaMeaning2": "Eita te Atua e faateimaha i te hoê varua hau atu i ta ’na e nehenehe e amo: e noaa i te taata tataitahi te maitai ta ’na i rave, e te mauiui i to ’na ino- ‘E te Fatu, eiaha e faahapa ia matou mai te peu e e mo‘ehia matou e e hape. E te Ariki, kaua e whakataimahatia matou e koe, me tau i whakataimaha ai ki o ratou mua. E te Ariki, kaua e whakauaua mai ki a matou i nga mea e taea ana e matou. Murua matou, murua matou, tohungia matou. Ko koe to matou Tiaki, no reira awhinatia matou ki te whawhai ki te hunga whakaponokore.",
-  "duaMeaning3": "'E to matou Ariki, kei kotiti ke o matou ngakau i muri i tau arahi i a matou. Tukua mai ki a matou tou atawhai: Ko koe te Kaiwhiwhi.",
-  "duaMeaning4": "E te Ariki, tukua matou ko aku uri kia mau tonu te inoi. E to matou Ariki, whakaae mai ki taku inoi.",
-  "duaMeaning5": "a ka whakaiti i tou parirau i runga i te ngakau mahaki ki a ratou i runga i te atawhai, ka mea, ‘E te Ariki, kia aroha ki a ratou, me ratou i tiaki i ahau i toku tamarikitanga.",
-  "duaMeaning6": "kia whakanuia te Atua, ko ia nei te tino tikanga. [Peropheta], eiaha e ru i te tai‘o hou te heheuraa e hope roa a parau ai, ‘E te Fatu, faarahi i to ’u ite!’",
-  "duaMeaning7": "Mea atu [te Peropheta], ‘E te Fatu, e faaore mai i te hara e e aroha mai: o oe tei hau atu i te aroha i te mau mea atoa.’",
-  "duaMeaning8": "te hunga e inoi ana, ‘E to matou Ariki, homai ki a matou te hari i roto i o matou hoa wahine me o matou uri. Meinga matou hei tauira pai ki te hunga e mohio ana ki a Koe’.",
-  "islamicNewYear": "Tau Hou Islamic",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Hawwara",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharama",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Tāmata",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Uta ana tafsir...",
-  "tafsirSourceLabel": "puna Tafsir",
-  "tafsirNoSurahFound": "Kaore i kitea he tafsir mo tenei surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
-  "tafsirLoadFailed": "Kaore i taea te utaina a Tafsir.",
-  "tafsirNoTextForAyah": "Karekau he tuhinga tafsir mo tenei papa.",
-  "tafsirDownloadingProgress": "E tango ana i te tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "I whakahokia e te puna Tafsir he hapa HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Ko te puna tafsir i tohua kaore he whakaurunga.",
-  "premiumProductUnavailable": "Ko te hua utu nui kaore i te waatea inaianei. Me ngana ano i muri mai.",
-  "premiumPurchaseFailed": "Kāore i taea te hoko. Me ngana ano.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Te Ara Ihirama o te Marama",
-  "downloadPartiallyFinishedForReciter": "Kua oti te tango mo {reciter} me te {failed} i rahua nga surah ({downloaded}/{total} kua tikiakehia).",
-  "placesLocationRequiredTitle": "Wāhi e hiahiatia ana",
-  "placesLocationRequiredBody": "Whakatakotoria he waahi i te tuatahi kia taea te rapu tika i nga whare karakia e tata ana, nga kai hara, me nga kura Ihirama.",
-  "placesMapTilesUnavailableTitle": "Karekau nga taera mapi i te waatea",
-  "placesMapTilesUnavailableBody": "Kaore ano kia whirihorahia he puna taera mapi mo tenei hanga. Ka taea tonu e nga waahi tata te uta mai i to waahi kua tiakina.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Tane (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Tane (Abdul Basit)",
-  "audioVoiceSudais": "Tane (Sudais)",
-  "qiblaSensorUnavailable": "Karekau te pūoko kāpehu i te wātea ki tēnei pūrere.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Matohi wa inoi me te tangi azan.",
-  "quranLoadFailed": "Kaore i taea te utaina nga ihirangi Quran. Me ngana ano.",
-  "locationDetectionFailed": "Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei.",
-  "qiblaLocationRequiredTitle": "Ko te waahi e hiahiatia ana mo Qibla",
-  "qiblaLocationRequiredBody": "Tautuhia to waahi tuturu i mua i te whakamahi i te kapehu Qibla kia tika ai te tatau i te ahunga.",
-  "placesDataSourceUnavailableTitle": "Ko nga raraunga waahi kaore i te waatea",
-  "placesDataSourceUnavailableBody": "Kaore ano kia whirihorahia he waahi mutunga raraunga mo tenei hanga. Tautuhia te PLACES_OVERPASS_API_URL ki tetahi takawaenga kua whakaaetia, kaiwhakarato ranei i mua i te whakaahei rapunga tata.",
-  "tafsirCacheUnavailable": "Ko te tafsir kua whakamanahia kaore i te waatea tuimotu. Tukutahia he huinga raraunga tafsir i mua i te tirotiro."
+  "asmaMeaning99": "Te Manawanui"
 }

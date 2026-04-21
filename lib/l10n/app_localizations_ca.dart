@@ -959,6 +959,13 @@ class AppLocalizationsCa extends AppLocalizations {
   String get dailyVerse => 'Vers diari';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Vers diaris no disponibles';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'El contingut de vers diari verificat encara no està configurat per a aquesta compilació. Connecteu-vos a la font del núvol o sincronitzeu una memòria cau verificada abans de navegar.';
+
+  @override
   String get todaysIbadah => 'Ibadah d\'avui';
 
   @override

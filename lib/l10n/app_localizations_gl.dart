@@ -957,6 +957,13 @@ class AppLocalizationsGl extends AppLocalizations {
   String get dailyVerse => 'Verso diario';
 
   @override
+  String get dailyVerseUnavailableTitle => 'O verso diario non está dispoñible';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'O contido de versículo diario verificado aínda non está configurado para esta compilación. Conéctate á fonte da nube ou sincroniza unha caché verificada antes de navegar.';
+
+  @override
   String get todaysIbadah => 'Hoxe Ibadah';
 
   @override

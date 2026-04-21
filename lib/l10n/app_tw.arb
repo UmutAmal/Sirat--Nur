@@ -1,6 +1,7 @@
 {
   "@@locale": "tw",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamfoɔ Kwan a Ɛfa Hann Ho",
   "home": "Fie",
   "quran": "Kur’aan",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib kasa",
   "isha": "Isha na ɔyɛ",
+  "prayerNotificationTitle": "Bere a wɔde yɛ {prayerName}.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ɛyɛ bere a ɛsɛ sɛ yɛbɔ mpae {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Nneɛma a Wɔkora So",
   "clearCache": "Popa Cache no mu",
   "cacheClearedSuccess": "Cache no yii mu yiye",
@@ -34,6 +51,7 @@
   "currentLocation": "Mprempren Beae (GPS)",
   "locationServiceDisabled": "Wɔayɛ beaeɛ som adwuma no adwuma.",
   "locationPermissionDenied": "Wɔapow beae ho kwan.",
+  "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Mfomso bi sii",
+  "appUnknownError": "Mfomso a wonnim",
+  "quranLoadFailed": "Wɔantumi amfa Quran mu nsɛm anhyɛ mu. Yɛsrɛ sɛ sɔ hwɛ bio.",
   "retry": "San bɔ mmɔden bio",
+  "refreshAction": "Refresh",
   "cancel": "Twam",
   "save": "Kora",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Aane",
   "no": "Daabi",
   "surah": "Surah a ɛwɔ hɔ",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Kratafa",
   "reading": "Akenkan",
   "recitation": "Nsɛm a Wɔka Kyerɛ",
   "translation": "Nkyerɛaseɛ",
   "tafsir": "Tafsir na ɔyɛ",
+  "tafsirLoading": "Loading tafsir...",
+  "tafsirSourceLabel": "Tafsir fibea",
+  "tafsirNoSurahFound": "Tafsir biara nni hɔ a wɔanhu ama saa surah yi.",
+  "tafsirNoAyahFound": "Wonhuu tafsir biara mma ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir antumi amfa nneɛma anhyɛ mu.",
+  "tafsirNoTextForAyah": "Tafsir nkyerɛwee biara nni hɔ a ɛfa saa ayah yi ho.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir fibea no san de HTTP {statusCode} mfomso bae.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Tafsir fibea a wɔapaw no ansan amfa nsɛm biara amma.",
+  "tafsirCacheUnavailable": "Verified tafsir no ntumi nkɔ offline de besi nnɛ. Sync tafsir dataset a woanya fibea ansa na woakɔ browse.",
   "bookmarks": "Nwoma a Wɔde Yɛ Nwoma",
   "addBookmark": "Fa Bookmark ka ho",
   "removeBookmark": "Yi Bookmark no fi hɔ",
   "lastRead": "Akenkan a Etwa To",
   "dailyZikr": "Da biara da Zikr",
+  "duaMeaning1": "afoforɔ nso bɔ mpaeɛ sɛ, ‘Yɛn Awurade, ma yɛn papa wɔ wiase yi mu ne Daankwamma mu, na bɔ yɛn ho ban firi Ogya ayayadeɛ ho.’",
+  "duaMeaning2": "Onyankopɔn mfa adesoa nhyɛ ɔkra biara so nsen nea obetumi asoa: obiara nya papa biara a wayɛ, na ohu ne bɔne- ‘ Awurade, sɛ yɛn werɛ fi anaasɛ yedi mfomso a, mfa yɛn nkɔ asɛnnibea. Awurade, mfa adesoa nto yɛn so sɛnea Wode adesoa guu wɔn a wodii yɛn anim kan no. Awurade, mma nnsoa yɛn so nsen nea yɛwɔ a yɛde bɛsoa. Fa yɛn bɔne kyɛ yɛn, fa kyɛ yɛn, na hu yɛn mmɔbɔ. Wone yɛn Banbɔfoɔ, enti boa yɛn tia atiafoɔ no.’",
+  "duaMeaning3": "‘Y’Awurade, mma yen akoma nnkyinkyin bere a Woakyere yen kwan akyi. Ma yɛn W’ahummɔbɔ: Wo ne Ɔma Daa.",
+  "duaMeaning4": "Awurade, ma me ne m'asefoɔ nkɔ so abɔ mpaeɛ. Y'Awurade, gye m'abisade no tom.",
+  "duaMeaning5": "na fa wo ntaban si fam wɔ ahobrɛase mu kyerɛ wɔn wɔ ayamye mu na ka sɛ, ‘Awurade, hu wɔn mmɔbɔ, sɛnea wɔhwɛɛ me bere a na meyɛ abofra no.’",
+  "duaMeaning6": "wɔmma Onyankopɔn, nea odi tumi ankasa no so. [Odiyifo], npere wo ho nkenkan ansa na adiyisɛm no awie koraa na mmom ka sɛ, ‘Awurade, ma me nnɔɔso wɔ nimdeɛ mu!’",
+  "duaMeaning7": "Ka [Odiyifo] se, ‘Awurade, fa kyɛ na hu mmɔbɔ: Wo ne mmɔborohunufo sen obiara.’",
+  "duaMeaning8": "wɔn a wɔbɔ mpae sɛ, ‘Yɛn Awurade, ma yɛn anigye wɔ yɛn ahokafo ne yɛn mma mu. Yɛ yɛn nhwɛso pa mma wɔn a wonim Wo’.",
   "morningZikr": "Anɔpa Zikr",
   "eveningZikr": "Anwummere Zikr",
   "tasbih": "Tasbih na ɛyɛ",
@@ -88,6 +171,26 @@
   "fasting": "Mmuadadi",
   "quranReading": "Kuran Akenkan",
   "prayers": "Mpaebɔ ahorow",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Kan no",
   "weeklyProgress": "Nnawɔtwe Biara Nkɔso",
   "monthlyProgress": "Nkɔso a Ɛba Ɔsram Biara",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan a ɛwɔ hɔ",
   "eidAlFitr": "Eid Al-Fitr na ɔkyerɛwee",
   "eidAlAdha": "Eid Al-Adha a ɛyɛ fɛ",
+  "islamicNewYear": "Islamfoɔ Afe Foforo",
+  "mawlidAnNabi": "Mawlid ne Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan da no",
+  "specialDayDateLaylatAlQadr": "27 Ramadan da no",
+  "specialDayDateEidAlFitr": "1 Shawwal na ɔkyerɛwee",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram na ɔkyerɛwee",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal na ɔkyerɛwee",
   "laylatAlQadr": "Laylat Al-Qadr na ɔkyerɛwee",
   "qiblaDirection": "Qibla Akwankyerɛ",
   "compass": "Kɔmpase a wɔde yɛ adwuma",
@@ -108,6 +219,19 @@
   "north": "Atifi",
   "qiblaFound": "Qibla a wɔahu!",
   "turnDevice": "Dane wo mfiri no ma ɛnhwɛ Qibla no",
+  "qiblaCompassErrorDetails": "Compass mfomso: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Compass sensor nni saa afiri yi so.",
+  "qiblaLocationRequiredTitle": "Beae ho hia ma Qibla",
+  "qiblaLocationRequiredBody": "Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Amanneɛbɔ ahorow",
   "prayerNotifications": "Mpaebɔ Ho Amanneɛbɔ",
   "enableNotifications": "Ma Notifications nyɛ adwuma",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "Klik so na kan",
+  "zikrCompletedMashAllah": "Wɔawie! MashAllah na ɔyɛ",
+  "zikrMeaningSubhanAllah": "Allah boro pɛyɛ biara so koraa.",
+  "zikrMeaningAlhamdulillah": "Ayeyi nyinaa ye Allah dea.",
+  "zikrMeaningAllahuAkbar": "Allah ne Ɔkɛseɛ.",
+  "zikrMeaningLaIlahaIllallah": "Onyame biara nni ho gyese Allah.",
+  "zikrMeaningAstaghfirullah": "Mehwehwe Allah bonefakye.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tumi ne ahoɔden biara nni hɔ gyese ɛnam Allah so.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Nne a Wɔde Tie",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Nsusuwii a Wɔde Yɛ Nneɛma",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration a ɛho hia. Di akɔneaba afiri a ɛwɔ mfonini-8 no mu.",
   "dailyVerse": "Daa Nkyekyɛm",
+  "dailyVerseUnavailableTitle": "Da biara da nkyekyem a enni hɔ",
+  "dailyVerseUnavailableBody": "Wɔnnya nhyehyɛɛ da biara da nkyekyem mu nsɛm a wɔagye atom ama saa ɔdan yi. Fa wo ho to cloud source no so anaa sync cache a wɔagye atom ansa na woakɔ browse.",
   "todaysIbadah": "Ɛnnɛ Ibadah",
   "quickAccess": "Nneɛma a Wɔde Kɔ Ntɛmntɛm",
   "assistant": "Abadiakyire",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verified duas no nnya mmae",
+  "duaUnavailableBody": "Verified daily duas no nnya nyɛɛ sync wɔ saa afiri yi so. Fa bata mununkum fibea no ho na fa duas a efi mu ba no hyɛ mu sen sɛ wobɛfa fallback a wɔannye antom.",
+  "duaCategoryQuranic": "Kur’aan dua",
+  "duaCategoryMorningEvening": "Anɔpa & Anwummere",
+  "duaCategoryTasbih": "Tasbih na ɛyɛ",
+  "duaCategoryProtection": "Ahobammɔ",
+  "duaCategoryBeginning": "Mfiase ahorow",
+  "duaCategorySleep": "Da",
+  "duaCategoryFoodDrink": "Aduan & Nnuan a Wɔnom",
+  "duaCategoryForgiveness": "Bɔne fafiri",
+  "duaCategoryHome": "Fie",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamfoɔ Nhomasua",
   "sukunAudioTitle": "Sukun Nnyigyei a Wɔde Yɛ Nneɛma",
   "hadithCollections": "Hadith Nneɛma a Wɔaboaboa Ano",
+  "hadithSourcePending": "Verified source a ɛda so ara wɔ hɔ",
+  "hadithUnavailableTitle": "Hadith ahorow a wɔaboaboa ano a wɔagye atom no nnya mmae",
+  "hadithUnavailableBody": "Saa ɔdan yi da so ara gyina abɔnten hadith feed a wɔannye antom so. Hadith browsing kɔ so yɛ adwuma kosi sɛ wɔbɛma dataset a wɔanya fibea no ayɛ sync.",
   "paywallUnlockAll": "Bue nneɛma a ɛwɔ hɔ nyinaa ma wo honhom mu akwantu no",
+  "premiumProductUnavailable": "Premium product no nni hɔ mprempren. Yɛsrɛ sɛ sɔ hwɛ bio akyiri yi.",
+  "premiumPurchaseFailed": "Wɔantumi anwie adetɔ no. Yɛsrɛ sɛ sɔ hwɛ bio.",
   "paywallFeature1Title": "Ntini mu Boafo Plus",
   "paywallFeature1Desc": "AI-powered Q&A a anohyeto nni mu",
   "paywallFeature2Title": "Anohyeto a Enni Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download awie ama {reciter} a {failed} surahs adi nkogu ({downloaded}/{total} a wɔatwe).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Wɔapopa fael a ɛwɔ intanɛt so ama {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Network mfomso. Yɛsrɛ sɛ sɔ hwɛ bio.",
+  "placesLocationRequiredTitle": "Beae a wɔhwehwɛ",
+  "placesLocationRequiredBody": "Fa beae bi di kan sɛnea ɛbɛyɛ a wobetumi ahwehwɛ asɔredan ahorow a ɛbɛn hɔ, halal nnuan, ne Nkramofo sukuu ahorow mu pɛpɛɛpɛ.",
+  "placesMapTilesUnavailableTitle": "Map tiles a wontumi nnya",
+  "placesMapTilesUnavailableBody": "Wɔnnya nhyehyɛɛ map tile fibea a wɔagye atom ama saa ɔdansi yi. Mmeae a ɛbɛn hɔ no da so ara tumi load fi beae a woakora so.",
+  "placesDataSourceUnavailableTitle": "De data a enni hɔ no si hɔ",
+  "placesDataSourceUnavailableBody": "Wɔnnya nhyehyɛɛ mmeae data endpoint a wɔagye atom ama saa ɔdan yi de besi nnɛ. Set PLACES_OVERPASS_API_URL to proxy anaa provider a wɔapene so ansa na woama hwehwɛ a ɛbɛn no ayɛ adwuma.",
   "unknownPlaceName": "Edin a Wonnim",
   "islamicPlaceFallback": "Islam Beaeɛ",
-  "prayerNotificationTitle": "Bere a wɔde yɛ {prayerName}.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ɛyɛ bere a ɛsɛ sɛ yɛbɔ mpae {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verified duas no nnya mmae",
-  "duaUnavailableBody": "Verified daily duas no nnya nyɛɛ sync wɔ saa afiri yi so. Fa bata mununkum fibea no ho na fa duas a efi mu ba no hyɛ mu sen sɛ wobɛfa fallback a wɔannye antom.",
-  "duaCategoryQuranic": "Kur’aan dua",
-  "duaCategoryMorningEvening": "Anɔpa & Anwummere",
-  "duaCategoryTasbih": "Tasbih na ɛyɛ",
-  "duaCategoryProtection": "Ahobammɔ",
-  "duaCategoryBeginning": "Mfiase ahorow",
-  "duaCategorySleep": "Da",
-  "duaCategoryFoodDrink": "Aduan & Nnuan a Wɔnom",
-  "duaCategoryForgiveness": "Bɔne fafiri",
-  "duaCategoryHome": "Fie",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verified source a ɛda so ara wɔ hɔ",
-  "hadithUnavailableTitle": "Hadith ahorow a wɔaboaboa ano a wɔagye atom no nnya mmae",
-  "hadithUnavailableBody": "Saa ɔdan yi da so ara gyina abɔnten hadith feed a wɔannye antom so. Hadith browsing kɔ so yɛ adwuma kosi sɛ wɔbɛma dataset a wɔanya fibea no ayɛ sync.",
-  "appErrorOccurred": "Mfomso bi sii",
-  "appUnknownError": "Mfomso a wonnim",
-  "qiblaCompassErrorDetails": "Compass mfomso: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Wɔawie! MashAllah na ɔyɛ",
-  "zikrMeaningSubhanAllah": "Allah boro pɛyɛ biara so koraa.",
-  "zikrMeaningAlhamdulillah": "Ayeyi nyinaa ye Allah dea.",
-  "zikrMeaningAllahuAkbar": "Allah ne Ɔkɛseɛ.",
-  "zikrMeaningLaIlahaIllallah": "Onyame biara nni ho gyese Allah.",
-  "zikrMeaningAstaghfirullah": "Mehwehwe Allah bonefakye.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Tumi ne ahoɔden biara nni hɔ gyese ɛnam Allah so.",
   "asmaMeaning1": "Nea Ɔyɛ Mfaso",
   "asmaMeaning2": "Mmɔborohunufoɔ",
   "asmaMeaning3": "Ɔhene / Daa Awurade",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Nea Ɔte hɔ Daa",
   "asmaMeaning97": "Adedifoɔ no",
   "asmaMeaning98": "Akwankyerɛ a ɛtene sen biara",
-  "asmaMeaning99": "Ɔyarefoɔ no",
-  "duaMeaning1": "afoforɔ nso bɔ mpaeɛ sɛ, ‘Yɛn Awurade, ma yɛn papa wɔ wiase yi mu ne Daankwamma mu, na bɔ yɛn ho ban firi Ogya ayayadeɛ ho.’",
-  "duaMeaning2": "Onyankopɔn mfa adesoa nhyɛ ɔkra biara so nsen nea obetumi asoa: obiara nya papa biara a wayɛ, na ohu ne bɔne- ‘ Awurade, sɛ yɛn werɛ fi anaasɛ yedi mfomso a, mfa yɛn nkɔ asɛnnibea. Awurade, mfa adesoa nto yɛn so sɛnea Wode adesoa guu wɔn a wodii yɛn anim kan no. Awurade, mma nnsoa yɛn so nsen nea yɛwɔ a yɛde bɛsoa. Fa yɛn bɔne kyɛ yɛn, fa kyɛ yɛn, na hu yɛn mmɔbɔ. Wone yɛn Banbɔfoɔ, enti boa yɛn tia atiafoɔ no.’",
-  "duaMeaning3": "‘Y’Awurade, mma yen akoma nnkyinkyin bere a Woakyere yen kwan akyi. Ma yɛn W’ahummɔbɔ: Wo ne Ɔma Daa.",
-  "duaMeaning4": "Awurade, ma me ne m'asefoɔ nkɔ so abɔ mpaeɛ. Y'Awurade, gye m'abisade no tom.",
-  "duaMeaning5": "na fa wo ntaban si fam wɔ ahobrɛase mu kyerɛ wɔn wɔ ayamye mu na ka sɛ, ‘Awurade, hu wɔn mmɔbɔ, sɛnea wɔhwɛɛ me bere a na meyɛ abofra no.’",
-  "duaMeaning6": "wɔmma Onyankopɔn, nea odi tumi ankasa no so. [Odiyifo], npere wo ho nkenkan ansa na adiyisɛm no awie koraa na mmom ka sɛ, ‘Awurade, ma me nnɔɔso wɔ nimdeɛ mu!’",
-  "duaMeaning7": "Ka [Odiyifo] se, ‘Awurade, fa kyɛ na hu mmɔbɔ: Wo ne mmɔborohunufo sen obiara.’",
-  "duaMeaning8": "wɔn a wɔbɔ mpae sɛ, ‘Yɛn Awurade, ma yɛn anigye wɔ yɛn ahokafo ne yɛn mma mu. Yɛ yɛn nhwɛso pa mma wɔn a wonim Wo’.",
-  "islamicNewYear": "Islamfoɔ Afe Foforo",
-  "mawlidAnNabi": "Mawlid ne Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan da no",
-  "specialDayDateLaylatAlQadr": "27 Ramadan da no",
-  "specialDayDateEidAlFitr": "1 Shawwal na ɔkyerɛwee",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram na ɔkyerɛwee",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal na ɔkyerɛwee",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir fibea",
-  "tafsirNoSurahFound": "Tafsir biara nni hɔ a wɔanhu ama saa surah yi.",
-  "tafsirNoAyahFound": "Wonhuu tafsir biara mma ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir antumi amfa nneɛma anhyɛ mu.",
-  "tafsirNoTextForAyah": "Tafsir nkyerɛwee biara nni hɔ a ɛfa saa ayah yi ho.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir fibea no san de HTTP {statusCode} mfomso bae.",
-  "tafsirNoEntriesReturned": "Tafsir fibea a wɔapaw no ansan amfa nsɛm biara amma.",
-  "premiumProductUnavailable": "Premium product no nni hɔ mprempren. Yɛsrɛ sɛ sɔ hwɛ bio akyiri yi.",
-  "premiumPurchaseFailed": "Wɔantumi anwie adetɔ no. Yɛsrɛ sɛ sɔ hwɛ bio.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamfoɔ Kwan a Ɛfa Hann Ho",
-  "downloadPartiallyFinishedForReciter": "Download awie ama {reciter} a {failed} surahs adi nkogu ({downloaded}/{total} a wɔatwe).",
-  "placesLocationRequiredTitle": "Beae a wɔhwehwɛ",
-  "placesLocationRequiredBody": "Fa beae bi di kan sɛnea ɛbɛyɛ a wobetumi ahwehwɛ asɔredan ahorow a ɛbɛn hɔ, halal nnuan, ne Nkramofo sukuu ahorow mu pɛpɛɛpɛ.",
-  "placesMapTilesUnavailableTitle": "Map tiles a wontumi nnya",
-  "placesMapTilesUnavailableBody": "Wɔnnya nhyehyɛɛ map tile fibea a wɔagye atom ama saa ɔdansi yi. Mmeae a ɛbɛn hɔ no da so ara tumi load fi beae a woakora so.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Compass sensor nni saa afiri yi so.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Wɔantumi amfa Quran mu nsɛm anhyɛ mu. Yɛsrɛ sɛ sɔ hwɛ bio.",
-  "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio.",
-  "qiblaLocationRequiredTitle": "Beae ho hia ma Qibla",
-  "qiblaLocationRequiredBody": "Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ.",
-  "placesDataSourceUnavailableTitle": "De data a enni hɔ no si hɔ",
-  "placesDataSourceUnavailableBody": "Wɔnnya nhyehyɛɛ mmeae data endpoint a wɔagye atom ama saa ɔdan yi de besi nnɛ. Set PLACES_OVERPASS_API_URL to proxy anaa provider a wɔapene so ansa na woama hwehwɛ a ɛbɛn no ayɛ adwuma.",
-  "tafsirCacheUnavailable": "Verified tafsir no ntumi nkɔ offline de besi nnɛ. Sync tafsir dataset a woanya fibea ansa na woakɔ browse."
+  "asmaMeaning99": "Ɔyarefoɔ no"
 }

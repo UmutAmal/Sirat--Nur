@@ -952,6 +952,13 @@ class AppLocalizationsEe extends AppLocalizations {
   String get dailyVerse => 'Gbesiagbe Kpukpui';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Gbesiagbe kpukpui aɖeke meli o';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Womeɖo gbesiagbe kpukpui me nya siwo ŋu woɖo kpee na xɔtutu sia haɖe o. Do ka kple alilikpo dzɔtsoƒe alo nàwɔ ɖeka kple cache si ŋu woɖo kpee hafi nàʋu.';
+
+  @override
   String get todaysIbadah => 'Egbe ƒe Ibadah';
 
   @override

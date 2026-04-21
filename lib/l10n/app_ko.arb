@@ -1,6 +1,7 @@
 {
   "@@locale": "ko",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "이슬람의 빛의 길",
   "home": "홈",
   "quran": "꾸란",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "마그리브",
   "isha": "이샤",
+  "prayerNotificationTitle": "{prayerName} 시간입니다",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "이제 {prayerName}을(를) 기도할 시간입니다.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "데이터 및 스토리지",
   "clearCache": "캐시 지우기",
   "cacheClearedSuccess": "캐시가 성공적으로 지워졌습니다.",
@@ -34,6 +51,7 @@
   "currentLocation": "현재 위치(GPS)",
   "locationServiceDisabled": "위치 서비스가 비활성화되었습니다.",
   "locationPermissionDenied": "위치 권한이 거부되었습니다.",
+  "locationDetectionFailed": "위치를 감지할 수 없습니다. 도시를 수동으로 선택하거나 다시 시도하세요.",
   "citiesCount": "{count} 도시",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "검색결과가 없습니다",
   "loading": "로드 중...",
   "error": "오류",
+  "appErrorOccurred": "오류가 발생했습니다",
+  "appUnknownError": "알 수 없는 오류",
+  "quranLoadFailed": "꾸란 콘텐츠를 로드할 수 없습니다. 다시 시도해 주세요.",
   "retry": "재시도",
+  "refreshAction": "새로고침",
   "cancel": "취소",
   "save": "저장",
   "delete": "삭제",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "아니요",
   "surah": "수라",
+  "ayahLabel": "아야 {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "유즈",
   "page": "페이지",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "타프시르 로드 중...",
+  "tafsirSourceLabel": "타프시르 소스",
+  "tafsirNoSurahFound": "이 수라에 대한 tafsir를 찾을 수 없습니다.",
+  "tafsirNoAyahFound": "ayah {ayah}에 대한 tafsir를 찾을 수 없습니다.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir를 로드할 수 없습니다.",
+  "tafsirNoTextForAyah": "이에 대한 tafsir 텍스트가 없습니다.",
+  "tafsirDownloadingProgress": "tafsir {current}/{total} 다운로드 중",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "타프시르 {current}/{total} 로드 중",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir 소스가 HTTP {statusCode} 오류를 반환했습니다.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "선택한 tafsir 소스에서 반환된 항목이 없습니다.",
+  "tafsirCacheUnavailable": "인증된 tafsir는 아직 오프라인에서 사용할 수 없습니다. 탐색하기 전에 소스 tafsir 데이터세트를 동기화하세요.",
   "bookmarks": "Bookmarks",
   "addBookmark": "북마크 추가",
   "removeBookmark": "북마크 제거",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "다른 사람들은 '우리 주님, 현세와 내세에서 우리에게 좋은 것을 주시고, 불의 고통으로부터 우리를 보호해 주십시오.'라고 기도합니다.",
+  "duaMeaning2": "하나님은 어떤 영혼에게도 감당할 수 있는 것 이상으로 짐을 지우지 않으십니다. 각 사람은 자신이 행한 선한 일을 모두 얻고 악한 일을 겪습니다. 주님, 당신이 우리 이전 사람들에게 짐을 지셨던 것처럼 우리에게도 짐을 지우지 마십시오. 주님, 우리가 감당할 수 있는 것 이상으로 우리에게 짐을 지우지 마십시오. 우리를 용서하시고, 용서하시고, 자비를 베푸소서. 당신은 우리의 보호자이시니 불신자들에 맞서 우리를 도와주세요.'",
+  "duaMeaning3": "‘주님, 주님께서 우리를 인도하신 후에 우리의 마음이 일탈하지 않게 하소서. 우리에게 당신의 자비를 베푸소서. 당신은 언제나 베푸시는 분이십니다.",
+  "duaMeaning4": "주여, 나와 내 후손이 계속 기도하게 하소서. 우리 주님, 제 요청을 받아주세요.",
+  "duaMeaning5": "그리고 그들을 향해 겸손한 날개를 내려 친절하게 '주님, 내가 어렸을 때 그들이 나를 돌본 것처럼 그들에게도 자비를 베푸소서'라고 말하십시오.",
+  "duaMeaning6": "참으로 다스리시는 하나님을 찬양합니다. [선지자] 계시가 다 차기 전에 서두르지 말고 '주님, 나에게 지식을 더해 주십시오!'라고 말하십시오.",
+  "duaMeaning7": "[선지자]에게 '주님, 용서하시고 자비를 베푸소서. 당신은 모든 사람 중에 가장 자비로우신 분이십니다.'라고 말하십시오.",
+  "duaMeaning8": "'주님, 배우자와 자손으로 인해 우리에게 기쁨을 주소서'라고 기도하는 사람. 당신을 아는 사람들에게 우리에게 좋은 본이 되어 주십시오.'",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "단식",
   "quranReading": "꾸란 읽기",
   "prayers": "기도",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "주간 진행 상황",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "이슬람 새해",
+  "mawlidAnNabi": "마울리드 안나비",
+  "specialDayDateRamadanStart": "1 라마단",
+  "specialDayDateLaylatAlQadr": "라마단 27일",
+  "specialDayDateEidAlFitr": "1 샤왈",
+  "specialDayDateEidAlAdha": "10 둘 히자",
+  "specialDayDateIslamicNewYear": "1 무하람",
+  "specialDayDateMawlidAnNabi": "12 라비 알 아왈",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "키블라 방향",
   "compass": "나침반",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "키블라 발견!",
   "turnDevice": "기기를 Qibla를 향하도록 돌립니다.",
+  "qiblaCompassErrorDetails": "나침반 오류: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "이 기기에서는 나침반 센서를 사용할 수 없습니다.",
+  "qiblaLocationRequiredTitle": "Qibla에 필요한 위치",
+  "qiblaLocationRequiredBody": "방향을 정확하게 계산할 수 있도록 Qibla 나침반을 사용하기 전에 실제 위치를 설정하십시오.",
+  "adhanNotificationChannelName": "아단 알림",
+  "adhanNotificationChannelDescription": "아단 소리로 기도 시간 알림.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "대상 수: {target}",
   "tapToCount": "탭해서 세기",
+  "zikrCompletedMashAllah": "완전한! 마쉬알라",
+  "zikrMeaningSubhanAllah": "알라는 모든 불완전함보다 훨씬 뛰어납니다.",
+  "zikrMeaningAlhamdulillah": "모든 찬양은 알라께 속합니다.",
+  "zikrMeaningAllahuAkbar": "알라는 가장 위대하다.",
+  "zikrMeaningLaIlahaIllallah": "알라 외에는 신이 없습니다.",
+  "zikrMeaningAstaghfirullah": "나는 알라의 용서를 구합니다.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "알라를 통하지 않고는 힘도 없고 힘도 없습니다.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "오디오 음성",
+  "audioVoiceMisharyAlafasy": "남성(Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "남성(Abdul Basit)",
+  "audioVoiceSudais": "남성(Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla 교정",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "교정이 필요합니다. 그림-8의 장치를 회전시킵니다.",
   "dailyVerse": "매일의 구절",
+  "dailyVerseUnavailableTitle": "일일 구절을 사용할 수 없습니다.",
+  "dailyVerseUnavailableBody": "이 빌드에는 검증된 일일 구절 콘텐츠가 아직 구성되지 않았습니다. 탐색하기 전에 클라우드 소스에 연결하거나 확인된 캐시를 동기화하세요.",
   "todaysIbadah": "오늘의 이바다",
   "quickAccess": "빠른 액세스",
   "assistant": "어시스턴트",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "인증된 이중화는 아직 사용할 수 없습니다.",
+  "duaUnavailableBody": "확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 폴백 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요.",
+  "duaCategoryQuranic": "꾸란 두아",
+  "duaCategoryMorningEvening": "아침 & 저녁",
+  "duaCategoryTasbih": "타스비",
+  "duaCategoryProtection": "보호",
+  "duaCategoryBeginning": "시작",
+  "duaCategorySleep": "잠",
+  "duaCategoryFoodDrink": "음식 및 음료",
+  "duaCategoryForgiveness": "용서",
+  "duaCategoryHome": "집",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "이슬람 교육",
   "sukunAudioTitle": "수쿤 사운드스케이프",
   "hadithCollections": "하디스 컬렉션",
+  "hadithSourcePending": "확인된 소스 보류 중",
+  "hadithUnavailableTitle": "검증된 hadith 컬렉션은 아직 사용할 수 없습니다.",
+  "hadithUnavailableBody": "이 빌드는 여전히 확인되지 않은 외부 hadith 피드에 의존합니다. Hadith 검색은 소스 데이터 세트가 동기화될 때까지 비활성화된 상태로 유지됩니다.",
   "paywallUnlockAll": "영적 여정을 위한 모든 기능을 잠금 해제하세요",
+  "premiumProductUnavailable": "프리미엄 제품은 현재 구매하실 수 없습니다. 나중에 다시 시도해 주세요.",
+  "premiumPurchaseFailed": "구매를 완료할 수 없습니다. 다시 시도해 주세요.",
   "paywallFeature1Title": "신경 보조자 플러스",
   "paywallFeature1Desc": "무제한 AI 기반 Q&A",
   "paywallFeature2Title": "무제한 오프라인",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter}에 대한 다운로드가 완료되었으며 {failed} 수라가 실패했습니다({downloaded}/{total} 다운로드됨).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter}의 오프라인 파일을 삭제했습니다.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "네트워크 오류입니다. 다시 시도해 주세요.",
+  "placesLocationRequiredTitle": "위치가 필요합니다.",
+  "placesLocationRequiredBody": "근처 모스크, 할랄음식, 이슬람 학교 등을 정확하게 검색할 수 있도록 위치를 먼저 설정하세요.",
+  "placesMapTilesUnavailableTitle": "지도 타일을 사용할 수 없습니다.",
+  "placesMapTilesUnavailableBody": "이 빌드에는 확인된 지도 타일 소스가 아직 구성되지 않았습니다. 저장된 위치에서 주변 장소를 계속 로드할 수 있습니다.",
+  "placesDataSourceUnavailableTitle": "장소 데이터를 사용할 수 없습니다.",
+  "placesDataSourceUnavailableBody": "이 빌드에는 확인된 장소 데이터 엔드포인트가 아직 구성되지 않았습니다. 주변 검색을 활성화하기 전에 PLACES_OVERPASS_API_URL을 승인된 프록시 또는 공급자로 설정하세요.",
   "unknownPlaceName": "알 수 없는 이름",
   "islamicPlaceFallback": "이슬람 장소",
-  "prayerNotificationTitle": "{prayerName} 시간입니다",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "이제 {prayerName}을(를) 기도할 시간입니다.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "인증된 이중화는 아직 사용할 수 없습니다.",
-  "duaUnavailableBody": "확인된 일일 듀아가 아직 이 기기에 동기화되지 않았습니다. 확인되지 않은 폴백 대신 소스가 있는 duas를 로드하려면 클라우드 소스에 연결하세요.",
-  "duaCategoryQuranic": "꾸란 두아",
-  "duaCategoryMorningEvening": "아침 & 저녁",
-  "duaCategoryTasbih": "타스비",
-  "duaCategoryProtection": "보호",
-  "duaCategoryBeginning": "시작",
-  "duaCategorySleep": "잠",
-  "duaCategoryFoodDrink": "음식 및 음료",
-  "duaCategoryForgiveness": "용서",
-  "duaCategoryHome": "집",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "확인된 소스 보류 중",
-  "hadithUnavailableTitle": "검증된 hadith 컬렉션은 아직 사용할 수 없습니다.",
-  "hadithUnavailableBody": "이 빌드는 여전히 확인되지 않은 외부 hadith 피드에 의존합니다. Hadith 검색은 소스 데이터 세트가 동기화될 때까지 비활성화된 상태로 유지됩니다.",
-  "appErrorOccurred": "오류가 발생했습니다",
-  "appUnknownError": "알 수 없는 오류",
-  "qiblaCompassErrorDetails": "나침반 오류: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "완전한! 마쉬알라",
-  "zikrMeaningSubhanAllah": "알라는 모든 불완전함보다 훨씬 뛰어납니다.",
-  "zikrMeaningAlhamdulillah": "모든 찬양은 알라께 속합니다.",
-  "zikrMeaningAllahuAkbar": "알라는 가장 위대하다.",
-  "zikrMeaningLaIlahaIllallah": "알라 외에는 신이 없습니다.",
-  "zikrMeaningAstaghfirullah": "나는 알라의 용서를 구합니다.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "알라를 통하지 않고는 힘도 없고 힘도 없습니다.",
   "asmaMeaning1": "은혜로운 자",
   "asmaMeaning2": "자비로우신 분",
   "asmaMeaning3": "왕/영원한 군주",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "영원하신 분",
   "asmaMeaning97": "상속자",
   "asmaMeaning98": "가장 의로운 인도자",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "다른 사람들은 '우리 주님, 현세와 내세에서 우리에게 좋은 것을 주시고, 불의 고통으로부터 우리를 보호해 주십시오.'라고 기도합니다.",
-  "duaMeaning2": "하나님은 어떤 영혼에게도 감당할 수 있는 것 이상으로 짐을 지우지 않으십니다. 각 사람은 자신이 행한 선한 일을 모두 얻고 악한 일을 겪습니다. 주님, 당신이 우리 이전 사람들에게 짐을 지셨던 것처럼 우리에게도 짐을 지우지 마십시오. 주님, 우리가 감당할 수 있는 것 이상으로 우리에게 짐을 지우지 마십시오. 우리를 용서하시고, 용서하시고, 자비를 베푸소서. 당신은 우리의 보호자이시니 불신자들에 맞서 우리를 도와주세요.'",
-  "duaMeaning3": "‘주님, 주님께서 우리를 인도하신 후에 우리의 마음이 일탈하지 않게 하소서. 우리에게 당신의 자비를 베푸소서. 당신은 언제나 베푸시는 분이십니다.",
-  "duaMeaning4": "주여, 나와 내 후손이 계속 기도하게 하소서. 우리 주님, 제 요청을 받아주세요.",
-  "duaMeaning5": "그리고 그들을 향해 겸손한 날개를 내려 친절하게 '주님, 내가 어렸을 때 그들이 나를 돌본 것처럼 그들에게도 자비를 베푸소서'라고 말하십시오.",
-  "duaMeaning6": "참으로 다스리시는 하나님을 찬양합니다. [선지자] 계시가 다 차기 전에 서두르지 말고 '주님, 나에게 지식을 더해 주십시오!'라고 말하십시오.",
-  "duaMeaning7": "[선지자]에게 '주님, 용서하시고 자비를 베푸소서. 당신은 모든 사람 중에 가장 자비로우신 분이십니다.'라고 말하십시오.",
-  "duaMeaning8": "'주님, 배우자와 자손으로 인해 우리에게 기쁨을 주소서'라고 기도하는 사람. 당신을 아는 사람들에게 우리에게 좋은 본이 되어 주십시오.'",
-  "islamicNewYear": "이슬람 새해",
-  "mawlidAnNabi": "마울리드 안나비",
-  "specialDayDateRamadanStart": "1 라마단",
-  "specialDayDateLaylatAlQadr": "라마단 27일",
-  "specialDayDateEidAlFitr": "1 샤왈",
-  "specialDayDateEidAlAdha": "10 둘 히자",
-  "specialDayDateIslamicNewYear": "1 무하람",
-  "specialDayDateMawlidAnNabi": "12 라비 알 아왈",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "새로고침",
-  "ayahLabel": "아야 {ayah}",
-  "tafsirLoading": "타프시르 로드 중...",
-  "tafsirSourceLabel": "타프시르 소스",
-  "tafsirNoSurahFound": "이 수라에 대한 tafsir를 찾을 수 없습니다.",
-  "tafsirNoAyahFound": "ayah {ayah}에 대한 tafsir를 찾을 수 없습니다.",
-  "tafsirLoadFailed": "Tafsir를 로드할 수 없습니다.",
-  "tafsirNoTextForAyah": "이에 대한 tafsir 텍스트가 없습니다.",
-  "tafsirDownloadingProgress": "tafsir {current}/{total} 다운로드 중",
-  "tafsirLoadingProgress": "타프시르 {current}/{total} 로드 중",
-  "tafsirApiStatusError": "Tafsir 소스가 HTTP {statusCode} 오류를 반환했습니다.",
-  "tafsirNoEntriesReturned": "선택한 tafsir 소스에서 반환된 항목이 없습니다.",
-  "premiumProductUnavailable": "프리미엄 제품은 현재 구매하실 수 없습니다. 나중에 다시 시도해 주세요.",
-  "premiumPurchaseFailed": "구매를 완료할 수 없습니다. 다시 시도해 주세요.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "이슬람의 빛의 길",
-  "downloadPartiallyFinishedForReciter": "{reciter}에 대한 다운로드가 완료되었으며 {failed} 수라가 실패했습니다({downloaded}/{total} 다운로드됨).",
-  "placesLocationRequiredTitle": "위치가 필요합니다.",
-  "placesLocationRequiredBody": "근처 모스크, 할랄음식, 이슬람 학교 등을 정확하게 검색할 수 있도록 위치를 먼저 설정하세요.",
-  "placesMapTilesUnavailableTitle": "지도 타일을 사용할 수 없습니다.",
-  "placesMapTilesUnavailableBody": "이 빌드에는 확인된 지도 타일 소스가 아직 구성되지 않았습니다. 저장된 위치에서 주변 장소를 계속 로드할 수 있습니다.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "남성(Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "남성(Abdul Basit)",
-  "audioVoiceSudais": "남성(Sudais)",
-  "qiblaSensorUnavailable": "이 기기에서는 나침반 센서를 사용할 수 없습니다.",
-  "adhanNotificationChannelName": "아단 알림",
-  "adhanNotificationChannelDescription": "아단 소리로 기도 시간 알림.",
-  "quranLoadFailed": "꾸란 콘텐츠를 로드할 수 없습니다. 다시 시도해 주세요.",
-  "locationDetectionFailed": "위치를 감지할 수 없습니다. 도시를 수동으로 선택하거나 다시 시도하세요.",
-  "qiblaLocationRequiredTitle": "Qibla에 필요한 위치",
-  "qiblaLocationRequiredBody": "방향을 정확하게 계산할 수 있도록 Qibla 나침반을 사용하기 전에 실제 위치를 설정하십시오.",
-  "placesDataSourceUnavailableTitle": "장소 데이터를 사용할 수 없습니다.",
-  "placesDataSourceUnavailableBody": "이 빌드에는 확인된 장소 데이터 엔드포인트가 아직 구성되지 않았습니다. 주변 검색을 활성화하기 전에 PLACES_OVERPASS_API_URL을 승인된 프록시 또는 공급자로 설정하세요.",
-  "tafsirCacheUnavailable": "인증된 tafsir는 아직 오프라인에서 사용할 수 없습니다. 탐색하기 전에 소스 tafsir 데이터세트를 동기화하세요."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

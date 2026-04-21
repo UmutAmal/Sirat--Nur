@@ -955,6 +955,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get dailyVerse => 'Ежедневный стих';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ежедневный стих недоступен.';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Проверенное ежедневное содержание стихов еще не настроено для этой сборки. Подключитесь к облачному источнику или синхронизируйте проверенный кеш перед просмотром.';
+
+  @override
   String get todaysIbadah => 'Сегодняшний Ибада';
 
   @override

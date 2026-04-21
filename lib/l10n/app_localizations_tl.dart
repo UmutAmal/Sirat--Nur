@@ -960,6 +960,14 @@ class AppLocalizationsTl extends AppLocalizations {
   String get dailyVerse => 'Araw-araw na Talata';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Hindi available ang pang-araw-araw na taludtod';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ang na-verify na pang-araw-araw na nilalaman ng talata ay hindi pa naka-configure para sa build na ito. Kumonekta sa cloud source o mag-sync ng na-verify na cache bago mag-browse.';
+
+  @override
   String get todaysIbadah => 'Ibadah ngayon';
 
   @override

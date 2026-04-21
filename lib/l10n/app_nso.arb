@@ -1,6 +1,7 @@
 {
   "@@locale": "nso",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Tsela ya Boiselamo ya Lesedi",
   "home": "Gae",
   "quran": "Quran",
   "qibla": "Qibla ya Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib wa naga",
   "isha": "Isha",
+  "prayerNotificationTitle": "Nako ya {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Ke nako ya go rapela {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datha & Polokelo",
   "clearCache": "Hlakola Cache",
   "cacheClearedSuccess": "Cache hlakola ka katleho",
@@ -34,6 +51,7 @@
   "currentLocation": "Lefelo la Bjale (GPS) .",
   "locationServiceDisabled": "Tirelo ya lefelo e šitišitšwe.",
   "locationPermissionDenied": "Tumelelo ya lefelo e gannwe.",
+  "locationDetectionFailed": "Ga se ya kgona go lemoga lefelo la gago. Hle kgetha motse ka seatla goba o leke gape.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Go ile gwa direga phošo",
+  "appUnknownError": "Phošo yeo e sa tsebjego",
+  "quranLoadFailed": "Diteng tša Quran di be di sa kgone go laetšwa. Hle leka gape.",
   "retry": "Leka gape",
+  "refreshAction": "Refresh",
   "cancel": "Khansela",
   "save": "Boloka",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Ee",
   "no": "Aowa",
   "surah": "Surah ya",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juse",
   "page": "Page",
   "reading": "Go bala",
   "recitation": "Polelo ya go bolela",
   "translation": "Phetolelo",
   "tafsir": "Tafsir e ile ya re",
+  "tafsirLoading": "Go laetša tafsir...",
+  "tafsirSourceLabel": "Mohlodi wa Tafsir",
+  "tafsirNoSurahFound": "Ga go na tafsir yeo e hweditšwego bakeng sa surah ye.",
+  "tafsirNoAyahFound": "Ga go na tafsir yeo e hweditšwego bakeng sa ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir e be e sa kgone go imelwa.",
+  "tafsirNoTextForAyah": "Ga go na sengwalwa sa tafsir bakeng sa ayah ye.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Mohlodi wa Tafsir o bušitše phošo ya HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Mohlodi wa tafsir wo o kgethilwego ga se wa bušetša dikeno.",
+  "tafsirCacheUnavailable": "Verified tafsir ga e hwetšagale ka ntle ga inthanete ga bjale. Nyalantšha sete ya data ya tafsir yeo e hweditšwego pele o phetla.",
   "bookmarks": "Dipuku tša go swaya",
   "addBookmark": "Oketša Letshwao la Puku",
   "removeBookmark": "Tloša Letshwao la Puku",
   "lastRead": "Bala La Mafelelo",
   "dailyZikr": "Zikr ya letšatši le letšatši",
+  "duaMeaning1": "ba bangwe ba rapela, ‘Morena wa rena, re fe tše botse lefaseng le le ka morago ga lehu, gomme o re šireletše tlhokofatšong ya Mollo.’",
+  "duaMeaning2": "Modimo ga a imele moya ofe goba ofe ka tše di fetago tšeo o ka di rwalago: yo mongwe le yo mongwe o hwetša botse le ge e le bofe bjo bo bo dirilego, gomme o tlaišwa ke bobe bja bjona- ‘ Morena, o se ke wa re tšea mošomong ge re lebala goba re dira diphošo. Morena, o se ke wa re imetša bjalo ka ge o ile wa imetša bao ba lego pele ga rena. Morena, o se ke wa re imetša ka go feta kamoo re nago le matla a go rwala. Re swarele, re swarele, o re gaugele. O Mošireletši wa rena, ka gona re thuše kgahlanong le bao ba sa dumelego.’",
+  "duaMeaning3": "‘Morena wa rena, o se ke wa dumelela dipelo tša rena di fapoga ka morago ga ge O re hlahlile. Re fe kgaugelo ya Gago: O Mofa ka mehla.",
+  "duaMeaning4": "Morena, anke nna le bana ba ka re tšwele pele ka thapelo. Morena wa rena, amogela kgopelo ya ka.",
+  "duaMeaning5": "gomme o theošetše lephego la gago ka boikokobetšo go bona ka botho gomme o re, ‘Morena, ba gaugele, go no swana le ge ba be ba ntlhokomela ge ke be ke sa le yo monnyane.’",
+  "duaMeaning6": "a godišwe Modimo, yo a laolago e le ka kgonthe. [Moporofeta], o se ke wa kitimela go bolela pele kutollo e felela ka mo go feletšego eupša o re, ‘Morena, nkgoketša tsebo!’",
+  "duaMeaning7": "E re [Moporofeta], ‘Morena, tshwarela o gaugele: O mogau go feta bohle.’",
+  "duaMeaning8": "bao ba rapelago ba re, ‘Morena wa rena, re thabele balekane ba rena le bana. Re dire mehlala ye mebotse go bao ba go lemogago’.",
   "morningZikr": "Mesong Zikr",
   "eveningZikr": "Mantšiboa Zikr",
   "tasbih": "Tasbih ya go swana",
@@ -88,6 +171,26 @@
   "fasting": "Go ikona dijo",
   "quranReading": "Go Bala Quran",
   "prayers": "Dithapelo",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Bala",
   "weeklyProgress": "Kgatelopele ya Beke le Beke",
   "monthlyProgress": "Kgatelopele ya Kgwedi le Kgwedi",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan ya Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha ya go swana le yona",
+  "islamicNewYear": "Ngwaga o Mofsa wa Boiselamo",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan ka la 1",
+  "specialDayDateLaylatAlQadr": "27 Ramadan ka la 27",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah ya go swana le yona",
+  "specialDayDateIslamicNewYear": "1 Muharram ka 1. Moharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal o ile a hlokomela",
   "laylatAlQadr": "Laylat Al-Qadr, o ile a hlokomela",
   "qiblaDirection": "Tlhahlo ya Qibla",
   "compass": "Khamphase ya",
@@ -108,6 +219,19 @@
   "north": "Leboa",
   "qiblaFound": "Qibla e hweditšwe!",
   "turnDevice": "Retolla sesebediswa sa hao ho tobana le Qibla",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Senthara ya khamphase ga e hwetšagale go sedirišwa se.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Ditsebišo",
   "prayerNotifications": "Ditsebišo tša Thapelo",
   "enableNotifications": "Kgontšha Ditsebišo",
@@ -166,6 +290,13 @@
   "newTarget": "Sepheo se Secha",
   "targetCount": "Sepheo: {target} .",
   "tapToCount": "Tlanya go bala",
+  "zikrCompletedMashAllah": "E phethilwe! MashAllah ke yena",
+  "zikrMeaningSubhanAllah": "Allah o ka godimo kudu ga go se phethagale mo gongwe le mo gongwe.",
+  "zikrMeaningAlhamdulillah": "Theto yohle ke ya Allah.",
+  "zikrMeaningAllahuAkbar": "Allah ke yo Mogolo.",
+  "zikrMeaningLaIlahaIllallah": "Ga go na modimo ge e se Allah.",
+  "zikrMeaningAstaghfirullah": "Ke nyaka tshwarelo ya Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ga go na maatla le maatla ntle le ka Allah.",
   "dailyChecklist": "Lenaneo la go Hlahloba la Letšatši le Letšatši",
   "qazaDebt": "Qaza (Sekoloto) .",
   "resetQazaData": "Seta gape Datha ya Qaza",
@@ -209,6 +340,9 @@
   "dbPath": "Tsela: {path} .",
   "quranCheckFailed": "Tlhahlobo ya Quran e paletšwe: {error}",
   "audioVoice": "Lentšu la Mamelwang",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Khutlo ya Fajr",
   "ishaAngle": "Isha Khutlo",
   "qiblaCalibration": "Go Lekanya ga Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Dikološa go Hwetša Qibla",
   "calibrationRequiredFigure8": "Go nyakega ga go lekanya. Dikološa sesebediswa ka setšoantšo-8.",
   "dailyVerse": "Temana ya Letšatši le Letšatši",
+  "dailyVerseUnavailableTitle": "Temana ya letšatši le letšatši ga e hwetšagale",
+  "dailyVerseUnavailableBody": "Diteng tša ditemana tša letšatši le letšatši tše di netefaditšwego ga se tša beakanywa bakeng sa go aga mo ga bjale. Ikgokaganye le mothopo wa leru goba o nyalantšha cache ye e netefaditšwego pele o phetla.",
   "todaysIbadah": "Ibadah ya lehono",
   "quickAccess": "Phihlelelo ya Kapejana",
   "assistant": "Mothuši",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Di-dua tše di netefaditšwego ga di hwetšagale ga bjale",
+  "duaUnavailableBody": "Di-dua tša letšatši le letšatši tše di netefaditšwego ga se tša nyalantšhwa le sedirišwa se ga bjale. Ikgokaganye le mothopo wa leru go laetša di-duas tšeo di tšwago mothopo go e na le go boela morago mo go sa netefatšwago.",
+  "duaCategoryQuranic": "Dua ya Quranic",
+  "duaCategoryMorningEvening": "Mesong & Mantšiboa",
+  "duaCategoryTasbih": "Tasbih ya go swana",
+  "duaCategoryProtection": "Tšhireletšo",
+  "duaCategoryBeginning": "Mathomo",
+  "duaCategorySleep": "Robala",
+  "duaCategoryFoodDrink": "Dijo & Dino",
+  "duaCategoryForgiveness": "Tshwarelo",
+  "duaCategoryHome": "Gae",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Thuto ya Boiselamo",
   "sukunAudioTitle": "Sukun Diponagalo tša Medumo",
   "hadithCollections": "Dikgoboketšo tša Hadith",
+  "hadithSourcePending": "Mohlodi o netefaditšwego o sa emetše",
+  "hadithUnavailableTitle": "Dikgoboketšo tša hadith tše di netefaditšwego ga se tša hwetšagala ga bjale",
+  "hadithUnavailableBody": "Go aga mo go sa ithekgile ka phepo ya hadith ya ka ntle yeo e sa netefatšwago. Go phetla Hadith go dula go šitišitšwe go fihlela sete ya data yeo e hweditšwego e nyalantšhwa.",
   "paywallUnlockAll": "Notlolla dikarolo ka moka tša leeto la gago la semoya",
+  "premiumProductUnavailable": "Setšweletšwa sa Premium ga se hwetšagale gona bjale. Hle leka gape ka morago.",
+  "premiumPurchaseFailed": "Go reka go be go sa kgone go phethwa. Hle leka gape.",
   "paywallFeature1Title": "Mothuši wa Neural Plus",
   "paywallFeature1Desc": "Q&A ye e sa lekanyetšwego yeo e šomišago AI",
   "paywallFeature2Title": "E sa lekanyetšwego Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "E phumotšwe difaele tša ka ntle ga inthanete tša {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Phošo ya netweke. Hle leka gape.",
+  "placesLocationRequiredTitle": "Lefelo le a nyakega",
+  "placesLocationRequiredBody": "Bea lefelo pele gore mafelo a kgauswi a borapedi, dijo tša halal le dikolo tša Boiselamo di ka phuruphutšwa ka mo go nepagetšego.",
+  "placesMapTilesUnavailableTitle": "Dithaele tša mmapa ga di hwetšagale",
+  "placesMapTilesUnavailableBody": "Mothopo wa thaele ya mmapa wo o netefaditšwego ga se wa beakanywa bakeng sa go aga mo ga bjale. Mafelo a kgauswi a sa dutše a ka laetša go tšwa lefelong la gago leo le bolokilwego.",
+  "placesDataSourceUnavailableTitle": "E bea ya data yeo e sa hwetšagalego",
+  "placesDataSourceUnavailableBody": "Ntlha ya mafelelo ya datha ya mafelo ao a netefaditšwego ga se ya beakanywa bakeng sa go aga mo ga bjale. Beakanya PLACES_OVERPASS_API_URL go moemedi yo a dumeletšwego goba moabi pele o kgontšha nyakišišo ya kgauswi.",
   "unknownPlaceName": "Leina leo le sa Tsebjego",
   "islamicPlaceFallback": "Lefelo la Boiselamo",
-  "prayerNotificationTitle": "Nako ya {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Ke nako ya go rapela {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Di-dua tše di netefaditšwego ga di hwetšagale ga bjale",
-  "duaUnavailableBody": "Di-dua tša letšatši le letšatši tše di netefaditšwego ga se tša nyalantšhwa le sedirišwa se ga bjale. Ikgokaganye le mothopo wa leru go laetša di-duas tšeo di tšwago mothopo go e na le go boela morago mo go sa netefatšwago.",
-  "duaCategoryQuranic": "Dua ya Quranic",
-  "duaCategoryMorningEvening": "Mesong & Mantšiboa",
-  "duaCategoryTasbih": "Tasbih ya go swana",
-  "duaCategoryProtection": "Tšhireletšo",
-  "duaCategoryBeginning": "Mathomo",
-  "duaCategorySleep": "Robala",
-  "duaCategoryFoodDrink": "Dijo & Dino",
-  "duaCategoryForgiveness": "Tshwarelo",
-  "duaCategoryHome": "Gae",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Mohlodi o netefaditšwego o sa emetše",
-  "hadithUnavailableTitle": "Dikgoboketšo tša hadith tše di netefaditšwego ga se tša hwetšagala ga bjale",
-  "hadithUnavailableBody": "Go aga mo go sa ithekgile ka phepo ya hadith ya ka ntle yeo e sa netefatšwago. Go phetla Hadith go dula go šitišitšwe go fihlela sete ya data yeo e hweditšwego e nyalantšhwa.",
-  "appErrorOccurred": "Go ile gwa direga phošo",
-  "appUnknownError": "Phošo yeo e sa tsebjego",
-  "qiblaCompassErrorDetails": "Compass error: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "E phethilwe! MashAllah ke yena",
-  "zikrMeaningSubhanAllah": "Allah o ka godimo kudu ga go se phethagale mo gongwe le mo gongwe.",
-  "zikrMeaningAlhamdulillah": "Theto yohle ke ya Allah.",
-  "zikrMeaningAllahuAkbar": "Allah ke yo Mogolo.",
-  "zikrMeaningLaIlahaIllallah": "Ga go na modimo ge e se Allah.",
-  "zikrMeaningAstaghfirullah": "Ke nyaka tshwarelo ya Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ga go na maatla le maatla ntle le ka Allah.",
   "asmaMeaning1": "Motho yo a Holago",
   "asmaMeaning2": "Mogau",
   "asmaMeaning3": "Kgoši / Morena wa ka mo go sa felego",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Yo a sa Felego",
   "asmaMeaning97": "Mojalefa",
   "asmaMeaning98": "Tlhahlo e Lokilego Kudu",
-  "asmaMeaning99": "Ya Molwetši",
-  "duaMeaning1": "ba bangwe ba rapela, ‘Morena wa rena, re fe tše botse lefaseng le le ka morago ga lehu, gomme o re šireletše tlhokofatšong ya Mollo.’",
-  "duaMeaning2": "Modimo ga a imele moya ofe goba ofe ka tše di fetago tšeo o ka di rwalago: yo mongwe le yo mongwe o hwetša botse le ge e le bofe bjo bo bo dirilego, gomme o tlaišwa ke bobe bja bjona- ‘ Morena, o se ke wa re tšea mošomong ge re lebala goba re dira diphošo. Morena, o se ke wa re imetša bjalo ka ge o ile wa imetša bao ba lego pele ga rena. Morena, o se ke wa re imetša ka go feta kamoo re nago le matla a go rwala. Re swarele, re swarele, o re gaugele. O Mošireletši wa rena, ka gona re thuše kgahlanong le bao ba sa dumelego.’",
-  "duaMeaning3": "‘Morena wa rena, o se ke wa dumelela dipelo tša rena di fapoga ka morago ga ge O re hlahlile. Re fe kgaugelo ya Gago: O Mofa ka mehla.",
-  "duaMeaning4": "Morena, anke nna le bana ba ka re tšwele pele ka thapelo. Morena wa rena, amogela kgopelo ya ka.",
-  "duaMeaning5": "gomme o theošetše lephego la gago ka boikokobetšo go bona ka botho gomme o re, ‘Morena, ba gaugele, go no swana le ge ba be ba ntlhokomela ge ke be ke sa le yo monnyane.’",
-  "duaMeaning6": "a godišwe Modimo, yo a laolago e le ka kgonthe. [Moporofeta], o se ke wa kitimela go bolela pele kutollo e felela ka mo go feletšego eupša o re, ‘Morena, nkgoketša tsebo!’",
-  "duaMeaning7": "E re [Moporofeta], ‘Morena, tshwarela o gaugele: O mogau go feta bohle.’",
-  "duaMeaning8": "bao ba rapelago ba re, ‘Morena wa rena, re thabele balekane ba rena le bana. Re dire mehlala ye mebotse go bao ba go lemogago’.",
-  "islamicNewYear": "Ngwaga o Mofsa wa Boiselamo",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan ka la 1",
-  "specialDayDateLaylatAlQadr": "27 Ramadan ka la 27",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah ya go swana le yona",
-  "specialDayDateIslamicNewYear": "1 Muharram ka 1. Moharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal o ile a hlokomela",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Go laetša tafsir...",
-  "tafsirSourceLabel": "Mohlodi wa Tafsir",
-  "tafsirNoSurahFound": "Ga go na tafsir yeo e hweditšwego bakeng sa surah ye.",
-  "tafsirNoAyahFound": "Ga go na tafsir yeo e hweditšwego bakeng sa ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir e be e sa kgone go imelwa.",
-  "tafsirNoTextForAyah": "Ga go na sengwalwa sa tafsir bakeng sa ayah ye.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Mohlodi wa Tafsir o bušitše phošo ya HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Mohlodi wa tafsir wo o kgethilwego ga se wa bušetša dikeno.",
-  "premiumProductUnavailable": "Setšweletšwa sa Premium ga se hwetšagale gona bjale. Hle leka gape ka morago.",
-  "premiumPurchaseFailed": "Go reka go be go sa kgone go phethwa. Hle leka gape.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Tsela ya Boiselamo ya Lesedi",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Lefelo le a nyakega",
-  "placesLocationRequiredBody": "Bea lefelo pele gore mafelo a kgauswi a borapedi, dijo tša halal le dikolo tša Boiselamo di ka phuruphutšwa ka mo go nepagetšego.",
-  "placesMapTilesUnavailableTitle": "Dithaele tša mmapa ga di hwetšagale",
-  "placesMapTilesUnavailableBody": "Mothopo wa thaele ya mmapa wo o netefaditšwego ga se wa beakanywa bakeng sa go aga mo ga bjale. Mafelo a kgauswi a sa dutše a ka laetša go tšwa lefelong la gago leo le bolokilwego.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Senthara ya khamphase ga e hwetšagale go sedirišwa se.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Diteng tša Quran di be di sa kgone go laetšwa. Hle leka gape.",
-  "locationDetectionFailed": "Ga se ya kgona go lemoga lefelo la gago. Hle kgetha motse ka seatla goba o leke gape.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "E bea ya data yeo e sa hwetšagalego",
-  "placesDataSourceUnavailableBody": "Ntlha ya mafelelo ya datha ya mafelo ao a netefaditšwego ga se ya beakanywa bakeng sa go aga mo ga bjale. Beakanya PLACES_OVERPASS_API_URL go moemedi yo a dumeletšwego goba moabi pele o kgontšha nyakišišo ya kgauswi.",
-  "tafsirCacheUnavailable": "Verified tafsir ga e hwetšagale ka ntle ga inthanete ga bjale. Nyalantšha sete ya data ya tafsir yeo e hweditšwego pele o phetla."
+  "asmaMeaning99": "Ya Molwetši"
 }

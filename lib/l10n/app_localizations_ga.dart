@@ -953,6 +953,13 @@ class AppLocalizationsGa extends AppLocalizations {
   String get dailyVerse => 'Rann Laethúil';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Níl véarsa laethúil ar fáil';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Níl ábhar véarsa laethúil fíoraithe cumraithe don leagan seo fós. Ceangail leis an bhfoinse néil nó sioncronaigh taisce fíoraithe roimh bhrabhsáil.';
+
+  @override
   String get todaysIbadah => 'Ibadah an lae inniu';
 
   @override

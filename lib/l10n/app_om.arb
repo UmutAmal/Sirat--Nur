@@ -1,6 +1,7 @@
 {
   "@@locale": "om",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Karaa Ifaa Islaamaa",
   "home": "Mana",
   "quran": "Qur'aana",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib jedhamuun beekama",
   "isha": "Ishaa",
+  "prayerNotificationTitle": "Yeroo {prayerName}.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Yeroon kadhannaa {prayerName} amma.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Daataa fi Kuusaa",
   "clearCache": "Cache Qulqulleessi",
   "cacheClearedSuccess": "Cache milkaa'inaan qulqullaa'e",
@@ -34,6 +51,7 @@
   "currentLocation": "Bakka Ammaa (GPS) .",
   "locationServiceDisabled": "Tajaajilli bakka hojii ni hin hojjenne.",
   "locationPermissionDenied": "Hayyamni iddoo dhorkame.",
+  "locationDetectionFailed": "Bakka jirtu adda baasuu hin dandeenye. Maaloo magaalaa harkaan filadhu ykn irra deebi'ii yaali.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Dogoggorri uumame",
+  "appUnknownError": "Dogoggora hin beekamne",
+  "quranLoadFailed": "Qabiyyeen Qur'aanaa fe'amuu hin dandeenye. Mee irra deebi'ii yaalaa.",
   "retry": "Irra deebi'ii yaali",
+  "refreshAction": "Refresh",
   "cancel": "Haquu",
   "save": "Qusachuu",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Lakki",
   "surah": "Suuraa",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Fuula",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsir fe'amaa jira...",
+  "tafsirSourceLabel": "Tafsir madda",
+  "tafsirNoSurahFound": "Suuraa kanaaf tafsiirri hin argamne.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsiir fe'amuu hin dandeenye.",
+  "tafsirNoTextForAyah": "Ayyaana kanaaf barreeffamni tafsiira hin jiru.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Maddi Tafsir dogongora HTTP {statusCode} deebise.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Maddi tafsir filatame galtee tokkollee hin deebisne.",
+  "tafsirCacheUnavailable": "Verified tafsir hanga ammaatti offline hin argamu. Daawwachuu dura kuusaa deetaa tafsir madda ta'e walsimsiisi.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Bookmark Dabaluu",
   "removeBookmark": "Bookmark haqi",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "kaan immoo, ‘Yaa Gooftaa keenya adunyaa fi Aakhiratti toltuu nuuf kenni, azaaba ibiddaa irraa nu eegi’ jedhanii kadhatu.",
+  "duaMeaning2": "Waaqayyo lubbuu kamiyyuu kan isheen baachuu dandeessu caalaa hin ba’u: tokkoon tokkoon isaanii waan gaarii hojjete hunda argatu, hamaa isaas ni rakkata- ‘ Gooftaa, yoo daganne ykn dogoggorre hojiitti nu hin fudhatin. Gooftaa akkuma warra nu duraa ba'aa itti baate nutti hin ba'iin. Gooftaa humna baachuu qabnu caalaa nutti hin ba'iin. Dhiifama nuuf godhi, nuuf araarami. Ati Eegduu keenya waan taateef kaafiroota irraa nu gargaari’ jedheera.",
+  "duaMeaning3": "‘Yaa Gooftaa keenya erga nu qajeelchitee booda qalbiin keenya hin maqin. Araarama Kee nuuf kenni: Ati yeroo hundumaa kan kennudha.",
+  "duaMeaning4": "Gooftaa anaa fi sanyii koo kadhannaa akka itti fufnu naaf kenni. Yaa Gooftaa keenya gaaffii koo fudhadhu.",
+  "duaMeaning5": "akkasumas gaarummaadhaan gara isaaniitti gad of deebisuudhaan baallee kee gadi qabdee, ‘Akkuma yeroon xiqqaa turetti naaf kunuunsan, isaaniif araarami’ jedhi.",
+  "duaMeaning6": "Waaqayyo, inni dhuguma to’achaa jiru ol haa ta’u. [Raajii], utuu mul’anni guutummaatti hin xumuramin qara’uuf hin ariifatin, ‘Gooftaa beekumsa na dabali!’ jedhi malee!",
+  "duaMeaning7": "[Nabiyyii] akkana jedhi, ‘Gooftaa, dhiifama godhi, araaramis: Ati hunda caalaa araaramaadha’.",
+  "duaMeaning8": "warra kadhatan, ‘Yaa Gooftaa keenya haadha manaa fi sanyii keenyatti gammachuu nuuf kenni. Warra Si beekaniif fakkeenya gaarii nuuf taasisi’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Soomana",
   "quranReading": "Dubbisa Qur'aana",
   "prayers": "Kadhannaa",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Adeemsa Torbanitti",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Bara Haaraa Islaamaa",
+  "mawlidAnNabi": "Mawlid an-Nabii",
+  "specialDayDateRamadanStart": "1 Ramadaanaa",
+  "specialDayDateLaylatAlQadr": "27 Ramadaanaa",
+  "specialDayDateEidAlFitr": "1 Shawwaal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjaa",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabii al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Kallattii",
   "compass": "Koompaasii",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qiblaan argame!",
   "turnDevice": "Meeshaa keessan gara Qiblaatti garagalchi",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Meeshaa kana irratti sensariin koompaasii hin argamu.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "Lakkaa'uuf tuqi",
+  "zikrCompletedMashAllah": "Xumurameera! MashAllah",
+  "zikrMeaningSubhanAllah": "Rabbiin mudaa hundarra baay’ee ol ta’a.",
+  "zikrMeaningAlhamdulillah": "Galanni hundi kan Rabbiiti.",
+  "zikrMeaningAllahuAkbar": "Rabbiin Guddaadha.",
+  "zikrMeaningLaIlahaIllallah": "Rabbiin malee gabbaramaan biraa hin jiru.",
+  "zikrMeaningAstaghfirullah": "Araarama Rabbii nan barbaada.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Karaa Rabbiin malee humni fi humni hin jiru.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Sagalee Sagalee",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Safartuu Qiblaa",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Safartuu barbaachisa. Meeshaa fakkii-8 irratti mul’atu naannessi.",
   "dailyVerse": "Keeyyata Guyyaa Guyyaa",
+  "dailyVerseUnavailableTitle": "Keeyyata guyyaa guyyaa hin argamne",
+  "dailyVerseUnavailableBody": "Qabiyyeen keeyyata guyyaa mirkanaa'e ammallee ijaarsa kanaaf hin qindaa'in. Madda duumessaa waliin walqabsiisi ykn osoo hin daawwatin dura kaachota mirkanaa'e walsimsiisi.",
   "todaysIbadah": "Ibada har'aa",
   "quickAccess": "Saffisaan Argachuu",
   "assistant": "Gargaaraa",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duaa mirkanaa'e ammallee hin jiru",
+  "duaUnavailableBody": "Duas guyyaa guyyaa mirkanaa'e hanga ammaatti meeshaa kana waliin wal hin simne. Kufaatii hin mirkanoofne osoo hin taane duas madda fe'uuf madda duumessaa waliin walqabsiisi.",
+  "duaCategoryQuranic": "Duaa Qur'aanaa",
+  "duaCategoryMorningEvening": "Ganama & Galgala",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Eegumsa",
+  "duaCategoryBeginning": "Jalqaba",
+  "duaCategorySleep": "Rafuu",
+  "duaCategoryFoodDrink": "Nyaata fi Dhugaatii",
+  "duaCategoryForgiveness": "Dhiifama",
+  "duaCategoryHome": "Mana",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Barnoota Islaamaa",
   "sukunAudioTitle": "Sukun Sagaleewwan",
   "hadithCollections": "Kuusaa Hadiisa",
+  "hadithSourcePending": "Maddi mirkanaa'e eegamaa jira",
+  "hadithUnavailableTitle": "Kuusaan hadiisa mirkanaa'e hanga ammaatti hin argamu",
+  "hadithUnavailableBody": "Ijaarsi kun ammallee nyaata hadiisa alaa hin mirkanoofne irratti hundaa’a. Daawwachuun Hadiisa hanga kuusaan deetaa madda walsimsiifamutti hojii irraa oolfamee hafa.",
   "paywallUnlockAll": "Imala hafuuraa keessaniif amaloota hunda banaa",
+  "premiumProductUnavailable": "Omishni sadarkaa olaanaa qabu yeroo ammaa kana hin argamu. Mee booda irra deebi'ii yaalaa.",
+  "premiumPurchaseFailed": "Bittaa xumuramuu hin dandeenye. Mee irra deebi'ii yaalaa.",
   "paywallFeature1Title": "Gargaaraa Niwuroonii Plus",
   "paywallFeature1Desc": "Gaaffii fi Deebii AIn humna qabu daangaa hin qabne",
   "paywallFeature2Title": "Daangaa Hin Qabne Toora Alaa",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Faayilota sarara ala jiran {reciter} tiif haqame.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Dogoggora networkii. Mee irra deebi'ii yaalaa.",
+  "placesLocationRequiredTitle": "Bakki barbaachisaadha",
+  "placesLocationRequiredBody": "Dursa bakka kaa'i akka masjiidota dhiyoo jiran, nyaanni halaala, fi manneen barnootaa Islaamaa sirritti sakatta'amuu danda'uuf.",
+  "placesMapTilesUnavailableTitle": "Tiloonni kaartaa hin argaman",
+  "placesMapTilesUnavailableBody": "Maddi taayilii kaartaa mirkanaa'e hanga ammaatti ijaarsa kanaaf hin qindaa'in. Bakkeewwan dhiyoo jiran ammallee bakka qusatte irraa fe'uu danda'u.",
+  "placesDataSourceUnavailableTitle": "Deetaan akka hin argamne kaa'a",
+  "placesDataSourceUnavailableBody": "Qabxiin xumura deetaa iddoowwan mirkanaa'e ammallee ijaarsa kanaaf hin qindaa'in. Barbaacha dhiyoo dandeessisuun dura PLACES_OVERPASS_API_URL gara bakka bu'aa ykn dhiyeessaa mirkanaa'etti saagi.",
   "unknownPlaceName": "Maqaa Hin Beekamne",
   "islamicPlaceFallback": "Bakka Islaamaa",
-  "prayerNotificationTitle": "Yeroo {prayerName}.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Yeroon kadhannaa {prayerName} amma.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duaa mirkanaa'e ammallee hin jiru",
-  "duaUnavailableBody": "Duas guyyaa guyyaa mirkanaa'e hanga ammaatti meeshaa kana waliin wal hin simne. Kufaatii hin mirkanoofne osoo hin taane duas madda fe'uuf madda duumessaa waliin walqabsiisi.",
-  "duaCategoryQuranic": "Duaa Qur'aanaa",
-  "duaCategoryMorningEvening": "Ganama & Galgala",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Eegumsa",
-  "duaCategoryBeginning": "Jalqaba",
-  "duaCategorySleep": "Rafuu",
-  "duaCategoryFoodDrink": "Nyaata fi Dhugaatii",
-  "duaCategoryForgiveness": "Dhiifama",
-  "duaCategoryHome": "Mana",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Maddi mirkanaa'e eegamaa jira",
-  "hadithUnavailableTitle": "Kuusaan hadiisa mirkanaa'e hanga ammaatti hin argamu",
-  "hadithUnavailableBody": "Ijaarsi kun ammallee nyaata hadiisa alaa hin mirkanoofne irratti hundaa’a. Daawwachuun Hadiisa hanga kuusaan deetaa madda walsimsiifamutti hojii irraa oolfamee hafa.",
-  "appErrorOccurred": "Dogoggorri uumame",
-  "appUnknownError": "Dogoggora hin beekamne",
-  "qiblaCompassErrorDetails": "Compass error: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Xumurameera! MashAllah",
-  "zikrMeaningSubhanAllah": "Rabbiin mudaa hundarra baay’ee ol ta’a.",
-  "zikrMeaningAlhamdulillah": "Galanni hundi kan Rabbiiti.",
-  "zikrMeaningAllahuAkbar": "Rabbiin Guddaadha.",
-  "zikrMeaningLaIlahaIllallah": "Rabbiin malee gabbaramaan biraa hin jiru.",
-  "zikrMeaningAstaghfirullah": "Araarama Rabbii nan barbaada.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Karaa Rabbiin malee humni fi humni hin jiru.",
   "asmaMeaning1": "Faayidaa",
   "asmaMeaning2": "Rahmaan",
   "asmaMeaning3": "Mootii / Gooftaa Bara Baraa",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Kan Bara Baraa",
   "asmaMeaning97": "Dhaaltuu",
   "asmaMeaning98": "Qajeelfama hunda caalaa qajeelaa",
-  "asmaMeaning99": "Kan Dhukkubsataa",
-  "duaMeaning1": "kaan immoo, ‘Yaa Gooftaa keenya adunyaa fi Aakhiratti toltuu nuuf kenni, azaaba ibiddaa irraa nu eegi’ jedhanii kadhatu.",
-  "duaMeaning2": "Waaqayyo lubbuu kamiyyuu kan isheen baachuu dandeessu caalaa hin ba’u: tokkoon tokkoon isaanii waan gaarii hojjete hunda argatu, hamaa isaas ni rakkata- ‘ Gooftaa, yoo daganne ykn dogoggorre hojiitti nu hin fudhatin. Gooftaa akkuma warra nu duraa ba'aa itti baate nutti hin ba'iin. Gooftaa humna baachuu qabnu caalaa nutti hin ba'iin. Dhiifama nuuf godhi, nuuf araarami. Ati Eegduu keenya waan taateef kaafiroota irraa nu gargaari’ jedheera.",
-  "duaMeaning3": "‘Yaa Gooftaa keenya erga nu qajeelchitee booda qalbiin keenya hin maqin. Araarama Kee nuuf kenni: Ati yeroo hundumaa kan kennudha.",
-  "duaMeaning4": "Gooftaa anaa fi sanyii koo kadhannaa akka itti fufnu naaf kenni. Yaa Gooftaa keenya gaaffii koo fudhadhu.",
-  "duaMeaning5": "akkasumas gaarummaadhaan gara isaaniitti gad of deebisuudhaan baallee kee gadi qabdee, ‘Akkuma yeroon xiqqaa turetti naaf kunuunsan, isaaniif araarami’ jedhi.",
-  "duaMeaning6": "Waaqayyo, inni dhuguma to’achaa jiru ol haa ta’u. [Raajii], utuu mul’anni guutummaatti hin xumuramin qara’uuf hin ariifatin, ‘Gooftaa beekumsa na dabali!’ jedhi malee!",
-  "duaMeaning7": "[Nabiyyii] akkana jedhi, ‘Gooftaa, dhiifama godhi, araaramis: Ati hunda caalaa araaramaadha’.",
-  "duaMeaning8": "warra kadhatan, ‘Yaa Gooftaa keenya haadha manaa fi sanyii keenyatti gammachuu nuuf kenni. Warra Si beekaniif fakkeenya gaarii nuuf taasisi’.",
-  "islamicNewYear": "Bara Haaraa Islaamaa",
-  "mawlidAnNabi": "Mawlid an-Nabii",
-  "specialDayDateRamadanStart": "1 Ramadaanaa",
-  "specialDayDateLaylatAlQadr": "27 Ramadaanaa",
-  "specialDayDateEidAlFitr": "1 Shawwaal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjaa",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabii al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Tafsir fe'amaa jira...",
-  "tafsirSourceLabel": "Tafsir madda",
-  "tafsirNoSurahFound": "Suuraa kanaaf tafsiirri hin argamne.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsiir fe'amuu hin dandeenye.",
-  "tafsirNoTextForAyah": "Ayyaana kanaaf barreeffamni tafsiira hin jiru.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Maddi Tafsir dogongora HTTP {statusCode} deebise.",
-  "tafsirNoEntriesReturned": "Maddi tafsir filatame galtee tokkollee hin deebisne.",
-  "premiumProductUnavailable": "Omishni sadarkaa olaanaa qabu yeroo ammaa kana hin argamu. Mee booda irra deebi'ii yaalaa.",
-  "premiumPurchaseFailed": "Bittaa xumuramuu hin dandeenye. Mee irra deebi'ii yaalaa.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Karaa Ifaa Islaamaa",
-  "downloadPartiallyFinishedForReciter": "Download finished for {reciter} with {failed} failed surahs ({downloaded}/{total} downloaded).",
-  "placesLocationRequiredTitle": "Bakki barbaachisaadha",
-  "placesLocationRequiredBody": "Dursa bakka kaa'i akka masjiidota dhiyoo jiran, nyaanni halaala, fi manneen barnootaa Islaamaa sirritti sakatta'amuu danda'uuf.",
-  "placesMapTilesUnavailableTitle": "Tiloonni kaartaa hin argaman",
-  "placesMapTilesUnavailableBody": "Maddi taayilii kaartaa mirkanaa'e hanga ammaatti ijaarsa kanaaf hin qindaa'in. Bakkeewwan dhiyoo jiran ammallee bakka qusatte irraa fe'uu danda'u.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Meeshaa kana irratti sensariin koompaasii hin argamu.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Qabiyyeen Qur'aanaa fe'amuu hin dandeenye. Mee irra deebi'ii yaalaa.",
-  "locationDetectionFailed": "Bakka jirtu adda baasuu hin dandeenye. Maaloo magaalaa harkaan filadhu ykn irra deebi'ii yaali.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Deetaan akka hin argamne kaa'a",
-  "placesDataSourceUnavailableBody": "Qabxiin xumura deetaa iddoowwan mirkanaa'e ammallee ijaarsa kanaaf hin qindaa'in. Barbaacha dhiyoo dandeessisuun dura PLACES_OVERPASS_API_URL gara bakka bu'aa ykn dhiyeessaa mirkanaa'etti saagi.",
-  "tafsirCacheUnavailable": "Verified tafsir hanga ammaatti offline hin argamu. Daawwachuu dura kuusaa deetaa tafsir madda ta'e walsimsiisi."
+  "asmaMeaning99": "Kan Dhukkubsataa"
 }

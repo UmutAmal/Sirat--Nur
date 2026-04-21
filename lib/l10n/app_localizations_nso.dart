@@ -960,6 +960,14 @@ class AppLocalizationsNso extends AppLocalizations {
   String get dailyVerse => 'Temana ya Letšatši le Letšatši';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Temana ya letšatši le letšatši ga e hwetšagale';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Diteng tša ditemana tša letšatši le letšatši tše di netefaditšwego ga se tša beakanywa bakeng sa go aga mo ga bjale. Ikgokaganye le mothopo wa leru goba o nyalantšha cache ye e netefaditšwego pele o phetla.';
+
+  @override
   String get todaysIbadah => 'Ibadah ya lehono';
 
   @override

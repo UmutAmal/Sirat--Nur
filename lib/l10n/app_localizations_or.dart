@@ -957,6 +957,13 @@ class AppLocalizationsOr extends AppLocalizations {
   String get dailyVerse => 'ଦ Daily ନିକ ପଦ |';
 
   @override
+  String get dailyVerseUnavailableTitle => 'ଦ Daily ନିକ ପଦ ଉପଲବ୍ଧ ନାହିଁ |';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ଯାଞ୍ଚ ହୋଇଥିବା ଦ daily ନିକ ପଦ ବିଷୟବସ୍ତୁ ଏହି ନିର୍ମାଣ ପାଇଁ ଏପର୍ଯ୍ୟନ୍ତ ବିନ୍ୟାସ ହୋଇନାହିଁ | କ୍ଲାଉଡ୍ ଉତ୍ସ ସହିତ ସଂଯୋଗ କରନ୍ତୁ କିମ୍ବା ବ୍ରାଉଜିଂ କରିବା ପୂର୍ବରୁ ଏକ ଯାଞ୍ଚ ହୋଇଥିବା କ୍ୟାଚ୍ ସିଙ୍କ କରନ୍ତୁ |';
+
+  @override
   String get todaysIbadah => 'ଆଜିର ଇବାଡା |';
 
   @override

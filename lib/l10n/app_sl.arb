@@ -1,6 +1,7 @@
 {
   "@@locale": "sl",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamska pot svetlobe",
   "home": "domov",
   "quran": "Koran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Čas za {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Čas je za molitev {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Podatki in shranjevanje",
   "clearCache": "Počisti predpomnilnik",
   "cacheClearedSuccess": "Predpomnilnik je uspešno počiščen",
@@ -34,6 +51,7 @@
   "currentLocation": "Trenutna lokacija (GPS)",
   "locationServiceDisabled": "Lokacijska storitev je onemogočena.",
   "locationPermissionDenied": "Dovoljenje za lokacijo zavrnjeno.",
+  "locationDetectionFailed": "Vaše lokacije ni bilo mogoče zaznati. Izberite mesto ročno ali poskusite znova.",
   "citiesCount": "{count} mest",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ni rezultatov",
   "loading": "Nalaganje...",
   "error": "Napaka",
+  "appErrorOccurred": "Prišlo je do napake",
+  "appUnknownError": "Neznana napaka",
+  "quranLoadFailed": "Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno",
   "retry": "Poskusite znova",
+  "refreshAction": "Osveži",
   "cancel": "Prekliči",
   "save": "Shrani",
   "delete": "Izbriši",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "št",
   "surah": "Sura",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Stran",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Nalaganje tafsirja ...",
+  "tafsirSourceLabel": "Tafsir vir",
+  "tafsirNoSurahFound": "Za to suro ni bilo mogoče najti nobenega tefsirja.",
+  "tafsirNoAyahFound": "Ni tefsirja za ajet {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsirja ni bilo mogoče naložiti.",
+  "tafsirNoTextForAyah": "Za ta ajet ni tafsirskega besedila.",
+  "tafsirDownloadingProgress": "Prenašanje tafsirja {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Nalaganje tefsirja {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Vir Tafsir je vrnil napako HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Izbrani vir tafsirja ni vrnil nobenega vnosa.",
+  "tafsirCacheUnavailable": "Preverjeni tafsir še ni na voljo brez povezave. Pred brskanjem sinhronizirajte pridobljeni nabor podatkov tafsir.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Dodaj zaznamek",
   "removeBookmark": "Odstrani zaznamek",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "drugi molijo: 'Naš Gospod, daj nam dobro na tem svetu in na onstranstvu in nas varuj pred mukami ognja.'",
+  "duaMeaning2": "Bog nobene duše ne obremenjuje z več, kot lahko prenese: vsaka pridobi vse, kar je dobrega storila, in trpi zaradi slabega – ‘Gospod, ne obremenjuj nas, če pozabljamo ali delamo napake. Gospod, ne obremenjuj nas, kakor si obremenjeval tiste pred nami. Gospod, ne obremenjuj nas z več, kot imamo moči nositi. Oprosti nam, odpusti nam in usmili se nas. Ti si naš zaščitnik, zato nam pomagaj proti nevernikom.«",
+  "duaMeaning3": "'Naš Gospod, ne dovoli, da naša srca skrenejo, potem ko si nas vodil. Podeli nam svoje usmiljenje: Ti si tisti, ki vedno daje.",
+  "duaMeaning4": "Gospod, daj, da jaz in moje potomstvo nadaljujemo z molitvijo. Gospod naš, sprejmi mojo prošnjo.",
+  "duaMeaning5": "in spusti svoje krilo v ponižnosti proti njim v prijaznosti in reci: 'Gospod, usmili se jih, tako kot so skrbeli zame, ko sem bil majhen.'",
+  "duaMeaning6": "vzvišen bodi Bog, tisti, ki resnično obvladuje. [Prerok], ne hiti recitirati, preden je razodetje popolnoma dokončano, ampak reci: 'Gospod, pomnoži me v spoznanju!'",
+  "duaMeaning7": "Reci [prerok]: 'Gospod, odpusti in usmili se: ti si najbolj usmiljen od vseh.'",
+  "duaMeaning8": "tisti, ki molijo: 'Naš Gospod, daj nam veselje v naših zakoncih in potomcih. Naredi nas za dober zgled tistim, ki se Te zavedajo.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Postenje",
   "quranReading": "Branje Korana",
   "prayers": "Molitve",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Tedenski napredek",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "islamsko novo leto",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1. ramadan",
+  "specialDayDateLaylatAlQadr": "27 ramazan",
+  "specialDayDateEidAlFitr": "1 šavval",
+  "specialDayDateEidAlAdha": "10 zul hidždže",
+  "specialDayDateIslamicNewYear": "1 muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Smer Qibla",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla najdena!",
   "turnDevice": "Obrnite napravo proti Qibli",
+  "qiblaCompassErrorDetails": "Napaka kompasa: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Senzor kompasa ni na voljo v tej napravi.",
+  "qiblaLocationRequiredTitle": "Zahtevana lokacija za Qiblo",
+  "qiblaLocationRequiredBody": "Pred uporabo kompasa Qibla nastavite svojo dejansko lokacijo, da lahko smer natančno izračunate.",
+  "adhanNotificationChannelName": "Adhan obvestila",
+  "adhanNotificationChannelDescription": "Opozorila o času molitve z zvokom ezana.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Ciljno število: {target}",
   "tapToCount": "Tapnite za štetje",
+  "zikrCompletedMashAllah": "Dokončano! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah je daleč nad vsako nepopolnostjo.",
+  "zikrMeaningAlhamdulillah": "Vsa slava pripada Allahu.",
+  "zikrMeaningAllahuAkbar": "Allah je največji.",
+  "zikrMeaningLaIlahaIllallah": "Ni boga razen Allaha.",
+  "zikrMeaningAstaghfirullah": "Iščem Allahovo odpuščanje.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ni moči in moči razen prek Allaha.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Zvočni glas",
+  "audioVoiceMisharyAlafasy": "Moški (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Moški (Abdul Basit)",
+  "audioVoiceSudais": "Moški (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kalibracija Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Potrebna kalibracija. Zavrtite napravo na sliki 8.",
   "dailyVerse": "Dnevni verz",
+  "dailyVerseUnavailableTitle": "Dnevni verz ni na voljo",
+  "dailyVerseUnavailableBody": "Vsebina preverjenih dnevnih verzov še ni konfigurirana za to zgradbo. Pred brskanjem se povežite z virom v oblaku ali sinhronizirajte preverjen predpomnilnik.",
   "todaysIbadah": "Današnji ibadah",
   "quickAccess": "Hitri dostop",
   "assistant": "Pomočnik",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Preverjene due še niso na voljo",
+  "duaUnavailableBody": "Preverjeni dnevni dua še niso bili sinhronizirani s to napravo. Povežite se z virom v oblaku, da naložite izvirne due namesto nepreverjenega nadomestnega.",
+  "duaCategoryQuranic": "Kur'anska dua",
+  "duaCategoryMorningEvening": "Zjutraj in zvečer",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Zaščita",
+  "duaCategoryBeginning": "Začetki",
+  "duaCategorySleep": "spi",
+  "duaCategoryFoodDrink": "Hrana in pijača",
+  "duaCategoryForgiveness": "Odpuščanje",
+  "duaCategoryHome": "domov",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamsko izobraževanje",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Zbirke hadisov",
+  "hadithSourcePending": "Preverjen vir čaka",
+  "hadithUnavailableTitle": "Preverjene zbirke hadisov še niso na voljo",
+  "hadithUnavailableBody": "Ta zgradba je še vedno odvisna od nepreverjenega zunanjega vira hadisa. Brskanje po hadisih ostane onemogočeno, dokler se izvorni nabor podatkov ne sinhronizira.",
   "paywallUnlockAll": "Odklenite vse funkcije za svoje duhovno potovanje",
+  "premiumProductUnavailable": "Premium izdelek trenutno ni na voljo. Poskusite znova pozneje.",
+  "premiumPurchaseFailed": "Nakupa ni bilo mogoče dokončati. prosim poskusite ponovno",
   "paywallFeature1Title": "Nevronski pomočnik Plus",
   "paywallFeature1Desc": "Neomejena vprašanja in odgovori, ki jih poganja AI",
   "paywallFeature2Title": "Neomejeno brez povezave",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Prenos je končan za {reciter} z {failed} neuspelimi surami ({downloaded}/{total} preneseno).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Izbrisane datoteke brez povezave za {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Omrežna napaka. prosim poskusite ponovno",
+  "placesLocationRequiredTitle": "Zahtevana lokacija",
+  "placesLocationRequiredBody": "Najprej nastavite lokacijo, da bo mogoče natančno preiskati bližnje mošeje, halal hrano in islamske šole.",
+  "placesMapTilesUnavailableTitle": "Ploščice zemljevida niso na voljo",
+  "placesMapTilesUnavailableBody": "Preverjen vir ploščic zemljevida še ni konfiguriran za to zgradbo. Mesta v bližini se lahko še vedno naložijo z vaše shranjene lokacije.",
+  "placesDataSourceUnavailableTitle": "Podatki o mestih niso na voljo",
+  "placesDataSourceUnavailableBody": "Preverjena končna točka podatkov o mestih še ni konfigurirana za to zgradbo. Preden omogočite iskanje v bližini, nastavite PLACES_OVERPASS_API_URL na odobrenega posrednika ali ponudnika.",
   "unknownPlaceName": "Neznano ime",
   "islamicPlaceFallback": "Islamsko mesto",
-  "prayerNotificationTitle": "Čas za {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Čas je za molitev {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Preverjene due še niso na voljo",
-  "duaUnavailableBody": "Preverjeni dnevni dua še niso bili sinhronizirani s to napravo. Povežite se z virom v oblaku, da naložite izvirne due namesto nepreverjenega nadomestnega.",
-  "duaCategoryQuranic": "Kur'anska dua",
-  "duaCategoryMorningEvening": "Zjutraj in zvečer",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Zaščita",
-  "duaCategoryBeginning": "Začetki",
-  "duaCategorySleep": "spi",
-  "duaCategoryFoodDrink": "Hrana in pijača",
-  "duaCategoryForgiveness": "Odpuščanje",
-  "duaCategoryHome": "domov",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Preverjen vir čaka",
-  "hadithUnavailableTitle": "Preverjene zbirke hadisov še niso na voljo",
-  "hadithUnavailableBody": "Ta zgradba je še vedno odvisna od nepreverjenega zunanjega vira hadisa. Brskanje po hadisih ostane onemogočeno, dokler se izvorni nabor podatkov ne sinhronizira.",
-  "appErrorOccurred": "Prišlo je do napake",
-  "appUnknownError": "Neznana napaka",
-  "qiblaCompassErrorDetails": "Napaka kompasa: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Dokončano! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah je daleč nad vsako nepopolnostjo.",
-  "zikrMeaningAlhamdulillah": "Vsa slava pripada Allahu.",
-  "zikrMeaningAllahuAkbar": "Allah je največji.",
-  "zikrMeaningLaIlahaIllallah": "Ni boga razen Allaha.",
-  "zikrMeaningAstaghfirullah": "Iščem Allahovo odpuščanje.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ni moči in moči razen prek Allaha.",
   "asmaMeaning1": "The Beneficent",
   "asmaMeaning2": "Usmiljeni",
   "asmaMeaning3": "Kralj / Večni gospodar",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Večni",
   "asmaMeaning97": "Dedič",
   "asmaMeaning98": "The Most Righteous Guide",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "drugi molijo: 'Naš Gospod, daj nam dobro na tem svetu in na onstranstvu in nas varuj pred mukami ognja.'",
-  "duaMeaning2": "Bog nobene duše ne obremenjuje z več, kot lahko prenese: vsaka pridobi vse, kar je dobrega storila, in trpi zaradi slabega – ‘Gospod, ne obremenjuj nas, če pozabljamo ali delamo napake. Gospod, ne obremenjuj nas, kakor si obremenjeval tiste pred nami. Gospod, ne obremenjuj nas z več, kot imamo moči nositi. Oprosti nam, odpusti nam in usmili se nas. Ti si naš zaščitnik, zato nam pomagaj proti nevernikom.«",
-  "duaMeaning3": "'Naš Gospod, ne dovoli, da naša srca skrenejo, potem ko si nas vodil. Podeli nam svoje usmiljenje: Ti si tisti, ki vedno daje.",
-  "duaMeaning4": "Gospod, daj, da jaz in moje potomstvo nadaljujemo z molitvijo. Gospod naš, sprejmi mojo prošnjo.",
-  "duaMeaning5": "in spusti svoje krilo v ponižnosti proti njim v prijaznosti in reci: 'Gospod, usmili se jih, tako kot so skrbeli zame, ko sem bil majhen.'",
-  "duaMeaning6": "vzvišen bodi Bog, tisti, ki resnično obvladuje. [Prerok], ne hiti recitirati, preden je razodetje popolnoma dokončano, ampak reci: 'Gospod, pomnoži me v spoznanju!'",
-  "duaMeaning7": "Reci [prerok]: 'Gospod, odpusti in usmili se: ti si najbolj usmiljen od vseh.'",
-  "duaMeaning8": "tisti, ki molijo: 'Naš Gospod, daj nam veselje v naših zakoncih in potomcih. Naredi nas za dober zgled tistim, ki se Te zavedajo.",
-  "islamicNewYear": "islamsko novo leto",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1. ramadan",
-  "specialDayDateLaylatAlQadr": "27 ramazan",
-  "specialDayDateEidAlFitr": "1 šavval",
-  "specialDayDateEidAlAdha": "10 zul hidždže",
-  "specialDayDateIslamicNewYear": "1 muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Osveži",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Nalaganje tafsirja ...",
-  "tafsirSourceLabel": "Tafsir vir",
-  "tafsirNoSurahFound": "Za to suro ni bilo mogoče najti nobenega tefsirja.",
-  "tafsirNoAyahFound": "Ni tefsirja za ajet {ayah}.",
-  "tafsirLoadFailed": "Tafsirja ni bilo mogoče naložiti.",
-  "tafsirNoTextForAyah": "Za ta ajet ni tafsirskega besedila.",
-  "tafsirDownloadingProgress": "Prenašanje tafsirja {current}/{total}",
-  "tafsirLoadingProgress": "Nalaganje tefsirja {current}/{total}",
-  "tafsirApiStatusError": "Vir Tafsir je vrnil napako HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Izbrani vir tafsirja ni vrnil nobenega vnosa.",
-  "premiumProductUnavailable": "Premium izdelek trenutno ni na voljo. Poskusite znova pozneje.",
-  "premiumPurchaseFailed": "Nakupa ni bilo mogoče dokončati. prosim poskusite ponovno",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamska pot svetlobe",
-  "downloadPartiallyFinishedForReciter": "Prenos je končan za {reciter} z {failed} neuspelimi surami ({downloaded}/{total} preneseno).",
-  "placesLocationRequiredTitle": "Zahtevana lokacija",
-  "placesLocationRequiredBody": "Najprej nastavite lokacijo, da bo mogoče natančno preiskati bližnje mošeje, halal hrano in islamske šole.",
-  "placesMapTilesUnavailableTitle": "Ploščice zemljevida niso na voljo",
-  "placesMapTilesUnavailableBody": "Preverjen vir ploščic zemljevida še ni konfiguriran za to zgradbo. Mesta v bližini se lahko še vedno naložijo z vaše shranjene lokacije.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Moški (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Moški (Abdul Basit)",
-  "audioVoiceSudais": "Moški (Sudais)",
-  "qiblaSensorUnavailable": "Senzor kompasa ni na voljo v tej napravi.",
-  "adhanNotificationChannelName": "Adhan obvestila",
-  "adhanNotificationChannelDescription": "Opozorila o času molitve z zvokom ezana.",
-  "quranLoadFailed": "Vsebine Korana ni bilo mogoče naložiti. prosim poskusite ponovno",
-  "locationDetectionFailed": "Vaše lokacije ni bilo mogoče zaznati. Izberite mesto ročno ali poskusite znova.",
-  "qiblaLocationRequiredTitle": "Zahtevana lokacija za Qiblo",
-  "qiblaLocationRequiredBody": "Pred uporabo kompasa Qibla nastavite svojo dejansko lokacijo, da lahko smer natančno izračunate.",
-  "placesDataSourceUnavailableTitle": "Podatki o mestih niso na voljo",
-  "placesDataSourceUnavailableBody": "Preverjena končna točka podatkov o mestih še ni konfigurirana za to zgradbo. Preden omogočite iskanje v bližini, nastavite PLACES_OVERPASS_API_URL na odobrenega posrednika ali ponudnika.",
-  "tafsirCacheUnavailable": "Preverjeni tafsir še ni na voljo brez povezave. Pred brskanjem sinhronizirajte pridobljeni nabor podatkov tafsir."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

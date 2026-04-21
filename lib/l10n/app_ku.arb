@@ -1,6 +1,7 @@
 {
   "@@locale": "ku",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Riya Îslamî ya Ronahî",
   "home": "Home",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Dema {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Wextê duakirinê ye {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Storage",
   "clearCache": "Cache paqij bike",
   "cacheClearedSuccess": "Cache bi serkeftî hate paqij kirin",
@@ -34,6 +51,7 @@
   "currentLocation": "Cihê Niha (GPS)",
   "locationServiceDisabled": "Xizmeta cihan neçalak e.",
   "locationPermissionDenied": "Destûra cihan hat redkirin.",
+  "locationDetectionFailed": "Cihê we nehat tespîtkirin. Ji kerema xwe bajarek bi destan hilbijêrin an dîsa biceribînin.",
   "citiesCount": "{count} bajar",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Encam nehat dîtin",
   "loading": "Barkirin...",
   "error": "Error",
+  "appErrorOccurred": "Çewtiyek derket",
+  "appUnknownError": "Çewtiya nenas",
+  "quranLoadFailed": "Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne.",
   "retry": "Ji nû ve biceribîne",
+  "refreshAction": "Refresh",
   "cancel": "Betal bike",
   "save": "Save",
   "delete": "Jêbirin",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Na",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Page",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tefsîr tê barkirin...",
+  "tafsirSourceLabel": "Çavkaniya Tefsîr",
+  "tafsirNoSurahFound": "Ji bo vê sûreyê tefsîr nehat dîtin.",
+  "tafsirNoAyahFound": "Ji bo ayah {ayah} tefsîr nehat dîtin.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tefsîr nehat barkirin.",
+  "tafsirNoTextForAyah": "Ji bo vê ayetê nivîsek tefsîr tune.",
+  "tafsirDownloadingProgress": "Tefsîr tê daxistin {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tefsîr tê barkirin {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Çavkaniya Tefsîrê xeletiyek HTTP {statusCode} vegerand.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Çavkaniya tefsîrê ya hilbijartî tu têketin venegeriya.",
+  "tafsirCacheUnavailable": "Tefsîreke verastkirî hîn negirêdayî ye. Berî gerokê danehevek tefsîrê ya jêderkî hevdeng bikin.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Bookmark lê zêde bike",
   "removeBookmark": "Nîşanê jêbirin",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "yên din jî dua dikin: “Rebbê me, tu li dinya û axretê xêrê bide me û me ji ezabê agir biparêze.”",
+  "duaMeaning2": "Xwedê ji barkirina tu canî zêdetir barê xwe bar nake: her kes çi qenciya ku kiriye bi dest dixe û xerabiya wî jî dikişîne- \"Ya Rebbî, heger em ji bîr bikin an xeletiyan bikin, me negire ser karê xwe.\" Ya Rebbî, çawa ku te li yên beriya me bar kir, li me bar neke. Ya Xudan, ji hêza me zêdetir barê me bar neke. Li me bibore, li me bibexşîne û li me were rehmê. Tu Parêzvanê me yî, vêca li hember kafiran alîkariya me bike.'",
+  "duaMeaning3": "“Rebbê me, piştî ku te em rêberî kirin, dilê me nehêle. Rehma xwe bide me: Tu yî her û her î.",
+  "duaMeaning4": "Ya Xudan, bihêle ku ez û zuriyeta min nimêjê bikin. Rebbê me, daxwaza min qebûl bike.",
+  "duaMeaning5": "Û bi dilnizmî baskê xwe li hember wan bi dilovanî daxîne û bêje: 'Ya Rebbê, li wan were rehmê, çawa ku wan dema ku ez piçûk bûm, li min miqate bûn.'",
+  "duaMeaning6": "Xwedayê ku bi rastî desthilatdar e, bilind be. [Pêxember], berî ku weht temam bibe, lezê nede xwendinê, lê bêje: \"Ya Rebbî, zanîna min zêde bike!\"",
+  "duaMeaning7": "Ji [Pêxember] re bêje: ‘Ya Rebbî, bibexşîne û rehmê bike: Tu ji hemûyan rehmtir î.",
+  "duaMeaning8": "yên ku dua dikin: 'Rebbê me, bi hevjîn û zarokên me şad bike. Ji wan ên ku haya wan ji te re heye, me bike nimûneyên baş.”",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Rojî girtin",
   "quranReading": "Xwendina Quranê",
   "prayers": "Dua",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Weekly Progress",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Newroza Îslamî",
+  "mawlidAnNabi": "Mewlid en-Nebî",
+  "specialDayDateRamadanStart": "1 Remezanê",
+  "specialDayDateLaylatAlQadr": "27 Remezanê",
+  "specialDayDateEidAlFitr": "1 Şewal",
+  "specialDayDateEidAlAdha": "10 Zul Hîce",
+  "specialDayDateIslamicNewYear": "1 Muherrem",
+  "specialDayDateMawlidAnNabi": "12 Rebî El Ewel",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Direction",
   "compass": "Compass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla dît!",
   "turnDevice": "Amûra xwe bizivirîne ber Qiblayê",
+  "qiblaCompassErrorDetails": "Çewtiya kompasê: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensor Compass li ser vê cîhazê ne berdest e.",
+  "qiblaLocationRequiredTitle": "Cihê ji bo Qibla hewce ye",
+  "qiblaLocationRequiredBody": "Berî ku hûn qursa Qibla bikar bînin cîhê xweya rastîn bicîh bikin da ku rêgez rast were hesibandin.",
+  "adhanNotificationChannelName": "Azan Notifications",
+  "adhanNotificationChannelDescription": "Dema nimêjê bi dengê azanê hişyar dike.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Hejmara armanc: {target}",
   "tapToCount": "Ji bo hejmartinê bikirtînin",
+  "zikrCompletedMashAllah": "Temam kirin! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah ji her kêmasiyan pir e.",
+  "zikrMeaningAlhamdulillah": "Hemd ji Xweda re ye.",
+  "zikrMeaningAllahuAkbar": "Xwedayê herî mezin e.",
+  "zikrMeaningLaIlahaIllallah": "Ji Xweda pêve tu Xweda tune.",
+  "zikrMeaningAstaghfirullah": "Ez ji Xwedê lêborînê dixwazim.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ji Xwedê pê ve tu hêz û hêz tune ye.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Dengê Deng",
+  "audioVoiceMisharyAlafasy": "Mêr (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mêr (Abdul Basit)",
+  "audioVoiceSudais": "Mêr (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Calibration Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration pêwîst. Di jimar-8 de cîhazê bizivirînin.",
   "dailyVerse": "Ayeta rojane",
+  "dailyVerseUnavailableTitle": "Ayeta rojane ne berdest e",
+  "dailyVerseUnavailableBody": "Naveroka ayeta rojane ya piştrastkirî hîn ji bo vê çêkirinê nehatiye mîheng kirin. Berî gerokê bi çavkaniya ewr ve girêdin an cacheyek pejirandî hevdeng bikin.",
   "todaysIbadah": "Îbadeta îro ye",
   "quickAccess": "Gihîştina Zû",
   "assistant": "Alîkar",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duayên verastkirî hîn ne berdest in",
+  "duaUnavailableBody": "Duayên rojane yên pejirandî hîn bi vê cîhazê re nehatine hevdeng kirin. Bi çavkaniya ewr ve girêdin da ku li şûna paşverûyek nerastkirî duayên jêderkirî bar bikin.",
+  "duaCategoryQuranic": "Dua Quranê",
+  "duaCategoryMorningEvening": "Sibeh & Êvar",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Parastinî",
+  "duaCategoryBeginning": "Destpêk",
+  "duaCategorySleep": "Xew",
+  "duaCategoryFoodDrink": "Xwarin & Vexwarin",
+  "duaCategoryForgiveness": "Lêborînî",
+  "duaCategoryHome": "Xane",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Perwerdehiya Îslamî",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Berhevokên Hedîsê",
+  "hadithSourcePending": "Çavkaniya verastkirî li bendê ye",
+  "hadithUnavailableTitle": "Berhevokên hedîsên tesdîqkirî hê ne berdest in",
+  "hadithUnavailableBody": "Ev avahî hîna jî bi pêvek hedîseke derveyî ya nerastkirî ve girêdayî ye. Gera hedîsê neçalak dimîne heya ku danegehek jêderkirî were senkronîze kirin.",
   "paywallUnlockAll": "Ji bo rêwîtiya xweya giyanî hemî taybetmendiyan vekin",
+  "premiumProductUnavailable": "Hilbera premium naha peyda nabe. Ji kerema xwe paşê dîsa biceribîne.",
+  "premiumPurchaseFailed": "Kirîn nehat qedandin. Ji kerema xwe dîsa biceribîne.",
   "paywallFeature1Title": "Alîkarê Neural Plus",
   "paywallFeature1Desc": "Q&A bi AI-a bêsînor",
   "paywallFeature2Title": "Bêsînor Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Daxistin ji bo {reciter} bi {failed} sûretên têkçûyî qediya ({downloaded}/{total} daxistî).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Pelên offline ji bo {reciter} hatin jêbirin.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Çewtiya torê. Ji kerema xwe dîsa biceribîne.",
+  "placesLocationRequiredTitle": "Cihê pêwîst",
+  "placesLocationRequiredBody": "Pêşî cîhek destnîşan bikin da ku mizgeftên nêzîk, xwarina helal, û dibistanên îslamî rast werin lêgerîn.",
+  "placesMapTilesUnavailableTitle": "Perçeyên nexşeyê ne berdest in",
+  "placesMapTilesUnavailableBody": "Çavkaniyek nexşeya pejirandî ji bo vê çêkirinê hêj nehatiye mîheng kirin. Cihên nêzîk hîn jî dikarin ji cîhê weya tomarkirî bar bikin.",
+  "placesDataSourceUnavailableTitle": "Daneyên cihan ne berdest in",
+  "placesDataSourceUnavailableBody": "Xala dawîya daneya cîhên pejirandî ji bo vê çêkirinê hêj nehatine mîheng kirin. Berî ku lêgerîna nêzîk çalak bike, PLACES_OVERPASS_API_URL bike wekî navendek an pêşkêşkerek pejirandî.",
   "unknownPlaceName": "Navê nenas",
   "islamicPlaceFallback": "Cihê Îslamî",
-  "prayerNotificationTitle": "Dema {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Wextê duakirinê ye {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duayên verastkirî hîn ne berdest in",
-  "duaUnavailableBody": "Duayên rojane yên pejirandî hîn bi vê cîhazê re nehatine hevdeng kirin. Bi çavkaniya ewr ve girêdin da ku li şûna paşverûyek nerastkirî duayên jêderkirî bar bikin.",
-  "duaCategoryQuranic": "Dua Quranê",
-  "duaCategoryMorningEvening": "Sibeh & Êvar",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Parastinî",
-  "duaCategoryBeginning": "Destpêk",
-  "duaCategorySleep": "Xew",
-  "duaCategoryFoodDrink": "Xwarin & Vexwarin",
-  "duaCategoryForgiveness": "Lêborînî",
-  "duaCategoryHome": "Xane",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Çavkaniya verastkirî li bendê ye",
-  "hadithUnavailableTitle": "Berhevokên hedîsên tesdîqkirî hê ne berdest in",
-  "hadithUnavailableBody": "Ev avahî hîna jî bi pêvek hedîseke derveyî ya nerastkirî ve girêdayî ye. Gera hedîsê neçalak dimîne heya ku danegehek jêderkirî were senkronîze kirin.",
-  "appErrorOccurred": "Çewtiyek derket",
-  "appUnknownError": "Çewtiya nenas",
-  "qiblaCompassErrorDetails": "Çewtiya kompasê: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Temam kirin! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah ji her kêmasiyan pir e.",
-  "zikrMeaningAlhamdulillah": "Hemd ji Xweda re ye.",
-  "zikrMeaningAllahuAkbar": "Xwedayê herî mezin e.",
-  "zikrMeaningLaIlahaIllallah": "Ji Xweda pêve tu Xweda tune.",
-  "zikrMeaningAstaghfirullah": "Ez ji Xwedê lêborînê dixwazim.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ji Xwedê pê ve tu hêz û hêz tune ye.",
   "asmaMeaning1": "Beneficent",
   "asmaMeaning2": "Mihrîvan",
   "asmaMeaning3": "Padîşah / Xudanê Herheyî",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Yê Herheyî",
   "asmaMeaning97": "Miras",
   "asmaMeaning98": "Rêberê Herî Rast",
-  "asmaMeaning99": "Nexweş Yek",
-  "duaMeaning1": "yên din jî dua dikin: “Rebbê me, tu li dinya û axretê xêrê bide me û me ji ezabê agir biparêze.”",
-  "duaMeaning2": "Xwedê ji barkirina tu canî zêdetir barê xwe bar nake: her kes çi qenciya ku kiriye bi dest dixe û xerabiya wî jî dikişîne- \"Ya Rebbî, heger em ji bîr bikin an xeletiyan bikin, me negire ser karê xwe.\" Ya Rebbî, çawa ku te li yên beriya me bar kir, li me bar neke. Ya Xudan, ji hêza me zêdetir barê me bar neke. Li me bibore, li me bibexşîne û li me were rehmê. Tu Parêzvanê me yî, vêca li hember kafiran alîkariya me bike.'",
-  "duaMeaning3": "“Rebbê me, piştî ku te em rêberî kirin, dilê me nehêle. Rehma xwe bide me: Tu yî her û her î.",
-  "duaMeaning4": "Ya Xudan, bihêle ku ez û zuriyeta min nimêjê bikin. Rebbê me, daxwaza min qebûl bike.",
-  "duaMeaning5": "Û bi dilnizmî baskê xwe li hember wan bi dilovanî daxîne û bêje: 'Ya Rebbê, li wan were rehmê, çawa ku wan dema ku ez piçûk bûm, li min miqate bûn.'",
-  "duaMeaning6": "Xwedayê ku bi rastî desthilatdar e, bilind be. [Pêxember], berî ku weht temam bibe, lezê nede xwendinê, lê bêje: \"Ya Rebbî, zanîna min zêde bike!\"",
-  "duaMeaning7": "Ji [Pêxember] re bêje: ‘Ya Rebbî, bibexşîne û rehmê bike: Tu ji hemûyan rehmtir î.",
-  "duaMeaning8": "yên ku dua dikin: 'Rebbê me, bi hevjîn û zarokên me şad bike. Ji wan ên ku haya wan ji te re heye, me bike nimûneyên baş.”",
-  "islamicNewYear": "Newroza Îslamî",
-  "mawlidAnNabi": "Mewlid en-Nebî",
-  "specialDayDateRamadanStart": "1 Remezanê",
-  "specialDayDateLaylatAlQadr": "27 Remezanê",
-  "specialDayDateEidAlFitr": "1 Şewal",
-  "specialDayDateEidAlAdha": "10 Zul Hîce",
-  "specialDayDateIslamicNewYear": "1 Muherrem",
-  "specialDayDateMawlidAnNabi": "12 Rebî El Ewel",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Tefsîr tê barkirin...",
-  "tafsirSourceLabel": "Çavkaniya Tefsîr",
-  "tafsirNoSurahFound": "Ji bo vê sûreyê tefsîr nehat dîtin.",
-  "tafsirNoAyahFound": "Ji bo ayah {ayah} tefsîr nehat dîtin.",
-  "tafsirLoadFailed": "Tefsîr nehat barkirin.",
-  "tafsirNoTextForAyah": "Ji bo vê ayetê nivîsek tefsîr tune.",
-  "tafsirDownloadingProgress": "Tefsîr tê daxistin {current}/{total}",
-  "tafsirLoadingProgress": "Tefsîr tê barkirin {current}/{total}",
-  "tafsirApiStatusError": "Çavkaniya Tefsîrê xeletiyek HTTP {statusCode} vegerand.",
-  "tafsirNoEntriesReturned": "Çavkaniya tefsîrê ya hilbijartî tu têketin venegeriya.",
-  "premiumProductUnavailable": "Hilbera premium naha peyda nabe. Ji kerema xwe paşê dîsa biceribîne.",
-  "premiumPurchaseFailed": "Kirîn nehat qedandin. Ji kerema xwe dîsa biceribîne.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Riya Îslamî ya Ronahî",
-  "downloadPartiallyFinishedForReciter": "Daxistin ji bo {reciter} bi {failed} sûretên têkçûyî qediya ({downloaded}/{total} daxistî).",
-  "placesLocationRequiredTitle": "Cihê pêwîst",
-  "placesLocationRequiredBody": "Pêşî cîhek destnîşan bikin da ku mizgeftên nêzîk, xwarina helal, û dibistanên îslamî rast werin lêgerîn.",
-  "placesMapTilesUnavailableTitle": "Perçeyên nexşeyê ne berdest in",
-  "placesMapTilesUnavailableBody": "Çavkaniyek nexşeya pejirandî ji bo vê çêkirinê hêj nehatiye mîheng kirin. Cihên nêzîk hîn jî dikarin ji cîhê weya tomarkirî bar bikin.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Mêr (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Mêr (Abdul Basit)",
-  "audioVoiceSudais": "Mêr (Sudais)",
-  "qiblaSensorUnavailable": "Sensor Compass li ser vê cîhazê ne berdest e.",
-  "adhanNotificationChannelName": "Azan Notifications",
-  "adhanNotificationChannelDescription": "Dema nimêjê bi dengê azanê hişyar dike.",
-  "quranLoadFailed": "Naveroka Quranê nehat barkirin. Ji kerema xwe dîsa biceribîne.",
-  "locationDetectionFailed": "Cihê we nehat tespîtkirin. Ji kerema xwe bajarek bi destan hilbijêrin an dîsa biceribînin.",
-  "qiblaLocationRequiredTitle": "Cihê ji bo Qibla hewce ye",
-  "qiblaLocationRequiredBody": "Berî ku hûn qursa Qibla bikar bînin cîhê xweya rastîn bicîh bikin da ku rêgez rast were hesibandin.",
-  "placesDataSourceUnavailableTitle": "Daneyên cihan ne berdest in",
-  "placesDataSourceUnavailableBody": "Xala dawîya daneya cîhên pejirandî ji bo vê çêkirinê hêj nehatine mîheng kirin. Berî ku lêgerîna nêzîk çalak bike, PLACES_OVERPASS_API_URL bike wekî navendek an pêşkêşkerek pejirandî.",
-  "tafsirCacheUnavailable": "Tefsîreke verastkirî hîn negirêdayî ye. Berî gerokê danehevek tefsîrê ya jêderkî hevdeng bikin."
+  "asmaMeaning99": "Nexweş Yek"
 }

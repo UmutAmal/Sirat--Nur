@@ -1,6 +1,7 @@
 {
   "@@locale": "co",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Via islamica di luce",
   "home": "A casa",
   "quran": "Coran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tempu per {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Hè u tempu di pricà {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Dati & Storage",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "A cache hè stata sguassata",
@@ -34,6 +51,7 @@
   "currentLocation": "Situazione attuale (GPS)",
   "locationServiceDisabled": "U serviziu di locu hè disattivatu.",
   "locationPermissionDenied": "U permessu di locu denegatu.",
+  "locationDetectionFailed": "Ùn pudia micca detectà a vostra situazione. Per piacè sceglite una cità manualmente o pruvate di novu.",
   "citiesCount": "{count} cità",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Nisun risultatu trovu",
   "loading": "Caricamentu...",
   "error": "Errore",
+  "appErrorOccurred": "Un errore hè accadutu",
+  "appUnknownError": "Errore scunnisciutu",
+  "quranLoadFailed": "U cuntenutu di u Quran ùn pò micca esse caricatu. Per piacè pruvate di novu.",
   "retry": "Riprova",
+  "refreshAction": "Refresh",
   "cancel": "Cancella",
   "save": "Salvà",
   "delete": "Sguassà",
@@ -57,17 +79,78 @@
   "yes": "Iè",
   "no": "Innò",
   "surah": "Sura",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Ghjus",
   "page": "Pagina",
   "reading": "Lettura",
   "recitation": "Recitazione",
   "translation": "Traduzzione",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Caricamentu di tafsir...",
+  "tafsirSourceLabel": "Fonte Tafsir",
+  "tafsirNoSurahFound": "Nisun tafsir trovu per sta sura.",
+  "tafsirNoAyahFound": "Nisun tafsir trovu per ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ùn pudia esse caricatu.",
+  "tafsirNoTextForAyah": "Nisun testu tafsir per questu ayah.",
+  "tafsirDownloadingProgress": "Scaricamentu di tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Caricamentu di tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "A fonte Tafsir hà restituutu un errore HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "A fonte di tafsir selezziunata ùn hà restituutu micca entrate.",
+  "tafsirCacheUnavailable": "Tafsir verificatu ùn hè micca dispunibule ancu offline. Sincronizza un inseme di dati tafsir prima di navigà.",
   "bookmarks": "Segnalibri",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Eliminate Bookmark",
   "lastRead": "Ultima lettura",
   "dailyZikr": "Zikr ogni ghjornu",
+  "duaMeaning1": "altri pricanu: \"Nostru Signore, dà ci bè in stu mondu è in l'altru, è pruteggeci da u turmentu di u focu\".",
+  "duaMeaning2": "Diu ùn carica micca l'ànima di più di ciò ch'ella pò suppurtà: ognunu guadagna tuttu ciò chì hà fattu u bonu, è soffre u so male - \"Signore, ùn ci pigliate micca à u travagliu s'ellu ci scurdemu o sbagliemu\". Signore, ùn ci impieghja micca cum'è tù l'avete caricatu quelli davanti à noi. Signore, ùn ci carica più di ciò chì avemu a forza di suppurtà. Pardonaci, perdonaci, è abbi pietà di noi. Siete u nostru Protettore, dunque aiutateci contr'à i miscredenti.",
+  "duaMeaning3": "\"Nostru Signore, ùn lasciate micca i nostri cori deviate dopu chì ci avete guidatu. Concedeci a vostra misericordia: Tu sì u sempre chì dà.",
+  "duaMeaning4": "Signore, cuncede chì eiu è i mo figlioli pudemu cuntinuà a preghiera. Nostru Signore, accetta a mo dumanda.",
+  "duaMeaning5": "è abbassate a vostra ala in umiltà versu elli in a gentilezza è dite: \"Signore, abbi pietà di elli, cum'elli anu cura di mè quandu era chjucu\".",
+  "duaMeaning6": "esaltatu sia Diu, quellu chì hè veramente in cuntrollu. [Profeta], ùn vi precipite micca à recità prima chì a rivelazione hè cumplettamente cumpleta, ma dite: \"Signore, aumentatemi in a cunniscenza!\"",
+  "duaMeaning7": "Dite [Profeta]: \"Signore, perdona è abbi pietà: sì u più misericordioso di tutti\".",
+  "duaMeaning8": "quelli chì pricanu, \"Nostru Signore, dà noi gioia in i nostri sposi è prole. Fateci boni esempii à quelli chì sò cuscenti di tè'.",
   "morningZikr": "Zikr matina",
   "eveningZikr": "Zikr di sera",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Digiunu",
   "quranReading": "Lettura di u Coran",
   "prayers": "Preghiere",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Conte Dhikr",
   "weeklyProgress": "Prugressu settimanale",
   "monthlyProgress": "Prugressu mensuale",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "New Year islamicu",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Direzzione di Qibla",
   "compass": "Bussola",
@@ -108,6 +219,19 @@
   "north": "Nordu",
   "qiblaFound": "Qibla trovu!",
   "turnDevice": "Turn u vostru dispusitivu per affruntà u Qibla",
+  "qiblaCompassErrorDetails": "Errore di bussola: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu.",
+  "qiblaLocationRequiredTitle": "U locu necessariu per a Qibla",
+  "qiblaLocationRequiredBody": "Definite u vostru locu attuale prima di utilizà a bussola Qibla per chì a direzzione pò esse calculata accuratamente.",
+  "adhanNotificationChannelName": "Notifiche Adhan",
+  "adhanNotificationChannelDescription": "Alerte di tempu di preghiera cù sonu adhan.",
   "notifications": "Notificazioni",
   "prayerNotifications": "Notificazioni di preghiera",
   "enableNotifications": "Habilita Notificazioni",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Conte di destinazione: {target}",
   "tapToCount": "Toccate per cuntà",
+  "zikrCompletedMashAllah": "Cumplitu ! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah hè assai sopra ogni imperfezione.",
+  "zikrMeaningAlhamdulillah": "Ogni lode appartene à Allah.",
+  "zikrMeaningAllahuAkbar": "Allah hè u più grande.",
+  "zikrMeaningLaIlahaIllallah": "Ùn ci hè un diu chè Allah.",
+  "zikrMeaningAstaghfirullah": "Cercu u pirdunu di Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ùn ci hè nè putenza nè forza fora di Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Voce audio",
+  "audioVoiceMisharyAlafasy": "Maschile (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Maschile (Abdul Basit)",
+  "audioVoiceSudais": "Maschile (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Calibration Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibrazione necessaria. Girate u dispusitivu in figura-8.",
   "dailyVerse": "Versu di ogni ghjornu",
+  "dailyVerseUnavailableTitle": "Versu di ogni ghjornu ùn hè micca dispunibule",
+  "dailyVerseUnavailableBody": "U cuntenutu verificatu di versi ogni ghjornu ùn hè micca cunfiguratu per sta custruzzione. Cunnettete à a fonte nuvola o sincronizà una cache verificata prima di navigà.",
   "todaysIbadah": "Ibadah d'oghje",
   "quickAccess": "Accessu Rapidu",
   "assistant": "Assistant",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duas verificate ùn sò ancu dispunibili",
+  "duaUnavailableBody": "Duas di ogni ghjornu verificate ùn sò micca stati sincronizzati cù stu dispusitivu. Cunnettete à a surgente nuvola per caricate duas provenienti invece di un fallback micca verificatu.",
+  "duaCategoryQuranic": "Dua coranique",
+  "duaCategoryMorningEvening": "Mattina è sera",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Prutezzione",
+  "duaCategoryBeginning": "I principii",
+  "duaCategorySleep": "Dormi",
+  "duaCategoryFoodDrink": "Food & Drink",
+  "duaCategoryForgiveness": "u pirdunu",
+  "duaCategoryHome": "A casa",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Educazione islamica",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Collezioni Hadith",
+  "hadithSourcePending": "Fonte verificata in attesa",
+  "hadithUnavailableTitle": "E cullezzione di hadith verificate ùn sò micca dispunibili",
+  "hadithUnavailableBody": "Sta custruzione dipende sempre da un alimentu di hadith esternu micca verificatu. A navigazione di Hadith resta disattivata finu à chì un set di dati di origine hè sincronizatu.",
   "paywallUnlockAll": "Sblocca tutte e funzioni per u vostru viaghju spirituale",
+  "premiumProductUnavailable": "U pruduttu premium ùn hè micca dispunibule avà. Per piacè pruvate di novu più tardi.",
+  "premiumPurchaseFailed": "A compra ùn pudia esse cumpletata. Per piacè pruvate di novu.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Q&A illimitate cù AI",
   "paywallFeature2Title": "Offline illimitatu",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Scaricamentu finitu per {reciter} cù {failed} surah falluti ({downloaded}/{total} scaricatu).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "I schedari offline sò stati eliminati per {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Errore di rete. Per piacè pruvate di novu.",
+  "placesLocationRequiredTitle": "U locu necessariu",
+  "placesLocationRequiredBody": "Fighjate prima un locu per chì e moschee vicine, l'alimentu halal è e scole islamiche ponu esse cercate accuratamente.",
+  "placesMapTilesUnavailableTitle": "Piastrelle di carte ùn sò micca dispunibili",
+  "placesMapTilesUnavailableBody": "Una fonte di tile di mappa verificata ùn hè ancu cunfigurata per questa custruzzione. Lochi vicini ponu sempre carica da u vostru locu salvatu.",
+  "placesDataSourceUnavailableTitle": "Dati di i posti ùn sò micca dispunibili",
+  "placesDataSourceUnavailableBody": "Un endpoint di dati di i posti verificati ùn hè ancu cunfiguratu per sta custruzzione. Pone PLACES_OVERPASS_API_URL à un proxy o fornitore appruvatu prima di attivà a ricerca vicinu.",
   "unknownPlaceName": "Nome scunnisciutu",
   "islamicPlaceFallback": "Locu islamicu",
-  "prayerNotificationTitle": "Tempu per {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Hè u tempu di pricà {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duas verificate ùn sò ancu dispunibili",
-  "duaUnavailableBody": "Duas di ogni ghjornu verificate ùn sò micca stati sincronizzati cù stu dispusitivu. Cunnettete à a surgente nuvola per caricate duas provenienti invece di un fallback micca verificatu.",
-  "duaCategoryQuranic": "Dua coranique",
-  "duaCategoryMorningEvening": "Mattina è sera",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Prutezzione",
-  "duaCategoryBeginning": "I principii",
-  "duaCategorySleep": "Dormi",
-  "duaCategoryFoodDrink": "Food & Drink",
-  "duaCategoryForgiveness": "u pirdunu",
-  "duaCategoryHome": "A casa",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Fonte verificata in attesa",
-  "hadithUnavailableTitle": "E cullezzione di hadith verificate ùn sò micca dispunibili",
-  "hadithUnavailableBody": "Sta custruzione dipende sempre da un alimentu di hadith esternu micca verificatu. A navigazione di Hadith resta disattivata finu à chì un set di dati di origine hè sincronizatu.",
-  "appErrorOccurred": "Un errore hè accadutu",
-  "appUnknownError": "Errore scunnisciutu",
-  "qiblaCompassErrorDetails": "Errore di bussola: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Cumplitu ! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah hè assai sopra ogni imperfezione.",
-  "zikrMeaningAlhamdulillah": "Ogni lode appartene à Allah.",
-  "zikrMeaningAllahuAkbar": "Allah hè u più grande.",
-  "zikrMeaningLaIlahaIllallah": "Ùn ci hè un diu chè Allah.",
-  "zikrMeaningAstaghfirullah": "Cercu u pirdunu di Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ùn ci hè nè putenza nè forza fora di Allah.",
   "asmaMeaning1": "U Beneficente",
   "asmaMeaning2": "U Misericordioso",
   "asmaMeaning3": "U Rè / Signore Eternu",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "L'Eternu",
   "asmaMeaning97": "L'eredi",
   "asmaMeaning98": "A guida più ghjustu",
-  "asmaMeaning99": "U Pacientu Unu",
-  "duaMeaning1": "altri pricanu: \"Nostru Signore, dà ci bè in stu mondu è in l'altru, è pruteggeci da u turmentu di u focu\".",
-  "duaMeaning2": "Diu ùn carica micca l'ànima di più di ciò ch'ella pò suppurtà: ognunu guadagna tuttu ciò chì hà fattu u bonu, è soffre u so male - \"Signore, ùn ci pigliate micca à u travagliu s'ellu ci scurdemu o sbagliemu\". Signore, ùn ci impieghja micca cum'è tù l'avete caricatu quelli davanti à noi. Signore, ùn ci carica più di ciò chì avemu a forza di suppurtà. Pardonaci, perdonaci, è abbi pietà di noi. Siete u nostru Protettore, dunque aiutateci contr'à i miscredenti.",
-  "duaMeaning3": "\"Nostru Signore, ùn lasciate micca i nostri cori deviate dopu chì ci avete guidatu. Concedeci a vostra misericordia: Tu sì u sempre chì dà.",
-  "duaMeaning4": "Signore, cuncede chì eiu è i mo figlioli pudemu cuntinuà a preghiera. Nostru Signore, accetta a mo dumanda.",
-  "duaMeaning5": "è abbassate a vostra ala in umiltà versu elli in a gentilezza è dite: \"Signore, abbi pietà di elli, cum'elli anu cura di mè quandu era chjucu\".",
-  "duaMeaning6": "esaltatu sia Diu, quellu chì hè veramente in cuntrollu. [Profeta], ùn vi precipite micca à recità prima chì a rivelazione hè cumplettamente cumpleta, ma dite: \"Signore, aumentatemi in a cunniscenza!\"",
-  "duaMeaning7": "Dite [Profeta]: \"Signore, perdona è abbi pietà: sì u più misericordioso di tutti\".",
-  "duaMeaning8": "quelli chì pricanu, \"Nostru Signore, dà noi gioia in i nostri sposi è prole. Fateci boni esempii à quelli chì sò cuscenti di tè'.",
-  "islamicNewYear": "New Year islamicu",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Caricamentu di tafsir...",
-  "tafsirSourceLabel": "Fonte Tafsir",
-  "tafsirNoSurahFound": "Nisun tafsir trovu per sta sura.",
-  "tafsirNoAyahFound": "Nisun tafsir trovu per ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir ùn pudia esse caricatu.",
-  "tafsirNoTextForAyah": "Nisun testu tafsir per questu ayah.",
-  "tafsirDownloadingProgress": "Scaricamentu di tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Caricamentu di tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "A fonte Tafsir hà restituutu un errore HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "A fonte di tafsir selezziunata ùn hà restituutu micca entrate.",
-  "premiumProductUnavailable": "U pruduttu premium ùn hè micca dispunibule avà. Per piacè pruvate di novu più tardi.",
-  "premiumPurchaseFailed": "A compra ùn pudia esse cumpletata. Per piacè pruvate di novu.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Via islamica di luce",
-  "downloadPartiallyFinishedForReciter": "Scaricamentu finitu per {reciter} cù {failed} surah falluti ({downloaded}/{total} scaricatu).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "U locu necessariu",
-  "placesLocationRequiredBody": "Fighjate prima un locu per chì e moschee vicine, l'alimentu halal è e scole islamiche ponu esse cercate accuratamente.",
-  "placesMapTilesUnavailableTitle": "Piastrelle di carte ùn sò micca dispunibili",
-  "placesMapTilesUnavailableBody": "Una fonte di tile di mappa verificata ùn hè ancu cunfigurata per questa custruzzione. Lochi vicini ponu sempre carica da u vostru locu salvatu.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Maschile (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Maschile (Abdul Basit)",
-  "audioVoiceSudais": "Maschile (Sudais)",
-  "qiblaSensorUnavailable": "U sensoru di bussola ùn hè micca dispunibule nantu à stu dispusitivu.",
-  "adhanNotificationChannelName": "Notifiche Adhan",
-  "adhanNotificationChannelDescription": "Alerte di tempu di preghiera cù sonu adhan.",
-  "quranLoadFailed": "U cuntenutu di u Quran ùn pò micca esse caricatu. Per piacè pruvate di novu.",
-  "locationDetectionFailed": "Ùn pudia micca detectà a vostra situazione. Per piacè sceglite una cità manualmente o pruvate di novu.",
-  "qiblaLocationRequiredTitle": "U locu necessariu per a Qibla",
-  "qiblaLocationRequiredBody": "Definite u vostru locu attuale prima di utilizà a bussola Qibla per chì a direzzione pò esse calculata accuratamente.",
-  "placesDataSourceUnavailableTitle": "Dati di i posti ùn sò micca dispunibili",
-  "placesDataSourceUnavailableBody": "Un endpoint di dati di i posti verificati ùn hè ancu cunfiguratu per sta custruzzione. Pone PLACES_OVERPASS_API_URL à un proxy o fornitore appruvatu prima di attivà a ricerca vicinu.",
-  "tafsirCacheUnavailable": "Tafsir verificatu ùn hè micca dispunibule ancu offline. Sincronizza un inseme di dati tafsir prima di navigà."
+  "asmaMeaning99": "U Pacientu Unu"
 }

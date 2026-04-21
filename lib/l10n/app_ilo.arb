@@ -1,6 +1,7 @@
 {
   "@@locale": "ilo",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamiko a Dalan ti Lawag",
   "home": "Taeng",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib nga",
   "isha": "Isha",
+  "prayerNotificationTitle": "Oras para iti {prayerName}.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Panawenen ti panagkararag {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datos & Pagidulin",
   "clearCache": "I-clear ti Cache",
   "cacheClearedSuccess": "Naballigi a na-clear ti cache",
@@ -34,6 +51,7 @@
   "currentLocation": "Agdama a Lugar (GPS) .",
   "locationServiceDisabled": "Nabaldado ti serbisio ti lokasion.",
   "locationPermissionDenied": "Napagkedkedan ti pammalubos ti lokasion.",
+  "locationDetectionFailed": "Saan a naduktalan ti lokasionmo. Pangngaasi a mangpili iti siudad a manual wenno padasen manen.",
   "citiesCount": "{count} dagiti siudad",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Napasamak ti biddut",
+  "appUnknownError": "Di ammo a biddut",
+  "quranLoadFailed": "Saan a mabalin a maikarga ti linaon ti Quran. Pangngaasiyo ta padasenyo manen.",
   "retry": "Padasem manen",
+  "refreshAction": "Refresh",
   "cancel": "Kanselaen",
   "save": "Idulin",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Wen",
   "no": "Saan",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Panid",
   "reading": "Panagbasa",
   "recitation": "Panagsao",
   "translation": "Panagpatarus",
   "tafsir": "Tafsir nga",
+  "tafsirLoading": "Nagkarga ti tafsir...",
+  "tafsirSourceLabel": "Tafsir a nagtaudan",
+  "tafsirNoSurahFound": "Awan ti nasarakan a tafsir para iti daytoy a surah.",
+  "tafsirNoAyahFound": "Awan ti nasarakan a tafsir para iti ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Saan a makarga ti Tafsir.",
+  "tafsirNoTextForAyah": "Awan ti tafsir text para iti daytoy nga ayah.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Ti taudan ti Tafsir ket nangisubli ti biddut ti HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ti napili a taudan ti tafsir ket awan ti insublina nga entry.",
+  "tafsirCacheUnavailable": "Ti naberipikado a tafsir ket saan pay a magun-od iti offline. I-sync ti nagtaudan a tafsir dataset sakbay ti panag-browse.",
   "bookmarks": "Dagiti Bookmark",
   "addBookmark": "Inayon ti Bookmark",
   "removeBookmark": "Ikkaten ti Bookmark",
   "lastRead": "Maudi a Panagbasa",
   "dailyZikr": "Inaldaw a Zikr",
+  "duaMeaning1": "ikararag dagiti dadduma, ‘Apomi, ikkannakami iti naimbag iti daytoy a lubong ken iti Akin-awid, ket salaknibannakami manipud iti pannakatutuok ti Apoy.’",
+  "duaMeaning2": "Saan a padagsenan ti Dios ti asinoman a kararua iti ad-adu ngem ti kabaelanna: tunggal maysa ket makagun-od iti aniaman a naimbag nga inaramidna, ken agsagaba iti dakesna- ‘ Apo, dinakami ibaklay no malipatan wenno agkamalitayo. Apo, saannakami a padagsenan a kas iti panangpadagsenmo kadagiti immun-una kadakami. Apo, saannaka a padagsenan iti ad-adu ngem ti pigsatayo a mangibaklay. Pakawannakami, pakawanennakami, ken kaasiannakami. Sika ti Manangsalaknib kadakami, isu a tulongannakami a maibusor kadagiti di mamati.’",
+  "duaMeaning3": "‘Apomi, dimo ipalubos a sumiasi dagiti pusomi kalpasan nga inwanwannakami. Itedmo kadakami ti asimo: Sika ti Agnanayon a Manangted.",
+  "duaMeaning4": "Apo, ipalubosmo nga itultuloyko ken dagiti kaputotak ti kararag. Apotayo, awatem ti kiddawko.",
+  "duaMeaning5": "ket ibabam ti payakmo a sipapakumbaba kadakuada buyogen ti kinaimbag ket kunaem, ‘Apo, kaasiam ida, kas iti panangaywanda kaniak idi ubingak pay.’",
+  "duaMeaning6": "maitan-ok koma ti Dios, daydiay pudpudno a mangkonkontrol. [Propeta], dika agdardaras nga agbasa sakbay a naan-anay a makompleto ti paltiing no di ket ibagam, ‘Apo, paaduennak iti pannakaammo!’",
+  "duaMeaning7": "Ibagam [Propeta], ‘Apo, pakawanem ken kaasiam: Sika ti kaasi kadagiti amin.’",
+  "duaMeaning8": "dagidiay agkarkararag, ‘Apomi, ikkannakami iti rag-o kadagiti assawa ken kaputotanmi. Aramidennakami a nasayaat nga ehemplo kadagidiay makaammo Kenka’.",
   "morningZikr": "Agsapa Zikr",
   "eveningZikr": "Malem Zikr",
   "tasbih": "Tasbih nga",
@@ -88,6 +171,26 @@
   "fasting": "Panagayuno",
   "quranReading": "Panagbasa iti Quran",
   "prayers": "Dagiti kararag",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr nga Konde",
   "weeklyProgress": "Linnawas a Panagrang-ay",
   "monthlyProgress": "Binulan a Panagrang-ay",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan nga",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha nga Eid",
+  "islamicNewYear": "Islamiko a Baro a Tawen",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 nga Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan nga aldaw",
+  "specialDayDateEidAlFitr": "1 Ni Shawwal",
+  "specialDayDateEidAlAdha": "10 Ti Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Ni Muharram",
+  "specialDayDateMawlidAnNabi": "12 Ni Rabi al-Awwal ti nagsurat",
   "laylatAlQadr": "Ni Laylat Al-Qadr ken ni",
   "qiblaDirection": "Direksion ti Qibla",
   "compass": "Kompas nga",
@@ -108,6 +219,19 @@
   "north": "Amianan",
   "qiblaFound": "Qibla ti nasarakan!",
   "turnDevice": "Iturno ti device-mo tapno sumango iti Qibla",
+  "qiblaCompassErrorDetails": "Biddut ti kompas: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Saan a magun-odan ti compass sensor iti daytoy nga alikamen.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Dagiti Pakaammo",
   "prayerNotifications": "Dagiti Pakaammo iti Kararag",
   "enableNotifications": "Pagbalinen a Pakaammo",
@@ -166,6 +290,13 @@
   "newTarget": "Baro a Target",
   "targetCount": "Target: {target} .",
   "tapToCount": "I-tap tapno mabilang",
+  "zikrCompletedMashAllah": "Nalpasen! MashAllah nga ni",
+  "zikrMeaningSubhanAllah": "Adayo a nangatngato ngem ni Allah iti tunggal kinaimperpekto.",
+  "zikrMeaningAlhamdulillah": "Amin a pammadayaw ket kukua ni Allah.",
+  "zikrMeaningAllahuAkbar": "Ni Allah ti Kadakkelan.",
+  "zikrMeaningLaIlahaIllallah": "Awan ti dios no di ni Allah.",
+  "zikrMeaningAstaghfirullah": "Sapsapulek ti pammakawan ni Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Awan ti bileg ken pigsa malaksid babaen ken Allah.",
   "dailyChecklist": "Inaldaw a Listaan ti Panangsukimat",
   "qazaDebt": "Qaza (Utang) .",
   "resetQazaData": "I-reset ti Datos ti Qaza",
@@ -209,6 +340,9 @@
   "dbPath": "Dalan: {path}.",
   "quranCheckFailed": "Napaay ti panangsukimat ti Quran: {error} .",
   "audioVoice": "Audio nga Boses",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr nga Anggulo",
   "ishaAngle": "Isha nga Anggulo",
   "qiblaCalibration": "Kalibrasion ti Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Agturong tapno Agbirok iti Qibla",
   "calibrationRequiredFigure8": "Masapul ti kalibrasion. I-rotate ti device iti figure-8.",
   "dailyVerse": "Inaldaw a Bersikulo",
+  "dailyVerseUnavailableTitle": "Inaldaw a bersikulo a saan a magun-odan",
+  "dailyVerseUnavailableBody": "Ti naberipikado nga inaldaw a linaon ti bersikulo ket saan pay a naikonfigura para iti daytoy a panagbangon. Agkonekta iti gubuayan ti ulep wenno i-sync ti naberipikado a cache sakbay nga ag-browse.",
   "todaysIbadah": "Ibadah ita nga aldaw",
   "quickAccess": "Napartak a Pannakagun-od",
   "assistant": "Mangbaddang",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Saan pay a magun-od dagiti verified duas",
+  "duaUnavailableBody": "Dagiti naberipikado nga inaldaw a dua ket saan pay a nai-sync iti daytoy nga alikamen. Konektaen ti gubuayan ti ulep tapno maikarga dagiti nagtaudan a duas imbes a ti saan a naberipikado a fallback.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Agsapa & Malem",
+  "duaCategoryTasbih": "Tasbih nga",
+  "duaCategoryProtection": "Pannakasalaknib",
+  "duaCategoryBeginning": "Dagiti pangrugian",
+  "duaCategorySleep": "Maturog",
+  "duaCategoryFoodDrink": "Taraon & Inumen",
+  "duaCategoryForgiveness": "Pammakawan",
+  "duaCategoryHome": "Balay",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamiko nga Edukasion",
   "sukunAudioTitle": "Dagiti buya ti Uni nga Sukun",
   "hadithCollections": "Dagiti Koleksion ti Hadith",
+  "hadithSourcePending": "Beripikado a gubuayan ti nakasagana",
+  "hadithUnavailableTitle": "Saan pay a magun-od dagiti naberipikado a koleksion ti hadith",
+  "hadithUnavailableBody": "Daytoy a panagbangon ket agpannuray pay laeng iti saan a naberipikado nga akinruar a hadith feed. Ti panag-browse ti Hadith ket agtalinaed a nabalbaliwan aginggana ti maysa a nagtaudan a dataset ket mai-sync.",
   "paywallUnlockAll": "Ilukat ti amin a tampok para iti naespirituan a panagdaliasatmo",
+  "premiumProductUnavailable": "Saan a magun-odan ti premium product ita. Pangngaasiyo ta padasenyo manen inton agangay.",
+  "premiumPurchaseFailed": "Saan a nakompleto ti panaggatang. Pangngaasiyo ta padasenyo manen.",
   "paywallFeature1Title": "Katulongan ti Neural Plus",
   "paywallFeature1Desc": "Awan limitasionna nga AI-powered Q&A",
   "paywallFeature2Title": "Awan limitasionna nga Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Nalpas ti panag-download para iti {reciter} nga addaan kadagiti {failed} a napaay a surah ({downloaded}/{total} nai-download).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Naikkat dagiti offline a file para iti {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Biddut ti network. Pangngaasiyo ta padasenyo manen.",
+  "placesLocationRequiredTitle": "Masapul ti lokasion",
+  "placesLocationRequiredBody": "Mangipasdek nga umuna iti lokasion tapno dagiti asideg a moske, halal a taraon, ken dagiti eskuelaan ti Islam ket umiso a mabirokan.",
+  "placesMapTilesUnavailableTitle": "Saan a magun-od dagiti baldosa ti mapa",
+  "placesMapTilesUnavailableBody": "Ti naberipikado a taudan ti baldosa ti mapa ket saan pay a naikonfigura para iti daytoy a panagbangon. Mabalin pay laeng nga agkarga dagiti asideg a lugar manipud iti naidulin a lokasionmo.",
+  "placesDataSourceUnavailableTitle": "Ikabilna ti datos a saan a magun-od",
+  "placesDataSourceUnavailableBody": "Ti naberipikado a puntos ti panagpatingga ti datos ti lugar ket saan pay a naikonfigura para iti daytoy a panagbangon. Itakderan ti PLACES_OVERPASS_API_URL iti naaprobaran a proxy wenno mangipapaay sakbay a mapalubosan ti asideg a panagbiruk.",
   "unknownPlaceName": "Di Ammo a Nagan",
   "islamicPlaceFallback": "Islamiko a Lugar",
-  "prayerNotificationTitle": "Oras para iti {prayerName}.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Panawenen ti panagkararag {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Saan pay a magun-od dagiti verified duas",
-  "duaUnavailableBody": "Dagiti naberipikado nga inaldaw a dua ket saan pay a nai-sync iti daytoy nga alikamen. Konektaen ti gubuayan ti ulep tapno maikarga dagiti nagtaudan a duas imbes a ti saan a naberipikado a fallback.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Agsapa & Malem",
-  "duaCategoryTasbih": "Tasbih nga",
-  "duaCategoryProtection": "Pannakasalaknib",
-  "duaCategoryBeginning": "Dagiti pangrugian",
-  "duaCategorySleep": "Maturog",
-  "duaCategoryFoodDrink": "Taraon & Inumen",
-  "duaCategoryForgiveness": "Pammakawan",
-  "duaCategoryHome": "Balay",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Beripikado a gubuayan ti nakasagana",
-  "hadithUnavailableTitle": "Saan pay a magun-od dagiti naberipikado a koleksion ti hadith",
-  "hadithUnavailableBody": "Daytoy a panagbangon ket agpannuray pay laeng iti saan a naberipikado nga akinruar a hadith feed. Ti panag-browse ti Hadith ket agtalinaed a nabalbaliwan aginggana ti maysa a nagtaudan a dataset ket mai-sync.",
-  "appErrorOccurred": "Napasamak ti biddut",
-  "appUnknownError": "Di ammo a biddut",
-  "qiblaCompassErrorDetails": "Biddut ti kompas: {error} .",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Nalpasen! MashAllah nga ni",
-  "zikrMeaningSubhanAllah": "Adayo a nangatngato ngem ni Allah iti tunggal kinaimperpekto.",
-  "zikrMeaningAlhamdulillah": "Amin a pammadayaw ket kukua ni Allah.",
-  "zikrMeaningAllahuAkbar": "Ni Allah ti Kadakkelan.",
-  "zikrMeaningLaIlahaIllallah": "Awan ti dios no di ni Allah.",
-  "zikrMeaningAstaghfirullah": "Sapsapulek ti pammakawan ni Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Awan ti bileg ken pigsa malaksid babaen ken Allah.",
   "asmaMeaning1": "Ti Makagunggona",
   "asmaMeaning2": "Ti Manangngaasi",
   "asmaMeaning3": "Ti Ari / Agnanayon nga Apo",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ti Agnanayon",
   "asmaMeaning97": "Ti Agtawid",
   "asmaMeaning98": "Ti Kalintegan a Giya",
-  "asmaMeaning99": "Ti Pasiente",
-  "duaMeaning1": "ikararag dagiti dadduma, ‘Apomi, ikkannakami iti naimbag iti daytoy a lubong ken iti Akin-awid, ket salaknibannakami manipud iti pannakatutuok ti Apoy.’",
-  "duaMeaning2": "Saan a padagsenan ti Dios ti asinoman a kararua iti ad-adu ngem ti kabaelanna: tunggal maysa ket makagun-od iti aniaman a naimbag nga inaramidna, ken agsagaba iti dakesna- ‘ Apo, dinakami ibaklay no malipatan wenno agkamalitayo. Apo, saannakami a padagsenan a kas iti panangpadagsenmo kadagiti immun-una kadakami. Apo, saannaka a padagsenan iti ad-adu ngem ti pigsatayo a mangibaklay. Pakawannakami, pakawanennakami, ken kaasiannakami. Sika ti Manangsalaknib kadakami, isu a tulongannakami a maibusor kadagiti di mamati.’",
-  "duaMeaning3": "‘Apomi, dimo ipalubos a sumiasi dagiti pusomi kalpasan nga inwanwannakami. Itedmo kadakami ti asimo: Sika ti Agnanayon a Manangted.",
-  "duaMeaning4": "Apo, ipalubosmo nga itultuloyko ken dagiti kaputotak ti kararag. Apotayo, awatem ti kiddawko.",
-  "duaMeaning5": "ket ibabam ti payakmo a sipapakumbaba kadakuada buyogen ti kinaimbag ket kunaem, ‘Apo, kaasiam ida, kas iti panangaywanda kaniak idi ubingak pay.’",
-  "duaMeaning6": "maitan-ok koma ti Dios, daydiay pudpudno a mangkonkontrol. [Propeta], dika agdardaras nga agbasa sakbay a naan-anay a makompleto ti paltiing no di ket ibagam, ‘Apo, paaduennak iti pannakaammo!’",
-  "duaMeaning7": "Ibagam [Propeta], ‘Apo, pakawanem ken kaasiam: Sika ti kaasi kadagiti amin.’",
-  "duaMeaning8": "dagidiay agkarkararag, ‘Apomi, ikkannakami iti rag-o kadagiti assawa ken kaputotanmi. Aramidennakami a nasayaat nga ehemplo kadagidiay makaammo Kenka’.",
-  "islamicNewYear": "Islamiko a Baro a Tawen",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 nga Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan nga aldaw",
-  "specialDayDateEidAlFitr": "1 Ni Shawwal",
-  "specialDayDateEidAlAdha": "10 Ti Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Ni Muharram",
-  "specialDayDateMawlidAnNabi": "12 Ni Rabi al-Awwal ti nagsurat",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Nagkarga ti tafsir...",
-  "tafsirSourceLabel": "Tafsir a nagtaudan",
-  "tafsirNoSurahFound": "Awan ti nasarakan a tafsir para iti daytoy a surah.",
-  "tafsirNoAyahFound": "Awan ti nasarakan a tafsir para iti ayah {ayah}.",
-  "tafsirLoadFailed": "Saan a makarga ti Tafsir.",
-  "tafsirNoTextForAyah": "Awan ti tafsir text para iti daytoy nga ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Ti taudan ti Tafsir ket nangisubli ti biddut ti HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Ti napili a taudan ti tafsir ket awan ti insublina nga entry.",
-  "premiumProductUnavailable": "Saan a magun-odan ti premium product ita. Pangngaasiyo ta padasenyo manen inton agangay.",
-  "premiumPurchaseFailed": "Saan a nakompleto ti panaggatang. Pangngaasiyo ta padasenyo manen.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamiko a Dalan ti Lawag",
-  "downloadPartiallyFinishedForReciter": "Nalpas ti panag-download para iti {reciter} nga addaan kadagiti {failed} a napaay a surah ({downloaded}/{total} nai-download).",
-  "placesLocationRequiredTitle": "Masapul ti lokasion",
-  "placesLocationRequiredBody": "Mangipasdek nga umuna iti lokasion tapno dagiti asideg a moske, halal a taraon, ken dagiti eskuelaan ti Islam ket umiso a mabirokan.",
-  "placesMapTilesUnavailableTitle": "Saan a magun-od dagiti baldosa ti mapa",
-  "placesMapTilesUnavailableBody": "Ti naberipikado a taudan ti baldosa ti mapa ket saan pay a naikonfigura para iti daytoy a panagbangon. Mabalin pay laeng nga agkarga dagiti asideg a lugar manipud iti naidulin a lokasionmo.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Saan a magun-odan ti compass sensor iti daytoy nga alikamen.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Saan a mabalin a maikarga ti linaon ti Quran. Pangngaasiyo ta padasenyo manen.",
-  "locationDetectionFailed": "Saan a naduktalan ti lokasionmo. Pangngaasi a mangpili iti siudad a manual wenno padasen manen.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Ikabilna ti datos a saan a magun-od",
-  "placesDataSourceUnavailableBody": "Ti naberipikado a puntos ti panagpatingga ti datos ti lugar ket saan pay a naikonfigura para iti daytoy a panagbangon. Itakderan ti PLACES_OVERPASS_API_URL iti naaprobaran a proxy wenno mangipapaay sakbay a mapalubosan ti asideg a panagbiruk.",
-  "tafsirCacheUnavailable": "Ti naberipikado a tafsir ket saan pay a magun-od iti offline. I-sync ti nagtaudan a tafsir dataset sakbay ti panag-browse."
+  "asmaMeaning99": "Ti Pasiente"
 }

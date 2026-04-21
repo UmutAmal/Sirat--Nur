@@ -951,6 +951,14 @@ class AppLocalizationsEu extends AppLocalizations {
   String get dailyVerse => 'Eguneko Bertsoa';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Eguneroko bertsoa ez dago erabilgarri';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Egiaztatutako eguneroko bertso-edukia ez dago konfiguratuta oraindik konfigurazio honetarako. Konektatu hodeiko iturrira edo sinkronizatu egiaztatutako cache bat arakatu aurretik.';
+
+  @override
   String get todaysIbadah => 'Gaur Ibadah';
 
   @override

@@ -950,6 +950,13 @@ class AppLocalizationsHt extends AppLocalizations {
   String get dailyVerse => 'Vèsè chak jou';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Vèsè chak jou pa disponib';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Kontni vèsè chak jou verifye poko configuré pou konstriksyon sa a. Konekte ak sous nwaj la oswa senkronize yon kachèt verifye anvan ou navige.';
+
+  @override
   String get todaysIbadah => 'Jodi a Ibadah';
 
   @override

@@ -956,6 +956,14 @@ class AppLocalizationsSt extends AppLocalizations {
   String get dailyVerse => 'Temana ea Letsatsi le Letsatsi';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Temana ea letsatsi le letsatsi ha e fumanehe';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Litemana tsa letsatsi le letsatsi tse netefalitsoeng ha li so lokisetsoe moaho ona hajoale. Hokela mohloling oa leru kapa amahanya cache e netefalitsoeng pele u e bala.';
+
+  @override
   String get todaysIbadah => 'Ibadah ea kajeno';
 
   @override

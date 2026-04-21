@@ -954,6 +954,13 @@ class AppLocalizationsPl extends AppLocalizations {
   String get dailyVerse => 'Codzienny werset';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Werset dzienny niedostępny';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Zweryfikowana treść codziennych wersetów nie została jeszcze skonfigurowana dla tej kompilacji. Przed przeglądaniem połącz się ze źródłem w chmurze lub zsynchronizuj zweryfikowaną pamięć podręczną.';
+
+  @override
   String get todaysIbadah => 'Dzisiejsza Ibada';
 
   @override

@@ -952,6 +952,13 @@ class AppLocalizationsEo extends AppLocalizations {
   String get dailyVerse => 'Ĉiutaga Verso';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ĉiutaga verso nedisponebla';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Kontrolita ĉiutaga versa enhavo ankoraŭ ne estas agordita por ĉi tiu konstruo. Konekti al la nuba fonto aŭ sinkronigi kontrolitan kaŝmemoron antaŭ foliumi.';
+
+  @override
   String get todaysIbadah => 'Hodiaŭ Ibadah';
 
   @override

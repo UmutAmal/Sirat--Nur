@@ -1,6 +1,7 @@
 {
   "@@locale": "cy",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Ffordd Goleuni Islamaidd",
   "home": "Cartref",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Amser ar gyfer {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Mae'n amser i weddïo {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data a Storio",
   "clearCache": "Clirio Cache",
   "cacheClearedSuccess": "Clirio'r storfa yn llwyddiannus",
@@ -34,6 +51,7 @@
   "currentLocation": "Lleoliad Presennol (GPS)",
   "locationServiceDisabled": "Mae'r gwasanaeth lleoliad wedi'i analluogi.",
   "locationPermissionDenied": "Caniatâd lleoliad wedi'i wrthod.",
+  "locationDetectionFailed": "Methu canfod eich lleoliad. Dewiswch ddinas â llaw neu ceisiwch eto.",
   "citiesCount": "{count} dinasoedd",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Digwyddodd gwall",
+  "appUnknownError": "Gwall anhysbys",
+  "quranLoadFailed": "Nid oedd modd llwytho cynnwys y Quran. Ceisiwch eto.",
   "retry": "Ceisiwch eto",
+  "refreshAction": "Refresh",
   "cancel": "Canslo",
   "save": "Arbed",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Oes",
   "no": "Nac ydw",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Tudalen",
   "reading": "Darllen",
   "recitation": "Llefaru",
   "translation": "Cyfieithiad",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Wrthi'n llwytho tafsir...",
+  "tafsirSourceLabel": "ffynhonnell Tafsir",
+  "tafsirNoSurahFound": "Ni chafwyd hyd i tafsir ar gyfer y surah hwn.",
+  "tafsirNoAyahFound": "Ni chafwyd hyd i tafsir ar gyfer ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Nid oedd modd llwytho Tafsir.",
+  "tafsirNoTextForAyah": "Dim testun tafsir ar gyfer y ayah hwn.",
+  "tafsirDownloadingProgress": "Lawrlwytho tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Yn llwytho tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Dychwelodd ffynhonnell Tafsir wall HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ni ddychwelodd y ffynhonnell tafsir a ddewiswyd unrhyw gofnodion.",
+  "tafsirCacheUnavailable": "Nid yw tafsir wedi'i ddilysu ar gael all-lein eto. Cysoni set ddata tafsir o ffynhonnell cyn pori.",
   "bookmarks": "Llyfrnodau",
   "addBookmark": "Ychwanegu Nod tudalen",
   "removeBookmark": "Dileu Nod tudalen",
   "lastRead": "Darlleniad Diwethaf",
   "dailyZikr": "Zikr dyddiol",
+  "duaMeaning1": "gweddïa eraill, ‘Ein Harglwydd, dyro inni ddaioni yn y byd hwn ac yn y dyfodol, ac amddiffyn ni rhag poenedigaeth y Tân.’",
+  "duaMeaning2": "Nid yw Duw yn rhoi mwy o faich ar unrhyw enaid nag y gall ei ddwyn: y mae pob un yn ennill pa les bynnag y mae wedi’i wneud, ac yn dioddef ei ddrwg - ‘Arglwydd, paid â chymryd ni i orchwyl os anghofiwn neu os gwnawn gamgymeriadau. Arglwydd, paid â rhoi baich arnom fel y gwnaethost feichiau ar y rhai o'n blaenau. Arglwydd, paid â rhoi mwy o faich arnom nag sydd gennym ni nerth i'w ddwyn. Maddeu inni, maddau inni, a thrugarha wrthym. Ti yw ein Amddiffynnydd, felly helpa ni yn erbyn yr anghredinwyr.’",
+  "duaMeaning3": "‘Ein Harglwydd, paid â gadael i'n calonnau wyro ar ôl i ti ein harwain. Caniatâ inni Dy drugaredd: Ti yw'r Rhoddwr Tragwyddol.",
+  "duaMeaning4": "Arglwydd, caniatâ i mi a'm hiliogaeth gadw i fynu y weddi. Ein Harglwydd, derbyn fy nghais.",
+  "duaMeaning5": "a gostwng dy adain mewn gostyngeiddrwydd tuag atynt mewn caredigrwydd, a dywed, ‘Arglwydd, trugarha wrthynt, fel yr oeddent yn gofalu amdanaf pan oeddwn yn fach’.",
+  "duaMeaning6": "dyrchafedig fyddo Duw, yr hwn sydd yn rheoli yn wirioneddol. [Proffwyd], paid â rhuthro i adrodd cyn y bydd y datguddiad yn gyflawn, ond dywed, ‘Arglwydd, cynydd fi mewn gwybodaeth!’",
+  "duaMeaning7": "Dywedwch [Proffwyd], ‘Arglwydd, maddau a thrugarha: Ti yw’r mwyaf trugarog oll.’",
+  "duaMeaning8": "y rhai sy’n gweddïo, ‘Ein Harglwydd, rho inni lawenydd yn ein priod a’n hiliogaeth. Gwna ni yn esiamplau da i’r rhai sy’n ymwybodol ohonot Ti’.",
   "morningZikr": "Bore Zikr",
   "eveningZikr": "Zikr hwyr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ymprydio",
   "quranReading": "Darllen Quran",
   "prayers": "Gweddiau",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Cyfrif Dhikr",
   "weeklyProgress": "Cynnydd Wythnosol",
   "monthlyProgress": "Cynnydd Misol",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Blwyddyn Newydd Islamaidd",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Cyfeiriad Qibla",
   "compass": "Cwmpawd",
@@ -108,6 +219,19 @@
   "north": "Gogledd",
   "qiblaFound": "Qibla dod o hyd!",
   "turnDevice": "Trowch eich dyfais i wynebu'r Qibla",
+  "qiblaCompassErrorDetails": "Gwall cwmpawd: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Nid yw synhwyrydd cwmpawd ar gael ar y ddyfais hon.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Hysbysiadau",
   "prayerNotifications": "Hysbysiadau Gweddi",
   "enableNotifications": "Galluogi Hysbysiadau",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Cyfrif targed: {target}",
   "tapToCount": "Tapiwch i gyfrif",
+  "zikrCompletedMashAllah": "Wedi'i gwblhau! MashAllah",
+  "zikrMeaningSubhanAllah": "Mae Allah ymhell uwchlaw pob amherffeithrwydd.",
+  "zikrMeaningAlhamdulillah": "Mae pob clod yn perthyn i Allah.",
+  "zikrMeaningAllahuAkbar": "Allah yw'r Mwyaf.",
+  "zikrMeaningLaIlahaIllallah": "Nid oes duw ond Allah.",
+  "zikrMeaningAstaghfirullah": "Rwy'n ceisio maddeuant Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nid oes unrhyw bŵer a dim cryfder ac eithrio trwy Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Llais Clywedol",
+  "audioVoiceMisharyAlafasy": "Gwryw (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Gwryw (Abdul Basit)",
+  "audioVoiceSudais": "Gwryw (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Calibradu Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Mae angen graddnodi. Cylchdroi dyfais yn ffigur-8.",
   "dailyVerse": "Pennill Dyddiol",
+  "dailyVerseUnavailableTitle": "Pennill dyddiol ddim ar gael",
+  "dailyVerseUnavailableBody": "Nid yw cynnwys pennill dyddiol wedi'i ddilysu wedi'i ffurfweddu ar gyfer y llun hwn eto. Cysylltwch â ffynhonnell y cwmwl neu cysoni storfa wedi'i dilysu cyn pori.",
   "todaysIbadah": "Ibadah heddiw",
   "quickAccess": "Mynediad Cyflym",
   "assistant": "Cynorthwy-ydd",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Nid yw deuodau wedi'u dilysu ar gael eto",
+  "duaUnavailableBody": "Nid yw deuodau dyddiol wedi'u dilysu wedi'u cysoni â'r ddyfais hon eto. Cysylltwch â ffynhonnell y cwmwl i lwytho deuodau o ffynonellau yn lle wrth gefn heb ei wirio.",
+  "duaCategoryQuranic": "Dua Quranic",
+  "duaCategoryMorningEvening": "Bore a Hwyr",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Amddiffyniad",
+  "duaCategoryBeginning": "Dechreuadau",
+  "duaCategorySleep": "Cwsg",
+  "duaCategoryFoodDrink": "Bwyd a Diod",
+  "duaCategoryForgiveness": "Maddeuant",
+  "duaCategoryHome": "Cartref",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Addysg Islamaidd",
   "sukunAudioTitle": "Seinweddau Sukun",
   "hadithCollections": "Casgliadau Hadith",
+  "hadithSourcePending": "Ffynhonnell wedi'i dilysu yn yr arfaeth",
+  "hadithUnavailableTitle": "Nid yw casgliadau hadith wedi'u dilysu ar gael eto",
+  "hadithUnavailableBody": "Mae'r adeiladwaith hwn yn dal i ddibynnu ar borthiant hadith allanol heb ei wirio. Mae pori Hadith yn aros yn anabl nes bod set ddata o ffynhonnell wedi'i chysoni.",
   "paywallUnlockAll": "Datgloi'r holl nodweddion ar gyfer eich taith ysbrydol",
+  "premiumProductUnavailable": "Nid yw cynnyrch premiwm ar gael ar hyn o bryd. Ceisiwch eto yn nes ymlaen.",
+  "premiumPurchaseFailed": "Ni ellid cwblhau'r pryniant. Ceisiwch eto.",
   "paywallFeature1Title": "Cynorthwy-ydd Niwral Plws",
   "paywallFeature1Desc": "Holi ac Ateb diderfyn wedi'i bweru gan AI",
   "paywallFeature2Title": "Unlimited All-lein",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Gorffennodd y llwytho i lawr ar gyfer {reciter} gyda {failed} swrahs wedi methu ({downloaded}/{total} llwytho i lawr).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Ffeiliau all-lein wedi'u dileu ar gyfer {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Gwall rhwydwaith. Ceisiwch eto.",
+  "placesLocationRequiredTitle": "Angen lleoliad",
+  "placesLocationRequiredBody": "Gosodwch leoliad yn gyntaf fel y gellir chwilio'n gywir am fosgiau cyfagos, bwyd halal, ac ysgolion Islamaidd.",
+  "placesMapTilesUnavailableTitle": "Nid yw teils map ar gael",
+  "placesMapTilesUnavailableBody": "Nid yw ffynhonnell teils map wedi'i dilysu wedi'i ffurfweddu ar gyfer yr adeilad hwn eto. Gall lleoedd cyfagos ddal i lwytho o'ch lleoliad sydd wedi'i gadw.",
+  "placesDataSourceUnavailableTitle": "Nid yw data lleoedd ar gael",
+  "placesDataSourceUnavailableBody": "Nid yw pwynt terfyn data lleoedd wedi'i ddilysu wedi'i ffurfweddu ar gyfer yr adeilad hwn eto. Gosod PLACES_OVERPASS_API_URL i ddirprwy neu ddarparwr cymeradwy cyn galluogi chwiliad cyfagos.",
   "unknownPlaceName": "Enw Anhysbys",
   "islamicPlaceFallback": "Lle Islamaidd",
-  "prayerNotificationTitle": "Amser ar gyfer {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Mae'n amser i weddïo {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Nid yw deuodau wedi'u dilysu ar gael eto",
-  "duaUnavailableBody": "Nid yw deuodau dyddiol wedi'u dilysu wedi'u cysoni â'r ddyfais hon eto. Cysylltwch â ffynhonnell y cwmwl i lwytho deuodau o ffynonellau yn lle wrth gefn heb ei wirio.",
-  "duaCategoryQuranic": "Dua Quranic",
-  "duaCategoryMorningEvening": "Bore a Hwyr",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Amddiffyniad",
-  "duaCategoryBeginning": "Dechreuadau",
-  "duaCategorySleep": "Cwsg",
-  "duaCategoryFoodDrink": "Bwyd a Diod",
-  "duaCategoryForgiveness": "Maddeuant",
-  "duaCategoryHome": "Cartref",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Ffynhonnell wedi'i dilysu yn yr arfaeth",
-  "hadithUnavailableTitle": "Nid yw casgliadau hadith wedi'u dilysu ar gael eto",
-  "hadithUnavailableBody": "Mae'r adeiladwaith hwn yn dal i ddibynnu ar borthiant hadith allanol heb ei wirio. Mae pori Hadith yn aros yn anabl nes bod set ddata o ffynhonnell wedi'i chysoni.",
-  "appErrorOccurred": "Digwyddodd gwall",
-  "appUnknownError": "Gwall anhysbys",
-  "qiblaCompassErrorDetails": "Gwall cwmpawd: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Wedi'i gwblhau! MashAllah",
-  "zikrMeaningSubhanAllah": "Mae Allah ymhell uwchlaw pob amherffeithrwydd.",
-  "zikrMeaningAlhamdulillah": "Mae pob clod yn perthyn i Allah.",
-  "zikrMeaningAllahuAkbar": "Allah yw'r Mwyaf.",
-  "zikrMeaningLaIlahaIllallah": "Nid oes duw ond Allah.",
-  "zikrMeaningAstaghfirullah": "Rwy'n ceisio maddeuant Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Nid oes unrhyw bŵer a dim cryfder ac eithrio trwy Allah.",
   "asmaMeaning1": "Y Buddiolwr",
   "asmaMeaning2": "Y Trugarog",
   "asmaMeaning3": "Y Brenin / Arglwydd Tragwyddol",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Yr Un Tragwyddol",
   "asmaMeaning97": "Yr Etifeddwr",
   "asmaMeaning98": "Y Canllaw Mwyaf Cyfiawn",
-  "asmaMeaning99": "Y Claf Un",
-  "duaMeaning1": "gweddïa eraill, ‘Ein Harglwydd, dyro inni ddaioni yn y byd hwn ac yn y dyfodol, ac amddiffyn ni rhag poenedigaeth y Tân.’",
-  "duaMeaning2": "Nid yw Duw yn rhoi mwy o faich ar unrhyw enaid nag y gall ei ddwyn: y mae pob un yn ennill pa les bynnag y mae wedi’i wneud, ac yn dioddef ei ddrwg - ‘Arglwydd, paid â chymryd ni i orchwyl os anghofiwn neu os gwnawn gamgymeriadau. Arglwydd, paid â rhoi baich arnom fel y gwnaethost feichiau ar y rhai o'n blaenau. Arglwydd, paid â rhoi mwy o faich arnom nag sydd gennym ni nerth i'w ddwyn. Maddeu inni, maddau inni, a thrugarha wrthym. Ti yw ein Amddiffynnydd, felly helpa ni yn erbyn yr anghredinwyr.’",
-  "duaMeaning3": "‘Ein Harglwydd, paid â gadael i'n calonnau wyro ar ôl i ti ein harwain. Caniatâ inni Dy drugaredd: Ti yw'r Rhoddwr Tragwyddol.",
-  "duaMeaning4": "Arglwydd, caniatâ i mi a'm hiliogaeth gadw i fynu y weddi. Ein Harglwydd, derbyn fy nghais.",
-  "duaMeaning5": "a gostwng dy adain mewn gostyngeiddrwydd tuag atynt mewn caredigrwydd, a dywed, ‘Arglwydd, trugarha wrthynt, fel yr oeddent yn gofalu amdanaf pan oeddwn yn fach’.",
-  "duaMeaning6": "dyrchafedig fyddo Duw, yr hwn sydd yn rheoli yn wirioneddol. [Proffwyd], paid â rhuthro i adrodd cyn y bydd y datguddiad yn gyflawn, ond dywed, ‘Arglwydd, cynydd fi mewn gwybodaeth!’",
-  "duaMeaning7": "Dywedwch [Proffwyd], ‘Arglwydd, maddau a thrugarha: Ti yw’r mwyaf trugarog oll.’",
-  "duaMeaning8": "y rhai sy’n gweddïo, ‘Ein Harglwydd, rho inni lawenydd yn ein priod a’n hiliogaeth. Gwna ni yn esiamplau da i’r rhai sy’n ymwybodol ohonot Ti’.",
-  "islamicNewYear": "Blwyddyn Newydd Islamaidd",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Wrthi'n llwytho tafsir...",
-  "tafsirSourceLabel": "ffynhonnell Tafsir",
-  "tafsirNoSurahFound": "Ni chafwyd hyd i tafsir ar gyfer y surah hwn.",
-  "tafsirNoAyahFound": "Ni chafwyd hyd i tafsir ar gyfer ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Nid oedd modd llwytho Tafsir.",
-  "tafsirNoTextForAyah": "Dim testun tafsir ar gyfer y ayah hwn.",
-  "tafsirDownloadingProgress": "Lawrlwytho tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Yn llwytho tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Dychwelodd ffynhonnell Tafsir wall HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Ni ddychwelodd y ffynhonnell tafsir a ddewiswyd unrhyw gofnodion.",
-  "premiumProductUnavailable": "Nid yw cynnyrch premiwm ar gael ar hyn o bryd. Ceisiwch eto yn nes ymlaen.",
-  "premiumPurchaseFailed": "Ni ellid cwblhau'r pryniant. Ceisiwch eto.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Ffordd Goleuni Islamaidd",
-  "downloadPartiallyFinishedForReciter": "Gorffennodd y llwytho i lawr ar gyfer {reciter} gyda {failed} swrahs wedi methu ({downloaded}/{total} llwytho i lawr).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Angen lleoliad",
-  "placesLocationRequiredBody": "Gosodwch leoliad yn gyntaf fel y gellir chwilio'n gywir am fosgiau cyfagos, bwyd halal, ac ysgolion Islamaidd.",
-  "placesMapTilesUnavailableTitle": "Nid yw teils map ar gael",
-  "placesMapTilesUnavailableBody": "Nid yw ffynhonnell teils map wedi'i dilysu wedi'i ffurfweddu ar gyfer yr adeilad hwn eto. Gall lleoedd cyfagos ddal i lwytho o'ch lleoliad sydd wedi'i gadw.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Gwryw (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Gwryw (Abdul Basit)",
-  "audioVoiceSudais": "Gwryw (Sudais)",
-  "qiblaSensorUnavailable": "Nid yw synhwyrydd cwmpawd ar gael ar y ddyfais hon.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Nid oedd modd llwytho cynnwys y Quran. Ceisiwch eto.",
-  "locationDetectionFailed": "Methu canfod eich lleoliad. Dewiswch ddinas â llaw neu ceisiwch eto.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Nid yw data lleoedd ar gael",
-  "placesDataSourceUnavailableBody": "Nid yw pwynt terfyn data lleoedd wedi'i ddilysu wedi'i ffurfweddu ar gyfer yr adeilad hwn eto. Gosod PLACES_OVERPASS_API_URL i ddirprwy neu ddarparwr cymeradwy cyn galluogi chwiliad cyfagos.",
-  "tafsirCacheUnavailable": "Nid yw tafsir wedi'i ddilysu ar gael all-lein eto. Cysoni set ddata tafsir o ffynhonnell cyn pori."
+  "asmaMeaning99": "Y Claf Un"
 }

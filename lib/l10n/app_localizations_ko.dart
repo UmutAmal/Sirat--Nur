@@ -939,6 +939,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get dailyVerse => '매일의 구절';
 
   @override
+  String get dailyVerseUnavailableTitle => '일일 구절을 사용할 수 없습니다.';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      '이 빌드에는 검증된 일일 구절 콘텐츠가 아직 구성되지 않았습니다. 탐색하기 전에 클라우드 소스에 연결하거나 확인된 캐시를 동기화하세요.';
+
+  @override
   String get todaysIbadah => '오늘의 이바다';
 
   @override

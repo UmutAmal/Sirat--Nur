@@ -1,6 +1,7 @@
 {
   "@@locale": "lg",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Engeri y'Obusiraamu ey'Ekitangaala",
   "home": "Ewaka",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Ekiseera kya {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Kye kiseera okusaba {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Okutereka",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache yalongoosezza bulungi",
@@ -34,6 +51,7 @@
   "currentLocation": "Ekifo ekiriwo kati (GPS) .",
   "locationServiceDisabled": "Empeereza y'ekifo eremeddwa.",
   "locationPermissionDenied": "Olukusa lw'ekifo lugaaniddwa.",
+  "locationDetectionFailed": "Teyasobodde kuzuula kifo kyo. Nsaba olonde ekibuga mu ngalo oba ddamu ogezeeko.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Ensobi ebaddewo",
+  "appUnknownError": "Ensobi etamanyiddwa",
+  "quranLoadFailed": "Ebirimu ku Quran tebyasobodde kutikkibwa. Nsaba oddemu ogezeeko.",
   "retry": "Ddamu gezaako",
+  "refreshAction": "Refresh",
   "cancel": "okusazaamu",
   "save": "Okununula",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nedda",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juzu",
   "page": "Omuko",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Okutikka tafsir...",
+  "tafsirSourceLabel": "Tafsir ensonda",
+  "tafsirNoSurahFound": "Tewali tafsir ezuuliddwa ku surah eno.",
+  "tafsirNoAyahFound": "Tewali tafsir ezuuliddwa ku ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir teyasobodde kutikkibwa.",
+  "tafsirNoTextForAyah": "Tewali kiwandiiko kya tafsir ku ayah eno.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Ensibuko ya Tafsir yazzaayo ensobi ya HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ensibuko ya tafsir erongooseddwa teyazzaayo biwandiiko byonna.",
+  "tafsirCacheUnavailable": "Verified tafsir tennafuna ku mukutu gwa yintaneeti. Sync sourced tafsir dataset nga tonnaba kugenda mu maaso.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Yongera ku Bookmark",
   "removeBookmark": "Ggyawo Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "abalala basaba nti, ‘Mukama waffe, tuwe ebirungi mu nsi ne ku nkomerero, era otukuume okuva mu kubonyaabonyezebwa kw’omuliro.’",
+  "duaMeaning2": "Katonda tazitoowerera mwoyo gwonna okusinga bwe gusobola okugumira: buli omu afuna ekirungi kyonna ky’akoze, era n’abonyaabonyezebwa ebibi byakyo- ‘ Mukama, totutwala ku mulimu bwe twerabira oba nga tukola ensobi. Mukama, totuzitoowerera nga bwe wazitoowerera abo abatusooka. Mukama, totuzitoowerera nnyo okusinga bwe tulina amaanyi okwetikka. Tusonyiwe, tusonyiwe, era tusaasire. Ggwe Mukuumi waffe, kale tuyambe ku batakkiriza.’",
+  "duaMeaning3": "‘Mukama waffe, toleka mitima gyaffe kuva ku mulamwa ng’omaze okutulungamya. Tuwe okusaasira Kwo: Ggwe Agaba Bulijjo.",
+  "duaMeaning4": "Mukama, mpa nze n’ezzadde lyange tugende mu maaso n’okusaba. Mukama waffe kkiriza okusaba kwange.",
+  "duaMeaning5": "era wansi ekiwawaatiro kyo mu bwetoowaze gye bali mu kisa era ogambe nti, ‘Mukama waffe, basaasire, nga bwe banfaako nga nkyali muto.’",
+  "duaMeaning6": "Katonda agulumizibwe, oyo afuga mu mazima. [Nnabbi], toyanguwa kusoma ng’okubikkulirwa tekunnaggwa mu bujjuvu wabula gamba nti, ‘Mukama, nnyongera okumanya!’",
+  "duaMeaning7": "Gamba [Nabbi] nti, ‘Mukama, sonyiwa era osaasire: Ggwe asinga bonna.’",
+  "duaMeaning8": "abo abasaba nti, ‘Mukama waffe, tuwe essanyu mu bafumbo n’ezzadde lyaffe. Tufuule ebyokulabirako ebirungi eri abo abakumanyi’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Okusiiba",
   "quranReading": "Okusoma Quran",
   "prayers": "Okusaba",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Enkulaakulana eya buli wiiki",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Omwaka omuggya ogw'Obusiraamu",
+  "mawlidAnNabi": "Mawlid ne Nabi",
+  "specialDayDateRamadanStart": "1 Ramadhan",
+  "specialDayDateLaylatAlQadr": "27 Ramadhan",
+  "specialDayDateEidAlFitr": "1 Shawwal, omuwandiisi w’ebitabo",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal, omuwandiisi w’ebitabo",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Obulagirizi",
   "compass": "Kampasi",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla yazuuliddwa!",
   "turnDevice": "Kyuusa ekyuma kyo kitunule mu Qibla",
+  "qiblaCompassErrorDetails": "Ensobi mu kampasi: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensulo ya kkampasi tesangibwa ku kyuma kino.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "Koona ku kubala",
+  "zikrCompletedMashAllah": "Kiwedde! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah asinga wala buli butatuukiridde.",
+  "zikrMeaningAlhamdulillah": "Amatendo gonna ga Allah.",
+  "zikrMeaningAllahuAkbar": "Allah y’asinga obukulu.",
+  "zikrMeaningLaIlahaIllallah": "Tewali katonda yenna okuggyako Allah.",
+  "zikrMeaningAstaghfirullah": "Nsaba Allah okusonyiyibwa.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tewali maanyi na maanyi okuggyako okuyita mu Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Eddoboozi ly'amaloboozi",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Okupima kwa Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Okupima (calibration) kyetaagisa. Zingulula ekyuma mu kifaananyi-8.",
   "dailyVerse": "Olunyiriri lwa Buli lunaku",
+  "dailyVerseUnavailableTitle": "Olunyiriri lwa buli lunaku teruliiwo",
+  "dailyVerseUnavailableBody": "Ebirimu ennyiriri eza buli lunaku ebikakasibwa tebinnaba kutegekebwa kuzimba kuno. Yunga ku nsibuko y'ekire oba kwataganya cache ekakasiddwa nga tonnagenda.",
   "todaysIbadah": "Ibadah ya leero",
   "quickAccess": "Okutuuka ku Mangu",
   "assistant": "Omuyambi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verified duas tezinnabaawo",
+  "duaUnavailableBody": "Verified daily duas tezinnaba kukwatagana na kyuma kino. Yunga ku nsibuko y'ekire okutikka duas ezisibuka mu kifo ky'okugwa emabega okutakakasiddwa.",
+  "duaCategoryQuranic": "Dua ya Quran",
+  "duaCategoryMorningEvening": "Enkya & Akawungeezi",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Obukuumi",
+  "duaCategoryBeginning": "Entandikwa",
+  "duaCategorySleep": "Otulo",
+  "duaCategoryFoodDrink": "Emmere & Ebyokunywa",
+  "duaCategoryForgiveness": "Okusonyiwa",
+  "duaCategoryHome": "Ewaka",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Ebyenjigiriza by’Obusiraamu",
   "sukunAudioTitle": "Sukun Ebifaananyi by’amaloboozi",
   "hadithCollections": "Ebikuŋŋaanyiziddwa mu Hadith",
+  "hadithSourcePending": "Ensonda ekakasiddwa nga bwerindirira",
+  "hadithUnavailableTitle": "Ebikuŋŋaanyizo bya hadith ebikakasibwa tebinnaba kufunibwa",
+  "hadithUnavailableBody": "Okuzimba kuno kukyasinziira ku feed ya hadith ey’ebweru etakakasiddwa. Okulambula Hadith kusigala nga kulemesebwa okutuusa nga dataset evuddemu ekwataganye.",
   "paywallUnlockAll": "Sumulula ebintu byonna ebikwata ku lugendo lwo olw’omwoyo",
+  "premiumProductUnavailable": "Premium product tesangibwa mu kiseera kino. Nsaba oddemu ogezeeko oluvannyuma.",
+  "premiumPurchaseFailed": "Okugula tekwasobodde kumalibwa. Nsaba oddemu ogezeeko.",
   "paywallFeature1Title": "Omuyambi w’obusimu Plus",
   "paywallFeature1Desc": "Q&A ezitaliiko kkomo ezikozesa AI",
   "paywallFeature2Title": "Tewali kkomo Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download ewedde ku {reciter} nga {failed} surahs eziremye ({downloaded}/{total} ziwanuliddwa).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Fayiro ezitali ku mutimbagano zasaziddwamu ku {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Ensobi mu mutimbagano. Nsaba oddemu ogezeeko.",
+  "placesLocationRequiredTitle": "Ekifo kyetaagisa",
+  "placesLocationRequiredBody": "Sooka oteekewo ekifo olwo emizikiti egy’okumpi, emmere ya halal, n’amasomero g’Obusiraamu bisobole okunoonyezebwa mu butuufu.",
+  "placesMapTilesUnavailableTitle": "Tiles za maapu teziriiwo",
+  "placesMapTilesUnavailableBody": "Ensibuko ya tile ya maapu ekakasiddwa tetegekebwa kuzimba kuno n'okutuusa kati. Ebifo ebiriraanyewo bikyayinza okutikka okuva mu kifo ky’otereka.",
+  "placesDataSourceUnavailableTitle": "Ateeka data nga tesobola kusangibwa",
+  "placesDataSourceUnavailableBody": "Enkomerero ya data y'ebifo ekakasiddwa tetegekeddwa kuzimba kuno n'okutuusa kati. Teeka PLACES_OVERPASS_API_URL ku proxy oba omuwa akkirizibwa nga tonnasobozesa kunoonya okumpi.",
   "unknownPlaceName": "Erinnya eritamanyiddwa",
   "islamicPlaceFallback": "Ekifo ky'Obusiraamu",
-  "prayerNotificationTitle": "Ekiseera kya {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Kye kiseera okusaba {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verified duas tezinnabaawo",
-  "duaUnavailableBody": "Verified daily duas tezinnaba kukwatagana na kyuma kino. Yunga ku nsibuko y'ekire okutikka duas ezisibuka mu kifo ky'okugwa emabega okutakakasiddwa.",
-  "duaCategoryQuranic": "Dua ya Quran",
-  "duaCategoryMorningEvening": "Enkya & Akawungeezi",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Obukuumi",
-  "duaCategoryBeginning": "Entandikwa",
-  "duaCategorySleep": "Otulo",
-  "duaCategoryFoodDrink": "Emmere & Ebyokunywa",
-  "duaCategoryForgiveness": "Okusonyiwa",
-  "duaCategoryHome": "Ewaka",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Ensonda ekakasiddwa nga bwerindirira",
-  "hadithUnavailableTitle": "Ebikuŋŋaanyizo bya hadith ebikakasibwa tebinnaba kufunibwa",
-  "hadithUnavailableBody": "Okuzimba kuno kukyasinziira ku feed ya hadith ey’ebweru etakakasiddwa. Okulambula Hadith kusigala nga kulemesebwa okutuusa nga dataset evuddemu ekwataganye.",
-  "appErrorOccurred": "Ensobi ebaddewo",
-  "appUnknownError": "Ensobi etamanyiddwa",
-  "qiblaCompassErrorDetails": "Ensobi mu kampasi: {error} .",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Kiwedde! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah asinga wala buli butatuukiridde.",
-  "zikrMeaningAlhamdulillah": "Amatendo gonna ga Allah.",
-  "zikrMeaningAllahuAkbar": "Allah y’asinga obukulu.",
-  "zikrMeaningLaIlahaIllallah": "Tewali katonda yenna okuggyako Allah.",
-  "zikrMeaningAstaghfirullah": "Nsaba Allah okusonyiyibwa.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Tewali maanyi na maanyi okuggyako okuyita mu Allah.",
   "asmaMeaning1": "Omuganyulo",
   "asmaMeaning2": "Omusaasizi",
   "asmaMeaning3": "Kabaka / Mukama ow'olubeerera",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Oyo Ataggwaawo",
   "asmaMeaning97": "Omusika",
   "asmaMeaning98": "Omulagirizi Asinga Obutuukirivu",
-  "asmaMeaning99": "Oyo Omulwadde",
-  "duaMeaning1": "abalala basaba nti, ‘Mukama waffe, tuwe ebirungi mu nsi ne ku nkomerero, era otukuume okuva mu kubonyaabonyezebwa kw’omuliro.’",
-  "duaMeaning2": "Katonda tazitoowerera mwoyo gwonna okusinga bwe gusobola okugumira: buli omu afuna ekirungi kyonna ky’akoze, era n’abonyaabonyezebwa ebibi byakyo- ‘ Mukama, totutwala ku mulimu bwe twerabira oba nga tukola ensobi. Mukama, totuzitoowerera nga bwe wazitoowerera abo abatusooka. Mukama, totuzitoowerera nnyo okusinga bwe tulina amaanyi okwetikka. Tusonyiwe, tusonyiwe, era tusaasire. Ggwe Mukuumi waffe, kale tuyambe ku batakkiriza.’",
-  "duaMeaning3": "‘Mukama waffe, toleka mitima gyaffe kuva ku mulamwa ng’omaze okutulungamya. Tuwe okusaasira Kwo: Ggwe Agaba Bulijjo.",
-  "duaMeaning4": "Mukama, mpa nze n’ezzadde lyange tugende mu maaso n’okusaba. Mukama waffe kkiriza okusaba kwange.",
-  "duaMeaning5": "era wansi ekiwawaatiro kyo mu bwetoowaze gye bali mu kisa era ogambe nti, ‘Mukama waffe, basaasire, nga bwe banfaako nga nkyali muto.’",
-  "duaMeaning6": "Katonda agulumizibwe, oyo afuga mu mazima. [Nnabbi], toyanguwa kusoma ng’okubikkulirwa tekunnaggwa mu bujjuvu wabula gamba nti, ‘Mukama, nnyongera okumanya!’",
-  "duaMeaning7": "Gamba [Nabbi] nti, ‘Mukama, sonyiwa era osaasire: Ggwe asinga bonna.’",
-  "duaMeaning8": "abo abasaba nti, ‘Mukama waffe, tuwe essanyu mu bafumbo n’ezzadde lyaffe. Tufuule ebyokulabirako ebirungi eri abo abakumanyi’.",
-  "islamicNewYear": "Omwaka omuggya ogw'Obusiraamu",
-  "mawlidAnNabi": "Mawlid ne Nabi",
-  "specialDayDateRamadanStart": "1 Ramadhan",
-  "specialDayDateLaylatAlQadr": "27 Ramadhan",
-  "specialDayDateEidAlFitr": "1 Shawwal, omuwandiisi w’ebitabo",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal, omuwandiisi w’ebitabo",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Okutikka tafsir...",
-  "tafsirSourceLabel": "Tafsir ensonda",
-  "tafsirNoSurahFound": "Tewali tafsir ezuuliddwa ku surah eno.",
-  "tafsirNoAyahFound": "Tewali tafsir ezuuliddwa ku ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir teyasobodde kutikkibwa.",
-  "tafsirNoTextForAyah": "Tewali kiwandiiko kya tafsir ku ayah eno.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Ensibuko ya Tafsir yazzaayo ensobi ya HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Ensibuko ya tafsir erongooseddwa teyazzaayo biwandiiko byonna.",
-  "premiumProductUnavailable": "Premium product tesangibwa mu kiseera kino. Nsaba oddemu ogezeeko oluvannyuma.",
-  "premiumPurchaseFailed": "Okugula tekwasobodde kumalibwa. Nsaba oddemu ogezeeko.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Engeri y'Obusiraamu ey'Ekitangaala",
-  "downloadPartiallyFinishedForReciter": "Download ewedde ku {reciter} nga {failed} surahs eziremye ({downloaded}/{total} ziwanuliddwa).",
-  "placesLocationRequiredTitle": "Ekifo kyetaagisa",
-  "placesLocationRequiredBody": "Sooka oteekewo ekifo olwo emizikiti egy’okumpi, emmere ya halal, n’amasomero g’Obusiraamu bisobole okunoonyezebwa mu butuufu.",
-  "placesMapTilesUnavailableTitle": "Tiles za maapu teziriiwo",
-  "placesMapTilesUnavailableBody": "Ensibuko ya tile ya maapu ekakasiddwa tetegekebwa kuzimba kuno n'okutuusa kati. Ebifo ebiriraanyewo bikyayinza okutikka okuva mu kifo ky’otereka.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Sensulo ya kkampasi tesangibwa ku kyuma kino.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Ebirimu ku Quran tebyasobodde kutikkibwa. Nsaba oddemu ogezeeko.",
-  "locationDetectionFailed": "Teyasobodde kuzuula kifo kyo. Nsaba olonde ekibuga mu ngalo oba ddamu ogezeeko.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Ateeka data nga tesobola kusangibwa",
-  "placesDataSourceUnavailableBody": "Enkomerero ya data y'ebifo ekakasiddwa tetegekeddwa kuzimba kuno n'okutuusa kati. Teeka PLACES_OVERPASS_API_URL ku proxy oba omuwa akkirizibwa nga tonnasobozesa kunoonya okumpi.",
-  "tafsirCacheUnavailable": "Verified tafsir tennafuna ku mukutu gwa yintaneeti. Sync sourced tafsir dataset nga tonnaba kugenda mu maaso."
+  "asmaMeaning99": "Oyo Omulwadde"
 }

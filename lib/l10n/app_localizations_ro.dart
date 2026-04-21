@@ -957,6 +957,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get dailyVerse => 'Vers zilnic';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Vers zilnic indisponibil';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Conținutul de versuri zilnic verificat nu este încă configurat pentru această versiune. Conectați-vă la sursa cloud sau sincronizați un cache verificat înainte de a naviga.';
+
+  @override
   String get todaysIbadah => 'Ibadah de azi';
 
   @override

@@ -954,6 +954,14 @@ class AppLocalizationsMn extends AppLocalizations {
   String get dailyVerse => 'Өдөр тутмын шүлэг';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Өдөр тутмын шүлгийг ашиглах боломжгүй';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Баталгаажсан өдөр тутмын шүлгийн агуулгыг энэ бүтээцэд хараахан тохируулаагүй байна. Үзэхээсээ өмнө үүлэн эх сурвалжтай холбогдох эсвэл баталгаажуулсан кэшийг синк хийнэ үү.';
+
+  @override
   String get todaysIbadah => 'Өнөөдрийн Ибада';
 
   @override

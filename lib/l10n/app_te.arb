@@ -1,6 +1,7 @@
 {
   "@@locale": "te",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "ఇస్లామిక్ వే ఆఫ్ లైట్",
   "home": "హోమ్",
   "quran": "ఖురాన్",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "అసర్",
   "maghrib": "మగ్రిబ్",
   "isha": "ఇషా",
+  "prayerNotificationTitle": "{prayerName} కోసం సమయం",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "ఇది {prayerName} ప్రార్థన చేయడానికి సమయం.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "డేటా & నిల్వ",
   "clearCache": "కాష్‌ని క్లియర్ చేయండి",
   "cacheClearedSuccess": "కాష్ విజయవంతంగా క్లియర్ చేయబడింది",
@@ -34,6 +51,7 @@
   "currentLocation": "ప్రస్తుత స్థానం (GPS)",
   "locationServiceDisabled": "స్థాన సేవ నిలిపివేయబడింది.",
   "locationPermissionDenied": "స్థాన అనుమతి నిరాకరించబడింది.",
+  "locationDetectionFailed": "మీ స్థానాన్ని గుర్తించడం సాధ్యపడలేదు. దయచేసి నగరాన్ని మాన్యువల్‌గా ఎంచుకోండి లేదా మళ్లీ ప్రయత్నించండి.",
   "citiesCount": "{count} నగరాలు",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "ఫలితాలు ఏవీ కనుగొనబడలేదు",
   "loading": "లోడ్ అవుతోంది...",
   "error": "లోపం",
+  "appErrorOccurred": "ఒక లోపం సంభవించింది",
+  "appUnknownError": "తెలియని లోపం",
+  "quranLoadFailed": "ఖురాన్ కంటెంట్ లోడ్ చేయబడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
   "retry": "మళ్లీ ప్రయత్నించండి",
+  "refreshAction": "రిఫ్రెష్ చేయండి",
   "cancel": "రద్దు చేయి",
   "save": "సేవ్ చేయండి",
   "delete": "తొలగించు",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "నం",
   "surah": "సూరా",
+  "ayahLabel": "అయ్యా {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "జుజ్",
   "page": "పేజీ",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "తఫ్సీర్ లోడ్ అవుతోంది...",
+  "tafsirSourceLabel": "తఫ్సీర్ మూలం",
+  "tafsirNoSurahFound": "ఈ సూరా కోసం తఫ్సీర్ కనుగొనబడలేదు.",
+  "tafsirNoAyahFound": "అయా {ayah} కోసం తఫ్సీర్ కనుగొనబడలేదు.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "తఫ్సీర్ లోడ్ కాలేదు.",
+  "tafsirNoTextForAyah": "ఈ అయాకు తఫ్సీర్ వచనం లేదు.",
+  "tafsirDownloadingProgress": "తఫ్సీర్ డౌన్‌లోడ్ చేస్తోంది {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "తఫ్సీర్ లోడ్ అవుతోంది {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir మూలం HTTP {statusCode} లోపాన్ని అందించింది.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "ఎంచుకున్న తఫ్సీర్ మూలం ఎలాంటి ఎంట్రీలను అందించలేదు.",
+  "tafsirCacheUnavailable": "ధృవీకరించబడిన తఫ్సీర్ ఇంకా ఆఫ్‌లైన్‌లో అందుబాటులో లేదు. బ్రౌజ్ చేయడానికి ముందు మూలాధారమైన tafsir డేటాసెట్‌ను సమకాలీకరించండి.",
   "bookmarks": "Bookmarks",
   "addBookmark": "బుక్‌మార్క్‌ని జోడించండి",
   "removeBookmark": "బుక్‌మార్క్‌ని తీసివేయండి",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "మరికొందరు, ‘మా ప్రభూ, మాకు ఇహలోకంలో మరియు పరలోకంలో మంచిని ప్రసాదించు, మరియు అగ్ని యొక్క వేదన నుండి మమ్మల్ని రక్షించు’ అని ప్రార్థిస్తారు.",
+  "duaMeaning2": "దేవుడు ఏ ఆత్మపైనా అది భరించగలిగే దానికంటే ఎక్కువ భారం వేయడు: ప్రతి ఒక్కరూ తాను చేసిన మంచిని పొందుతాడు మరియు దాని చెడును అనుభవిస్తాడు- ‘ప్రభూ, మేము మరచిపోయినా లేదా తప్పులు చేసినా మమ్మల్ని శిక్షించవద్దు. ప్రభూ, మా ముందున్న వారిపై భారం మోపినట్లు మాపై భారం వేయకు. ప్రభూ, మాకు భరించే శక్తి కంటే ఎక్కువ భారం వేయకు. మమ్మల్ని క్షమించు, క్షమించు మరియు మాపై దయ చూపండి. నువ్వే మా రక్షకుడివి, కాబట్టి అవిశ్వాసులకు వ్యతిరేకంగా మాకు సహాయం చెయ్యి.’",
+  "duaMeaning3": "‘మా ప్రభూ, నీవు మాకు మార్గనిర్దేశం చేసిన తర్వాత మా హృదయాలను విడదీయకు. నీ దయను మాకు ప్రసాదించు: నువ్వే ఎప్పటికీ ఇచ్చేవాడివి.",
+  "duaMeaning4": "ప్రభూ, నేను మరియు నా సంతానం ప్రార్థనను కొనసాగించేలా అనుగ్రహించు. మా ప్రభూ, నా అభ్యర్థనను అంగీకరించండి.",
+  "duaMeaning5": "మరియు దయతో వారి పట్ల వినయంతో మీ రెక్కలను తగ్గించి, 'ప్రభూ, నేను చిన్నగా ఉన్నప్పుడు వారు నన్ను ఎలా చూసుకున్నారో వారిపై దయ చూపండి' అని చెప్పండి.",
+  "duaMeaning6": "నిజంగా నియంత్రణలో ఉన్న దేవుడు గొప్పవాడు. [ప్రవక్త], ద్యోతకం పూర్తిగా పూర్తికాకముందే పఠించడానికి తొందరపడకండి, ‘ప్రభూ, నాకు జ్ఞానాన్ని పెంచు!’ అని చెప్పండి.",
+  "duaMeaning7": "[ప్రవక్త], ‘ప్రభూ, క్షమించు మరియు దయ చూపు: నీవు అందరికంటే దయగలవాడివి’ అని చెప్పండి.",
+  "duaMeaning8": "ప్రార్థించే వారు, 'మా ప్రభూ, మా భార్యాభర్తలు మరియు సంతానంలో మాకు సంతోషాన్ని ప్రసాదించు. మీ గురించి అవగాహన ఉన్నవారికి మమ్మల్ని మంచి ఉదాహరణగా చేయండి.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "ఉపవాసం",
   "quranReading": "ఖురాన్ పఠనం",
   "prayers": "ప్రార్థనలు",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}ని",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}ని",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "వీక్లీ ప్రోగ్రెస్",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "ఇస్లామిక్ నూతన సంవత్సరం",
+  "mawlidAnNabi": "మవ్లీద్ అన్-నబీ",
+  "specialDayDateRamadanStart": "1 రంజాన్",
+  "specialDayDateLaylatAlQadr": "27 రంజాన్",
+  "specialDayDateEidAlFitr": "1 షవ్వాల్",
+  "specialDayDateEidAlAdha": "10 దుల్ హిజ్జా",
+  "specialDayDateIslamicNewYear": "1 మొహర్రం",
+  "specialDayDateMawlidAnNabi": "12 రబీ అల్-అవ్వల్",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "ఖిబ్లా దిశ",
   "compass": "దిక్సూచి",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "ఖిబ్లా దొరికింది!",
   "turnDevice": "కిబ్లాకు ఎదురుగా మీ పరికరాన్ని తిరగండి",
+  "qiblaCompassErrorDetails": "కంపాస్ లోపం: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు.",
+  "qiblaLocationRequiredTitle": "ఖిబ్లా కోసం అవసరమైన స్థానం",
+  "qiblaLocationRequiredBody": "Qibla దిక్సూచిని ఉపయోగించే ముందు మీ వాస్తవ స్థానాన్ని సెట్ చేయండి, తద్వారా దిశను ఖచ్చితంగా లెక్కించవచ్చు.",
+  "adhanNotificationChannelName": "అధాన్ నోటిఫికేషన్‌లు",
+  "adhanNotificationChannelDescription": "అధాన్ ధ్వనితో ప్రార్థన సమయ హెచ్చరికలు.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "లక్ష్య సంఖ్య: {target}",
   "tapToCount": "లెక్కించడానికి నొక్కండి",
+  "zikrCompletedMashAllah": "పూర్తయింది! మాషాఅల్లాహ్",
+  "zikrMeaningSubhanAllah": "అల్లాహ్ ప్రతి అసంపూర్ణత కంటే చాలా ఎక్కువ.",
+  "zikrMeaningAlhamdulillah": "అన్ని ప్రశంసలు అల్లాహ్‌కే చెందుతాయి.",
+  "zikrMeaningAllahuAkbar": "అల్లాహ్ గొప్పవాడు.",
+  "zikrMeaningLaIlahaIllallah": "అల్లా తప్ప మరే దేవుడు లేడు.",
+  "zikrMeaningAstaghfirullah": "నేను అల్లాహ్ క్షమాపణ కోరుతున్నాను.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "అల్లాహ్ ద్వారా తప్ప శక్తి మరియు బలం లేదు.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "ఆడియో వాయిస్",
+  "audioVoiceMisharyAlafasy": "పురుషులు (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "పురుషులు (Abdul Basit)",
+  "audioVoiceSudais": "పురుషులు (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "ఖిబ్లా క్రమాంకనం",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "క్రమాంకనం అవసరం. ఫిగర్-8లో పరికరాన్ని తిప్పండి.",
   "dailyVerse": "రోజువారీ పద్యం",
+  "dailyVerseUnavailableTitle": "రోజువారీ పద్యం అందుబాటులో లేదు",
+  "dailyVerseUnavailableBody": "ఈ బిల్డ్ కోసం ధృవీకరించబడిన రోజువారీ పద్య కంటెంట్ ఇంకా కాన్ఫిగర్ చేయబడలేదు. బ్రౌజ్ చేయడానికి ముందు క్లౌడ్ సోర్స్‌కి కనెక్ట్ చేయండి లేదా ధృవీకరించబడిన కాష్‌ని సింక్ చేయండి.",
   "todaysIbadah": "నేటి ఇబాదా",
   "quickAccess": "త్వరిత యాక్సెస్",
   "assistant": "సహాయకుడు",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "ధృవీకరించబడిన దువాలు ఇంకా అందుబాటులో లేవు",
+  "duaUnavailableBody": "ధృవీకరించబడిన రోజువారీ దువాలు ఇంకా ఈ పరికరానికి సమకాలీకరించబడలేదు. ధృవీకరించని ఫాల్‌బ్యాక్‌కు బదులుగా మూలాధారమైన దువాలను లోడ్ చేయడానికి క్లౌడ్ సోర్స్‌కి కనెక్ట్ చేయండి.",
+  "duaCategoryQuranic": "ఖురాన్ దువా",
+  "duaCategoryMorningEvening": "ఉదయం & సాయంత్రం",
+  "duaCategoryTasbih": "తస్బిహ్",
+  "duaCategoryProtection": "రక్షణ",
+  "duaCategoryBeginning": "ప్రారంభం",
+  "duaCategorySleep": "నిద్రించు",
+  "duaCategoryFoodDrink": "ఆహారం & పానీయం",
+  "duaCategoryForgiveness": "క్షమాపణ",
+  "duaCategoryHome": "హోమ్",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "ఇస్లామిక్ విద్య",
   "sukunAudioTitle": "సుకున్ సౌండ్‌స్కేప్స్",
   "hadithCollections": "హదీథ్ సేకరణలు",
+  "hadithSourcePending": "ధృవీకరించబడిన మూలం పెండింగ్‌లో ఉంది",
+  "hadithUnavailableTitle": "ధృవీకరించబడిన హదీసు సేకరణలు ఇంకా అందుబాటులో లేవు",
+  "hadithUnavailableBody": "ఈ బిల్డ్ ఇప్పటికీ ధృవీకరించబడని బాహ్య హదీసు ఫీడ్‌పై ఆధారపడి ఉంటుంది. మూలాధార డేటాసెట్ సమకాలీకరించబడే వరకు హదీత్ బ్రౌజింగ్ నిలిపివేయబడుతుంది.",
   "paywallUnlockAll": "మీ ఆధ్యాత్మిక ప్రయాణం కోసం అన్ని లక్షణాలను అన్‌లాక్ చేయండి",
+  "premiumProductUnavailable": "ప్రీమియం ఉత్పత్తి ప్రస్తుతం అందుబాటులో లేదు. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.",
+  "premiumPurchaseFailed": "కొనుగోలు పూర్తి కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
   "paywallFeature1Title": "న్యూరల్ అసిస్టెంట్ ప్లస్",
   "paywallFeature1Desc": "అపరిమిత AI-ఆధారిత Q&A",
   "paywallFeature2Title": "అపరిమిత ఆఫ్‌లైన్",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} కోసం {failed} విఫలమైన సూరాలతో డౌన్‌లోడ్ పూర్తయింది ({downloaded}/{total} డౌన్‌లోడ్ చేయబడింది).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} కోసం ఆఫ్‌లైన్ ఫైల్‌లు తొలగించబడ్డాయి.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "నెట్‌వర్క్ లోపం. దయచేసి మళ్లీ ప్రయత్నించండి.",
+  "placesLocationRequiredTitle": "స్థానం అవసరం",
+  "placesLocationRequiredBody": "ముందుగా లొకేషన్‌ను సెట్ చేయండి, తద్వారా సమీపంలోని మసీదులు, హలాల్ ఫుడ్ మరియు ఇస్లామిక్ పాఠశాలలను ఖచ్చితంగా శోధించవచ్చు.",
+  "placesMapTilesUnavailableTitle": "మ్యాప్ టైల్స్ అందుబాటులో లేవు",
+  "placesMapTilesUnavailableBody": "ఈ బిల్డ్ కోసం ధృవీకరించబడిన మ్యాప్ టైల్ మూలం ఇంకా కాన్ఫిగర్ చేయబడలేదు. మీరు సేవ్ చేసిన స్థానం నుండి సమీప స్థలాలు ఇప్పటికీ లోడ్ అవుతాయి.",
+  "placesDataSourceUnavailableTitle": "స్థలాల డేటా అందుబాటులో లేదు",
+  "placesDataSourceUnavailableBody": "ఈ బిల్డ్ కోసం ధృవీకరించబడిన స్థలాల డేటా ముగింపు పాయింట్ ఇంకా కాన్ఫిగర్ చేయబడలేదు. సమీపంలోని శోధనను ప్రారంభించే ముందు PLACES_OVERPASS_API_URLని ఆమోదించబడిన ప్రాక్సీ లేదా ప్రొవైడర్‌కి సెట్ చేయండి.",
   "unknownPlaceName": "తెలియని పేరు",
   "islamicPlaceFallback": "ఇస్లామిక్ ప్లేస్",
-  "prayerNotificationTitle": "{prayerName} కోసం సమయం",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "ఇది {prayerName} ప్రార్థన చేయడానికి సమయం.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "ధృవీకరించబడిన దువాలు ఇంకా అందుబాటులో లేవు",
-  "duaUnavailableBody": "ధృవీకరించబడిన రోజువారీ దువాలు ఇంకా ఈ పరికరానికి సమకాలీకరించబడలేదు. ధృవీకరించని ఫాల్‌బ్యాక్‌కు బదులుగా మూలాధారమైన దువాలను లోడ్ చేయడానికి క్లౌడ్ సోర్స్‌కి కనెక్ట్ చేయండి.",
-  "duaCategoryQuranic": "ఖురాన్ దువా",
-  "duaCategoryMorningEvening": "ఉదయం & సాయంత్రం",
-  "duaCategoryTasbih": "తస్బిహ్",
-  "duaCategoryProtection": "రక్షణ",
-  "duaCategoryBeginning": "ప్రారంభం",
-  "duaCategorySleep": "నిద్రించు",
-  "duaCategoryFoodDrink": "ఆహారం & పానీయం",
-  "duaCategoryForgiveness": "క్షమాపణ",
-  "duaCategoryHome": "హోమ్",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "ధృవీకరించబడిన మూలం పెండింగ్‌లో ఉంది",
-  "hadithUnavailableTitle": "ధృవీకరించబడిన హదీసు సేకరణలు ఇంకా అందుబాటులో లేవు",
-  "hadithUnavailableBody": "ఈ బిల్డ్ ఇప్పటికీ ధృవీకరించబడని బాహ్య హదీసు ఫీడ్‌పై ఆధారపడి ఉంటుంది. మూలాధార డేటాసెట్ సమకాలీకరించబడే వరకు హదీత్ బ్రౌజింగ్ నిలిపివేయబడుతుంది.",
-  "appErrorOccurred": "ఒక లోపం సంభవించింది",
-  "appUnknownError": "తెలియని లోపం",
-  "qiblaCompassErrorDetails": "కంపాస్ లోపం: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "పూర్తయింది! మాషాఅల్లాహ్",
-  "zikrMeaningSubhanAllah": "అల్లాహ్ ప్రతి అసంపూర్ణత కంటే చాలా ఎక్కువ.",
-  "zikrMeaningAlhamdulillah": "అన్ని ప్రశంసలు అల్లాహ్‌కే చెందుతాయి.",
-  "zikrMeaningAllahuAkbar": "అల్లాహ్ గొప్పవాడు.",
-  "zikrMeaningLaIlahaIllallah": "అల్లా తప్ప మరే దేవుడు లేడు.",
-  "zikrMeaningAstaghfirullah": "నేను అల్లాహ్ క్షమాపణ కోరుతున్నాను.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "అల్లాహ్ ద్వారా తప్ప శక్తి మరియు బలం లేదు.",
   "asmaMeaning1": "ది బెనిఫిసెంట్",
   "asmaMeaning2": "దయగల",
   "asmaMeaning3": "రాజు / ఎటర్నల్ లార్డ్",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "ఎవర్‌లాస్టింగ్ వన్",
   "asmaMeaning97": "ది ఇన్‌హెరిటర్",
   "asmaMeaning98": "అత్యంత నీతివంతమైన మార్గదర్శి",
-  "asmaMeaning99": "రోగి వన్",
-  "duaMeaning1": "మరికొందరు, ‘మా ప్రభూ, మాకు ఇహలోకంలో మరియు పరలోకంలో మంచిని ప్రసాదించు, మరియు అగ్ని యొక్క వేదన నుండి మమ్మల్ని రక్షించు’ అని ప్రార్థిస్తారు.",
-  "duaMeaning2": "దేవుడు ఏ ఆత్మపైనా అది భరించగలిగే దానికంటే ఎక్కువ భారం వేయడు: ప్రతి ఒక్కరూ తాను చేసిన మంచిని పొందుతాడు మరియు దాని చెడును అనుభవిస్తాడు- ‘ప్రభూ, మేము మరచిపోయినా లేదా తప్పులు చేసినా మమ్మల్ని శిక్షించవద్దు. ప్రభూ, మా ముందున్న వారిపై భారం మోపినట్లు మాపై భారం వేయకు. ప్రభూ, మాకు భరించే శక్తి కంటే ఎక్కువ భారం వేయకు. మమ్మల్ని క్షమించు, క్షమించు మరియు మాపై దయ చూపండి. నువ్వే మా రక్షకుడివి, కాబట్టి అవిశ్వాసులకు వ్యతిరేకంగా మాకు సహాయం చెయ్యి.’",
-  "duaMeaning3": "‘మా ప్రభూ, నీవు మాకు మార్గనిర్దేశం చేసిన తర్వాత మా హృదయాలను విడదీయకు. నీ దయను మాకు ప్రసాదించు: నువ్వే ఎప్పటికీ ఇచ్చేవాడివి.",
-  "duaMeaning4": "ప్రభూ, నేను మరియు నా సంతానం ప్రార్థనను కొనసాగించేలా అనుగ్రహించు. మా ప్రభూ, నా అభ్యర్థనను అంగీకరించండి.",
-  "duaMeaning5": "మరియు దయతో వారి పట్ల వినయంతో మీ రెక్కలను తగ్గించి, 'ప్రభూ, నేను చిన్నగా ఉన్నప్పుడు వారు నన్ను ఎలా చూసుకున్నారో వారిపై దయ చూపండి' అని చెప్పండి.",
-  "duaMeaning6": "నిజంగా నియంత్రణలో ఉన్న దేవుడు గొప్పవాడు. [ప్రవక్త], ద్యోతకం పూర్తిగా పూర్తికాకముందే పఠించడానికి తొందరపడకండి, ‘ప్రభూ, నాకు జ్ఞానాన్ని పెంచు!’ అని చెప్పండి.",
-  "duaMeaning7": "[ప్రవక్త], ‘ప్రభూ, క్షమించు మరియు దయ చూపు: నీవు అందరికంటే దయగలవాడివి’ అని చెప్పండి.",
-  "duaMeaning8": "ప్రార్థించే వారు, 'మా ప్రభూ, మా భార్యాభర్తలు మరియు సంతానంలో మాకు సంతోషాన్ని ప్రసాదించు. మీ గురించి అవగాహన ఉన్నవారికి మమ్మల్ని మంచి ఉదాహరణగా చేయండి.",
-  "islamicNewYear": "ఇస్లామిక్ నూతన సంవత్సరం",
-  "mawlidAnNabi": "మవ్లీద్ అన్-నబీ",
-  "specialDayDateRamadanStart": "1 రంజాన్",
-  "specialDayDateLaylatAlQadr": "27 రంజాన్",
-  "specialDayDateEidAlFitr": "1 షవ్వాల్",
-  "specialDayDateEidAlAdha": "10 దుల్ హిజ్జా",
-  "specialDayDateIslamicNewYear": "1 మొహర్రం",
-  "specialDayDateMawlidAnNabi": "12 రబీ అల్-అవ్వల్",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "రిఫ్రెష్ చేయండి",
-  "ayahLabel": "అయ్యా {ayah}",
-  "tafsirLoading": "తఫ్సీర్ లోడ్ అవుతోంది...",
-  "tafsirSourceLabel": "తఫ్సీర్ మూలం",
-  "tafsirNoSurahFound": "ఈ సూరా కోసం తఫ్సీర్ కనుగొనబడలేదు.",
-  "tafsirNoAyahFound": "అయా {ayah} కోసం తఫ్సీర్ కనుగొనబడలేదు.",
-  "tafsirLoadFailed": "తఫ్సీర్ లోడ్ కాలేదు.",
-  "tafsirNoTextForAyah": "ఈ అయాకు తఫ్సీర్ వచనం లేదు.",
-  "tafsirDownloadingProgress": "తఫ్సీర్ డౌన్‌లోడ్ చేస్తోంది {current}/{total}",
-  "tafsirLoadingProgress": "తఫ్సీర్ లోడ్ అవుతోంది {current}/{total}",
-  "tafsirApiStatusError": "Tafsir మూలం HTTP {statusCode} లోపాన్ని అందించింది.",
-  "tafsirNoEntriesReturned": "ఎంచుకున్న తఫ్సీర్ మూలం ఎలాంటి ఎంట్రీలను అందించలేదు.",
-  "premiumProductUnavailable": "ప్రీమియం ఉత్పత్తి ప్రస్తుతం అందుబాటులో లేదు. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.",
-  "premiumPurchaseFailed": "కొనుగోలు పూర్తి కాలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}ని",
-  "prayerRemainingMinutes": "{minutes}ని",
-  "splashTagline": "ఇస్లామిక్ వే ఆఫ్ లైట్",
-  "downloadPartiallyFinishedForReciter": "{reciter} కోసం {failed} విఫలమైన సూరాలతో డౌన్‌లోడ్ పూర్తయింది ({downloaded}/{total} డౌన్‌లోడ్ చేయబడింది).",
-  "placesLocationRequiredTitle": "స్థానం అవసరం",
-  "placesLocationRequiredBody": "ముందుగా లొకేషన్‌ను సెట్ చేయండి, తద్వారా సమీపంలోని మసీదులు, హలాల్ ఫుడ్ మరియు ఇస్లామిక్ పాఠశాలలను ఖచ్చితంగా శోధించవచ్చు.",
-  "placesMapTilesUnavailableTitle": "మ్యాప్ టైల్స్ అందుబాటులో లేవు",
-  "placesMapTilesUnavailableBody": "ఈ బిల్డ్ కోసం ధృవీకరించబడిన మ్యాప్ టైల్ మూలం ఇంకా కాన్ఫిగర్ చేయబడలేదు. మీరు సేవ్ చేసిన స్థానం నుండి సమీప స్థలాలు ఇప్పటికీ లోడ్ అవుతాయి.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "పురుషులు (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "పురుషులు (Abdul Basit)",
-  "audioVoiceSudais": "పురుషులు (Sudais)",
-  "qiblaSensorUnavailable": "ఈ పరికరంలో కంపాస్ సెన్సార్ అందుబాటులో లేదు.",
-  "adhanNotificationChannelName": "అధాన్ నోటిఫికేషన్‌లు",
-  "adhanNotificationChannelDescription": "అధాన్ ధ్వనితో ప్రార్థన సమయ హెచ్చరికలు.",
-  "quranLoadFailed": "ఖురాన్ కంటెంట్ లోడ్ చేయబడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
-  "locationDetectionFailed": "మీ స్థానాన్ని గుర్తించడం సాధ్యపడలేదు. దయచేసి నగరాన్ని మాన్యువల్‌గా ఎంచుకోండి లేదా మళ్లీ ప్రయత్నించండి.",
-  "qiblaLocationRequiredTitle": "ఖిబ్లా కోసం అవసరమైన స్థానం",
-  "qiblaLocationRequiredBody": "Qibla దిక్సూచిని ఉపయోగించే ముందు మీ వాస్తవ స్థానాన్ని సెట్ చేయండి, తద్వారా దిశను ఖచ్చితంగా లెక్కించవచ్చు.",
-  "placesDataSourceUnavailableTitle": "స్థలాల డేటా అందుబాటులో లేదు",
-  "placesDataSourceUnavailableBody": "ఈ బిల్డ్ కోసం ధృవీకరించబడిన స్థలాల డేటా ముగింపు పాయింట్ ఇంకా కాన్ఫిగర్ చేయబడలేదు. సమీపంలోని శోధనను ప్రారంభించే ముందు PLACES_OVERPASS_API_URLని ఆమోదించబడిన ప్రాక్సీ లేదా ప్రొవైడర్‌కి సెట్ చేయండి.",
-  "tafsirCacheUnavailable": "ధృవీకరించబడిన తఫ్సీర్ ఇంకా ఆఫ్‌లైన్‌లో అందుబాటులో లేదు. బ్రౌజ్ చేయడానికి ముందు మూలాధారమైన tafsir డేటాసెట్‌ను సమకాలీకరించండి."
+  "asmaMeaning99": "రోగి వన్"
 }

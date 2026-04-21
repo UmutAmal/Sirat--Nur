@@ -1,6 +1,7 @@
 {
   "@@locale": "tg",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Роҳи нури исломӣ",
   "home": "Хона",
   "quran": "Қуръон",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Аср",
   "maghrib": "Мағриб",
   "isha": "Иша",
+  "prayerNotificationTitle": "Вақти {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} вақти дуо кардан аст.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Маълумот ва нигоҳдорӣ",
   "clearCache": "Тоза кардани кэш",
   "cacheClearedSuccess": "Кэш бомуваффақият тоза карда шуд",
@@ -34,6 +51,7 @@
   "currentLocation": "Ҷойгиршавии ҷорӣ (GPS)",
   "locationServiceDisabled": "Хадамоти ҷойгиршавӣ ғайрифаъол аст.",
   "locationPermissionDenied": "Иҷозати ҷойгиршавӣ рад карда шуд.",
+  "locationDetectionFailed": "Ҷойгиршавии шуморо муайян карда натавонист. Лутфан шаҳрро дастӣ интихоб кунед ё дубора кӯшиш кунед.",
   "citiesCount": "{count} шаҳрҳо",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ягон натиҷа ёфт нашуд",
   "loading": "Loading...",
   "error": "Хатогӣ",
+  "appErrorOccurred": "Хатогӣ рӯй дод",
+  "appUnknownError": "Хатогии номаълум",
+  "quranLoadFailed": "Мундариҷаи Қуръон бор карда нашуд. Лутфан бори дигар кӯшиш кунед.",
   "retry": "Аз нав кӯшиш кунед",
+  "refreshAction": "Навсозӣ",
   "cancel": "Бекор кардан",
   "save": "Захира кунед",
   "delete": "Нобуд кунед",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Не",
   "surah": "Сура",
+  "ayahLabel": "Оят {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Юз",
   "page": "Саҳифа",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Loading тафсир...",
+  "tafsirSourceLabel": "Манбаи тафсир",
+  "tafsirNoSurahFound": "Барои ин сура тафсир ёфт нашуд.",
+  "tafsirNoAyahFound": "Барои оят {ayah} тафсир ёфт нашуд.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Тафсир бор карда нашуд.",
+  "tafsirNoTextForAyah": "Барои ин оят матни тафсир нест.",
+  "tafsirDownloadingProgress": "Зеркашии тафсири {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Боркунии тафсири {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Манбаи тафсир хатои HTTP {statusCode} баргардонид.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Сарчашмаи интихобшудаи тафсир ягон сабтро барнагардондааст.",
+  "tafsirCacheUnavailable": "Тафсири тасдиқшуда ҳанӯз офлайн дастрас нест. Пеш аз дидан, маҷмӯи додаҳои тафсирро ҳамоҳанг созед.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Иловаи хатчӯб",
   "removeBookmark": "Хатчӯбро хориҷ кунед",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "Дигарон дуо мекунанд: «Эй Парвардигори мо, ба мо дар дунёву охират некӣ ато кун ва моро аз азоби оташ нигоҳ дор».",
+  "duaMeaning2": "Худованд ҳеҷ касро ба андозаи тоқати тавонаш бор намекунад: ҳар кас ҳар кори хайре, ки кардааст, ба даст меорад ва ба бади худ гирифтор мешавад. Эй Парвардигори мо, агар фаромӯш кардаем ё хато кардаем, моро бозхост макун. Парвардигоро, ба мо бор макун, чунон ки ба касоне, ки пеш аз мо будӣ. Парвардигоро, бар мо аз он чизе, ки тавони тоқат кардан дорем, бор макун. Моро бубахш, моро биёмурз ва бар мо раҳм кун. Ту ёвари мо ҳастӣ, пас моро бар зидди кофирон ёрӣ деҳ».",
+  "duaMeaning3": "«Эй Парвардигори мо, пас аз он, ки моро ҳидоят кардаӣ, дилҳои моро аз он гумроҳ макун. Раҳмати худро ба мо ато кун, ки Ту бахшанда ҳастӣ.",
+  "duaMeaning4": "Парвардигоро, бигзор ману авлоди ман намоз бигузорем. Парвардигоро, дуои маро қабул кун.",
+  "duaMeaning5": "ва боли худро ба хоксорӣ дар баробари эҳсонашон фуруд ор ва бигӯ: «Парвардигоро!",
+  "duaMeaning6": "Пок аст Худое, ки ҳоким аст! [Пайғамбар], пеш аз он ки ваҳй тамом шавад, ба хондан шитоб накун, балки бигӯ: «Парвардигоро, илми маро афзун кун!».",
+  "duaMeaning7": "Бигӯ: «Парвардигоро, биёмурз ва раҳм кун, ки Ту меҳрубонтарини ҳама ҳастӣ».",
+  "duaMeaning8": "Онон, ки дуо мекунанд: «Эй Парвардигори мо, моро ба ҳамсарон ва фарзандонамон шод гардон. Моро барои касоне, ки аз Ту огоҳанд, намунаи нек кун».",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Рӯза",
   "quranReading": "Хониши Қуръон",
   "prayers": "Дуоҳо",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Пешрафти ҳафта",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Соли нави исломи",
+  "mawlidAnNabi": "Мавлиди Наби",
+  "specialDayDateRamadanStart": "1 Рамазон",
+  "specialDayDateLaylatAlQadr": "27 Рамазон",
+  "specialDayDateEidAlFitr": "1 Шаввол",
+  "specialDayDateEidAlAdha": "10 Зулҳиҷҷа",
+  "specialDayDateIslamicNewYear": "1 Муҳаррам",
+  "specialDayDateMawlidAnNabi": "12 Рабиул-аввал",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Самти қибла",
   "compass": "Компас",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Қибла ёфт!",
   "turnDevice": "Дастгоҳи худро ба сӯи қибла рӯ кунед",
+  "qiblaCompassErrorDetails": "Хатогии компас: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест.",
+  "qiblaLocationRequiredTitle": "Ҷой барои қибла лозим аст",
+  "qiblaLocationRequiredBody": "Пеш аз истифодаи қутбнамо аз қибла макони воқеии худро таъин кунед, то самт дуруст ҳисоб карда шавад.",
+  "adhanNotificationChannelName": "Огоҳиҳои азон",
+  "adhanNotificationChannelDescription": "Огоҳии вақти намоз бо садои азон.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Шумораи мақсаднок: {target}",
   "tapToCount": "Барои ҳисоб клик кунед",
+  "zikrCompletedMashAllah": "Ба итмом расид! МашаАллах",
+  "zikrMeaningSubhanAllah": "Аллоҳ ҳар бир ноқулайликдан устундир.",
+  "zikrMeaningAlhamdulillah": "Ҳамду ситоиш аз они Худост.",
+  "zikrMeaningAllahuAkbar": "Аллоҳ бузургтар аст.",
+  "zikrMeaningLaIlahaIllallah": "Ҳеҷ худое ҷуз Аллоҳ нест.",
+  "zikrMeaningAstaghfirullah": "Аллоҳдан мағфират сўрайман.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ҳеҷ қудрат ва тавоноӣ ҷуз ба воситаи Аллоҳ нест.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Овози аудио",
+  "audioVoiceMisharyAlafasy": "Мард (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Мард (Abdul Basit)",
+  "audioVoiceSudais": "Мард (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Калибргузории қибла",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Калибрченкунӣ лозим аст. Таҷҳизотро дар расм-8 гардиш кунед.",
   "dailyVerse": "Сурати ҳаррӯза",
+  "dailyVerseUnavailableTitle": "Ояти ҳаррӯза дастрас нест",
+  "dailyVerseUnavailableBody": "Мундариҷаи тасдиқшудаи ҳаррӯза барои ин сохтмон ҳанӯз танзим нашудааст. Пеш аз дидан ба манбаи абр пайваст шавед ё кэши тасдиқшударо ҳамоҳанг созед.",
   "todaysIbadah": "Ибодати имрӯза",
   "quickAccess": "Дастрасии зуд",
   "assistant": "Ёрдамчӣ",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Дуоҳои тасдиқшуда ҳанӯз дастрас нестанд",
+  "duaUnavailableBody": "Дуоҳои ҳаррӯзаи тасдиқшуда то ҳол бо ин дастгоҳ ҳамоҳанг карда нашудаанд. Ба манбаи абр пайваст шавед, то дуоҳои сарчашмаро ба ҷои бозгашти тасдиқнашуда бор кунед.",
+  "duaCategoryQuranic": "Дуои Қуръон",
+  "duaCategoryMorningEvening": "Субх ва шом",
+  "duaCategoryTasbih": "Тасбих",
+  "duaCategoryProtection": "Муҳофизат",
+  "duaCategoryBeginning": "Оғозҳо",
+  "duaCategorySleep": "Хоб",
+  "duaCategoryFoodDrink": "Хӯрок ва нӯшокӣ",
+  "duaCategoryForgiveness": "бахшидан",
+  "duaCategoryHome": "Хона",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Таълими исломӣ",
   "sukunAudioTitle": "Манзараҳои садои Сукун",
   "hadithCollections": "Маҷмӯаи Ҳадис",
+  "hadithSourcePending": "Манбаи тасдиқшуда интизор аст",
+  "hadithUnavailableTitle": "Маҷмӯаҳои ҳадисҳои тасдиқшуда ҳанӯз дастрас нестанд",
+  "hadithUnavailableBody": "Ин сохтмон то ҳол аз як канали ҳадисҳои берунии тасдиқнашуда вобаста аст. Баррасии ҳадисҳо то синхронизатсияи маҷмӯи додаҳои манбаъ ғайрифаъол мемонад.",
   "paywallUnlockAll": "Тамоми хусусиятҳоро барои сафари рӯҳонии худ кушоед",
+  "premiumProductUnavailable": "Маҳсулоти Premium ҳоло дастрас нест. Лутфан баъдтар бори дигар кӯшиш кунед.",
+  "premiumPurchaseFailed": "Харид анҷом дода нашуд. Лутфан бори дигар кӯшиш кунед.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Саволҳо ва ҷавобҳои бемаҳдуд аз ҷониби AI",
   "paywallFeature2Title": "Офлайн бемаҳдуд",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Зеркашӣ барои {reciter} бо {failed} сураҳои ноком анҷом ёфт ({downloaded}/{total} бор карда шудааст).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Файлҳои офлайнӣ барои {reciter} нест карда шуданд.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Хатогии шабака. Лутфан бори дигар кӯшиш кунед.",
+  "placesLocationRequiredTitle": "Ҷойгиршавӣ талаб карда мешавад",
+  "placesLocationRequiredBody": "Аввалан як макон таъин кунед, то масҷидҳои наздик, ғизои ҳалол ва мактабҳои исломиро дақиқ ҷустуҷӯ кунанд.",
+  "placesMapTilesUnavailableTitle": "Плитаҳои харита дастрас нестанд",
+  "placesMapTilesUnavailableBody": "Манбаи сафҳаи тасдиқшудаи харита барои ин сохтмон ҳанӯз танзим нашудааст. Ҷойҳои ҳамсоя ҳоло ҳам метавонанд аз макони захирашудаи шумо бор кунанд.",
+  "placesDataSourceUnavailableTitle": "Маълумоти ҷойҳо дастрас нест",
+  "placesDataSourceUnavailableBody": "Нуқтаи ниҳоии маълумотҳои тасдиқшудаи ҷойҳо барои ин сохтмон ҳанӯз танзим нашудааст. Пеш аз фаъол кардани ҷустуҷӯи наздик PLACES_OVERPASS_API_URL-ро ба прокси ё провайдери тасдиқшуда насб кунед.",
   "unknownPlaceName": "Номи номаълум",
   "islamicPlaceFallback": "Ҷойи исломӣ",
-  "prayerNotificationTitle": "Вақти {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} вақти дуо кардан аст.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Дуоҳои тасдиқшуда ҳанӯз дастрас нестанд",
-  "duaUnavailableBody": "Дуоҳои ҳаррӯзаи тасдиқшуда то ҳол бо ин дастгоҳ ҳамоҳанг карда нашудаанд. Ба манбаи абр пайваст шавед, то дуоҳои сарчашмаро ба ҷои бозгашти тасдиқнашуда бор кунед.",
-  "duaCategoryQuranic": "Дуои Қуръон",
-  "duaCategoryMorningEvening": "Субх ва шом",
-  "duaCategoryTasbih": "Тасбих",
-  "duaCategoryProtection": "Муҳофизат",
-  "duaCategoryBeginning": "Оғозҳо",
-  "duaCategorySleep": "Хоб",
-  "duaCategoryFoodDrink": "Хӯрок ва нӯшокӣ",
-  "duaCategoryForgiveness": "бахшидан",
-  "duaCategoryHome": "Хона",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Манбаи тасдиқшуда интизор аст",
-  "hadithUnavailableTitle": "Маҷмӯаҳои ҳадисҳои тасдиқшуда ҳанӯз дастрас нестанд",
-  "hadithUnavailableBody": "Ин сохтмон то ҳол аз як канали ҳадисҳои берунии тасдиқнашуда вобаста аст. Баррасии ҳадисҳо то синхронизатсияи маҷмӯи додаҳои манбаъ ғайрифаъол мемонад.",
-  "appErrorOccurred": "Хатогӣ рӯй дод",
-  "appUnknownError": "Хатогии номаълум",
-  "qiblaCompassErrorDetails": "Хатогии компас: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ба итмом расид! МашаАллах",
-  "zikrMeaningSubhanAllah": "Аллоҳ ҳар бир ноқулайликдан устундир.",
-  "zikrMeaningAlhamdulillah": "Ҳамду ситоиш аз они Худост.",
-  "zikrMeaningAllahuAkbar": "Аллоҳ бузургтар аст.",
-  "zikrMeaningLaIlahaIllallah": "Ҳеҷ худое ҷуз Аллоҳ нест.",
-  "zikrMeaningAstaghfirullah": "Аллоҳдан мағфират сўрайман.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ҳеҷ қудрат ва тавоноӣ ҷуз ба воситаи Аллоҳ нест.",
   "asmaMeaning1": "Раҳмон",
   "asmaMeaning2": "Раҳмон",
   "asmaMeaning3": "Подшоҳ / Худованди абадӣ",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ҷовидон",
   "asmaMeaning97": "Ворис",
   "asmaMeaning98": "Роҳнамои одилтарин",
-  "asmaMeaning99": "Сабр",
-  "duaMeaning1": "Дигарон дуо мекунанд: «Эй Парвардигори мо, ба мо дар дунёву охират некӣ ато кун ва моро аз азоби оташ нигоҳ дор».",
-  "duaMeaning2": "Худованд ҳеҷ касро ба андозаи тоқати тавонаш бор намекунад: ҳар кас ҳар кори хайре, ки кардааст, ба даст меорад ва ба бади худ гирифтор мешавад. Эй Парвардигори мо, агар фаромӯш кардаем ё хато кардаем, моро бозхост макун. Парвардигоро, ба мо бор макун, чунон ки ба касоне, ки пеш аз мо будӣ. Парвардигоро, бар мо аз он чизе, ки тавони тоқат кардан дорем, бор макун. Моро бубахш, моро биёмурз ва бар мо раҳм кун. Ту ёвари мо ҳастӣ, пас моро бар зидди кофирон ёрӣ деҳ».",
-  "duaMeaning3": "«Эй Парвардигори мо, пас аз он, ки моро ҳидоят кардаӣ, дилҳои моро аз он гумроҳ макун. Раҳмати худро ба мо ато кун, ки Ту бахшанда ҳастӣ.",
-  "duaMeaning4": "Парвардигоро, бигзор ману авлоди ман намоз бигузорем. Парвардигоро, дуои маро қабул кун.",
-  "duaMeaning5": "ва боли худро ба хоксорӣ дар баробари эҳсонашон фуруд ор ва бигӯ: «Парвардигоро!",
-  "duaMeaning6": "Пок аст Худое, ки ҳоким аст! [Пайғамбар], пеш аз он ки ваҳй тамом шавад, ба хондан шитоб накун, балки бигӯ: «Парвардигоро, илми маро афзун кун!».",
-  "duaMeaning7": "Бигӯ: «Парвардигоро, биёмурз ва раҳм кун, ки Ту меҳрубонтарини ҳама ҳастӣ».",
-  "duaMeaning8": "Онон, ки дуо мекунанд: «Эй Парвардигори мо, моро ба ҳамсарон ва фарзандонамон шод гардон. Моро барои касоне, ки аз Ту огоҳанд, намунаи нек кун».",
-  "islamicNewYear": "Соли нави исломи",
-  "mawlidAnNabi": "Мавлиди Наби",
-  "specialDayDateRamadanStart": "1 Рамазон",
-  "specialDayDateLaylatAlQadr": "27 Рамазон",
-  "specialDayDateEidAlFitr": "1 Шаввол",
-  "specialDayDateEidAlAdha": "10 Зулҳиҷҷа",
-  "specialDayDateIslamicNewYear": "1 Муҳаррам",
-  "specialDayDateMawlidAnNabi": "12 Рабиул-аввал",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Навсозӣ",
-  "ayahLabel": "Оят {ayah}",
-  "tafsirLoading": "Loading тафсир...",
-  "tafsirSourceLabel": "Манбаи тафсир",
-  "tafsirNoSurahFound": "Барои ин сура тафсир ёфт нашуд.",
-  "tafsirNoAyahFound": "Барои оят {ayah} тафсир ёфт нашуд.",
-  "tafsirLoadFailed": "Тафсир бор карда нашуд.",
-  "tafsirNoTextForAyah": "Барои ин оят матни тафсир нест.",
-  "tafsirDownloadingProgress": "Зеркашии тафсири {current}/{total}",
-  "tafsirLoadingProgress": "Боркунии тафсири {current}/{total}",
-  "tafsirApiStatusError": "Манбаи тафсир хатои HTTP {statusCode} баргардонид.",
-  "tafsirNoEntriesReturned": "Сарчашмаи интихобшудаи тафсир ягон сабтро барнагардондааст.",
-  "premiumProductUnavailable": "Маҳсулоти Premium ҳоло дастрас нест. Лутфан баъдтар бори дигар кӯшиш кунед.",
-  "premiumPurchaseFailed": "Харид анҷом дода нашуд. Лутфан бори дигар кӯшиш кунед.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Роҳи нури исломӣ",
-  "downloadPartiallyFinishedForReciter": "Зеркашӣ барои {reciter} бо {failed} сураҳои ноком анҷом ёфт ({downloaded}/{total} бор карда шудааст).",
-  "placesLocationRequiredTitle": "Ҷойгиршавӣ талаб карда мешавад",
-  "placesLocationRequiredBody": "Аввалан як макон таъин кунед, то масҷидҳои наздик, ғизои ҳалол ва мактабҳои исломиро дақиқ ҷустуҷӯ кунанд.",
-  "placesMapTilesUnavailableTitle": "Плитаҳои харита дастрас нестанд",
-  "placesMapTilesUnavailableBody": "Манбаи сафҳаи тасдиқшудаи харита барои ин сохтмон ҳанӯз танзим нашудааст. Ҷойҳои ҳамсоя ҳоло ҳам метавонанд аз макони захирашудаи шумо бор кунанд.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Мард (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Мард (Abdul Basit)",
-  "audioVoiceSudais": "Мард (Sudais)",
-  "qiblaSensorUnavailable": "Дар ин дастгоҳ сенсори қутбнамо мавҷуд нест.",
-  "adhanNotificationChannelName": "Огоҳиҳои азон",
-  "adhanNotificationChannelDescription": "Огоҳии вақти намоз бо садои азон.",
-  "quranLoadFailed": "Мундариҷаи Қуръон бор карда нашуд. Лутфан бори дигар кӯшиш кунед.",
-  "locationDetectionFailed": "Ҷойгиршавии шуморо муайян карда натавонист. Лутфан шаҳрро дастӣ интихоб кунед ё дубора кӯшиш кунед.",
-  "qiblaLocationRequiredTitle": "Ҷой барои қибла лозим аст",
-  "qiblaLocationRequiredBody": "Пеш аз истифодаи қутбнамо аз қибла макони воқеии худро таъин кунед, то самт дуруст ҳисоб карда шавад.",
-  "placesDataSourceUnavailableTitle": "Маълумоти ҷойҳо дастрас нест",
-  "placesDataSourceUnavailableBody": "Нуқтаи ниҳоии маълумотҳои тасдиқшудаи ҷойҳо барои ин сохтмон ҳанӯз танзим нашудааст. Пеш аз фаъол кардани ҷустуҷӯи наздик PLACES_OVERPASS_API_URL-ро ба прокси ё провайдери тасдиқшуда насб кунед.",
-  "tafsirCacheUnavailable": "Тафсири тасдиқшуда ҳанӯз офлайн дастрас нест. Пеш аз дидан, маҷмӯи додаҳои тафсирро ҳамоҳанг созед."
+  "asmaMeaning99": "Сабр"
 }

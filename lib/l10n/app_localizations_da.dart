@@ -952,6 +952,13 @@ class AppLocalizationsDa extends AppLocalizations {
   String get dailyVerse => 'Dagsvers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Dagsvers ikke tilgængelig';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verificeret dagligt versindhold er ikke konfigureret til denne build endnu. Opret forbindelse til skykilden, eller synkroniser en verificeret cache, før du browser.';
+
+  @override
   String get todaysIbadah => 'Dagens Ibadah';
 
   @override

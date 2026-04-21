@@ -950,6 +950,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get dailyVerse => 'ຂໍ້ພຣະຄໍາພີປະຈໍາວັນ';
 
   @override
+  String get dailyVerseUnavailableTitle => 'ບໍ່ມີຂໍ້ພຣະຄໍາພີປະຈໍາວັນ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ເນື້ອໃນຂໍ້ພຣະຄໍາພີປະຈຳວັນທີ່ຢັ້ງຢືນແລ້ວຍັງບໍ່ທັນໄດ້ກຳນົດຄ່າສຳລັບການສ້າງນີ້ເທື່ອ. ເຊື່ອມຕໍ່ຫາແຫຼ່ງຄລາວ ຫຼື ຊິງຄ໌ແຄສທີ່ຢືນຢັນແລ້ວກ່ອນທີ່ຈະຊອກຫາ.';
+
+  @override
   String get todaysIbadah => 'Ibadah ມື້ນີ້';
 
   @override

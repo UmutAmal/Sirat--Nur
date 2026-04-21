@@ -952,6 +952,13 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dailyVerse => 'Don o don Vɛrise';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Don o don tɛmɛsira tɛ sɔrɔ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Don o don vɛrɛsi kɔnɔkow sɛgɛsɛgɛlenw ma labɛn nin jɔli in kama fɔlɔ. Aw bɛ ɲɔgɔn don sankaba sɔrɔyɔrɔ la walima ka cache sɛgɛsɛgɛlen dɔ sinsin sani aw ka navigatiɔn kɛ.';
+
+  @override
   String get todaysIbadah => 'Bi Ibadah';
 
   @override

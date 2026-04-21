@@ -952,6 +952,14 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get dailyVerse => 'Paukū o kēlā me kēia lā';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'ʻAʻole loaʻa ka pauku o kēlā me kēia lā';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ʻAʻole i hoʻonohonoho ʻia ka ʻikepili pauku i kēlā me kēia lā no kēia kūkulu ʻana. Hoʻohui i ke kumu ao a hoʻopaʻa i kahi huna huna i hōʻoia ʻia ma mua o ka mākaʻikaʻi ʻana.';
+
+  @override
   String get todaysIbadah => 'ʻO ka Ibadah i kēia lā';
 
   @override

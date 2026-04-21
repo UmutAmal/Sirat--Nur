@@ -1,6 +1,7 @@
 {
   "@@locale": "ig",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Ụzọ Ìhè nke Islam",
   "home": "Ụlọ",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Oge maka {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Oge eruola ikpe ekpere {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Nchekwa",
   "clearCache": "Kpochapụ cache",
   "cacheClearedSuccess": "A kpochapụrụ cache nke ọma",
@@ -34,6 +51,7 @@
   "currentLocation": "Ebe dị ugbu a (GPS)",
   "locationServiceDisabled": "Agbanyụrụ ọrụ ebe.",
   "locationPermissionDenied": "Ajụrụ ikike ebe.",
+  "locationDetectionFailed": "Enweghị ike ịchọpụta ọnọdụ gị. Biko jiri aka họrọ obodo ma ọ bụ nwaa ọzọ.",
   "citiesCount": "Obodo {count}",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ọnweghị nsonaazụ ahụrụ",
   "loading": "Na-ebu...",
   "error": "Njehie",
+  "appErrorOccurred": "Enwere mperi",
+  "appUnknownError": "Njehie amaghị",
+  "quranLoadFailed": "Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ.",
   "retry": "Gbalịa ọzọ",
+  "refreshAction": "Weghachite ume",
   "cancel": "Kagbuo",
   "save": "Chekwa",
   "delete": "Hichapụ",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Mba",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Ibe",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Na-ebu tafsir...",
+  "tafsirSourceLabel": "Isi mmalite Tafsir",
+  "tafsirNoSurahFound": "Enweghị tafsir ahụrụ maka surah a.",
+  "tafsirNoAyahFound": "Enweghị tafsir ahụrụ maka ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Enweghị ike ibunye Tafsir.",
+  "tafsirNoTextForAyah": "Enweghị ederede tafsir maka ayah a.",
+  "tafsirDownloadingProgress": "Na-ebudata tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Na-ebu tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Isi mmalite Tafsir weghachiri mperi HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Isi mmalite tafsir ahọpụtara weghachighị ndenye ọ bụla.",
+  "tafsirCacheUnavailable": "Ekwenyere tafsir adịkwaghị na ntanetị. Mekọrịta dataset tafsir ewepụtara tupu ịme nchọgharị.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Tinye ibe edokọbara",
   "removeBookmark": "Wepu ibe edokọbara",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "ndị ọzọ na-ekpe ekpere, sị, ‘Onyenwe anyị, nye anyị ihe ọma n’ụwa a na n’ụwa, chebe anyị pụọ n’ahụhụ nke ọkụ.",
+  "duaMeaning2": "Chineke adịghị ebu mkpụrụ obi ọ bụla ibu karịa ihe ọ pụrụ iburu: onye ọ bụla na-enweta ihe ọma ọ bụla o mere, na-ata ahụhụ ihe ọjọọ ya- ‘Onyenwe anyị, ewerela anyị n’ọrụ ma ọ bụrụ na anyị echefuo ma ọ bụ mehie. Onyenweanyị, ebula anyị ibu dị ka I boro ndị bu anyị ụzọ. Onye-nwe-anyị, etinyela anyị ibu karịa ka anyị nwere ike ibu. Gbaghara anyị, gbaghara anyị, meekwa anyị ebere. Ị bụ onye nchebe anyị, ya mere nyere anyị aka megide ndị na-ekweghị ekwe.",
+  "duaMeaning3": "‘Onye-nwe-anyị, ekwela ka obi anyị gbagharịa ma I duzie anyị. Nye ayi ebere Gi: Gi bu onye na-enye mgbe nile.",
+  "duaMeaning4": "Onyenweanyị, mee ka mụ na ụmụ m na-ekpesi ekpere ike. Onyenweanyị, nara arịrịọ m.",
+  "duaMeaning5": "wedata nku-gi n'obi umeala n'ebe ha nọ n'obi-ọma, si, Onye-nwe-ayi, mere ha ebere, dika ha lekọtaworom mb͕e m'di ntà.",
+  "duaMeaning6": "Chineke dị elu, Onye na-achị n'ezie. [Prọfet], kûsọp ukot ẹkot mbemiso ediyarade oro ọyọhọ ọyọhọ, edi dọhọ ete, ‘Ọbọn̄, anam mi ọdọdiọn̄ ọfiọk!’",
+  "duaMeaning7": "Kwuo [Amụma], ‘Onyenwe anyị, gbaghara ma mee ebere: Ị bụ onye obi ebere karịa ihe niile.’",
+  "duaMeaning8": "ndị na-ekpe ekpere, ‘Onyenwe anyị, nye anyị ọṅụ n’ime di na nwunye na ụmụ anyị. Mee anyị ezi ihe atụ nye ndị maara gị’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ibu ọnụ",
   "quranReading": "Ọgụgụ Quran",
   "prayers": "Ekpere",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Ọganihu kwa izu",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Afọ Ọhụrụ nke Islam",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 nke ọnwa Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Ntuziaka Qibla",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla hụrụ!",
   "turnDevice": "Tụgharịa ngwaọrụ gị ka chere Qibla ihu",
+  "qiblaCompassErrorDetails": "Compass error: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Ihe mmetụta kompas adịghị na ngwaọrụ a.",
+  "qiblaLocationRequiredTitle": "Ebe achọrọ maka Qibla",
+  "qiblaLocationRequiredBody": "Tọọ ọnọdụ gị n'ezie tupu i jiri kompas Qibla ka e nwee ike gbakọọ ntụzịaka nke ọma.",
+  "adhanNotificationChannelName": "Ọkwa Adhan",
+  "adhanNotificationChannelDescription": "Ekpere oge alerts na adhan ụda.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Ebumnuche: {target}",
   "tapToCount": "Pịa ka ịgụọ",
+  "zikrCompletedMashAllah": "Emechaala! MashaAllah",
+  "zikrMeaningSubhanAllah": "Allah dị elu karịa ezughị okè ọ bụla.",
+  "zikrMeaningAlhamdulillah": "Otuto niile bụ nke Allah.",
+  "zikrMeaningAllahuAkbar": "Allah kachasi ike.",
+  "zikrMeaningLaIlahaIllallah": "Ọ dịghị chi ma ọ bụghị Allah.",
+  "zikrMeaningAstaghfirullah": "M na-arịọ Allah mgbaghara.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Ọ dịghị ike na ọ dịghị ike ma e wezụga site Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Olu olu",
+  "audioVoiceMisharyAlafasy": "Nwoke (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Nwoke (Abdul Basit)",
+  "audioVoiceSudais": "Nwoke (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Nhazi nke Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "achọrọ nhazi nhazi. Tụgharịa ngwaọrụ na ọnụ ọgụgụ-8.",
   "dailyVerse": "Amaokwu kwa ụbọchị",
+  "dailyVerseUnavailableTitle": "Amaghị amaokwu kwa ụbọchị",
+  "dailyVerseUnavailableBody": "ahazibeghị ọdịnaya amaokwu kwa ụbọchị ka ọ rụọ ọrụ a. Jikọọ na isi iyi igwe ojii ma ọ bụ mekọrịta cache enwetara tupu ị chọgharịa.",
   "todaysIbadah": "Ibada nke taa",
   "quickAccess": "Nweta ngwa ngwa",
   "assistant": "Enyemaka",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duas akwadoro adịghị",
+  "duaUnavailableBody": "Emekọrịtabeghị duas kwa ụbọchị na ngwaọrụ a. Jikọọ na isi iyi ígwé ojii iji buo duas ewepụtara kama ịdaghachi azụ achọpụtaghị.",
+  "duaCategoryQuranic": "Quran dua",
+  "duaCategoryMorningEvening": "Ụtụtụ na mgbede",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Nchedo",
+  "duaCategoryBeginning": "Mmalite",
+  "duaCategorySleep": "Ụra",
+  "duaCategoryFoodDrink": "Nri na ihe ọṅụṅụ",
+  "duaCategoryForgiveness": "Mgbaghara",
+  "duaCategoryHome": "Ụlọ",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Education nke Islam",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Nchịkọta Hadith",
+  "hadithSourcePending": "Ekwenyere na isi iyi na-echere",
+  "hadithUnavailableTitle": "Nchịkọta haddi ekwenyeghị ekwenye adịbeghị",
+  "hadithUnavailableBody": "Nke a na-ewu ka na-adabere na unverified mpụga hadith ndepụta. A na-enwe nkwarụ chọgharịa haddith ruo mgbe emekọrịtara ntọala data ewepụtara.",
   "paywallUnlockAll": "Mepee atụmatụ niile maka njem ime mmụọ gị",
+  "premiumProductUnavailable": "Ngwaahịa adịchaghị adị ugbu a. Biko nwaa ọzọ ma emechaa.",
+  "premiumPurchaseFailed": "Enweghị ike ịzụta ya. Biko nwaa ọzọ.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Q&A na-akparaghị ókè AI",
   "paywallFeature2Title": "Na-anọghị n'ịntanetị na-akparaghị ókè",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Nbudata emechara maka {reciter} nwere surah {failed} dara ada ({downloaded}/{total} ebudatara).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "ehichapụ faịlụ ndị na-adịghị n'ịntanetị maka {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Njehie netwọkụ. Biko nwaa ọzọ.",
+  "placesLocationRequiredTitle": "Ebe achọrọ",
+  "placesLocationRequiredBody": "Tọọ ebe mbụ ka e wee chọọ ụlọ alakụba dị nso, nri halal na ụlọ akwụkwọ islam nke ọma.",
+  "placesMapTilesUnavailableTitle": "Taịlị maapụ adịghị",
+  "placesMapTilesUnavailableBody": "Ahaziri isi iyi taịlị maapụ akwadoro maka nrụpụta a. Ebe ndị dị nso ka nwere ike ibunye na ebe echekwara gị.",
+  "placesDataSourceUnavailableTitle": "Ebe data adịghị",
+  "placesDataSourceUnavailableBody": "Ahaziri ebe njedebe data akwadoro maka iwulite a. Tọọ PLACES_OVERPASS_API_URL ka ọ bụrụ onye nnọchi anya ma ọ bụ onye na-eweta akwadoro tupu ịmee ọchụchọ dị nso.",
   "unknownPlaceName": "Aha amaghi ama",
   "islamicPlaceFallback": "Ebe islam",
-  "prayerNotificationTitle": "Oge maka {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Oge eruola ikpe ekpere {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duas akwadoro adịghị",
-  "duaUnavailableBody": "Emekọrịtabeghị duas kwa ụbọchị na ngwaọrụ a. Jikọọ na isi iyi ígwé ojii iji buo duas ewepụtara kama ịdaghachi azụ achọpụtaghị.",
-  "duaCategoryQuranic": "Quran dua",
-  "duaCategoryMorningEvening": "Ụtụtụ na mgbede",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Nchedo",
-  "duaCategoryBeginning": "Mmalite",
-  "duaCategorySleep": "Ụra",
-  "duaCategoryFoodDrink": "Nri na ihe ọṅụṅụ",
-  "duaCategoryForgiveness": "Mgbaghara",
-  "duaCategoryHome": "Ụlọ",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Ekwenyere na isi iyi na-echere",
-  "hadithUnavailableTitle": "Nchịkọta haddi ekwenyeghị ekwenye adịbeghị",
-  "hadithUnavailableBody": "Nke a na-ewu ka na-adabere na unverified mpụga hadith ndepụta. A na-enwe nkwarụ chọgharịa haddith ruo mgbe emekọrịtara ntọala data ewepụtara.",
-  "appErrorOccurred": "Enwere mperi",
-  "appUnknownError": "Njehie amaghị",
-  "qiblaCompassErrorDetails": "Compass error: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Emechaala! MashaAllah",
-  "zikrMeaningSubhanAllah": "Allah dị elu karịa ezughị okè ọ bụla.",
-  "zikrMeaningAlhamdulillah": "Otuto niile bụ nke Allah.",
-  "zikrMeaningAllahuAkbar": "Allah kachasi ike.",
-  "zikrMeaningLaIlahaIllallah": "Ọ dịghị chi ma ọ bụghị Allah.",
-  "zikrMeaningAstaghfirullah": "M na-arịọ Allah mgbaghara.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Ọ dịghị ike na ọ dịghị ike ma e wezụga site Allah.",
   "asmaMeaning1": "Onye bara uru",
   "asmaMeaning2": "Onye Ebere",
   "asmaMeaning3": "Eze / Dinwenu ebighi ebi",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Onye Ebighị Ebi",
   "asmaMeaning97": "Onye nketa",
   "asmaMeaning98": "Nduzi kachasi ezi omume",
-  "asmaMeaning99": "Onye Nri",
-  "duaMeaning1": "ndị ọzọ na-ekpe ekpere, sị, ‘Onyenwe anyị, nye anyị ihe ọma n’ụwa a na n’ụwa, chebe anyị pụọ n’ahụhụ nke ọkụ.",
-  "duaMeaning2": "Chineke adịghị ebu mkpụrụ obi ọ bụla ibu karịa ihe ọ pụrụ iburu: onye ọ bụla na-enweta ihe ọma ọ bụla o mere, na-ata ahụhụ ihe ọjọọ ya- ‘Onyenwe anyị, ewerela anyị n’ọrụ ma ọ bụrụ na anyị echefuo ma ọ bụ mehie. Onyenweanyị, ebula anyị ibu dị ka I boro ndị bu anyị ụzọ. Onye-nwe-anyị, etinyela anyị ibu karịa ka anyị nwere ike ibu. Gbaghara anyị, gbaghara anyị, meekwa anyị ebere. Ị bụ onye nchebe anyị, ya mere nyere anyị aka megide ndị na-ekweghị ekwe.",
-  "duaMeaning3": "‘Onye-nwe-anyị, ekwela ka obi anyị gbagharịa ma I duzie anyị. Nye ayi ebere Gi: Gi bu onye na-enye mgbe nile.",
-  "duaMeaning4": "Onyenweanyị, mee ka mụ na ụmụ m na-ekpesi ekpere ike. Onyenweanyị, nara arịrịọ m.",
-  "duaMeaning5": "wedata nku-gi n'obi umeala n'ebe ha nọ n'obi-ọma, si, Onye-nwe-ayi, mere ha ebere, dika ha lekọtaworom mb͕e m'di ntà.",
-  "duaMeaning6": "Chineke dị elu, Onye na-achị n'ezie. [Prọfet], kûsọp ukot ẹkot mbemiso ediyarade oro ọyọhọ ọyọhọ, edi dọhọ ete, ‘Ọbọn̄, anam mi ọdọdiọn̄ ọfiọk!’",
-  "duaMeaning7": "Kwuo [Amụma], ‘Onyenwe anyị, gbaghara ma mee ebere: Ị bụ onye obi ebere karịa ihe niile.’",
-  "duaMeaning8": "ndị na-ekpe ekpere, ‘Onyenwe anyị, nye anyị ọṅụ n’ime di na nwunye na ụmụ anyị. Mee anyị ezi ihe atụ nye ndị maara gị’.",
-  "islamicNewYear": "Afọ Ọhụrụ nke Islam",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 nke ọnwa Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Weghachite ume",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Na-ebu tafsir...",
-  "tafsirSourceLabel": "Isi mmalite Tafsir",
-  "tafsirNoSurahFound": "Enweghị tafsir ahụrụ maka surah a.",
-  "tafsirNoAyahFound": "Enweghị tafsir ahụrụ maka ayah {ayah}.",
-  "tafsirLoadFailed": "Enweghị ike ibunye Tafsir.",
-  "tafsirNoTextForAyah": "Enweghị ederede tafsir maka ayah a.",
-  "tafsirDownloadingProgress": "Na-ebudata tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Na-ebu tafsir {current}/{total}",
-  "tafsirApiStatusError": "Isi mmalite Tafsir weghachiri mperi HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Isi mmalite tafsir ahọpụtara weghachighị ndenye ọ bụla.",
-  "premiumProductUnavailable": "Ngwaahịa adịchaghị adị ugbu a. Biko nwaa ọzọ ma emechaa.",
-  "premiumPurchaseFailed": "Enweghị ike ịzụta ya. Biko nwaa ọzọ.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Ụzọ Ìhè nke Islam",
-  "downloadPartiallyFinishedForReciter": "Nbudata emechara maka {reciter} nwere surah {failed} dara ada ({downloaded}/{total} ebudatara).",
-  "placesLocationRequiredTitle": "Ebe achọrọ",
-  "placesLocationRequiredBody": "Tọọ ebe mbụ ka e wee chọọ ụlọ alakụba dị nso, nri halal na ụlọ akwụkwọ islam nke ọma.",
-  "placesMapTilesUnavailableTitle": "Taịlị maapụ adịghị",
-  "placesMapTilesUnavailableBody": "Ahaziri isi iyi taịlị maapụ akwadoro maka nrụpụta a. Ebe ndị dị nso ka nwere ike ibunye na ebe echekwara gị.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Nwoke (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Nwoke (Abdul Basit)",
-  "audioVoiceSudais": "Nwoke (Sudais)",
-  "qiblaSensorUnavailable": "Ihe mmetụta kompas adịghị na ngwaọrụ a.",
-  "adhanNotificationChannelName": "Ọkwa Adhan",
-  "adhanNotificationChannelDescription": "Ekpere oge alerts na adhan ụda.",
-  "quranLoadFailed": "Enweghị ike ibunye ọdịnaya Quran. Biko nwaa ọzọ.",
-  "locationDetectionFailed": "Enweghị ike ịchọpụta ọnọdụ gị. Biko jiri aka họrọ obodo ma ọ bụ nwaa ọzọ.",
-  "qiblaLocationRequiredTitle": "Ebe achọrọ maka Qibla",
-  "qiblaLocationRequiredBody": "Tọọ ọnọdụ gị n'ezie tupu i jiri kompas Qibla ka e nwee ike gbakọọ ntụzịaka nke ọma.",
-  "placesDataSourceUnavailableTitle": "Ebe data adịghị",
-  "placesDataSourceUnavailableBody": "Ahaziri ebe njedebe data akwadoro maka iwulite a. Tọọ PLACES_OVERPASS_API_URL ka ọ bụrụ onye nnọchi anya ma ọ bụ onye na-eweta akwadoro tupu ịmee ọchụchọ dị nso.",
-  "tafsirCacheUnavailable": "Ekwenyere tafsir adịkwaghị na ntanetị. Mekọrịta dataset tafsir ewepụtara tupu ịme nchọgharị."
+  "asmaMeaning99": "Onye Nri"
 }

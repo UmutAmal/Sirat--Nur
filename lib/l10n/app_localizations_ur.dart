@@ -951,6 +951,13 @@ class AppLocalizationsUr extends AppLocalizations {
   String get dailyVerse => 'روزانہ آیت';
 
   @override
+  String get dailyVerseUnavailableTitle => 'روزانہ آیت دستیاب نہیں ہے۔';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'تصدیق شدہ روزانہ آیت کا مواد ابھی تک اس تعمیر کے لیے ترتیب نہیں دیا گیا ہے۔ کلاؤڈ سورس سے جڑیں یا براؤز کرنے سے پہلے تصدیق شدہ کیشے کو سنک کریں۔';
+
+  @override
   String get todaysIbadah => 'آج کی عبادت';
 
   @override

@@ -951,6 +951,13 @@ class AppLocalizationsPa extends AppLocalizations {
   String get dailyVerse => 'ਰੋਜ਼ਾਨਾ ਆਇਤ';
 
   @override
+  String get dailyVerseUnavailableTitle => 'ਰੋਜ਼ਾਨਾ ਆਇਤ ਉਪਲਬਧ ਨਹੀਂ ਹੈ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ਇਸ ਬਿਲਡ ਲਈ ਤਸਦੀਕ ਕੀਤੀ ਗਈ ਰੋਜ਼ਾਨਾ ਆਇਤ ਸਮੱਗਰੀ ਅਜੇ ਕੌਂਫਿਗਰ ਨਹੀਂ ਕੀਤੀ ਗਈ ਹੈ। ਬ੍ਰਾਊਜ਼ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਲਾਉਡ ਸਰੋਤ ਨਾਲ ਕਨੈਕਟ ਕਰੋ ਜਾਂ ਪ੍ਰਮਾਣਿਤ ਕੈਸ਼ ਨੂੰ ਸਿੰਕ ਕਰੋ।';
+
+  @override
   String get todaysIbadah => 'ਅੱਜ ਦਾ ਇਬਾਦਤ';
 
   @override

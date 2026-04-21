@@ -203,14 +203,14 @@ class HomePage extends ConsumerWidget {
                     ),
                     const SizedBox(height: 12),
                     Text(
-                      l10n.noInternet,
+                      l10n.dailyVerseUnavailableTitle,
                       style: const TextStyle(
                         color: Colors.red,
                         fontWeight: FontWeight.w700,
                       ),
                     ),
                     const SizedBox(height: 4),
-                    Text(l10n.checkConnection),
+                    Text(l10n.dailyVerseUnavailableBody),
                   ],
                 ),
               ),

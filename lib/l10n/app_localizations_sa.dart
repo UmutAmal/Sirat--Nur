@@ -952,6 +952,13 @@ class AppLocalizationsSa extends AppLocalizations {
   String get dailyVerse => 'दैनिक श्लोक';
 
   @override
+  String get dailyVerseUnavailableTitle => 'नित्य श्लोक अनुपलब्ध';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'सत्यापिता दैनिकपद्यसामग्री अद्यापि अस्य निर्माणस्य कृते विन्यस्ता नास्ति । मेघस्रोतेन सह सम्बद्धं कुर्वन्तु अथवा ब्राउज् कर्तुं पूर्वं सत्यापितं संग्रहणं समन्वययन्तु ।';
+
+  @override
   String get todaysIbadah => 'अद्यतन इबादः';
 
   @override

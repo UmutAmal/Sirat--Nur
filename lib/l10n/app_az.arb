@@ -1,6 +1,7 @@
 {
   "@@locale": "az",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "İslam İşıq Yolu",
   "home": "Ev",
   "quran": "Quran",
   "qibla": "qiblə",
@@ -23,6 +24,22 @@
   "asr": "Əsr",
   "maghrib": "Mağrib",
   "isha": "İşa",
+  "prayerNotificationTitle": "{prayerName} üçün vaxt",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} dua etmək vaxtıdır.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Məlumat və Saxlama",
   "clearCache": "Keşi təmizləyin",
   "cacheClearedSuccess": "Keş uğurla təmizləndi",
@@ -34,6 +51,7 @@
   "currentLocation": "Cari Məkan (GPS)",
   "locationServiceDisabled": "Məkan xidməti deaktiv edilib.",
   "locationPermissionDenied": "Məkan icazəsi rədd edildi.",
+  "locationDetectionFailed": "Məkanınızı aşkar etmək mümkün olmadı. Lütfən, şəhəri əl ilə seçin və ya yenidən cəhd edin.",
   "citiesCount": "{count} şəhərlər",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Heç bir nəticə tapılmadı",
   "loading": "Yüklənir...",
   "error": "Xəta",
+  "appErrorOccurred": "Xəta baş verdi",
+  "appUnknownError": "Naməlum xəta",
+  "quranLoadFailed": "Quran məzmununu yükləmək mümkün olmadı. Yenidən cəhd edin.",
   "retry": "Yenidən cəhd edin",
+  "refreshAction": "Yeniləyin",
   "cancel": "Ləğv et",
   "save": "Saxla",
   "delete": "Sil",
@@ -57,17 +79,78 @@
   "yes": "Bəli",
   "no": "yox",
   "surah": "surə",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Səhifə",
   "reading": "Oxumaq",
   "recitation": "Qiraət",
   "translation": "Tərcümə",
   "tafsir": "Təfsir",
+  "tafsirLoading": "Təfsir yüklənir...",
+  "tafsirSourceLabel": "Təfsir mənbəyi",
+  "tafsirNoSurahFound": "Bu surə üçün heç bir təfsir tapılmadı.",
+  "tafsirNoAyahFound": "{ayah} ayəsi üçün heç bir təfsir tapılmadı.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Təfsiri yükləmək mümkün olmadı.",
+  "tafsirNoTextForAyah": "Bu ayə üçün təfsir mətni yoxdur.",
+  "tafsirDownloadingProgress": "{current}/{total} təfsiri endirilir",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Təfsir yüklənir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Təfsir mənbəyi HTTP {statusCode} xətası qaytardı.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Seçilmiş təfsir mənbəyi heç bir qeydi qaytarmadı.",
+  "tafsirCacheUnavailable": "Doğrulanmış təfsir hələ oflayn olaraq mövcud deyil. Baxışdan əvvəl mənbəli təfsir verilənlər bazasını sinxronlaşdırın.",
   "bookmarks": "Əlfəcinlər",
   "addBookmark": "Əlfəcin əlavə edin",
   "removeBookmark": "Əlfəcin silin",
   "lastRead": "Son Oxu",
   "dailyZikr": "Gündəlik Zikr",
+  "duaMeaning1": "Digərləri isə: “Ey Rəbbimiz, bizə dünyada da, axirətdə də yaxşılıq ver və bizi Cəhənnəm əzabından qoru!” deyə dua edirlər.",
+  "duaMeaning2": "Allah heç bir kəsə gücündən artıq yük yükləməz: Hər kəs etdiyi yaxşılıqdan savayı qazanar, pisliyi isə ona çatar – “Pərvərdigara, unutsaq və ya xəta etsək, bizi cəzalandırma. Ya Rəbb, bizdən əvvəlkilərə yüklədiyin kimi, bizi də yükləmə! Ya Rəbb, bizə dözə biləcəyimizdən artıq yük yükləmə. Bizi bağışla, bizi bağışla və bizə rəhm et. Sən bizim himayəmizsən, kafirlərə qarşı bizə kömək et!”",
+  "duaMeaning3": "“Ey Rəbbimiz, bizi doğru yola yönəltdikdən sonra qəlblərimizi azdırma. Bizə mərhəmətini nəsib et!",
+  "duaMeaning4": "Ya Rəbb, mənə və nəslimə namaz qılmağı nəsib et. Ey Rəbbimiz, duamı qəbul et.",
+  "duaMeaning5": "Onlara mehribanlıqla təvazökarlıqla qanadını aşağı sal və de: “Pərvərdigara!",
+  "duaMeaning6": "Həqiqətən hakim olan Allah ucadır. [Peyğəmbər], vəhy tamam olmamışdan əvvəl oxumağa tələsmə və de: “Pərvərdigara, mənim elmimi artır!”",
+  "duaMeaning7": "(Peyğəmbərə) de: “Pərvərdigara, bağışla və rəhm et, Sən ən mərhəmətlisən.",
+  "duaMeaning8": "O kəslər ki: “Ey Rəbbimiz, zövcələrimizi və övladlarımızı sevindir. Bizi Səndən xəbərdar olanlara gözəl nümunə et!”",
   "morningZikr": "Səhər Zikr",
   "eveningZikr": "Axşam Zikr",
   "tasbih": "Təsbih",
@@ -88,6 +171,26 @@
   "fasting": "Oruc tutmaq",
   "quranReading": "Quran oxumaq",
   "prayers": "Dualar",
+  "prayerRemainingHoursMinutes": "{hours}saat {minutes}dəq",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Zikr sayı",
   "weeklyProgress": "Həftəlik Tərəqqi",
   "monthlyProgress": "Aylıq tərəqqi",
@@ -101,6 +204,14 @@
   "ramadan": "Ramazan",
   "eidAlFitr": "Fitr bayramı",
   "eidAlAdha": "Qurban bayramı",
+  "islamicNewYear": "İslam Yeni ili",
+  "mawlidAnNabi": "Mövlud ən-Nəbi",
+  "specialDayDateRamadanStart": "1 Ramazan",
+  "specialDayDateLaylatAlQadr": "27 Ramazan",
+  "specialDayDateEidAlFitr": "1 Şəvval",
+  "specialDayDateEidAlAdha": "10 Zilhiccə",
+  "specialDayDateIslamicNewYear": "1 Məhərrəm",
+  "specialDayDateMawlidAnNabi": "12 Rəbiul-əvvəl",
   "laylatAlQadr": "Qədr gecəsi",
   "qiblaDirection": "Qiblə istiqaməti",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "Şimal",
   "qiblaFound": "Qiblə tapıldı!",
   "turnDevice": "Cihazınızı qibləyə tərəf çevirin",
+  "qiblaCompassErrorDetails": "Kompas xətası: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Bu cihazda kompas sensoru mövcud deyil.",
+  "qiblaLocationRequiredTitle": "Qiblə üçün yer tələb olunur",
+  "qiblaLocationRequiredBody": "Qiblə kompasından istifadə etməzdən əvvəl faktiki yerinizi təyin edin ki, istiqamət dəqiq hesablana bilsin.",
+  "adhanNotificationChannelName": "Azan bildirişləri",
+  "adhanNotificationChannelDescription": "Azan səsi ilə namaz vaxtı xəbərdarlığı.",
   "notifications": "Bildirişlər",
   "prayerNotifications": "Namaz Bildirişləri",
   "enableNotifications": "Bildirişləri aktivləşdirin",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Hədəf sayı: {target}",
   "tapToCount": "Saymaq üçün toxunun",
+  "zikrCompletedMashAllah": "Tamamlandı! MaşAllah",
+  "zikrMeaningSubhanAllah": "Allah hər bir qüsurdan uzaqdır.",
+  "zikrMeaningAlhamdulillah": "Bütün həmdlər Allaha məxsusdur.",
+  "zikrMeaningAllahuAkbar": "Allah ən böyükdür.",
+  "zikrMeaningLaIlahaIllallah": "Allahdan başqa ilah yoxdur.",
+  "zikrMeaningAstaghfirullah": "Allahdan bağışlanma diləyirəm.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Allahdan başqa heç bir güc və güc yoxdur.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Səs",
+  "audioVoiceMisharyAlafasy": "Kişi (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Kişi (Abdul Basit)",
+  "audioVoiceSudais": "Kişi (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qiblə kalibrləmə",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrləmə tələb olunur. Şəkil-8-də cihazı fırladın.",
   "dailyVerse": "Gündəlik ayə",
+  "dailyVerseUnavailableTitle": "Gündəlik ayə mövcud deyil",
+  "dailyVerseUnavailableBody": "Doğrulanmış gündəlik ayə məzmunu hələ bu quruluş üçün konfiqurasiya edilməyib. Axtarışdan əvvəl bulud mənbəyinə qoşulun və ya təsdiqlənmiş keşi sinxronlaşdırın.",
   "todaysIbadah": "Bugünkü ibadət",
   "quickAccess": "Sürətli giriş",
   "assistant": "köməkçi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Təsdiqlənmiş dualar hələ mövcud deyil",
+  "duaUnavailableBody": "Doğrulanmış gündəlik dualar hələ bu cihaza sinxronlaşdırılmayıb. Təsdiqlənməmiş ehtiyat əvəzinə mənbəli duaları yükləmək üçün bulud mənbəyinə qoşulun.",
+  "duaCategoryQuranic": "Quran duası",
+  "duaCategoryMorningEvening": "Səhər & Axşam",
+  "duaCategoryTasbih": "Təsbih",
+  "duaCategoryProtection": "Qoruma",
+  "duaCategoryBeginning": "Başlanğıclar",
+  "duaCategorySleep": "yatmaq",
+  "duaCategoryFoodDrink": "Qida və İçki",
+  "duaCategoryForgiveness": "bağışlanma",
+  "duaCategoryHome": "Ev",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "İslam Təhsili",
   "sukunAudioTitle": "Sukun Səs Mənzərələri",
   "hadithCollections": "Hədis Topluları",
+  "hadithSourcePending": "Təsdiqlənmiş mənbə gözlənilir",
+  "hadithUnavailableTitle": "Təsdiqlənmiş hədis topluları hələ mövcud deyil",
+  "hadithUnavailableBody": "Bu quruluş hələ də təsdiqlənməmiş xarici hədis lentindən asılıdır. Hədislərə baxış qaynaqlanmış verilənlər bazası sinxronizasiya edilənə qədər qeyri-aktiv qalır.",
   "paywallUnlockAll": "Ruhani səyahətiniz üçün bütün xüsusiyyətləri açın",
+  "premiumProductUnavailable": "Premium məhsul hazırda mövcud deyil. Daha sonra yenidən cəhd edin.",
+  "premiumPurchaseFailed": "Satınalma tamamlanmadı. Yenidən cəhd edin.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Limitsiz süni intellektlə işləyən sual-cavab",
   "paywallFeature2Title": "Limitsiz Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{failed} uğursuz surələrlə {reciter} üçün endirmə tamamlandı ({downloaded}/{total} endirildi).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} üçün oflayn fayllar silindi.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Şəbəkə xətası. Yenidən cəhd edin.",
+  "placesLocationRequiredTitle": "Məkan tələb olunur",
+  "placesLocationRequiredBody": "Əvvəlcə yer təyin edin ki, yaxınlıqdakı məscidlər, halal yeməklər və İslam məktəbləri dəqiq axtarılsın.",
+  "placesMapTilesUnavailableTitle": "Xəritə plitələri əlçatan deyil",
+  "placesMapTilesUnavailableBody": "Doğrulanmış xəritə mənbəsi hələ bu quruluş üçün konfiqurasiya edilməyib. Yaxınlıqdakı yerlər hələ də saxladığınız yerdən yükləyə bilər.",
+  "placesDataSourceUnavailableTitle": "Yer məlumatları əlçatan deyil",
+  "placesDataSourceUnavailableBody": "Doğrulanmış yerlər datasının son nöqtəsi bu quruluş üçün hələ konfiqurasiya edilməyib. Yaxınlıqda axtarışı aktiv etməzdən əvvəl PLACES_OVERPASS_API_URL-ni təsdiq edilmiş proksi və ya provayderə təyin edin.",
   "unknownPlaceName": "Naməlum Ad",
   "islamicPlaceFallback": "İslam Məkanı",
-  "prayerNotificationTitle": "{prayerName} üçün vaxt",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} dua etmək vaxtıdır.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Təsdiqlənmiş dualar hələ mövcud deyil",
-  "duaUnavailableBody": "Doğrulanmış gündəlik dualar hələ bu cihaza sinxronlaşdırılmayıb. Təsdiqlənməmiş ehtiyat əvəzinə mənbəli duaları yükləmək üçün bulud mənbəyinə qoşulun.",
-  "duaCategoryQuranic": "Quran duası",
-  "duaCategoryMorningEvening": "Səhər & Axşam",
-  "duaCategoryTasbih": "Təsbih",
-  "duaCategoryProtection": "Qoruma",
-  "duaCategoryBeginning": "Başlanğıclar",
-  "duaCategorySleep": "yatmaq",
-  "duaCategoryFoodDrink": "Qida və İçki",
-  "duaCategoryForgiveness": "bağışlanma",
-  "duaCategoryHome": "Ev",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Təsdiqlənmiş mənbə gözlənilir",
-  "hadithUnavailableTitle": "Təsdiqlənmiş hədis topluları hələ mövcud deyil",
-  "hadithUnavailableBody": "Bu quruluş hələ də təsdiqlənməmiş xarici hədis lentindən asılıdır. Hədislərə baxış qaynaqlanmış verilənlər bazası sinxronizasiya edilənə qədər qeyri-aktiv qalır.",
-  "appErrorOccurred": "Xəta baş verdi",
-  "appUnknownError": "Naməlum xəta",
-  "qiblaCompassErrorDetails": "Kompas xətası: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Tamamlandı! MaşAllah",
-  "zikrMeaningSubhanAllah": "Allah hər bir qüsurdan uzaqdır.",
-  "zikrMeaningAlhamdulillah": "Bütün həmdlər Allaha məxsusdur.",
-  "zikrMeaningAllahuAkbar": "Allah ən böyükdür.",
-  "zikrMeaningLaIlahaIllallah": "Allahdan başqa ilah yoxdur.",
-  "zikrMeaningAstaghfirullah": "Allahdan bağışlanma diləyirəm.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Allahdan başqa heç bir güc və güc yoxdur.",
   "asmaMeaning1": "Xeyirxah",
   "asmaMeaning2": "Rəhman",
   "asmaMeaning3": "Kral / Əbədi Rəbb",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Əbədi Olan",
   "asmaMeaning97": "Varis",
   "asmaMeaning98": "Ən Saleh Bələdçi",
-  "asmaMeaning99": "Xəstə Bir",
-  "duaMeaning1": "Digərləri isə: “Ey Rəbbimiz, bizə dünyada da, axirətdə də yaxşılıq ver və bizi Cəhənnəm əzabından qoru!” deyə dua edirlər.",
-  "duaMeaning2": "Allah heç bir kəsə gücündən artıq yük yükləməz: Hər kəs etdiyi yaxşılıqdan savayı qazanar, pisliyi isə ona çatar – “Pərvərdigara, unutsaq və ya xəta etsək, bizi cəzalandırma. Ya Rəbb, bizdən əvvəlkilərə yüklədiyin kimi, bizi də yükləmə! Ya Rəbb, bizə dözə biləcəyimizdən artıq yük yükləmə. Bizi bağışla, bizi bağışla və bizə rəhm et. Sən bizim himayəmizsən, kafirlərə qarşı bizə kömək et!”",
-  "duaMeaning3": "“Ey Rəbbimiz, bizi doğru yola yönəltdikdən sonra qəlblərimizi azdırma. Bizə mərhəmətini nəsib et!",
-  "duaMeaning4": "Ya Rəbb, mənə və nəslimə namaz qılmağı nəsib et. Ey Rəbbimiz, duamı qəbul et.",
-  "duaMeaning5": "Onlara mehribanlıqla təvazökarlıqla qanadını aşağı sal və de: “Pərvərdigara!",
-  "duaMeaning6": "Həqiqətən hakim olan Allah ucadır. [Peyğəmbər], vəhy tamam olmamışdan əvvəl oxumağa tələsmə və de: “Pərvərdigara, mənim elmimi artır!”",
-  "duaMeaning7": "(Peyğəmbərə) de: “Pərvərdigara, bağışla və rəhm et, Sən ən mərhəmətlisən.",
-  "duaMeaning8": "O kəslər ki: “Ey Rəbbimiz, zövcələrimizi və övladlarımızı sevindir. Bizi Səndən xəbərdar olanlara gözəl nümunə et!”",
-  "islamicNewYear": "İslam Yeni ili",
-  "mawlidAnNabi": "Mövlud ən-Nəbi",
-  "specialDayDateRamadanStart": "1 Ramazan",
-  "specialDayDateLaylatAlQadr": "27 Ramazan",
-  "specialDayDateEidAlFitr": "1 Şəvval",
-  "specialDayDateEidAlAdha": "10 Zilhiccə",
-  "specialDayDateIslamicNewYear": "1 Məhərrəm",
-  "specialDayDateMawlidAnNabi": "12 Rəbiul-əvvəl",
-  "refreshAction": "Yeniləyin",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Təfsir yüklənir...",
-  "tafsirSourceLabel": "Təfsir mənbəyi",
-  "tafsirNoSurahFound": "Bu surə üçün heç bir təfsir tapılmadı.",
-  "tafsirNoAyahFound": "{ayah} ayəsi üçün heç bir təfsir tapılmadı.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Təfsiri yükləmək mümkün olmadı.",
-  "tafsirNoTextForAyah": "Bu ayə üçün təfsir mətni yoxdur.",
-  "tafsirDownloadingProgress": "{current}/{total} təfsiri endirilir",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Təfsir yüklənir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Təfsir mənbəyi HTTP {statusCode} xətası qaytardı.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Seçilmiş təfsir mənbəyi heç bir qeydi qaytarmadı.",
-  "premiumProductUnavailable": "Premium məhsul hazırda mövcud deyil. Daha sonra yenidən cəhd edin.",
-  "premiumPurchaseFailed": "Satınalma tamamlanmadı. Yenidən cəhd edin.",
-  "prayerRemainingHoursMinutes": "{hours}saat {minutes}dəq",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "İslam İşıq Yolu",
-  "downloadPartiallyFinishedForReciter": "{failed} uğursuz surələrlə {reciter} üçün endirmə tamamlandı ({downloaded}/{total} endirildi).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Məkan tələb olunur",
-  "placesLocationRequiredBody": "Əvvəlcə yer təyin edin ki, yaxınlıqdakı məscidlər, halal yeməklər və İslam məktəbləri dəqiq axtarılsın.",
-  "placesMapTilesUnavailableTitle": "Xəritə plitələri əlçatan deyil",
-  "placesMapTilesUnavailableBody": "Doğrulanmış xəritə mənbəsi hələ bu quruluş üçün konfiqurasiya edilməyib. Yaxınlıqdakı yerlər hələ də saxladığınız yerdən yükləyə bilər.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Kişi (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Kişi (Abdul Basit)",
-  "audioVoiceSudais": "Kişi (Sudais)",
-  "qiblaSensorUnavailable": "Bu cihazda kompas sensoru mövcud deyil.",
-  "adhanNotificationChannelName": "Azan bildirişləri",
-  "adhanNotificationChannelDescription": "Azan səsi ilə namaz vaxtı xəbərdarlığı.",
-  "quranLoadFailed": "Quran məzmununu yükləmək mümkün olmadı. Yenidən cəhd edin.",
-  "locationDetectionFailed": "Məkanınızı aşkar etmək mümkün olmadı. Lütfən, şəhəri əl ilə seçin və ya yenidən cəhd edin.",
-  "qiblaLocationRequiredTitle": "Qiblə üçün yer tələb olunur",
-  "qiblaLocationRequiredBody": "Qiblə kompasından istifadə etməzdən əvvəl faktiki yerinizi təyin edin ki, istiqamət dəqiq hesablana bilsin.",
-  "placesDataSourceUnavailableTitle": "Yer məlumatları əlçatan deyil",
-  "placesDataSourceUnavailableBody": "Doğrulanmış yerlər datasının son nöqtəsi bu quruluş üçün hələ konfiqurasiya edilməyib. Yaxınlıqda axtarışı aktiv etməzdən əvvəl PLACES_OVERPASS_API_URL-ni təsdiq edilmiş proksi və ya provayderə təyin edin.",
-  "tafsirCacheUnavailable": "Doğrulanmış təfsir hələ oflayn olaraq mövcud deyil. Baxışdan əvvəl mənbəli təfsir verilənlər bazasını sinxronlaşdırın."
+  "asmaMeaning99": "Xəstə Bir"
 }

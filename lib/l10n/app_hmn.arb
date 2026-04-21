@@ -1,6 +1,7 @@
 {
   "@@locale": "hmn",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamic Txoj Kev ntawm Lub Teeb",
   "home": "Tsev",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Sijhawm rau {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Nws yog lub sij hawm thov Vajtswv {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Cov ntaub ntawv & Cia",
   "clearCache": "Clear Cache",
   "cacheClearedSuccess": "Cache cleared tiav",
@@ -34,6 +51,7 @@
   "currentLocation": "Qhov chaw tam sim no (GPS)",
   "locationServiceDisabled": "Qhov chaw pabcuam raug kaw.",
   "locationPermissionDenied": "Qhov chaw tso cai tsis kam lees.",
+  "locationDetectionFailed": "Nrhiav tsis tau koj qhov chaw nyob. Thov xaiv lub nroog manually lossis sim dua.",
   "citiesCount": "{count} lub zos",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Tsis pom qhov tshwm sim",
   "loading": "Loading...",
   "error": "yuam kev",
+  "appErrorOccurred": "Ib qho yuam kev tshwm sim",
+  "appUnknownError": "Unknown yuam kev",
+  "quranLoadFailed": "Cov ntsiab lus Quran tsis tuaj yeem thauj khoom. Thov rov sim dua.",
   "retry": "Rov sim dua",
+  "refreshAction": "Hloov tshiab",
   "cancel": "Tso tseg",
   "save": "Txuag",
   "delete": "Rho tawm",
@@ -57,17 +79,78 @@
   "yes": "Yog lawm",
   "no": "Tsis muaj",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Nplooj",
   "reading": "Nyeem ntawv",
   "recitation": "Rov hais dua",
   "translation": "Kev txhais lus",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Loading tafsir...",
+  "tafsirSourceLabel": "Tafsir qhov chaw",
+  "tafsirNoSurahFound": "Tsis muaj tafsir pom rau no surah.",
+  "tafsirNoAyahFound": "Tsis pom tafsir rau ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir tsis tuaj yeem thauj khoom.",
+  "tafsirNoTextForAyah": "Tsis muaj tafsir ntawv rau no ayah.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir qhov chaw xa rov qab HTTP {statusCode} yuam kev.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Cov xaiv tafsir qhov chaw xa rov qab tsis muaj kev nkag.",
+  "tafsirCacheUnavailable": "Verified tafsir tseem tsis tau muaj offline. Sync ib qhov chaw tafsir dataset ua ntej browsing.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Ntxiv Bookmark",
   "removeBookmark": "Tshem tawm Bookmark",
   "lastRead": "Xeem Nyeem",
   "dailyZikr": "Txhua hnub Zikr",
+  "duaMeaning1": "Lwm tus thov Vajtswv tias, 'Peb tus Tswv, thov kom peb muaj kev zoo nyob hauv lub ntiaj teb no thiab hauv ntiaj teb no, thiab tiv thaiv peb los ntawm kev tsim txom ntawm hluav taws.'",
+  "duaMeaning2": "Vajtswv tsis ris lub nra hnyav rau ib tug twg ntau tshaj li qhov nws muaj peev xwm: txhua tus tau txais txhua yam uas nws tau ua, thiab raug kev txom nyem los ntawm nws qhov phem - 'Tus Tswv, tsis txhob coj peb mus ua haujlwm yog tias peb tsis nco qab lossis ua yuam kev. Tus Tswv, tsis txhob ris peb ib yam li koj ris cov neeg ua ntej peb. Tus Tswv, tsis txhob nkim peb ntau dua li peb muaj zog los ris. Thov zam txim rau peb, zam txim rau peb, thiab zam txim rau peb. Koj yog peb tus Cawm Seej, yog li ntawd pab peb tawm tsam cov tsis ntseeg.'",
+  "duaMeaning3": "'Peb tus Tswv, tsis txhob cia peb lub siab hloov tom qab koj tau coj peb. Muab Koj txoj kev hlub tshua rau peb: Koj yog tus pub.",
+  "duaMeaning4": "Tus Tswv, thov pub kom kuv thiab kuv cov xeeb ntxwv ua raws li tej lus thov. Peb tus Tswv, lees txais kuv qhov kev thov.",
+  "duaMeaning5": "Thiab txo koj lub tis kom txo hwj chim rau lawv hauv kev ua siab zoo thiab hais tias, 'Tus Tswv, thov koj khuv leej lawv, ib yam li lawv saib xyuas kuv thaum kuv tseem yau.'",
+  "duaMeaning6": "ua Vajtswv tsaug, tus uas tswj tau tiag tiag. [Yehauvas], tsis txhob maj hais ua ntej qhov kev tshwm sim yuav tiav, tiam sis hais tias, 'Tus Tswv, thov kom kuv paub ntxiv!'",
+  "duaMeaning7": "Hais [Yehauvas] hais tias, 'Tus Tswv, zam txim thiab muaj kev hlub tshua: Koj yog tus uas hlub tshua tshaj txhua tus.'",
+  "duaMeaning8": "cov uas thov Vajtswv hais tias, 'Peb tus Tswv, thov kom peb muaj kev xyiv fab ntawm peb cov txij nkawm thiab cov xeeb ntxwv. Ua rau peb ua piv txwv zoo rau cov uas paub txog koj'.",
   "morningZikr": "Sawv ntxov Zikr",
   "eveningZikr": "Hmo Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Kev yoo mov",
   "quranReading": "Nyeem Quran",
   "prayers": "Kev thov Vajtswv",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr suav",
   "weeklyProgress": "Kev vam meej txhua lub lim tiam",
   "monthlyProgress": "Kev nce qib txhua hli",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamic Xyoo Tshiab",
+  "mawlidAnNabi": "Mawlid thiab Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Direction",
   "compass": "Compass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla nrhiav tau!",
   "turnDevice": "Tig koj lub cuab yeej kom fim Qibla",
+  "qiblaCompassErrorDetails": "Compass yuam kev: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Compass sensor tsis muaj nyob rau ntawm lub cuab yeej no.",
+  "qiblaLocationRequiredTitle": "Qhov chaw xav tau rau Qibla",
+  "qiblaLocationRequiredBody": "Teem koj qhov chaw tiag tiag ua ntej siv Qibla compass kom cov kev taw qhia tuaj yeem suav tau raug.",
+  "adhanNotificationChannelName": "Adhan Cov Lus Qhia",
+  "adhanNotificationChannelDescription": "Lub sij hawm thov Vajtswv ceeb toom nrog adhan suab.",
   "notifications": "Kev ceeb toom",
   "prayerNotifications": "Kev ceeb toom thov Vajtswv",
   "enableNotifications": "Qhib Kev Ceeb Toom",
@@ -166,6 +290,13 @@
   "newTarget": "Lub Hom Phiaj Tshiab",
   "targetCount": "Lub hom phiaj suav: {target}",
   "tapToCount": "Coj mus rhaub suav",
+  "zikrCompletedMashAllah": "Ua tiav! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah nyob deb tshaj txhua qhov tsis zoo.",
+  "zikrMeaningAlhamdulillah": "Tag nrho cov qhuas belongs rau Allah.",
+  "zikrMeaningAllahuAkbar": "Allah yog tus loj tshaj.",
+  "zikrMeaningLaIlahaIllallah": "Tsis muaj Vajtswv tab sis Allah.",
+  "zikrMeaningAstaghfirullah": "Kuv nrhiav Allah kev zam txim.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tsis muaj hwj chim thiab tsis muaj zog tsuas yog los ntawm Allah.",
   "dailyChecklist": "Daim ntawv txheeb xyuas txhua hnub",
   "qazaDebt": "Qaza (Cov nuj nqis)",
   "resetQazaData": "Pib dua Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Txoj kev: {path}",
   "quranCheckFailed": "Quran check ua tsis tau tejyam: {error}",
   "audioVoice": "Lub Suab",
+  "audioVoiceMisharyAlafasy": "Txiv neej (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Txiv neej (Abdul Basit)",
+  "audioVoiceSudais": "Txiv neej (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Tig mus Nrhiav Qibla",
   "calibrationRequiredFigure8": "Calibration yuav tsum tau. Tig lub cuab yeej hauv daim duab-8.",
   "dailyVerse": "Txhua Hnub Verse",
+  "dailyVerseUnavailableTitle": "Cov nqe lus niaj hnub tsis muaj",
+  "dailyVerseUnavailableBody": "Kev txheeb xyuas cov ntsiab lus txhua hnub tsis tau teeb tsa rau qhov kev tsim no tsis tau. Txuas mus rau huab qhov chaw lossis sync lub cache pov thawj ua ntej browsing.",
   "todaysIbadah": "Hnub no yog Ibadah",
   "quickAccess": "Kev nkag ceev",
   "assistant": "Tus pab",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verified duas tseem tsis tau muaj",
+  "duaUnavailableBody": "Txheeb xyuas txhua hnub duas tseem tsis tau synced rau lub cuab yeej no. Txuas mus rau huab qhov chaw thauj khoom duas es tsis txhob muaj qhov rov qab tsis tau lees paub.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Sawv ntxov & yav tsaus ntuj",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Kev tiv thaiv",
+  "duaCategoryBeginning": "Pib",
+  "duaCategorySleep": "Pw tsaug zog",
+  "duaCategoryFoodDrink": "Khoom noj & haus",
+  "duaCategoryForgiveness": "Kev zam txim",
+  "duaCategoryHome": "Tsev",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Kev Kawm Islamic",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith Collections",
+  "hadithSourcePending": "Txheeb xyuas qhov chaw tos",
+  "hadithUnavailableTitle": "Kev txheeb xyuas hadith collections tseem tsis tau muaj",
+  "hadithUnavailableBody": "Qhov kev tsim no tseem nyob ntawm qhov tsis tau lees paub sab nraud hadith pub. Hadith browsing nyob twj ywm tsis ua hauj lwm kom txog rau thaum ib tug sourced dataset yog synced.",
   "paywallUnlockAll": "Xauv tag nrho cov yam ntxwv rau koj txoj kev mus rau sab ntsuj plig",
+  "premiumProductUnavailable": "Cov khoom hwm zoo tsis muaj tam sim no. Thov rov sim dua tom qab.",
+  "premiumPurchaseFailed": "Kev yuav khoom tsis tuaj yeem ua tiav. Thov rov sim dua.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Unlimited AI-powered Q&A",
   "paywallFeature2Title": "Unlimited Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download tiav rau {reciter} nrog {failed} ua tsis tiav surahs ({downloaded}/{total} rub tawm).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Tshem tawm cov ntaub ntawv offline rau {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Network yuam kev. Thov rov sim dua.",
+  "placesLocationRequiredTitle": "Qhov chaw xav tau",
+  "placesLocationRequiredBody": "Teem ib qhov chaw ua ntej kom cov mosques nyob ze, cov zaub mov halal, thiab cov tsev kawm Islamic tuaj yeem tshawb xyuas kom raug.",
+  "placesMapTilesUnavailableTitle": "Daim ntawv qhia vuas tsis muaj",
+  "placesMapTilesUnavailableBody": "Ib daim ntawv qhia cov pobzeb cov ntaub ntawv pov thawj tseem tsis tau teeb tsa rau qhov kev tsim no. Cov chaw nyob ze tseem tuaj yeem thauj khoom los ntawm koj qhov chaw khaws cia.",
+  "placesDataSourceUnavailableTitle": "Qhov chaw cov ntaub ntawv tsis muaj",
+  "placesDataSourceUnavailableBody": "Ib qho kev txheeb xyuas qhov chaw cov ntaub ntawv kawg tsis tau teeb tsa rau qhov kev tsim no tseem. Teem PLACES_OVERPASS_API_URL rau lub npe lossis tus kws kho mob pom zoo ua ntej qhib kev tshawb nrhiav nyob ze.",
   "unknownPlaceName": "Tsis paub lub npe",
   "islamicPlaceFallback": "Qhov chaw Islamic",
-  "prayerNotificationTitle": "Sijhawm rau {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Nws yog lub sij hawm thov Vajtswv {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verified duas tseem tsis tau muaj",
-  "duaUnavailableBody": "Txheeb xyuas txhua hnub duas tseem tsis tau synced rau lub cuab yeej no. Txuas mus rau huab qhov chaw thauj khoom duas es tsis txhob muaj qhov rov qab tsis tau lees paub.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Sawv ntxov & yav tsaus ntuj",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Kev tiv thaiv",
-  "duaCategoryBeginning": "Pib",
-  "duaCategorySleep": "Pw tsaug zog",
-  "duaCategoryFoodDrink": "Khoom noj & haus",
-  "duaCategoryForgiveness": "Kev zam txim",
-  "duaCategoryHome": "Tsev",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Txheeb xyuas qhov chaw tos",
-  "hadithUnavailableTitle": "Kev txheeb xyuas hadith collections tseem tsis tau muaj",
-  "hadithUnavailableBody": "Qhov kev tsim no tseem nyob ntawm qhov tsis tau lees paub sab nraud hadith pub. Hadith browsing nyob twj ywm tsis ua hauj lwm kom txog rau thaum ib tug sourced dataset yog synced.",
-  "appErrorOccurred": "Ib qho yuam kev tshwm sim",
-  "appUnknownError": "Unknown yuam kev",
-  "qiblaCompassErrorDetails": "Compass yuam kev: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Ua tiav! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah nyob deb tshaj txhua qhov tsis zoo.",
-  "zikrMeaningAlhamdulillah": "Tag nrho cov qhuas belongs rau Allah.",
-  "zikrMeaningAllahuAkbar": "Allah yog tus loj tshaj.",
-  "zikrMeaningLaIlahaIllallah": "Tsis muaj Vajtswv tab sis Allah.",
-  "zikrMeaningAstaghfirullah": "Kuv nrhiav Allah kev zam txim.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Tsis muaj hwj chim thiab tsis muaj zog tsuas yog los ntawm Allah.",
   "asmaMeaning1": "The Beneficent",
   "asmaMeaning2": "The Merciful",
   "asmaMeaning3": "Tus Vajntxwv / Tus Tswv Nyob Mus Ib Txhis",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Txoj Kev Mus Ib Txhis",
   "asmaMeaning97": "The Inheritor",
   "asmaMeaning98": "Cov Lus Qhia Ncaj Ncees",
-  "asmaMeaning99": "Tus Neeg Mob Ib",
-  "duaMeaning1": "Lwm tus thov Vajtswv tias, 'Peb tus Tswv, thov kom peb muaj kev zoo nyob hauv lub ntiaj teb no thiab hauv ntiaj teb no, thiab tiv thaiv peb los ntawm kev tsim txom ntawm hluav taws.'",
-  "duaMeaning2": "Vajtswv tsis ris lub nra hnyav rau ib tug twg ntau tshaj li qhov nws muaj peev xwm: txhua tus tau txais txhua yam uas nws tau ua, thiab raug kev txom nyem los ntawm nws qhov phem - 'Tus Tswv, tsis txhob coj peb mus ua haujlwm yog tias peb tsis nco qab lossis ua yuam kev. Tus Tswv, tsis txhob ris peb ib yam li koj ris cov neeg ua ntej peb. Tus Tswv, tsis txhob nkim peb ntau dua li peb muaj zog los ris. Thov zam txim rau peb, zam txim rau peb, thiab zam txim rau peb. Koj yog peb tus Cawm Seej, yog li ntawd pab peb tawm tsam cov tsis ntseeg.'",
-  "duaMeaning3": "'Peb tus Tswv, tsis txhob cia peb lub siab hloov tom qab koj tau coj peb. Muab Koj txoj kev hlub tshua rau peb: Koj yog tus pub.",
-  "duaMeaning4": "Tus Tswv, thov pub kom kuv thiab kuv cov xeeb ntxwv ua raws li tej lus thov. Peb tus Tswv, lees txais kuv qhov kev thov.",
-  "duaMeaning5": "Thiab txo koj lub tis kom txo hwj chim rau lawv hauv kev ua siab zoo thiab hais tias, 'Tus Tswv, thov koj khuv leej lawv, ib yam li lawv saib xyuas kuv thaum kuv tseem yau.'",
-  "duaMeaning6": "ua Vajtswv tsaug, tus uas tswj tau tiag tiag. [Yehauvas], tsis txhob maj hais ua ntej qhov kev tshwm sim yuav tiav, tiam sis hais tias, 'Tus Tswv, thov kom kuv paub ntxiv!'",
-  "duaMeaning7": "Hais [Yehauvas] hais tias, 'Tus Tswv, zam txim thiab muaj kev hlub tshua: Koj yog tus uas hlub tshua tshaj txhua tus.'",
-  "duaMeaning8": "cov uas thov Vajtswv hais tias, 'Peb tus Tswv, thov kom peb muaj kev xyiv fab ntawm peb cov txij nkawm thiab cov xeeb ntxwv. Ua rau peb ua piv txwv zoo rau cov uas paub txog koj'.",
-  "islamicNewYear": "Islamic Xyoo Tshiab",
-  "mawlidAnNabi": "Mawlid thiab Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al Awwal",
-  "refreshAction": "Hloov tshiab",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Loading tafsir...",
-  "tafsirSourceLabel": "Tafsir qhov chaw",
-  "tafsirNoSurahFound": "Tsis muaj tafsir pom rau no surah.",
-  "tafsirNoAyahFound": "Tsis pom tafsir rau ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir tsis tuaj yeem thauj khoom.",
-  "tafsirNoTextForAyah": "Tsis muaj tafsir ntawv rau no ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tafsir qhov chaw xa rov qab HTTP {statusCode} yuam kev.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Cov xaiv tafsir qhov chaw xa rov qab tsis muaj kev nkag.",
-  "premiumProductUnavailable": "Cov khoom hwm zoo tsis muaj tam sim no. Thov rov sim dua tom qab.",
-  "premiumPurchaseFailed": "Kev yuav khoom tsis tuaj yeem ua tiav. Thov rov sim dua.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Islamic Txoj Kev ntawm Lub Teeb",
-  "downloadPartiallyFinishedForReciter": "Download tiav rau {reciter} nrog {failed} ua tsis tiav surahs ({downloaded}/{total} rub tawm).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Qhov chaw xav tau",
-  "placesLocationRequiredBody": "Teem ib qhov chaw ua ntej kom cov mosques nyob ze, cov zaub mov halal, thiab cov tsev kawm Islamic tuaj yeem tshawb xyuas kom raug.",
-  "placesMapTilesUnavailableTitle": "Daim ntawv qhia vuas tsis muaj",
-  "placesMapTilesUnavailableBody": "Ib daim ntawv qhia cov pobzeb cov ntaub ntawv pov thawj tseem tsis tau teeb tsa rau qhov kev tsim no. Cov chaw nyob ze tseem tuaj yeem thauj khoom los ntawm koj qhov chaw khaws cia.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Txiv neej (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Txiv neej (Abdul Basit)",
-  "audioVoiceSudais": "Txiv neej (Sudais)",
-  "qiblaSensorUnavailable": "Compass sensor tsis muaj nyob rau ntawm lub cuab yeej no.",
-  "adhanNotificationChannelName": "Adhan Cov Lus Qhia",
-  "adhanNotificationChannelDescription": "Lub sij hawm thov Vajtswv ceeb toom nrog adhan suab.",
-  "quranLoadFailed": "Cov ntsiab lus Quran tsis tuaj yeem thauj khoom. Thov rov sim dua.",
-  "locationDetectionFailed": "Nrhiav tsis tau koj qhov chaw nyob. Thov xaiv lub nroog manually lossis sim dua.",
-  "qiblaLocationRequiredTitle": "Qhov chaw xav tau rau Qibla",
-  "qiblaLocationRequiredBody": "Teem koj qhov chaw tiag tiag ua ntej siv Qibla compass kom cov kev taw qhia tuaj yeem suav tau raug.",
-  "placesDataSourceUnavailableTitle": "Qhov chaw cov ntaub ntawv tsis muaj",
-  "placesDataSourceUnavailableBody": "Ib qho kev txheeb xyuas qhov chaw cov ntaub ntawv kawg tsis tau teeb tsa rau qhov kev tsim no tseem. Teem PLACES_OVERPASS_API_URL rau lub npe lossis tus kws kho mob pom zoo ua ntej qhib kev tshawb nrhiav nyob ze.",
-  "tafsirCacheUnavailable": "Verified tafsir tseem tsis tau muaj offline. Sync ib qhov chaw tafsir dataset ua ntej browsing."
+  "asmaMeaning99": "Tus Neeg Mob Ib"
 }

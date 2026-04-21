@@ -956,6 +956,14 @@ class AppLocalizationsMt extends AppLocalizations {
   String get dailyVerse => 'Vers ta \'Kuljum';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Poeżiji ta\' kuljum mhux disponibbli';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Il-kontenut tal-vers ta\' kuljum ivverifikat għadu mhux ikkonfigurat għal din il-bini. Qabbad mas-sors tas-sħab jew issinkronizza cache verifikata qabel ma tibbrawżja.';
+
+  @override
   String get todaysIbadah => 'Ibadah tal-lum';
 
   @override

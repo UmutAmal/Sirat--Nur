@@ -952,6 +952,13 @@ class AppLocalizationsAf extends AppLocalizations {
   String get dailyVerse => 'Daaglikse vers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Daaglikse vers nie beskikbaar nie';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Geverifieerde daaglikse versinhoud is nog nie vir hierdie bou opgestel nie. Koppel aan die wolkbron of sinkroniseer \'n geverifieerde kas voordat u blaai.';
+
+  @override
   String get todaysIbadah => 'Vandag se Ibadah';
 
   @override

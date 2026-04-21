@@ -1,6 +1,7 @@
 {
   "@@locale": "kri",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamik We fɔ Layt",
   "home": "Na os",
   "quran": "Kɔran",
   "qibla": "Qibla we dɛn kɔl Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib we dɛn kɔl Maghrib",
   "isha": "Isha we de na di wɔl",
+  "prayerNotificationTitle": "Taym fɔ {prayerName}.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Na tɛm fɔ pre {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Stɔrej",
   "clearCache": "Klia di Kesh",
   "cacheClearedSuccess": "Kesh bin klia fayn fayn wan",
@@ -34,6 +51,7 @@
   "currentLocation": "Di say we yu de naw (GPS) .",
   "locationServiceDisabled": "Di lokeshɔn savis nɔ de wok.",
   "locationPermissionDenied": "Dɛn nɔ gri fɔ gi pɔsin rayt fɔ mek di ples.",
+  "locationDetectionFailed": "Nɔ bin ebul fɔ no usay yu de. Duya pik wan siti wit yu an ɔ tray bak.",
   "citiesCount": "{count} siti dɛm",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "No results found",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Wan mistek bin apin",
+  "appUnknownError": "Mistek we dɛn nɔ no",
+  "quranLoadFailed": "Di tin dɛn we de insay di Kɔran nɔ bin ebul fɔ lod. Duya tray bak.",
   "retry": "Tray bak",
+  "refreshAction": "Refresh",
   "cancel": "Kansel",
   "save": "Sev am",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Yɛs",
   "no": "Nɔ",
   "surah": "Surah we dɛn kɔl",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Pej",
   "reading": "Fɔ rid",
   "recitation": "We yu de rid",
   "translation": "Transleshɔn",
   "tafsir": "Tafsir bin de du am",
+  "tafsirLoading": "Loading tafsir we yu de lod...",
+  "tafsirSourceLabel": "Tafsir sos",
+  "tafsirNoSurahFound": "No tafsir fain fo dis surah.",
+  "tafsirNoAyahFound": "No tafsir fain fɔ ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir nɔ bin ebul fɔ lod.",
+  "tafsirNoTextForAyah": "No tafsir teks fo dis ayah.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir sɔs bin ritɔn wan HTTP {statusCode} mistek.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Di tafsir sɔs we dɛn pik nɔ bin ritɔn ɛni ɛntri.",
+  "tafsirCacheUnavailable": "Verified tafsir nɔ de ɔflayna yet. Sink wan sɔs tafsir datasɛt bifo yu browz.",
   "bookmarks": "Bukmak dɛn",
   "addBookmark": "Add Bukmak fɔ yu",
   "removeBookmark": "Rimov di Bukmak",
   "lastRead": "Las Rid",
   "dailyZikr": "Ɛvride Zikr",
+  "duaMeaning1": "ɔda wan dɛn de pre se, ‘Wi Masta, gi wi gud na dis wɔl ɛn na di layf we de afta, ɛn protɛkt wi frɔm di sɔfa we di Faya de mek wi sɔfa.’",
+  "duaMeaning2": "Gɔd nɔ de lod ɛni sol wit mɔ pas wetin i ebul fɔ bia: ɛni wan de gɛt ɛni gud we i dɔn du, ɛn sɔfa in bad- ‘ Masta, nɔ tek wi fɔ wok if wi fɔgɛt ɔ mek mistek. Masta, nɔ lod wi lɛk aw Yu bin lod di wan dɛn we bin de bifo wi. Masta, nɔ lod wi pas wetin wi gɛt trɛnk fɔ bia. Fɔgiv wi, fɔgiv wi, ɛn sɔri fɔ wi. Yu na wi Protɛkta, so ɛp wi agens di wan dɛn we nɔ biliv.’",
+  "duaMeaning3": "‘Wi Masta, nɔ mek wi at kɔmɔt biɛn afta Yu dɔn gayd wi. Gi wi Yu sɔri-at: Yu na di wan we de gi ɔltɛm.",
+  "duaMeaning4": "Masta, mek mi ɛn mi pikin dɛn kɔntinyu fɔ pre. Wi Masta, aksept mi ​​rikwest.",
+  "duaMeaning5": "ɛn put yu wing dɔŋ wit ɔmbul to dɛn wit gudnɛs ɛn se, ‘Masta, sɔri fɔ dɛn, jɔs lɛk aw dɛn bin de kia fɔ mi we a bin smɔl.’",
+  "duaMeaning6": "Gɔd fɔ ɔp, di wan we rili de kɔntrol. [Prɔfɛt], nɔ rɔsh fɔ rid bifo di rivyu dɔn ful-ɔp bɔt se, ‘Masta, mek a no mɔ!’",
+  "duaMeaning7": "Se [Prɔfɛt], ‘Masta, fɔgiv ɛn sɔri: Yu gɛt sɔri-at pas ɔlman.’",
+  "duaMeaning8": "di wan dɛn we de pre se, ‘Wi Masta, gi wi gladi at pan wi man ɔ wɛf ɛn pikin dɛn. Mek wi gud ɛgzampul to di wan dɛn we no Yu’.",
   "morningZikr": "Mɔnin Zikr",
   "eveningZikr": "Ivinin Zikr",
   "tasbih": "Tasbih bin de",
@@ -88,6 +171,26 @@
   "fasting": "Fɔ fast",
   "quranReading": "Ridin fɔ di Kɔran",
   "prayers": "Prea dɛn we wi kin pre",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Kɔnt",
   "weeklyProgress": "Di Prɔgrɛs we De Ɛvri Wik",
   "monthlyProgress": "Di Prɔgrɛs we De Ɛvri Mɔnt",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan we dɛn kɔl Ramadan",
   "eidAlFitr": "Eid Al-Fitr we de na di wɔl",
   "eidAlAdha": "Eid Al-Adha bin de go",
+  "islamicNewYear": "Islamik Nyu Ia",
+  "mawlidAnNabi": "Mawlid wan-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal, we de na di wɔl",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah we dɛn kɔl",
+  "specialDayDateIslamicNewYear": "1 Muharram, we dɛn kɔl Muharram",
+  "specialDayDateMawlidAnNabi": "12 Na Rabi al-Awwal bin rayt am",
   "laylatAlQadr": "Laylat Al-Qadr we de wok fɔ di kɔmni",
   "qiblaDirection": "Qibla Dairekshɔn",
   "compass": "Kɔmpas we dɛn kin yuz",
@@ -108,6 +219,19 @@
   "north": "Nɔt",
   "qiblaFound": "Qibla bin fɛn am!",
   "turnDevice": "Turn yu divais fo fes di Qibla",
+  "qiblaCompassErrorDetails": "Kɔmpas mistek: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kɔmpas sɛns nɔ de na dis divays.",
+  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Notis dɛn we dɛn kin gi",
   "prayerNotifications": "Notis fɔ Prea",
   "enableNotifications": "Enable Notis dɛn",
@@ -166,6 +290,13 @@
   "newTarget": "Nyu Target",
   "targetCount": "Target: {target} we yu want fɔ du.",
   "tapToCount": "Tap fɔ kɔnt",
+  "zikrCompletedMashAllah": "Dɛn dɔn dɔn am! MashAllah na di pɔsin",
+  "zikrMeaningSubhanAllah": "Allah de fa fawe pas ɔl di tin dɛn we nɔ pafɛkt.",
+  "zikrMeaningAlhamdulillah": "Ɔl di prez na fɔ Allah.",
+  "zikrMeaningAllahuAkbar": "Allah na di wan we pas ɔlman.",
+  "zikrMeaningLaIlahaIllallah": "No gɔd nɔ de pas Allah.",
+  "zikrMeaningAstaghfirullah": "A de luk fɔ Allah in fɔgivnɛs.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "No pawa ɛn trɛnk nɔ de pas tru Allah.",
   "dailyChecklist": "Chɛklist ɛvride",
   "qazaDebt": "Qaza (Dɛt) .",
   "resetQazaData": "Riset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}.",
   "quranCheckFailed": "Quran chɛk nɔ wok: {error}.",
   "audioVoice": "Odio Voys",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle we yu de du",
   "ishaAngle": "Isha Angle we de na di wɔl",
   "qiblaCalibration": "Qibla Kalibreshɔn fɔ di wok",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate fɔ Fɛn Qibla",
   "calibrationRequiredFigure8": "Kalibreshɔn nid fɔ de. Rotate divays na figa-8.",
   "dailyVerse": "Vas we dɛn kin yuz ɛvride",
+  "dailyVerseUnavailableTitle": "Vas nɔ de fɔ ɛvride",
+  "dailyVerseUnavailableBody": "Verified daily verse content nɔ kɔnfigyut fɔ dis bild yet. Kɔnekt to di klawd sɔs ɔ sink wan verified kesh bifo yu browz.",
   "todaysIbadah": "Tide na Ibadah",
   "quickAccess": "Kwik Akses",
   "assistant": "Pɔsin we de ɛp",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verified duas nɔ de yet",
+  "duaUnavailableBody": "Verified daily duas nɔ dɔn sink to dis divays yet. Konekt to di klawd sɔs fɔ lod sɔs duas instead ɔf wan unverified fallback.",
+  "duaCategoryQuranic": "Dua we de na di Kɔran",
+  "duaCategoryMorningEvening": "Mɔnin & Ivinin",
+  "duaCategoryTasbih": "Tasbih bin de",
+  "duaCategoryProtection": "Protɛkshɔn fɔ di pɔsin",
+  "duaCategoryBeginning": "Di biginin dɛn",
+  "duaCategorySleep": "Slip",
+  "duaCategoryFoodDrink": "Fɔd & Drink fɔ it",
+  "duaCategoryForgiveness": "Fɔ fɔgiv",
+  "duaCategoryHome": "Os",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamik Ɛdyukeshɔn",
   "sukunAudioTitle": "Sukun Sɔndskɛp dɛn",
   "hadithCollections": "Hadith Kɔllɛkshɔn dɛn",
+  "hadithSourcePending": "Verified source pending",
+  "hadithUnavailableTitle": "Verified hadith collections nɔ de yet",
+  "hadithUnavailableBody": "Dis bild stil dipen pan wan unverified eksternal hadith fid. Hadith brawzin de disable te dɛn sink wan sɔs datasɛt.",
   "paywallUnlockAll": "Unlock ɔl di ficha dɛn fɔ yu spiritual joyn",
+  "premiumProductUnavailable": "Premium prodak nɔ de rayt naw. Duya tray bak leta.",
+  "premiumPurchaseFailed": "Dɛn nɔ bin ebul fɔ dɔn fɔ bay tin dɛn. Duya tray bak.",
   "paywallFeature1Title": "Nyural Asisten Plɔs",
   "paywallFeature1Desc": "Q&A we nɔ gɛt limit wit AI",
   "paywallFeature2Title": "Nɔ gɛt limit Ɔflayn",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Daunlod dɔn fɔ {reciter} wit {failed} fayl surahs ({downloaded}/{total} dɔn dawnlod).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Dilit ɔflayn fayl dɛn fɔ {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Netwok mistek. Duya tray bak.",
+  "placesLocationRequiredTitle": "Di say we dɛn nid fɔ de",
+  "placesLocationRequiredBody": "Set ples fɔs so dat dɛn go ebul fɔ fɛn di moskɛt dɛn we de nia de, halal it, ɛn Islamik skul dɛn kɔrɛkt wan.",
+  "placesMapTilesUnavailableTitle": "Map tayl dɛn nɔ de",
+  "placesMapTilesUnavailableBody": "Wan verified map tayl sɔs nɔ kɔnfigyut fɔ dis bild yet. Ples dɛn we de nia yu kin stil lod frɔm di say we yu dɔn sev.",
+  "placesDataSourceUnavailableTitle": "Ples di data we nɔ de",
+  "placesDataSourceUnavailableBody": "Wan verified ples data endpoint nɔ kɔnfigyut fɔ dis bild yet. Set PLACES_OVERPASS_API_URL to wan apruv prɔksi ɔ prɔvayda bifo yu ɛnabul sɔch we de nia.",
   "unknownPlaceName": "Nem we wi nɔ no",
   "islamicPlaceFallback": "Islamik Ples we dɛn kɔl",
-  "prayerNotificationTitle": "Taym fɔ {prayerName}.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Na tɛm fɔ pre {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verified duas nɔ de yet",
-  "duaUnavailableBody": "Verified daily duas nɔ dɔn sink to dis divays yet. Konekt to di klawd sɔs fɔ lod sɔs duas instead ɔf wan unverified fallback.",
-  "duaCategoryQuranic": "Dua we de na di Kɔran",
-  "duaCategoryMorningEvening": "Mɔnin & Ivinin",
-  "duaCategoryTasbih": "Tasbih bin de",
-  "duaCategoryProtection": "Protɛkshɔn fɔ di pɔsin",
-  "duaCategoryBeginning": "Di biginin dɛn",
-  "duaCategorySleep": "Slip",
-  "duaCategoryFoodDrink": "Fɔd & Drink fɔ it",
-  "duaCategoryForgiveness": "Fɔ fɔgiv",
-  "duaCategoryHome": "Os",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verified source pending",
-  "hadithUnavailableTitle": "Verified hadith collections nɔ de yet",
-  "hadithUnavailableBody": "Dis bild stil dipen pan wan unverified eksternal hadith fid. Hadith brawzin de disable te dɛn sink wan sɔs datasɛt.",
-  "appErrorOccurred": "Wan mistek bin apin",
-  "appUnknownError": "Mistek we dɛn nɔ no",
-  "qiblaCompassErrorDetails": "Kɔmpas mistek: {error} .",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Dɛn dɔn dɔn am! MashAllah na di pɔsin",
-  "zikrMeaningSubhanAllah": "Allah de fa fawe pas ɔl di tin dɛn we nɔ pafɛkt.",
-  "zikrMeaningAlhamdulillah": "Ɔl di prez na fɔ Allah.",
-  "zikrMeaningAllahuAkbar": "Allah na di wan we pas ɔlman.",
-  "zikrMeaningLaIlahaIllallah": "No gɔd nɔ de pas Allah.",
-  "zikrMeaningAstaghfirullah": "A de luk fɔ Allah in fɔgivnɛs.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "No pawa ɛn trɛnk nɔ de pas tru Allah.",
   "asmaMeaning1": "Di Wan we de bɛnifit",
   "asmaMeaning2": "Di Wan we gɛt sɔri-at",
   "asmaMeaning3": "Di Kiŋ / Masta we de sote go",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Di Wan we De Sote Go",
   "asmaMeaning97": "Di Inhɛritɔ",
   "asmaMeaning98": "Di Mɔs Rayt Gayd",
-  "asmaMeaning99": "Di Patient Wan",
-  "duaMeaning1": "ɔda wan dɛn de pre se, ‘Wi Masta, gi wi gud na dis wɔl ɛn na di layf we de afta, ɛn protɛkt wi frɔm di sɔfa we di Faya de mek wi sɔfa.’",
-  "duaMeaning2": "Gɔd nɔ de lod ɛni sol wit mɔ pas wetin i ebul fɔ bia: ɛni wan de gɛt ɛni gud we i dɔn du, ɛn sɔfa in bad- ‘ Masta, nɔ tek wi fɔ wok if wi fɔgɛt ɔ mek mistek. Masta, nɔ lod wi lɛk aw Yu bin lod di wan dɛn we bin de bifo wi. Masta, nɔ lod wi pas wetin wi gɛt trɛnk fɔ bia. Fɔgiv wi, fɔgiv wi, ɛn sɔri fɔ wi. Yu na wi Protɛkta, so ɛp wi agens di wan dɛn we nɔ biliv.’",
-  "duaMeaning3": "‘Wi Masta, nɔ mek wi at kɔmɔt biɛn afta Yu dɔn gayd wi. Gi wi Yu sɔri-at: Yu na di wan we de gi ɔltɛm.",
-  "duaMeaning4": "Masta, mek mi ɛn mi pikin dɛn kɔntinyu fɔ pre. Wi Masta, aksept mi ​​rikwest.",
-  "duaMeaning5": "ɛn put yu wing dɔŋ wit ɔmbul to dɛn wit gudnɛs ɛn se, ‘Masta, sɔri fɔ dɛn, jɔs lɛk aw dɛn bin de kia fɔ mi we a bin smɔl.’",
-  "duaMeaning6": "Gɔd fɔ ɔp, di wan we rili de kɔntrol. [Prɔfɛt], nɔ rɔsh fɔ rid bifo di rivyu dɔn ful-ɔp bɔt se, ‘Masta, mek a no mɔ!’",
-  "duaMeaning7": "Se [Prɔfɛt], ‘Masta, fɔgiv ɛn sɔri: Yu gɛt sɔri-at pas ɔlman.’",
-  "duaMeaning8": "di wan dɛn we de pre se, ‘Wi Masta, gi wi gladi at pan wi man ɔ wɛf ɛn pikin dɛn. Mek wi gud ɛgzampul to di wan dɛn we no Yu’.",
-  "islamicNewYear": "Islamik Nyu Ia",
-  "mawlidAnNabi": "Mawlid wan-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal, we de na di wɔl",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah we dɛn kɔl",
-  "specialDayDateIslamicNewYear": "1 Muharram, we dɛn kɔl Muharram",
-  "specialDayDateMawlidAnNabi": "12 Na Rabi al-Awwal bin rayt am",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Loading tafsir we yu de lod...",
-  "tafsirSourceLabel": "Tafsir sos",
-  "tafsirNoSurahFound": "No tafsir fain fo dis surah.",
-  "tafsirNoAyahFound": "No tafsir fain fɔ ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir nɔ bin ebul fɔ lod.",
-  "tafsirNoTextForAyah": "No tafsir teks fo dis ayah.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir sɔs bin ritɔn wan HTTP {statusCode} mistek.",
-  "tafsirNoEntriesReturned": "Di tafsir sɔs we dɛn pik nɔ bin ritɔn ɛni ɛntri.",
-  "premiumProductUnavailable": "Premium prodak nɔ de rayt naw. Duya tray bak leta.",
-  "premiumPurchaseFailed": "Dɛn nɔ bin ebul fɔ dɔn fɔ bay tin dɛn. Duya tray bak.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamik We fɔ Layt",
-  "downloadPartiallyFinishedForReciter": "Daunlod dɔn fɔ {reciter} wit {failed} fayl surahs ({downloaded}/{total} dɔn dawnlod).",
-  "placesLocationRequiredTitle": "Di say we dɛn nid fɔ de",
-  "placesLocationRequiredBody": "Set ples fɔs so dat dɛn go ebul fɔ fɛn di moskɛt dɛn we de nia de, halal it, ɛn Islamik skul dɛn kɔrɛkt wan.",
-  "placesMapTilesUnavailableTitle": "Map tayl dɛn nɔ de",
-  "placesMapTilesUnavailableBody": "Wan verified map tayl sɔs nɔ kɔnfigyut fɔ dis bild yet. Ples dɛn we de nia yu kin stil lod frɔm di say we yu dɔn sev.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Kɔmpas sɛns nɔ de na dis divays.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Di tin dɛn we de insay di Kɔran nɔ bin ebul fɔ lod. Duya tray bak.",
-  "locationDetectionFailed": "Nɔ bin ebul fɔ no usay yu de. Duya pik wan siti wit yu an ɔ tray bak.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Ples di data we nɔ de",
-  "placesDataSourceUnavailableBody": "Wan verified ples data endpoint nɔ kɔnfigyut fɔ dis bild yet. Set PLACES_OVERPASS_API_URL to wan apruv prɔksi ɔ prɔvayda bifo yu ɛnabul sɔch we de nia.",
-  "tafsirCacheUnavailable": "Verified tafsir nɔ de ɔflayna yet. Sink wan sɔs tafsir datasɛt bifo yu browz."
+  "asmaMeaning99": "Di Patient Wan"
 }

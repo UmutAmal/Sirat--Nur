@@ -952,6 +952,13 @@ class AppLocalizationsEt extends AppLocalizations {
   String get dailyVerse => 'Igapäevane salm';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Igapäevane salm pole saadaval';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Kinnitatud igapäevane salmi sisu pole selle järgu jaoks veel konfigureeritud. Enne sirvimist looge ühendus pilveallikaga või sünkroonige kinnitatud vahemälu.';
+
+  @override
   String get todaysIbadah => 'Tänane Ibadah';
 
   @override

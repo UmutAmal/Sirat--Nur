@@ -1,6 +1,7 @@
 {
   "@@locale": "no",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamsk lysvei",
   "home": "Hjem",
   "quran": "Koranen",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tid for {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Det er på tide å be {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data og lagring",
   "clearCache": "Tøm buffer",
   "cacheClearedSuccess": "Bufferen ble tømt",
@@ -34,6 +51,7 @@
   "currentLocation": "Nåværende posisjon (GPS)",
   "locationServiceDisabled": "Plasseringstjenesten er deaktivert.",
   "locationPermissionDenied": "Plasseringstillatelse nektet.",
+  "locationDetectionFailed": "Kunne ikke finne posisjonen din. Velg en by manuelt eller prøv på nytt.",
   "citiesCount": "{count} byer",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ingen resultater funnet",
   "loading": "Laster inn...",
   "error": "Feil",
+  "appErrorOccurred": "Det oppsto en feil",
+  "appUnknownError": "Ukjent feil",
+  "quranLoadFailed": "Koraninnhold kunne ikke lastes. Vennligst prøv igjen.",
   "retry": "Prøv på nytt",
+  "refreshAction": "Oppdater",
   "cancel": "Avbryt",
   "save": "Lagre",
   "delete": "Slett",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nei",
   "surah": "Sura",
+  "ayahLabel": "Vers {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juzʾ",
   "page": "Side",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Laster inn tafsir...",
+  "tafsirSourceLabel": "Tafsir kilde",
+  "tafsirNoSurahFound": "Ingen tafsir funnet for denne suraen.",
+  "tafsirNoAyahFound": "Ingen tafsir funnet for ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir kunne ikke lastes.",
+  "tafsirNoTextForAyah": "Ingen tafsir-tekst for denne ayahen.",
+  "tafsirDownloadingProgress": "Laster ned tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Laster inn {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir-kilden returnerte en HTTP {statusCode}-feil.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Den valgte tafsir-kilden returnerte ingen oppføringer.",
+  "tafsirCacheUnavailable": "Verifisert tafsir er ikke tilgjengelig offline ennå. Synkroniser et hentet tafsir-datasett før du surfer.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Legg til bokmerke",
   "removeBookmark": "Fjern bokmerke",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "andre ber: 'Vår Herre, gi oss det gode i denne verden og i det hinsidige, og beskytt oss mot Ildens pine.'",
+  "duaMeaning2": "Gud belaster ikke noen sjel med mer enn den kan tåle: hver og en får det gode den har gjort, og lider av dets onde- 'Herre, ikke ta oss til oppgaven hvis vi glemmer eller gjør feil. Herre, legg ikke byrder på oss slik du har belastet dem før oss. Herre, belastning oss ikke med mer enn vi har styrke til å bære. Tilgi oss, tilgi oss og forbarm deg over oss. Du er vår beskytter, så hjelp oss mot de vantro.'",
+  "duaMeaning3": "'Vår Herre, la ikke våre hjerter avvike etter at Du har ledet oss. Gi oss din nåde: Du er den som alltid gir.",
+  "duaMeaning4": "Herre, gi at jeg og mitt avkom kan fortsette å be. Vår Herre, godta min forespørsel.",
+  "duaMeaning5": "og senk din vinge i ydmykhet mot dem i vennlighet og si: 'Herre, forbarm deg over dem, akkurat som de brydde seg om meg da jeg var liten.'",
+  "duaMeaning6": "Opphøyet være Gud, den som virkelig har kontroll. [Profet], ikke skynd deg å resitere før åpenbaringen er fullstendig fullstendig, men si: 'Herre, øk meg i kunnskap!'",
+  "duaMeaning7": "Si [profet], 'Herre, tilgi og ha barmhjertighet: Du er den mest barmhjertige av alle.'",
+  "duaMeaning8": "de som ber: 'Vår Herre, gi oss glede i våre ektefeller og avkom. Gjør oss til gode eksempler for de som er klar over deg.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Faste",
   "quranReading": "Koranlesing",
   "prayers": "Bønner",
+  "prayerRemainingHoursMinutes": "{hours}t {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes} min",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Ukentlig fremgang",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamsk nyttår",
+  "mawlidAnNabi": "Mawlid Kandili",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhu al-Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla-retning",
   "compass": "Kompass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla funnet!",
   "turnDevice": "Snu enheten mot Qibla",
+  "qiblaCompassErrorDetails": "Kompassfeil: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompasssensor er utilgjengelig på denne enheten.",
+  "qiblaLocationRequiredTitle": "Plassering kreves for Qibla",
+  "qiblaLocationRequiredBody": "Still inn din faktiske posisjon før du bruker Qibla-kompasset slik at retningen kan beregnes nøyaktig.",
+  "adhanNotificationChannelName": "Adhan-varsler",
+  "adhanNotificationChannelDescription": "Bønnetidsvarsler med adhan-lyd.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Målantall: {target}",
   "tapToCount": "Trykk for å telle",
+  "zikrCompletedMashAllah": "Fullført! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah er langt over enhver ufullkommenhet.",
+  "zikrMeaningAlhamdulillah": "All ros tilhører Allah.",
+  "zikrMeaningAllahuAkbar": "Allah er den største.",
+  "zikrMeaningLaIlahaIllallah": "Det er ingen gud utenom Allah.",
+  "zikrMeaningAstaghfirullah": "Jeg søker Allahs tilgivelse.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Det er ingen kraft og ingen styrke uten gjennom Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Lydstemme",
+  "audioVoiceMisharyAlafasy": "Mann (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mann (Abdul Basit)",
+  "audioVoiceSudais": "Mann (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla-kalibrering",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrering kreves. Roter enheten i figur 8.",
   "dailyVerse": "Daglig vers",
+  "dailyVerseUnavailableTitle": "Dagsvers utilgjengelig",
+  "dailyVerseUnavailableBody": "Verifisert daglig versinnhold er ikke konfigurert for denne versjonen ennå. Koble til skykilden eller synkroniser en bekreftet cache før du surfer.",
   "todaysIbadah": "Dagens Ibadah",
   "quickAccess": "Rask tilgang",
   "assistant": "Assistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verifiserte duas er ikke tilgjengelig ennå",
+  "duaUnavailableBody": "Verifiserte daglige duas er ikke synkronisert til denne enheten ennå. Koble til skykilden for å laste inn hentede duas i stedet for en ubekreftet reserve.",
+  "duaCategoryQuranic": "Koranisk dua",
+  "duaCategoryMorningEvening": "Morgen og kveld",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Beskyttelse",
+  "duaCategoryBeginning": "Begynnelser",
+  "duaCategorySleep": "Sove",
+  "duaCategoryFoodDrink": "Mat og drikke",
+  "duaCategoryForgiveness": "Tilgivelse",
+  "duaCategoryHome": "Hjem",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamsk utdanning",
   "sukunAudioTitle": "Sukun lydlandskap",
   "hadithCollections": "Hadith-samlinger",
+  "hadithSourcePending": "Verifisert kilde venter",
+  "hadithUnavailableTitle": "Verifiserte hadith-samlinger er ikke tilgjengelige ennå",
+  "hadithUnavailableBody": "Denne konstruksjonen avhenger fortsatt av en ubekreftet ekstern hadith-feed. Hadith-surfing forblir deaktivert til et hentet datasett synkroniseres.",
   "paywallUnlockAll": "Lås opp alle funksjoner for din åndelige reise",
+  "premiumProductUnavailable": "Premium-produktet er ikke tilgjengelig akkurat nå. Prøv igjen senere.",
+  "premiumPurchaseFailed": "Kjøpet kunne ikke fullføres. Vennligst prøv igjen.",
   "paywallFeature1Title": "Nevral assistent pluss",
   "paywallFeature1Desc": "Ubegrenset AI-drevet spørsmål og svar",
   "paywallFeature2Title": "Ubegrenset frakoblet",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Nedlastingen fullført for {reciter} med {failed} mislykkede suraher ({downloaded}/{total} lastet ned).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Slettede frakoblede filer for {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Nettverksfeil. Vennligst prøv igjen.",
+  "placesLocationRequiredTitle": "Plassering kreves",
+  "placesLocationRequiredBody": "Angi et sted først, slik at nærliggende moskeer, halalmat og islamske skoler kan søkes nøyaktig.",
+  "placesMapTilesUnavailableTitle": "Kartfliser er ikke tilgjengelige",
+  "placesMapTilesUnavailableBody": "En bekreftet kartbrikkekilde er ikke konfigurert for denne versjonen ennå. Steder i nærheten kan fortsatt lastes inn fra det lagrede stedet.",
+  "placesDataSourceUnavailableTitle": "Stedsdata er utilgjengelige",
+  "placesDataSourceUnavailableBody": "Et verifisert stedsdataendepunkt er ikke konfigurert for denne versjonen ennå. Sett PLACES_OVERPASS_API_URL til en godkjent proxy eller leverandør før du aktiverer søk i nærheten.",
   "unknownPlaceName": "Ukjent navn",
   "islamicPlaceFallback": "Islamsk sted",
-  "prayerNotificationTitle": "Tid for {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Det er på tide å be {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verifiserte duas er ikke tilgjengelig ennå",
-  "duaUnavailableBody": "Verifiserte daglige duas er ikke synkronisert til denne enheten ennå. Koble til skykilden for å laste inn hentede duas i stedet for en ubekreftet reserve.",
-  "duaCategoryQuranic": "Koranisk dua",
-  "duaCategoryMorningEvening": "Morgen og kveld",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Beskyttelse",
-  "duaCategoryBeginning": "Begynnelser",
-  "duaCategorySleep": "Sove",
-  "duaCategoryFoodDrink": "Mat og drikke",
-  "duaCategoryForgiveness": "Tilgivelse",
-  "duaCategoryHome": "Hjem",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verifisert kilde venter",
-  "hadithUnavailableTitle": "Verifiserte hadith-samlinger er ikke tilgjengelige ennå",
-  "hadithUnavailableBody": "Denne konstruksjonen avhenger fortsatt av en ubekreftet ekstern hadith-feed. Hadith-surfing forblir deaktivert til et hentet datasett synkroniseres.",
-  "appErrorOccurred": "Det oppsto en feil",
-  "appUnknownError": "Ukjent feil",
-  "qiblaCompassErrorDetails": "Kompassfeil: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Fullført! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah er langt over enhver ufullkommenhet.",
-  "zikrMeaningAlhamdulillah": "All ros tilhører Allah.",
-  "zikrMeaningAllahuAkbar": "Allah er den største.",
-  "zikrMeaningLaIlahaIllallah": "Det er ingen gud utenom Allah.",
-  "zikrMeaningAstaghfirullah": "Jeg søker Allahs tilgivelse.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Det er ingen kraft og ingen styrke uten gjennom Allah.",
   "asmaMeaning1": "Den som har barmhjertighet, medlidenhet og barmhjertighet med alle skapninger i verden.",
   "asmaMeaning2": "Den barmhjertige",
   "asmaMeaning3": "Kongen / Evig Herre",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Den evige",
   "asmaMeaning97": "Arvingen",
   "asmaMeaning98": "Den mest rettferdige guiden",
-  "asmaMeaning99": "Den tålmodige, som ikke fremskynder straffen og handler med fullkommen overbærenhet.",
-  "duaMeaning1": "andre ber: 'Vår Herre, gi oss det gode i denne verden og i det hinsidige, og beskytt oss mot Ildens pine.'",
-  "duaMeaning2": "Gud belaster ikke noen sjel med mer enn den kan tåle: hver og en får det gode den har gjort, og lider av dets onde- 'Herre, ikke ta oss til oppgaven hvis vi glemmer eller gjør feil. Herre, legg ikke byrder på oss slik du har belastet dem før oss. Herre, belastning oss ikke med mer enn vi har styrke til å bære. Tilgi oss, tilgi oss og forbarm deg over oss. Du er vår beskytter, så hjelp oss mot de vantro.'",
-  "duaMeaning3": "'Vår Herre, la ikke våre hjerter avvike etter at Du har ledet oss. Gi oss din nåde: Du er den som alltid gir.",
-  "duaMeaning4": "Herre, gi at jeg og mitt avkom kan fortsette å be. Vår Herre, godta min forespørsel.",
-  "duaMeaning5": "og senk din vinge i ydmykhet mot dem i vennlighet og si: 'Herre, forbarm deg over dem, akkurat som de brydde seg om meg da jeg var liten.'",
-  "duaMeaning6": "Opphøyet være Gud, den som virkelig har kontroll. [Profet], ikke skynd deg å resitere før åpenbaringen er fullstendig fullstendig, men si: 'Herre, øk meg i kunnskap!'",
-  "duaMeaning7": "Si [profet], 'Herre, tilgi og ha barmhjertighet: Du er den mest barmhjertige av alle.'",
-  "duaMeaning8": "de som ber: 'Vår Herre, gi oss glede i våre ektefeller og avkom. Gjør oss til gode eksempler for de som er klar over deg.",
-  "islamicNewYear": "Islamsk nyttår",
-  "mawlidAnNabi": "Mawlid Kandili",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhu al-Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Oppdater",
-  "ayahLabel": "Vers {ayah}",
-  "tafsirLoading": "Laster inn tafsir...",
-  "tafsirSourceLabel": "Tafsir kilde",
-  "tafsirNoSurahFound": "Ingen tafsir funnet for denne suraen.",
-  "tafsirNoAyahFound": "Ingen tafsir funnet for ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir kunne ikke lastes.",
-  "tafsirNoTextForAyah": "Ingen tafsir-tekst for denne ayahen.",
-  "tafsirDownloadingProgress": "Laster ned tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Laster inn {current}/{total}",
-  "tafsirApiStatusError": "Tafsir-kilden returnerte en HTTP {statusCode}-feil.",
-  "tafsirNoEntriesReturned": "Den valgte tafsir-kilden returnerte ingen oppføringer.",
-  "premiumProductUnavailable": "Premium-produktet er ikke tilgjengelig akkurat nå. Prøv igjen senere.",
-  "premiumPurchaseFailed": "Kjøpet kunne ikke fullføres. Vennligst prøv igjen.",
-  "prayerRemainingHoursMinutes": "{hours}t {minutes}m",
-  "prayerRemainingMinutes": "{minutes} min",
-  "splashTagline": "Islamsk lysvei",
-  "downloadPartiallyFinishedForReciter": "Nedlastingen fullført for {reciter} med {failed} mislykkede suraher ({downloaded}/{total} lastet ned).",
-  "placesLocationRequiredTitle": "Plassering kreves",
-  "placesLocationRequiredBody": "Angi et sted først, slik at nærliggende moskeer, halalmat og islamske skoler kan søkes nøyaktig.",
-  "placesMapTilesUnavailableTitle": "Kartfliser er ikke tilgjengelige",
-  "placesMapTilesUnavailableBody": "En bekreftet kartbrikkekilde er ikke konfigurert for denne versjonen ennå. Steder i nærheten kan fortsatt lastes inn fra det lagrede stedet.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Mann (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Mann (Abdul Basit)",
-  "audioVoiceSudais": "Mann (Sudais)",
-  "qiblaSensorUnavailable": "Kompasssensor er utilgjengelig på denne enheten.",
-  "adhanNotificationChannelName": "Adhan-varsler",
-  "adhanNotificationChannelDescription": "Bønnetidsvarsler med adhan-lyd.",
-  "quranLoadFailed": "Koraninnhold kunne ikke lastes. Vennligst prøv igjen.",
-  "locationDetectionFailed": "Kunne ikke finne posisjonen din. Velg en by manuelt eller prøv på nytt.",
-  "qiblaLocationRequiredTitle": "Plassering kreves for Qibla",
-  "qiblaLocationRequiredBody": "Still inn din faktiske posisjon før du bruker Qibla-kompasset slik at retningen kan beregnes nøyaktig.",
-  "placesDataSourceUnavailableTitle": "Stedsdata er utilgjengelige",
-  "placesDataSourceUnavailableBody": "Et verifisert stedsdataendepunkt er ikke konfigurert for denne versjonen ennå. Sett PLACES_OVERPASS_API_URL til en godkjent proxy eller leverandør før du aktiverer søk i nærheten.",
-  "tafsirCacheUnavailable": "Verifisert tafsir er ikke tilgjengelig offline ennå. Synkroniser et hentet tafsir-datasett før du surfer."
+  "asmaMeaning99": "Den tålmodige, som ikke fremskynder straffen og handler med fullkommen overbærenhet."
 }

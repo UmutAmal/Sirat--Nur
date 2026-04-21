@@ -955,6 +955,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get dailyVerse => 'Versículo Diário';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Versículo diário indisponível';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'O conteúdo verificado do versículo diário ainda não está configurado para esta compilação. Conecte-se à fonte da nuvem ou sincronize um cache verificado antes de navegar.';
+
+  @override
   String get todaysIbadah => 'Ibadah de hoje';
 
   @override

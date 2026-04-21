@@ -952,6 +952,13 @@ class AppLocalizationsJv extends AppLocalizations {
   String get dailyVerse => 'Ayat Saben dina';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ayat saben dina ora kasedhiya';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Konten ayat saben dina sing diverifikasi durung dikonfigurasi kanggo mbangun iki. Sambungake menyang sumber maya utawa nyelarasake cache sing wis diverifikasi sadurunge browsing.';
+
+  @override
   String get todaysIbadah => 'Ibadah dina iki';
 
   @override

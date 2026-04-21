@@ -1,6 +1,7 @@
 {
   "@@locale": "id",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Jalan Cahaya Islam",
   "home": "Beranda",
   "quran": "Al-Quran",
   "qibla": "Kiblat",
@@ -23,6 +24,22 @@
   "asr": "Ashar",
   "maghrib": "Maghrib",
   "isha": "Isya",
+  "prayerNotificationTitle": "Waktunya untuk {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Saatnya berdoa {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Penyimpanan",
   "clearCache": "Hapus Cache",
   "cacheClearedSuccess": "Cache berhasil dihapus",
@@ -34,6 +51,7 @@
   "currentLocation": "Lokasi Saat Ini (GPS)",
   "locationServiceDisabled": "Layanan lokasi dinonaktifkan.",
   "locationPermissionDenied": "Izin lokasi ditolak.",
+  "locationDetectionFailed": "Tidak dapat mendeteksi lokasi Anda. Silakan pilih kota secara manual atau coba lagi.",
   "citiesCount": "{count} kota",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Tidak ada hasil yang ditemukan",
   "loading": "Memuat...",
   "error": "Kesalahan",
+  "appErrorOccurred": "Terjadi kesalahan",
+  "appUnknownError": "Kesalahan tidak diketahui",
+  "quranLoadFailed": "Konten Al-Quran tidak dapat dimuat. Silakan coba lagi.",
   "retry": "Coba Lagi",
+  "refreshAction": "Segarkan",
   "cancel": "Batal",
   "save": "Simpan",
   "delete": "Hapus",
@@ -57,17 +79,78 @@
   "yes": "Ya",
   "no": "Tidak",
   "surah": "Surat",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Halaman",
   "reading": "Bacaan",
   "recitation": "Tilawah",
   "translation": "Terjemahan",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Memuat tafsir...",
+  "tafsirSourceLabel": "Sumber Tafsir",
+  "tafsirNoSurahFound": "Tidak ditemukan tafsir untuk surah ini.",
+  "tafsirNoAyahFound": "Tidak ditemukan tafsir untuk ayat {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir tidak dapat dimuat.",
+  "tafsirNoTextForAyah": "Tidak ada teks tafsir untuk ayat ini.",
+  "tafsirDownloadingProgress": "Mengunduh tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Memuat tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Sumber Tafsir mengembalikan kesalahan HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Sumber tafsir yang dipilih tidak menghasilkan entri apa pun.",
+  "tafsirCacheUnavailable": "Tafsir terverifikasi belum tersedia secara offline. Sinkronkan kumpulan data tafsir yang bersumber sebelum menjelajah.",
   "bookmarks": "Penanda",
   "addBookmark": "Tambah Penanda",
   "removeBookmark": "Hapus Penanda",
   "lastRead": "Terakhir Dibaca",
   "dailyZikr": "Zikir Harian",
+  "duaMeaning1": "yang lain berdoa, 'Ya Tuhan kami, berilah kami kebaikan di dunia dan di akhirat, dan lindungi kami dari siksa Neraka.'",
+  "duaMeaning2": "Tuhan tidak membebani jiwa mana pun dengan lebih dari yang dapat ditanggungnya: masing-masing memperoleh kebaikan apa pun yang telah dilakukannya, dan menanggung keburukannya. 'Tuhan, jangan bebankan kami pada tugas jika kami lupa atau melakukan kesalahan. Tuhan, jangan bebani kami seperti Engkau membebani orang-orang sebelum kami. Tuhan, jangan membebani kami dengan beban melebihi kekuatan kami untuk menanggungnya. Maafkan kami, maafkan kami, dan kasihanilah kami. Engkaulah Pelindung kami, maka bantulah kami melawan orang-orang kafir.’",
+  "duaMeaning3": "‘Ya Tuhan kami, jangan biarkan hati kami menyimpang setelah Engkau memberi petunjuk kepada kami. Berilah kami rahmat-Mu: Engkaulah Yang Maha Memberi.",
+  "duaMeaning4": "Tuhan, berilah aku dan anak cucuku dapat menjaga shalat. Tuhan kami, terimalah permintaanku.",
+  "duaMeaning5": "dan turunkan sayapmu dalam kerendahan hati terhadap mereka dalam kebaikan dan katakan, 'Tuhan, kasihanilah mereka, sama seperti mereka merawatku ketika aku masih kecil.'",
+  "duaMeaning6": "Maha Suci Allah, yang benar-benar memegang kendali. [Nabi], jangan terburu-buru membaca sebelum wahyu selesai sepenuhnya tetapi katakan, 'Tuhan, tambahlah ilmuku!'",
+  "duaMeaning7": "Katakanlah [Nabi], 'Tuhan, ampunilah dan kasihanilah: Engkaulah yang paling penyayang di antara semuanya.'",
+  "duaMeaning8": "orang-orang yang berdoa, ‘Ya Tuhan kami, berilah kami kebahagiaan pada pasangan dan keturunan kami. Jadikanlah kami teladan yang baik bagi orang-orang yang sadar akan Engkau’.",
   "morningZikr": "Zikir Pagi",
   "eveningZikr": "Zikir Sore",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Puasa",
   "quranReading": "Bacaan Quran",
   "prayers": "Sholat",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Jumlah Zikir",
   "weeklyProgress": "Progres Mingguan",
   "monthlyProgress": "Progres Bulanan",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadhan",
   "eidAlFitr": "Idul Fitri",
   "eidAlAdha": "Idul Adha",
+  "islamicNewYear": "Tahun Baru Islam",
+  "mawlidAnNabi": "Maulid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadhan",
+  "specialDayDateLaylatAlQadr": "27 Ramadhan",
+  "specialDayDateEidAlFitr": "1 Syawal",
+  "specialDayDateEidAlAdha": "10 Dzulhijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awal",
   "laylatAlQadr": "Lailatul Qadar",
   "qiblaDirection": "Arah Kiblat",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "Utara",
   "qiblaFound": "Kiblat ditemukan!",
   "turnDevice": "Putar perangkat Anda menghadap kiblat",
+  "qiblaCompassErrorDetails": "Kesalahan kompas: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensor kompas tidak tersedia di perangkat ini.",
+  "qiblaLocationRequiredTitle": "Lokasi diperlukan untuk Kiblat",
+  "qiblaLocationRequiredBody": "Atur lokasi sebenarnya Anda sebelum menggunakan kompas kiblat agar arahnya dapat dihitung secara akurat.",
+  "adhanNotificationChannelName": "Pemberitahuan Adzan",
+  "adhanNotificationChannelDescription": "Peringatan waktu sholat dengan suara adzan.",
   "notifications": "Notifikasi",
   "prayerNotifications": "Notifikasi Sholat",
   "enableNotifications": "Aktifkan Notifikasi",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Jumlah target: {target}",
   "tapToCount": "Ketuk untuk menghitung",
+  "zikrCompletedMashAllah": "Selesai! Masya Allah",
+  "zikrMeaningSubhanAllah": "Allah jauh diatas segala ketidaksempurnaan.",
+  "zikrMeaningAlhamdulillah": "Segala puji milik Allah.",
+  "zikrMeaningAllahuAkbar": "Allah Maha Besar.",
+  "zikrMeaningLaIlahaIllallah": "Tidak ada Tuhan selain Allah.",
+  "zikrMeaningAstaghfirullah": "Saya mohon ampun kepada Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tidak ada daya dan kekuatan kecuali melalui Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Suara Audio",
+  "audioVoiceMisharyAlafasy": "Pria (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Pria (Abdul Basit)",
+  "audioVoiceSudais": "Pria (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kalibrasi Kiblat",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Diperlukan kalibrasi. Putar perangkat pada gambar-8.",
   "dailyVerse": "Ayat Harian",
+  "dailyVerseUnavailableTitle": "Ayat harian tidak tersedia",
+  "dailyVerseUnavailableBody": "Konten ayat harian terverifikasi belum dikonfigurasi untuk versi ini. Hubungkan ke sumber cloud atau sinkronkan cache terverifikasi sebelum menjelajah.",
   "todaysIbadah": "Ibadah hari ini",
   "quickAccess": "Akses Cepat",
   "assistant": "Asisten",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Doa yang terverifikasi belum tersedia",
+  "duaUnavailableBody": "Doa harian yang terverifikasi belum disinkronkan ke perangkat ini. Hubungkan ke sumber cloud untuk memuat doa yang bersumber, bukan fallback yang belum diverifikasi.",
+  "duaCategoryQuranic": "Doa Al-Quran",
+  "duaCategoryMorningEvening": "Pagi & Sore",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Perlindungan",
+  "duaCategoryBeginning": "Awal",
+  "duaCategorySleep": "Tidur",
+  "duaCategoryFoodDrink": "Makanan & Minuman",
+  "duaCategoryForgiveness": "Pengampunan",
+  "duaCategoryHome": "Rumah",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Pendidikan Agama Islam",
   "sukunAudioTitle": "Soundscape Sukun",
   "hadithCollections": "Koleksi Hadits",
+  "hadithSourcePending": "Sumber terverifikasi tertunda",
+  "hadithUnavailableTitle": "Koleksi hadis yang terverifikasi belum tersedia",
+  "hadithUnavailableBody": "Pembuatan ini masih bergantung pada feed hadis eksternal yang belum diverifikasi. Penjelajahan hadis tetap dinonaktifkan hingga kumpulan data yang bersumber disinkronkan.",
   "paywallUnlockAll": "Buka kunci semua fitur untuk perjalanan spiritual Anda",
+  "premiumProductUnavailable": "Produk premium tidak tersedia saat ini. Silakan coba lagi nanti.",
+  "premiumPurchaseFailed": "Pembelian tidak dapat diselesaikan. Silakan coba lagi.",
   "paywallFeature1Title": "Asisten Saraf Plus",
   "paywallFeature1Desc": "T&J bertenaga AI tanpa batas",
   "paywallFeature2Title": "Offline Tanpa Batas",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Pengunduhan selesai untuk {reciter} dengan {failed} surah yang gagal ({downloaded}/{total} diunduh).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "File offline untuk {reciter} dihapus.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Kesalahan jaringan. Silakan coba lagi.",
+  "placesLocationRequiredTitle": "Lokasi diperlukan",
+  "placesLocationRequiredBody": "Tetapkan lokasi terlebih dahulu agar masjid terdekat, makanan halal, dan pesantren dapat dicari dengan akurat.",
+  "placesMapTilesUnavailableTitle": "Ubin peta tidak tersedia",
+  "placesMapTilesUnavailableBody": "Sumber ubin peta terverifikasi belum dikonfigurasi untuk build ini. Tempat-tempat terdekat masih dapat dimuat dari lokasi tersimpan Anda.",
+  "placesDataSourceUnavailableTitle": "Data tempat tidak tersedia",
+  "placesDataSourceUnavailableBody": "Titik akhir data tempat terverifikasi belum dikonfigurasi untuk build ini. Setel PLACES_OVERPASS_API_URL ke proksi atau penyedia yang disetujui sebelum mengaktifkan penelusuran terdekat.",
   "unknownPlaceName": "Nama Tidak Diketahui",
   "islamicPlaceFallback": "Tempat Islami",
-  "prayerNotificationTitle": "Waktunya untuk {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Saatnya berdoa {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Doa yang terverifikasi belum tersedia",
-  "duaUnavailableBody": "Doa harian yang terverifikasi belum disinkronkan ke perangkat ini. Hubungkan ke sumber cloud untuk memuat doa yang bersumber, bukan fallback yang belum diverifikasi.",
-  "duaCategoryQuranic": "Doa Al-Quran",
-  "duaCategoryMorningEvening": "Pagi & Sore",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Perlindungan",
-  "duaCategoryBeginning": "Awal",
-  "duaCategorySleep": "Tidur",
-  "duaCategoryFoodDrink": "Makanan & Minuman",
-  "duaCategoryForgiveness": "Pengampunan",
-  "duaCategoryHome": "Rumah",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Sumber terverifikasi tertunda",
-  "hadithUnavailableTitle": "Koleksi hadis yang terverifikasi belum tersedia",
-  "hadithUnavailableBody": "Pembuatan ini masih bergantung pada feed hadis eksternal yang belum diverifikasi. Penjelajahan hadis tetap dinonaktifkan hingga kumpulan data yang bersumber disinkronkan.",
-  "appErrorOccurred": "Terjadi kesalahan",
-  "appUnknownError": "Kesalahan tidak diketahui",
-  "qiblaCompassErrorDetails": "Kesalahan kompas: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Selesai! Masya Allah",
-  "zikrMeaningSubhanAllah": "Allah jauh diatas segala ketidaksempurnaan.",
-  "zikrMeaningAlhamdulillah": "Segala puji milik Allah.",
-  "zikrMeaningAllahuAkbar": "Allah Maha Besar.",
-  "zikrMeaningLaIlahaIllallah": "Tidak ada Tuhan selain Allah.",
-  "zikrMeaningAstaghfirullah": "Saya mohon ampun kepada Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Tidak ada daya dan kekuatan kecuali melalui Allah.",
   "asmaMeaning1": "Yang Maha Pemurah",
   "asmaMeaning2": "Maha Penyayang",
   "asmaMeaning3": "Raja / Tuan Yang Abadi",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Yang Abadi",
   "asmaMeaning97": "Pewaris",
   "asmaMeaning98": "Pedoman Yang Paling Adil",
-  "asmaMeaning99": "Yang Sabar",
-  "duaMeaning1": "yang lain berdoa, 'Ya Tuhan kami, berilah kami kebaikan di dunia dan di akhirat, dan lindungi kami dari siksa Neraka.'",
-  "duaMeaning2": "Tuhan tidak membebani jiwa mana pun dengan lebih dari yang dapat ditanggungnya: masing-masing memperoleh kebaikan apa pun yang telah dilakukannya, dan menanggung keburukannya. 'Tuhan, jangan bebankan kami pada tugas jika kami lupa atau melakukan kesalahan. Tuhan, jangan bebani kami seperti Engkau membebani orang-orang sebelum kami. Tuhan, jangan membebani kami dengan beban melebihi kekuatan kami untuk menanggungnya. Maafkan kami, maafkan kami, dan kasihanilah kami. Engkaulah Pelindung kami, maka bantulah kami melawan orang-orang kafir.’",
-  "duaMeaning3": "‘Ya Tuhan kami, jangan biarkan hati kami menyimpang setelah Engkau memberi petunjuk kepada kami. Berilah kami rahmat-Mu: Engkaulah Yang Maha Memberi.",
-  "duaMeaning4": "Tuhan, berilah aku dan anak cucuku dapat menjaga shalat. Tuhan kami, terimalah permintaanku.",
-  "duaMeaning5": "dan turunkan sayapmu dalam kerendahan hati terhadap mereka dalam kebaikan dan katakan, 'Tuhan, kasihanilah mereka, sama seperti mereka merawatku ketika aku masih kecil.'",
-  "duaMeaning6": "Maha Suci Allah, yang benar-benar memegang kendali. [Nabi], jangan terburu-buru membaca sebelum wahyu selesai sepenuhnya tetapi katakan, 'Tuhan, tambahlah ilmuku!'",
-  "duaMeaning7": "Katakanlah [Nabi], 'Tuhan, ampunilah dan kasihanilah: Engkaulah yang paling penyayang di antara semuanya.'",
-  "duaMeaning8": "orang-orang yang berdoa, ‘Ya Tuhan kami, berilah kami kebahagiaan pada pasangan dan keturunan kami. Jadikanlah kami teladan yang baik bagi orang-orang yang sadar akan Engkau’.",
-  "islamicNewYear": "Tahun Baru Islam",
-  "mawlidAnNabi": "Maulid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadhan",
-  "specialDayDateLaylatAlQadr": "27 Ramadhan",
-  "specialDayDateEidAlFitr": "1 Syawal",
-  "specialDayDateEidAlAdha": "10 Dzulhijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Segarkan",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Memuat tafsir...",
-  "tafsirSourceLabel": "Sumber Tafsir",
-  "tafsirNoSurahFound": "Tidak ditemukan tafsir untuk surah ini.",
-  "tafsirNoAyahFound": "Tidak ditemukan tafsir untuk ayat {ayah}.",
-  "tafsirLoadFailed": "Tafsir tidak dapat dimuat.",
-  "tafsirNoTextForAyah": "Tidak ada teks tafsir untuk ayat ini.",
-  "tafsirDownloadingProgress": "Mengunduh tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Memuat tafsir {current}/{total}",
-  "tafsirApiStatusError": "Sumber Tafsir mengembalikan kesalahan HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Sumber tafsir yang dipilih tidak menghasilkan entri apa pun.",
-  "premiumProductUnavailable": "Produk premium tidak tersedia saat ini. Silakan coba lagi nanti.",
-  "premiumPurchaseFailed": "Pembelian tidak dapat diselesaikan. Silakan coba lagi.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Jalan Cahaya Islam",
-  "downloadPartiallyFinishedForReciter": "Pengunduhan selesai untuk {reciter} dengan {failed} surah yang gagal ({downloaded}/{total} diunduh).",
-  "placesLocationRequiredTitle": "Lokasi diperlukan",
-  "placesLocationRequiredBody": "Tetapkan lokasi terlebih dahulu agar masjid terdekat, makanan halal, dan pesantren dapat dicari dengan akurat.",
-  "placesMapTilesUnavailableTitle": "Ubin peta tidak tersedia",
-  "placesMapTilesUnavailableBody": "Sumber ubin peta terverifikasi belum dikonfigurasi untuk build ini. Tempat-tempat terdekat masih dapat dimuat dari lokasi tersimpan Anda.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Pria (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Pria (Abdul Basit)",
-  "audioVoiceSudais": "Pria (Sudais)",
-  "qiblaSensorUnavailable": "Sensor kompas tidak tersedia di perangkat ini.",
-  "adhanNotificationChannelName": "Pemberitahuan Adzan",
-  "adhanNotificationChannelDescription": "Peringatan waktu sholat dengan suara adzan.",
-  "quranLoadFailed": "Konten Al-Quran tidak dapat dimuat. Silakan coba lagi.",
-  "locationDetectionFailed": "Tidak dapat mendeteksi lokasi Anda. Silakan pilih kota secara manual atau coba lagi.",
-  "qiblaLocationRequiredTitle": "Lokasi diperlukan untuk Kiblat",
-  "qiblaLocationRequiredBody": "Atur lokasi sebenarnya Anda sebelum menggunakan kompas kiblat agar arahnya dapat dihitung secara akurat.",
-  "placesDataSourceUnavailableTitle": "Data tempat tidak tersedia",
-  "placesDataSourceUnavailableBody": "Titik akhir data tempat terverifikasi belum dikonfigurasi untuk build ini. Setel PLACES_OVERPASS_API_URL ke proksi atau penyedia yang disetujui sebelum mengaktifkan penelusuran terdekat.",
-  "tafsirCacheUnavailable": "Tafsir terverifikasi belum tersedia secara offline. Sinkronkan kumpulan data tafsir yang bersumber sebelum menjelajah."
+  "asmaMeaning99": "Yang Sabar"
 }

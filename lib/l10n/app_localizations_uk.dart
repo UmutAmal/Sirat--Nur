@@ -954,6 +954,13 @@ class AppLocalizationsUk extends AppLocalizations {
   String get dailyVerse => 'Щоденний вірш';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Щоденний вірш недоступний';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Перевірений вміст щоденних віршів ще не налаштовано для цієї збірки. Підключіться до хмарного джерела або синхронізуйте перевірений кеш перед переглядом.';
+
+  @override
   String get todaysIbadah => 'Сьогодні Ібада';
 
   @override

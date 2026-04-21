@@ -950,6 +950,13 @@ class AppLocalizationsMai extends AppLocalizations {
   String get dailyVerse => 'दैनिक छंद';
 
   @override
+  String get dailyVerseUnavailableTitle => 'दैनिक श्लोक अनुपलब्ध';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'सत्यापित दैनिक छंद सामग्री एखन धरि एहि बिल्ड लेल कॉन्फ़िगर नहि कएल गेल अछि. ब्राउजिंग सं पहिने क्लाउड स्रोत सं कनेक्ट करू अथवा कोनो सत्यापित कैश कें सिंक करू.';
+
+  @override
   String get todaysIbadah => 'आजुक इबादा';
 
   @override

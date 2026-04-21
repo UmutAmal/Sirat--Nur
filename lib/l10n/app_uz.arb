@@ -1,6 +1,7 @@
 {
   "@@locale": "uz",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islom nur yo'li",
   "home": "Uy",
   "quran": "Qur'on",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Shom",
   "isha": "Isha",
+  "prayerNotificationTitle": "{prayerName} vaqti",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} ibodat qilish vaqti keldi.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Ma'lumotlar va saqlash",
   "clearCache": "Keshni tozalash",
   "cacheClearedSuccess": "Kesh muvaffaqiyatli tozalandi",
@@ -34,6 +51,7 @@
   "currentLocation": "Joriy joylashuv (GPS)",
   "locationServiceDisabled": "Joylashuv xizmati o‘chirilgan.",
   "locationPermissionDenied": "Joylashuv ruxsati rad etildi.",
+  "locationDetectionFailed": "Joylashuvingiz aniqlanmadi. Shaharni qoʻlda tanlang yoki qayta urinib koʻring.",
   "citiesCount": "{count} shaharlar",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Hech qanday natija topilmadi",
   "loading": "Yuklanmoqda...",
   "error": "Xato",
+  "appErrorOccurred": "Xatolik yuz berdi",
+  "appUnknownError": "Noma'lum xato",
+  "quranLoadFailed": "Qur'on mazmunini yuklab bo'lmadi. Iltimos, qayta urinib koʻring.",
   "retry": "Qayta urinish",
+  "refreshAction": "Yangilash",
   "cancel": "Bekor qilish",
   "save": "Saqlash",
   "delete": "Oʻchirish",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Yo'q",
   "surah": "sura",
+  "ayahLabel": "Oya {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Sahifa",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsir yuklanmoqda...",
+  "tafsirSourceLabel": "Tafsir manbasi",
+  "tafsirNoSurahFound": "Bu sura uchun tafsir topilmadi.",
+  "tafsirNoAyahFound": "{ayah} oyati uchun tafsir topilmadi.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsirni yuklab bo‘lmadi.",
+  "tafsirNoTextForAyah": "Bu oyat uchun tafsir matni yo'q.",
+  "tafsirDownloadingProgress": "{current}/{total} tafsiri yuklab olinmoqda",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Tafsir yuklanmoqda {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir manbasi HTTP {statusCode} xatosini qaytardi.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Tanlangan tafsir manbasi hech qanday yozuvni qaytarmadi.",
+  "tafsirCacheUnavailable": "Tasdiqlangan tafsir hali oflayn rejimda mavjud emas. Ko‘rishdan oldin manba tafsir ma’lumotlar to‘plamini sinxronlashtiring.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Xatcho‘p qo‘shish",
   "removeBookmark": "Xatcho‘pni olib tashlash",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "Boshqalar esa: «Ey Robbimiz, bizga dunyo va oxiratda yaxshilik ato et va bizni do'zax azobidan saqla», deb duo qiladilar.",
+  "duaMeaning2": "Alloh hech bir jonga toqatidan ortiq narsani yuklamaydi: har kim qilgan yaxshiligidan ortig‘ini oladi va o‘zining yomonligidan azob chekadi – “Ey Robbim, agar unutsak yoki xato qilsak, bizni jazolamagin. Parvardigorim, bizdan oldingilarga og‘ir yuklaganingdek, bizni ham yuklamagin. Parvardigorim, bizni kuchimizdan ortiq yuklamagin. Bizni kechir, kechir va bizga rahm qil. Sen bizning valiymizsan, kofirlarga qarshi bizga yordam ber», dedilar.",
+  "duaMeaning3": "«Ey Robbimiz, bizlarni hidoyat qilganingdan keyin qalblarimizni og'dirmagin. Bizga rahmatingni ato et, O'zing berguvchisan.",
+  "duaMeaning4": "Rabbim, menga va zurriyotimga namozni to'g'ri o'qishni nasib et. Robbimiz, iltimosimni qabul qil.",
+  "duaMeaning5": "Ularga mehribonlik ila tavakkal qilib qanotingizni pastga tushiring va: “Yo Parvardigorim, ular menga kichikligimda g‘amxo‘rlik qilganidek, ularga ham rahm qil”, deb ayt.",
+  "duaMeaning6": "Haqiqatan ham hukmron bo'lgan Alloh pokdir. [Payg‘ambar], vahiy to‘liq bo‘lmasdan turib, qiroat qilishga shoshilma, balki: “Robbim, ilmimni ziyoda qil!” deb ayt.",
+  "duaMeaning7": "(Payg‘ambarga) ayt: “Robbim, mag‘firat qil va rahm qil, Sen eng mehribonsan”.",
+  "duaMeaning8": "«Robbimiz, bizni juftlarimiz va zurriyotlarimizni xursand qilgin», deb duo qilganlar. Bizni O'zingdan xabardor bo'lganlarga yaxshi namuna qilgin», dedi.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ro'za",
   "quranReading": "Qur'on o'qish",
   "prayers": "Ibodatlar",
+  "prayerRemainingHoursMinutes": "{hours}soat {minutes}daq",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Haftalik taraqqiyot",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islomiy Yangi yil",
+  "mawlidAnNabi": "Mavlid an-Nabiy",
+  "specialDayDateRamadanStart": "1 Ramazon",
+  "specialDayDateLaylatAlQadr": "27 Ramazon",
+  "specialDayDateEidAlFitr": "1 Shavvol",
+  "specialDayDateEidAlAdha": "10 Zulhijja",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul-avval",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla yo'nalishi",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla topildi!",
   "turnDevice": "Qurilmangizni qiblaga qaratib aylantiring",
+  "qiblaCompassErrorDetails": "Kompas xatosi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompas sensori bu qurilmada ishlamaydi.",
+  "qiblaLocationRequiredTitle": "Qibla uchun joy kerak",
+  "qiblaLocationRequiredBody": "Qibla kompasidan foydalanishdan oldin oʻzingizning haqiqiy joylashuvingizni oʻrnating, shunda yoʻnalish aniq hisoblab chiqiladi.",
+  "adhanNotificationChannelName": "Azon bildirishnomalari",
+  "adhanNotificationChannelDescription": "Namoz vaqti azon ovozi bilan ogohlantiriladi.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Maqsadlar soni: {target}",
   "tapToCount": "Hisoblash uchun bosing",
+  "zikrCompletedMashAllah": "Bajarildi! MashAlloh",
+  "zikrMeaningSubhanAllah": "Alloh taolo har bir nuqsondan uzoqdir.",
+  "zikrMeaningAlhamdulillah": "Hamma hamdlar Allohga xosdir.",
+  "zikrMeaningAllahuAkbar": "Alloh eng buyukdir.",
+  "zikrMeaningLaIlahaIllallah": "Allohdan o'zga iloh yo'q.",
+  "zikrMeaningAstaghfirullah": "Allohdan mag'firat so'rayman.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Allohdan boshqa hech qanday kuch va quvvat yo'q.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio ovoz",
+  "audioVoiceMisharyAlafasy": "Erkak (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Erkak (Abdul Basit)",
+  "audioVoiceSudais": "Erkak (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla kalibrlash",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibrlash talab qilinadi. 8-rasmdagi qurilmani aylantiring.",
   "dailyVerse": "Kundalik oyat",
+  "dailyVerseUnavailableTitle": "Kundalik oyat mavjud emas",
+  "dailyVerseUnavailableBody": "Tasdiqlangan kundalik oyat mazmuni hali bu tuzilish uchun sozlanmagan. Ko‘rishdan oldin bulut manbasiga ulaning yoki tasdiqlangan keshni sinxronlang.",
   "todaysIbadah": "Bugungi Ibodat",
   "quickAccess": "Tez kirish",
   "assistant": "Yordamchi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Tasdiqlangan duolar hali mavjud emas",
+  "duaUnavailableBody": "Tasdiqlangan kundalik duolar hali bu qurilmaga sinxronlanmagan. Tasdiqlanmagan zaxira oʻrniga manbali duolarni yuklash uchun bulut manbasiga ulaning.",
+  "duaCategoryQuranic": "Qur'on duo",
+  "duaCategoryMorningEvening": "Ertalab va kechqurun",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Himoya",
+  "duaCategoryBeginning": "Boshlanishlar",
+  "duaCategorySleep": "Uxlash",
+  "duaCategoryFoodDrink": "Oziq-ovqat va ichimliklar",
+  "duaCategoryForgiveness": "Kechirim",
+  "duaCategoryHome": "Uy",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islom ta'limi",
   "sukunAudioTitle": "Sukun ovoz manzaralari",
   "hadithCollections": "Hadislar to'plami",
+  "hadithSourcePending": "Tasdiqlangan manba kutilmoqda",
+  "hadithUnavailableTitle": "Tasdiqlangan hadis to‘plamlari hozircha mavjud emas",
+  "hadithUnavailableBody": "Bu tuzilish hali ham tasdiqlanmagan tashqi hadis tasmasiga bog'liq. Hadislarni ko'rish manba ma'lumotlar to'plami sinxronlanmaguncha o'chirilgan bo'lib qoladi.",
   "paywallUnlockAll": "Ruhiy sayohatingiz uchun barcha xususiyatlarni oching",
+  "premiumProductUnavailable": "Premium mahsulot hozirda mavjud emas. Keyinroq qayta urinib ko‘ring.",
+  "premiumPurchaseFailed": "Xaridni yakunlab bo‘lmadi. Iltimos, qayta urinib koʻring.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Cheksiz AI bilan ishlaydigan savol-javob",
   "paywallFeature2Title": "Cheksiz oflayn",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} uchun {failed} muvaffaqiyatsiz suralarni yuklab olish tugadi ({downloaded}/{total} yuklab olindi).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "{reciter} uchun oflayn fayllar o‘chirib tashlandi.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Tarmoq xatosi. Iltimos, qayta urinib koʻring.",
+  "placesLocationRequiredTitle": "Joylashuv talab qilinadi",
+  "placesLocationRequiredBody": "Yaqin atrofdagi masjidlar, halol taomlar va islomiy maktablarni aniq qidirish uchun birinchi navbatda joyni belgilang.",
+  "placesMapTilesUnavailableTitle": "Xarita plitalari mavjud emas",
+  "placesMapTilesUnavailableBody": "Tasdiqlangan xaritalar manbasi hali bu tuzilish uchun sozlanmagan. Yaqin-atrofdagi joylar hali ham saqlangan joylashuvingizdan yuklanishi mumkin.",
+  "placesDataSourceUnavailableTitle": "Joylar maʼlumotlari mavjud emas",
+  "placesDataSourceUnavailableBody": "Tasdiqlangan joylar maʼlumotlarining soʻnggi nuqtasi bu tuzilish uchun hali sozlanmagan. Yaqin atrofdagi qidiruvni yoqishdan oldin PLACES_OVERPASS_API_URL manzilini tasdiqlangan proksi-server yoki provayderga sozlang.",
   "unknownPlaceName": "Noma'lum ism",
   "islamicPlaceFallback": "Islomiy joy",
-  "prayerNotificationTitle": "{prayerName} vaqti",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} ibodat qilish vaqti keldi.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Tasdiqlangan duolar hali mavjud emas",
-  "duaUnavailableBody": "Tasdiqlangan kundalik duolar hali bu qurilmaga sinxronlanmagan. Tasdiqlanmagan zaxira oʻrniga manbali duolarni yuklash uchun bulut manbasiga ulaning.",
-  "duaCategoryQuranic": "Qur'on duo",
-  "duaCategoryMorningEvening": "Ertalab va kechqurun",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Himoya",
-  "duaCategoryBeginning": "Boshlanishlar",
-  "duaCategorySleep": "Uxlash",
-  "duaCategoryFoodDrink": "Oziq-ovqat va ichimliklar",
-  "duaCategoryForgiveness": "Kechirim",
-  "duaCategoryHome": "Uy",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Tasdiqlangan manba kutilmoqda",
-  "hadithUnavailableTitle": "Tasdiqlangan hadis to‘plamlari hozircha mavjud emas",
-  "hadithUnavailableBody": "Bu tuzilish hali ham tasdiqlanmagan tashqi hadis tasmasiga bog'liq. Hadislarni ko'rish manba ma'lumotlar to'plami sinxronlanmaguncha o'chirilgan bo'lib qoladi.",
-  "appErrorOccurred": "Xatolik yuz berdi",
-  "appUnknownError": "Noma'lum xato",
-  "qiblaCompassErrorDetails": "Kompas xatosi: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Bajarildi! MashAlloh",
-  "zikrMeaningSubhanAllah": "Alloh taolo har bir nuqsondan uzoqdir.",
-  "zikrMeaningAlhamdulillah": "Hamma hamdlar Allohga xosdir.",
-  "zikrMeaningAllahuAkbar": "Alloh eng buyukdir.",
-  "zikrMeaningLaIlahaIllallah": "Allohdan o'zga iloh yo'q.",
-  "zikrMeaningAstaghfirullah": "Allohdan mag'firat so'rayman.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Allohdan boshqa hech qanday kuch va quvvat yo'q.",
   "asmaMeaning1": "Mehribon",
   "asmaMeaning2": "Mehribon",
   "asmaMeaning3": "Qirol / Abadiy Rabbiy",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Abadiy",
   "asmaMeaning97": "Meroschi",
   "asmaMeaning98": "Eng solih yo'lboshchi",
-  "asmaMeaning99": "Bemor",
-  "duaMeaning1": "Boshqalar esa: «Ey Robbimiz, bizga dunyo va oxiratda yaxshilik ato et va bizni do'zax azobidan saqla», deb duo qiladilar.",
-  "duaMeaning2": "Alloh hech bir jonga toqatidan ortiq narsani yuklamaydi: har kim qilgan yaxshiligidan ortig‘ini oladi va o‘zining yomonligidan azob chekadi – “Ey Robbim, agar unutsak yoki xato qilsak, bizni jazolamagin. Parvardigorim, bizdan oldingilarga og‘ir yuklaganingdek, bizni ham yuklamagin. Parvardigorim, bizni kuchimizdan ortiq yuklamagin. Bizni kechir, kechir va bizga rahm qil. Sen bizning valiymizsan, kofirlarga qarshi bizga yordam ber», dedilar.",
-  "duaMeaning3": "«Ey Robbimiz, bizlarni hidoyat qilganingdan keyin qalblarimizni og'dirmagin. Bizga rahmatingni ato et, O'zing berguvchisan.",
-  "duaMeaning4": "Rabbim, menga va zurriyotimga namozni to'g'ri o'qishni nasib et. Robbimiz, iltimosimni qabul qil.",
-  "duaMeaning5": "Ularga mehribonlik ila tavakkal qilib qanotingizni pastga tushiring va: “Yo Parvardigorim, ular menga kichikligimda g‘amxo‘rlik qilganidek, ularga ham rahm qil”, deb ayt.",
-  "duaMeaning6": "Haqiqatan ham hukmron bo'lgan Alloh pokdir. [Payg‘ambar], vahiy to‘liq bo‘lmasdan turib, qiroat qilishga shoshilma, balki: “Robbim, ilmimni ziyoda qil!” deb ayt.",
-  "duaMeaning7": "(Payg‘ambarga) ayt: “Robbim, mag‘firat qil va rahm qil, Sen eng mehribonsan”.",
-  "duaMeaning8": "«Robbimiz, bizni juftlarimiz va zurriyotlarimizni xursand qilgin», deb duo qilganlar. Bizni O'zingdan xabardor bo'lganlarga yaxshi namuna qilgin», dedi.",
-  "islamicNewYear": "Islomiy Yangi yil",
-  "mawlidAnNabi": "Mavlid an-Nabiy",
-  "specialDayDateRamadanStart": "1 Ramazon",
-  "specialDayDateLaylatAlQadr": "27 Ramazon",
-  "specialDayDateEidAlFitr": "1 Shavvol",
-  "specialDayDateEidAlAdha": "10 Zulhijja",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul-avval",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Yangilash",
-  "ayahLabel": "Oya {ayah}",
-  "tafsirLoading": "Tafsir yuklanmoqda...",
-  "tafsirSourceLabel": "Tafsir manbasi",
-  "tafsirNoSurahFound": "Bu sura uchun tafsir topilmadi.",
-  "tafsirNoAyahFound": "{ayah} oyati uchun tafsir topilmadi.",
-  "tafsirLoadFailed": "Tafsirni yuklab bo‘lmadi.",
-  "tafsirNoTextForAyah": "Bu oyat uchun tafsir matni yo'q.",
-  "tafsirDownloadingProgress": "{current}/{total} tafsiri yuklab olinmoqda",
-  "tafsirLoadingProgress": "Tafsir yuklanmoqda {current}/{total}",
-  "tafsirApiStatusError": "Tafsir manbasi HTTP {statusCode} xatosini qaytardi.",
-  "tafsirNoEntriesReturned": "Tanlangan tafsir manbasi hech qanday yozuvni qaytarmadi.",
-  "premiumProductUnavailable": "Premium mahsulot hozirda mavjud emas. Keyinroq qayta urinib ko‘ring.",
-  "premiumPurchaseFailed": "Xaridni yakunlab bo‘lmadi. Iltimos, qayta urinib koʻring.",
-  "prayerRemainingHoursMinutes": "{hours}soat {minutes}daq",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islom nur yo'li",
-  "downloadPartiallyFinishedForReciter": "{reciter} uchun {failed} muvaffaqiyatsiz suralarni yuklab olish tugadi ({downloaded}/{total} yuklab olindi).",
-  "placesLocationRequiredTitle": "Joylashuv talab qilinadi",
-  "placesLocationRequiredBody": "Yaqin atrofdagi masjidlar, halol taomlar va islomiy maktablarni aniq qidirish uchun birinchi navbatda joyni belgilang.",
-  "placesMapTilesUnavailableTitle": "Xarita plitalari mavjud emas",
-  "placesMapTilesUnavailableBody": "Tasdiqlangan xaritalar manbasi hali bu tuzilish uchun sozlanmagan. Yaqin-atrofdagi joylar hali ham saqlangan joylashuvingizdan yuklanishi mumkin.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Erkak (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Erkak (Abdul Basit)",
-  "audioVoiceSudais": "Erkak (Sudais)",
-  "qiblaSensorUnavailable": "Kompas sensori bu qurilmada ishlamaydi.",
-  "adhanNotificationChannelName": "Azon bildirishnomalari",
-  "adhanNotificationChannelDescription": "Namoz vaqti azon ovozi bilan ogohlantiriladi.",
-  "quranLoadFailed": "Qur'on mazmunini yuklab bo'lmadi. Iltimos, qayta urinib koʻring.",
-  "locationDetectionFailed": "Joylashuvingiz aniqlanmadi. Shaharni qoʻlda tanlang yoki qayta urinib koʻring.",
-  "qiblaLocationRequiredTitle": "Qibla uchun joy kerak",
-  "qiblaLocationRequiredBody": "Qibla kompasidan foydalanishdan oldin oʻzingizning haqiqiy joylashuvingizni oʻrnating, shunda yoʻnalish aniq hisoblab chiqiladi.",
-  "placesDataSourceUnavailableTitle": "Joylar maʼlumotlari mavjud emas",
-  "placesDataSourceUnavailableBody": "Tasdiqlangan joylar maʼlumotlarining soʻnggi nuqtasi bu tuzilish uchun hali sozlanmagan. Yaqin atrofdagi qidiruvni yoqishdan oldin PLACES_OVERPASS_API_URL manzilini tasdiqlangan proksi-server yoki provayderga sozlang.",
-  "tafsirCacheUnavailable": "Tasdiqlangan tafsir hali oflayn rejimda mavjud emas. Ko‘rishdan oldin manba tafsir ma’lumotlar to‘plamini sinxronlashtiring."
+  "asmaMeaning99": "Bemor"
 }

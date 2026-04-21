@@ -955,6 +955,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get dailyVerse => 'Denný verš';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Denný verš nie je k dispozícii';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Overený denný obsah veršov ešte nie je pre túto zostavu nakonfigurovaný. Pred prehliadaním sa pripojte ku cloudovému zdroju alebo synchronizujte overenú vyrovnávaciu pamäť.';
+
+  @override
   String get todaysIbadah => 'Dnešný Ibadah';
 
   @override

@@ -954,6 +954,14 @@ class AppLocalizationsCo extends AppLocalizations {
   String get dailyVerse => 'Versu di ogni ghjornu';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Versu di ogni ghjornu ùn hè micca dispunibule';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'U cuntenutu verificatu di versi ogni ghjornu ùn hè micca cunfiguratu per sta custruzzione. Cunnettete à a fonte nuvola o sincronizà una cache verificata prima di navigà.';
+
+  @override
   String get todaysIbadah => 'Ibadah d\'oghje';
 
   @override

@@ -956,6 +956,14 @@ class AppLocalizationsGd extends AppLocalizations {
   String get dailyVerse => 'Rann làitheil';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Chan eil rann làitheil ri fhaighinn';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Chan eil susbaint rann làitheil dearbhte air a rèiteachadh airson an togail seo fhathast. Ceangail ris an stòr sgòthan no sioncronaich tasgadan dearbhte mus brobhsadh thu.';
+
+  @override
   String get todaysIbadah => 'Ibadah an-diugh';
 
   @override

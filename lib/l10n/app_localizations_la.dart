@@ -953,6 +953,13 @@ class AppLocalizationsLa extends AppLocalizations {
   String get dailyVerse => 'Quotidie Versus';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Cotidiana versum unavailable';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verifica- tus cotidianus versus contentus non configuratur pro hoc aedificato adhuc. Coniungere ad fontem vel sync nubem certificatum cache ante pasco.';
+
+  @override
   String get todaysIbadah => 'Hodie Ibadah';
 
   @override

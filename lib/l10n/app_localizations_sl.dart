@@ -954,6 +954,13 @@ class AppLocalizationsSl extends AppLocalizations {
   String get dailyVerse => 'Dnevni verz';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Dnevni verz ni na voljo';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Vsebina preverjenih dnevnih verzov še ni konfigurirana za to zgradbo. Pred brskanjem se povežite z virom v oblaku ali sinhronizirajte preverjen predpomnilnik.';
+
+  @override
   String get todaysIbadah => 'Današnji ibadah';
 
   @override

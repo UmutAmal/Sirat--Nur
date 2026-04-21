@@ -952,6 +952,13 @@ class AppLocalizationsAs extends AppLocalizations {
   String get dailyVerse => 'দৈনিক পদ্য';
 
   @override
+  String get dailyVerseUnavailableTitle => 'দৈনিক পদ উপলব্ধ নহয়';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'এই নিৰ্মাণৰ বাবে পৰীক্ষা কৰা দৈনিক পদ্যৰ বিষয়বস্তু এতিয়াও বিন্যাস কৰা হোৱা নাই। ক্লাউড উৎসৰ সৈতে সংযোগ কৰক বা ব্ৰাউজ কৰাৰ আগতে এটা পৰীক্ষা কৰা কেশ্ব সিঙ্ক কৰক।';
+
+  @override
   String get todaysIbadah => 'আজিৰ ইবাদাহ';
 
   @override

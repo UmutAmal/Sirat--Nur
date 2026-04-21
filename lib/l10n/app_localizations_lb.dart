@@ -953,6 +953,13 @@ class AppLocalizationsLb extends AppLocalizations {
   String get dailyVerse => 'Deeglech Vers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Deeglech Vers net verfügbar';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verifizéiert alldeegleche Versinhalt ass nach net fir dëse Build konfiguréiert. Connectéiert mat der Cloudquell oder synchroniséiert e verifizéierte Cache virum Surfen.';
+
+  @override
   String get todaysIbadah => 'Haut ass Ibadah';
 
   @override

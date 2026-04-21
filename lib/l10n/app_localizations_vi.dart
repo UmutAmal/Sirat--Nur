@@ -954,6 +954,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get dailyVerse => 'Câu thơ hàng ngày';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Câu thơ hàng ngày không có sẵn';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Nội dung câu thơ hàng ngày đã được xác minh chưa được định cấu hình cho bản dựng này. Kết nối với nguồn đám mây hoặc đồng bộ hóa bộ đệm đã được xác minh trước khi duyệt.';
+
+  @override
   String get todaysIbadah => 'Ibadah ngày nay';
 
   @override

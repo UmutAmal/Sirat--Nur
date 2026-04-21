@@ -955,6 +955,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get dailyVerse => 'Ivesi Lansuku zonke';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ivesi lansuku zonke alitholakali';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Okuqukethwe kwevesi lansuku zonke okuqinisekisiwe akulungiselelwe lesi sakhiwo okwamanje. Xhuma kumthombo wamafu noma vumelanisa inqolobane eqinisekisiwe ngaphambi kokuphequlula.';
+
+  @override
   String get todaysIbadah => 'I-Ibadah yanamuhla';
 
   @override

@@ -1,6 +1,7 @@
 {
   "@@locale": "he",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "דרך האור האסלאמית",
   "home": "דף הבית",
   "quran": "קוראן",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "אסר",
   "maghrib": "מגריב",
   "isha": "אשה",
+  "prayerNotificationTitle": "הגיע הזמן ל-{prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "הגיע הזמן להתפלל {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "נתונים ואחסון",
   "clearCache": "נקה את המטמון",
   "cacheClearedSuccess": "המטמון נוקה בהצלחה",
@@ -34,6 +51,7 @@
   "currentLocation": "מיקום נוכחי (GPS)",
   "locationServiceDisabled": "שירות המיקום מושבת.",
   "locationPermissionDenied": "הרשאת המיקום נדחתה.",
+  "locationDetectionFailed": "לא ניתן היה לזהות את המיקום שלך. אנא בחר עיר באופן ידני או נסה שוב.",
   "citiesCount": "{count} ערים",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "לא נמצאו תוצאות",
   "loading": "טוען...",
   "error": "שגיאה",
+  "appErrorOccurred": "אירעה שגיאה",
+  "appUnknownError": "שגיאה לא ידועה",
+  "quranLoadFailed": "לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב.",
   "retry": "נסה שוב",
+  "refreshAction": "רענן",
   "cancel": "בטל",
   "save": "שמור",
   "delete": "מחק",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "לא",
   "surah": "סורה",
+  "ayahLabel": "איה {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "ג׳וז",
   "page": "עמוד",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "טוען תפסיר...",
+  "tafsirSourceLabel": "מקור תפסיר",
+  "tafsirNoSurahFound": "לא נמצא טפסיר לסורה זו.",
+  "tafsirNoAyahFound": "לא נמצא טפסיר עבור איה {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "לא ניתן היה להטעין את תפסיר.",
+  "tafsirNoTextForAyah": "אין טקסט תפירה עבור האיה הזו.",
+  "tafsirDownloadingProgress": "מוריד את תפסיר {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "טוען תפסיר {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "מקור תפסיר החזיר שגיאת HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "מקור התפסר שנבחר לא החזיר ערכים.",
+  "tafsirCacheUnavailable": "Tafsir מאומת עדיין לא זמין במצב לא מקוון. סנכרן מערך נתונים ממקור tafsir לפני הגלישה.",
   "bookmarks": "Bookmarks",
   "addBookmark": "הוסף סימניה",
   "removeBookmark": "הסר סימניה",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "אחרים מתפללים, 'אדוננו, תן לנו טוב בעולם הזה ובעולם הבא, והגן עלינו מייסורי האש'.",
+  "duaMeaning2": "אלוהים אינו מכביד על אף נשמה יותר ממה שהיא יכולה לשאת: כל אחד זוכה בכל הטוב שעשה, וסובל מהרע שלו- 'אדוני, אל תיקח אותנו למשימה אם אנחנו שוכחים או עושים טעויות. אדוני, אל תכביד עלינו כפי שהעמסת על אלו שלפנינו. אדוני, אל תעמיס עלינו יותר ממה שיש לנו כוח לשאת. סלח לנו, סלח לנו, ורחם עלינו. אתה המגן שלנו, אז עזור לנו נגד הכופרים'.",
+  "duaMeaning3": "'אדוננו, אל תיתן ללבנו לסטות לאחר שהנחית אותנו. תן לנו את רחמיך: אתה הנותן תמיד.",
+  "duaMeaning4": "אדוני, תן ​​שאני וצאצאיי נמשיך בתפילה. אדוננו, קבל את בקשתי.",
+  "duaMeaning5": "והורד את כנך בענווה כלפיהם בחסד ואמרת 'אדוני, רחם עליהם, כשם שדאגו לי כשהייתי קטן'.",
+  "duaMeaning6": "יתעלה אלוהים, זה ששולט באמת. [נביא], אל תמהר לדקלם לפני שההתגלות תהיה שלמה במלואה אלא אמור 'אדוני, הגדל אותי לדעת!'",
+  "duaMeaning7": "אמור [הנביא], 'אדוני, סלח ורחם: אתה הרחמן מכולם'.",
+  "duaMeaning8": "אלה המתפללים, 'אדוננו, תן לנו שמחה על בני זוגנו וצאצאינו. תן לנו דוגמאות טובות למי שמודע לך'.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "צום",
   "quranReading": "קריאת הקוראן",
   "prayers": "תפילות",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}מ'",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}מ'",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "התקדמות שבועית",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "ראש השנה האסלאמית",
+  "mawlidAnNabi": "מאוליד אן-נבי",
+  "specialDayDateRamadanStart": "1 רמדאן",
+  "specialDayDateLaylatAlQadr": "27 רמדאן",
+  "specialDayDateEidAlFitr": "1 שווואל",
+  "specialDayDateEidAlAdha": "10 דהול היג'ה",
+  "specialDayDateIslamicNewYear": "1 מוהר\"ם",
+  "specialDayDateMawlidAnNabi": "12 רבי אל-אוואל",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "כיוון קיבלה",
   "compass": "מצפן",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "הקיבלה נמצאה!",
   "turnDevice": "סובב את המכשיר לכיוון הקיבלה",
+  "qiblaCompassErrorDetails": "שגיאת מצפן: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "חיישן מצפן אינו זמין במכשיר זה.",
+  "qiblaLocationRequiredTitle": "נדרש מיקום עבור Qibla",
+  "qiblaLocationRequiredBody": "הגדר את המיקום האמיתי שלך לפני השימוש במצפן Qibla כך שניתן יהיה לחשב את הכיוון במדויק.",
+  "adhanNotificationChannelName": "התראות אדהאן",
+  "adhanNotificationChannelDescription": "התראות על זמן תפילה עם צליל אדהן.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "ספירת יעד: {target}",
   "tapToCount": "הקש כדי לספור",
+  "zikrCompletedMashAllah": "הושלם! משאאללה",
+  "zikrMeaningSubhanAllah": "אללה הוא הרבה מעל כל חוסר שלמות.",
+  "zikrMeaningAlhamdulillah": "כל השבחים שייכים לאללה.",
+  "zikrMeaningAllahuAkbar": "אללה הוא הגדול ביותר.",
+  "zikrMeaningLaIlahaIllallah": "אין אלוהים מלבד אללה.",
+  "zikrMeaningAstaghfirullah": "אני מבקש את סליחתו של אללה.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "אין כוח ואין כוח אלא דרך אללה.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "קול אודיו",
+  "audioVoiceMisharyAlafasy": "זכר (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
+  "audioVoiceSudais": "זכר (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "כיול קיבלה",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "נדרש כיול. סובב את המכשיר באיור 8.",
   "dailyVerse": "פסוק יומי",
+  "dailyVerseUnavailableTitle": "פסוק יומי אינו זמין",
+  "dailyVerseUnavailableBody": "תוכן פסוק יומי מאומת עדיין לא מוגדר עבור המבנה הזה. התחבר למקור הענן או סנכרן מטמון מאומת לפני הגלישה.",
   "todaysIbadah": "איבאדה של היום",
   "quickAccess": "גישה מהירה",
   "assistant": "עוֹזֵר",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "דואס מאומת אינם זמינים עדיין",
+  "duaUnavailableBody": "עדיין לא סונכרנו דואס יומיים מאומתים עם המכשיר הזה. התחבר למקור הענן כדי לטעון דואס ממקור במקום סתירה לא מאומתת.",
+  "duaCategoryQuranic": "דואה קוראנית",
+  "duaCategoryMorningEvening": "בוקר וערב",
+  "duaCategoryTasbih": "טסביח",
+  "duaCategoryProtection": "הֲגָנָה",
+  "duaCategoryBeginning": "התחלות",
+  "duaCategorySleep": "לִישׁוֹן",
+  "duaCategoryFoodDrink": "אוכל ושתייה",
+  "duaCategoryForgiveness": "סְלִיחָה",
+  "duaCategoryHome": "בַּיִת",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "חינוך איסלאמי",
   "sukunAudioTitle": "נופי סאונד של סוקון",
   "hadithCollections": "אוספי חדית'",
+  "hadithSourcePending": "מקור מאומת בהמתנה",
+  "hadithUnavailableTitle": "אוספי חדית' מאומתים אינם זמינים עדיין",
+  "hadithUnavailableBody": "המבנה הזה עדיין תלוי בפיד חדית' חיצוני לא מאומת. הגלישה בחדית' נשארת מושבתת עד שמסנכרן מערך נתונים ממקור.",
   "paywallUnlockAll": "פתח את כל התכונות למסע הרוחני שלך",
+  "premiumProductUnavailable": "מוצר פרימיום אינו זמין כעת. אנא נסה שוב מאוחר יותר.",
+  "premiumPurchaseFailed": "לא ניתן היה להשלים את הרכישה. אנא נסה שוב.",
   "paywallFeature1Title": "עוזר עצבי פלוס",
   "paywallFeature1Desc": "שאלות ותשובות המופעלות על ידי AI ללא הגבלה",
   "paywallFeature2Title": "אופליין ללא הגבלה",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "ההורדה הסתיימה עבור {reciter} עם {failed} סורות כושלות ({downloaded}/{total} הורדו).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "נמחקו קבצים לא מקוונים עבור {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "שגיאת רשת. אנא נסה שוב.",
+  "placesLocationRequiredTitle": "נדרש מיקום",
+  "placesLocationRequiredBody": "תחילה הגדר מיקום כך שניתן יהיה לחפש במדויק מסגדים, אוכל חלאל ובתי ספר איסלאמיים בקרבת מקום.",
+  "placesMapTilesUnavailableTitle": "אריחי מפה אינם זמינים",
+  "placesMapTilesUnavailableBody": "מקור אריחי מפה מאומת עדיין לא מוגדר עבור המבנה הזה. מקומות קרובים עדיין יכולים להיטען מהמיקום השמור שלך.",
+  "placesDataSourceUnavailableTitle": "נתוני המקומות אינם זמינים",
+  "placesDataSourceUnavailableBody": "עדיין לא הוגדרה נקודת קצה נתונים של מקומות מאומתים עבור המבנה הזה. הגדר את PLACES_OVERPASS_API_URL לשרת proxy או ספק מאושר לפני הפעלת חיפוש בקרבת מקום.",
   "unknownPlaceName": "שם לא ידוע",
   "islamicPlaceFallback": "מקום איסלאמי",
-  "prayerNotificationTitle": "הגיע הזמן ל-{prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "הגיע הזמן להתפלל {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "דואס מאומת אינם זמינים עדיין",
-  "duaUnavailableBody": "עדיין לא סונכרנו דואס יומיים מאומתים עם המכשיר הזה. התחבר למקור הענן כדי לטעון דואס ממקור במקום סתירה לא מאומתת.",
-  "duaCategoryQuranic": "דואה קוראנית",
-  "duaCategoryMorningEvening": "בוקר וערב",
-  "duaCategoryTasbih": "טסביח",
-  "duaCategoryProtection": "הֲגָנָה",
-  "duaCategoryBeginning": "התחלות",
-  "duaCategorySleep": "לִישׁוֹן",
-  "duaCategoryFoodDrink": "אוכל ושתייה",
-  "duaCategoryForgiveness": "סְלִיחָה",
-  "duaCategoryHome": "בַּיִת",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "מקור מאומת בהמתנה",
-  "hadithUnavailableTitle": "אוספי חדית' מאומתים אינם זמינים עדיין",
-  "hadithUnavailableBody": "המבנה הזה עדיין תלוי בפיד חדית' חיצוני לא מאומת. הגלישה בחדית' נשארת מושבתת עד שמסנכרן מערך נתונים ממקור.",
-  "appErrorOccurred": "אירעה שגיאה",
-  "appUnknownError": "שגיאה לא ידועה",
-  "qiblaCompassErrorDetails": "שגיאת מצפן: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "הושלם! משאאללה",
-  "zikrMeaningSubhanAllah": "אללה הוא הרבה מעל כל חוסר שלמות.",
-  "zikrMeaningAlhamdulillah": "כל השבחים שייכים לאללה.",
-  "zikrMeaningAllahuAkbar": "אללה הוא הגדול ביותר.",
-  "zikrMeaningLaIlahaIllallah": "אין אלוהים מלבד אללה.",
-  "zikrMeaningAstaghfirullah": "אני מבקש את סליחתו של אללה.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "אין כוח ואין כוח אלא דרך אללה.",
   "asmaMeaning1": "המיטיב",
   "asmaMeaning2": "הרחמן",
   "asmaMeaning3": "המלך / האדון הנצחי",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "הנצח",
   "asmaMeaning97": "היורש",
   "asmaMeaning98": "המדריך הכי צדיק",
-  "asmaMeaning99": "הסבלן, שאינו ממהר להעניש ופועל באורך רוח מושלם.",
-  "duaMeaning1": "אחרים מתפללים, 'אדוננו, תן לנו טוב בעולם הזה ובעולם הבא, והגן עלינו מייסורי האש'.",
-  "duaMeaning2": "אלוהים אינו מכביד על אף נשמה יותר ממה שהיא יכולה לשאת: כל אחד זוכה בכל הטוב שעשה, וסובל מהרע שלו- 'אדוני, אל תיקח אותנו למשימה אם אנחנו שוכחים או עושים טעויות. אדוני, אל תכביד עלינו כפי שהעמסת על אלו שלפנינו. אדוני, אל תעמיס עלינו יותר ממה שיש לנו כוח לשאת. סלח לנו, סלח לנו, ורחם עלינו. אתה המגן שלנו, אז עזור לנו נגד הכופרים'.",
-  "duaMeaning3": "'אדוננו, אל תיתן ללבנו לסטות לאחר שהנחית אותנו. תן לנו את רחמיך: אתה הנותן תמיד.",
-  "duaMeaning4": "אדוני, תן ​​שאני וצאצאיי נמשיך בתפילה. אדוננו, קבל את בקשתי.",
-  "duaMeaning5": "והורד את כנך בענווה כלפיהם בחסד ואמרת 'אדוני, רחם עליהם, כשם שדאגו לי כשהייתי קטן'.",
-  "duaMeaning6": "יתעלה אלוהים, זה ששולט באמת. [נביא], אל תמהר לדקלם לפני שההתגלות תהיה שלמה במלואה אלא אמור 'אדוני, הגדל אותי לדעת!'",
-  "duaMeaning7": "אמור [הנביא], 'אדוני, סלח ורחם: אתה הרחמן מכולם'.",
-  "duaMeaning8": "אלה המתפללים, 'אדוננו, תן לנו שמחה על בני זוגנו וצאצאינו. תן לנו דוגמאות טובות למי שמודע לך'.",
-  "islamicNewYear": "ראש השנה האסלאמית",
-  "mawlidAnNabi": "מאוליד אן-נבי",
-  "specialDayDateRamadanStart": "1 רמדאן",
-  "specialDayDateLaylatAlQadr": "27 רמדאן",
-  "specialDayDateEidAlFitr": "1 שווואל",
-  "specialDayDateEidAlAdha": "10 דהול היג'ה",
-  "specialDayDateIslamicNewYear": "1 מוהר\"ם",
-  "specialDayDateMawlidAnNabi": "12 רבי אל-אוואל",
-  "refreshAction": "רענן",
-  "ayahLabel": "איה {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "טוען תפסיר...",
-  "tafsirSourceLabel": "מקור תפסיר",
-  "tafsirNoSurahFound": "לא נמצא טפסיר לסורה זו.",
-  "tafsirNoAyahFound": "לא נמצא טפסיר עבור איה {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "לא ניתן היה להטעין את תפסיר.",
-  "tafsirNoTextForAyah": "אין טקסט תפירה עבור האיה הזו.",
-  "tafsirDownloadingProgress": "מוריד את תפסיר {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "טוען תפסיר {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "מקור תפסיר החזיר שגיאת HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "מקור התפסר שנבחר לא החזיר ערכים.",
-  "premiumProductUnavailable": "מוצר פרימיום אינו זמין כעת. אנא נסה שוב מאוחר יותר.",
-  "premiumPurchaseFailed": "לא ניתן היה להשלים את הרכישה. אנא נסה שוב.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}מ'",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}מ'",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "דרך האור האסלאמית",
-  "downloadPartiallyFinishedForReciter": "ההורדה הסתיימה עבור {reciter} עם {failed} סורות כושלות ({downloaded}/{total} הורדו).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "נדרש מיקום",
-  "placesLocationRequiredBody": "תחילה הגדר מיקום כך שניתן יהיה לחפש במדויק מסגדים, אוכל חלאל ובתי ספר איסלאמיים בקרבת מקום.",
-  "placesMapTilesUnavailableTitle": "אריחי מפה אינם זמינים",
-  "placesMapTilesUnavailableBody": "מקור אריחי מפה מאומת עדיין לא מוגדר עבור המבנה הזה. מקומות קרובים עדיין יכולים להיטען מהמיקום השמור שלך.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "זכר (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
-  "audioVoiceSudais": "זכר (Sudais)",
-  "qiblaSensorUnavailable": "חיישן מצפן אינו זמין במכשיר זה.",
-  "adhanNotificationChannelName": "התראות אדהאן",
-  "adhanNotificationChannelDescription": "התראות על זמן תפילה עם צליל אדהן.",
-  "quranLoadFailed": "לא ניתן היה לטעון את תוכן הקוראן. אנא נסה שוב.",
-  "locationDetectionFailed": "לא ניתן היה לזהות את המיקום שלך. אנא בחר עיר באופן ידני או נסה שוב.",
-  "qiblaLocationRequiredTitle": "נדרש מיקום עבור Qibla",
-  "qiblaLocationRequiredBody": "הגדר את המיקום האמיתי שלך לפני השימוש במצפן Qibla כך שניתן יהיה לחשב את הכיוון במדויק.",
-  "placesDataSourceUnavailableTitle": "נתוני המקומות אינם זמינים",
-  "placesDataSourceUnavailableBody": "עדיין לא הוגדרה נקודת קצה נתונים של מקומות מאומתים עבור המבנה הזה. הגדר את PLACES_OVERPASS_API_URL לשרת proxy או ספק מאושר לפני הפעלת חיפוש בקרבת מקום.",
-  "tafsirCacheUnavailable": "Tafsir מאומת עדיין לא זמין במצב לא מקוון. סנכרן מערך נתונים ממקור tafsir לפני הגלישה."
+  "asmaMeaning99": "הסבלן, שאינו ממהר להעניש ופועל באורך רוח מושלם."
 }

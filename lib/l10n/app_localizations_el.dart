@@ -957,6 +957,14 @@ class AppLocalizationsEl extends AppLocalizations {
   String get dailyVerse => 'Καθημερινός Στίχος';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Ο καθημερινός στίχος δεν είναι διαθέσιμος';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Το επαληθευμένο καθημερινό περιεχόμενο στίχων δεν έχει διαμορφωθεί ακόμα για αυτήν την έκδοση. Συνδεθείτε στην πηγή cloud ή συγχρονίστε μια επαληθευμένη κρυφή μνήμη πριν από την περιήγηση.';
+
+  @override
   String get todaysIbadah => 'Η σημερινή Ibadah';
 
   @override

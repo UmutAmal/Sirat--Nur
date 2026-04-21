@@ -955,6 +955,13 @@ class AppLocalizationsLus extends AppLocalizations {
   String get dailyVerse => 'Nitin Châng';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Nitin chang a awm lo';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.';
+
+  @override
   String get todaysIbadah => 'Vawiin kan Ibadah';
 
   @override

@@ -955,6 +955,14 @@ class AppLocalizationsMi extends AppLocalizations {
   String get dailyVerse => 'Te whiti o ia ra';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Karekau i te waatea te irava o ia ra';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Kaore ano kia whirihorahia nga ihirangi irava ia ra mo tenei hanga. Hono atu ki te puna kapua ka tukutahi ranei i tetahi keteroki kua manatoko i mua i te tirotiro.';
+
+  @override
   String get todaysIbadah => 'Ko Ibadah i tenei ra';
 
   @override

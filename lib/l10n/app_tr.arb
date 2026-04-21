@@ -424,6 +424,8 @@
   "rotateToFindQibla": "Kıbleyi Bulmak İçin Çevir",
   "calibrationRequiredFigure8": "Kalibrasyon gerekli. Cihazı 8 çizerek çevirin.",
   "dailyVerse": "Günün Ayeti",
+  "dailyVerseUnavailableTitle": "Günün ayeti kullanılamıyor",
+  "dailyVerseUnavailableBody": "Bu sürüm için doğrulanmış günlük ayet içeriği henüz yapılandırılmadı. Gezinmeden önce bulut kaynağına bağlanın veya doğrulanmış bir önbelleği senkronlayın.",
   "todaysIbadah": "Bugünün İbadeti",
   "quickAccess": "Hızlı Erişim",
   "assistant": "Asistan",

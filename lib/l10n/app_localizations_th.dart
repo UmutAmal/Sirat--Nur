@@ -950,6 +950,13 @@ class AppLocalizationsTh extends AppLocalizations {
   String get dailyVerse => 'กลอนประจำวัน';
 
   @override
+  String get dailyVerseUnavailableTitle => 'กลอนประจำวันไม่พร้อมใช้งาน';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'เนื้อหาข้อพระคัมภีร์ประจำวันที่ตรวจสอบแล้วยังไม่ได้รับการกำหนดค่าสำหรับโครงสร้างนี้ เชื่อมต่อกับแหล่งคลาวด์หรือซิงค์แคชที่ตรวจสอบแล้วก่อนเรียกดู';
+
+  @override
   String get todaysIbadah => 'วันนี้อิบาดะห์';
 
   @override

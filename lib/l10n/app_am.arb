@@ -1,6 +1,7 @@
 {
   "@@locale": "am",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "ኢስላማዊ የብርሃን መንገድ",
   "home": "ቤት",
   "quran": "ቁርኣን",
   "qibla": "ቂብላ",
@@ -23,6 +24,22 @@
   "asr": "አስር",
   "maghrib": "መግሪብ",
   "isha": "ኢሻ",
+  "prayerNotificationTitle": "የ{prayerName} ጊዜ",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} ለመጸለይ ጊዜው አሁን ነው።",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "ውሂብ እና ማከማቻ",
   "clearCache": "መሸጎጫ አጽዳ",
   "cacheClearedSuccess": "መሸጎጫ በተሳካ ሁኔታ ጸድቷል።",
@@ -34,6 +51,7 @@
   "currentLocation": "የአሁኑ አካባቢ (ጂፒኤስ)",
   "locationServiceDisabled": "የአካባቢ አገልግሎት ተሰናክሏል።",
   "locationPermissionDenied": "የአካባቢ ፈቃድ ተከልክሏል።",
+  "locationDetectionFailed": "አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "ምንም ውጤቶች አልተገኙም።",
   "loading": "በመጫን ላይ...",
   "error": "ስህተት",
+  "appErrorOccurred": "ስህተት ተከስቷል።",
+  "appUnknownError": "ያልታወቀ ስህተት",
+  "quranLoadFailed": "የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።",
   "retry": "እንደገና ይሞክሩ",
+  "refreshAction": "አድስ",
   "cancel": "ሰርዝ",
   "save": "አስቀምጥ",
   "delete": "ሰርዝ",
@@ -57,17 +79,78 @@
   "yes": "አዎ",
   "no": "አይ",
   "surah": "ሱራ",
+  "ayahLabel": "አያ {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "ጁዝ",
   "page": "ገጽ",
   "reading": "ማንበብ",
   "recitation": "ንባብ",
   "translation": "ትርጉም",
   "tafsir": "ተፍሲር",
+  "tafsirLoading": "ተፍሲርን በመጫን ላይ...",
+  "tafsirSourceLabel": "የተፍሲር ምንጭ",
+  "tafsirNoSurahFound": "ለዚህ ሱራ ምንም ተፍሲር አልተገኘም።",
+  "tafsirNoAyahFound": "ለአያህ {ayah} ምንም ተፍሲር አልተገኘም።",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "ተፍሲርን መጫን አልተቻለም።",
+  "tafsirNoTextForAyah": "ለዚህ አያህ ምንም የተፍሲር ጽሑፍ የለም።",
+  "tafsirDownloadingProgress": "ተፍሲርን በማውረድ ላይ {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "ተፍሲርን በመጫን ላይ {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "የተፍሲር ምንጭ HTTP {statusCode} ስህተት መልሷል።",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "የተመረጠው የተፍሲር ምንጭ ምንም ግቤት አልተመለሰም።",
+  "tafsirCacheUnavailable": "የተረጋገጠ ተፍሲር እስካሁን ከመስመር ውጭ አይገኝም። ከማሰስዎ በፊት የተገኘ የታፍሲር ዳታ ስብስብ ያመሳስሉ።",
   "bookmarks": "ዕልባቶች",
   "addBookmark": "ዕልባት ጨምር",
   "removeBookmark": "ዕልባት አስወግድ",
   "lastRead": "ለመጨረሻ ጊዜ የተነበበ",
   "dailyZikr": "ዕለታዊ ዚክር",
+  "duaMeaning1": "ሌሎችም ‘ጌታችን ሆይ በቅርቢቱም ሆነ በመጨረሻይቱ ዓለም መልካምን ነገር ስጠን ከእሳትም ቅጣት ጠብቀን’ ብለው ይጸልያሉ።",
+  "duaMeaning2": "እግዚአብሔር የትኛውንም ነፍስ ልትሸከመው ከምትችለው በላይ አይጭንበትም፤ እያንዳንዱ የሠራውን መልካም ነገር ያገኛል፤ በመጥፎዋም ይሠቃያል- ‘ጌታ ሆይ፣ ከረሳን ወይም ከተሳሳትን ወደ ሥራ አታግባን። ጌታ ሆይ ከኛ በፊት የነበሩትን እንደ ሸከምክ አትከብደን። ጌታ ሆይ ለመሸከም ካለን አቅም በላይ አትከብደን። ይቅር በለን ፣ ይቅር በለን ፣ ማረን ። አንተ ረዳታችን ነህና በከሓዲዎችንም እርዳን።",
+  "duaMeaning3": "‹ጌታችን ሆይ ከመራኸን በኋላ ልቦቻችንን አታዘንብ። እዝነትህን ስጠን አንተ ሰጭ ነህ።",
+  "duaMeaning4": "ጌታ ሆይ እኔና ዘሮቼ ጸሎታችንን እንድንሰግድ ስጠን። ጌታችን ሆይ ልመናዬን ተቀበል።",
+  "duaMeaning5": "በትሕትናም ክንፍህን ወደ እነርሱ በቸርነት ዝቅ አድርግና፡- ‘ጌታ ሆይ!",
+  "duaMeaning6": "አላህ የጠራው እርሱ በእርግጥ ተቆጣጣሪው ነው። (ነብዩ) ራዕዩ ሳይፈጸም በፊት ለማንበብ አትቸኩል ነገር ግን ‘ጌታ ሆይ እውቀትን ጨምርልኝ!’ በል።",
+  "duaMeaning7": "(ነብዩ)፡- ‘ጌታ ሆይ ይቅር በለን እዘንም አንተ ከምንም በላይ አዛኝ ነህ’ በላቸው።",
+  "duaMeaning8": "የሚጸልዩት፡- ጌታችን ሆይ በትዳር አጋሮቻችንና በዘሮቻችን ደስታን ስጠን። አንተን ለሚያውቁ ጥሩ ምሳሌ አድርግልን።",
   "morningZikr": "ጥዋት ዚክር",
   "eveningZikr": "ምሽት ዚክር",
   "tasbih": "ተስቢህ",
@@ -88,6 +171,26 @@
   "fasting": "መጾም",
   "quranReading": "የቁርኣን ንባብ",
   "prayers": "ጸሎቶች",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "ዚክር ቆጠራ",
   "weeklyProgress": "ሳምንታዊ እድገት",
   "monthlyProgress": "ወርሃዊ እድገት",
@@ -101,6 +204,14 @@
   "ramadan": "ረመዳን",
   "eidAlFitr": "ኢድ አልፈጥር",
   "eidAlAdha": "ኢድ አል-አድሓ",
+  "islamicNewYear": "ኢስላማዊ አዲስ አመት",
+  "mawlidAnNabi": "መውሊድ አን-ናቢ",
+  "specialDayDateRamadanStart": "1 ረመዳን",
+  "specialDayDateLaylatAlQadr": "27 ረመዳን",
+  "specialDayDateEidAlFitr": "1 ሻውል",
+  "specialDayDateEidAlAdha": "10 ዙል ሂጃህ",
+  "specialDayDateIslamicNewYear": "1 ሙሀረም",
+  "specialDayDateMawlidAnNabi": "12 ረቢ አል-አወል",
   "laylatAlQadr": "ሌይላት አልቃድር",
   "qiblaDirection": "የቂብላ አቅጣጫ",
   "compass": "ኮምፓስ",
@@ -108,6 +219,19 @@
   "north": "ሰሜን",
   "qiblaFound": "ቂብላ ተገኘ!",
   "turnDevice": "መሳሪያዎን ወደ ቂብላ ያዙሩት",
+  "qiblaCompassErrorDetails": "የኮምፓስ ስህተት፡ {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።",
+  "qiblaLocationRequiredTitle": "ለቂብላ ቦታ ያስፈልጋል",
+  "qiblaLocationRequiredBody": "የቂብላ ኮምፓስን ከመጠቀምዎ በፊት ትክክለኛ ቦታዎን ያዘጋጁ አቅጣጫው በትክክል እንዲሰላ ያድርጉ።",
+  "adhanNotificationChannelName": "አድሃን ማሳወቂያዎች",
+  "adhanNotificationChannelDescription": "የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።",
   "notifications": "ማሳወቂያዎች",
   "prayerNotifications": "የጸሎት ማሳወቂያዎች",
   "enableNotifications": "ማሳወቂያዎችን አንቃ",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "የዒላማ ብዛት፡ {target}",
   "tapToCount": "ለመቁጠር መታ ያድርጉ",
+  "zikrCompletedMashAllah": "ተጠናቀቀ! ማሻአላህ",
+  "zikrMeaningSubhanAllah": "አላህ ከጉድለት ሁሉ በላይ ነው።",
+  "zikrMeaningAlhamdulillah": "ምስጋና ሁሉ የአላህ ነው።",
+  "zikrMeaningAllahuAkbar": "አላህ ታላቅ ነው።",
+  "zikrMeaningLaIlahaIllallah": "ከአላህ በስተቀር ሌላ አምላክ የለም።",
+  "zikrMeaningAstaghfirullah": "የአላህን ምህረት እጠይቃለሁ።",
+  "zikrMeaningLaHawlaWaLaQuwwata": "በአላህ ካልሆነ በስተቀር ምንም ሃይል እና ጥንካሬ የለም።",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "የድምጽ ድምጽ",
+  "audioVoiceMisharyAlafasy": "ወንድ (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "ወንድ (Abdul Basit)",
+  "audioVoiceSudais": "ወንድ (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "የቂብላ መለኪያ",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "ልኬት ያስፈልጋል። መሣሪያውን በስእል-8 አሽከርክር።",
   "dailyVerse": "ዕለታዊ ጥቅስ",
+  "dailyVerseUnavailableTitle": "ዕለታዊ ጥቅስ አይገኝም",
+  "dailyVerseUnavailableBody": "የተረጋገጠ ዕለታዊ ጥቅስ ይዘት ለዚህ ግንባታ ገና አልተዋቀረም። ከማሰስዎ በፊት ከደመናው ምንጭ ጋር ይገናኙ ወይም የተረጋገጠ መሸጎጫ ያመሳስሉ።",
   "todaysIbadah": "የዛሬው ኢባዳ",
   "quickAccess": "ፈጣን መዳረሻ",
   "assistant": "ረዳት",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "የተረጋገጡ ዱዓዎች እስካሁን አይገኙም።",
+  "duaUnavailableBody": "የተረጋገጡ ዕለታዊ ዱዓዎች እስካሁን ከዚህ መሳሪያ ጋር አልተመሳሰሉም። ካልተረጋገጠ መመለሻ ይልቅ የመነጩ ዱአዎችን ለመጫን ከደመና ምንጭ ጋር ይገናኙ።",
+  "duaCategoryQuranic": "የቁርዓን ዱአ",
+  "duaCategoryMorningEvening": "ጥዋት እና ምሽት",
+  "duaCategoryTasbih": "ተስቢህ",
+  "duaCategoryProtection": "ጥበቃ",
+  "duaCategoryBeginning": "ጅምር",
+  "duaCategorySleep": "እንቅልፍ",
+  "duaCategoryFoodDrink": "ምግብ እና መጠጥ",
+  "duaCategoryForgiveness": "ይቅርታ",
+  "duaCategoryHome": "ቤት",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "ኢስላማዊ ትምህርት",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "የሀዲስ ስብስቦች",
+  "hadithSourcePending": "የተረጋገጠ ምንጭ በመጠባበቅ ላይ",
+  "hadithUnavailableTitle": "የተረጋገጡ የሀዲስ ስብስቦች እስካሁን አይገኙም።",
+  "hadithUnavailableBody": "ይህ ግንባታ አሁንም ባልተረጋገጠ የውጪ የሀዲስ ምግብ ላይ የተመሰረተ ነው። የተገኘ የውሂብ ስብስብ እስኪሰምር ድረስ የሃዲስ አሰሳ እንደተሰናከለ ይቆያል።",
   "paywallUnlockAll": "ለመንፈሳዊ ጉዞዎ ሁሉንም ባህሪያት ይክፈቱ",
+  "premiumProductUnavailable": "ፕሪሚየም ምርት አሁን አይገኝም። እባክዎ ቆይተው እንደገና ይሞክሩ።",
+  "premiumPurchaseFailed": "ግዢ ሊጠናቀቅ አልቻለም። እባክህ እንደገና ሞክር።",
   "paywallFeature1Title": "የነርቭ ረዳት ፕላስ",
   "paywallFeature1Desc": "ያልተገደበ AI-የተጎላበተ ጥያቄ እና መልስ",
   "paywallFeature2Title": "ከመስመር ውጭ ያልተገደበ",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "ለ {reciter} ማውረዱ አልቋል {failed} ያልተሳኩ ሱራዎች ({downloaded}/{total} ወርዷል)።",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "ለ{reciter} ከመስመር ውጭ ፋይሎች ተሰርዘዋል።",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "የአውታረ መረብ ስህተት። እባክህ እንደገና ሞክር።",
+  "placesLocationRequiredTitle": "ቦታ ያስፈልጋል",
+  "placesLocationRequiredBody": "በአቅራቢያ ያሉ መስጊዶች፣ ሃላል ምግብ እና ኢስላሚክ ትምህርት ቤቶች በትክክል መፈለግ እንዲችሉ መጀመሪያ ቦታ ያዘጋጁ።",
+  "placesMapTilesUnavailableTitle": "የካርታ ሰቆች አይገኙም።",
+  "placesMapTilesUnavailableBody": "የተረጋገጠ የካርታ ንጣፍ ምንጭ እስካሁን ለዚህ ግንባታ አልተዋቀረም። በአቅራቢያ ያሉ ቦታዎች አሁንም ከተቀመጠው ቦታዎ መጫን ይችላሉ።",
+  "placesDataSourceUnavailableTitle": "የቦታዎች ውሂብ አይገኝም",
+  "placesDataSourceUnavailableBody": "የተረጋገጠ የቦታዎች ውሂብ መጨረሻ ነጥብ ለዚህ ግንባታ ገና አልተዋቀረም። በአቅራቢያ ፍለጋን ከማንቃትዎ በፊት PLACES_OVERPASS_API_URL ወደ ተቀባይነት ያለው ተኪ ወይም አቅራቢ ያቀናብሩ።",
   "unknownPlaceName": "ያልታወቀ ስም",
   "islamicPlaceFallback": "ኢስላማዊ ቦታ",
-  "prayerNotificationTitle": "የ{prayerName} ጊዜ",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} ለመጸለይ ጊዜው አሁን ነው።",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "የተረጋገጡ ዱዓዎች እስካሁን አይገኙም።",
-  "duaUnavailableBody": "የተረጋገጡ ዕለታዊ ዱዓዎች እስካሁን ከዚህ መሳሪያ ጋር አልተመሳሰሉም። ካልተረጋገጠ መመለሻ ይልቅ የመነጩ ዱአዎችን ለመጫን ከደመና ምንጭ ጋር ይገናኙ።",
-  "duaCategoryQuranic": "የቁርዓን ዱአ",
-  "duaCategoryMorningEvening": "ጥዋት እና ምሽት",
-  "duaCategoryTasbih": "ተስቢህ",
-  "duaCategoryProtection": "ጥበቃ",
-  "duaCategoryBeginning": "ጅምር",
-  "duaCategorySleep": "እንቅልፍ",
-  "duaCategoryFoodDrink": "ምግብ እና መጠጥ",
-  "duaCategoryForgiveness": "ይቅርታ",
-  "duaCategoryHome": "ቤት",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "የተረጋገጠ ምንጭ በመጠባበቅ ላይ",
-  "hadithUnavailableTitle": "የተረጋገጡ የሀዲስ ስብስቦች እስካሁን አይገኙም።",
-  "hadithUnavailableBody": "ይህ ግንባታ አሁንም ባልተረጋገጠ የውጪ የሀዲስ ምግብ ላይ የተመሰረተ ነው። የተገኘ የውሂብ ስብስብ እስኪሰምር ድረስ የሃዲስ አሰሳ እንደተሰናከለ ይቆያል።",
-  "appErrorOccurred": "ስህተት ተከስቷል።",
-  "appUnknownError": "ያልታወቀ ስህተት",
-  "qiblaCompassErrorDetails": "የኮምፓስ ስህተት፡ {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "ተጠናቀቀ! ማሻአላህ",
-  "zikrMeaningSubhanAllah": "አላህ ከጉድለት ሁሉ በላይ ነው።",
-  "zikrMeaningAlhamdulillah": "ምስጋና ሁሉ የአላህ ነው።",
-  "zikrMeaningAllahuAkbar": "አላህ ታላቅ ነው።",
-  "zikrMeaningLaIlahaIllallah": "ከአላህ በስተቀር ሌላ አምላክ የለም።",
-  "zikrMeaningAstaghfirullah": "የአላህን ምህረት እጠይቃለሁ።",
-  "zikrMeaningLaHawlaWaLaQuwwata": "በአላህ ካልሆነ በስተቀር ምንም ሃይል እና ጥንካሬ የለም።",
   "asmaMeaning1": "በጎ አድራጊው",
   "asmaMeaning2": "አዛኙ",
   "asmaMeaning3": "ንጉሱ / ዘላለማዊው ጌታ",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "ዘላለማዊው",
   "asmaMeaning97": "ወራሹ",
   "asmaMeaning98": "በጣም ትክክለኛ መመሪያ",
-  "asmaMeaning99": "በሽተኛው",
-  "duaMeaning1": "ሌሎችም ‘ጌታችን ሆይ በቅርቢቱም ሆነ በመጨረሻይቱ ዓለም መልካምን ነገር ስጠን ከእሳትም ቅጣት ጠብቀን’ ብለው ይጸልያሉ።",
-  "duaMeaning2": "እግዚአብሔር የትኛውንም ነፍስ ልትሸከመው ከምትችለው በላይ አይጭንበትም፤ እያንዳንዱ የሠራውን መልካም ነገር ያገኛል፤ በመጥፎዋም ይሠቃያል- ‘ጌታ ሆይ፣ ከረሳን ወይም ከተሳሳትን ወደ ሥራ አታግባን። ጌታ ሆይ ከኛ በፊት የነበሩትን እንደ ሸከምክ አትከብደን። ጌታ ሆይ ለመሸከም ካለን አቅም በላይ አትከብደን። ይቅር በለን ፣ ይቅር በለን ፣ ማረን ። አንተ ረዳታችን ነህና በከሓዲዎችንም እርዳን።",
-  "duaMeaning3": "‹ጌታችን ሆይ ከመራኸን በኋላ ልቦቻችንን አታዘንብ። እዝነትህን ስጠን አንተ ሰጭ ነህ።",
-  "duaMeaning4": "ጌታ ሆይ እኔና ዘሮቼ ጸሎታችንን እንድንሰግድ ስጠን። ጌታችን ሆይ ልመናዬን ተቀበል።",
-  "duaMeaning5": "በትሕትናም ክንፍህን ወደ እነርሱ በቸርነት ዝቅ አድርግና፡- ‘ጌታ ሆይ!",
-  "duaMeaning6": "አላህ የጠራው እርሱ በእርግጥ ተቆጣጣሪው ነው። (ነብዩ) ራዕዩ ሳይፈጸም በፊት ለማንበብ አትቸኩል ነገር ግን ‘ጌታ ሆይ እውቀትን ጨምርልኝ!’ በል።",
-  "duaMeaning7": "(ነብዩ)፡- ‘ጌታ ሆይ ይቅር በለን እዘንም አንተ ከምንም በላይ አዛኝ ነህ’ በላቸው።",
-  "duaMeaning8": "የሚጸልዩት፡- ጌታችን ሆይ በትዳር አጋሮቻችንና በዘሮቻችን ደስታን ስጠን። አንተን ለሚያውቁ ጥሩ ምሳሌ አድርግልን።",
-  "islamicNewYear": "ኢስላማዊ አዲስ አመት",
-  "mawlidAnNabi": "መውሊድ አን-ናቢ",
-  "specialDayDateRamadanStart": "1 ረመዳን",
-  "specialDayDateLaylatAlQadr": "27 ረመዳን",
-  "specialDayDateEidAlFitr": "1 ሻውል",
-  "specialDayDateEidAlAdha": "10 ዙል ሂጃህ",
-  "specialDayDateIslamicNewYear": "1 ሙሀረም",
-  "specialDayDateMawlidAnNabi": "12 ረቢ አል-አወል",
-  "refreshAction": "አድስ",
-  "ayahLabel": "አያ {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "ተፍሲርን በመጫን ላይ...",
-  "tafsirSourceLabel": "የተፍሲር ምንጭ",
-  "tafsirNoSurahFound": "ለዚህ ሱራ ምንም ተፍሲር አልተገኘም።",
-  "tafsirNoAyahFound": "ለአያህ {ayah} ምንም ተፍሲር አልተገኘም።",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "ተፍሲርን መጫን አልተቻለም።",
-  "tafsirNoTextForAyah": "ለዚህ አያህ ምንም የተፍሲር ጽሑፍ የለም።",
-  "tafsirDownloadingProgress": "ተፍሲርን በማውረድ ላይ {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "ተፍሲርን በመጫን ላይ {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "የተፍሲር ምንጭ HTTP {statusCode} ስህተት መልሷል።",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "የተመረጠው የተፍሲር ምንጭ ምንም ግቤት አልተመለሰም።",
-  "premiumProductUnavailable": "ፕሪሚየም ምርት አሁን አይገኝም። እባክዎ ቆይተው እንደገና ይሞክሩ።",
-  "premiumPurchaseFailed": "ግዢ ሊጠናቀቅ አልቻለም። እባክህ እንደገና ሞክር።",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "ኢስላማዊ የብርሃን መንገድ",
-  "downloadPartiallyFinishedForReciter": "ለ {reciter} ማውረዱ አልቋል {failed} ያልተሳኩ ሱራዎች ({downloaded}/{total} ወርዷል)።",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "ቦታ ያስፈልጋል",
-  "placesLocationRequiredBody": "በአቅራቢያ ያሉ መስጊዶች፣ ሃላል ምግብ እና ኢስላሚክ ትምህርት ቤቶች በትክክል መፈለግ እንዲችሉ መጀመሪያ ቦታ ያዘጋጁ።",
-  "placesMapTilesUnavailableTitle": "የካርታ ሰቆች አይገኙም።",
-  "placesMapTilesUnavailableBody": "የተረጋገጠ የካርታ ንጣፍ ምንጭ እስካሁን ለዚህ ግንባታ አልተዋቀረም። በአቅራቢያ ያሉ ቦታዎች አሁንም ከተቀመጠው ቦታዎ መጫን ይችላሉ።",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "ወንድ (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "ወንድ (Abdul Basit)",
-  "audioVoiceSudais": "ወንድ (Sudais)",
-  "qiblaSensorUnavailable": "የኮምፓስ ዳሳሽ በዚህ መሳሪያ ላይ የለም።",
-  "adhanNotificationChannelName": "አድሃን ማሳወቂያዎች",
-  "adhanNotificationChannelDescription": "የጸሎት ጊዜ ማንቂያዎች ከአድሃን ድምፅ ጋር።",
-  "quranLoadFailed": "የቁርኣን ይዘት ሊጫን አልቻለም። እባክህ እንደገና ሞክር።",
-  "locationDetectionFailed": "አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።",
-  "qiblaLocationRequiredTitle": "ለቂብላ ቦታ ያስፈልጋል",
-  "qiblaLocationRequiredBody": "የቂብላ ኮምፓስን ከመጠቀምዎ በፊት ትክክለኛ ቦታዎን ያዘጋጁ አቅጣጫው በትክክል እንዲሰላ ያድርጉ።",
-  "placesDataSourceUnavailableTitle": "የቦታዎች ውሂብ አይገኝም",
-  "placesDataSourceUnavailableBody": "የተረጋገጠ የቦታዎች ውሂብ መጨረሻ ነጥብ ለዚህ ግንባታ ገና አልተዋቀረም። በአቅራቢያ ፍለጋን ከማንቃትዎ በፊት PLACES_OVERPASS_API_URL ወደ ተቀባይነት ያለው ተኪ ወይም አቅራቢ ያቀናብሩ።",
-  "tafsirCacheUnavailable": "የተረጋገጠ ተፍሲር እስካሁን ከመስመር ውጭ አይገኝም። ከማሰስዎ በፊት የተገኘ የታፍሲር ዳታ ስብስብ ያመሳስሉ።"
+  "asmaMeaning99": "በሽተኛው"
 }

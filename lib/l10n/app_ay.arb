@@ -1,6 +1,7 @@
 {
   "@@locale": "ay",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islámica Way of Light ukax mä jach’a thakhiwa",
   "home": "Uta",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "{prayerName} ukan pachapa.",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "{prayerName} mayiñ pachaw purini.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datos & Almacenamiento ukax mä juk’a pachanakanwa",
   "clearCache": "Caché ukax q’umachaña",
   "cacheClearedSuccess": "Caché ukax wali suma q’umachatawa",
@@ -34,6 +51,7 @@
   "currentLocation": "Jichha pachanx (GPS) .",
   "locationServiceDisabled": "Servicio de ubicación ukax jan ch’amanchatawa.",
   "locationPermissionDenied": "Uka chiqanx permiso ukax janiw satawa.",
+  "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Janiw kuna askis jikxataskiti",
   "loading": "Loading...",
   "error": "Pantjasiwi",
+  "appErrorOccurred": "Mä pantjasiwiw utjawayi",
+  "appUnknownError": "Jan uñt’at pantjasiwi",
+  "quranLoadFailed": "Quran ukax janiw cargañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
   "retry": "Wasitat yantʼañamawa",
+  "refreshAction": "Refresco luraña",
   "cancel": "Kansilaña",
   "save": "Imaña",
   "delete": "Chhaqtayaña",
@@ -57,17 +79,78 @@
   "yes": "Jïsa",
   "no": "Janiwa",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Page",
   "reading": "Ullaña",
   "recitation": "Uñakipt’aña",
   "translation": "Jaqukipaña",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Ukax tafsir...",
+  "tafsirSourceLabel": "Tafsir ukax mä jamuqawa",
+  "tafsirNoSurahFound": "Aka surah ukatakix janiw tafsir jikxataskiti.",
+  "tafsirNoAyahFound": "Janiw tafsir ukax ayah {ayah} ukatakix jikxataskiti.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir ukax janiw cargañjamäkänti.",
+  "tafsirNoTextForAyah": "Janiw tafsir qillqatax aka ayah ukatakix utjkiti.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir phuqhawix HTTP {statusCode} pantjasiw kutt’ayawayi.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ajllit tafsir phunchhawix janiw kuna qillqt’atanakas kutt’ayawaykiti.",
+  "tafsirCacheUnavailable": "Verificado tafsir ukax janiw offline ukankiti. Mä fuente tafsir datos conjunto ukar sincronización janïr uñakipt’kasa.",
   "bookmarks": "Markachirinaka",
   "addBookmark": "Marka uñt’ayaña",
   "removeBookmark": "Ukax Bookmark satawa",
   "lastRead": "Qhipa Uñakipäwi",
   "dailyZikr": "Sapa uru Zikr",
+  "duaMeaning1": "yaqhipanakax akham sasaw mayipxi: ‘Tatitu, akapachan ukhamarak qhipa urunakan askinak churapxita, ukat Nina t’aqhisiñat jark’aqapxita’ sasa.",
+  "duaMeaning2": "Diosax janiw khiti almarus juk’amp q’ipt’kiti: sapa mayniw kuna askinaktï lurawayki uk jikxati, ukat jan walinakaparuw t’aqhisi- ‘ Tatitu, armasxañäni jan ukax pantjasiñäni ukhax jan juchar irpkistati. Tatitu, jan q'ipipxamti, kunjamtï nayra jaqinakarux q'ipt'apkta ukhama. Tatay, jan ch'amanïñasat sipansa juk'amp q'ipt'apxistati. Perdonapxita, pampachapxita, khuyapt'ayapxita. Jumaw jiwasan Arxatirisätaxa, ukhamax jan iyawsirinakar saykatañ yanaptʼapxita’ sasa.",
+  "duaMeaning3": "‘Tatitusa, jan chuymanakajajj mayjtʼaypanti, Jumajj irpapkista uka qhepatjja. Khuyapayasiñam churapxita: Jumaw Sapa kuti churirïtaxa.",
+  "duaMeaning4": "Tatay, nayampi wawanakajampix mayiskakipxañajataki —sasa. Tatitusa, mayitax katuqapxam.",
+  "duaMeaning5": "ukatsti altʼat chuymampiw chʼiwipar jiskʼachañama, ukat akham sañamawa: ‘Tatay, jupanakat khuyaptʼayasim, kunjamtï jiskʼäkayäta ukhajj nayar uñjapkitäna ukhama’ sasa.",
+  "duaMeaning6": "Diosax jach'añchatäpan, khititix chiqpachapuni apnaqki uka. [Profeta], janïr qhanañchäwix taqpach tukuykipanx janiw jank’ak arsuñamäkiti jan ukasti akham sañamawa: ‘¡Tata, yatiñan jilxattayata!’ sasa.",
+  "duaMeaning7": "[Profeta] sañamawa: ‘Tata, pampacham ukat khuyapt’ayasim: Jumaw taqit sipansa juk’amp khuyapt’ayasiri’.",
+  "duaMeaning8": "‘Tatitu, chachasa jan ukajj warmisampi, wawanakasampi kusisiyapjjeta’ sasin mayipki ukanaka. Khitinakatix Jumar uñt’apki ukanakatakix suma uñacht’äwinak lurapxita’.",
   "morningZikr": "Alwajj Zikr satänwa",
   "eveningZikr": "Jayp’u tuqiru Zikr",
   "tasbih": "Tasbih ukax mä juk’a pachanakanwa",
@@ -88,6 +171,26 @@
   "fasting": "Ayunaña",
   "quranReading": "Quran Uñakipt’añataki",
   "prayers": "Oracionanaka",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Jakhuwi",
   "weeklyProgress": "Sapa semanan nayrar sartaña",
   "monthlyProgress": "Sapa phaxsi nayrar sartawi",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadán urunxa",
   "eidAlFitr": "Eid Al-Fitr ukax mä jach’a uñacht’äwiwa",
   "eidAlAdha": "Eid Al-Adha ukax mä jach’a uñacht’äwiwa",
+  "islamicNewYear": "Islámico Machaq Mara",
+  "mawlidAnNabi": "Mawlid ukat Nabi",
+  "specialDayDateRamadanStart": "1 Ramadán uru",
+  "specialDayDateLaylatAlQadr": "27 Ramadán uru",
+  "specialDayDateEidAlFitr": "1 Shawwal ukat juk’ampinaka",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah ukat juk’ampinaka",
+  "specialDayDateIslamicNewYear": "1 Muharram ukat juk’ampinaka",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal sat chachan sarnaqäwipa",
   "laylatAlQadr": "Laylat Al-Qadr ukat yaqhanakampi",
   "qiblaDirection": "Qibla Dirección",
   "compass": "Brújula ukampi",
@@ -108,6 +219,19 @@
   "north": "Alaya",
   "qiblaFound": "Qibla jikxatawayi!",
   "turnDevice": "Dispositivo ukax Qibla uñkatasiñapatakiw turkañama",
+  "qiblaCompassErrorDetails": "Brújula ukan pantjasiwipa: {error} .",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.",
+  "qiblaLocationRequiredTitle": "Qibla markatakix kawkhantix utjki ukax wakisiwa",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Adhan Yatiyawinaka",
+  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Yatiyawinaka",
   "prayerNotifications": "Oracionan Yatiyäwinakapa",
   "enableNotifications": "Yatiyawinak ch’amanchaña",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target: {target}",
   "tapToCount": "Jakhuñatakix ch’iqt’añamawa",
+  "zikrCompletedMashAllah": "¡Tukuyatäxiwa! MashAllah ukax mä juk’a pachanakanwa",
+  "zikrMeaningSubhanAllah": "Allah ukax taqi pantjasiwinakat sipanx juk’amp jach’awa.",
+  "zikrMeaningAlhamdulillah": "Taqi jach’añchäwix Allah ukankiwa.",
+  "zikrMeaningAllahuAkbar": "Allah ukax Jach’akiwa.",
+  "zikrMeaningLaIlahaIllallah": "Janiw kuna diosas utjkiti, jan ukasti Allah ukaw utji.",
+  "zikrMeaningAstaghfirullah": "Nayax Allahan pampachäwip thaqhaskta.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Janiw kuna ch’amas ch’amas utjkiti jan ukasti Allah tuqikiw utji.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Voz ukax mä juk’a pachanakanwa",
+  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
+  "audioVoiceSudais": "Male (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibración ukax mä jach’a uñacht’äwiwa",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration required. Rotate device in figure-8.",
   "dailyVerse": "Sapa uru Versículo",
+  "dailyVerseUnavailableTitle": "Sapa uru jiskʼa tʼaqax janiw utjkiti",
+  "dailyVerseUnavailableBody": "Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.",
   "todaysIbadah": "Jichhürunakanx Ibadah",
   "quickAccess": "Jank’aki Uñt’ayañataki",
   "assistant": "Asistinti",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Verificado duas ukax janiw jichhakamax utjkiti",
+  "duaUnavailableBody": "Verificado diario duas ukax janiw aka dispositivo ukarux sincronizadokiti. Qhixu qhixu phunchhawimp chikt’atäñapawa, jan chiqapar uñjat fallback ukat sipanx duas fuente ukar apkatañataki.",
+  "duaCategoryQuranic": "Quran ukax dua",
+  "duaCategoryMorningEvening": "Alwa & Jayp’u",
+  "duaCategoryTasbih": "Tasbih ukax mä juk’a pachanakanwa",
+  "duaCategoryProtection": "Jark’aqaña",
+  "duaCategoryBeginning": "Qalltawinaka",
+  "duaCategorySleep": "Ikiña",
+  "duaCategoryFoodDrink": "Manq’añanaka & Umañanaka",
+  "duaCategoryForgiveness": "Perdonaña",
+  "duaCategoryHome": "Uta",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Educación Islámica ukax mä jach’a yatiqañ utawa",
   "sukunAudioTitle": "Sukun Ukax mä jach’a uñacht’äwiwa",
   "hadithCollections": "Hadith ukax mä juk’a pachanakanwa",
+  "hadithSourcePending": "Chiqapa phuqhata phuqhawi suyt’ata",
+  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
+  "hadithUnavailableBody": "This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.",
   "paywallUnlockAll": "Ajay tuqin saräwimatakix taqi lurawinakat jist’arañamawa",
+  "premiumProductUnavailable": "Premium ukax janiw jichhax utjkiti. Mä juk’a pachatxa mayampi yant’apxañani.",
+  "premiumPurchaseFailed": "Alañax janiw tukuyañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
   "paywallFeature1Title": "Yanapt’ir Neural ukax Plus",
   "paywallFeature1Desc": "Jan limitat AI-mp ch’amanchata Q&A",
   "paywallFeature2Title": "Jan limitado Offline ukampi",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} ukatakix {failed} jan walt’ayat surahs ukanakamp apkatañax tukuyatawa ({downloaded}/{total} apkatatawa).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Deleted offline files for {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Red ukan pantjasiwipa. Ukhamaraki, mayampi yant’apxañani.",
+  "placesLocationRequiredTitle": "Kawkhantix utjki ukax wakisiwa",
+  "placesLocationRequiredBody": "Nayraqatax mä chiqawj utt’ayañama ukhamat jak’ankir mezquitas, halal manq’añanaka, ukat islámica yatiqañ utanakax chiqaparu thaqhatäñapataki.",
+  "placesMapTilesUnavailableTitle": "Mapa tejas ukax janiw utjkiti",
+  "placesMapTilesUnavailableBody": "Mä chiqanchata mapa azulejo phuqhawix janiw aka lurañatakix wakicht’atäkiti. Jak’a chiqanakax waliw qhispiyat chiqat apkatasispa.",
+  "placesDataSourceUnavailableTitle": "Ukax datos jan utjki ukanak uñt’ayi",
+  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Jan uñt’at Suti",
   "islamicPlaceFallback": "Lugar Islámico ukax mä jach’a uñacht’äwiwa",
-  "prayerNotificationTitle": "{prayerName} ukan pachapa.",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "{prayerName} mayiñ pachaw purini.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Verificado duas ukax janiw jichhakamax utjkiti",
-  "duaUnavailableBody": "Verificado diario duas ukax janiw aka dispositivo ukarux sincronizadokiti. Qhixu qhixu phunchhawimp chikt’atäñapawa, jan chiqapar uñjat fallback ukat sipanx duas fuente ukar apkatañataki.",
-  "duaCategoryQuranic": "Quran ukax dua",
-  "duaCategoryMorningEvening": "Alwa & Jayp’u",
-  "duaCategoryTasbih": "Tasbih ukax mä juk’a pachanakanwa",
-  "duaCategoryProtection": "Jark’aqaña",
-  "duaCategoryBeginning": "Qalltawinaka",
-  "duaCategorySleep": "Ikiña",
-  "duaCategoryFoodDrink": "Manq’añanaka & Umañanaka",
-  "duaCategoryForgiveness": "Perdonaña",
-  "duaCategoryHome": "Uta",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Chiqapa phuqhata phuqhawi suyt’ata",
-  "hadithUnavailableTitle": "Verified hadith collections are not available yet",
-  "hadithUnavailableBody": "This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.",
-  "appErrorOccurred": "Mä pantjasiwiw utjawayi",
-  "appUnknownError": "Jan uñt’at pantjasiwi",
-  "qiblaCompassErrorDetails": "Brújula ukan pantjasiwipa: {error} .",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "¡Tukuyatäxiwa! MashAllah ukax mä juk’a pachanakanwa",
-  "zikrMeaningSubhanAllah": "Allah ukax taqi pantjasiwinakat sipanx juk’amp jach’awa.",
-  "zikrMeaningAlhamdulillah": "Taqi jach’añchäwix Allah ukankiwa.",
-  "zikrMeaningAllahuAkbar": "Allah ukax Jach’akiwa.",
-  "zikrMeaningLaIlahaIllallah": "Janiw kuna diosas utjkiti, jan ukasti Allah ukaw utji.",
-  "zikrMeaningAstaghfirullah": "Nayax Allahan pampachäwip thaqhaskta.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Janiw kuna ch’amas ch’amas utjkiti jan ukasti Allah tuqikiw utji.",
   "asmaMeaning1": "Uka suma jaqejja",
   "asmaMeaning2": "Khuyapayasir jaqixa",
   "asmaMeaning3": "Rey / Wiñay Tatitu",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Wiñay Jaqi",
   "asmaMeaning97": "Uka Herencia katuqirixa",
   "asmaMeaning98": "Taqi kunat sipansa chiqapar uñjir guia",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "yaqhipanakax akham sasaw mayipxi: ‘Tatitu, akapachan ukhamarak qhipa urunakan askinak churapxita, ukat Nina t’aqhisiñat jark’aqapxita’ sasa.",
-  "duaMeaning2": "Diosax janiw khiti almarus juk’amp q’ipt’kiti: sapa mayniw kuna askinaktï lurawayki uk jikxati, ukat jan walinakaparuw t’aqhisi- ‘ Tatitu, armasxañäni jan ukax pantjasiñäni ukhax jan juchar irpkistati. Tatitu, jan q'ipipxamti, kunjamtï nayra jaqinakarux q'ipt'apkta ukhama. Tatay, jan ch'amanïñasat sipansa juk'amp q'ipt'apxistati. Perdonapxita, pampachapxita, khuyapt'ayapxita. Jumaw jiwasan Arxatirisätaxa, ukhamax jan iyawsirinakar saykatañ yanaptʼapxita’ sasa.",
-  "duaMeaning3": "‘Tatitusa, jan chuymanakajajj mayjtʼaypanti, Jumajj irpapkista uka qhepatjja. Khuyapayasiñam churapxita: Jumaw Sapa kuti churirïtaxa.",
-  "duaMeaning4": "Tatay, nayampi wawanakajampix mayiskakipxañajataki —sasa. Tatitusa, mayitax katuqapxam.",
-  "duaMeaning5": "ukatsti altʼat chuymampiw chʼiwipar jiskʼachañama, ukat akham sañamawa: ‘Tatay, jupanakat khuyaptʼayasim, kunjamtï jiskʼäkayäta ukhajj nayar uñjapkitäna ukhama’ sasa.",
-  "duaMeaning6": "Diosax jach'añchatäpan, khititix chiqpachapuni apnaqki uka. [Profeta], janïr qhanañchäwix taqpach tukuykipanx janiw jank’ak arsuñamäkiti jan ukasti akham sañamawa: ‘¡Tata, yatiñan jilxattayata!’ sasa.",
-  "duaMeaning7": "[Profeta] sañamawa: ‘Tata, pampacham ukat khuyapt’ayasim: Jumaw taqit sipansa juk’amp khuyapt’ayasiri’.",
-  "duaMeaning8": "‘Tatitu, chachasa jan ukajj warmisampi, wawanakasampi kusisiyapjjeta’ sasin mayipki ukanaka. Khitinakatix Jumar uñt’apki ukanakatakix suma uñacht’äwinak lurapxita’.",
-  "islamicNewYear": "Islámico Machaq Mara",
-  "mawlidAnNabi": "Mawlid ukat Nabi",
-  "specialDayDateRamadanStart": "1 Ramadán uru",
-  "specialDayDateLaylatAlQadr": "27 Ramadán uru",
-  "specialDayDateEidAlFitr": "1 Shawwal ukat juk’ampinaka",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah ukat juk’ampinaka",
-  "specialDayDateIslamicNewYear": "1 Muharram ukat juk’ampinaka",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal sat chachan sarnaqäwipa",
-  "refreshAction": "Refresco luraña",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Ukax tafsir...",
-  "tafsirSourceLabel": "Tafsir ukax mä jamuqawa",
-  "tafsirNoSurahFound": "Aka surah ukatakix janiw tafsir jikxataskiti.",
-  "tafsirNoAyahFound": "Janiw tafsir ukax ayah {ayah} ukatakix jikxataskiti.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir ukax janiw cargañjamäkänti.",
-  "tafsirNoTextForAyah": "Janiw tafsir qillqatax aka ayah ukatakix utjkiti.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tafsir phuqhawix HTTP {statusCode} pantjasiw kutt’ayawayi.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Ajllit tafsir phunchhawix janiw kuna qillqt’atanakas kutt’ayawaykiti.",
-  "premiumProductUnavailable": "Premium ukax janiw jichhax utjkiti. Mä juk’a pachatxa mayampi yant’apxañani.",
-  "premiumPurchaseFailed": "Alañax janiw tukuyañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Islámica Way of Light ukax mä jach’a thakhiwa",
-  "downloadPartiallyFinishedForReciter": "{reciter} ukatakix {failed} jan walt’ayat surahs ukanakamp apkatañax tukuyatawa ({downloaded}/{total} apkatatawa).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Kawkhantix utjki ukax wakisiwa",
-  "placesLocationRequiredBody": "Nayraqatax mä chiqawj utt’ayañama ukhamat jak’ankir mezquitas, halal manq’añanaka, ukat islámica yatiqañ utanakax chiqaparu thaqhatäñapataki.",
-  "placesMapTilesUnavailableTitle": "Mapa tejas ukax janiw utjkiti",
-  "placesMapTilesUnavailableBody": "Mä chiqanchata mapa azulejo phuqhawix janiw aka lurañatakix wakicht’atäkiti. Jak’a chiqanakax waliw qhispiyat chiqat apkatasispa.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Male (Abdul Basit)",
-  "audioVoiceSudais": "Male (Sudais)",
-  "qiblaSensorUnavailable": "Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.",
-  "adhanNotificationChannelName": "Adhan Yatiyawinaka",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
-  "quranLoadFailed": "Quran ukax janiw cargañjamäkänti. Ukhamaraki, mayampi yant’apxañani.",
-  "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.",
-  "qiblaLocationRequiredTitle": "Qibla markatakix kawkhantix utjki ukax wakisiwa",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Ukax datos jan utjki ukanak uñt’ayi",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
-  "tafsirCacheUnavailable": "Verificado tafsir ukax janiw offline ukankiti. Mä fuente tafsir datos conjunto ukar sincronización janïr uñakipt’kasa."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

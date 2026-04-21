@@ -1,6 +1,7 @@
 {
   "@@locale": "ny",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Njira Yachisilamu Yowala",
   "home": "Kunyumba",
   "quran": "Korani",
   "qibla": "Chibela",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Nthawi ya {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Yakwana nthawi yopemphera {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Kusunga",
   "clearCache": "Chotsani Cache",
   "cacheClearedSuccess": "Cache yachotsedwa bwino",
@@ -34,6 +51,7 @@
   "currentLocation": "Malo Apano (GPS)",
   "locationServiceDisabled": "Ntchito zamalo ndizozimitsidwa.",
   "locationPermissionDenied": "Chilolezo cha malo chaletsedwa.",
+  "locationDetectionFailed": "Sitinathe kuzindikira komwe muli. Chonde sankhani mzinda pamanja kapena yesaninso.",
   "citiesCount": "{count} mizinda",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Palibe zotsatira zomwe zapezeka",
   "loading": "Tikutsegula...",
   "error": "Cholakwika",
+  "appErrorOccurred": "Zalakwika",
+  "appUnknownError": "Cholakwika chosadziwika",
+  "quranLoadFailed": "Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso.",
   "retry": "Yesaninso",
+  "refreshAction": "Tsitsaninso",
   "cancel": "Letsani",
   "save": "Sungani",
   "delete": "Chotsani",
@@ -57,17 +79,78 @@
   "yes": "Inde",
   "no": "Ayi",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Tsamba",
   "reading": "Kuwerenga",
   "recitation": "Kubwereza",
   "translation": "Kumasulira",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tikutsegula tafsir...",
+  "tafsirSourceLabel": "Gwero la Tafsir",
+  "tafsirNoSurahFound": "Sura iyi sinapezeke tafsir.",
+  "tafsirNoAyahFound": "Palibe tafsir yomwe yapezeka ya ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir sinathe kuikidwa.",
+  "tafsirNoTextForAyah": "Palibe mawu a tafsir a ayah iyi.",
+  "tafsirDownloadingProgress": "Kutsitsa tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Kutsegula tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Gwero la Tafsir labweza cholakwika cha HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Magwero osankhidwa a tafsir sanabweze chilichonse.",
+  "tafsirCacheUnavailable": "Tafsir yotsimikizika sinapezekebe pa intaneti. Gwirizanitsani deta ya tafsir yochokera musanayambe kusakatula.",
   "bookmarks": "Zosungira",
   "addBookmark": "Onjezani Bookmark",
   "removeBookmark": "Chotsani Bookmark",
   "lastRead": "Kuwerenga Komaliza",
   "dailyZikr": "Zikr tsiku lililonse",
+  "duaMeaning1": "ena amapemphera kuti: ‘Mbuye wathu, tipatseni zabwino padziko lapansi ndi tsiku lomaliza, ndipo titetezeni ku chilango cha moto.",
+  "duaMeaning2": "Mulungu sausenzetsa mzimu uliwonse Kuposa umene ungapirire. Aliyense amapeza zabwino zimene wachita, ndipo amakumana ndi zoipa zake, “Ambuye, musatipondereze tikaiwala kapena kulakwa. Ambuye, Musatisenze mtolo monga mudawalemetsa omwe adalipo patsogolo pathu. Ambuye, musatisenzetse ife ndi mphamvu zoposa zimene tili nazo. Tikhululukireni, tikhululukireni, ndipo tichitireni chifundo. Inu ndinu Mtetezi wathu, choncho tithandizeni kwa osakhulupirira.",
+  "duaMeaning3": "‘Mbuye wathu, musalole kuti mitima yathu Ipotoke pambuyo potitsogolera. Tipatseni chifundo Chanu: Inu ndinu Wopereka nthawi zonse.",
+  "duaMeaning4": "Ambuye ndipatseni ine ndi ana anga kuti tisunge mapemphero. Ambuye wathu, landirani pempho langa.",
+  "duaMeaning5": "ndipo tsitsani mapiko anu modzichepetsa kwa iwo mwachifundo ndi kunena, ‘Ambuye, achitireni chifundo monga momwe anandisamalira ine pamene ndinali wamng’ono.",
+  "duaMeaning6": "watukuka Mulungu Yemwe ali wolamuliradi. [Mneneri], musamafulumire kunena chivumbulutso chisanakwaniritsidwe koma nenani, Ambuye, ndiwonjezereni kudziwa!",
+  "duaMeaning7": "Nena [Mneneri]: “Ambuye, khululukani ndipo chitirani chifundo;",
+  "duaMeaning8": "amene amapemphera kuti: ‘Mbuye wathu, tisangalatseni mwa akazi athu ndi ana athu. Tipangeni ife zitsanzo zabwino kwa iwo amene akukudziwani Inu”.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Usiku wa Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Kusala kudya",
   "quranReading": "Kuwerenga Korani",
   "prayers": "Mapemphero",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Mtengo wa Dhikr",
   "weeklyProgress": "Kupita Patsogolo Kwamlungu",
   "monthlyProgress": "Kupita kwa Mwezi ndi Mwezi",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Chaka Chatsopano cha Chisilamu",
+  "mawlidAnNabi": "Maulid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Direction",
   "compass": "Kampasi",
@@ -108,6 +219,19 @@
   "north": "Kumpoto",
   "qiblaFound": "Qibla yapezeka!",
   "turnDevice": "Sinthani chipangizo chanu kuti chiyang'ane ndi Qibla",
+  "qiblaCompassErrorDetails": "Vuto la Kampasi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensa ya Compass sichikupezeka pachidachi.",
+  "qiblaLocationRequiredTitle": "Malo ofunikira ku Qibla",
+  "qiblaLocationRequiredBody": "Khazikitsani malo anu enieni musanagwiritse ntchito kampasi ya Qibla kuti kolowera kuwerengedwe molondola.",
+  "adhanNotificationChannelName": "Zidziwitso za Adhan",
+  "adhanNotificationChannelDescription": "Zidziwitso za nthawi ya mapemphero ndi mawu a adhan.",
   "notifications": "Zidziwitso",
   "prayerNotifications": "Zidziwitso za Pemphero",
   "enableNotifications": "Yambitsani Zidziwitso",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Chiwerengero cha zomwe mukufuna: {target}",
   "tapToCount": "Dinani kuti muwerenge",
+  "zikrCompletedMashAllah": "Zatha! MashaAllah",
+  "zikrMeaningSubhanAllah": "Allah ali Pamwambamwamba pa chilichonse chopanda ungwiro.",
+  "zikrMeaningAlhamdulillah": "Kuyamikidwa konse nkwa Mulungu.",
+  "zikrMeaningAllahuAkbar": "Allah ndi wamkulu.",
+  "zikrMeaningLaIlahaIllallah": "Palibe wopembedzedwa mwachoonadi koma Allah.",
+  "zikrMeaningAstaghfirullah": "Ndikupempha chikhululuko kwa Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Palibe mphamvu ndi mphamvu koma kudzera mwa Mulungu.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Voice",
+  "audioVoiceMisharyAlafasy": "Amuna (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Amuna (Abdul Basit)",
+  "audioVoiceSudais": "Amuna (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kusintha kwa Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration chofunika. Sinthani chipangizo mu chithunzi-8.",
   "dailyVerse": "Ndime yatsiku ndi tsiku",
+  "dailyVerseUnavailableTitle": "Ndime yatsiku ndi tsiku palibe",
+  "dailyVerseUnavailableBody": "Zomwe zatsimikizika zatsiku ndi tsiku sizinakhazikitsidwe kuti zikhale zomangidwa pano. Lumikizani ku mtambo kapena kulunzanitsa kache yotsimikizika musanasakatu.",
   "todaysIbadah": "Lero Ibadah",
   "quickAccess": "Kufikira Mwamsanga",
   "assistant": "Wothandizira",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ma dua otsimikizika sakupezeka pano",
+  "duaUnavailableBody": "Ma dua otsimikiziridwa tsiku ndi tsiku sanagwirizanitsidwe ku chipangizochi panobe. Lumikizani ku mtambo kuti mutsegule ma duas m'malo mobwerera komwe sikunatsimikizidwe.",
+  "duaCategoryQuranic": "Dua ya Quran",
+  "duaCategoryMorningEvening": "M'mawa ndi Madzulo",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Chitetezo",
+  "duaCategoryBeginning": "Zoyambira",
+  "duaCategorySleep": "Gona",
+  "duaCategoryFoodDrink": "Chakudya & Chakumwa",
+  "duaCategoryForgiveness": "Kukhululuka",
+  "duaCategoryHome": "Kunyumba",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Maphunziro achisilamu",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Zosonkhanitsa Hadith",
+  "hadithSourcePending": "Gwero lotsimikizika likudikirira",
+  "hadithUnavailableTitle": "Zopereka zotsimikizika za hadith sizinapezeke",
+  "hadithUnavailableBody": "Kumanga uku kumadalirabe chakudya cha hadith chosatsimikizika. Kusakatula kwa Hadith kumakhala kozimitsidwa mpaka dataset yochokera kulumikizidwa.",
   "paywallUnlockAll": "Tsegulani mbali zonse za ulendo wanu wauzimu",
+  "premiumProductUnavailable": "Chogulitsa chamtengo wapatali sichikupezeka pakali pano. Chonde yesaninso nthawi ina.",
+  "premiumPurchaseFailed": "Kugula sikunathe. Chonde yesaninso.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Q&A yoyendetsedwa ndi AI yopanda malire",
   "paywallFeature2Title": "Zopanda malire Zopanda intaneti",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Kutsitsa kwatha kwa {reciter} ndi {failed} ma surah omwe sanatheke ({downloaded}/{total} adatsitsidwa).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Fayilo ya {reciter} yachotsedwa.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Zolakwika pa netiweki. Chonde yesaninso.",
+  "placesLocationRequiredTitle": "Malo ofunikira",
+  "placesLocationRequiredBody": "Khazikitsani malo kaye kuti mizikiti yapafupi, chakudya cha halal, ndi masukulu achisilamu azifufuzidwa molondola.",
+  "placesMapTilesUnavailableTitle": "Matailosi amapu sakupezeka",
+  "placesMapTilesUnavailableBody": "Malo otsimikizika a matailosi amapu sanakhazikitsidwebe kuti apangidwe pano. Malo apafupi atha kutsegulabe kuchokera komwe mwasungidwa.",
+  "placesDataSourceUnavailableTitle": "Deta yamalo palibe",
+  "placesDataSourceUnavailableBody": "Malo otsimikizika omaliza sanakhazikitsidwe kuti apangidwe pano. Khazikitsani PLACES_OVERPASS_API_URL kukhala wovomerezeka kapena wopereka chithandizo musanayatse kusaka pafupi.",
   "unknownPlaceName": "Dzina Losadziwika",
   "islamicPlaceFallback": "Malo achisilamu",
-  "prayerNotificationTitle": "Nthawi ya {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Yakwana nthawi yopemphera {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ma dua otsimikizika sakupezeka pano",
-  "duaUnavailableBody": "Ma dua otsimikiziridwa tsiku ndi tsiku sanagwirizanitsidwe ku chipangizochi panobe. Lumikizani ku mtambo kuti mutsegule ma duas m'malo mobwerera komwe sikunatsimikizidwe.",
-  "duaCategoryQuranic": "Dua ya Quran",
-  "duaCategoryMorningEvening": "M'mawa ndi Madzulo",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Chitetezo",
-  "duaCategoryBeginning": "Zoyambira",
-  "duaCategorySleep": "Gona",
-  "duaCategoryFoodDrink": "Chakudya & Chakumwa",
-  "duaCategoryForgiveness": "Kukhululuka",
-  "duaCategoryHome": "Kunyumba",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Gwero lotsimikizika likudikirira",
-  "hadithUnavailableTitle": "Zopereka zotsimikizika za hadith sizinapezeke",
-  "hadithUnavailableBody": "Kumanga uku kumadalirabe chakudya cha hadith chosatsimikizika. Kusakatula kwa Hadith kumakhala kozimitsidwa mpaka dataset yochokera kulumikizidwa.",
-  "appErrorOccurred": "Zalakwika",
-  "appUnknownError": "Cholakwika chosadziwika",
-  "qiblaCompassErrorDetails": "Vuto la Kampasi: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Zatha! MashaAllah",
-  "zikrMeaningSubhanAllah": "Allah ali Pamwambamwamba pa chilichonse chopanda ungwiro.",
-  "zikrMeaningAlhamdulillah": "Kuyamikidwa konse nkwa Mulungu.",
-  "zikrMeaningAllahuAkbar": "Allah ndi wamkulu.",
-  "zikrMeaningLaIlahaIllallah": "Palibe wopembedzedwa mwachoonadi koma Allah.",
-  "zikrMeaningAstaghfirullah": "Ndikupempha chikhululuko kwa Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Palibe mphamvu ndi mphamvu koma kudzera mwa Mulungu.",
   "asmaMeaning1": "Wopindula",
   "asmaMeaning2": "Wachifundo",
   "asmaMeaning3": "Mfumu / Ambuye Wamuyaya",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Wosatha",
   "asmaMeaning97": "Wolowa",
   "asmaMeaning98": "Kalozera Wachilungamo",
-  "asmaMeaning99": "Wodwala",
-  "duaMeaning1": "ena amapemphera kuti: ‘Mbuye wathu, tipatseni zabwino padziko lapansi ndi tsiku lomaliza, ndipo titetezeni ku chilango cha moto.",
-  "duaMeaning2": "Mulungu sausenzetsa mzimu uliwonse Kuposa umene ungapirire. Aliyense amapeza zabwino zimene wachita, ndipo amakumana ndi zoipa zake, “Ambuye, musatipondereze tikaiwala kapena kulakwa. Ambuye, Musatisenze mtolo monga mudawalemetsa omwe adalipo patsogolo pathu. Ambuye, musatisenzetse ife ndi mphamvu zoposa zimene tili nazo. Tikhululukireni, tikhululukireni, ndipo tichitireni chifundo. Inu ndinu Mtetezi wathu, choncho tithandizeni kwa osakhulupirira.",
-  "duaMeaning3": "‘Mbuye wathu, musalole kuti mitima yathu Ipotoke pambuyo potitsogolera. Tipatseni chifundo Chanu: Inu ndinu Wopereka nthawi zonse.",
-  "duaMeaning4": "Ambuye ndipatseni ine ndi ana anga kuti tisunge mapemphero. Ambuye wathu, landirani pempho langa.",
-  "duaMeaning5": "ndipo tsitsani mapiko anu modzichepetsa kwa iwo mwachifundo ndi kunena, ‘Ambuye, achitireni chifundo monga momwe anandisamalira ine pamene ndinali wamng’ono.",
-  "duaMeaning6": "watukuka Mulungu Yemwe ali wolamuliradi. [Mneneri], musamafulumire kunena chivumbulutso chisanakwaniritsidwe koma nenani, Ambuye, ndiwonjezereni kudziwa!",
-  "duaMeaning7": "Nena [Mneneri]: “Ambuye, khululukani ndipo chitirani chifundo;",
-  "duaMeaning8": "amene amapemphera kuti: ‘Mbuye wathu, tisangalatseni mwa akazi athu ndi ana athu. Tipangeni ife zitsanzo zabwino kwa iwo amene akukudziwani Inu”.",
-  "islamicNewYear": "Chaka Chatsopano cha Chisilamu",
-  "mawlidAnNabi": "Maulid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Tsitsaninso",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Tikutsegula tafsir...",
-  "tafsirSourceLabel": "Gwero la Tafsir",
-  "tafsirNoSurahFound": "Sura iyi sinapezeke tafsir.",
-  "tafsirNoAyahFound": "Palibe tafsir yomwe yapezeka ya ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir sinathe kuikidwa.",
-  "tafsirNoTextForAyah": "Palibe mawu a tafsir a ayah iyi.",
-  "tafsirDownloadingProgress": "Kutsitsa tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Kutsegula tafsir {current}/{total}",
-  "tafsirApiStatusError": "Gwero la Tafsir labweza cholakwika cha HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Magwero osankhidwa a tafsir sanabweze chilichonse.",
-  "premiumProductUnavailable": "Chogulitsa chamtengo wapatali sichikupezeka pakali pano. Chonde yesaninso nthawi ina.",
-  "premiumPurchaseFailed": "Kugula sikunathe. Chonde yesaninso.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Njira Yachisilamu Yowala",
-  "downloadPartiallyFinishedForReciter": "Kutsitsa kwatha kwa {reciter} ndi {failed} ma surah omwe sanatheke ({downloaded}/{total} adatsitsidwa).",
-  "placesLocationRequiredTitle": "Malo ofunikira",
-  "placesLocationRequiredBody": "Khazikitsani malo kaye kuti mizikiti yapafupi, chakudya cha halal, ndi masukulu achisilamu azifufuzidwa molondola.",
-  "placesMapTilesUnavailableTitle": "Matailosi amapu sakupezeka",
-  "placesMapTilesUnavailableBody": "Malo otsimikizika a matailosi amapu sanakhazikitsidwebe kuti apangidwe pano. Malo apafupi atha kutsegulabe kuchokera komwe mwasungidwa.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Amuna (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Amuna (Abdul Basit)",
-  "audioVoiceSudais": "Amuna (Sudais)",
-  "qiblaSensorUnavailable": "Sensa ya Compass sichikupezeka pachidachi.",
-  "adhanNotificationChannelName": "Zidziwitso za Adhan",
-  "adhanNotificationChannelDescription": "Zidziwitso za nthawi ya mapemphero ndi mawu a adhan.",
-  "quranLoadFailed": "Zomwe zili mu Quran sizinathe kuyikidwa. Chonde yesaninso.",
-  "locationDetectionFailed": "Sitinathe kuzindikira komwe muli. Chonde sankhani mzinda pamanja kapena yesaninso.",
-  "qiblaLocationRequiredTitle": "Malo ofunikira ku Qibla",
-  "qiblaLocationRequiredBody": "Khazikitsani malo anu enieni musanagwiritse ntchito kampasi ya Qibla kuti kolowera kuwerengedwe molondola.",
-  "placesDataSourceUnavailableTitle": "Deta yamalo palibe",
-  "placesDataSourceUnavailableBody": "Malo otsimikizika omaliza sanakhazikitsidwe kuti apangidwe pano. Khazikitsani PLACES_OVERPASS_API_URL kukhala wovomerezeka kapena wopereka chithandizo musanayatse kusaka pafupi.",
-  "tafsirCacheUnavailable": "Tafsir yotsimikizika sinapezekebe pa intaneti. Gwirizanitsani deta ya tafsir yochokera musanayambe kusakatula."
+  "asmaMeaning99": "Wodwala"
 }

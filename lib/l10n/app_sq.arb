@@ -1,6 +1,7 @@
 {
   "@@locale": "sq",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Rruga Islame e Dritës",
   "home": "Shtëpi",
   "quran": "Kurani",
   "qibla": "Kibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Akshami",
   "isha": "Isha",
+  "prayerNotificationTitle": "Koha për {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Është koha për t'u lutur {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Të dhënat dhe ruajtja",
   "clearCache": "Pastro cache",
   "cacheClearedSuccess": "Cache u pastrua me sukses",
@@ -34,6 +51,7 @@
   "currentLocation": "Vendndodhja aktuale (GPS)",
   "locationServiceDisabled": "Shërbimi i vendndodhjes është i çaktivizuar.",
   "locationPermissionDenied": "Leja e vendndodhjes u refuzua.",
+  "locationDetectionFailed": "Vendndodhja juaj nuk mund të zbulohej. Ju lutemi zgjidhni një qytet manualisht ose provoni përsëri.",
   "citiesCount": "{count} qytete",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Nuk u gjet asnjë rezultat",
   "loading": "Po ngarkohet...",
   "error": "Gabim",
+  "appErrorOccurred": "Ndodhi një gabim",
+  "appUnknownError": "Gabim i panjohur",
+  "quranLoadFailed": "Përmbajtja e Kuranit nuk mund të ngarkohej. Ju lutemi provoni përsëri.",
   "retry": "Provo sërish",
+  "refreshAction": "Rifresko",
   "cancel": "Anulo",
   "save": "Ruaj",
   "delete": "Fshije",
@@ -57,17 +79,78 @@
   "yes": "po",
   "no": "Nr",
   "surah": "Surja",
+  "ayahLabel": "Ajet {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Faqe",
   "reading": "Leximi",
   "recitation": "Recitim",
   "translation": "Përkthimi",
   "tafsir": "Tefsir",
+  "tafsirLoading": "Po ngarkohet tefsiri...",
+  "tafsirSourceLabel": "Burimi i tefsirit",
+  "tafsirNoSurahFound": "Nuk u gjet asnjë tefsir për këtë sure.",
+  "tafsirNoAyahFound": "Nuk u gjet asnjë tefsir për ajetin {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tefsir nuk mund të ngarkohej.",
+  "tafsirNoTextForAyah": "Nuk ka tekst tefsir për këtë ajet.",
+  "tafsirDownloadingProgress": "Po shkarkon tefsirin {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Po ngarkohet tefsiri {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Burimi Tafsir ktheu një gabim HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Burimi i zgjedhur i tefsirit nuk ktheu asnjë hyrje.",
+  "tafsirCacheUnavailable": "Tefsir i verifikuar nuk ofrohet ende jashtë linje. Sinkronizoni një grup të dhënash tafsir me burim përpara se të shfletoni.",
   "bookmarks": "Faqerojtësit",
   "addBookmark": "Shto faqeshënues",
   "removeBookmark": "Hiq faqeshënuesin",
   "lastRead": "Leximi i fundit",
   "dailyZikr": "Zikri ditor",
+  "duaMeaning1": "të tjerët luten: \"Zoti ynë, na jep të mira në këtë botë dhe në botën tjetër dhe na ruaj nga dënimi i zjarrit\".",
+  "duaMeaning2": "Zoti nuk e ngarkon asnjë shpirt me më shumë sesa mund të përballojë: secili fiton çdo të mirë që ka bërë dhe vuan të këqijat e tij - \"Zot, mos na merr në detyrë nëse harrojmë ose gabojmë\". O Zot, mos na ngarko si i ngarkove ata që ishin para nesh. Zot, mos na ngarko me më shumë sesa kemi forcë për të përballuar. Na fal, na fal dhe na mëshiro. Ti je Mbrojtësi ynë, prandaj na ndihmo kundër mosbesimtarëve!”",
+  "duaMeaning3": "“Zoti ynë, mos i lër zemrat tona të devijojnë pasi na ke udhëzuar. Na jep mëshirën Tënde: Ti je Gjithë Dhuruesi.",
+  "duaMeaning4": "Zot, më dhëntë që unë dhe pasardhësit e mi ta mbajmë namazin. Zoti ynë, pranoje kërkesën time.",
+  "duaMeaning5": "dhe uli krahun tënd me përulësi ndaj tyre në mirësi dhe thuaj: \"Zot, ki mëshirë për ta, ashtu siç u kujdesën për mua kur isha i vogël\".",
+  "duaMeaning6": "i lartësuar qoftë Perëndia, ai që është me të vërtetë në kontroll. [Pejgamber], mos nxito të recitosh para se të përfundojë shpallja, por thuaj: \"Zot, më shto diturinë!\"",
+  "duaMeaning7": "Thuaj [Profetit]: \"Zot, fal dhe mëshiro: Ti je më i mëshirshmi nga të gjithë\".",
+  "duaMeaning8": "ata që luten: “Zoti ynë, na jep gëzim me bashkëshortet dhe pasardhësit tanë. Na bëj shembuj të mirë për ata që janë të vetëdijshëm për Ty”.",
   "morningZikr": "Zikri i mëngjesit",
   "eveningZikr": "Zikri i mbrëmjes",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "agjërimi",
   "quranReading": "Leximi i Kuranit",
   "prayers": "lutjet",
+  "prayerRemainingHoursMinutes": "{hours}orë {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Kont Dhikri",
   "weeklyProgress": "Përparimi javor",
   "monthlyProgress": "Progresi mujor",
@@ -101,6 +204,14 @@
   "ramadan": "Ramazani",
   "eidAlFitr": "Fitër Bajrami",
   "eidAlAdha": "Kurban Bajrami",
+  "islamicNewYear": "Viti i Ri Islamik",
+  "mawlidAnNabi": "Mevlid en-Nebi",
+  "specialDayDateRamadanStart": "1 Ramazan",
+  "specialDayDateLaylatAlQadr": "27 Ramazan",
+  "specialDayDateEidAlFitr": "1 Sheval",
+  "specialDayDateEidAlAdha": "10 Dhul Hixhe",
+  "specialDayDateIslamicNewYear": "1 Muharrem",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Evvel",
   "laylatAlQadr": "Nata e Kadrit",
   "qiblaDirection": "Drejtimi i Kiblës",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "Veriu",
   "qiblaFound": "Kibla u gjet!",
   "turnDevice": "Kthejeni pajisjen tuaj në drejtim të Kiblës",
+  "qiblaCompassErrorDetails": "Gabim busull: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sensori i busullës nuk ofrohet në këtë pajisje.",
+  "qiblaLocationRequiredTitle": "Vendndodhja e kërkuar për Kibla",
+  "qiblaLocationRequiredBody": "Vendosni vendndodhjen tuaj aktuale përpara se të përdorni busullën e Kiblës në mënyrë që drejtimi të mund të llogaritet me saktësi.",
+  "adhanNotificationChannelName": "Njoftimet e ezanit",
+  "adhanNotificationChannelDescription": "Alarmet për kohën e namazit me tingullin e ezanit.",
   "notifications": "Njoftimet",
   "prayerNotifications": "Njoftimet për lutjen",
   "enableNotifications": "Aktivizo Njoftimet",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Numri i synuar: {target}",
   "tapToCount": "Trokit për të numëruar",
+  "zikrCompletedMashAllah": "E përfunduar! MashAllah",
+  "zikrMeaningSubhanAllah": "Allahu është shumë mbi çdo papërsosmëri.",
+  "zikrMeaningAlhamdulillah": "I gjithë lavdërimi i takon Allahut.",
+  "zikrMeaningAllahuAkbar": "Allahu është më i madhi.",
+  "zikrMeaningLaIlahaIllallah": "Nuk ka zot përveç Allahut.",
+  "zikrMeaningAstaghfirullah": "Kërkoj falje nga Allahu.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nuk ka fuqi dhe fuqi përveçse nëpërmjet Allahut.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Zëri audio",
+  "audioVoiceMisharyAlafasy": "Mashkull (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Mashkull (Abdul Basit)",
+  "audioVoiceSudais": "Mashkull (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kalibrimi i Kiblës",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kërkohet kalibrimi. Rrotulloni pajisjen në figurën-8.",
   "dailyVerse": "Vargu i përditshëm",
+  "dailyVerseUnavailableTitle": "Vargu ditor i padisponueshëm",
+  "dailyVerseUnavailableBody": "Përmbajtja e verifikuar ditore e vargjeve nuk është konfiguruar ende për këtë ndërtim. Lidhu me burimin cloud ose sinkronizoni një memorie të verifikuar përpara shfletimit.",
   "todaysIbadah": "Ibadeti i sotëm",
   "quickAccess": "Qasje e Shpejtë",
   "assistant": "Asistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duat e verifikuara nuk ofrohen ende",
+  "duaUnavailableBody": "Duat e verifikuara ditore nuk janë sinkronizuar ende me këtë pajisje. Lidhu me burimin cloud për të ngarkuar duatë me burim në vend të një kthimi të paverifikuar.",
+  "duaCategoryQuranic": "dua Kur'anore",
+  "duaCategoryMorningEvening": "Mëngjes & Mbrëmje",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Mbrojtja",
+  "duaCategoryBeginning": "Fillimet",
+  "duaCategorySleep": "Flini",
+  "duaCategoryFoodDrink": "Ushqim & Pije",
+  "duaCategoryForgiveness": "falje",
+  "duaCategoryHome": "Shtëpi",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Edukata Islame",
   "sukunAudioTitle": "Tinguj Sukun",
   "hadithCollections": "Koleksionet e Haditheve",
+  "hadithSourcePending": "Burimi i verifikuar në pritje",
+  "hadithUnavailableTitle": "Koleksionet e verifikuara të haditheve nuk janë ende të disponueshme",
+  "hadithUnavailableBody": "Ky ndërtim ende varet nga një burim i jashtëm i hadithit të paverifikuar. Shfletimi i hadithit qëndron i çaktivizuar derisa të sinkronizohet një grup të dhënash me burim.",
   "paywallUnlockAll": "Zhbllokoni të gjitha veçoritë për udhëtimin tuaj shpirtëror",
+  "premiumProductUnavailable": "Produkti premium nuk është i disponueshëm për momentin. Ju lutemi provoni përsëri më vonë.",
+  "premiumPurchaseFailed": "Blerja nuk mund të përfundonte. Ju lutemi provoni përsëri.",
   "paywallFeature1Title": "Asistent Neural Plus",
   "paywallFeature1Desc": "Pyetje dhe përgjigje të pakufizuara me AI",
   "paywallFeature2Title": "Pafund offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Shkarkimi përfundoi për {reciter} me {failed} sure të dështuara ({downloaded}/{total} të shkarkuara).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Skedarët jashtë linje u fshinë për {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Gabim rrjeti. Ju lutemi provoni përsëri.",
+  "placesLocationRequiredTitle": "Kërkohet vendndodhja",
+  "placesLocationRequiredBody": "Vendosni fillimisht një vendndodhje në mënyrë që xhamitë e afërta, ushqimi hallall dhe shkollat islame të mund të kërkohen me saktësi.",
+  "placesMapTilesUnavailableTitle": "Pllakat e hartës nuk ofrohen",
+  "placesMapTilesUnavailableBody": "Një burim i verifikuar i pllakës së hartës nuk është konfiguruar ende për këtë ndërtim. Vendet në afërsi mund të ngarkohen ende nga vendndodhja jote e ruajtur.",
+  "placesDataSourceUnavailableTitle": "Të dhënat e vendeve të padisponueshme",
+  "placesDataSourceUnavailableBody": "Një pikë fundore e të dhënave të verifikuara të vendeve nuk është konfiguruar ende për këtë ndërtim. Cakto PLACES_OVERPASS_API_URL te një përfaqësues ose ofrues i miratuar përpara se të aktivizosh kërkimin në afërsi.",
   "unknownPlaceName": "Emër i panjohur",
   "islamicPlaceFallback": "Vendi Islamik",
-  "prayerNotificationTitle": "Koha për {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Është koha për t'u lutur {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duat e verifikuara nuk ofrohen ende",
-  "duaUnavailableBody": "Duat e verifikuara ditore nuk janë sinkronizuar ende me këtë pajisje. Lidhu me burimin cloud për të ngarkuar duatë me burim në vend të një kthimi të paverifikuar.",
-  "duaCategoryQuranic": "dua Kur'anore",
-  "duaCategoryMorningEvening": "Mëngjes & Mbrëmje",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Mbrojtja",
-  "duaCategoryBeginning": "Fillimet",
-  "duaCategorySleep": "Flini",
-  "duaCategoryFoodDrink": "Ushqim & Pije",
-  "duaCategoryForgiveness": "falje",
-  "duaCategoryHome": "Shtëpi",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Burimi i verifikuar në pritje",
-  "hadithUnavailableTitle": "Koleksionet e verifikuara të haditheve nuk janë ende të disponueshme",
-  "hadithUnavailableBody": "Ky ndërtim ende varet nga një burim i jashtëm i hadithit të paverifikuar. Shfletimi i hadithit qëndron i çaktivizuar derisa të sinkronizohet një grup të dhënash me burim.",
-  "appErrorOccurred": "Ndodhi një gabim",
-  "appUnknownError": "Gabim i panjohur",
-  "qiblaCompassErrorDetails": "Gabim busull: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "E përfunduar! MashAllah",
-  "zikrMeaningSubhanAllah": "Allahu është shumë mbi çdo papërsosmëri.",
-  "zikrMeaningAlhamdulillah": "I gjithë lavdërimi i takon Allahut.",
-  "zikrMeaningAllahuAkbar": "Allahu është më i madhi.",
-  "zikrMeaningLaIlahaIllallah": "Nuk ka zot përveç Allahut.",
-  "zikrMeaningAstaghfirullah": "Kërkoj falje nga Allahu.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Nuk ka fuqi dhe fuqi përveçse nëpërmjet Allahut.",
   "asmaMeaning1": "Beneficenti",
   "asmaMeaning2": "I Mëshirshmi",
   "asmaMeaning3": "Mbreti / Zoti i Përjetshëm",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "I Përjetshmi",
   "asmaMeaning97": "Trashëgimtari",
   "asmaMeaning98": "Udhëzuesi më i drejtë",
-  "asmaMeaning99": "Pacienti Një",
-  "duaMeaning1": "të tjerët luten: \"Zoti ynë, na jep të mira në këtë botë dhe në botën tjetër dhe na ruaj nga dënimi i zjarrit\".",
-  "duaMeaning2": "Zoti nuk e ngarkon asnjë shpirt me më shumë sesa mund të përballojë: secili fiton çdo të mirë që ka bërë dhe vuan të këqijat e tij - \"Zot, mos na merr në detyrë nëse harrojmë ose gabojmë\". O Zot, mos na ngarko si i ngarkove ata që ishin para nesh. Zot, mos na ngarko me më shumë sesa kemi forcë për të përballuar. Na fal, na fal dhe na mëshiro. Ti je Mbrojtësi ynë, prandaj na ndihmo kundër mosbesimtarëve!”",
-  "duaMeaning3": "“Zoti ynë, mos i lër zemrat tona të devijojnë pasi na ke udhëzuar. Na jep mëshirën Tënde: Ti je Gjithë Dhuruesi.",
-  "duaMeaning4": "Zot, më dhëntë që unë dhe pasardhësit e mi ta mbajmë namazin. Zoti ynë, pranoje kërkesën time.",
-  "duaMeaning5": "dhe uli krahun tënd me përulësi ndaj tyre në mirësi dhe thuaj: \"Zot, ki mëshirë për ta, ashtu siç u kujdesën për mua kur isha i vogël\".",
-  "duaMeaning6": "i lartësuar qoftë Perëndia, ai që është me të vërtetë në kontroll. [Pejgamber], mos nxito të recitosh para se të përfundojë shpallja, por thuaj: \"Zot, më shto diturinë!\"",
-  "duaMeaning7": "Thuaj [Profetit]: \"Zot, fal dhe mëshiro: Ti je më i mëshirshmi nga të gjithë\".",
-  "duaMeaning8": "ata që luten: “Zoti ynë, na jep gëzim me bashkëshortet dhe pasardhësit tanë. Na bëj shembuj të mirë për ata që janë të vetëdijshëm për Ty”.",
-  "islamicNewYear": "Viti i Ri Islamik",
-  "mawlidAnNabi": "Mevlid en-Nebi",
-  "specialDayDateRamadanStart": "1 Ramazan",
-  "specialDayDateLaylatAlQadr": "27 Ramazan",
-  "specialDayDateEidAlFitr": "1 Sheval",
-  "specialDayDateEidAlAdha": "10 Dhul Hixhe",
-  "specialDayDateIslamicNewYear": "1 Muharrem",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Evvel",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Rifresko",
-  "ayahLabel": "Ajet {ayah}",
-  "tafsirLoading": "Po ngarkohet tefsiri...",
-  "tafsirSourceLabel": "Burimi i tefsirit",
-  "tafsirNoSurahFound": "Nuk u gjet asnjë tefsir për këtë sure.",
-  "tafsirNoAyahFound": "Nuk u gjet asnjë tefsir për ajetin {ayah}.",
-  "tafsirLoadFailed": "Tefsir nuk mund të ngarkohej.",
-  "tafsirNoTextForAyah": "Nuk ka tekst tefsir për këtë ajet.",
-  "tafsirDownloadingProgress": "Po shkarkon tefsirin {current}/{total}",
-  "tafsirLoadingProgress": "Po ngarkohet tefsiri {current}/{total}",
-  "tafsirApiStatusError": "Burimi Tafsir ktheu një gabim HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Burimi i zgjedhur i tefsirit nuk ktheu asnjë hyrje.",
-  "premiumProductUnavailable": "Produkti premium nuk është i disponueshëm për momentin. Ju lutemi provoni përsëri më vonë.",
-  "premiumPurchaseFailed": "Blerja nuk mund të përfundonte. Ju lutemi provoni përsëri.",
-  "prayerRemainingHoursMinutes": "{hours}orë {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Rruga Islame e Dritës",
-  "downloadPartiallyFinishedForReciter": "Shkarkimi përfundoi për {reciter} me {failed} sure të dështuara ({downloaded}/{total} të shkarkuara).",
-  "placesLocationRequiredTitle": "Kërkohet vendndodhja",
-  "placesLocationRequiredBody": "Vendosni fillimisht një vendndodhje në mënyrë që xhamitë e afërta, ushqimi hallall dhe shkollat islame të mund të kërkohen me saktësi.",
-  "placesMapTilesUnavailableTitle": "Pllakat e hartës nuk ofrohen",
-  "placesMapTilesUnavailableBody": "Një burim i verifikuar i pllakës së hartës nuk është konfiguruar ende për këtë ndërtim. Vendet në afërsi mund të ngarkohen ende nga vendndodhja jote e ruajtur.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Mashkull (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Mashkull (Abdul Basit)",
-  "audioVoiceSudais": "Mashkull (Sudais)",
-  "qiblaSensorUnavailable": "Sensori i busullës nuk ofrohet në këtë pajisje.",
-  "adhanNotificationChannelName": "Njoftimet e ezanit",
-  "adhanNotificationChannelDescription": "Alarmet për kohën e namazit me tingullin e ezanit.",
-  "quranLoadFailed": "Përmbajtja e Kuranit nuk mund të ngarkohej. Ju lutemi provoni përsëri.",
-  "locationDetectionFailed": "Vendndodhja juaj nuk mund të zbulohej. Ju lutemi zgjidhni një qytet manualisht ose provoni përsëri.",
-  "qiblaLocationRequiredTitle": "Vendndodhja e kërkuar për Kibla",
-  "qiblaLocationRequiredBody": "Vendosni vendndodhjen tuaj aktuale përpara se të përdorni busullën e Kiblës në mënyrë që drejtimi të mund të llogaritet me saktësi.",
-  "placesDataSourceUnavailableTitle": "Të dhënat e vendeve të padisponueshme",
-  "placesDataSourceUnavailableBody": "Një pikë fundore e të dhënave të verifikuara të vendeve nuk është konfiguruar ende për këtë ndërtim. Cakto PLACES_OVERPASS_API_URL te një përfaqësues ose ofrues i miratuar përpara se të aktivizosh kërkimin në afërsi.",
-  "tafsirCacheUnavailable": "Tefsir i verifikuar nuk ofrohet ende jashtë linje. Sinkronizoni një grup të dhënash tafsir me burim përpara se të shfletoni."
+  "asmaMeaning99": "Pacienti Një"
 }

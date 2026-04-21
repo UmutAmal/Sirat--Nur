@@ -955,6 +955,13 @@ class AppLocalizationsLv extends AppLocalizations {
   String get dailyVerse => 'Dienas dzejolis';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ikdienas dzejolis nav pieejams';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verificēts ikdienas dzejoļu saturs šai versijai vēl nav konfigurēts. Pirms pārlūkošanas izveidojiet savienojumu ar mākoņa avotu vai sinhronizējiet pārbaudītu kešatmiņu.';
+
+  @override
   String get todaysIbadah => 'Šodienas Ibada';
 
   @override

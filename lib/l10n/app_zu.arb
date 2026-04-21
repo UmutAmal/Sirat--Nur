@@ -1,6 +1,7 @@
 {
   "@@locale": "zu",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Indlela YamaSulumane Yokukhanya",
   "home": "Ikhaya",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Isikhathi se-{prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Isikhathi sokuthandaza {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Idatha Nesitoreji",
   "clearCache": "Sula inqolobane",
   "cacheClearedSuccess": "Inqolobane isulwe ngempumelelo",
@@ -34,6 +51,7 @@
   "currentLocation": "Indawo yamanje (GPS)",
   "locationServiceDisabled": "Isevisi yendawo ivaliwe.",
   "locationPermissionDenied": "Imvume yendawo inqatshiwe.",
+  "locationDetectionFailed": "Ayikwazanga ukubona indawo yakho. Sicela ukhethe idolobha mathupha noma uzame futhi.",
   "citiesCount": "{count} amadolobha",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Ayikho imiphumela etholiwe",
   "loading": "Iyalayisha...",
   "error": "Iphutha",
+  "appErrorOccurred": "Kwenzeke iphutha",
+  "appUnknownError": "Iphutha elingaziwa",
+  "quranLoadFailed": "Okuqukethwe kwe-Quran akukwazanga ukulayishwa. Sicela uzame futhi.",
   "retry": "Zama futhi",
+  "refreshAction": "Vuselela",
   "cancel": "Khansela",
   "save": "Londoloza",
   "delete": "Susa",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Cha",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Ikhasi",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Ilayisha i-tafsir...",
+  "tafsirSourceLabel": "Umthombo we-Tafsir",
+  "tafsirNoSurahFound": "Ayikho i-tafsir etholakele yale surah.",
+  "tafsirNoAyahFound": "Ayikho i-tafsir etholakele ye-ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "I-Tafsir ayikwazanga ukulayishwa.",
+  "tafsirNoTextForAyah": "Awukho umbhalo we-tafsir wale ayah.",
+  "tafsirDownloadingProgress": "Ilanda i-tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Ilayisha i-tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Umthombo we-Tafsir ubuyisele iphutha le-HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Umthombo we-tafsir okhethiwe awuzange ubuyise okufakiwe.",
+  "tafsirCacheUnavailable": "I-tafsir eqinisekisiwe ayitholakali ungaxhunyiwe ku-inthanethi okwamanje. Vumelanisa isethi yedatha ye-tafsir etholakala kumthombo ngaphambi kokuphequlula.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Engeza Ibhukhimakhi",
   "removeBookmark": "Susa Ibhukhimakhi",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "abanye bayakhuleka bethi, ‘Nkosi yethu, siphe okuhle emhlabeni nakwelizayo, futhi usivikele esijezisweni soMlilo.",
+  "duaMeaning2": "UNkulunkulu akawuthwali umphefumulo ngokungaphezu kwalokho ongakuthwala: yilowo nalowo uzuza noma yikuphi okuhle akwenzile, futhi ubhekana nobubi bawo- ‘Nkosi, ungasithwesi icala uma sikhohlwa noma senza amaphutha. Nkosi, ungasithwali njengoba Wathwalisa ababephambi kwethu. Nkosi, ungasithwali ngokungaphezu kwamandla ethu. Sithethelele, sithethelele, futhi ube nomusa kithi. Wena unguMvikeli wethu, ngakho-ke sisize ngokumelene nabangakholwa.",
+  "duaMeaning3": "‘Nkosi yethu, ungazivumeli izinhliziyo zethu zichezuke emva kokuthi Usiholile. Siphe umusa Wakho: UnguMuphi Waphakade.",
+  "duaMeaning4": "Nkosi, ngiphe ukuba mina nenzalo yami sigcine umkhuleko. Nkosi yethu, yamukela isicelo sami.",
+  "duaMeaning5": "bese wehlisela uphiko lwakho ngokuzithoba kubo ngomusa uthi, ‘Nkosi, bahawukele, njengoba nje babenginakekela ngisemncane.’",
+  "duaMeaning6": "makaphakanyiswe uNkulunkulu, ophethe ngempela. [Mprofethi], ungajahi ukusho ngaphambi kokuba isambulo sipheleliswe kodwa uthi: ‘Nkosi, ngandise olwazini!",
+  "duaMeaning7": "Yithi [uMprofethi]: ‘Nkosi, thethelela futhi ube nomusa: Wena unesihe kunazo zonke.’",
+  "duaMeaning8": "labo abakhuleka bethi, ‘Nkosi yethu, siphe injabulo kwabashadile bethu nenzalo yethu. Senze sibe yizibonelo ezinhle kulabo abakwaziyo’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Ukuzila ukudla",
   "quranReading": "Ukufundwa kwe-Quran",
   "prayers": "Imithandazo",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Inqubekelaphambili Yamasonto onke",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Unyaka Omusha WamaSulumane",
+  "mawlidAnNabi": "UMawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Direction",
   "compass": "Ikhampasi",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "I-Qibla itholakele!",
   "turnDevice": "Vula idivayisi yakho ibhekane ne-Qibla",
+  "qiblaCompassErrorDetails": "Iphutha lekhampasi: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Inzwa yekhampasi ayitholakali kule divayisi.",
+  "qiblaLocationRequiredTitle": "Indawo iyadingeka ku-Qibla",
+  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "adhanNotificationChannelName": "Izaziso ze-Adhan",
+  "adhanNotificationChannelDescription": "Izaziso zesikhathi somkhuleko ezinomsindo we-adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Ukubalwa okuhlosiwe: {target}",
   "tapToCount": "Thepha ukuze ubale",
+  "zikrCompletedMashAllah": "Kuqediwe! MashaAllah",
+  "zikrMeaningSubhanAllah": "UAllah ungaphezulu kakhulu kukho konke ukungapheleli.",
+  "zikrMeaningAlhamdulillah": "Udumo lonke malube kuAllah.",
+  "zikrMeaningAllahuAkbar": "UAllah mkhulu.",
+  "zikrMeaningLaIlahaIllallah": "Akekho unkulunkulu ngaphandle kukaAllah.",
+  "zikrMeaningAstaghfirullah": "Ngicela intethelelo kuAllah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Akukho mandla namandla ngaphandle kukaAllah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Izwi Lomsindo",
+  "audioVoiceMisharyAlafasy": "Owesilisa (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Owesilisa (Abdul Basit)",
+  "audioVoiceSudais": "Owesilisa (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Ukulinganisa kwe-Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kudingeka ukulinganisa. Zungezisa idivayisi kumfanekiso-8.",
   "dailyVerse": "Ivesi Lansuku zonke",
+  "dailyVerseUnavailableTitle": "Ivesi lansuku zonke alitholakali",
+  "dailyVerseUnavailableBody": "Okuqukethwe kwevesi lansuku zonke okuqinisekisiwe akulungiselelwe lesi sakhiwo okwamanje. Xhuma kumthombo wamafu noma vumelanisa inqolobane eqinisekisiwe ngaphambi kokuphequlula.",
   "todaysIbadah": "I-Ibadah yanamuhla",
   "quickAccess": "Ukufinyelela Ngokushesha",
   "assistant": "Umsizi",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ama-duas aqinisekisiwe awatholakali okwamanje",
+  "duaUnavailableBody": "I-duas yansuku zonke eqinisekisiwe ayikavunyelaniswa kule divayisi okwamanje. Xhuma kumthombo wamafu ukuze ulayishe ama-duas atholakala esikhundleni sokubuyela emuva okungaqinisekisiwe.",
+  "duaCategoryQuranic": "I-Quranic dua",
+  "duaCategoryMorningEvening": "Ekuseni nakusihlwa",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Ukuvikelwa",
+  "duaCategoryBeginning": "Iziqalo",
+  "duaCategorySleep": "Lala",
+  "duaCategoryFoodDrink": "Ukudla Neziphuzo",
+  "duaCategoryForgiveness": "Ukuthethelela",
+  "duaCategoryHome": "Ikhaya",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Imfundo YamaSulumane",
   "sukunAudioTitle": "I-Sukun Soundscapes",
   "hadithCollections": "Hadith Amaqoqo",
+  "hadithSourcePending": "Umthombo oqinisekisiwe ulindile",
+  "hadithUnavailableTitle": "Amaqoqo ama-hadith aqinisekisiwe awatholakali okwamanje",
+  "hadithUnavailableBody": "Lesi sakhiwo sisancike kokuphakelayo kwe-hadith yangaphandle engaqinisekisiwe. Ukuphequlula kwe-Hadith kuhlala kuvaliwe kuze kube yilapho isethi yedatha etholakalayo ivunyelaniswa.",
   "paywallUnlockAll": "Vula zonke izici zohambo lwakho lokomoya",
+  "premiumProductUnavailable": "Umkhiqizo we-Premium awutholakali okwamanje. Sicela uzame futhi emuva kwesikhathi.",
+  "premiumPurchaseFailed": "Ukuthenga akuqedwanga. Sicela uzame futhi.",
   "paywallFeature1Title": "I-Neural Assistant Plus",
   "paywallFeature1Desc": "I-Q&A ene-AI engenamkhawulo",
   "paywallFeature2Title": "Okungaxhunyiwe ku-inthanethi okungenamkhawulo",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Ukulanda kuqediwe kwe-{reciter} nge-{failed} ama-surah ahlulekile ({downloaded}/{total} alandiwe).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Amafayela angaxhunyiwe ku-inthanethi asusiwe {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Iphutha lenethiwekhi. Sicela uzame futhi.",
+  "placesLocationRequiredTitle": "Indawo iyadingeka",
+  "placesLocationRequiredBody": "Setha indawo kuqala ukuze ama-mosque aseduze, ukudla kwe-halal, nezikole zamaSulumane ziseshwe ngokunembile.",
+  "placesMapTilesUnavailableTitle": "Amathayela emephu awatholakali",
+  "placesMapTilesUnavailableBody": "Umthombo wethayela lemephu oqinisekisiwe awulungiselelwe lesi sakhiwo okwamanje. Izindawo eziseduze zisengalayisha zisuka endaweni yakho elondoloziwe.",
+  "placesDataSourceUnavailableTitle": "Idatha yezindawo ayitholakali",
+  "placesDataSourceUnavailableBody": "Indawo yokugcina idatha yezindawo eqinisekisiwe ayilungiselwe lesi sakhiwo okwamanje. Setha i-PLACES_OVERPASS_API_URL kummeleli ogunyaziwe noma umhlinzeki ngaphambi kokunika amandla ukusesha okuseduze.",
   "unknownPlaceName": "Igama Elingaziwa",
   "islamicPlaceFallback": "Indawo yamaSulumane",
-  "prayerNotificationTitle": "Isikhathi se-{prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Isikhathi sokuthandaza {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ama-duas aqinisekisiwe awatholakali okwamanje",
-  "duaUnavailableBody": "I-duas yansuku zonke eqinisekisiwe ayikavunyelaniswa kule divayisi okwamanje. Xhuma kumthombo wamafu ukuze ulayishe ama-duas atholakala esikhundleni sokubuyela emuva okungaqinisekisiwe.",
-  "duaCategoryQuranic": "I-Quranic dua",
-  "duaCategoryMorningEvening": "Ekuseni nakusihlwa",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Ukuvikelwa",
-  "duaCategoryBeginning": "Iziqalo",
-  "duaCategorySleep": "Lala",
-  "duaCategoryFoodDrink": "Ukudla Neziphuzo",
-  "duaCategoryForgiveness": "Ukuthethelela",
-  "duaCategoryHome": "Ikhaya",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Umthombo oqinisekisiwe ulindile",
-  "hadithUnavailableTitle": "Amaqoqo ama-hadith aqinisekisiwe awatholakali okwamanje",
-  "hadithUnavailableBody": "Lesi sakhiwo sisancike kokuphakelayo kwe-hadith yangaphandle engaqinisekisiwe. Ukuphequlula kwe-Hadith kuhlala kuvaliwe kuze kube yilapho isethi yedatha etholakalayo ivunyelaniswa.",
-  "appErrorOccurred": "Kwenzeke iphutha",
-  "appUnknownError": "Iphutha elingaziwa",
-  "qiblaCompassErrorDetails": "Iphutha lekhampasi: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Kuqediwe! MashaAllah",
-  "zikrMeaningSubhanAllah": "UAllah ungaphezulu kakhulu kukho konke ukungapheleli.",
-  "zikrMeaningAlhamdulillah": "Udumo lonke malube kuAllah.",
-  "zikrMeaningAllahuAkbar": "UAllah mkhulu.",
-  "zikrMeaningLaIlahaIllallah": "Akekho unkulunkulu ngaphandle kukaAllah.",
-  "zikrMeaningAstaghfirullah": "Ngicela intethelelo kuAllah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Akukho mandla namandla ngaphandle kukaAllah.",
   "asmaMeaning1": "Olungileyo",
   "asmaMeaning2": "Onomusa",
   "asmaMeaning3": "Inkosi / Inkosi Yaphakade",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ongunaphakade",
   "asmaMeaning97": "Indlalifa",
   "asmaMeaning98": "Umhlahlandlela Olungile Kakhulu",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "abanye bayakhuleka bethi, ‘Nkosi yethu, siphe okuhle emhlabeni nakwelizayo, futhi usivikele esijezisweni soMlilo.",
-  "duaMeaning2": "UNkulunkulu akawuthwali umphefumulo ngokungaphezu kwalokho ongakuthwala: yilowo nalowo uzuza noma yikuphi okuhle akwenzile, futhi ubhekana nobubi bawo- ‘Nkosi, ungasithwesi icala uma sikhohlwa noma senza amaphutha. Nkosi, ungasithwali njengoba Wathwalisa ababephambi kwethu. Nkosi, ungasithwali ngokungaphezu kwamandla ethu. Sithethelele, sithethelele, futhi ube nomusa kithi. Wena unguMvikeli wethu, ngakho-ke sisize ngokumelene nabangakholwa.",
-  "duaMeaning3": "‘Nkosi yethu, ungazivumeli izinhliziyo zethu zichezuke emva kokuthi Usiholile. Siphe umusa Wakho: UnguMuphi Waphakade.",
-  "duaMeaning4": "Nkosi, ngiphe ukuba mina nenzalo yami sigcine umkhuleko. Nkosi yethu, yamukela isicelo sami.",
-  "duaMeaning5": "bese wehlisela uphiko lwakho ngokuzithoba kubo ngomusa uthi, ‘Nkosi, bahawukele, njengoba nje babenginakekela ngisemncane.’",
-  "duaMeaning6": "makaphakanyiswe uNkulunkulu, ophethe ngempela. [Mprofethi], ungajahi ukusho ngaphambi kokuba isambulo sipheleliswe kodwa uthi: ‘Nkosi, ngandise olwazini!",
-  "duaMeaning7": "Yithi [uMprofethi]: ‘Nkosi, thethelela futhi ube nomusa: Wena unesihe kunazo zonke.’",
-  "duaMeaning8": "labo abakhuleka bethi, ‘Nkosi yethu, siphe injabulo kwabashadile bethu nenzalo yethu. Senze sibe yizibonelo ezinhle kulabo abakwaziyo’.",
-  "islamicNewYear": "Unyaka Omusha WamaSulumane",
-  "mawlidAnNabi": "UMawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Vuselela",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Ilayisha i-tafsir...",
-  "tafsirSourceLabel": "Umthombo we-Tafsir",
-  "tafsirNoSurahFound": "Ayikho i-tafsir etholakele yale surah.",
-  "tafsirNoAyahFound": "Ayikho i-tafsir etholakele ye-ayah {ayah}.",
-  "tafsirLoadFailed": "I-Tafsir ayikwazanga ukulayishwa.",
-  "tafsirNoTextForAyah": "Awukho umbhalo we-tafsir wale ayah.",
-  "tafsirDownloadingProgress": "Ilanda i-tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Ilayisha i-tafsir {current}/{total}",
-  "tafsirApiStatusError": "Umthombo we-Tafsir ubuyisele iphutha le-HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Umthombo we-tafsir okhethiwe awuzange ubuyise okufakiwe.",
-  "premiumProductUnavailable": "Umkhiqizo we-Premium awutholakali okwamanje. Sicela uzame futhi emuva kwesikhathi.",
-  "premiumPurchaseFailed": "Ukuthenga akuqedwanga. Sicela uzame futhi.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Indlela YamaSulumane Yokukhanya",
-  "downloadPartiallyFinishedForReciter": "Ukulanda kuqediwe kwe-{reciter} nge-{failed} ama-surah ahlulekile ({downloaded}/{total} alandiwe).",
-  "placesLocationRequiredTitle": "Indawo iyadingeka",
-  "placesLocationRequiredBody": "Setha indawo kuqala ukuze ama-mosque aseduze, ukudla kwe-halal, nezikole zamaSulumane ziseshwe ngokunembile.",
-  "placesMapTilesUnavailableTitle": "Amathayela emephu awatholakali",
-  "placesMapTilesUnavailableBody": "Umthombo wethayela lemephu oqinisekisiwe awulungiselelwe lesi sakhiwo okwamanje. Izindawo eziseduze zisengalayisha zisuka endaweni yakho elondoloziwe.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Owesilisa (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Owesilisa (Abdul Basit)",
-  "audioVoiceSudais": "Owesilisa (Sudais)",
-  "qiblaSensorUnavailable": "Inzwa yekhampasi ayitholakali kule divayisi.",
-  "adhanNotificationChannelName": "Izaziso ze-Adhan",
-  "adhanNotificationChannelDescription": "Izaziso zesikhathi somkhuleko ezinomsindo we-adhan.",
-  "quranLoadFailed": "Okuqukethwe kwe-Quran akukwazanga ukulayishwa. Sicela uzame futhi.",
-  "locationDetectionFailed": "Ayikwazanga ukubona indawo yakho. Sicela ukhethe idolobha mathupha noma uzame futhi.",
-  "qiblaLocationRequiredTitle": "Indawo iyadingeka ku-Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
-  "placesDataSourceUnavailableTitle": "Idatha yezindawo ayitholakali",
-  "placesDataSourceUnavailableBody": "Indawo yokugcina idatha yezindawo eqinisekisiwe ayilungiselwe lesi sakhiwo okwamanje. Setha i-PLACES_OVERPASS_API_URL kummeleli ogunyaziwe noma umhlinzeki ngaphambi kokunika amandla ukusesha okuseduze.",
-  "tafsirCacheUnavailable": "I-tafsir eqinisekisiwe ayitholakali ungaxhunyiwe ku-inthanethi okwamanje. Vumelanisa isethi yedatha ye-tafsir etholakala kumthombo ngaphambi kokuphequlula."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }

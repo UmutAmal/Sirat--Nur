@@ -951,6 +951,13 @@ class AppLocalizationsAz extends AppLocalizations {
   String get dailyVerse => 'Gündəlik ayə';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Gündəlik ayə mövcud deyil';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Doğrulanmış gündəlik ayə məzmunu hələ bu quruluş üçün konfiqurasiya edilməyib. Axtarışdan əvvəl bulud mənbəyinə qoşulun və ya təsdiqlənmiş keşi sinxronlaşdırın.';
+
+  @override
   String get todaysIbadah => 'Bugünkü ibadət';
 
   @override

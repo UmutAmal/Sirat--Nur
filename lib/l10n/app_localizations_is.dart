@@ -953,6 +953,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get dailyVerse => 'Daglegt vers';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Daglegt vers ekki tiltækt';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Staðfest daglegt vers innihald er ekki stillt fyrir þessa smíði ennþá. Tengstu við skýjagjafann eða samstilltu staðfest skyndiminni áður en þú vafrar.';
+
+  @override
   String get todaysIbadah => 'Ibadah í dag';
 
   @override

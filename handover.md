@@ -16033,3 +16033,36 @@
 
 ### Sonraki Adim
 - Appium ile onboarding sonrasi ana ekran, location permission, prayer/location update ve bottom navigation smoke akislari siradaki UI risk taramasina alinacak. Store-ready kalan blokajlar halen Supabase env/content apply ve Places tile/Overpass endpoint konularidir.
+## 2026-04-22 TUR-373 - Daily Verse False Internet Error Fixed
+
+### MASTER Karari
+- Risk: Supabase cloud content veya verified daily ayat cache yokken ana ekrandaki Daily Verse karti `No Internet Connection` / `Please check your connection` gosteriyordu.
+- Kanit: Appium onboarding sonrasi ana ekran smoke testinde Daily Verse karti internet yok metniyle render oldu; logcat ayni akista `Supabase init failed (non-blocking)` gosterdi, cihaz/uygulama offline crash durumunda degildi.
+- Kok sebep: `lib/features/home/home_page.dart` daily ayat error branch'i provider hatasini ayirmadan genel `l10n.noInternet` ve `l10n.checkConnection` metinlerine bagliyordu; provider `daily_ayat_unavailable` atsa bile UI yanlis tani veriyordu.
+- Kullanici etkisi: kullanici gercek sebep Supabase/config/cache eksigi iken internetini suclar; false-success/false-diagnosis ve store review guven riski olusur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 honest content availability blocker).
+- Rollback plani: `lib/features/home/home_page.dart`, `test/features/home/home_page_test.dart`, ilgili `lib/l10n/app_*.arb` ve generated localization dosyalari onceki commit'e geri alinabilir.
+
+### BUILDER Degisikligi
+- `HomePage` Daily Verse error state'i artik `dailyVerseUnavailableTitle` ve `dailyVerseUnavailableBody` l10n anahtarlarini kullaniyor.
+- `app_en.arb` ve `app_tr.arb` referans metinleri eklendi; `sync_arb_keys.dart` ile tum `app_*.arb` dosyalarina anahtarlar tamamlandi.
+- `translate_arb_keys.dart --force dailyVerseUnavailableTitle dailyVerseUnavailableBody` ile guvenli ceviri turu calistirildi; ARB generator tekrar calistirildi.
+- `app_lus.arb`, `app_mai.arb`, `app_sa.arb`, `app_ti.arb` icindeki multiline/mixed-output ceviri artigi temizlendi; Lushai/Mizo body icin uydurma ceviri yerine guvenli English fallback birakildi.
+- `test/features/home/home_page_test.dart` yeni guard ile daily ayat provider hata verdiginde eski `No Internet Connection` ve `Please check your connection` metinlerinin gorunmemesini dogruluyor.
+
+### Dogrulama Sonucu
+- `flutter analyze` PASS.
+- `flutter test test\features\home\home_page_test.dart test\daily_ayat_provider_test.dart --reporter compact` PASS, 10/10.
+- Ilk full regression `flutter test --reporter compact` ARB debris guard ile FAIL etti; kok neden yeni ceviri batch'indeki multiline artikti.
+- `flutter test test\arb_coverage_test.dart --reporter compact` PASS, ARB newline/debris taramasi bos.
+- `flutter test --reporter compact` PASS, 605/605.
+- `flutter build apk --debug` PASS.
+- Appium after-fix smoke: onboarding `Next`, `Next`, `Get Started` tiklamalari PASS; final XML `containsDailyVerseUnavailable=True`, `containsOldNoInternet=False`, `containsOldCheckConnection=False`, `containsSettings=False`; kanit dosyalari `build/appium-daily-verse-after-fix.xml` ve `build/appium-daily-verse-after-fix.png`.
+- `dart run tool\translate_arb_keys.dart --report dailyVerseUnavailableTitle dailyVerseUnavailableBody`: missing/empty `0`, placeholder mismatch `0`, same-as-English `128`. Low-resource locale fallback borcu durustce korunuyor; uydurma ceviri yapilmadi.
+
+### Risk Degisimi
+- Daily Verse false internet diagnosis: `16/25 -> 2/25`.
+- L10n integrity risk: multiline/mixed-output yeni anahtarlar `12/25 -> 2/25` test guard ile kapandi.
+
+### Sonraki Adim
+- Store-ready kalan dis blokajlar: gercek Supabase content apply summary, `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL` runtime env dogrulamasi. Siradaki risk taramasi Appium ile location permission/prayer update/bottom navigation akislari ve store checker blokajlarina devam edecek.

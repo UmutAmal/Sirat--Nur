@@ -953,6 +953,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get dailyVerse => 'ദൈനംദിന വാക്യം';
 
   @override
+  String get dailyVerseUnavailableTitle => 'പ്രതിദിന വാക്യം ലഭ്യമല്ല';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'ഈ ബിൽഡിനായി പരിശോധിച്ച പ്രതിദിന വാക്യ ഉള്ളടക്കം ഇതുവരെ കോൺഫിഗർ ചെയ്‌തിട്ടില്ല. ബ്രൗസുചെയ്യുന്നതിന് മുമ്പ് ക്ലൗഡ് ഉറവിടത്തിലേക്ക് കണക്റ്റുചെയ്യുക അല്ലെങ്കിൽ പരിശോധിച്ചുറപ്പിച്ച കാഷെ സമന്വയിപ്പിക്കുക.';
+
+  @override
   String get todaysIbadah => 'ഇന്നത്തെ ഇബാദത്ത്';
 
   @override

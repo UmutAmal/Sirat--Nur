@@ -952,6 +952,13 @@ class AppLocalizationsId extends AppLocalizations {
   String get dailyVerse => 'Ayat Harian';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ayat harian tidak tersedia';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Konten ayat harian terverifikasi belum dikonfigurasi untuk versi ini. Hubungkan ke sumber cloud atau sinkronkan cache terverifikasi sebelum menjelajah.';
+
+  @override
   String get todaysIbadah => 'Ibadah hari ini';
 
   @override

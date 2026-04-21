@@ -952,6 +952,13 @@ class AppLocalizationsTk extends AppLocalizations {
   String get dailyVerse => 'Gündelik aýat';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Gündelik aýat elýeterli däl';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Barlanylan gündelik aýat mazmuny entek bu gurluş üçin düzülenok. Bulut çeşmesine birikdiriň ýa-da göz aýlamazdan ozal tassyklanan keşi sinhronlaň.';
+
+  @override
   String get todaysIbadah => 'Şu günki Ibada';
 
   @override

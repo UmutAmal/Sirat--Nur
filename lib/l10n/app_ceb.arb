@@ -1,6 +1,7 @@
 {
   "@@locale": "ceb",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamikong Dalan sa Kahayag",
   "home": "Balay",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Ang Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Oras para sa {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Panahon na sa pag-ampo {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data ug Pagtipig",
   "clearCache": "Hawan ang Cache",
   "cacheClearedSuccess": "Malampuson nga natangtang ang cache",
@@ -34,6 +51,7 @@
   "currentLocation": "Kasamtangang Lokasyon (GPS)",
   "locationServiceDisabled": "Gi-disable ang serbisyo sa lokasyon.",
   "locationPermissionDenied": "Gidili ang pagtugot sa lokasyon.",
+  "locationDetectionFailed": "Dili makit-an ang imong lokasyon. Palihug pagpili ug siyudad sa mano-mano o sulayi pag-usab.",
   "citiesCount": "{count} nga mga siyudad",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Walay resulta nga nakit-an",
   "loading": "Nagkarga...",
   "error": "Sayop",
+  "appErrorOccurred": "Usa ka sayup ang nahitabo",
+  "appUnknownError": "Wala mailhi nga sayup",
+  "quranLoadFailed": "Ang sulod sa Quran dili makarga. Palihug sulayi pag-usab.",
   "retry": "Sulayi pag-usab",
+  "refreshAction": "I-refresh",
   "cancel": "Pagkanselar",
   "save": "Tipigi",
   "delete": "Pagtangtang",
@@ -57,17 +79,78 @@
   "yes": "Oo",
   "no": "Dili",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Panid",
   "reading": "Pagbasa",
   "recitation": "Pagbasa",
   "translation": "Paghubad",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Nagkarga sa tafsir...",
+  "tafsirSourceLabel": "Tafsir tinubdan",
+  "tafsirNoSurahFound": "Walay tafsir nga nakit-an alang niini nga surah.",
+  "tafsirNoAyahFound": "Walay tafsir nga nakit-an para sa ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Dili makarga ang Tafsir.",
+  "tafsirNoTextForAyah": "Walay teksto sa tafsir alang niini nga amahan.",
+  "tafsirDownloadingProgress": "Nag-download sa tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Nagkarga sa tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Ang tinubdan sa Tafsir mibalik og HTTP {statusCode} error.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ang gipili nga tinubdan sa tafsir walay gibalik nga mga entri.",
+  "tafsirCacheUnavailable": "Ang gipamatud-an nga tafsir dili pa magamit offline. I-sync ang usa ka gigikanan nga tafsir dataset sa dili pa mag-browse.",
   "bookmarks": "Mga bookmark",
   "addBookmark": "Idugang ang Bookmark",
   "removeBookmark": "Kuhaa ang Bookmark",
   "lastRead": "Katapusan nga Pagbasa",
   "dailyZikr": "Adlaw-adlaw nga Zikr",
+  "duaMeaning1": "ang uban nag-ampo, ‘Among Ginoo, hatagi kami ug kaayohan dinhi sa kalibotan ug sa Kataposan, ug panalipdi kami gikan sa silot sa Kalayo.’",
+  "duaMeaning2": "Ang Dios wala magpabug-at sa bisan kinsa nga kalag sa labaw pa sa iyang maagwanta: ang matag usa makaangkon sa bisan unsa nga maayo nga iyang nahimo, ug mag-antus sa iyang pagkadautan- ‘Ginoo, ayaw kami paantusa kung kami makalimot o masayop. Ginoo, ayaw kami pabug-aa sama sa imong pagpas-an sa mga nauna kanamo. Ginoo, ayaw kami pabug-aa ug labaw pa sa among kusog sa pagpas-an. Pasayloa kami, pasayloa kami, ug kaloy-i kami. Ikaw ang among Tigpanalipod, busa tabangi kami batok sa mga dili magtutuo.'",
+  "duaMeaning3": "‘Among Ginoo, ayaw itugot nga ang among mga kasingkasing motipas human Mo kami giyahan. Ihatag kanamo ang Imong kaluoy: Ikaw ang Kanunayng Hatagan.",
+  "duaMeaning4": "Ginoo, itugot nga ako ug ang akong kaliwat magpadayon sa pag-ampo. Ginoo namo, dawata ang akong hangyo.",
+  "duaMeaning5": "ug ipaubos ang imong pako sa pagpaubos ngadto kanila sa pagkamabination ug pag-ingon, 'Ginoo, kaloy-i sila, ingon nga sila nag-atiman kanako sa gamay pa ako.'",
+  "duaMeaning6": "bayawon ang Dios, ang usa nga tinuod nga nagmando. [Propeta], ayaw pagdalidali sa pag-recite sa dili pa makompleto ang pagpadayag apan ingna, ‘Ginoo, dugangi ako sa kahibalo!’",
+  "duaMeaning7": "Ingna [Propeta], ‘Ginoo, pasayloa ug kaloy-i: Ikaw ang labing maloloy-on sa tanan.’",
+  "duaMeaning8": "kadtong nag-ampo, ‘Ginoo namo, hatagi kami ug kalipay sa among mga kapikas ug mga anak. Himoa kami nga maayong panig-ingnan sa mga nakaila Kanimo’.",
   "morningZikr": "Buntag Zikr",
   "eveningZikr": "Gabii Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Pagpuasa",
   "quranReading": "Pagbasa sa Quran",
   "prayers": "Mga pag-ampo",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Pag-ihap sa Dhikr",
   "weeklyProgress": "Senemana nga Pag-uswag",
   "monthlyProgress": "Buwan nga Pag-uswag",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Bag-ong Tuig sa Islam",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Direksyon sa Qibla",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "Amihanan",
   "qiblaFound": "Qibla nakit-an!",
   "turnDevice": "Ibalik ang imong device aron mag-atubang sa Qibla",
+  "qiblaCompassErrorDetails": "Error sa kompas: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Ang sensor sa kompas dili magamit sa kini nga aparato.",
+  "qiblaLocationRequiredTitle": "Lokasyon gikinahanglan para sa Qibla",
+  "qiblaLocationRequiredBody": "Ibutang ang imong aktuwal nga lokasyon sa dili pa gamiton ang Qibla compass aron ang direksyon makalkula sa tukma.",
+  "adhanNotificationChannelName": "Mga Abiso sa Adhan",
+  "adhanNotificationChannelDescription": "Mga alerto sa oras sa pag-ampo nga adunay tunog sa adhan.",
   "notifications": "Mga pahibalo",
   "prayerNotifications": "Mga Pahibalo sa Pag-ampo",
   "enableNotifications": "I-enable ang Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Target nga ihap: {target}",
   "tapToCount": "I-tap para mag-ihap",
+  "zikrCompletedMashAllah": "Nakompleto na! MashAllah",
+  "zikrMeaningSubhanAllah": "Si Allah labaw sa tanang pagkadili hingpit.",
+  "zikrMeaningAlhamdulillah": "Ang tanang pagdayeg iya ni Allah.",
+  "zikrMeaningAllahuAkbar": "Si Allah ang Labing Gamhanan.",
+  "zikrMeaningLaIlahaIllallah": "Walay dios gawas sa Allah.",
+  "zikrMeaningAstaghfirullah": "Nangayo ko sa pasaylo ni Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Walay gahum ug walay kusog gawas kon pinaagi ni Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Tingog sa Audio",
+  "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",
+  "audioVoiceSudais": "Lalaki (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Pag-calibrate sa Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Gikinahanglan ang pag-calibrate. I-rotate ang device sa numero-8.",
   "dailyVerse": "Adlaw-adlaw nga Bersikulo",
+  "dailyVerseUnavailableTitle": "Adlaw-adlaw nga bersikulo dili magamit",
+  "dailyVerseUnavailableBody": "Ang na-verify nga inadlaw nga sulud sa bersikulo wala pa gi-configure para sa kini nga pagtukod. Sumpaysumpaya ang tinubdan sa panganod o i-sync ang usa ka na-verify nga cache sa dili pa mag-browse.",
   "todaysIbadah": "Ibadah karon",
   "quickAccess": "Dali nga Pag-access",
   "assistant": "Katabang",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ang gi-verify nga mga duha wala pa magamit",
+  "duaUnavailableBody": "Ang gi-verify nga adlaw-adlaw nga duha wala pa ma-sync sa kini nga aparato. Sumpaysumpaya ang tinubdan sa panganod aron ma-load ang mga sourced nga duha imbes nga usa ka wala mapamatud-an nga fallback.",
+  "duaCategoryQuranic": "Quranikong duha",
+  "duaCategoryMorningEvening": "Buntag ug Gabii",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Proteksyon",
+  "duaCategoryBeginning": "Mga Sinugdanan",
+  "duaCategorySleep": "Pagkatulog",
+  "duaCategoryFoodDrink": "Pagkaon ug Ilimnon",
+  "duaCategoryForgiveness": "Pagpasaylo",
+  "duaCategoryHome": "Balay",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Edukasyon sa Islam",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Mga Koleksyon sa Hadith",
+  "hadithSourcePending": "Gi-verify nga tinubdan naghulat",
+  "hadithUnavailableTitle": "Ang napamatud-an nga mga koleksyon sa hadith wala pa magamit",
+  "hadithUnavailableBody": "Kini nga pagtukod nagdepende gihapon sa usa ka wala mapamatud-an nga eksternal nga feed sa hadith. Ang pag-browse sa hadith magpabilin nga wala’y mahimo hangtod ang usa ka gigikanan nga dataset ma-sync.",
   "paywallUnlockAll": "I-unlock ang tanang feature para sa imong espirituhanong panaw",
+  "premiumProductUnavailable": "Ang premium nga produkto dili magamit karon. Palihug sulayi pag-usab unya.",
+  "premiumPurchaseFailed": "Ang pagpalit dili makompleto. Palihug sulayi pag-usab.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Walay kinutuban nga AI-powered Q&A",
   "paywallFeature2Title": "Walay kinutuban nga Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Nahuman ang pag-download alang sa {reciter} nga adunay {failed} nga napakyas nga mga surah ({downloaded}/{total} na-download).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Gitangtang ang offline nga mga file para sa {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Sayop sa network. Palihug sulayi pag-usab.",
+  "placesLocationRequiredTitle": "Gikinahanglan ang lokasyon",
+  "placesLocationRequiredBody": "Pagbutang una og lokasyon aron ang duol nga mga mosque, halal nga pagkaon, ug Islamic nga mga eskwelahan mapangita sa tukma.",
+  "placesMapTilesUnavailableTitle": "Dili magamit ang mga tile sa mapa",
+  "placesMapTilesUnavailableBody": "Ang usa ka napamatud-an nga tinubdan sa tile sa mapa wala pa ma-configure alang niini nga pagtukod. Ang mga duol nga lugar mahimo gihapon nga magkarga gikan sa imong gitipig nga lokasyon.",
+  "placesDataSourceUnavailableTitle": "Dili magamit ang datos sa mga lugar",
+  "placesDataSourceUnavailableBody": "Ang usa ka napamatud-an nga mga lugar nga endpoint sa data wala pa ma-configure alang niini nga pagtukod. Ibutang ang PLACES_OVERPASS_API_URL sa usa ka aprobahan nga proxy o provider sa dili pa i-enable ang duol nga pagpangita.",
   "unknownPlaceName": "Wala mailhi nga Ngalan",
   "islamicPlaceFallback": "Islamic nga Dapit",
-  "prayerNotificationTitle": "Oras para sa {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Panahon na sa pag-ampo {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ang gi-verify nga mga duha wala pa magamit",
-  "duaUnavailableBody": "Ang gi-verify nga adlaw-adlaw nga duha wala pa ma-sync sa kini nga aparato. Sumpaysumpaya ang tinubdan sa panganod aron ma-load ang mga sourced nga duha imbes nga usa ka wala mapamatud-an nga fallback.",
-  "duaCategoryQuranic": "Quranikong duha",
-  "duaCategoryMorningEvening": "Buntag ug Gabii",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Proteksyon",
-  "duaCategoryBeginning": "Mga Sinugdanan",
-  "duaCategorySleep": "Pagkatulog",
-  "duaCategoryFoodDrink": "Pagkaon ug Ilimnon",
-  "duaCategoryForgiveness": "Pagpasaylo",
-  "duaCategoryHome": "Balay",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Gi-verify nga tinubdan naghulat",
-  "hadithUnavailableTitle": "Ang napamatud-an nga mga koleksyon sa hadith wala pa magamit",
-  "hadithUnavailableBody": "Kini nga pagtukod nagdepende gihapon sa usa ka wala mapamatud-an nga eksternal nga feed sa hadith. Ang pag-browse sa hadith magpabilin nga wala’y mahimo hangtod ang usa ka gigikanan nga dataset ma-sync.",
-  "appErrorOccurred": "Usa ka sayup ang nahitabo",
-  "appUnknownError": "Wala mailhi nga sayup",
-  "qiblaCompassErrorDetails": "Error sa kompas: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Nakompleto na! MashAllah",
-  "zikrMeaningSubhanAllah": "Si Allah labaw sa tanang pagkadili hingpit.",
-  "zikrMeaningAlhamdulillah": "Ang tanang pagdayeg iya ni Allah.",
-  "zikrMeaningAllahuAkbar": "Si Allah ang Labing Gamhanan.",
-  "zikrMeaningLaIlahaIllallah": "Walay dios gawas sa Allah.",
-  "zikrMeaningAstaghfirullah": "Nangayo ko sa pasaylo ni Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Walay gahum ug walay kusog gawas kon pinaagi ni Allah.",
   "asmaMeaning1": "Ang Mabination",
   "asmaMeaning2": "Ang Maluluy-on",
   "asmaMeaning3": "Ang Hari / Walay Katapusan nga Ginoo",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ang Usa nga Walay Katapusan",
   "asmaMeaning97": "Ang Manununod",
   "asmaMeaning98": "Ang Labing Matarong nga Giya",
-  "asmaMeaning99": "Ang Usa nga Pasyente",
-  "duaMeaning1": "ang uban nag-ampo, ‘Among Ginoo, hatagi kami ug kaayohan dinhi sa kalibotan ug sa Kataposan, ug panalipdi kami gikan sa silot sa Kalayo.’",
-  "duaMeaning2": "Ang Dios wala magpabug-at sa bisan kinsa nga kalag sa labaw pa sa iyang maagwanta: ang matag usa makaangkon sa bisan unsa nga maayo nga iyang nahimo, ug mag-antus sa iyang pagkadautan- ‘Ginoo, ayaw kami paantusa kung kami makalimot o masayop. Ginoo, ayaw kami pabug-aa sama sa imong pagpas-an sa mga nauna kanamo. Ginoo, ayaw kami pabug-aa ug labaw pa sa among kusog sa pagpas-an. Pasayloa kami, pasayloa kami, ug kaloy-i kami. Ikaw ang among Tigpanalipod, busa tabangi kami batok sa mga dili magtutuo.'",
-  "duaMeaning3": "‘Among Ginoo, ayaw itugot nga ang among mga kasingkasing motipas human Mo kami giyahan. Ihatag kanamo ang Imong kaluoy: Ikaw ang Kanunayng Hatagan.",
-  "duaMeaning4": "Ginoo, itugot nga ako ug ang akong kaliwat magpadayon sa pag-ampo. Ginoo namo, dawata ang akong hangyo.",
-  "duaMeaning5": "ug ipaubos ang imong pako sa pagpaubos ngadto kanila sa pagkamabination ug pag-ingon, 'Ginoo, kaloy-i sila, ingon nga sila nag-atiman kanako sa gamay pa ako.'",
-  "duaMeaning6": "bayawon ang Dios, ang usa nga tinuod nga nagmando. [Propeta], ayaw pagdalidali sa pag-recite sa dili pa makompleto ang pagpadayag apan ingna, ‘Ginoo, dugangi ako sa kahibalo!’",
-  "duaMeaning7": "Ingna [Propeta], ‘Ginoo, pasayloa ug kaloy-i: Ikaw ang labing maloloy-on sa tanan.’",
-  "duaMeaning8": "kadtong nag-ampo, ‘Ginoo namo, hatagi kami ug kalipay sa among mga kapikas ug mga anak. Himoa kami nga maayong panig-ingnan sa mga nakaila Kanimo’.",
-  "islamicNewYear": "Bag-ong Tuig sa Islam",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "I-refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Nagkarga sa tafsir...",
-  "tafsirSourceLabel": "Tafsir tinubdan",
-  "tafsirNoSurahFound": "Walay tafsir nga nakit-an alang niini nga surah.",
-  "tafsirNoAyahFound": "Walay tafsir nga nakit-an para sa ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Dili makarga ang Tafsir.",
-  "tafsirNoTextForAyah": "Walay teksto sa tafsir alang niini nga amahan.",
-  "tafsirDownloadingProgress": "Nag-download sa tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Nagkarga sa tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Ang tinubdan sa Tafsir mibalik og HTTP {statusCode} error.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "Ang gipili nga tinubdan sa tafsir walay gibalik nga mga entri.",
-  "premiumProductUnavailable": "Ang premium nga produkto dili magamit karon. Palihug sulayi pag-usab unya.",
-  "premiumPurchaseFailed": "Ang pagpalit dili makompleto. Palihug sulayi pag-usab.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Islamikong Dalan sa Kahayag",
-  "downloadPartiallyFinishedForReciter": "Nahuman ang pag-download alang sa {reciter} nga adunay {failed} nga napakyas nga mga surah ({downloaded}/{total} na-download).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Gikinahanglan ang lokasyon",
-  "placesLocationRequiredBody": "Pagbutang una og lokasyon aron ang duol nga mga mosque, halal nga pagkaon, ug Islamic nga mga eskwelahan mapangita sa tukma.",
-  "placesMapTilesUnavailableTitle": "Dili magamit ang mga tile sa mapa",
-  "placesMapTilesUnavailableBody": "Ang usa ka napamatud-an nga tinubdan sa tile sa mapa wala pa ma-configure alang niini nga pagtukod. Ang mga duol nga lugar mahimo gihapon nga magkarga gikan sa imong gitipig nga lokasyon.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",
-  "audioVoiceSudais": "Lalaki (Sudais)",
-  "qiblaSensorUnavailable": "Ang sensor sa kompas dili magamit sa kini nga aparato.",
-  "adhanNotificationChannelName": "Mga Abiso sa Adhan",
-  "adhanNotificationChannelDescription": "Mga alerto sa oras sa pag-ampo nga adunay tunog sa adhan.",
-  "quranLoadFailed": "Ang sulod sa Quran dili makarga. Palihug sulayi pag-usab.",
-  "locationDetectionFailed": "Dili makit-an ang imong lokasyon. Palihug pagpili ug siyudad sa mano-mano o sulayi pag-usab.",
-  "qiblaLocationRequiredTitle": "Lokasyon gikinahanglan para sa Qibla",
-  "qiblaLocationRequiredBody": "Ibutang ang imong aktuwal nga lokasyon sa dili pa gamiton ang Qibla compass aron ang direksyon makalkula sa tukma.",
-  "placesDataSourceUnavailableTitle": "Dili magamit ang datos sa mga lugar",
-  "placesDataSourceUnavailableBody": "Ang usa ka napamatud-an nga mga lugar nga endpoint sa data wala pa ma-configure alang niini nga pagtukod. Ibutang ang PLACES_OVERPASS_API_URL sa usa ka aprobahan nga proxy o provider sa dili pa i-enable ang duol nga pagpangita.",
-  "tafsirCacheUnavailable": "Ang gipamatud-an nga tafsir dili pa magamit offline. I-sync ang usa ka gigikanan nga tafsir dataset sa dili pa mag-browse."
+  "asmaMeaning99": "Ang Usa nga Pasyente"
 }

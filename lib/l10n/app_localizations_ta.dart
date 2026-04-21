@@ -957,6 +957,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get dailyVerse => 'தினசரி வசனம்';
 
   @override
+  String get dailyVerseUnavailableTitle => 'தினசரி வசனம் கிடைக்கவில்லை';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'சரிபார்க்கப்பட்ட தினசரி வசன உள்ளடக்கம் இந்தக் கட்டமைப்பிற்கு இன்னும் உள்ளமைக்கப்படவில்லை. மேகக்கணி மூலத்துடன் இணைக்கவும் அல்லது உலாவுவதற்கு முன் சரிபார்க்கப்பட்ட தற்காலிக சேமிப்பை ஒத்திசைக்கவும்.';
+
+  @override
   String get todaysIbadah => 'இன்றைய இபாதத்';
 
   @override

@@ -959,6 +959,14 @@ class AppLocalizationsTs extends AppLocalizations {
   String get dailyVerse => 'Ndzimana ya Siku na Siku';
 
   @override
+  String get dailyVerseUnavailableTitle =>
+      'Ndzimana ya siku na siku a yi kumeki';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Nhundzu ya tindzimana ta siku na siku leyi tiyisisiweke a yi si lulamisiwa eka ku aka loku ku fikela sweswi. Hlanganisa na xihlovo xa xigwitsirisi kutani u fambisana na cache leyi tiyisisiweke u nga si pfula.';
+
+  @override
   String get todaysIbadah => 'Ibadah ya namuntlha';
 
   @override

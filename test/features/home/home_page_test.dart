@@ -54,7 +54,7 @@ void main() {
   });
 
   testWidgets(
-    'HomePage shows an honest connectivity message when daily ayat fails',
+    'HomePage shows an honest unavailable message when daily ayat fails',
     (tester) async {
       await pumpHomePage(
         tester,
@@ -64,8 +64,16 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text('Daily Verse'), findsOneWidget);
-      expect(find.text('No Internet Connection'), findsOneWidget);
-      expect(find.text('Please check your connection'), findsOneWidget);
+      expect(find.text('Daily verse unavailable'), findsOneWidget);
+      expect(
+        find.text(
+          'Verified daily verse content is not configured for this build yet. '
+          'Connect to the cloud source or sync a verified cache before browsing.',
+        ),
+        findsOneWidget,
+      );
+      expect(find.text('No Internet Connection'), findsNothing);
+      expect(find.text('Please check your connection'), findsNothing);
       expect(find.textContaining('ٱللَّهِ'), findsNothing);
     },
   );

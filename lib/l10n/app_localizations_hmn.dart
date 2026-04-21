@@ -954,6 +954,13 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get dailyVerse => 'Txhua Hnub Verse';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Cov nqe lus niaj hnub tsis muaj';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Kev txheeb xyuas cov ntsiab lus txhua hnub tsis tau teeb tsa rau qhov kev tsim no tsis tau. Txuas mus rau huab qhov chaw lossis sync lub cache pov thawj ua ntej browsing.';
+
+  @override
   String get todaysIbadah => 'Hnub no yog Ibadah';
 
   @override

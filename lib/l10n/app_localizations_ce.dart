@@ -949,6 +949,13 @@ class AppLocalizationsCe extends AppLocalizations {
   String get dailyVerse => 'Daily Verse';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Daily verse unavailable';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.';
+
+  @override
   String get todaysIbadah => 'Today\'s Ibadah';
 
   @override

@@ -1,6 +1,7 @@
 {
   "@@locale": "sn",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Nzira yechiIslam yeChiedza",
   "home": "Kumba",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Nguva ye{prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Yave nguva yekunamata {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Kuchengeta",
   "clearCache": "Bvisa Cache",
   "cacheClearedSuccess": "Cache yakapedzwa zvakanaka",
@@ -34,6 +51,7 @@
   "currentLocation": "Nzvimbo Yazvino (GPS)",
   "locationServiceDisabled": "Sevhisi yenzvimbo yakadzimwa.",
   "locationPermissionDenied": "Mvumo yenzvimbo yarambwa.",
+  "locationDetectionFailed": "Hatina kukwanisa kuona nzvimbo yako. Ndapota sarudza guta nemaoko kana edza zvakare.",
   "citiesCount": "{count} maguta",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Hapana zvawanikwa",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Paitika chikanganiso",
+  "appUnknownError": "Kukanganisa kusingazivikanwe",
+  "quranLoadFailed": "Korani yatadza kurodha. Ndapota edza zvakare.",
   "retry": "Edza zvakare",
+  "refreshAction": "Refresh",
   "cancel": "Cancel",
   "save": "Sevha",
   "delete": "Delete",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Aihwa",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Page",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Kurodha tafsir...",
+  "tafsirSourceLabel": "Tafsir source",
+  "tafsirNoSurahFound": "Hapana tafsir yawanikwa yesurah iyi.",
+  "tafsirNoAyahFound": "Hapana tafsir yawanikwa yeayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir yatadza kurodha.",
+  "tafsirNoTextForAyah": "Hapana mavara etafsir eiyi ayah.",
+  "tafsirDownloadingProgress": "Kudhaunirodha tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Kurodha tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir kwakabva kwadzosa HTTP {statusCode} kukanganisa.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Mabviro etafsir akasarudzwa haana kudzoka.",
+  "tafsirCacheUnavailable": "Verified tafsir haisati yave kuwanikwa kunze kwenyika. Batanidza dataset yakatorwa tafsir usati wabhurawuza.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Wedzera Bookmark",
   "removeBookmark": "Bvisa Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "vamwe vanonamata vachiti, ‘Ishe wedu, tipei zvakanaka munyika ino uye muHera, uye tidzivirirei kubva kumarwadzo emoto.",
+  "duaMeaning2": "Allah haaremedzi chero mweya upi zvawo nezvaunokwanisa kutakura: mumwe nemumwe anowana chero chakanaka chaakaita, uye anotambura nekuipa kwawo- ‘Ishe, musatitorera mhosva kana tikakanganwa kana kukanganisa. Ishe musatiremedza sezvamakaremedza avo vaiva pamberi pedu. Ishe musatiremedza nesimba rinopfuura ratiinaro. Tiregererei, tiregererei, mutinzwirewo tsitsi. Ndimi Mudziviriri wedu, saka tibatsirei pane avo vasingatendi.",
+  "duaMeaning3": "‘Tenzi vedu, musarega mwoyo yedu ichitsauka mushure mekunge matitungamirira. Tipeiwo ngoni dzenyu: Ndimi Munogara Achipa.",
+  "duaMeaning4": "Ishe itai kuti ini nevana vangu tichengete munyengetero. Ishe wedu, gamuchirai chikumbiro changu.",
+  "duaMeaning5": "uye udzikise bapiro rako mukuzvininipisa kwavari netsitsi uye uti, ‘Ishe, vanzwirei ngoni, sokundichengeta kwavakaita ndichiri muduku.",
+  "duaMeaning6": "ngaakudzwe Mwari, iye anotonga zvirokwazvo. [Muporofita], usamhanyire kutaura zvakazarurwa zvisati zvakwana asi iti, ‘Ishe, ndiwedzerei muzivo!’",
+  "duaMeaning7": "Iti [Muporofita], ‘Ishe, kanganwirai uye muve netsitsi: Imi ndimi mune tsitsi huru kupfuura vose.",
+  "duaMeaning8": "avo vanonamata vachiti, ‘Ishe wedu, tipei mufaro muwanano yedu uye muvana vedu. Tiitirei mienzaniso yakanaka kune avo vanokuzivai'.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Kutsanya",
   "quranReading": "Kuverenga Korani",
   "prayers": "Minamato",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Kufambira mberi Kwevhiki Nevhiki",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Goredzva reIslam",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla Direction",
   "compass": "Compass",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla yakawanikwa!",
   "turnDevice": "Shandura mudziyo wako kutarisana neQibla",
+  "qiblaCompassErrorDetails": "Compass kukanganisa: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Compass sensor haisi kuwanikwa pamudziyo uyu.",
+  "qiblaLocationRequiredTitle": "Nzvimbo inodiwa kuQibla",
+  "qiblaLocationRequiredBody": "Seta nzvimbo yako chaiyo usati washandisa kambasi yeQibla kuti gwara rigone kuverengerwa nemazvo.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Nyevero yenguva yemunamato ine adhan ruzha.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Nhamba yezvinangwa: {target}",
   "tapToCount": "Tinya kuti uverenge",
+  "zikrCompletedMashAllah": "Yakapedzwa! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah vari pamusoro pekusakwana kwese.",
+  "zikrMeaningAlhamdulillah": "Kurumbidzwa kwese ndekwaAllah.",
+  "zikrMeaningAllahuAkbar": "Allah ndivo Mukuru.",
+  "zikrMeaningLaIlahaIllallah": "Hakuna mwari kunze kwaAllah.",
+  "zikrMeaningAstaghfirullah": "Ndinokumbira ruregerero kuna Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Hapana simba uye hapana simba kunze kwekuna Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Voice",
+  "audioVoiceMisharyAlafasy": "Murume (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Murume (Abdul Basit)",
+  "audioVoiceSudais": "Murume (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration inodiwa. Tenderedza mudziyo mumufananidzo-8.",
   "dailyVerse": "Daily Verse",
+  "dailyVerseUnavailableTitle": "Vhesi rezuva nezuva hariwanikwi",
+  "dailyVerseUnavailableBody": "Verified daily verse content haisati yagadzirirwa ichi chivakwa. Batanidza kune gore sosi kana sync cache yakasimbiswa usati wabhurawuza.",
   "todaysIbadah": "Nhasi Ibadah",
   "quickAccess": "Quick Access",
   "assistant": "Mubatsiri",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Maduas akasimbiswa haasati awanikwa",
+  "duaUnavailableBody": "Madua emazuva ese anosimbiswa haasati awiriraniswa pamudziyo uyu. Batanidza kune iyo cloud source kuti uise sourced duas pachinzvimbo chefour unverified fallback.",
+  "duaCategoryQuranic": "Quran dua",
+  "duaCategoryMorningEvening": "Mangwanani & Manheru",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Dziviriro",
+  "duaCategoryBeginning": "Mavambo",
+  "duaCategorySleep": "Rara",
+  "duaCategoryFoodDrink": "Zvokudya Nekunwa",
+  "duaCategoryForgiveness": "Kukanganwira",
+  "duaCategoryHome": "Kumba",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Dzidzo yechiIslam",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Vadivelu Comedy Hadith Collections",
+  "hadithSourcePending": "Verified source yakamirira",
+  "hadithUnavailableTitle": "Verified hadith collections haisati yavapo",
+  "hadithUnavailableBody": "Kuvaka uku kuchiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kusvikira dataset yawanikwa yawiriraniswa.",
   "paywallUnlockAll": "Vhura zvese zverwendo rwako rwemweya",
+  "premiumProductUnavailable": "Premium chigadzirwa hachipo pari zvino. Ndapota edza zvakare gare gare.",
+  "premiumPurchaseFailed": "Kutenga kwatadza kupedzwa. Ndapota edza zvakare.",
   "paywallFeature1Title": "Neural Mubatsiri Plus",
   "paywallFeature1Desc": "Unlimited AI-powered Q&A",
   "paywallFeature2Title": "Unlimited Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Kudhaunirodha kwapera nokuda kwe {reciter} ne {failed} ma surah akundikana ({downloaded}/{total} akadhaunirodwa).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Dzakadzimwa mafaira e{reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Network kukanganisa. Ndapota edza zvakare.",
+  "placesLocationRequiredTitle": "Nzvimbo inodiwa",
+  "placesLocationRequiredBody": "Gadza nzvimbo kutanga kuitira kuti mamosque ari padyo, chikafu che halal, uye zvikoro zveIslam zvigone kutsvakwa nemazvo.",
+  "placesMapTilesUnavailableTitle": "Mathairi emepu haasi kuwanikwa",
+  "placesMapTilesUnavailableBody": "Matairi emepu akasimbiswa haasati agadzirirwa kuvaka uku. Nzvimbo dziri pedyo dzinogona kurodha kubva panzvimbo yako yakachengetedzwa.",
+  "placesDataSourceUnavailableTitle": "Data yenzvimbo haisipo",
+  "placesDataSourceUnavailableBody": "Nzvimbo dzakasimbiswa data yekupedzisira haisati yagadzirirwa kuvaka iyi. Isa PLACES_OVERPASS_API_URL kumumiririri akatenderwa kana mubatsiri usati wabvumira kutsvaga kuri pedyo.",
   "unknownPlaceName": "Zita risingazivikanwe",
   "islamicPlaceFallback": "Nzvimbo yeIslam",
-  "prayerNotificationTitle": "Nguva ye{prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Yave nguva yekunamata {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Maduas akasimbiswa haasati awanikwa",
-  "duaUnavailableBody": "Madua emazuva ese anosimbiswa haasati awiriraniswa pamudziyo uyu. Batanidza kune iyo cloud source kuti uise sourced duas pachinzvimbo chefour unverified fallback.",
-  "duaCategoryQuranic": "Quran dua",
-  "duaCategoryMorningEvening": "Mangwanani & Manheru",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Dziviriro",
-  "duaCategoryBeginning": "Mavambo",
-  "duaCategorySleep": "Rara",
-  "duaCategoryFoodDrink": "Zvokudya Nekunwa",
-  "duaCategoryForgiveness": "Kukanganwira",
-  "duaCategoryHome": "Kumba",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Verified source yakamirira",
-  "hadithUnavailableTitle": "Verified hadith collections haisati yavapo",
-  "hadithUnavailableBody": "Kuvaka uku kuchiri kutsamira pane isina kusimbiswa ekunze hadith feed. Kubhurawuza kweHadith kunoramba kwakavharwa kusvikira dataset yawanikwa yawiriraniswa.",
-  "appErrorOccurred": "Paitika chikanganiso",
-  "appUnknownError": "Kukanganisa kusingazivikanwe",
-  "qiblaCompassErrorDetails": "Compass kukanganisa: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Yakapedzwa! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah vari pamusoro pekusakwana kwese.",
-  "zikrMeaningAlhamdulillah": "Kurumbidzwa kwese ndekwaAllah.",
-  "zikrMeaningAllahuAkbar": "Allah ndivo Mukuru.",
-  "zikrMeaningLaIlahaIllallah": "Hakuna mwari kunze kwaAllah.",
-  "zikrMeaningAstaghfirullah": "Ndinokumbira ruregerero kuna Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Hapana simba uye hapana simba kunze kwekuna Allah.",
   "asmaMeaning1": "Iye Ane Beneficent",
   "asmaMeaning2": "Vane Tsitsi",
   "asmaMeaning3": "Mambo / Ishe Asingagumi",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Iye Anogara Nokusingaperi",
   "asmaMeaning97": "Mudyi Wenhaka",
   "asmaMeaning98": "Mutungamiriri Akarurama",
-  "asmaMeaning99": "Iye Murwere",
-  "duaMeaning1": "vamwe vanonamata vachiti, ‘Ishe wedu, tipei zvakanaka munyika ino uye muHera, uye tidzivirirei kubva kumarwadzo emoto.",
-  "duaMeaning2": "Allah haaremedzi chero mweya upi zvawo nezvaunokwanisa kutakura: mumwe nemumwe anowana chero chakanaka chaakaita, uye anotambura nekuipa kwawo- ‘Ishe, musatitorera mhosva kana tikakanganwa kana kukanganisa. Ishe musatiremedza sezvamakaremedza avo vaiva pamberi pedu. Ishe musatiremedza nesimba rinopfuura ratiinaro. Tiregererei, tiregererei, mutinzwirewo tsitsi. Ndimi Mudziviriri wedu, saka tibatsirei pane avo vasingatendi.",
-  "duaMeaning3": "‘Tenzi vedu, musarega mwoyo yedu ichitsauka mushure mekunge matitungamirira. Tipeiwo ngoni dzenyu: Ndimi Munogara Achipa.",
-  "duaMeaning4": "Ishe itai kuti ini nevana vangu tichengete munyengetero. Ishe wedu, gamuchirai chikumbiro changu.",
-  "duaMeaning5": "uye udzikise bapiro rako mukuzvininipisa kwavari netsitsi uye uti, ‘Ishe, vanzwirei ngoni, sokundichengeta kwavakaita ndichiri muduku.",
-  "duaMeaning6": "ngaakudzwe Mwari, iye anotonga zvirokwazvo. [Muporofita], usamhanyire kutaura zvakazarurwa zvisati zvakwana asi iti, ‘Ishe, ndiwedzerei muzivo!’",
-  "duaMeaning7": "Iti [Muporofita], ‘Ishe, kanganwirai uye muve netsitsi: Imi ndimi mune tsitsi huru kupfuura vose.",
-  "duaMeaning8": "avo vanonamata vachiti, ‘Ishe wedu, tipei mufaro muwanano yedu uye muvana vedu. Tiitirei mienzaniso yakanaka kune avo vanokuzivai'.",
-  "islamicNewYear": "Goredzva reIslam",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Refresh",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Kurodha tafsir...",
-  "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "Hapana tafsir yawanikwa yesurah iyi.",
-  "tafsirNoAyahFound": "Hapana tafsir yawanikwa yeayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir yatadza kurodha.",
-  "tafsirNoTextForAyah": "Hapana mavara etafsir eiyi ayah.",
-  "tafsirDownloadingProgress": "Kudhaunirodha tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Kurodha tafsir {current}/{total}",
-  "tafsirApiStatusError": "Tafsir kwakabva kwadzosa HTTP {statusCode} kukanganisa.",
-  "tafsirNoEntriesReturned": "Mabviro etafsir akasarudzwa haana kudzoka.",
-  "premiumProductUnavailable": "Premium chigadzirwa hachipo pari zvino. Ndapota edza zvakare gare gare.",
-  "premiumPurchaseFailed": "Kutenga kwatadza kupedzwa. Ndapota edza zvakare.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Nzira yechiIslam yeChiedza",
-  "downloadPartiallyFinishedForReciter": "Kudhaunirodha kwapera nokuda kwe {reciter} ne {failed} ma surah akundikana ({downloaded}/{total} akadhaunirodwa).",
-  "placesLocationRequiredTitle": "Nzvimbo inodiwa",
-  "placesLocationRequiredBody": "Gadza nzvimbo kutanga kuitira kuti mamosque ari padyo, chikafu che halal, uye zvikoro zveIslam zvigone kutsvakwa nemazvo.",
-  "placesMapTilesUnavailableTitle": "Mathairi emepu haasi kuwanikwa",
-  "placesMapTilesUnavailableBody": "Matairi emepu akasimbiswa haasati agadzirirwa kuvaka uku. Nzvimbo dziri pedyo dzinogona kurodha kubva panzvimbo yako yakachengetedzwa.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Murume (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Murume (Abdul Basit)",
-  "audioVoiceSudais": "Murume (Sudais)",
-  "qiblaSensorUnavailable": "Compass sensor haisi kuwanikwa pamudziyo uyu.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Nyevero yenguva yemunamato ine adhan ruzha.",
-  "quranLoadFailed": "Korani yatadza kurodha. Ndapota edza zvakare.",
-  "locationDetectionFailed": "Hatina kukwanisa kuona nzvimbo yako. Ndapota sarudza guta nemaoko kana edza zvakare.",
-  "qiblaLocationRequiredTitle": "Nzvimbo inodiwa kuQibla",
-  "qiblaLocationRequiredBody": "Seta nzvimbo yako chaiyo usati washandisa kambasi yeQibla kuti gwara rigone kuverengerwa nemazvo.",
-  "placesDataSourceUnavailableTitle": "Data yenzvimbo haisipo",
-  "placesDataSourceUnavailableBody": "Nzvimbo dzakasimbiswa data yekupedzisira haisati yagadzirirwa kuvaka iyi. Isa PLACES_OVERPASS_API_URL kumumiririri akatenderwa kana mubatsiri usati wabvumira kutsvaga kuri pedyo.",
-  "tafsirCacheUnavailable": "Verified tafsir haisati yave kuwanikwa kunze kwenyika. Batanidza dataset yakatorwa tafsir usati wabhurawuza."
+  "asmaMeaning99": "Iye Murwere"
 }

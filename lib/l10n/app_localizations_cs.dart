@@ -952,6 +952,13 @@ class AppLocalizationsCs extends AppLocalizations {
   String get dailyVerse => 'Denní verš';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Denní verš není k dispozici';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ověřený denní obsah veršů zatím není pro toto sestavení nakonfigurován. Před procházením se připojte ke zdroji cloudu nebo synchronizujte ověřenou mezipaměť.';
+
+  @override
   String get todaysIbadah => 'Dnešní Ibadah';
 
   @override

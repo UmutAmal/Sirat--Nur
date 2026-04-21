@@ -1,6 +1,7 @@
 {
   "@@locale": "ro",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Calea Islamică a Luminii",
   "home": "Acasă",
   "quran": "Coranul",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magribul",
   "isha": "Isha",
+  "prayerNotificationTitle": "Este timpul pentru {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Este timpul să ne rugăm {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Date și stocare",
   "clearCache": "Goliți memoria cache",
   "cacheClearedSuccess": "Cache-ul a fost golit cu succes",
@@ -34,6 +51,7 @@
   "currentLocation": "Locația curentă (GPS)",
   "locationServiceDisabled": "Serviciul de localizare este dezactivat.",
   "locationPermissionDenied": "Permisiunea pentru locație a fost refuzată.",
+  "locationDetectionFailed": "Nu s-a putut detecta locația dvs. Alegeți manual un oraș sau încercați din nou.",
   "citiesCount": "{count} orașe",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Nu s-au găsit rezultate",
   "loading": "Se încarcă...",
   "error": "Eroare",
+  "appErrorOccurred": "A apărut o eroare",
+  "appUnknownError": "Eroare necunoscută",
+  "quranLoadFailed": "Conținutul Coranului nu a putut fi încărcat. Vă rugăm să încercați din nou.",
   "retry": "Reîncercați",
+  "refreshAction": "Reîmprospătați",
   "cancel": "Anulează",
   "save": "Salvați",
   "delete": "Ștergeți",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nu",
   "surah": "Sura",
+  "ayahLabel": "Da {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Pagina",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Se încarcă tafsir...",
+  "tafsirSourceLabel": "sursa Tafsir",
+  "tafsirNoSurahFound": "Nu s-a găsit niciun tafsir pentru această sură.",
+  "tafsirNoAyahFound": "Nu a fost găsit niciun tafsir pentru ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir nu a putut fi încărcat.",
+  "tafsirNoTextForAyah": "Fără text tafsir pentru această ayah.",
+  "tafsirDownloadingProgress": "Se descarcă tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Se încarcă tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Sursa Tafsir a returnat o eroare HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Sursa tafsir selectată nu a returnat nicio intrare.",
+  "tafsirCacheUnavailable": "Tafsir verificat nu este încă disponibil offline. Sincronizați un set de date tafsir din sursă înainte de a naviga.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Adăugați marcaj",
   "removeBookmark": "Eliminați marcajul",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "alții se roagă: „Doamne, dă-ne bine în lumea aceasta și în cea de Apoi și ferește-ne de chinul Focului”.",
+  "duaMeaning2": "Dumnezeu nu împovărează niciun suflet cu mai mult decât poate suporta: fiecare câștigă orice bine a făcut și suferă răul ei... „Doamne, nu ne lua la sarcină dacă uităm sau greșim. Doamne, nu ne împovăra cum i-ai împovărat pe cei dinaintea noastră. Doamne, nu ne împovăra cu mai mult decât avem putere să suportăm. Iartă-ne, iartă-ne și ai milă de noi. Tu ești Protectorul nostru, așa că ajută-ne împotriva necredincioșilor.”",
+  "duaMeaning3": "„Doamne, nu lăsa inimile noastre să se abate după ce Tu ne-ai călăuzit. Dăruiește-ne mila Ta: Tu ești Cel Dăruitor.",
+  "duaMeaning4": "Doamne, dă-mi voie ca eu și urmașii mei să ținem rugăciunea. Domnul nostru, acceptă cererea mea.",
+  "duaMeaning5": "și coboară-ți aripa cu smerenie față de ei cu bunătate și spune: „Doamne, miluiește-i, așa cum au avut grijă de mine când eram mic”.",
+  "duaMeaning6": "înălțat să fie Dumnezeu, cel care este cu adevărat în control. [Profet], nu te grăbi să reciti înainte ca revelația să fie pe deplin completă, ci spune: „Doamne, mărește-mă în cunoștință!”",
+  "duaMeaning7": "Spune [Profet]: „Doamne, iartă și ai milă: Tu ești cel mai milostiv dintre toți.”",
+  "duaMeaning8": "cei care se roagă: „Doamne, dă-ne bucurie în soții și în urmașii noștri. Fă-ne exemple bune pentru cei care te cunosc”.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "post",
   "quranReading": "Citirea Coranului",
   "prayers": "Rugăciuni",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Progresul săptămânal",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Anul Nou Islamic",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Direcția Qibla",
   "compass": "busola",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla găsit!",
   "turnDevice": "Întoarceți dispozitivul în fața Qibla",
+  "qiblaCompassErrorDetails": "Eroare busola: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Senzorul busolă nu este disponibil pe acest dispozitiv.",
+  "qiblaLocationRequiredTitle": "Locația necesară pentru Qibla",
+  "qiblaLocationRequiredBody": "Setați-vă locația reală înainte de a utiliza busola Qibla, astfel încât direcția să poată fi calculată cu precizie.",
+  "adhanNotificationChannelName": "Notificări Adhan",
+  "adhanNotificationChannelDescription": "Alerte de timp de rugăciune cu sunet adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Număr țintă: {target}",
   "tapToCount": "Atingeți pentru a număra",
+  "zikrCompletedMashAllah": "Finalizat! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah este cu mult deasupra oricărei imperfecțiuni.",
+  "zikrMeaningAlhamdulillah": "Toată lauda îi aparține lui Allah.",
+  "zikrMeaningAllahuAkbar": "Allah este Cel Mai Mare.",
+  "zikrMeaningLaIlahaIllallah": "Nu există zeu în afară de Allah.",
+  "zikrMeaningAstaghfirullah": "Caut iertarea lui Allah.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nu există putere și putere decât prin Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Voce audio",
+  "audioVoiceMisharyAlafasy": "Bărbat (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Bărbat (Abdul Basit)",
+  "audioVoiceSudais": "Bărbat (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Calibrare Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Este necesară calibrarea. Rotiți dispozitivul din figura-8.",
   "dailyVerse": "Vers zilnic",
+  "dailyVerseUnavailableTitle": "Vers zilnic indisponibil",
+  "dailyVerseUnavailableBody": "Conținutul de versuri zilnic verificat nu este încă configurat pentru această versiune. Conectați-vă la sursa cloud sau sincronizați un cache verificat înainte de a naviga.",
   "todaysIbadah": "Ibadah de azi",
   "quickAccess": "Acces rapid",
   "assistant": "Asistent",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Duasele verificate nu sunt încă disponibile",
+  "duaUnavailableBody": "Duaurile zilnice verificate nu au fost încă sincronizate cu acest dispozitiv. Conectați-vă la sursa cloud pentru a încărca duas-ul sursă în loc de o rezervă neverificată.",
+  "duaCategoryQuranic": "Dua Coranică",
+  "duaCategoryMorningEvening": "Dimineața și seara",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protecţie",
+  "duaCategoryBeginning": "Începuturile",
+  "duaCategorySleep": "Dormi",
+  "duaCategoryFoodDrink": "Mâncare și băutură",
+  "duaCategoryForgiveness": "Iertare",
+  "duaCategoryHome": "Acasă",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Educația islamică",
   "sukunAudioTitle": "Peisaje sonore Sukun",
   "hadithCollections": "Colecții de hadith",
+  "hadithSourcePending": "Sursă verificată în așteptare",
+  "hadithUnavailableTitle": "Colecțiile verificate de hadith nu sunt încă disponibile",
+  "hadithUnavailableBody": "Această construcție depinde în continuare de un flux de hadith extern neverificat. Navigarea Hadith rămâne dezactivată până când un set de date sursă este sincronizat.",
   "paywallUnlockAll": "Deblocați toate funcțiile pentru călătoria voastră spirituală",
+  "premiumProductUnavailable": "Produsul premium nu este disponibil momentan. Vă rugăm să încercați din nou mai târziu.",
+  "premiumPurchaseFailed": "Achiziția nu a putut fi finalizată. Vă rugăm să încercați din nou.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Întrebări și răspunsuri nelimitate bazate pe inteligență artificială",
   "paywallFeature2Title": "Offline nelimitat",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Descărcarea s-a încheiat pentru {reciter} cu {failed} sure nereușite ({downloaded}/{total} descărcate).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Fișierele offline au fost șterse pentru {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Eroare de rețea. Vă rugăm să încercați din nou.",
+  "placesLocationRequiredTitle": "Este necesară locația",
+  "placesLocationRequiredBody": "Setați mai întâi o locație, astfel încât moscheile din apropiere, mâncarea halal și școlile islamice să poată fi căutate cu precizie.",
+  "placesMapTilesUnavailableTitle": "Dale de hartă indisponibile",
+  "placesMapTilesUnavailableBody": "O sursă de dale de hartă verificată nu este încă configurată pentru această versiune. Locațiile din apropiere se pot încărca în continuare din locația dvs. salvată.",
+  "placesDataSourceUnavailableTitle": "Datele locațiilor nu sunt disponibile",
+  "placesDataSourceUnavailableBody": "Un punct final de date pentru locații verificate nu este încă configurat pentru această versiune. Setați PLACES_OVERPASS_API_URL la un proxy sau un furnizor aprobat înainte de a activa căutarea în apropiere.",
   "unknownPlaceName": "Nume necunoscut",
   "islamicPlaceFallback": "Locul Islamic",
-  "prayerNotificationTitle": "Este timpul pentru {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Este timpul să ne rugăm {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Duasele verificate nu sunt încă disponibile",
-  "duaUnavailableBody": "Duaurile zilnice verificate nu au fost încă sincronizate cu acest dispozitiv. Conectați-vă la sursa cloud pentru a încărca duas-ul sursă în loc de o rezervă neverificată.",
-  "duaCategoryQuranic": "Dua Coranică",
-  "duaCategoryMorningEvening": "Dimineața și seara",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Protecţie",
-  "duaCategoryBeginning": "Începuturile",
-  "duaCategorySleep": "Dormi",
-  "duaCategoryFoodDrink": "Mâncare și băutură",
-  "duaCategoryForgiveness": "Iertare",
-  "duaCategoryHome": "Acasă",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Sursă verificată în așteptare",
-  "hadithUnavailableTitle": "Colecțiile verificate de hadith nu sunt încă disponibile",
-  "hadithUnavailableBody": "Această construcție depinde în continuare de un flux de hadith extern neverificat. Navigarea Hadith rămâne dezactivată până când un set de date sursă este sincronizat.",
-  "appErrorOccurred": "A apărut o eroare",
-  "appUnknownError": "Eroare necunoscută",
-  "qiblaCompassErrorDetails": "Eroare busola: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Finalizat! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah este cu mult deasupra oricărei imperfecțiuni.",
-  "zikrMeaningAlhamdulillah": "Toată lauda îi aparține lui Allah.",
-  "zikrMeaningAllahuAkbar": "Allah este Cel Mai Mare.",
-  "zikrMeaningLaIlahaIllallah": "Nu există zeu în afară de Allah.",
-  "zikrMeaningAstaghfirullah": "Caut iertarea lui Allah.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Nu există putere și putere decât prin Allah.",
   "asmaMeaning1": "Beneficienții",
   "asmaMeaning2": "Milostivul",
   "asmaMeaning3": "Regele / Domnul etern",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Cel Veșnic",
   "asmaMeaning97": "Moștenitorul",
   "asmaMeaning98": "Cel mai drept ghid",
-  "asmaMeaning99": "Pacientul Cel",
-  "duaMeaning1": "alții se roagă: „Doamne, dă-ne bine în lumea aceasta și în cea de Apoi și ferește-ne de chinul Focului”.",
-  "duaMeaning2": "Dumnezeu nu împovărează niciun suflet cu mai mult decât poate suporta: fiecare câștigă orice bine a făcut și suferă răul ei... „Doamne, nu ne lua la sarcină dacă uităm sau greșim. Doamne, nu ne împovăra cum i-ai împovărat pe cei dinaintea noastră. Doamne, nu ne împovăra cu mai mult decât avem putere să suportăm. Iartă-ne, iartă-ne și ai milă de noi. Tu ești Protectorul nostru, așa că ajută-ne împotriva necredincioșilor.”",
-  "duaMeaning3": "„Doamne, nu lăsa inimile noastre să se abate după ce Tu ne-ai călăuzit. Dăruiește-ne mila Ta: Tu ești Cel Dăruitor.",
-  "duaMeaning4": "Doamne, dă-mi voie ca eu și urmașii mei să ținem rugăciunea. Domnul nostru, acceptă cererea mea.",
-  "duaMeaning5": "și coboară-ți aripa cu smerenie față de ei cu bunătate și spune: „Doamne, miluiește-i, așa cum au avut grijă de mine când eram mic”.",
-  "duaMeaning6": "înălțat să fie Dumnezeu, cel care este cu adevărat în control. [Profet], nu te grăbi să reciti înainte ca revelația să fie pe deplin completă, ci spune: „Doamne, mărește-mă în cunoștință!”",
-  "duaMeaning7": "Spune [Profet]: „Doamne, iartă și ai milă: Tu ești cel mai milostiv dintre toți.”",
-  "duaMeaning8": "cei care se roagă: „Doamne, dă-ne bucurie în soții și în urmașii noștri. Fă-ne exemple bune pentru cei care te cunosc”.",
-  "islamicNewYear": "Anul Nou Islamic",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Reîmprospătați",
-  "ayahLabel": "Da {ayah}",
-  "tafsirLoading": "Se încarcă tafsir...",
-  "tafsirSourceLabel": "sursa Tafsir",
-  "tafsirNoSurahFound": "Nu s-a găsit niciun tafsir pentru această sură.",
-  "tafsirNoAyahFound": "Nu a fost găsit niciun tafsir pentru ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir nu a putut fi încărcat.",
-  "tafsirNoTextForAyah": "Fără text tafsir pentru această ayah.",
-  "tafsirDownloadingProgress": "Se descarcă tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Se încarcă tafsir {current}/{total}",
-  "tafsirApiStatusError": "Sursa Tafsir a returnat o eroare HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Sursa tafsir selectată nu a returnat nicio intrare.",
-  "premiumProductUnavailable": "Produsul premium nu este disponibil momentan. Vă rugăm să încercați din nou mai târziu.",
-  "premiumPurchaseFailed": "Achiziția nu a putut fi finalizată. Vă rugăm să încercați din nou.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Calea Islamică a Luminii",
-  "downloadPartiallyFinishedForReciter": "Descărcarea s-a încheiat pentru {reciter} cu {failed} sure nereușite ({downloaded}/{total} descărcate).",
-  "placesLocationRequiredTitle": "Este necesară locația",
-  "placesLocationRequiredBody": "Setați mai întâi o locație, astfel încât moscheile din apropiere, mâncarea halal și școlile islamice să poată fi căutate cu precizie.",
-  "placesMapTilesUnavailableTitle": "Dale de hartă indisponibile",
-  "placesMapTilesUnavailableBody": "O sursă de dale de hartă verificată nu este încă configurată pentru această versiune. Locațiile din apropiere se pot încărca în continuare din locația dvs. salvată.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Bărbat (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Bărbat (Abdul Basit)",
-  "audioVoiceSudais": "Bărbat (Sudais)",
-  "qiblaSensorUnavailable": "Senzorul busolă nu este disponibil pe acest dispozitiv.",
-  "adhanNotificationChannelName": "Notificări Adhan",
-  "adhanNotificationChannelDescription": "Alerte de timp de rugăciune cu sunet adhan.",
-  "quranLoadFailed": "Conținutul Coranului nu a putut fi încărcat. Vă rugăm să încercați din nou.",
-  "locationDetectionFailed": "Nu s-a putut detecta locația dvs. Alegeți manual un oraș sau încercați din nou.",
-  "qiblaLocationRequiredTitle": "Locația necesară pentru Qibla",
-  "qiblaLocationRequiredBody": "Setați-vă locația reală înainte de a utiliza busola Qibla, astfel încât direcția să poată fi calculată cu precizie.",
-  "placesDataSourceUnavailableTitle": "Datele locațiilor nu sunt disponibile",
-  "placesDataSourceUnavailableBody": "Un punct final de date pentru locații verificate nu este încă configurat pentru această versiune. Setați PLACES_OVERPASS_API_URL la un proxy sau un furnizor aprobat înainte de a activa căutarea în apropiere.",
-  "tafsirCacheUnavailable": "Tafsir verificat nu este încă disponibil offline. Sincronizați un set de date tafsir din sursă înainte de a naviga."
+  "asmaMeaning99": "Pacientul Cel"
 }

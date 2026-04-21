@@ -953,6 +953,13 @@ class AppLocalizationsMk extends AppLocalizations {
   String get dailyVerse => 'Дневен стих';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Дневниот стих е недостапен';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Потврдената дневна содржина на стих сè уште не е конфигурирана за оваа верзија. Поврзете се со изворот на облак или синхронизирајте потврдена кеш пред да прелистувате.';
+
+  @override
   String get todaysIbadah => 'Денешниот Ибаде';
 
   @override

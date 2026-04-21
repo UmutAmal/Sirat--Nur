@@ -951,6 +951,13 @@ class AppLocalizationsUz extends AppLocalizations {
   String get dailyVerse => 'Kundalik oyat';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Kundalik oyat mavjud emas';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Tasdiqlangan kundalik oyat mazmuni hali bu tuzilish uchun sozlanmagan. Ko‘rishdan oldin bulut manbasiga ulaning yoki tasdiqlangan keshni sinxronlang.';
+
+  @override
   String get todaysIbadah => 'Bugungi Ibodat';
 
   @override

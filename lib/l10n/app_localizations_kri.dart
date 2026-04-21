@@ -951,6 +951,13 @@ class AppLocalizationsKri extends AppLocalizations {
   String get dailyVerse => 'Vas we dɛn kin yuz ɛvride';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Vas nɔ de fɔ ɛvride';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Verified daily verse content nɔ kɔnfigyut fɔ dis bild yet. Kɔnekt to di klawd sɔs ɔ sink wan verified kesh bifo yu browz.';
+
+  @override
   String get todaysIbadah => 'Tide na Ibadah';
 
   @override

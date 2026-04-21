@@ -956,6 +956,13 @@ class AppLocalizationsHy extends AppLocalizations {
   String get dailyVerse => 'Ամենօրյա հատված';
 
   @override
+  String get dailyVerseUnavailableTitle => 'Ամենօրյա հատվածը անհասանելի է';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'Ստուգված ամենօրյա չափածո բովանդակությունը դեռ կազմաձևված չէ այս նախագծման համար: Զննարկումից առաջ միացեք ամպային աղբյուրին կամ համաժամացրեք հաստատված քեշը:';
+
+  @override
   String get todaysIbadah => 'Այսօրվա Իբադան';
 
   @override

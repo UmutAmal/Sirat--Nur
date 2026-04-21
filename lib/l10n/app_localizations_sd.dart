@@ -949,6 +949,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get dailyVerse => 'روزانه نظم';
 
   @override
+  String get dailyVerseUnavailableTitle => 'روزاني نظم دستياب ناهي';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'تصديق ٿيل روزاني آيت جو مواد اڃا تائين هن تعمير لاءِ ترتيب نه ڏنو ويو آهي. ڪلائوڊ ماخذ سان ڳنڍيو يا برائوز ڪرڻ کان اڳ تصديق ٿيل ڪيش کي هم وقت سازي ڪريو.';
+
+  @override
   String get todaysIbadah => 'اڄ جي عبادت';
 
   @override

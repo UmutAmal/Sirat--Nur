@@ -1,6 +1,7 @@
 {
   "@@locale": "fy",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamityske Way of Light",
   "home": "Thús",
   "quran": "Koran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Tiid foar {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "It is tiid om te bidden {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & opslach",
   "clearCache": "Cache wiskje",
   "cacheClearedSuccess": "Cache mei sukses wiske",
@@ -34,6 +51,7 @@
   "currentLocation": "Aktuele lokaasje (GPS)",
   "locationServiceDisabled": "Lokaasje tsjinst is útskeakele.",
   "locationPermissionDenied": "Lokaasje tastimming wegere.",
+  "locationDetectionFailed": "Koe jo lokaasje net ûntdekke. Kies in stêd mei de hân of besykje it nochris.",
   "citiesCount": "{count} stêden",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Gjin resultaten fûn",
   "loading": "Loading...",
   "error": "Flater",
+  "appErrorOccurred": "Der barde in flater",
+  "appUnknownError": "Unbekende flater",
+  "quranLoadFailed": "Koranynhâld koe net laden wurde. Besykje it nochris.",
   "retry": "Opnij besykje",
+  "refreshAction": "Ferfarskje",
   "cancel": "Ofbrekke",
   "save": "Rêde",
   "delete": "Wiskje",
@@ -57,17 +79,78 @@
   "yes": "Ja",
   "no": "Nee",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Side",
   "reading": "Lêzing",
   "recitation": "Resitaasje",
   "translation": "Oersetting",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Tafsir laden...",
+  "tafsirSourceLabel": "Tafsir boarne",
+  "tafsirNoSurahFound": "Gjin tafsir fûn foar dizze surah.",
+  "tafsirNoAyahFound": "Gjin tafsir fûn foar ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir koe net laden wurde.",
+  "tafsirNoTextForAyah": "Gjin tafsir tekst foar dizze ayah.",
+  "tafsirDownloadingProgress": "Download tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir boarne joech in HTTP {statusCode} flater werom.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "De selektearre tafsir boarne joech gjin ynstjoerings.",
+  "tafsirCacheUnavailable": "Ferifiearre tafsir is noch net offline beskikber. Syngronisearje in boarne tafsir-dataset foardat jo blêdzje.",
   "bookmarks": "Blêdwizers",
   "addBookmark": "Blêdwizer tafoegje",
   "removeBookmark": "Blêdwizer fuortsmite",
   "lastRead": "Lêste lêzen",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "oaren bidde: ‘Us Hear, jou ús it goede yn dizze wrâld en yn it Hiernamaals, en beskerm ús tsjin de marteling fan it Fjoer.’",
+  "duaMeaning2": "God belêstet gjin siel mei mear as se ferneare kin: elk wint wat goed er dien hat, en lijt syn kwea- ‘Hear, nim ús net oan as wy ferjitte of flaters meitsje. Hear, belêste ús net sa't Jo dy foar ús hawwe. Hear, belêste ús net mei mear as wy krêft hawwe om te dragen. Ferjou ús, ferjou ús, en hawwe genede oer ús. Do bist ús Beskermer, dus help ús tsjin de ûnleauwigen.’",
+  "duaMeaning3": "‘Us Hear, lit ús hert net ôfwike neidat Jo ús liede hawwe. Jou ús jo genede: Jo binne de ivich jaan.",
+  "duaMeaning4": "Hear, jou dat ik en myn neiteam it gebed folhâlde meie. Us Hear, akseptearje myn fersyk.",
+  "duaMeaning5": "en del dyn wjuk yn dimmenens tsjin harren yn goedernichheid del en sis: ‘Hear, haw genede oer harren, krekt sa’t se my fersoarge doe’t ik lyts wie’.",
+  "duaMeaning6": "ferheven wêze God, dejinge dy't wier yn kontrôle is. [Profeet], haast net om te recitearjen foardat de iepenbiering folslein kompleet is, mar sis: 'Hear, fergrutsje my yn kennis!'",
+  "duaMeaning7": "Sis [profeet], 'Hear, ferjou en haw barmhertichheid: Jo binne de barmhertichste fan allegear.'",
+  "duaMeaning8": "dyjingen dy't bidde: 'Us Hear, jow ús freugde yn ús breidspearen en neiteam. Meitsje ús goede foarbylden foar dyjingen dy't jo bewust binne'.",
   "morningZikr": "Moarn Zikr",
   "eveningZikr": "Jûn Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Fêste",
   "quranReading": "Koranlêzing",
   "prayers": "Gebeden",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Wyklikse foarútgong",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamityske Nijjier",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadan",
+  "specialDayDateLaylatAlQadr": "27 Ramadan",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla rjochting",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "Noard",
   "qiblaFound": "Qibla fûn!",
   "turnDevice": "Draai jo apparaat nei de Qibla",
+  "qiblaCompassErrorDetails": "Kompasflater: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Kompassensor is net beskikber op dit apparaat.",
+  "qiblaLocationRequiredTitle": "Lokaasje nedich foar Qibla",
+  "qiblaLocationRequiredBody": "Stel jo werklike lokaasje yn foardat jo it Qibla-kompas brûke, sadat de rjochting krekt kin wurde berekkene.",
+  "adhanNotificationChannelName": "Adhan Notifikaasjes",
+  "adhanNotificationChannelDescription": "Gebedstiidalarms mei adhan-lûd.",
   "notifications": "Notifikaasjes",
   "prayerNotifications": "Gebedsnotifikaasjes",
   "enableNotifications": "Notifikaasjes ynskeakelje",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Doeltelling: {target}",
   "tapToCount": "Tik om te tellen",
+  "zikrCompletedMashAllah": "Foltôge! MashAllah",
+  "zikrMeaningSubhanAllah": "Allah is fier boppe elke ûnfolsleinens.",
+  "zikrMeaningAlhamdulillah": "Alle lof heart oan Allah.",
+  "zikrMeaningAllahuAkbar": "Allah is de Grutste.",
+  "zikrMeaningLaIlahaIllallah": "D'r is gjin god behalve Allah.",
+  "zikrMeaningAstaghfirullah": "Ik sykje Allah syn ferjouwing.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "D'r is gjin macht en gjin krêft útsein troch Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Audio Stim",
+  "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Man (Abdul Basit)",
+  "audioVoiceSudais": "Man (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Kalibraasje",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Kalibraasje nedich. Rotearje apparaat yn figuer-8.",
   "dailyVerse": "Deistich fers",
+  "dailyVerseUnavailableTitle": "Deistich fers net beskikber",
+  "dailyVerseUnavailableBody": "Ferifiearre deistige fers ynhâld is noch net ynsteld foar dizze build. Ferbine mei de wolkboarne of syngronisearje in ferifiearre cache foardat jo blêdzje.",
   "todaysIbadah": "Hjoed Ibadah",
   "quickAccess": "Fluch tagong",
   "assistant": "Assistint",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Ferifiearre duas binne noch net beskikber",
+  "duaUnavailableBody": "Ferifiearre deistige duas binne noch net syngronisearre mei dit apparaat. Ferbine mei de wolkboarne om boarne duas te laden ynstee fan in net ferifiearre fallback.",
+  "duaCategoryQuranic": "Koranyske dua",
+  "duaCategoryMorningEvening": "Moarn & Jûn",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Beskerming",
+  "duaCategoryBeginning": "Beginings",
+  "duaCategorySleep": "Sliep",
+  "duaCategoryFoodDrink": "Iten & Drinken",
+  "duaCategoryForgiveness": "Ferjouwing",
+  "duaCategoryHome": "Thús",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamityske Underwiis",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Hadith Samlingen",
+  "hadithSourcePending": "Ferifiearre boarne yn ôfwachting",
+  "hadithUnavailableTitle": "Ferifiearre hadith-kolleksjes binne noch net beskikber",
+  "hadithUnavailableBody": "Dizze build is noch ôfhinklik fan in net ferifiearre eksterne hadith feed. Hadith-blêdzjen bliuwt útskeakele oant in boarne dataset wurdt syngronisearre.",
   "paywallUnlockAll": "Untskoattelje alle funksjes foar jo geastlike reis",
+  "premiumProductUnavailable": "Premiumprodukt is no net beskikber. Besykje it letter nochris.",
+  "premiumPurchaseFailed": "Oankeap koe net foltôge wurde. Besykje it nochris.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Unbeheind AI-oandreaune Q&A",
   "paywallFeature2Title": "Unbeheind Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Download klear foar {reciter} mei {failed} mislearre surahs ({downloaded}/{total} ynladen).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Offline bestannen wiske foar {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Netwurk flater. Besykje it nochris.",
+  "placesLocationRequiredTitle": "Lokaasje fereaske",
+  "placesLocationRequiredBody": "Stel earst in lokaasje yn, sadat moskeeën yn 'e buert, halal-iten en islamityske skoallen sekuer kinne wurde socht.",
+  "placesMapTilesUnavailableTitle": "Kaarttegels net beskikber",
+  "placesMapTilesUnavailableBody": "In ferifiearre kaarttegelboarne is noch net ynsteld foar dizze build. Plakken yn 'e buert kinne noch laden wurde fan jo bewarre lokaasje.",
+  "placesDataSourceUnavailableTitle": "Plakken gegevens net beskikber",
+  "placesDataSourceUnavailableBody": "In ferifiearre plakken gegevenseinpunt is noch net ynsteld foar dizze build. Stel PLACES_OVERPASS_API_URL yn op in goedkarde proxy of provider foardat jo sykjen yn 'e buert ynskeakelje.",
   "unknownPlaceName": "Unbekende namme",
   "islamicPlaceFallback": "Islamityske plak",
-  "prayerNotificationTitle": "Tiid foar {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "It is tiid om te bidden {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Ferifiearre duas binne noch net beskikber",
-  "duaUnavailableBody": "Ferifiearre deistige duas binne noch net syngronisearre mei dit apparaat. Ferbine mei de wolkboarne om boarne duas te laden ynstee fan in net ferifiearre fallback.",
-  "duaCategoryQuranic": "Koranyske dua",
-  "duaCategoryMorningEvening": "Moarn & Jûn",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Beskerming",
-  "duaCategoryBeginning": "Beginings",
-  "duaCategorySleep": "Sliep",
-  "duaCategoryFoodDrink": "Iten & Drinken",
-  "duaCategoryForgiveness": "Ferjouwing",
-  "duaCategoryHome": "Thús",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Ferifiearre boarne yn ôfwachting",
-  "hadithUnavailableTitle": "Ferifiearre hadith-kolleksjes binne noch net beskikber",
-  "hadithUnavailableBody": "Dizze build is noch ôfhinklik fan in net ferifiearre eksterne hadith feed. Hadith-blêdzjen bliuwt útskeakele oant in boarne dataset wurdt syngronisearre.",
-  "appErrorOccurred": "Der barde in flater",
-  "appUnknownError": "Unbekende flater",
-  "qiblaCompassErrorDetails": "Kompasflater: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Foltôge! MashAllah",
-  "zikrMeaningSubhanAllah": "Allah is fier boppe elke ûnfolsleinens.",
-  "zikrMeaningAlhamdulillah": "Alle lof heart oan Allah.",
-  "zikrMeaningAllahuAkbar": "Allah is de Grutste.",
-  "zikrMeaningLaIlahaIllallah": "D'r is gjin god behalve Allah.",
-  "zikrMeaningAstaghfirullah": "Ik sykje Allah syn ferjouwing.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "D'r is gjin macht en gjin krêft útsein troch Allah.",
   "asmaMeaning1": "De Beneficent",
   "asmaMeaning2": "De Barmhertige",
   "asmaMeaning3": "De kening / ivige Hear",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "De ivige",
   "asmaMeaning97": "De erfgenamt",
   "asmaMeaning98": "De meast rjochtfeardige gids",
-  "asmaMeaning99": "De pasjint ien",
-  "duaMeaning1": "oaren bidde: ‘Us Hear, jou ús it goede yn dizze wrâld en yn it Hiernamaals, en beskerm ús tsjin de marteling fan it Fjoer.’",
-  "duaMeaning2": "God belêstet gjin siel mei mear as se ferneare kin: elk wint wat goed er dien hat, en lijt syn kwea- ‘Hear, nim ús net oan as wy ferjitte of flaters meitsje. Hear, belêste ús net sa't Jo dy foar ús hawwe. Hear, belêste ús net mei mear as wy krêft hawwe om te dragen. Ferjou ús, ferjou ús, en hawwe genede oer ús. Do bist ús Beskermer, dus help ús tsjin de ûnleauwigen.’",
-  "duaMeaning3": "‘Us Hear, lit ús hert net ôfwike neidat Jo ús liede hawwe. Jou ús jo genede: Jo binne de ivich jaan.",
-  "duaMeaning4": "Hear, jou dat ik en myn neiteam it gebed folhâlde meie. Us Hear, akseptearje myn fersyk.",
-  "duaMeaning5": "en del dyn wjuk yn dimmenens tsjin harren yn goedernichheid del en sis: ‘Hear, haw genede oer harren, krekt sa’t se my fersoarge doe’t ik lyts wie’.",
-  "duaMeaning6": "ferheven wêze God, dejinge dy't wier yn kontrôle is. [Profeet], haast net om te recitearjen foardat de iepenbiering folslein kompleet is, mar sis: 'Hear, fergrutsje my yn kennis!'",
-  "duaMeaning7": "Sis [profeet], 'Hear, ferjou en haw barmhertichheid: Jo binne de barmhertichste fan allegear.'",
-  "duaMeaning8": "dyjingen dy't bidde: 'Us Hear, jow ús freugde yn ús breidspearen en neiteam. Meitsje ús goede foarbylden foar dyjingen dy't jo bewust binne'.",
-  "islamicNewYear": "Islamityske Nijjier",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadan",
-  "specialDayDateLaylatAlQadr": "27 Ramadan",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Ferfarskje",
-  "ayahLabel": "Ayah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Tafsir laden...",
-  "tafsirSourceLabel": "Tafsir boarne",
-  "tafsirNoSurahFound": "Gjin tafsir fûn foar dizze surah.",
-  "tafsirNoAyahFound": "Gjin tafsir fûn foar ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Tafsir koe net laden wurde.",
-  "tafsirNoTextForAyah": "Gjin tafsir tekst foar dizze ayah.",
-  "tafsirDownloadingProgress": "Download tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "Tafsir boarne joech in HTTP {statusCode} flater werom.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "De selektearre tafsir boarne joech gjin ynstjoerings.",
-  "premiumProductUnavailable": "Premiumprodukt is no net beskikber. Besykje it letter nochris.",
-  "premiumPurchaseFailed": "Oankeap koe net foltôge wurde. Besykje it nochris.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Islamityske Way of Light",
-  "downloadPartiallyFinishedForReciter": "Download klear foar {reciter} mei {failed} mislearre surahs ({downloaded}/{total} ynladen).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Lokaasje fereaske",
-  "placesLocationRequiredBody": "Stel earst in lokaasje yn, sadat moskeeën yn 'e buert, halal-iten en islamityske skoallen sekuer kinne wurde socht.",
-  "placesMapTilesUnavailableTitle": "Kaarttegels net beskikber",
-  "placesMapTilesUnavailableBody": "In ferifiearre kaarttegelboarne is noch net ynsteld foar dizze build. Plakken yn 'e buert kinne noch laden wurde fan jo bewarre lokaasje.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Man (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Man (Abdul Basit)",
-  "audioVoiceSudais": "Man (Sudais)",
-  "qiblaSensorUnavailable": "Kompassensor is net beskikber op dit apparaat.",
-  "adhanNotificationChannelName": "Adhan Notifikaasjes",
-  "adhanNotificationChannelDescription": "Gebedstiidalarms mei adhan-lûd.",
-  "quranLoadFailed": "Koranynhâld koe net laden wurde. Besykje it nochris.",
-  "locationDetectionFailed": "Koe jo lokaasje net ûntdekke. Kies in stêd mei de hân of besykje it nochris.",
-  "qiblaLocationRequiredTitle": "Lokaasje nedich foar Qibla",
-  "qiblaLocationRequiredBody": "Stel jo werklike lokaasje yn foardat jo it Qibla-kompas brûke, sadat de rjochting krekt kin wurde berekkene.",
-  "placesDataSourceUnavailableTitle": "Plakken gegevens net beskikber",
-  "placesDataSourceUnavailableBody": "In ferifiearre plakken gegevenseinpunt is noch net ynsteld foar dizze build. Stel PLACES_OVERPASS_API_URL yn op in goedkarde proxy of provider foardat jo sykjen yn 'e buert ynskeakelje.",
-  "tafsirCacheUnavailable": "Ferifiearre tafsir is noch net offline beskikber. Syngronisearje in boarne tafsir-dataset foardat jo blêdzje."
+  "asmaMeaning99": "De pasjint ien"
 }

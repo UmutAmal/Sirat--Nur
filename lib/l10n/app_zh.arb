@@ -1,6 +1,7 @@
 {
   "@@locale": "zh",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "伊斯兰之光之路",
   "home": "首页",
   "quran": "古兰经",
   "qibla": "朝拜",
@@ -23,6 +24,22 @@
   "asr": "晡气",
   "maghrib": "昏礼",
   "isha": "伊莎",
+  "prayerNotificationTitle": "{prayerName} 时间到了",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "是时候祈祷{prayerName}了。",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "数据与存储",
   "clearCache": "清除缓存",
   "cacheClearedSuccess": "缓存清除成功",
@@ -34,6 +51,7 @@
   "currentLocation": "当前位置（GPS）",
   "locationServiceDisabled": "定位服务被禁用。",
   "locationPermissionDenied": "位置权限被拒绝。",
+  "locationDetectionFailed": "无法检测到您的位置。请手动选择城市或重试。",
   "citiesCount": "{count} 个城市",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "没有找到结果",
   "loading": "正在加载...",
   "error": "错误",
+  "appErrorOccurred": "发生错误",
+  "appUnknownError": "未知错误",
+  "quranLoadFailed": "无法加载《古兰经》内容。请再试一次。",
   "retry": "重试",
+  "refreshAction": "刷新",
   "cancel": "取消",
   "save": "保存",
   "delete": "删除",
@@ -57,17 +79,78 @@
   "yes": "是的",
   "no": "不",
   "surah": "苏拉",
+  "ayahLabel": "阿亚 {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "朱兹",
   "page": "页",
   "reading": "阅读",
   "recitation": "背诵",
   "translation": "翻译",
   "tafsir": "塔夫西尔",
+  "tafsirLoading": "加载中...",
+  "tafsirSourceLabel": "塔夫西尔来源",
+  "tafsirNoSurahFound": "没有找到该章的塔夫西尔。",
+  "tafsirNoAyahFound": "没有找到 ayah {ayah} 的塔夫西尔。",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "无法加载 Tafsir。",
+  "tafsirNoTextForAyah": "没有该阿耶的塔夫西尔文本。",
+  "tafsirDownloadingProgress": "正在下载 tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "正在加载 {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Tafsir 源返回了 HTTP {statusCode} 错误。",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "所选的 tafsir 源未返回任何条目。",
+  "tafsirCacheUnavailable": "已验证的 tafsir 尚无法离线使用。在浏览之前同步来源的 tafsir 数据集。",
   "bookmarks": "书签",
   "addBookmark": "添加书签",
   "removeBookmark": "删除书签",
   "lastRead": "最后阅读",
   "dailyZikr": "每日则克尔",
+  "duaMeaning1": "其他人则祈祷：“我们的主，请赐予我们今世和后世的美好，并保护我们免受火焰的折磨。”",
+  "duaMeaning2": "上帝不会给任何灵魂带来超出其承受能力的负担：每个人都会获得其所做的一切善行，并承受其恶行——“主啊，如果我们忘记或犯了错误，请不要责怪我们。”主啊，不要像你给我们之前的人带来负担一样给我们带来负担。主啊，不要让我们承受超出我们承受能力的负担。饶恕我们，饶恕我们，怜悯我们。你是我们的保护者，所以请帮助我们对抗异教徒。”",
+  "duaMeaning3": "‘我们的主啊，在您引导我们之后，不要让我们的心偏离。请赐予我们您的仁慈：您是永恒的给予者。",
+  "duaMeaning4": "主啊，求你让我和我的后代能够继续祷告。我们的主啊，请接受我的请求。",
+  "duaMeaning5": "并以谦卑和仁慈的态度向他们放下你的翅膀，说：“主啊，怜悯他们，就像我小时候他们照顾我一样。”",
+  "duaMeaning6": "尊崇上帝，真正掌管一切的上帝。 [先知]，在启示完全完成之前，不要急于背诵，而要说：“主啊，请增加我的知识！”",
+  "duaMeaning7": "说[先知]：“主啊，宽恕并怜悯：你是最仁慈的。”",
+  "duaMeaning8": "那些祈祷的人：‘我们的主，求你使我们的配偶和子孙喜乐。让我们成为那些认识您的人的好榜样。”",
   "morningZikr": "早晨则克尔",
   "eveningZikr": "晚上则克尔",
   "tasbih": "塔斯比赫",
@@ -88,6 +171,26 @@
   "fasting": "斋戒",
   "quranReading": "《古兰经》阅读",
   "prayers": "礼拜",
+  "prayerRemainingHoursMinutes": "{hours}小时 {minutes}分钟",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}分钟",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "迪克尔伯爵",
   "weeklyProgress": "每周进度",
   "monthlyProgress": "每月进度",
@@ -101,6 +204,14 @@
   "ramadan": "斋月",
   "eidAlFitr": "开斋节",
   "eidAlAdha": "古尔邦节",
+  "islamicNewYear": "伊斯兰新年",
+  "mawlidAnNabi": "圣祭安纳比",
+  "specialDayDateRamadanStart": "1 斋月",
+  "specialDayDateLaylatAlQadr": "27 斋月",
+  "specialDayDateEidAlFitr": "1 肖瓦尔",
+  "specialDayDateEidAlAdha": "10 杜尔希贾",
+  "specialDayDateIslamicNewYear": "穆哈兰月 1 日",
+  "specialDayDateMawlidAnNabi": "12 拉比·阿瓦瓦尔",
   "laylatAlQadr": "莱拉特·盖德尔",
   "qiblaDirection": "朝拜方向",
   "compass": "罗盘",
@@ -108,6 +219,19 @@
   "north": "北",
   "qiblaFound": "已找到朝拜方向！",
   "turnDevice": "请将设备朝向朝拜方向",
+  "qiblaCompassErrorDetails": "指南针错误：{error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "指南针传感器在此设备上不可用。",
+  "qiblaLocationRequiredTitle": "朝拜所需地点",
+  "qiblaLocationRequiredBody": "在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。",
+  "adhanNotificationChannelName": "宣礼通知",
+  "adhanNotificationChannelDescription": "祈祷时间以宣礼声提醒。",
   "notifications": "通知",
   "prayerNotifications": "祷告通知",
   "enableNotifications": "启用通知",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "目标计数：{target}",
   "tapToCount": "点击计数",
+  "zikrCompletedMashAllah": "完全的！玛什真主",
+  "zikrMeaningSubhanAllah": "安拉远高于一切缺陷。",
+  "zikrMeaningAlhamdulillah": "所有赞美都属于安拉。",
+  "zikrMeaningAllahuAkbar": "安拉是最伟大的。",
+  "zikrMeaningLaIlahaIllallah": "除安拉外，别无上帝。",
+  "zikrMeaningAstaghfirullah": "我寻求阿拉的宽恕。",
+  "zikrMeaningLaHawlaWaLaQuwwata": "除了安拉之外，没有任何力量和力量。",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "音频 语音",
+  "audioVoiceMisharyAlafasy": "男 (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "男 (Abdul Basit)",
+  "audioVoiceSudais": "男 (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "朝拜校准",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "需要校准。旋转图 8 中的设备。",
   "dailyVerse": "每日诗歌",
+  "dailyVerseUnavailableTitle": "每日经文不可用",
+  "dailyVerseUnavailableBody": "尚未为此版本配置已验证的每日经文内容。在浏览之前连接到云源或同步经过验证的缓存。",
   "todaysIbadah": "今天的伊巴达",
   "quickAccess": "快速访问",
   "assistant": "助手",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "已验证的 dua 尚不可用",
+  "duaUnavailableBody": "已验证的每日 duas 尚未同步到此设备。连接到云源以加载来源的 dua，而不是未经验证的后备。",
+  "duaCategoryQuranic": "古兰经杜阿",
+  "duaCategoryMorningEvening": "早上和晚上",
+  "duaCategoryTasbih": "塔斯比赫",
+  "duaCategoryProtection": "保护",
+  "duaCategoryBeginning": "开始",
+  "duaCategorySleep": "睡觉",
+  "duaCategoryFoodDrink": "食品和饮料",
+  "duaCategoryForgiveness": "饶恕",
+  "duaCategoryHome": "家",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "伊斯兰教育",
   "sukunAudioTitle": "苏坤音景",
   "hadithCollections": "圣训集",
+  "hadithSourcePending": "来源待核实",
+  "hadithUnavailableTitle": "尚未提供经过验证的圣训集",
+  "hadithUnavailableBody": "此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。",
   "paywallUnlockAll": "解锁你的精神之旅的所有功能",
+  "premiumProductUnavailable": "高级产品目前不可用。请稍后重试。",
+  "premiumPurchaseFailed": "购买无法完成。请再试一次。",
   "paywallFeature1Title": "神经助手增强版",
   "paywallFeature1Desc": "无限的人工智能问答",
   "paywallFeature2Title": "无限离线",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "{reciter} 的下载已完成，其中 {failed} 章节失败（{downloaded}/{total} 已下载）。",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "已删除 {reciter} 的脱机文件。",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "网络错误。请再试一次。",
+  "placesLocationRequiredTitle": "需要位置",
+  "placesLocationRequiredBody": "先设定好位置，这样就可以准确搜索到附近的清真寺、清真食品、伊斯兰学校。",
+  "placesMapTilesUnavailableTitle": "地图图块不可用",
+  "placesMapTilesUnavailableBody": "尚未为此构建配置经过验证的地图图块源。附近的地点仍然可以从您保存的位置加载。",
+  "placesDataSourceUnavailableTitle": "地点数据不可用",
+  "placesDataSourceUnavailableBody": "尚未为此构建配置经过验证的地点数据端点。在启用附近搜索之前，将 PLACES_OVERPASS_API_URL 设置为已批准的代理或提供商。",
   "unknownPlaceName": "未知名称",
   "islamicPlaceFallback": "伊斯兰广场",
-  "prayerNotificationTitle": "{prayerName} 时间到了",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "是时候祈祷{prayerName}了。",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "已验证的 dua 尚不可用",
-  "duaUnavailableBody": "已验证的每日 duas 尚未同步到此设备。连接到云源以加载来源的 dua，而不是未经验证的后备。",
-  "duaCategoryQuranic": "古兰经杜阿",
-  "duaCategoryMorningEvening": "早上和晚上",
-  "duaCategoryTasbih": "塔斯比赫",
-  "duaCategoryProtection": "保护",
-  "duaCategoryBeginning": "开始",
-  "duaCategorySleep": "睡觉",
-  "duaCategoryFoodDrink": "食品和饮料",
-  "duaCategoryForgiveness": "饶恕",
-  "duaCategoryHome": "家",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "来源待核实",
-  "hadithUnavailableTitle": "尚未提供经过验证的圣训集",
-  "hadithUnavailableBody": "此构建仍然依赖于未经验证的外部圣训提要。在源数据集同步之前，圣训浏览保持禁用状态。",
-  "appErrorOccurred": "发生错误",
-  "appUnknownError": "未知错误",
-  "qiblaCompassErrorDetails": "指南针错误：{error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "完全的！玛什真主",
-  "zikrMeaningSubhanAllah": "安拉远高于一切缺陷。",
-  "zikrMeaningAlhamdulillah": "所有赞美都属于安拉。",
-  "zikrMeaningAllahuAkbar": "安拉是最伟大的。",
-  "zikrMeaningLaIlahaIllallah": "除安拉外，别无上帝。",
-  "zikrMeaningAstaghfirullah": "我寻求阿拉的宽恕。",
-  "zikrMeaningLaHawlaWaLaQuwwata": "除了安拉之外，没有任何力量和力量。",
   "asmaMeaning1": "仁慈者",
   "asmaMeaning2": "仁慈者",
   "asmaMeaning3": "国王/永恒之主",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "永恒的人",
   "asmaMeaning97": "继承者",
   "asmaMeaning98": "最正向导",
-  "asmaMeaning99": "忍耐者，不急于惩罚，并以完美的宽容行事。",
-  "duaMeaning1": "其他人则祈祷：“我们的主，请赐予我们今世和后世的美好，并保护我们免受火焰的折磨。”",
-  "duaMeaning2": "上帝不会给任何灵魂带来超出其承受能力的负担：每个人都会获得其所做的一切善行，并承受其恶行——“主啊，如果我们忘记或犯了错误，请不要责怪我们。”主啊，不要像你给我们之前的人带来负担一样给我们带来负担。主啊，不要让我们承受超出我们承受能力的负担。饶恕我们，饶恕我们，怜悯我们。你是我们的保护者，所以请帮助我们对抗异教徒。”",
-  "duaMeaning3": "‘我们的主啊，在您引导我们之后，不要让我们的心偏离。请赐予我们您的仁慈：您是永恒的给予者。",
-  "duaMeaning4": "主啊，求你让我和我的后代能够继续祷告。我们的主啊，请接受我的请求。",
-  "duaMeaning5": "并以谦卑和仁慈的态度向他们放下你的翅膀，说：“主啊，怜悯他们，就像我小时候他们照顾我一样。”",
-  "duaMeaning6": "尊崇上帝，真正掌管一切的上帝。 [先知]，在启示完全完成之前，不要急于背诵，而要说：“主啊，请增加我的知识！”",
-  "duaMeaning7": "说[先知]：“主啊，宽恕并怜悯：你是最仁慈的。”",
-  "duaMeaning8": "那些祈祷的人：‘我们的主，求你使我们的配偶和子孙喜乐。让我们成为那些认识您的人的好榜样。”",
-  "islamicNewYear": "伊斯兰新年",
-  "mawlidAnNabi": "圣祭安纳比",
-  "specialDayDateRamadanStart": "1 斋月",
-  "specialDayDateLaylatAlQadr": "27 斋月",
-  "specialDayDateEidAlFitr": "1 肖瓦尔",
-  "specialDayDateEidAlAdha": "10 杜尔希贾",
-  "specialDayDateIslamicNewYear": "穆哈兰月 1 日",
-  "specialDayDateMawlidAnNabi": "12 拉比·阿瓦瓦尔",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "刷新",
-  "ayahLabel": "阿亚 {ayah}",
-  "tafsirLoading": "加载中...",
-  "tafsirSourceLabel": "塔夫西尔来源",
-  "tafsirNoSurahFound": "没有找到该章的塔夫西尔。",
-  "tafsirNoAyahFound": "没有找到 ayah {ayah} 的塔夫西尔。",
-  "tafsirLoadFailed": "无法加载 Tafsir。",
-  "tafsirNoTextForAyah": "没有该阿耶的塔夫西尔文本。",
-  "tafsirDownloadingProgress": "正在下载 tafsir {current}/{total}",
-  "tafsirLoadingProgress": "正在加载 {current}/{total}",
-  "tafsirApiStatusError": "Tafsir 源返回了 HTTP {statusCode} 错误。",
-  "tafsirNoEntriesReturned": "所选的 tafsir 源未返回任何条目。",
-  "premiumProductUnavailable": "高级产品目前不可用。请稍后重试。",
-  "premiumPurchaseFailed": "购买无法完成。请再试一次。",
-  "prayerRemainingHoursMinutes": "{hours}小时 {minutes}分钟",
-  "prayerRemainingMinutes": "{minutes}分钟",
-  "splashTagline": "伊斯兰之光之路",
-  "downloadPartiallyFinishedForReciter": "{reciter} 的下载已完成，其中 {failed} 章节失败（{downloaded}/{total} 已下载）。",
-  "placesLocationRequiredTitle": "需要位置",
-  "placesLocationRequiredBody": "先设定好位置，这样就可以准确搜索到附近的清真寺、清真食品、伊斯兰学校。",
-  "placesMapTilesUnavailableTitle": "地图图块不可用",
-  "placesMapTilesUnavailableBody": "尚未为此构建配置经过验证的地图图块源。附近的地点仍然可以从您保存的位置加载。",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "男 (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "男 (Abdul Basit)",
-  "audioVoiceSudais": "男 (Sudais)",
-  "qiblaSensorUnavailable": "指南针传感器在此设备上不可用。",
-  "adhanNotificationChannelName": "宣礼通知",
-  "adhanNotificationChannelDescription": "祈祷时间以宣礼声提醒。",
-  "quranLoadFailed": "无法加载《古兰经》内容。请再试一次。",
-  "locationDetectionFailed": "无法检测到您的位置。请手动选择城市或重试。",
-  "qiblaLocationRequiredTitle": "朝拜所需地点",
-  "qiblaLocationRequiredBody": "在使用朝拜指南针之前设置您的实际位置，以便可以准确计算方向。",
-  "placesDataSourceUnavailableTitle": "地点数据不可用",
-  "placesDataSourceUnavailableBody": "尚未为此构建配置经过验证的地点数据端点。在启用附近搜索之前，将 PLACES_OVERPASS_API_URL 设置为已批准的代理或提供商。",
-  "tafsirCacheUnavailable": "已验证的 tafsir 尚无法离线使用。在浏览之前同步来源的 tafsir 数据集。"
+  "asmaMeaning99": "忍耐者，不急于惩罚，并以完美的宽容行事。"
 }

@@ -952,6 +952,13 @@ class AppLocalizationsBn extends AppLocalizations {
   String get dailyVerse => 'দৈনিক আয়াত';
 
   @override
+  String get dailyVerseUnavailableTitle => 'দৈনিক শ্লোক অনুপলব্ধ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'যাচাই করা দৈনিক পদ্য বিষয়বস্তু এই বিল্ডের জন্য এখনও কনফিগার করা হয়নি। ক্লাউড উত্সের সাথে সংযোগ করুন বা ব্রাউজ করার আগে একটি যাচাইকৃত ক্যাশে সিঙ্ক করুন৷';
+
+  @override
   String get todaysIbadah => 'আজকের ইবাদত';
 
   @override

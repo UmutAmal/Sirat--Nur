@@ -950,6 +950,13 @@ class AppLocalizationsGu extends AppLocalizations {
   String get dailyVerse => 'દૈનિક શ્લોક';
 
   @override
+  String get dailyVerseUnavailableTitle => 'દૈનિક શ્લોક અનુપલબ્ધ';
+
+  @override
+  String get dailyVerseUnavailableBody =>
+      'આ બિલ્ડ માટે ચકાસાયેલ દૈનિક શ્લોક સામગ્રી હજી સુધી ગોઠવવામાં આવી નથી. ક્લાઉડ સ્ત્રોત સાથે કનેક્ટ કરો અથવા બ્રાઉઝ કરતા પહેલા ચકાસાયેલ કેશને સમન્વયિત કરો.';
+
+  @override
   String get todaysIbadah => 'આજની ઇબાદાહ';
 
   @override

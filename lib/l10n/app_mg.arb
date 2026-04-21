@@ -1,6 +1,7 @@
 {
   "@@locale": "mg",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Lalam-pahazavana Islamika",
   "home": "Trano",
   "quran": "CORAN",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Maghrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Fotoana hanaovana {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Fotoana hivavahana {prayerName} izao.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & fitahirizana",
   "clearCache": "Hamafa Cache",
   "cacheClearedSuccess": "Voafafa soa aman-tsara ny cache",
@@ -34,6 +51,7 @@
   "currentLocation": "Toerana ankehitriny (GPS)",
   "locationServiceDisabled": "Tsy miasa ny serivisy toerana.",
   "locationPermissionDenied": "Nolavina ny fahazoan-dàlana toerana.",
+  "locationDetectionFailed": "Tsy hita ny toerana misy anao. Misafidiana tanàna iray azafady na andramo indray.",
   "citiesCount": "{count} tanàna",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Tsy misy valiny hita",
   "loading": "Loading...",
   "error": "Error",
+  "appErrorOccurred": "Nisy hadisoana nitranga",
+  "appUnknownError": "Error tsy fantatra",
+  "quranLoadFailed": "Tsy azo nalaina ny votoatin'ny CORAN. Andramo indray azafady.",
   "retry": "Andramo indray",
+  "refreshAction": "Havaozina",
   "cancel": "Manafoana",
   "save": "Vonjeo",
   "delete": "Fafao",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "tsy misy",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Pejy",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Loading ny tafsir...",
+  "tafsirSourceLabel": "Loharanon'ny Tafsir",
+  "tafsirNoSurahFound": "Tsy nisy tafsir hita tamin'ity surah ity.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tsy azo nalaina ny Tafsir.",
+  "tafsirNoTextForAyah": "Tsy misy soratra tafsir ho an'ity andininy ity.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Ny loharanon'ny Tafsir dia namerina hadisoana HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Ny loharanon'ny tafsir nofantenana dia tsy naveriny.",
+  "tafsirCacheUnavailable": "Mbola tsy misy an-tserasera ny tafsir voamarina. Ampifanaraho ny angon-drakitra misy tafsir alohan'ny hijerena.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Ampio Bookmark",
   "removeBookmark": "Esory Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "ny sasany mivavaka hoe: ‘Ry Tomponay, omeo soa izahay eto amin’izao tontolo izao sy any an-koatra, ary arovy amin’ny fampijalian’ny Afo izahay.",
+  "duaMeaning2": "Andriamanitra dia tsy mahavesatra ny fanahy mihoatra noho izay zakany: samy mahazo izay soa vitany ny tsirairay, ary miaritra ny faharatsiany- ‘Tompo ô, aza manadino anay, na manao fahadisoana izahay. Tompo ô, aza manavesatra anay tahaka ny nanasanao entana ireo teo alohanay. Tompo ô, aza manavesatra anay mihoatra noho izay zakanay. Mamelà anay, mamelà anay, ary mamindrà fo aminay. Ianao no Mpiaro anay, koa ampio izahay hanohitra ireo tsy mpino.",
+  "duaMeaning3": "‘Ry Tomponay, aza avela hivily ny fonay rehefa avy nitari-dalana anay Ianao. Omeo anay ny famindram-ponao: Ianao no Mpanome mandrakizay.",
+  "duaMeaning4": "Tompo ô, omeo ahy sy ny taranako ny mivavaka. Tomponay ô, ekeo ny fangatahako.",
+  "duaMeaning5": "ary ampidino amin’ny fanetren-tena ny elatrao aminy amim-pitiavana, ka ataovy hoe: ‘Tompo ô, mamindrà fo aminy, tahaka ny nikarakarany ahy fony aho mbola kely.",
+  "duaMeaning6": "asandratra anie Andriamanitra, Izay mahafehy tokoa. [Mpaminany], aza maika ny mitanisa alohan’ny fahafenoan’ny fanambarana fa lazao hoe: ‘Tompo ô, ampitomboy fahalalana aho!’",
+  "duaMeaning7": "Lazao [ny Mpaminany] hoe: ‘Tompo ô, mamelà heloka sy mamindrà fo: Hianao no mamindra fo indrindra amin’izy rehetra.’",
+  "duaMeaning8": "ireo izay mivavaka hoe: ‘Ry Tomponay, omeo fifaliana izahay amin’ny vadinay sy ny taranakay. Ataovy ohatra tsara ho an’izay mahalala Anao izahay’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Fifadian-kanina",
   "quranReading": "Famakiana Quran",
   "prayers": "Vavaka",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Fandrosoana isan-kerinandro",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Taom-baovao Islamika",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadany",
+  "specialDayDateLaylatAlQadr": "27 Ramadany",
+  "specialDayDateEidAlFitr": "1 Syawal",
+  "specialDayDateEidAlAdha": "10 Dzulhijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Lalana Kibla",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla hita!",
   "turnDevice": "Avereno ny fitaovanao mba hitodika amin'ny Qibla",
+  "qiblaCompassErrorDetails": "Error compass: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Tsy misy sensor compass amin'ity fitaovana ity.",
+  "qiblaLocationRequiredTitle": "Toerana ilaina amin'ny Qibla",
+  "qiblaLocationRequiredBody": "Apetraho ny toerana misy anao alohan'ny hampiasana ny kompas Qibla mba ho azo kajy tsara ny lalana.",
+  "adhanNotificationChannelName": "Adhan Notifications",
+  "adhanNotificationChannelDescription": "Fampandrenesana ny fotoam-bavaka miaraka amin'ny feon'ny adhan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Isan'ny kendrena: {target}",
   "tapToCount": "Tsindrio raha manisa",
+  "zikrCompletedMashAllah": "Vita! MashAllah",
+  "zikrMeaningSubhanAllah": "I Allah dia ambony lavitra noho ny tsy fahatanterahana rehetra.",
+  "zikrMeaningAlhamdulillah": "An'i Allah ny dera rehetra.",
+  "zikrMeaningAllahuAkbar": "I Allah no lehibe indrindra.",
+  "zikrMeaningLaIlahaIllallah": "Tsy misy andriamanitra afa-tsy Allah.",
+  "zikrMeaningAstaghfirullah": "Mangataka ny famelan'i Allah aho.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Tsy misy hery sy hery afa-tsy amin’ny alalan’i Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Feo Audio",
+  "audioVoiceMisharyAlafasy": "Lahy (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lehilahy (Abdul Basit)",
+  "audioVoiceSudais": "Lahy (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla calibration",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Ilaina ny calibration. Ahodina ny fitaovana amin'ny sary-8.",
   "dailyVerse": "Andininy isan'andro",
+  "dailyVerseUnavailableTitle": "Andininy isan'andro tsy misy",
+  "dailyVerseUnavailableBody": "Ny votoatin'ny andininy isan'andro voamarina dia tsy mbola voarafitra ho an'ity fananganana ity. Mifandraisa amin'ny loharano rahona na ampifanaraho cache voamarina alohan'ny hivezivezena.",
   "todaysIbadah": "Ibadah anio",
   "quickAccess": "Fidirana haingana",
   "assistant": "mpanampy",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Tsy mbola misy ny roa voamarina",
+  "duaUnavailableBody": "Ny duas isan'andro voamarina dia tsy mbola narindra tamin'ity fitaovana ity. Ampifandraiso amin'ny loharanon-drahona mba hametahana ny roa avy amin'ny loharano fa tsy fiverenana tsy voamarina.",
+  "duaCategoryQuranic": "Quranic dua",
+  "duaCategoryMorningEvening": "Maraina & hariva",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "MIARO",
+  "duaCategoryBeginning": "fiandohana",
+  "duaCategorySleep": "torimaso",
+  "duaCategoryFoodDrink": "Sakafo sy zava-pisotro",
+  "duaCategoryForgiveness": "Famelan-keloka",
+  "duaCategoryHome": "an-trano",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Fampianarana Islamika",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Fanangonana Hadith",
+  "hadithSourcePending": "Loharano voamarina miandry",
+  "hadithUnavailableTitle": "Tsy mbola misy ny fanangonana hadita voamarina",
+  "hadithUnavailableBody": "Mbola miankina amin'ny fahana hadita ivelany tsy voamarina io fananganana io. Mijanona ho kilemaina ny fitetezana Hadith mandra-pirindran'ny angon-drakitra misy loharano iray.",
   "paywallUnlockAll": "Sokafy ny endri-javatra rehetra ho an'ny dianao ara-panahy",
+  "premiumProductUnavailable": "Ny vokatra Premium dia tsy misy amin'izao fotoana izao. Andramo indray rahatrizay.",
+  "premiumPurchaseFailed": "Tsy vita ny fividianana. Andramo indray azafady.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Q&A tsy misy fetran'ny AI",
   "paywallFeature2Title": "Tsy voafetra an-tserasera",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Vita ny fampidinana ho an'ny {reciter} miaraka amin'ny {failed} surah tsy nahomby ({downloaded}/{total} alaina).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Voafafa ny rakitra an-tserasera ho an'ny {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Fahadisoan'ny tambajotra. Andramo indray azafady.",
+  "placesLocationRequiredTitle": "Toerana ilaina",
+  "placesLocationRequiredBody": "Mametraha toerana aloha mba ho azo karohina tsara ny moske manodidina, ny sakafo halal ary ny sekoly Islamika.",
+  "placesMapTilesUnavailableTitle": "Tsy hita ny taila sari-tany",
+  "placesMapTilesUnavailableBody": "Mbola tsy voarafitra ho an'ity fananganana ity ny loharano misy sarintany voamarina. Mbola afaka misintona avy amin'ny toerana voatahiry ny toerana akaiky anao.",
+  "placesDataSourceUnavailableTitle": "Tsy misy angona toerana",
+  "placesDataSourceUnavailableBody": "Mbola tsy voafefy ho an'ity fananganana ity ny tondro fiafaran'ny angona toerana voamarina. Mametraha PLACES_OVERPASS_API_URL amin'ny proxy na mpanome ankatoavina alohan'ny handefasana ny fikarohana eo akaiky eo.",
   "unknownPlaceName": "Anarana tsy fantatra",
   "islamicPlaceFallback": "Toerana Islamika",
-  "prayerNotificationTitle": "Fotoana hanaovana {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Fotoana hivavahana {prayerName} izao.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Tsy mbola misy ny roa voamarina",
-  "duaUnavailableBody": "Ny duas isan'andro voamarina dia tsy mbola narindra tamin'ity fitaovana ity. Ampifandraiso amin'ny loharanon-drahona mba hametahana ny roa avy amin'ny loharano fa tsy fiverenana tsy voamarina.",
-  "duaCategoryQuranic": "Quranic dua",
-  "duaCategoryMorningEvening": "Maraina & hariva",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "MIARO",
-  "duaCategoryBeginning": "fiandohana",
-  "duaCategorySleep": "torimaso",
-  "duaCategoryFoodDrink": "Sakafo sy zava-pisotro",
-  "duaCategoryForgiveness": "Famelan-keloka",
-  "duaCategoryHome": "an-trano",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Loharano voamarina miandry",
-  "hadithUnavailableTitle": "Tsy mbola misy ny fanangonana hadita voamarina",
-  "hadithUnavailableBody": "Mbola miankina amin'ny fahana hadita ivelany tsy voamarina io fananganana io. Mijanona ho kilemaina ny fitetezana Hadith mandra-pirindran'ny angon-drakitra misy loharano iray.",
-  "appErrorOccurred": "Nisy hadisoana nitranga",
-  "appUnknownError": "Error tsy fantatra",
-  "qiblaCompassErrorDetails": "Error compass: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Vita! MashAllah",
-  "zikrMeaningSubhanAllah": "I Allah dia ambony lavitra noho ny tsy fahatanterahana rehetra.",
-  "zikrMeaningAlhamdulillah": "An'i Allah ny dera rehetra.",
-  "zikrMeaningAllahuAkbar": "I Allah no lehibe indrindra.",
-  "zikrMeaningLaIlahaIllallah": "Tsy misy andriamanitra afa-tsy Allah.",
-  "zikrMeaningAstaghfirullah": "Mangataka ny famelan'i Allah aho.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Tsy misy hery sy hery afa-tsy amin’ny alalan’i Allah.",
   "asmaMeaning1": "Ilay Mahasoa",
   "asmaMeaning2": "Ilay Mamindra fo",
   "asmaMeaning3": "Ny Mpanjaka / Tompo mandrakizay",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Ilay Mandrakizay",
   "asmaMeaning97": "Ny mpandova",
   "asmaMeaning98": "Ilay Mpitarika Marina indrindra",
-  "asmaMeaning99": "Ilay marary",
-  "duaMeaning1": "ny sasany mivavaka hoe: ‘Ry Tomponay, omeo soa izahay eto amin’izao tontolo izao sy any an-koatra, ary arovy amin’ny fampijalian’ny Afo izahay.",
-  "duaMeaning2": "Andriamanitra dia tsy mahavesatra ny fanahy mihoatra noho izay zakany: samy mahazo izay soa vitany ny tsirairay, ary miaritra ny faharatsiany- ‘Tompo ô, aza manadino anay, na manao fahadisoana izahay. Tompo ô, aza manavesatra anay tahaka ny nanasanao entana ireo teo alohanay. Tompo ô, aza manavesatra anay mihoatra noho izay zakanay. Mamelà anay, mamelà anay, ary mamindrà fo aminay. Ianao no Mpiaro anay, koa ampio izahay hanohitra ireo tsy mpino.",
-  "duaMeaning3": "‘Ry Tomponay, aza avela hivily ny fonay rehefa avy nitari-dalana anay Ianao. Omeo anay ny famindram-ponao: Ianao no Mpanome mandrakizay.",
-  "duaMeaning4": "Tompo ô, omeo ahy sy ny taranako ny mivavaka. Tomponay ô, ekeo ny fangatahako.",
-  "duaMeaning5": "ary ampidino amin’ny fanetren-tena ny elatrao aminy amim-pitiavana, ka ataovy hoe: ‘Tompo ô, mamindrà fo aminy, tahaka ny nikarakarany ahy fony aho mbola kely.",
-  "duaMeaning6": "asandratra anie Andriamanitra, Izay mahafehy tokoa. [Mpaminany], aza maika ny mitanisa alohan’ny fahafenoan’ny fanambarana fa lazao hoe: ‘Tompo ô, ampitomboy fahalalana aho!’",
-  "duaMeaning7": "Lazao [ny Mpaminany] hoe: ‘Tompo ô, mamelà heloka sy mamindrà fo: Hianao no mamindra fo indrindra amin’izy rehetra.’",
-  "duaMeaning8": "ireo izay mivavaka hoe: ‘Ry Tomponay, omeo fifaliana izahay amin’ny vadinay sy ny taranakay. Ataovy ohatra tsara ho an’izay mahalala Anao izahay’.",
-  "islamicNewYear": "Taom-baovao Islamika",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadany",
-  "specialDayDateLaylatAlQadr": "27 Ramadany",
-  "specialDayDateEidAlFitr": "1 Syawal",
-  "specialDayDateEidAlAdha": "10 Dzulhijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Havaozina",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Loading ny tafsir...",
-  "tafsirSourceLabel": "Loharanon'ny Tafsir",
-  "tafsirNoSurahFound": "Tsy nisy tafsir hita tamin'ity surah ity.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
-  "tafsirLoadFailed": "Tsy azo nalaina ny Tafsir.",
-  "tafsirNoTextForAyah": "Tsy misy soratra tafsir ho an'ity andininy ity.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Ny loharanon'ny Tafsir dia namerina hadisoana HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Ny loharanon'ny tafsir nofantenana dia tsy naveriny.",
-  "premiumProductUnavailable": "Ny vokatra Premium dia tsy misy amin'izao fotoana izao. Andramo indray rahatrizay.",
-  "premiumPurchaseFailed": "Tsy vita ny fividianana. Andramo indray azafady.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Lalam-pahazavana Islamika",
-  "downloadPartiallyFinishedForReciter": "Vita ny fampidinana ho an'ny {reciter} miaraka amin'ny {failed} surah tsy nahomby ({downloaded}/{total} alaina).",
-  "placesLocationRequiredTitle": "Toerana ilaina",
-  "placesLocationRequiredBody": "Mametraha toerana aloha mba ho azo karohina tsara ny moske manodidina, ny sakafo halal ary ny sekoly Islamika.",
-  "placesMapTilesUnavailableTitle": "Tsy hita ny taila sari-tany",
-  "placesMapTilesUnavailableBody": "Mbola tsy voarafitra ho an'ity fananganana ity ny loharano misy sarintany voamarina. Mbola afaka misintona avy amin'ny toerana voatahiry ny toerana akaiky anao.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Lahy (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Lehilahy (Abdul Basit)",
-  "audioVoiceSudais": "Lahy (Sudais)",
-  "qiblaSensorUnavailable": "Tsy misy sensor compass amin'ity fitaovana ity.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Fampandrenesana ny fotoam-bavaka miaraka amin'ny feon'ny adhan.",
-  "quranLoadFailed": "Tsy azo nalaina ny votoatin'ny CORAN. Andramo indray azafady.",
-  "locationDetectionFailed": "Tsy hita ny toerana misy anao. Misafidiana tanàna iray azafady na andramo indray.",
-  "qiblaLocationRequiredTitle": "Toerana ilaina amin'ny Qibla",
-  "qiblaLocationRequiredBody": "Apetraho ny toerana misy anao alohan'ny hampiasana ny kompas Qibla mba ho azo kajy tsara ny lalana.",
-  "placesDataSourceUnavailableTitle": "Tsy misy angona toerana",
-  "placesDataSourceUnavailableBody": "Mbola tsy voafefy ho an'ity fananganana ity ny tondro fiafaran'ny angona toerana voamarina. Mametraha PLACES_OVERPASS_API_URL amin'ny proxy na mpanome ankatoavina alohan'ny handefasana ny fikarohana eo akaiky eo.",
-  "tafsirCacheUnavailable": "Mbola tsy misy an-tserasera ny tafsir voamarina. Ampifanaraho ny angon-drakitra misy tafsir alohan'ny hijerena."
+  "asmaMeaning99": "Ilay marary"
 }

@@ -1,6 +1,7 @@
 {
   "@@locale": "su",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Jalan Islam Cahaya",
   "home": "Imah",
   "quran": "Quran",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asar",
   "maghrib": "Magrib",
   "isha": "Isha",
+  "prayerNotificationTitle": "Waktu keur {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Geus waktuna pikeun ngadoa {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Data & Panyimpenan",
   "clearCache": "Hapus Cache",
   "cacheClearedSuccess": "Cache suksés dipupus",
@@ -34,6 +51,7 @@
   "currentLocation": "Lokasi Ayeuna (GPS)",
   "locationServiceDisabled": "Ladenan lokasi ditumpurkeun.",
   "locationPermissionDenied": "Idin lokasi ditolak.",
+  "locationDetectionFailed": "Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Teu kapanggih hasil",
   "loading": "Ngamuat...",
   "error": "Kasalahan",
+  "appErrorOccurred": "Aya kasalahan",
+  "appUnknownError": "Kasalahan teu dipikanyaho",
+  "quranLoadFailed": "eusi Quran teu bisa dimuat. Mangga cobian deui.",
   "retry": "Coba deui",
+  "refreshAction": "Nyegerkeun",
   "cancel": "Ngabolaykeun",
   "save": "Simpen",
   "delete": "Hapus",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "No",
   "surah": "Surah",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Kaca",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Ngamuat tafsir...",
+  "tafsirSourceLabel": "Sumber Tafsir",
+  "tafsirNoSurahFound": "Teu aya tafsir anu kapanggih pikeun surat ieu.",
+  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir teu bisa dimuat.",
+  "tafsirNoTextForAyah": "Henteu aya téks tafsir pikeun ayat ieu.",
+  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "Sumber tafsir balik kasalahan HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Sumber tafsir anu dipilih teu aya deui entri.",
+  "tafsirCacheUnavailable": "Tafsir anu diverifikasi henteu acan sayogi offline. Nyingkronkeun dataset tafsir sumber samemeh browsing.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Tambahkeun Bookmark",
   "removeBookmark": "Cabut Bookmark",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "batur ngado'a, 'Ya Tuhan kami, pasihan kami kahadéan di dunya sareng di ahérat, sareng lindungi kami tina siksa seuneu.'",
+  "duaMeaning2": "Gusti henteu ngabeungbeuratan jiwa mana waé kalayan langkung ti anu tiasa nanggung: masing-masing nampi kasaéan naon waé anu parantos dilakukeun, sareng sangsara kagoréngan - 'Gusti, ulah nyandak tugas upami urang hilap atanapi ngalakukeun kasalahan. Gusti, ulah ngabeungbeuratan kami sakumaha Anjeun ngabeuratkeun jalma-jalma sateuacan kami. Gusti, ulah ngabeungbeuratan kami kalayan langkung ti anu kami kuatkeun. Hampura kami, hampura kami, sarta rahmat ka kami. Anjeun téh Panjaga kami, jadi tulungan kami ngalawan jalma-jalma kafir.'",
+  "duaMeaning3": "'Ya Rabb kami, ulah ngantepkeun hate kami jadi menyimpang sanggeus anjeun maparin pituduh ka kami. Pasihan kami rahmat anjeun: Anjeun Anu Maha Pasih.",
+  "duaMeaning4": "Gusti, pasihan abdi sareng turunan abdi tiasa nedunan solat. Nun Gusti, kabulkeun pamenta abdi.",
+  "duaMeaning5": "Jeung handap jangjang Anjeun dina humility ka maranehna dina kahadean jeung ucapkeun, 'Gusti, hampura aranjeunna, sakumaha aranjeunna miara kuring nalika kuring leutik.'",
+  "duaMeaning6": "Maha Suci Allah, anu bener-bener ngawasa. [Nabi], ulah buru-buru maca sateuacan wahyu lengkep lengkep, tapi ucapkeun, 'Gusti, tambahkeun pangaweruh kuring!'",
+  "duaMeaning7": "Ucapkeun [Nabi], 'Nun Gusti, hampura sareng welas asih: Anjeun anu paling welas asih.'",
+  "duaMeaning8": "jalma-jalma anu ngadoa, 'Nun Gusti, pasihan abdi kabagjaan pikeun pasangan sareng turunan kami. Jadikeun kami conto anu hade pikeun jalma-jalma anu sadar kana Anjeun’.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Puasa",
   "quranReading": "Bacaan Quran",
   "prayers": "Sholat",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Kamajuan mingguan",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Taun Anyar Islam",
+  "mawlidAnNabi": "Maulid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadhan",
+  "specialDayDateLaylatAlQadr": "27 Ramadhan",
+  "specialDayDateEidAlFitr": "1 Syawal",
+  "specialDayDateEidAlAdha": "10 Dzulhijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabiul Awal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Arah Kiblat",
   "compass": "Kompas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Kiblat kapanggih!",
   "turnDevice": "Hurungkeun alat anjeun pikeun nyanghareupan kiblat",
+  "qiblaCompassErrorDetails": "Kasalahan kompas: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Sénsor kompas henteu sayogi dina alat ieu.",
+  "qiblaLocationRequiredTitle": "Lokasi diperlukeun pikeun Kiblat",
+  "qiblaLocationRequiredBody": "Setel lokasi saleresna anjeun sateuacan nganggo kompas kiblat supados arahna tiasa diitung sacara akurat.",
+  "adhanNotificationChannelName": "Bewara Adzan",
+  "adhanNotificationChannelDescription": "Waktos solat ngageter ku sora adzan.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Jumlah target: {target}",
   "tapToCount": "Ketok pikeun ngitung",
+  "zikrCompletedMashAllah": "Réngsé! MasyaAllah",
+  "zikrMeaningSubhanAllah": "Allah jauh di luhur sagala kasampurnaan.",
+  "zikrMeaningAlhamdulillah": "Sadaya puji kagungan Allah.",
+  "zikrMeaningAllahuAkbar": "Allah Maha Agung.",
+  "zikrMeaningLaIlahaIllallah": "Teu aya tuhan anging Alloh.",
+  "zikrMeaningAstaghfirullah": "Abdi nyuhunkeun pangampura Alloh.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Teu aya kakuatan sareng kakuatan iwal ti Allah.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Sora Audio",
+  "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",
+  "audioVoiceSudais": "Lalaki (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kalibrasi Kiblat",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibration diperlukeun. Rotasikeun alat dina gambar-8.",
   "dailyVerse": "Ayat poean",
+  "dailyVerseUnavailableTitle": "Ayat poean teu sadia",
+  "dailyVerseUnavailableBody": "Eusi ayat poean anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Sambungkeun ka sumber awan atanapi singkronkeun cache anu diverifikasi sateuacan browsing.",
   "todaysIbadah": "Ibadah ayeuna",
   "quickAccess": "Aksés Gancang",
   "assistant": "Asisten",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "duas diverifikasi teu sadia acan",
+  "duaUnavailableBody": "Duas poean anu diverifikasi teu acan disingkronkeun ka alat ieu. Sambungkeun ka sumber awan pikeun muka duas sourced tinimbang fallback unverified.",
+  "duaCategoryQuranic": "Qur'an dua",
+  "duaCategoryMorningEvening": "Isuk & Sore",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Panyalindungan",
+  "duaCategoryBeginning": "Mimiti",
+  "duaCategorySleep": "Saré",
+  "duaCategoryFoodDrink": "Dahareun & Inuman",
+  "duaCategoryForgiveness": "Hampura",
+  "duaCategoryHome": "Imah",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Pendidikan Islam",
   "sukunAudioTitle": "Sukun Soundscapes",
   "hadithCollections": "Kumpulan Hadits",
+  "hadithSourcePending": "Sumber diverifikasi ngantosan",
+  "hadithUnavailableTitle": "Koléksi hadits anu diverifikasi henteu acan sayogi",
+  "hadithUnavailableBody": "Ieu ngawangun masih gumantung kana feed hadits éksternal unverified. Ngotéktak Hadits tetep ditumpurkeun dugi ka set data sumber disingkronkeun.",
   "paywallUnlockAll": "Buka konci sadaya fitur pikeun perjalanan spiritual anjeun",
+  "premiumProductUnavailable": "Produk premium henteu sayogi ayeuna. Mangga cobian deui engké.",
+  "premiumPurchaseFailed": "Meuli teu bisa réngsé. Mangga cobian deui.",
   "paywallFeature1Title": "Neural Asisten Ditambah",
   "paywallFeature1Desc": "Tanya Jawab AI-Powered Unlimited",
   "paywallFeature2Title": "Unlimited Offline",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Unduh réngsé pikeun {reciter} sareng {failed} surah gagal ({downloaded}/{total} diunduh).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Ngahapus file offline pikeun {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Kasalahan jaringan. Mangga cobian deui.",
+  "placesLocationRequiredTitle": "Lokasi diperlukeun",
+  "placesLocationRequiredBody": "Setel lokasi heula supados masjid caket dieu, kadaharan halal, sareng sakola Islam tiasa milarian sacara akurat.",
+  "placesMapTilesUnavailableTitle": "Kotak peta teu sadia",
+  "placesMapTilesUnavailableBody": "Sumber ubin peta anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Tempat-tempat caket dieu masih tiasa ngamuat tina lokasi anu anjeun simpen.",
+  "placesDataSourceUnavailableTitle": "Data tempat teu sadia",
+  "placesDataSourceUnavailableBody": "Titik data tempat anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Setel PLACES_OVERPASS_API_URL ka proksi atanapi panyadia anu disatujuan sateuacan ngaktipkeun milarian caket dieu.",
   "unknownPlaceName": "Ngaran teu kanyahoan",
   "islamicPlaceFallback": "Tempat Islami",
-  "prayerNotificationTitle": "Waktu keur {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Geus waktuna pikeun ngadoa {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "duas diverifikasi teu sadia acan",
-  "duaUnavailableBody": "Duas poean anu diverifikasi teu acan disingkronkeun ka alat ieu. Sambungkeun ka sumber awan pikeun muka duas sourced tinimbang fallback unverified.",
-  "duaCategoryQuranic": "Qur'an dua",
-  "duaCategoryMorningEvening": "Isuk & Sore",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Panyalindungan",
-  "duaCategoryBeginning": "Mimiti",
-  "duaCategorySleep": "Saré",
-  "duaCategoryFoodDrink": "Dahareun & Inuman",
-  "duaCategoryForgiveness": "Hampura",
-  "duaCategoryHome": "Imah",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Sumber diverifikasi ngantosan",
-  "hadithUnavailableTitle": "Koléksi hadits anu diverifikasi henteu acan sayogi",
-  "hadithUnavailableBody": "Ieu ngawangun masih gumantung kana feed hadits éksternal unverified. Ngotéktak Hadits tetep ditumpurkeun dugi ka set data sumber disingkronkeun.",
-  "appErrorOccurred": "Aya kasalahan",
-  "appUnknownError": "Kasalahan teu dipikanyaho",
-  "qiblaCompassErrorDetails": "Kasalahan kompas: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Réngsé! MasyaAllah",
-  "zikrMeaningSubhanAllah": "Allah jauh di luhur sagala kasampurnaan.",
-  "zikrMeaningAlhamdulillah": "Sadaya puji kagungan Allah.",
-  "zikrMeaningAllahuAkbar": "Allah Maha Agung.",
-  "zikrMeaningLaIlahaIllallah": "Teu aya tuhan anging Alloh.",
-  "zikrMeaningAstaghfirullah": "Abdi nyuhunkeun pangampura Alloh.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Teu aya kakuatan sareng kakuatan iwal ti Allah.",
   "asmaMeaning1": "Nu Maha Welas Asih",
   "asmaMeaning2": "Nu Maha Welas Asih",
   "asmaMeaning3": "Raja / Gusti nu Langgeng",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Nu Langgeng",
   "asmaMeaning97": "Nu Ngawaris",
   "asmaMeaning98": "Nu Maha Adil",
-  "asmaMeaning99": "Nu Sabar",
-  "duaMeaning1": "batur ngado'a, 'Ya Tuhan kami, pasihan kami kahadéan di dunya sareng di ahérat, sareng lindungi kami tina siksa seuneu.'",
-  "duaMeaning2": "Gusti henteu ngabeungbeuratan jiwa mana waé kalayan langkung ti anu tiasa nanggung: masing-masing nampi kasaéan naon waé anu parantos dilakukeun, sareng sangsara kagoréngan - 'Gusti, ulah nyandak tugas upami urang hilap atanapi ngalakukeun kasalahan. Gusti, ulah ngabeungbeuratan kami sakumaha Anjeun ngabeuratkeun jalma-jalma sateuacan kami. Gusti, ulah ngabeungbeuratan kami kalayan langkung ti anu kami kuatkeun. Hampura kami, hampura kami, sarta rahmat ka kami. Anjeun téh Panjaga kami, jadi tulungan kami ngalawan jalma-jalma kafir.'",
-  "duaMeaning3": "'Ya Rabb kami, ulah ngantepkeun hate kami jadi menyimpang sanggeus anjeun maparin pituduh ka kami. Pasihan kami rahmat anjeun: Anjeun Anu Maha Pasih.",
-  "duaMeaning4": "Gusti, pasihan abdi sareng turunan abdi tiasa nedunan solat. Nun Gusti, kabulkeun pamenta abdi.",
-  "duaMeaning5": "Jeung handap jangjang Anjeun dina humility ka maranehna dina kahadean jeung ucapkeun, 'Gusti, hampura aranjeunna, sakumaha aranjeunna miara kuring nalika kuring leutik.'",
-  "duaMeaning6": "Maha Suci Allah, anu bener-bener ngawasa. [Nabi], ulah buru-buru maca sateuacan wahyu lengkep lengkep, tapi ucapkeun, 'Gusti, tambahkeun pangaweruh kuring!'",
-  "duaMeaning7": "Ucapkeun [Nabi], 'Nun Gusti, hampura sareng welas asih: Anjeun anu paling welas asih.'",
-  "duaMeaning8": "jalma-jalma anu ngadoa, 'Nun Gusti, pasihan abdi kabagjaan pikeun pasangan sareng turunan kami. Jadikeun kami conto anu hade pikeun jalma-jalma anu sadar kana Anjeun’.",
-  "islamicNewYear": "Taun Anyar Islam",
-  "mawlidAnNabi": "Maulid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadhan",
-  "specialDayDateLaylatAlQadr": "27 Ramadhan",
-  "specialDayDateEidAlFitr": "1 Syawal",
-  "specialDayDateEidAlAdha": "10 Dzulhijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabiul Awal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Nyegerkeun",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Ngamuat tafsir...",
-  "tafsirSourceLabel": "Sumber Tafsir",
-  "tafsirNoSurahFound": "Teu aya tafsir anu kapanggih pikeun surat ieu.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
-  "tafsirLoadFailed": "Tafsir teu bisa dimuat.",
-  "tafsirNoTextForAyah": "Henteu aya téks tafsir pikeun ayat ieu.",
-  "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Loading tafsir {current}/{total}",
-  "tafsirApiStatusError": "Sumber tafsir balik kasalahan HTTP {statusCode}.",
-  "tafsirNoEntriesReturned": "Sumber tafsir anu dipilih teu aya deui entri.",
-  "premiumProductUnavailable": "Produk premium henteu sayogi ayeuna. Mangga cobian deui engké.",
-  "premiumPurchaseFailed": "Meuli teu bisa réngsé. Mangga cobian deui.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Jalan Islam Cahaya",
-  "downloadPartiallyFinishedForReciter": "Unduh réngsé pikeun {reciter} sareng {failed} surah gagal ({downloaded}/{total} diunduh).",
-  "placesLocationRequiredTitle": "Lokasi diperlukeun",
-  "placesLocationRequiredBody": "Setel lokasi heula supados masjid caket dieu, kadaharan halal, sareng sakola Islam tiasa milarian sacara akurat.",
-  "placesMapTilesUnavailableTitle": "Kotak peta teu sadia",
-  "placesMapTilesUnavailableBody": "Sumber ubin peta anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Tempat-tempat caket dieu masih tiasa ngamuat tina lokasi anu anjeun simpen.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",
-  "audioVoiceSudais": "Lalaki (Sudais)",
-  "qiblaSensorUnavailable": "Sénsor kompas henteu sayogi dina alat ieu.",
-  "adhanNotificationChannelName": "Bewara Adzan",
-  "adhanNotificationChannelDescription": "Waktos solat ngageter ku sora adzan.",
-  "quranLoadFailed": "eusi Quran teu bisa dimuat. Mangga cobian deui.",
-  "locationDetectionFailed": "Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui.",
-  "qiblaLocationRequiredTitle": "Lokasi diperlukeun pikeun Kiblat",
-  "qiblaLocationRequiredBody": "Setel lokasi saleresna anjeun sateuacan nganggo kompas kiblat supados arahna tiasa diitung sacara akurat.",
-  "placesDataSourceUnavailableTitle": "Data tempat teu sadia",
-  "placesDataSourceUnavailableBody": "Titik data tempat anu diverifikasi henteu acan dikonpigurasi pikeun ngawangun ieu. Setel PLACES_OVERPASS_API_URL ka proksi atanapi panyadia anu disatujuan sateuacan ngaktipkeun milarian caket dieu.",
-  "tafsirCacheUnavailable": "Tafsir anu diverifikasi henteu acan sayogi offline. Nyingkronkeun dataset tafsir sumber samemeh browsing."
+  "asmaMeaning99": "Nu Sabar"
 }

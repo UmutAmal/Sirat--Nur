@@ -1,6 +1,7 @@
 {
   "@@locale": "lt",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Islamo šviesos kelias",
   "home": "Pradžia",
   "quran": "Koranas",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magribas",
   "isha": "Isha",
+  "prayerNotificationTitle": "Laikas {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "Atėjo laikas melstis {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Duomenys ir saugykla",
   "clearCache": "Išvalyti talpyklą",
   "cacheClearedSuccess": "Talpykla sėkmingai išvalyta",
@@ -34,6 +51,7 @@
   "currentLocation": "Dabartinė vieta (GPS)",
   "locationServiceDisabled": "Vietos nustatymo paslauga išjungta.",
   "locationPermissionDenied": "Vietos leidimas atmestas.",
+  "locationDetectionFailed": "Nepavyko aptikti jūsų vietos. Pasirinkite miestą rankiniu būdu arba bandykite dar kartą.",
   "citiesCount": "{count} miestuose",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Rezultatų nerasta",
   "loading": "Įkeliama...",
   "error": "Klaida",
+  "appErrorOccurred": "Įvyko klaida",
+  "appUnknownError": "Nežinoma klaida",
+  "quranLoadFailed": "Nepavyko įkelti Korano turinio. Bandykite dar kartą.",
   "retry": "Bandykite dar kartą",
+  "refreshAction": "Atnaujinti",
   "cancel": "Atšaukti",
   "save": "Išsaugoti",
   "delete": "Ištrinti",
@@ -57,17 +79,78 @@
   "yes": "Yes",
   "no": "Nr",
   "surah": "Sura",
+  "ayahLabel": "Ayah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Juz",
   "page": "Puslapis",
   "reading": "Reading",
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Įkeliama tafsir...",
+  "tafsirSourceLabel": "Tafsir šaltinis",
+  "tafsirNoSurahFound": "Šiai surai tafsyro nerasta.",
+  "tafsirNoAyahFound": "Ayah {ayah} tafsir nerasta.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Tafsir nepavyko įkelti.",
+  "tafsirNoTextForAyah": "Nėra tafsir teksto šiai ayah.",
+  "tafsirDownloadingProgress": "Atsisiunčiama tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Įkeliamas tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "„Tafsir“ šaltinis pateikė HTTP {statusCode} klaidą.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "Pasirinktas tafsir šaltinis nepateikė jokių įrašų.",
+  "tafsirCacheUnavailable": "Patvirtinta tafsir dar nepasiekiama neprisijungus. Prieš naršydami sinchronizuokite gautą tafsir duomenų rinkinį.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Pridėti žymę",
   "removeBookmark": "Pašalinti žymę",
   "lastRead": "Last Read",
   "dailyZikr": "Daily Zikr",
+  "duaMeaning1": "kiti meldžia: „Mūsų Viešpatie, duok mums gero šiame pasaulyje ir anapusyje ir apsaugok mus nuo Ugnies kančių“.",
+  "duaMeaning2": "Dievas neapkrauna nė vienos sielos daugiau, nei ji gali pakelti: kiekviena laimi tai, ką padarė gera, ir kenčia už blogį – „Viešpatie, neimk mūsų į darbą, jei pamirštame ar klystame. Viešpatie, neapkrauk mūsų taip, kaip apsunkei tuos, kurie buvo prieš mus. Viešpatie, neapkrauk mūsų daugiau, nei turime jėgų pakelti. Atleisk mums, atleisk mums ir pasigailėk mūsų. Tu esi mūsų gynėjas, tad padėk mums nuo netikinčiųjų.",
+  "duaMeaning3": "„Mūsų Viešpatie, neleisk, kad mūsų širdys nukryptų po to, kai mus vedei. Suteik mums savo gailestingumą: Tu esi visad dovanojantis.",
+  "duaMeaning4": "Viešpatie, duok, kad aš ir mano palikuonys tęstume maldą. Viešpatie, priimk mano prašymą.",
+  "duaMeaning5": "Nuleiskite savo sparną nuolankiai prieš juos gerumu ir sakyk: 'Viešpatie, pasigailėk jų, kaip jie rūpinosi manimi, kai buvau mažas'.",
+  "duaMeaning6": "tebūna išaukštintas Dievas, tas, kuris tikrai valdo. [Pranaše], neskubėk deklamuoti, kol apreiškimas nėra visiškai baigtas, bet sakyk: 'Viešpatie, padidink mane pažinimu!'",
+  "duaMeaning7": "Pasakykite [Pranašas]: „Viešpatie, atleisk ir pasigailėk: tu esi gailestingiausias iš visų“.",
+  "duaMeaning8": "tie, kurie meldžiasi: „Viešpatie, duok mums džiaugsmo mūsų sutuoktiniais ir palikuonimis“. Parodyk mus geru pavyzdžiu tiems, kurie Tave žino“.",
   "morningZikr": "Morning Zikr",
   "eveningZikr": "Evening Zikr",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Pasninkas",
   "quranReading": "Korano skaitymas",
   "prayers": "Maldos",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}min",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Dhikr Count",
   "weeklyProgress": "Savaitės pažanga",
   "monthlyProgress": "Monthly Progress",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Islamo Naujieji metai",
+  "mawlidAnNabi": "Mawlidas an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadanas",
+  "specialDayDateLaylatAlQadr": "27 Ramadanas",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharramas",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Qibla kryptis",
   "compass": "Kompasas",
@@ -108,6 +219,19 @@
   "north": "North",
   "qiblaFound": "Qibla rasta!",
   "turnDevice": "Pasukite prietaisą į Qiblą",
+  "qiblaCompassErrorDetails": "Kompaso klaida: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "Šiame įrenginyje kompaso jutiklis nepasiekiamas.",
+  "qiblaLocationRequiredTitle": "Reikalinga vieta Qiblai",
+  "qiblaLocationRequiredBody": "Prieš naudodami Qibla kompasą, nustatykite savo tikrąją vietą, kad būtų galima tiksliai apskaičiuoti kryptį.",
+  "adhanNotificationChannelName": "Adhan pranešimai",
+  "adhanNotificationChannelDescription": "Maldos laikas perspėja su adhano garsu.",
   "notifications": "Notifications",
   "prayerNotifications": "Prayer Notifications",
   "enableNotifications": "Enable Notifications",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Tikslinis skaičius: {target}",
   "tapToCount": "Palieskite, kad suskaičiuotumėte",
+  "zikrCompletedMashAllah": "Baigta! MashAllah",
+  "zikrMeaningSubhanAllah": "Alachas yra daug aukščiau už visus netobulumus.",
+  "zikrMeaningAlhamdulillah": "Visos šlovės priklauso Allahui.",
+  "zikrMeaningAllahuAkbar": "Allah is the Greatest.",
+  "zikrMeaningLaIlahaIllallah": "Nėra kito dievo, išskyrus Allah.",
+  "zikrMeaningAstaghfirullah": "Aš prašau Allaho atleidimo.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Nėra jėgos ir jėgos, išskyrus per Allahą.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Garso balsas",
+  "audioVoiceMisharyAlafasy": "Vyras (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Vyras (Abdul Basit)",
+  "audioVoiceSudais": "Vyras (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla kalibravimas",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Reikalingas kalibravimas. Pasukite įrenginį 8 paveiksle.",
   "dailyVerse": "Dienos eilėraštis",
+  "dailyVerseUnavailableTitle": "Dienos eilutė nepasiekiama",
+  "dailyVerseUnavailableBody": "Patvirtintas kasdienis eilėraščių turinys šiai versijai dar nesukonfigūruotas. Prieš naršydami prisijunkite prie debesies šaltinio arba sinchronizuokite patvirtintą talpyklą.",
   "todaysIbadah": "Šiandien Ibada",
   "quickAccess": "Greita prieiga",
   "assistant": "Asistentas",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "Patvirtintos duos dar nepasiekiamos",
+  "duaUnavailableBody": "Patvirtinti kasdieniniai duai dar nebuvo sinchronizuoti su šiuo įrenginiu. Prisijunkite prie debesies šaltinio, kad įkeltumėte šaltinio duas, o ne nepatvirtintą atsarginį failą.",
+  "duaCategoryQuranic": "Korano dua",
+  "duaCategoryMorningEvening": "Rytas & Vakaras",
+  "duaCategoryTasbih": "Tasbihas",
+  "duaCategoryProtection": "Apsauga",
+  "duaCategoryBeginning": "Pradžios",
+  "duaCategorySleep": "Miegoti",
+  "duaCategoryFoodDrink": "Maistas ir gėrimai",
+  "duaCategoryForgiveness": "Atleidimas",
+  "duaCategoryHome": "Pradžia",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Islamo švietimas",
   "sukunAudioTitle": "Sukun garso peizažai",
   "hadithCollections": "Hadith kolekcijos",
+  "hadithSourcePending": "Laukiama patvirtinto šaltinio",
+  "hadithUnavailableTitle": "Patvirtintos haditų kolekcijos dar nepasiekiamos",
+  "hadithUnavailableBody": "Ši konstrukcija vis dar priklauso nuo nepatvirtinto išorinio haditų sklaidos kanalo. Hadith naršymas lieka išjungtas, kol nebus sinchronizuojamas šaltinio duomenų rinkinys.",
   "paywallUnlockAll": "Atrakinkite visas dvasinės kelionės funkcijas",
+  "premiumProductUnavailable": "Aukščiausios kokybės gaminio šiuo metu nėra. Bandykite dar kartą vėliau.",
+  "premiumPurchaseFailed": "Pirkimo užbaigti nepavyko. Bandykite dar kartą.",
   "paywallFeature1Title": "Neural Assistant Plus",
   "paywallFeature1Desc": "Neribotas AI varomas klausimų ir atsakymų",
   "paywallFeature2Title": "Neribotas neprisijungus",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "Atsisiuntimas baigtas {reciter} su {failed} nepavykusiomis suromis ({downloaded}/{total} atsisiųsta).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Ištrinti neprisijungus pasiekiami {reciter} failai.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Tinklo klaida. Bandykite dar kartą.",
+  "placesLocationRequiredTitle": "Reikalinga vieta",
+  "placesLocationRequiredBody": "Pirmiausia nustatykite vietą, kad būtų galima tiksliai ieškoti netoliese esančių mečečių, halal maisto ir islamo mokyklų.",
+  "placesMapTilesUnavailableTitle": "Žemėlapio plytelės nepasiekiamos",
+  "placesMapTilesUnavailableBody": "Patvirtintas žemėlapio išklotinės šaltinis šiai versijai dar nesukonfigūruotas. Netoliese esančias vietas vis tiek galima įkelti iš jūsų išsaugotos vietos.",
+  "placesDataSourceUnavailableTitle": "Vietų duomenys nepasiekiami",
+  "placesDataSourceUnavailableBody": "Patvirtintų vietų duomenų galutinis taškas šiai versijai dar nesukonfigūruotas. Prieš įjungdami netoliese esančią paiešką, nustatykite PLACES_OVERPASS_API_URL patvirtintą tarpinį serverį arba teikėją.",
   "unknownPlaceName": "Nežinomas vardas",
   "islamicPlaceFallback": "Islamo vieta",
-  "prayerNotificationTitle": "Laikas {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "Atėjo laikas melstis {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "Patvirtintos duos dar nepasiekiamos",
-  "duaUnavailableBody": "Patvirtinti kasdieniniai duai dar nebuvo sinchronizuoti su šiuo įrenginiu. Prisijunkite prie debesies šaltinio, kad įkeltumėte šaltinio duas, o ne nepatvirtintą atsarginį failą.",
-  "duaCategoryQuranic": "Korano dua",
-  "duaCategoryMorningEvening": "Rytas & Vakaras",
-  "duaCategoryTasbih": "Tasbihas",
-  "duaCategoryProtection": "Apsauga",
-  "duaCategoryBeginning": "Pradžios",
-  "duaCategorySleep": "Miegoti",
-  "duaCategoryFoodDrink": "Maistas ir gėrimai",
-  "duaCategoryForgiveness": "Atleidimas",
-  "duaCategoryHome": "Pradžia",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Laukiama patvirtinto šaltinio",
-  "hadithUnavailableTitle": "Patvirtintos haditų kolekcijos dar nepasiekiamos",
-  "hadithUnavailableBody": "Ši konstrukcija vis dar priklauso nuo nepatvirtinto išorinio haditų sklaidos kanalo. Hadith naršymas lieka išjungtas, kol nebus sinchronizuojamas šaltinio duomenų rinkinys.",
-  "appErrorOccurred": "Įvyko klaida",
-  "appUnknownError": "Nežinoma klaida",
-  "qiblaCompassErrorDetails": "Kompaso klaida: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Baigta! MashAllah",
-  "zikrMeaningSubhanAllah": "Alachas yra daug aukščiau už visus netobulumus.",
-  "zikrMeaningAlhamdulillah": "Visos šlovės priklauso Allahui.",
-  "zikrMeaningAllahuAkbar": "Allah is the Greatest.",
-  "zikrMeaningLaIlahaIllallah": "Nėra kito dievo, išskyrus Allah.",
-  "zikrMeaningAstaghfirullah": "Aš prašau Allaho atleidimo.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Nėra jėgos ir jėgos, išskyrus per Allahą.",
   "asmaMeaning1": "Geras",
   "asmaMeaning2": "Gailestingasis",
   "asmaMeaning3": "Karalius / Amžinasis Viešpats",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "Amžinasis",
   "asmaMeaning97": "Paveldėtojas",
   "asmaMeaning98": "Teisiausias vadovas",
-  "asmaMeaning99": "Pacientas vienas",
-  "duaMeaning1": "kiti meldžia: „Mūsų Viešpatie, duok mums gero šiame pasaulyje ir anapusyje ir apsaugok mus nuo Ugnies kančių“.",
-  "duaMeaning2": "Dievas neapkrauna nė vienos sielos daugiau, nei ji gali pakelti: kiekviena laimi tai, ką padarė gera, ir kenčia už blogį – „Viešpatie, neimk mūsų į darbą, jei pamirštame ar klystame. Viešpatie, neapkrauk mūsų taip, kaip apsunkei tuos, kurie buvo prieš mus. Viešpatie, neapkrauk mūsų daugiau, nei turime jėgų pakelti. Atleisk mums, atleisk mums ir pasigailėk mūsų. Tu esi mūsų gynėjas, tad padėk mums nuo netikinčiųjų.",
-  "duaMeaning3": "„Mūsų Viešpatie, neleisk, kad mūsų širdys nukryptų po to, kai mus vedei. Suteik mums savo gailestingumą: Tu esi visad dovanojantis.",
-  "duaMeaning4": "Viešpatie, duok, kad aš ir mano palikuonys tęstume maldą. Viešpatie, priimk mano prašymą.",
-  "duaMeaning5": "Nuleiskite savo sparną nuolankiai prieš juos gerumu ir sakyk: 'Viešpatie, pasigailėk jų, kaip jie rūpinosi manimi, kai buvau mažas'.",
-  "duaMeaning6": "tebūna išaukštintas Dievas, tas, kuris tikrai valdo. [Pranaše], neskubėk deklamuoti, kol apreiškimas nėra visiškai baigtas, bet sakyk: 'Viešpatie, padidink mane pažinimu!'",
-  "duaMeaning7": "Pasakykite [Pranašas]: „Viešpatie, atleisk ir pasigailėk: tu esi gailestingiausias iš visų“.",
-  "duaMeaning8": "tie, kurie meldžiasi: „Viešpatie, duok mums džiaugsmo mūsų sutuoktiniais ir palikuonimis“. Parodyk mus geru pavyzdžiu tiems, kurie Tave žino“.",
-  "islamicNewYear": "Islamo Naujieji metai",
-  "mawlidAnNabi": "Mawlidas an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadanas",
-  "specialDayDateLaylatAlQadr": "27 Ramadanas",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharramas",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "refreshAction": "Atnaujinti",
-  "ayahLabel": "Ayah {ayah}",
-  "tafsirLoading": "Įkeliama tafsir...",
-  "tafsirSourceLabel": "Tafsir šaltinis",
-  "tafsirNoSurahFound": "Šiai surai tafsyro nerasta.",
-  "tafsirNoAyahFound": "Ayah {ayah} tafsir nerasta.",
-  "tafsirLoadFailed": "Tafsir nepavyko įkelti.",
-  "tafsirNoTextForAyah": "Nėra tafsir teksto šiai ayah.",
-  "tafsirDownloadingProgress": "Atsisiunčiama tafsir {current}/{total}",
-  "tafsirLoadingProgress": "Įkeliamas tafsir {current}/{total}",
-  "tafsirApiStatusError": "„Tafsir“ šaltinis pateikė HTTP {statusCode} klaidą.",
-  "tafsirNoEntriesReturned": "Pasirinktas tafsir šaltinis nepateikė jokių įrašų.",
-  "premiumProductUnavailable": "Aukščiausios kokybės gaminio šiuo metu nėra. Bandykite dar kartą vėliau.",
-  "premiumPurchaseFailed": "Pirkimo užbaigti nepavyko. Bandykite dar kartą.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}min",
-  "prayerRemainingMinutes": "{minutes}m",
-  "splashTagline": "Islamo šviesos kelias",
-  "downloadPartiallyFinishedForReciter": "Atsisiuntimas baigtas {reciter} su {failed} nepavykusiomis suromis ({downloaded}/{total} atsisiųsta).",
-  "placesLocationRequiredTitle": "Reikalinga vieta",
-  "placesLocationRequiredBody": "Pirmiausia nustatykite vietą, kad būtų galima tiksliai ieškoti netoliese esančių mečečių, halal maisto ir islamo mokyklų.",
-  "placesMapTilesUnavailableTitle": "Žemėlapio plytelės nepasiekiamos",
-  "placesMapTilesUnavailableBody": "Patvirtintas žemėlapio išklotinės šaltinis šiai versijai dar nesukonfigūruotas. Netoliese esančias vietas vis tiek galima įkelti iš jūsų išsaugotos vietos.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Vyras (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Vyras (Abdul Basit)",
-  "audioVoiceSudais": "Vyras (Sudais)",
-  "qiblaSensorUnavailable": "Šiame įrenginyje kompaso jutiklis nepasiekiamas.",
-  "adhanNotificationChannelName": "Adhan pranešimai",
-  "adhanNotificationChannelDescription": "Maldos laikas perspėja su adhano garsu.",
-  "quranLoadFailed": "Nepavyko įkelti Korano turinio. Bandykite dar kartą.",
-  "locationDetectionFailed": "Nepavyko aptikti jūsų vietos. Pasirinkite miestą rankiniu būdu arba bandykite dar kartą.",
-  "qiblaLocationRequiredTitle": "Reikalinga vieta Qiblai",
-  "qiblaLocationRequiredBody": "Prieš naudodami Qibla kompasą, nustatykite savo tikrąją vietą, kad būtų galima tiksliai apskaičiuoti kryptį.",
-  "placesDataSourceUnavailableTitle": "Vietų duomenys nepasiekiami",
-  "placesDataSourceUnavailableBody": "Patvirtintų vietų duomenų galutinis taškas šiai versijai dar nesukonfigūruotas. Prieš įjungdami netoliese esančią paiešką, nustatykite PLACES_OVERPASS_API_URL patvirtintą tarpinį serverį arba teikėją.",
-  "tafsirCacheUnavailable": "Patvirtinta tafsir dar nepasiekiama neprisijungus. Prieš naršydami sinchronizuokite gautą tafsir duomenų rinkinį."
+  "asmaMeaning99": "Pacientas vienas"
 }

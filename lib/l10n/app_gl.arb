@@ -1,6 +1,7 @@
 {
   "@@locale": "gl",
   "appTitle": "Sirat-ı Nur",
+  "splashTagline": "Camiño Islámico da Luz",
   "home": "Casa",
   "quran": "Corán",
   "qibla": "Qibla",
@@ -23,6 +24,22 @@
   "asr": "Asr",
   "maghrib": "Magreb",
   "isha": "Isha",
+  "prayerNotificationTitle": "Hora de {prayerName}",
+  "@prayerNotificationTitle": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerNotificationBody": "É hora de rezar {prayerName}.",
+  "@prayerNotificationBody": {
+    "placeholders": {
+      "prayerName": {
+        "type": "String"
+      }
+    }
+  },
   "dataStorage": "Datos e almacenamento",
   "clearCache": "Borrar caché",
   "cacheClearedSuccess": "A caché borrouse correctamente",
@@ -34,6 +51,7 @@
   "currentLocation": "Localización actual (GPS)",
   "locationServiceDisabled": "O servizo de localización está desactivado.",
   "locationPermissionDenied": "Permiso de localización denegado.",
+  "locationDetectionFailed": "Non se puido detectar a túa localización. Escolle unha cidade manualmente ou téntao de novo.",
   "citiesCount": "{count} cidades",
   "@citiesCount": {
     "placeholders": {
@@ -47,7 +65,11 @@
   "noResults": "Non se atoparon resultados",
   "loading": "Cargando...",
   "error": "Erro",
+  "appErrorOccurred": "Produciuse un erro",
+  "appUnknownError": "Erro descoñecido",
+  "quranLoadFailed": "Non se puido cargar o contido do Corán. Téntao de novo.",
   "retry": "Volve tentar",
+  "refreshAction": "Actualizar",
   "cancel": "Cancelar",
   "save": "Gardar",
   "delete": "Eliminar",
@@ -57,17 +79,78 @@
   "yes": "Si",
   "no": "Non",
   "surah": "Sura",
+  "ayahLabel": "Aiah {ayah}",
+  "@ayahLabel": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
   "juz": "Xuz",
   "page": "Páx",
   "reading": "Lendo",
   "recitation": "Recitado",
   "translation": "Tradución",
   "tafsir": "Tafsir",
+  "tafsirLoading": "Cargando tafsir...",
+  "tafsirSourceLabel": "Fonte Tafsir",
+  "tafsirNoSurahFound": "Non se atopou ningún tafsir para esta sura.",
+  "tafsirNoAyahFound": "Non se atopou ningún tafsir para ayah {ayah}.",
+  "@tafsirNoAyahFound": {
+    "placeholders": {
+      "ayah": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadFailed": "Non se puido cargar Tafsir.",
+  "tafsirNoTextForAyah": "Non hai texto de tafsir para este ayah.",
+  "tafsirDownloadingProgress": "Descargando tafsir {current}/{total}",
+  "@tafsirDownloadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirLoadingProgress": "Cargando tafsir {current}/{total}",
+  "@tafsirLoadingProgress": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirApiStatusError": "A fonte Tafsir devolveu un erro HTTP {statusCode}.",
+  "@tafsirApiStatusError": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    }
+  },
+  "tafsirNoEntriesReturned": "A fonte tafsir seleccionada non devolveu entradas.",
+  "tafsirCacheUnavailable": "O tafsir verificado aínda non está dispoñible sen conexión. Sincroniza un conxunto de datos tafsir de orixe antes de navegar.",
   "bookmarks": "Marcadores",
   "addBookmark": "Engadir marcador",
   "removeBookmark": "Eliminar o marcador",
   "lastRead": "Última lectura",
   "dailyZikr": "Zikr diario",
+  "duaMeaning1": "outros rezan: ‘Señor, dános o ben neste mundo e no Alén, e protéxenos do tormento do Lume’.",
+  "duaMeaning2": "Deus non carga a ningunha alma con máis do que pode soportar: cada un gaña o ben que fixo, e sofre o seu mal- ‘Señor, non nos tome a tarefa se esquecemos ou cometemos erros. Señor, non nos cargues como ti cargaches ós que nos precederon. Señor, non nos cargues máis do que temos forza para soportar. Perdóanos, perdóanos e ten piedade de nós. Ti es o noso Protector, así que axúdanos contra os incrédulos.",
+  "duaMeaning3": "‘Noso Señor, non deixes que os nosos corazóns se desvíen despois de que ti nos guiaras. Concédenos a túa misericordia: ti es o que sempre dá.",
+  "duaMeaning4": "Señor, fai que eu e a miña descendencia sigamos a oración. Noso Señor, acepta a miña petición.",
+  "duaMeaning5": "e baixa a túa á con humildade cara a eles con bondade e di: ‘Señor, ten piedade deles, como eles coidaron de min cando era pequeno’.",
+  "duaMeaning6": "exaltado sexa Deus, o que ten verdadeiramente o control. [Profeta], non te apresures a recitar antes de que a revelación estea completamente completa, senón que di: \"Señor, aumentame en coñecemento!\"",
+  "duaMeaning7": "Di [Profeta]: \"Señor, perdoa e ten piedade: ti es o máis misericordioso de todos\".",
+  "duaMeaning8": "os que rezan: ‘Señor, danos alegría nos nosos esposos e descendencia. Fainos bos exemplos para os que te coñecen’.",
   "morningZikr": "Zikr de mañá",
   "eveningZikr": "Zikr da noite",
   "tasbih": "Tasbih",
@@ -88,6 +171,26 @@
   "fasting": "Xaxún",
   "quranReading": "Lectura do Corán",
   "prayers": "Oracións",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "@prayerRemainingHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingMinutes": "{minutes}m",
+  "@prayerRemainingMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "prayerRemainingUnavailable": "--",
   "dhikrCount": "Conde Dhikr",
   "weeklyProgress": "Progreso semanal",
   "monthlyProgress": "Progreso Mensual",
@@ -101,6 +204,14 @@
   "ramadan": "Ramadán",
   "eidAlFitr": "Eid Al-Fitr",
   "eidAlAdha": "Eid Al-Adha",
+  "islamicNewYear": "Ano Novo islámico",
+  "mawlidAnNabi": "Mawlid an-Nabi",
+  "specialDayDateRamadanStart": "1 Ramadán",
+  "specialDayDateLaylatAlQadr": "27 Ramadán",
+  "specialDayDateEidAlFitr": "1 Shawwal",
+  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
+  "specialDayDateIslamicNewYear": "1 Muharram",
+  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
   "laylatAlQadr": "Laylat Al-Qadr",
   "qiblaDirection": "Dirección de Qibla",
   "compass": "Compás",
@@ -108,6 +219,19 @@
   "north": "Norte",
   "qiblaFound": "Qibla atopada!",
   "turnDevice": "Xire o dispositivo para enfrontarse á Qibla",
+  "qiblaCompassErrorDetails": "Erro do compás: {error}",
+  "@qiblaCompassErrorDetails": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "qiblaSensorUnavailable": "O sensor do compás non está dispoñible neste dispositivo.",
+  "qiblaLocationRequiredTitle": "Localización necesaria para Qibla",
+  "qiblaLocationRequiredBody": "Establece a túa localización real antes de usar o compás Qibla para que se poida calcular a dirección con precisión.",
+  "adhanNotificationChannelName": "Notificacións de Adhan",
+  "adhanNotificationChannelDescription": "Alertas de tempo de oración con son adhan.",
   "notifications": "Notificacións",
   "prayerNotifications": "Notificacións de oración",
   "enableNotifications": "Activa as notificacións",
@@ -166,6 +290,13 @@
   "newTarget": "New Target",
   "targetCount": "Reconto de obxectivos: {target}",
   "tapToCount": "Toca para contar",
+  "zikrCompletedMashAllah": "Completado! MashAllah",
+  "zikrMeaningSubhanAllah": "Alá está moi por riba de toda imperfección.",
+  "zikrMeaningAlhamdulillah": "Todos os eloxios pertencen a Deus.",
+  "zikrMeaningAllahuAkbar": "Alá é o Maior.",
+  "zikrMeaningLaIlahaIllallah": "Non hai deus senón Alá.",
+  "zikrMeaningAstaghfirullah": "Busco o perdón de Deus.",
+  "zikrMeaningLaHawlaWaLaQuwwata": "Non hai poder nin forza excepto por Deus.",
   "dailyChecklist": "Daily Checklist",
   "qazaDebt": "Qaza (Debt)",
   "resetQazaData": "Reset Qaza Data",
@@ -209,6 +340,9 @@
   "dbPath": "Path: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "Voz de audio",
+  "audioVoiceMisharyAlafasy": "Home (Mishary Alafasy)",
+  "audioVoiceAbdulBaset": "Home (Abdul Basit)",
+  "audioVoiceSudais": "Home (Sudais)",
   "fajrAngle": "Fajr Angle",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Calibración Qibla",
@@ -290,6 +424,8 @@
   "rotateToFindQibla": "Rotate to Find Qibla",
   "calibrationRequiredFigure8": "Calibración necesaria. Xire o dispositivo na figura-8.",
   "dailyVerse": "Verso diario",
+  "dailyVerseUnavailableTitle": "O verso diario non está dispoñible",
+  "dailyVerseUnavailableBody": "O contido de versículo diario verificado aínda non está configurado para esta compilación. Conéctate á fonte da nube ou sincroniza unha caché verificada antes de navegar.",
   "todaysIbadah": "Hoxe Ibadah",
   "quickAccess": "Acceso rápido",
   "assistant": "Asistente",
@@ -305,10 +441,31 @@
       }
     }
   },
+  "duaUnavailableTitle": "As dúas verificadas aínda non están dispoñibles",
+  "duaUnavailableBody": "As duas diarias verificadas aínda non se sincronizaron con este dispositivo. Conéctate á fonte da nube para cargar duas de orixe en lugar dunha alternativa non verificada.",
+  "duaCategoryQuranic": "Dua coránica",
+  "duaCategoryMorningEvening": "Mañá e Noite",
+  "duaCategoryTasbih": "Tasbih",
+  "duaCategoryProtection": "Protección",
+  "duaCategoryBeginning": "Comezos",
+  "duaCategorySleep": "Durmir",
+  "duaCategoryFoodDrink": "Comida e bebida",
+  "duaCategoryForgiveness": "O perdón",
+  "duaCategoryHome": "Casa",
+  "duaSourceBukhari": "Bukhari",
+  "duaSourceMuslim": "Muslim",
+  "duaSourceAbuDawud": "Abu Dawud",
+  "duaSourceTirmidhi": "Tirmidhi",
+  "duaSourceAhmad": "Ahmad",
   "islamicEducation": "Educación islámica",
   "sukunAudioTitle": "Paisaxes sonoras de Sukun",
   "hadithCollections": "Coleccións Hadith",
+  "hadithSourcePending": "Fonte verificada pendente",
+  "hadithUnavailableTitle": "As coleccións de hadiz verificadas aínda non están dispoñibles",
+  "hadithUnavailableBody": "Esta compilación aínda depende dun feed de hadiz externo non verificado. A navegación de hadith permanece desactivada ata que se sincronice un conxunto de datos de orixe.",
   "paywallUnlockAll": "Desbloquea todas as funcións para a túa viaxe espiritual",
+  "premiumProductUnavailable": "O produto Premium non está dispoñible neste momento. Téntao de novo máis tarde.",
+  "premiumPurchaseFailed": "Non se puido completar a compra. Téntao de novo.",
   "paywallFeature1Title": "Asistente Neural Plus",
   "paywallFeature1Desc": "Preguntas e respostas ilimitadas con IA",
   "paywallFeature2Title": "Ilimitado fóra de liña",
@@ -410,6 +567,23 @@
       }
     }
   },
+  "downloadPartiallyFinishedForReciter": "A descarga finalizou para {reciter} con {failed} suras erradas ({downloaded}/{total} descargadas).",
+  "@downloadPartiallyFinishedForReciter": {
+    "placeholders": {
+      "reciter": {
+        "type": "String"
+      },
+      "downloaded": {
+        "type": "String"
+      },
+      "total": {
+        "type": "String"
+      },
+      "failed": {
+        "type": "String"
+      }
+    }
+  },
   "deletedOfflineFilesForReciter": "Elimináronse ficheiros sen conexión para {reciter}.",
   "@deletedOfflineFilesForReciter": {
     "placeholders": {
@@ -489,60 +663,14 @@
     }
   },
   "placesNetworkError": "Erro de rede. Téntao de novo.",
+  "placesLocationRequiredTitle": "Localización necesaria",
+  "placesLocationRequiredBody": "Establece primeiro unha localización para que se poidan buscar con precisión nas mesquitas próximas, a comida halal e as escolas islámicas.",
+  "placesMapTilesUnavailableTitle": "Os mosaicos do mapa non están dispoñibles",
+  "placesMapTilesUnavailableBody": "Unha fonte de mosaico de mapa verificada aínda non está configurada para esta compilación. Os lugares próximos aínda poden cargar desde a túa localización gardada.",
+  "placesDataSourceUnavailableTitle": "Os datos de lugares non están dispoñibles",
+  "placesDataSourceUnavailableBody": "Un punto final de datos de lugares verificados aínda non está configurado para esta compilación. Establece PLACES_OVERPASS_API_URL nun proxy ou provedor aprobado antes de activar a busca nas proximidades.",
   "unknownPlaceName": "Nome descoñecido",
   "islamicPlaceFallback": "Lugar islámico",
-  "prayerNotificationTitle": "Hora de {prayerName}",
-  "@prayerNotificationTitle": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerNotificationBody": "É hora de rezar {prayerName}.",
-  "@prayerNotificationBody": {
-    "placeholders": {
-      "prayerName": {
-        "type": "String"
-      }
-    }
-  },
-  "duaUnavailableTitle": "As dúas verificadas aínda non están dispoñibles",
-  "duaUnavailableBody": "As duas diarias verificadas aínda non se sincronizaron con este dispositivo. Conéctate á fonte da nube para cargar duas de orixe en lugar dunha alternativa non verificada.",
-  "duaCategoryQuranic": "Dua coránica",
-  "duaCategoryMorningEvening": "Mañá e Noite",
-  "duaCategoryTasbih": "Tasbih",
-  "duaCategoryProtection": "Protección",
-  "duaCategoryBeginning": "Comezos",
-  "duaCategorySleep": "Durmir",
-  "duaCategoryFoodDrink": "Comida e bebida",
-  "duaCategoryForgiveness": "O perdón",
-  "duaCategoryHome": "Casa",
-  "duaSourceBukhari": "Bukhari",
-  "duaSourceMuslim": "Muslim",
-  "duaSourceAbuDawud": "Abu Dawud",
-  "duaSourceTirmidhi": "Tirmidhi",
-  "duaSourceAhmad": "Ahmad",
-  "hadithSourcePending": "Fonte verificada pendente",
-  "hadithUnavailableTitle": "As coleccións de hadiz verificadas aínda non están dispoñibles",
-  "hadithUnavailableBody": "Esta compilación aínda depende dun feed de hadiz externo non verificado. A navegación de hadith permanece desactivada ata que se sincronice un conxunto de datos de orixe.",
-  "appErrorOccurred": "Produciuse un erro",
-  "appUnknownError": "Erro descoñecido",
-  "qiblaCompassErrorDetails": "Erro do compás: {error}",
-  "@qiblaCompassErrorDetails": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    }
-  },
-  "zikrCompletedMashAllah": "Completado! MashAllah",
-  "zikrMeaningSubhanAllah": "Alá está moi por riba de toda imperfección.",
-  "zikrMeaningAlhamdulillah": "Todos os eloxios pertencen a Deus.",
-  "zikrMeaningAllahuAkbar": "Alá é o Maior.",
-  "zikrMeaningLaIlahaIllallah": "Non hai deus senón Alá.",
-  "zikrMeaningAstaghfirullah": "Busco o perdón de Deus.",
-  "zikrMeaningLaHawlaWaLaQuwwata": "Non hai poder nin forza excepto por Deus.",
   "asmaMeaning1": "O Beneficioso",
   "asmaMeaning2": "O Misericordioso",
   "asmaMeaning3": "O Rei / Señor Eterno",
@@ -641,131 +769,5 @@
   "asmaMeaning96": "O eterno",
   "asmaMeaning97": "O herdeiro",
   "asmaMeaning98": "A guía máis xusta",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
-  "duaMeaning1": "outros rezan: ‘Señor, dános o ben neste mundo e no Alén, e protéxenos do tormento do Lume’.",
-  "duaMeaning2": "Deus non carga a ningunha alma con máis do que pode soportar: cada un gaña o ben que fixo, e sofre o seu mal- ‘Señor, non nos tome a tarefa se esquecemos ou cometemos erros. Señor, non nos cargues como ti cargaches ós que nos precederon. Señor, non nos cargues máis do que temos forza para soportar. Perdóanos, perdóanos e ten piedade de nós. Ti es o noso Protector, así que axúdanos contra os incrédulos.",
-  "duaMeaning3": "‘Noso Señor, non deixes que os nosos corazóns se desvíen despois de que ti nos guiaras. Concédenos a túa misericordia: ti es o que sempre dá.",
-  "duaMeaning4": "Señor, fai que eu e a miña descendencia sigamos a oración. Noso Señor, acepta a miña petición.",
-  "duaMeaning5": "e baixa a túa á con humildade cara a eles con bondade e di: ‘Señor, ten piedade deles, como eles coidaron de min cando era pequeno’.",
-  "duaMeaning6": "exaltado sexa Deus, o que ten verdadeiramente o control. [Profeta], non te apresures a recitar antes de que a revelación estea completamente completa, senón que di: \"Señor, aumentame en coñecemento!\"",
-  "duaMeaning7": "Di [Profeta]: \"Señor, perdoa e ten piedade: ti es o máis misericordioso de todos\".",
-  "duaMeaning8": "os que rezan: ‘Señor, danos alegría nos nosos esposos e descendencia. Fainos bos exemplos para os que te coñecen’.",
-  "islamicNewYear": "Ano Novo islámico",
-  "mawlidAnNabi": "Mawlid an-Nabi",
-  "specialDayDateRamadanStart": "1 Ramadán",
-  "specialDayDateLaylatAlQadr": "27 Ramadán",
-  "specialDayDateEidAlFitr": "1 Shawwal",
-  "specialDayDateEidAlAdha": "10 Dhul Hijjah",
-  "specialDayDateIslamicNewYear": "1 Muharram",
-  "specialDayDateMawlidAnNabi": "12 Rabi al-Awwal",
-  "refreshAction": "Actualizar",
-  "ayahLabel": "Aiah {ayah}",
-  "@ayahLabel": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoading": "Cargando tafsir...",
-  "tafsirSourceLabel": "Fonte Tafsir",
-  "tafsirNoSurahFound": "Non se atopou ningún tafsir para esta sura.",
-  "tafsirNoAyahFound": "Non se atopou ningún tafsir para ayah {ayah}.",
-  "@tafsirNoAyahFound": {
-    "placeholders": {
-      "ayah": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadFailed": "Non se puido cargar Tafsir.",
-  "tafsirNoTextForAyah": "Non hai texto de tafsir para este ayah.",
-  "tafsirDownloadingProgress": "Descargando tafsir {current}/{total}",
-  "@tafsirDownloadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirLoadingProgress": "Cargando tafsir {current}/{total}",
-  "@tafsirLoadingProgress": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirApiStatusError": "A fonte Tafsir devolveu un erro HTTP {statusCode}.",
-  "@tafsirApiStatusError": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    }
-  },
-  "tafsirNoEntriesReturned": "A fonte tafsir seleccionada non devolveu entradas.",
-  "premiumProductUnavailable": "O produto Premium non está dispoñible neste momento. Téntao de novo máis tarde.",
-  "premiumPurchaseFailed": "Non se puido completar a compra. Téntao de novo.",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
-  "@prayerRemainingHoursMinutes": {
-    "placeholders": {
-      "hours": {
-        "type": "String"
-      },
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "prayerRemainingMinutes": "{minutes}m",
-  "@prayerRemainingMinutes": {
-    "placeholders": {
-      "minutes": {
-        "type": "String"
-      }
-    }
-  },
-  "splashTagline": "Camiño Islámico da Luz",
-  "downloadPartiallyFinishedForReciter": "A descarga finalizou para {reciter} con {failed} suras erradas ({downloaded}/{total} descargadas).",
-  "@downloadPartiallyFinishedForReciter": {
-    "placeholders": {
-      "reciter": {
-        "type": "String"
-      },
-      "downloaded": {
-        "type": "String"
-      },
-      "total": {
-        "type": "String"
-      },
-      "failed": {
-        "type": "String"
-      }
-    }
-  },
-  "placesLocationRequiredTitle": "Localización necesaria",
-  "placesLocationRequiredBody": "Establece primeiro unha localización para que se poidan buscar con precisión nas mesquitas próximas, a comida halal e as escolas islámicas.",
-  "placesMapTilesUnavailableTitle": "Os mosaicos do mapa non están dispoñibles",
-  "placesMapTilesUnavailableBody": "Unha fonte de mosaico de mapa verificada aínda non está configurada para esta compilación. Os lugares próximos aínda poden cargar desde a túa localización gardada.",
-  "prayerRemainingUnavailable": "--",
-  "audioVoiceMisharyAlafasy": "Home (Mishary Alafasy)",
-  "audioVoiceAbdulBaset": "Home (Abdul Basit)",
-  "audioVoiceSudais": "Home (Sudais)",
-  "qiblaSensorUnavailable": "O sensor do compás non está dispoñible neste dispositivo.",
-  "adhanNotificationChannelName": "Notificacións de Adhan",
-  "adhanNotificationChannelDescription": "Alertas de tempo de oración con son adhan.",
-  "quranLoadFailed": "Non se puido cargar o contido do Corán. Téntao de novo.",
-  "locationDetectionFailed": "Non se puido detectar a túa localización. Escolle unha cidade manualmente ou téntao de novo.",
-  "qiblaLocationRequiredTitle": "Localización necesaria para Qibla",
-  "qiblaLocationRequiredBody": "Establece a túa localización real antes de usar o compás Qibla para que se poida calcular a dirección con precisión.",
-  "placesDataSourceUnavailableTitle": "Os datos de lugares non están dispoñibles",
-  "placesDataSourceUnavailableBody": "Un punto final de datos de lugares verificados aínda non está configurado para esta compilación. Establece PLACES_OVERPASS_API_URL nun proxy ou provedor aprobado antes de activar a busca nas proximidades.",
-  "tafsirCacheUnavailable": "O tafsir verificado aínda non está dispoñible sen conexión. Sincroniza un conxunto de datos tafsir de orixe antes de navegar."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
 }
