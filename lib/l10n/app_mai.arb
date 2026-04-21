@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "नक्शा टाइल्स अनुपलब्ध",
   "placesMapTilesUnavailableBody": "एकटा सत्यापित मैप टाइल स्रोत एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. पास के जगह एखनो अहां के सेव कएल गेल लोकेशन सं लोड भ सकैत अछि.",
   "placesDataSourceUnavailableTitle": "डेटा अनुपलब्ध राखैत अछि",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "एकटा सत्यापित स्थानक डाटा एंडपॉइंट एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. नजदीकी खोज केँ सक्षम करबा सँ पहिने PLACES_OVERPASS_API_URL केँ कोनो स्वीकृत प्रॉक्सी अथवा प्रदाता पर सेट करू.",
   "unknownPlaceName": "अज्ञात नाम",
   "islamicPlaceFallback": "इस्लामी स्थान",
   "asmaMeaning1": "द बेनिफिसेंट",

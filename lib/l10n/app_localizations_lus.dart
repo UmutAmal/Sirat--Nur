@@ -1388,7 +1388,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'He build atan hian verified places data endpoint hi configure a la ni lo. PLACES_OVERPASS_API_URL chu a bul hnaia zawn theihna tur i tih hmain proxy emaw provider emaw pawm tawhah set rawh.';
 
   @override
   String get unknownPlaceName => 'Hming hriat loh';

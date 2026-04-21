@@ -210,7 +210,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Fordítás';
 
   @override
   String get tafsir => 'Tafsir';

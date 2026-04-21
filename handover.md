@@ -16167,3 +16167,33 @@
 ### Sonraki Adim
 - Tam validation: `flutter analyze` ve `flutter test --reporter compact`.
 - Sonraki risk: Dogrulanmis hadith/tafsir manifest kaynaklari bulunmadan bu seedler uretilemez. Guvenilir kaynak/lisans kaniti gelene kadar gate bloklamali kalacak; paralel olarak yetki gerektirmeyen baska code/content riskleri taranacak.
+## 2026-04-22 TUR-377 - Places and Quran Translation Fallback Debt Reduced Safely
+
+### MASTER Karari
+- Risk: Kullaniciya gorunen bazi yeni Places/runtime metinleri ve Quran okuma `translation` etiketi bircok non-English locale dosyasinda app_en.arb ile birebir ayniydi. Bu, dil secen kullanicinin ekranda Ingilizce fallback gormesine yol aciyordu.
+- Kanit: `dart run tool/translate_arb_keys.dart --report translation nearbyMosques placesLocationRequiredTitle placesLocationRequiredBody placesMapTilesUnavailableTitle placesMapTilesUnavailableBody placesDataSourceUnavailableTitle placesDataSourceUnavailableBody` raporu ilk taramada 8 anahtar icin `Same-as-English locales: 585` verdi.
+- Kapsam karari: Dini icerik, ayet, hadis veya tafsir metni uretilmedi. Sadece UI/operasyonel Places copy ve genel `Translation` etiketi ele alindi. Dusuk kaynakli dillerde translator temiz aday uretmediginde Ingilizce fallback bilerek korundu; uydurma veya guvensiz ceviri yazilmadi.
+- Kullanici etkisi: Oncelikli ve desteklenen locale'lerde Quran okuma ve Places hata/durum copy'si daha fazla yerellestirilmis olacak; teknik `PLACES_OVERPASS_API_URL` token'i ceviriye karismadan korunacak.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 UI localization integrity riski).
+- Rollback plani: `lib/l10n/app_*.arb`, `lib/l10n/app_localizations_*.dart`, `test/arb_ui_localization_test.dart`, `test/translate_arb_keys_test.dart` icindeki bu tur diff'i geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool/translate_arb_keys.dart` ile yalniz secilen 8 anahtar icin kontrollu ceviri calistirildi.
+- 72 locale ARB dosyasinda temiz aday uretilen degerler guncellendi.
+- `flutter gen-l10n` calistirildi; ilgili `app_localizations_*.dart` runtime degerleri ARB ile senkronlandi.
+- `test/translate_arb_keys_test.dart` Places/download-diagnostics-chatbot l10n debt guard'i `1535 -> 1532` seviyesine indirildi ve Aymara `placesDataSourceUnavailableBody` icin English fallback guard'i eklendi.
+- `test/arb_ui_localization_test.dart` Quran reading shell copy guard'ina `translation` anahtari eklendi.
+
+### Dogrulama Sonucu
+- Targeted report after patch: secilen 8 anahtarda `Same-as-English locales: 513`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS; `flutter test test\arb_ui_localization_test.dart --reporter compact` PASS.
+- Full analyze: `flutter analyze` PASS, no issues.
+- Full regression: `flutter test --reporter compact` PASS, 608/608.
+- Diff check: `git diff --check` PASS.
+
+### Risk Degisimi
+- Secilen Places/Quran UI fallback debt: `12/25 -> 6/25`.
+- Kalan l10n borcu: Dusuk kaynakli locale'lerde guvenli ceviri adayi yoksa Ingilizce fallback korundu. Bu AGENTS.md'nin "belirsizlik varsa EN referans alin, uydurma yapma" kuralina uygundur; ileride insan/reviewed ceviri listesi geldikce ayni arac ile azaltmaya devam edilecek.
+
+### Sonraki Adim
+- Commit/push sonrasi siradaki risk taramasi: Supabase gercek tablo/seed blokajlari yetki gerektiriyor; yetki yokken sahte summary uretilmeyecek. Yetki gerektirmeyen alanlarda hardcoded runtime string, Appium smoke, offline/audio edge ve store-readiness guard taramasi surdurulecek.

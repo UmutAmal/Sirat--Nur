@@ -210,7 +210,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Vuhundzuluxi';
 
   @override
   String get tafsir => 'Tafsir';

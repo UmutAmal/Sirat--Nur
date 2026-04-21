@@ -318,6 +318,7 @@ void main() {
           'ayahs',
           'juz',
           'page',
+          'translation',
         ];
 
         for (final locale in quranReadingShellSafeLocales) {

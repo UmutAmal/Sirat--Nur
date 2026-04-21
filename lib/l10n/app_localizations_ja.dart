@@ -207,7 +207,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => '翻訳';
 
   @override
   String get tafsir => 'Tafsir';

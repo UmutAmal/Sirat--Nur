@@ -208,7 +208,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Ukuhumusha';
 
   @override
   String get tafsir => 'Tafsir';

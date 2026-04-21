@@ -208,7 +208,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Werger';
 
   @override
   String get tafsir => 'Tafsir';

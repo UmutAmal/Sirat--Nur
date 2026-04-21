@@ -1378,7 +1378,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'एकटा सत्यापित स्थानक डाटा एंडपॉइंट एखन धरि एहि बिल्ड क लेल कॉन्फ़िगर नहि कएल गेल अछि. नजदीकी खोज केँ सक्षम करबा सँ पहिने PLACES_OVERPASS_API_URL केँ कोनो स्वीकृत प्रॉक्सी अथवा प्रदाता पर सेट करू.';
 
   @override
   String get unknownPlaceName => 'अज्ञात नाम';

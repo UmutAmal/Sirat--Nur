@@ -208,7 +208,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Iwwersetzung';
 
   @override
   String get tafsir => 'Tafsir';

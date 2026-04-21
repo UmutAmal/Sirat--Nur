@@ -209,7 +209,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'மொழிபெயர்ப்பு';
 
   @override
   String get tafsir => 'Tafsir';

@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Map tiles a awm lo",
   "placesMapTilesUnavailableBody": "He build atan hian verified map tile source hi configure a la ni lo. I saved location atang hian hmun hnai tak tak te chu a la load thei tho.",
   "placesDataSourceUnavailableTitle": "Data awm lohna hmunah a dah",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "He build atan hian verified places data endpoint hi configure a la ni lo. PLACES_OVERPASS_API_URL chu a bul hnaia zawn theihna tur i tih hmain proxy emaw provider emaw pawm tawhah set rawh.",
   "unknownPlaceName": "Hming hriat loh",
   "islamicPlaceFallback": "Islamic Hmun a ni",
   "asmaMeaning1": "Thil hlawkthlak tak",

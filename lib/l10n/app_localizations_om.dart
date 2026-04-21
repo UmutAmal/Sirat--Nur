@@ -209,7 +209,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Hiikaa';
 
   @override
   String get tafsir => 'Tafsir';

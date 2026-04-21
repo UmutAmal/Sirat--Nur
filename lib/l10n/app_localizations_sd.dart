@@ -208,7 +208,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'ترجمو';
 
   @override
   String get tafsir => 'Tafsir';

@@ -209,7 +209,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Tradução';
 
   @override
   String get tafsir => 'Tafsir';

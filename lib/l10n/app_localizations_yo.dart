@@ -208,7 +208,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Itumọ';
 
   @override
   String get tafsir => 'Tafsir';

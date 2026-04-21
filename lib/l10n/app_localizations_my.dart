@@ -210,7 +210,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'ဘာသာပြန်ခြင်း။';
 
   @override
   String get tafsir => 'Tafsir';

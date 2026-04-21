@@ -209,7 +209,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Переклад';
 
   @override
   String get tafsir => 'Tafsir';

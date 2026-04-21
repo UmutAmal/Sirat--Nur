@@ -208,7 +208,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'വിവർത്തനം';
 
   @override
   String get tafsir => 'Tafsir';
