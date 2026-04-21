@@ -16262,3 +16262,32 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi siradaki dongu: Supabase yetkisi gerektirmeyen yeni P1/P2 riskleri tara. Ozellikle Appium smoke'u kalici script/guard haline getirme, download page accessibility/label uyumu, store-readiness blokajlari ve hardcoded runtime string taramasi surdurulecek.
+## 2026-04-22 TUR-380 - Appium Runtime Smoke Made Reproducible
+
+### MASTER Karari
+- Risk: Appium runtime smoke kaniti onceki turlarda inline script ve ignored `build/` artefact'leriyle uretiliyordu. Bu, exact-alarm hijack, onboarding, bottom navigation ve quick access regresyonlarinin bir sonraki gelistirici tarafindan ayni sekilde tekrar dogrulanamamasina yol aciyordu.
+- Kanit: Repo taramasinda Appium smoke icin kalici `tool/` script'i yoktu; handover kayitlari `build/appium-*.xml/png/json` artefact'lerine referans veriyordu ama bunlar ignored ve commitlenmiyor.
+- Kullanici etkisi: Runtime UI regresyonu sadece manuel hafizada kalirsa store-ready oncesi tekrar gozden kacabilir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 runtime validation reproducibility).
+- Rollback plani: `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool/appium_runtime_smoke.ps1` eklendi.
+- Script Appium REST API ile mevcut yüklu Android APK'yi acar, onboarding (`Next`, `Next`, `Start/Get Started`), bottom nav (`Quran`, `Qibla`, `Zikr`, `Calendar`) ve quick access (`Places`, `Downloads`, `Analytics`, `Premium`) akisini dogrular.
+- Script Android Settings/Alarms hijack, eski `No Internet Connection` copy'si ve logcat crash marker'lari (`FATAL EXCEPTION`, `E/flutter`, `Unhandled Exception`) icin fail-fast yapar.
+- Script tekrar calistirilabilir kanit olarak `build/appium-runtime-smoke-summary.json`, XML kaynaklari ve logcat dosyasi uretir; `build/` ignored kalir.
+- `test/appium_runtime_smoke_script_test.dart` eklendi; script'in kritik selector, hijack guard, crash marker ve artefact uretim kurallarini static regression guard'a baglar.
+
+### Dogrulama Sonucu
+- Targeted static test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, 4/4.
+- Live Appium smoke: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\appium_runtime_smoke.ps1` PASS. Summary: onboarding tiklandi, 4 bottom nav ve 4 quick access hedefi clicked/expected, Android Settings yok, logcat crash-free.
+- Full analyze: `flutter analyze` PASS, no issues.
+- Full regression: `flutter test --reporter compact` PASS, 617/617.
+- Diff check: `git diff --check -- tool\appium_runtime_smoke.ps1 test\appium_runtime_smoke_script_test.dart` PASS.
+
+### Risk Degisimi
+- Ad-hoc Appium runtime validation risk: `12/25 -> 3/25`.
+- Kalan risk: Script CI'ya bagli degil; emulatore/Appium server'a ihtiyac duydugu icin release oncesi manuel veya CI smoke adimi olarak kosulmali.
+
+### Sonraki Adim
+- Commit/push sonrasi siradaki dongu: Supabase production content blokajlari yetki/verified manifest gerektiriyor; yetkisiz alanda sessiz catch/error-state, hardcoded runtime string ve store checker guard taramasina devam edilecek.
