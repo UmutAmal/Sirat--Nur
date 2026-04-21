@@ -538,7 +538,7 @@ class AppLocalizationsGa extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Bainisteoir íoslódáil';
 
   @override
   String get downloads => 'Íoslódálacha';
@@ -547,10 +547,10 @@ class AppLocalizationsGa extends AppLocalizations {
   String get downloading => 'Ag íosluchtú...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Íosluchtaigh Críochnaithe';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Theip ar íoslódáil';
 
   @override
   String get offlineMode => 'Mód As Líne';
@@ -730,7 +730,7 @@ class AppLocalizationsGa extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Bainisteoir íoslódáil gan an Idirlíon';
 
   @override
   String get manageDatasets =>
@@ -1185,16 +1185,16 @@ class AppLocalizationsGa extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Cumasaigh Cúltaca As Líne';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Íoslódáil a ullmhú.. .';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Surah á íoslódáil $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Gach surahs íoslódáilte cheana féin don aithriseoir seo.';
 
   @override
   String get offlineQuranAudioPacks => 'Pacáistí Fuaime Quran As Líne';
@@ -1206,11 +1206,11 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surahs íoslódáilte';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Deisiúchán / Íoslódáil Ar iarraidh';
 
   @override
   String get downloadAction => 'Íosluchtaigh';
@@ -1222,7 +1222,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Scrios Comhaid Íosluchtaithe';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Á chealú...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

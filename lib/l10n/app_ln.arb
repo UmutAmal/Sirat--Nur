@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Gestionnaire ya téléchargement",
   "downloads": "Ba téléchargements",
   "downloading": "Kozwa téléchargement...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Télécharger Complète",
+  "downloadFailed": "Téléchargement Elongi te",
   "offlineMode": "Mode Hors Connexion",
   "noInternet": "No Internet Connection",
   "checkConnection": "Svp tala connexion na yo",
@@ -320,7 +320,7 @@
   "premiumVerified": "Abonnement premium e vérifié.",
   "premiumNotFound": "Abonnement premium ezwami te.",
   "premiumRefreshError": "Ekoki te kozongisa sika ezalela ya abonnément premium: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Gestionnaire ya téléchargement hors ligne",
   "manageDatasets": "Gérer ba paquets audio & ensembles de données massifs hors ligne.",
   "freeStorage": "Kopesa bonsomi ya kobomba biloko ya kati ya aparɛyi.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Base ya boyebi ya Islam oyo e vérifié hors ligne ezali kaka ko curer. Okoki ko activer fallback hors ligne sikoyo, kasi ekolakisa kaka ba messages ya sécurité limitée tii tango ensemble ya ba données sourced ekozala prêt.\n\nOlingi ko activer fallback hors ligne?",
   "chatbotOfflineSwitched": "Fallback hors ligne efungolami. Ba réponses islamiques locales vérifiées ezali nanu prêt te.",
   "chatbotOfflineDownloadLabel": "Activer Fallback hors ligne",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Kobongisa téléchargement...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Ba surah nionso esi e téléchargé pona réciter oyo.",
   "offlineQuranAudioPacks": "Offline Coran Audio Packs",
   "storedOnDeviceMb": "Ebombami na dispositif: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Réparation / Téléchargement Ezali te",
   "downloadAction": "Kozwa",
   "resumeDownload": "Koba ko télécharger",
   "deleteDownloadedFiles": "Bolongola ba fichiers oyo o télécharger",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Kolongolama...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

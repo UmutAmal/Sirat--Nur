@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Mufambisi wa ku Dawuniloda",
   "downloads": "Swilo leswi dawunilodiwaka",
   "downloading": "Ku dawuniloda...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Download Yi helerile",
+  "downloadFailed": "Download yi tsandzekile",
   "offlineMode": "Mode ya le Handle ka Inthanete",
   "noInternet": "No Internet Connection",
   "checkConnection": "Hi kombela u languta vuhlanganisi bya wena",
@@ -320,7 +320,7 @@
   "premiumVerified": "Xikhokhelo xa premium xi tiyisisiwile.",
   "premiumNotFound": "Xikhokhelo xa premium a xi kumeki.",
   "premiumRefreshError": "A swi swi kotanga ku pfuxeta xiyimo xa xikhokhelo xa premium: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Mufambisi wa ku Dawuniloda ehandle ka Inthanete",
   "manageDatasets": "Lawula tiphakiti ta mpfumawulo lowukulu wa le handle ka inthanete & dataset.",
   "freeStorage": "Ntshunxa vuhlayiselo bya switirhisiwa swa le ndzeni.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Xivandla xa vutivi bya Xiislam lexi tiyisisiweke xa le handle ka inthanete xa ha hlayisiwa. U nga pfumelela ku tlhelela endzhaku ka le handle ka inthanete sweswi, kambe yi ta kombisa ntsena marungula lama hlayisekeke lama nga nyawuriki ku kondza dataset leyi humaka eka xihlovo yi lunghekile.\n\nXana u nga tsakela ku endla leswaku ku va na ku tlhelela endzhaku ka offline?",
   "chatbotOfflineSwitched": "Offline fallback yi tirhisiwile. Tinhlamulo ta Xiislam ta laha kaya leti tiyisisiweke a ti si lungheka.",
   "chatbotOfflineDownloadLabel": "Endla leswaku Offline Fallback yi tirha",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Ku lunghiselela ku dawuniloda...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Ti surah hinkwato se ti dawunilodiwile eka muhlayi loyi.",
   "offlineQuranAudioPacks": "Tiphakiti ta mpfumawulo ta Quran leti nga riki eka inthanete",
   "storedOnDeviceMb": "Yi hlayisiwile eka xitirhisiwa: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ku lunghisa / Download Ku kayivela",
   "downloadAction": "Downloda",
   "resumeDownload": "Yana emahlweni u kopa",
   "deleteDownloadedFiles": "Susa Tifayili Leti Dawunilodiweke",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ku khansela...",
   "downloadCanceledForReciter": "Download yi khanseliwile eka {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

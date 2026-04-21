@@ -540,7 +540,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get downloadManager => 'Gerînendeyê Daxistinê';
 
   @override
-  String get downloads => 'Downloads';
+  String get downloads => 'Daxistin';
 
   @override
   String get downloading => 'Daxistin...';

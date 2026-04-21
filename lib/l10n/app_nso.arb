@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Molaodi wa Download",
   "downloads": "Di-download",
   "downloading": "Go taonelouta...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Download Feletseng",
+  "downloadFailed": "Download e paletšwe",
   "offlineMode": "Mokgwa wa ka ntle ga Inthanete",
   "noInternet": "No Internet Connection",
   "checkConnection": "Hle hlahloba kgokagano ya gago",
@@ -320,7 +320,7 @@
   "premiumVerified": "Peeletšo ya Premium e netefaditšwe.",
   "premiumNotFound": "Peeletšo ya Premium ga se ya hwetšwa.",
   "premiumRefreshError": "Ga se ya kgona go hlabolla maemo a peeletšo ya premium: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Molaodi wa go Taonelouta ka ntle ga Inthanete",
   "manageDatasets": "Laola massive offline mamelwang & dataset diphuthelwana.",
   "freeStorage": "Free ho fihlela ka hare sesebediswa polokelo.",
   "quranIntegrity": "Botshepegi bja Quran",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Motheo wa tsebo ya Boiselamo wo o netefaditšwego wa ka ntle ga inthanete o sa dutše o hlokomelwa. O ka kgontšha go boela morago ka ntle ga inthanete bjale, eupša e tla bontšha fela melaetša ye e bolokegilego ye e lekanyeditšwego go fihlela sete ya datha ye e hweditšwego e lokile.\n\nNa o ka rata go kgontšha go boela morago ka ntle ga inthanete?",
   "chatbotOfflineSwitched": "Fallback ya ka ntle ga inthanete e kgontšhitšwe. Dikarabo tša selegae tša Boiselamo tše di netefaditšwego ga se tša lokela ga bjale.",
   "chatbotOfflineDownloadLabel": "Kgontšha Fallback ya ka ntle ga inthanete",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Go lokišetša go taonelouta...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "All surahs se a ntse a thowuni bakeng sa reciter ena.",
   "offlineQuranAudioPacks": "Diphuthelwana tša Mamelwang tša Quran tša ka ntle ga Inthanete",
   "storedOnDeviceMb": "E bolokilwe ka sesebediswa: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Tokiso / Download E hlaeletse",
   "downloadAction": "Taonelouta",
   "resumeDownload": "Tswela pele go taonelouta",
   "deleteDownloadedFiles": "Phimola Difaele tše di Taoneloutšwago",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Go phumola...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

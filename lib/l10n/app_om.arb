@@ -262,7 +262,7 @@
   "downloadManager": "Download Manager",
   "downloads": "Downloads",
   "downloading": "Buufachuuf...",
-  "downloadComplete": "Download Complete",
+  "downloadComplete": "Download Guutuu",
   "downloadFailed": "Download Failed",
   "offlineMode": "Haala Toora Alaa",
   "noInternet": "No Internet Connection",
@@ -320,7 +320,7 @@
   "premiumVerified": "Maallaqni maallaqaan bitamuu (premium subscription) mirkanaa'eera.",
   "premiumNotFound": "Maallaqni maallaqaa (premium subscription) hin argamne.",
   "premiumRefreshError": "Haala maallaqa maallaqa gatii olaanaa haaromsuu hin dandeenye: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Bulchaa Buufachuuf Toora Alaa",
   "manageDatasets": "Paakkii sagalee & kuusaa deetaa sarara ala guddaa bulchuu.",
   "freeStorage": "Kuusaa meeshaa keessoo bilisa gochuu.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Bu'uurri beekumsa Islaamaa toora ala ta'ee mirkanaa'e ammallee qophaa'aa jira. Amma kufaatii sarara ala dandeessisuu dandeessa, garuu hanga kuusaan deetaa madda ta'etti ergaawwan nageenya qaban daangeffaman qofa agarsiisa.\n\nOffline fallback dandeessisuun barbaadduu?",
   "chatbotOfflineSwitched": "Kufaatii sarara ala ta'e dandeessifameera. Deebiin Islaamaa naannoo mirkanaa'e ammallee qophii miti.",
   "chatbotOfflineDownloadLabel": "Fallback Sarara Alaa dandeessisi",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Buufachuuf qopheessuu...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Suuraaleen qara'aa kanaaf duraan buufaman hundi.",
   "offlineQuranAudioPacks": "Offline Qur'aana Sagalee Paakkii",
   "storedOnDeviceMb": "Meeshaa irratti kuufame: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Suphaa / Download Dhabame",
   "downloadAction": "Buusuu",
   "resumeDownload": "Download itti fufaa",
   "deleteDownloadedFiles": "Faayilota Buufaman Haquu",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Haquu...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -541,7 +541,7 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Mufambisi wa ku Dawuniloda';
 
   @override
   String get downloads => 'Swilo leswi dawunilodiwaka';
@@ -550,10 +550,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get downloading => 'Ku dawuniloda...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Download Yi helerile';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Download yi tsandzekile';
 
   @override
   String get offlineMode => 'Mode ya le Handle ka Inthanete';
@@ -735,7 +735,8 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Mufambisi wa ku Dawuniloda ehandle ka Inthanete';
 
   @override
   String get manageDatasets =>
@@ -1195,7 +1196,7 @@ class AppLocalizationsTs extends AppLocalizations {
       'Endla leswaku Offline Fallback yi tirha';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ku lunghiselela ku dawuniloda...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1204,7 +1205,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Ti surah hinkwato se ti dawunilodiwile eka muhlayi loyi.';
 
   @override
   String get offlineQuranAudioPacks =>
@@ -1221,7 +1222,7 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Ku lunghisa / Download Ku kayivela';
 
   @override
   String get downloadAction => 'Downloda';
@@ -1233,7 +1234,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Susa Tifayili Leti Dawunilodiweke';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Ku khansela...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

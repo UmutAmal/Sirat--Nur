@@ -540,7 +540,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Manager ti Panag-download';
 
   @override
   String get downloads => 'Dagiti nai-download';
@@ -549,10 +549,10 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get downloading => 'Pag-download ti...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'I-download a Kompleto';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Napaay ti panag-download';
 
   @override
   String get offlineMode => 'Offline nga Modo';
@@ -735,7 +735,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Offline a Manager ti Panag-download';
 
   @override
   String get manageDatasets =>
@@ -1194,7 +1194,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Pagbalinen nga Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Panagsagana ti download...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1203,7 +1203,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Amin a surah ket nai-downloaden para iti daytoy a reciter.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline nga Quran nga Audio Packs';
@@ -1219,7 +1219,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Tarimaan / I-download ti Napukaw';
 
   @override
   String get downloadAction => 'I-download';
@@ -1231,7 +1231,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Buraken Dagiti Nai-download a File';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Panagkansela ti...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

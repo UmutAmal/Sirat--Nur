@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "ޑައުންލޯޑް މެނޭޖަރ",
   "downloads": "ޑައުންލޯޑްސް",
   "downloading": "ޑައުންލޯޑް ކުރަމުން...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "ޑައުންލޯޑް ފުރިހަމަ",
+  "downloadFailed": "ޑައުންލޯޑް ފެއިލްވެއްޖެ",
   "offlineMode": "އޮފްލައިން މޯޑް",
   "noInternet": "No Internet Connection",
   "checkConnection": "ކަނެކްޝަން ޗެކް ކުރައްވާށެވެ",
@@ -320,7 +320,7 @@
   "premiumVerified": "ޕްރީމިއަމް ސަބްސްކްރިޕްޝަން ވެރިފައިޑް.",
   "premiumNotFound": "ޕްރީމިއަމް ސަބްސްކްރިޕްޝަން ނުފެނެއެވެ.",
   "premiumRefreshError": "ޕްރީމިއަމް ސަބްސްކްރިޕްޝަން ސްޓޭޓަސް ރިފްރެޝް ނުކުރެވުނު: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "އޮފްލައިން ޑައުންލޯޑް މެނޭޖަރ",
   "manageDatasets": "ބޮޑު އޮފްލައިން އޯޑިއޯ & ޑޭޓާސެޓް ޕެކްތައް މެނޭޖްކުރުން.",
   "freeStorage": "އިންޓަރނަލް ޑިވައިސް ސްޓޯރޭޖް މިނިވަންކުރުން.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "ވެރިފައިޑް އޮފްލައިން އިސްލާމިކް ނޮލެޖް ބޭސް މިހާރުވެސް ދަނީ ކިއުރެޓް ކުރަމުންނެވެ. މިހާރު އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރެވޭނެ ނަމަވެސް ސޯސްޑް ޑޭޓާސެޓް ތައްޔާރުވާންދެން އެއިން ދައްކާނީ ލިމިޓެޑް ސޭފް މެސެޖްތަކެކެވެ.\n\nއޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރަން ބޭނުން ހެއްޔެވެ؟",
   "chatbotOfflineSwitched": "އޮފްލައިން ފޯލްބެކް އެނެބަލްކޮށްފައި. ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ޖަވާބުތައް އަދި ތައްޔާރު ނުވެއެވެ.",
   "chatbotOfflineDownloadLabel": "އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރާށެވެ",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "ޑައުންލޯޑް ތައްޔާރު ކުރަމުން...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "މި ކީރިތި މީހާއަށް މިހާރުވެސް ޑައުންލޯޑް ކުރެވިފައިވާ ހުރިހާ ސޫރަތެކެވެ.",
   "offlineQuranAudioPacks": "އޮފްލައިން ޤުރުއާން އޯޑިއޯ ޕެކްސް",
   "storedOnDeviceMb": "ޑިވައިސްގައި ރައްކާކުރެވިފައިވަނީ: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "މަރާމާތުކުރުން / ޑައުންލޯޑް ގެއްލިއްޖެ",
   "downloadAction": "ޑައުންލޯޑް",
   "resumeDownload": "ޑައުންލޯޑް ކުރިއަށް ގެންދަވާށެވެ",
   "deleteDownloadedFiles": "ޑައުންލޯޑް ކުރެވިފައިވާ ފައިލްތައް ޑިލީޓްކުރުން",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ކެންސަލް ކުރަނީ...",
   "downloadCanceledForReciter": "{reciter} އަށް ޑައުންލޯޑް ކެންސަލް ކޮށްފި އެވެ.",
   "@downloadCanceledForReciter": {
     "placeholders": {

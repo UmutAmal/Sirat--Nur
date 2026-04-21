@@ -543,7 +543,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get downloads => 'डाउनलोड्स्';
 
   @override
-  String get downloading => 'Downloading...';
+  String get downloading => 'डाउनलोड् करणं...';
 
   @override
   String get downloadComplete => 'डाउनलोड सम्पूर्ण';

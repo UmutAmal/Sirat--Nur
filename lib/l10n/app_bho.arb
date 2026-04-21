@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "डाउनलोड प्रबंधक के बा",
   "downloads": "डाउनलोड हो गइल बा",
   "downloading": "डाउनलोड हो रहल बा...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "डाउनलोड पूरा हो गइल बा",
+  "downloadFailed": "डाउनलोड फेल हो गइल",
   "offlineMode": "ऑफलाइन मोड के बा",
   "noInternet": "No Internet Connection",
   "checkConnection": "कृपया आपन कनेक्शन के जांच करीं",
@@ -320,7 +320,7 @@
   "premiumVerified": "प्रीमियम सदस्यता के सत्यापन हो गइल.",
   "premiumNotFound": "प्रीमियम सदस्यता ना मिलल.",
   "premiumRefreshError": "प्रीमियम सदस्यता के स्थिति ताजा ना हो पावल: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ऑफलाइन डाउनलोड प्रबंधक के बा",
   "manageDatasets": "भारी ऑफलाइन ऑडियो & डाटासेट पैक के प्रबंधन करीं।",
   "freeStorage": "आंतरिक डिवाइस भंडारण के मुक्त कर दीं।",
   "quranIntegrity": "कुरान के अखंडता के बारे में बतावल गइल बा",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "सत्यापन कइल ऑफलाइन इस्लामी ज्ञान आधार के अबहीं ले क्यूरेट कइल जा रहल बा. अब रउआँ ऑफलाइन फॉलबैक सक्षम क सकत बानी, बाकी ई तबले सीमित सुरक्षित संदेश तब ले देखावे ला जब ले सोर्स कइल गइल डाटासेट तइयार ना हो जाई।\n\nका रउआँ ऑफलाइन फॉलबैक सक्षम कइल चाहत बानी?",
   "chatbotOfflineSwitched": "ऑफलाइन फॉलबैक सक्षम हो गइल बा. सत्यापन स्थानीय इस्लामी जवाब अभी तक तैयार नईखे।",
   "chatbotOfflineDownloadLabel": "ऑफलाइन फॉलबैक के सक्षम करीं",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "डाउनलोड के तइयारी हो रहल बा...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "एह पाठक खातिर सगरी सूरह पहिलहीं से डाउनलोड हो चुकल बा.",
   "offlineQuranAudioPacks": "ऑफलाइन कुरान ऑडियो पैक बा",
   "storedOnDeviceMb": "डिवाइस पर संग्रहीत बा: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} सूरह डाउनलोड हो गइल बा",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "मरम्मत / डाउनलोड गायब बा",
   "downloadAction": "डाउनलोड करीं",
   "resumeDownload": "डाउनलोड जारी राखीं",
   "deleteDownloadedFiles": "डाउनलोड भइल फाइल के हटा दिहल जाव",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "रद्द हो रहल बा...",
   "downloadCanceledForReciter": "{reciter} खातिर डाउनलोड रद्द हो गइल।",
   "@downloadCanceledForReciter": {
     "placeholders": {

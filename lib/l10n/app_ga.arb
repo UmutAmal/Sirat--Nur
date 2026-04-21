@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Bainisteoir íoslódáil",
   "downloads": "Íoslódálacha",
   "downloading": "Ag íosluchtú...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Íosluchtaigh Críochnaithe",
+  "downloadFailed": "Theip ar íoslódáil",
   "offlineMode": "Mód As Líne",
   "noInternet": "No Internet Connection",
   "checkConnection": "Seiceáil do cheangal",
@@ -320,7 +320,7 @@
   "premiumVerified": "Síntiús préimhe fíoraithe.",
   "premiumNotFound": "Níor aimsíodh síntiús préimhe.",
   "premiumRefreshError": "Níorbh fhéidir stádas síntiúis phréimhe a athnuachan: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Bainisteoir íoslódáil gan an Idirlíon",
   "manageDatasets": "Bainistigh pacaí ollmhóra fuaime & tacair as líne.",
   "freeStorage": "Íoslódáil saor in aisce gléas stórála inmheánach.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Tá an bonn eolais Ioslamach fíoraithe as líne á choimeád fós. Is féidir leat cúltaca as líne a chumasú anois, ach ní thaispeánfaidh sé ach teachtaireachtaí teoranta sábháilte go dtí go mbeidh an tacar sonraí foinseach réidh.\n\nAr mhaith leat cúltaca as líne a chumasú?",
   "chatbotOfflineSwitched": "Cumasaíodh aischur as líne. Níl freagraí Ioslamacha áitiúla fíoraithe réidh fós.",
   "chatbotOfflineDownloadLabel": "Cumasaigh Cúltaca As Líne",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Íoslódáil a ullmhú.. .",
+  "downloadingSurah": "Surah á íoslódáil {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Gach surahs íoslódáilte cheana féin don aithriseoir seo.",
   "offlineQuranAudioPacks": "Pacáistí Fuaime Quran As Líne",
   "storedOnDeviceMb": "Stóráilte ar ghléas: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs íoslódáilte",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Deisiúchán / Íoslódáil Ar iarraidh",
   "downloadAction": "Íosluchtaigh",
   "resumeDownload": "Leanúint ar aghaidh íoslódáil",
   "deleteDownloadedFiles": "Scrios Comhaid Íosluchtaithe",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Á chealú...",
   "downloadCanceledForReciter": "Cuireadh an t-íoslódáil ar ceal le haghaidh {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

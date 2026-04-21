@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Descarga kamachiq",
   "downloads": "Descargas nisqakuna",
   "downloading": "Uraykachispa...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Descargar Completo nisqa",
+  "downloadFailed": "Descarga Mana atisqachu",
   "offlineMode": "Modo mana tinkisqa",
   "noInternet": "No Internet Connection",
   "checkConnection": "Ama hina kaspa, tinkisqaykita qhaway",
@@ -320,7 +320,7 @@
   "premiumVerified": "Suscripción premium nisqa chiqapchasqa.",
   "premiumNotFound": "Suscripción premium mana tarisqachu.",
   "premiumRefreshError": "Mana premium suscripción estadota musuqyachiyta atirqanchu: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Mana tinkisqa uraykachiy kamachiq",
   "manageDatasets": "Hatun mana tinkisqa uyarina & willay huñu packs kamachiy.",
   "freeStorage": "Ukhu dispositivo waqaychayta kacharichiy.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Chay chiqapchasqa mana tinkisqa islam yachaypa tiyanan kunankamapas curado kachkan. Kunan mana tinkisqa kutiy kutichiyta atichiyta atikunki, ichaqa pisi waqaychasqa willakuykunatalla rikuchinqa pukyuta willay huñu wakichisqa kanankama.\n\n¿Mana tinkisqa fallback atichiyta munankichu?",
   "chatbotOfflineSwitched": "Mana tinkisqa fallback atichisqa. Chiqapchasqa llaqta islam kutichiykuna manaraqmi wakichisqachu.",
   "chatbotOfflineDownloadLabel": "Mana tinkisqa Fallback nisqa atichiy",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Descargata wakichispa...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Tukuy surahkuna kay reciterpaq uraykachisqaña.",
   "offlineQuranAudioPacks": "Mana tinkisqa Quran Audio Packs",
   "storedOnDeviceMb": "Dispositivopi waqaychasqa: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Allchay / Descarga Falta",
   "downloadAction": "Uraykachiy",
   "resumeDownload": "Hinalla uraykachiy",
   "deleteDownloadedFiles": "Descargasqa Archivokunata chinkachiy",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Cancelando...",
   "downloadCanceledForReciter": "{reciter} nisqapaq descarga cancelasqa.",
   "@downloadCanceledForReciter": {
     "placeholders": {

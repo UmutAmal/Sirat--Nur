@@ -548,7 +548,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get downloading => 'Buufachuuf...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Download Guutuu';
 
   @override
   String get downloadFailed => 'Download Failed';
@@ -736,7 +736,7 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Bulchaa Buufachuuf Toora Alaa';
 
   @override
   String get manageDatasets =>
@@ -1193,7 +1193,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Fallback Sarara Alaa dandeessisi';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Buufachuuf qopheessuu...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1202,7 +1202,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Suuraaleen qara\'aa kanaaf duraan buufaman hundi.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Qur\'aana Sagalee Paakkii';
@@ -1218,7 +1218,7 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Suphaa / Download Dhabame';
 
   @override
   String get downloadAction => 'Buusuu';
@@ -1230,7 +1230,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get deleteDownloadedFiles => 'Faayilota Buufaman Haquu';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Haquu...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

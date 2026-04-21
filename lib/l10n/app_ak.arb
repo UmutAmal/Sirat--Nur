@@ -259,10 +259,10 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Download Manager no so",
   "downloads": "Nneɛma a wɔtwe",
   "downloading": "Woretwe...",
-  "downloadComplete": "Download Complete",
+  "downloadComplete": "Twe Awie",
   "downloadFailed": "Download Failed",
   "offlineMode": "Offline Mode a Wɔde Di Dwuma",
   "noInternet": "No Internet Connection",
@@ -320,7 +320,7 @@
   "premiumVerified": "Premium nkrataahyɛ a wɔagye atom.",
   "premiumNotFound": "Premium subscription no nnya nhuu.",
   "premiumRefreshError": "Entumi nsiesie premium nkrataahyɛ tebea: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Offline Download Manager a Ɛhwɛ Nneɛma so",
   "manageDatasets": "Hwɛ offline audio & dataset packs akɛse so.",
   "freeStorage": "Free up mfiri a ɛwɔ mu akorae.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Wɔda so ara reyɛ Islam nimdeɛ a wɔagye atom wɔ offline no so. Wubetumi ama offline fallback ayɛ adwuma mprempren, nanso ɛbɛkyerɛ nkrasɛm a ahobammɔ wom kakraa bi pɛ kosi sɛ dataset a wonya fii mu no bɛyɛ krado.\n\nWopɛ sɛ woma offline fallback yɛ adwuma?",
   "chatbotOfflineSwitched": "Offline fallback a wɔama ayɛ adwuma. Mmuaeɛ Islamfoɔ mmuaeɛ a wɔagye atom no nsiesiee wɔn ho nyɛɛ saa.",
   "chatbotOfflineDownloadLabel": "Ma Offline Fallback nyɛ adwuma",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Woresiesie wo ho sɛ wobɛtwe...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Surahs nyinaa a wɔatwe dedaw ama saa akenkanfo yi.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs a Wɔde Di Dwuma",
   "storedOnDeviceMb": "Wɔakora so wɔ afiri so: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Siesie / Twe Ayera",
   "downloadAction": "Twe",
   "resumeDownload": "Kɔ so twe",
   "deleteDownloadedFiles": "Popa Fael Ahorow a Wɔatwe no",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Wɔretwa mu...",
   "downloadCanceledForReciter": "Wɔatwa download no mu ama {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

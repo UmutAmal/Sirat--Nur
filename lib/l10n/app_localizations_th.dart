@@ -536,7 +536,7 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'ตัวจัดการการดาวน์โหลด';
 
   @override
   String get downloads => 'ดาวน์โหลด';
@@ -545,10 +545,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get downloading => 'กำลังดาวน์โหลด...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ดาวน์โหลดเสร็จสมบูรณ์';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ดาวน์โหลดล้มเหลว';
 
   @override
   String get offlineMode => 'โหมดออฟไลน์';
@@ -728,7 +728,7 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'ตัวจัดการดาวน์โหลดออฟไลน์';
 
   @override
   String get manageDatasets => 'จัดการชุดเสียงและชุดข้อมูลออฟไลน์ขนาดใหญ่';
@@ -1183,16 +1183,16 @@ class AppLocalizationsTh extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'เปิดใช้งานทางเลือกสำรองแบบออฟไลน์';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'กำลังเตรียมการดาวน์โหลด...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'กำลังดาวน์โหลดซูเราะห์ $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'ดาวน์โหลด Surah ทั้งหมดแล้วสำหรับผู้อ่านรายนี้';
 
   @override
   String get offlineQuranAudioPacks => 'ชุดเสียงอัลกุรอานออฟไลน์';
@@ -1204,11 +1204,11 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total ดาวน์โหลดแล้ว';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'ซ่อมแซม / ดาวน์โหลดที่หายไป';
 
   @override
   String get downloadAction => 'ดาวน์โหลด';
@@ -1220,7 +1220,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get deleteDownloadedFiles => 'ลบไฟล์ที่ดาวน์โหลด';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'กำลังยกเลิก...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

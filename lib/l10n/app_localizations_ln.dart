@@ -538,7 +538,7 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Gestionnaire ya téléchargement';
 
   @override
   String get downloads => 'Ba téléchargements';
@@ -547,10 +547,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get downloading => 'Kozwa téléchargement...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Télécharger Complète';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Téléchargement Elongi te';
 
   @override
   String get offlineMode => 'Mode Hors Connexion';
@@ -731,7 +731,8 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Gestionnaire ya téléchargement hors ligne';
 
   @override
   String get manageDatasets =>
@@ -1188,7 +1189,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Activer Fallback hors ligne';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Kobongisa téléchargement...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1197,7 +1198,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Ba surah nionso esi e téléchargé pona réciter oyo.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Coran Audio Packs';
@@ -1213,7 +1214,7 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Réparation / Téléchargement Ezali te';
 
   @override
   String get downloadAction => 'Kozwa';
@@ -1225,7 +1226,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Bolongola ba fichiers oyo o télécharger';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Kolongolama...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

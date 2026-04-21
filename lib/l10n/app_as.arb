@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "ডাউনলোড ব্যৱস্থাপক",
   "downloads": "ডাউনলোডসমূহ",
   "downloading": "ডাউনলোড...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "ডাউনলোড সম্পূৰ্ণ",
+  "downloadFailed": "ডাউনলোড বিফল",
   "offlineMode": "অফলাইন মোড",
   "noInternet": "No Internet Connection",
   "checkConnection": "অনুগ্ৰহ কৰি আপোনাৰ সংযোগ পৰীক্ষা কৰক",
@@ -320,7 +320,7 @@
   "premiumVerified": "প্ৰিমিয়াম চাবস্ক্ৰিপচন পৰীক্ষা কৰা হৈছে।",
   "premiumNotFound": "প্ৰিমিয়াম চাবস্ক্ৰিপচন পোৱা নগ'ল।",
   "premiumRefreshError": "প্ৰিমিয়াম স্বাক্ষৰণ অৱস্থা সতেজ কৰিব পৰা নগ'ল: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "অফলাইন ডাউনলোড ব্যৱস্থাপক",
   "manageDatasets": "বৃহৎ অফলাইন অডিঅ' আৰু ডাটাছেট পেকসমূহ পৰিচালনা কৰক।",
   "freeStorage": "অভ্যন্তৰীণ ডিভাইচ সংৰক্ষণ মুক্ত কৰক।",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "পৰীক্ষিত অফলাইন ইছলামিক জ্ঞানৰ ভিত্তি এতিয়াও কিউৰেট কৰা হৈছে। আপুনি এতিয়া অফলাইন ফ'লবেক সামৰ্থবান কৰিব পাৰিব, কিন্তু ই কেৱল সীমিত সুৰক্ষিত বাৰ্তাসমূহ দেখুৱাব যেতিয়ালৈকে উৎস ডাটাছেট প্ৰস্তুত নহয়।\n\nআপুনি অফলাইন ফ'লবেক সামৰ্থবান কৰিব বিচাৰেনে?",
   "chatbotOfflineSwitched": "অফলাইন ফ'লবেক সামৰ্থবান কৰা হৈছে। পৰীক্ষিত স্থানীয় ইছলামিক উত্তৰ এতিয়াও সাজু হোৱা নাই।",
   "chatbotOfflineDownloadLabel": "অফলাইন ফ'লবেক সামৰ্থবান কৰক",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "ডাউনলোড প্ৰস্তুত কৰা হৈছে...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "এই পাঠকৰ বাবে ইতিমধ্যে সকলো চুৰা ডাউনলোড কৰা হৈছে।",
   "offlineQuranAudioPacks": "অফলাইন কোৰআন অডিঅ' পেক",
   "storedOnDeviceMb": "ডিভাইচত সংৰক্ষণ কৰা হৈছে: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} চুৰাসমূহ ডাউনলোড কৰা হৈছে",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "মেৰামতি / ডাউনলোড অনুপস্থিত",
   "downloadAction": "ডাউনল’ড",
   "resumeDownload": "ডাউনলোড অব্যাহত ৰাখক",
   "deleteDownloadedFiles": "ডাউনলোড কৰা ফাইলসমূহ মচি পেলাওক",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "বাতিল কৰা হৈছে...",
   "downloadCanceledForReciter": "{reciter} ৰ বাবে ডাউনলোড বাতিল কৰা হৈছে।",
   "@downloadCanceledForReciter": {
     "placeholders": {

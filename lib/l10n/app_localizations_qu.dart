@@ -539,7 +539,7 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Descarga kamachiq';
 
   @override
   String get downloads => 'Descargas nisqakuna';
@@ -548,10 +548,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get downloading => 'Uraykachispa...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Descargar Completo nisqa';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Descarga Mana atisqachu';
 
   @override
   String get offlineMode => 'Modo mana tinkisqa';
@@ -732,7 +732,7 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Mana tinkisqa uraykachiy kamachiq';
 
   @override
   String get manageDatasets =>
@@ -1190,7 +1190,7 @@ class AppLocalizationsQu extends AppLocalizations {
       'Mana tinkisqa Fallback nisqa atichiy';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Descargata wakichispa...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1199,7 +1199,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Tukuy surahkuna kay reciterpaq uraykachisqaña.';
 
   @override
   String get offlineQuranAudioPacks => 'Mana tinkisqa Quran Audio Packs';
@@ -1215,7 +1215,7 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Allchay / Descarga Falta';
 
   @override
   String get downloadAction => 'Uraykachiy';
@@ -1227,7 +1227,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Descargasqa Archivokunata chinkachiy';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Cancelando...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

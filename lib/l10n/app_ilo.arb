@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Manager ti Panag-download",
   "downloads": "Dagiti nai-download",
   "downloading": "Pag-download ti...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "I-download a Kompleto",
+  "downloadFailed": "Napaay ti panag-download",
   "offlineMode": "Offline nga Modo",
   "noInternet": "No Internet Connection",
   "checkConnection": "Pangngaasiyo ta kitaenyo ti koneksionyo",
@@ -320,7 +320,7 @@
   "premiumVerified": "Naberipika ti premium a suskripsion.",
   "premiumNotFound": "Saan a nasarakan ti premium subscription.",
   "premiumRefreshError": "Saan a ma-refresh ti kasasaad ti suskrision ti premium: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Offline a Manager ti Panag-download",
   "manageDatasets": "Imanehar dagiti dakkel nga offline nga audio & dataset pack.",
   "freeStorage": "Libre ti internal device storage.",
   "quranIntegrity": "Kinatarnaw ti Quran",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Ti naberipikado nga offline Islamic knowledge base ket ma-curate pay laeng. Mabalinmo nga ipalubos ti offline fallback ita, ngem ipakitana laeng dagiti limitado a natalged a mensahe agingga a nakasaganan ti nagtaudan a dataset.\n\nKayatmo kadi nga ipalubos ti offline fallback?",
   "chatbotOfflineSwitched": "Na-enable ti offline a fallback. Saan pay a nakasagana dagiti naberipikado a lokal nga Islamiko a sungbat.",
   "chatbotOfflineDownloadLabel": "Pagbalinen nga Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Panagsagana ti download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Amin a surah ket nai-downloaden para iti daytoy a reciter.",
   "offlineQuranAudioPacks": "Offline nga Quran nga Audio Packs",
   "storedOnDeviceMb": "Naidulin iti alikamen: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Tarimaan / I-download ti Napukaw",
   "downloadAction": "I-download",
   "resumeDownload": "Ituloy ti panag-download",
   "deleteDownloadedFiles": "Buraken Dagiti Nai-download a File",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Panagkansela ti...",
   "downloadCanceledForReciter": "Nakansela ti panag-download para iti {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -537,7 +537,7 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Daunlod Maneja';
 
   @override
   String get downloads => 'Di tin dɛn we dɛn kin dawnlod';
@@ -546,10 +546,10 @@ class AppLocalizationsKri extends AppLocalizations {
   String get downloading => 'We yu de dawnlod...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Daunlod Kɔmplit';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Daunlod nɔ bin wok';
 
   @override
   String get offlineMode => 'Ɔflayn Mɔd';
@@ -729,7 +729,7 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Ɔflayn Daunlod Maneja';
 
   @override
   String get manageDatasets => 'Manej masɛf ɔflayn ɔdio & datasɛt pak dɛn.';
@@ -1182,7 +1182,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Ɔflayn Fɔlbak';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'We yu de pripia fɔ dawnlod...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1191,7 +1191,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Ɔl di surah dɛn we dɛn dɔn ɔlrɛdi dawnlod fɔ dis pɔsin we de rid.';
 
   @override
   String get offlineQuranAudioPacks => 'Offlain Quran Odio Pak dɛn';
@@ -1203,11 +1203,11 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surah dɛn we dɛn dɔn dawnlod';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Ripair / Daunlod Mis';
 
   @override
   String get downloadAction => 'Dɔŋlod';
@@ -1219,7 +1219,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get deleteDownloadedFiles => 'Dilit Fayl dɛn we yu dɔn Daunlod';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'We yu de kansel...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

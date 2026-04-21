@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Ñemboguejy Moakãha",
   "downloads": "Umi descarga rehegua",
   "downloading": "Ojegueru jave...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Descargar Completo",
+  "downloadFailed": "Ojegueru ndoikói",
   "offlineMode": "Modo Offline rehegua",
   "noInternet": "No Internet Connection",
   "checkConnection": "Ehecháke ne joaju",
@@ -320,7 +320,7 @@
   "premiumVerified": "Ojeverifika suscripción premium rehegua.",
   "premiumNotFound": "Ndojejuhúi suscripción premium.",
   "premiumRefreshError": "Ndaikatúi ombopyahu premium suscripción reko: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Ñemboguejyha Ñemboguejyha Fuera de línea",
   "manageDatasets": "Emohenda audio & conjunto de datos paquete masivo offline rehegua.",
   "freeStorage": "Emosãso tembipuru’i ryru ryepypegua.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Ko base de conocimiento islámico verificado offline oime gueteri comisariado. Ikatu emboguata fallback offline ko’áĝa, ha katu ohechaukáta marandu seguro limitado añoite pe datokuéra ryru osẽva’ekue oĩma peve.\n\n¿Remboguatasépa fallback offline?",
   "chatbotOfflineSwitched": "Ojeheja rei fallback offline-pe. Umi respuesta islámica local verificado noĩri gueteri listo.",
   "chatbotOfflineDownloadLabel": "Emboguata Fallback Offline rehegua",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Oñembosako'ívo descarga...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Opaite surah ojeguerupáma ko recitador-pe guarã.",
   "offlineQuranAudioPacks": "Paquetes de Audio Corán Offline rehegua",
   "storedOnDeviceMb": "Oñongatu tembipuru’ípe: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Omyatyrõ / Ojegueru Ofalta",
   "downloadAction": "Mboguejy",
   "resumeDownload": "Eñepyrũ emboguejy",
   "deleteDownloadedFiles": "Embogue umi Archivo Ojegueruva’ekue",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Oñemboykévo...",
   "downloadCanceledForReciter": "Oñemboguejy oñembogue {reciter}-pe g̃uarã.",
   "@downloadCanceledForReciter": {
     "placeholders": {

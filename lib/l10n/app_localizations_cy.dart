@@ -539,7 +539,7 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Rheolwr Lawrlwytho';
 
   @override
   String get downloads => 'Lawrlwythiadau';
@@ -548,10 +548,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get downloading => 'Wrthi\'n llwytho i lawr...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Lawrlwytho Cyflawn';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Wedi methu llwytho i lawr';
 
   @override
   String get offlineMode => 'Modd All-lein';
@@ -732,7 +732,7 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Rheolwr Lawrlwytho All-lein';
 
   @override
   String get manageDatasets =>
@@ -1187,16 +1187,16 @@ class AppLocalizationsCy extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Galluogi All-lein Wrth Gefn';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Wrthi\'n paratoi lawrlwythiad...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Lawrlwytho surah $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Pob swrahs wedi\'u llwytho i lawr yn barod ar gyfer yr adroddwr hwn.';
 
   @override
   String get offlineQuranAudioPacks => 'Pecynnau Sain Quran All-lein';
@@ -1208,11 +1208,11 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total swrahs wedi\'u llwytho i lawr';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Atgyweirio / Lawrlwytho Ar Goll';
 
   @override
   String get downloadAction => 'Lawrlwythwch';
@@ -1224,7 +1224,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Dileu Ffeiliau Wedi\'u Lawrlwytho';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Wrthi\'n canslo...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

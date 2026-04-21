@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Omuddukanya Download",
   "downloads": "Ebiwanuddwa",
   "downloading": "Okuwanula...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Download Emaliriziddwa",
+  "downloadFailed": "Download Eremereddwa",
   "offlineMode": "Omutindo ogutali ku mutimbagano",
   "noInternet": "No Internet Connection",
   "checkConnection": "Nsaba okebere omukutu gwo",
@@ -320,7 +320,7 @@
   "premiumVerified": "Okuwandiisa kwa Premium kukakasiddwa.",
   "premiumNotFound": "Premium subscription tezuuliddwa.",
   "premiumRefreshError": "Teyasobodde kuzza buggya mbeera ya kuwandiisa ya premium: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Omuddukanya okuwanula ku mutimbagano",
   "manageDatasets": "Dukanya massive offline audio & dataset packs.",
   "freeStorage": "Sumulula okutereka ebyuma eby’omunda.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Ekifo eky’okumanya kw’Obusiraamu ekikakasiddwa nga tekirina mutimbagano kikyakuumibwa. Osobola okusobozesa offline fallback kati, naye ejja kulaga obubaka obutono bwokka obutebenkevu okutuusa nga dataset evudde ensibuko yeetegese.\n\nWandyagadde okusobozesa okugwa ku mutimbagano?",
   "chatbotOfflineSwitched": "Offline fallback esobozeseddwa. Eby'okuddamu by'Obusiraamu eby'omu kitundu ebikakasibwa tebinnaba kwetegekera.",
   "chatbotOfflineDownloadLabel": "Ssobozesa Okugwa ku mutimbagano",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Okuteekateeka okuwanula...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Surah zonna zawanula dda ku musomi ono.",
   "offlineQuranAudioPacks": "Ebipapula by'amaloboozi ga Quran ebitali ku mutimbagano",
   "storedOnDeviceMb": "Eterekeddwa ku kyuma: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Okuddaabiriza / Download Okubula",
   "downloadAction": "Okufuna",
   "resumeDownload": "Weeyongere okuwanula",
   "deleteDownloadedFiles": "Sazaamu Fayiro Eziwanuliddwa",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Okusazaamu...",
   "downloadCanceledForReciter": "Download esaziddwamu ku lwa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

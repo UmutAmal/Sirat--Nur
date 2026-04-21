@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Luchdaich sìos Manaidsear",
   "downloads": "Luchdaich sìos",
   "downloading": "A' luchdachadh sìos...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Luchdaich sìos Complete",
+  "downloadFailed": "Dh'fhàillig an luchdachadh sìos",
   "offlineMode": "Modh far loidhne",
   "noInternet": "No Internet Connection",
   "checkConnection": "Feuch an toir thu sùil air a’ cheangal agad",
@@ -320,7 +320,7 @@
   "premiumVerified": "Fo-sgrìobhadh Premium air a dhearbhadh.",
   "premiumNotFound": "Cha deach fo-sgrìobhadh Premium a lorg.",
   "premiumRefreshError": "Cha b' urrainn dhuinn inbhe an fho-sgrìobhaidh ùrachadh: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Manaidsear far loidhne luchdadh a-nuas",
   "manageDatasets": "Stiùirich pasganan claisneachd is dàta mòr far-loidhne.",
   "freeStorage": "Stòradh inneal taobh a-staigh an-asgaidh.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Tha am bunait eòlais Ioslamach far-loidhne dearbhte fhathast ga chur air dòigh. Faodaidh tu cùl-taic far loidhne a chomasachadh a-nis, ach cha sheall e ach teachdaireachdan cuibhrichte sàbhailte gus am bi an stòr-dàta a fhuaireadh deiseil.\n\nAm bu toil leat cùl-taic far loidhne a chomasachadh?",
   "chatbotOfflineSwitched": "Cùl-taic far-loidhne air a chomasachadh. Chan eil freagairtean Ioslamach ionadail dearbhte deiseil fhathast.",
   "chatbotOfflineDownloadLabel": "Dèan comas air cùl-taic far-loidhne",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ag ullachadh airson luchdachadh sìos...",
+  "downloadingSurah": "A’ luchdachadh sìos surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "A h-uile surahs a chaidh a luchdachadh sìos mu thràth airson an aithris seo.",
   "offlineQuranAudioPacks": "Pacaidean fuaim Quran far loidhne",
   "storedOnDeviceMb": "Air a stòradh air inneal: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs air a luchdachadh sìos",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Càradh / luchdachadh sìos a dhìth",
   "downloadAction": "Luchdaich sìos",
   "resumeDownload": "Lean air adhart leis an luchdachadh sìos",
   "deleteDownloadedFiles": "Sguab às Faidhlichean a chaidh a luchdachadh sìos",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "A' cur dheth...",
   "downloadCanceledForReciter": "Chaidh an luchdachadh sìos a chuir dheth airson {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

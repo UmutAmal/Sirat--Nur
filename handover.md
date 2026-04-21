@@ -16231,3 +16231,34 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi siradaki dongu: store-readiness/Supabase blokajlari yetki gerektiriyor; bunun disinda Appium smoke ve sessiz catch/error-state taramasi surdurulecek.
+## 2026-04-22 TUR-379 - Download Shell Localization Debt Reduced And Appium Smoke Verified
+
+### MASTER Karari
+- Risk: Download/offline-audio ekraninda kullaniciya gorunen 18 operasyonel UI anahtarinda cok sayida locale app_en.arb ile birebir ayniydi. Bu durum offline Quran audio indirme ve download manager yuzeylerinde dil secen kullanicinin Ingilizce fallback gormesine neden oluyordu.
+- Kanit: `dart run tool/translate_arb_keys.dart --report downloadManager downloads downloading downloadComplete downloadFailed offlineDownloadManager downloadPreparing downloadingSurah downloadCompleted offlineQuranAudioPacks downloadedSurahProgress redownloadMissingRepair downloadAction downloadCancelling downloadCanceledForReciter downloadFinishedForReciter downloadPartiallyFinishedForReciter deletedOfflineFilesForReciter` ilk raporda `Same-as-English locales: 1481`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0` verdi.
+- Kapsam karari: Ayet, hadis, tafsir veya dini hukum metni uretilmedi. Sadece download/offline-audio operasyonel arayuz copy'si ele alindi. Guvenli ceviri adayi uretilmeyen dusuk kaynakli locale'lerde Ingilizce fallback korundu; uydurma veya belirsiz ceviri yazilmadi.
+- Ek runtime kanit: Appium v2 smoke onboarding, bottom nav (`Quran`, `Qibla`, `Zikr`, `Calendar`) ve quick access (`Places`, `Downloads`, `Analytics`, `Premium`) akisini acti. Android Settings'e dusme yoktu. Logcat dar taramasinda `FATAL EXCEPTION`, `E/flutter`, `Unhandled Exception` yoktu.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 localization/runtime confidence).
+- Rollback plani: Bu turun `lib/l10n/app_*.arb`, `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover kaydi diff'i geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool/translate_arb_keys.dart` 18 download/offline-audio anahtari icin calistirildi.
+- Guvenli aday bulunan 25 locale ARB dosyasi guncellendi: `ak`, `as`, `bho`, `bm`, `cy`, `dv`, `ee`, `ga`, `gd`, `gn`, `hr`, `ilo`, `kri`, `ku`, `lg`, `ln`, `nso`, `om`, `qu`, `sa`, `sr`, `th`, `ti`, `ts`, `tw`.
+- `flutter gen-l10n` ile generated localization dosyalari ARB ile senkronlandi.
+- `test/translate_arb_keys_test.dart` icine 18 anahtarlik download shell guard'i eklendi; borc esigi `<=1299` olarak kilitlendi ve `as`, `th`, `ti`, `ak`, `cy` kurtarilan locale ornekleri regression guard'a baglandi.
+
+### Dogrulama Sonucu
+- Appium smoke v2: onboarding button'lari tiklandi; bottom nav ve quick access sayfalari acildi; Android Settings'e dusme yok.
+- Logcat crash taramasi: `FATAL EXCEPTION`, `E/flutter`, `Unhandled Exception` bulunmadi.
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS, 129/129.
+- Full analyze: `flutter analyze` PASS, no issues.
+- Full regression: `flutter test --reporter compact` PASS, 613/613.
+- Diff check: `git diff --check` PASS.
+
+### Risk Degisimi
+- Download/offline-audio shell l10n fallback debt: `12/25 -> 7/25`.
+- 18 anahtardaki same-as-English toplam borc: `1481 -> 1299`.
+- Kalan risk: Guvenli aday uretilemeyen dusuk kaynakli dillerde fallback bilerek korundu; insan/reviewed ceviri listesi geldikce ayni guard ile azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi siradaki dongu: Supabase yetkisi gerektirmeyen yeni P1/P2 riskleri tara. Ozellikle Appium smoke'u kalici script/guard haline getirme, download page accessibility/label uyumu, store-readiness blokajlari ve hardcoded runtime string taramasi surdurulecek.

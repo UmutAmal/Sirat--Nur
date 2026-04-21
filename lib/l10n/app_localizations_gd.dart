@@ -541,7 +541,7 @@ class AppLocalizationsGd extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Luchdaich sìos Manaidsear';
 
   @override
   String get downloads => 'Luchdaich sìos';
@@ -550,10 +550,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get downloading => 'A\' luchdachadh sìos...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Luchdaich sìos Complete';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Dh\'fhàillig an luchdachadh sìos';
 
   @override
   String get offlineMode => 'Modh far loidhne';
@@ -733,7 +733,7 @@ class AppLocalizationsGd extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Manaidsear far loidhne luchdadh a-nuas';
 
   @override
   String get manageDatasets =>
@@ -1192,16 +1192,16 @@ class AppLocalizationsGd extends AppLocalizations {
       'Dèan comas air cùl-taic far-loidhne';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ag ullachadh airson luchdachadh sìos...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'A’ luchdachadh sìos surah $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'A h-uile surahs a chaidh a luchdachadh sìos mu thràth airson an aithris seo.';
 
   @override
   String get offlineQuranAudioPacks => 'Pacaidean fuaim Quran far loidhne';
@@ -1213,11 +1213,11 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surahs air a luchdachadh sìos';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Càradh / luchdachadh sìos a dhìth';
 
   @override
   String get downloadAction => 'Luchdaich sìos';
@@ -1230,7 +1230,7 @@ class AppLocalizationsGd extends AppLocalizations {
       'Sguab às Faidhlichean a chaidh a luchdachadh sìos';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'A\' cur dheth...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

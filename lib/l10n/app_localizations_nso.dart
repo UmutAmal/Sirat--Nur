@@ -540,7 +540,7 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Molaodi wa Download';
 
   @override
   String get downloads => 'Di-download';
@@ -549,10 +549,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get downloading => 'Go taonelouta...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Download Feletseng';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Download e paletšwe';
 
   @override
   String get offlineMode => 'Mokgwa wa ka ntle ga Inthanete';
@@ -733,7 +733,8 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Molaodi wa go Taonelouta ka ntle ga Inthanete';
 
   @override
   String get manageDatasets =>
@@ -1198,7 +1199,7 @@ class AppLocalizationsNso extends AppLocalizations {
       'Kgontšha Fallback ya ka ntle ga inthanete';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Go lokišetša go taonelouta...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1207,7 +1208,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'All surahs se a ntse a thowuni bakeng sa reciter ena.';
 
   @override
   String get offlineQuranAudioPacks =>
@@ -1224,7 +1225,7 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Tokiso / Download E hlaeletse';
 
   @override
   String get downloadAction => 'Taonelouta';
@@ -1236,7 +1237,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get deleteDownloadedFiles => 'Phimola Difaele tše di Taoneloutšwago';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Go phumola...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

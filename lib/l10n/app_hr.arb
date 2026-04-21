@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Upravitelj preuzimanja",
   "downloads": "Preuzimanja",
   "downloading": "Preuzimanje...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Preuzimanje dovršeno",
+  "downloadFailed": "Preuzimanje nije uspjelo",
   "offlineMode": "Izvanmrežni način rada",
   "noInternet": "No Internet Connection",
   "checkConnection": "Provjerite vezu",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Verificirana izvanmrežna islamska baza znanja još uvijek se priprema. Sada možete omogućiti izvanmrežnu zamjenu, ali će prikazivati ​​samo ograničene sigurne poruke dok izvorni skup podataka ne bude spreman.\n\nŽelite li omogućiti offline zamjenu?",
   "chatbotOfflineSwitched": "Omogućen izvanmrežni rezervni način. Provjereni domaći islamski odgovori još nisu spremni.",
   "chatbotOfflineDownloadLabel": "Omogući izvanmrežnu zamjenu",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Priprema preuzimanja...",
+  "downloadingSurah": "Preuzimanje sure {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Sve sure su već preuzete za ovog recitatora.",
   "offlineQuranAudioPacks": "Izvanmrežni audio paketi Kur'ana",
   "storedOnDeviceMb": "Pohranjeno na uređaju: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} sura preuzeto",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Nedostaje popravak / preuzimanje",
   "downloadAction": "preuzimanje",
   "resumeDownload": "Nastavi preuzimanje",
   "deleteDownloadedFiles": "Brisanje preuzetih datoteka",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Otkazivanje...",
   "downloadCanceledForReciter": "Otkazano preuzimanje za {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

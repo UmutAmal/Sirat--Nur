@@ -540,7 +540,7 @@ class AppLocalizationsDv extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'ޑައުންލޯޑް މެނޭޖަރ';
 
   @override
   String get downloads => 'ޑައުންލޯޑްސް';
@@ -549,10 +549,10 @@ class AppLocalizationsDv extends AppLocalizations {
   String get downloading => 'ޑައުންލޯޑް ކުރަމުން...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ޑައުންލޯޑް ފުރިހަމަ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ޑައުންލޯޑް ފެއިލްވެއްޖެ';
 
   @override
   String get offlineMode => 'އޮފްލައިން މޯޑް';
@@ -735,7 +735,7 @@ class AppLocalizationsDv extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'އޮފްލައިން ޑައުންލޯޑް މެނޭޖަރ';
 
   @override
   String get manageDatasets =>
@@ -1195,7 +1195,7 @@ class AppLocalizationsDv extends AppLocalizations {
       'އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރާށެވެ';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'ޑައުންލޯޑް ތައްޔާރު ކުރަމުން...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1204,7 +1204,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'މި ކީރިތި މީހާއަށް މިހާރުވެސް ޑައުންލޯޑް ކުރެވިފައިވާ ހުރިހާ ސޫރަތެކެވެ.';
 
   @override
   String get offlineQuranAudioPacks => 'އޮފްލައިން ޤުރުއާން އޯޑިއޯ ޕެކްސް';
@@ -1220,7 +1220,8 @@ class AppLocalizationsDv extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair =>
+      'މަރާމާތުކުރުން / ޑައުންލޯޑް ގެއްލިއްޖެ';
 
   @override
   String get downloadAction => 'ޑައުންލޯޑް';
@@ -1233,7 +1234,7 @@ class AppLocalizationsDv extends AppLocalizations {
       'ޑައުންލޯޑް ކުރެވިފައިވާ ފައިލްތައް ޑިލީޓްކުރުން';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'ކެންސަލް ކުރަނީ...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

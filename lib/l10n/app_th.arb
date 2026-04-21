@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "ตัวจัดการการดาวน์โหลด",
   "downloads": "ดาวน์โหลด",
   "downloading": "กำลังดาวน์โหลด...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "ดาวน์โหลดเสร็จสมบูรณ์",
+  "downloadFailed": "ดาวน์โหลดล้มเหลว",
   "offlineMode": "โหมดออฟไลน์",
   "noInternet": "No Internet Connection",
   "checkConnection": "กรุณาตรวจสอบการเชื่อมต่อของคุณ",
@@ -320,7 +320,7 @@
   "premiumVerified": "ยืนยันการสมัครสมาชิกแบบพรีเมียมแล้ว",
   "premiumNotFound": "ไม่พบการสมัครสมาชิกแบบพรีเมียม",
   "premiumRefreshError": "ไม่สามารถรีเฟรชสถานะการสมัครรับข้อมูลแบบพรีเมียม: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ตัวจัดการดาวน์โหลดออฟไลน์",
   "manageDatasets": "จัดการชุดเสียงและชุดข้อมูลออฟไลน์ขนาดใหญ่",
   "freeStorage": "เพิ่มพื้นที่จัดเก็บข้อมูลภายในอุปกรณ์",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "ฐานความรู้อิสลามแบบออฟไลน์ที่ได้รับการตรวจสอบแล้วยังคงได้รับการดูแลจัดการ คุณสามารถเปิดใช้งานทางเลือกแบบออฟไลน์ได้ในขณะนี้ แต่จะแสดงเฉพาะข้อความที่ปลอดภัยแบบจำกัดจนกว่าชุดข้อมูลที่มาจะพร้อม\n\nคุณต้องการเปิดใช้งานทางเลือกแบบออฟไลน์หรือไม่",
   "chatbotOfflineSwitched": "เปิดใช้งานทางเลือกแบบออฟไลน์แล้ว คำตอบของศาสนาอิสลามในท้องถิ่นที่ได้รับการยืนยันแล้วยังไม่พร้อม",
   "chatbotOfflineDownloadLabel": "เปิดใช้งานทางเลือกสำรองแบบออฟไลน์",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "กำลังเตรียมการดาวน์โหลด...",
+  "downloadingSurah": "กำลังดาวน์โหลดซูเราะห์ {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "ดาวน์โหลด Surah ทั้งหมดแล้วสำหรับผู้อ่านรายนี้",
   "offlineQuranAudioPacks": "ชุดเสียงอัลกุรอานออฟไลน์",
   "storedOnDeviceMb": "เก็บไว้ในอุปกรณ์: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ดาวน์โหลดแล้ว",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ซ่อมแซม / ดาวน์โหลดที่หายไป",
   "downloadAction": "ดาวน์โหลด",
   "resumeDownload": "ดาวน์โหลดต่อ",
   "deleteDownloadedFiles": "ลบไฟล์ที่ดาวน์โหลด",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "กำลังยกเลิก...",
   "downloadCanceledForReciter": "การดาวน์โหลดถูกยกเลิกสำหรับ {reciter}",
   "@downloadCanceledForReciter": {
     "placeholders": {

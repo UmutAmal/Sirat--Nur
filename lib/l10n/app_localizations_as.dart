@@ -536,7 +536,7 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'ডাউনলোড ব্যৱস্থাপক';
 
   @override
   String get downloads => 'ডাউনলোডসমূহ';
@@ -545,10 +545,10 @@ class AppLocalizationsAs extends AppLocalizations {
   String get downloading => 'ডাউনলোড...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'ডাউনলোড সম্পূৰ্ণ';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'ডাউনলোড বিফল';
 
   @override
   String get offlineMode => 'অফলাইন মোড';
@@ -729,7 +729,7 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'অফলাইন ডাউনলোড ব্যৱস্থাপক';
 
   @override
   String get manageDatasets =>
@@ -1184,7 +1184,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'অফলাইন ফ\'লবেক সামৰ্থবান কৰক';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'ডাউনলোড প্ৰস্তুত কৰা হৈছে...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1193,7 +1193,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'এই পাঠকৰ বাবে ইতিমধ্যে সকলো চুৰা ডাউনলোড কৰা হৈছে।';
 
   @override
   String get offlineQuranAudioPacks => 'অফলাইন কোৰআন অডিঅ\' পেক';
@@ -1205,11 +1205,11 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total চুৰাসমূহ ডাউনলোড কৰা হৈছে';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'মেৰামতি / ডাউনলোড অনুপস্থিত';
 
   @override
   String get downloadAction => 'ডাউনল’ড';
@@ -1221,7 +1221,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get deleteDownloadedFiles => 'ডাউনলোড কৰা ফাইলসমূহ মচি পেলাওক';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'বাতিল কৰা হৈছে...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

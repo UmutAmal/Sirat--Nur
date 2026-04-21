@@ -537,7 +537,7 @@ class AppLocalizationsHr extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Upravitelj preuzimanja';
 
   @override
   String get downloads => 'Preuzimanja';
@@ -546,10 +546,10 @@ class AppLocalizationsHr extends AppLocalizations {
   String get downloading => 'Preuzimanje...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Preuzimanje dovršeno';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Preuzimanje nije uspjelo';
 
   @override
   String get offlineMode => 'Izvanmrežni način rada';
@@ -1186,16 +1186,16 @@ class AppLocalizationsHr extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Omogući izvanmrežnu zamjenu';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Priprema preuzimanja...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Preuzimanje sure $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Sve sure su već preuzete za ovog recitatora.';
 
   @override
   String get offlineQuranAudioPacks => 'Izvanmrežni audio paketi Kur\'ana';
@@ -1207,11 +1207,11 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total sura preuzeto';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Nedostaje popravak / preuzimanje';
 
   @override
   String get downloadAction => 'preuzimanje';
@@ -1223,7 +1223,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Brisanje preuzetih datoteka';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Otkazivanje...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

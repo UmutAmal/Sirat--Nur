@@ -537,7 +537,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'डाउनलोड प्रबंधक के बा';
 
   @override
   String get downloads => 'डाउनलोड हो गइल बा';
@@ -546,10 +546,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get downloading => 'डाउनलोड हो रहल बा...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'डाउनलोड पूरा हो गइल बा';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'डाउनलोड फेल हो गइल';
 
   @override
   String get offlineMode => 'ऑफलाइन मोड के बा';
@@ -728,7 +728,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक के बा';
 
   @override
   String get manageDatasets =>
@@ -1187,7 +1187,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'ऑफलाइन फॉलबैक के सक्षम करीं';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'डाउनलोड के तइयारी हो रहल बा...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1196,7 +1196,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'एह पाठक खातिर सगरी सूरह पहिलहीं से डाउनलोड हो चुकल बा.';
 
   @override
   String get offlineQuranAudioPacks => 'ऑफलाइन कुरान ऑडियो पैक बा';
@@ -1208,11 +1208,11 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total सूरह डाउनलोड हो गइल बा';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'मरम्मत / डाउनलोड गायब बा';
 
   @override
   String get downloadAction => 'डाउनलोड करीं';
@@ -1224,7 +1224,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get deleteDownloadedFiles => 'डाउनलोड भइल फाइल के हटा दिहल जाव';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'रद्द हो रहल बा...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

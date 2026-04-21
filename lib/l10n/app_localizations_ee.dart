@@ -545,10 +545,10 @@ class AppLocalizationsEe extends AppLocalizations {
   String get downloading => 'Wole eƒe kɔpi wɔm...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Download Wòwu enu';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Download Do kpo nu';
 
   @override
   String get offlineMode => 'Offline ƒe Nɔnɔme';
@@ -729,7 +729,8 @@ class AppLocalizationsEe extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Offline Download Dɔwɔƒe si Kpɔa Dɔwɔnyawo Gbɔ';
 
   @override
   String get manageDatasets =>
@@ -1184,7 +1185,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Na Offline Fallback nawɔ dɔ';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Dzadzraɖo ɖe download dzi...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1192,8 +1193,7 @@ class AppLocalizationsEe extends AppLocalizations {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => 'Surah siwo katã woɖe xoxo na nuxlẽla sia.';
 
   @override
   String get offlineQuranAudioPacks =>
@@ -1210,7 +1210,7 @@ class AppLocalizationsEe extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Dzadzraɖo / Download Bu';
 
   @override
   String get downloadAction => 'Hee ɖa anyi';
@@ -1223,7 +1223,7 @@ class AppLocalizationsEe extends AppLocalizations {
       'Tsɔ Faɛl Siwo Woɖe Ðe Internet Dzi la Tutu';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Tete ɖe...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

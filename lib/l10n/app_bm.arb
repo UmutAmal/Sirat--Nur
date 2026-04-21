@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Silamɛya dɔnniyada min sɛgɛsɛgɛra ɛntɛrinɛti kɔkan, o bɛ ka labɛn hali bi. Aw bɛ se ka offline fallback daminɛ sisan, nka a bɛna cikan lakananen danmadɔw dɔrɔn de jira fo ka se sourced dataset labɛn.\n\nYala i b’a fɛ ka se ka kɛ sababu ye ka offline fallback kɛ wa?",
   "chatbotOfflineSwitched": "Offline fallback bɛ se ka kɛ. Sigida silamɛya jaabi sɛgɛsɛgɛlenw ma labɛn fɔlɔ.",
   "chatbotOfflineDownloadLabel": "A’ ye Offline Fallback daminɛ",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Téléchargement labɛnni...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Sura bɛɛ telesarse kaban nin kalanbaga in kama.",
   "offlineQuranAudioPacks": "Kuranɛ Audio Packs minnu tɛ ɛntɛrinɛti kan",
   "storedOnDeviceMb": "A maralen bɛ minɛn kan: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Dilan / Télécharger Missing",
   "downloadAction": "Ka telesarize",
   "resumeDownload": "Aw bɛ taa a fɛ ka telesarse",
   "deleteDownloadedFiles": "Delete Downloaded Files",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "A bɛ ka kansɛli kɛ...",
   "downloadCanceledForReciter": "Téléchargement cancellé pour {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

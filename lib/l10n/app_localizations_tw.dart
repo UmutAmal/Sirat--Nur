@@ -538,7 +538,7 @@ class AppLocalizationsTw extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Download Manager no so';
 
   @override
   String get downloads => 'Nneɛma a wɔtwe';
@@ -547,7 +547,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get downloading => 'Woretwe...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Twe Awie';
 
   @override
   String get downloadFailed => 'Download Failed';
@@ -729,7 +729,8 @@ class AppLocalizationsTw extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Offline Download Manager a Ɛhwɛ Nneɛma so';
 
   @override
   String get manageDatasets => 'Hwɛ offline audio & dataset packs akɛse so.';
@@ -1185,7 +1186,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Ma Offline Fallback nyɛ adwuma';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Woresiesie wo ho sɛ wobɛtwe...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1194,7 +1195,7 @@ class AppLocalizationsTw extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Surahs nyinaa a wɔatwe dedaw ama saa akenkanfo yi.';
 
   @override
   String get offlineQuranAudioPacks =>
@@ -1211,7 +1212,7 @@ class AppLocalizationsTw extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Siesie / Twe Ayera';
 
   @override
   String get downloadAction => 'Twe';
@@ -1223,7 +1224,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get deleteDownloadedFiles => 'Popa Fael Ahorow a Wɔatwe no';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Wɔretwa mu...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

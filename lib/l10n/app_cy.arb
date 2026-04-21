@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Rheolwr Lawrlwytho",
   "downloads": "Lawrlwythiadau",
   "downloading": "Wrthi'n llwytho i lawr...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Lawrlwytho Cyflawn",
+  "downloadFailed": "Wedi methu llwytho i lawr",
   "offlineMode": "Modd All-lein",
   "noInternet": "No Internet Connection",
   "checkConnection": "Gwiriwch eich cysylltiad",
@@ -320,7 +320,7 @@
   "premiumVerified": "Tanysgrifiad premiwm wedi'i ddilysu.",
   "premiumNotFound": "Heb ganfod tanysgrifiad premiwm.",
   "premiumRefreshError": "Methu ag adnewyddu statws tanysgrifiad premiwm: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Rheolwr Lawrlwytho All-lein",
   "manageDatasets": "Rheoli pecynnau sain a set ddata enfawr all-lein.",
   "freeStorage": "Rhyddhau storfa ddyfais fewnol.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Mae'r sylfaen wybodaeth Islamaidd all-lein wedi'i dilysu yn dal i gael ei churadu. Gallwch chi alluogi wrth gefn all-lein nawr, ond dim ond negeseuon diogel cyfyngedig y bydd yn eu dangos nes bod y set ddata o ffynonellau yn barod.\n\nHoffech chi alluogi wrth gefn all-lein?",
   "chatbotOfflineSwitched": "Galluogi wrth gefn all-lein. Nid yw atebion Islamaidd lleol wedi'u dilysu yn barod eto.",
   "chatbotOfflineDownloadLabel": "Galluogi All-lein Wrth Gefn",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Wrthi'n paratoi lawrlwythiad...",
+  "downloadingSurah": "Lawrlwytho surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Pob swrahs wedi'u llwytho i lawr yn barod ar gyfer yr adroddwr hwn.",
   "offlineQuranAudioPacks": "Pecynnau Sain Quran All-lein",
   "storedOnDeviceMb": "Wedi'i storio ar ddyfais: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} swrahs wedi'u llwytho i lawr",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Atgyweirio / Lawrlwytho Ar Goll",
   "downloadAction": "Lawrlwythwch",
   "resumeDownload": "Parhewch i lawrlwytho",
   "deleteDownloadedFiles": "Dileu Ffeiliau Wedi'u Lawrlwytho",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Wrthi'n canslo...",
   "downloadCanceledForReciter": "Llawrlwythiad wedi'i ganslo ar gyfer {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

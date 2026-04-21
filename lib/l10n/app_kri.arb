@@ -259,11 +259,11 @@
       }
     }
   },
-  "downloadManager": "Download Manager",
+  "downloadManager": "Daunlod Maneja",
   "downloads": "Di tin dɛn we dɛn kin dawnlod",
   "downloading": "We yu de dawnlod...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Daunlod Kɔmplit",
+  "downloadFailed": "Daunlod nɔ bin wok",
   "offlineMode": "Ɔflayn Mɔd",
   "noInternet": "No Internet Connection",
   "checkConnection": "Duya chɛk yu kɔnɛkshɔn",
@@ -320,7 +320,7 @@
   "premiumVerified": "Premium sabskripshɔn we dɛn dɔn chɛk.",
   "premiumNotFound": "Premium sabskripshɔn nɔ de.",
   "premiumRefreshError": "Nɔ ebul fɔ rifresh prɛmiɔm sabskripshɔn stetɔs: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Ɔflayn Daunlod Maneja",
   "manageDatasets": "Manej masɛf ɔflayn ɔdio & datasɛt pak dɛn.",
   "freeStorage": "Fri op intanɛnt divays stɔrɔj.",
   "quranIntegrity": "Di Kɔran Intɛgriti",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Di verified oflain Islamik no bies stil de curate. Yu kin ɛnabul ɔflayn fɔlbak naw, bɔt i go jɔs sho limited sef mɛsej dɛn te di sɔs datasɛt rɛdi.\n\nYu go lɛk fɔ ɛnabul ɔflayn fɔlbak?",
   "chatbotOfflineSwitched": "Ɔflayn fɔlbak dɔn ɛnabul. Verified lokal Islamic ansa dem no redi yet.",
   "chatbotOfflineDownloadLabel": "Enable Ɔflayn Fɔlbak",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "We yu de pripia fɔ dawnlod...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Ɔl di surah dɛn we dɛn dɔn ɔlrɛdi dawnlod fɔ dis pɔsin we de rid.",
   "offlineQuranAudioPacks": "Offlain Quran Odio Pak dɛn",
   "storedOnDeviceMb": "Dɛn kin kip am na divays: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah dɛn we dɛn dɔn dawnlod",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ripair / Daunlod Mis",
   "downloadAction": "Dɔŋlod",
   "resumeDownload": "Kɔntinyu fɔ dawnlod am",
   "deleteDownloadedFiles": "Dilit Fayl dɛn we yu dɔn Daunlod",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "We yu de kansel...",
   "downloadCanceledForReciter": "Daunlod kansel fɔ {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

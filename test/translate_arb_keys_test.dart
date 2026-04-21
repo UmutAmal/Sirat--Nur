@@ -389,6 +389,67 @@ void main() {
       }
     });
 
+    test('tracks download shell l10n debt reduction', () {
+      const keys = [
+        'downloadManager',
+        'downloads',
+        'downloading',
+        'downloadComplete',
+        'downloadFailed',
+        'offlineDownloadManager',
+        'downloadPreparing',
+        'downloadingSurah',
+        'downloadCompleted',
+        'offlineQuranAudioPacks',
+        'downloadedSurahProgress',
+        'redownloadMissingRepair',
+        'downloadAction',
+        'downloadCancelling',
+        'downloadCanceledForReciter',
+        'downloadFinishedForReciter',
+        'downloadPartiallyFinishedForReciter',
+        'deletedOfflineFilesForReciter',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1299));
+      expect(
+        localeArbs['as']!['downloadManager'],
+        isNot(english['downloadManager']),
+      );
+      expect(
+        localeArbs['th']!['downloadingSurah'],
+        isNot(english['downloadingSurah']),
+      );
+      expect(localeArbs['ti']!['downloading'], isNot(english['downloading']));
+      expect(
+        localeArbs['ak']!['downloadCompleted'],
+        isNot(english['downloadCompleted']),
+      );
+      expect(
+        localeArbs['cy']!['downloadComplete'],
+        isNot(english['downloadComplete']),
+      );
+    });
+
     test('tracks settings audio and hadith l10n debt reduction', () {
       const keys = [
         'manageDatasets',

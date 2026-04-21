@@ -540,7 +540,7 @@ class AppLocalizationsGn extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'Download Manager';
+  String get downloadManager => 'Ñemboguejy Moakãha';
 
   @override
   String get downloads => 'Umi descarga rehegua';
@@ -549,10 +549,10 @@ class AppLocalizationsGn extends AppLocalizations {
   String get downloading => 'Ojegueru jave...';
 
   @override
-  String get downloadComplete => 'Download Complete';
+  String get downloadComplete => 'Descargar Completo';
 
   @override
-  String get downloadFailed => 'Download Failed';
+  String get downloadFailed => 'Ojegueru ndoikói';
 
   @override
   String get offlineMode => 'Modo Offline rehegua';
@@ -733,7 +733,8 @@ class AppLocalizationsGn extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Ñemboguejyha Ñemboguejyha Fuera de línea';
 
   @override
   String get manageDatasets =>
@@ -1188,7 +1189,7 @@ class AppLocalizationsGn extends AppLocalizations {
       'Emboguata Fallback Offline rehegua';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Oñembosako\'ívo descarga...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1197,7 +1198,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Opaite surah ojeguerupáma ko recitador-pe guarã.';
 
   @override
   String get offlineQuranAudioPacks =>
@@ -1214,7 +1215,7 @@ class AppLocalizationsGn extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Omyatyrõ / Ojegueru Ofalta';
 
   @override
   String get downloadAction => 'Mboguejy';
@@ -1226,7 +1227,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Embogue umi Archivo Ojegueruva’ekue';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Oñemboykévo...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

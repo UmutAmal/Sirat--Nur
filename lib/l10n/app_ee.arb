@@ -262,8 +262,8 @@
   "downloadManager": "Download Manager",
   "downloads": "Nusiwo woate ŋu awɔ kɔpi na",
   "downloading": "Wole eƒe kɔpi wɔm...",
-  "downloadComplete": "Download Complete",
-  "downloadFailed": "Download Failed",
+  "downloadComplete": "Download Wòwu enu",
+  "downloadFailed": "Download Do kpo nu",
   "offlineMode": "Offline ƒe Nɔnɔme",
   "noInternet": "No Internet Connection",
   "checkConnection": "Taflatse lé ŋku ɖe wò kadodoa ŋu",
@@ -320,7 +320,7 @@
   "premiumVerified": "Woɖo kpe nudɔdɔ si nye premium dzi.",
   "premiumNotFound": "Womekpɔ Premium nudɔdɔ o.",
   "premiumRefreshError": "Mete ŋu trɔ asi le premium nudɔdɔ ƒe nɔnɔme ŋu o: {error} .",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Offline Download Dɔwɔƒe si Kpɔa Dɔwɔnyawo Gbɔ",
   "manageDatasets": "Dzra odio & nyatakakadzraɖoƒe gbogbo siwo mele Internet dzi o dzi.",
   "freeStorage": "Na mɔ̃a ƒe ememe nudzraɖoƒe navo.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Wogale Islamtɔwo ƒe sidzedze ƒe dɔwɔƒe si ŋu woɖo kpee si mele Internet dzi o la dzi kpɔm kokoko. Àte ŋu awɔ offline fallback fifia, gake gbedasi dedie siwo seɖoƒe li na koe wòaɖe afia vaseɖe esime nyatakakatsoƒe si wokpɔ tso eme la nasɔ.\n\nÀdi be yeana offline fallback nawɔ dɔa?",
   "chatbotOfflineSwitched": "Offline fallback wowɔ dɔ. Islamtɔwo ƒe ŋuɖoɖo siwo ŋu woɖo kpee le nutoa me la mesu te haɖe o.",
   "chatbotOfflineDownloadLabel": "Na Offline Fallback nawɔ dɔ",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Dzadzraɖo ɖe download dzi...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Surah siwo katã woɖe xoxo na nuxlẽla sia.",
   "offlineQuranAudioPacks": "Quran Odio Packs siwo mele Internet dzi o",
   "storedOnDeviceMb": "Wodzrae ɖo ɖe mɔ̃ dzi: {size} MB",
   "@storedOnDeviceMb": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Dzadzraɖo / Download Bu",
   "downloadAction": "Hee ɖa anyi",
   "resumeDownload": "Yi edzi nànɔ eƒe kɔpi wɔm",
   "deleteDownloadedFiles": "Tsɔ Faɛl Siwo Woɖe Ðe Internet Dzi la Tutu",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Tete ɖe...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
