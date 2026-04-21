@@ -31,6 +31,19 @@ The checker intentionally fails if production environment variables, upload
 signing, Quran audio mirror/distribution evidence, or the public privacy policy are missing.
 Do not bypass it by using a raw `flutter build` command.
 
+Run this after installing the current Android candidate on an emulator or test
+device with Appium running:
+
+```powershell
+.\tool\appium_runtime_smoke.ps1
+```
+
+The Appium smoke must pass before release sign-off. Keep
+`build/appium-runtime-smoke-summary.json` with the release evidence; it proves
+first launch did not open Android Settings, onboarding completed, bottom
+navigation and quick access pages opened, legacy offline copy did not appear,
+and logcat stayed crash-free.
+
 ## Required Local Secrets
 
 These values must exist only on the release machine or secure CI secret store:
@@ -126,6 +139,7 @@ not be used for production seeding.
 ## Final Evidence To Keep
 
 - Store readiness checker output.
+- Appium runtime smoke summary: `build/appium-runtime-smoke-summary.json`.
 - `flutter analyze` output.
 - `flutter test --reporter compact` output.
 - Store AAB path and size.

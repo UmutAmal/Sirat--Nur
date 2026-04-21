@@ -60,6 +60,15 @@ Release builds never fall back to the Android debug keystore. Local release pack
 
 Store policy materials are tracked under `store/`. Keep `docs/privacy_policy.md`, `store/release_checklist.md`, `store/play/data_safety.md`, `store/play/exact_alarm_declaration.md`, `store/play/billing_test_plan.md`, and `store/appstore/app_privacy.md` aligned with code before every release. Exact alarms are used only for user-enabled prayer reminders and adhan alerts; when Android does not allow exact alarms, the scheduler falls back to inexact reminders instead of pretending exact scheduling succeeded.
 
+After installing the current Android candidate on an emulator or test device
+with Appium running, execute the runtime UI smoke before release sign-off:
+```powershell
+.\tool\appium_runtime_smoke.ps1
+```
+The script writes `build/appium-runtime-smoke-summary.json` and fails if first
+launch opens Android Settings, onboarding or runtime navigation breaks, legacy
+offline copy appears, or logcat contains crash markers.
+
 ## Quran Audio Sovereignty Workflow
 The runtime requires verified `storage_path` rows and first-party distribution endpoints for playable Quran audio. Supabase stores only metadata/path rows; the 11.6 GB Quran MP3 catalog is not uploaded to Supabase Storage. The planned split is Cloudflare R2/CDN for every reciter except `abdul_basit_murattal`, and GitHub Releases for the complete `abdul_basit_murattal` overflow set. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks.
 

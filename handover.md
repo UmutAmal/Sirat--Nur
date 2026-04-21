@@ -16291,3 +16291,29 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi siradaki dongu: Supabase production content blokajlari yetki/verified manifest gerektiriyor; yetkisiz alanda sessiz catch/error-state, hardcoded runtime string ve store checker guard taramasina devam edilecek.
+## 2026-04-22 TUR-381 - Appium Release Gate Documented
+
+### MASTER Karari
+- Risk: Appium runtime smoke script'i kalici hale gelmisti fakat release checklist ve README gate'lerinde zorunlu adim olarak belgelenmemisti. Bu durumda sonraki release turunda script mevcut olsa bile calistirilmadan store sign-off yapilabilirdi.
+- Kanit: `tool/appium_runtime_smoke.ps1` ve `test/appium_runtime_smoke_script_test.dart` commitlenmisti; ancak `README.md` ve `store/release_checklist.md` store gate bolumlerinde script adi ve `build/appium-runtime-smoke-summary.json` kaniti yoktu.
+- Kullanici etkisi: Android Settings hijack, onboarding/nav kopmasi veya logcat crash regresyonu store-ready oncesi tekrar kacabilirdi.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25 (P2 release process gap).
+- Rollback plani: `README.md`, `store/release_checklist.md`, `test/readme_operational_docs_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `README.md` Store Release Gates bolumune Android aday build kurulduktan sonra `.\tool\appium_runtime_smoke.ps1` calistirilmasi eklendi.
+- `store/release_checklist.md` Machine Gate ve Final Evidence bolumlerine Appium runtime smoke ve `build/appium-runtime-smoke-summary.json` kaniti eklendi.
+- `test/readme_operational_docs_test.dart` README ve release checklist'in Appium smoke script'i, summary artefact'i, Android Settings guard'i ve logcat crash-free kanitini belgeledigini dogrulayan regression testiyle genisletildi.
+
+### Dogrulama Sonucu
+- Targeted docs tests: `flutter test test\readme_operational_docs_test.dart test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, 11/11.
+- Full analyze: `flutter analyze` PASS, no issues.
+- Full regression: `flutter test --reporter compact` PASS, 618/618.
+- Diff check: `git diff --check` PASS.
+
+### Risk Degisimi
+- Undocumented Appium release gate risk: `9/25 -> 2/25`.
+- Kalan risk: Appium smoke release oncesi bir insan/CI tarafindan calistirilmelidir; script ve dokumantasyon artik bunu acik gate olarak tutuyor.
+
+### Sonraki Adim
+- Commit/push sonrasi siradaki dongu: sessiz catch/error-state ve Supabase fallback davranislari taranacak; yetki gerektirmeyen dogrulanabilir P1/P2 riskler once kapatilacak.

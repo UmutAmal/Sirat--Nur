@@ -5,6 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('README operational documentation', () {
     final readme = File('README.md').readAsStringSync();
+    final releaseChecklist = File(
+      'store/release_checklist.md',
+    ).readAsStringSync();
 
     test('documents the Quran audio distribution import order', () {
       final downloadIndex = readme.indexOf(
@@ -105,6 +108,15 @@ void main() {
       expect(readme, contains('store/play/data_safety.md'));
       expect(readme, contains('store/play/exact_alarm_declaration.md'));
       expect(readme, contains('falls back to inexact reminders'));
+    });
+
+    test('documents the Appium runtime smoke release gate', () {
+      expect(readme, contains('.\\tool\\appium_runtime_smoke.ps1'));
+      expect(readme, contains('appium-runtime-smoke-summary.json'));
+      expect(readme, contains('Android Settings'));
+      expect(releaseChecklist, contains('.\\tool\\appium_runtime_smoke.ps1'));
+      expect(releaseChecklist, contains('appium-runtime-smoke-summary.json'));
+      expect(releaseChecklist, contains('logcat stayed crash-free'));
     });
 
     test(
