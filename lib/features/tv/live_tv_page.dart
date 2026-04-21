@@ -99,6 +99,29 @@ String resolveLiveTvDisplayText(Map<String, dynamic> stream, String key) {
   return _readLiveTvString(stream[key]) ?? '';
 }
 
+List<Map<String, dynamic>> resolveLiveTvStreams(
+  List<Map<String, dynamic>> rows,
+) {
+  final streams = <Map<String, dynamic>>[];
+
+  for (final row in rows) {
+    final title = resolveLiveTvDisplayText(row, 'title');
+    if (title.isEmpty || resolveLiveTvCandidateUrls(row).isEmpty) {
+      continue;
+    }
+
+    streams.add(
+      Map.unmodifiable({
+        ...row,
+        'title': title,
+        'subtitle': resolveLiveTvDisplayText(row, 'subtitle'),
+      }),
+    );
+  }
+
+  return List.unmodifiable(streams);
+}
+
 class LiveTvPage extends ConsumerStatefulWidget {
   const LiveTvPage({super.key});
 
@@ -273,18 +296,19 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
         error: (e, s) =>
             Center(child: Text(buildLiveTvProviderErrorText(l10n))),
         data: (fetchedStreams) {
-          if (fetchedStreams.isEmpty) {
+          final visibleStreams = resolveLiveTvStreams(fetchedStreams);
+          if (visibleStreams.isEmpty) {
             return Center(child: Text(buildLiveTvEmptyStateText(l10n)));
           }
 
           // Triggers load on first successful fetch
           if (_streams.isEmpty) {
-            _streams = fetchedStreams;
+            _streams = visibleStreams;
             WidgetsBinding.instance.addPostFrameCallback((_) {
               _loadSelectedStream();
             });
           } else {
-            _streams = fetchedStreams;
+            _streams = visibleStreams;
           }
           if (_selectedIndex >= _streams.length) {
             _selectedIndex = 0;

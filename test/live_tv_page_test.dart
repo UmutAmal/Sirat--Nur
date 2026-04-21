@@ -159,5 +159,27 @@ void main() {
       expect(resolveLiveTvDisplayText({'title': '   '}, 'title'), '');
       expect(resolveLiveTvDisplayText({}, 'title'), '');
     });
+
+    test('stream resolver keeps only titled rows with safe playable URLs', () {
+      final streams = resolveLiveTvStreams([
+        {
+          'title': '  Makkah Live  ',
+          'subtitle': '  Official channel  ',
+          'embed_url': 'https://www.youtube.com/embed/live',
+        },
+        {'title': 'Unsafe host', 'embed_url': 'https://example.com/embed/live'},
+        {
+          'title': 'No playable candidate',
+          'embed_url': '',
+          'fallback_embed_url': 7,
+        },
+        {'title': '   ', 'embed_url': 'https://www.youtube.com/embed/live2'},
+      ]);
+
+      expect(streams, hasLength(1));
+      expect(streams.single['title'], 'Makkah Live');
+      expect(streams.single['subtitle'], 'Official channel');
+      expect(resolveLiveTvCandidateUrls(streams.single), isNotEmpty);
+    });
   });
 }

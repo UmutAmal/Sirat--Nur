@@ -16375,3 +16375,30 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan yeni dongude live TV row filtering ve diagnostics/store checker derin taramasi surdurulecek.
+## 2026-04-22 TUR-384 - Live TV Cloud Rows Filtered Before WebView
+
+### MASTER Karari
+- Risk: Live TV akisi URL candidate sanitizer'a sahipti, fakat stream row seviyesinde filtre yoktu. Supabase bos title veya hic guvenli playable URL tasimayan satir donerse satir listeye giriyor, secili stream WebView'e kadar ilerleyip gereksiz error overlay veya bos liste elemani olusturabiliyordu.
+- Kanit: `lib/features/tv/live_tv_page.dart` data branch'i `fetchedStreams` listesini dogrudan `_streams` icine atiyordu; `resolveLiveTvCandidateUrls(...)` sadece secili stream yuklenirken calisiyordu. `test/live_tv_page_test.dart` eski durumda candidate/display helper'lari testliyordu ama row-level filtering testi yoktu.
+- Kullanici etkisi: CMS/Supabase tarafindan hatali veya eksik satir gelirse canli TV ekraninda bos/oynatilamaz kanal gosterilebilir ve kullaniciya stream hatasi gibi yansiyabilirdi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 cloud CMS row integrity).
+- Rollback plani: `lib/features/tv/live_tv_page.dart`, `test/live_tv_page_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `resolveLiveTvStreams(...)` helper'i eklendi.
+- Helper bos/invalid title tasiyan veya `resolveLiveTvCandidateUrls(...)` sonucu bos olan stream row'larini render ve WebView yukleme akisi oncesinde eliyor.
+- Gecerli row'larda `title` ve `subtitle` trim edilerek UI'ya normalize veriliyor.
+- `LiveTvPage` data branch'i artik raw `fetchedStreams` yerine `visibleStreams` kullanir.
+
+### TESTER Degisikligi
+- `test/live_tv_page_test.dart` stream row sanitizer testi eklendi; unsafe host, playsiz row ve bos title row'un elendigini, gecerli row'un normalize kaldigini dogruluyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\live_tv_page_test.dart --reporter compact` PASS, 10/10.
+
+### Risk Degisimi
+- Live TV invalid cloud row leak risk: `12/25 -> 3/25`.
+- Kalan risk: Supabase live_tv_channels icerigi halen operator tarafindan dogru YouTube kanal URL'leriyle beslenmeli; runtime artik bozuk satirlari oynatmaya calismiyor.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan diagnostics ve cloud-only provider edge-case taramasi surdurulecek.
