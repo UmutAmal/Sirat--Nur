@@ -359,14 +359,19 @@ try {
         )) {
         try {
           $tableUri = "$supabaseUrl/rest/v1/$tableName`?select=id&limit=1"
-          $tableResponse = Invoke-WebRequest -Uri $tableUri -Headers $supabaseHeaders -Method Get -TimeoutSec 30 -SkipHttpErrorCheck
+          $tableResponse = Invoke-WebRequest -UseBasicParsing -Uri $tableUri -Headers $supabaseHeaders -Method Get -TimeoutSec 30
           if ($tableResponse.StatusCode -eq 200) {
             Add-Pass "Supabase public table is reachable: $tableName."
           } else {
             Add-Failure "Supabase public table is not reachable: $tableName returned HTTP $($tableResponse.StatusCode)."
           }
         } catch {
-          Add-Failure "Supabase public table is not reachable: $tableName ($($_.Exception.Message))"
+          $response = $_.Exception.Response
+          if ($response -and $response.StatusCode) {
+            Add-Failure "Supabase public table is not reachable: $tableName returned HTTP $([int]$response.StatusCode)."
+          } else {
+            Add-Failure "Supabase public table is not reachable: $tableName ($($_.Exception.Message))"
+          }
         }
       }
     }

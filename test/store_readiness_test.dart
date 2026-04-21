@@ -143,6 +143,9 @@ void main() {
         contains('Cloudflare Quran audio partition is below 10 GB'),
       );
       expect(script, contains('Supabase public table is reachable'));
+      expect(script, contains('-UseBasicParsing -Uri \$tableUri'));
+      expect(script, contains('\$_.Exception.Response'));
+      expect(script, isNot(contains('-SkipHttpErrorCheck')));
       expect(script, contains('quran_surahs'));
       expect(script, contains('tafsir_entries'));
       expect(script, contains('storagePathValueCount -eq 684'));

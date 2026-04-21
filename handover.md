@@ -16066,3 +16066,30 @@
 
 ### Sonraki Adim
 - Store-ready kalan dis blokajlar: gercek Supabase content apply summary, `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL` runtime env dogrulamasi. Siradaki risk taramasi Appium ile location permission/prayer update/bottom navigation akislari ve store checker blokajlarina devam edecek.
+## 2026-04-22 TUR-374 - Store Readiness Supabase HTTP Probe PowerShell 5.1 Fix
+
+### MASTER Karari
+- Risk: `tool/check_store_readiness.ps1` Supabase public table kontrollerinde Windows PowerShell 5.1 tarafindan desteklenmeyen `-SkipHttpErrorCheck` parametresini kullaniyordu.
+- Kanit: Audio/Supabase publishable env degerleriyle checker calistirildiginda 11 tablo icin `A parameter cannot be found that matches parameter name 'SkipHttpErrorCheck'.` mesaji geldi; bu tablo erisimi degil checker uyumluluk hatasiydi.
+- Kullanici etkisi: Store-ready blokaj listesi sahte hatalarla sisiyor, gercek Supabase 404 tablolar ile arac hatasi birbirinden ayrilamiyor.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 store-readiness false-failure).
+- Rollback plani: `tool/check_store_readiness.ps1` ve `test/store_readiness_test.dart` onceki commit'e geri alinabilir; checker yine PowerShell 5.1 altinda sahte parametre hatasi uretir.
+
+### BUILDER Degisikligi
+- Supabase table probe `Invoke-WebRequest -UseBasicParsing` ile PowerShell 5.1 uyumlu hale getirildi.
+- HTTP hata yanitlari catch blogunda `Exception.Response.StatusCode` ile ayriliyor; parametre yoklugu artik tablo erisim blokaji gibi raporlanmiyor.
+- `test/store_readiness_test.dart` guard'i eklendi: checker table probe icin `-UseBasicParsing -Uri $tableUri` kullanmali, `-SkipHttpErrorCheck` icermemeli ve response status catch yolu korunmali.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Store checker with known env: `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, Quran Cloudflare base URL ve GitHub release template ile calistirildi.
+- Onceki sahte hata: 11 adet `SkipHttpErrorCheck` parametre hatasi.
+- Sonraki gercek sonuc: `daily_content`, `live_tv_channels`, `education_categories`, `education_topics` PASS; `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` HTTP 404.
+- Kalan checker blokajlari: `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, dry-run Supabase content apply summary ve 7 eksik Supabase public tablo.
+
+### Risk Degisimi
+- Store checker false Supabase probe failure: `12/25 -> 1/25`.
+- Kalan Supabase production content risk: `25/25` devam ediyor; tablo 404 sonuclari artik gercek ve uygulanabilir kanit.
+
+### Sonraki Adim
+- Supabase production schema/seed real apply icin CLI access token veya DB URL olmadan DDL/DML uygulanamiyor. Cloudflare Worker ile Places tile/Overpass endpointleri uretilebilir; Supabase apply yetkisi gelince `tool/apply_supabase_content_bundle.ps1` real modda calistirilacak ve checker yeniden kosulacak.
