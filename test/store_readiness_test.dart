@@ -153,6 +153,10 @@ void main() {
       expect(script, contains('-UseBasicParsing -Uri \$tableUri'));
       expect(script, contains('\$_.Exception.Response'));
       expect(script, isNot(contains('-SkipHttpErrorCheck')));
+      expect(script, contains('content_seed_hadith.sql'));
+      expect(script, contains('content_seed_tafsir.sql'));
+      expect(script, contains('missing_optional_files'));
+      expect(script, contains('hadith seed, and tafsir seed'));
       expect(script, contains('quran_surahs'));
       expect(script, contains('tafsir_entries'));
       expect(script, contains('storagePathValueCount -eq 684'));
@@ -181,7 +185,10 @@ void main() {
       expect(supabaseApplyScript, contains('npx --yes supabase db query'));
       expect(supabaseApplyScript, contains('content_schema.sql'));
       expect(supabaseApplyScript, contains('content_seed_quran_ayahs.sql'));
+      expect(supabaseApplyScript, contains('content_seed_hadith.sql'));
+      expect(supabaseApplyScript, contains('content_seed_tafsir.sql'));
       expect(supabaseApplyScript, contains('SUPABASE_DB_URL'));
+      expect(supabaseApplyScript, isNot(contains(r'$optionalSqlFiles')));
     });
 
     test('Gradle release packaging refuses missing runtime dart-defines', () {

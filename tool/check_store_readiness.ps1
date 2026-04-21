@@ -303,16 +303,22 @@ try {
         'seed.sql',
         'content_seed_quran_surahs.sql',
         'content_seed_quran_ayahs.sql',
-        'content_seed_quran_audio_storage.sql'
+        'content_seed_quran_audio_storage.sql',
+        'content_seed_hadith.sql',
+        'content_seed_tafsir.sql'
       )
       $appliedFiles = @($supabaseApplySummary.files_applied)
       $missingAppliedFiles = @(
         $requiredSupabaseFiles | Where-Object { $appliedFiles -notcontains $_ }
       )
+      $missingOptionalFiles = @($supabaseApplySummary.missing_optional_files)
+      if ($missingOptionalFiles.Count -gt 0) {
+        Add-Failure "Supabase content apply summary still marks production seed files as optional/missing: $($missingOptionalFiles -join ', ')."
+      }
       if ($supabaseApplySummary.dry_run -eq $true) {
         Add-Failure 'Supabase content apply summary is a dry-run; run tool/apply_supabase_content_bundle.ps1 without -DryRun after applying production SQL.'
       } elseif ($missingAppliedFiles.Count -eq 0) {
-        Add-Pass 'Supabase content apply summary includes schema, core seed, Quran surah/ayah seed, and Quran audio seed.'
+        Add-Pass 'Supabase content apply summary includes schema, core seed, Quran surah/ayah seed, Quran audio seed, hadith seed, and tafsir seed.'
       } else {
         Add-Failure "Supabase content apply summary is missing required applied files: $($missingAppliedFiles -join ', ')."
       }

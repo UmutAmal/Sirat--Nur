@@ -16138,3 +16138,32 @@
 ### Sonraki Adim
 - Tam validation: `flutter analyze` ve `flutter test --reporter compact` calistirilacak.
 - Ardindan commit/push sonrasi siradaki en yuksek risk Supabase production schema/seed real apply olacak. Bu adim icin mevcut makinede Supabase CLI access token veya `SUPABASE_DB_URL` yok; sahte summary yazilmayacak.
+## 2026-04-22 TUR-376 - Supabase Hadith/Tafsir Seeds Made Mandatory
+
+### MASTER Karari
+- Risk: `tool/apply_supabase_content_bundle.ps1` hadith ve tafsir SQL dosyalarini optional goruyordu. Supabase yetkisi geldikten sonra real apply, `content_seed_hadith.sql` ve `content_seed_tafsir.sql` olmadan da summary uretebilirdi; bu dini icerik kataloglarini eksik birakip store-ready kapisini yaniltirdi.
+- Kanit: `build/supabase_content_apply_summary.json` `missing_optional_files` icinde `content_seed_hadith.sql` ve `content_seed_tafsir.sql` listeliyordu. `Get-ChildItem content_seed_*.sql` sadece Quran/audio seed dosyalarini gosterdi; hadith ve tafsir seed dosyalari repo icinde yok.
+- Kullanici etkisi: Hadith ve tafsir ekranlari dogrulanmis cloud icerik olmadan kalir; daha kotusu store checker ileride dry-run disi summary'de bu eksigi yeterince sert yakalamayabilir.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P1 religious content completeness gate; P0'a yaklasan store integrity riski).
+- Rollback plani: `tool/apply_supabase_content_bundle.ps1`, `tool/check_store_readiness.ps1`, `test/store_readiness_test.dart` onceki commit'e geri alinabilir; rollback eksik hadith/tafsir seed riskini tekrar optional hale getirir.
+
+### BUILDER Degisikligi
+- `content_seed_hadith.sql` ve `content_seed_tafsir.sql` `apply_supabase_content_bundle.ps1` icinde required SQL dosyalari listesine tasindi.
+- `missing_optional_files` artik yeni summary'lerde bos liste olarak yazilir; dini content seedleri optional degil.
+- `check_store_readiness.ps1` required applied files listesine hadith ve tafsir seedlerini ekledi.
+- Eski summary'de `missing_optional_files` doluysa checker artik ayri failure veriyor: `Supabase content apply summary still marks production seed files as optional/missing`.
+- `test/store_readiness_test.dart` guard'i apply/checker zincirinin hadith/tafsir seedlerini zorunlu gordugunu ve `$optionalSqlFiles` kullanmadigini dogruluyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Negative dry-run proof: `powershell -File .\tool\apply_supabase_content_bundle.ps1 -DryRun` beklenen sekilde FAIL etti: `Required Supabase SQL file is missing: content_seed_hadith.sql`.
+- Store checker with production env and `-SkipFlutterValidation`: Places/audio/env PASS; yeni honest blocker eklendi: missing optional hadith/tafsir seed summary. Toplam blokaj `8 -> 9` oldu, cunku eksik dini content artik gizlenmiyor.
+- Kalan 9 blokaj: hadith/tafsir seed dosyalari eksik, Supabase apply summary dry-run, `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` public table HTTP 404.
+
+### Risk Degisimi
+- Hadith/tafsir seed optional false-pass: `20/25 -> 2/25`.
+- Gercek hadith/tafsir icerik eksigi: `20/25` devam ediyor; dogrulanmis manifest/source olmadan uydurma seed uretilmeyecek.
+
+### Sonraki Adim
+- Tam validation: `flutter analyze` ve `flutter test --reporter compact`.
+- Sonraki risk: Dogrulanmis hadith/tafsir manifest kaynaklari bulunmadan bu seedler uretilemez. Guvenilir kaynak/lisans kaniti gelene kadar gate bloklamali kalacak; paralel olarak yetki gerektirmeyen baska code/content riskleri taranacak.
