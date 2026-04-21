@@ -81,6 +81,78 @@ function Require-File {
   return $false
 }
 
+function Get-SupabaseRestCount {
+  param(
+    [Parameter(Mandatory = $true)][string]$SupabaseUrl,
+    [Parameter(Mandatory = $true)][string]$ClientKey,
+    [Parameter(Mandatory = $true)][string]$TableName,
+    [string]$FilterQuery = ''
+  )
+
+  $supabaseHeaders = @{
+    apikey = $ClientKey
+    Authorization = "Bearer $ClientKey"
+    Prefer = 'count=exact'
+  }
+  $queryParts = New-Object System.Collections.Generic.List[string]
+  $queryParts.Add('select=id') | Out-Null
+  if (-not [string]::IsNullOrWhiteSpace($FilterQuery)) {
+    foreach ($part in $FilterQuery.Split('&')) {
+      if (-not [string]::IsNullOrWhiteSpace($part)) {
+        $queryParts.Add($part) | Out-Null
+      }
+    }
+  }
+  $queryParts.Add('limit=1') | Out-Null
+  $tableUri = "$SupabaseUrl/rest/v1/$TableName`?$($queryParts -join '&')"
+  $tableResponse = Invoke-WebRequest -UseBasicParsing -Uri $tableUri -Headers $supabaseHeaders -Method Get -TimeoutSec 30
+  if ($tableResponse.StatusCode -ne 200 -and $tableResponse.StatusCode -ne 206) {
+    throw "HTTP $($tableResponse.StatusCode)"
+  }
+
+  $contentRange = $tableResponse.Headers['Content-Range']
+  if ($contentRange -is [array]) {
+    $contentRange = $contentRange[0]
+  }
+  if ($contentRange -and $contentRange.ToString() -match '/(?<total>\d+)$') {
+    return [int]$Matches.total
+  }
+
+  $rows = @()
+  if (-not [string]::IsNullOrWhiteSpace($tableResponse.Content)) {
+    $decoded = $tableResponse.Content | ConvertFrom-Json
+    $rows = @($decoded)
+  }
+  return $rows.Count
+}
+
+function Assert-SupabaseTableMinimumCount {
+  param(
+    [Parameter(Mandatory = $true)][string]$SupabaseUrl,
+    [Parameter(Mandatory = $true)][string]$ClientKey,
+    [Parameter(Mandatory = $true)][string]$TableName,
+    [Parameter(Mandatory = $true)][int]$MinimumCount,
+    [Parameter(Mandatory = $true)][string]$Description,
+    [string]$FilterQuery = ''
+  )
+
+  try {
+    $actualCount = Get-SupabaseRestCount -SupabaseUrl $SupabaseUrl -ClientKey $ClientKey -TableName $TableName -FilterQuery $FilterQuery
+    if ($actualCount -ge $MinimumCount) {
+      Add-Pass "Supabase public table has required rows: $Description ($actualCount/$MinimumCount)."
+    } else {
+      Add-Failure "Supabase public table has insufficient rows: $Description ($actualCount/$MinimumCount)."
+    }
+  } catch {
+    $response = $_.Exception.Response
+    if ($response -and $response.StatusCode) {
+      Add-Failure "Supabase public table is not reachable: $TableName returned HTTP $([int]$response.StatusCode)."
+    } else {
+      Add-Failure "Supabase public table is not reachable: $TableName ($($_.Exception.Message))"
+    }
+  }
+}
+
 Push-Location $repoRoot
 try {
   Write-Host 'Sirat-i Nur store readiness check'
@@ -361,39 +433,27 @@ try {
       -not [string]::IsNullOrWhiteSpace($supabaseUrl) -and
       -not [string]::IsNullOrWhiteSpace($supabaseClientKey)
     ) {
-      $supabaseHeaders = @{
-        apikey = $supabaseClientKey
-        Authorization = "Bearer $supabaseClientKey"
-      }
-      foreach ($tableName in @(
-          'daily_content',
-          'live_tv_channels',
-          'education_categories',
-          'education_topics',
-          'audio_files',
-          'duas',
-          'asma_ul_husna',
-          'quran_surahs',
-          'quran_ayahs',
-          'tafsir_entries',
-          'hadiths'
-        )) {
-        try {
-          $tableUri = "$supabaseUrl/rest/v1/$tableName`?select=id&limit=1"
-          $tableResponse = Invoke-WebRequest -UseBasicParsing -Uri $tableUri -Headers $supabaseHeaders -Method Get -TimeoutSec 30
-          if ($tableResponse.StatusCode -eq 200) {
-            Add-Pass "Supabase public table is reachable: $tableName."
-          } else {
-            Add-Failure "Supabase public table is not reachable: $tableName returned HTTP $($tableResponse.StatusCode)."
-          }
-        } catch {
-          $response = $_.Exception.Response
-          if ($response -and $response.StatusCode) {
-            Add-Failure "Supabase public table is not reachable: $tableName returned HTTP $([int]$response.StatusCode)."
-          } else {
-            Add-Failure "Supabase public table is not reachable: $tableName ($($_.Exception.Message))"
-          }
-        }
+      $supabaseTableChecks = @(
+        @{ table = 'daily_content'; minimum = 8; description = 'verified daily ayat seed'; filter = 'content_type=eq.ayat&verified_at=not.is.null' },
+        @{ table = 'live_tv_channels'; minimum = 2; description = 'Makkah/Madinah live TV channels'; filter = 'title=not.is.null' },
+        @{ table = 'education_categories'; minimum = 1; description = 'verified education categories'; filter = 'source=not.is.null&verified_at=not.is.null' },
+        @{ table = 'education_topics'; minimum = 1; description = 'verified education topics'; filter = 'source=not.is.null&verified_at=not.is.null' },
+        @{ table = 'audio_files'; minimum = 684; description = 'verified Quran audio storage paths'; filter = 'type=eq.quran_surah&reciter=not.is.null&surah_number=not.is.null&storage_path=not.is.null&verified_at=not.is.null' },
+        @{ table = 'duas'; minimum = 1; description = 'verified duas'; filter = 'source=not.is.null&verified_at=not.is.null' },
+        @{ table = 'asma_ul_husna'; minimum = 99; description = 'verified Asma-ul-Husna names'; filter = 'source=not.is.null&verified_at=not.is.null' },
+        @{ table = 'quran_surahs'; minimum = 114; description = 'verified Quran surahs'; filter = 'source=not.is.null&verified_at=not.is.null' },
+        @{ table = 'quran_ayahs'; minimum = 6236; description = 'verified Quran ayahs'; filter = 'source=not.is.null&verified_at=not.is.null' },
+        @{ table = 'tafsir_entries'; minimum = 6236; description = 'complete verified tafsir catalog'; filter = 'source=not.is.null&source_license=not.is.null&verified_at=not.is.null' },
+        @{ table = 'hadiths'; minimum = 600; description = 'verified hadith catalog minimum'; filter = 'source=not.is.null&source_license=not.is.null&verified_at=not.is.null' }
+      )
+      foreach ($check in $supabaseTableChecks) {
+        Assert-SupabaseTableMinimumCount `
+          -SupabaseUrl $supabaseUrl `
+          -ClientKey $supabaseClientKey `
+          -TableName $check.table `
+          -MinimumCount $check.minimum `
+          -Description $check.description `
+          -FilterQuery $check.filter
       }
     }
   }

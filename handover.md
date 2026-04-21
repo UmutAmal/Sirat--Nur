@@ -16430,3 +16430,32 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan diagnostics ve Supabase readiness validator'inda row-quality kontrolleri taranacak.
+## 2026-04-22 TUR-386 - Supabase Readiness Requires Row Counts
+
+### MASTER Karari
+- Risk: Store readiness script'i Supabase REST tarafinda sadece tablo endpoint'inin 200 donmesini kontrol ediyordu. Bos tablo, eksik seed veya provenance tasimayan icerik yine "reachable" kabul edilebilir ve release false-success'e gidebilirdi.
+- Kanit: `tool/check_store_readiness.ps1` eski durumda `select=id&limit=1` ile `daily_content`, `audio_files`, `quran_ayahs`, `tafsir_entries`, `hadiths` gibi tablolar icin sadece HTTP 200 kontrolu yapiyordu. `test/store_readiness_test.dart` da yalnizca "Supabase public table is reachable" metnini guard'liyordu.
+- Kullanici etkisi: Supabase tablolarinin bos ya da eksik oldugu durumda uygulama store-ready sanilabilir; Quran ses, tafsir, hadis veya Asma verisi prod ortaminda eksik kalabilir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 release false-success).
+- Rollback plani: `tool/check_store_readiness.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `Get-SupabaseRestCount(...)` helper'i eklendi; Supabase REST cagrilarina `Prefer = count=exact` ekleyip `Content-Range` toplam satir sayisini okur.
+- `Assert-SupabaseTableMinimumCount(...)` eklendi; tablo ulasilabilirligini ve minimum dogrulanmis satir sayisini tek kapida kontrol eder.
+- Release gate artik minimum row-count ister: daily ayat 8, live TV 2, education category/topic 1, Quran audio path 684, duas 1, Asma-ul-Husna 99, Quran surah 114, Quran ayah 6236, tafsir 6236, hadith 600.
+- Provenance gereken tablolarda `source`, `source_license` ve/veya `verified_at` filtreleri eklendi.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` count-exact, `Content-Range`, minimum row-count ve Quran/hadith/tafsir/Asma threshold guard'larini dogrular.
+
+### Dogrulama Sonucu
+- PowerShell parse: PASS.
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Live Supabase REST probe: `daily_content?select=id&limit=1` + `Prefer=count=exact` returned `Content-Range=0-0/31`, so the checker can read exact row totals.
+
+### Risk Degisimi
+- Supabase reachable-but-empty false-success risk: `16/25 -> 4/25`.
+- Kalan risk: Gercek remote tablolar halen missing/eksik olabilir; bu degisiklik artik bunu saklamaz, release gate'te fail eder.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan live content runtime tarafinda eksik veri mesajlari ve diagnostics row kalitesi taranacak.

@@ -149,7 +149,11 @@ void main() {
         script,
         contains('Cloudflare Quran audio partition is below 10 GB'),
       );
-      expect(script, contains('Supabase public table is reachable'));
+      expect(script, contains('Get-SupabaseRestCount'));
+      expect(script, contains('Assert-SupabaseTableMinimumCount'));
+      expect(script, contains("Prefer = 'count=exact'"));
+      expect(script, contains('Content-Range'));
+      expect(script, contains('Supabase public table has required rows'));
       expect(script, contains('-UseBasicParsing -Uri \$tableUri'));
       expect(script, contains('\$_.Exception.Response'));
       expect(script, isNot(contains('-SkipHttpErrorCheck')));
@@ -159,6 +163,11 @@ void main() {
       expect(script, contains('hadith seed, and tafsir seed'));
       expect(script, contains('quran_surahs'));
       expect(script, contains('tafsir_entries'));
+      expect(script, contains("table = 'quran_ayahs'; minimum = 6236"));
+      expect(script, contains("table = 'tafsir_entries'; minimum = 6236"));
+      expect(script, contains("table = 'hadiths'; minimum = 600"));
+      expect(script, contains("table = 'asma_ul_husna'; minimum = 99"));
+      expect(script, contains("filter = 'type=eq.quran_surah"));
       expect(script, contains('storagePathValueCount -eq 684'));
       expect(script, contains('Quran audio path seed is complete'));
       expect(script, contains('android.permission.USE_EXACT_ALARM'));
