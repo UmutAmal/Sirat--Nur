@@ -15969,3 +15969,32 @@
 
 ### Sonraki Adim
 - Cloudflare icin `wrangler login` veya `CLOUDFLARE_API_TOKEN`, R2 bucket adi ve public/custom domain base URL saglaninca `tool/upload_quran_audio_distribution.ps1` gercek Cloudflare upload icin calistirilacak. GitHub tarafi tamam oldugu icin gerekirse script/summary GitHub assetlerini yeniden dogrulayacak.
+## 2026-04-21 TUR-371 - Cloudflare Quran Audio R2 Upload Completed
+
+### MASTER Karari
+- Risk: Quran audio dagitiminin Cloudflare parcasi tamamlanmadan uygulama yalniz GitHub overflow setine sahip olur; Alafasy, Husary, Shuraim, Sudais ve Abdul Basit Mujawwad icin 570 MP3 URL'si calismaz.
+- Kanit: `build/quran_audio_distribution_upload_plan.json` Cloudflare partition icin `files=570`, `bytes=9024412526`, `validation_failures=0` veriyordu. Store checker TUR-370 sonrasi audio summary dry-run oldugu icin blokajda kaldi.
+- Etki: Store-ready audio ownership hedefi eksik kalir; Quran offline indirme katalogu kismen 404 veya bos doner.
+- Olasilik: R2 bucket henuz yoktu; `wrangler r2 bucket list` bos dondu.
+- Risk skoru: Etki 5 x Olasilik 5 = 25/25 (P0 external audio distribution blocker).
+- Rollback plani: Cloudflare R2 bucket `sirat-nur-quran-audio` silinir veya objeler temizlenir; local `build/quran_audio_distribution_upload_summary.json` dry-run hale geri alinabilir. Repo kod degisikligi yoktur.
+
+### BUILDER/DEVOPS Degisikligi
+- Cloudflare OAuth dogrulandi: hesap `umutamal@hotmail.com`, account id `c934a78105635201c5cab29c5ae7b5a1`.
+- R2 bucket `sirat-nur-quran-audio` olusturuldu.
+- Public `r2.dev` erisimi acildi: `https://pub-a3840ab94c2f4998aa2df19c2f271a92.r2.dev`.
+- Plan sirasi ile 570 Cloudflare objesi yuklendi. Ilk uzun upload `shuraim/048.mp3` sirasinda 401 ile kesildi; `shuraim/048.mp3` marker'indan resume edilerek `570/570` tamamlandi.
+- `build/quran_audio_distribution_upload_summary.json` gercek summary olarak yazildi: `dry_run=false`, `cloudflare.uploaded=570`, `github.uploaded=114`.
+
+### Dogrulama Sonucu
+- R2 object verification: `wrangler r2 object get sirat-nur-quran-audio/alafasy/001.mp3 --remote` PASS; indirilen dosya `793327` byte ve MP3/ID3 header `49 44 33 04`.
+- R2 object verification: `wrangler r2 object get sirat-nur-quran-audio/sudais/114.mp3 --remote` PASS; indirilen dosya `628864` byte ve MP3/ID3 header `49 44 33 04`.
+- Store checker with audio env: `QURAN_AUDIO_CLOUDFLARE_BASE_URL=https://pub-a3840ab94c2f4998aa2df19c2f271a92.r2.dev` ve GitHub template ile `Quran audio distribution upload summary is complete: Cloudflare 570 files, GitHub 114 files.` PASS. Blokaj sayisi audio disi konular nedeniyle `8 -> 5` oldu.
+- Not: Bu Windows makinede `curl.exe`/`Invoke-WebRequest` ile `r2.dev` public URL HEAD denemeleri TLS reset/`000` verdi. Cloudflare R2 ic object get ve dev-url durumu PASS; production icin custom domain veya farkli agdan public URL testi siradaki risk olarak kaldi.
+
+### Risk Degisimi
+- Cloudflare Quran audio upload riski: `25/25 -> 3/25`.
+- Kalan audio riski: Public `r2.dev` URL'sinin bu yerel agdan TLS reset vermesi nedeniyle uygulama icin custom domain veya bagimsiz ag dogrulamasi yapilmali.
+
+### Sonraki Adim
+- Store-ready kalan 5 blokaj: `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `PLACES_TILE_URL_TEMPLATE`, `PLACES_OVERPASS_API_URL`, ve gercek Supabase content apply summary. Audio dagitim summary artik gercek ve complete.

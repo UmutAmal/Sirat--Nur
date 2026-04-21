@@ -47,5 +47,6 @@ app.*.map.json
 # Store signing secrets must stay local or in CI secret storage.
 /android/key.properties
 /.secrets/
+/.wrangler/
 *.jks
 *.keystore
