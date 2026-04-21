@@ -92,7 +92,7 @@ JOIN public.quran_surahs surah
 JOIN public.quran_ayahs ayah
   ON ayah.surah_id = surah.id
   AND ayah.ayah_number = seed.ayah_number
-ON CONFLICT (display_date) DO UPDATE SET
+ON CONFLICT (content_type, display_date) DO UPDATE SET
   content_type = EXCLUDED.content_type,
   content_ar = EXCLUDED.content_ar,
   content_tr = EXCLUDED.content_tr,

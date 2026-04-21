@@ -16402,3 +16402,31 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan diagnostics ve cloud-only provider edge-case taramasi surdurulecek.
+## 2026-04-22 TUR-385 - Daily Content Composite Upsert Key
+
+### MASTER Karari
+- Risk: `daily_content` tablosu `content_type` kolonuna sahip olmasina ve runtime `content_type = ayat` ile sorgulamasina ragmen DB unique anahtari sadece `display_date` uzerindeydi. Ayni tarihte ayet + dua + hadis gibi birden fazla gunluk icerik turu yayinlanmak istendiginde satirlar birbirini engelleyebilir veya seed upsert'i yanlis turu ezebilirdi.
+- Kanit: `content_schema.sql` eski durumda `display_date date not null unique` ve `daily_content_display_date_unique_idx` kullaniyordu; `seed.sql` de `ON CONFLICT (display_date)` ile conflict hedefini tek tarihe bagliyordu. `lib/core/providers/supabase_providers.dart` ise daily content'i `content_type` ve `display_date` birlikte filtreliyor.
+- Kullanici etkisi: Ileride gunluk dua/hadis/bilgi icerigi eklendiginde ayni gun icin tek tur disinda icerik yayinlanamaz; store verisi dogru olsa bile DB seviyesinde blok veya yanlis overwrite olusabilir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 cloud content extensibility/data integrity).
+- Rollback plani: `content_schema.sql`, `seed.sql`, `test/content_schema_test.dart`, `test/seed_sql_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `daily_content.display_date` kolonundaki tekil unique tanimi kaldirildi.
+- Existing DB migration icin eski implicit constraint `daily_content_display_date_key`, eski single-date index `daily_content_display_date_unique_idx` ve eski non-unique composite index `daily_content_type_display_date_idx` temizlenir.
+- Yeni canonical unique index `daily_content_type_display_date_unique_idx` `(content_type, display_date)` uzerinde kuruldu.
+- `seed.sql` daily ayet upsert hedefi `ON CONFLICT (content_type, display_date)` olarak guncellendi.
+
+### TESTER Degisikligi
+- `test/content_schema_test.dart` composite unique anahtari, eski single-date unique kalintisinin yoklugunu ve migration drop guard'larini dogrular.
+- `test/seed_sql_test.dart` seed conflict hedefinin artik content type + display date oldugunu dogrular.
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\content_schema_test.dart test\seed_sql_test.dart --reporter compact` PASS, 5/5.
+
+### Risk Degisimi
+- Daily content cross-type overwrite/block risk: `12/25 -> 3/25`.
+- Kalan risk: Gercek Supabase apply halen `SUPABASE_DB_URL`/access token ve verified hadith/tafsir seedleri gelmeden store-ready hale gelemez; bu tur fake apply veya sahte dini icerik uretmedi.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan diagnostics ve Supabase readiness validator'inda row-quality kontrolleri taranacak.

@@ -9,7 +9,7 @@ create table if not exists public.daily_content (
   content_tr text,
   content_en text,
   reference text not null,
-  display_date date not null unique,
+  display_date date not null,
   verified_at timestamptz,
   created_at timestamptz not null default timezone('utc', now())
 );
@@ -17,11 +17,15 @@ create table if not exists public.daily_content (
 alter table public.daily_content
 add column if not exists verified_at timestamptz;
 
-create index if not exists daily_content_type_display_date_idx
-on public.daily_content (content_type, display_date);
+alter table public.daily_content
+drop constraint if exists daily_content_display_date_key;
 
-create unique index if not exists daily_content_display_date_unique_idx
-on public.daily_content (display_date);
+drop index if exists daily_content_display_date_unique_idx;
+
+drop index if exists daily_content_type_display_date_idx;
+
+create unique index if not exists daily_content_type_display_date_unique_idx
+on public.daily_content (content_type, display_date);
 
 alter table public.daily_content enable row level security;
 

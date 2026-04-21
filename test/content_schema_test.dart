@@ -49,12 +49,29 @@ void main() {
           'alter table public.daily_content\nadd column if not exists verified_at timestamptz;',
         ),
       );
+      expect(schema, contains('display_date date not null,'));
       expect(
         schema,
         contains(
-          'create unique index if not exists daily_content_display_date_unique_idx',
+          'alter table public.daily_content\n'
+          'drop constraint if exists daily_content_display_date_key;',
         ),
       );
+      expect(
+        schema,
+        contains('drop index if exists daily_content_display_date_unique_idx;'),
+      );
+      expect(
+        schema,
+        contains(
+          'create unique index if not exists daily_content_type_display_date_unique_idx',
+        ),
+      );
+      expect(
+        schema,
+        contains('on public.daily_content (content_type, display_date);'),
+      );
+      expect(schema, isNot(contains('display_date date not null unique')));
       expect(schema, contains('short_label text not null unique'));
       expect(
         schema,

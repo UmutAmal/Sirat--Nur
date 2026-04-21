@@ -27,7 +27,10 @@ void main() {
       expect(seed, contains('JOIN public.quran_ayahs'));
       expect(seed, contains('ayah.text_ar'));
       expect(seed, contains('ayah.verified_at'));
-      expect(seed, contains('ON CONFLICT (display_date) DO UPDATE SET'));
+      expect(
+        seed,
+        contains('ON CONFLICT (content_type, display_date) DO UPDATE SET'),
+      );
       expect(
         seed,
         isNot(
