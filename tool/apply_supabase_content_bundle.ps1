@@ -13,6 +13,7 @@ $requiredSqlFiles = @(
   'content_seed_quran_surahs.sql',
   'content_seed_quran_ayahs.sql',
   'content_seed_quran_audio_storage.sql',
+  'content_seed_duas.sql',
   'seed.sql',
   'content_seed_hadith.sql',
   'content_seed_tafsir.sql'

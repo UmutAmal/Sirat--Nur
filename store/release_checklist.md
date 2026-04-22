@@ -111,7 +111,7 @@ dart run tool/generate_tafsir_seed.dart --manifest=content_tafsir_manifest.json 
   `verified_at`; missing provenance is a release blocker.
 
 5. Apply `content_schema.sql`, Quran surah/ayah seed data,
-`content_seed_quran_audio_storage.sql`, core seed data,
+`content_seed_quran_audio_storage.sql`, Quran-verified dua seed data,
 `content_seed_hadith.sql`, and `content_seed_tafsir.sql` to the production
 Supabase project with the tracked apply gate:
 

@@ -54,6 +54,7 @@ void main() {
       expect(readme, contains('source_license'));
       expect(readme, contains('content_seed_hadith.sql'));
       expect(readme, contains('content_seed_tafsir.sql'));
+      expect(readme, contains('content_seed_duas.sql'));
       expect(readme, contains('SUPABASE_DB_URL'));
       expect(readme, contains('build/supabase_content_apply_summary.json'));
       expect(readme, contains('files_applied'));

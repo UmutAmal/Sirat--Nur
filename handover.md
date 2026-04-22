@@ -16744,3 +16744,36 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan verified content seed blocker'lari ve runtime graceful-degradation taramasi surdurulecek.
+
+## 2026-04-23 TUR-397 - Verified Quranic Dua Supabase Seed
+
+### MASTER Karari
+- Risk: Store-readiness `duas` tablosunda en az 1 verified kayit bekliyor, fakat Supabase apply bundle icinde verified dua seed dosyasi yoktu. Remote schema apply sonrasi bile `duas` bos kalabilir ve release readiness false-negative/eksik icerik durumuna dusebilirdi.
+- Kanit: `tool/check_store_readiness.ps1:493` `duas` tablosunu `source=not.is.null&verified_at=not.is.null` filtresiyle kontrol ediyor; onceki remote probe `duas` tablosunun PostgREST schema cache'te olmadigini gostermisti. `lib/core/constants/duas_data.dart` Quran referansli fallback icerik tasiyor ve `test/duas_data_test.dart` bu metinleri `assets/data/full_quran.json` ile birebir dogruluyor.
+- Kullanici etkisi: Uygulama dini dua icerigini Supabase'e tasirken verified seed zinciri eksik kalirsa store hazirligi tamamlanmis gibi gorunmez ve sahte/manuel veri ekleme riski dogar.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 verified content seed blocker).
+- Rollback plani: `content_seed_duas.sql`, `test/duas_seed_test.dart`, apply/readiness script ekleri, dokumantasyon ekleri ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `content_seed_duas.sql` eklendi; yalnizca mevcut Quran-verified `dailyDuas` fallback setinden turetilen 8 kayit iceriyor.
+- Her kayit `category='quranic_dua'`, bos olmayan `source` ve `verified_at` degerleriyle yazildi; AI uretimi veya kaynaksiz dini metin eklenmedi.
+- `tool/apply_supabase_content_bundle.ps1` apply sirasina `content_seed_duas.sql` ekledi.
+- `tool/check_store_readiness.ps1`, `README.md` ve `store/release_checklist.md` verified dua seed dosyasini release/apply zincirine dahil etti.
+
+### TESTER Degisikligi
+- `test/duas_seed_test.dart` seed dosyasindaki INSERT sayisinin `dailyDuas.length` ile eslestigini ve her dua icin baslik/metin/source/verified_at alanlarinin seed icinde bulundugunu guard'liyor.
+- `test/store_readiness_test.dart` Supabase apply/readiness siralamasinda `content_seed_duas.sql` dosyasinin Quran ayah/audio seed'lerinden sonra, core `seed.sql` dosyasindan once calismasini guard'liyor.
+- `test/readme_operational_docs_test.dart` operasyon dokumanlarinin yeni verified dua seed dosyasini anmasini guard'liyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\duas_seed_test.dart test\duas_data_test.dart test\store_readiness_test.dart test\readme_operational_docs_test.dart --reporter compact` PASS, 29/29.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 627/627.
+- Flutter doctor: Android toolchain/connected device/network PASS; Chrome ve Visual Studio eksikleri Android release akisi icin kritik degil.
+
+### Risk Degisimi
+- Verified dua Supabase seed blocker risk: `12/25 -> 3/25`.
+- Kalan risk: Remote Supabase schema/apply henuz public key ile yapilamaz; `SUPABASE_DB_URL` veya authenticated Supabase MCP/CLI gerekir. Verified hadith ve tafsir seed dosyalari da kaynak/provenance tamamlanmadan uretilmeyecek.
+
+### Sonraki Adim
+- Commit/push; ardindan Supabase remote apply icin gereken credential/env eksiklerini ve verified hadith/tafsir seed blocker'larini sahte icerik uretmeden tarama.

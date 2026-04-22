@@ -425,6 +425,7 @@ try {
         'content_seed_quran_surahs.sql',
         'content_seed_quran_ayahs.sql',
         'content_seed_quran_audio_storage.sql',
+        'content_seed_duas.sql',
         'seed.sql',
         'content_seed_hadith.sql',
         'content_seed_tafsir.sql'
@@ -453,9 +454,9 @@ try {
       if ($supabaseApplySummary.dry_run -eq $true) {
         Add-Failure 'Supabase content apply summary is a dry-run; run tool/apply_supabase_content_bundle.ps1 without -DryRun after applying production SQL.'
       } elseif (-not $appliedOrderIsValid) {
-        Add-Failure 'Supabase content apply summary order is invalid; schema, Quran surah/ayah seed, Quran audio seed, core seed, hadith seed, and tafsir seed must be applied in order.'
+        Add-Failure 'Supabase content apply summary order is invalid; schema, Quran surah/ayah seed, Quran audio seed, verified dua seed, core seed, hadith seed, and tafsir seed must be applied in order.'
       } elseif ($missingAppliedFiles.Count -eq 0) {
-        Add-Pass 'Supabase content apply summary includes schema, Quran surah/ayah seed, Quran audio seed, core seed, hadith seed, and tafsir seed.'
+        Add-Pass 'Supabase content apply summary includes schema, Quran surah/ayah seed, Quran audio seed, verified dua seed, core seed, hadith seed, and tafsir seed.'
       } else {
         Add-Failure "Supabase content apply summary is missing required applied files: $($missingAppliedFiles -join ', ')."
       }

@@ -169,7 +169,9 @@ void main() {
       expect(script, isNot(contains('-SkipHttpErrorCheck')));
       expect(script, contains('content_seed_hadith.sql'));
       expect(script, contains('content_seed_tafsir.sql'));
+      expect(script, contains('content_seed_duas.sql'));
       expect(script, contains('missing_optional_files'));
+      expect(script, contains('verified dua seed'));
       expect(script, contains('hadith seed, and tafsir seed'));
       expect(script, contains('quran_surahs'));
       expect(script, contains('tafsir_entries'));
@@ -217,12 +219,17 @@ void main() {
       );
       expect(supabaseApplyScript, contains('content_schema.sql'));
       expect(supabaseApplyScript, contains('content_seed_quran_ayahs.sql'));
+      expect(supabaseApplyScript, contains('content_seed_duas.sql'));
       expect(supabaseApplyScript, contains('content_seed_hadith.sql'));
       expect(supabaseApplyScript, contains('content_seed_tafsir.sql'));
       expect(supabaseApplyScript, contains('SUPABASE_DB_URL'));
       expect(supabaseApplyScript, isNot(contains(r'$optionalSqlFiles')));
       expect(
         supabaseApplyScript.indexOf("'content_seed_quran_ayahs.sql'"),
+        lessThan(supabaseApplyScript.indexOf("'content_seed_duas.sql'")),
+      );
+      expect(
+        supabaseApplyScript.indexOf("'content_seed_duas.sql'"),
         lessThan(supabaseApplyScript.indexOf("'seed.sql'")),
       );
     });
