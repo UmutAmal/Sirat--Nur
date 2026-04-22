@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Коръән тикшерү уңышсыз: {error}",
   "audioVoice": "Аудио тавыш",
   "audioVoiceMisharyAlafasy": "Ир-ат (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Ир-ат (Abdul Basit)",
@@ -380,7 +380,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Укылган манифест уңышсыз: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

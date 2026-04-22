@@ -802,7 +802,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Ujongo lweQuran akuphumelelanga: $error';
   }
 
   @override
@@ -897,7 +897,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Ufundo olubonakalisiweyo aluphumelelanga: $error';
   }
 
   @override

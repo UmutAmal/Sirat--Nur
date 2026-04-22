@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "I rahua te taki Quran: {error}",
   "audioVoice": "Reo Ororongo",
   "audioVoiceMisharyAlafasy": "Tane (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Tane (Abdul Basit)",

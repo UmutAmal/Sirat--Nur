@@ -798,7 +798,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'قرآن کی جانچ ناکام ہوگئی: $error';
   }
 
   @override
@@ -893,7 +893,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'مینی فیسٹ پڑھنا ناکام ہو گیا: $error';
   }
 
   @override

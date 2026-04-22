@@ -804,7 +804,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Napakyas ang pagsusi sa Quran: $error';
   }
 
   @override

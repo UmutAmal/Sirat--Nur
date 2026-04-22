@@ -781,7 +781,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return '《古兰经》检查失败：$error';
   }
 
   @override
@@ -2429,7 +2429,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return '《古兰经》检查失败：$error';
   }
 
   @override
@@ -4077,7 +4077,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return '《古蘭經》檢驗失敗：$error';
   }
 
   @override

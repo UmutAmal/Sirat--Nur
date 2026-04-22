@@ -801,7 +801,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Помилка перевірки Корану: $error';
   }
 
   @override
@@ -896,7 +896,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'Не вдалося прочитати маніфест: $error';
   }
 
   @override

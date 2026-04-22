@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Binciken Al-Qur'ani ya kasa: {error}",
   "audioVoice": "Muryar Sauti",
   "audioVoiceMisharyAlafasy": "Namiji (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Namiji (Abdul Basit)",

@@ -926,7 +926,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'Cloud check a hlawhchham: $error';
   }
 
   @override

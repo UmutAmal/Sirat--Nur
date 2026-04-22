@@ -802,7 +802,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Methodd siec y Quran: $error';
   }
 
   @override

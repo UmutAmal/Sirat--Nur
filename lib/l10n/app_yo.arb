@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Ayẹwo Al-Qur'an kuna: {error}",
   "audioVoice": "Ohun Ohun",
   "audioVoiceMisharyAlafasy": "Okunrin (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Okunrin (Abdul Basit)",
@@ -380,7 +380,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Iṣafihan kika kuna: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

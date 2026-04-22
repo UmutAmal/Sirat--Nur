@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Kukagua Qurani kumeshindwa: {error}",
   "audioVoice": "Sauti ya Sauti",
   "audioVoiceMisharyAlafasy": "Mwanaume (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Mwanaume (Abdul Basit)",

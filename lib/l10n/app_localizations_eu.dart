@@ -798,7 +798,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Koranaren egiaztapenak huts egin du: $error';
   }
 
   @override

@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "ການກວດສອບ Quran ລົ້ມເຫລວ: {error}",
   "audioVoice": "ສຽງສຽງ",
   "audioVoiceMisharyAlafasy": "ຜູ້ຊາຍ (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "ຜູ້ຊາຍ (Abdul Basit)",

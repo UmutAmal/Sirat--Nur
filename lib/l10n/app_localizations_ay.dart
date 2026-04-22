@@ -811,7 +811,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Quran uñakipañax janiw phuqhaskiti: $error';
   }
 
   @override

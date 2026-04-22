@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "ਕੁਰਾਨ ਜਾਂਚ ਅਸਫਲ ਹੋਈ: {error}",
   "audioVoice": "ਆਡੀਓ ਵੌਇਸ",
   "audioVoiceMisharyAlafasy": "ਮਰਦ (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "ਮਰਦ (Abdul Basit)",

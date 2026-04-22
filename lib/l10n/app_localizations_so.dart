@@ -801,7 +801,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'hubinta Qur\'aanka waa fashilantay: $error';
   }
 
   @override

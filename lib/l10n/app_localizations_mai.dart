@@ -921,7 +921,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
-    return 'Cloud check failed: $error';
+    return 'क्लाउड जांच विफल: $error';
   }
 
   @override

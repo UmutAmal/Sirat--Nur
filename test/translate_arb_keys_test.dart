@@ -291,6 +291,55 @@ void main() {
       );
     });
 
+    test('tracks Quran and diagnostics runtime error l10n debt reduction', () {
+      const keys = [
+        'quranCheckFailed',
+        'diagnosticsManifestReadFailed',
+        'diagnosticsQuranCloudCheckFailed',
+        'diagnosticsQuranCloudStructuralCheckFailed',
+        'appErrorOccurred',
+        'appUnknownError',
+        'tafsirApiStatusError',
+        'streamError',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(539));
+      for (final locale in ['af', 'ar', 'zh', 'zh_CN', 'zh_TW']) {
+        expect(
+          localeArbs[locale]!['quranCheckFailed'],
+          isNot(english['quranCheckFailed']),
+          reason: 'app_$locale.arb still uses English for quranCheckFailed',
+        );
+      }
+      for (final locale in ['tt', 'ug', 'zu']) {
+        expect(
+          localeArbs[locale]!['diagnosticsManifestReadFailed'],
+          isNot(english['diagnosticsManifestReadFailed']),
+          reason:
+              'app_$locale.arb still uses English for diagnosticsManifestReadFailed',
+        );
+      }
+    });
+
     test('tracks splash tagline l10n debt without accepting debris', () {
       const keys = ['splashTagline', 'onboarding1Title'];
       final english = _readArbFile('lib/l10n/app_en.arb');

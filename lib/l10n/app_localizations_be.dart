@@ -803,7 +803,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Збой праверкі Карана: $error';
   }
 
   @override

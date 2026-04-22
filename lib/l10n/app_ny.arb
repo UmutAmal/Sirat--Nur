@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Kuwona korani kwalephera: {error}",
   "audioVoice": "Audio Voice",
   "audioVoiceMisharyAlafasy": "Amuna (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Amuna (Abdul Basit)",

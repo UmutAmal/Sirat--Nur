@@ -800,7 +800,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Igenzura rya Koran ryananiwe: $error';
   }
 
   @override

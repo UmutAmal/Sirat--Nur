@@ -800,7 +800,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Theip ar sheic Quran: $error';
   }
 
   @override

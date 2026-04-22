@@ -799,7 +799,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'قۇرئان تەكشۈرۈش مەغلۇب بولدى: $error';
   }
 
   @override
@@ -894,7 +894,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String diagnosticsManifestReadFailed(String error) {
-    return 'Manifest read failed: $error';
+    return 'كۆرۈنۈشتە مەغلۇب بولدى: $error';
   }
 
   @override

@@ -16594,3 +16594,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.
+
+## 2026-04-23 TUR-392 - Reduce Quran Diagnostics Runtime L10n Debt
+
+### MASTER Karari
+- Risk: Quran/diagnostics/app hata metinlerinde 8 runtime anahtar icin dusuk kaynakli locale'lerde toplam 664 birebir Ingilizce fallback kalmisti. Bu, kullaniciya gorunen hata durumlarinda "tum diller tam kapsam" hedefini zayiflatiyordu.
+- Kanit: `dart run tool/translate_arb_keys.dart --report quranCheckFailed diagnosticsManifestReadFailed diagnosticsQuranCloudCheckFailed diagnosticsQuranCloudStructuralCheckFailed appErrorOccurred appUnknownError tafsirApiStatusError streamError` raporu `Same-as-English locales: 664` verdi.
+- Kullanici etkisi: Quran DB check veya diagnostics hata durumunda bircok locale'de kullanici Ingilizce runtime hata copy'si goruyordu.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 l10n runtime error coverage).
+- Rollback plani: `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `tool/translate_arb_keys.dart`, ilgili testler ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Guvenli `translate_arb_keys.dart` akisiyle yalniz secilen 8 anahtar tarandi; placeholder veya teknik token bozuldugunda mevcut/Ing fallback korunacak sekilde hareket edildi.
+- `quranCheckFailed` basta olmak uzere 116 ARB dosyasinda guvenli yeni ceviriler yazildi ve `flutter gen-l10n` ile generated localization dosyalari senkronlandi.
+- `translate_arb_keys.dart` single-line korumasina `quranCheckFailed`, `diagnosticsManifestReadFailed`, `appErrorOccurred`, `appUnknownError` eklendi.
+
+### TESTER Degisikligi
+- `test/translate_arb_keys_test.dart` yeni runtime hata l10n borcu guard'ini ekledi: eksik/placeholder mismatch sifir kalmali ve same-as-English sayisi `<=539` olmali.
+- `test/arb_ui_localization_test.dart` Quran check/app error/diagnostics manifest copy icin single-line ve safe priority locale fallback guard'larini genisletti.
+
+### Dogrulama Sonucu
+- Debt report after patch: `Same-as-English locales: 539`, `Missing/empty: 0`, `Placeholder mismatch: 0`.
+- Targeted tests: `flutter test test/translate_arb_keys_test.dart test/arb_ui_localization_test.dart --reporter compact` PASS, 130/130.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 624/624.
+
+### Risk Degisimi
+- Runtime Quran/diagnostics l10n fallback debt risk: `12/25 -> 6/25`.
+- Kalan risk: Ceviri servisi temiz sonuc uretmeyen locale'lerde Ingilizce fallback bilincli korundu; uydurma dusuk kaynakli ceviri yazilmadi.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan kalan l10n debt ve runtime provider graceful-degradation taramasi surdurulecek.

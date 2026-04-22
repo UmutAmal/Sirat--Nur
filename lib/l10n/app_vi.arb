@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Kiểm tra Kinh Qur'an không thành công: {error}",
   "audioVoice": "Giọng nói âm thanh",
   "audioVoiceMisharyAlafasy": "Nam (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Nam (Abdul Basit)",

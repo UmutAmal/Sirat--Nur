@@ -799,7 +799,7 @@ class AppLocalizationsDa extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Korankontrol mislykkedes: $error';
   }
 
   @override

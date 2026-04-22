@@ -803,7 +803,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Dh’fhàillig le seic Quran: $error';
   }
 
   @override

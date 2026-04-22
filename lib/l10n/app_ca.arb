@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "La comprovació de l'Alcorà ha fallat: {error}",
   "audioVoice": "Veu d'àudio",
   "audioVoiceMisharyAlafasy": "Home (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Home (Abdul Basit)",

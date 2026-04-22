@@ -800,7 +800,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'ការត្រួតពិនិត្យគម្ពីគូរ៉ាបានបរាជ័យ៖ $error';
   }
 
   @override

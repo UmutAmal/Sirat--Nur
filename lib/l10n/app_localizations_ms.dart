@@ -800,7 +800,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Semakan al-Quran gagal: $error';
   }
 
   @override

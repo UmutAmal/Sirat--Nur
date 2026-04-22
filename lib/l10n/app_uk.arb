@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Помилка перевірки Корану: {error}",
   "audioVoice": "Аудіо голос",
   "audioVoiceMisharyAlafasy": "Чоловік (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Чоловік (Abdul Basit)",
@@ -380,7 +380,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Не вдалося прочитати маніфест: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

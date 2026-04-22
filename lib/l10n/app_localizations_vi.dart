@@ -800,7 +800,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Kiểm tra Kinh Qur\'an không thành công: $error';
   }
 
   @override

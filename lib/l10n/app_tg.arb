@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Санҷиши Қуръон ноком шуд: {error}",
   "audioVoice": "Овози аудио",
   "audioVoiceMisharyAlafasy": "Мард (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Мард (Abdul Basit)",

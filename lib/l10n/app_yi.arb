@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "קווראַן טשעק ניט אַנדערש: {error}",
   "audioVoice": "אַודיאָ קול",
   "audioVoiceMisharyAlafasy": "זכר (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
@@ -380,7 +380,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "מאַניפעסט לייענען ניט אַנדערש: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

@@ -800,7 +800,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'ყურანის შემოწმება ვერ მოხერხდა: $error';
   }
 
   @override

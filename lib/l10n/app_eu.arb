@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Koranaren egiaztapenak huts egin du: {error}",
   "audioVoice": "Audio Ahotsa",
   "audioVoiceMisharyAlafasy": "Gizonezkoa (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Gizonezkoa (Abdul Basit)",

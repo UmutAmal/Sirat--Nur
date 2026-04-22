@@ -797,7 +797,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'การตรวจสอบอัลกุรอานล้มเหลว: $error';
   }
 
   @override

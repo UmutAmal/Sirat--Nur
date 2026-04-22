@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Ukuhlola i-Quran kuhlulekile: {error}",
   "audioVoice": "Izwi Lomsindo",
   "audioVoiceMisharyAlafasy": "Owesilisa (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Owesilisa (Abdul Basit)",
@@ -380,7 +380,7 @@
       }
     }
   },
-  "diagnosticsManifestReadFailed": "Manifest read failed: {error}",
+  "diagnosticsManifestReadFailed": "Ukufundwa kwe-manifest kuhlulekile: {error}",
   "@diagnosticsManifestReadFailed": {
     "placeholders": {
       "error": {

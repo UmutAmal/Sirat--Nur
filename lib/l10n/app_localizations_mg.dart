@@ -803,7 +803,7 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Tsy nahomby ny fisavana CORAN: $error';
   }
 
   @override

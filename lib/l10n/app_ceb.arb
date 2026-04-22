@@ -338,7 +338,7 @@
   "missingTurkish": "Missing Turkish: {count}",
   "dbVersion": "DB Version: {version}",
   "dbPath": "Path: {path}",
-  "quranCheckFailed": "Quran check failed: {error}",
+  "quranCheckFailed": "Napakyas ang pagsusi sa Quran: {error}",
   "audioVoice": "Tingog sa Audio",
   "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",

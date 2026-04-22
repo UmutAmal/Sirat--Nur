@@ -825,6 +825,7 @@ String _postProcessTranslation({
 bool _mustStaySingleLine(String key) {
   return key.startsWith('audioVoice') ||
       key == 'quranLoadFailed' ||
+      key == 'quranCheckFailed' ||
       key == 'locationDetectionFailed' ||
       key == 'tapToCount' ||
       key == 'zikr' ||
@@ -861,6 +862,8 @@ bool _mustStaySingleLine(String key) {
       key == 'streamError' ||
       key == 'reload' ||
       key == 'checkConnection' ||
+      key == 'appErrorOccurred' ||
+      key == 'appUnknownError' ||
       key == 'settings' ||
       key == 'home' ||
       key == 'calendar' ||
@@ -931,6 +934,7 @@ bool _mustStaySingleLine(String key) {
       key == 'diagnosticsQuranJuzMetadata' ||
       key == 'diagnosticsQuranCloudCheckFailed' ||
       key == 'diagnosticsQuranCloudStructuralCheckFailed' ||
+      key == 'diagnosticsManifestReadFailed' ||
       key == 'diagnosticsQuranCloudTablesMissing' ||
       key == 'diagnosticsQuranCloudJuzMissing' ||
       key == 'placesSearchArea' ||

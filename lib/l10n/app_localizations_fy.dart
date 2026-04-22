@@ -800,7 +800,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Korankontrôle mislearre: $error';
   }
 
   @override

@@ -800,7 +800,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String quranCheckFailed(Object error) {
-    return 'Quran check failed: $error';
+    return 'Binciken Al-Qur\'ani ya kasa: $error';
   }
 
   @override
