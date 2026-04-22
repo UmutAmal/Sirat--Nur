@@ -160,7 +160,10 @@ void main() {
       expect(script, contains('Supabase public table has required rows'));
       expect(script, contains('Supabase public table count check failed'));
       expect(script, contains('ErrorDetails.Message'));
+      expect(script, contains('Read-HttpErrorDetail'));
       expect(script, contains('ReadAsStringAsync().GetAwaiter().GetResult()'));
+      expect(script, contains('GetResponseStream'));
+      expect(script, contains('[System.IO.StreamReader]::new'));
       expect(script, contains('-UseBasicParsing -Uri \$tableUri'));
       expect(script, contains('\$_.Exception.Response'));
       expect(script, isNot(contains('-SkipHttpErrorCheck')));

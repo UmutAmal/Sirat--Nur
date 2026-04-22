@@ -16684,3 +16684,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan runtime provider graceful-degradation ve kalan store-readiness blocker taramasi surdurulecek.
+
+## 2026-04-23 TUR-395 - Store Readiness Shows Supabase Error Bodies
+
+### MASTER Karari
+- Risk: Store-readiness remote Supabase count check'leri HTTP 400/404 durumunda PostgREST hata govdesini gostermiyordu. Bu, kolon eksigi, tablo eksigi, RLS veya schema-cache problemini ayni belirsiz "HTTP 400/404" mesajina indiriyor ve gercek release blocker kok sebebini maskeliyordu.
+- Kanit: `tool/check_store_readiness.ps1 -SkipFlutterValidation` Supabase URL/key ile `daily_content returned HTTP 400` ve `education_categories returned HTTP 400` dedi, fakat hangi kolonun eksik oldugunu gostermedi.
+- Kullanici etkisi: Supabase apply/migration sonrasi hangi tablo veya kolonun eksik oldugu gorulmezse operator yanlis SQL'i tekrar uygulayabilir ya da sahte seed/manuel workaround baskisi olusur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 release diagnostics).
+- Rollback plani: `tool/check_store_readiness.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `Read-HttpErrorDetail` helper'i eklendi.
+- Readiness script'i artik hem PowerShell `HttpResponseMessage.Content.ReadAsStringAsync()` hem de eski WebResponse `GetResponseStream()` hata govdelerini okuyup tek satir normalize ediyor.
+- `Assert-SupabaseTableMinimumCount` catch blogu ham HTTP status yerine govde detayini mesajlara ekliyor.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` readiness script'inin `Read-HttpErrorDetail`, `GetResponseStream` ve `StreamReader` fallback'lerini korumasini guard'liyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Supabase readiness probe with runtime public URL/key: expected FAIL, but now diagnostic bodies are visible.
+- Remote blocker details now visible: `daily_content.verified_at` missing, `education_categories.source` missing, `education_topics.source` missing, and `audio_files`, `duas`, `asma_ul_husna`, `quran_surahs`, `quran_ayahs`, `tafsir_entries`, `hadiths` missing from PostgREST schema cache.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 625/625.
+
+### Risk Degisimi
+- Supabase readiness diagnostic ambiguity risk: `12/25 -> 3/25`.
+- Kalan risk: Gercek remote Supabase schema/content apply halen gerekli; dry-run false summary veya dini seed uydurulmadi.
+
+### Sonraki Adim
+- Commit/push; ardindan Supabase schema/apply bundle ve runtime graceful-degradation taramasi surdurulecek.

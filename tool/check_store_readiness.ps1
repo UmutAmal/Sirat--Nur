@@ -126,6 +126,47 @@ function Get-SupabaseRestCount {
   return $rows.Count
 }
 
+function Read-HttpErrorDetail {
+  param([Parameter(Mandatory = $true)]$ErrorRecord)
+
+  $errorDetail = $ErrorRecord.ErrorDetails.Message
+  $response = $ErrorRecord.Exception.Response
+
+  if ([string]::IsNullOrWhiteSpace($errorDetail) -and $response -and $response.Content) {
+    try {
+      $errorDetail = $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+    } catch {
+      $errorDetail = ''
+    }
+  }
+
+  if (
+    [string]::IsNullOrWhiteSpace($errorDetail) -and
+    $response -and
+    ($response | Get-Member -Name GetResponseStream -MemberType Method)
+  ) {
+    try {
+      $stream = $response.GetResponseStream()
+      if ($stream) {
+        $reader = [System.IO.StreamReader]::new($stream)
+        try {
+          $errorDetail = $reader.ReadToEnd()
+        } finally {
+          $reader.Dispose()
+        }
+      }
+    } catch {
+      $errorDetail = ''
+    }
+  }
+
+  if (-not [string]::IsNullOrWhiteSpace($errorDetail)) {
+    return ($errorDetail -replace '\s+', ' ').Trim()
+  }
+
+  return ''
+}
+
 function Assert-SupabaseTableMinimumCount {
   param(
     [Parameter(Mandatory = $true)][string]$SupabaseUrl,
@@ -144,17 +185,7 @@ function Assert-SupabaseTableMinimumCount {
       Add-Failure "Supabase public table has insufficient rows: $Description ($actualCount/$MinimumCount)."
     }
   } catch {
-    $errorDetail = $_.ErrorDetails.Message
-    if ([string]::IsNullOrWhiteSpace($errorDetail) -and $_.Exception.Response -and $_.Exception.Response.Content) {
-      try {
-        $errorDetail = $_.Exception.Response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
-      } catch {
-        $errorDetail = ''
-      }
-    }
-    if (-not [string]::IsNullOrWhiteSpace($errorDetail)) {
-      $errorDetail = ($errorDetail -replace '\s+', ' ').Trim()
-    }
+    $errorDetail = Read-HttpErrorDetail -ErrorRecord $_
     $response = $_.Exception.Response
     if ($response -and $response.StatusCode) {
       $message = "Supabase public table count check failed: $TableName returned HTTP $([int]$response.StatusCode)"
