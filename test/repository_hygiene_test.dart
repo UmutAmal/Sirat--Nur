@@ -14,5 +14,15 @@ void main() {
 
       expect(rootPatchFiles, isEmpty);
     });
+
+    test('ignores Android emulator bugreport archives', () {
+      final gitignore = File('.gitignore').readAsLinesSync();
+
+      expect(
+        gitignore,
+        contains('bugreport-*.zip'),
+        reason: 'Appium/emulator bugreports are large local diagnostics only.',
+      );
+    });
   });
 }

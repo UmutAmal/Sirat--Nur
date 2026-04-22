@@ -16657,3 +16657,30 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan Appium/emulator artefact hijyeni ve runtime provider graceful-degradation taramasi surdurulecek.
+
+## 2026-04-23 TUR-394 - Ignore Android Emulator Bugreports
+
+### MASTER Karari
+- Risk: Appium/emulator kosulari kok dizinde `bugreport-*.zip` gibi buyuk diagnostik arsivler uretebiliyor. `.gitignore` bu paterni kapsamiyorsa dosya untracked kalir ve yanlislikla commitlenip repo bloat'u veya hassas runtime diagnostik sizintisi yaratabilir.
+- Kanit: `git status -sb` Appium turundan sonra `?? bugreport-sdk_gphone64_x86_64-BE4B.251210.005-2026-04-22-00-15-15.zip` gosterdi; `.gitignore` eski durumda Android emulator/Appium bugreport paterni icermiyordu.
+- Kullanici etkisi: Release/dev dongulerinde gereksiz buyuk yerel dosyalar Git gorunurlugune girer; commit secimi karmasiklasir ve CI/repo hijyeni bozulabilir.
+- Risk skoru: Etki 2 x Olasilik 4 = 8/25 (P2 repository hygiene).
+- Rollback plani: `.gitignore`, `test/repository_hygiene_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `.gitignore` dosyasina Android emulator/Appium diagnostik arsivleri icin `bugreport-*.zip` paterni eklendi.
+- Mevcut yerel bugreport dosyasi silinmedi; sadece Git tarafinda ignore kapsamina alindi.
+
+### TESTER Degisikligi
+- `test/repository_hygiene_test.dart` `.gitignore` icinde `bugreport-*.zip` guard'i ekledi.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\repository_hygiene_test.dart --reporter compact` PASS, 2/2.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 625/625.
+
+### Risk Degisimi
+- Emulator/Appium bugreport accidental commit risk: `8/25 -> 1/25`.
+
+### Sonraki Adim
+- Commit/push; ardindan runtime provider graceful-degradation ve kalan store-readiness blocker taramasi surdurulecek.
