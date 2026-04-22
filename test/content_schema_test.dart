@@ -267,6 +267,7 @@ void main() {
       expect(schema, contains("using (bucket_id = 'audio-adhan');"));
       expect(schema, contains('create policy "Public read asma audio bucket"'));
       expect(schema, contains("using (bucket_id = 'audio-asma');"));
+      expect(schema, contains("notify pgrst, 'reload schema';"));
     });
   });
 }

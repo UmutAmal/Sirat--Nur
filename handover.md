@@ -16487,3 +16487,28 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan Supabase apply bundle ve runtime diagnostics arasindaki schema uyumu taranacak.
+## 2026-04-22 TUR-388 - Supabase REST Schema Cache Reload
+
+### MASTER Karari
+- Risk: Supabase SQL bundle'i yeni tablo ve kolonlari olustursa bile PostgREST schema cache hemen yenilenmezse REST readiness gate ayni turda 400/404 gormeye devam edebilir. Bu, real apply basarili olsa bile store-readiness tarafinda gereksiz false-fail ve operator karmasasi yaratir.
+- Kanit: `tool/check_store_readiness.ps1 -SkipFlutterValidation` remote REST tarafinda `daily_content.verified_at` ve `education_categories.source` icin schema-cache/schema eksikligi hatalari verdi. `content_schema.sql` eski durumda DDL sonunda explicit PostgREST reload bildirimi yapmiyordu.
+- Kullanici etkisi: Supabase apply sonrasinda yeni tablolar/kolonlar REST endpointlerinde gec gorunebilir; store-ready dogrulama ayni pipeline icinde yanlis negatif uretir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 release pipeline consistency).
+- Rollback plani: `content_schema.sql`, `test/content_schema_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `content_schema.sql` sonuna `notify pgrst, 'reload schema';` eklendi.
+- DDL sonrasi Supabase REST/PostgREST schema cache yenileme niyeti acik yorumla belgelendi.
+
+### TESTER Degisikligi
+- `test/content_schema_test.dart` schema cache reload bildiriminin SQL bundle'da kalmasini guard'lar.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\content_schema_test.dart --reporter compact` PASS, 2/2.
+
+### Risk Degisimi
+- PostgREST stale schema cache false-fail risk: `12/25 -> 4/25`.
+- Kalan risk: Real Supabase apply icin halen DB URL/access token ve verified hadith/tafsir seedleri gerekiyor.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.

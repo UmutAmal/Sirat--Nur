@@ -367,3 +367,7 @@ create policy "Public read asma audio bucket"
 on storage.objects
 for select
 using (bucket_id = 'audio-asma');
+
+-- Supabase REST uses PostgREST's schema cache. Reload it after DDL so
+-- store-readiness checks can see newly-created tables and columns immediately.
+notify pgrst, 'reload schema';
