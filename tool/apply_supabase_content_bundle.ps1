@@ -97,6 +97,9 @@ try {
   foreach ($relativePath in $plannedFiles) {
     $fullPath = Join-Path $repoRoot $relativePath
     npx --yes supabase db query --db-url "$DbUrl" --file "$fullPath" --output json --agent=no | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+      throw "Supabase SQL apply failed for $relativePath (exit code $LASTEXITCODE)."
+    }
     $appliedFiles.Add($relativePath) | Out-Null
   }
 

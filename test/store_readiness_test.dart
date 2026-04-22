@@ -210,6 +210,11 @@ void main() {
       expect(uploadScript, contains('gh release upload'));
       expect(uploadScript, contains(r'dry_run = $false'));
       expect(supabaseApplyScript, contains('npx --yes supabase db query'));
+      expect(supabaseApplyScript, contains(r'if ($LASTEXITCODE -ne 0)'));
+      expect(
+        supabaseApplyScript,
+        contains(r'Supabase SQL apply failed for $relativePath'),
+      );
       expect(supabaseApplyScript, contains('content_schema.sql'));
       expect(supabaseApplyScript, contains('content_seed_quran_ayahs.sql'));
       expect(supabaseApplyScript, contains('content_seed_hadith.sql'));

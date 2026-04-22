@@ -16715,3 +16715,32 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Supabase schema/apply bundle ve runtime graceful-degradation taramasi surdurulecek.
+
+## 2026-04-23 TUR-396 - Supabase Apply Checks Native Exit Codes
+
+### MASTER Karari
+- Risk: PowerShell native commandlari non-zero exit code ile dondugunde `$ErrorActionPreference = 'Stop'` tek basina her zaman exception uretmez. `tool/apply_supabase_content_bundle.ps1` `npx supabase db query` basarisiz olsa bile `$LASTEXITCODE` kontrolu yoksa dosyayi `files_applied` listesine ekleyip false-success apply summary uretebilirdi.
+- Kanit: Script eski durumda `npx --yes supabase db query ... | Out-Null` satirindan hemen sonra `$appliedFiles.Add($relativePath)` yapiyordu; exit code guard yoktu.
+- Kullanici etkisi: Production Supabase SQL apply kismi basarisiz olsa bile store-readiness daha sonra sahte `dry_run=false`/applied summary kanitina guvenebilirdi; dini icerik ve schema eksikleri store build oncesi kacabilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 release false-success).
+- Rollback plani: `tool/apply_supabase_content_bundle.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Her `npx supabase db query` cagrisi sonrasi `$LASTEXITCODE -ne 0` kontrolu eklendi.
+- Basarisiz SQL apply artik `"Supabase SQL apply failed for $relativePath"` hatasiyla durur ve summary'ye uygulanmis dosya yazmaz.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` apply script'in native exit-code guard'ini ve hata mesajini korur.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Apply dry-run smoke: expected FAIL with `Required Supabase SQL file is missing: content_seed_hadith.sql`; bu dogru, cunku verified hadith/tafsir seed olmadan plan/summary uretmiyor.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 625/625.
+
+### Risk Degisimi
+- Supabase apply native command false-success risk: `15/25 -> 3/25`.
+- Kalan risk: Gercek `content_seed_hadith.sql`, `content_seed_tafsir.sql`, `SUPABASE_DB_URL` ve remote apply halen gerekli; sahte seed uretilmedi.
+
+### Sonraki Adim
+- Commit/push; ardindan verified content seed blocker'lari ve runtime graceful-degradation taramasi surdurulecek.
