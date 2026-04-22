@@ -16625,3 +16625,35 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan kalan l10n debt ve runtime provider graceful-degradation taramasi surdurulecek.
+
+## 2026-04-23 TUR-393 - Appium Android Runtime Smoke
+
+### MASTER Karari
+- Risk: Flutter widget/unit testleri yesil olsa bile Android runtime, onboarding, bottom navigation, quick access ve logcat crash yuzeyleri gercek emulator uzerinde dogrulanmazsa store-ready akisinda UI/runtime regresyonu kacabilir.
+- Kanit: Kullanici Appium'un neden kullanilmadigini sordu; repo icinde `tool/appium_runtime_smoke.ps1` kalici smoke script'i mevcut. Ilk arka plan Appium baslatma denemesi path bosluklari nedeniyle log uretmeden kapandi; `node.exe` + quoted `index.js` + relative log yolu ile `GET /status` `ready: true` dondu.
+- Kullanici etkisi: Gercek Android oturumunda onboarding veya ana navigasyon kirilsa kullanici uygulama icinde temel bolumlere ulasamayabilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 runtime UI regression guard).
+- Rollback plani: Bu handover kaydi geri alinabilir; uygulama kodu degistirilmedi.
+
+### BUILDER Degisikligi
+- Kod degisikligi yapilmadi.
+- Appium server Windows path quoting riski pratik olarak bypass edildi: Appium `3.3.0`, `uiautomator2@7.1.2`, emulator `emulator-5554`.
+- Debug APK yeniden derlendi ve emulatore yeniden kuruldu.
+
+### TESTER Degisikligi
+- `flutter build apk --debug` PASS.
+- `adb install -r build\app\outputs\flutter-apk\app-debug.apk` PASS.
+- `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\appium_runtime_smoke.ps1` PASS.
+- Appium sonucu: onboarding `Next/Next/Start` clicked, `homeContainsDailyVerse: true`, `homeContainsNoInternetLegacy: false`, bottom nav `Quran/Qibla/Zikr/Calendar` clicked, quick access `Places/Downloads/Analytics/Premium` clicked, `logcatCrashFree: true`, `failures: []`.
+
+### Dogrulama Sonucu
+- Appium server status: PASS, `ready: true`, Appium `3.3.0`.
+- Android runtime smoke: PASS, 0 failure.
+- Full analyze/test commit oncesi calistirilacak.
+
+### Risk Degisimi
+- Android runtime UI smoke coverage risk: `12/25 -> 3/25`.
+- Kalan risk: Appium artefact hijyeni icin emulator `bugreport-*.zip` dosyasi henuz ignore edilmiyor; takip eden turda `.gitignore` guard'i ile ele alinacak.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan Appium/emulator artefact hijyeni ve runtime provider graceful-degradation taramasi surdurulecek.
