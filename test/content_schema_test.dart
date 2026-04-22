@@ -50,6 +50,13 @@ void main() {
         ),
       );
       expect(schema, contains('display_date date not null,'));
+      expect(schema, contains('verified_at timestamptz not null,'));
+      expect(
+        schema,
+        contains(
+          'alter table public.daily_content\nalter column verified_at set not null;',
+        ),
+      );
       expect(
         schema,
         contains(

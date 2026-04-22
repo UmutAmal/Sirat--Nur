@@ -16868,3 +16868,31 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan release apply scriptlerinin operator hatalarini ve Supabase auth/apply eksiklerini taramaya devam.
+
+## 2026-04-23 TUR-401 - Require Verified Daily Content Rows
+
+### MASTER Karari
+- Risk: Ana ekranda gorunen `daily_content` kayitlari `seed.sql` tarafinda verified Quran ayah seed tablolarindan turetiliyor ve store-readiness `verified_at=not.is.null` bekliyor; fakat `content_schema.sql` `verified_at` kolonunu nullable birakiyordu.
+- Kanit: `seed.sql` daily ayat insert'i `ayah.verified_at` degerini yazar. `tool/check_store_readiness.ps1` `daily_content` icin `content_type=eq.ayat&verified_at=not.is.null` filtresi kullanir. `content_schema.sql` once `verified_at timestamptz,` tanimliydi.
+- Kullanici etkisi: Manuel/hatali Supabase import ile dogrulama tarihi olmayan daily content satirlari DB'ye girebilir ve ana ekranda dini icerik provenance'i zayiflayabilirdi.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 daily content provenance).
+- Rollback plani: `content_schema.sql`, `test/content_schema_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `daily_content.verified_at` yeni tablo taniminda `timestamptz not null` yapildi.
+- Mevcut tablo apply akisi icin `alter table public.daily_content alter column verified_at set not null;` eklendi.
+
+### TESTER Degisikligi
+- `test/content_schema_test.dart` daily content `verified_at` not-null tanimini ve migration alter satirini guard'liyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\content_schema_test.dart test\seed_sql_test.dart test\store_readiness_test.dart --reporter compact` PASS, 14/14.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Daily content unverified row DB integrity risk: `12/25 -> 3/25`.
+- Kalan risk: Education category/topic source ve verified_at kolonlari halen nullable; siradaki turda ayrica ele alinacak.
+
+### Sonraki Adim
+- Commit/push; ardindan education content provenance schema sertlestirmesi.

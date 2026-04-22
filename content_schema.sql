@@ -10,12 +10,15 @@ create table if not exists public.daily_content (
   content_en text,
   reference text not null,
   display_date date not null,
-  verified_at timestamptz,
+  verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now())
 );
 
 alter table public.daily_content
 add column if not exists verified_at timestamptz;
+
+alter table public.daily_content
+alter column verified_at set not null;
 
 alter table public.daily_content
 drop constraint if exists daily_content_display_date_key;
