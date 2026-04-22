@@ -52,6 +52,7 @@ Production builds must inject Supabase values explicitly when cloud content or d
 ```powershell
 .\tool\build_store_appbundle.ps1
 ```
+Use `.env.example` as the local/CI checklist. Real `.env` files are git-ignored; export the values into the shell or CI secret store before running release scripts.
 
 `PLACES_TILE_URL_TEMPLATE` is intentionally empty by default. Without it, the Places screen shows an honest map-unavailable state instead of silently using a public tile server. Production values must be HTTPS tile templates containing `{z}`, `{x}`, and `{y}`, must not carry client-side query tokens or user-info secrets, and must not point directly at public OpenStreetMap tile hosts. `PLACES_OVERPASS_API_URL` is also intentionally empty by default; configure it with a monitored HTTPS proxy, an approved HTTPS provider, or your own rate-limited HTTPS Overpass-compatible endpoint before enabling nearby search in production. The app refuses known public community Overpass hosts and endpoint URLs containing user info, query strings, or fragments so secrets and unbounded community-service traffic are not shipped in the client.
 

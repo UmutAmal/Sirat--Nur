@@ -16807,3 +16807,35 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Supabase env/auth ve verified hadith/tafsir manifest zincirinde kalan en yuksek riskli eksik taranacak.
+
+## 2026-04-23 TUR-399 - Runtime Appium Smoke and Env Secret Hygiene
+
+### MASTER Karari
+- Risk: Store/release env degerleri `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_DB_URL`, Cloudflare ve GitHub tokenlari gibi hassas bilgiler iceriyor; `.gitignore` bu tur oncesi `.env` dosyalarini kapsamiyordu. Ayrica kullanici Appium'un aktif kullanilmasini istedi; runtime smoke kaniti taze tutulmali.
+- Kanit: `.gitignore` sadece `/android/key.properties`, `/.secrets/`, `/.wrangler/`, `*.jks`, `*.keystore` ignore ediyordu; `.env` paterni yoktu. `tool/appium_runtime_smoke.ps1` Appium ile onboarding/nav/quick access/logcat smoke uretir.
+- Kullanici etkisi: Yerel `.env` dosyasina Supabase/Cloudflare/GitHub secret yazildiginda yanlislikla Git'e girebilirdi. Runtime UI sadece widget testlerle degil gercek emulator/Appium akisi ile de izlenmeli.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 secret leakage + runtime regression evidence).
+- Rollback plani: `.gitignore`, `.env.example`, `README.md`, `test/repository_hygiene_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `.gitignore` icine `/.env`, `/.env.*` ve `!/.env.example` eklendi.
+- `.env.example` guvenli bos release/runtime checklist olarak eklendi; gercek secret, Supabase key veya JWT benzeri deger yazilmadi.
+- README setup bolumu `.env.example` dosyasini yerel/CI checklist olarak kullanmayi ve gercek degerleri shell/CI secret store'a export etmeyi aciklar.
+
+### TESTER Degisikligi
+- `test/repository_hygiene_test.dart` `.env` ignore paternlerini, `.env.example` varligini ve ornek dosyada `sb_publishable_`/JWT benzeri secret bulunmamasini guard'liyor.
+- Appium runtime smoke tekrar calistirildi: Appium v3.3.0 + UiAutomator2 v7.1.2, `emulator-5554`, `tool/appium_runtime_smoke.ps1`.
+
+### Dogrulama Sonucu
+- Appium runtime smoke: PASS. Summary `failures=[]`, onboarding `Next/Next/Start` clicked, bottom nav `Quran/Qibla/Zikr/Calendar` clicked, quick access `Places/Downloads/Analytics/Premium` clicked, `logcatCrashFree=true`, `firstContainsAndroidSettings=false`.
+- Targeted test: `flutter test test\repository_hygiene_test.dart test\readme_operational_docs_test.dart --reporter compact` PASS, 10/10.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Runtime env accidental commit risk: `15/25 -> 2/25`.
+- Runtime UI smoke freshness risk: `8/25 -> 2/25`.
+- Kalan risk: Gercek release env degerleri halen shell/CI'da export edilmeli; repo secret tutmayacak.
+
+### Sonraki Adim
+- Commit/push; ardindan Supabase MCP/auth yoklugu, real `SUPABASE_DB_URL` apply ve verified hadith/tafsir manifest blocker'lari taranacak.

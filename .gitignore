@@ -50,6 +50,9 @@ bugreport-*.zip
 # Store signing secrets must stay local or in CI secret storage.
 /android/key.properties
 /.secrets/
+/.env
+/.env.*
+!/.env.example
 /.wrangler/
 *.jks
 *.keystore
