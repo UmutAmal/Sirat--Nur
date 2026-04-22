@@ -269,6 +269,16 @@ tasks.register("validateStoreReleaseRuntimeConfig") {
             throw GradleException("SUPABASE_URL must be a clean HTTPS project origin without user info, path, query, or fragment.")
         }
 
+        val quranAudioPathNamespace =
+            dartDefines["QURAN_AUDIO_PATH_NAMESPACE"]?.trim()?.takeIf { it.isNotEmpty() }
+                ?: dartDefines["SUPABASE_QURAN_AUDIO_BUCKET"]?.trim()?.takeIf { it.isNotEmpty() }
+                ?: "quran-audio"
+        if (quranAudioPathNamespace != "quran-audio") {
+            throw GradleException(
+                "QURAN_AUDIO_PATH_NAMESPACE must be quran-audio so it matches the verified audio_files.storage_path seed."
+            )
+        }
+
         if (!isCleanHttpsUrl(dartDefines.getValue("QURAN_AUDIO_CLOUDFLARE_BASE_URL"))) {
             throw GradleException("QURAN_AUDIO_CLOUDFLARE_BASE_URL must be a clean HTTPS base URL without user info, query, or fragment.")
         }

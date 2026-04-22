@@ -41,6 +41,8 @@ void main() {
       expect(gradle, contains('PLACES_TILE_URL_TEMPLATE'));
       expect(gradle, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
       expect(gradle, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
+      expect(gradle, contains('QURAN_AUDIO_PATH_NAMESPACE'));
+      expect(gradle, contains('verified audio_files.storage_path seed'));
     });
 
     test('release lint remains enabled for store packaging', () {

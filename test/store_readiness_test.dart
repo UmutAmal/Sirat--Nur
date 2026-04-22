@@ -229,6 +229,8 @@ void main() {
       expect(gradle, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(gradle, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
       expect(gradle, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
+      expect(gradle, contains('QURAN_AUDIO_PATH_NAMESPACE'));
+      expect(gradle, contains('verified audio_files.storage_path seed'));
       expect(gradle, contains('no public OpenStreetMap tile host'));
       expect(gradle, contains('must not use a public Overpass host'));
     });

@@ -16566,3 +16566,31 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.
+
+## 2026-04-22 TUR-391 - Gradle Validates Quran Audio Namespace
+
+### MASTER Karari
+- Risk: `tool/build_store_appbundle.ps1` yanlis `QURAN_AUDIO_PATH_NAMESPACE` degerini reddediyordu, fakat dogrudan Gradle `bundleRelease`/`assembleRelease` cagrisi ayni dart-define yanlis verildiginde bunu yakalamiyordu. Tek giris noktasi disinda release alinmaya calisilirsa runtime audio storage_path sozlesmesi bozulabilirdi.
+- Kanit: `android/app/build.gradle.kts` `validateStoreReleaseRuntimeConfig` eski durumda Supabase/Places/Quran endpointlerini kontrol ediyor ama `QURAN_AUDIO_PATH_NAMESPACE` veya legacy `SUPABASE_QURAN_AUDIO_BUCKET` degerini `quran-audio` ile sinirlamiyordu.
+- Kullanici etkisi: Yanlis namespace ile release artifact uretilirse `audio_files.storage_path` seed'iyle runtime URL cozumleme sozlesmesi ayrisir; Quran audio playback store build'de kirilabilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 release runtime config integrity).
+- Rollback plani: `android/app/build.gradle.kts`, `test/android_config_test.dart`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Gradle `validateStoreReleaseRuntimeConfig` artik `QURAN_AUDIO_PATH_NAMESPACE`, legacy `SUPABASE_QURAN_AUDIO_BUCKET`, veya default `quran-audio` degerini cozer.
+- Cozulen namespace `quran-audio` degilse release packaging `verified audio_files.storage_path seed` sozlesmesi hatasiyla fail eder.
+
+### TESTER Degisikligi
+- `test/android_config_test.dart` ve `test/store_readiness_test.dart` Gradle guard'inin namespace ve storage_path seed sozlesmesini icermesini dogrular.
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\android_config_test.dart test\store_readiness_test.dart --reporter compact` PASS, 15/15.
+- Gradle configure smoke: `android\gradlew.bat :app:tasks --no-daemon` PASS.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 623/623.
+
+### Risk Degisimi
+- Direct Gradle release namespace false-success risk: `12/25 -> 3/25`.
+
+### Sonraki Adim
+- Commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.
