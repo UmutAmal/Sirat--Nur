@@ -393,6 +393,29 @@ try {
     Add-Failure 'Quran audio path seed is missing; run dart run tool/generate_quran_audio_storage_seed.dart after mirroring audio.'
   }
 
+  $duaSeedPath = Join-Path $repoRoot 'content_seed_duas.sql'
+  if (Test-Path -LiteralPath $duaSeedPath) {
+    $duaSeed = Get-Content -LiteralPath $duaSeedPath -Raw
+    $duaInsertCount = ([regex]::Matches($duaSeed, 'INSERT INTO public\.duas')).Count
+    $duaConflictCount = ([regex]::Matches($duaSeed, 'ON CONFLICT \(id\) DO UPDATE SET')).Count
+    $quranicDuaCategoryCount = ([regex]::Matches($duaSeed, "'quranic_dua'")).Count
+    $verifiedDuaTimestampCount = ([regex]::Matches($duaSeed, "TIMESTAMPTZ '\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z'")).Count
+    if (
+      $duaInsertCount -eq 8 -and
+      $duaConflictCount -eq 8 -and
+      $quranicDuaCategoryCount -eq 8 -and
+      $verifiedDuaTimestampCount -eq 8 -and
+      -not $duaSeed.Contains('http://') -and
+      -not $duaSeed.Contains('https://')
+    ) {
+      Add-Pass 'Quranic dua seed is complete: 8 verified storage-neutral upserts.'
+    } else {
+      Add-Failure "Quranic dua seed is incomplete or contains external URLs: inserts=$duaInsertCount, conflicts=$duaConflictCount, categories=$quranicDuaCategoryCount, verified_at=$verifiedDuaTimestampCount."
+    }
+  } else {
+    Add-Failure 'Quranic dua seed is missing: content_seed_duas.sql.'
+  }
+
   $distributionSummaryPath = Join-Path $repoRoot 'build/quran_audio_distribution_upload_summary.json'
   if (Test-Path -LiteralPath $distributionSummaryPath) {
     try {
@@ -490,7 +513,7 @@ try {
         @{ table = 'education_categories'; minimum = 1; description = 'verified education categories'; filter = 'source=not.is.null&verified_at=not.is.null' },
         @{ table = 'education_topics'; minimum = 1; description = 'verified education topics'; filter = 'source=not.is.null&verified_at=not.is.null' },
         @{ table = 'audio_files'; minimum = 684; description = 'verified Quran audio storage paths'; filter = 'type=eq.quran_surah&reciter=not.is.null&surah_number=not.is.null&storage_path=not.is.null&verified_at=not.is.null' },
-        @{ table = 'duas'; minimum = 1; description = 'verified duas'; filter = 'source=not.is.null&verified_at=not.is.null' },
+        @{ table = 'duas'; minimum = 8; description = 'verified Quranic duas'; filter = 'source=not.is.null&verified_at=not.is.null' },
         @{ table = 'asma_ul_husna'; minimum = 99; description = 'verified Asma-ul-Husna names'; filter = 'source=not.is.null&verified_at=not.is.null' },
         @{ table = 'quran_surahs'; minimum = 114; description = 'verified Quran surahs'; filter = 'source=not.is.null&verified_at=not.is.null' },
         @{ table = 'quran_ayahs'; minimum = 6236; description = 'verified Quran ayahs'; filter = 'source=not.is.null&verified_at=not.is.null' },

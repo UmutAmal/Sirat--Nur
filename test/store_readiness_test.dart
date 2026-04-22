@@ -172,10 +172,15 @@ void main() {
       expect(script, contains('content_seed_duas.sql'));
       expect(script, contains('missing_optional_files'));
       expect(script, contains('verified dua seed'));
+      expect(script, contains('Quranic dua seed is complete'));
+      expect(script, contains('duaInsertCount -eq 8'));
+      expect(script, contains('quranicDuaCategoryCount -eq 8'));
       expect(script, contains('hadith seed, and tafsir seed'));
       expect(script, contains('quran_surahs'));
       expect(script, contains('tafsir_entries'));
       expect(script, contains("table = 'quran_ayahs'; minimum = 6236"));
+      expect(script, contains("table = 'duas'; minimum = 8"));
+      expect(script, contains("description = 'verified Quranic duas'"));
       expect(script, contains("table = 'tafsir_entries'; minimum = 6236"));
       expect(script, contains("table = 'hadiths'; minimum = 600"));
       expect(script, contains("table = 'asma_ul_husna'; minimum = 99"));

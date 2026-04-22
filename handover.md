@@ -16777,3 +16777,33 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Supabase remote apply icin gereken credential/env eksiklerini ve verified hadith/tafsir seed blocker'larini sahte icerik uretmeden tarama.
+
+## 2026-04-23 TUR-398 - Store Readiness Requires Complete Dua Seed
+
+### MASTER Karari
+- Risk: `content_seed_duas.sql` 8 verified Quranic dua kaydi iceriyor, fakat `tool/check_store_readiness.ps1:493` remote Supabase `duas` tablosunda sadece 1 verified kayitla geciyordu. Bu, eksik veya kismi dua import'unu store-ready gibi gosterebilirdi.
+- Kanit: `content_seed_duas.sql` 8 `INSERT INTO public.duas` upsert'i tasiyor; `test/duas_seed_test.dart` bu sayiyi `dailyDuas.length` ile guard'liyor. Readiness remote check'i ise once `minimum = 1` kullaniyordu.
+- Kullanici etkisi: Production Supabase'e yalnizca tek dua row'u yuklenirse uygulama eksik dini icerikle yayinlanabilir ve readiness bunu yakalayamayabilirdi.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 release false-ready).
+- Rollback plani: `tool/check_store_readiness.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Store readiness script'i artik `content_seed_duas.sql` dosyasinin 8 insert, 8 conflict upsert, 8 `quranic_dua` kategori ve 8 `verified_at` timestamp icerdigini kontrol ediyor.
+- Dua seed dosyasinda `http://` veya `https://` gecerse readiness fail ediyor; boylece dua seed'i harici URL/audio bagimliligi tasimadan storage-neutral kaliyor.
+- Remote Supabase `duas` minimumu `1 -> 8` yapildi ve aciklama `verified Quranic duas` olarak sertlestirildi.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` yeni local seed completeness guard'larini ve remote `duas` minimum 8 sartini koruyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Readiness smoke: `powershell -NoProfile -ExecutionPolicy Bypass -File tool\check_store_readiness.ps1 -SkipNetwork -SkipFlutterValidation` expected FAIL with 8 external blockers, but PASS lines include `Quranic dua seed is complete: 8 verified storage-neutral upserts.`
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 627/627.
+
+### Risk Degisimi
+- Partial dua Supabase import false-ready risk: `12/25 -> 2/25`.
+- Kalan risk: Env vars, real Supabase apply summary, verified hadith seed ve verified tafsir seed halen store blocker.
+
+### Sonraki Adim
+- Commit/push; ardindan Supabase env/auth ve verified hadith/tafsir manifest zincirinde kalan en yuksek riskli eksik taranacak.
