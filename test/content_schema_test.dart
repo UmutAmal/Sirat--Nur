@@ -107,7 +107,22 @@ void main() {
       expect(schema, contains('juz_number smallint'));
       expect(schema, contains('tafsir_source text not null'));
       expect(schema, contains('tafsir_text text not null'));
-      expect(schema, contains('source_license text'));
+      expect(
+        schema,
+        contains(
+          'source_license text not null check (length(trim(source_license)) > 0)',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.tafsir_entries\nalter column source_license set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains('add constraint tafsir_entries_source_license_nonempty'),
+      );
       expect(
         schema,
         contains('unique (surah_number, ayah_number, tafsir_source)'),
@@ -126,7 +141,16 @@ void main() {
       expect(schema, contains('text_en text'));
       expect(schema, contains('narrator text'));
       expect(schema, contains('grade text'));
-      expect(schema, contains('source_license text'));
+      expect(
+        schema,
+        contains(
+          'alter table public.hadiths\nalter column source_license set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains('add constraint hadiths_source_license_nonempty'),
+      );
       expect(schema, contains('unique (collection_id, hadith_number)'));
       expect(
         schema,

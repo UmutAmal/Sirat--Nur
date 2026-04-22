@@ -16839,3 +16839,32 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Supabase MCP/auth yoklugu, real `SUPABASE_DB_URL` apply ve verified hadith/tafsir manifest blocker'lari taranacak.
+
+## 2026-04-23 TUR-400 - Enforce Source License In Content Schema
+
+### MASTER Karari
+- Risk: Hadith ve tafsir generator'lari `source_license` alanini zorunlu tutuyor, store-readiness remote check'i de `source_license=not.is.null` filtresiyle sayiyor; fakat `content_schema.sql` tablo taniminda `source_license text` nullable idi. DB seviyesinde eksik provenance iceri girebilirdi.
+- Kanit: `tool/generate_hadith_seed.dart` ve `tool/generate_tafsir_seed.dart` `Missing source_license` durumunda `FormatException` firlatiyor. `tool/check_store_readiness.ps1` `tafsir_entries` ve `hadiths` icin `source_license=not.is.null` kullanir. `content_schema.sql` once `source_license text,` tanimliyordu.
+- Kullanici etkisi: Manuel veya hatali SQL apply ile lisans/provenance eksik dini metin Supabase'e girerse, uygulama dogrulanmis gibi gorunen fakat lisansi belirsiz hadith/tafsir satirlarini tasiyabilir.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 provenance integrity).
+- Rollback plani: `content_schema.sql`, `test/content_schema_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `tafsir_entries.source_license` ve `hadiths.source_license` kolonlari yeni tablo taniminda `not null` ve non-empty check ile tanimlandi.
+- Mevcut tablo apply akisi icin named non-empty constraint'ler ve `alter column source_license set not null` eklendi.
+- Bu degisiklik generator/readiness/app provider kontratini DB schema seviyesine tasir.
+
+### TESTER Degisikligi
+- `test/content_schema_test.dart` source license not-null/non-empty tanimini, migration `alter column ... set not null` satirlarini ve named constraint'leri guard'liyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\content_schema_test.dart test\generate_hadith_seed_test.dart test\generate_tafsir_seed_test.dart test\store_readiness_test.dart --reporter compact` PASS, 30/30.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Hadith/tafsir source license DB integrity risk: `15/25 -> 3/25`.
+- Kalan risk: Gercek sourced hadith/tafsir manifestleri ve production apply henuz yok; schema artik eksik lisansli satiri kabul etmemeli.
+
+### Sonraki Adim
+- Commit/push; ardindan release apply scriptlerinin operator hatalarini ve Supabase auth/apply eksiklerini taramaya devam.

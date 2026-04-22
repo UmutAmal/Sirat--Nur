@@ -238,11 +238,21 @@ create table if not exists public.tafsir_entries (
   language text not null,
   tafsir_text text not null check (length(trim(tafsir_text)) > 0),
   source text not null,
-  source_license text,
+  source_license text not null check (length(trim(source_license)) > 0),
   verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now()),
   unique (surah_number, ayah_number, tafsir_source)
 );
+
+alter table public.tafsir_entries
+drop constraint if exists tafsir_entries_source_license_nonempty;
+
+alter table public.tafsir_entries
+add constraint tafsir_entries_source_license_nonempty
+check (length(trim(source_license)) > 0);
+
+alter table public.tafsir_entries
+alter column source_license set not null;
 
 create index if not exists tafsir_entries_source_surah_ayah_idx
 on public.tafsir_entries (tafsir_source, surah_number, ayah_number);
@@ -266,11 +276,21 @@ create table if not exists public.hadiths (
   narrator text,
   grade text,
   source text not null check (length(trim(source)) > 0),
-  source_license text,
+  source_license text not null check (length(trim(source_license)) > 0),
   verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now()),
   unique (collection_id, hadith_number)
 );
+
+alter table public.hadiths
+drop constraint if exists hadiths_source_license_nonempty;
+
+alter table public.hadiths
+add constraint hadiths_source_license_nonempty
+check (length(trim(source_license)) > 0);
+
+alter table public.hadiths
+alter column source_license set not null;
 
 create index if not exists hadiths_collection_number_idx
 on public.hadiths (collection_id, hadith_number);
