@@ -92,7 +92,18 @@ dart run tool/generate_quran_audio_storage_seed.dart \
 .\tool\upload_quran_audio_distribution.ps1 -CloudflareBucket <r2-bucket-name> -GithubReleaseTag quran-audio-v1
 ```
 
-4. Apply `content_schema.sql`, Quran surah/ayah seeds, `content_seed_quran_audio_storage.sql`, then `seed.sql` to production Supabase with the tracked apply gate from a release shell or CI job where `SUPABASE_DB_URL` is injected as a secure secret. The generator rejects incomplete or failed mirror manifests, so a partial download cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
+4. Generate the verified hadith and tafsir seeds only after an operator supplies sourced manifests. Do not invent, scrape ad-hoc, or placeholder religious text. The hadith generator requires every supported collection and at least 100 verified rows per collection; the tafsir generator requires a complete 6,236-ayah catalog per tafsir source. Both require `source`, `source_license`, and `verified_at` provenance before SQL can be written.
+```bash
+dart run tool/generate_hadith_seed.dart \
+  --manifest=content_hadith_manifest.json \
+  --output=content_seed_hadith.sql
+
+dart run tool/generate_tafsir_seed.dart \
+  --manifest=content_tafsir_manifest.json \
+  --output=content_seed_tafsir.sql
+```
+
+5. Apply `content_schema.sql`, Quran surah/ayah seeds, `content_seed_quran_audio_storage.sql`, `seed.sql`, `content_seed_hadith.sql`, and `content_seed_tafsir.sql` to production Supabase with the tracked apply gate from a release shell or CI job where `SUPABASE_DB_URL` is injected as a secure secret. The generators reject incomplete or failed manifests, so a partial download or partial religious corpus cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
 ```powershell
 .\tool\apply_supabase_content_bundle.ps1 -DryRun
 .\tool\apply_supabase_content_bundle.ps1

@@ -195,6 +195,10 @@ void main() {
       expect(checklist, contains('requested=684'));
       expect(checklist, contains('jarsigner -verify'));
       expect(checklist, contains('QURAN_AUDIO_CLOUDFLARE_BUCKET'));
+      expect(checklist, contains('dart run tool/generate_hadith_seed.dart'));
+      expect(checklist, contains('dart run tool/generate_tafsir_seed.dart'));
+      expect(checklist, contains('at least 100 verified rows per collection'));
+      expect(checklist, contains('complete 6,236-ayah catalog'));
       expect(uploadScript, contains('npx --yes wrangler@latest r2 object put'));
       expect(uploadScript, contains('gh release upload'));
       expect(uploadScript, contains(r'dry_run = $false'));

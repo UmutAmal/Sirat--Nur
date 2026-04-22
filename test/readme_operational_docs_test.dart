@@ -45,6 +45,15 @@ void main() {
       expect(readme, contains('64-character `sha256` checksum'));
       expect(readme, contains('first-party distribution providers'));
       expect(readme, contains('.\\tool\\apply_supabase_content_bundle.ps1'));
+      expect(readme, contains('dart run tool/generate_hadith_seed.dart'));
+      expect(readme, contains('dart run tool/generate_tafsir_seed.dart'));
+      expect(readme, contains('content_hadith_manifest.json'));
+      expect(readme, contains('content_tafsir_manifest.json'));
+      expect(readme, contains('at least 100 verified rows per collection'));
+      expect(readme, contains('complete 6,236-ayah catalog'));
+      expect(readme, contains('source_license'));
+      expect(readme, contains('content_seed_hadith.sql'));
+      expect(readme, contains('content_seed_tafsir.sql'));
       expect(readme, contains('SUPABASE_DB_URL'));
       expect(readme, contains('build/supabase_content_apply_summary.json'));
       expect(readme, contains('files_applied'));

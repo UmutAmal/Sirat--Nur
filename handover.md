@@ -16512,3 +16512,31 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.
+## 2026-04-22 TUR-389 - Verified Hadith/Tafsir Release Docs
+
+### MASTER Karari
+- Risk: Apply script `content_seed_hadith.sql` ve `content_seed_tafsir.sql` dosyalarini required hale getirdi, fakat README ve release checklist operatoru bu dosyalari verified manifestlerden nasil uretecegine yonlendirmiyordu. Bu, store-ready yolunda "hangi adim eksik?" belirsizligi ve sahte/placeholder icerik ekleme baskisi yaratabilir.
+- Kanit: `README.md` eski Quran Audio Sovereignty Workflow adimi dogrudan schema/Quran/audio/core seed apply'a geciyordu; `store/release_checklist.md` de hadith/tafsir manifest uretimini anlatmadan Supabase apply adimina geciyordu.
+- Kullanici etkisi: Devralan operator verified hadith/tafsir manifest gerekliligini kacirabilir; eksik seed blocker'i tekrar tekrar gorulur veya dini icerik aceleyle/yanlis kaynakla uretilmeye calisilabilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 release process/content integrity).
+- Rollback plani: `README.md`, `store/release_checklist.md`, `test/readme_operational_docs_test.dart`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- README workflow'a verified hadith ve tafsir seed uretim adimi eklendi.
+- Hadith icin her desteklenen koleksiyon + koleksiyon basina en az 100 verified row sarti dokumante edildi.
+- Tafsir icin complete 6,236-ayah catalog sarti dokumante edildi.
+- `source`, `source_license`, `verified_at` provenance zorunlulugu ve placeholder/unsourced dini icerik yasagi release checklist'e eklendi.
+
+### TESTER Degisikligi
+- `test/readme_operational_docs_test.dart` README'nin generator komutlarini, manifest adlarini, provenance ve output seed dosyalarini anlatmasini guard'lar.
+- `test/store_readiness_test.dart` release checklist'in hadith/tafsir generator adimlarini ve completeness threshold'larini icermesini guard'lar.
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\readme_operational_docs_test.dart test\store_readiness_test.dart --reporter compact` PASS, 16/16.
+
+### Risk Degisimi
+- Verified religious content release-doc gap risk: `12/25 -> 3/25`.
+- Kalan risk: Gercek manifestler halen yok; bu tur sahte dini icerik veya bos seed uretmedi.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.

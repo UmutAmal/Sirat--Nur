@@ -95,9 +95,25 @@ The real upload must write
 `build/quran_audio_distribution_upload_summary.json` with `dry_run=false`,
 Cloudflare `uploaded=570`, and GitHub `uploaded=114`.
 
-4. Apply `content_schema.sql`, Quran surah/ayah seed data,
-`content_seed_quran_audio_storage.sql`, and then core seed data to the
-production Supabase project with the tracked apply gate:
+4. Generate verified hadith and tafsir seeds from operator-reviewed manifests.
+Do not write placeholder or unsourced religious content.
+
+```powershell
+dart run tool/generate_hadith_seed.dart --manifest=content_hadith_manifest.json --output=content_seed_hadith.sql
+dart run tool/generate_tafsir_seed.dart --manifest=content_tafsir_manifest.json --output=content_seed_tafsir.sql
+```
+
+- Hadith production manifests must represent every supported collection and
+  include at least 100 verified rows per collection.
+- Tafsir production manifests must provide a complete 6,236-ayah catalog per
+  tafsir source.
+- Every hadith and tafsir row must carry `source`, `source_license`, and
+  `verified_at`; missing provenance is a release blocker.
+
+5. Apply `content_schema.sql`, Quran surah/ayah seed data,
+`content_seed_quran_audio_storage.sql`, core seed data,
+`content_seed_hadith.sql`, and `content_seed_tafsir.sql` to the production
+Supabase project with the tracked apply gate:
 
 ```powershell
 .\tool\apply_supabase_content_bundle.ps1 -DryRun
