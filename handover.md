@@ -16925,3 +16925,33 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan content schema'da nullable provenance kalip kalmadigini ve apply script operator risklerini yeniden tara.
+
+## 2026-04-23 TUR-403 - Quran Audio Distribution Upload Exit-Code Guard
+
+### MASTER Karari
+- Risk: `tool/upload_quran_audio_distribution.ps1` `dart`, `wrangler` ve `gh` native komutlarini calistiriyor, fakat bazi noktalarda `$LASTEXITCODE` kontrol etmiyordu. PowerShell native komut non-zero donse bile script uploaded sayacini arttirip `dry_run=false` summary yazabilirdi.
+- Kanit: Script once `npx --yes wrangler@latest r2 object put ...` ve `gh release upload ...` satirlarindan hemen sonra uploaded sayacini arttiriyordu. Supabase apply tarafinda ayni false-success sinifi daha once `$LASTEXITCODE` guard ile kapatildi.
+- Kullanici etkisi: Cloudflare veya GitHub upload kismi basarisiz olsa bile store-readiness daha sonra eksik ses dagitimini tamamlanmis sanabilirdi; Quran ses katalogu kismi kalirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 audio distribution false-success).
+- Rollback plani: `tool/upload_quran_audio_distribution.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `Assert-NativeSuccess` helper'i eklendi.
+- Plan generation, GitHub auth, Wrangler auth, GitHub release create, Cloudflare R2 upload ve GitHub release upload cagrilarindan sonra exit-code guard eklendi.
+- Upload sayaclari sadece ilgili native komut basariyla dondugunde artar.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` upload script'inin `Assert-NativeSuccess` ve Cloudflare/GitHub upload guard mesajlarini korumasini saglar.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart test\upload_quran_audio_storage_test.dart --reporter compact` PASS, 15/15.
+- Upload dry-run smoke: `tool\upload_quran_audio_distribution.ps1 -DryRun -SummaryOutput build\quran_audio_distribution_upload_summary_smoke.json -PlanOutput build\quran_audio_distribution_upload_plan_smoke.json` PASS; plan cloudflare=570, github=114, failures=0.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Quran audio distribution false-success risk: `15/25 -> 3/25`.
+- Kalan risk: Gercek Cloudflare/GitHub credential ve real upload halen operator/CI tarafinda tamamlanmali; dry-run summary release-ready sayilmaz.
+
+### Sonraki Adim
+- Commit/push; ardindan release readiness ve Supabase apply zincirindeki diger native command false-success noktalarini tara.

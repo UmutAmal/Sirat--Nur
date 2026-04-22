@@ -215,6 +215,15 @@ void main() {
       expect(checklist, contains('complete 6,236-ayah catalog'));
       expect(uploadScript, contains('npx --yes wrangler@latest r2 object put'));
       expect(uploadScript, contains('gh release upload'));
+      expect(uploadScript, contains('Assert-NativeSuccess'));
+      expect(
+        uploadScript,
+        contains(r'Cloudflare Quran audio upload $($object.object_path)'),
+      );
+      expect(
+        uploadScript,
+        contains(r'GitHub Quran audio upload $($object.asset_name)'),
+      );
       expect(uploadScript, contains(r'dry_run = $false'));
       expect(supabaseApplyScript, contains('npx --yes supabase db query'));
       expect(supabaseApplyScript, contains(r'if ($LASTEXITCODE -ne 0)'));

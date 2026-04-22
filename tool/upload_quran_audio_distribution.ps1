@@ -43,6 +43,16 @@ function Write-JsonFile {
   $Value | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $fullPath -Encoding UTF8
 }
 
+function Assert-NativeSuccess {
+  param(
+    [Parameter(Mandatory = $true)][string]$Description
+  )
+
+  if ($LASTEXITCODE -ne 0) {
+    throw "$Description failed (exit code $LASTEXITCODE)."
+  }
+}
+
 function New-HardLinkedGithubAsset {
   param(
     [Parameter(Mandatory = $true)][string]$SourcePath,
@@ -83,6 +93,7 @@ try {
   }
 
   dart run tool/quran_audio_distribution_plan.dart --manifest="$manifestPath" --output="$PlanOutput"
+  Assert-NativeSuccess -Description 'Quran audio distribution plan generation'
   $planPath = if ([System.IO.Path]::IsPathRooted($PlanOutput)) {
     $PlanOutput
   } else {
@@ -122,11 +133,16 @@ try {
   }
 
   gh auth status -h github.com | Out-Null
+  Assert-NativeSuccess -Description 'GitHub CLI authentication check'
   npx --yes wrangler@latest whoami | Out-Null
+  Assert-NativeSuccess -Description 'Cloudflare Wrangler authentication check'
 
   $releaseExists = $true
   try {
     gh release view $GithubReleaseTag --repo $GithubRepo | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+      $releaseExists = $false
+    }
   } catch {
     $releaseExists = $false
   }
@@ -135,6 +151,7 @@ try {
       throw "GitHub release $GithubReleaseTag does not exist. Re-run with -CreateGithubRelease or create it manually."
     }
     gh release create $GithubReleaseTag --repo $GithubRepo --title $GithubReleaseTag --notes 'Verified Quran audio overflow assets for Sirat-i Nur.'
+    Assert-NativeSuccess -Description 'GitHub release create'
   }
 
   $cloudflareUploaded = 0
@@ -145,6 +162,7 @@ try {
       Join-Path $repoRoot $object.local_path
     }
     npx --yes wrangler@latest r2 object put "$CloudflareBucket/$($object.object_path)" --file "$sourcePath" --content-type 'audio/mpeg' --cache-control 'public, max-age=31536000, immutable' --remote --force
+    Assert-NativeSuccess -Description "Cloudflare Quran audio upload $($object.object_path)"
     $cloudflareUploaded += 1
   }
 
@@ -157,6 +175,7 @@ try {
     }
     $assetPath = New-HardLinkedGithubAsset -SourcePath $sourcePath -AssetName $object.asset_name
     gh release upload $GithubReleaseTag "$assetPath" --repo $GithubRepo --clobber
+    Assert-NativeSuccess -Description "GitHub Quran audio upload $($object.asset_name)"
     $githubUploaded += 1
   }
 
