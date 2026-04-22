@@ -73,8 +73,8 @@ create table if not exists public.education_categories (
   description text,
   description_en text,
   sort_order integer not null default 0,
-  source text,
-  verified_at timestamptz,
+  source text not null check (length(trim(source)) > 0),
+  verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now())
 );
 
@@ -83,6 +83,19 @@ add column if not exists source text;
 
 alter table public.education_categories
 add column if not exists verified_at timestamptz;
+
+alter table public.education_categories
+drop constraint if exists education_categories_source_nonempty;
+
+alter table public.education_categories
+add constraint education_categories_source_nonempty
+check (length(trim(source)) > 0);
+
+alter table public.education_categories
+alter column source set not null;
+
+alter table public.education_categories
+alter column verified_at set not null;
 
 create index if not exists education_categories_sort_order_idx
 on public.education_categories (sort_order);
@@ -103,8 +116,8 @@ create table if not exists public.education_topics (
   content text not null,
   content_en text,
   sort_order integer not null default 0,
-  source text,
-  verified_at timestamptz,
+  source text not null check (length(trim(source)) > 0),
+  verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now())
 );
 
@@ -113,6 +126,19 @@ add column if not exists source text;
 
 alter table public.education_topics
 add column if not exists verified_at timestamptz;
+
+alter table public.education_topics
+drop constraint if exists education_topics_source_nonempty;
+
+alter table public.education_topics
+add constraint education_topics_source_nonempty
+check (length(trim(source)) > 0);
+
+alter table public.education_topics
+alter column source set not null;
+
+alter table public.education_topics
+alter column verified_at set not null;
 
 create index if not exists education_topics_category_sort_order_idx
 on public.education_topics (category_id, sort_order);

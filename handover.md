@@ -16896,3 +16896,32 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan education content provenance schema sertlestirmesi.
+
+## 2026-04-23 TUR-402 - Require Verified Education Content Sources
+
+### MASTER Karari
+- Risk: `education_categories` ve `education_topics` dini bilgi/egitim yuzeyini temsil ediyor. Store-readiness bu tablolarda `source=not.is.null&verified_at=not.is.null` bekliyor, fakat schema `source` ve `verified_at` kolonlarini nullable birakiyordu.
+- Kanit: `tool/check_store_readiness.ps1` education tablolarinda source/verified_at filtresiyle row sayiyor. `seed.sql` unverified dini egitim satirlarini bilerek seed etmiyor. `content_schema.sql` once `source text, verified_at timestamptz,` tanimliyordu.
+- Kullanici etkisi: Manuel veya hatali import ile kaynaksiz dini egitim icerigi DB'ye girebilir ve uygulamada dogrulanmis gibi gorunebilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 education provenance integrity).
+- Rollback plani: `content_schema.sql`, `test/content_schema_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `education_categories.source` ve `education_topics.source` yeni tablo taniminda `not null` + non-empty check yapildi.
+- `education_categories.verified_at` ve `education_topics.verified_at` yeni tablo taniminda `not null` yapildi.
+- Mevcut tablo apply akisi icin named source non-empty constraint'ler ve `alter column source/verified_at set not null` satirlari eklendi.
+
+### TESTER Degisikligi
+- `test/content_schema_test.dart` education source constraint'lerini ve migration alter satirlarini guard'liyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\content_schema_test.dart test\seed_sql_test.dart test\store_readiness_test.dart --reporter compact` PASS, 14/14.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Education content unverified row DB integrity risk: `15/25 -> 3/25`.
+- Kalan risk: Gercek sourced education manifest/seed henuz yok; schema artik kaynaksiz row kabul etmemeli.
+
+### Sonraki Adim
+- Commit/push; ardindan content schema'da nullable provenance kalip kalmadigini ve apply script operator risklerini yeniden tara.

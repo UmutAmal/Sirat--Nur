@@ -95,8 +95,40 @@ void main() {
       expect(
         schema,
         contains(
+          'alter table public.education_categories\nalter column source set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.education_categories\nalter column verified_at set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains('add constraint education_categories_source_nonempty'),
+      );
+      expect(
+        schema,
+        contains(
           'alter table public.education_topics\nadd column if not exists verified_at timestamptz;',
         ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.education_topics\nalter column source set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.education_topics\nalter column verified_at set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains('add constraint education_topics_source_nonempty'),
       );
       expect(
         schema,
