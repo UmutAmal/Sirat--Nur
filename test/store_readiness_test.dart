@@ -120,6 +120,10 @@ void main() {
       expect(script, contains('tile.openstreetmap.org'));
       expect(script, contains('overpass-api.de'));
       expect(script, contains('flutter build appbundle --release'));
+      expect(
+        script.indexOf("QURAN_AUDIO_PATH_NAMESPACE must be quran-audio"),
+        lessThan(script.indexOf(r'if ($NoBuild)')),
+      );
     });
 
     test('store readiness checker refuses hidden external blockers', () {

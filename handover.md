@@ -16512,6 +16512,32 @@
 
 ### Sonraki Adim
 - Full analyze/test, commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.
+## 2026-04-22 TUR-390 - Store NoBuild Validates Quran Audio Namespace
+
+### MASTER Karari
+- Risk: `tool/build_store_appbundle.ps1 -NoBuild` konfigurasyon smoke'u `QURAN_AUDIO_PATH_NAMESPACE` kontrolune gelmeden cikiyordu. Yanlis namespace ile NoBuild "Store release configuration is present" diyebilir, ama gercek build ayni config ile sonradan fail edebilirdi.
+- Kanit: Script eski sirada `if ($NoBuild) { ... exit 0 }` blogunu namespace kontrolunden once calistiriyordu; namespace guard'i sadece build path'inde isliyordu.
+- Kullanici etkisi: Release operatoru config smoke'u yesil gorup ilerleyebilir; gercek AAB build asamasinda gereksiz gec fail yasanir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25 (P2 release ergonomics/false-success).
+- Rollback plani: `tool/build_store_appbundle.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `QURAN_AUDIO_PATH_NAMESPACE` / legacy `SUPABASE_QURAN_AUDIO_BUCKET` default ve uyum kontrolu `-NoBuild` cikisindan onceye tasindi.
+- `-NoBuild` artik store config'in hem endpoint/signing hem de Quran audio storage_path namespace sozlesmesini dogrular.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` namespace hata mesajinin `if ($NoBuild)` blogundan once gelmesini guard'lar.
+
+### Dogrulama Sonucu
+- PowerShell parse: PASS.
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Config smoke: `tool\build_store_appbundle.ps1 -NoBuild` PASS with current release env/default `quran-audio` namespace.
+
+### Risk Degisimi
+- Store NoBuild namespace false-success risk: `9/25 -> 2/25`.
+
+### Sonraki Adim
+- Full analyze/test, commit/push; ardindan runtime provider graceful-degradation taramasi surdurulecek.
 ## 2026-04-22 TUR-389 - Verified Hadith/Tafsir Release Docs
 
 ### MASTER Karari

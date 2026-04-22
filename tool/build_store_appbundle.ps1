@@ -130,11 +130,6 @@ foreach ($requiredKey in @('storeFile=', 'storePassword=', 'keyAlias=', 'keyPass
   }
 }
 
-if ($NoBuild) {
-  Write-Host 'Store release configuration is present.'
-  exit 0
-}
-
 $quranAudioPathNamespace = [Environment]::GetEnvironmentVariable('QURAN_AUDIO_PATH_NAMESPACE')
 if ([string]::IsNullOrWhiteSpace($quranAudioPathNamespace)) {
   $quranAudioPathNamespace = [Environment]::GetEnvironmentVariable('SUPABASE_QURAN_AUDIO_BUCKET')
@@ -144,6 +139,11 @@ if ([string]::IsNullOrWhiteSpace($quranAudioPathNamespace)) {
 }
 if ($quranAudioPathNamespace -ne 'quran-audio') {
   throw 'QURAN_AUDIO_PATH_NAMESPACE must be quran-audio so it matches the verified audio_files.storage_path seed.'
+}
+
+if ($NoBuild) {
+  Write-Host 'Store release configuration is present.'
+  exit 0
 }
 
 flutter build appbundle --release `
