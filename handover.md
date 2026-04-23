@@ -16986,3 +16986,37 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan release/ops scriptlerinde kalan native-command ve runtime smoke risklerini taramaya devam et.
+
+## 2026-04-23 TUR-405 - Appium Logcat Capture Must Be Real
+
+### MASTER Karari
+- Risk: `tool/appium_runtime_smoke.ps1` runtime UI smoke sonunda `adb logcat -d` okuyordu, fakat okuma basarisiz olursa sadece warning basip `logcatCrashFree=true` degerini koruyordu.
+- Kanit: Onceki akista `adb logcat -d -v time` catch blogu `Write-Warning "adb logcat read failed; continuing with UI smoke result."` ile devam ediyordu. Summary bu durumda crash-free gorunebilirdi.
+- Kullanici etkisi: Appium smoke gercek UI akisini calistirsa bile native/Flutter crash loglari okunamazsa store-ready runtime kaniti yanlis PASS uretebilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 runtime smoke false-success).
+- Rollback plani: `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `adb` komutu `-SkipLogcat` verilmedikce zorunlu hale getirildi.
+- Logcat clear/read komutlari hedef cihaza baglandi: `adb -s $DeviceName ...`.
+- Native `$LASTEXITCODE` guard'i eklendi.
+- Summary'ye `logcatCaptured` ve `logcatError` alanlari eklendi.
+- Logcat okunamazsa smoke artik `Logcat could not be captured` hatasiyla FAIL olur; crash marker mesaji sadece logcat gercekten yakalandiysa uretilir.
+
+### TESTER Degisikligi
+- `test/appium_runtime_smoke_script_test.dart` adb requirement, target-device logcat komutlari ve capture failure guard'larini kontrol ediyor.
+- PowerShell parse smoke PASS.
+- Gercek Appium runtime smoke `emulator-5554` uzerinde PASS verdi.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, 4/4.
+- Appium runtime smoke: PASS; onboarding Next/Next/Start, bottom nav Quran/Qibla/Zikr/Calendar, quick access Places/Downloads/Analytics/Premium; `logcatCaptured=true`, `logcatCrashFree=true`, `failures=[]`.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Appium logcat false-success risk: `15/25 -> 2/25`.
+- Kalan risk: Appium smoke emuletor/device bagimlidir; cihaz yoksa script bilerek fail eder veya operator acikca `-SkipLogcat` ile logcat kanitini devre disi birakir.
+
+### Sonraki Adim
+- Commit/push; ardindan kalan release readiness ve store-blocker taramasina devam et.

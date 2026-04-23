@@ -10,6 +10,30 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+function Require-Command {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Name,
+    [Parameter(Mandatory = $true)]
+    [string]$InstallHint
+  )
+
+  if (-not (Get-Command $Name -ErrorAction SilentlyContinue)) {
+    throw "$Name is required. $InstallHint"
+  }
+}
+
+function Assert-NativeSuccess {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Description
+  )
+
+  if ($LASTEXITCODE -ne 0) {
+    throw "$Description failed (exit code $LASTEXITCODE)."
+  }
+}
+
 function Invoke-AppiumJson {
   param(
     [Parameter(Mandatory = $true)][string]$Method,
@@ -153,11 +177,9 @@ function Test-ContainsAny {
 New-Item -ItemType Directory -Force -Path $OutputDir | Out-Null
 
 if (-not $SkipLogcat) {
-  try {
-    adb logcat -c | Out-Null
-  } catch {
-    Write-Warning "adb logcat clear failed; continuing Appium smoke."
-  }
+  Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH, or pass -SkipLogcat explicitly.'
+  adb -s $DeviceName logcat -c | Out-Null
+  Assert-NativeSuccess -Description 'adb logcat clear'
 }
 
 $status = Get-AppiumValue (Invoke-AppiumJson -Method "GET" -Path "/status")
@@ -200,6 +222,8 @@ $summary = [ordered]@{
   bottomNavResults = @()
   quickAccessResults = @()
   logcatCrashFree = $true
+  logcatCaptured = $false
+  logcatError = $null
   failures = @()
 }
 
@@ -267,13 +291,16 @@ try {
 
 if (-not $SkipLogcat) {
   try {
-    $logcat = adb logcat -d -v time 2>$null
+    $logcat = adb -s $DeviceName logcat -d -v time 2>$null
+    Assert-NativeSuccess -Description 'adb logcat read'
     $logcatPath = Join-Path $OutputDir "appium-runtime-smoke-logcat.txt"
     $logcat | Set-Content -Encoding UTF8 -Path $logcatPath
     $logcatText = [string]::Join("`n", $logcat)
+    $summary.logcatCaptured = $true
     $summary.logcatCrashFree = -not ($logcatText -match "FATAL EXCEPTION|E/flutter|Unhandled Exception")
   } catch {
-    Write-Warning "adb logcat read failed; continuing with UI smoke result."
+    $summary.logcatCrashFree = $false
+    $summary.logcatError = "adb logcat read failed: $($_.Exception.Message)"
   }
 }
 
@@ -312,8 +339,11 @@ foreach ($item in $summary.quickAccessResults) {
     $failures += "Quick access '$($item.label)' opened Android Settings."
   }
 }
-if (-not $summary.logcatCrashFree) {
+if ($summary.logcatCaptured -and -not $summary.logcatCrashFree) {
   $failures += "Logcat contains crash markers: FATAL EXCEPTION, E/flutter, or Unhandled Exception."
+}
+if (-not $SkipLogcat -and -not $summary.logcatCaptured) {
+  $failures += "Logcat could not be captured: $($summary.logcatError)"
 }
 
 $summary.failures = $failures

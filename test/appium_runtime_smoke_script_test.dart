@@ -35,6 +35,11 @@ void main() {
 
     test('fails on legacy offline copy and crash markers', () {
       expect(script, contains('No Internet Connection'));
+      expect(script, contains("Require-Command -Name 'adb'"));
+      expect(script, contains(r'adb -s $DeviceName logcat -c'));
+      expect(script, contains(r'adb -s $DeviceName logcat -d -v time'));
+      expect(script, contains('adb logcat read failed'));
+      expect(script, contains('Logcat could not be captured'));
       expect(script, contains('FATAL EXCEPTION'));
       expect(script, contains('E/flutter'));
       expect(script, contains('Unhandled Exception'));
