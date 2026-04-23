@@ -202,10 +202,7 @@ Map<String, String> resolveCloudSukunSources(List<Map<String, dynamic>> rows) {
       continue;
     }
 
-    final hasVerifiedProvenance =
-        _readFirstAyatValue(row, ['source', 'reference']) != null &&
-        _readFirstAyatValue(row, ['verified_at', 'verifiedAt']) != null;
-    if (!hasVerifiedProvenance) {
+    if (!hasVerifiedCloudAudioProvenance(row)) {
       continue;
     }
 

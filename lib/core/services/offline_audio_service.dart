@@ -93,8 +93,35 @@ String _readCloudAudioString(Map<String, dynamic> row, List<String> keys) {
   return '';
 }
 
+const Set<String> _approvedCloudAudioSourceHosts = {
+  'quran.com',
+  'quran.gov.sa',
+  'diyanet.gov.tr',
+  'islamhouse.com',
+  'mp3quran.net',
+  'everyayah.com',
+};
+
+bool isApprovedCloudAudioSourceUrl(String source) {
+  final uri = Uri.tryParse(source.trim());
+  if (uri == null ||
+      !uri.isScheme('https') ||
+      uri.host.trim().isEmpty ||
+      uri.userInfo.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment) {
+    return false;
+  }
+
+  final host = uri.host.toLowerCase();
+  return _approvedCloudAudioSourceHosts.any(
+    (approvedHost) => host == approvedHost || host.endsWith('.$approvedHost'),
+  );
+}
+
 bool hasVerifiedCloudAudioProvenance(Map<String, dynamic> row) {
-  return _readCloudAudioString(row, const ['source', 'reference']).isNotEmpty &&
+  final source = _readCloudAudioString(row, const ['source', 'reference']);
+  return isApprovedCloudAudioSourceUrl(source) &&
       _readCloudAudioString(row, const [
         'verified_at',
         'verifiedAt',

@@ -1,8 +1,34 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
+import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
+
+const String _approvedSukunAudioSource = 'https://www.diyanet.gov.tr/tr-TR';
 
 void main() {
   group('resolveCloudSukunSources', () {
+    test('trusts only approved HTTPS cloud audio source domains', () {
+      expect(isApprovedCloudAudioSourceUrl(_approvedSukunAudioSource), isTrue);
+      expect(
+        isApprovedCloudAudioSourceUrl('https://api.quran.com/api/v4/test'),
+        isTrue,
+      );
+      expect(
+        isApprovedCloudAudioSourceUrl('https://www.islamhouse.com/audio'),
+        isTrue,
+      );
+
+      for (final source in const [
+        'verified audio catalog',
+        'https://example.com/audio',
+        'http://www.diyanet.gov.tr/tr-TR',
+        'https://audit@www.diyanet.gov.tr/tr-TR',
+        'https://www.diyanet.gov.tr/tr-TR?token=1',
+        'https://www.diyanet.gov.tr/tr-TR#fragment',
+      ]) {
+        expect(isApprovedCloudAudioSourceUrl(source), isFalse, reason: source);
+      }
+    });
+
     test('maps storage-backed cloud rows into expected sukun sound types', () {
       final resolved = resolveCloudSukunSources([
         {
@@ -10,7 +36,7 @@ void main() {
           'title': 'Rain of Mercy',
           'storage_path': 'audio-sukun/rain.mp3',
           'url': 'https://cdn.example.com/audio/rain.mp3',
-          'source': 'verified audio catalog',
+          'source': _approvedSukunAudioSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
         {
@@ -18,7 +44,7 @@ void main() {
           'title': 'forest',
           'storage_path': 'audio-sukun/forest.mp3',
           'url': 'https://cdn.example.com/audio/forest.mp3',
-          'source': 'verified audio catalog',
+          'source': _approvedSukunAudioSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
@@ -40,7 +66,7 @@ void main() {
             'title': 'Rain of Mercy',
             'storage_path': 'audio-sukun/rain.mp3',
             'url': 'https://cdn.example.com/audio/rain.mp3',
-            'source': 'verified audio catalog',
+            'source': _approvedSukunAudioSource,
             'verified_at': '2026-04-15T00:00:00Z',
           },
         ]);
@@ -58,28 +84,28 @@ void main() {
           'type': 'adhan',
           'title': 'Rain of Mercy',
           'url': 'https://cdn.example.com/audio/rain.mp3',
-          'source': 'verified audio catalog',
+          'source': _approvedSukunAudioSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
         {
           'type': 'sukun',
           'title': 'Ocean Tawheed',
           'url': '',
-          'source': 'verified audio catalog',
+          'source': _approvedSukunAudioSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
         {
           'type': 'sukun',
           'title': 'Unknown stream',
           'url': 'https://cdn.example.com/audio/unknown.mp3',
-          'source': 'verified audio catalog',
+          'source': _approvedSukunAudioSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
         {
           'type': 'sukun',
           'title': 'Rain of Mercy',
           'url': 'https://cdn.example.com/audio/rain.mp3',
-          'source': 'verified audio catalog',
+          'source': _approvedSukunAudioSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
@@ -99,7 +125,28 @@ void main() {
           'type': 'nature',
           'title': 'forest',
           'url': 'https://cdn.example.com/audio/forest.mp3',
+          'source': _approvedSukunAudioSource,
+        },
+      ]);
+
+      expect(resolved, isEmpty);
+    });
+
+    test('rejects storage-backed rows from unapproved source domains', () {
+      final resolved = resolveCloudSukunSources([
+        {
+          'type': 'sukun',
+          'title': 'Rain of Mercy',
+          'storage_path': 'audio-sukun/rain.mp3',
           'source': 'verified audio catalog',
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
+        {
+          'type': 'nature',
+          'title': 'forest',
+          'storage_path': 'audio-sukun/forest.mp3',
+          'source': 'https://example.com/audio/forest',
+          'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
 

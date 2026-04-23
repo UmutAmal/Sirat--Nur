@@ -17236,3 +17236,36 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan sukun/education cloud source domain guard'i ve store-readiness external blocker taramasina devam et.
+
+## 2026-04-23 TUR-413 - Cloud Audio Requires Approved Source Domains
+
+### MASTER Karari
+- Risk: `lib/core/services/offline_audio_service.dart` cloud Quran audio normalizer'i ve `lib/core/providers/supabase_providers.dart` Sukun/Nature audio normalizer'i `source` alaninda yalniz non-empty kontrol yapiyordu.
+- Kanit: `hasVerifiedCloudAudioProvenance` once `_readCloudAudioString(...).isNotEmpty` ile yetiniyordu. `resolveCloudSukunSources` ayrica `source/reference != null` ve `verified_at != null` kontrolu yapiyor, domain/protocol denetimi yapmiyordu. Test fixture'lari `QuranFoundation`, `Verified Sukun Source` ve `verified audio catalog` serbest metinlerini valid kabul ediyordu.
+- Kullanici etkisi: Manuel veya hatali Supabase `audio_files` satirlari, izinli resmi/dogrulanmis kaynak domaini olmadan Quran/Sukun audio kaynagi gibi oynatilabilir hale gelebilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 audio provenance runtime gate).
+- Rollback plani: `lib/core/services/offline_audio_service.dart`, `lib/core/providers/supabase_providers.dart`, `test/offline_audio_service_test.dart`, `test/sukun_audio_sources_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Cloud audio source allowlist'i HTTPS `quran.com`, `quran.gov.sa`, `diyanet.gov.tr`, `islamhouse.com`, `mp3quran.net` ve `everyayah.com` domainleri veya alt domainleriyle sinirlandi.
+- `hasVerifiedCloudAudioProvenance` artik source/reference alanini `isApprovedCloudAudioSourceUrl` ile dogruluyor.
+- `resolveCloudSukunSources` kendi serbest metin provenance kontrolu yerine ortak `hasVerifiedCloudAudioProvenance` guard'ini kullaniyor.
+- HTTP, user-info, query ve fragment iceren source URL'leri reddediliyor.
+
+### TESTER Degisikligi
+- Quran audio fixture'lari valid kaynak olarak `https://api.quran.com/api/v4/chapter_recitations/7` kullaniyor.
+- Sukun fixture'lari valid kaynak olarak `https://www.diyanet.gov.tr/tr-TR` kullaniyor.
+- `QuranFoundation`, `verified audio catalog`, `example.com`, HTTP, credential, query ve fragment iceren kaynaklar reddediliyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\offline_audio_service_test.dart --reporter compact` PASS, 20/20.
+- Targeted test: `flutter test test\sukun_audio_sources_provider_test.dart --reporter compact` PASS, 6/6.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 637/637.
+
+### Risk Degisimi
+- Cloud audio unapproved-source risk: `15/25 -> 2/25`.
+- Kalan risk: Education cloud content normalizer'i source URL'lerini yalniz non-empty kontrol ediyor; bir sonraki turda ayni domain guard'i ile sertlestirilecek.
+
+### Sonraki Adim
+- Commit/push; ardindan education category/topic source domain guard'i ve store-readiness external blocker taramasina devam et.
