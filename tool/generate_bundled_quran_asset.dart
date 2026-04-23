@@ -15,6 +15,11 @@ final RegExp _ayahPattern = RegExp(
   multiLine: true,
 );
 
+final RegExp _batchedAyahPattern = RegExp(
+  r"\(\s*(\d+),\s*(\d+),\s*(\d+),\s*'((?:[^']|'')*)',\s*'((?:[^']|'')*)',\s*'((?:[^']|'')*)',\s*'((?:[^']|'')*)',\s*TIMESTAMPTZ '([^']+)'\s*\)",
+  multiLine: true,
+);
+
 void main() {
   final surahSeed = File(_surahSeedPath).readAsStringSync();
   final ayahSeed = File(_ayahSeedPath).readAsStringSync();
@@ -47,76 +52,98 @@ List<Map<String, dynamic>> buildBundledQuranRows({
 
   final ayahsBySurah = <int, List<_AyahSeedRow>>{};
   for (final ayah in ayahs) {
-    ayahsBySurah.putIfAbsent(ayah.surahNumber, () => <_AyahSeedRow>[]).add(ayah);
+    ayahsBySurah
+        .putIfAbsent(ayah.surahNumber, () => <_AyahSeedRow>[])
+        .add(ayah);
   }
 
   var runningAyahNumber = 1;
-  return surahs.map((surah) {
-    final surahAyahs = [...?ayahsBySurah[surah.surahNumber]]
-      ..sort((a, b) => a.ayahNumber.compareTo(b.ayahNumber));
+  return surahs
+      .map((surah) {
+        final surahAyahs = [...?ayahsBySurah[surah.surahNumber]]
+          ..sort((a, b) => a.ayahNumber.compareTo(b.ayahNumber));
 
-    if (surahAyahs.length != surah.ayahCount) {
-      throw StateError(
-        'Surah ${surah.surahNumber} expected ${surah.ayahCount} ayahs, '
-        'got ${surahAyahs.length}.',
-      );
-    }
+        if (surahAyahs.length != surah.ayahCount) {
+          throw StateError(
+            'Surah ${surah.surahNumber} expected ${surah.ayahCount} ayahs, '
+            'got ${surahAyahs.length}.',
+          );
+        }
 
-    final ayahMaps = surahAyahs.map((ayah) {
-      return <String, dynamic>{
-        'number': runningAyahNumber++,
-        'text': ayah.textArabic,
-        'numberInSurah': ayah.ayahNumber,
-        'juz': ayah.juzNumber,
-        'en_translation': ayah.textEnglish,
-        'tr_translation': ayah.textTurkish,
-      };
-    }).toList(growable: false);
+        final ayahMaps = surahAyahs
+            .map((ayah) {
+              return <String, dynamic>{
+                'number': runningAyahNumber++,
+                'text': ayah.textArabic,
+                'numberInSurah': ayah.ayahNumber,
+                'juz': ayah.juzNumber,
+                'en_translation': ayah.textEnglish,
+                'tr_translation': ayah.textTurkish,
+              };
+            })
+            .toList(growable: false);
 
-    return <String, dynamic>{
-      'number': surah.surahNumber,
-      'name': surah.nameArabic,
-      'englishName': surah.transliteration,
-      'englishNameTranslation': surah.nameEnglish,
-      'revelationType': surah.revelationType,
-      'ayahs': ayahMaps,
-    };
-  }).toList(growable: false);
+        return <String, dynamic>{
+          'number': surah.surahNumber,
+          'name': surah.nameArabic,
+          'englishName': surah.transliteration,
+          'englishNameTranslation': surah.nameEnglish,
+          'revelationType': surah.revelationType,
+          'ayahs': ayahMaps,
+        };
+      })
+      .toList(growable: false);
 }
 
 List<_SurahSeedRow> _parseSurahSeedRows(String seedSql) {
-  return _surahPattern.allMatches(seedSql).map((match) {
-    return _SurahSeedRow(
-      surahNumber: int.parse(match.group(1)!),
-      nameArabic: _unescapeSql(match.group(2)!),
-      nameEnglish: _unescapeSql(match.group(4)!),
-      transliteration: _unescapeSql(match.group(5)!),
-      ayahCount: int.parse(match.group(6)!),
-      revelationType: _unescapeSql(match.group(7)!),
-    );
-  }).toList(growable: false)
+  return _surahPattern
+      .allMatches(seedSql)
+      .map((match) {
+        return _SurahSeedRow(
+          surahNumber: int.parse(match.group(1)!),
+          nameArabic: _unescapeSql(match.group(2)!),
+          nameEnglish: _unescapeSql(match.group(4)!),
+          transliteration: _unescapeSql(match.group(5)!),
+          ayahCount: int.parse(match.group(6)!),
+          revelationType: _unescapeSql(match.group(7)!),
+        );
+      })
+      .toList(growable: false)
     ..sort((a, b) => a.surahNumber.compareTo(b.surahNumber));
 }
 
 List<_AyahSeedRow> _parseAyahSeedRows(String seedSql) {
-  return _ayahPattern.allMatches(seedSql).map((match) {
-    final surahNumber = int.parse(match.group(8)!);
-    return _AyahSeedRow(
-      surahNumber: surahNumber,
-      ayahNumber: int.parse(match.group(1)!),
-      juzNumber: int.parse(match.group(2)!),
-      textArabic: _unescapeSql(match.group(3)!),
-      textTurkish: _unescapeSql(match.group(4)!),
-      textEnglish: _unescapeSql(match.group(5)!),
-    );
-  }).toList(growable: false)
-    ..sort((a, b) {
-      final surahOrder = a.surahNumber.compareTo(b.surahNumber);
-      if (surahOrder != 0) {
-        return surahOrder;
-      }
-      return a.ayahNumber.compareTo(b.ayahNumber);
-    });
+  final rows = <_AyahSeedRow>[
+    ..._batchedAyahPattern.allMatches(seedSql).map((match) {
+      return _AyahSeedRow(
+        surahNumber: int.parse(match.group(1)!),
+        ayahNumber: int.parse(match.group(2)!),
+        juzNumber: int.parse(match.group(3)!),
+        textArabic: _unescapeSql(match.group(4)!),
+        textTurkish: _unescapeSql(match.group(5)!),
+        textEnglish: _unescapeSql(match.group(6)!),
+      );
+    }),
+    ..._ayahPattern.allMatches(seedSql).map((match) {
+      final surahNumber = int.parse(match.group(8)!);
+      return _AyahSeedRow(
+        surahNumber: surahNumber,
+        ayahNumber: int.parse(match.group(1)!),
+        juzNumber: int.parse(match.group(2)!),
+        textArabic: _unescapeSql(match.group(3)!),
+        textTurkish: _unescapeSql(match.group(4)!),
+        textEnglish: _unescapeSql(match.group(5)!),
+      );
+    }),
+  ];
+  rows.sort((a, b) {
+    final surahOrder = a.surahNumber.compareTo(b.surahNumber);
+    if (surahOrder != 0) {
+      return surahOrder;
+    }
+    return a.ayahNumber.compareTo(b.ayahNumber);
+  });
+  return rows;
 }
 
 String _unescapeSql(String value) => value.replaceAll("''", "'");

@@ -50,7 +50,21 @@ void main() {
         ),
       );
       expect(schema, contains('display_date date not null,'));
+      expect(schema, contains('source text not null,'));
+      expect(
+        schema,
+        contains(
+          'alter table public.daily_content\nadd column if not exists source text;',
+        ),
+      );
       expect(schema, contains('verified_at timestamptz not null,'));
+      expect(
+        schema,
+        contains(
+          'update public.daily_content\n'
+          'set verified_at = coalesce(verified_at, created_at, timezone(\'utc\', now()))',
+        ),
+      );
       expect(
         schema,
         contains(
@@ -110,6 +124,10 @@ void main() {
       );
       expect(
         schema,
+        contains("set source = 'legacy://sirat-i-nur/pre-supabase-content'"),
+      );
+      expect(
+        schema,
         contains(
           'alter table public.education_topics\nadd column if not exists verified_at timestamptz;',
         ),
@@ -139,7 +157,31 @@ void main() {
       expect(
         schema,
         contains(
+          'alter table public.duas\nadd column if not exists source text;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
           'alter table public.asma_ul_husna\nadd column if not exists storage_path text;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.asma_ul_husna\nadd column if not exists source text;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.quran_surahs\nadd column if not exists source text;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.quran_ayahs\nadd column if not exists source text;',
         ),
       );
       expect(schema, contains('surah_number smallint'));
@@ -156,6 +198,12 @@ void main() {
         schema,
         contains(
           'alter table public.tafsir_entries\nalter column source_license set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.tafsir_entries\nadd column if not exists source_license text;',
         ),
       );
       expect(
@@ -184,6 +232,12 @@ void main() {
         schema,
         contains(
           'alter table public.hadiths\nalter column source_license set not null;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.hadiths\nadd column if not exists source_license text;',
         ),
       );
       expect(
@@ -233,6 +287,12 @@ void main() {
         schema,
         contains(
           'create unique index if not exists audio_files_quran_surah_unique_idx',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'alter table public.audio_files\nadd column if not exists source text;',
         ),
       );
       expect(schema, contains('verified_at timestamptz not null'));

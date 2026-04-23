@@ -509,10 +509,7 @@ class TafsirLocalService {
       'language': 'English',
     },
     {'id': 'en.maarif', 'name': "Ma'arif al-Qur'an", 'language': 'English'},
-    {'id': 'en.tazkir', 'name': 'Tazkirul Quran', 'language': 'English'},
-    {'id': 'ar.muyassar', 'name': 'Tafsir Muyassar', 'language': 'Arabic'},
-    {'id': 'ar.wasit', 'name': 'Al-Tafsir al-Wasit', 'language': 'Arabic'},
-    {'id': 'ar.ibn_kathir', 'name': 'Tafsir Ibn Kathir', 'language': 'Arabic'},
+    {'id': 'ar.baghawi', 'name': 'Tafseer Al-Baghawi', 'language': 'Arabic'},
   ];
 }
 

@@ -47,6 +47,7 @@ void main() {
       expect(readme, contains('.\\tool\\apply_supabase_content_bundle.ps1'));
       expect(readme, contains('dart run tool/generate_hadith_seed.dart'));
       expect(readme, contains('dart run tool/generate_tafsir_seed.dart'));
+      expect(readme, contains('dart run tool/generate_asma_seed.dart'));
       expect(readme, contains('content_hadith_manifest.json'));
       expect(readme, contains('content_tafsir_manifest.json'));
       expect(readme, contains('at least 100 verified rows per collection'));
@@ -55,7 +56,10 @@ void main() {
       expect(readme, contains('content_seed_hadith.sql'));
       expect(readme, contains('content_seed_tafsir.sql'));
       expect(readme, contains('content_seed_duas.sql'));
+      expect(readme, contains('content_seed_education.sql'));
+      expect(readme, contains('content_seed_asma_ul_husna.sql'));
       expect(readme, contains('SUPABASE_DB_URL'));
+      expect(readme, contains('tool/apply_supabase_sql_file.cjs'));
       expect(readme, contains('build/supabase_content_apply_summary.json'));
       expect(readme, contains('files_applied'));
       expect(
@@ -121,7 +125,10 @@ void main() {
     });
 
     test('documents the Appium runtime smoke release gate', () {
-      expect(readme, contains('.\\tool\\appium_runtime_smoke.ps1 -BuildMode release'));
+      expect(
+        readme,
+        contains('.\\tool\\appium_runtime_smoke.ps1 -BuildMode release'),
+      );
       expect(readme, contains('appium-runtime-smoke-summary.json'));
       expect(readme, contains('Android Settings'));
       expect(

@@ -4,6 +4,7 @@ import 'dart:io';
 const String _defaultManifestPath = 'content_tafsir_manifest.json';
 const String _defaultOutputPath = 'content_seed_tafsir.sql';
 const int expectedTafsirAyahCount = 6236;
+const int _seedInsertBatchSize = 400;
 const Set<String> _approvedTafsirSourceHosts = {
   'quran.com',
   'quran.gov.sa',
@@ -331,16 +332,28 @@ String buildTafsirSeedSql(Iterable<VerifiedTafsirEntry> entries) {
       approvedHosts: _approvedTafsirSourceHosts,
       contentType: 'tafsir',
     );
+  }
+
+  for (var start = 0; start < rows.length; start += _seedInsertBatchSize) {
+    final batch = rows
+        .skip(start)
+        .take(_seedInsertBatchSize)
+        .toList(growable: false);
     buffer
       ..writeln('INSERT INTO public.tafsir_entries (')
       ..writeln(
         '  surah_number, ayah_number, tafsir_source, language, tafsir_text, source, source_license, verified_at',
       )
-      ..writeln(') VALUES (')
-      ..writeln(
-        "  ${entry.surahNumber}, ${entry.ayahNumber}, '${_escapeSql(entry.tafsirSource)}', '${_escapeSql(entry.language)}', '${_escapeSql(entry.tafsirText)}', '${_escapeSql(entry.source)}', '${_escapeSql(entry.sourceLicense)}', TIMESTAMPTZ '${entry.verifiedAt.toIso8601String()}'",
-      )
-      ..writeln(') ON CONFLICT (surah_number, ayah_number, tafsir_source)')
+      ..writeln(') VALUES');
+
+    for (var index = 0; index < batch.length; index++) {
+      final entry = batch[index];
+      final isLast = index == batch.length - 1;
+      buffer.writeln('${_tafsirValuesSql(entry)}${isLast ? '' : ','}');
+    }
+
+    buffer
+      ..writeln('ON CONFLICT (surah_number, ayah_number, tafsir_source)')
       ..writeln('DO UPDATE SET')
       ..writeln('  language = EXCLUDED.language,')
       ..writeln('  tafsir_text = EXCLUDED.tafsir_text,')
@@ -351,6 +364,10 @@ String buildTafsirSeedSql(Iterable<VerifiedTafsirEntry> entries) {
   }
 
   return buffer.toString();
+}
+
+String _tafsirValuesSql(VerifiedTafsirEntry entry) {
+  return "  (${entry.surahNumber}, ${entry.ayahNumber}, '${_escapeSql(entry.tafsirSource)}', '${_escapeSql(entry.language)}', '${_escapeSql(entry.tafsirText)}', '${_escapeSql(entry.source)}', '${_escapeSql(entry.sourceLicense)}', TIMESTAMPTZ '${entry.verifiedAt.toIso8601String()}')";
 }
 
 void _validateApprovedSource(

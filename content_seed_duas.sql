@@ -16,7 +16,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 2:201',
+  'https://quran.com/2/201',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,
@@ -46,7 +46,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 2:286',
+  'https://quran.com/2/286',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,
@@ -76,7 +76,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 3:8',
+  'https://quran.com/3/8',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,
@@ -106,7 +106,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 14:40',
+  'https://quran.com/14/40',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,
@@ -136,7 +136,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 17:24',
+  'https://quran.com/17/24',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,
@@ -166,7 +166,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 20:114',
+  'https://quran.com/20/114',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,
@@ -196,7 +196,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 23:118',
+  'https://quran.com/23/118',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,
@@ -226,7 +226,7 @@ INSERT INTO public.duas (
   NULL,
   NULL,
   'quranic_dua',
-  'Quran 25:74',
+  'https://quran.com/25/74',
   TIMESTAMPTZ '2026-04-17T00:00:00Z'
 ) ON CONFLICT (id) DO UPDATE SET
   title_tr = EXCLUDED.title_tr,

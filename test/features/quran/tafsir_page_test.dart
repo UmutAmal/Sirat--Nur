@@ -41,6 +41,10 @@ void main() {
   test('tafsir service canonicalizes only verified source aliases', () {
     expect(TafsirLocalService.defaultTafsirSourceId, 'en.ibn_kathir');
     expect(
+      TafsirLocalService.availableTafsirs.map((tafsir) => tafsir['id']),
+      <String?>['en.ibn_kathir', 'en.maarif', 'ar.baghawi'],
+    );
+    expect(
       TafsirLocalService.canonicalTafsirSource('en.sahih'),
       'en.ibn_kathir',
     );

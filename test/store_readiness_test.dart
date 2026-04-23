@@ -30,6 +30,7 @@ void main() {
         'tool/build_store_appbundle.ps1',
         'tool/import_release_environment.ps1',
         'tool/apply_supabase_content_bundle.ps1',
+        'tool/apply_supabase_sql_file.cjs',
         'tool/quran_audio_distribution_plan.dart',
         'tool/upload_quran_audio_distribution.ps1',
         'infra/cloudflare/places-proxy/README.md',
@@ -147,6 +148,9 @@ void main() {
       final supabaseApplyScript = File(
         'tool/apply_supabase_content_bundle.ps1',
       ).readAsStringSync();
+      final supabaseSqlRunner = File(
+        'tool/apply_supabase_sql_file.cjs',
+      ).readAsStringSync();
 
       expect(script, contains('import_release_environment.ps1'));
       expect(script, contains('Initialize-ReleaseEnvironment'));
@@ -200,6 +204,8 @@ void main() {
       expect(script, contains('content_seed_hadith.sql'));
       expect(script, contains('content_seed_tafsir.sql'));
       expect(script, contains('content_seed_duas.sql'));
+      expect(script, contains('content_seed_education.sql'));
+      expect(script, contains('content_seed_asma_ul_husna.sql'));
       expect(
         script,
         contains("'storeFile', 'storePassword', 'keyAlias', 'keyPassword'"),
@@ -210,10 +216,11 @@ void main() {
       );
       expect(script, contains('empty or missing'));
       expect(script, contains('missing_optional_files'));
-      expect(script, contains('verified dua seed'));
+      expect(script, contains('verified dua/education/Asma seed'));
       expect(script, contains('Quranic dua seed is complete'));
       expect(script, contains('duaInsertCount -eq 8'));
       expect(script, contains('quranicDuaCategoryCount -eq 8'));
+      expect(script, contains('approvedDuaSourceCount -eq 8'));
       expect(script, contains('hadith seed, and tafsir seed'));
       expect(script, contains('quran_surahs'));
       expect(script, contains('tafsir_entries'));
@@ -227,6 +234,9 @@ void main() {
       expect(script, contains('source=not.is.null&source=neq.'));
       expect(script, contains('source_license=neq.'));
       expect(script, contains('storage_path=neq.'));
+      expect(script, contains(r'return $rows.ToArray()'));
+      expect(script, contains(r'$sourceHost'));
+      expect(script, contains('api[_-]?key|token|secret|password'));
       expect(
         script,
         contains(
@@ -288,11 +298,13 @@ void main() {
         supabaseApplyScript,
         contains('Loaded release environment file(s):'),
       );
-      expect(supabaseApplyScript, contains('npx --yes supabase db query'));
+      expect(supabaseApplyScript, contains('Ensure-NodePgRunner'));
+      expect(supabaseApplyScript, contains('tool/apply_supabase_sql_file.cjs'));
+      expect(supabaseApplyScript, contains('pg@8.13.3'));
       expect(supabaseApplyScript, contains(r'if ($LASTEXITCODE -ne 0)'));
       expect(
         supabaseApplyScript,
-        contains(r'Supabase SQL apply failed for $relativePath'),
+        contains(r'Supabase SQL apply failed for $RelativePath'),
       );
       expect(
         supabaseApplyScript,
@@ -301,8 +313,13 @@ void main() {
       expect(supabaseApplyScript, contains('content_schema.sql'));
       expect(supabaseApplyScript, contains('content_seed_quran_ayahs.sql'));
       expect(supabaseApplyScript, contains('content_seed_duas.sql'));
+      expect(supabaseApplyScript, contains('content_seed_education.sql'));
+      expect(supabaseApplyScript, contains('content_seed_asma_ul_husna.sql'));
       expect(supabaseApplyScript, contains('content_seed_hadith.sql'));
       expect(supabaseApplyScript, contains('content_seed_tafsir.sql'));
+      expect(supabaseSqlRunner, contains('function splitSqlStatements'));
+      expect(supabaseSqlRunner, contains('dollarTag'));
+      expect(supabaseSqlRunner, contains('statementIndex + 1'));
       expect(supabaseApplyScript, contains('SUPABASE_DB_URL'));
       expect(supabaseApplyScript, isNot(contains(r'$optionalSqlFiles')));
       expect(
@@ -311,6 +328,16 @@ void main() {
       );
       expect(
         supabaseApplyScript.indexOf("'content_seed_duas.sql'"),
+        lessThan(supabaseApplyScript.indexOf("'content_seed_education.sql'")),
+      );
+      expect(
+        supabaseApplyScript.indexOf("'content_seed_education.sql'"),
+        lessThan(
+          supabaseApplyScript.indexOf("'content_seed_asma_ul_husna.sql'"),
+        ),
+      );
+      expect(
+        supabaseApplyScript.indexOf("'content_seed_asma_ul_husna.sql'"),
         lessThan(supabaseApplyScript.indexOf("'seed.sql'")),
       );
     });

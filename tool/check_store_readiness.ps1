@@ -189,7 +189,7 @@ function Get-SupabaseRestRows {
     $offset += $pageSize
   }
 
-  return @($rows)
+  return $rows.ToArray()
 }
 
 $approvedStoreSourceHosts = @(
@@ -225,15 +225,18 @@ function Test-ApprovedStoreSourceUrl {
     $uri.Scheme -ne 'https' -or
     [string]::IsNullOrWhiteSpace($uri.Host) -or
     -not [string]::IsNullOrEmpty($uri.UserInfo) -or
-    -not [string]::IsNullOrEmpty($uri.Query) -or
     -not [string]::IsNullOrEmpty($uri.Fragment)
   ) {
     return $false
   }
 
-  $host = $uri.Host.ToLowerInvariant()
+  if ($uri.Query -match '(?i)(api[_-]?key|token|secret|password|signature|sig)=') {
+    return $false
+  }
+
+  $sourceHost = $uri.Host.ToLowerInvariant()
   foreach ($approvedHost in $ApprovedHosts) {
-    if ($host -eq $approvedHost -or $host.EndsWith(".$approvedHost")) {
+    if ($sourceHost -eq $approvedHost -or $sourceHost.EndsWith(".$approvedHost")) {
       return $true
     }
   }
@@ -587,18 +590,22 @@ try {
     $duaInsertCount = ([regex]::Matches($duaSeed, 'INSERT INTO public\.duas')).Count
     $duaConflictCount = ([regex]::Matches($duaSeed, 'ON CONFLICT \(id\) DO UPDATE SET')).Count
     $quranicDuaCategoryCount = ([regex]::Matches($duaSeed, "'quranic_dua'")).Count
+    $approvedDuaSourceCount = ([regex]::Matches($duaSeed, "'https://quran\.com/\d+/\d+'")).Count
     $verifiedDuaTimestampCount = ([regex]::Matches($duaSeed, "TIMESTAMPTZ '\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z'")).Count
     if (
       $duaInsertCount -eq 8 -and
       $duaConflictCount -eq 8 -and
       $quranicDuaCategoryCount -eq 8 -and
+      $approvedDuaSourceCount -eq 8 -and
       $verifiedDuaTimestampCount -eq 8 -and
       -not $duaSeed.Contains('http://') -and
-      -not $duaSeed.Contains('https://')
+      -not $duaSeed.Contains('download.quranicaudio.com') -and
+      -not $duaSeed.Contains('server7.mp3quran.net') -and
+      -not $duaSeed.Contains('cdn.example.com')
     ) {
-      Add-Pass 'Quranic dua seed is complete: 8 verified storage-neutral upserts.'
+      Add-Pass 'Quranic dua seed is complete: 8 verified storage-neutral upserts with approved source URLs.'
     } else {
-      Add-Failure "Quranic dua seed is incomplete or contains external URLs: inserts=$duaInsertCount, conflicts=$duaConflictCount, categories=$quranicDuaCategoryCount, verified_at=$verifiedDuaTimestampCount."
+      Add-Failure "Quranic dua seed is incomplete or contains unapproved external URLs: inserts=$duaInsertCount, conflicts=$duaConflictCount, categories=$quranicDuaCategoryCount, approved_sources=$approvedDuaSourceCount, verified_at=$verifiedDuaTimestampCount."
     }
   } else {
     Add-Failure 'Quranic dua seed is missing: content_seed_duas.sql.'
@@ -637,6 +644,8 @@ try {
         'content_seed_quran_ayahs.sql',
         'content_seed_quran_audio_storage.sql',
         'content_seed_duas.sql',
+        'content_seed_education.sql',
+        'content_seed_asma_ul_husna.sql',
         'seed.sql',
         'content_seed_hadith.sql',
         'content_seed_tafsir.sql'
@@ -665,9 +674,9 @@ try {
       if ($supabaseApplySummary.dry_run -eq $true) {
         Add-Failure 'Supabase content apply summary is a dry-run; run tool/apply_supabase_content_bundle.ps1 without -DryRun after applying production SQL.'
       } elseif (-not $appliedOrderIsValid) {
-        Add-Failure 'Supabase content apply summary order is invalid; schema, Quran surah/ayah seed, Quran audio seed, verified dua seed, core seed, hadith seed, and tafsir seed must be applied in order.'
+        Add-Failure 'Supabase content apply summary order is invalid; schema, Quran surah/ayah seed, Quran audio seed, verified dua/Asma seed, core seed, hadith seed, and tafsir seed must be applied in order.'
       } elseif ($missingAppliedFiles.Count -eq 0) {
-        Add-Pass 'Supabase content apply summary includes schema, Quran surah/ayah seed, Quran audio seed, verified dua seed, core seed, hadith seed, and tafsir seed.'
+        Add-Pass 'Supabase content apply summary includes schema, Quran surah/ayah seed, Quran audio seed, verified dua/education/Asma seed, core seed, hadith seed, and tafsir seed.'
       } else {
         Add-Failure "Supabase content apply summary is missing required applied files: $($missingAppliedFiles -join ', ')."
       }
@@ -724,7 +733,7 @@ try {
             -MinimumCount $check.minimum `
             -Description $check.description `
             -FilterQuery $check.filter `
-            -ApprovedHosts $check.approvedSourceHosts
+            -ApprovedHosts ([string[]]$check.approvedSourceHosts)
         }
       }
     }

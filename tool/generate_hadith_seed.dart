@@ -9,6 +9,7 @@ const String _defaultOutputPath = 'content_seed_hadith.sql';
 const Set<String> supportedHadithCollections = supportedHadithCollectionIds;
 const int minimumHadithRowsPerCollection =
     minimumVerifiedHadithRowsPerCollection;
+const int _seedInsertBatchSize = 400;
 
 final RegExp _identifierPattern = RegExp(r'^[a-z0-9][a-z0-9_-]*$');
 const Set<String> _approvedHadithSourceHosts = {'sunnah.com'};
@@ -214,16 +215,28 @@ String buildHadithSeedSql(Iterable<VerifiedHadithEntry> entries) {
       approvedHosts: _approvedHadithSourceHosts,
       contentType: 'hadith',
     );
+  }
+
+  for (var start = 0; start < rows.length; start += _seedInsertBatchSize) {
+    final batch = rows
+        .skip(start)
+        .take(_seedInsertBatchSize)
+        .toList(growable: false);
     buffer
       ..writeln('INSERT INTO public.hadiths (')
       ..writeln(
         '  collection_id, book, hadith_number, text_ar, text_tr, text_en, narrator, grade, source, source_license, verified_at',
       )
-      ..writeln(') VALUES (')
-      ..writeln(
-        "  '${_escapeSql(entry.collectionId)}', '${_escapeSql(entry.book)}', ${entry.hadithNumber}, '${_escapeSql(entry.textAr)}', ${_nullableSql(entry.textTr)}, ${_nullableSql(entry.textEn)}, ${_nullableSql(entry.narrator)}, ${_nullableSql(entry.grade)}, '${_escapeSql(entry.source)}', '${_escapeSql(entry.sourceLicense)}', TIMESTAMPTZ '${entry.verifiedAt.toIso8601String()}'",
-      )
-      ..writeln(') ON CONFLICT (collection_id, hadith_number)')
+      ..writeln(') VALUES');
+
+    for (var index = 0; index < batch.length; index++) {
+      final entry = batch[index];
+      final isLast = index == batch.length - 1;
+      buffer.writeln('${_hadithValuesSql(entry)}${isLast ? '' : ','}');
+    }
+
+    buffer
+      ..writeln('ON CONFLICT (collection_id, hadith_number)')
       ..writeln('DO UPDATE SET')
       ..writeln('  book = EXCLUDED.book,')
       ..writeln('  text_ar = EXCLUDED.text_ar,')
@@ -238,6 +251,10 @@ String buildHadithSeedSql(Iterable<VerifiedHadithEntry> entries) {
   }
 
   return buffer.toString();
+}
+
+String _hadithValuesSql(VerifiedHadithEntry entry) {
+  return "  ('${_escapeSql(entry.collectionId)}', '${_escapeSql(entry.book)}', ${entry.hadithNumber}, '${_escapeSql(entry.textAr)}', ${_nullableSql(entry.textTr)}, ${_nullableSql(entry.textEn)}, ${_nullableSql(entry.narrator)}, ${_nullableSql(entry.grade)}, '${_escapeSql(entry.source)}', '${_escapeSql(entry.sourceLicense)}', TIMESTAMPTZ '${entry.verifiedAt.toIso8601String()}')";
 }
 
 void _validateApprovedSource(

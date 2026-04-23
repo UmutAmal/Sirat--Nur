@@ -543,6 +543,13 @@ String _translateDuaSource(String source, AppLocalizations l10n) {
     return '${l10n.quran} ${source.substring('Quran '.length)}';
   }
 
+  final quranUrlMatch = RegExp(
+    r'^https://(?:www\.)?quran\.com/(\d+)/(\d+)/?$',
+  ).firstMatch(source.trim());
+  if (quranUrlMatch != null) {
+    return '${l10n.quran} ${quranUrlMatch.group(1)}:${quranUrlMatch.group(2)}';
+  }
+
   return source
       .replaceAll('Buhari', l10n.duaSourceBukhari)
       .replaceAll('Müslim', l10n.duaSourceMuslim)

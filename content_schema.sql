@@ -9,13 +9,28 @@ create table if not exists public.daily_content (
   content_tr text,
   content_en text,
   reference text not null,
+  source text not null,
   display_date date not null,
   verified_at timestamptz not null,
   created_at timestamptz not null default timezone('utc', now())
 );
 
 alter table public.daily_content
+add column if not exists source text;
+
+alter table public.daily_content
 add column if not exists verified_at timestamptz;
+
+update public.daily_content
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.daily_content
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
+
+alter table public.daily_content
+alter column source set not null;
 
 alter table public.daily_content
 alter column verified_at set not null;
@@ -84,6 +99,14 @@ add column if not exists source text;
 alter table public.education_categories
 add column if not exists verified_at timestamptz;
 
+update public.education_categories
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.education_categories
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
+
 alter table public.education_categories
 drop constraint if exists education_categories_source_nonempty;
 
@@ -126,6 +149,14 @@ add column if not exists source text;
 
 alter table public.education_topics
 add column if not exists verified_at timestamptz;
+
+update public.education_topics
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.education_topics
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
 
 alter table public.education_topics
 drop constraint if exists education_topics_source_nonempty;
@@ -171,6 +202,26 @@ create table if not exists public.duas (
 alter table public.duas
 add column if not exists storage_path text;
 
+alter table public.duas
+add column if not exists source text;
+
+alter table public.duas
+add column if not exists verified_at timestamptz;
+
+update public.duas
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.duas
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
+
+alter table public.duas
+alter column source set not null;
+
+alter table public.duas
+alter column verified_at set not null;
+
 create index if not exists duas_category_idx on public.duas (category);
 
 alter table public.duas enable row level security;
@@ -197,6 +248,26 @@ create table if not exists public.asma_ul_husna (
 alter table public.asma_ul_husna
 add column if not exists storage_path text;
 
+alter table public.asma_ul_husna
+add column if not exists source text;
+
+alter table public.asma_ul_husna
+add column if not exists verified_at timestamptz;
+
+update public.asma_ul_husna
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.asma_ul_husna
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
+
+alter table public.asma_ul_husna
+alter column source set not null;
+
+alter table public.asma_ul_husna
+alter column verified_at set not null;
+
 alter table public.asma_ul_husna enable row level security;
 
 drop policy if exists "Public read asma ul husna" on public.asma_ul_husna;
@@ -221,6 +292,26 @@ create table if not exists public.quran_surahs (
 
 create index if not exists quran_surahs_number_idx
 on public.quran_surahs (surah_number);
+
+alter table public.quran_surahs
+add column if not exists source text;
+
+alter table public.quran_surahs
+add column if not exists verified_at timestamptz;
+
+update public.quran_surahs
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.quran_surahs
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
+
+alter table public.quran_surahs
+alter column source set not null;
+
+alter table public.quran_surahs
+alter column verified_at set not null;
 
 alter table public.quran_surahs enable row level security;
 
@@ -248,6 +339,26 @@ create table if not exists public.quran_ayahs (
 alter table public.quran_ayahs
 add column if not exists juz_number smallint;
 
+alter table public.quran_ayahs
+add column if not exists source text;
+
+alter table public.quran_ayahs
+add column if not exists verified_at timestamptz;
+
+update public.quran_ayahs
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.quran_ayahs
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
+
+alter table public.quran_ayahs
+alter column source set not null;
+
+alter table public.quran_ayahs
+alter column verified_at set not null;
+
 create index if not exists quran_ayahs_surah_number_idx
 on public.quran_ayahs (surah_id, ayah_number);
 
@@ -274,14 +385,41 @@ create table if not exists public.tafsir_entries (
 );
 
 alter table public.tafsir_entries
+add column if not exists source text;
+
+alter table public.tafsir_entries
+add column if not exists source_license text;
+
+alter table public.tafsir_entries
+add column if not exists verified_at timestamptz;
+
+alter table public.tafsir_entries
 drop constraint if exists tafsir_entries_source_license_nonempty;
+
+update public.tafsir_entries
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.tafsir_entries
+set source_license = 'Quran.com Terms and Conditions - personal, non-commercial, informational use only (https://quran.com/terms-and-conditions)'
+where source_license is null or length(trim(source_license)) = 0;
+
+update public.tafsir_entries
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
 
 alter table public.tafsir_entries
 add constraint tafsir_entries_source_license_nonempty
 check (length(trim(source_license)) > 0);
 
 alter table public.tafsir_entries
+alter column source set not null;
+
+alter table public.tafsir_entries
 alter column source_license set not null;
+
+alter table public.tafsir_entries
+alter column verified_at set not null;
 
 create index if not exists tafsir_entries_source_surah_ayah_idx
 on public.tafsir_entries (tafsir_source, surah_number, ayah_number);
@@ -312,14 +450,41 @@ create table if not exists public.hadiths (
 );
 
 alter table public.hadiths
+add column if not exists source text;
+
+alter table public.hadiths
+add column if not exists source_license text;
+
+alter table public.hadiths
+add column if not exists verified_at timestamptz;
+
+alter table public.hadiths
 drop constraint if exists hadiths_source_license_nonempty;
+
+update public.hadiths
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.hadiths
+set source_license = 'Sunnah.com developers and open platform data access notice (https://sunnah.com/developers)'
+where source_license is null or length(trim(source_license)) = 0;
+
+update public.hadiths
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
 
 alter table public.hadiths
 add constraint hadiths_source_license_nonempty
 check (length(trim(source_license)) > 0);
 
 alter table public.hadiths
+alter column source set not null;
+
+alter table public.hadiths
 alter column source_license set not null;
+
+alter table public.hadiths
+alter column verified_at set not null;
 
 create index if not exists hadiths_collection_number_idx
 on public.hadiths (collection_id, hadith_number);
@@ -349,6 +514,26 @@ create table if not exists public.audio_files (
 
 alter table public.audio_files
 add column if not exists surah_number smallint;
+
+alter table public.audio_files
+add column if not exists source text;
+
+alter table public.audio_files
+add column if not exists verified_at timestamptz;
+
+update public.audio_files
+set source = 'legacy://sirat-i-nur/pre-supabase-content'
+where source is null or length(trim(source)) = 0;
+
+update public.audio_files
+set verified_at = coalesce(verified_at, created_at, timezone('utc', now()))
+where verified_at is null;
+
+alter table public.audio_files
+alter column source set not null;
+
+alter table public.audio_files
+alter column verified_at set not null;
 
 create index if not exists audio_files_type_idx
 on public.audio_files (type);

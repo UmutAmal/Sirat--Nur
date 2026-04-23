@@ -102,9 +102,12 @@ dart run tool/generate_hadith_seed.dart \
 dart run tool/generate_tafsir_seed.dart \
   --manifest=content_tafsir_manifest.json \
   --output=content_seed_tafsir.sql
+
+dart run tool/generate_asma_seed.dart \
+  --output=content_seed_asma_ul_husna.sql
 ```
 
-5. Apply `content_schema.sql`, Quran surah/ayah seeds, `content_seed_quran_audio_storage.sql`, the Quran-verified `content_seed_duas.sql`, `seed.sql`, `content_seed_hadith.sql`, and `content_seed_tafsir.sql` to production Supabase with the tracked apply gate from a release shell or CI job where `SUPABASE_DB_URL` is injected as a secure secret. The generators reject incomplete or failed manifests, so a partial download or partial religious corpus cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
+5. Apply `content_schema.sql`, Quran surah/ayah seeds, `content_seed_quran_audio_storage.sql`, the Quran-verified `content_seed_duas.sql`, the sourced `content_seed_education.sql`, TDV-aligned `content_seed_asma_ul_husna.sql`, `seed.sql`, `content_seed_hadith.sql`, and `content_seed_tafsir.sql` to production Supabase with the tracked apply gate from a release shell or CI job where `SUPABASE_DB_URL` is injected as a secure secret. The apply gate uses the Node `pg` runner in `tool/apply_supabase_sql_file.cjs` for multi-command SQL files and prepares its transient dependency under `build/`. The generators reject incomplete or failed manifests, so a partial download or partial religious corpus cannot silently become a database seed. `--allow-partial` is only for local smoke tests, may only write under `build/`, and must not be used for production audio seeding.
 ```powershell
 .\tool\apply_supabase_content_bundle.ps1 -DryRun
 .\tool\apply_supabase_content_bundle.ps1

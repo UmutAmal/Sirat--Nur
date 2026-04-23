@@ -17544,3 +17544,47 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan bir sonraki kanitli risk halkasinda Appium veya statik tarama ile yeni runtime/ops riski izole etmeye devam et.
+
+## 2026-04-23 TUR-422 - Verified Religious Content Bundle Applied To Supabase
+
+### MASTER Karari
+- Risk: Store-ready zincirinde verified dini icerik seedleri ve real Supabase apply kaniti eksik kalirsa uygulama kodu yesil olsa bile production verisi eksik, eski veya dogrulanmamis kalabilirdi.
+- Kanit:
+  - Onceki blocker kaydi TUR-420, `content_hadith_manifest.json`, `content_tafsir_manifest.json`, `content_seed_hadith.sql`, `content_seed_tafsir.sql` ve real `SUPABASE_DB_URL` apply kanitini eksik olarak isaretlemisti.
+  - Bu tur sonunda `tool/apply_supabase_content_bundle.ps1` real calisti ve `Supabase content apply complete: applied=10` sonucunu uretti.
+  - `tool/check_store_readiness.ps1` Supabase tablolarinda Quran surah 114, ayah 6236, tafsir 18708/6236, hadith 1755/600, Asma 99/99, dua 8/8, education category 7/topic 25, live TV 2/2 ve Quran audio storage 684/684 kanitlarini dogruladi.
+  - Aynı readiness kapisi `flutter analyze` PASS ve full `flutter test` PASS, 654/654 sonucuyla tamamlandi.
+- Kullanici etkisi: Uygulama dini icerik tarafinda uydurma/placeholder kalintilarina yaslanmadan, kaynagi ve verified_at alani olan production seed zinciriyle store artifact uretebilir hale geldi.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P1 release content blocker).
+- Rollback plani: Bu turdaki seed/generator/schema/test/doc dosyalari tek commit olarak geri alinabilir; Supabase icin onceki bundle yeniden uygulanabilir veya tablolar seed migration oncesi yedekten restore edilebilir.
+
+### BUILDER Degisikligi
+- Asma-ul-Husna data zinciri saf 99 isim kaynagi ve Supabase/audio helper ayrimi yapacak sekilde duzenlendi; `content_seed_asma_ul_husna.sql` uretildi.
+- Hadith ve tafsir manifestleri approved kaynaklardan uretilip production seed SQL dosyalarina baglandi.
+- Quran ayah, tafsir ve hadith seedleri batched upsert formatina tasindi; cok buyuk tekil insert/apply riskleri azaltilde.
+- Quran translation seed/asset hattinda bilinen metin bicim bozulmalari normalize edildi.
+- Education seed 7 kategori ve 25 kaynakli topic ile placeholder/typo kalintilarindan arindirildi.
+- Dua source alanlari raw CDN yerine approved Quran.com provenance URL'lerine tasindi; UI bunlari kullaniciya temiz `Quran surah:ayah` biciminde gosteriyor.
+- Supabase apply script'i transient Node `pg` runner ile gercek DB apply yapacak ve tek/dollar-quoted SQL bloklarini guvenli bolecek sekilde sertlestirildi.
+- Store readiness script'i real Supabase row donuslerini, approved source host/query denetimini ve apply-summary beklenen dosyalarini dogru yorumlayacak sekilde guncellendi.
+
+### TESTER Degisikligi
+- Yeni/odak testler eklendi: Asma seed, education seed, verified hadith manifest, verified tafsir manifest, Quran ayah seed, bundled Quran asset, dua data/source, schema, seed SQL, README operasyonel dokuman ve store readiness guard'lari.
+- Targeted test gruplari yesil calisti.
+- Real Supabase apply komutu: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\apply_supabase_content_bundle.ps1` PASS, `applied=10`.
+- Store readiness komutu: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\check_store_readiness.ps1` PASS.
+
+### Dogrulama Sonucu
+- `flutter doctor -v`: Android toolchain, connected Windows/Edge targets ve network kaynaklari PASS; Chrome ve Visual Studio eksikleri Android release hatti icin nonkritik.
+- `flutter analyze`: PASS.
+- `flutter test --reporter compact`: PASS, 654/654.
+- Supabase real content apply: PASS, 10/10 dosya.
+- Store readiness: PASS; production store artifact uretimine bu makinede hazir.
+
+### Risk Degisimi
+- Verified religious content / production apply blocker: `20/25 -> 3/25`.
+- Buyuk SQL apply false-negative riski: `16/25 -> 3/25`.
+- Placeholder/legacy education/daily content riski: `16/25 -> 4/25`.
+
+### Sonraki Adim
+- Commit/push; ardindan yeni dongude prayer/notification, localization parity, Appium release smoke, audio storage dagitimi ve store listing/policy yuzeylerini yeniden tarayip siradaki en yuksek kanitli riski izole et.

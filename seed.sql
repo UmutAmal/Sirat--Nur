@@ -58,6 +58,11 @@ INSERT INTO public.live_tv_channels (
   muted_by_default = EXCLUDED.muted_by_default,
   sort_order = EXCLUDED.sort_order;
 
+UPDATE public.daily_content
+SET content_type = 'legacy_unverified_' || content_type
+WHERE source LIKE 'legacy://sirat-i-nur/%'
+  AND content_type IN ('ayat', 'hadith', 'dua');
+
 WITH daily_ayat_seed(surah_number, ayah_number, reference, display_date) AS (
   VALUES
     (2, 201, 'Al-Baqarah 2:201', CURRENT_DATE + INTERVAL '0 day'),
@@ -75,6 +80,7 @@ INSERT INTO public.daily_content (
   content_tr,
   content_en,
   reference,
+  source,
   display_date,
   verified_at
 )
@@ -84,6 +90,7 @@ SELECT
   ayah.text_tr,
   ayah.text_en,
   seed.reference,
+  ayah.source,
   seed.display_date::date,
   ayah.verified_at
 FROM daily_ayat_seed seed
@@ -98,4 +105,5 @@ ON CONFLICT (content_type, display_date) DO UPDATE SET
   content_tr = EXCLUDED.content_tr,
   content_en = EXCLUDED.content_en,
   reference = EXCLUDED.reference,
+  source = EXCLUDED.source,
   verified_at = EXCLUDED.verified_at;

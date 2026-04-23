@@ -17,6 +17,7 @@ void main() {
       );
       expect(seed, contains('ON CONFLICT (id) DO UPDATE SET'));
       expect(seed, contains('quranic_dua'));
+      expect(seed, contains('https://quran.com/2/201'));
       expect(seed, contains('setval('));
 
       for (final dua in dailyDuas) {
