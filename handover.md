@@ -17144,3 +17144,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan hadis runtime provider, Supabase config/default URL ve store-readiness external blocker taramasina devam et.
+
+## 2026-04-23 TUR-410 - Hadith Runtime Requires Approved Sunnah Sources
+
+### MASTER Karari
+- Risk: `lib/features/library/providers/hadith_provider.dart` runtime hadis normalizer'i `source` alaninda yalniz non-empty kontrol yapiyordu; generator allowlist'i bypass eden manuel Supabase satirlari verified hadis gibi gorunebilirdi.
+- Kanit: `resolveVerifiedHadithItems` once `source = _readText(row['source'])` ve `sourceLicense/verifiedAt` ile yetiniyordu. `test/features/library/hadith_provider_test.dart` valid fixture olarak `Verified hadith archive` gibi domain olmayan kaynak kullaniyordu.
+- Kullanici etkisi: Hadis metni izinli/dogrulanmis kaynak disindan gelirse uygulama bunu gated dataset icinde kabul edip kullaniciya dini icerik olarak sunabilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 religious content provenance runtime gate).
+- Rollback plani: `lib/features/library/providers/hadith_provider.dart`, `test/features/library/hadith_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Runtime hadis source allowlist'i HTTPS `sunnah.com` domaini ve alt domainleriyle sinirlandi.
+- `resolveVerifiedHadithItems` artik non-empty source yaninda approved source URL kontrolu de yapiyor.
+- HTTP, user-info, query ve fragment iceren source URL'leri reddediliyor.
+
+### TESTER Degisikligi
+- Hadis provider fixture'lari valid kaynak olarak `https://sunnah.com/bukhari/1` kullaniyor.
+- `https://example.com/hadith` kaynakli satirlar normalizer tarafindan yok sayiliyor.
+- Approved Sunnah/subdomain source URL'leri kabul ediliyor; HTTP, credential, query ve fragment iceren kaynaklar reddediliyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\features\library\hadith_provider_test.dart --reporter compact` PASS, 5/5.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 632/632.
+
+### Risk Degisimi
+- Hadith runtime unapproved-source risk: `15/25 -> 2/25`.
+- Kalan risk: Gercek hadis manifestleri ve Supabase apply kaniti halen operator/credential gerektirir; uygulama sahte veya izin disi kaynakli hadis satirlarini kabul etmeyecek.
+
+### Sonraki Adim
+- Commit/push; ardindan Supabase config/default URL ve store-readiness external blocker taramasina devam et.

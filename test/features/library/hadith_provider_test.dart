@@ -42,6 +42,12 @@ void main() {
             textAr: ' ',
             textTr: 'Missing Arabic must be ignored.',
           ),
+          _row(
+            collectionId: 'bukhari',
+            hadithNumber: 6,
+            source: 'https://example.com/hadith',
+            textTr: 'Unapproved source must be ignored.',
+          ),
         ],
         collectionId: 'bukhari',
         langCode: 'tr',
@@ -83,6 +89,24 @@ void main() {
       expect(items, hasLength(2));
       expect(items.first.translation, 'Verified English test translation.');
       expect(items.last.translation, 'Doğrulanmış Türkçe test çevirisi.');
+    });
+
+    test('trusts only approved HTTPS Sunnah source domains', () {
+      expect(isApprovedHadithSourceUrl('https://sunnah.com/bukhari/1'), isTrue);
+      expect(
+        isApprovedHadithSourceUrl('https://api.sunnah.com/v1/hadiths'),
+        isTrue,
+      );
+
+      for (final source in const [
+        'https://example.com/hadith',
+        'http://sunnah.com/bukhari/1',
+        'https://token@sunnah.com/bukhari/1',
+        'https://sunnah.com/bukhari/1?token=secret',
+        'https://sunnah.com/bukhari/1#fragment',
+      ]) {
+        expect(isApprovedHadithSourceUrl(source), isFalse, reason: source);
+      }
     });
 
     test('completeness guard requires every supported collection', () {
@@ -167,7 +191,7 @@ Map<String, dynamic> _row({
   String textAr = 'نص اختباري موثق',
   String? textTr = 'Doğrulanmış Türkçe test çevirisi.',
   String? textEn = 'Verified English test translation.',
-  String? source = 'Verified hadith archive',
+  String? source = 'https://sunnah.com/bukhari/1',
   String? sourceLicense = 'verified-open-license',
   String? verifiedAt = '2026-04-16T00:00:00Z',
 }) {

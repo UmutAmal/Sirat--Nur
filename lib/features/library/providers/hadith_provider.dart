@@ -38,6 +38,7 @@ const String _hadithSelectColumns =
     'collection_id, book, hadith_number, text_ar, text_tr, text_en, narrator, grade, source, source_license, verified_at';
 const int _hadithCompletenessProbeLimit =
     minimumVerifiedHadithRowsPerCollection;
+const Set<String> _approvedHadithSourceHosts = {'sunnah.com'};
 
 final verifiedHadithDatasetAvailabilityProvider = FutureProvider<bool>((
   ref,
@@ -175,6 +176,7 @@ List<HadithItem> resolveVerifiedHadithItems(
         arabic == null ||
         translation == null ||
         source == null ||
+        !isApprovedHadithSourceUrl(source) ||
         sourceLicense == null ||
         verifiedAt == null) {
       continue;
@@ -192,6 +194,23 @@ List<HadithItem> resolveVerifiedHadithItems(
 
   items.sort((left, right) => left.number.compareTo(right.number));
   return List.unmodifiable(items);
+}
+
+bool isApprovedHadithSourceUrl(String source) {
+  final uri = Uri.tryParse(source.trim());
+  if (uri == null ||
+      !uri.isScheme('https') ||
+      uri.host.trim().isEmpty ||
+      uri.userInfo.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment) {
+    return false;
+  }
+
+  final host = uri.host.toLowerCase();
+  return _approvedHadithSourceHosts.any(
+    (approvedHost) => host == approvedHost || host.endsWith('.$approvedHost'),
+  );
 }
 
 String? _readPreferredTranslation(Map<String, dynamic> row, String langCode) {
