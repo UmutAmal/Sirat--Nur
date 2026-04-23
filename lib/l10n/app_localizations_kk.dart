@@ -872,6 +872,11 @@ class AppLocalizationsKk extends AppLocalizations {
       'Қолмен реттелетін бұрыштар (институционалдық дереккөз жоқ)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName әдісі, пайдаланушы таңдаған $madhab Аср параметрі';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Бұлтқа негізделген';
 
   @override

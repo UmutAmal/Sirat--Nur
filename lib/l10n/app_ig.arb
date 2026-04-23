@@ -769,5 +769,16 @@
   "asmaMeaning96": "Onye Ebighị Ebi",
   "asmaMeaning97": "Onye nketa",
   "asmaMeaning98": "Nduzi kachasi ezi omume",
-  "asmaMeaning99": "Onye Nri"
+  "asmaMeaning99": "Onye Nri",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting"
 }

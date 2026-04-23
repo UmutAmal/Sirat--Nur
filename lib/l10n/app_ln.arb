@@ -769,5 +769,16 @@
   "asmaMeaning96": "Moto ya seko",
   "asmaMeaning97": "Mosangoli ya libula",
   "asmaMeaning98": "Motambwisi oyo eleki sembo",
-  "asmaMeaning99": "Mobɛli oyo"
+  "asmaMeaning99": "Mobɛli oyo",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} méthode na paramètre ya Asr oyo mosaleli aponaki {madhab}"
 }

@@ -873,6 +873,11 @@ class AppLocalizationsJv extends AppLocalizations {
       'Sudut khusus manual (ora ana sumber institusi)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Metode $sourceName nganggo setelan $madhab sing dipilih pangguna';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

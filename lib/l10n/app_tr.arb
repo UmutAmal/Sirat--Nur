@@ -367,6 +367,17 @@
     }
   },
   "diagnosticsPrayerCustomSource": "Kurumsal kaynak yok; manuel özel açı",
+  "diagnosticsPrayerHybridSource": "{sourceName} yöntemi + kullanıcının seçtiği {madhab} ikindi ayarı",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
   "diagnosticsCloudDriven": "Bulut Tabanlı",
   "diagnosticsAdhanAudioAssets": "Ezan Ses Varlıkları",
   "diagnosticsUiAudioAssets": "Arayüz Ses Varlıkları",

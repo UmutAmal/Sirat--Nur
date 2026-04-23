@@ -769,5 +769,16 @@
   "asmaMeaning96": "Txoj Kev Mus Ib Txhis",
   "asmaMeaning97": "The Inheritor",
   "asmaMeaning98": "Cov Lus Qhia Ncaj Ncees",
-  "asmaMeaning99": "Tus Neeg Mob Ib"
+  "asmaMeaning99": "Tus Neeg Mob Ib",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} txoj kev nrog cov neeg siv xaiv {madhab} Asr teeb tsa"
 }

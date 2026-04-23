@@ -873,6 +873,11 @@ class AppLocalizationsIg extends AppLocalizations {
       'Akuku omenala ejiri aka (enweghị isi mmalite)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName method with user-selected $madhab Asr setting';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Igwe ojii chụpụrụ';
 
   @override

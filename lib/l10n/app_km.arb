@@ -769,5 +769,16 @@
   "asmaMeaning96": "ព្រះដ៏អស់កល្ប",
   "asmaMeaning97": "អ្នកទទួលមរតក",
   "asmaMeaning98": "ការណែនាំដ៏ត្រឹមត្រូវបំផុត។",
-  "asmaMeaning99": "អ្នកជំងឺម្នាក់"
+  "asmaMeaning99": "អ្នកជំងឺម្នាក់",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "វិធីសាស្រ្ត {sourceName} ជាមួយនឹងការកំណត់ {madhab} Asr ដែលបានជ្រើសរើសដោយអ្នកប្រើប្រាស់"
 }

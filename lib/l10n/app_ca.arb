@@ -769,5 +769,16 @@
   "asmaMeaning96": "L'Etern",
   "asmaMeaning97": "L'hereu",
   "asmaMeaning98": "La guia més justa",
-  "asmaMeaning99": "El pacient"
+  "asmaMeaning99": "El pacient",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Mètode {sourceName} amb la configuració d'ASR {madhab} seleccionada per l'usuari"
 }

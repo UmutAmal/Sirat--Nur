@@ -874,6 +874,11 @@ class AppLocalizationsSw extends AppLocalizations {
       'Pembe maalum za mwongozo (hakuna chanzo cha kitaasisi)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName mbinu iliyochaguliwa na mtumiaji $madhab mpangilio wa Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Inaendeshwa na Wingu';
 
   @override

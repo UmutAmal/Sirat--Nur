@@ -769,5 +769,16 @@
   "asmaMeaning96": "ਸਦੀਵੀ ਇੱਕ",
   "asmaMeaning97": "ਵਾਰਸ",
   "asmaMeaning98": "ਸਭ ਤੋਂ ਸਹੀ ਮਾਰਗਦਰਸ਼ਕ",
-  "asmaMeaning99": "ਮਰੀਜ਼ ਇੱਕ"
+  "asmaMeaning99": "ਮਰੀਜ਼ ਇੱਕ",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ਵਿਧੀ ਉਪਭੋਗਤਾ ਦੁਆਰਾ ਚੁਣੀ ਗਈ {madhab} Asr ਸੈਟਿੰਗ ਨਾਲ"
 }

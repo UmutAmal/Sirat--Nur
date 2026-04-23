@@ -876,6 +876,11 @@ class AppLocalizationsQu extends AppLocalizations {
       'Manual costumbre ángulos (mana institucional fuenteyuq) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ruwaywan ruwaqpa akllasqan $madhab Asr churaywan';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Puyu purichisqa';
 
   @override

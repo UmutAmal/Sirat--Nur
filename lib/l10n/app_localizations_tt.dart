@@ -871,6 +871,11 @@ class AppLocalizationsTt extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ысулы белән кулланучылар сайлаган $madhab Asr көйләнеше';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Болыт';
 
   @override

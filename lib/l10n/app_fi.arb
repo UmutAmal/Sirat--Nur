@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ikuinen",
   "asmaMeaning97": "Perijä",
   "asmaMeaning98": "Oikein opas",
-  "asmaMeaning99": "Potilas yksi"
+  "asmaMeaning99": "Potilas yksi",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} menetelmä käyttäjän valitsemalla {madhab} Asr-asetuksella"
 }

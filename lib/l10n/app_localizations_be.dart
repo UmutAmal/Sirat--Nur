@@ -877,6 +877,11 @@ class AppLocalizationsBe extends AppLocalizations {
       'Карыстальніцкія куты ўручную (няма інстытуцыйнай крыніцы)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName метад з абранай карыстальнікам наладай $madhab Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Кіраваны воблакам';
 
   @override

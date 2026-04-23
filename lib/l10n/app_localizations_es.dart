@@ -878,6 +878,11 @@ class AppLocalizationsEs extends AppLocalizations {
       'Ángulos personalizados manuales (sin fuente institucional)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Método $sourceName con configuración Asr $madhab seleccionada por el usuario';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Impulsado por la nube';
 
   @override

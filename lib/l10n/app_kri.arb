@@ -769,5 +769,16 @@
   "asmaMeaning96": "Di Wan we De Sote Go",
   "asmaMeaning97": "Di Inhɛritɔ",
   "asmaMeaning98": "Di Mɔs Rayt Gayd",
-  "asmaMeaning99": "Di Patient Wan"
+  "asmaMeaning99": "Di Patient Wan",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} we wit yuz-selekt {madhab} Asr sɛtin"
 }

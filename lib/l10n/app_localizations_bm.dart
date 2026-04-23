@@ -873,6 +873,11 @@ class AppLocalizationsBm extends AppLocalizations {
       'Manuel custom angles (sɔrɔyɔrɔ tɛ sigida la) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName fɛɛrɛ ni baarakɛla ka sugandilen $madhab Asr sigicogo';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Sankaba bɛ boli';
 
   @override

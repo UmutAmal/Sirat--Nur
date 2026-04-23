@@ -875,6 +875,11 @@ class AppLocalizationsHu extends AppLocalizations {
       'Kézi egyéni szögek (nincs intézményi forrás)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metódus a felhasználó által kiválasztott $madhab Asr beállítással';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Felhővezérelt';
 
   @override

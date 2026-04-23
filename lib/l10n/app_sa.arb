@@ -769,5 +769,16 @@
   "asmaMeaning96": "अनादिः",
   "asmaMeaning97": "उत्तराधिकारी",
   "asmaMeaning98": "परमधर्ममार्गदर्शकः",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} उपयोक्तृ-चयनितेन सह विधिः {madhab} Asr सेटिंग्"
 }

@@ -769,5 +769,16 @@
   "asmaMeaning96": "ಎವರ್ಲಾಸ್ಟಿಂಗ್ ಒನ್",
   "asmaMeaning97": "ಉತ್ತರಾಧಿಕಾರಿ",
   "asmaMeaning98": "ಅತ್ಯಂತ ನೀತಿವಂತ ಮಾರ್ಗದರ್ಶಿ",
-  "asmaMeaning99": "ರೋಗಿ"
+  "asmaMeaning99": "ರೋಗಿ",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "ಬಳಕೆದಾರ-ಆಯ್ಕೆಮಾಡಿದ {madhab} Asr ಸೆಟ್ಟಿಂಗ್‌ನೊಂದಿಗೆ {sourceName} ವಿಧಾನ"
 }

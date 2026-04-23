@@ -769,5 +769,16 @@
   "asmaMeaning96": "Мәңгелек",
   "asmaMeaning97": "Мирас",
   "asmaMeaning98": "Иң гадел юл күрсәтүче",
-  "asmaMeaning99": "Пациент"
+  "asmaMeaning99": "Пациент",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ысулы белән кулланучылар сайлаган {madhab} Asr көйләнеше"
 }

@@ -874,6 +874,11 @@ class AppLocalizationsLt extends AppLocalizations {
       'Rankiniai pasirinktiniai kampai (be institucinio šaltinio)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metodas su vartotojo pasirinktu $madhab Asr nustatymu';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Varomas debesų';
 
   @override

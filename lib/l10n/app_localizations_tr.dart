@@ -871,6 +871,11 @@ class AppLocalizationsTr extends AppLocalizations {
       'Kurumsal kaynak yok; manuel özel açı';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName yöntemi + kullanıcının seçtiği $madhab ikindi ayarı';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Bulut Tabanlı';
 
   @override

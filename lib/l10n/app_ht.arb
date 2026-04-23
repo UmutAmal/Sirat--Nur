@@ -769,5 +769,16 @@
   "asmaMeaning96": "Eternel la",
   "asmaMeaning97": "Eritye a",
   "asmaMeaning98": "Gid ki pi jis",
-  "asmaMeaning99": "Pasyan Youn nan"
+  "asmaMeaning99": "Pasyan Youn nan",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metòd ak itilizatè a chwazi {madhab} anviwònman Asr"
 }

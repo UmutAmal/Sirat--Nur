@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ka Mea Mau loa",
   "asmaMeaning97": "Ka Hooilina",
   "asmaMeaning98": "Ke Alakai Pono Loa",
-  "asmaMeaning99": "Ka Mea Hoomanawanui"
+  "asmaMeaning99": "Ka Mea Hoomanawanui",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ala me {madhab} i koho ʻia e ka mea hoʻohana."
 }

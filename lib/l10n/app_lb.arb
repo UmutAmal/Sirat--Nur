@@ -769,5 +769,16 @@
   "asmaMeaning96": "Den Éiwege",
   "asmaMeaning97": "The Iheritor",
   "asmaMeaning98": "The Most Gerecht Guide",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} Method mat Benotzer-ausgewielten {madhab} Asr Astellung"
 }

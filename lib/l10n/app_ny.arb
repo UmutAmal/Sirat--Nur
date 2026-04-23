@@ -769,5 +769,16 @@
   "asmaMeaning96": "Wosatha",
   "asmaMeaning97": "Wolowa",
   "asmaMeaning98": "Kalozera Wachilungamo",
-  "asmaMeaning99": "Wodwala"
+  "asmaMeaning99": "Wodwala",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} njira yokhala ndi {madhab} Asr yosankhidwa ndi ogwiritsa ntchito"
 }

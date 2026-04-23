@@ -769,5 +769,16 @@
   "asmaMeaning96": "De ivige",
   "asmaMeaning97": "De erfgenamt",
   "asmaMeaning98": "De meast rjochtfeardige gids",
-  "asmaMeaning99": "De pasjint ien"
+  "asmaMeaning99": "De pasjint ien",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metoade mei brûker selekteare {madhab} Asr ynstelling"
 }

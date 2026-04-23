@@ -73,6 +73,29 @@ void main() {
     expect(find.byIcon(Icons.open_in_new_rounded), findsNothing);
   });
 
+  testWidgets(
+    'SettingsPage does not mark madhab overrides as full official authority',
+    (tester) async {
+      await pumpSettingsPage(
+        tester,
+        prefsValues: const {
+          'calculationMethod': diyanetPrayerMethod,
+          'madhab': jafariMadhab,
+        },
+        locale: const Locale('tr'),
+      );
+
+      expect(find.text('Namaz Kurumu'), findsOneWidget);
+      expect(
+        find.text(
+          'Diyanet Isleri Baskanligi yöntemi + kullanıcının seçtiği Ja\'fari ikindi ayarı',
+        ),
+        findsOneWidget,
+      );
+      expect(find.byIcon(Icons.open_in_new_rounded), findsOneWidget);
+    },
+  );
+
   testWidgets('SettingsPage builds localized share text from app metadata', (
     tester,
   ) async {

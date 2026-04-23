@@ -769,5 +769,16 @@
   "asmaMeaning96": "Вечный",
   "asmaMeaning97": "Наследник",
   "asmaMeaning98": "Самый праведный проводник",
-  "asmaMeaning99": "Терпеливый, Который не спешит с наказанием и действует с совершенным долготерпением."
+  "asmaMeaning99": "Терпеливый, Который не спешит с наказанием и действует с совершенным долготерпением.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Метод {sourceName} с выбранной пользователем настройкой {madhab} Asr"
 }

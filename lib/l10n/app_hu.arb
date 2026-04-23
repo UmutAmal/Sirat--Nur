@@ -769,5 +769,16 @@
   "asmaMeaning96": "Az örökkévaló",
   "asmaMeaning97": "Az örökös",
   "asmaMeaning98": "A legigazságosabb útmutató",
-  "asmaMeaning99": "A beteg"
+  "asmaMeaning99": "A beteg",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metódus a felhasználó által kiválasztott {madhab} Asr beállítással"
 }

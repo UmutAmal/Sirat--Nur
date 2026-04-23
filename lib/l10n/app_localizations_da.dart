@@ -873,6 +873,11 @@ class AppLocalizationsDa extends AppLocalizations {
       'Manuelle tilpassede vinkler (ingen institutionel kilde)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metode med brugervalgt $madhab Asr indstilling';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud drevet';
 
   @override

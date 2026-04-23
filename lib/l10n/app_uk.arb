@@ -769,5 +769,16 @@
   "asmaMeaning96": "Вічний",
   "asmaMeaning97": "Спадкоємець",
   "asmaMeaning98": "The Most Righteous Guide",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} метод із вибраним користувачем налаштуванням {madhab} Asr"
 }

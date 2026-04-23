@@ -875,6 +875,11 @@ class AppLocalizationsCo extends AppLocalizations {
       'Angoli persunalizati manuali (senza fonte istituzionale)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metudu cù l\'impostazione Asr $madhab selezionata da l\'utilizatori';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

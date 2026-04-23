@@ -769,5 +769,16 @@
   "asmaMeaning96": "Pe Ipaveʼỹva",
   "asmaMeaning97": "Pe Heredero",
   "asmaMeaning98": "Pe Guía Hekojojavéva",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} método orekóva puruhára oiporavóva {madhab} Asr ñemboheko"
 }

@@ -928,6 +928,7 @@ bool _mustStaySingleLine(String key) {
       key == 'diagnosticsUiAudioAssets' ||
       key == 'diagnosticsQuranAudioAssets' ||
       key == 'diagnosticsSupportedCount' ||
+      key == 'diagnosticsPrayerHybridSource' ||
       key == 'diagnosticsQuranDataset' ||
       key == 'diagnosticsQuranSurahs' ||
       key == 'diagnosticsQuranAyahs' ||

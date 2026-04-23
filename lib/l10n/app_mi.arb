@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ko te Mea Tuturu",
   "asmaMeaning97": "Te Kaiwhiwhi",
   "asmaMeaning98": "Te Arataki Tino Tika",
-  "asmaMeaning99": "Te Manawanui"
+  "asmaMeaning99": "Te Manawanui",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} tikanga me te {madhab} i kowhiria e te kaiwhakamahi te tautuhinga Asr"
 }

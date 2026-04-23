@@ -877,6 +877,11 @@ class AppLocalizationsKy extends AppLocalizations {
       'Кол менен ыңгайлаштырылган бурчтар (институционалдык булак жок)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ыкмасы, колдонуучу тандаган $madhab Аср жөндөөсү';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

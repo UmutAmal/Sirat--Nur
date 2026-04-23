@@ -769,5 +769,16 @@
   "asmaMeaning96": "هميشه وارو",
   "asmaMeaning97": "وارث",
   "asmaMeaning98": "سڀ کان وڌيڪ صحيح ھدايت ڪندڙ",
-  "asmaMeaning99": "مريض ھڪڙو"
+  "asmaMeaning99": "مريض ھڪڙو",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} طريقو استعمال ڪندڙ جي چونڊيل {madhab} عصر سيٽنگ سان"
 }

@@ -872,6 +872,11 @@ class AppLocalizationsEu extends AppLocalizations {
       'Eskuzko angelu pertsonalizatuak (iturri instituzionala ez)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metodoa erabiltzaileak hautatutako $madhab Asr ezarpenarekin';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Hodeian bultzatuta';
 
   @override

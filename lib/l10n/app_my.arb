@@ -769,5 +769,16 @@
   "asmaMeaning96": "ထာဝရဘုရား",
   "asmaMeaning97": "အမွေဆက်ခံသူ",
   "asmaMeaning98": "အဖြောင့်မတ်ဆုံးလမ်းညွှန်",
-  "asmaMeaning99": "လူနာတစ်ဦး"
+  "asmaMeaning99": "လူနာတစ်ဦး",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "အသုံးပြုသူရွေးချယ်ထားသော {madhab} Asr ဆက်တင်ဖြင့် {sourceName} နည်းလမ်း"
 }

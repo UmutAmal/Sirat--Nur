@@ -871,6 +871,11 @@ class AppLocalizationsKri extends AppLocalizations {
       'Manual kɔstɔm angul dɛn (nɔ institiushɔnal sɔs) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName we wit yuz-selekt $madhab Asr sɛtin';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Klaud Drayv';
 
   @override

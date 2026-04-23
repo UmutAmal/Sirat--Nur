@@ -879,6 +879,11 @@ class AppLocalizationsDv extends AppLocalizations {
       'މެނުއަލް ކަސްޓަމް އެންގްލްސް (އިންސްޓިޓިއުޝަނަލް ސޯސްއެއް ނެތް)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName މެތޯޑް އާއި އެކު ޔޫޒަރ ސެލެކްޓް $madhab Asr ސެޓިންގ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ކްލައުޑް ޑްރައިވް ކޮށްގެންނެވެ';
 
   @override

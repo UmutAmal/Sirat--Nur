@@ -769,5 +769,16 @@
   "asmaMeaning96": "De eeuwige",
   "asmaMeaning97": "De erfgenaam",
   "asmaMeaning98": "De meest rechtvaardige gids",
-  "asmaMeaning99": "De patiënt"
+  "asmaMeaning99": "De patiënt",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} methode met door de gebruiker geselecteerde {madhab} Asr-instelling"
 }

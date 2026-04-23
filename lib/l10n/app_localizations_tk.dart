@@ -873,6 +873,11 @@ class AppLocalizationsTk extends AppLocalizations {
       'El bilen ýasalan burçlar (institusional çeşme ýok)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Ulanyjy tarapyndan saýlanan $sourceName usuly $madhab Asr sazlamasy';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Bulut sürülýär';
 
   @override

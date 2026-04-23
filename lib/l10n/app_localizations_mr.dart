@@ -872,6 +872,11 @@ class AppLocalizationsMr extends AppLocalizations {
       'मॅन्युअल सानुकूल कोन (संस्थागत स्रोत नाही)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'वापरकर्त्याने निवडलेल्या $madhab Asr सेटिंगसह $sourceName पद्धत';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ढग चालवलेले';
 
   @override

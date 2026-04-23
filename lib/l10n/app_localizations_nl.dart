@@ -875,6 +875,11 @@ class AppLocalizationsNl extends AppLocalizations {
       'Handmatig aangepaste hoeken (geen institutionele bron)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName methode met door de gebruiker geselecteerde $madhab Asr-instelling';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloudgedreven';
 
   @override

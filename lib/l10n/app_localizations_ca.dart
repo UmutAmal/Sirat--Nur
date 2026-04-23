@@ -880,6 +880,11 @@ class AppLocalizationsCa extends AppLocalizations {
       'Angles personalitzats manuals (sense font institucional)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Mètode $sourceName amb la configuració d\'ASR $madhab seleccionada per l\'usuari';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Impulsat al núvol';
 
   @override

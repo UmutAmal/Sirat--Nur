@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ya sa Feleng",
   "asmaMeaning97": "Mojalefa",
   "asmaMeaning98": "Motataisi ea lokileng ka ho Fetisisa",
-  "asmaMeaning99": "Mokudi"
+  "asmaMeaning99": "Mokudi",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} mokhoa o khethiloeng ke mosebelisi {madhab} litlhophiso tsa Asr"
 }

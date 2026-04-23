@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ang Usa nga Walay Katapusan",
   "asmaMeaning97": "Ang Manununod",
   "asmaMeaning98": "Ang Labing Matarong nga Giya",
-  "asmaMeaning99": "Ang Usa nga Pasyente"
+  "asmaMeaning99": "Ang Usa nga Pasyente",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} nga pamaagi nga gipili sa user {madhab} Asr setting"
 }

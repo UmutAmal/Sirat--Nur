@@ -872,6 +872,11 @@ class AppLocalizationsTg extends AppLocalizations {
       'Кунҷҳои фармоишии дастӣ (манбаи институтсионалӣ нест)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName усули бо интихоби корбар $madhab танзими аср';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Абри рондашуда';
 
   @override

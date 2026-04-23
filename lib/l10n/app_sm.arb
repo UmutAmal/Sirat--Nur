@@ -769,5 +769,16 @@
   "asmaMeaning96": "O Le Faavavau",
   "asmaMeaning97": "O le Suli",
   "asmaMeaning98": "Le Ta'ita'i Sili Amiotonu",
-  "asmaMeaning99": "O Le Onosa'i"
+  "asmaMeaning99": "O Le Onosa'i",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} auala fa'atasi ai ma {madhab} fa'atulagaina o le Asr ua filifilia e le tagata."
 }

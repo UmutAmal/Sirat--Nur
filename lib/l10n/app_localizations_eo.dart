@@ -873,6 +873,11 @@ class AppLocalizationsEo extends AppLocalizations {
       'Manaj kutimaj anguloj (neniu institucia fonto)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metodo kun $madhab Asr-agordo elektita de uzanto';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Nubo Stirita';
 
   @override

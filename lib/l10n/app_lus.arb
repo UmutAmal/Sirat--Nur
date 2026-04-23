@@ -769,5 +769,16 @@
   "asmaMeaning96": "Chatuan mi",
   "asmaMeaning97": "Ro luahtu chu",
   "asmaMeaning98": "Kaihhruaina Dik Ber",
-  "asmaMeaning99": "Damlo pakhat"
+  "asmaMeaning99": "Damlo pakhat",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} method hmangin user-in a thlan {madhab} Asr setting a awm"
 }

@@ -880,6 +880,11 @@ class AppLocalizationsNso extends AppLocalizations {
       'Dikhutlo tša tlwaelo tša seatla (ga go na mohlodi wa setheo) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName mokgwa wo o kgethilwego ke mosediriši $madhab Asr setting';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Leru le Kgannwago';
 
   @override

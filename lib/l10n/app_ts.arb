@@ -769,5 +769,16 @@
   "asmaMeaning96": "Loyi A Nga Heriki",
   "asmaMeaning97": "Mudyandzhaka",
   "asmaMeaning98": "Nkongomiso Lowu Lulama Ngopfu",
-  "asmaMeaning99": "Loyi Muvabyi"
+  "asmaMeaning99": "Loyi Muvabyi",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ndlela leyi nga na xiyimiso xa Asr lexi hlawuriweke hi mutirhisi {madhab}"
 }

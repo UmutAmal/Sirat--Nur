@@ -869,6 +869,11 @@ class AppLocalizationsAr extends AppLocalizations {
       'الزوايا المخصصة اليدوية (لا يوجد مصدر مؤسسي)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'طريقة $sourceName مع إعداد $madhab العصر الذي حدده المستخدم';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'سحابة مدفوعة';
 
   @override

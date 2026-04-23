@@ -769,5 +769,16 @@
   "asmaMeaning96": "Yang Abadi",
   "asmaMeaning97": "Pewaris",
   "asmaMeaning98": "Pedoman Yang Paling Adil",
-  "asmaMeaning99": "Yang Sabar"
+  "asmaMeaning99": "Yang Sabar",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Metode {sourceName} dengan pengaturan {madhab} Ashar yang dipilih pengguna"
 }

@@ -871,6 +871,11 @@ class AppLocalizationsLo extends AppLocalizations {
       'ມຸມທີ່ກໍາຫນົດເອງດ້ວຍມື (ບໍ່ມີແຫຼ່ງສະຖາບັນ)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'ວິທີການ $sourceName ດ້ວຍການຕັ້ງຄ່າ $madhab Asr ທີ່ເລືອກໂດຍຜູ້ໃຊ້';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

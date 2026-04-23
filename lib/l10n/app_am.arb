@@ -769,5 +769,16 @@
   "asmaMeaning96": "ዘላለማዊው",
   "asmaMeaning97": "ወራሹ",
   "asmaMeaning98": "በጣም ትክክለኛ መመሪያ",
-  "asmaMeaning99": "በሽተኛው"
+  "asmaMeaning99": "በሽተኛው",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ዘዴ በተጠቃሚ የተመረጠ {madhab} አስር ቅንብር"
 }

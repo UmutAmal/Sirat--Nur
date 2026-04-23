@@ -875,6 +875,11 @@ class AppLocalizationsMn extends AppLocalizations {
       'Гараар тохируулсан өнцөг (байгууллагын эх сурвалж байхгүй)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Хэрэглэгчийн сонгосон $madhab Asr тохиргоотой $sourceName арга';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

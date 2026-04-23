@@ -870,6 +870,11 @@ class AppLocalizationsSd extends AppLocalizations {
       'دستي حسب ضرورت زاويه (ڪو به ادارو ذريعو نه آهي)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName طريقو استعمال ڪندڙ جي چونڊيل $madhab عصر سيٽنگ سان';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

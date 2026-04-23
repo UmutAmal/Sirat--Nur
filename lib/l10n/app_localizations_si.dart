@@ -872,6 +872,11 @@ class AppLocalizationsSi extends AppLocalizations {
       'අතින් අභිරුචි කෝණ (ආයතනික මූලාශ්‍ර නැත)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'පරිශීලක-තෝරාගත් $madhab Asr සැකසුම සහිත $sourceName ක්‍රමය';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

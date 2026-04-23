@@ -874,6 +874,11 @@ class AppLocalizationsTe extends AppLocalizations {
       'మాన్యువల్ అనుకూల కోణాలు (సంస్థాగత మూలం లేదు)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'వినియోగదారు ఎంచుకున్న $madhab Asr సెట్టింగ్‌తో $sourceName పద్ధతి';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'క్లౌడ్ నడిచేది';
 
   @override

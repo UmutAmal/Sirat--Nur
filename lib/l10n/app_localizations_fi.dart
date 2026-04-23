@@ -874,6 +874,11 @@ class AppLocalizationsFi extends AppLocalizations {
       'Manuaaliset mukautetut kulmat (ei institutionaalista lähdettä)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName menetelmä käyttäjän valitsemalla $madhab Asr-asetuksella';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Pilvivetoinen';
 
   @override

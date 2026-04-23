@@ -120,12 +120,17 @@ String resolvePrayerProfileValue(
 String resolvePrayerSourceValue(
   PrayerCalculationProfile profile, {
   String? customSourceValue,
+  String? hybridSourceValue,
 }) {
-  if (!isOfficialPrayerProfile(profile)) {
-    return customSourceValue ?? profile.sourceName;
+  if (isOfficialPrayerProfile(profile)) {
+    return '${profile.sourceName} (${profile.sourceUrl})';
   }
 
-  return '${profile.sourceName} (${profile.sourceUrl})';
+  if (hasInstitutionalPrayerMethodSource(profile)) {
+    return hybridSourceValue ?? profile.sourceName;
+  }
+
+  return customSourceValue ?? profile.sourceName;
 }
 
 @visibleForTesting
@@ -317,6 +322,10 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
         resolvePrayerSourceValue(
           prayerProfile,
           customSourceValue: l10n.diagnosticsPrayerCustomSource,
+          hybridSourceValue: l10n.diagnosticsPrayerHybridSource(
+            prayerProfile.sourceName,
+            displayMadhabLabel(prayerProfile.madhab),
+          ),
         ),
         prayerProfileIsOfficial,
       ),

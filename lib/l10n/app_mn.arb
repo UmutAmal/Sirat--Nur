@@ -769,5 +769,16 @@
   "asmaMeaning96": "Мөнхийн Нэгэн",
   "asmaMeaning97": "Өв залгамжлагч",
   "asmaMeaning98": "Хамгийн зөвт хөтөч",
-  "asmaMeaning99": "The Patent One"
+  "asmaMeaning99": "The Patent One",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Хэрэглэгчийн сонгосон {madhab} Asr тохиргоотой {sourceName} арга"
 }

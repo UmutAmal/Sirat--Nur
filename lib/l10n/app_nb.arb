@@ -769,5 +769,16 @@
   "asmaMeaning96": "Den evige",
   "asmaMeaning97": "Arvingen",
   "asmaMeaning98": "Den mest rettferdige guiden",
-  "asmaMeaning99": "Den tålmodige, som ikke fremskynder straffen og handler med fullkommen overbærenhet."
+  "asmaMeaning99": "Den tålmodige, som ikke fremskynder straffen og handler med fullkommen overbærenhet.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metode med brukervalgt {madhab} Asr-innstilling"
 }

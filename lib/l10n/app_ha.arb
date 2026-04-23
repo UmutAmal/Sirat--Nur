@@ -769,5 +769,16 @@
   "asmaMeaning96": "Mai Dawwama",
   "asmaMeaning97": "Magado",
   "asmaMeaning98": "Mafi Adalci Jagora",
-  "asmaMeaning99": "Mai haƙuri"
+  "asmaMeaning99": "Mai haƙuri",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting"
 }

@@ -861,6 +861,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get diagnosticsPrayerCustomSource => '수동 맞춤 각도(기관 소스 없음)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '사용자가 선택한 $madhab Asr 설정이 포함된 $sourceName 메서드';
+  }
+
+  @override
   String get diagnosticsCloudDriven => '클라우드 기반';
 
   @override

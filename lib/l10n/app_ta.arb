@@ -769,5 +769,16 @@
   "asmaMeaning96": "நித்தியமான ஒன்று",
   "asmaMeaning97": "த மரபுரிமையாளர்",
   "asmaMeaning98": "மிகவும் நேர்மையான வழிகாட்டி",
-  "asmaMeaning99": "நோயாளி"
+  "asmaMeaning99": "நோயாளி",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "பயனர் தேர்ந்தெடுத்த {sourceName} முறை {madhab} Asr அமைப்பு"
 }

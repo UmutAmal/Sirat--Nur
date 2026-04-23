@@ -878,6 +878,11 @@ class AppLocalizationsOr extends AppLocalizations {
       'ମାନୁଆଲ୍ କଷ୍ଟମ୍ କୋଣ (କ institution ଣସି ଅନୁଷ୍ଠାନିକ ଉତ୍ସ ନାହିଁ)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ପଦ୍ଧତି ଉପଭୋକ୍ତା-ମନୋନୀତ $madhab ଆସ୍ର ସେଟିଂ ସହିତ |';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'କ୍ଲାଉଡ୍ ଚାଳିତ |';
 
   @override

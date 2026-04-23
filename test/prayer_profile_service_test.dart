@@ -188,6 +188,26 @@ void main() {
     });
 
     test(
+      'marks user-selected madhab overrides as non-institutional profiles',
+      () {
+        final official = profileForMethod(
+          diyanetPrayerMethod,
+          madhab: hanafiMadhab,
+        );
+        final hybrid = profileForMethod(
+          diyanetPrayerMethod,
+          madhab: jafariMadhab,
+        );
+
+        expect(official.hasUserMadhabOverride, isFalse);
+        expect(hasOfficialPrayerAuthority(official), isTrue);
+        expect(hybrid.hasUserMadhabOverride, isTrue);
+        expect(hasOfficialPrayerAuthority(hybrid), isFalse);
+        expect(hasInstitutionalPrayerMethodSource(hybrid), isTrue);
+      },
+    );
+
+    test(
       'builds Tehran profile with maghrib angle and jafari-compatible shadow factor',
       () {
         final params = buildCalculationParameters(tehranPrayerMethod)

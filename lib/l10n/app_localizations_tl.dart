@@ -881,6 +881,11 @@ class AppLocalizationsTl extends AppLocalizations {
       'Mga manu-manong custom na anggulo (walang institusyonal na pinagmulan)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName na pamamaraan na may napiling user na $madhab setting ng Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

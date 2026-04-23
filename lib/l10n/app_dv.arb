@@ -769,5 +769,16 @@
   "asmaMeaning96": "ދަ އެވަރލަސްޓިންގ ވަން އެވެ",
   "asmaMeaning97": "ވާރުތަވެރިޔާ އެވެ",
   "asmaMeaning98": "އެންމެ ޞާލިޙު ގައިޑް",
-  "asmaMeaning99": "ދަ ޕޭޝަންޓް ވަން އެވެ"
+  "asmaMeaning99": "ދަ ޕޭޝަންޓް ވަން އެވެ",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} މެތޯޑް އާއި އެކު ޔޫޒަރ ސެލެކްޓް {madhab} Asr ސެޓިންގ"
 }

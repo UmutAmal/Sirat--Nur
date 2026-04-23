@@ -877,6 +877,11 @@ class AppLocalizationsHy extends AppLocalizations {
       'Ձեռքով հարմարեցված անկյուններ (ոչ ինստիտուցիոնալ աղբյուր)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName մեթոդ՝ օգտագործողի կողմից ընտրված $madhab Asr կարգավորումով';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

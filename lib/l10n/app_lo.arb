@@ -769,5 +769,16 @@
   "asmaMeaning96": "ອັນນິລັນດອນ",
   "asmaMeaning97": "ຜູ້ສືບທອດ",
   "asmaMeaning98": "ຄູ່ມືທີ່ຖືກຕ້ອງທີ່ສຸດ",
-  "asmaMeaning99": "ຄົນເຈັບຄົນເຈັບ"
+  "asmaMeaning99": "ຄົນເຈັບຄົນເຈັບ",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "ວິທີການ {sourceName} ດ້ວຍການຕັ້ງຄ່າ {madhab} Asr ທີ່ເລືອກໂດຍຜູ້ໃຊ້"
 }

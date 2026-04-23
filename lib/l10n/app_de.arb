@@ -769,5 +769,16 @@
   "asmaMeaning96": "Der Bleibende, dessen Dasein ewig fortbesteht.",
   "asmaMeaning97": "Der Erbe, dem alles nach dem Vergehen der Geschöpfe bleibt.",
   "asmaMeaning98": "Der Führer zur Rechtschaffenheit, der alles mit vollkommener Weisheit leitet.",
-  "asmaMeaning99": "Der Geduldige, der nicht zur Strafe eilt und in vollkommener Nachsicht handelt."
+  "asmaMeaning99": "Der Geduldige, der nicht zur Strafe eilt und in vollkommener Nachsicht handelt.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName}-Methode mit vom Benutzer ausgewählter {madhab} Asr-Einstellung"
 }

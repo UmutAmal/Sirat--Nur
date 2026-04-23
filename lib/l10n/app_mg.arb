@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ilay Mandrakizay",
   "asmaMeaning97": "Ny mpandova",
   "asmaMeaning98": "Ilay Mpitarika Marina indrindra",
-  "asmaMeaning99": "Ilay marary"
+  "asmaMeaning99": "Ilay marary",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} fomba misy {madhab} Asr nofidin'ny mpampiasa"
 }

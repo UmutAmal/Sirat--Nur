@@ -769,5 +769,16 @@
   "asmaMeaning96": "تلپاتې",
   "asmaMeaning97": "د وارثانو",
   "asmaMeaning98": "ترټولو غوره لارښود",
-  "asmaMeaning99": "مریض یو"
+  "asmaMeaning99": "مریض یو",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} طریقه د کارن لخوا ټاکل شوي {madhab} د عصر ترتیب سره"
 }

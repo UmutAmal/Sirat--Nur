@@ -874,6 +874,11 @@ class AppLocalizationsHa extends AppLocalizations {
       'Kusurwoyin al\'ada na hannu (babu tushen cibiyoyi)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName method with user-selected $madhab Asr setting';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

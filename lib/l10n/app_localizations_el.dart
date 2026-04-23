@@ -878,6 +878,11 @@ class AppLocalizationsEl extends AppLocalizations {
       'Μη αυτόματες προσαρμοσμένες γωνίες (χωρίς θεσμική πηγή)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'μέθοδος $sourceName με ρύθμιση $madhab Asr επιλεγμένη από τον χρήστη';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

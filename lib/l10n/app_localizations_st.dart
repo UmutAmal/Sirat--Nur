@@ -877,6 +877,11 @@ class AppLocalizationsSt extends AppLocalizations {
       'Li-angles tsa tloaelo (ha ho mohloli oa setsi)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName mokhoa o khethiloeng ke mosebelisi $madhab litlhophiso tsa Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

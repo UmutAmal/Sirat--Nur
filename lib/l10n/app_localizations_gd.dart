@@ -877,6 +877,11 @@ class AppLocalizationsGd extends AppLocalizations {
       'Ceàrnan gnàthaichte làimhe (gun stòr institiùideach)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName modh le suidheachadh $madhab air a thaghadh leis a’ chleachdaiche';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud air a stiùireadh';
 
   @override

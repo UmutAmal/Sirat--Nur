@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ẹni Ayérayé",
   "asmaMeaning97": "Ajogún",
   "asmaMeaning98": "Itọsọna Olododo Julọ",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Ọna {sourceName} pẹlu olumulo-yan {madhab} Eto Asr"
 }

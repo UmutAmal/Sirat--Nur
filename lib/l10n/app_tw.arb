@@ -769,5 +769,16 @@
   "asmaMeaning96": "Nea Ɔte hɔ Daa",
   "asmaMeaning97": "Adedifoɔ no",
   "asmaMeaning98": "Akwankyerɛ a ɛtene sen biara",
-  "asmaMeaning99": "Ɔyarefoɔ no"
+  "asmaMeaning99": "Ɔyarefoɔ no",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} kwan a nea ɔde di dwuma no apaw {madhab} Asr nhyehyɛe"
 }

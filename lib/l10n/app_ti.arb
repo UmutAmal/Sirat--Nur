@@ -769,5 +769,16 @@
   "asmaMeaning96": "እቲ ዘለኣለማዊ",
   "asmaMeaning97": "እቲ ወራሲ",
   "asmaMeaning98": "እቲ ኣዝዩ ጻድቕ መምርሒ",
-  "asmaMeaning99": "እቲ ሕሙም ዝኾነ"
+  "asmaMeaning99": "እቲ ሕሙም ዝኾነ",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ሜላ ምስ ተጠቃሚ ዝመረጾ {madhab} Asr ቅጥዒ"
 }

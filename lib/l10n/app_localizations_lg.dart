@@ -875,6 +875,11 @@ class AppLocalizationsLg extends AppLocalizations {
       'Enkoona z’ennono ez’omu ngalo (tewali nsibuko ya kitongole) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName enkola nga omukozesa alondeddwa $madhab Asr okuteekawo';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Ekire Ekivugibwa';
 
   @override

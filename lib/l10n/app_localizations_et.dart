@@ -873,6 +873,11 @@ class AppLocalizationsEt extends AppLocalizations {
       'Käsitsi kohandatud nurgad (puudub institutsiooniline allikas)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName meetod kasutaja valitud $madhab Asr-sätetega';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Pilvepõhine';
 
   @override

@@ -873,6 +873,11 @@ class AppLocalizationsCs extends AppLocalizations {
       'Manuální uživatelské úhly (žádný institucionální zdroj)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metoda s uživatelem vybraným nastavením $madhab Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

@@ -769,5 +769,16 @@
   "asmaMeaning96": "لازوال",
   "asmaMeaning97": "وارث",
   "asmaMeaning98": "سب سے زیادہ صحیح رہنما",
-  "asmaMeaning99": "مریض ایک"
+  "asmaMeaning99": "مریض ایک",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} طریقہ صارف کے منتخب کردہ {madhab} عصر کی ترتیب کے ساتھ"
 }

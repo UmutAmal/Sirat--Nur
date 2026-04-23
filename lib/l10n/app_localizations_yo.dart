@@ -871,6 +871,11 @@ class AppLocalizationsYo extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Ọna $sourceName pẹlu olumulo-yan $madhab Eto Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Awọsanma wakọ';
 
   @override

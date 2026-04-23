@@ -758,6 +758,7 @@ void main() {
           'diagnosticsLocalizationLocales',
           'diagnosticsPrayerCustomProfile',
           'diagnosticsPrayerCustomSource',
+          'diagnosticsPrayerHybridSource',
           'diagnosticsSupportedCount',
           'diagnosticsQuranDataset',
           'diagnosticsQuranSurahs',

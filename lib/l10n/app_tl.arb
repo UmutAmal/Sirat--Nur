@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ang Walang Hanggan",
   "asmaMeaning97": "The Inheritor",
   "asmaMeaning98": "Ang Pinaka Matuwid na Patnubay",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} na pamamaraan na may napiling user na {madhab} setting ng Asr"
 }

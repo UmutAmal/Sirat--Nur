@@ -769,5 +769,16 @@
   "asmaMeaning96": "די ייביק",
   "asmaMeaning97": "דער ינכעריטאָר",
   "asmaMeaning98": "דער מערסט צדיקים גייד",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} אופֿן מיט באַניצער-געקליבן {madhab} אַסר באַשטעטיקן"
 }

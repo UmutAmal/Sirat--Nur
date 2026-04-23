@@ -874,6 +874,11 @@ class AppLocalizationsFy extends AppLocalizations {
       'Hânlieding oanpaste hoeken (gjin ynstitúsjonele boarne)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metoade mei brûker selekteare $madhab Asr ynstelling';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

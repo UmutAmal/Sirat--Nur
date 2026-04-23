@@ -769,5 +769,16 @@
   "asmaMeaning96": "Věčný",
   "asmaMeaning97": "Dědič",
   "asmaMeaning98": "Nejspravedlivější průvodce",
-  "asmaMeaning99": "Pacient One"
+  "asmaMeaning99": "Pacient One",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metoda s uživatelem vybraným nastavením {madhab} Asr"
 }

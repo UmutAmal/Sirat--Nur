@@ -878,6 +878,11 @@ class AppLocalizationsDe extends AppLocalizations {
       'Manuelle benutzerdefinierte Winkel (keine institutionelle Quelle)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName-Methode mit vom Benutzer ausgewählter $madhab Asr-Einstellung';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud-gesteuert';
 
   @override

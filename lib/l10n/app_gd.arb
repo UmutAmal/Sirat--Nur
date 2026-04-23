@@ -769,5 +769,16 @@
   "asmaMeaning96": "Am Fear Siorruidh",
   "asmaMeaning97": "An t-Oighreiche",
   "asmaMeaning98": "An Leabhar-iùil as Ceartaiche",
-  "asmaMeaning99": "An t-euslainteach"
+  "asmaMeaning99": "An t-euslainteach",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} modh le suidheachadh {madhab} air a thaghadh leis a’ chleachdaiche"
 }

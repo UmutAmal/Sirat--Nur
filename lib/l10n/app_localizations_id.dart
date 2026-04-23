@@ -873,6 +873,11 @@ class AppLocalizationsId extends AppLocalizations {
       'Sudut khusus manual (tidak ada sumber institusional)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Metode $sourceName dengan pengaturan $madhab Ashar yang dipilih pengguna';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Didorong oleh Awan';
 
   @override

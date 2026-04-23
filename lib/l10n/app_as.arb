@@ -769,5 +769,16 @@
   "asmaMeaning96": "চিৰন্তনজন",
   "asmaMeaning97": "উত্তৰাধিকাৰী",
   "asmaMeaning98": "আটাইতকৈ ধাৰ্মিক গাইড",
-  "asmaMeaning99": "ৰোগীজন"
+  "asmaMeaning99": "ৰোগীজন",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "ব্যৱহাৰকাৰী-নিৰ্বাচিত {madhab} Asr সংহতিৰ সৈতে {sourceName} পদ্ধতি"
 }

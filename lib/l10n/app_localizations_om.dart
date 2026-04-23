@@ -880,6 +880,11 @@ class AppLocalizationsOm extends AppLocalizations {
       'Kofoota amala harkaan hojjetaman (madda dhaabbataa hin qabu) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName mala fayyadamaan filate waliin $madhab qindaa\'ina Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Duumeessa Kan Oofamu';
 
   @override

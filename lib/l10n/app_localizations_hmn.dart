@@ -874,6 +874,11 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Manual custom angles (tsis muaj qhov chaw ua haujlwm)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName txoj kev nrog cov neeg siv xaiv $madhab Asr teeb tsa';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Huab Tsav';
 
   @override

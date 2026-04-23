@@ -874,6 +874,11 @@ class AppLocalizationsIs extends AppLocalizations {
       'Handvirk sérsniðin horn (engin stofnanaheimild)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName aðferð með notandavöldum $madhab Asr stillingu';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Skýdrifið';
 
   @override

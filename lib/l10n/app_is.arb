@@ -769,5 +769,16 @@
   "asmaMeaning96": "Hinn eilífi",
   "asmaMeaning97": "Erfinginn",
   "asmaMeaning98": "Réttlátasti leiðarvísirinn",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} aðferð með notandavöldum {madhab} Asr stillingu"
 }

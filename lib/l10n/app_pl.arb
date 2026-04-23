@@ -769,5 +769,16 @@
   "asmaMeaning96": "Odwieczny",
   "asmaMeaning97": "Spadkobierca",
   "asmaMeaning98": "Najsprawiedliwszy przewodnik",
-  "asmaMeaning99": "Pacjent Jeden"
+  "asmaMeaning99": "Pacjent Jeden",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Metoda {sourceName} z wybranym przez użytkownika ustawieniem {madhab} Asr"
 }

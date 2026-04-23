@@ -875,6 +875,11 @@ class AppLocalizationsPl extends AppLocalizations {
       'Ręczne niestandardowe kąty (brak źródła instytucjonalnego)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Metoda $sourceName z wybranym przez użytkownika ustawieniem $madhab Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Napędzany chmurą';
 
   @override

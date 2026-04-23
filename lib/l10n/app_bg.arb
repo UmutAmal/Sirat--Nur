@@ -769,5 +769,16 @@
   "asmaMeaning96": "Вечният",
   "asmaMeaning97": "Наследникът",
   "asmaMeaning98": "Най-праведният водач",
-  "asmaMeaning99": "Търпеливият"
+  "asmaMeaning99": "Търпеливият",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} метод с избрана от потребителя настройка {madhab} Asr"
 }

@@ -770,5 +770,16 @@
   "asmaMeaning97": "Pewaris",
   "asmaMeaning98": "Petunjuk Yang Maha Adil",
   "asmaMeaning99": "Yang Sabar",
-  "eidAdha": "Hari Raya Aidiladha"
+  "eidAdha": "Hari Raya Aidiladha",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Kaedah {sourceName} dengan tetapan Asar {madhab} yang dipilih pengguna"
 }

@@ -870,6 +870,11 @@ class AppLocalizationsPs extends AppLocalizations {
       'د لاسي دودیز زاویې (هیڅ اداري سرچینه نشته)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName طریقه د کارن لخوا ټاکل شوي $madhab د عصر ترتیب سره';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'بادل چلول';
 
   @override

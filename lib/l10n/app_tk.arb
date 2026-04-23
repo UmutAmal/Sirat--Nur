@@ -769,5 +769,16 @@
   "asmaMeaning96": "Baky",
   "asmaMeaning97": "Mirasçy",
   "asmaMeaning98": "Iň dogry gollanma",
-  "asmaMeaning99": "Sabyrly"
+  "asmaMeaning99": "Sabyrly",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Ulanyjy tarapyndan saýlanan {sourceName} usuly {madhab} Asr sazlamasy"
 }

@@ -877,6 +877,11 @@ class AppLocalizationsLn extends AppLocalizations {
       'Ba angles personnalisés manuels (source institutionnelle te) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName méthode na paramètre ya Asr oyo mosaleli aponaki $madhab';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Lipata Etambwisami';
 
   @override

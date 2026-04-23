@@ -769,5 +769,16 @@
   "asmaMeaning96": "Yr Un Tragwyddol",
   "asmaMeaning97": "Yr Etifeddwr",
   "asmaMeaning98": "Y Canllaw Mwyaf Cyfiawn",
-  "asmaMeaning99": "Y Claf Un"
+  "asmaMeaning99": "Y Claf Un",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "dull {sourceName} gyda gosodiad {madhab} a ddewiswyd gan y defnyddiwr"
 }

@@ -769,5 +769,16 @@
   "asmaMeaning96": "Oyo Ataggwaawo",
   "asmaMeaning97": "Omusika",
   "asmaMeaning98": "Omulagirizi Asinga Obutuukirivu",
-  "asmaMeaning99": "Oyo Omulwadde"
+  "asmaMeaning99": "Oyo Omulwadde",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} enkola nga omukozesa alondeddwa {madhab} Asr okuteekawo"
 }

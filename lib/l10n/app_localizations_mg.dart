@@ -877,6 +877,11 @@ class AppLocalizationsMg extends AppLocalizations {
       'Zoro fanao amin\'ny tanana (tsy misy loharano andrim-panjakana)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName fomba misy $madhab Asr nofidin\'ny mpampiasa';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

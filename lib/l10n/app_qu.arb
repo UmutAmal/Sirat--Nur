@@ -769,5 +769,16 @@
   "asmaMeaning96": "Wiñaypaq kaq",
   "asmaMeaning97": "Heredero nisqa",
   "asmaMeaning98": "Aswan chanin pusaq",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ruwaywan ruwaqpa akllasqan {madhab} Asr churaywan"
 }

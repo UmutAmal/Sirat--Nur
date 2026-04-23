@@ -769,5 +769,16 @@
   "asmaMeaning96": "Vječni",
   "asmaMeaning97": "Nasljednik",
   "asmaMeaning98": "Najpravedniji vodič",
-  "asmaMeaning99": "Prvi pacijent"
+  "asmaMeaning99": "Prvi pacijent",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metoda sa {madhab} postavkom Asr koju je izabrao korisnik"
 }

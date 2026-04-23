@@ -864,6 +864,11 @@ class AppLocalizationsAm extends AppLocalizations {
   String get diagnosticsPrayerCustomSource => 'በእጅ ብጁ ማዕዘኖች (ተቋማዊ ምንጭ የለም)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ዘዴ በተጠቃሚ የተመረጠ $madhab አስር ቅንብር';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'በደመና የሚነዳ';
 
   @override

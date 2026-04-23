@@ -769,5 +769,16 @@
   "asmaMeaning96": "მარადიული",
   "asmaMeaning97": "მემკვიდრე",
   "asmaMeaning98": "ყველაზე მართალი მეგზური",
-  "asmaMeaning99": "პაციენტი ერთი"
+  "asmaMeaning99": "პაციენტი ერთი",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} მეთოდი მომხმარებლის მიერ არჩეული {madhab} Asr პარამეტრით"
 }

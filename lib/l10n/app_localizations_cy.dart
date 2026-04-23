@@ -876,6 +876,11 @@ class AppLocalizationsCy extends AppLocalizations {
       'Onglau personol â llaw (dim ffynhonnell sefydliadol)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'dull $sourceName gyda gosodiad $madhab a ddewiswyd gan y defnyddiwr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Gyrrwr Cwmwl';
 
   @override

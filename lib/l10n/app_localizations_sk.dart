@@ -875,6 +875,11 @@ class AppLocalizationsSk extends AppLocalizations {
       'Manuálne vlastné uhly (bez inštitucionálneho zdroja)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Metóda $sourceName s používateľom vybratým nastavením $madhab Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

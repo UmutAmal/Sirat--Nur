@@ -871,6 +871,11 @@ class AppLocalizationsTh extends AppLocalizations {
       'มุมที่กำหนดเองแบบแมนนวล (ไม่มีแหล่งที่มาของสถาบัน)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'วิธีการ $sourceName ที่ผู้ใช้เลือก $madhab การตั้งค่า Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ขับเคลื่อนด้วยคลาวด์';
 
   @override

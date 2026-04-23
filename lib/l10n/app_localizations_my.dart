@@ -881,6 +881,11 @@ class AppLocalizationsMy extends AppLocalizations {
       'ကိုယ်တိုင်စိတ်ကြိုက်ထောင့်များ (အဖွဲ့အစည်းဆိုင်ရာ အရင်းအမြစ်မရှိပါ)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'အသုံးပြုသူရွေးချယ်ထားသော $madhab Asr ဆက်တင်ဖြင့် $sourceName နည်းလမ်း';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

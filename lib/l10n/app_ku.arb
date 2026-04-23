@@ -769,5 +769,16 @@
   "asmaMeaning96": "Yê Herheyî",
   "asmaMeaning97": "Miras",
   "asmaMeaning98": "Rêberê Herî Rast",
-  "asmaMeaning99": "Nexweş Yek"
+  "asmaMeaning99": "Nexweş Yek",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} rêbaza ku ji hêla bikarhêner ve hatî hilbijartin {madhab} Mîhenga Asr"
 }

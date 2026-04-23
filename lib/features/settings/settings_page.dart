@@ -38,8 +38,16 @@ class SettingsPage extends ConsumerWidget {
       madhab: settings.madhab,
     );
     final prayerAuthorityIsOfficial = hasOfficialPrayerAuthority(prayerProfile);
+    final prayerMethodHasSource = hasInstitutionalPrayerMethodSource(
+      prayerProfile,
+    );
     final prayerAuthorityDetails = prayerAuthorityIsOfficial
         ? '${prayerProfile.sourceName}\n${prayerProfile.sourceUrl}'
+        : prayerMethodHasSource
+        ? l10n.diagnosticsPrayerHybridSource(
+            prayerProfile.sourceName,
+            displayMadhabLabel(prayerProfile.madhab),
+          )
         : l10n.diagnosticsPrayerCustomSource;
 
     return Scaffold(
@@ -105,12 +113,12 @@ class SettingsPage extends ConsumerWidget {
                       ),
                     ),
                     trailing: Icon(
-                      prayerAuthorityIsOfficial
+                      prayerMethodHasSource
                           ? Icons.open_in_new_rounded
                           : Icons.block_rounded,
                       size: 20,
                     ),
-                    onTap: prayerAuthorityIsOfficial
+                    onTap: prayerMethodHasSource
                         ? () => launchExternalHttpUrl(
                             context,
                             prayerProfile.sourceUrl,

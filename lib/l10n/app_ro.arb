@@ -769,5 +769,16 @@
   "asmaMeaning96": "Cel Veșnic",
   "asmaMeaning97": "Moștenitorul",
   "asmaMeaning98": "Cel mai drept ghid",
-  "asmaMeaning99": "Pacientul Cel"
+  "asmaMeaning99": "Pacientul Cel",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Metoda {sourceName} cu setarea {madhab} selectată de utilizator"
 }

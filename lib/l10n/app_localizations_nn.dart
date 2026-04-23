@@ -873,6 +873,11 @@ class AppLocalizationsNn extends AppLocalizations {
       'Manuelle tilpassede vinkler (ingen institusjonell kilde)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metode med brukervalgt $madhab Asr-innstilling';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Skydrevet';
 
   @override

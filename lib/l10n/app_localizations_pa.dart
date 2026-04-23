@@ -872,6 +872,11 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਮੈਨੁਅਲ ਕਸਟਮ ਐਂਗਲ (ਕੋਈ ਸੰਸਥਾਗਤ ਸਰੋਤ ਨਹੀਂ)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ਵਿਧੀ ਉਪਭੋਗਤਾ ਦੁਆਰਾ ਚੁਣੀ ਗਈ $madhab Asr ਸੈਟਿੰਗ ਨਾਲ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ਕਲਾਊਡ ਡਰਾਈਵ';
 
   @override

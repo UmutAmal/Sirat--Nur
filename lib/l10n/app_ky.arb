@@ -769,5 +769,16 @@
   "asmaMeaning96": "Түбөлүктүү",
   "asmaMeaning97": "Мурасчы",
   "asmaMeaning98": "Эң Адил Жол көрсөткүч",
-  "asmaMeaning99": "Сабырдуу"
+  "asmaMeaning99": "Сабырдуу",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ыкмасы, колдонуучу тандаган {madhab} Аср жөндөөсү"
 }

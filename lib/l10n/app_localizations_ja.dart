@@ -862,6 +862,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get diagnosticsPrayerCustomSource => '手動カスタム角度 (機関的な情報源なし)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'ユーザーが選択した $madhab Asr 設定を使用した $sourceName メソッド';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'クラウドドリブン';
 
   @override

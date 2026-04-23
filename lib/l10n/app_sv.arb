@@ -769,5 +769,16 @@
   "asmaMeaning96": "Den eviga",
   "asmaMeaning97": "Arvtagaren",
   "asmaMeaning98": "Den mest rättfärdiga guiden",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metod med användarvald {madhab} Asr-inställning"
 }

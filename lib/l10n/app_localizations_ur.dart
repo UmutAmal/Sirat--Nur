@@ -872,6 +872,11 @@ class AppLocalizationsUr extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName طریقہ صارف کے منتخب کردہ $madhab عصر کی ترتیب کے ساتھ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'کلاؤڈ سے چلنے والا';
 
   @override

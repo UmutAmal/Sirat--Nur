@@ -769,5 +769,16 @@
   "asmaMeaning96": "Əbədi Olan",
   "asmaMeaning97": "Varis",
   "asmaMeaning98": "Ən Saleh Bələdçi",
-  "asmaMeaning99": "Xəstə Bir"
+  "asmaMeaning99": "Xəstə Bir",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "İstifadəçi tərəfindən seçilmiş {madhab} Əsr ayarı ilə {sourceName} metodu"
 }

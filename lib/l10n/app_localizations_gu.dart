@@ -871,6 +871,11 @@ class AppLocalizationsGu extends AppLocalizations {
       'મેન્યુઅલ કસ્ટમ એંગલ (કોઈ સંસ્થાકીય સ્ત્રોત નથી)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'વપરાશકર્તા દ્વારા પસંદ કરેલ $madhab Asr સેટિંગ સાથે $sourceName પદ્ધતિ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'મેઘ સંચાલિત';
 
   @override

@@ -769,5 +769,16 @@
   "asmaMeaning96": "영원하신 분",
   "asmaMeaning97": "상속자",
   "asmaMeaning98": "가장 의로운 인도자",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "사용자가 선택한 {madhab} Asr 설정이 포함된 {sourceName} 메서드"
 }

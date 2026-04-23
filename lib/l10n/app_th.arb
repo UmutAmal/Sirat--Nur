@@ -769,5 +769,16 @@
   "asmaMeaning96": "ผู้เป็นนิรันดร์",
   "asmaMeaning97": "ผู้สืบทอด",
   "asmaMeaning98": "คำแนะนำที่ชอบธรรมที่สุด",
-  "asmaMeaning99": "ผู้ป่วยคนหนึ่ง"
+  "asmaMeaning99": "ผู้ป่วยคนหนึ่ง",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "วิธีการ {sourceName} ที่ผู้ใช้เลือก {madhab} การตั้งค่า Asr"
 }

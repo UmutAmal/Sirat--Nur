@@ -769,5 +769,16 @@
   "asmaMeaning96": "Iye Anogara Nokusingaperi",
   "asmaMeaning97": "Mudyi Wenhaka",
   "asmaMeaning98": "Mutungamiriri Akarurama",
-  "asmaMeaning99": "Iye Murwere"
+  "asmaMeaning99": "Iye Murwere",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} nzira ine yakasarudzwa nemushandisi {madhab} Asr marongero"
 }

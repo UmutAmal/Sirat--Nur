@@ -873,6 +873,11 @@ class AppLocalizationsBn extends AppLocalizations {
       'ম্যানুয়াল কাস্টম কোণ (কোন প্রাতিষ্ঠানিক উত্স নেই)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'ব্যবহারকারী-নির্বাচিত $madhab আছর সেটিং সহ $sourceName পদ্ধতি';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'মেঘ চালিত';
 
   @override

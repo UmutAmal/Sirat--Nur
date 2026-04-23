@@ -871,6 +871,11 @@ class AppLocalizationsMai extends AppLocalizations {
       'मैनुअल कस्टम कोण (कोनो संस्थागत स्रोत नहि)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName विधि उपयोगकर्ता-चयनित $madhab Asr सेटिंग के साथ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'बादल संचालित';
 
   @override

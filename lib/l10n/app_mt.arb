@@ -769,5 +769,16 @@
   "asmaMeaning96": "The Everlasting One",
   "asmaMeaning97": "Il-Werriet",
   "asmaMeaning98": "L-Aktar Gwida Ġust",
-  "asmaMeaning99": "Il-Pazjent Wieħed"
+  "asmaMeaning99": "Il-Pazjent Wieħed",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metodu b'setting Asr {madhab} magħżul mill-utent"
 }

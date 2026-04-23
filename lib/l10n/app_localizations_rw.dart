@@ -874,6 +874,11 @@ class AppLocalizationsRw extends AppLocalizations {
       'Intoki gakondo (nta soko yinzego)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName uburyo hamwe nabakoresha-batoranijwe $madhab Igenamiterere rya Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Igicu';
 
   @override

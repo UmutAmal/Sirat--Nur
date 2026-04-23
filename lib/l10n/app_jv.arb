@@ -769,5 +769,16 @@
   "asmaMeaning96": "Sing Langgeng",
   "asmaMeaning97": "Pewaris",
   "asmaMeaning98": "Tuntunan ingkang Maha Adil",
-  "asmaMeaning99": "Sing Sabar"
+  "asmaMeaning99": "Sing Sabar",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Metode {sourceName} nganggo setelan {madhab} sing dipilih pangguna"
 }

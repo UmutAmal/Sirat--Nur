@@ -874,6 +874,11 @@ class AppLocalizationsMk extends AppLocalizations {
       'Рачни приспособени агли (без институционален извор)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'метод $sourceName со поставка $madhab избрана од корисникот';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Облак управувано';
 
   @override

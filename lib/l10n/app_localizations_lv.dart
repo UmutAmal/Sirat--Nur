@@ -876,6 +876,11 @@ class AppLocalizationsLv extends AppLocalizations {
       'Manuāli pielāgoti leņķi (nav institucionāla avota)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metode ar lietotāja atlasītu $madhab Asr iestatījumu';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Mākoņu vadīts';
 
   @override

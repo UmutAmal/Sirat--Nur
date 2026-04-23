@@ -872,6 +872,11 @@ class AppLocalizationsFa extends AppLocalizations {
       'زوایای سفارشی دستی (بدون منبع سازمانی)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'روش $sourceName با تنظیم عصر $madhab انتخاب شده توسط کاربر';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ابر رانده';
 
   @override

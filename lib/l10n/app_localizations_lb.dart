@@ -874,6 +874,11 @@ class AppLocalizationsLb extends AppLocalizations {
       'Manuell personaliséiert Wénkel (keng institutionell Quell)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName Method mat Benotzer-ausgewielten $madhab Asr Astellung';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud gefuer';
 
   @override

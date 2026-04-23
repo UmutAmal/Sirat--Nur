@@ -769,5 +769,16 @@
   "asmaMeaning96": "In aeternum",
   "asmaMeaning97": "Hereditarius",
   "asmaMeaning98": "The justissime Guide",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} methodus cum user delectis {madhab} Asr occasum"
 }

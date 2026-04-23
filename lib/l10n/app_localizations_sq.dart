@@ -876,6 +876,11 @@ class AppLocalizationsSq extends AppLocalizations {
       'Kënde të personalizuara manuale (pa burim institucional)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Metoda $sourceName me cilësimin e asr $madhab të zgjedhur nga përdoruesi';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Drejtuar nga rea';
 
   @override

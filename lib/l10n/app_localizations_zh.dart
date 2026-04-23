@@ -853,6 +853,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get diagnosticsPrayerCustomSource => '手动自定义角度（无机构来源）';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '具有用户选择的 $madhab Asr 设置的 $sourceName 方法';
+  }
+
+  @override
   String get diagnosticsCloudDriven => '云驱动';
 
   @override
@@ -2501,6 +2506,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get diagnosticsPrayerCustomSource => '手动自定义角度（无机构来源）';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '具有用户选择的 $madhab Asr 设置的 $sourceName 方法';
+  }
+
+  @override
   String get diagnosticsCloudDriven => '云驱动';
 
   @override
@@ -4147,6 +4157,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get diagnosticsPrayerCustomSource => '手動自訂角度（無機構來源）';
+
+  @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '具有使用者選擇的 $madhab Asr 設定的 $sourceName 方法';
+  }
 
   @override
   String get diagnosticsCloudDriven => '雲端驅動';

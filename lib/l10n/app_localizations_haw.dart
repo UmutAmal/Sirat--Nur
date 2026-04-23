@@ -873,6 +873,11 @@ class AppLocalizationsHaw extends AppLocalizations {
       'Nā kihi maʻamau maʻamau (ʻaʻohe kumu kumu)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ala me $madhab i koho ʻia e ka mea hoʻohana.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Kapua Kapua';
 
   @override

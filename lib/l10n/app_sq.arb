@@ -769,5 +769,16 @@
   "asmaMeaning96": "I Përjetshmi",
   "asmaMeaning97": "Trashëgimtari",
   "asmaMeaning98": "Udhëzuesi më i drejtë",
-  "asmaMeaning99": "Pacienti Një"
+  "asmaMeaning99": "Pacienti Një",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Metoda {sourceName} me cilësimin e asr {madhab} të zgjedhur nga përdoruesi"
 }

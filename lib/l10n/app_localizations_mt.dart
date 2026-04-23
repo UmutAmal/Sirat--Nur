@@ -877,6 +877,11 @@ class AppLocalizationsMt extends AppLocalizations {
       'Angoli manwali tad-dwana (l-ebda sors istituzzjonali)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metodu b\'setting Asr $madhab magħżul mill-utent';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Sħab Immexxi';
 
   @override

@@ -863,6 +863,11 @@ class AppLocalizationsTi extends AppLocalizations {
   String get diagnosticsPrayerCustomSource => 'ማንዋል ብሕታዊ ኩርናዓት (ትካላዊ ምንጪ የለን)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ሜላ ምስ ተጠቃሚ ዝመረጾ $madhab Asr ቅጥዒ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ደበና ዝመርሖ';
 
   @override

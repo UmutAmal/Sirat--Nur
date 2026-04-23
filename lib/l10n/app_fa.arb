@@ -769,5 +769,16 @@
   "asmaMeaning96": "آدم ابدی",
   "asmaMeaning97": "وارث",
   "asmaMeaning98": "راست ترین راهنمای",
-  "asmaMeaning99": "بیمار یک"
+  "asmaMeaning99": "بیمار یک",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "روش {sourceName} با تنظیم عصر {madhab} انتخاب شده توسط کاربر"
 }

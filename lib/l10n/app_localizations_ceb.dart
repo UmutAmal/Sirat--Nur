@@ -878,6 +878,11 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Manual custom nga mga anggulo (walay institusyonal nga tinubdan)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName nga pamaagi nga gipili sa user $madhab Asr setting';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

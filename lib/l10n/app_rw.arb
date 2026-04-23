@@ -769,5 +769,16 @@
   "asmaMeaning96": "Uhoraho",
   "asmaMeaning97": "Umurage",
   "asmaMeaning98": "Umuyobozi Ukiranuka",
-  "asmaMeaning99": "Umurwayi"
+  "asmaMeaning99": "Umurwayi",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} uburyo hamwe nabakoresha-batoranijwe {madhab} Igenamiterere rya Asr"
 }

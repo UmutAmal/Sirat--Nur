@@ -873,6 +873,11 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಹಸ್ತಚಾಲಿತ ಕಸ್ಟಮ್ ಕೋನಗಳು (ಯಾವುದೇ ಸಾಂಸ್ಥಿಕ ಮೂಲವಿಲ್ಲ)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'ಬಳಕೆದಾರ-ಆಯ್ಕೆಮಾಡಿದ $madhab Asr ಸೆಟ್ಟಿಂಗ್‌ನೊಂದಿಗೆ $sourceName ವಿಧಾನ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ಮೇಘ ಚಾಲಿತ';
 
   @override

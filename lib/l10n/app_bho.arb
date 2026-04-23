@@ -769,5 +769,16 @@
   "asmaMeaning96": "सनातन वाला के कहल जाला",
   "asmaMeaning97": "वारिस के नाम से जानल जाला",
   "asmaMeaning98": "सबसे धर्मी गाइड के बारे में बतावल गइल बा",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} तरीका उपयोगकर्ता द्वारा चुनल {madhab} Asr सेटिंग के साथ"
 }

@@ -881,6 +881,11 @@ class AppLocalizationsTs extends AppLocalizations {
       'Ti-angle ta ntolovelo ta manual (ku hava xihlovo xa nhlangano) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName ndlela leyi nga na xiyimiso xa Asr lexi hlawuriweke hi mutirhisi $madhab';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Ku Fambiwa hi Mapapa';
 
   @override

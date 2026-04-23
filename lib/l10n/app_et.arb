@@ -769,5 +769,16 @@
   "asmaMeaning96": "Igavene",
   "asmaMeaning97": "Pärija",
   "asmaMeaning98": "Kõige õigem teejuht",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} meetod kasutaja valitud {madhab} Asr-sätetega"
 }

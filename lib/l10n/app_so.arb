@@ -769,5 +769,16 @@
   "asmaMeaning96": "Midka Aakhiro",
   "asmaMeaning97": "Dhaxalka",
   "asmaMeaning98": "Tusaha ugu Xaqsan",
-  "asmaMeaning99": "Kan Bukaanka ah"
+  "asmaMeaning99": "Kan Bukaanka ah",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} hab leh isticmaale-doortay {madhab} dejinta Asr"
 }

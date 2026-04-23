@@ -874,6 +874,11 @@ class AppLocalizationsMl extends AppLocalizations {
       'മാനുവൽ ഇഷ്‌ടാനുസൃത ആംഗിളുകൾ (ഇൻസ്റ്റിറ്റ്യൂഷണൽ ഉറവിടങ്ങളില്ല)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'ഉപയോക്താവ് തിരഞ്ഞെടുത്ത $madhab Asr ക്രമീകരണത്തോടുകൂടിയ $sourceName രീതി';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ക്ലൗഡ് ഡ്രൈവൺ';
 
   @override

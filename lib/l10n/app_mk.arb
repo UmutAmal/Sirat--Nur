@@ -769,5 +769,16 @@
   "asmaMeaning96": "Вечниот",
   "asmaMeaning97": "The Inheritor",
   "asmaMeaning98": "Најправедниот водич",
-  "asmaMeaning99": "Пациентот Еден"
+  "asmaMeaning99": "Пациентот Еден",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "метод {sourceName} со поставка {madhab} избрана од корисникот"
 }

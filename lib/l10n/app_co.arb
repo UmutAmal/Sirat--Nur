@@ -769,5 +769,16 @@
   "asmaMeaning96": "L'Eternu",
   "asmaMeaning97": "L'eredi",
   "asmaMeaning98": "A guida più ghjustu",
-  "asmaMeaning99": "U Pacientu Unu"
+  "asmaMeaning99": "U Pacientu Unu",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metudu cù l'impostazione Asr {madhab} selezionata da l'utilizatori"
 }

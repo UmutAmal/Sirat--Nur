@@ -874,6 +874,11 @@ class AppLocalizationsSm extends AppLocalizations {
       'Su\'ega fa\'ale-aganu\'u tusi (leai se puna fa\'alapotopotoga)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName auala fa\'atasi ai ma $madhab fa\'atulagaina o le Asr ua filifilia e le tagata.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Ao Uia';
 
   @override

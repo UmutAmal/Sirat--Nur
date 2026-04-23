@@ -769,5 +769,16 @@
   "asmaMeaning96": "La Eterna Unu",
   "asmaMeaning97": "La Heredanto",
   "asmaMeaning98": "La Plej Justa Gvidilo",
-  "asmaMeaning99": "La Paciento Unu"
+  "asmaMeaning99": "La Paciento Unu",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metodo kun {madhab} Asr-agordo elektita de uzanto"
 }

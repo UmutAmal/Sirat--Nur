@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ti Agnanayon",
   "asmaMeaning97": "Ti Agtawid",
   "asmaMeaning98": "Ti Kalintegan a Giya",
-  "asmaMeaning99": "Ti Pasiente"
+  "asmaMeaning99": "Ti Pasiente",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} a pamay-an nga addaan iti napili ti agar-aramat a {madhab} Asr a setting"
 }

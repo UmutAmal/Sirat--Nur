@@ -769,5 +769,16 @@
   "asmaMeaning96": "Die Ewige Een",
   "asmaMeaning97": "Die Erfgenaam",
   "asmaMeaning98": "Die mees regverdige gids",
-  "asmaMeaning99": "Die geduldige een"
+  "asmaMeaning99": "Die geduldige een",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} metode met gebruiker-geselekteerde {madhab} Asr-instelling"
 }

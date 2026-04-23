@@ -769,5 +769,16 @@
   "asmaMeaning96": "Lowo Ungunaphakade",
   "asmaMeaning97": "Indlalifa",
   "asmaMeaning98": "Oyena Mkhokheli olungileyo",
-  "asmaMeaning99": "Lowo Unomonde"
+  "asmaMeaning99": "Lowo Unomonde",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} indlela ekhethwe ngumsebenzisi {madhab} Asr useto"
 }

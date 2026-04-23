@@ -769,5 +769,16 @@
   "asmaMeaning96": "Kan Bara Baraa",
   "asmaMeaning97": "Dhaaltuu",
   "asmaMeaning98": "Qajeelfama hunda caalaa qajeelaa",
-  "asmaMeaning99": "Kan Dhukkubsataa"
+  "asmaMeaning99": "Kan Dhukkubsataa",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} mala fayyadamaan filate waliin {madhab} qindaa'ina Asr"
 }

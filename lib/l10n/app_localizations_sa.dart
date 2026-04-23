@@ -873,6 +873,11 @@ class AppLocalizationsSa extends AppLocalizations {
       'मैनुअल् कस्टम् कोणाः (कोऽपि संस्थागतः स्रोतः नास्ति) २.';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName उपयोक्तृ-चयनितेन सह विधिः $madhab Asr सेटिंग्';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'मेघ चालित';
 
   @override

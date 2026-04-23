@@ -871,6 +871,11 @@ class AppLocalizationsHt extends AppLocalizations {
       'Manyèl ang koutim (pa gen okenn sous enstitisyonèl)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metòd ak itilizatè a chwazi $madhab anviwònman Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

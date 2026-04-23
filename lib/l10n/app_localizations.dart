@@ -2068,6 +2068,12 @@ abstract class AppLocalizations {
   /// **'Manual custom angles (no institutional source)'**
   String get diagnosticsPrayerCustomSource;
 
+  /// No description provided for @diagnosticsPrayerHybridSource.
+  ///
+  /// In en, this message translates to:
+  /// **'{sourceName} method with user-selected {madhab} Asr setting'**
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab);
+
   /// No description provided for @diagnosticsCloudDriven.
   ///
   /// In en, this message translates to:

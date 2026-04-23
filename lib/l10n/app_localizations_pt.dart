@@ -876,6 +876,11 @@ class AppLocalizationsPt extends AppLocalizations {
       'Ângulos personalizados manuais (sem fonte institucional)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Método $sourceName com configuração Asr $madhab selecionada pelo usuário';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Orientado pela nuvem';
 
   @override

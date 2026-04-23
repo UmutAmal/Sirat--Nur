@@ -769,5 +769,16 @@
   "asmaMeaning96": "Yo a sa Felego",
   "asmaMeaning97": "Mojalefa",
   "asmaMeaning98": "Tlhahlo e Lokilego Kudu",
-  "asmaMeaning99": "Ya Molwetši"
+  "asmaMeaning99": "Ya Molwetši",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} mokgwa wo o kgethilwego ke mosediriši {madhab} Asr setting"
 }

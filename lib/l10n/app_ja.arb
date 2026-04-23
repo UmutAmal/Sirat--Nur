@@ -769,5 +769,16 @@
   "asmaMeaning96": "永遠のもの",
   "asmaMeaning97": "継承者",
   "asmaMeaning98": "最も正義のガイド",
-  "asmaMeaning99": "罰を急がず、完全な寛容をもって対処される御方。"
+  "asmaMeaning99": "罰を急がず、完全な寛容をもって対処される御方。",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "ユーザーが選択した {madhab} Asr 設定を使用した {sourceName} メソッド"
 }

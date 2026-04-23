@@ -874,6 +874,11 @@ class AppLocalizationsGa extends AppLocalizations {
       'Uillinneacha saincheaptha láimhe (gan aon fhoinse institiúideach)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'modh $sourceName le socrú Asr $madhab roghnaithe ag an úsáideoir';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Scamall Tiomáinte';
 
   @override

@@ -874,6 +874,11 @@ class AppLocalizationsHr extends AppLocalizations {
       'Ručni prilagođeni kutovi (bez institucionalnog izvora)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metoda s postavkom $madhab Asr koju je odabrao korisnik';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Vođen oblakom';
 
   @override

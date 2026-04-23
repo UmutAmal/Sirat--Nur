@@ -887,6 +887,11 @@ class AppLocalizationsAy extends AppLocalizations {
       'Ángulos personalizados manuales (janiw institucional ukax utjkiti) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName lurawixa apnaqirina ajllitapampi $madhab Asr wakicht’awimpi';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Qhixu qhixu apnaqata';
 
   @override

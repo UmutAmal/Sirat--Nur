@@ -769,5 +769,16 @@
   "asmaMeaning96": "Yule wa Milele",
   "asmaMeaning97": "Mrithi",
   "asmaMeaning98": "Mwongozo Muadilifu",
-  "asmaMeaning99": "Yule Mgonjwa"
+  "asmaMeaning99": "Yule Mgonjwa",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} mbinu iliyochaguliwa na mtumiaji {madhab} mpangilio wa Asr"
 }

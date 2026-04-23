@@ -869,6 +869,11 @@ class AppLocalizationsHe extends AppLocalizations {
       'זוויות מותאמות אישית ידניות (ללא מקור מוסדי)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'שיטת $sourceName עם הגדרת $madhab שנבחרה על ידי המשתמש';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'מונע בענן';
 
   @override

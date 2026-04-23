@@ -873,6 +873,11 @@ class AppLocalizationsTw extends AppLocalizations {
       'Manual custom angles (asoɛe biara nni hɔ fibea) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName kwan a nea ɔde di dwuma no apaw $madhab Asr nhyehyɛe';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Mununkum a Wɔde Di Dwuma';
 
   @override

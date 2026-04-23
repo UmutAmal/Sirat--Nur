@@ -876,6 +876,11 @@ class AppLocalizationsMi extends AppLocalizations {
       'Koki ritenga a-ringa (kaore he puna whakahaere)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName tikanga me te $madhab i kowhiria e te kaiwhakamahi te tautuhinga Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Kapua Peia';
 
   @override

@@ -872,6 +872,11 @@ class AppLocalizationsKu extends AppLocalizations {
       'Goşeyên xwerû yên destan (çavkaniyek sazûmanî tune)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName rêbaza ku ji hêla bikarhêner ve hatî hilbijartin $madhab Mîhenga Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

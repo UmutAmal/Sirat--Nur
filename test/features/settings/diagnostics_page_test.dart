@@ -165,7 +165,14 @@ void main() {
 
     expect(resolvePrayerProfileValue(profile), "Diyanet / Shafi'i");
     expect(profile.sourceUrl, 'https://namazvakitleri.diyanet.gov.tr');
-    expect(isOfficialPrayerProfile(profile), isTrue);
+    expect(isOfficialPrayerProfile(profile), isFalse);
+    expect(
+      resolvePrayerSourceValue(
+        profile,
+        hybridSourceValue: 'Diyanet method with Shafi override',
+      ),
+      'Diyanet method with Shafi override',
+    );
   });
 
   test('resolvePrayerProfileValue flags custom profiles honestly', () {

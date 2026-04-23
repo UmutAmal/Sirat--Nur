@@ -17588,3 +17588,44 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan yeni dongude prayer/notification, localization parity, Appium release smoke, audio storage dagitimi ve store listing/policy yuzeylerini yeniden tarayip siradaki en yuksek kanitli riski izole et.
+
+## 2026-04-23 TUR-423 - Prayer Authority Copy No Longer Marks Madhab Overrides As Fully Official
+
+### MASTER Karari
+- Risk: Resmi namaz vakti metodu uzerine kullanici farkli bir ikindi fikhi yontemi sectiginde uygulama bu hibrit ayari hala tam kurum onayli profil gibi gosterebiliyordu.
+- Kanit:
+  - `lib/core/services/prayer_profile_service.dart` icinde `PrayerCalculationProfile.withMadhab(...)` kaynak adini ve URL'yi koruyup override durumunu ayirt etmiyordu.
+  - `hasOfficialPrayerAuthority(...)` yalnizca `calculationMethod != Custom` ve `sourceUrl` dolu mu diye bakiyordu.
+  - `lib/features/settings/settings_page.dart` bu degeri yesil/open-in-new resmi authority durumu olarak kullaniyordu.
+  - `test/features/settings/diagnostics_page_test.dart` onceki davranisi `isOfficialPrayerProfile(profile) == true` diye sabitliyordu; bu test yanlis guvence uretmis oldu.
+- Kullanici etkisi: Diyanet + Ja'fari veya benzeri bir hibrit kombinasyon, kurumun fiilen verdigi resmi profilmis gibi algilanabilir; bu dini vakit/kaynak guveni icin P1 risk.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: Bu turdaki profile model flag'i, settings/diagnostics UI kullanimlari, yeni l10n anahtari ve test guncellemeleri tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- `PrayerCalculationProfile` icine `hasUserMadhabOverride` flag'i eklendi.
+- `withMadhab(...)` default madhab disina cikildiginde profili hibrit olarak isaretliyor.
+- `hasOfficialPrayerAuthority(...)` artik hibrit profilleri resmi kurum profili saymiyor.
+- `hasInstitutionalPrayerMethodSource(...)` eklendi; hibrit profillerde kurum metodunun kaynak linki hala acilabilir kaliyor, fakat UI bunu tam resmi profil gibi saglikli gostermiyor.
+- Settings ve Diagnostics yuzeyleri yeni `diagnosticsPrayerHybridSource` l10n metniyle hibrit durumu acik soyluyor.
+- Yeni l10n anahtari tum `app_*.arb` dosyalarina eklendi ve generated `app_localizations*.dart` dosyalari yenilendi.
+
+### TESTER Degisikligi
+- `test/prayer_profile_service_test.dart` hibrit override'in non-institutional profil sayildigini guard'liyor.
+- `test/features/settings/diagnostics_page_test.dart` eski yanlis official beklentisini tersine cevirdi ve hibrit kaynak metnini dogruluyor.
+- `test/features/settings/settings_page_test.dart` TR UI'da hibrit Diyanet + Ja'fari profilinin resmi authority gibi isaretlenmedigini dogruluyor.
+- `test/arb_ui_localization_test.dart` yeni diagnostics metnini safe-priority locale kapsamına aldi.
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\prayer_profile_service_test.dart test\features\settings\diagnostics_page_test.dart test\features\settings\settings_page_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS.
+- L10n debt report for `diagnosticsPrayerHybridSource`: missing/empty 0, placeholder mismatch 0; 66 dusuk-kaynak locale Google Translate tarafindan EN ile ayni kaldigi icin uydurma ceviri yazilmadi.
+- Store readiness: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\check_store_readiness.ps1` PASS.
+- `flutter analyze`: PASS.
+- `flutter test`: PASS, 656/656.
+
+### Risk Degisimi
+- Prayer authority false-official hibrit profil riski: `16/25 -> 3/25`.
+- Kalan risk: Dusuk-kaynak 66 locale icin bu yeni tek metinde EN referans korunuyor; dogrulanmis insan/kurumsal ceviri saglanirsa iyilestirilebilir ama uydurma ceviri yapilmadi.
+
+### Sonraki Adim
+- Commit/push; ardindan siradaki dongude dependency patch guncellemeleri, buyuk Git artefaktlari ve Appium release smoke yuzeylerini risk skoruna gore ele al.

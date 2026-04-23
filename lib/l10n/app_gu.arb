@@ -769,5 +769,16 @@
   "asmaMeaning96": "The Everlasting One",
   "asmaMeaning97": "ધ ઇનહેરિટર",
   "asmaMeaning98": "સૌથી ન્યાયી માર્ગદર્શિકા",
-  "asmaMeaning99": "પેશન્ટ વન"
+  "asmaMeaning99": "પેશન્ટ વન",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "વપરાશકર્તા દ્વારા પસંદ કરેલ {madhab} Asr સેટિંગ સાથે {sourceName} પદ્ધતિ"
 }

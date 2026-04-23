@@ -875,6 +875,11 @@ class AppLocalizationsRu extends AppLocalizations {
       'Пользовательские углы вручную (без институционального источника)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Метод $sourceName с выбранной пользователем настройкой $madhab Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Облачное управление';
 
   @override

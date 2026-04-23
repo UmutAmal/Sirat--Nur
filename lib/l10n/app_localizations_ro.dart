@@ -878,6 +878,11 @@ class AppLocalizationsRo extends AppLocalizations {
       'Unghiuri personalizate manual (fără sursă instituțională)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Metoda $sourceName cu setarea $madhab selectată de utilizator';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Condus pe cloud';
 
   @override

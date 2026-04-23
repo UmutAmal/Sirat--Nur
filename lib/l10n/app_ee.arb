@@ -769,5 +769,16 @@
   "asmaMeaning96": "Mavɔtɔ la",
   "asmaMeaning97": "Domenyila la",
   "asmaMeaning98": "Mɔfiala si Dzɔdzɔe Wu",
-  "asmaMeaning99": "Dɔnɔa"
+  "asmaMeaning99": "Dɔnɔa",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} mɔnu si zãla tia {madhab} Asr ɖoɖo"
 }

@@ -874,6 +874,11 @@ class AppLocalizationsKm extends AppLocalizations {
       'មុំផ្ទាល់ខ្លួនដោយដៃ (គ្មានប្រភពស្ថាប័ន)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'វិធីសាស្រ្ត $sourceName ជាមួយនឹងការកំណត់ $madhab Asr ដែលបានជ្រើសរើសដោយអ្នកប្រើប្រាស់';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ដំណើរការលើពពក';
 
   @override

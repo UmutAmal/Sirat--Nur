@@ -873,6 +873,11 @@ class AppLocalizationsAs extends AppLocalizations {
       'মেনুৱেল কাষ্টম এংগেল (কোনো প্ৰতিষ্ঠানিক উৎস নাই)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'ব্যৱহাৰকাৰী-নিৰ্বাচিত $madhab Asr সংহতিৰ সৈতে $sourceName পদ্ধতি';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ক্লাউড চালিত';
 
   @override

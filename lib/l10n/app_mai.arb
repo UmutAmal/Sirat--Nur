@@ -769,5 +769,16 @@
   "asmaMeaning96": "शाश्वत वाला",
   "asmaMeaning97": "उत्तराधिकारी",
   "asmaMeaning98": "परम धर्मी मार्गदर्शक",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} विधि उपयोगकर्ता-चयनित {madhab} Asr सेटिंग के साथ"
 }

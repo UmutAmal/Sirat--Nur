@@ -769,5 +769,16 @@
   "asmaMeaning96": "مەڭگۈلۈك",
   "asmaMeaning97": "ۋارىس",
   "asmaMeaning98": "ئەڭ ھەققانىي يېتەكچى",
-  "asmaMeaning99": "بىمار"
+  "asmaMeaning99": "بىمار",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "ئىشلەتكۈچى تاللىغان {sourceName} ئۇسۇلى {madhab} Asr تەڭشىكى"
 }

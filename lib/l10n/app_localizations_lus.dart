@@ -875,6 +875,11 @@ class AppLocalizationsLus extends AppLocalizations {
       'Manual custom angle (institutional source a awm lo) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName method hmangin user-in a thlan $madhab Asr setting a awm';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven a ni';
 
   @override

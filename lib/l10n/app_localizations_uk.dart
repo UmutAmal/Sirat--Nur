@@ -875,6 +875,11 @@ class AppLocalizationsUk extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName метод із вибраним користувачем налаштуванням $madhab Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Керований хмарою';
 
   @override

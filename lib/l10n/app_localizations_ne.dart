@@ -871,6 +871,11 @@ class AppLocalizationsNe extends AppLocalizations {
       'म्यानुअल अनुकूलन कोण (कुनै संस्थागत स्रोत छैन)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'प्रयोगकर्ता द्वारा चयन गरिएको $sourceName विधि $madhab Asr सेटिङ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'क्लाउड संचालित';
 
   @override

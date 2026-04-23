@@ -880,6 +880,11 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Dagiti manual a kostumbre nga anggulo (awan ti institusional a gubuayan) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName a pamay-an nga addaan iti napili ti agar-aramat a $madhab Asr a setting';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

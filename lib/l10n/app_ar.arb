@@ -769,5 +769,16 @@
   "asmaMeaning96": "الدائم الذي لا يفنى.",
   "asmaMeaning97": "الباقي بعد فناء الخلق.",
   "asmaMeaning98": "المرشد إلى مصالح الدين والدنيا.",
-  "asmaMeaning99": "الذي لا يعجل بالعقوبة."
+  "asmaMeaning99": "الذي لا يعجل بالعقوبة.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "طريقة {sourceName} مع إعداد {madhab} العصر الذي حدده المستخدم"
 }

@@ -874,6 +874,11 @@ class AppLocalizationsKa extends AppLocalizations {
       'ხელით მორგებული კუთხეები (ინსტიტუციური წყაროს გარეშე)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName მეთოდი მომხმარებლის მიერ არჩეული $madhab Asr პარამეტრით';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ღრუბლოვანი';
 
   @override

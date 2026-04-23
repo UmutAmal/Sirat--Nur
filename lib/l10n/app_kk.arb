@@ -769,5 +769,16 @@
   "asmaMeaning96": "Мәңгілік",
   "asmaMeaning97": "Мұрагер",
   "asmaMeaning98": "Ең әділ жетекші",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} әдісі, пайдаланушы таңдаған {madhab} Аср параметрі"
 }

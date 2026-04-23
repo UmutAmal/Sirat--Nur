@@ -769,5 +769,16 @@
   "asmaMeaning96": "ശാശ്വതമായ ഒന്ന്",
   "asmaMeaning97": "The Inheritor",
   "asmaMeaning98": "ഏറ്റവും നീതിയുള്ള വഴികാട്ടി",
-  "asmaMeaning99": "രോഗി"
+  "asmaMeaning99": "രോഗി",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "ഉപയോക്താവ് തിരഞ്ഞെടുത്ത {madhab} Asr ക്രമീകരണത്തോടുകൂടിയ {sourceName} രീതി"
 }

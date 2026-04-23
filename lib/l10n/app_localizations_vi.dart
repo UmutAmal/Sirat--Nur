@@ -874,6 +874,11 @@ class AppLocalizationsVi extends AppLocalizations {
       'Góc tùy chỉnh thủ công (không có nguồn tổ chức)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Phương thức $sourceName với cài đặt $madhab Asr do người dùng chọn';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Điều khiển bằng đám mây';
 
   @override

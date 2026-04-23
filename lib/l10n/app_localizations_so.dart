@@ -875,6 +875,11 @@ class AppLocalizationsSo extends AppLocalizations {
       'Xaglaha gaarka ah ee gacanta (malaha il hay\'ad)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName hab leh isticmaale-doortay $madhab dejinta Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Daruuruhu wadey';
 
   @override

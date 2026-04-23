@@ -769,5 +769,16 @@
   "asmaMeaning96": "L'Éternel",
   "asmaMeaning97": "L'héritier",
   "asmaMeaning98": "Le guide le plus juste",
-  "asmaMeaning99": "Le Longanime, qui ne hâte pas le châtiment et agit avec une indulgence parfaite."
+  "asmaMeaning99": "Le Longanime, qui ne hâte pas le châtiment et agit avec une indulgence parfaite.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Méthode {sourceName} avec paramètre {madhab} Asr sélectionné par l'utilisateur"
 }

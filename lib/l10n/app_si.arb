@@ -769,5 +769,16 @@
   "asmaMeaning96": "සදාකාලික එක",
   "asmaMeaning97": "උරුමය",
   "asmaMeaning98": "වඩාත්ම ධර්මිෂ්ඨ මාර්ගෝපදේශකය",
-  "asmaMeaning99": "රෝගියා"
+  "asmaMeaning99": "රෝගියා",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "පරිශීලක-තෝරාගත් {madhab} Asr සැකසුම සහිත {sourceName} ක්‍රමය"
 }

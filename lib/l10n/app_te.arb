@@ -769,5 +769,16 @@
   "asmaMeaning96": "ఎవర్‌లాస్టింగ్ వన్",
   "asmaMeaning97": "ది ఇన్‌హెరిటర్",
   "asmaMeaning98": "అత్యంత నీతివంతమైన మార్గదర్శి",
-  "asmaMeaning99": "రోగి వన్"
+  "asmaMeaning99": "రోగి వన్",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "వినియోగదారు ఎంచుకున్న {madhab} Asr సెట్టింగ్‌తో {sourceName} పద్ధతి"
 }

@@ -873,6 +873,11 @@ class AppLocalizationsYi extends AppLocalizations {
       'Manual custom angles (no institutional source)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName אופֿן מיט באַניצער-געקליבן $madhab אַסר באַשטעטיקן';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'וואָלקן געטריבן';
 
   @override

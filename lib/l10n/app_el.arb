@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ο Αιώνιος",
   "asmaMeaning97": "Ο κληρονόμος",
   "asmaMeaning98": "Ο πιο δίκαιος οδηγός",
-  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance."
+  "asmaMeaning99": "The Patient, who does not hasten punishment and acts with perfect forbearance.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "μέθοδος {sourceName} με ρύθμιση {madhab} Asr επιλεγμένη από τον χρήστη"
 }

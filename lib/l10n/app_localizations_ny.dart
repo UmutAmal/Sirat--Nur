@@ -876,6 +876,11 @@ class AppLocalizationsNy extends AppLocalizations {
       'Ma angles okhazikika pamanja (palibe gwero)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName njira yokhala ndi $madhab Asr yosankhidwa ndi ogwiritsa ntchito';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Drived';
 
   @override

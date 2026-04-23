@@ -872,6 +872,11 @@ class AppLocalizationsSn extends AppLocalizations {
       'Manual tsika angles (hapana masangano sosi)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName nzira ine yakasarudzwa nemushandisi $madhab Asr marongero';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

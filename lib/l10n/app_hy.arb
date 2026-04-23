@@ -769,5 +769,16 @@
   "asmaMeaning96": "Հավիտենականը",
   "asmaMeaning97": "Ժառանգողը",
   "asmaMeaning98": "Ամենաարդար առաջնորդը",
-  "asmaMeaning99": "Հիվանդը"
+  "asmaMeaning99": "Հիվանդը",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} մեթոդ՝ օգտագործողի կողմից ընտրված {madhab} Asr կարգավորումով"
 }

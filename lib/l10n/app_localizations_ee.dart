@@ -874,6 +874,11 @@ class AppLocalizationsEe extends AppLocalizations {
       'Dzogoe siwo wowɔ ɖe ɖoɖo nu kple asi (habɔbɔ ƒe dzɔtsoƒe aɖeke meli o) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName mɔnu si zãla tia $madhab Asr ɖoɖo';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Alilikpo Ʋuʋu';
 
   @override

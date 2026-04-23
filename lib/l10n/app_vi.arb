@@ -769,5 +769,16 @@
   "asmaMeaning96": "Người vĩnh cửu",
   "asmaMeaning97": "Người thừa kế",
   "asmaMeaning98": "Hướng dẫn chính đáng nhất",
-  "asmaMeaning99": "Đấng Kiên nhẫn, không vội trừng phạt và hành xử với sự khoan dung hoàn hảo."
+  "asmaMeaning99": "Đấng Kiên nhẫn, không vội trừng phạt và hành xử với sự khoan dung hoàn hảo.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Phương thức {sourceName} với cài đặt {madhab} Asr do người dùng chọn"
 }

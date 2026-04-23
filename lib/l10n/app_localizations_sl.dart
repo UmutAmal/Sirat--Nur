@@ -874,6 +874,11 @@ class AppLocalizationsSl extends AppLocalizations {
       'Ročni koti po meri (brez institucionalnega vira)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName metoda z uporabniško izbrano nastavitvijo $madhab Asr';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Poganja oblak';
 
   @override

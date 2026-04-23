@@ -769,5 +769,16 @@
   "asmaMeaning96": "הנצח",
   "asmaMeaning97": "היורש",
   "asmaMeaning98": "המדריך הכי צדיק",
-  "asmaMeaning99": "הסבלן, שאינו ממהר להעניש ופועל באורך רוח מושלם."
+  "asmaMeaning99": "הסבלן, שאינו ממהר להעניש ופועל באורך רוח מושלם.",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "שיטת {sourceName} עם הגדרת {madhab} שנבחרה על ידי המשתמש"
 }

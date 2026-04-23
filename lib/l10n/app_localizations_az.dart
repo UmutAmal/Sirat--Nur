@@ -872,6 +872,11 @@ class AppLocalizationsAz extends AppLocalizations {
       'Manual fərdi açılar (institusional mənbə yoxdur)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'İstifadəçi tərəfindən seçilmiş $madhab Əsr ayarı ilə $sourceName metodu';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Buludla idarə olunur';
 
   @override

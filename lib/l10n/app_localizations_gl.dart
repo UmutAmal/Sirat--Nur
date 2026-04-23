@@ -877,6 +877,11 @@ class AppLocalizationsGl extends AppLocalizations {
       'Ángulos personalizados manuais (sen fonte institucional)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Método $sourceName coa configuración $madhab seleccionada polo usuario';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Impulsado pola nube';
 
   @override

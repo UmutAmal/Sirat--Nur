@@ -769,5 +769,16 @@
   "asmaMeaning96": "Nu Langgeng",
   "asmaMeaning97": "Nu Ngawaris",
   "asmaMeaning98": "Nu Maha Adil",
-  "asmaMeaning99": "Nu Sabar"
+  "asmaMeaning99": "Nu Sabar",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "Métode {sourceName} nganggo setélan {madhab} Asar anu dipilih ku pamaké"
 }

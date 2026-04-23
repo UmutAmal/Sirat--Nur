@@ -874,6 +874,11 @@ class AppLocalizationsLa extends AppLocalizations {
       'Mores manuales anguli (no fonte institutionali)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName methodus cum user delectis $madhab Asr occasum';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

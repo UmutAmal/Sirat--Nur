@@ -769,5 +769,16 @@
   "asmaMeaning96": "Ҷовидон",
   "asmaMeaning97": "Ворис",
   "asmaMeaning98": "Роҳнамои одилтарин",
-  "asmaMeaning99": "Сабр"
+  "asmaMeaning99": "Сабр",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} усули бо интихоби корбар {madhab} танзими аср"
 }

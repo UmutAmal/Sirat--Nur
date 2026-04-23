@@ -769,5 +769,16 @@
   "asmaMeaning96": "ଅନନ୍ତ |",
   "asmaMeaning97": "ଉତ୍ତରାଧିକାରୀ |",
   "asmaMeaning98": "ସବୁଠାରୁ ଧାର୍ମିକ ଗାଇଡ୍ |",
-  "asmaMeaning99": "ରୋଗୀ"
+  "asmaMeaning99": "ରୋଗୀ",
+  "@diagnosticsPrayerHybridSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      },
+      "madhab": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerHybridSource": "{sourceName} ପଦ୍ଧତି ଉପଭୋକ୍ତା-ମନୋନୀତ {madhab} ଆସ୍ର ସେଟିଂ ସହିତ |"
 }

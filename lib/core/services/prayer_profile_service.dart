@@ -5,12 +5,14 @@ class PrayerCalculationProfile {
   final String madhab;
   final String sourceName;
   final String sourceUrl;
+  final bool hasUserMadhabOverride;
 
   const PrayerCalculationProfile({
     required this.calculationMethod,
     required this.madhab,
     required this.sourceName,
     required this.sourceUrl,
+    this.hasUserMadhabOverride = false,
   });
 
   PrayerCalculationProfile withMadhab(String? madhab) {
@@ -28,6 +30,7 @@ class PrayerCalculationProfile {
       madhab: normalizedMadhab,
       sourceName: sourceName,
       sourceUrl: sourceUrl,
+      hasUserMadhabOverride: true,
     );
   }
 }
@@ -362,6 +365,13 @@ String displayMadhabLabel(String madhab) {
 bool hasOfficialPrayerAuthority(PrayerCalculationProfile profile) {
   return normalizeCalculationMethod(profile.calculationMethod) !=
           customPrayerMethod &&
+      profile.sourceUrl.trim().isNotEmpty &&
+      !profile.hasUserMadhabOverride;
+}
+
+bool hasInstitutionalPrayerMethodSource(PrayerCalculationProfile profile) {
+  return normalizeCalculationMethod(profile.calculationMethod) !=
+          customPrayerMethod &&
       profile.sourceUrl.trim().isNotEmpty;
 }
 
@@ -408,6 +418,9 @@ PrayerCalculationProfile profileForMethod(String method, {String? madhab}) {
         madhab: normalizedMadhab ?? _customProfile.madhab,
         sourceName: _customProfile.sourceName,
         sourceUrl: _customProfile.sourceUrl,
+        hasUserMadhabOverride:
+            normalizedMadhab != null &&
+            normalizedMadhab != _customProfile.madhab,
       );
     default:
       return _mwlShafiiProfile;

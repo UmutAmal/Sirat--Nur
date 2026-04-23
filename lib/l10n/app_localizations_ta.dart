@@ -878,6 +878,11 @@ class AppLocalizationsTa extends AppLocalizations {
       'கைமுறை தனிப்பயன் கோணங்கள் (நிறுவன மூலங்கள் இல்லை)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'பயனர் தேர்ந்தெடுத்த $sourceName முறை $madhab Asr அமைப்பு';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'மேகம் இயக்கப்பட்டது';
 
   @override

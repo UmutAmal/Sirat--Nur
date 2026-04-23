@@ -875,6 +875,11 @@ class AppLocalizationsSu extends AppLocalizations {
       'Sudut custom manual (euweuh sumber institusional)';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return 'Métode $sourceName nganggo setélan $madhab Asar anu dipilih ku pamaké';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Awan disetir';
 
   @override

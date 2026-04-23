@@ -878,6 +878,11 @@ class AppLocalizationsGn extends AppLocalizations {
       'Ángulo personalizado manual (ndaipóri fuente institucional) .';
 
   @override
+  String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
+    return '$sourceName método orekóva puruhára oiporavóva $madhab Asr ñemboheko';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Arai Ñemboguata';
 
   @override
