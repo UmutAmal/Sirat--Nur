@@ -120,6 +120,12 @@ void main() {
       expect(script, contains('tile.openstreetmap.org'));
       expect(script, contains('overpass-api.de'));
       expect(script, contains('flutter build appbundle --release'));
+      expect(script, contains(r'if ($LASTEXITCODE -ne 0)'));
+      expect(script, contains('Store app bundle build failed'));
+      expect(
+        script.indexOf('flutter build appbundle --release'),
+        lessThan(script.indexOf('Store app bundle build failed')),
+      );
       expect(
         script.indexOf("QURAN_AUDIO_PATH_NAMESPACE must be quran-audio"),
         lessThan(script.indexOf(r'if ($NoBuild)')),

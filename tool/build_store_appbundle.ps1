@@ -155,3 +155,9 @@ flutter build appbundle --release `
   --dart-define=QURAN_AUDIO_CLOUDFLARE_BASE_URL="$env:QURAN_AUDIO_CLOUDFLARE_BASE_URL" `
   --dart-define=QURAN_AUDIO_GITHUB_URL_TEMPLATE="$env:QURAN_AUDIO_GITHUB_URL_TEMPLATE" `
   --dart-define=GEMINI_API_KEY="$env:GEMINI_API_KEY"
+
+if ($LASTEXITCODE -ne 0) {
+  throw "Store app bundle build failed (exit code $LASTEXITCODE)."
+}
+
+Write-Host 'Store app bundle build completed.'

@@ -16955,3 +16955,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan release readiness ve Supabase apply zincirindeki diger native command false-success noktalarini tara.
+
+## 2026-04-23 TUR-404 - Store Appbundle Build Exit-Code Guard
+
+### MASTER Karari
+- Risk: `tool/build_store_appbundle.ps1` store packaging icin final `flutter build appbundle --release` native komutunu calistiriyordu, fakat `$LASTEXITCODE` acikca kontrol edilmiyordu.
+- Kanit: `tool/build_store_appbundle.ps1` satir 149-157 final build komutunu yurutuyor, onceki halinde bu komuttan hemen sonra script bitiyordu. PowerShell tarafinda bu noktaya sonradan satir eklenirse build fail'i false-success'e donebilirdi.
+- Kullanici etkisi: Operator veya CI store paketi olusmadigi halde script akisini basarili sanabilir; Play upload oncesi eksik/bozuk artifact riski dogar.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 release packaging false-success).
+- Rollback plani: `tool/build_store_appbundle.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Final `flutter build appbundle --release` sonrasina `$LASTEXITCODE` guard'i eklendi.
+- Build non-zero donerse script `Store app bundle build failed (exit code X).` hatasi ile sert fail eder.
+- Build basariliysa `Store app bundle build completed.` mesaji yazar.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` store appbundle scriptinde `$LASTEXITCODE` guard'inin build komutundan sonra kaldigini kontrol ediyor.
+- `tool/build_store_appbundle.ps1 -NoBuild` dummy HTTPS release env degerleriyle smoke edildi; gercek build tetiklenmeden release configuration gate PASS verdi.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Script smoke: `tool\build_store_appbundle.ps1 -NoBuild` PASS; `Store release configuration is present.`
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Store appbundle false-success risk: `12/25 -> 2/25`.
+- Kalan risk: Gercek store-ready AAB build icin production env, upload keystore, Cloudflare/GitHub audio URL'leri ve Supabase content apply evidence operator/CI tarafinda saglanmali.
+
+### Sonraki Adim
+- Commit/push; ardindan release/ops scriptlerinde kalan native-command ve runtime smoke risklerini taramaya devam et.
