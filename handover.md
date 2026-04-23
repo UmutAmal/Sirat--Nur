@@ -17629,3 +17629,30 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan siradaki dongude dependency patch guncellemeleri, buyuk Git artefaktlari ve Appium release smoke yuzeylerini risk skoruna gore ele al.
+
+## 2026-04-23 TUR-424 - Resolvable Dependency Patch Updates Applied
+
+### MASTER Karari
+- Risk: `flutter pub outdated` yedi resolvable dependency'nin eski patch surumlerinde kilitli kaldigini gosteriyordu. Bu, store-ready hedefinde bilinen patch duzeltmelerinden mahrum kalma ve ileride daha buyuk toplu upgrade riski uretir.
+- Kanit:
+  - `flutter pub outdated` once `go_router 17.2.1 -> 17.2.2`, `sqflite 2.4.2 -> 2.4.2+1`, `dart_jsonwebtoken 3.4.0 -> 3.4.1`, `hooks 1.0.2 -> 1.0.3`, `synchronized 3.4.0 -> 3.4.0+1`, `webview_flutter_wkwebview 3.24.3 -> 3.24.5` ve `sqflite_common 2.5.6 -> 2.5.6+1` olarak resolvable patch guncellemeleri raporladi.
+  - `pubspec.yaml` icindeki `share_plus` yorumu Flutter 3.41.4 nedeniyle 13.x'e gecilmemesi gerektigini acikliyor; bu nedenle uyumsuz latest surum zorlanmadi.
+- Kullanici etkisi: Navigation, local DB locking, JWT helper ve iOS WebView transitive tarafinda patch seviyesinde guvenilirlik/artifakt guncelligi artar; riskli major upgrade yapilmadan sistem en yeni resolvable lock durumuna gelir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: `pubspec.lock` bu commit oncesi haline geri alinir; kod dosyasi degismedigi icin rollback izole ve dusuk risklidir.
+
+### BUILDER Degisikligi
+- `flutter pub upgrade go_router sqflite dart_jsonwebtoken hooks synchronized webview_flutter_wkwebview` calistirildi.
+- `pubspec.lock` guncellendi; yeni transitive `record_use 0.6.0` lock dosyasina eklendi.
+- `flutter pub outdated` tekrar calistirildi ve proje artik `Resolvable` kolonundaki en yeni uyumlu surumleri kullaniyor.
+
+### TESTER Degisikligi
+- `flutter analyze`: PASS.
+- `flutter test --reporter compact`: PASS, 656/656.
+
+### Risk Degisimi
+- Eski resolvable patch dependency riski: `12/25 -> 2/25`.
+- Kalan risk: `share_plus 13.1.0` ve bazi transitive latest surumler Flutter 3.41.4/toolchain constraint nedeniyle su an uyumsuz; Flutter toolchain resmi olarak uygun seviyeye cikinca ayri ve testli bir upgrade halkasinda ele alinmali.
+
+### Sonraki Adim
+- Commit/push; ardindan yeni dongude buyuk Git artefaktlari, Appium release smoke ve prayer/notification scheduling zincirini tekrar kanitli risk siralamasina al.
