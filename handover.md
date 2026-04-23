@@ -17472,3 +17472,36 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan remote Supabase auth/MCP imkanini, verified manifest izlerini ve kalan store-release operasyonel blocker'larini taramaya devam et.
+
+## 2026-04-23 TUR-420 - Remaining Blockers Confirmed As Operational
+
+### MASTER Karari
+- Risk: Kod tarafindaki release-env false blocker'lari kapandiktan sonra kalan store-ready engellerinin gercekten repo disi operasyonel eksikler oldugu kesinlestirilmeli.
+- Kanit:
+  - `functions.list_mcp_resources(server=\"supabase\")` ve `functions.list_mcp_resource_templates(server=\"supabase\")` ayni sekilde FAIL oldu: `OAuth token refresh failed: Failed to parse server response`.
+  - Repo koku ve `build/` taramasinda `content_hadith_manifest.json`, `content_tafsir_manifest.json`, `content_seed_hadith.sql`, `content_seed_tafsir.sql` bulunmadi.
+  - `tool/check_store_readiness.ps1` env smokes sonrasinda yalnizca `build/supabase_content_apply_summary.json` dry-run kalintisi ve hadith/tafsir apply kaniti eksigini blocker olarak birakiyor.
+- Kullanici etkisi: Bu noktadan sonra yeni kod yazarak store-ready olmak mumkun degil; verified dini manifestler ve calisir Supabase auth/DB erisimi gereklidir.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 (P1 release operasyonel blocker).
+- Rollback plani: Bu tur yalniz handover notudur; kod degisikligi yok.
+
+### BUILDER Degisikligi
+- Kod degisikligi yapilmadi.
+
+### TESTER Degisikligi
+- Supabase MCP kaynak listesi ve template listesi denendi; ikisi de auth refresh/parsing hatasi ile basarisiz oldu.
+- Repo taramasi: verified hadith/tafsir manifestleri ve bunlardan uretilmis production seed SQL dosyalari bulunmadi.
+
+### Dogrulama Sonucu
+- Workspace temiz durumda; son kod commitleri `1b62111d`, `af6dd72e`, `12862122` remote `master`'a pushlandi.
+- Kalan blocker'lar kod degil, operasyonel bagimlilik:
+  1. Cekirdek verified manifestler: `content_hadith_manifest.json`, `content_tafsir_manifest.json`
+  2. Bunlardan uretilecek `content_seed_hadith.sql`, `content_seed_tafsir.sql`
+  3. Real apply icin calisir `SUPABASE_DB_URL` veya saglam authenticated Supabase MCP/CLI erisimi
+  4. Ardindan `tool/apply_supabase_content_bundle.ps1` ile `build/supabase_content_apply_summary.json` dosyasinin `dry_run=false` olacak sekilde yenilenmesi
+
+### Risk Degisimi
+- Kod kaynakli false blocker riski daha fazla kalmadi; kalan store-release riski tamamen operasyonel tarafta toplandi.
+
+### Sonraki Adim
+- Supabase MCP auth/refresh sorunu dis ortamda duzeltilir veya `SUPABASE_DB_URL` saglanir saglanmaz verified hadith/tafsir manifestlerinden seed uretimine ve real apply kanitina gec.
