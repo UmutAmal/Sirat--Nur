@@ -17437,3 +17437,38 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan verified hadith/tafsir manifest izleri, remote Supabase auth imkani ve store-ready kalan operasyonel blocker'lari taramaya devam et.
+
+## 2026-04-23 TUR-419 - Quran Audio Upload Script Loads Bucket From Release Env
+
+### MASTER Karari
+- Risk: `tool/upload_quran_audio_distribution.ps1` `QURAN_AUDIO_CLOUDFLARE_BUCKET` icin yalnizca process env default param'ina bakiyordu. Bucket adi `.env.store` veya persisted env scope'ta olsa bile Codex oturumu bunu miras almadiysa real upload script'i sahte "bucket yok" blokajina dusebilirdi.
+- Kanit: Script param'i ` [string]$CloudflareBucket = $env:QURAN_AUDIO_CLOUDFLARE_BUCKET` idi; dotenv/persisted-scope helper yoktu. Repo release checklist'i ise `.env.example` ve local secret store kullanimini tesvik ediyor.
+- Kullanici etkisi: Quran audio dagitim artefakti gelecekte yeniden uretilecekse upload operatoru gereksiz konfigurasyon hatasi gorur; mevcut release automation zinciri tutarsiz kalirdi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 (P1 operator false blocker).
+- Rollback plani: `tool/upload_quran_audio_distribution.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool/upload_quran_audio_distribution.ps1` ortak `tool/import_release_environment.ps1` helper'ini kullanacak sekilde guncellendi.
+- `QURAN_AUDIO_CLOUDFLARE_BUCKET` degeri `Process -> dotenv -> User -> Machine` zinciriyle resolve edilip parametre bos geldiginde current process'e aktariliyor.
+- Script helper bir `.env*` dosyasi kullandiysa secretsiz `Loaded release environment file(s): ...` log'u yaziyor; geri kalan upload akisi degismedi.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` upload script'in ortak env helper'i kullandigini, loaded-env log'unu ve `QURAN_AUDIO_CLOUDFLARE_BUCKET` fallback'ini korudugunu guard'liyor.
+- PowerShell parse check: `tool/upload_quran_audio_distribution.ps1` PASS.
+- Manuel dry-run smoke:
+  - Gecici `.env.store` icine `QURAN_AUDIO_CLOUDFLARE_BUCKET=sirat-nur-quran-audio-env-smoke` yazildi.
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\upload_quran_audio_distribution.ps1 -DryRun -PlanOutput build/quran_audio_distribution_upload_plan_env_smoke.json -SummaryOutput build/quran_audio_distribution_upload_summary_env_smoke.json` PASS.
+  - Dry-run summary icindeki `cloudflare.bucket` alaninin `.env.store` degerine esit oldugu dogrulandi.
+  - Gecici `.env.store`, plan ve summary dosyalari temizlendi.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 10/10.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 640/640.
+
+### Risk Degisimi
+- Quran audio upload env false-negative blocker: `12/25 -> 2/25`.
+- Kalan risk: Store-ready icin gercek blocker artik yalniz verified hadith/tafsir manifestleri, bunlardan uretilecek seed SQL'leri ve calisir `SUPABASE_DB_URL` ile remote apply kaniti.
+
+### Sonraki Adim
+- Commit/push; ardindan remote Supabase auth/MCP imkanini, verified manifest izlerini ve kalan store-release operasyonel blocker'larini taramaya devam et.

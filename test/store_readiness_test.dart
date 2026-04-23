@@ -261,6 +261,15 @@ void main() {
       expect(checklist, contains('dart run tool/generate_tafsir_seed.dart'));
       expect(checklist, contains('at least 100 verified rows per collection'));
       expect(checklist, contains('complete 6,236-ayah catalog'));
+      expect(uploadScript, contains('import_release_environment.ps1'));
+      expect(uploadScript, contains('Initialize-ReleaseEnvironment'));
+      expect(uploadScript, contains('Loaded release environment file(s):'));
+      expect(
+        uploadScript,
+        contains(
+          "[Environment]::GetEnvironmentVariable('QURAN_AUDIO_CLOUDFLARE_BUCKET')",
+        ),
+      );
       expect(uploadScript, contains('npx --yes wrangler@latest r2 object put'));
       expect(uploadScript, contains('gh release upload'));
       expect(uploadScript, contains('Assert-NativeSuccess'));

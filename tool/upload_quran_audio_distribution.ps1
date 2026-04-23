@@ -14,6 +14,15 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
 $githubAssetStageDir = Join-Path $repoRoot 'build/github_quran_audio_release_assets'
 
+. (Join-Path $PSScriptRoot 'import_release_environment.ps1')
+
+$releaseEnvironment = Initialize-ReleaseEnvironment -RepoRoot $repoRoot -VariableNames @(
+  'QURAN_AUDIO_CLOUDFLARE_BUCKET'
+)
+if ([string]::IsNullOrWhiteSpace($CloudflareBucket)) {
+  $CloudflareBucket = [Environment]::GetEnvironmentVariable('QURAN_AUDIO_CLOUDFLARE_BUCKET')
+}
+
 function Require-Command {
   param(
     [Parameter(Mandatory = $true)][string]$Name,
@@ -82,6 +91,9 @@ try {
   Require-Command -Name 'dart' -InstallHint 'Install Flutter/Dart and ensure dart is on PATH.'
   Require-Command -Name 'npx' -InstallHint 'Install Node.js so npx can run wrangler.'
   Require-Command -Name 'gh' -InstallHint 'Install GitHub CLI and authenticate with gh auth login.'
+  if ($releaseEnvironment.LoadedFiles.Count -gt 0) {
+    Write-Host "Loaded release environment file(s): $($releaseEnvironment.LoadedFiles -join ', ')"
+  }
 
   $manifestPath = if ([System.IO.Path]::IsPathRooted($Manifest)) {
     $Manifest
