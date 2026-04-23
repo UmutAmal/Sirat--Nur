@@ -17505,3 +17505,42 @@
 
 ### Sonraki Adim
 - Supabase MCP auth/refresh sorunu dis ortamda duzeltilir veya `SUPABASE_DB_URL` saglanir saglanmaz verified hadith/tafsir manifestlerinden seed uretimine ve real apply kanitina gec.
+
+## 2026-04-23 TUR-421 - Appium Smoke Now Builds The Current Workspace APK
+
+### MASTER Karari
+- Risk: `tool/appium_runtime_smoke.ps1` mevcut yuku Android APK'yi aciyordu; workspace icindeki guncel kodu build edip kurmuyordu. Bu nedenle emulator uzerindeki eski binary ile smoke kosulup yanlis runtime bulgusu uretebilirdi.
+- Kanit:
+  - Canli smoke ilk denemede `Home showed legacy No Internet Connection copy.` hatasi verdi ve `build/appium-runtime-smoke-home.xml` icinde `Daily Verse\nNo Internet Connection\nPlease check your connection` goruldu.
+  - Kaynak kod ayni anda dürüst fallback kullaniyordu: `lib/features/home/home_page.dart` error branch'i `dailyVerseUnavailableTitle` ve `dailyVerseUnavailableBody` render ediyor; `test/features/home/home_page_test.dart` da `No Internet Connection` kopyasinin gorunmemesini guard'liyor.
+  - Kurulan release APK stale idi: `build/app/outputs/flutter-apk/app-release.apk` `2026-04-17` tarihliydi; son repo commit'i `2026-04-23` idi.
+- Kullanici etkisi: Appium smoke gercek regressions yerine eski build kalintilarini raporlayip yanlis P1 runtime alarmi uretebilir; kalite zinciri sahte negatif uretir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 runtime smoke stale-build false-negative).
+- Rollback plani: `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart`, `README.md`, `store/release_checklist.md`, `test/readme_operational_docs_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool/appium_runtime_smoke.ps1` guncellendi.
+- Script artik varsayilan olarak `BuildMode=debug` ile guncel workspace APK'sini zorunlu build edip `adb -s $DeviceName install -r` ile cihaza kuruyor; stale yuku binary'ye guvenmiyor.
+- Summary artefact'ine `buildMode`, `apkPath`, `apkPrepared`, `apkLastWriteTime`, `apkLength` alanlari eklendi; smoke kaniti artik hangi binary'nin test edildigini acikca tasiyor.
+- Release gate dokumani release adayi smoke etmek icin acik sekilde `.\tool\appium_runtime_smoke.ps1 -BuildMode release` komutuna guncellendi.
+
+### TESTER Degisikligi
+- `test/appium_runtime_smoke_script_test.dart` script'in current-workspace build/install guard'ini, APK kanit alanlarini ve varsayilan debug modunu static regression guard'a bagladi.
+- `test/readme_operational_docs_test.dart` release dokumantasyonunun `-BuildMode release` komutunu acikca belgeledigini dogruladi.
+- Canli Appium smoke yeniden kosuldu:
+  - Komut: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\appium_runtime_smoke.ps1 -DeviceName emulator-5554`
+  - Sonuc: PASS
+  - Summary: `buildMode=debug`, `apkPrepared=true`, `apkPath=build\app\outputs\flutter-apk\app-debug.apk`, `apkLastWriteTime=2026-04-23T19:40:06...`, `homeContainsDailyVerseUnavailable=true`, `homeContainsNoInternetLegacy=false`, `failures=[]`
+
+### Dogrulama Sonucu
+- Targeted tests: `flutter test test\appium_runtime_smoke_script_test.dart test\readme_operational_docs_test.dart --reporter compact` PASS, 12/12.
+- Live Appium smoke: PASS, 0 failure.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 641/641.
+
+### Risk Degisimi
+- Appium stale-build false-negative riski: `16/25 -> 2/25`.
+- Kalan risk: Release adayi smoke etmek icin store dart-define/env zinciri hazir oldugunda `.\tool\appium_runtime_smoke.ps1 -BuildMode release` kullanilmali; script varsayilan debug modda gelistirme/runtime taramasi icin guvenli kaldi.
+
+### Sonraki Adim
+- Commit/push; ardindan bir sonraki kanitli risk halkasinda Appium veya statik tarama ile yeni runtime/ops riski izole etmeye devam et.

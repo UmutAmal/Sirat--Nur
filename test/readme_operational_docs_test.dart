@@ -121,10 +121,13 @@ void main() {
     });
 
     test('documents the Appium runtime smoke release gate', () {
-      expect(readme, contains('.\\tool\\appium_runtime_smoke.ps1'));
+      expect(readme, contains('.\\tool\\appium_runtime_smoke.ps1 -BuildMode release'));
       expect(readme, contains('appium-runtime-smoke-summary.json'));
       expect(readme, contains('Android Settings'));
-      expect(releaseChecklist, contains('.\\tool\\appium_runtime_smoke.ps1'));
+      expect(
+        releaseChecklist,
+        contains('.\\tool\\appium_runtime_smoke.ps1 -BuildMode release'),
+      );
       expect(releaseChecklist, contains('appium-runtime-smoke-summary.json'));
       expect(releaseChecklist, contains('logcat stayed crash-free'));
     });

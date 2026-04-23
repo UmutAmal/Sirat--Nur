@@ -35,7 +35,7 @@ Run this after installing the current Android candidate on an emulator or test
 device with Appium running:
 
 ```powershell
-.\tool\appium_runtime_smoke.ps1
+.\tool\appium_runtime_smoke.ps1 -BuildMode release
 ```
 
 The Appium smoke must pass before release sign-off. Keep

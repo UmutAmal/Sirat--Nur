@@ -45,6 +45,15 @@ void main() {
       expect(script, contains('Unhandled Exception'));
     });
 
+    test('prepares the current workspace apk before starting Appium', () {
+      expect(script, contains(r'[string]$BuildMode = "debug"'));
+      expect(script, contains(r'[switch]$SkipBuildInstall'));
+      expect(script, contains(r'flutter build apk "--$BuildMode"'));
+      expect(script, contains(r'adb -s $DeviceName install -r $apkPath'));
+      expect(script, contains('apkLastWriteTime'));
+      expect(script, contains('apkPrepared'));
+    });
+
     test('writes reproducible summary and XML artifacts under build', () {
       expect(script, contains('appium-runtime-smoke-summary.json'));
       expect(script, contains('appium-runtime-smoke-'));

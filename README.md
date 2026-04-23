@@ -64,7 +64,7 @@ Store policy materials are tracked under `store/`. Keep `docs/privacy_policy.md`
 After installing the current Android candidate on an emulator or test device
 with Appium running, execute the runtime UI smoke before release sign-off:
 ```powershell
-.\tool\appium_runtime_smoke.ps1
+.\tool\appium_runtime_smoke.ps1 -BuildMode release
 ```
 The script writes `build/appium-runtime-smoke-summary.json` and fails if first
 launch opens Android Settings, onboarding or runtime navigation breaks, legacy

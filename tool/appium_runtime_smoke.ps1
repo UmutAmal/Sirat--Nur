@@ -4,6 +4,9 @@ param(
   [string]$Package = "com.umutamal.sirat_i_nur",
   [string]$Activity = ".MainActivity",
   [string]$OutputDir = "build",
+  [ValidateSet("release", "debug")]
+  [string]$BuildMode = "debug",
+  [switch]$SkipBuildInstall,
   [switch]$NoReset,
   [switch]$SkipLogcat
 )
@@ -176,8 +179,34 @@ function Test-ContainsAny {
 
 New-Item -ItemType Directory -Force -Path $OutputDir | Out-Null
 
-if (-not $SkipLogcat) {
+$apkPath = Join-Path "build\app\outputs\flutter-apk" "app-$BuildMode.apk"
+$apkLastWriteTime = $null
+$apkLength = $null
+$apkPrepared = $false
+
+if (-not $SkipBuildInstall) {
+  Require-Command -Name 'flutter' -InstallHint 'Install Flutter and ensure flutter is on PATH before running the Appium smoke script.'
+  Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH before running the Appium smoke script.'
+
+  flutter build apk "--$BuildMode" | Out-Null
+  Assert-NativeSuccess -Description "flutter build apk --$BuildMode"
+
+  if (-not (Test-Path $apkPath)) {
+    throw "Current workspace APK was not produced at $apkPath."
+  }
+
+  $apkItem = Get-Item $apkPath
+  $apkLastWriteTime = $apkItem.LastWriteTime.ToString('o')
+  $apkLength = [int64]$apkItem.Length
+
+  adb -s $DeviceName install -r $apkPath | Out-Null
+  Assert-NativeSuccess -Description "adb install current $BuildMode APK"
+  $apkPrepared = $true
+} elseif (-not $SkipLogcat) {
   Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH, or pass -SkipLogcat explicitly.'
+}
+
+if (-not $SkipLogcat) {
   adb -s $DeviceName logcat -c | Out-Null
   Assert-NativeSuccess -Description 'adb logcat clear'
 }
@@ -213,6 +242,11 @@ if (-not $sessionId) {
 
 $summary = [ordered]@{
   sessionId = $sessionId
+  buildMode = $BuildMode
+  apkPath = $apkPath
+  apkPrepared = $apkPrepared
+  apkLastWriteTime = $apkLastWriteTime
+  apkLength = $apkLength
   firstContainsWelcome = $false
   firstContainsAndroidSettings = $false
   onboarding = @()
