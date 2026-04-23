@@ -260,8 +260,40 @@ String? _readCloudIdentifier(Object? value) {
   return null;
 }
 
+const Set<String> _approvedCloudContentSourceHosts = {
+  'diyanet.gov.tr',
+  'islamansiklopedisi.org.tr',
+  'quran.gov.sa',
+  'dar-alifta.org',
+  'habous.gov.ma',
+  'quran.com',
+  'sunnah.com',
+  'islamhouse.com',
+  'mp3quran.net',
+  'everyayah.com',
+};
+
+bool isApprovedCloudContentSourceUrl(String source) {
+  final uri = Uri.tryParse(source.trim());
+  if (uri == null ||
+      !uri.isScheme('https') ||
+      uri.host.trim().isEmpty ||
+      uri.userInfo.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment) {
+    return false;
+  }
+
+  final host = uri.host.toLowerCase();
+  return _approvedCloudContentSourceHosts.any(
+    (approvedHost) => host == approvedHost || host.endsWith('.$approvedHost'),
+  );
+}
+
 bool _hasVerifiedCloudContentProvenance(Map<String, dynamic> row) {
-  return _readCloudProvenanceSource(row) != null &&
+  final source = _readCloudProvenanceSource(row);
+  return source != null &&
+      isApprovedCloudContentSourceUrl(source) &&
       _readCloudVerifiedAt(row) != null;
 }
 

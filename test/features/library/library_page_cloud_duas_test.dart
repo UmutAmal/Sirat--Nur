@@ -68,6 +68,36 @@ Future<void> disposeLibraryPage(WidgetTester tester) async {
 
 void main() {
   group('Education cloud row sanitizers', () {
+    test('trusts only approved HTTPS education source domains', () {
+      expect(
+        isApprovedCloudContentSourceUrl('https://islamansiklopedisi.org.tr'),
+        isTrue,
+      );
+      expect(
+        isApprovedCloudContentSourceUrl('https://api.diyanet.gov.tr/content'),
+        isTrue,
+      );
+      expect(
+        isApprovedCloudContentSourceUrl('https://www.islamhouse.com/lessons'),
+        isTrue,
+      );
+
+      for (final source in const [
+        'TDV Islam Ansiklopedisi',
+        'https://example.com/lesson',
+        'http://islamansiklopedisi.org.tr',
+        'https://audit@islamansiklopedisi.org.tr',
+        'https://islamansiklopedisi.org.tr?token=1',
+        'https://islamansiklopedisi.org.tr#fragment',
+      ]) {
+        expect(
+          isApprovedCloudContentSourceUrl(source),
+          isFalse,
+          reason: source,
+        );
+      }
+    });
+
     test('categories keep only rows with usable id, title, and provenance', () {
       final categories = resolveEducationCategories([
         {
@@ -169,6 +199,40 @@ void main() {
 
       expect(resolveEducationCategories(categories), categories);
       expect(resolveEducationTopics(topics), topics);
+    });
+
+    test('rejects education rows from unapproved source domains', () {
+      final categories = resolveEducationCategories([
+        {
+          'id': 'bad-text-source',
+          'title': 'Bad source',
+          'source': 'TDV Islam Ansiklopedisi',
+          'verified_at': '2026-04-17T00:00:00Z',
+        },
+        {
+          'id': 'bad-domain',
+          'title': 'Bad domain',
+          'source': 'https://example.com/lesson',
+          'verified_at': '2026-04-17T00:00:00Z',
+        },
+      ]);
+      final topics = resolveEducationTopics([
+        {
+          'title': 'Bad source topic',
+          'content': 'Body',
+          'source': 'TDV Islam Ansiklopedisi',
+          'verified_at': '2026-04-17T00:00:00Z',
+        },
+        {
+          'title': 'Bad domain topic',
+          'content': 'Body',
+          'reference': 'https://example.com/lesson',
+          'verifiedAt': '2026-04-17T00:00:00Z',
+        },
+      ]);
+
+      expect(categories, isEmpty);
+      expect(topics, isEmpty);
     });
   });
 

@@ -17269,3 +17269,35 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan education category/topic source domain guard'i ve store-readiness external blocker taramasina devam et.
+
+## 2026-04-23 TUR-414 - Education Content Requires Approved Source Domains
+
+### MASTER Karari
+- Risk: `lib/core/providers/supabase_providers.dart` education category/topic normalizer'i `source` veya `reference` alaninda yalniz non-empty kontrol yapiyordu.
+- Kanit: `_hasVerifiedCloudContentProvenance` once `_readCloudProvenanceSource(row) != null && _readCloudVerifiedAt(row) != null` ile yetiniyordu. Bu, `education_categories` ve `education_topics` satirlarinda domain/protocol denetimi olmadan dini egitim icerigini render edebilirdi.
+- Kullanici etkisi: Manuel veya hatali Supabase satirlari, izinli resmi/dogrulanmis kaynak domaini olmadan Library education bolumunde gosterilebilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 religious education content provenance runtime gate).
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/features/library/library_page_cloud_duas_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Education cloud content source allowlist'i AGENTS.md kabul kaynaklariyla sinirlandi: Diyanet, TDV Islam Ansiklopedisi, quran.gov.sa, Dar al-Ifta, Habous, Quran.com, Sunnah.com, IslamHouse, MP3Quran ve EveryAyah.
+- `_hasVerifiedCloudContentProvenance` artik source/reference alanini `isApprovedCloudContentSourceUrl` ile dogruluyor.
+- HTTP, user-info, query ve fragment iceren source URL'leri reddediliyor.
+
+### TESTER Degisikligi
+- Education sanitizer testleri approved HTTPS domainleri kabul ediyor.
+- `TDV Islam Ansiklopedisi`, `example.com`, HTTP, credential, query ve fragment iceren kaynaklar reddediliyor.
+- Category ve topic satirlari unapproved source ile geldiklerinde bos sonuc donuyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\features\library\library_page_cloud_duas_test.dart --reporter compact` PASS, 11/11.
+- Targeted test: `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS, 8/8.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 639/639.
+
+### Risk Degisimi
+- Education cloud unapproved-source risk: `15/25 -> 2/25`.
+- Kalan risk: Store readiness script'i Supabase REST filtrelerinde source URL allowlist'i yerine non-empty kontrol kullaniyor; runtime korunuyor ama store gate daha sertlestirilecek.
+
+### Sonraki Adim
+- Commit/push; ardindan store-readiness Supabase source-domain filtreleri ve kalan external blocker taramasina devam et.
