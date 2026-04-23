@@ -3,6 +3,25 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
+
+. (Join-Path $PSScriptRoot 'import_release_environment.ps1')
+
+$releaseEnvironment = Initialize-ReleaseEnvironment -RepoRoot $repoRoot -VariableNames @(
+  'SUPABASE_URL',
+  'SUPABASE_PUBLISHABLE_KEY',
+  'SUPABASE_ANON_KEY',
+  'PLACES_TILE_URL_TEMPLATE',
+  'PLACES_OVERPASS_API_URL',
+  'QURAN_AUDIO_CLOUDFLARE_BASE_URL',
+  'QURAN_AUDIO_GITHUB_URL_TEMPLATE',
+  'QURAN_AUDIO_PATH_NAMESPACE',
+  'SUPABASE_QURAN_AUDIO_BUCKET',
+  'GEMINI_API_KEY'
+)
+if ($releaseEnvironment.LoadedFiles.Count -gt 0) {
+  Write-Host "Loaded release environment file(s): $($releaseEnvironment.LoadedFiles -join ', ')"
+}
 
 $requiredEnvironment = @(
   'SUPABASE_URL',

@@ -17364,3 +17364,40 @@
 
 ### Sonraki Adim
 - Handover kaydini test/analyze ile dogrula, commit/push yap; ardindan store release config/appbundle blocker taramasina devam et.
+
+## 2026-04-23 TUR-417 - Store Tooling Loads Release Env From Dotenv And Persisted Scopes
+
+### MASTER Karari
+- Risk: `tool/check_store_readiness.ps1` ve `tool/build_store_appbundle.ps1` yalnizca mevcut process env'ini okuyordu; Codex oturumu acildiktan sonra tanimlanan `setx` env'leri veya git-ignored `.env` dosyalarindaki release degerleri gorulmedigi icin store gate sahte `missing env` blokaji uretiyordu.
+- Kanit: `tool/check_store_readiness.ps1` required runtime config icin `[Environment]::GetEnvironmentVariable($name)` kullaniyor, `tool/build_store_appbundle.ps1` ayni sekilde process env'e bagli kalip repo icindeki `.env` dosyalarini hic import etmiyordu.
+- Kullanici etkisi: Gercek release config yerel makinede hazir olsa bile readiness checker 8 blokajla false-negative verebilir, `tool/build_store_appbundle.ps1 -NoBuild` gereksiz yere durabilirdi.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 store release false blocker).
+- Rollback plani: `tool/import_release_environment.ps1`, `tool/check_store_readiness.ps1`, `tool/build_store_appbundle.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Ortak helper `tool/import_release_environment.ps1` eklendi.
+- Helper `.env.store`, `.env.release`, `.env.local` ve `.env` dosyalarini parse ediyor; `export KEY=value` satirlarini ve quoted degerleri destekliyor.
+- Env precedence sirası `Process -> dotenv -> User -> Machine` olarak tanimlandi; bulunan degerler current process env'e enjekte edilerek mevcut script akislarini bozmadan kullanilabilir hale getirildi.
+- `tool/build_store_appbundle.ps1` helper'i dot-source edip release env bootstrap'i ile basliyor; `SUPABASE_URL`, Supabase client key alias'lari, Places tile/Overpass, Cloudflare/GitHub audio URL'leri, namespace ve `GEMINI_API_KEY` ayni bootstrap zincirine baglandi.
+- `tool/check_store_readiness.ps1` de ayni helper ile release env'leri bootstrap ediyor ve yalnizca gercek blokajlari raporluyor.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` yeni helper dosyasinin repoda bulundugunu ve her iki store script'inin helper'i kullandigini guard'liyor.
+- Yeni test helper'in `.env*` dosyalarini ve `Process/User/Machine` scope fallback'larini korudugunu dogruluyor.
+- PowerShell parse check: `tool/import_release_environment.ps1`, `tool/build_store_appbundle.ps1`, `tool/check_store_readiness.ps1` icin PASS.
+- Gecici git-ignored `.env.store` ile manuel smoke:
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\build_store_appbundle.ps1 -NoBuild` PASS.
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\check_store_readiness.ps1 -SkipNetwork -SkipFlutterValidation` artik env eksikleri yerine yalnizca gercek Supabase apply summary blokajlarini birakiyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 10/10.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 640/640.
+- Manuel env smoke: temporary `.env.store` ile build script PASS; readiness checker 8 false env blocker yerine 2 gercek blocker ile FAIL (`build/supabase_content_apply_summary.json` dry-run ve hadith/tafsir missing_optional kalintisi).
+
+### Risk Degisimi
+- Store env false-negative blocker: `16/25 -> 3/25`.
+- Kalan risk: Prod Supabase SQL apply kaniti hala gercek blocker. `build/supabase_content_apply_summary.json` gercek apply ile yenilenmeden store-ready denemez.
+
+### Sonraki Adim
+- Commit/push; ardindan Supabase production apply evidence zincirini ve kalan store-ready blocker'larini taramaya devam et.

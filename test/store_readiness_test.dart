@@ -28,6 +28,7 @@ void main() {
         'store/listing/tr-TR.md',
         'tool/check_store_readiness.ps1',
         'tool/build_store_appbundle.ps1',
+        'tool/import_release_environment.ps1',
         'tool/apply_supabase_content_bundle.ps1',
         'tool/quran_audio_distribution_plan.dart',
         'tool/upload_quran_audio_distribution.ps1',
@@ -100,6 +101,9 @@ void main() {
     test('store app bundle script requires real release configuration', () {
       final script = File('tool/build_store_appbundle.ps1').readAsStringSync();
 
+      expect(script, contains('import_release_environment.ps1'));
+      expect(script, contains('Initialize-ReleaseEnvironment'));
+      expect(script, contains('Loaded release environment file(s):'));
       expect(script, contains('SUPABASE_URL'));
       expect(script, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(script, contains('PLACES_TILE_URL_TEMPLATE'));
@@ -144,6 +148,9 @@ void main() {
         'tool/apply_supabase_content_bundle.ps1',
       ).readAsStringSync();
 
+      expect(script, contains('import_release_environment.ps1'));
+      expect(script, contains('Initialize-ReleaseEnvironment'));
+      expect(script, contains('Loaded release environment file(s):'));
       expect(script, contains('SUPABASE_PUBLISHABLE_KEY'));
       expect(script, contains('QURAN_AUDIO_CLOUDFLARE_BASE_URL'));
       expect(script, contains('QURAN_AUDIO_GITHUB_URL_TEMPLATE'));
@@ -287,6 +294,25 @@ void main() {
         supabaseApplyScript.indexOf("'content_seed_duas.sql'"),
         lessThan(supabaseApplyScript.indexOf("'seed.sql'")),
       );
+    });
+
+    test('release environment helper resolves .env and persisted scopes', () {
+      final helper = File(
+        'tool/import_release_environment.ps1',
+      ).readAsStringSync();
+
+      expect(helper, contains('.env.store'));
+      expect(helper, contains('.env.release'));
+      expect(helper, contains('.env.local'));
+      expect(helper, contains(".env'"));
+      expect(helper, contains("GetEnvironmentVariable(\$Name, 'Process')"));
+      expect(helper, contains("GetEnvironmentVariable(\$Name, 'User')"));
+      expect(helper, contains("GetEnvironmentVariable(\$Name, 'Machine')"));
+      expect(
+        helper,
+        contains(r"SetEnvironmentVariable($name, $value, 'Process')"),
+      );
+      expect(helper, contains('export '));
     });
 
     test('Gradle release packaging refuses missing runtime dart-defines', () {

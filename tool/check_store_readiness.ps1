@@ -8,6 +8,18 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
 $failures = New-Object System.Collections.Generic.List[string]
 
+. (Join-Path $PSScriptRoot 'import_release_environment.ps1')
+
+$releaseEnvironment = Initialize-ReleaseEnvironment -RepoRoot $repoRoot -VariableNames @(
+  'SUPABASE_URL',
+  'SUPABASE_PUBLISHABLE_KEY',
+  'SUPABASE_ANON_KEY',
+  'PLACES_TILE_URL_TEMPLATE',
+  'PLACES_OVERPASS_API_URL',
+  'QURAN_AUDIO_CLOUDFLARE_BASE_URL',
+  'QURAN_AUDIO_GITHUB_URL_TEMPLATE'
+)
+
 function Add-Failure {
   param([Parameter(Mandatory = $true)][string]$Message)
   $failures.Add($Message) | Out-Null
@@ -370,6 +382,9 @@ Push-Location $repoRoot
 try {
   Write-Host 'Sirat-i Nur store readiness check'
   Write-Host "Repository: $repoRoot"
+  if ($releaseEnvironment.LoadedFiles.Count -gt 0) {
+    Write-Host "Loaded release environment file(s): $($releaseEnvironment.LoadedFiles -join ', ')"
+  }
 
   $trackedDocs = @(
     @('docs/privacy_policy.md', 'Privacy policy'),
