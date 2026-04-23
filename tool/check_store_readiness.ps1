@@ -518,17 +518,17 @@ try {
       -not [string]::IsNullOrWhiteSpace($supabaseClientKey)
     ) {
       $supabaseTableChecks = @(
-        @{ table = 'daily_content'; minimum = 8; description = 'verified daily ayat seed'; filter = 'content_type=eq.ayat&verified_at=not.is.null' },
+        @{ table = 'daily_content'; minimum = 8; description = 'verified daily ayat seed'; filter = 'content_type=eq.ayat&source=not.is.null&source=neq.&verified_at=not.is.null' },
         @{ table = 'live_tv_channels'; minimum = 2; description = 'Makkah/Madinah live TV channels'; filter = 'title=not.is.null' },
-        @{ table = 'education_categories'; minimum = 1; description = 'verified education categories'; filter = 'source=not.is.null&verified_at=not.is.null' },
-        @{ table = 'education_topics'; minimum = 1; description = 'verified education topics'; filter = 'source=not.is.null&verified_at=not.is.null' },
-        @{ table = 'audio_files'; minimum = 684; description = 'verified Quran audio storage paths'; filter = 'type=eq.quran_surah&reciter=not.is.null&surah_number=not.is.null&storage_path=not.is.null&verified_at=not.is.null' },
-        @{ table = 'duas'; minimum = 8; description = 'verified Quranic duas'; filter = 'source=not.is.null&verified_at=not.is.null' },
-        @{ table = 'asma_ul_husna'; minimum = 99; description = 'verified Asma-ul-Husna names'; filter = 'source=not.is.null&verified_at=not.is.null' },
-        @{ table = 'quran_surahs'; minimum = 114; description = 'verified Quran surahs'; filter = 'source=not.is.null&verified_at=not.is.null' },
-        @{ table = 'quran_ayahs'; minimum = 6236; description = 'verified Quran ayahs'; filter = 'source=not.is.null&verified_at=not.is.null' },
-        @{ table = 'tafsir_entries'; minimum = 6236; description = 'complete verified tafsir catalog'; filter = 'source=not.is.null&source_license=not.is.null&verified_at=not.is.null' },
-        @{ table = 'hadiths'; minimum = 600; description = 'verified hadith catalog minimum'; filter = 'source=not.is.null&source_license=not.is.null&verified_at=not.is.null' }
+        @{ table = 'education_categories'; minimum = 1; description = 'verified education categories'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
+        @{ table = 'education_topics'; minimum = 1; description = 'verified education topics'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
+        @{ table = 'audio_files'; minimum = 684; description = 'verified Quran audio storage paths'; filter = 'type=eq.quran_surah&reciter=not.is.null&reciter=neq.&surah_number=not.is.null&storage_path=not.is.null&storage_path=neq.&verified_at=not.is.null' },
+        @{ table = 'duas'; minimum = 8; description = 'verified Quranic duas'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
+        @{ table = 'asma_ul_husna'; minimum = 99; description = 'verified Asma-ul-Husna names'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
+        @{ table = 'quran_surahs'; minimum = 114; description = 'verified Quran surahs'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
+        @{ table = 'quran_ayahs'; minimum = 6236; description = 'verified Quran ayahs'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
+        @{ table = 'tafsir_entries'; minimum = 6236; description = 'complete verified tafsir catalog'; filter = 'source=not.is.null&source=neq.&source_license=not.is.null&source_license=neq.&verified_at=not.is.null' },
+        @{ table = 'hadiths'; minimum = 600; description = 'verified hadith catalog minimum'; filter = 'source=not.is.null&source=neq.&source_license=not.is.null&source_license=neq.&verified_at=not.is.null' }
       )
       foreach ($check in $supabaseTableChecks) {
         Assert-SupabaseTableMinimumCount `

@@ -201,6 +201,9 @@ void main() {
       expect(script, contains("table = 'tafsir_entries'; minimum = 6236"));
       expect(script, contains("table = 'hadiths'; minimum = 600"));
       expect(script, contains("table = 'asma_ul_husna'; minimum = 99"));
+      expect(script, contains('source=neq.'));
+      expect(script, contains('source_license=neq.'));
+      expect(script, contains('storage_path=neq.'));
       expect(script, contains("filter = 'type=eq.quran_surah"));
       expect(script, contains('storagePathValueCount -eq 684'));
       expect(script, contains('Quran audio path seed is complete'));

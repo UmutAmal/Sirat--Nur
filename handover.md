@@ -17084,3 +17084,33 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Supabase apply evidence ve store-readiness blocker taramasina devam et.
+
+## 2026-04-23 TUR-408 - Store Readiness Requires Non-Empty Remote Provenance
+
+### MASTER Karari
+- Risk: `tool/check_store_readiness.ps1` Supabase REST count filtrelerinde `source=not.is.null` ve `source_license=not.is.null` kullaniyordu, fakat bos string degerleri remote readiness sayimina dahil edebilirdi.
+- Kanit: Hadith/tafsir remote checks once `source=not.is.null&source_license=not.is.null&verified_at=not.is.null` ile sayiyordu. DB constraint bos degeri engellese bile readiness kaniti ayni sertlikte degildi.
+- Kullanici etkisi: Harici apply veya elle import hatasi bos provenance alanlari birakirse store-readiness dini icerigi eksiksiz sanabilirdi.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 remote readiness provenance false-success).
+- Rollback plani: `tool/check_store_readiness.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Daily content, education, dua, Asma-ul-Husna, Quran surah/ayah, tafsir ve hadith remote count filtrelerine `source=neq.` eklendi.
+- Hadith/tafsir remote count filtrelerine `source_license=neq.` eklendi.
+- Quran audio remote count filtresi `reciter=neq.` ve `storage_path=neq.` ile bos string path/reciter degerlerini dislar.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` readiness scriptinde `source=neq.`, `source_license=neq.` ve `storage_path=neq.` guard'larini kontrol ediyor.
+- PowerShell parse smoke PASS.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 630/630.
+
+### Risk Degisimi
+- Remote readiness empty-provenance false-success risk: `12/25 -> 2/25`.
+- Kalan risk: Remote Supabase tablolarinin gercek sayimi icin production `SUPABASE_URL` ve publishable key current shell/CI ortaminda saglanmali.
+
+### Sonraki Adim
+- Commit/push; ardindan runtime Supabase config fallback ve external store blocker taramasina devam et.
