@@ -115,30 +115,53 @@ void main() {
           'text_ar': 'دعاء',
           'text_tr': 'Turkce dua',
           'text_en': 'English dua',
-          'source': 'Diyanet',
+          'source': 'https://www.diyanet.gov.tr',
         },
       ]);
 
       expect(resolved, bundledDailyDuaFallback());
     });
 
+    test('trusts only approved HTTPS cloud dua source domains', () {
+      expect(
+        isApprovedCloudDuaSourceUrl('https://www.diyanet.gov.tr/tr-TR'),
+        isTrue,
+      );
+      expect(
+        isApprovedCloudDuaSourceUrl('https://api.quran.com/api/v4/verses'),
+        isTrue,
+      );
+
+      for (final source in const [
+        'Diyanet',
+        'https://example.com/dua',
+        'http://www.diyanet.gov.tr',
+        'https://token@www.diyanet.gov.tr',
+        'https://www.diyanet.gov.tr?token=secret',
+        'https://www.diyanet.gov.tr#fragment',
+      ]) {
+        expect(isApprovedCloudDuaSourceUrl(source), isFalse, reason: source);
+      }
+    });
+
     test(
       'keeps verified cloud rows with source and verified_at provenance',
       () {
+        const approvedSource = 'https://www.diyanet.gov.tr/tr-TR';
         final resolved = resolveCloudDuas([
           {
             'id': 'cloud-1',
             'text_ar': 'دعاء',
             'text_tr': 'Turkce dua',
             'text_en': 'English dua',
-            'source': 'Diyanet',
+            'source': approvedSource,
             'verified_at': '2026-04-15T00:00:00Z',
             'category': 'Sabah Akşam',
           },
         ]);
 
         expect(resolved, hasLength(1));
-        expect(resolved.first.source, 'Diyanet');
+        expect(resolved.first.source, approvedSource);
         expect(resolved.first.verifiedAt, '2026-04-15T00:00:00Z');
       },
     );
@@ -152,7 +175,7 @@ void main() {
           'text_en': 'English dua',
           'storage_path': 'audio-dua/morning/001.mp3',
           'audio_url': 'https://cdn.example.com/dua/001.mp3',
-          'source': 'Diyanet',
+          'source': 'https://www.diyanet.gov.tr/tr-TR',
           'verified_at': '2026-04-15T00:00:00Z',
           'category': 'Sabah Akşam',
         },
@@ -172,7 +195,7 @@ void main() {
           'text_tr': 'Turkce dua',
           'text_en': 'English dua',
           'audio_url': 'https://cdn.example.com/dua/001.mp3',
-          'source': 'Diyanet',
+          'source': 'https://www.diyanet.gov.tr/tr-TR',
           'verified_at': '2026-04-15T00:00:00Z',
           'category': 'Sabah Akşam',
         },

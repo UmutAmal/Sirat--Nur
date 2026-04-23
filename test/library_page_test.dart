@@ -143,6 +143,7 @@ void main() {
     );
 
     test('cloud duas map Supabase rows into DuaData objects', () {
+      const approvedSource = 'https://www.diyanet.gov.tr/tr-TR';
       final resolved = resolveCloudDuas([
         {
           'id': 'cloud-1',
@@ -150,7 +151,7 @@ void main() {
           'transliteration': 'dua',
           'text_tr': 'Turkce dua',
           'text_en': 'English dua',
-          'source': 'Diyanet',
+          'source': approvedSource,
           'verified_at': '2026-04-15T00:00:00Z',
           'category': 'Sabah Akşam',
         },
@@ -163,7 +164,7 @@ void main() {
       expect(resolved.first.english, 'English dua');
       expect(resolved.first.resolvedTranslations['tr'], 'Turkce dua');
       expect(resolved.first.resolvedTranslations['en'], 'English dua');
-      expect(resolved.first.source, 'Diyanet');
+      expect(resolved.first.source, approvedSource);
       expect(resolved.first.verifiedAt, '2026-04-15T00:00:00Z');
       expect(resolved.first.category, 'Sabah Akşam');
       expect(resolved.first.audioUrl, isEmpty);

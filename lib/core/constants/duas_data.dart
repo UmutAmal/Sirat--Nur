@@ -134,6 +134,13 @@ Map<String, String> _readDuaTranslations(dynamic rawTranslations) {
 const bool hasVerifiedBundledDuas = true;
 const String quranicDuaCategory = 'quranic_dua';
 const String bundledQuranDuaVerifiedAt = '2026-04-17T00:00:00Z';
+const Set<String> _approvedCloudDuaSourceHosts = {
+  'quran.com',
+  'quran.gov.sa',
+  'diyanet.gov.tr',
+  'islamansiklopedisi.org.tr',
+  'islamhouse.com',
+};
 
 const List<DuaData> dailyDuas = [
   DuaData(
@@ -252,12 +259,29 @@ List<DuaData> resolveCloudDuas(List<Map<String, dynamic>> rows) {
         (dua) =>
             dua.arabic.isNotEmpty &&
             (dua.turkish.isNotEmpty || dua.english.isNotEmpty) &&
-            dua.source.isNotEmpty &&
+            isApprovedCloudDuaSourceUrl(dua.source) &&
             dua.verifiedAt.isNotEmpty,
       )
       .toList();
 
   return parsed.isEmpty ? bundledDailyDuaFallback() : parsed;
+}
+
+bool isApprovedCloudDuaSourceUrl(String source) {
+  final uri = Uri.tryParse(source.trim());
+  if (uri == null ||
+      !uri.isScheme('https') ||
+      uri.host.trim().isEmpty ||
+      uri.userInfo.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment) {
+    return false;
+  }
+
+  final host = uri.host.toLowerCase();
+  return _approvedCloudDuaSourceHosts.any(
+    (approvedHost) => host == approvedHost || host.endsWith('.$approvedHost'),
+  );
 }
 
 /// Get duas by category

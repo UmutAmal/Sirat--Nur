@@ -17175,3 +17175,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Supabase config/default URL ve store-readiness external blocker taramasina devam et.
+
+## 2026-04-23 TUR-411 - Cloud Dua Runtime Requires Approved Source Domains
+
+### MASTER Karari
+- Risk: `lib/core/constants/duas_data.dart` cloud dua normalizer'i `source` alaninda yalniz non-empty kontrol yapiyordu; Supabase'e manuel veya hatali import edilen URL olmayan kaynaklar verified dua gibi kabul edilebilirdi.
+- Kanit: `resolveCloudDuas` once `dua.source.isNotEmpty && dua.verifiedAt.isNotEmpty` ile yetiniyordu. `test/duas_data_test.dart` ve `test/library_page_test.dart` valid cloud fixture olarak `Diyanet` stringini kullaniyordu.
+- Kullanici etkisi: Dini dua metni izinli resmi/dogrulanmis kaynak domaini disindan gelirse uygulama bunu kullaniciya verified cloud dua olarak sunabilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 religious content provenance runtime gate).
+- Rollback plani: `lib/core/constants/duas_data.dart`, `test/duas_data_test.dart`, `test/library_page_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Cloud dua source allowlist'i HTTPS `quran.com`, `quran.gov.sa`, `diyanet.gov.tr`, `islamansiklopedisi.org.tr` ve `islamhouse.com` domainleri veya alt domainleriyle sinirlandi.
+- `resolveCloudDuas` artik non-empty source yerine `isApprovedCloudDuaSourceUrl` guard'i ile karar veriyor.
+- HTTP, user-info, query ve fragment iceren source URL'leri reddediliyor.
+
+### TESTER Degisikligi
+- Cloud dua fixture'lari valid kaynak olarak `https://www.diyanet.gov.tr/tr-TR` kullaniyor.
+- `Diyanet`, `example.com`, HTTP, credential, query ve fragment iceren kaynaklar reddediliyor.
+- Eski library page fixture'i izinli URL'ye cekildi; production guard gevsetilmedi.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\duas_data_test.dart test\library_page_test.dart --reporter compact` PASS, 26/26.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 633/633.
+
+### Risk Degisimi
+- Cloud dua unapproved-source risk: `15/25 -> 2/25`.
+- Kalan risk: Asma-ul-Husna ve sukun/education cloud provenance helper'lari ayni allowlist sertligi icin ayrica taranacak.
+
+### Sonraki Adim
+- Commit/push; ardindan Asma-ul-Husna cloud source domain guard'i ve store-readiness external blocker taramasina devam et.
