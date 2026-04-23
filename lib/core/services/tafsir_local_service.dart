@@ -19,6 +19,15 @@ class TafsirLocalService {
       "source IS NOT NULL AND TRIM(source) != '' "
       "AND source_license IS NOT NULL AND TRIM(source_license) != '' "
       "AND verified_at IS NOT NULL AND TRIM(verified_at) != ''";
+  static const Set<String> _approvedTafsirSourceHosts = {
+    'quran.com',
+    'quran.gov.sa',
+    'diyanet.gov.tr',
+    'islamansiklopedisi.org.tr',
+    'islamhouse.com',
+    'dar-alifta.org',
+    'habous.gov.ma',
+  };
 
   static final Map<String, int> _sourceToApiId = {
     'en.ibn_kathir': 169,
@@ -252,6 +261,42 @@ class TafsirLocalService {
     return ayahNumber >= 1 && ayahNumber <= ayahCount;
   }
 
+  static bool isApprovedTafsirSourceUrl(String source) {
+    final uri = Uri.tryParse(source.trim());
+    if (uri == null ||
+        !uri.isScheme('https') ||
+        uri.host.trim().isEmpty ||
+        uri.userInfo.isNotEmpty ||
+        uri.hasQuery ||
+        uri.hasFragment) {
+      return false;
+    }
+
+    final host = uri.host.toLowerCase();
+    return _approvedTafsirSourceHosts.any(
+      (approvedHost) => host == approvedHost || host.endsWith('.$approvedHost'),
+    );
+  }
+
+  static bool _hasApprovedTafsirCacheProvenance(Map<String, Object?> row) {
+    final source = _readNonEmptyText(row['source']);
+    final sourceLicense = _readNonEmptyText(row['source_license']);
+    final verifiedAt = _readVerifiedAt(row['verified_at']);
+    return source != null &&
+        sourceLicense != null &&
+        verifiedAt != null &&
+        isApprovedTafsirSourceUrl(source);
+  }
+
+  static List<Map<String, dynamic>> _filterVerifiedTafsirCacheRows(
+    List<Map<String, Object?>> rows,
+  ) {
+    return rows
+        .where(_hasApprovedTafsirCacheProvenance)
+        .map(Map<String, dynamic>.from)
+        .toList(growable: false);
+  }
+
   static List<Map<String, Object>> normalizeVerifiedTafsirRows(
     List<dynamic> tafsirs, {
     required int surahNumber,
@@ -300,6 +345,7 @@ class TafsirLocalService {
       if (tafsirText == null ||
           language == null ||
           source == null ||
+          !isApprovedTafsirSourceUrl(source) ||
           sourceLicense == null ||
           verifiedAt == null) {
         continue;
@@ -385,9 +431,10 @@ class TafsirLocalService {
           'surah_number = ? AND verse_number = ? AND tafsir_source = ? AND $_verifiedWhere',
       whereArgs: [surahNumber, verseNumber, canonical],
     );
+    final verifiedResults = _filterVerifiedTafsirCacheRows(results);
 
-    if (results.isEmpty) return null;
-    return results.first['tafsir_text'] as String?;
+    if (verifiedResults.isEmpty) return null;
+    return verifiedResults.first['tafsir_text'] as String?;
   }
 
   static Future<List<Map<String, dynamic>>> getTafsirsForSurah({
@@ -397,56 +444,56 @@ class TafsirLocalService {
     final db = await database;
     final canonical = _canonicalSource(tafsirSource);
 
-    return db.query(
+    final results = await db.query(
       _tableName,
       where: 'surah_number = ? AND tafsir_source = ? AND $_verifiedWhere',
       whereArgs: [surahNumber, canonical],
       orderBy: 'verse_number ASC',
     );
+    return _filterVerifiedTafsirCacheRows(results);
   }
 
   static Future<bool> hasTafsirCached({
     required int surahNumber,
     required String tafsirSource,
   }) async {
-    final db = await database;
-    final canonical = _canonicalSource(tafsirSource);
-
-    final count = Sqflite.firstIntValue(
-      await db.rawQuery(
-        'SELECT COUNT(*) FROM $_tableName WHERE surah_number = ? AND tafsir_source = ? AND $_verifiedWhere',
-        [surahNumber, canonical],
-      ),
-    );
-    return (count ?? 0) > 0;
+    return (await getTafsirsForSurah(
+      surahNumber: surahNumber,
+      tafsirSource: tafsirSource,
+    )).isNotEmpty;
   }
 
   static Future<bool> hasAllTafsirsCached() async {
     final db = await database;
-    final count = Sqflite.firstIntValue(
-      await db.rawQuery(
-        'SELECT COUNT(DISTINCT surah_number) FROM $_tableName WHERE $_verifiedWhere',
+    final rows = _filterVerifiedTafsirCacheRows(
+      await db.query(
+        _tableName,
+        columns: ['surah_number', 'source', 'source_license', 'verified_at'],
+        where: _verifiedWhere,
       ),
     );
-    return (count ?? 0) >= 114;
+    final cachedSurahs = rows
+        .map((row) => _readInt(row['surah_number']))
+        .whereType<int>()
+        .toSet();
+    return cachedSurahs.length >= 114;
   }
 
   static Future<Map<String, int>> getCacheInfo() async {
     final db = await database;
-    final totalVerses =
-        Sqflite.firstIntValue(
-          await db.rawQuery(
-            'SELECT COUNT(*) FROM $_tableName WHERE $_verifiedWhere',
-          ),
-        ) ??
-        0;
-    final cachedSurahs =
-        Sqflite.firstIntValue(
-          await db.rawQuery(
-            'SELECT COUNT(DISTINCT surah_number) FROM $_tableName WHERE $_verifiedWhere',
-          ),
-        ) ??
-        0;
+    final rows = _filterVerifiedTafsirCacheRows(
+      await db.query(
+        _tableName,
+        columns: ['surah_number', 'source', 'source_license', 'verified_at'],
+        where: _verifiedWhere,
+      ),
+    );
+    final cachedSurahs = rows
+        .map((row) => _readInt(row['surah_number']))
+        .whereType<int>()
+        .toSet()
+        .length;
+    final totalVerses = rows.length;
     return {'total_verses': totalVerses, 'cached_surahs': cachedSurahs};
   }
 

@@ -62,6 +62,7 @@ void main() {
   });
 
   test('tafsir service normalizes only verified cloud rows', () {
+    const approvedSource = 'https://api.quran.com/api/v4/tafsirs/en.ibn_kathir';
     final rows = TafsirLocalService.normalizeVerifiedTafsirRows(
       [
         {
@@ -70,7 +71,7 @@ void main() {
           'tafsir_source': 'en.sahih',
           'language': 'en',
           'tafsir_text': 'Verified tafsir text',
-          'source': 'Verified tafsir archive',
+          'source': approvedSource,
           'source_license': 'verified-open-license',
           'verified_at': '2026-04-16T00:00:00Z',
         },
@@ -87,7 +88,7 @@ void main() {
           'tafsir_source': 'en.sahih',
           'language': 'en',
           'tafsir_text': 'Wrong surah must be ignored',
-          'source': 'Verified tafsir archive',
+          'source': approvedSource,
           'source_license': 'verified-open-license',
           'verified_at': '2026-04-16T00:00:00Z',
         },
@@ -97,7 +98,7 @@ void main() {
           'tafsir_source': 'unknown.source',
           'language': 'en',
           'tafsir_text': 'Unsupported source must be ignored',
-          'source': 'Verified tafsir archive',
+          'source': approvedSource,
           'source_license': 'verified-open-license',
           'verified_at': '2026-04-16T00:00:00Z',
         },
@@ -107,7 +108,17 @@ void main() {
           'tafsir_source': 'en.sahih',
           'language': 'en',
           'tafsir_text': 'Out-of-range ayah must be ignored',
-          'source': 'Verified tafsir archive',
+          'source': approvedSource,
+          'source_license': 'verified-open-license',
+          'verified_at': '2026-04-16T00:00:00Z',
+        },
+        {
+          'surah_number': 2,
+          'ayah_number': 1,
+          'tafsir_source': 'en.sahih',
+          'language': 'en',
+          'tafsir_text': 'Unapproved source must be ignored',
+          'source': 'https://example.com/tafsir',
           'source_license': 'verified-open-license',
           'verified_at': '2026-04-16T00:00:00Z',
         },
@@ -120,9 +131,38 @@ void main() {
     expect(rows.single['surah_number'], 2);
     expect(rows.single['verse_number'], 255);
     expect(rows.single['tafsir_source'], 'en.ibn_kathir');
-    expect(rows.single['source'], 'Verified tafsir archive');
+    expect(rows.single['source'], approvedSource);
     expect(rows.single['source_license'], 'verified-open-license');
     expect(rows.single['verified_at'], '2026-04-16T00:00:00.000Z');
+  });
+
+  test('tafsir service trusts only approved HTTPS source domains', () {
+    expect(
+      TafsirLocalService.isApprovedTafsirSourceUrl(
+        'https://api.quran.com/api/v4/tafsirs/en.ibn_kathir',
+      ),
+      isTrue,
+    );
+    expect(
+      TafsirLocalService.isApprovedTafsirSourceUrl(
+        'https://www.diyanet.gov.tr/tr-TR/Kurumsal',
+      ),
+      isTrue,
+    );
+
+    for (final source in const [
+      'https://example.com/tafsir',
+      'http://api.quran.com/api/v4/tafsirs',
+      'https://token@api.quran.com/api/v4/tafsirs',
+      'https://api.quran.com/api/v4/tafsirs?token=secret',
+      'https://api.quran.com/api/v4/tafsirs#fragment',
+    ]) {
+      expect(
+        TafsirLocalService.isApprovedTafsirSourceUrl(source),
+        isFalse,
+        reason: source,
+      );
+    }
   });
 
   test('tafsir service rejects out-of-range Quran references', () {
@@ -134,7 +174,7 @@ void main() {
           'tafsir_source': 'en.ibn_kathir',
           'language': 'en',
           'tafsir_text': 'Out-of-range surah must be ignored',
-          'source': 'Verified tafsir archive',
+          'source': 'https://api.quran.com/api/v4/tafsirs/en.ibn_kathir',
           'source_license': 'verified-open-license',
           'verified_at': '2026-04-16T00:00:00Z',
         },

@@ -17114,3 +17114,33 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan runtime Supabase config fallback ve external store blocker taramasina devam et.
+
+## 2026-04-23 TUR-409 - Tafsir Runtime Requires Approved Source Domains
+
+### MASTER Karari
+- Risk: `lib/core/services/tafsir_local_service.dart` runtime tafsir normalizer ve local cache read path'i `source` alaninda yalniz non-empty kontrol yapiyordu; generator allowlist'i bypass eden manuel Supabase/cache satirlari uygulamada verified tafsir gibi gorunebilirdi.
+- Kanit: `normalizeVerifiedTafsirRows` once `source = _readNonEmptyText(tafsir['source'])` ile yetiniyor, `getTafsirsForSurah` ve `getTafsir` local cache'te sadece `_verifiedWhere` non-empty provenance filtresine bakiyordu.
+- Kullanici etkisi: Dini tafsir metni izinli resmi/dogrulanmis kaynak domaini disindan gelirse uygulama bunu cache'e alip kullaniciya kaynakli icerik gibi sunabilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 religious content provenance runtime gate).
+- Rollback plani: `lib/core/services/tafsir_local_service.dart`, `test/features/quran/tafsir_page_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Tafsir runtime source allowlist'i HTTPS `quran.com`, `quran.gov.sa`, `diyanet.gov.tr`, `islamansiklopedisi.org.tr`, `islamhouse.com`, `dar-alifta.org` ve `habous.gov.ma` domainleri veya alt domainleriyle sinirlandi.
+- `normalizeVerifiedTafsirRows` artik non-empty source yaninda approved source URL kontrolu de yapiyor.
+- `getTafsir`, `getTafsirsForSurah`, `hasTafsirCached`, `hasAllTafsirsCached` ve `getCacheInfo` eski local cache satirlarini da approved provenance filtresinden geciriyor.
+
+### TESTER Degisikligi
+- `test/features/quran/tafsir_page_test.dart` sahte `Verified tafsir archive` kaynagini valid ornek olmaktan cikardi.
+- Approved Quran.com/Diyanet source URL'leri kabul ediliyor; `example.com`, HTTP, user-info, query ve fragment iceren kaynaklar reddediliyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\features\quran\tafsir_page_test.dart --reporter compact` PASS, 9/9.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 631/631.
+
+### Risk Degisimi
+- Tafsir runtime unapproved-source risk: `15/25 -> 2/25`.
+- Kalan risk: Gercek tafsir dataset manifestleri ve Supabase apply kaniti hala operator/credential gerektirir; uygulama sahte veya izin disi kaynakli tafsir satirlarini kabul etmeyecek.
+
+### Sonraki Adim
+- Commit/push; ardindan hadis runtime provider, Supabase config/default URL ve store-readiness external blocker taramasina devam et.
