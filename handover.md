@@ -17332,3 +17332,35 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan store/app release blocker taramasinda kalan configuration ve Appium runtime smoke durumuna gec.
+
+## 2026-04-23 TUR-416 - Appium Runtime Smoke Verified On Android Emulator
+
+### MASTER Karari
+- Risk: Appium hattinin kurulu oldugu soylenmisti, fakat store-ready runtime smoke'un gercek emulator uzerinde kosulabilir olduguna dair yeni kanit yoktu.
+- Kanit: `tool/appium_runtime_smoke.ps1` Appium server, UiAutomator2, ADB logcat, onboarding, bottom navigation ve quick access smoke guard'larini calistiriyor. Gercek emulator `emulator-5554` uzerinde script exit kodu ayrica olculdu.
+- Kullanici etkisi: Sadece unit/widget testleri gecse bile Android runtime navigation, onboarding veya logcat crash sorunlari store oncesi kacabilirdi.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 runtime smoke evidence gap).
+- Rollback plani: Bu tur yalniz handover kanit kaydidir; kod veya test dosyasi degismedi.
+
+### BUILDER Degisikligi
+- Kod degisikligi yapilmadi; mevcut workspace'ten debug APK uretildi ve emulatore yeniden kuruldu.
+- App data temizlenerek ilk acilis/onboarding akisi gercek runtime kosulunda test edildi.
+
+### TESTER Degisikligi
+- Appium 3.3.0 ve UiAutomator2 7.1.2 kurulu oldugu dogrulandi.
+- ADB `emulator-5554` cihazini `device` durumunda gordu.
+- `flutter build apk --debug` PASS.
+- `adb install -r build\app\outputs\flutter-apk\app-debug.apk` PASS.
+- `tool/appium_runtime_smoke.ps1 -DeviceName emulator-5554 -OutputDir build` PASS, exit 0.
+- Appium summary: onboarding clicked, Home Daily Verse rendered, bottom nav Quran/Qibla/Zikr/Calendar clicked, quick access Places/Downloads/Analytics/Premium clicked, Android Settings hijack yok, logcat crash marker yok.
+
+### Dogrulama Sonucu
+- Runtime smoke: PASS, `build/appium-runtime-smoke-summary.json` icinde `failures: []`, `logcatCrashFree: true`, `logcatCaptured: true`.
+- Full analyze/test bu handover kaydindan sonra tekrar calistirilerek commit kapisi kapatilacak.
+
+### Risk Degisimi
+- Appium runtime evidence gap: `12/25 -> 2/25`.
+- Kalan risk: Store release config secrets, real Supabase remote data/apply summary ve production appbundle signing kanitlari operator ortaminda dogrulanmali.
+
+### Sonraki Adim
+- Handover kaydini test/analyze ile dogrula, commit/push yap; ardindan store release config/appbundle blocker taramasina devam et.
