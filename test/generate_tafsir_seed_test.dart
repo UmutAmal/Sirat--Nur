@@ -33,6 +33,7 @@ void main() {
       expect(entries.single.ayahNumber, 1);
       expect(entries.single.tafsirSource, 'en.ibn_kathir');
       expect(entries.single.language, 'en');
+      expect(entries.single.source, 'https://api.quran.com/api/v4/tafsirs');
       expect(entries.single.sourceLicense, 'verified-open-license');
     });
 
@@ -89,7 +90,7 @@ void main() {
       expect(
         () => parseVerifiedTafsirManifest(
           jsonEncode({
-            'source': 'Verified source',
+            'source': 'https://api.quran.com/api/v4/tafsirs',
             'verified_at': '2026-04-16T00:00:00Z',
             'entries': [
               {
@@ -108,6 +109,35 @@ void main() {
             (error) => error.message,
             'message',
             contains('source_license'),
+          ),
+        ),
+      );
+    });
+
+    test('rejects unapproved source domains', () {
+      expect(
+        () => parseVerifiedTafsirManifest(
+          jsonEncode({
+            'source': 'https://example.com/tafsir',
+            'source_license': 'verified-open-license',
+            'verified_at': '2026-04-16T00:00:00Z',
+            'entries': [
+              {
+                'surah_number': 1,
+                'ayah_number': 1,
+                'tafsir_source': 'en.ibn_kathir',
+                'language': 'en',
+                'tafsir_text': 'Text',
+              },
+            ],
+          }),
+          requireCompleteCatalog: false,
+        ),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('Unapproved tafsir source'),
           ),
         ),
       );
@@ -147,7 +177,7 @@ void main() {
           tafsirSource: 'en.ibn_kathir',
           language: 'en',
           tafsirText: "Allah's mercy opens the surah.",
-          source: 'Verified tafsir archive',
+          source: 'https://api.quran.com/api/v4/tafsirs/en.ibn_kathir',
           sourceLicense: 'verified-open-license',
           verifiedAt: DateTime.utc(2026, 4, 16),
         ),
@@ -160,7 +190,7 @@ void main() {
       );
       expect(sql, contains("Allah''s mercy opens the surah."));
       expect(sql, contains('source_license = EXCLUDED.source_license'));
-      expect(sql, isNot(contains('https://api.quran.com/api/v4/tafsirs')));
+      expect(sql, contains('https://api.quran.com/api/v4/tafsirs'));
     });
 
     test('smoke manifest can be converted into tafsir seed SQL', () {
@@ -202,7 +232,7 @@ void main() {
 
 String _manifestJson({required List<Map<String, Object?>> entries}) {
   return const JsonEncoder.withIndent('  ').convert({
-    'source': 'Verified tafsir archive',
+    'source': 'https://api.quran.com/api/v4/tafsirs',
     'source_license': 'verified-open-license',
     'verified_at': '2026-04-16T00:00:00Z',
     'entries': entries,

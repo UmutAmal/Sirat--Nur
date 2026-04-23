@@ -4,6 +4,15 @@ import 'dart:io';
 const String _defaultManifestPath = 'content_tafsir_manifest.json';
 const String _defaultOutputPath = 'content_seed_tafsir.sql';
 const int expectedTafsirAyahCount = 6236;
+const Set<String> _approvedTafsirSourceHosts = {
+  'quran.com',
+  'quran.gov.sa',
+  'diyanet.gov.tr',
+  'islamansiklopedisi.org.tr',
+  'islamhouse.com',
+  'dar-alifta.org',
+  'habous.gov.ma',
+};
 
 const List<int> quranAyahCountsBySurah = [
   0,
@@ -236,6 +245,11 @@ VerifiedTafsirEntry _parseTafsirEntry(
   if (verifiedAtRaw == null) {
     throw const FormatException('Missing verified_at for tafsir entry.');
   }
+  _validateApprovedSource(
+    source,
+    approvedHosts: _approvedTafsirSourceHosts,
+    contentType: 'tafsir',
+  );
 
   return VerifiedTafsirEntry(
     surahNumber: surahNumber,
@@ -312,6 +326,11 @@ String buildTafsirSeedSql(Iterable<VerifiedTafsirEntry> entries) {
     ..writeln();
 
   for (final entry in rows) {
+    _validateApprovedSource(
+      entry.source,
+      approvedHosts: _approvedTafsirSourceHosts,
+      contentType: 'tafsir',
+    );
     buffer
       ..writeln('INSERT INTO public.tafsir_entries (')
       ..writeln(
@@ -332,6 +351,30 @@ String buildTafsirSeedSql(Iterable<VerifiedTafsirEntry> entries) {
   }
 
   return buffer.toString();
+}
+
+void _validateApprovedSource(
+  String source, {
+  required Set<String> approvedHosts,
+  required String contentType,
+}) {
+  final uri = Uri.tryParse(source);
+  final host = uri?.host.toLowerCase();
+  final isApprovedHost =
+      host != null &&
+      approvedHosts.any((allowedHost) {
+        final normalized = allowedHost.toLowerCase();
+        return host == normalized || host.endsWith('.$normalized');
+      });
+  if (uri == null ||
+      uri.scheme != 'https' ||
+      host == null ||
+      host.isEmpty ||
+      !isApprovedHost) {
+    throw FormatException(
+      'Unapproved $contentType source: $source. Use an AGENTS.md-approved HTTPS source.',
+    );
+  }
 }
 
 int _requiredInt(Map<String, dynamic> row, String key) {

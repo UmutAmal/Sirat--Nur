@@ -17053,3 +17053,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan store-readiness external blocker ve icerik seed zincirini taramaya devam et.
+
+## 2026-04-23 TUR-407 - Hadith And Tafsir Seeds Require Approved Source Domains
+
+### MASTER Karari
+- Risk: `tool/generate_hadith_seed.dart` ve `tool/generate_tafsir_seed.dart` `source` alanini non-empty zorluyordu, fakat kaynagin AGENTS.md'de izin verilen resmi/dogrulanmis HTTPS domainlerinden biri oldugunu dogrulamiyordu.
+- Kanit: Hadith parser once `Missing source` kontrolunden sonra kaynagi oldugu gibi `VerifiedHadithEntry.source` alanina tasiyordu. Tafsir parser da ayni sekilde herhangi bir string kaynagi kabul ediyordu.
+- Kullanici etkisi: Operator manifesti yanlis veya belirsiz bir domainle gelirse dini icerik seed SQL'i uretilebilir ve Supabase'e dogrulanmis gibi yuklenebilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 religious content provenance gate).
+- Rollback plani: `tool/generate_hadith_seed.dart`, `tool/generate_tafsir_seed.dart`, ilgili generator testleri ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Hadith seed generator `source` alanini HTTPS `sunnah.com` domaini veya alt domainleriyle sinirlar.
+- Tafsir seed generator `source` alanini HTTPS `quran.com`, `quran.gov.sa`, `diyanet.gov.tr`, `islamansiklopedisi.org.tr`, `islamhouse.com`, `dar-alifta.org` ve `habous.gov.ma` domainleri veya alt domainleriyle sinirlar.
+- Parser ve SQL builder ayni source allowlist kontrolunu calistirir; manuel `Verified*Entry` olusturma ile guard bypass edilemez.
+- Hatalar `Unapproved hadith source` veya `Unapproved tafsir source` olarak sert fail eder.
+
+### TESTER Degisikligi
+- Hadith generator testleri `https://sunnah.com` kaynakli manifestleri kabul eder ve `https://example.com/hadith` kaynagini reddeder.
+- Tafsir generator testleri `https://api.quran.com/api/v4/tafsirs` kaynakli manifestleri kabul eder ve `https://example.com/tafsir` kaynagini reddeder.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\generate_hadith_seed_test.dart test\generate_tafsir_seed_test.dart --reporter compact` PASS, 21/21.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 630/630.
+
+### Risk Degisimi
+- Religious seed unapproved-source risk: `15/25 -> 2/25`.
+- Kalan risk: Gercek hadith/tafsir manifestleri halen operator tarafindan saglanmali; generator sadece izinli kaynak disi manifestleri reddeder, sahte icerik uretmez.
+
+### Sonraki Adim
+- Commit/push; ardindan Supabase apply evidence ve store-readiness blocker taramasina devam et.

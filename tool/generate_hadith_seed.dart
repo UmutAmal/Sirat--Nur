@@ -11,6 +11,7 @@ const int minimumHadithRowsPerCollection =
     minimumVerifiedHadithRowsPerCollection;
 
 final RegExp _identifierPattern = RegExp(r'^[a-z0-9][a-z0-9_-]*$');
+const Set<String> _approvedHadithSourceHosts = {'sunnah.com'};
 
 class VerifiedHadithEntry {
   const VerifiedHadithEntry({
@@ -131,6 +132,11 @@ VerifiedHadithEntry _parseHadithEntry(
   if (verifiedAtRaw == null) {
     throw const FormatException('Missing verified_at for hadith entry.');
   }
+  _validateApprovedSource(
+    source,
+    approvedHosts: _approvedHadithSourceHosts,
+    contentType: 'hadith',
+  );
 
   return VerifiedHadithEntry(
     collectionId: collectionId,
@@ -203,6 +209,11 @@ String buildHadithSeedSql(Iterable<VerifiedHadithEntry> entries) {
     ..writeln();
 
   for (final entry in rows) {
+    _validateApprovedSource(
+      entry.source,
+      approvedHosts: _approvedHadithSourceHosts,
+      contentType: 'hadith',
+    );
     buffer
       ..writeln('INSERT INTO public.hadiths (')
       ..writeln(
@@ -227,6 +238,30 @@ String buildHadithSeedSql(Iterable<VerifiedHadithEntry> entries) {
   }
 
   return buffer.toString();
+}
+
+void _validateApprovedSource(
+  String source, {
+  required Set<String> approvedHosts,
+  required String contentType,
+}) {
+  final uri = Uri.tryParse(source);
+  final host = uri?.host.toLowerCase();
+  final isApprovedHost =
+      host != null &&
+      approvedHosts.any((allowedHost) {
+        final normalized = allowedHost.toLowerCase();
+        return host == normalized || host.endsWith('.$normalized');
+      });
+  if (uri == null ||
+      uri.scheme != 'https' ||
+      host == null ||
+      host.isEmpty ||
+      !isApprovedHost) {
+    throw FormatException(
+      'Unapproved $contentType source: $source. Use an AGENTS.md-approved HTTPS source.',
+    );
+  }
 }
 
 int _requiredInt(Map<String, dynamic> row, String key) {

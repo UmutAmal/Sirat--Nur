@@ -42,6 +42,7 @@ void main() {
       expect(entries.single.textAr, 'نص اختباري موثق');
       expect(entries.single.textEn, 'Verified test translation.');
       expect(entries.single.textTr, 'Doğrulanmış test çevirisi.');
+      expect(entries.single.source, 'https://sunnah.com');
       expect(entries.single.sourceLicense, 'verified-open-license');
     });
 
@@ -137,7 +138,7 @@ void main() {
       expect(
         () => parseVerifiedHadithManifest(
           jsonEncode({
-            'source': 'Verified hadith archive',
+            'source': 'https://sunnah.com',
             'verified_at': '2026-04-16T00:00:00Z',
             'entries': [_entry(collectionId: 'bukhari', hadithNumber: 1)],
           }),
@@ -148,6 +149,27 @@ void main() {
             (error) => error.message,
             'message',
             contains('source_license'),
+          ),
+        ),
+      );
+    });
+
+    test('rejects unapproved source domains', () {
+      expect(
+        () => parseVerifiedHadithManifest(
+          jsonEncode({
+            'source': 'https://example.com/hadith',
+            'source_license': 'verified-open-license',
+            'verified_at': '2026-04-16T00:00:00Z',
+            'entries': [_entry(collectionId: 'bukhari', hadithNumber: 1)],
+          }),
+          requireAllCollections: false,
+        ),
+        throwsA(
+          isA<FormatException>().having(
+            (error) => error.message,
+            'message',
+            contains('Unapproved hadith source'),
           ),
         ),
       );
@@ -183,7 +205,7 @@ void main() {
           textEn: "Verified test translation.",
           narrator: "Umar ibn al-Khattab",
           grade: 'sahih',
-          source: 'Verified hadith archive',
+          source: 'https://sunnah.com/bukhari/1',
           sourceLicense: 'verified-open-license',
           verifiedAt: DateTime.utc(2026, 4, 16),
         ),
@@ -193,7 +215,7 @@ void main() {
       expect(sql, contains('ON CONFLICT (collection_id, hadith_number)'));
       expect(sql, contains("Verified test translation."));
       expect(sql, contains("source_license = EXCLUDED.source_license"));
-      expect(sql, isNot(contains('sunnah.com')));
+      expect(sql, contains('https://sunnah.com/bukhari/1'));
     });
 
     test('smoke manifest can be converted into hadith seed SQL', () {
@@ -255,7 +277,7 @@ List<Map<String, Object?>> _completeProductionEntries() {
 
 String _manifestJson({required List<Map<String, Object?>> entries}) {
   return const JsonEncoder.withIndent('  ').convert({
-    'source': 'Verified hadith archive',
+    'source': 'https://sunnah.com',
     'source_license': 'verified-open-license',
     'verified_at': '2026-04-16T00:00:00Z',
     'entries': entries,
