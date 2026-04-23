@@ -162,11 +162,26 @@ void main() {
         contains('Cloudflare Quran audio partition is below 10 GB'),
       );
       expect(script, contains('Get-SupabaseRestCount'));
+      expect(script, contains('Get-SupabaseRestRows'));
       expect(script, contains('Assert-SupabaseTableMinimumCount'));
+      expect(script, contains('Assert-SupabaseTableApprovedSourceUrls'));
+      expect(script, contains('Test-ApprovedStoreSourceUrl'));
       expect(script, contains("Prefer = 'count=exact'"));
       expect(script, contains('Content-Range'));
       expect(script, contains('Supabase public table has required rows'));
       expect(script, contains('Supabase public table count check failed'));
+      expect(
+        script,
+        contains('Supabase public table source URLs are approved'),
+      );
+      expect(
+        script,
+        contains('Supabase public table has unapproved source URLs'),
+      );
+      expect(
+        script,
+        contains('approvedSourceHosts = \$approvedStoreSourceHosts'),
+      );
       expect(script, contains('ErrorDetails.Message'));
       expect(script, contains('Read-HttpErrorDetail'));
       expect(script, contains('ReadAsStringAsync().GetAwaiter().GetResult()'));
@@ -202,9 +217,15 @@ void main() {
       expect(script, contains("table = 'hadiths'; minimum = 600"));
       expect(script, contains("table = 'asma_ul_husna'; minimum = 99"));
       expect(script, contains('source=neq.'));
+      expect(script, contains('source=not.is.null&source=neq.'));
       expect(script, contains('source_license=neq.'));
       expect(script, contains('storage_path=neq.'));
-      expect(script, contains("filter = 'type=eq.quran_surah"));
+      expect(
+        script,
+        contains(
+          "filter = 'type=eq.quran_surah&reciter=not.is.null&reciter=neq.&surah_number=not.is.null&storage_path=not.is.null&storage_path=neq.&source=not.is.null&source=neq.&verified_at=not.is.null'",
+        ),
+      );
       expect(script, contains('storagePathValueCount -eq 684'));
       expect(script, contains('Quran audio path seed is complete'));
       expect(script, contains('android.permission.USE_EXACT_ALARM'));

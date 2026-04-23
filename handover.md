@@ -17301,3 +17301,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan store-readiness Supabase source-domain filtreleri ve kalan external blocker taramasina devam et.
+
+## 2026-04-23 TUR-415 - Store Readiness Verifies Approved Supabase Source URLs
+
+### MASTER Karari
+- Risk: `tool/check_store_readiness.ps1` Supabase REST release gate'i dini icerik tablolarinda `source` alanini yalniz non-empty sayiyordu; store-ready raporu unapproved domain veya serbest metin source iceren satirlari kacirabilirdi.
+- Kanit: `supabaseTableChecks` once `source=not.is.null&source=neq.` filtreleriyle count aliyor, source URL domainini dogrulamiyordu. `audio_files` filtresi ise `source` alanini hic zorunlu tutmuyordu.
+- Kullanici etkisi: Runtime guard'lar sahte kaynaklari reddetse bile release operatoru Supabase datasini store-ready sanabilir, eksik/yanlis provenance yayina kalabilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 store release false-ready gate).
+- Rollback plani: `tool/check_store_readiness.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Store readiness script'ine paginated `Get-SupabaseRestRows` eklendi; artik source kolonlari satir satir okunuyor.
+- `Test-ApprovedStoreSourceUrl` ve `Assert-SupabaseTableApprovedSourceUrls` eklendi; source URL'leri AGENTS.md kabul kaynak hostlariyla, HTTPS/protocol/user-info/query/fragment kurallariyla dogrulaniyor.
+- `audio_files` Quran audio filtresi artik `source=not.is.null&source=neq.` sartini da iceriyor.
+- Daily ayat, education, audio, duas, Asma, Quran, tafsir ve hadith tablolarina approved source URL gate'i baglandi.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` store checker'in paginated row fetch, approved source URL validator, unapproved source failure mesaji ve audio source filter zorunlulugunu korudugunu dogruluyor.
+- PowerShell parse check: `[scriptblock]::Create((Get-Content -Raw tool\check_store_readiness.ps1))` PASS.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 639/639.
+
+### Risk Degisimi
+- Store readiness unapproved-source false-ready risk: `15/25 -> 2/25`.
+- Kalan risk: Supabase remote ortaminda gercek data/apply summary ve runtime config degerleri operator credentials ile dogrulanmali; script artik unapproved source URL'leri yakalayacak.
+
+### Sonraki Adim
+- Commit/push; ardindan store/app release blocker taramasinda kalan configuration ve Appium runtime smoke durumuna gec.

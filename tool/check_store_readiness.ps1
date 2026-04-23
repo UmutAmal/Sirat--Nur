@@ -126,6 +126,169 @@ function Get-SupabaseRestCount {
   return $rows.Count
 }
 
+function Get-SupabaseRestRows {
+  param(
+    [Parameter(Mandatory = $true)][string]$SupabaseUrl,
+    [Parameter(Mandatory = $true)][string]$ClientKey,
+    [Parameter(Mandatory = $true)][string]$TableName,
+    [string]$FilterQuery = '',
+    [string]$Select = 'id,source'
+  )
+
+  $supabaseHeaders = @{
+    apikey = $ClientKey
+    Authorization = "Bearer $ClientKey"
+  }
+  $pageSize = 1000
+  $offset = 0
+  $rows = New-Object System.Collections.Generic.List[object]
+
+  while ($true) {
+    $queryParts = New-Object System.Collections.Generic.List[string]
+    $queryParts.Add("select=$Select") | Out-Null
+    if (-not [string]::IsNullOrWhiteSpace($FilterQuery)) {
+      foreach ($part in $FilterQuery.Split('&')) {
+        if (-not [string]::IsNullOrWhiteSpace($part)) {
+          $queryParts.Add($part) | Out-Null
+        }
+      }
+    }
+    $queryParts.Add("limit=$pageSize") | Out-Null
+    $queryParts.Add("offset=$offset") | Out-Null
+
+    $tableUri = "$SupabaseUrl/rest/v1/$TableName`?$($queryParts -join '&')"
+    $tableResponse = Invoke-WebRequest -UseBasicParsing -Uri $tableUri -Headers $supabaseHeaders -Method Get -TimeoutSec 30
+    if ($tableResponse.StatusCode -ne 200 -and $tableResponse.StatusCode -ne 206) {
+      throw "HTTP $($tableResponse.StatusCode)"
+    }
+
+    $pageRows = @()
+    if (-not [string]::IsNullOrWhiteSpace($tableResponse.Content)) {
+      $decoded = $tableResponse.Content | ConvertFrom-Json
+      $pageRows = @($decoded)
+    }
+    foreach ($row in $pageRows) {
+      $rows.Add($row) | Out-Null
+    }
+
+    if ($pageRows.Count -lt $pageSize) {
+      break
+    }
+    $offset += $pageSize
+  }
+
+  return @($rows)
+}
+
+$approvedStoreSourceHosts = @(
+  'diyanet.gov.tr',
+  'islamansiklopedisi.org.tr',
+  'quran.gov.sa',
+  'dar-alifta.org',
+  'habous.gov.ma',
+  'quran.com',
+  'sunnah.com',
+  'islamhouse.com',
+  'mp3quran.net',
+  'everyayah.com'
+)
+
+function Test-ApprovedStoreSourceUrl {
+  param(
+    [Parameter(Mandatory = $true)][string]$Source,
+    [Parameter(Mandatory = $true)][string[]]$ApprovedHosts
+  )
+
+  if ([string]::IsNullOrWhiteSpace($Source)) {
+    return $false
+  }
+
+  try {
+    $uri = [System.Uri]$Source.Trim()
+  } catch {
+    return $false
+  }
+
+  if (
+    $uri.Scheme -ne 'https' -or
+    [string]::IsNullOrWhiteSpace($uri.Host) -or
+    -not [string]::IsNullOrEmpty($uri.UserInfo) -or
+    -not [string]::IsNullOrEmpty($uri.Query) -or
+    -not [string]::IsNullOrEmpty($uri.Fragment)
+  ) {
+    return $false
+  }
+
+  $host = $uri.Host.ToLowerInvariant()
+  foreach ($approvedHost in $ApprovedHosts) {
+    if ($host -eq $approvedHost -or $host.EndsWith(".$approvedHost")) {
+      return $true
+    }
+  }
+
+  return $false
+}
+
+function Assert-SupabaseTableApprovedSourceUrls {
+  param(
+    [Parameter(Mandatory = $true)][string]$SupabaseUrl,
+    [Parameter(Mandatory = $true)][string]$ClientKey,
+    [Parameter(Mandatory = $true)][string]$TableName,
+    [Parameter(Mandatory = $true)][int]$MinimumCount,
+    [Parameter(Mandatory = $true)][string]$Description,
+    [Parameter(Mandatory = $true)][string[]]$ApprovedHosts,
+    [string]$FilterQuery = '',
+    [string]$SourceField = 'source'
+  )
+
+  try {
+    $rows = Get-SupabaseRestRows -SupabaseUrl $SupabaseUrl -ClientKey $ClientKey -TableName $TableName -FilterQuery $FilterQuery -Select "id,$SourceField"
+    $approvedCount = 0
+    $invalidCount = 0
+    $invalidExamples = New-Object System.Collections.Generic.List[string]
+
+    foreach ($row in $rows) {
+      $sourceProperty = $row.PSObject.Properties[$SourceField]
+      $sourceValue = if ($sourceProperty) { [string]$sourceProperty.Value } else { '' }
+      if (Test-ApprovedStoreSourceUrl -Source $sourceValue -ApprovedHosts $ApprovedHosts) {
+        $approvedCount += 1
+        continue
+      }
+
+      $invalidCount += 1
+      if ($invalidExamples.Count -lt 5) {
+        $idProperty = $row.PSObject.Properties['id']
+        $rowId = if ($idProperty) { [string]$idProperty.Value } else { '<missing-id>' }
+        $invalidExamples.Add("${rowId}: $sourceValue") | Out-Null
+      }
+    }
+
+    if ($invalidCount -gt 0) {
+      Add-Failure "Supabase public table has unapproved source URLs: $Description ($invalidCount invalid; examples: $($invalidExamples -join '; '))."
+    } elseif ($approvedCount -ge $MinimumCount) {
+      Add-Pass "Supabase public table source URLs are approved: $Description ($approvedCount/$MinimumCount)."
+    } else {
+      Add-Failure "Supabase public table has insufficient approved source URLs: $Description ($approvedCount/$MinimumCount)."
+    }
+  } catch {
+    $errorDetail = Read-HttpErrorDetail -ErrorRecord $_
+    $response = $_.Exception.Response
+    if ($response -and $response.StatusCode) {
+      $message = "Supabase public table source URL check failed: $TableName returned HTTP $([int]$response.StatusCode)"
+      if (-not [string]::IsNullOrWhiteSpace($errorDetail)) {
+        $message = "${message}: $errorDetail"
+      }
+      Add-Failure $message
+    } else {
+      $message = "Supabase public table source URL check failed: $TableName ($($_.Exception.Message))"
+      if (-not [string]::IsNullOrWhiteSpace($errorDetail)) {
+        $message = "${message}: $errorDetail"
+      }
+      Add-Failure $message
+    }
+  }
+}
+
 function Read-HttpErrorDetail {
   param([Parameter(Mandatory = $true)]$ErrorRecord)
 
@@ -518,17 +681,17 @@ try {
       -not [string]::IsNullOrWhiteSpace($supabaseClientKey)
     ) {
       $supabaseTableChecks = @(
-        @{ table = 'daily_content'; minimum = 8; description = 'verified daily ayat seed'; filter = 'content_type=eq.ayat&source=not.is.null&source=neq.&verified_at=not.is.null' },
+        @{ table = 'daily_content'; minimum = 8; description = 'verified daily ayat seed'; filter = 'content_type=eq.ayat&source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
         @{ table = 'live_tv_channels'; minimum = 2; description = 'Makkah/Madinah live TV channels'; filter = 'title=not.is.null' },
-        @{ table = 'education_categories'; minimum = 1; description = 'verified education categories'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
-        @{ table = 'education_topics'; minimum = 1; description = 'verified education topics'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
-        @{ table = 'audio_files'; minimum = 684; description = 'verified Quran audio storage paths'; filter = 'type=eq.quran_surah&reciter=not.is.null&reciter=neq.&surah_number=not.is.null&storage_path=not.is.null&storage_path=neq.&verified_at=not.is.null' },
-        @{ table = 'duas'; minimum = 8; description = 'verified Quranic duas'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
-        @{ table = 'asma_ul_husna'; minimum = 99; description = 'verified Asma-ul-Husna names'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
-        @{ table = 'quran_surahs'; minimum = 114; description = 'verified Quran surahs'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
-        @{ table = 'quran_ayahs'; minimum = 6236; description = 'verified Quran ayahs'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null' },
-        @{ table = 'tafsir_entries'; minimum = 6236; description = 'complete verified tafsir catalog'; filter = 'source=not.is.null&source=neq.&source_license=not.is.null&source_license=neq.&verified_at=not.is.null' },
-        @{ table = 'hadiths'; minimum = 600; description = 'verified hadith catalog minimum'; filter = 'source=not.is.null&source=neq.&source_license=not.is.null&source_license=neq.&verified_at=not.is.null' }
+        @{ table = 'education_categories'; minimum = 1; description = 'verified education categories'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'education_topics'; minimum = 1; description = 'verified education topics'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'audio_files'; minimum = 684; description = 'verified Quran audio storage paths'; filter = 'type=eq.quran_surah&reciter=not.is.null&reciter=neq.&surah_number=not.is.null&storage_path=not.is.null&storage_path=neq.&source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'duas'; minimum = 8; description = 'verified Quranic duas'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'asma_ul_husna'; minimum = 99; description = 'verified Asma-ul-Husna names'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'quran_surahs'; minimum = 114; description = 'verified Quran surahs'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'quran_ayahs'; minimum = 6236; description = 'verified Quran ayahs'; filter = 'source=not.is.null&source=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'tafsir_entries'; minimum = 6236; description = 'complete verified tafsir catalog'; filter = 'source=not.is.null&source=neq.&source_license=not.is.null&source_license=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts },
+        @{ table = 'hadiths'; minimum = 600; description = 'verified hadith catalog minimum'; filter = 'source=not.is.null&source=neq.&source_license=not.is.null&source_license=neq.&verified_at=not.is.null'; approvedSourceHosts = $approvedStoreSourceHosts }
       )
       foreach ($check in $supabaseTableChecks) {
         Assert-SupabaseTableMinimumCount `
@@ -538,6 +701,16 @@ try {
           -MinimumCount $check.minimum `
           -Description $check.description `
           -FilterQuery $check.filter
+        if ($check.ContainsKey('approvedSourceHosts')) {
+          Assert-SupabaseTableApprovedSourceUrls `
+            -SupabaseUrl $supabaseUrl `
+            -ClientKey $supabaseClientKey `
+            -TableName $check.table `
+            -MinimumCount $check.minimum `
+            -Description $check.description `
+            -FilterQuery $check.filter `
+            -ApprovedHosts $check.approvedSourceHosts
+        }
       }
     }
   }
