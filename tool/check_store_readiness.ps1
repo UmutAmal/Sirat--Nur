@@ -237,23 +237,33 @@ try {
   $keyPropertiesPath = Join-Path $repoRoot 'android/key.properties'
   if (Test-Path -LiteralPath $keyPropertiesPath) {
     $keyProperties = Get-Content -LiteralPath $keyPropertiesPath -Raw
-    foreach ($requiredKey in @('storeFile=', 'storePassword=', 'keyAlias=', 'keyPassword=')) {
-      if ($keyProperties.Contains($requiredKey)) {
-        Add-Pass "android/key.properties contains $requiredKey"
+    $keyPropertiesValues = @{}
+    foreach ($line in ($keyProperties -split "`r?`n")) {
+      $trimmedLine = $line.Trim()
+      if ([string]::IsNullOrWhiteSpace($trimmedLine) -or $trimmedLine.StartsWith('#')) {
+        continue
+      }
+      $parts = $trimmedLine.Split('=', 2)
+      if ($parts.Count -eq 2) {
+        $keyPropertiesValues[$parts[0].Trim()] = $parts[1].Trim()
+      }
+    }
+    foreach ($requiredKey in @('storeFile', 'storePassword', 'keyAlias', 'keyPassword')) {
+      if ($keyPropertiesValues.ContainsKey($requiredKey) -and -not [string]::IsNullOrWhiteSpace($keyPropertiesValues[$requiredKey])) {
+        Add-Pass "android/key.properties has non-empty $requiredKey"
       } else {
-        Add-Failure "android/key.properties is missing $requiredKey"
+        Add-Failure "android/key.properties has empty or missing $requiredKey"
       }
     }
 
-    $storeFileLine = ($keyProperties -split "`r?`n" | Where-Object { $_.Trim().StartsWith('storeFile=') } | Select-Object -First 1)
-    if ($storeFileLine) {
-      $storeFile = $storeFileLine.Substring('storeFile='.Length).Trim()
+    if ($keyPropertiesValues.ContainsKey('storeFile') -and -not [string]::IsNullOrWhiteSpace($keyPropertiesValues['storeFile'])) {
+      $storeFile = $keyPropertiesValues['storeFile']
       $storePath = if ([System.IO.Path]::IsPathRooted($storeFile)) {
         $storeFile
       } else {
         Join-Path (Join-Path $repoRoot 'android') $storeFile
       }
-      if (Test-Path -LiteralPath $storePath) {
+      if (Test-Path -LiteralPath $storePath -PathType Leaf) {
         Add-Pass 'Release upload keystore file exists.'
       } else {
         Add-Failure "Release upload keystore file does not exist: $storePath"

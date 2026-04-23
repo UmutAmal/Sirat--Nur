@@ -124,10 +124,30 @@ if (-not (Test-Path -LiteralPath $keyProperties)) {
 }
 
 $keyPropertiesContent = Get-Content -LiteralPath $keyProperties -Raw
-foreach ($requiredKey in @('storeFile=', 'storePassword=', 'keyAlias=', 'keyPassword=')) {
-  if (-not $keyPropertiesContent.Contains($requiredKey)) {
-    throw "android/key.properties is missing $requiredKey"
+$keyPropertiesValues = @{}
+foreach ($line in ($keyPropertiesContent -split "`r?`n")) {
+  $trimmedLine = $line.Trim()
+  if ([string]::IsNullOrWhiteSpace($trimmedLine) -or $trimmedLine.StartsWith('#')) {
+    continue
   }
+  $parts = $trimmedLine.Split('=', 2)
+  if ($parts.Count -eq 2) {
+    $keyPropertiesValues[$parts[0].Trim()] = $parts[1].Trim()
+  }
+}
+foreach ($requiredKey in @('storeFile', 'storePassword', 'keyAlias', 'keyPassword')) {
+  if (-not $keyPropertiesValues.ContainsKey($requiredKey) -or [string]::IsNullOrWhiteSpace($keyPropertiesValues[$requiredKey])) {
+    throw "android/key.properties has empty or missing $requiredKey"
+  }
+}
+$storeFile = $keyPropertiesValues['storeFile']
+$storePath = if ([System.IO.Path]::IsPathRooted($storeFile)) {
+  $storeFile
+} else {
+  Join-Path (Join-Path $PSScriptRoot '..\android') $storeFile
+}
+if (-not (Test-Path -LiteralPath $storePath -PathType Leaf)) {
+  throw "Release upload keystore file does not exist: $storePath"
 }
 
 $quranAudioPathNamespace = [Environment]::GetEnvironmentVariable('QURAN_AUDIO_PATH_NAMESPACE')

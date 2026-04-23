@@ -17020,3 +17020,36 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan kalan release readiness ve store-blocker taramasina devam et.
+
+## 2026-04-23 TUR-406 - Release Signing Preflight Requires Real Values
+
+### MASTER Karari
+- Risk: `tool/check_store_readiness.ps1` ve `tool/build_store_appbundle.ps1` `android/key.properties` icin sadece `storeFile=`, `storePassword=`, `keyAlias=`, `keyPassword=` metinlerinin varligini kontrol ediyordu.
+- Kanit: Onceki readiness kontrolu `$keyProperties.Contains($requiredKey)` ile PASS uretiyordu. `storeFile=` bos olursa `Join-Path android ''` klasore donebilir ve dosya kaniti yanlis PASS alabilirdi.
+- Kullanici etkisi: Store preflight, upload signing gercekte eksik/yanlis olsa bile "configuration present" diyebilirdi; release artifact uretimi veya Play upload oncesi false-success riski dogardi.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 (P1 release signing false-success).
+- Rollback plani: `tool/check_store_readiness.ps1`, `tool/build_store_appbundle.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `android/key.properties` satirlari key/value map olarak parse ediliyor; bos satir ve yorumlar yok sayiliyor.
+- `storeFile`, `storePassword`, `keyAlias`, `keyPassword` degerleri non-empty olmak zorunda.
+- `storeFile` artik sadece path varligina degil, gercek dosya olmasina (`-PathType Leaf`) gore kabul ediliyor.
+- Secret degerleri loglanmiyor; readiness yalnizca non-empty PASS/FAIL mesaji yaziyor.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` release signing scriptlerinde non-empty/value guard'larini koruyor.
+- `tool/build_store_appbundle.ps1 -NoBuild` dummy HTTPS runtime env ile PASS verdi.
+- `tool/check_store_readiness.ps1 -SkipNetwork -SkipFlutterValidation` beklenen external env/Supabase blocker'lariyla FAIL verdi; signing bolumu non-empty degerler ve keystore dosyasi icin PASS verdi.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 9/9.
+- Script parse smoke: PASS.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 628/628.
+
+### Risk Degisimi
+- Release signing false-success risk: `12/25 -> 2/25`.
+- Kalan risk: Store readiness halen production env ve real Supabase content apply evidence olmadan bilerek FAIL verir.
+
+### Sonraki Adim
+- Commit/push; ardindan store-readiness external blocker ve icerik seed zincirini taramaya devam et.

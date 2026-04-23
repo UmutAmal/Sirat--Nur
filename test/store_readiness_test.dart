@@ -121,6 +121,8 @@ void main() {
       expect(script, contains('overpass-api.de'));
       expect(script, contains('flutter build appbundle --release'));
       expect(script, contains(r'if ($LASTEXITCODE -ne 0)'));
+      expect(script, contains('empty or missing'));
+      expect(script, contains('Release upload keystore file does not exist'));
       expect(script, contains('Store app bundle build failed'));
       expect(
         script.indexOf('flutter build appbundle --release'),
@@ -176,6 +178,15 @@ void main() {
       expect(script, contains('content_seed_hadith.sql'));
       expect(script, contains('content_seed_tafsir.sql'));
       expect(script, contains('content_seed_duas.sql'));
+      expect(
+        script,
+        contains("'storeFile', 'storePassword', 'keyAlias', 'keyPassword'"),
+      );
+      expect(
+        script,
+        contains(r'android/key.properties has non-empty $requiredKey'),
+      );
+      expect(script, contains('empty or missing'));
       expect(script, contains('missing_optional_files'));
       expect(script, contains('verified dua seed'));
       expect(script, contains('Quranic dua seed is complete'));
