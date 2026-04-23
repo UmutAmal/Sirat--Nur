@@ -893,6 +893,12 @@ class AsmaUlHusnaData {
   ];
 }
 
+const Set<String> _approvedAsmaSourceHosts = {
+  'diyanet.gov.tr',
+  'islamansiklopedisi.org.tr',
+  'islamhouse.com',
+};
+
 List<Map<String, dynamic>> buildBundledAsmaUlHusnaFallback() {
   return AsmaUlHusnaData.names
       .map((item) => {...item, 'audioUrl': ''})
@@ -970,6 +976,23 @@ String _resolveCloudAsmaAudioUrl(Map<String, dynamic> row) {
   return '';
 }
 
+bool isApprovedCloudAsmaSourceUrl(String source) {
+  final uri = Uri.tryParse(source.trim());
+  if (uri == null ||
+      !uri.isScheme('https') ||
+      uri.host.trim().isEmpty ||
+      uri.userInfo.isNotEmpty ||
+      uri.hasQuery ||
+      uri.hasFragment) {
+    return false;
+  }
+
+  final host = uri.host.toLowerCase();
+  return _approvedAsmaSourceHosts.any(
+    (approvedHost) => host == approvedHost || host.endsWith('.$approvedHost'),
+  );
+}
+
 Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
   final id = row['id'];
   final transliteration = _readAsmaString(row, [
@@ -1006,7 +1029,7 @@ List<Map<String, dynamic>> resolveCloudAsmaUlHusnaRows(
     return (item['arabic'] ?? '').toString().trim().isNotEmpty &&
         (item['transliteration'] ?? '').toString().trim().isNotEmpty &&
         hasTranslation &&
-        (item['source'] ?? '').toString().trim().isNotEmpty &&
+        isApprovedCloudAsmaSourceUrl((item['source'] ?? '').toString()) &&
         (item['verifiedAt'] ?? '').toString().trim().isNotEmpty;
   }).toList();
 

@@ -4,6 +4,8 @@ import 'dart:io';
 
 void main() {
   group('AsmaUlHusna data helpers', () {
+    const approvedSource = 'https://islamansiklopedisi.org.tr/esma-i-husna';
+
     test('cloud rows fall back to bundled names when rows are empty', () {
       final resolved = resolveCloudAsmaUlHusnaRows([]);
 
@@ -21,7 +23,7 @@ void main() {
           'meaning_tr': 'Merhameti her seyi kusatan',
           'meaning_en': 'The Beneficent',
           'audio_url': 'https://example.com/001.mp3',
-          'source': 'TDV Islam Ansiklopedisi',
+          'source': approvedSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
@@ -39,8 +41,27 @@ void main() {
         'The Beneficent',
       );
       expect(resolved.first['audioUrl'], isEmpty);
-      expect(resolved.first['source'], 'TDV Islam Ansiklopedisi');
+      expect(resolved.first['source'], approvedSource);
       expect(resolved.first['verifiedAt'], '2026-04-15T00:00:00Z');
+    });
+
+    test('trusts only approved HTTPS cloud Asma source domains', () {
+      expect(isApprovedCloudAsmaSourceUrl(approvedSource), isTrue);
+      expect(
+        isApprovedCloudAsmaSourceUrl('https://www.diyanet.gov.tr/tr-TR'),
+        isTrue,
+      );
+
+      for (final source in const [
+        'TDV Islam Ansiklopedisi',
+        'https://example.com/asma',
+        'http://islamansiklopedisi.org.tr/esma-i-husna',
+        'https://token@islamansiklopedisi.org.tr/esma-i-husna',
+        'https://islamansiklopedisi.org.tr/esma-i-husna?token=secret',
+        'https://islamansiklopedisi.org.tr/esma-i-husna#fragment',
+      ]) {
+        expect(isApprovedCloudAsmaSourceUrl(source), isFalse, reason: source);
+      }
     });
 
     test('cloud rows use Supabase Storage-backed audio when available', () {
@@ -53,7 +74,7 @@ void main() {
           'meaning_en': 'The Beneficent',
           'storage_path': 'audio-asma/001.mp3',
           'audio_url': 'https://example.com/001.mp3',
-          'source': 'TDV Islam Ansiklopedisi',
+          'source': approvedSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
@@ -75,7 +96,7 @@ void main() {
             'tr': 'Rahmeti her seyi kusatan',
             'de': 'Der Allerbarmer',
           },
-          'source': 'TDV Islam Ansiklopedisi',
+          'source': approvedSource,
           'verified_at': '2026-04-15T00:00:00Z',
         },
       ]);
@@ -105,7 +126,7 @@ void main() {
             'transliteration': 'Ar Raheem',
             'meaning_tr': 'Merhamet eden',
             'meaning_en': 'The Merciful',
-            'source': 'TDV Islam Ansiklopedisi',
+            'source': approvedSource,
           },
         ]);
 

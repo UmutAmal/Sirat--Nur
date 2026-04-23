@@ -17206,3 +17206,33 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Asma-ul-Husna cloud source domain guard'i ve store-readiness external blocker taramasina devam et.
+
+## 2026-04-23 TUR-412 - Cloud Asma Requires Approved Source Domains
+
+### MASTER Karari
+- Risk: `lib/core/constants/asma_ul_husna_data.dart` cloud Asma normalizer'i `source` alaninda yalniz non-empty kontrol yapiyordu; Supabase'e manuel veya hatali import edilen URL olmayan kaynaklar verified Asma gibi kabul edilebilirdi.
+- Kanit: `resolveCloudAsmaUlHusnaRows` once `(item['source'] ?? '').toString().trim().isNotEmpty` ile yetiniyordu. `test/asma_ul_husna_data_test.dart` valid fixture olarak `TDV Islam Ansiklopedisi` serbest metnini kullaniyordu.
+- Kullanici etkisi: Esma-ul-Husna metni izinli resmi/dogrulanmis kaynak domaini disindan gelirse uygulama bunu verified cloud content olarak sunabilirdi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 (P1 religious content provenance runtime gate).
+- Rollback plani: `lib/core/constants/asma_ul_husna_data.dart`, `test/asma_ul_husna_data_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Cloud Asma source allowlist'i HTTPS `diyanet.gov.tr`, `islamansiklopedisi.org.tr` ve `islamhouse.com` domainleri veya alt domainleriyle sinirlandi.
+- `resolveCloudAsmaUlHusnaRows` artik non-empty source yerine `isApprovedCloudAsmaSourceUrl` guard'i ile karar veriyor.
+- HTTP, user-info, query ve fragment iceren source URL'leri reddediliyor.
+
+### TESTER Degisikligi
+- Cloud Asma fixture'lari valid kaynak olarak `https://islamansiklopedisi.org.tr/esma-i-husna` kullaniyor.
+- `TDV Islam Ansiklopedisi`, `example.com`, HTTP, credential, query ve fragment iceren kaynaklar reddediliyor.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\asma_ul_husna_data_test.dart --reporter compact` PASS, 11/11.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 634/634.
+
+### Risk Degisimi
+- Cloud Asma unapproved-source risk: `15/25 -> 2/25`.
+- Kalan risk: Sukun/education cloud provenance helper'lari ve Supabase config/default URL store blocker taramasi devam edecek.
+
+### Sonraki Adim
+- Commit/push; ardindan sukun/education cloud source domain guard'i ve store-readiness external blocker taramasina devam et.
