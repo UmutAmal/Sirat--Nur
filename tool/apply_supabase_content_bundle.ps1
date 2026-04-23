@@ -8,6 +8,15 @@ $ErrorActionPreference = 'Stop'
 
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
 
+. (Join-Path $PSScriptRoot 'import_release_environment.ps1')
+
+$releaseEnvironment = Initialize-ReleaseEnvironment -RepoRoot $repoRoot -VariableNames @(
+  'SUPABASE_DB_URL'
+)
+if ([string]::IsNullOrWhiteSpace($DbUrl)) {
+  $DbUrl = [Environment]::GetEnvironmentVariable('SUPABASE_DB_URL')
+}
+
 $requiredSqlFiles = @(
   'content_schema.sql',
   'content_seed_quran_surahs.sql',
@@ -66,6 +75,9 @@ function Assert-SafeSqlFile {
 Push-Location $repoRoot
 try {
   Require-Command -Name 'npx' -InstallHint 'Install Node.js so npx can run the Supabase CLI.'
+  if ($releaseEnvironment.LoadedFiles.Count -gt 0) {
+    Write-Host "Loaded release environment file(s): $($releaseEnvironment.LoadedFiles -join ', ')"
+  }
 
   $plannedFiles = New-Object System.Collections.Generic.List[string]
   foreach ($relativePath in $requiredSqlFiles) {

@@ -17401,3 +17401,39 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Supabase production apply evidence zincirini ve kalan store-ready blocker'larini taramaya devam et.
+
+## 2026-04-23 TUR-418 - Supabase Apply Script Also Loads Release Env
+
+### MASTER Karari
+- Risk: `tool/apply_supabase_content_bundle.ps1` `SUPABASE_DB_URL` icin yalnizca process env default param'ina guveniyordu; git-ignored `.env` dosyasina veya persisted scope'a yazilmis DB URL, Codex oturumu icinde gorunmezse real apply komutu sahte `SUPABASE_DB_URL` yok hatasina dusebilirdi.
+- Kanit: Script param'i ` [string]$DbUrl = $env:SUPABASE_DB_URL` olarak tanimliydi ve mevcut akista dotenv/persisted-scope bootstrap bulunmuyordu. README/release checklist ise operatoru `.env` veya secure secret store ile calismaya yonlendiriyor.
+- Kullanici etkisi: Gercek verified hadith/tafsir seedleri ve SQL apply sirasinda ortam hazir olsa bile apply script'i false-negative verebilir, store-ready yolundaki son teknik blocker gereksiz yere kapanmazdi.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 (P1 production apply false blocker).
+- Rollback plani: `tool/apply_supabase_content_bundle.ps1`, `test/store_readiness_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool/apply_supabase_content_bundle.ps1` artik `tool/import_release_environment.ps1` helper'ini kullanarak `SUPABASE_DB_URL` degerini `Process -> dotenv -> User -> Machine` zinciriyle resolve ediyor.
+- Parametre bos geldiginde helper sonrasinda `SUPABASE_DB_URL` current process'e alinip `$DbUrl` yeniden set ediliyor; script geri kalan akisi degismeden real apply komutuna devam ediyor.
+- Helper dosyasi yuklendiyse script hangi `.env*` dosyasinin kullanildigini secretsiz sekilde raporluyor.
+
+### TESTER Degisikligi
+- `test/store_readiness_test.dart` apply script'in ortak env helper'i kullandigini, `SUPABASE_DB_URL` fallback'ini ve loaded-env log mesajini korudugunu guard'liyor.
+- PowerShell parse check: `tool/apply_supabase_content_bundle.ps1` PASS.
+- Manuel negative smoke:
+  - Gecici `.env.store` icine `SUPABASE_DB_URL=postgresql://postgres:postgres@127.0.0.1:9/postgres?sslmode=disable` yazildi.
+  - Gecici `content_seed_hadith.sql` ve `content_seed_tafsir.sql` dummy `select 1;` icerigiyle olusturuldu.
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\apply_supabase_content_bundle.ps1` calistirildi.
+  - Script `Loaded release environment file(s): .env.store` yazdi ve `SUPABASE_DB_URL` missing demek yerine beklenen sekilde `content_schema.sql` apply asamasinda connection refused ile durdu: `Supabase SQL apply failed for content_schema.sql (exit code 1).`
+  - Gecici `.env.store` ve dummy seed dosyalari temizlendi.
+
+### Dogrulama Sonucu
+- Targeted test: `flutter test test\store_readiness_test.dart --reporter compact` PASS, 10/10.
+- Full analyze: PASS.
+- Full test: `flutter test --reporter compact` PASS, 640/640.
+
+### Risk Degisimi
+- Supabase apply env false-negative blocker: `16/25 -> 3/25`.
+- Kalan risk: Artık blocker tamamen gercek operasyonel zincirde. Repo disinda hala `content_hadith_manifest.json`, `content_tafsir_manifest.json`, bunlardan uretilmis `content_seed_hadith.sql`/`content_seed_tafsir.sql`, ve calisir `SUPABASE_DB_URL` gerekiyor.
+
+### Sonraki Adim
+- Commit/push; ardindan verified hadith/tafsir manifest izleri, remote Supabase auth imkani ve store-ready kalan operasyonel blocker'lari taramaya devam et.

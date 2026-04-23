@@ -273,11 +273,21 @@ void main() {
         contains(r'GitHub Quran audio upload $($object.asset_name)'),
       );
       expect(uploadScript, contains(r'dry_run = $false'));
+      expect(supabaseApplyScript, contains('import_release_environment.ps1'));
+      expect(supabaseApplyScript, contains('Initialize-ReleaseEnvironment'));
+      expect(
+        supabaseApplyScript,
+        contains('Loaded release environment file(s):'),
+      );
       expect(supabaseApplyScript, contains('npx --yes supabase db query'));
       expect(supabaseApplyScript, contains(r'if ($LASTEXITCODE -ne 0)'));
       expect(
         supabaseApplyScript,
         contains(r'Supabase SQL apply failed for $relativePath'),
+      );
+      expect(
+        supabaseApplyScript,
+        contains("[Environment]::GetEnvironmentVariable('SUPABASE_DB_URL')"),
       );
       expect(supabaseApplyScript, contains('content_schema.sql'));
       expect(supabaseApplyScript, contains('content_seed_quran_ayahs.sql'));
