@@ -17950,3 +17950,32 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan yeni dongude silent catch/error visibility, dependency freshness, religious content source fidelity ve kalan l10n/content correctness taramasina devam et.
+
+## 2026-04-24 TUR-434 - Daily Ayat Runtime Requires Approved Provenance
+
+### MASTER Karari
+- Risk: Daily Ayat runtime provider'i satirda `content_*`, `reference` ve `verified_at` varsa ayeti kabul ediyordu; `source` alaninin onayli HTTPS dini kaynak URL'si olup olmadigini provider seviyesinde dogrulamiyordu.
+- Kanit:
+  - `lib/core/providers/supabase_providers.dart` icindeki `normalizeDailyAyat` once `reference` veya `source` degerini tek `reference` alanina indiriyor, `source` URL'sini ayri saklamiyor ve `isApprovedCloudContentSourceUrl` kullanmiyordu.
+  - `content_schema.sql` ve `seed.sql` daily content icin `reference` ile `source` alanlarini ayri tutuyor; `source` quran_ayahs kaynagindan geliyor.
+  - `tool/check_store_readiness.ps1` Supabase tarafinda approved source host kontrolu yapiyor, fakat runtime provider icin ayni savunmayi kilitleyen test yoktu.
+- Kullanici etkisi: Supabase veya cache icinde yanlis/eksik kaynakli bir daily ayat satiri UI ve widget'a sizarsa uygulama "dogrulanmis icerik" hedefini runtime'da zayiflatir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/daily_ayat_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `normalizeDailyAyat` artik `source` alanini zorunlu tutuyor ve `isApprovedCloudContentSourceUrl(source)` gecmeden satiri reddediyor.
+- `reference` yalniz ekranda gosterilecek ayet referansi olarak kaldi; `source` ayri cache'leniyor ve runtime veri sozlesmesine dahil edildi.
+- Eski kaynak URL'siz cache satirlari artik guvenli kabul edilmiyor; Supabase/cache yoksa mevcut honest unavailable akisi devreye giriyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\daily_ayat_provider_test.dart test\features\home\home_page_test.dart test\content_schema_test.dart test\store_readiness_test.dart --reporter compact` PASS, 22/22.
+- Yeni regresyon: `normalizeDailyAyat` `verified_at` eksik, `source` eksik veya `example.com` gibi onaysiz kaynak iceren satirlari reddediyor.
+- Yeni regresyon: kabul edilen satirlar hem `reference` hem `source` alanlarini koruyarak cache'e yaziliyor.
+
+### Risk Degisimi
+- Daily Ayat runtime provenance guard riski: `12/25 -> 2/25`.
+- Kalan risk: Home/UI halen TR disi locale'lerde daily ayat tercumesi icin EN fallback kullaniyor; dogrulanmis cok dilli Quran meal kaynagi yuklenmeden uydurma tercume eklenmeyecek.
+
+### Sonraki Adim
+- Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan silent catch/error visibility ve kalan kaynak dogrulugu yuzeylerine devam et.

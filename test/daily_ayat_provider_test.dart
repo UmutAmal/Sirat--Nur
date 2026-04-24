@@ -6,6 +6,7 @@ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  const approvedDailyAyatSource = 'https://quran.com/2/201';
 
   setUp(() {
     SharedPreferences.setMockInitialValues({});
@@ -25,6 +26,7 @@ void main() {
           'content_tr': 'Gunun ayeti',
           'content_en': 'Verse of the day',
           'reference': 'Al-Baqarah 2:255',
+          'source': approvedDailyAyatSource,
           'verified_at': '2026-04-08T00:00:00Z',
         },
         fetchFallbackAyat: () async => null,
@@ -44,6 +46,7 @@ void main() {
       'content_tr': 'Onbellek',
       'content_en': 'Cached',
       'reference': 'Al-Fatihah 1:1',
+      'source': approvedDailyAyatSource,
       'verified_at': '2026-04-08T00:00:00Z',
     }, now: cachedAt);
 
@@ -69,6 +72,7 @@ void main() {
         'content_tr': 'Eski',
         'content_en': 'Old',
         'reference': 'Al-Fatihah 1:1',
+        'source': approvedDailyAyatSource,
         'verified_at': '2026-04-06T00:00:00Z',
       }, now: cachedAt);
 
@@ -95,6 +99,7 @@ void main() {
         'content_tr': 'Kayitli ayet',
         'content_en': 'Cached verse',
         'reference': 'Al-Fatihah 1:1',
+        'source': approvedDailyAyatSource,
         'verified_at': '2026-04-08T00:00:00Z',
       }, now: cachedAt);
 
@@ -203,6 +208,30 @@ void main() {
         'content_tr': 'Ayet',
         'content_en': 'Verse',
         'reference': 'Al-Fatihah 1:1',
+        'source': approvedDailyAyatSource,
+      }),
+      isNull,
+    );
+
+    expect(
+      normalizeDailyAyat({
+        'content_ar': 'آية',
+        'content_tr': 'Ayet',
+        'content_en': 'Verse',
+        'reference': 'Al-Fatihah 1:1',
+        'source': 'https://example.com/ayat',
+        'verified_at': '2026-04-08T00:00:00Z',
+      }),
+      isNull,
+    );
+
+    expect(
+      normalizeDailyAyat({
+        'content_ar': 'آية',
+        'content_tr': 'Ayet',
+        'content_en': 'Verse',
+        'reference': 'Al-Fatihah 1:1',
+        'verified_at': '2026-04-08T00:00:00Z',
       }),
       isNull,
     );
@@ -213,6 +242,7 @@ void main() {
         'text_tr': 'Ayet',
         'text_en': 'Verse',
         'reference': 'Al-Fatihah 1:1',
+        'source': approvedDailyAyatSource,
         'verifiedAt': '2026-04-08T00:00:00Z',
       }),
       {
@@ -220,6 +250,7 @@ void main() {
         'content_tr': 'Ayet',
         'content_en': 'Verse',
         'reference': 'Al-Fatihah 1:1',
+        'source': approvedDailyAyatSource,
         'verified_at': '2026-04-08T00:00:00Z',
       },
     );

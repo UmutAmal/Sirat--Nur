@@ -54,11 +54,17 @@ Map<String, dynamic>? normalizeDailyAyat(Map<String, dynamic>? row) {
     return null;
   }
 
+  final source = _readFirstAyatValue(row, ['source']);
+  if (source == null || !isApprovedCloudContentSourceUrl(source)) {
+    return null;
+  }
+
   final normalized = <String, dynamic>{
     'content_ar': _readFirstAyatValue(row, ['content_ar', 'text_ar']),
     'content_tr': _readFirstAyatValue(row, ['content_tr', 'text_tr']),
     'content_en': _readFirstAyatValue(row, ['content_en', 'text_en']),
-    'reference': _readFirstAyatValue(row, ['reference', 'source']),
+    'reference': _readFirstAyatValue(row, ['reference']),
+    'source': source,
     'verified_at': _readFirstAyatValue(row, ['verified_at', 'verifiedAt']),
   };
 
