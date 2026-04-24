@@ -17761,3 +17761,30 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan kalan runtime/UI yuzeyleri, l10n borclari ve store artefact uretimini tekrar tara.
+
+## 2026-04-24 TUR-428 - Store App Bundle Rebuilt From Current Release Environment
+
+### MASTER Karari
+- Risk: Store-ready kontroller yesil olsa bile `build/app/outputs/bundle/release/app-release.aab` dosyasi eski committen kalmis olabilir. Bir onceki artefact taramasinda AAB timestamp'i 2026-04-17 idi; son kod/icerik/appium duzeltmeleri bu pakete yansimamisti.
+- Kanit:
+  - Artefact taramasi `app-release.aab` icin `2026-04-17 23:57:19` tarihini gosterdi.
+  - Release APK live Appium smoke tarafinda 2026-04-24 timestamp'liydi, AAB ise stale kalmisti.
+- Kullanici etkisi: Yanlislikla eski AAB yuklenirse son verified content/appium/prayer/diagnostics duzeltmeleri store paketinde yer almayabilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25.
+- Rollback plani: Build artefact'i `build/` altinda untracked oldugu icin kaynak rollback gerekmez; gerekirse script tekrar calistirilir.
+
+### DEVOPS / BUILD Degisikligi
+- Komut: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\build_store_appbundle.ps1`
+- Sonuc: PASS.
+- Script `.env.store` release ortam dosyasini yukledi ve `bundleRelease` task'ini calistirdi.
+- Yeni artefact: `build\app\outputs\bundle\release\app-release.aab`, 60.8 MB.
+
+### Dogrulama Sonucu
+- Store app bundle build completed.
+- Bu tur kaynak kod degistirmedi; yalniz store artefact guncellendi ve handover kaniti eklendi.
+
+### Risk Degisimi
+- Stale AAB store upload riski: `12/25 -> 2/25`.
+
+### Sonraki Adim
+- Commit/push; ardindan runtime/UI/l10n ve store policy yuzeylerinde yeni risk taramasina devam et.
