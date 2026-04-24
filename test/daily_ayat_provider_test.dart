@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -40,6 +41,12 @@ void main() {
   test('resolveDailyAyat uses a fresh cache when cloud fetch fails', () async {
     final prefs = await SharedPreferences.getInstance();
     final cachedAt = DateTime.utc(2026, 4, 8, 8);
+    final debugMessages = <String>[];
+    final previousDebugPrint = debugPrint;
+    addTearDown(() => debugPrint = previousDebugPrint);
+    debugPrint = (String? message, {int? wrapWidth}) {
+      if (message != null) debugMessages.add(message);
+    };
 
     await cacheDailyAyat(prefs, {
       'content_ar': 'المخزن',
@@ -59,6 +66,10 @@ void main() {
 
     expect(ayat['content_en'], 'Cached');
     expect(ayat['reference'], 'Al-Fatihah 1:1');
+    expect(
+      debugMessages,
+      contains('Daily ayat cloud fetch failed; trying fallback/cache'),
+    );
   });
 
   test(

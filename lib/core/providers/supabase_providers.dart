@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/constants/asma_ul_husna_data.dart';
@@ -126,7 +127,9 @@ Map<String, dynamic>? readCachedDailyAyat(
     if (decoded is Map) {
       return normalizeDailyAyat(Map<String, dynamic>.from(decoded));
     }
-  } catch (_) {}
+  } catch (_) {
+    debugPrint('Daily ayat cache decode failed');
+  }
 
   return null;
 }
@@ -146,7 +149,9 @@ Future<Map<String, dynamic>> resolveDailyAyat({
         await cacheDailyAyat(prefs, ayat, now: currentTime());
         return ayat;
       }
-    } catch (_) {}
+    } catch (_) {
+      debugPrint('Daily ayat cloud fetch failed; trying fallback/cache');
+    }
   }
 
   final cachedAyat = readCachedDailyAyat(prefs, now: currentTime());

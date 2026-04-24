@@ -18167,3 +18167,31 @@
 
 ### Sonraki Adim
 - Targeted Quran provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan diger provider silent fallback'leri taranacak.
+
+## 2026-04-24 TUR-442 - Daily Ayat Cloud Fallback Is No Longer Silent
+
+### MASTER Karari
+- Risk: Daily Ayat cloud fetch exception'lari sessizce yutuluyor, sonra fallback/cache dogru calissa bile scheduled/fallback kaynak arizasi loglarda gorunmuyordu.
+- Kanit:
+  - `lib/core/providers/supabase_providers.dart` icindeki `resolveDailyAyat` once her fetch denemesini `catch (_) {}` ile sessizce geciyordu.
+  - `readCachedDailyAyat` cache decode hatalarinda da sessiz `catch (_) {}` kullaniyordu.
+  - `test/daily_ayat_provider_test.dart` cloud fetch fail + fresh cache fallback davranisini test ediyordu, fakat fallback'in gorunur/loglanir olmasini garanti etmiyordu.
+- Kullanici etkisi: Gunluk ayet ekrani cache ile calismaya devam etse bile cloud/schedule arizasi uzun sure fark edilmeyebilir; bu dini icerik tazeleme zincirinde sessiz stale-data riski dogurur.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/daily_ayat_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `resolveDailyAyat` fetch exception durumunda sanitized debug log yazacak ve mevcut fallback/cache davranisini koruyacak.
+- `readCachedDailyAyat` JSON decode exception durumunda sanitized debug log yazacak ve `null` fallback sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS, 8/8.
+- Yeni regresyon: Cloud fetch exception verdiginde Daily Ayat fresh cache'e donerken `Daily ayat cloud fetch failed; trying fallback/cache` logu uretilecek.
+
+### Risk Degisimi
+- Daily Ayat silent fallback riski: `9/25 -> 2/25`.
+- Kalan risk: Sukun/Dua/Asma provider fallback catch'leri ve Quran ayah legacy projection catch'i ayrica taranacak.
+
+### Sonraki Adim
+- Targeted Daily Ayat testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Sukun/Dua/Asma silent fallback'leri taranacak.
