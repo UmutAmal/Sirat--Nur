@@ -18255,3 +18255,29 @@
 
 ### Sonraki Adim
 - `dart format`, targeted offline audio testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Quran ayah legacy projection catch'i ele alinacak.
+
+## 2026-04-24 TUR-445 - Quran Ayah Legacy Projection Retry Is Logged
+
+### MASTER Karari
+- Risk: Quran cloud ayah query ilk olarak `juz_number` kolonunu iceren projection ile deneniyor; bu projection herhangi bir cloud/schema uyumsuzlugunda eski projection'a retry ediyor, ancak retry sessiz kaldigi icin partial schema drift fark edilmiyordu.
+- Kanit:
+  - `lib/features/quran/providers/bundled_quran_provider.dart` icindeki `_loadCloudAyahRows` catch blogu once dogrudan ikinci `.select(...)` cagrisina geciyordu.
+  - `test/features/quran/providers/bundled_quran_provider_test.dart` provenance kolonlarini ve dataset fallback logunu test ediyor, fakat legacy projection retry logunu garanti etmiyordu.
+- Kullanici etkisi: Cloud Quran datasi calismaya devam edebilir, ancak `juz_number` projection arizasi runtime'da gorunmez kalir; bu da juz meta verisi ve cloud schema sagligi icin erken uyariyi kacirir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/features/quran/providers/bundled_quran_provider.dart`, `test/features/quran/providers/bundled_quran_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `_loadCloudAyahRows` ilk projection catch blogu sanitized debug log yazacak ve mevcut legacy projection retry sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\quran\providers\bundled_quran_provider_test.dart --reporter compact` PASS, 14/14.
+- Yeni regresyon: Live cloud Quran query source guard'i legacy projection retry log metnini de zorunlu tutacak.
+
+### Risk Degisimi
+- Quran ayah legacy projection silent retry riski: `9/25 -> 2/25`.
+- Kalan risk: Hadith availability catch'i ve Tafsir cloud fallback gorunurlugu ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted bundled Quran provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan hadith availability catch'i ele alinacak.

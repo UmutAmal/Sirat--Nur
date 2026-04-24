@@ -92,6 +92,9 @@ Future<List<dynamic>> _loadCloudAyahRows(SupabaseClient supabase) async {
         .order('surah_id', ascending: true)
         .order('ayah_number', ascending: true);
   } catch (_) {
+    debugPrint(
+      'Quran ayah cloud query failed with juz_number projection; retrying legacy projection',
+    );
     return supabase
         .from('quran_ayahs')
         .select(

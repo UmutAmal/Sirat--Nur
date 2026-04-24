@@ -351,6 +351,12 @@ void main() {
         source,
         contains('Quran cloud dataset load failed; using bundled Quran asset'),
       );
+      expect(
+        source,
+        contains(
+          'Quran ayah cloud query failed with juz_number projection; retrying legacy projection',
+        ),
+      );
     });
   });
 
