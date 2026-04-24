@@ -62,31 +62,36 @@ class AdhanSchedulerService {
     // Clear only adhan schedules to avoid deleting unrelated notifications.
     await _cancelScheduledAdhans();
 
-    final resolvedTimezoneName = TimezoneUtils.resolveTimezoneName(
-      timezoneName: timezoneName,
-      latitude: lat,
-      longitude: lon,
-    );
-    final now = TimezoneUtils.nowForTimezone(resolvedTimezoneName);
-    for (int i = 0; i < _scheduleDays; i++) {
-      final date = now.add(Duration(days: i));
-      final times = PrayerCalendarService.calculatePrayerTimes(
+    try {
+      final resolvedTimezoneName = TimezoneUtils.resolveTimezoneName(
+        timezoneName: timezoneName,
         latitude: lat,
         longitude: lon,
-        date: date,
-        method: method,
-        madhab: madhab,
-        timezone: resolvedTimezoneName,
-        fajrAngle: fajrAngle,
-        ishaAngle: ishaAngle,
       );
+      final now = TimezoneUtils.nowForTimezone(resolvedTimezoneName);
+      for (int i = 0; i < _scheduleDays; i++) {
+        final date = now.add(Duration(days: i));
+        final times = PrayerCalendarService.calculatePrayerTimes(
+          latitude: lat,
+          longitude: lon,
+          date: date,
+          method: method,
+          madhab: madhab,
+          timezone: resolvedTimezoneName,
+          fajrAngle: fajrAngle,
+          ishaAngle: ishaAngle,
+        );
 
-      await _scheduleDailyEvents(
-        times,
-        i,
-        timezoneName: resolvedTimezoneName,
-        languageCode: languageCode,
-      );
+        await _scheduleDailyEvents(
+          times,
+          i,
+          timezoneName: resolvedTimezoneName,
+          languageCode: languageCode,
+        );
+      }
+    } catch (_) {
+      await _cancelScheduledAdhans();
+      rethrow;
     }
   }
 

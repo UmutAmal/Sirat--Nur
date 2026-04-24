@@ -80,19 +80,38 @@ void main() {
     },
   );
 
+  test('adhan scheduler never opens exact alarm settings during bootstrap', () {
+    final source = File(
+      'lib/core/services/adhan_scheduler_service.dart',
+    ).readAsStringSync();
+
+    expect(source, contains('canScheduleExactNotifications()'));
+    expect(source, isNot(contains('requestExactAlarmsPermission()')));
+    expect(source, contains('_resolveAndroidScheduleMode'));
+    expect(source, contains('AndroidScheduleMode.exactAllowWhileIdle'));
+    expect(source, contains('AndroidScheduleMode.inexactAllowWhileIdle'));
+    expect(source, contains('androidScheduleMode: androidScheduleMode'));
+  });
+
   test(
-    'adhan scheduler never opens exact alarm settings during bootstrap',
+    'adhan scheduler clears partial schedules after scheduling failures',
     () {
       final source = File(
         'lib/core/services/adhan_scheduler_service.dart',
       ).readAsStringSync();
 
-      expect(source, contains('canScheduleExactNotifications()'));
-      expect(source, isNot(contains('requestExactAlarmsPermission()')));
-      expect(source, contains('_resolveAndroidScheduleMode'));
-      expect(source, contains('AndroidScheduleMode.exactAllowWhileIdle'));
-      expect(source, contains('AndroidScheduleMode.inexactAllowWhileIdle'));
-      expect(source, contains('androidScheduleMode: androidScheduleMode'));
+      final firstClear = source.indexOf('await _cancelScheduledAdhans();');
+      final guardedSchedule = source.indexOf('try {', firstClear);
+      final dailySchedule = source.indexOf('await _scheduleDailyEvents(');
+      final failureCleanup = source.indexOf(
+        'await _cancelScheduledAdhans();\n      rethrow;',
+        dailySchedule,
+      );
+
+      expect(firstClear, isNonNegative);
+      expect(guardedSchedule, greaterThan(firstClear));
+      expect(dailySchedule, greaterThan(guardedSchedule));
+      expect(failureCleanup, greaterThan(dailySchedule));
     },
   );
 }

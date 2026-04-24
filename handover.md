@@ -17690,3 +17690,34 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Appium release smoke, prayer/notification scheduling ve kalan runtime debug/error yuzeylerini yeni risk sirasina gore taramaya devam et.
+
+## 2026-04-23 TUR-426 - Adhan Scheduler Cleans Partial Notification Plans On Failure
+
+### MASTER Karari
+- Risk: `AdhanSchedulerService.scheduleAdhans(...)` once mevcut 30 gunluk adhan ID araligini temizliyor, sonra gun gun yeni bildirim planliyordu. `zonedSchedule` veya namaz vakti hesaplama ortada hata verirse ilk gunler planlanmis, kalan gunler eksik kalmis bir partial state olusabilirdi.
+- Kanit:
+  - `lib/core/services/adhan_scheduler_service.dart` icinde `_cancelScheduledAdhans()` yalniz baslangicta cagriliyordu.
+  - Ayni metodun planlama dongusu `await _scheduleDailyEvents(...)` ile sirali calisiyordu; catch/final cleanup yoktu.
+  - `PrayerNotificationCoordinator` scheduler hatasini yakalayip logluyor ve fingerprint'i basarili saymiyor; fakat scheduler katmani partial notification state'i kendi kendine temizlemiyordu.
+- Kullanici etkisi: Bildirim planlama sirasinda tek bir platform hatasi, kullaniciya acik hata vermeden eksik 30 gunluk adhan hatirlatmasi birakabilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25.
+- Rollback plani: `lib/core/services/adhan_scheduler_service.dart` try/catch cleanup'i ve `test/notification_service_guard_test.dart` guard'i tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- `scheduleAdhans(...)` initial adhan cleanup'tan sonra planlama bolumunu `try` ile sardı.
+- Planlama/hapsetme/hesaplama hatasi olursa `_cancelScheduledAdhans()` tekrar calisiyor ve hata `rethrow` ile coordinator'a ulasiyor.
+- Bu degisiklik unrelated notification ID'lerine dokunmuyor; sadece mevcut adhan ID araligini temizleyen ayni helper'i kullaniyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\notification_service_guard_test.dart test\prayer_notification_coordinator_test.dart --reporter compact` PASS, 14/14.
+- `test/notification_service_guard_test.dart` partial schedule failure cleanup siralamasini static regression guard'a bagladi.
+- `flutter analyze`: PASS.
+- `flutter test --reporter compact`: PASS, 658/658.
+- `tool/check_store_readiness.ps1`: PASS; Supabase content/source checks, analyze ve full test dahil store-ready kapisi yesil.
+
+### Risk Degisimi
+- Partial adhan notification plan riski: `12/25 -> 2/25`.
+- Kalan risk: Platform plugin'i `cancel` operasyonlarinda da hata firlatirsa bu hata yukariya cikmaya devam eder; bu durum schedule basarisizliginin dogru gorunmesini saglar, silent success uretilmez.
+
+### Sonraki Adim
+- Commit/push; ardindan release/Appium smoke ve UI/runtime debug yuzeylerini yeniden tara.
