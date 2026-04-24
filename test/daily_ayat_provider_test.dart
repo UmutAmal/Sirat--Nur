@@ -219,6 +219,18 @@ void main() {
         'content_tr': 'Ayet',
         'content_en': 'Verse',
         'reference': 'Al-Fatihah 1:1',
+        'source': approvedDailyAyatSource,
+        'verified_at': 'not-a-date',
+      }),
+      isNull,
+    );
+
+    expect(
+      normalizeDailyAyat({
+        'content_ar': 'آية',
+        'content_tr': 'Ayet',
+        'content_en': 'Verse',
+        'reference': 'Al-Fatihah 1:1',
         'source': 'https://example.com/ayat',
         'verified_at': '2026-04-08T00:00:00Z',
       }),

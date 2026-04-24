@@ -17979,3 +17979,29 @@
 
 ### Sonraki Adim
 - Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan silent catch/error visibility ve kalan kaynak dogrulugu yuzeylerine devam et.
+
+## 2026-04-24 TUR-435 - Daily Ayat Verified Timestamp Must Parse
+
+### MASTER Karari
+- Risk: TUR-434 kaynak URL guard'ini ekledi, ancak `verified_at` halen yalniz bos olmayan string olarak kabul edilebilirdi. Bozuk cache veya hatali cloud satiri `not-a-date` gibi degerle runtime'a girebilirdi.
+- Kanit:
+  - `lib/core/providers/supabase_providers.dart` icindeki `normalizeDailyAyat` once `verified_at`/`verifiedAt` degerini `DateTime.tryParse` ile dogrulamiyordu.
+  - `tafsir_local_service.dart` ve hadith provider gibi diger kritik dini veri yuzeylerinde timestamp parse guard'i zaten kullaniliyor; Daily Ayat ayni seviye savunmaya sahip degildi.
+- Kullanici etkisi: Kaynak URL dogru olsa bile gecersiz dogrulama tarihi, veri provenance zincirini zayiflatir ve bozuk cache'in guvenilir gorunmesine neden olabilir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/daily_ayat_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `normalizeDailyAyat` artik `verified_at`/`verifiedAt` degerini `DateTime.tryParse` ile dogruluyor; parse edilemeyen satirlar reddediliyor.
+- Kabul edilen satirlarin normalized map'inde parse edilen degil, kaynak satirdaki string degeri korunuyor; UI/cache sozlesmesi degismiyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\daily_ayat_provider_test.dart test\features\home\home_page_test.dart --reporter compact` PASS, 10/10.
+- Yeni regresyon: `verified_at: not-a-date` iceren daily ayat satiri `normalizeDailyAyat` tarafindan reddediliyor.
+
+### Risk Degisimi
+- Daily Ayat invalid verified_at riski: `9/25 -> 1/25`.
+- Kalan risk: Diger fallback-backed cloud provider'larda `verified_at` parse guard'i ayrica taranacak; tek turda global rewrite yapilmadi.
+
+### Sonraki Adim
+- Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan diger dini content provider'larinda timestamp/source guard esligine devam et.
