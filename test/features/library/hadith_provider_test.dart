@@ -175,6 +175,12 @@ void main() {
         providerSource,
         contains('minimumVerifiedHadithRowsPerCollection'),
       );
+      expect(
+        providerSource,
+        contains(
+          'Verified hadith dataset availability check failed; disabling hadith browsing',
+        ),
+      );
       expect(providerSource, contains('verifiedCount <'));
       expect(providerSource, contains('.limit(_hadithCompletenessProbeLimit)'));
       expect(providerSource, contains(".eq('collection_id', collectionId)"));

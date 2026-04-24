@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/core/services/hadith_api_service.dart';
@@ -55,6 +56,9 @@ final verifiedHadithDatasetAvailabilityProvider = FutureProvider<bool>((
   try {
     return await hasCompleteVerifiedHadithDatasetInCloud(supabase);
   } catch (_) {
+    debugPrint(
+      'Verified hadith dataset availability check failed; disabling hadith browsing',
+    );
     return false;
   }
 });

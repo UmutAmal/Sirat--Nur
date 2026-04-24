@@ -18281,3 +18281,29 @@
 
 ### Sonraki Adim
 - `dart format`, targeted bundled Quran provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan hadith availability catch'i ele alinacak.
+
+## 2026-04-24 TUR-446 - Hadith Availability Probe Failures Are Visible
+
+### MASTER Karari
+- Risk: Verified hadith dataset availability provider cloud completeness probe exception durumunda guvenli sekilde `false` donuyor, ancak hadis browsing'in neden kapandigina dair runtime kaniti uretmiyordu.
+- Kanit:
+  - `lib/features/library/providers/hadith_provider.dart` icindeki `verifiedHadithDatasetAvailabilityProvider` catch blogu once sadece `return false` yapiyordu.
+  - `test/features/library/hadith_provider_test.dart` provider'in verified `hadiths` tablosunu, provenance kolonlarini ve gate davranisini test ediyor, fakat availability exception logunu garanti etmiyordu.
+- Kullanici etkisi: Hadis ekrani guvenli sekilde kapali kalir, fakat Supabase/table/query arizasi operasyonel olarak gorunmezse store build veya saha loglarinda kok sebep kacabilir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/features/library/providers/hadith_provider.dart`, `test/features/library/hadith_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Availability probe catch blogu sanitized debug log yazacak ve mevcut `false` fallback sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\library\hadith_provider_test.dart --reporter compact` PASS, 5/5.
+- Yeni regresyon: Hadith provider source guard'i availability probe exception log metnini zorunlu tutacak.
+
+### Risk Degisimi
+- Hadith availability silent fallback riski: `9/25 -> 2/25`.
+- Kalan risk: Tafsir cloud fallback gorunurlugu ve UI catch bloklari ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted hadith provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan tafsir cloud fallback catch'i ele alinacak.
