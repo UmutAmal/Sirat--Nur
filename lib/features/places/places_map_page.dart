@@ -386,7 +386,8 @@ class _PlacesMapPageState extends ConsumerState<PlacesMapPage> {
         final l10n = AppLocalizations.of(context)!;
         setState(() => _error = l10n.placesApiError('${response.statusCode}'));
       }
-    } catch (e) {
+    } catch (_) {
+      debugPrint('Places fetch failed');
       if (!mounted) return;
       final l10n = AppLocalizations.of(context)!;
       setState(() => _error = l10n.placesNetworkError);

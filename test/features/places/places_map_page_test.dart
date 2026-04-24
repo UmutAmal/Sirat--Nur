@@ -320,6 +320,16 @@ void main() {
     expect(source, isNot(contains('_error!')));
   });
 
+  test('PlacesMapPage logs sanitized fetch failures', () {
+    final source = File(
+      'lib/features/places/places_map_page.dart',
+    ).readAsStringSync();
+
+    expect(source, contains("debugPrint('Places fetch failed')"));
+    expect(source, contains('l10n.placesNetworkError'));
+    expect(source, isNot(contains(r'Places fetch failed: $error')));
+  });
+
   test('PlacesMapPage keeps visible OpenStreetMap attribution on the map', () {
     final source = File(
       'lib/features/places/places_map_page.dart',

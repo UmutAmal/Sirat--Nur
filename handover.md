@@ -18441,3 +18441,30 @@
 
 ### Sonraki Adim
 - `dart format`, targeted location selection testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Places network fallback'ini skorla.
+
+## 2026-04-24 TUR-452 - Places Fetch Failure Is Visible
+
+### MASTER Karari
+- Risk: PlacesMapPage Overpass/proxy fetch exception durumunda localized network error gosteriyor, fakat fetch failure runtime'da loglanmadigi icin endpoint veya ag kok sebebi saha loglarinda gorunmez kaliyordu.
+- Kanit:
+  - `lib/features/places/places_map_page.dart:367` `http.post` ile places fetch yapiyor.
+  - `lib/features/places/places_map_page.dart:389` catch blogu once dogrudan `l10n.placesNetworkError` set ediyordu.
+  - `test/features/places/places_map_page_test.dart` endpoint config, parser ve honest empty states'i test ediyor, fakat fetch exception logunu garanti etmiyordu.
+- Kullanici etkisi: Kullanici dogru localized ag hatasi gorur, ancak proxy, TLS veya network arizasinin app loglarinda gorunmemesi store/saha teshisini zorlastirir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/features/places/places_map_page.dart`, `test/features/places/places_map_page_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Places fetch catch blogu sanitized debug log yazacak ve mevcut localized `placesNetworkError` UI fallback sozlesmesini koruyacak.
+- Loglarda exception detayi, endpoint, query, koordinat veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\places\places_map_page_test.dart --reporter compact` PASS, 10/10.
+- Yeni regresyon: PlacesMapPage source guard'i sanitized fetch failure logunu ve localized network error fallback'ini zorunlu tutacak.
+
+### Risk Degisimi
+- Places fetch silent failure riski: `9/25 -> 2/25`.
+- Kalan risk: pure-Dart audio validation edge-case'leri ve store tool catch bloklari ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted places map testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan pure-Dart audio validation ve store tooling risklerini skorla.
