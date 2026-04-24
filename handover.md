@@ -18414,3 +18414,30 @@
 
 ### Sonraki Adim
 - `dart format`, targeted calendar testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan location reverse-geocoding fallback'ini skorla.
+
+## 2026-04-24 TUR-451 - Reverse Geocoding Fallback Is Visible
+
+### MASTER Karari
+- Risk: Current location detection konum koordinatlarini alabiliyor, fakat reverse-geocoding exception durumunda generic label ile devam ederken fallback sessiz kaliyordu.
+- Kanit:
+  - `lib/features/settings/location_selection_page.dart:107` `placemarkFromCoordinates` reverse-geocoding cagrisi try blogunda calisiyor.
+  - `lib/features/settings/location_selection_page.dart:126` catch blogu once sadece yorumla generic label fallback'ini koruyordu.
+  - `test/location_selection_page_test.dart` detection failure copy ve manual update logunu test ediyor, fakat reverse-geocoding fallback logunu garanti etmiyordu.
+- Kullanici etkisi: Konum koordinatlari kaydedilirken label `Current Location` gibi generic kalabilir; hata sessizse saha loglarinda neden sehir/ulke adinin gelmedigi anlasilmaz.
+- Risk skoru: Etki 2 x Olasilik 3 = 6/25.
+- Rollback plani: `lib/features/settings/location_selection_page.dart`, `test/location_selection_page_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Reverse-geocoding catch blogu sanitized debug log yazacak ve mevcut generic label fallback sozlesmesini koruyacak.
+- Loglarda exception detayi, koordinat veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\location_selection_page_test.dart --reporter compact` PASS, 6/6.
+- Yeni regresyon: Location selection source guard'i sanitized reverse-geocoding fallback logunu zorunlu tutacak.
+
+### Risk Degisimi
+- Reverse-geocoding silent fallback riski: `6/25 -> 1/25`.
+- Kalan risk: Places network fallback loglari, pure-Dart audio validation edge-case'leri ve tool catch bloklari ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted location selection testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Places network fallback'ini skorla.

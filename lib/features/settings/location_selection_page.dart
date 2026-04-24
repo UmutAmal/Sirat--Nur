@@ -124,6 +124,7 @@ class _LocationSelectionPageState extends ConsumerState<LocationSelectionPage> {
           }
         }
       } catch (_) {
+        debugPrint('Reverse geocoding failed; using generic location label');
         // Keep generic label when reverse geocoding fails.
       }
 

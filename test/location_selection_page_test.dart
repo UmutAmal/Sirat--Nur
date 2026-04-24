@@ -78,6 +78,12 @@ void main() {
 
       expect(source, isNot(contains(r"'${l10n.error}: $error'")));
       expect(source, isNot(contains(r'Location detection failed: $error')));
+      expect(
+        source,
+        contains(
+          "debugPrint('Reverse geocoding failed; using generic location label')",
+        ),
+      );
       expect(source, contains('l10n.locationDetectionFailed'));
     });
 
