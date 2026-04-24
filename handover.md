@@ -18387,3 +18387,30 @@
 
 ### Sonraki Adim
 - `dart format`, targeted prayer calendar testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan location selection catch bloklarini skorla.
+
+## 2026-04-24 TUR-450 - Hijri Locale Fallback Is Visible
+
+### MASTER Karari
+- Risk: CalendarPage Hijri locale ayari desteklenmeyen locale'de exception alirsa sessizce Ingilizce fallback'e geciyor, ancak dini takvim ekranindaki locale uyumsuzlugu runtime'da gorunmez kaliyordu.
+- Kanit:
+  - `lib/features/calendar/calendar_page.dart:41` `HijriCalendar.setLocal(localeCode)` cagrisi try blogunda calisiyor.
+  - `lib/features/calendar/calendar_page.dart:44` catch blogu once sadece `HijriCalendar.setLocal('en')` fallback'i yapiyordu.
+  - `test/features/calendar/calendar_page_test.dart` dini gun adlarini test ediyor, fakat Hijri locale fallback logunu garanti etmiyordu.
+- Kullanici etkisi: Desteklenmeyen veya paket tarafindan taninmayan locale'lerde takvim calismaya devam eder, ancak neden Ingilizce Hijri ay adina dusuldugu saha loglarinda gorunmez.
+- Risk skoru: Etki 2 x Olasilik 3 = 6/25.
+- Rollback plani: `lib/features/calendar/calendar_page.dart`, `test/features/calendar/calendar_page_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Hijri locale fallback catch blogu sanitized debug log yazacak ve mevcut Ingilizce fallback sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\calendar\calendar_page_test.dart --reporter compact` PASS, 3/3.
+- Yeni regresyon: CalendarPage source guard'i sanitized Hijri locale fallback logunu ve Ingilizce fallback cagrısını zorunlu tutacak.
+
+### Risk Degisimi
+- Hijri locale fallback visibility riski: `6/25 -> 1/25`.
+- Kalan risk: Location reverse-geocoding fallback'i ve UI network fallback loglari ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted calendar testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan location reverse-geocoding fallback'ini skorla.

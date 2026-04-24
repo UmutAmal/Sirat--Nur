@@ -42,6 +42,7 @@ class _CalendarPageState extends State<CalendarPage> {
       HijriCalendar.setLocal(localeCode);
       _activeHijriLocale = localeCode;
     } catch (_) {
+      debugPrint('Hijri calendar locale fallback applied');
       HijriCalendar.setLocal('en');
       _activeHijriLocale = 'en';
     }

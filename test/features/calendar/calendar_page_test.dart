@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/features/calendar/calendar_page.dart';
@@ -54,5 +56,18 @@ void main() {
         ),
       ),
     );
+  });
+
+  test('CalendarPage logs sanitized Hijri locale fallback', () {
+    final source = File(
+      'lib/features/calendar/calendar_page.dart',
+    ).readAsStringSync();
+
+    expect(
+      source,
+      contains("debugPrint('Hijri calendar locale fallback applied')"),
+    );
+    expect(source, contains("HijriCalendar.setLocal('en')"));
+    expect(source, isNot(contains(r'Hijri calendar locale fallback: $error')));
   });
 }
