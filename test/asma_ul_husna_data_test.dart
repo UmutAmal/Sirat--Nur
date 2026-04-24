@@ -128,6 +128,15 @@ void main() {
             'meaning_en': 'The Merciful',
             'source': approvedSource,
           },
+          {
+            'id': '3',
+            'name_ar': 'الْمَلِكُ',
+            'transliteration': 'Al Malik',
+            'meaning_tr': 'Mutlak hukumdar',
+            'meaning_en': 'The King',
+            'source': approvedSource,
+            'verified_at': 'not-a-date',
+          },
         ]);
 
         expect(resolved, hasLength(AsmaUlHusnaData.names.length));

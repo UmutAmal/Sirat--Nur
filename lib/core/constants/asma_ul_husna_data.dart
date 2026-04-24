@@ -89,6 +89,11 @@ String _resolveCloudAsmaAudioUrl(Map<String, dynamic> row) {
   return '';
 }
 
+String _readVerifiedAt(Map<String, dynamic> row) {
+  final value = _readAsmaString(row, ['verified_at', 'verifiedAt']);
+  return DateTime.tryParse(value) == null ? '' : value;
+}
+
 bool isApprovedCloudAsmaSourceUrl(String source) {
   final uri = Uri.tryParse(source.trim());
   if (uri == null ||
@@ -117,7 +122,7 @@ Map<String, dynamic> normalizeAsmaUlHusnaRow(Map<String, dynamic> row) {
   final translations = _readAsmaTranslations(row);
   final audioUrl = _resolveCloudAsmaAudioUrl(row);
   final source = _readAsmaString(row, ['source', 'reference']);
-  final verifiedAt = _readAsmaString(row, ['verified_at', 'verifiedAt']);
+  final verifiedAt = _readVerifiedAt(row);
 
   return {
     'id': id ?? '',

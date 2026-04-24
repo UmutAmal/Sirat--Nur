@@ -18005,3 +18005,29 @@
 
 ### Sonraki Adim
 - Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan diger dini content provider'larinda timestamp/source guard esligine devam et.
+
+## 2026-04-24 TUR-436 - Asma Cloud Rows Require Parseable Verification Timestamp
+
+### MASTER Karari
+- Risk: Asma-ul-Husna cloud satirlari onayli kaynak host kontrolunden gecse bile `verified_at` yalniz bos olmayan string olarak kabul ediliyordu. Bozuk `not-a-date` degeri verified provenance gibi gorunebilirdi.
+- Kanit:
+  - `lib/core/constants/asma_ul_husna_data.dart` icindeki `resolveCloudAsmaUlHusnaRows` filtreleri `isApprovedCloudAsmaSourceUrl(...)` kullaniyor, fakat `verifiedAt` icin `DateTime.tryParse` guard'i yoktu.
+  - `test/asma_ul_husna_data_test.dart` kaynak ve `verified_at` eksikligini test ediyordu, ancak gecersiz tarih stringini yakalamiyordu.
+- Kullanici etkisi: Allah'in isimleri gibi hassas dini icerikte cloud satiri kaynagi dogru olsa bile bozuk dogrulama tarihi veri guven zincirini zayiflatir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/constants/asma_ul_husna_data.dart`, `test/asma_ul_husna_data_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `_readVerifiedAt` helper'i eklendi; `verified_at`/`verifiedAt` sadece `DateTime.tryParse` ile parse edilebiliyorsa korunuyor.
+- Gecersiz timestamp iceren cloud Asma satirlari parse sonrasi bos `verifiedAt` aldigi icin mevcut fallback guvenlik filtresinden gecemiyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\asma_ul_husna_data_test.dart test\features\library\asma_ul_husna_page_test.dart --reporter compact` PASS, 20/20.
+- Yeni regresyon: onayli kaynak URL'si olsa bile `verified_at: not-a-date` iceren cloud Asma satiri bundled fallback'e dusuyor.
+
+### Risk Degisimi
+- Asma cloud invalid verified_at riski: `9/25 -> 1/25`.
+- Kalan risk: Dua cloud helper'i ayni timestamp parse esligi icin siradaki dar dongude ele alinacak.
+
+### Sonraki Adim
+- Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan dua cloud timestamp guard'ini tamamla.
