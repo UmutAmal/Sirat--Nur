@@ -17721,3 +17721,43 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan release/Appium smoke ve UI/runtime debug yuzeylerini yeniden tara.
+
+## 2026-04-24 TUR-427 - Appium Release Smoke Uses Store Dart Defines And Recovers Signature Mismatch
+
+### MASTER Karari
+- Risk: `tool/appium_runtime_smoke.ps1 -BuildMode release` release smoke kapisi olarak belgelenmisti, fakat script release build sirasinda store dart-define/env zincirini yuklemiyordu. Android Gradle `validateStoreReleaseRuntimeConfig` eksik/guvensiz dart-define'lari bilerek reddettigi icin release smoke dogru ortamda bile false-blocker uretebilirdi.
+- Ek risk: Debug APK kurulu emulator uzerine release APK kurulurken imza farki `INSTALL_FAILED_UPDATE_INCOMPATIBLE` ile install'i kesiyordu; bu da gercek release smoke'u eski debug kalintisina bagimli hale getiriyordu.
+- Kanit:
+  - `tool/appium_runtime_smoke.ps1` once `flutter build apk "--$BuildMode"` komutunu dart-define olmadan calistiriyordu.
+  - Ilk live release smoke denemesi release APK build edip install adiminda `INSTALL_FAILED_UPDATE_INCOMPATIBLE` ile durdu.
+  - PowerShell `$ErrorActionPreference = "Stop"` native adb stderr'ini handler'a dusmeden kestigi icin ilk recovery implementasyonu Windows'ta hata kodunu yakalayamadi.
+- Kullanici etkisi: Store-ready oldugu halde release Appium smoke calismayabilir; ya missing runtime config ya da emulator'daki onceki debug imzasi yuzunden runtime kaniti uretilemez.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover kaydi tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke script'i release modda `import_release_environment.ps1` ile `.env.store`/release env zincirini yukluyor.
+- Release APK build komutu artik `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`/`SUPABASE_ANON_KEY`, `QURAN_AUDIO_PATH_NAMESPACE`, Places tile/Overpass ve Quran audio Cloudflare/GitHub dart-define'larini geciyor; degerler loglanmiyor.
+- Install helper'i `INSTALL_FAILED_UPDATE_INCOMPATIBLE` durumunda ve `-NoReset` verilmemisse paketi uninstall edip release APK'yi tekrar kuruyor.
+- Native adb stderr Windows'ta satir sarmasi yapsa bile hata kodu whitespace normalize edilerek yakalaniyor.
+- Summary artefact'ine `releaseDartDefinesApplied` ve `apkReinstalledAfterSignatureMismatch` alanlari eklendi.
+
+### TESTER Degisikligi
+- Script syntax parse: PASS.
+- Targeted tests: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, 7/7.
+- Live release Appium smoke:
+  - Emulator: `Medium_Phone_API_36.1`, device `emulator-5554`.
+  - Komut: `powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554`
+  - Sonuc: PASS.
+  - Summary: `buildMode=release`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkReinstalledAfterSignatureMismatch=true`, `apkLength=93271890`, `firstContainsWelcome=true`, `homeContainsDailyVerse=true`, `homeContainsNoInternetLegacy=false`, bottom nav Quran/Qibla/Zikr/Calendar clicked/rendered, quick actions Places/Downloads/Analytics/Premium clicked/rendered, `logcatCrashFree=true`, `failures=[]`.
+- `flutter analyze`: PASS.
+- `flutter test --reporter compact`: PASS, 660/660.
+- `tool/check_store_readiness.ps1`: PASS; Supabase content/source checks, analyze ve full test dahil store-ready kapisi yesil.
+
+### Risk Degisimi
+- Release Appium smoke env false-blocker riski: `16/25 -> 2/25`.
+- Debug-to-release signature mismatch false-blocker riski: `12/25 -> 2/25`.
+- Kalan risk: `-NoReset` ile calistirilirsa imza uyumsuzlugunda uninstall yapilmaz; bu bilincli olarak kullanici verisini korur ve script hatayi acik verir.
+
+### Sonraki Adim
+- Commit/push; ardindan kalan runtime/UI yuzeyleri, l10n borclari ve store artefact uretimini tekrar tara.

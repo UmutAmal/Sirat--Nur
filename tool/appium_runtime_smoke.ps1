@@ -13,6 +13,21 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+. (Join-Path $PSScriptRoot 'import_release_environment.ps1')
+
+$releaseRuntimeVariableNames = @(
+  'SUPABASE_URL',
+  'SUPABASE_PUBLISHABLE_KEY',
+  'SUPABASE_ANON_KEY',
+  'PLACES_TILE_URL_TEMPLATE',
+  'PLACES_OVERPASS_API_URL',
+  'QURAN_AUDIO_CLOUDFLARE_BASE_URL',
+  'QURAN_AUDIO_GITHUB_URL_TEMPLATE',
+  'QURAN_AUDIO_PATH_NAMESPACE',
+  'SUPABASE_QURAN_AUDIO_BUCKET',
+  'GEMINI_API_KEY'
+)
+
 function Require-Command {
   param(
     [Parameter(Mandatory = $true)]
@@ -35,6 +50,53 @@ function Assert-NativeSuccess {
   if ($LASTEXITCODE -ne 0) {
     throw "$Description failed (exit code $LASTEXITCODE)."
   }
+}
+
+function Install-CurrentWorkspaceApk {
+  param(
+    [Parameter(Mandatory = $true)][string]$DeviceName,
+    [Parameter(Mandatory = $true)][string]$Package,
+    [Parameter(Mandatory = $true)][string]$ApkPath,
+    [Parameter(Mandatory = $true)][bool]$NoReset
+  )
+
+  $previousErrorActionPreference = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
+  try {
+    $installOutput = adb -s $DeviceName install -r $ApkPath 2>&1
+    $installExitCode = $LASTEXITCODE
+  } finally {
+    $ErrorActionPreference = $previousErrorActionPreference
+  }
+
+  if ($installExitCode -eq 0) {
+    return $false
+  }
+
+  $installMessage = ($installOutput | Out-String).Trim()
+  $normalizedInstallMessage = $installMessage -replace '\s+', ''
+  if ($normalizedInstallMessage.Contains('INSTALL_FAILED_UPDATE_INCOMPATIBLE') -and -not $NoReset) {
+    adb -s $DeviceName uninstall $Package | Out-Null
+    Assert-NativeSuccess -Description "adb uninstall incompatible package $Package"
+
+    $previousErrorActionPreference = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+      $retryOutput = adb -s $DeviceName install -r $ApkPath 2>&1
+      $retryExitCode = $LASTEXITCODE
+    } finally {
+      $ErrorActionPreference = $previousErrorActionPreference
+    }
+
+    if ($retryExitCode -eq 0) {
+      return $true
+    }
+
+    $retryMessage = ($retryOutput | Out-String).Trim()
+    throw "adb install current APK failed after uninstall: $retryMessage"
+  }
+
+  throw "adb install current APK failed: $installMessage"
 }
 
 function Invoke-AppiumJson {
@@ -76,6 +138,47 @@ function Get-ElementId {
   }
 
   return $Element.ELEMENT
+}
+
+function Get-ReleaseDartDefineArguments {
+  param([Parameter(Mandatory = $true)][string]$BuildMode)
+
+  if ($BuildMode -ne 'release') {
+    return @()
+  }
+
+  $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
+  $releaseEnvironment = Initialize-ReleaseEnvironment -RepoRoot $repoRoot -VariableNames $releaseRuntimeVariableNames
+  if ($releaseEnvironment.LoadedFiles.Count -gt 0) {
+    Write-Host "Loaded release environment file(s): $($releaseEnvironment.LoadedFiles -join ', ')"
+  }
+
+  $supabaseClientKey = [Environment]::GetEnvironmentVariable('SUPABASE_PUBLISHABLE_KEY')
+  if ([string]::IsNullOrWhiteSpace($supabaseClientKey)) {
+    $supabaseClientKey = [Environment]::GetEnvironmentVariable('SUPABASE_ANON_KEY')
+  }
+  if ([string]::IsNullOrWhiteSpace($supabaseClientKey)) {
+    throw 'SUPABASE_PUBLISHABLE_KEY or SUPABASE_ANON_KEY is required for release Appium smoke builds.'
+  }
+
+  $quranAudioPathNamespace = [Environment]::GetEnvironmentVariable('QURAN_AUDIO_PATH_NAMESPACE')
+  if ([string]::IsNullOrWhiteSpace($quranAudioPathNamespace)) {
+    $quranAudioPathNamespace = [Environment]::GetEnvironmentVariable('SUPABASE_QURAN_AUDIO_BUCKET')
+  }
+  if ([string]::IsNullOrWhiteSpace($quranAudioPathNamespace)) {
+    throw 'QURAN_AUDIO_PATH_NAMESPACE or SUPABASE_QURAN_AUDIO_BUCKET is required for release Appium smoke builds.'
+  }
+
+  return @(
+    "--dart-define=SUPABASE_URL=$([Environment]::GetEnvironmentVariable('SUPABASE_URL'))",
+    "--dart-define=SUPABASE_PUBLISHABLE_KEY=$supabaseClientKey",
+    "--dart-define=QURAN_AUDIO_PATH_NAMESPACE=$quranAudioPathNamespace",
+    "--dart-define=PLACES_TILE_URL_TEMPLATE=$([Environment]::GetEnvironmentVariable('PLACES_TILE_URL_TEMPLATE'))",
+    "--dart-define=PLACES_OVERPASS_API_URL=$([Environment]::GetEnvironmentVariable('PLACES_OVERPASS_API_URL'))",
+    "--dart-define=QURAN_AUDIO_CLOUDFLARE_BASE_URL=$([Environment]::GetEnvironmentVariable('QURAN_AUDIO_CLOUDFLARE_BASE_URL'))",
+    "--dart-define=QURAN_AUDIO_GITHUB_URL_TEMPLATE=$([Environment]::GetEnvironmentVariable('QURAN_AUDIO_GITHUB_URL_TEMPLATE'))",
+    "--dart-define=GEMINI_API_KEY=$([Environment]::GetEnvironmentVariable('GEMINI_API_KEY'))"
+  )
 }
 
 function Find-AppiumElement {
@@ -183,12 +286,20 @@ $apkPath = Join-Path "build\app\outputs\flutter-apk" "app-$BuildMode.apk"
 $apkLastWriteTime = $null
 $apkLength = $null
 $apkPrepared = $false
+$releaseDartDefinesApplied = $false
+$apkReinstalledAfterSignatureMismatch = $false
 
 if (-not $SkipBuildInstall) {
   Require-Command -Name 'flutter' -InstallHint 'Install Flutter and ensure flutter is on PATH before running the Appium smoke script.'
   Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH before running the Appium smoke script.'
 
-  flutter build apk "--$BuildMode" | Out-Null
+  $flutterBuildArgs = @('build', 'apk', "--$BuildMode")
+  $dartDefineArgs = Get-ReleaseDartDefineArguments -BuildMode $BuildMode
+  if ($dartDefineArgs.Count -gt 0) {
+    $releaseDartDefinesApplied = $true
+    $flutterBuildArgs += $dartDefineArgs
+  }
+  flutter @flutterBuildArgs | Out-Null
   Assert-NativeSuccess -Description "flutter build apk --$BuildMode"
 
   if (-not (Test-Path $apkPath)) {
@@ -199,8 +310,7 @@ if (-not $SkipBuildInstall) {
   $apkLastWriteTime = $apkItem.LastWriteTime.ToString('o')
   $apkLength = [int64]$apkItem.Length
 
-  adb -s $DeviceName install -r $apkPath | Out-Null
-  Assert-NativeSuccess -Description "adb install current $BuildMode APK"
+  $apkReinstalledAfterSignatureMismatch = Install-CurrentWorkspaceApk -DeviceName $DeviceName -Package $Package -ApkPath $apkPath -NoReset ([bool]$NoReset)
   $apkPrepared = $true
 } elseif (-not $SkipLogcat) {
   Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH, or pass -SkipLogcat explicitly.'
@@ -243,8 +353,10 @@ if (-not $sessionId) {
 $summary = [ordered]@{
   sessionId = $sessionId
   buildMode = $BuildMode
+  releaseDartDefinesApplied = $releaseDartDefinesApplied
   apkPath = $apkPath
   apkPrepared = $apkPrepared
+  apkReinstalledAfterSignatureMismatch = $apkReinstalledAfterSignatureMismatch
   apkLastWriteTime = $apkLastWriteTime
   apkLength = $apkLength
   firstContainsWelcome = $false
