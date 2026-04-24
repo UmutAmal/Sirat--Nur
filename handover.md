@@ -18139,3 +18139,31 @@
 
 ### Sonraki Adim
 - Targeted audio testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan silent catch ve provider fallback gorunurlugu taranacak.
+
+## 2026-04-24 TUR-441 - Quran Cloud Fallback Is No Longer Silent
+
+### MASTER Karari
+- Risk: Quran cloud loader veya resolver hata verdiginde uygulama dogru sekilde bundled Quran asset'e dusuyor, ancak hata tamamen sessiz kaldigi icin cloud kesintisi ya da schema uyumsuzlugu runtime'da gorunmez oluyordu.
+- Kanit:
+  - `lib/features/quran/providers/bundled_quran_provider.dart` icindeki `resolveQuranRows` once `catch (_) {}` ile hatayi tamamen yutuyordu.
+  - Ayni dosyadaki `loadCloudQuranRows` Supabase/schema hatalarinda `return null` yapip fallback'i tetikliyordu, fakat hic log uretmiyordu.
+  - `test/features/quran/providers/bundled_quran_provider_test.dart` fallback davranisini test ediyordu, ancak fallback'in gorunur/loglanir olmasini garanti etmiyordu.
+- Kullanici etkisi: Kur'an icerigi bundled fallback ile calismaya devam etse bile cloud dataset arizasi release oncesi veya runtime loglarinda yakalanamayabilir; bu uzun vadeli bakimda sessiz veri tazeleme riski dogurur.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/features/quran/providers/bundled_quran_provider.dart`, `test/features/quran/providers/bundled_quran_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `resolveQuranRows` cloud loader exception durumunda sanitized debug log yazacak ve bundled fallback davranisini koruyacak.
+- `loadCloudQuranRows` Supabase/cloud dataset hatasinda sanitized debug log yazacak ve `null` donerek mevcut fallback sozlesmesini koruyacak.
+- Loglarda exception detaylari veya secret tasiyabilecek degerler basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\quran\providers\bundled_quran_provider_test.dart --reporter compact` PASS, 14/14.
+- Yeni regresyon: Cloud loader exception verdiginde resolver bundled fallback'e donerken `Quran cloud row resolver failed; using bundled Quran asset` logu uretilecek.
+
+### Risk Degisimi
+- Quran silent fallback riski: `9/25 -> 2/25`.
+- Kalan risk: Daily ayat/duas/Asma/sukun gibi diger provider fallback catch'lerinin gorunurlugu ayrica taranacak.
+
+### Sonraki Adim
+- Targeted Quran provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan diger provider silent fallback'leri taranacak.

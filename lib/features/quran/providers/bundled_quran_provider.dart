@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
@@ -50,7 +51,9 @@ Future<List<Map<String, dynamic>>> resolveQuranRows({
     if (cloudRows != null && cloudRows.isNotEmpty) {
       return cloudRows;
     }
-  } catch (_) {}
+  } catch (_) {
+    debugPrint('Quran cloud row resolver failed; using bundled Quran asset');
+  }
 
   return loadBundledRows();
 }
@@ -74,6 +77,7 @@ Future<List<Map<String, dynamic>>?> loadCloudQuranRows({
       bundledRows: bundledRows,
     );
   } catch (_) {
+    debugPrint('Quran cloud dataset load failed; using bundled Quran asset');
     return null;
   }
 }

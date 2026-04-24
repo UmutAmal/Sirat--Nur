@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
@@ -346,6 +347,10 @@ void main() {
         source,
         contains('text_ar, text_tr, text_en, source, verified_at'),
       );
+      expect(
+        source,
+        contains('Quran cloud dataset load failed; using bundled Quran asset'),
+      );
     });
   });
 
@@ -380,6 +385,13 @@ void main() {
     );
 
     test('falls back to bundled rows when cloud loading throws', () async {
+      final debugMessages = <String>[];
+      final previousDebugPrint = debugPrint;
+      addTearDown(() => debugPrint = previousDebugPrint);
+      debugPrint = (String? message, {int? wrapWidth}) {
+        if (message != null) debugMessages.add(message);
+      };
+
       final rows = await resolveQuranRows(
         loadCloudRows: () =>
             Future<List<Map<String, dynamic>>?>.error(StateError('boom')),
@@ -387,6 +399,10 @@ void main() {
       );
 
       expect(rows.single['name'], 'الفاتحة');
+      expect(
+        debugMessages,
+        contains('Quran cloud row resolver failed; using bundled Quran asset'),
+      );
     });
   });
 
