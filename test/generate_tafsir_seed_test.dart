@@ -227,6 +227,39 @@ void main() {
       expect(sql, contains("'en.ibn_kathir'"));
       expect(sql, contains("'verified-open-license'"));
     });
+
+    test('manifest reader accepts gzip fallback for large exports', () {
+      final tempDir = Directory.systemTemp.createTempSync('sirat_tafsir_gzip_');
+      addTearDown(() {
+        if (tempDir.existsSync()) {
+          tempDir.deleteSync(recursive: true);
+        }
+      });
+
+      final manifestPath =
+          '${tempDir.path}${Platform.pathSeparator}content_tafsir_manifest.json';
+      final manifestJson = _manifestJson(
+        entries: [
+          {
+            'surah_number': 1,
+            'ayah_number': 1,
+            'tafsir_source': 'en.ibn_kathir',
+            'language': 'en',
+            'tafsir_text': 'In the name of Allah begins the surah.',
+          },
+        ],
+      );
+      File(
+        '$manifestPath.gz',
+      ).writeAsBytesSync(gzip.encode(utf8.encode(manifestJson)));
+
+      expect(readVerifiedTafsirManifestJson(manifestPath), manifestJson);
+      final entries = parseVerifiedTafsirManifest(
+        readVerifiedTafsirManifestJson(manifestPath),
+        requireCompleteCatalog: false,
+      );
+      expect(entries.single.tafsirSource, 'en.ibn_kathir');
+    });
   });
 }
 

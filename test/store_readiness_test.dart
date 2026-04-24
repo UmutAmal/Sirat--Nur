@@ -299,6 +299,10 @@ void main() {
         contains('Loaded release environment file(s):'),
       );
       expect(supabaseApplyScript, contains('Ensure-NodePgRunner'));
+      expect(supabaseApplyScript, contains('Resolve-RequiredSqlFile'));
+      expect(supabaseApplyScript, contains('Expand-GzipFile'));
+      expect(supabaseApplyScript, contains("build/supabase_expanded_sql"));
+      expect(supabaseApplyScript, contains(r'$plainPath.gz'));
       expect(supabaseApplyScript, contains('tool/apply_supabase_sql_file.cjs'));
       expect(supabaseApplyScript, contains('pg@8.13.3'));
       expect(supabaseApplyScript, contains(r'if ($LASTEXITCODE -ne 0)'));

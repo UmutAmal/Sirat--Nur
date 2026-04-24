@@ -17656,3 +17656,37 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan yeni dongude buyuk Git artefaktlari, Appium release smoke ve prayer/notification scheduling zincirini tekrar kanitli risk siralamasina al.
+
+## 2026-04-23 TUR-425 - Large Tafsir Seed Artifacts Moved To Gzip Fallbacks
+
+### MASTER Karari
+- Risk: GitHub push daha once `content_seed_tafsir.sql` ve `content_tafsir_manifest.json` icin 50 MB ustu blob uyarisi veriyordu. Bu dosyalar dini icerik icin gercek ve gerekli olsa da plain formda repo HEAD'inde tasinmalari clone/push maliyeti ve ileride hard limit riski uretir.
+- Kanit:
+  - `git ls-files` taramasi iki tracked dosyanin 50 MB ustunde oldugunu gosterdi: `content_seed_tafsir.sql` 70.67 MB, `content_tafsir_manifest.json` 70.45 MB.
+  - Ayni tarama baska tracked 50 MB ustu dosya bulmadi.
+  - `README.md` ve `store/release_checklist.md` bu dosyalari release zincirinin parcalari olarak belgeliyordu; bu nedenle dosyalari dogrudan silmek dini icerik apply zincirini kirardi.
+- Kullanici etkisi: Yeni clone ve yeni push'lar gereksiz buyuk plain tafsir bloblari tasimaz; buna ragmen verified tafsir manifest/seed zinciri gzip fallback ile taze checkout'ta calisir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: `content_tafsir_manifest.json.gz`, `content_seed_tafsir.sql.gz`, `.gitignore`, apply/generator fallback kodu, testler ve dokuman degisiklikleri geri alinip plain JSON/SQL tekrar track edilebilir.
+
+### BUILDER Degisikligi
+- `content_tafsir_manifest.json` ve `content_seed_tafsir.sql` Git index'inden kaldirildi; yerel plain kopyalar `.gitignore` ile korunuyor ve tekrar yanlislikla commitlenmiyor.
+- `content_tafsir_manifest.json.gz` ve `content_seed_tafsir.sql.gz` eklendi; her biri yaklasik 10 MB.
+- `tool/generate_tafsir_seed.dart` `content_tafsir_manifest.json.gz` fallback'ini okuyacak sekilde guncellendi.
+- `tool/apply_supabase_content_bundle.ps1` plain SQL yoksa `content_seed_tafsir.sql.gz` dosyasini `build/supabase_expanded_sql/` altina acip ayni logical `content_seed_tafsir.sql` adiyla plan/apply summary uretmeye devam ediyor.
+- README ve release checklist gzip fallback davranisini belgeliyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\generate_tafsir_seed_test.dart test\store_readiness_test.dart test\readme_operational_docs_test.dart --reporter compact` PASS, 27/27.
+- Gzip fallback dry-run: plain `content_seed_tafsir.sql` gecici olarak kenara alindi, `.\tool\apply_supabase_content_bundle.ps1 -DryRun -SummaryOutput build/gzip_fallback_test/summary.json` PASS, planned=10; sonra plain yerel kopya geri tasindi.
+- `flutter analyze`: PASS.
+- `flutter test --reporter compact`: PASS, 657/657.
+- `tool/check_store_readiness.ps1`: PASS; Supabase public table checks, source URL approval, analyze ve full test dahil store-ready kapisi yesil.
+- `git ls-files` 50 MB ustu tracked dosya taramasi artik bos donuyor.
+
+### Risk Degisimi
+- Tracked 50 MB ustu tafsir artefakti riski: `16/25 -> 2/25`.
+- Kalan risk: Eski commit gecmisinde buyuk bloblar kalmaya devam eder; history rewrite/filter-repo kullanimi paylasilan remote'u etkiledigi icin bu tur uygulanmadi. Gerekirse ayri ve acik repo-bakim penceresinde planlanmali.
+
+### Sonraki Adim
+- Commit/push; ardindan Appium release smoke, prayer/notification scheduling ve kalan runtime debug/error yuzeylerini yeni risk sirasina gore taramaya devam et.

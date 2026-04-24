@@ -109,6 +109,9 @@ dart run tool/generate_tafsir_seed.dart --manifest=content_tafsir_manifest.json 
   tafsir source.
 - Every hadith and tafsir row must carry `source`, `source_license`, and
   `verified_at`; missing provenance is a release blocker.
+- Large tafsir exports are tracked as `content_tafsir_manifest.json.gz` and
+  `content_seed_tafsir.sql.gz`; the generator and apply gate transparently read
+  those gzip files when the plain JSON/SQL exports are absent.
 
 5. Apply `content_schema.sql`, Quran surah/ayah seed data,
 `content_seed_quran_audio_storage.sql`, Quran-verified dua seed data,

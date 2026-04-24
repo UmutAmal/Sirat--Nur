@@ -47,6 +47,10 @@ app.*.map.json
 # Android emulator/Appium diagnostics are large local artifacts.
 bugreport-*.zip
 
+# Verified tafsir exports are reproducible and too large for plain Git blobs.
+/content_tafsir_manifest.json
+/content_seed_tafsir.sql
+
 # Store signing secrets must stay local or in CI secret storage.
 /android/key.properties
 /.secrets/

@@ -74,6 +74,56 @@ function Assert-SafeSqlFile {
   }
 }
 
+function Expand-GzipFile {
+  param(
+    [Parameter(Mandatory = $true)][string]$SourcePath,
+    [Parameter(Mandatory = $true)][string]$DestinationPath
+  )
+
+  $destinationParent = Split-Path -Parent $DestinationPath
+  if (-not (Test-Path -LiteralPath $destinationParent)) {
+    New-Item -ItemType Directory -Path $destinationParent -Force | Out-Null
+  }
+
+  $sourceStream = [System.IO.File]::OpenRead($SourcePath)
+  try {
+    $gzipStream = [System.IO.Compression.GzipStream]::new(
+      $sourceStream,
+      [System.IO.Compression.CompressionMode]::Decompress
+    )
+    try {
+      $destinationStream = [System.IO.File]::Create($DestinationPath)
+      try {
+        $gzipStream.CopyTo($destinationStream)
+      } finally {
+        $destinationStream.Dispose()
+      }
+    } finally {
+      $gzipStream.Dispose()
+    }
+  } finally {
+    $sourceStream.Dispose()
+  }
+}
+
+function Resolve-RequiredSqlFile {
+  param([Parameter(Mandatory = $true)][string]$RelativePath)
+
+  $plainPath = Join-Path $repoRoot $RelativePath
+  if (Test-Path -LiteralPath $plainPath) {
+    return $plainPath
+  }
+
+  $gzipPath = "$plainPath.gz"
+  if (-not (Test-Path -LiteralPath $gzipPath)) {
+    throw "Required Supabase SQL file is missing: $RelativePath"
+  }
+
+  $expandedPath = Join-Path (Join-Path $repoRoot 'build/supabase_expanded_sql') $RelativePath
+  Expand-GzipFile -SourcePath $gzipPath -DestinationPath $expandedPath
+  return $expandedPath
+}
+
 function Ensure-NodePgRunner {
   Require-Command -Name 'node' -InstallHint 'Install Node.js so SQL files can be applied through the pg runner.'
   Require-Command -Name 'npm' -InstallHint 'Install npm so the pg runner dependency can be prepared under build/.'
@@ -122,12 +172,11 @@ try {
   }
 
   $plannedFiles = New-Object System.Collections.Generic.List[string]
+  $resolvedSqlFiles = @{}
   foreach ($relativePath in $requiredSqlFiles) {
-    $fullPath = Join-Path $repoRoot $relativePath
-    if (-not (Test-Path -LiteralPath $fullPath)) {
-      throw "Required Supabase SQL file is missing: $relativePath"
-    }
+    $fullPath = Resolve-RequiredSqlFile -RelativePath $relativePath
     Assert-SafeSqlFile -Path $fullPath
+    $resolvedSqlFiles[$relativePath] = $fullPath
     $plannedFiles.Add($relativePath) | Out-Null
   }
 
@@ -150,7 +199,7 @@ try {
 
   $appliedFiles = New-Object System.Collections.Generic.List[string]
   foreach ($relativePath in $plannedFiles) {
-    $fullPath = Join-Path $repoRoot $relativePath
+    $fullPath = $resolvedSqlFiles[$relativePath]
     Invoke-SupabaseSqlFile -DbUrl $DbUrl -SqlFile $fullPath -RelativePath $relativePath
     $appliedFiles.Add($relativePath) | Out-Null
   }

@@ -50,11 +50,13 @@ void main() {
       expect(readme, contains('dart run tool/generate_asma_seed.dart'));
       expect(readme, contains('content_hadith_manifest.json'));
       expect(readme, contains('content_tafsir_manifest.json'));
+      expect(readme, contains('content_tafsir_manifest.json.gz'));
       expect(readme, contains('at least 100 verified rows per collection'));
       expect(readme, contains('complete 6,236-ayah catalog'));
       expect(readme, contains('source_license'));
       expect(readme, contains('content_seed_hadith.sql'));
       expect(readme, contains('content_seed_tafsir.sql'));
+      expect(readme, contains('content_seed_tafsir.sql.gz'));
       expect(readme, contains('content_seed_duas.sql'));
       expect(readme, contains('content_seed_education.sql'));
       expect(readme, contains('content_seed_asma_ul_husna.sql'));

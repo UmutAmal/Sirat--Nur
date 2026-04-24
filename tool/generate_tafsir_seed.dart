@@ -422,6 +422,26 @@ String? _optionalString(Object? value) {
 
 String _escapeSql(String value) => value.replaceAll("'", "''");
 
+String readVerifiedTafsirManifestJson(String manifestPath) {
+  final manifestFile = File(manifestPath);
+  if (manifestFile.existsSync()) {
+    if (manifestPath.toLowerCase().endsWith('.gz')) {
+      return utf8.decode(gzip.decode(manifestFile.readAsBytesSync()));
+    }
+    return manifestFile.readAsStringSync();
+  }
+
+  final gzipFile = File('$manifestPath.gz');
+  if (gzipFile.existsSync()) {
+    return utf8.decode(gzip.decode(gzipFile.readAsBytesSync()));
+  }
+
+  throw FileSystemException(
+    'Verified tafsir manifest file not found',
+    manifestFile.path,
+  );
+}
+
 void _printUsage() {
   stdout.writeln('''
 Verified tafsir seed generator
@@ -463,16 +483,8 @@ Future<void> main(List<String> args) async {
     throw FormatException('Unsupported argument: $arg');
   }
 
-  final manifestFile = File(manifestPath);
-  if (!manifestFile.existsSync()) {
-    throw FileSystemException(
-      'Verified tafsir manifest file not found',
-      manifestFile.path,
-    );
-  }
-
   final entries = parseVerifiedTafsirManifest(
-    manifestFile.readAsStringSync(),
+    readVerifiedTafsirManifestJson(manifestPath),
     requireCompleteCatalog: !allowPartial,
   );
   final sql = buildTafsirSeedSql(entries);
