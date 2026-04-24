@@ -121,11 +121,12 @@ bool isApprovedCloudAudioSourceUrl(String source) {
 
 bool hasVerifiedCloudAudioProvenance(Map<String, dynamic> row) {
   final source = _readCloudAudioString(row, const ['source', 'reference']);
+  final verifiedAt = _readCloudAudioString(row, const [
+    'verified_at',
+    'verifiedAt',
+  ]);
   return isApprovedCloudAudioSourceUrl(source) &&
-      _readCloudAudioString(row, const [
-        'verified_at',
-        'verifiedAt',
-      ]).isNotEmpty;
+      DateTime.tryParse(verifiedAt) != null;
 }
 
 String normalizeStorageObjectPath(

@@ -176,6 +176,14 @@ void main() {
             'url': 'https://cdn.example.com/002.mp3',
             'source': _approvedQuranAudioSource,
           },
+          {
+            'type': 'quran_surah',
+            'reciter': 'alafasy',
+            'surah_number': 3,
+            'storage_path': 'quran-audio/alafasy/003.mp3',
+            'source': _approvedQuranAudioSource,
+            'verified_at': 'not-a-date',
+          },
         ], reciterId: 'alafasy');
 
         expect(urls, isEmpty);

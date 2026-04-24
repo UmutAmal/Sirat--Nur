@@ -127,6 +127,13 @@ void main() {
           'url': 'https://cdn.example.com/audio/forest.mp3',
           'source': _approvedSukunAudioSource,
         },
+        {
+          'type': 'sukun',
+          'title': 'Rain of Mercy',
+          'storage_path': 'audio-sukun/rain.mp3',
+          'source': _approvedSukunAudioSource,
+          'verified_at': 'not-a-date',
+        },
       ]);
 
       expect(resolved, isEmpty);

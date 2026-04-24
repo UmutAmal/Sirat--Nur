@@ -18112,3 +18112,30 @@
 
 ### Sonraki Adim
 - Targeted Quran provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan audio provider provenance guard'lari taranacak.
+
+## 2026-04-24 TUR-440 - Audio Cloud Rows Require Parseable Verification Timestamp
+
+### MASTER Karari
+- Risk: Audio cloud provenance kapisi onayli kaynak hostu kontrol ediyor, ancak `verified_at` icin yalniz bos olmayan string yeterli goruyordu. `not-a-date` gibi bozuk timestamp ile Quran audio veya sukun audio satiri verified kabul edilebilirdi.
+- Kanit:
+  - `lib/core/services/offline_audio_service.dart` icindeki `hasVerifiedCloudAudioProvenance` once `_readCloudAudioString(...).isNotEmpty` kontroluyle yetiniyordu.
+  - `resolveCloudQuranSurahUrls` ve `resolveCloudSukunSources` ayni helper'a bagli oldugu icin tek zayif kapidan iki audio yuzeyi etkileniyordu.
+  - `test/offline_audio_service_test.dart` ve `test/sukun_audio_sources_provider_test.dart` eksik source/verified_at ve unapproved domainleri test ediyordu, fakat gecersiz timestamp stringini yakalamiyordu.
+- Kullanici etkisi: Ses dosyalari bizim Cloudflare/GitHub/Supabase dagitim modelimize tasinsa bile bozuk cloud metadata'si verified gorunebilir ve audio katalog guven zincirini zayiflatabilir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/services/offline_audio_service.dart`, `test/offline_audio_service_test.dart`, `test/sukun_audio_sources_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `hasVerifiedCloudAudioProvenance` artik `verified_at`/`verifiedAt` degerini `DateTime.tryParse` ile dogruluyor.
+- Source host allowlist ve storage_path tabanli playable URL cozumu degismedi; sadece bozuk timestamp'li cloud metadata satirlari filtre disi kalacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\offline_audio_service_test.dart test\sukun_audio_sources_provider_test.dart --reporter compact` PASS, 26/26.
+- Yeni regresyonlar: Onayli kaynak URL'si ve storage_path olsa bile `verified_at: not-a-date` iceren Quran audio ve sukun audio satirlari reddedilecek.
+
+### Risk Degisimi
+- Audio cloud invalid verified_at riski: `9/25 -> 1/25`.
+- Kalan risk: Silent catch gorunurlugu ve diger provider'larda parse/source esligi ayrica taranacak.
+
+### Sonraki Adim
+- Targeted audio testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan silent catch ve provider fallback gorunurlugu taranacak.
