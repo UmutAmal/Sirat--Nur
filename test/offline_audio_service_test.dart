@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
@@ -354,6 +355,31 @@ void main() {
         contains(
           ".select(\n            'type, reciter, surah_number, url, storage_path, source, verified_at',\n          )",
         ),
+      );
+    });
+
+    test('cloud quran audio fallback failures are logged', () async {
+      final messages = <String>[];
+      final previousDebugPrint = debugPrint;
+      addTearDown(() => debugPrint = previousDebugPrint);
+      debugPrint = (String? message, {int? wrapWidth}) {
+        if (message != null) {
+          messages.add(message);
+        }
+      };
+
+      final catalog = await OfflineReciters.getQuranAudioCatalog();
+      final url = await OfflineReciters.getSurahUrl('alafasy', 1);
+
+      expect(catalog, isEmpty);
+      expect(url, isNull);
+      expect(
+        messages,
+        contains('Quran audio cloud catalog load failed; returning empty map'),
+      );
+      expect(
+        messages,
+        contains('Quran audio cloud URL lookup failed; returning no stream'),
       );
     });
 

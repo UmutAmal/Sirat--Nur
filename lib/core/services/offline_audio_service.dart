@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
@@ -582,6 +583,7 @@ class OfflineReciters {
 
       return resolvePlayableCloudAudioUrl(audioRow);
     } catch (_) {
+      debugPrint('Quran audio cloud URL lookup failed; returning no stream');
       return null;
     }
   }
@@ -595,6 +597,9 @@ class OfflineReciters {
       final catalog = await getQuranAudioCatalog();
       return catalog[reciterId] ?? const {};
     } catch (_) {
+      debugPrint(
+        'Quran audio reciter catalog lookup failed; returning empty map',
+      );
       return const {};
     }
   }
@@ -614,6 +619,7 @@ class OfflineReciters {
         List<Map<String, dynamic>>.from(rows),
       );
     } catch (_) {
+      debugPrint('Quran audio cloud catalog load failed; returning empty map');
       return const {};
     }
   }

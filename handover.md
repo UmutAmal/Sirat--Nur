@@ -18225,3 +18225,33 @@
 
 ### Sonraki Adim
 - Targeted Daily Ayat/provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan kalan silent catch'leri sirala.
+
+## 2026-04-24 TUR-444 - Quran Audio Cloud Catalog Failures Are Visible
+
+### MASTER Karari
+- Risk: Quran audio catalog/URL lookup akisi Supabase client veya cloud query exception durumunda `null`/bos map donerek UI'yi ayakta tutuyor, ancak cloud audio borusu kirildiginda runtime kaniti uretmiyordu.
+- Kanit:
+  - `lib/core/services/offline_audio_service.dart` icindeki `OfflineReciters.getSurahUrl` catch blogu once sadece `return null` yapiyordu.
+  - Ayni dosyadaki `OfflineReciters.getAllSurahUrls` catch blogu once sadece `return const {}` yapiyordu.
+  - Ayni dosyadaki `OfflineReciters.getQuranAudioCatalog` catch blogu once sadece `return const {}` yapiyordu.
+  - `test/offline_audio_service_test.dart` storage_path ve provenance kurallarini test ediyor, ancak cloud lookup exception fallback'inin gorunur oldugunu garanti etmiyordu.
+- Kullanici etkisi: Reciter/sure sesleri cloud katalog arizasi nedeniyle bos kalabilir; uygulama cokmeden devam etse bile hata sessiz kalirsa store veya saha loglarinda kok sebep yakalanamaz.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25.
+- Rollback plani: `lib/core/services/offline_audio_service.dart`, `test/offline_audio_service_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Quran audio tek sure URL lookup catch blogu sanitized debug log yazacak ve `null` fallback sozlesmesini koruyacak.
+- Quran audio reciter catalog catch blogu sanitized debug log yazacak ve bos map fallback sozlesmesini koruyacak.
+- Quran audio full cloud catalog catch blogu sanitized debug log yazacak ve bos map fallback sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\offline_audio_service_test.dart --reporter compact` PASS, 21/21.
+- Yeni regresyon: Supabase init edilmemis/cloud unavailable senaryoda `OfflineReciters.getQuranAudioCatalog()` bos map, `OfflineReciters.getSurahUrl()` null donerken sanitized debug loglar yakalanacak.
+
+### Risk Degisimi
+- Quran audio silent cloud catalog fallback riski: `12/25 -> 3/25`.
+- Kalan risk: Quran ayah legacy projection catch'i, hadith availability catch'i ve tafsir cloud fallback gorunurlugu ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted offline audio testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Quran ayah legacy projection catch'i ele alinacak.
