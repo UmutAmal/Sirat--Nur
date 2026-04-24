@@ -314,10 +314,26 @@ void main() {
         await notifier.updateCalculationMethod(ummAlQuraPrayerMethod);
 
         expect(notifier.state.calculationMethod, ummAlQuraPrayerMethod);
+        expect(notifier.state.madhab, hanbaliMadhab);
         expect(notifier.state.fajrAngle, 18.5);
         expect(notifier.state.ishaAngle, 0.0);
+        expect(prefs.getString('madhab'), hanbaliMadhab);
         expect(prefs.getDouble('fajrAngle'), 18.5);
         expect(prefs.getDouble('ishaAngle'), 0.0);
+      },
+    );
+
+    test(
+      'updateCalculationMethod keeps custom madhab when returning to custom angles',
+      () async {
+        final notifier = SettingsNotifier(prefs);
+        await notifier.updateMadhab(jafariMadhab);
+
+        await notifier.updateCalculationMethod(customPrayerMethod);
+
+        expect(notifier.state.calculationMethod, customPrayerMethod);
+        expect(notifier.state.madhab, jafariMadhab);
+        expect(prefs.getString('madhab'), jafariMadhab);
       },
     );
 

@@ -17821,3 +17821,32 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan yeni turda tum repo icin hardcoded string, TODO/stub, content correctness, dependency drift, Appium runtime ve store artefact taramasina devam et.
+
+## 2026-04-24 TUR-430 - Prayer Method Selection Resets Madhab Safely
+
+### MASTER Karari
+- Risk: Manuel hesaplama yontemi degistirilince yeni yontemin resmi/default madhab'i uygulanmiyordu. Kullanici `Umm al-Qura`, `Dubai`, `Qatar`, `Tehran` gibi profillere gecse bile onceki `Hanafi/Shafii` tercihi kalabiliyor ve Asr shadow factor dini profile aykiri calisabiliyordu.
+- Kanit:
+  - `lib/features/settings/settings_provider.dart` icinde `updateCalculationMethod` yalniz `calculationMethod`, `fajrAngle` ve `ishaAngle` yaziyordu; `madhab` state/prefs guncellenmiyordu.
+  - `test/settings_provider_test.dart` icindeki resmi profil reset testi sadece acilari dogruluyordu; mezhep persistence guard'i yoktu.
+- Kullanici etkisi: Namaz vakti hesaplamasinda yontem ve mezhep kombinasyonu sessizce ayrisabilir; dini hassasiyeti yuksek cekirdek akista yanlis Asr hesabina yol acabilir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: `lib/features/settings/settings_provider.dart` ve `test/settings_provider_test.dart` bu turdaki diff ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `updateCalculationMethod` artik custom disi her resmi yontemde `profileForMethod(normalizedMethod).madhab` degerini state ve SharedPreferences'a yazar.
+- `customPrayerMethod` icin mevcut kullanici mezhebi korunur; custom acilar kullanicinin secili juristic ayarini bozmadan devam eder.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\settings_provider_test.dart test\prayer_profile_service_test.dart test\prayer_calendar_service_test.dart --reporter compact` PASS.
+- `flutter analyze`: PASS, no issues.
+- `flutter test --reporter compact`: PASS, 663/663.
+- `tool/check_store_readiness.ps1`: PASS; Supabase public content/source checks, verified Quran audio mirror checks, analyze ve full test dahil store-ready kapisi yesil.
+- Secret diff scan: PASS; staged/unstaged diff icinde Supabase DB URI, publishable/service token, password veya private key paterni yok.
+
+### Risk Degisimi
+- Manual prayer method -> stale madhab riski: `16/25 -> 2/25`.
+- Kalan risk: Ulke/bolge bazli tum resmi kurum profilleri icin kapsama denetimi devam edecek; belirsiz resmi metodlarda uydurma profil eklenmeyecek, kanitli kaynak aranacak.
+
+### Sonraki Adim
+- Commit/push; ardindan city/profile coverage, regional fallback honesty, runtime smoke ve kalan silent catch/l10n yuzeylerini yeni turda tara.

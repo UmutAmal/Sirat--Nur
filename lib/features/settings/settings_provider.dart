@@ -214,11 +214,16 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   Future<void> updateCalculationMethod(String method) async {
     final normalizedMethod = normalizeCalculationMethod(method);
     final (fajrAngle, ishaAngle) = _defaultAnglesForMethod(normalizedMethod);
+    final defaultMadhab = normalizedMethod == customPrayerMethod
+        ? state.madhab
+        : profileForMethod(normalizedMethod).madhab;
     await _prefs.setString('calculationMethod', normalizedMethod);
+    await _prefs.setString('madhab', defaultMadhab);
     await _prefs.setDouble('fajrAngle', fajrAngle);
     await _prefs.setDouble('ishaAngle', ishaAngle);
     state = state.copyWith(
       calculationMethod: normalizedMethod,
+      madhab: defaultMadhab,
       fajrAngle: fajrAngle,
       ishaAngle: ishaAngle,
     );
