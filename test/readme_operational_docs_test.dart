@@ -133,11 +133,15 @@ void main() {
       );
       expect(readme, contains('appium-runtime-smoke-summary.json'));
       expect(readme, contains('Android Settings'));
+      expect(readme, contains('-SmokeLocale tr'));
+      expect(readme, contains('lib/l10n/app_<locale>.arb'));
       expect(
         releaseChecklist,
         contains('.\\tool\\appium_runtime_smoke.ps1 -BuildMode release'),
       );
       expect(releaseChecklist, contains('appium-runtime-smoke-summary.json'));
+      expect(releaseChecklist, contains('-SmokeLocale tr'));
+      expect(releaseChecklist, contains('lib/l10n/app_<locale>.arb'));
       expect(releaseChecklist, contains('logcat stayed crash-free'));
     });
 

@@ -19,6 +19,7 @@ void main() {
 
     test('uses accessibility description selectors for runtime navigation', () {
       expect(script, contains('descriptionContains'));
+      expect(script, contains('Click-AnyDescriptionOrText'));
       for (final label in [
         'Quran',
         'Qibla',
@@ -80,6 +81,21 @@ void main() {
         expect(script, contains('releaseDartDefinesApplied'));
       },
     );
+
+    test('loads localized smoke labels from ARB and pins Appium language', () {
+      expect(script, contains(r'[string]$SmokeLocale = "en"'));
+      expect(script, contains('Resolve-SmokeLocaleTag'));
+      expect(script, contains('Read-ArbMessages'));
+      expect(script, contains('Get-SmokeTextBundle'));
+      expect(script, contains(r'app_$LocaleTag.arb'));
+      expect(script, contains("app_en.arb"));
+      expect(script, contains(r'"appium:language" = $smokeLanguage'));
+      expect(script, contains('"appium:locale"'));
+      expect(script, contains(r'smokeLocale = $normalizedSmokeLocale'));
+      expect(script, contains(r'$smokeText.quran'));
+      expect(script, contains(r'$smokeText.dailyVerse'));
+      expect(script, contains(r'$smokeText.offlineQuranAudioPacks'));
+    });
 
     test('writes reproducible summary and XML artifacts under build', () {
       expect(script, contains('appium-runtime-smoke-summary.json'));

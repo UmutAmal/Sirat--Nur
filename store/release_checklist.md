@@ -38,6 +38,11 @@ device with Appium running:
 .\tool\appium_runtime_smoke.ps1 -BuildMode release
 ```
 
+For localized release evidence, pass the candidate locale explicitly, for
+example `.\tool\appium_runtime_smoke.ps1 -BuildMode release -SmokeLocale tr`.
+The smoke script reads expected labels from `lib/l10n/app_<locale>.arb` and
+falls back to English only when a locale file is unavailable.
+
 The Appium smoke must pass before release sign-off. Keep
 `build/appium-runtime-smoke-summary.json` with the release evidence; it proves
 first launch did not open Android Settings, onboarding completed, bottom

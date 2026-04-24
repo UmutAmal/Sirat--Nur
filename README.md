@@ -68,7 +68,10 @@ with Appium running, execute the runtime UI smoke before release sign-off:
 ```
 The script writes `build/appium-runtime-smoke-summary.json` and fails if first
 launch opens Android Settings, onboarding or runtime navigation breaks, legacy
-offline copy appears, or logcat contains crash markers.
+offline copy appears, or logcat contains crash markers. It reads expected UI
+labels from `lib/l10n/app_<locale>.arb`; use `-SmokeLocale tr` (or another
+supported locale) when validating a localized candidate instead of relying on
+English-only selectors.
 
 ## Quran Audio Sovereignty Workflow
 The runtime requires verified `storage_path` rows and first-party distribution endpoints for playable Quran audio. Supabase stores only metadata/path rows; the 11.6 GB Quran MP3 catalog is not uploaded to Supabase Storage. The planned split is Cloudflare R2/CDN for every reciter except `abdul_basit_murattal`, and GitHub Releases for the complete `abdul_basit_murattal` overflow set. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks.

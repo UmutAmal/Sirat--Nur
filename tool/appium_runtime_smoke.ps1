@@ -6,6 +6,7 @@ param(
   [string]$OutputDir = "build",
   [ValidateSet("release", "debug")]
   [string]$BuildMode = "debug",
+  [string]$SmokeLocale = "en",
   [switch]$SkipBuildInstall,
   [switch]$NoReset,
   [switch]$SkipLogcat
@@ -280,7 +281,142 @@ function Test-ContainsAny {
   return $false
 }
 
+function Select-NonEmptyUniqueStrings {
+  param([string[]]$Values)
+
+  $seen = @{}
+  $result = @()
+  foreach ($value in $Values) {
+    if ([string]::IsNullOrWhiteSpace($value)) {
+      continue
+    }
+
+    $trimmed = $value.Trim()
+    if ($seen.ContainsKey($trimmed)) {
+      continue
+    }
+
+    $seen[$trimmed] = $true
+    $result += $trimmed
+  }
+
+  return [string[]]$result
+}
+
+function Resolve-SmokeLocaleTag {
+  param([string]$Locale)
+
+  if ([string]::IsNullOrWhiteSpace($Locale)) {
+    return 'en'
+  }
+
+  $normalized = $Locale.Trim().Replace('-', '_')
+  if ($normalized -notmatch '^[A-Za-z]{2,3}(_[A-Za-z]{2})?$') {
+    throw "SmokeLocale must be a BCP-47-like language tag such as en, tr, ar, or zh_CN."
+  }
+
+  $parts = $normalized.Split('_')
+  if ($parts.Count -eq 1) {
+    return $parts[0].ToLowerInvariant()
+  }
+
+  return "$($parts[0].ToLowerInvariant())_$($parts[1].ToUpperInvariant())"
+}
+
+function Read-ArbMessages {
+  param([Parameter(Mandatory = $true)][string]$LocaleTag)
+
+  $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
+  $l10nRoot = Join-Path $repoRoot 'lib\l10n'
+  $candidatePaths = @(
+    (Join-Path $l10nRoot "app_$LocaleTag.arb")
+  )
+
+  if ($LocaleTag.Contains('_')) {
+    $languageOnly = $LocaleTag.Split('_')[0]
+    $candidatePaths += (Join-Path $l10nRoot "app_$languageOnly.arb")
+  }
+
+  $candidatePaths += (Join-Path $l10nRoot 'app_en.arb')
+
+  foreach ($path in $candidatePaths) {
+    if (Test-Path $path) {
+      return Get-Content -Raw -Path $path | ConvertFrom-Json
+    }
+  }
+
+  throw 'No ARB localization file could be loaded for the Appium smoke script.'
+}
+
+function Get-ArbString {
+  param(
+    [Parameter(Mandatory = $true)]$Messages,
+    [Parameter(Mandatory = $true)][string]$Key,
+    [Parameter(Mandatory = $true)][string]$Fallback
+  )
+
+  $property = $Messages.PSObject.Properties[$Key]
+  if ($null -eq $property -or [string]::IsNullOrWhiteSpace([string]$property.Value)) {
+    return $Fallback
+  }
+
+  return [string]$property.Value
+}
+
+function Get-SmokeTextBundle {
+  param([Parameter(Mandatory = $true)][string]$LocaleTag)
+
+  $messages = Read-ArbMessages -LocaleTag $LocaleTag
+  return [ordered]@{
+    locale = $LocaleTag
+    next = Get-ArbString -Messages $messages -Key 'next' -Fallback 'Next'
+    getStarted = Get-ArbString -Messages $messages -Key 'getStarted' -Fallback 'Get Started'
+    onboarding1Title = Get-ArbString -Messages $messages -Key 'onboarding1Title' -Fallback 'Welcome to Sirat-ı Nur'
+    home = Get-ArbString -Messages $messages -Key 'home' -Fallback 'Home'
+    quran = Get-ArbString -Messages $messages -Key 'quran' -Fallback 'Quran'
+    qibla = Get-ArbString -Messages $messages -Key 'qibla' -Fallback 'Qibla'
+    zikr = Get-ArbString -Messages $messages -Key 'zikr' -Fallback 'Zikr'
+    calendar = Get-ArbString -Messages $messages -Key 'calendar' -Fallback 'Calendar'
+    dailyVerse = Get-ArbString -Messages $messages -Key 'dailyVerse' -Fallback 'Daily Verse'
+    dailyVerseUnavailableTitle = Get-ArbString -Messages $messages -Key 'dailyVerseUnavailableTitle' -Fallback 'Daily verse unavailable'
+    noInternet = Get-ArbString -Messages $messages -Key 'noInternet' -Fallback 'No Internet Connection'
+    places = Get-ArbString -Messages $messages -Key 'places' -Fallback 'Places'
+    placesLocationRequiredTitle = Get-ArbString -Messages $messages -Key 'placesLocationRequiredTitle' -Fallback 'Location required'
+    nearbyMosques = Get-ArbString -Messages $messages -Key 'nearbyMosques' -Fallback 'Nearby Mosques'
+    downloads = Get-ArbString -Messages $messages -Key 'downloads' -Fallback 'Downloads'
+    offlineQuranAudioPacks = Get-ArbString -Messages $messages -Key 'offlineQuranAudioPacks' -Fallback 'Offline Quran Audio Packs'
+    offlineDownloadManager = Get-ArbString -Messages $messages -Key 'offlineDownloadManager' -Fallback 'Offline Download Manager'
+    analytics = Get-ArbString -Messages $messages -Key 'analytics' -Fallback 'Analytics'
+    prayerCompletion = Get-ArbString -Messages $messages -Key 'prayerCompletion' -Fallback 'Prayer Completion'
+    streaks = Get-ArbString -Messages $messages -Key 'streaks' -Fallback 'Streaks'
+    premium = Get-ArbString -Messages $messages -Key 'premium' -Fallback 'Premium'
+    upgradeToPro = Get-ArbString -Messages $messages -Key 'upgradeToPro' -Fallback 'Upgrade to Pro'
+  }
+}
+
+function Click-AnyDescriptionOrText {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string[]]$Candidates
+  )
+
+  foreach ($candidate in $Candidates) {
+    if ((Click-DescriptionContains -SessionId $SessionId -Label $candidate) -or
+        (Click-TextContains -SessionId $SessionId -Label $candidate)) {
+      return $true
+    }
+  }
+
+  return $false
+}
+
 New-Item -ItemType Directory -Force -Path $OutputDir | Out-Null
+
+$normalizedSmokeLocale = Resolve-SmokeLocaleTag -Locale $SmokeLocale
+$smokeText = Get-SmokeTextBundle -LocaleTag $normalizedSmokeLocale
+$smokeLocaleParts = $normalizedSmokeLocale.Split('_')
+$smokeLanguage = $smokeLocaleParts[0]
+$smokeRegion = if ($smokeLocaleParts.Count -gt 1) { $smokeLocaleParts[1] } else { $null }
 
 $apkPath = Join-Path "build\app\outputs\flutter-apk" "app-$BuildMode.apk"
 $apkLastWriteTime = $null
@@ -326,18 +462,25 @@ if (-not $status.ready) {
   throw "Appium server is not ready at $AppiumUrl"
 }
 
+$alwaysMatch = @{
+  platformName = "Android"
+  "appium:automationName" = "UiAutomator2"
+  "appium:deviceName" = $DeviceName
+  "appium:appPackage" = $Package
+  "appium:appActivity" = $Activity
+  "appium:noReset" = [bool]$NoReset
+  "appium:newCommandTimeout" = 120
+  "appium:autoGrantPermissions" = $true
+  "appium:language" = $smokeLanguage
+}
+
+if (-not [string]::IsNullOrWhiteSpace($smokeRegion)) {
+  $alwaysMatch["appium:locale"] = $smokeRegion
+}
+
 $created = Invoke-AppiumJson -Method "POST" -Path "/session" -Body @{
   capabilities = @{
-    alwaysMatch = @{
-      platformName = "Android"
-      "appium:automationName" = "UiAutomator2"
-      "appium:deviceName" = $DeviceName
-      "appium:appPackage" = $Package
-      "appium:appActivity" = $Activity
-      "appium:noReset" = [bool]$NoReset
-      "appium:newCommandTimeout" = 120
-      "appium:autoGrantPermissions" = $true
-    }
+    alwaysMatch = $alwaysMatch
   }
 }
 
@@ -353,6 +496,9 @@ if (-not $sessionId) {
 $summary = [ordered]@{
   sessionId = $sessionId
   buildMode = $BuildMode
+  smokeLocale = $normalizedSmokeLocale
+  smokeLanguage = $smokeLanguage
+  smokeRegion = $smokeRegion
   releaseDartDefinesApplied = $releaseDartDefinesApplied
   apkPath = $apkPath
   apkPrepared = $apkPrepared
@@ -376,52 +522,83 @@ $summary = [ordered]@{
 try {
   Start-Sleep -Seconds 4
   $firstXml = Save-AppiumSource -SessionId $sessionId -Name "first"
-  $summary.firstContainsWelcome = $firstXml.Contains("Welcome to Sirat") -or $firstXml.Contains("Sirat-")
+  $summary.firstContainsWelcome = Test-ContainsAny -Source $firstXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.onboarding1Title, 'Welcome to Sirat', 'Sirat-'))
   $summary.firstContainsAndroidSettings = $firstXml.Contains("Settings suggestions") -or $firstXml.Contains("Android Settings") -or $firstXml.Contains("Alarms & reminders")
 
-  foreach ($label in @("Next", "Next", "Start", "Get Started")) {
-    $clicked = (Click-DescriptionContains -SessionId $sessionId -Label $label) -or (Click-TextContains -SessionId $sessionId -Label $label)
+  $onboardingSteps = @(
+    [ordered]@{ label = 'next-1'; candidates = Select-NonEmptyUniqueStrings @($smokeText.next, 'Next') },
+    [ordered]@{ label = 'next-2'; candidates = Select-NonEmptyUniqueStrings @($smokeText.next, 'Next') },
+    [ordered]@{ label = 'start'; candidates = Select-NonEmptyUniqueStrings @($smokeText.getStarted, 'Get Started', 'Start') }
+  )
+
+  foreach ($step in $onboardingSteps) {
+    $clicked = Click-AnyDescriptionOrText -SessionId $sessionId -Candidates $step.candidates
     $summary.onboarding += [ordered]@{
-      label = $label
+      label = $step.label
+      candidates = $step.candidates
       clicked = $clicked
     }
-    if ($label -in @("Start", "Get Started") -and $clicked) {
+    if ($step.label -eq 'start' -and $clicked) {
       break
     }
   }
 
   $homeXml = Save-AppiumSource -SessionId $sessionId -Name "home"
-  $summary.homeContainsDailyVerse = $homeXml.Contains("Daily Verse")
-  $summary.homeContainsDailyVerseUnavailable = $homeXml.Contains("Daily verse unavailable")
-  $summary.homeContainsNoInternetLegacy = $homeXml.Contains("No Internet Connection")
+  $summary.homeContainsDailyVerse = Test-ContainsAny -Source $homeXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.dailyVerse, 'Daily Verse'))
+  $summary.homeContainsDailyVerseUnavailable = Test-ContainsAny -Source $homeXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.dailyVerseUnavailableTitle, 'Daily verse unavailable'))
+  $summary.homeContainsNoInternetLegacy = Test-ContainsAny -Source $homeXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.noInternet, 'No Internet Connection'))
 
-  $bottomNavLabels = @("Quran", "Qibla", "Zikr", "Calendar")
-  foreach ($label in $bottomNavLabels) {
-    $clicked = Click-DescriptionContains -SessionId $sessionId -Label $label
-    $xml = Save-AppiumSource -SessionId $sessionId -Name "nav-$label"
+  $bottomNavTargets = @(
+    [ordered]@{ label = 'Quran'; candidates = Select-NonEmptyUniqueStrings @($smokeText.quran, 'Quran') },
+    [ordered]@{ label = 'Qibla'; candidates = Select-NonEmptyUniqueStrings @($smokeText.qibla, 'Qibla') },
+    [ordered]@{ label = 'Zikr'; candidates = Select-NonEmptyUniqueStrings @($smokeText.zikr, 'Zikr') },
+    [ordered]@{ label = 'Calendar'; candidates = Select-NonEmptyUniqueStrings @($smokeText.calendar, 'Calendar') }
+  )
+  foreach ($target in $bottomNavTargets) {
+    $clicked = Click-AnyDescriptionOrText -SessionId $sessionId -Candidates $target.candidates
+    $xml = Save-AppiumSource -SessionId $sessionId -Name "nav-$($target.label)"
     $summary.bottomNavResults += [ordered]@{
-      label = $label
+      label = $target.label
+      candidates = $target.candidates
       clicked = $clicked
-      containsLabel = $xml.Contains($label)
+      containsLabel = Test-ContainsAny -Source $xml -Needles $target.candidates
       containsAndroidSettings = $xml.Contains("Settings suggestions") -or $xml.Contains("Android Settings") -or $xml.Contains("Alarms & reminders")
     }
   }
 
-  Click-DescriptionContains -SessionId $sessionId -Label "Home" | Out-Null
-  $quickExpectations = [ordered]@{
-    Places = @("Places", "Location required", "Nearby Mosques")
-    Downloads = @("Offline Quran Audio Packs", "Offline Download Manager", "surahs downloaded")
-    Analytics = @("Analytics", "Prayer Completion", "Streaks")
-    Premium = @("Premium", "Unlimited", "subscription")
-  }
+  Click-AnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.home, 'Home')) | Out-Null
+  $quickExpectations = @(
+    [ordered]@{
+      label = 'Places'
+      candidates = Select-NonEmptyUniqueStrings @($smokeText.places, 'Places')
+      expected = Select-NonEmptyUniqueStrings @($smokeText.places, $smokeText.placesLocationRequiredTitle, $smokeText.nearbyMosques, 'Places', 'Location required', 'Nearby Mosques')
+    },
+    [ordered]@{
+      label = 'Downloads'
+      candidates = Select-NonEmptyUniqueStrings @($smokeText.downloads, 'Downloads')
+      expected = Select-NonEmptyUniqueStrings @($smokeText.offlineQuranAudioPacks, $smokeText.offlineDownloadManager, 'Offline Quran Audio Packs', 'Offline Download Manager')
+    },
+    [ordered]@{
+      label = 'Analytics'
+      candidates = Select-NonEmptyUniqueStrings @($smokeText.analytics, 'Analytics')
+      expected = Select-NonEmptyUniqueStrings @($smokeText.analytics, $smokeText.prayerCompletion, $smokeText.streaks, 'Analytics', 'Prayer Completion', 'Streaks')
+    },
+    [ordered]@{
+      label = 'Premium'
+      candidates = Select-NonEmptyUniqueStrings @($smokeText.premium, 'Premium')
+      expected = Select-NonEmptyUniqueStrings @($smokeText.premium, $smokeText.upgradeToPro, 'Premium', 'Upgrade to Pro', 'subscription')
+    }
+  )
 
-  foreach ($label in $quickExpectations.Keys) {
-    $clicked = Click-DescriptionContains -SessionId $sessionId -Label $label
-    $xml = Save-AppiumSource -SessionId $sessionId -Name "quick-$label"
+  foreach ($target in $quickExpectations) {
+    $clicked = Click-AnyDescriptionOrText -SessionId $sessionId -Candidates $target.candidates
+    $xml = Save-AppiumSource -SessionId $sessionId -Name "quick-$($target.label)"
     $summary.quickAccessResults += [ordered]@{
-      label = $label
+      label = $target.label
+      candidates = $target.candidates
+      expected = $target.expected
       clicked = $clicked
-      containsExpected = Test-ContainsAny -Source $xml -Needles $quickExpectations[$label]
+      containsExpected = Test-ContainsAny -Source $xml -Needles $target.expected
       containsAndroidSettings = $xml.Contains("Settings suggestions") -or $xml.Contains("Android Settings") -or $xml.Contains("Alarms & reminders")
     }
     Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null

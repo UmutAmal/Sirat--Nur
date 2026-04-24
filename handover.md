@@ -17885,3 +17885,35 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan Appium live runtime, silent catch/error visibility ve kalan l10n/content correctness taramasina devam et.
+
+## 2026-04-24 TUR-432 - Appium Smoke Becomes Locale-Aware
+
+### MASTER Karari
+- Risk: Kalici Appium runtime smoke release kapisi UI metinlerini `Quran`, `Daily Verse`, `Places`, `Downloads`, `Analytics`, `Premium` gibi Ingilizce sabitlerle ariyordu. Cihaz veya aday build Turkce/baska locale ile acildiginda uygulama dogru calissa bile smoke false-fail uretebilir veya lokalize UI regresyonlarini dogru yakalayamazdi.
+- Kanit:
+  - `tool/appium_runtime_smoke.ps1` once onboarding, bottom nav ve quick access kontrollerinde Ingilizce label/needle listeleri kullaniyordu.
+  - `lib/l10n/app_tr.arb` ayni UI yuzeyleri icin `Kur'an-ı Kerim`, `Gunun Ayeti`, `Mekanlar`, `Indirilenler`, `Analitik` gibi farkli degerler tasiyor.
+  - `adb devices` bu turda bagli cihaz gostermedi; canli Appium kosusu cihaz olmadigi icin yapilmadi, false runtime kanit uretilmedi.
+- Kullanici etkisi: Release oncesi runtime smoke kapisi dil/bolge adaylarini guvenilir test edemezse store-ready kalite zinciri sahte blokaj veya sahte rahatlama uretebilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25.
+- Rollback plani: `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart`, `README.md`, `store/release_checklist.md`, `test/readme_operational_docs_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool/appium_runtime_smoke.ps1` icin `-SmokeLocale` parametresi eklendi; varsayilan `en`.
+- Script locale tag'ini normalize ediyor, `lib/l10n/app_<locale>.arb` dosyasindan beklenen smoke metinlerini okuyor ve locale dosyasi yoksa kontrollu olarak `app_en.arb` fallback kullaniyor.
+- Appium session capability zincirine `appium:language` ve uygun oldugunda `appium:locale` eklendi.
+- Onboarding, bottom nav ve quick access tiklama/dogrulamalari artik ARB tabanli localized candidate listeleri ile yapiliyor; Ingilizce sabitler sadece geriye donuk emniyet fallback'i olarak kaliyor.
+- README ve release checklist, lokalize aday kaniti icin `.\tool\appium_runtime_smoke.ps1 -BuildMode release -SmokeLocale tr` ornegini ve ARB tabanli label okuma davranisini belgeliyor.
+
+### TESTER Degisikligi
+- PowerShell parse check: `PSParser::Tokenize(tool\appium_runtime_smoke.ps1)` PASS.
+- Targeted tests: `flutter test test\appium_runtime_smoke_script_test.dart test\readme_operational_docs_test.dart --reporter compact` PASS, 15/15.
+- `git diff --check -- tool\appium_runtime_smoke.ps1 test\appium_runtime_smoke_script_test.dart README.md store\release_checklist.md test\readme_operational_docs_test.dart` PASS.
+- Canli Appium smoke bu turda kosulmadi: `adb devices` bagli cihaz listelemedi. Cihaz/emulator baglandiginda once `-SmokeLocale en`, sonra `-SmokeLocale tr` ile release smoke alinacak.
+
+### Risk Degisimi
+- Appium runtime smoke locale false-fail/false-negative riski: `12/25 -> 3/25`.
+- Kalan risk: Gercek cihaz/emulator hazir olunca localized Appium evidence tazelenmeli; cihaz yokken sahte PASS uretilmeyecek.
+
+### Sonraki Adim
+- Full analyze/test ve secret diff scan; gecerse commit/push. Ardindan silent catch/error visibility ve kalan l10n/content correctness taramasina devam et.
