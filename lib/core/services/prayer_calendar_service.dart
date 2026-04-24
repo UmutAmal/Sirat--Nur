@@ -1,4 +1,5 @@
 import 'package:adhan/adhan.dart';
+import 'package:flutter/foundation.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/domain/entities/prayer_times_entity.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -277,7 +278,9 @@ class PrayerCalendarService {
             ),
           )
           .toList();
-    } catch (e) {
+    } catch (_) {
+      debugPrint('Prayer times cache read failed; cleared corrupt cache');
+      await prefs.remove(_cacheKey);
       return null;
     }
   }

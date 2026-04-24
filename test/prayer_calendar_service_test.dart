@@ -1,10 +1,12 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:adhan/adhan.dart';
 import 'package:sirat_i_nur/core/services/prayer_calendar_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest.dart' as tzdata;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -152,6 +154,30 @@ void main() {
       expect(source, isNot(contains('getPrayerNameEnglish')));
       expect(source, isNot(contains('Sabah (Fajr)')));
       expect(source, isNot(contains('Fajr (Dawn)')));
+    });
+
+    test('clears corrupt cached prayer times and logs the fallback', () async {
+      SharedPreferences.setMockInitialValues({
+        'prayer_times_cache': '{"times": "not-a-list"}',
+      });
+      final logs = <String>[];
+      final previousDebugPrint = debugPrint;
+      debugPrint = (message, {wrapWidth}) {
+        if (message != null) logs.add(message);
+      };
+      addTearDown(() {
+        debugPrint = previousDebugPrint;
+      });
+
+      final cached = await PrayerCalendarService.getCachedPrayerTimes();
+      final prefs = await SharedPreferences.getInstance();
+
+      expect(cached, isNull);
+      expect(prefs.containsKey('prayer_times_cache'), isFalse);
+      expect(
+        logs,
+        contains('Prayer times cache read failed; cleared corrupt cache'),
+      );
     });
   });
 }

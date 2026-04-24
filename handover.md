@@ -18359,3 +18359,31 @@
 
 ### Sonraki Adim
 - `dart format`, targeted notification guard testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan `main.dart` bootstrap catch'lerini skorla.
+
+## 2026-04-24 TUR-449 - Corrupt Prayer Cache Self-Heals
+
+### MASTER Karari
+- Risk: Offline prayer cache JSON'u veya `times` yapisi bozulursa `getCachedPrayerTimes()` sessizce `null` donuyor ve bozuk `_cacheKey` SharedPreferences icinde kalmaya devam ediyordu.
+- Kanit:
+  - `lib/core/services/prayer_calendar_service.dart:263` cache JSON decode ediyor.
+  - `lib/core/services/prayer_calendar_service.dart:281` catch blogu once sadece `return null` yapiyordu.
+  - `test/prayer_calendar_service_test.dart` DST, timezone inference ve stale prayer-name guardlarini test ediyor, fakat corrupt cache fallback'ini dogrulamiyordu.
+- Kullanici etkisi: Bozuk cache uygulamayi cokertmeyebilir, ancak `hasCachedTimes()` sonraki acilislarda cache var sanabilir; offline prayer hattinda kok sebep gorunmez kalir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25.
+- Rollback plani: `lib/core/services/prayer_calendar_service.dart`, `test/prayer_calendar_service_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Corrupt prayer cache catch blogu sanitized debug log yazacak.
+- Ayni catch blogu bozuk `_cacheKey` degerini silecek ve mevcut guvenli `null` fallback sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\prayer_calendar_service_test.dart --reporter compact` PASS, 6/6.
+- Yeni regresyon: Bozuk `prayer_times_cache` degeri okundugunda sonuc `null`, cache anahtari silinmis ve sanitized debug log yazilmis olmasi zorunlu.
+
+### Risk Degisimi
+- Corrupt prayer cache persistence riski: `12/25 -> 2/25`.
+- Kalan risk: Location/manual update catch bloklari ve UI data parse fallback'leri ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted prayer calendar testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan location selection catch bloklarini skorla.
