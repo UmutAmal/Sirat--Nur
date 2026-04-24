@@ -244,6 +244,12 @@ void main() {
     expect(source, isNot(contains('downloadAllTafsirs')));
     expect(source, contains('this.fetchPolicy = TafsirFetchPolicy.cacheOnly'));
     expect(source, contains('VerifiedTafsirRowsLoader? verifiedRowsLoader'));
+    expect(
+      source,
+      contains(
+        'Verified tafsir cloud load failed; using verified local cache if available',
+      ),
+    );
     expect(loaderSource, contains("TafsirException('cache_missing'"));
     expect(loaderSource, isNot(contains('allowExternalRefresh')));
     expect(

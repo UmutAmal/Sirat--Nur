@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -587,6 +588,9 @@ class TafsirLoader {
         tafsirSource: tafsirSource,
       );
     } catch (_) {
+      debugPrint(
+        'Verified tafsir cloud load failed; using verified local cache if available',
+      );
       return const [];
     }
   }

@@ -18307,3 +18307,29 @@
 
 ### Sonraki Adim
 - `dart format`, targeted hadith provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan tafsir cloud fallback catch'i ele alinacak.
+
+## 2026-04-24 TUR-447 - Tafsir Cloud Loader Failures Are Visible
+
+### MASTER Karari
+- Risk: `TafsirLoader` verified cloud rows loader exception durumunda bos liste donup lokal cache'e devam ediyor, ancak cloud tefsir sync/load arizasi runtime'da gorunmez kaliyordu.
+- Kanit:
+  - `lib/core/services/tafsir_local_service.dart` icindeki `_loadVerifiedRowsFromCloud` catch blogu once sadece `return const []` yapiyordu.
+  - `test/features/quran/tafsir_page_test.dart` loader'in cache-only kaldigini, runtime tafsir API kullanmadigini ve verified loader'i test ediyor, fakat cloud loader exception logunu garanti etmiyordu.
+- Kullanici etkisi: Tefsir lokal cache varsa ekran calismaya devam eder; cache yoksa `cache_missing` olur. Ancak cloud loader arizasi loglanmazsa saha/store loglarinda kok sebep bulunamaz.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/services/tafsir_local_service.dart`, `test/features/quran/tafsir_page_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Verified tafsir cloud loader catch blogu sanitized debug log yazacak ve mevcut bos liste/cache fallback sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\quran\tafsir_page_test.dart --reporter compact` PASS, 9/9.
+- Yeni regresyon: Tafsir loader source guard'i verified cloud loader exception log metnini zorunlu tutacak.
+
+### Risk Degisimi
+- Tafsir cloud loader silent fallback riski: `9/25 -> 2/25`.
+- Kalan risk: UI catch bloklari ve location/manual update log gorunurlugu ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted tafsir page/service testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan UI catch bloklarini skorla.
