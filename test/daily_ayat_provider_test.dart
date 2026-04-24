@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -177,6 +179,29 @@ void main() {
       expect(asmaNames, hasLength(99));
     },
   );
+
+  test('fallback-backed cloud provider catch blocks are logged', () {
+    final source = File(
+      'lib/core/providers/supabase_providers.dart',
+    ).readAsStringSync();
+
+    expect(
+      source,
+      contains('Sukun audio cloud source load failed; returning empty map'),
+    );
+    expect(
+      source,
+      contains(
+        'Daily duas cloud load failed; using bundled Quran dua fallback',
+      ),
+    );
+    expect(
+      source,
+      contains(
+        'Asma-ul-Husna cloud load failed; using bundled verified fallback',
+      ),
+    );
+  });
 
   test(
     'cloud-only providers report a controlled unavailable error when Supabase is unavailable',

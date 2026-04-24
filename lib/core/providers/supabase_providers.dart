@@ -256,6 +256,7 @@ final sukunAudioSourcesProvider = FutureProvider<Map<String, String>>((
     final res = await supabase.from('audio_files').select().order('id');
     return resolveCloudSukunSources(List<Map<String, dynamic>>.from(res));
   } catch (_) {
+    debugPrint('Sukun audio cloud source load failed; returning empty map');
     return const {};
   }
 });
@@ -426,6 +427,9 @@ final dailyDuasProvider = FutureProvider<List<DuaData>>((ref) async {
         .order('id', ascending: true);
     return resolveCloudDuas(List<Map<String, dynamic>>.from(res));
   } catch (_) {
+    debugPrint(
+      'Daily duas cloud load failed; using bundled Quran dua fallback',
+    );
     return bundledDailyDuaFallback();
   }
 });
@@ -445,6 +449,9 @@ final asmaUlHusnaProvider = FutureProvider<List<Map<String, dynamic>>>((
         .order('id', ascending: true);
     return resolveCloudAsmaUlHusnaRows(List<Map<String, dynamic>>.from(res));
   } catch (_) {
+    debugPrint(
+      'Asma-ul-Husna cloud load failed; using bundled verified fallback',
+    );
     return buildBundledAsmaUlHusnaFallback();
   }
 });

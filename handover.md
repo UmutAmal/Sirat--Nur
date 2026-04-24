@@ -18195,3 +18195,33 @@
 
 ### Sonraki Adim
 - Targeted Daily Ayat testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Sukun/Dua/Asma silent fallback'leri taranacak.
+
+## 2026-04-24 TUR-443 - Fallback-Backed Cloud Providers Are No Longer Silent
+
+### MASTER Karari
+- Risk: Sukun audio, Daily Duas ve Asma-ul-Husna provider'lari Supabase/cloud query exception durumunda dogru fallback'e donuyor, ancak hata sessiz kaldigi icin cloud dataset arizasi gorunmez oluyordu.
+- Kanit:
+  - `lib/core/providers/supabase_providers.dart` icindeki `sukunAudioSourcesProvider` catch blogu once sadece `return const {}` yapiyordu.
+  - Ayni dosyadaki `dailyDuasProvider` catch blogu once sadece `bundledDailyDuaFallback()` donuyordu.
+  - Ayni dosyadaki `asmaUlHusnaProvider` catch blogu once sadece `buildBundledAsmaUlHusnaFallback()` donuyordu.
+  - `test/daily_ayat_provider_test.dart` fallback-backed provider'larin fallback davranisini test ediyor, fakat catch bloklarinin gorunur/loglanir olmasini garanti etmiyordu.
+- Kullanici etkisi: Uygulama fallback ile calismaya devam etse bile ses/dua/Asma cloud verisinin bozuldugu release veya runtime loglarinda fark edilmeyebilir; bu uzun vadeli icerik tazeleme ve kaynak guven zinciri riskidir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/daily_ayat_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Sukun audio cloud catch blogu sanitized debug log yazacak ve bos map fallback sozlesmesini koruyacak.
+- Daily Duas cloud catch blogu sanitized debug log yazacak ve bundled Quran dua fallback sozlesmesini koruyacak.
+- Asma-ul-Husna cloud catch blogu sanitized debug log yazacak ve bundled verified fallback sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS, 9/9.
+- Yeni regresyon: Fallback-backed cloud provider catch bloklarinda her yuzey icin sanitized debug log metni bulunacak.
+
+### Risk Degisimi
+- Fallback-backed provider silent catch riski: `9/25 -> 2/25`.
+- Kalan risk: Quran ayah legacy projection catch'i, audio service local IO catch'leri ve diger UI catch gorunurlugu ayrica taranacak.
+
+### Sonraki Adim
+- Targeted Daily Ayat/provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan kalan silent catch'leri sirala.
