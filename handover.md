@@ -18031,3 +18031,30 @@
 
 ### Sonraki Adim
 - Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan dua cloud timestamp guard'ini tamamla.
+
+## 2026-04-24 TUR-437 - Dua Cloud Rows Require Parseable Verification Timestamp
+
+### MASTER Karari
+- Risk: Cloud dua satirlari onayli kaynak URL'si ve bos olmayan `verified_at` tasidiklarinda kabul ediliyordu; `verified_at` parse edilebilir tarih degilse bile satir dogrulanmis gibi gorunebilirdi.
+- Kanit:
+  - `lib/core/constants/duas_data.dart` icindeki `DuaData.fromSupabaseRow` once `verified_at`/`verifiedAt` alanini direkt string olarak aliyordu.
+  - `resolveCloudDuas` filtresi yalniz `dua.verifiedAt.isNotEmpty` kontrolu yapiyordu.
+  - `test/duas_data_test.dart` kaynak ve tarih eksikligini test ediyordu, fakat gecersiz tarih stringini yakalamiyordu.
+- Kullanici etkisi: Dua icerigi dini hassasiyeti yuksek oldugu icin kaynak URL'si dogru olsa bile bozuk dogrulama tarihi provenance zincirini zayiflatir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/constants/duas_data.dart`, `test/duas_data_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `_readDuaVerifiedAt` helper'i eklendi; `verified_at`/`verifiedAt` sadece `DateTime.tryParse` ile parse edilebiliyorsa korunuyor.
+- Gecersiz timestamp iceren cloud dua satirlari bos `verifiedAt` aldigi icin mevcut fallback filtresinden gecemiyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\duas_data_test.dart test\features\library\library_page_cloud_duas_test.dart --reporter compact` PASS, 23/23.
+- Yeni regresyon: onayli kaynak URL'si olsa bile `verified_at: not-a-date` iceren cloud dua satiri bundled Quran dua fallback'e dusuyor.
+
+### Risk Degisimi
+- Dua cloud invalid verified_at riski: `9/25 -> 1/25`.
+- Kalan risk: Education cloud rows ve diger content helper'lari timestamp parse esligi icin taranacak; global rewrite yapilmadi.
+
+### Sonraki Adim
+- Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan education content timestamp/source guard esligini tara.

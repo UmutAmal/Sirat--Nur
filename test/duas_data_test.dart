@@ -117,6 +117,14 @@ void main() {
           'text_en': 'English dua',
           'source': 'https://www.diyanet.gov.tr',
         },
+        {
+          'id': 'invalid-verified-at',
+          'text_ar': 'دعاء',
+          'text_tr': 'Turkce dua',
+          'text_en': 'English dua',
+          'source': 'https://www.diyanet.gov.tr',
+          'verified_at': 'not-a-date',
+        },
       ]);
 
       expect(resolved, bundledDailyDuaFallback());

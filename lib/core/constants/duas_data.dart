@@ -71,7 +71,7 @@ class DuaData {
       english: english,
       source: readFirst(['source', 'reference']),
       category: readFirst(['category', 'title_tr', 'title_en']),
-      verifiedAt: readFirst(['verified_at', 'verifiedAt']),
+      verifiedAt: _readDuaVerifiedAt(row),
       audioUrl: _resolveCloudDuaAudioUrl(row),
       translations: translations,
     );
@@ -95,6 +95,11 @@ String _resolveCloudDuaAudioUrl(Map<String, dynamic> row) {
   }
 
   return '';
+}
+
+String _readDuaVerifiedAt(Map<String, dynamic> row) {
+  final value = _readDuaString(row, const ['verified_at', 'verifiedAt']);
+  return DateTime.tryParse(value) == null ? '' : value;
 }
 
 String _readDuaString(Map<String, dynamic> row, List<String> keys) {
