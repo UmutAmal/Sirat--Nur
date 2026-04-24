@@ -878,6 +878,11 @@ class AppLocalizationsJv extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Mundur regional nggunakake $sourceName. Konfirmasi wektu sholat lokal karo masjid utawa otoritas agama resmi.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

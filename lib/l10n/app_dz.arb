@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "རྣར་ཉན་གཏང་ནི་འཐུས་ཤོར་འབྱུང་ཡོདཔ། ཁྱོད་ཀྱི་མཐུད་ལམ་ཞིབ་དཔྱད་འབད་གནང་།"
+  "quranAudioPlaybackErrorWithConnectionHint": "རྣར་ཉན་གཏང་ནི་འཐུས་ཤོར་འབྱུང་ཡོདཔ། ཁྱོད་ཀྱི་མཐུད་ལམ་ཞིབ་དཔྱད་འབད་གནང་།",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ལག་ལེན་འཐབ་ཐོག་ལས་ ལུང་ཕྱོགས་ཕོལབེཀ། ཁྱོད་རའི་ཁ་ཆེའི་ལྷ་ཁང་ཡང་ན་ གཞུང་འབྲེལ་ཆོས་ལུགས་དབང་འཛིན་དང་གཅིག་ཁར་ ས་གནས་ཀྱི་སྨོན་ལམ་བཏབ་པའི་དུས་ཚོད་ཚུ་ ངེས་གཏན་བཟོ།"
 }

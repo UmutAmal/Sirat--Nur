@@ -880,6 +880,11 @@ class AppLocalizationsLus extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional fallback chu $sourceName hmangin a ni. I mosque emaw official sakhaw thuneitu emaw nen tualchhung tawngtai hun tur chu nemnghet rawh.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven a ni';
 
   @override

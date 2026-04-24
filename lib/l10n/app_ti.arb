@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ሜላ ምስ ተጠቃሚ ዝመረጾ {madhab} Asr ቅጥዒ",
-  "quranAudioPlaybackErrorWithConnectionHint": "ድምጺ ምጽዋት ኣይተዓወተን። በጃኹም ርክብኩም ኣረጋግጹ።"
+  "quranAudioPlaybackErrorWithConnectionHint": "ድምጺ ምጽዋት ኣይተዓወተን። በጃኹም ርክብኩም ኣረጋግጹ።",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "ዞባዊ ምምላስ {sourceName} ብምጥቃም። ናይ ከባቢኻ ናይ ጸሎት ሰዓታት ምስ መስጊድካ ወይ ወግዓዊ ሃይማኖታዊ በዓል መዚ ኣረጋግጽ።"
 }

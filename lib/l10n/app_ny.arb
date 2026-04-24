@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} njira yokhala ndi {madhab} Asr yosankhidwa ndi ogwiritsa ntchito",
-  "quranAudioPlaybackErrorWithConnectionHint": "Kusewerera mawu kwalephera. Chonde onani kulumikizana kwanu."
+  "quranAudioPlaybackErrorWithConnectionHint": "Kusewerera mawu kwalephera. Chonde onani kulumikizana kwanu.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Kubwerera m'chigawo pogwiritsa ntchito {sourceName}. Tsimikizirani nthawi zamapemphero kwanuko ndi mzikiti wanu kapena akuluakulu achipembedzo."
 }

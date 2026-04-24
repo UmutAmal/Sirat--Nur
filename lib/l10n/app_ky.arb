@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ыкмасы, колдонуучу тандаган {madhab} Аср жөндөөсү",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио ойнотуу ишке ашкан жок. Сураныч, байланышыңызды текшериңиз."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио ойнотуу ишке ашкан жок. Сураныч, байланышыңызды текшериңиз.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} аркылуу аймактык кайра кайтаруу. Жергиликтүү намаз убактысын мечитиңиз же расмий диний бийлик менен ырастаңыз."
 }

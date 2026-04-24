@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metódus a felhasználó által kiválasztott {madhab} Asr beállítással",
-  "quranAudioPlaybackErrorWithConnectionHint": "A hanglejátszás nem sikerült. Kérjük, ellenőrizze a kapcsolatot."
+  "quranAudioPlaybackErrorWithConnectionHint": "A hanglejátszás nem sikerült. Kérjük, ellenőrizze a kapcsolatot.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionális tartalék a {sourceName} használatával. Erősítse meg a helyi imaidőpontokat mecsetjénél vagy hivatalos vallási hatóságánál."
 }

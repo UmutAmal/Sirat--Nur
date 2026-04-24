@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "ユーザーが選択した {madhab} Asr 設定を使用した {sourceName} メソッド",
-  "quranAudioPlaybackErrorWithConnectionHint": "音声の再生に失敗しました。接続を確認してください。"
+  "quranAudioPlaybackErrorWithConnectionHint": "音声の再生に失敗しました。接続を確認してください。",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} を使用した地域フォールバック。現地の礼拝時間については、モスクまたは公式の宗教当局に確認してください。"
 }

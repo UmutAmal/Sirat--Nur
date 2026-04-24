@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metòd ak itilizatè a chwazi {madhab} anviwònman Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Lektur odyo echwe. Tanpri tcheke koneksyon ou."
+  "quranAudioPlaybackErrorWithConnectionHint": "Lektur odyo echwe. Tanpri tcheke koneksyon ou.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Repiblik rejyonal lè l sèvi avèk {sourceName}. Konfime lè lapriyè lokal yo ak moske w oswa otorite relijye ofisyèl ou."
 }

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Metodo {sourceName} con impostazione {madhab} selezionata dall'utente",
-  "quranAudioPlaybackErrorWithConnectionHint": "La riproduzione audio non è riuscita. Per favore controlla la tua connessione."
+  "quranAudioPlaybackErrorWithConnectionHint": "La riproduzione audio non è riuscita. Per favore controlla la tua connessione.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback regionale utilizzando {sourceName}. Conferma gli orari di preghiera locali con la tua moschea o l'autorità religiosa ufficiale."
 }

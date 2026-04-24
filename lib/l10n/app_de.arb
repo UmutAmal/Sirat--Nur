@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName}-Methode mit vom Benutzer ausgewählter {madhab} Asr-Einstellung",
-  "quranAudioPlaybackErrorWithConnectionHint": "Die Audiowiedergabe ist fehlgeschlagen. Bitte überprüfen Sie Ihre Verbindung."
+  "quranAudioPlaybackErrorWithConnectionHint": "Die Audiowiedergabe ist fehlgeschlagen. Bitte überprüfen Sie Ihre Verbindung.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionaler Fallback mit {sourceName}. Bestätigen Sie die örtlichen Gebetszeiten mit Ihrer Moschee oder offiziellen religiösen Autorität."
 }

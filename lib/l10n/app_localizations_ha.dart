@@ -879,6 +879,11 @@ class AppLocalizationsHa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Komawar yanki ta amfani da $sourceName. Tabbatar da lokutan sallar gida tare da masallacin ku ko ikon addini na hukuma.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

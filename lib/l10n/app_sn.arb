@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} nzira ine yakasarudzwa nemushandisi {madhab} Asr marongero",
-  "quranAudioPlaybackErrorWithConnectionHint": "Kuridza redhiyo hakuna kukwanisa. Ndokumbira utarise kubatana kwako."
+  "quranAudioPlaybackErrorWithConnectionHint": "Kuridza redhiyo hakuna kukwanisa. Ndokumbira utarise kubatana kwako.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Kudzokera kumashure uchishandisa {sourceName}. Simbisa nguva dzeminamato yemunharaunda nemosque yako kana vechitendero chepamutemo."
 }

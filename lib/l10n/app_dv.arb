@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} މެތޯޑް އާއި އެކު ޔޫޒަރ ސެލެކްޓް {madhab} Asr ސެޓިންގ",
-  "quranAudioPlaybackErrorWithConnectionHint": "އޯޑިއޯ ޕްލޭބެކް ފެއިލްވެއްޖެއެވެ. ކަނެކްޝަން ޗެކް ކުރައްވާށެވެ."
+  "quranAudioPlaybackErrorWithConnectionHint": "އޯޑިއޯ ޕްލޭބެކް ފެއިލްވެއްޖެއެވެ. ކަނެކްޝަން ޗެކް ކުރައްވާށެވެ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ބޭނުންކޮށްގެން ރީޖަނަލް ފޯލްބެކް. ލޯކަލް ނަމާދު ވަގުތުތައް ތިމާގެ މިސްކިތާ ނުވަތަ ރަސްމީ ދީނީ އިދާރާއާއެކު ކަށަވަރުކުރުން."
 }

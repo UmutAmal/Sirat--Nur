@@ -876,6 +876,11 @@ class AppLocalizationsSv extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional reserv med $sourceName. Bekräfta lokala bönetider med din moské eller officiella religiösa myndighet.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Molndrivet';
 
   @override

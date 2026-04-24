@@ -875,6 +875,11 @@ class AppLocalizationsSd extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'علائقائي فال بيڪ استعمال ڪندي $sourceName. توهان جي مسجد يا سرڪاري مذهبي اختيار سان مقامي نماز جي وقت جي تصديق ڪريو.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

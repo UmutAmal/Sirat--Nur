@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metodo kun {madhab} Asr-agordo elektita de uzanto",
-  "quranAudioPlaybackErrorWithConnectionHint": "Sona reproduktado malsukcesis. Bonvolu kontroli vian konekton."
+  "quranAudioPlaybackErrorWithConnectionHint": "Sona reproduktado malsukcesis. Bonvolu kontroli vian konekton.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regiona repliko uzante {sourceName}. Konfirmu lokajn preĝtempojn kun via moskeo aŭ oficiala religia aŭtoritato."
 }

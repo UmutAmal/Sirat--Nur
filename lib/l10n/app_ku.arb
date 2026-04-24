@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} rêbaza ku ji hêla bikarhêner ve hatî hilbijartin {madhab} Mîhenga Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Lîstika deng bi ser neket. Ji kerema xwe pêwendiya xwe kontrol bikin."
+  "quranAudioPlaybackErrorWithConnectionHint": "Lîstika deng bi ser neket. Ji kerema xwe pêwendiya xwe kontrol bikin.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Vegera herêmî ya {sourceName} bikar tîne. Demên nimêja herêmî bi mizgefta xwe an desthilatdariya olî ya fermî piştrast bikin."
 }

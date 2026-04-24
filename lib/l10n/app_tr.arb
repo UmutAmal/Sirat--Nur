@@ -378,6 +378,14 @@
       }
     }
   },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ile bölgesel fallback. Namaz vakitlerini yerel caminiz veya resmi dini kurumla doğrulayın.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
   "diagnosticsCloudDriven": "Bulut Tabanlı",
   "diagnosticsAdhanAudioAssets": "Ezan Ses Varlıkları",
   "diagnosticsUiAudioAssets": "Arayüz Ses Varlıkları",

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "ئىشلەتكۈچى تاللىغان {sourceName} ئۇسۇلى {madhab} Asr تەڭشىكى",
-  "quranAudioPlaybackErrorWithConnectionHint": "ئاۋاز قويۇش مەغلۇب بولدى. ئۇلىنىشىڭىزنى تەكشۈرۈپ بېقىڭ."
+  "quranAudioPlaybackErrorWithConnectionHint": "ئاۋاز قويۇش مەغلۇب بولدى. ئۇلىنىشىڭىزنى تەكشۈرۈپ بېقىڭ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} نى ئىشلىتىپ رايون خاراكتېرلىك چېكىنىش. مەسچىت ياكى رەسمىي دىنىي ھوقۇقىڭىز بىلەن يەرلىك دۇئا ۋاقتىنى جەزملەشتۈرۈڭ."
 }

@@ -885,6 +885,11 @@ class AppLocalizationsIlo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Rehional a panagsubli babaen ti panagusar ti $sourceName. Pasingkedan dagiti lokal nga oras ti panagkararag iti moske wenno opisial a narelihiosuan nga autoridadmo.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

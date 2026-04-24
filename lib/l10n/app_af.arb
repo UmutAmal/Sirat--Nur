@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metode met gebruiker-geselekteerde {madhab} Asr-instelling",
-  "quranAudioPlaybackErrorWithConnectionHint": "Oudioterugspeel het misluk. Gaan asseblief jou verbinding na."
+  "quranAudioPlaybackErrorWithConnectionHint": "Oudioterugspeel het misluk. Gaan asseblief jou verbinding na.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Streeksterugval deur {sourceName} te gebruik. Bevestig plaaslike gebedstye met jou moskee of amptelike godsdienstige owerheid."
 }

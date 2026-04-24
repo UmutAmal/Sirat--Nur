@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metoade mei brûker selekteare {madhab} Asr ynstelling",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio ôfspieljen mislearre. Kontrolearje asjebleaft jo ferbining."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio ôfspieljen mislearre. Kontrolearje asjebleaft jo ferbining.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback mei {sourceName}. Befêstigje lokale gebedstiden mei jo moskee as offisjele religieuze autoriteit."
 }

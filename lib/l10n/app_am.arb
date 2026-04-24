@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ዘዴ በተጠቃሚ የተመረጠ {madhab} አስር ቅንብር",
-  "quranAudioPlaybackErrorWithConnectionHint": "የድምጽ መልሶ ማጫወት አልተሳካም። እባክዎ ግንኙነትዎን ያረጋግጡ።"
+  "quranAudioPlaybackErrorWithConnectionHint": "የድምጽ መልሶ ማጫወት አልተሳካም። እባክዎ ግንኙነትዎን ያረጋግጡ።",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} በመጠቀም የክልል ውድቀት። ከመስጊድዎ ወይም ከኦፊሴላዊው የሃይማኖት ባለስልጣን ጋር የአካባቢውን የጸሎት ጊዜያት ያረጋግጡ።"
 }

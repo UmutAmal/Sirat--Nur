@@ -880,6 +880,11 @@ class AppLocalizationsSo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Dib u dhaca gobolka iyadoo la adeegsanayo $sourceName. Ku xaqiiji wakhtiyada salaadda deegaanka masjidkaaga ama maamulka diinta ee rasmiga ah.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Daruuruhu wadey';
 
   @override

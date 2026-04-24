@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "ວິທີການ {sourceName} ດ້ວຍການຕັ້ງຄ່າ {madhab} Asr ທີ່ເລືອກໂດຍຜູ້ໃຊ້",
-  "quranAudioPlaybackErrorWithConnectionHint": "ການຫຼິ້ນສຽງລົ້ມເຫລວ. ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ຂອງທ່ານ."
+  "quranAudioPlaybackErrorWithConnectionHint": "ການຫຼິ້ນສຽງລົ້ມເຫລວ. ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ຂອງທ່ານ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "ທາງເລືອກໃນພາກພື້ນໂດຍໃຊ້ {sourceName}. ຢືນຢັນເວລາອະທິຖານໃນທ້ອງຖິ່ນກັບ mosque ຫຼືອໍານາດທາງສາສະຫນາຂອງເຈົ້າ."
 }

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "具有使用者選擇的 {madhab} Asr 設定的 {sourceName} 方法",
-  "quranAudioPlaybackErrorWithConnectionHint": "音頻播放失敗。請檢查您的連線。"
+  "quranAudioPlaybackErrorWithConnectionHint": "音頻播放失敗。請檢查您的連線。",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "使用 {sourceName} 進行區域後備。與您的清真寺或官方宗教權威確認當地的祈禱時間。"
 }

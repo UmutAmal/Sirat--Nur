@@ -17850,3 +17850,38 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan city/profile coverage, regional fallback honesty, runtime smoke ve kalan silent catch/l10n yuzeylerini yeni turda tara.
+
+## 2026-04-24 TUR-431 - Regional Prayer Fallbacks Are No Longer Shown As Local Official Authority
+
+### MASTER Karari
+- Risk: Kanitli yerel resmi profil olmayan ulke/bolge kombinasyonlarinda sistem MWL gibi genel fallback kullaniyordu, fakat Settings/Diagnostics bunu "Prayer Authority" altinda fazla kesin gosterebiliyordu.
+- Kanit:
+  - `resolvePrayerProfile(countryCode: 'DE', timezone: 'Europe/Berlin')` genel MWL profiline dusuyordu.
+  - `hasOfficialPrayerAuthority` yalniz method/custom/sourceUrl/override kontrolu yaptigi icin fallback profil ile user-selected institution profili arasinda fark yoktu.
+  - Settings ve Diagnostics `profileForMethod(settings.calculationMethod, madhab: settings.madhab)` kullandigi icin konumdan gelen fallback baglamini kaybediyordu.
+- Kullanici etkisi: Yerel dini kurum tarafindan dogrulanmamis bir hesap profili resmi/yerel kesinlik gibi algilanabilir; dini hassasiyeti yuksek namaz vakti akisi icin bu yaniltici olur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: `prayer_profile_service.dart`, Settings/Diagnostics UI dosyalari, yeni l10n anahtari ve ilgili testler bu committen geri alinabilir.
+
+### BUILDER Degisikligi
+- `PrayerCalculationProfile` icine `isRegionalFallback` eklendi.
+- MWL Shafii/Hanafi/Maliki regional fallback profilleri ayrildi; DZ/TN, BD/AF, BA/UZ/AZ ve bilinmeyen ulke/timezone fallback'leri official sayilmayan profile donuyor.
+- `hasOfficialPrayerAuthority` regional fallback icin `false` donduruyor; `hasInstitutionalPrayerMethodSource` kaynak linkini koruyor.
+- `resolveActivePrayerProfile` eklendi; Settings/Diagnostics artik konumdan gelen fallback baglamini kaybetmeden aktif profili cozumleyebiliyor.
+- `diagnosticsPrayerRegionalFallbackSource` l10n anahtari eklendi: kullaniciya "bolgesel fallback, yerel cami/resmi dini kurum ile dogrula" mesaji gosteriliyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\prayer_profile_service_test.dart test\features\settings\settings_page_test.dart test\features\settings\diagnostics_page_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS.
+- L10n raporu: `dart run tool\translate_arb_keys.dart --report diagnosticsPrayerRegionalFallbackSource` -> missing/empty `0`, placeholder mismatch `0`, same-as-English `53`.
+- Not: 53 dusuk-kaynak locale icin sahte ceviri yazilmadi; EN fallback AGENTS kuralina uygun olarak korundu.
+- `flutter analyze`: PASS, no issues.
+- `flutter test --reporter compact`: PASS, 667/667.
+- `tool/check_store_readiness.ps1`: PASS; Supabase public content/source checks, Quran audio mirror checks, analyze ve full test dahil store-ready kapisi yesil.
+- Secret diff scan: PASS; diff icinde Supabase DB URI, publishable/service token, password veya private key paterni yok.
+
+### Risk Degisimi
+- Regional fallback'in local official authority gibi gorunme riski: `16/25 -> 2/25`.
+- Kalan risk: Bahrain/Oman/Iraq/Jordan/Syria/Palestine gibi ulkeler icin resmi hesaplama metodu kodlanmadan once guvenilir resmi kaynak ve parametre kaniti gerekecek; uydurma resmi profil eklenmeyecek.
+
+### Sonraki Adim
+- Commit/push; ardindan Appium live runtime, silent catch/error visibility ve kalan l10n/content correctness taramasina devam et.

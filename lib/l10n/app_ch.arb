@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ti siña ma'usa i audio. På'go, chek i koneksion-mu."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ti siña ma'usa i audio. På'go, chek i koneksion-mu.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback ni' ma'usa {sourceName}. Na'siguru na i tiempon tinayuyot gi i gima'yu'os-mu pat i ofisiåt na ahensian rilihoso."
 }

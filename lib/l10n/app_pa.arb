@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ਵਿਧੀ ਉਪਭੋਗਤਾ ਦੁਆਰਾ ਚੁਣੀ ਗਈ {madhab} Asr ਸੈਟਿੰਗ ਨਾਲ",
-  "quranAudioPlaybackErrorWithConnectionHint": "ਆਡੀਓ ਪਲੇਬੈਕ ਅਸਫਲ ਰਿਹਾ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+  "quranAudioPlaybackErrorWithConnectionHint": "ਆਡੀਓ ਪਲੇਬੈਕ ਅਸਫਲ ਰਿਹਾ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਖੇਤਰੀ ਫਾਲਬੈਕ। ਆਪਣੀ ਮਸਜਿਦ ਜਾਂ ਅਧਿਕਾਰਤ ਧਾਰਮਿਕ ਅਥਾਰਟੀ ਨਾਲ ਸਥਾਨਕ ਪ੍ਰਾਰਥਨਾ ਦੇ ਸਮੇਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।"
 }

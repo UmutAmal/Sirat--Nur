@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Ulanyjy tarapyndan saýlanan {sourceName} usuly {madhab} Asr sazlamasy",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ses görkezmek şowsuz. Baglanyşygyňyzy barlaň."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ses görkezmek şowsuz. Baglanyşygyňyzy barlaň.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ulanyp sebitleýin yza gaýtma. Doga wagtyňyzy metjidiňiz ýa-da resmi dini ygtyýaryňyz bilen tassyklaň."
 }

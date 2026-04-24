@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metoda sa {madhab} postavkom Asr koju je izabrao korisnik",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio reprodukcija nije uspjela. Provjerite svoju vezu."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio reprodukcija nije uspjela. Provjerite svoju vezu.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionalna rezerva koristeći {sourceName}. Potvrdite lokalno vrijeme namaza kod svoje džamije ili službene vjerske vlasti."
 }

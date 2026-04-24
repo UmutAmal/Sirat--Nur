@@ -866,6 +866,11 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName을 사용하는 지역 대체. 모스크나 공식 종교 당국에 현지 기도 시간을 확인하세요.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => '클라우드 기반';
 
   @override

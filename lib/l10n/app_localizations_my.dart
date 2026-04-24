@@ -886,6 +886,11 @@ class AppLocalizationsMy extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ကို အသုံးပြု၍ ဒေသဆိုင်ရာ တုန့်ပြန်မှု။ သင်၏ဗလီ သို့မဟုတ် တရားဝင်ဘာသာရေးအာဏာပိုင်ဖြင့် ဒေသန္တရဆုတောင်းချိန်များကို အတည်ပြုပါ။';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

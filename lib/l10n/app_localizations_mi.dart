@@ -881,6 +881,11 @@ class AppLocalizationsMi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Whakahoki a rohe ma te whakamahi $sourceName. Whakapumautia nga wa karakia o to rohe me to whare whare karakia me to mana whakahaere whakapono.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Kapua Peia';
 
   @override

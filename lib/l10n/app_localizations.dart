@@ -2074,6 +2074,12 @@ abstract class AppLocalizations {
   /// **'{sourceName} method with user-selected {madhab} Asr setting'**
   String diagnosticsPrayerHybridSource(String sourceName, String madhab);
 
+  /// No description provided for @diagnosticsPrayerRegionalFallbackSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.'**
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName);
+
   /// No description provided for @diagnosticsCloudDriven.
   ///
   /// In en, this message translates to:

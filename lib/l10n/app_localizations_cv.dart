@@ -875,6 +875,11 @@ class AppLocalizationsCv extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName усӑ курса регионти каялла тавӑрасси. Вырӑнти кӗлӗ вӑхӑчӗсене хӑвӑрӑн мечӗтпе е официаллӑ тӗн органӗпе ҫирӗплетӗр.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

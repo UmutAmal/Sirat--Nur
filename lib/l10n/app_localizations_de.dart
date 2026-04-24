@@ -883,6 +883,11 @@ class AppLocalizationsDe extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionaler Fallback mit $sourceName. Bestätigen Sie die örtlichen Gebetszeiten mit Ihrer Moschee oder offiziellen religiösen Autorität.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud-gesteuert';
 
   @override

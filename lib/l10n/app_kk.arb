@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} әдісі, пайдаланушы таңдаған {madhab} Аср параметрі",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио ойнату сәтсіз аяқталды. Байланысты тексеріңіз."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио ойнату сәтсіз аяқталды. Байланысты тексеріңіз.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} арқылы аймақтық қалпына келтіру. Жергілікті намаз уақытын мешітіңізбен немесе ресми діни мекемемен растаңыз."
 }

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "วิธีการ {sourceName} ที่ผู้ใช้เลือก {madhab} การตั้งค่า Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "การเล่นเสียงล้มเหลว กรุณาตรวจสอบการเชื่อมต่อของคุณ"
+  "quranAudioPlaybackErrorWithConnectionHint": "การเล่นเสียงล้มเหลว กรุณาตรวจสอบการเชื่อมต่อของคุณ",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "ทางเลือกระดับภูมิภาคโดยใช้ {sourceName} ยืนยันเวลาละหมาดในท้องถิ่นกับมัสยิดหรือหน่วยงานทางศาสนาอย่างเป็นทางการ"
 }

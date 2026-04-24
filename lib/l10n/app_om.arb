@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} mala fayyadamaan filate waliin {madhab} qindaa'ina Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Taphachuun sagalee hin milkoofne. Mee connection keessan ilaalaa."
+  "quranAudioPlaybackErrorWithConnectionHint": "Taphachuun sagalee hin milkoofne. Mee connection keessan ilaalaa.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Kufaatii naannoo {sourceName} fayyadamuun. Yeroo salaataa naannoo keessanii masjiida keessanii ykn abbaa taayitaa amantii ofiisaa waliin mirkaneessaa."
 }

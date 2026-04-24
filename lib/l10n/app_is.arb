@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} aðferð með notandavöldum {madhab} Asr stillingu",
-  "quranAudioPlaybackErrorWithConnectionHint": "Hljóðspilun mistókst. Vinsamlegast athugaðu tenginguna þína."
+  "quranAudioPlaybackErrorWithConnectionHint": "Hljóðspilun mistókst. Vinsamlegast athugaðu tenginguna þína.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Svæðisbundin varahlutur með því að nota {sourceName}. Staðfestu staðbundna bænatíma með mosku þinni eða opinberu trúarlegu yfirvaldi."
 }

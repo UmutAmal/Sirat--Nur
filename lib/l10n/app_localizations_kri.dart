@@ -876,6 +876,11 @@ class AppLocalizationsKri extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Rijinal fɔlbak we de yuz $sourceName. Kɔnfɛm lokal prea tɛm wit yu moskɛt ɔ ɔfishal rilijɔn ɔtoriti.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Klaud Drayv';
 
   @override

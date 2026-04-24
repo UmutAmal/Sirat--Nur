@@ -879,6 +879,11 @@ class AppLocalizationsSl extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionalna nadomestna uporaba $sourceName. Potrdite lokalni čas molitve pri svoji mošeji ali uradni verski oblasti.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Poganja oblak';
 
   @override

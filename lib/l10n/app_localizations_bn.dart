@@ -878,6 +878,11 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ব্যবহার করে আঞ্চলিক ফলব্যাক। আপনার মসজিদ বা সরকারী ধর্মীয় কর্তৃপক্ষের সাথে স্থানীয় প্রার্থনার সময়গুলি নিশ্চিত করুন।';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'মেঘ চালিত';
 
   @override

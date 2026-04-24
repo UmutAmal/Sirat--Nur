@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} метад з абранай карыстальнікам наладай {madhab} Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Памылка прайгравання аўдыя. Праверце падключэнне."
+  "quranAudioPlaybackErrorWithConnectionHint": "Памылка прайгравання аўдыя. Праверце падключэнне.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Рэгіянальны рэзервовы варыянт з выкарыстаннем {sourceName}. Пацвердзіце мясцовы час малітвы ў вашай мячэці або афіцыйным рэлігійным органам."
 }

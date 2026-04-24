@@ -883,6 +883,11 @@ class AppLocalizationsOr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ବ୍ୟବହାର କରି ଆଞ୍ଚଳିକ ପତନ | ଆପଣଙ୍କର ମସଜିଦ କିମ୍ବା ସରକାରୀ ଧାର୍ମିକ ପ୍ରାଧିକରଣ ସହିତ ସ୍ଥାନୀୟ ପ୍ରାର୍ଥନା ସମୟ ନିଶ୍ଚିତ କରନ୍ତୁ |';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'କ୍ଲାଉଡ୍ ଚାଳିତ |';
 
   @override

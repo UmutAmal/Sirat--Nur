@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "E sega ni rawa na vakatagitaki ni rorogo. Kerekere mo raica na nomu veitaratara."
+  "quranAudioPlaybackErrorWithConnectionHint": "E sega ni rawa na vakatagitaki ni rorogo. Kerekere mo raica na nomu veitaratara.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority."
 }

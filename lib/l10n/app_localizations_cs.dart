@@ -878,6 +878,11 @@ class AppLocalizationsCs extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionální záložní pomocí $sourceName. Potvrďte místní modlitební časy u své mešity nebo oficiální náboženské autority.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

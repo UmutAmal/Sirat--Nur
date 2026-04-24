@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} methodus cum user delectis {madhab} Asr occasum",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio playback fallit. Quaeso nexum reprehendo tuum."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio playback fallit. Quaeso nexum reprehendo tuum.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Fallacium regionale utens {sourceName}. Confirma orationem localem temporibus tuis meschitis vel auctoritate religiosa officiali."
 }

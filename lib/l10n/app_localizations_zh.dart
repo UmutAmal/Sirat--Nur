@@ -858,6 +858,11 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '使用 $sourceName 进行区域后备。与您的清真寺或官方宗教权威确认当地的祈祷时间。';
+  }
+
+  @override
   String get diagnosticsCloudDriven => '云驱动';
 
   @override
@@ -2514,6 +2519,11 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '使用 $sourceName 进行区域后备。与您的清真寺或官方宗教权威确认当地的祈祷时间。';
+  }
+
+  @override
   String get diagnosticsCloudDriven => '云驱动';
 
   @override
@@ -4167,6 +4177,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
     return '具有使用者選擇的 $madhab Asr 設定的 $sourceName 方法';
+  }
+
+  @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '使用 $sourceName 進行區域後備。與您的清真寺或官方宗教權威確認當地的祈禱時間。';
   }
 
   @override

@@ -883,6 +883,11 @@ class AppLocalizationsCeb extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Rehiyonal nga fallback gamit ang $sourceName. Kumpirma ang lokal nga mga oras sa pag-ampo uban sa imong mosque o opisyal nga awtoridad sa relihiyon.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

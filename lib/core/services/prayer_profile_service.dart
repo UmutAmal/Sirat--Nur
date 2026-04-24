@@ -6,6 +6,7 @@ class PrayerCalculationProfile {
   final String sourceName;
   final String sourceUrl;
   final bool hasUserMadhabOverride;
+  final bool isRegionalFallback;
 
   const PrayerCalculationProfile({
     required this.calculationMethod,
@@ -13,6 +14,7 @@ class PrayerCalculationProfile {
     required this.sourceName,
     required this.sourceUrl,
     this.hasUserMadhabOverride = false,
+    this.isRegionalFallback = false,
   });
 
   PrayerCalculationProfile withMadhab(String? madhab) {
@@ -31,6 +33,7 @@ class PrayerCalculationProfile {
       sourceName: sourceName,
       sourceUrl: sourceUrl,
       hasUserMadhabOverride: true,
+      isRegionalFallback: isRegionalFallback,
     );
   }
 }
@@ -187,6 +190,33 @@ const PrayerCalculationProfile _mwlHanbaliProfile = PrayerCalculationProfile(
   sourceUrl: 'https://www.mwl.net/en',
 );
 
+const PrayerCalculationProfile _mwlShafiiRegionalFallbackProfile =
+    PrayerCalculationProfile(
+      calculationMethod: mwlPrayerMethod,
+      madhab: shafiiMadhab,
+      sourceName: 'Muslim World League',
+      sourceUrl: 'https://www.mwl.net/en',
+      isRegionalFallback: true,
+    );
+
+const PrayerCalculationProfile _mwlHanafiRegionalFallbackProfile =
+    PrayerCalculationProfile(
+      calculationMethod: mwlPrayerMethod,
+      madhab: hanafiMadhab,
+      sourceName: 'Muslim World League',
+      sourceUrl: 'https://www.mwl.net/en',
+      isRegionalFallback: true,
+    );
+
+const PrayerCalculationProfile _mwlMalikiRegionalFallbackProfile =
+    PrayerCalculationProfile(
+      calculationMethod: mwlPrayerMethod,
+      madhab: malikiMadhab,
+      sourceName: 'Muslim World League',
+      sourceUrl: 'https://www.mwl.net/en',
+      isRegionalFallback: true,
+    );
+
 const PrayerCalculationProfile _moroccoProfile = PrayerCalculationProfile(
   calculationMethod: moroccoPrayerMethod,
   madhab: malikiMadhab,
@@ -210,10 +240,10 @@ const PrayerCalculationProfile _customProfile = PrayerCalculationProfile(
 
 const Map<String, PrayerCalculationProfile> _timezoneProfileFallbacks =
     <String, PrayerCalculationProfile>{
-      'Africa/Algiers': _mwlMalikiProfile,
       'Africa/Cairo': _egyptianProfile,
       'Africa/Casablanca': _moroccoProfile,
-      'Africa/Tunis': _mwlMalikiProfile,
+      'Africa/Algiers': _mwlMalikiRegionalFallbackProfile,
+      'Africa/Tunis': _mwlMalikiRegionalFallbackProfile,
       'America/Adak': _isnaProfile,
       'America/Anchorage': _isnaProfile,
       'America/Atikokan': _isnaProfile,
@@ -268,11 +298,11 @@ const Map<String, PrayerCalculationProfile> _timezoneProfileFallbacks =
       'America/Winnipeg': _isnaProfile,
       'America/Yakutat': _isnaProfile,
       'America/Yellowknife': _isnaProfile,
-      'Asia/Dhaka': _mwlHanafiProfile,
+      'Asia/Dhaka': _mwlHanafiRegionalFallbackProfile,
       'Asia/Dubai': _dubaiProfile,
       'Asia/Jakarta': _kemenagProfile,
       'Asia/Jayapura': _kemenagProfile,
-      'Asia/Kabul': _mwlHanafiProfile,
+      'Asia/Kabul': _mwlHanafiRegionalFallbackProfile,
       'Asia/Karachi': _karachiProfile,
       'Asia/Kuala_Lumpur': _jakimProfile,
       'Asia/Kuching': _jakimProfile,
@@ -363,7 +393,8 @@ String displayMadhabLabel(String madhab) {
 }
 
 bool hasOfficialPrayerAuthority(PrayerCalculationProfile profile) {
-  return normalizeCalculationMethod(profile.calculationMethod) !=
+  return !profile.isRegionalFallback &&
+      normalizeCalculationMethod(profile.calculationMethod) !=
           customPrayerMethod &&
       profile.sourceUrl.trim().isNotEmpty &&
       !profile.hasUserMadhabOverride;
@@ -427,6 +458,29 @@ PrayerCalculationProfile profileForMethod(String method, {String? madhab}) {
   }
 }
 
+PrayerCalculationProfile resolveActivePrayerProfile({
+  required String calculationMethod,
+  required String madhab,
+  String? countryCode,
+  String? timezone,
+}) {
+  final selectedProfile = profileForMethod(calculationMethod, madhab: madhab);
+  final locationProfile = resolvePrayerProfile(
+    countryCode: countryCode,
+    timezone: timezone,
+  );
+
+  if (locationProfile.isRegionalFallback &&
+      normalizeCalculationMethod(locationProfile.calculationMethod) ==
+          normalizeCalculationMethod(selectedProfile.calculationMethod) &&
+      normalizeMadhab(locationProfile.madhab) ==
+          normalizeMadhab(selectedProfile.madhab)) {
+    return locationProfile;
+  }
+
+  return selectedProfile;
+}
+
 PrayerCalculationProfile resolvePrayerProfile({
   String? countryCode,
   String? timezone,
@@ -455,12 +509,12 @@ PrayerCalculationProfile resolvePrayerProfile({
       return _moroccoProfile;
     case 'DZ':
     case 'TN':
-      return _mwlMalikiProfile;
+      return _mwlMalikiRegionalFallbackProfile;
     case 'PK':
       return _karachiProfile;
     case 'BD':
     case 'AF':
-      return _mwlHanafiProfile;
+      return _mwlHanafiRegionalFallbackProfile;
     case 'IR':
       return _tehranProfile;
     case 'US':
@@ -469,17 +523,18 @@ PrayerCalculationProfile resolvePrayerProfile({
     case 'BA':
     case 'UZ':
     case 'AZ':
-      return _mwlHanafiProfile;
+      return _mwlHanafiRegionalFallbackProfile;
     default:
       break;
   }
 
   final normalizedTimezone = timezone?.trim();
   if (normalizedTimezone == null || normalizedTimezone.isEmpty) {
-    return _mwlShafiiProfile;
+    return _mwlShafiiRegionalFallbackProfile;
   }
 
-  return _timezoneProfileFallbacks[normalizedTimezone] ?? _mwlShafiiProfile;
+  return _timezoneProfileFallbacks[normalizedTimezone] ??
+      _mwlShafiiRegionalFallbackProfile;
 }
 
 CalculationParameters buildCalculationParameters(

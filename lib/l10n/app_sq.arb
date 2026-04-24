@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Metoda {sourceName} me cilësimin e asr {madhab} të zgjedhur nga përdoruesi",
-  "quranAudioPlaybackErrorWithConnectionHint": "Riprodhimi i audios dështoi. Ju lutemi kontrolloni lidhjen tuaj."
+  "quranAudioPlaybackErrorWithConnectionHint": "Riprodhimi i audios dështoi. Ju lutemi kontrolloni lidhjen tuaj.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Rikthim rajonal duke përdorur {sourceName}. Konfirmoni kohën lokale të lutjes me xhaminë tuaj ose autoritetin zyrtar fetar."
 }

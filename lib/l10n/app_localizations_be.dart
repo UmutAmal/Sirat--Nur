@@ -882,6 +882,11 @@ class AppLocalizationsBe extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Рэгіянальны рэзервовы варыянт з выкарыстаннем $sourceName. Пацвердзіце мясцовы час малітвы ў вашай мячэці або афіцыйным рэлігійным органам.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Кіраваны воблакам';
 
   @override

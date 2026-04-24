@@ -878,6 +878,11 @@ class AppLocalizationsEt extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Piirkondlik varu, kasutades $sourceName. Kinnitage kohalikud palveajad oma mošee või ametliku usuasutusega.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Pilvepõhine';
 
   @override

@@ -879,6 +879,11 @@ class AppLocalizationsLb extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional Réckfall mat $sourceName. Bestätegt lokal Gebiedszäite mat Ärer Moschee oder offiziell reliéiser Autoritéit.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud gefuer';
 
   @override

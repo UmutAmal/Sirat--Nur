@@ -880,6 +880,11 @@ class AppLocalizationsCo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Fallback regiunale usendu $sourceName. Cunfirmà i tempi di preghiera lucali cù a vostra moschea o l\'autorità religiosa ufficiale.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

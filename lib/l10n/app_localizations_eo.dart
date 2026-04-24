@@ -878,6 +878,11 @@ class AppLocalizationsEo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regiona repliko uzante $sourceName. Konfirmu lokajn preĝtempojn kun via moskeo aŭ oficiala religia aŭtoritato.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Nubo Stirita';
 
   @override

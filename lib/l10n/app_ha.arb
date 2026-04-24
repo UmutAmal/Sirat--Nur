@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "An kasa sake kunna sautin. Da fatan za a duba haɗin ku."
+  "quranAudioPlaybackErrorWithConnectionHint": "An kasa sake kunna sautin. Da fatan za a duba haɗin ku.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Komawar yanki ta amfani da {sourceName}. Tabbatar da lokutan sallar gida tare da masallacin ku ko ikon addini na hukuma."
 }

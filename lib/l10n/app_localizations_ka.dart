@@ -879,6 +879,11 @@ class AppLocalizationsKa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'რეგიონალური სარეზერვო $sourceName-ის გამოყენებით. დაადასტურეთ ადგილობრივი ლოცვის დრო თქვენს მეჩეთთან ან ოფიციალურ რელიგიურ ხელისუფლებასთან.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ღრუბლოვანი';
 
   @override

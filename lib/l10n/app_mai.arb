@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} विधि उपयोगकर्ता-चयनित {madhab} Asr सेटिंग के साथ",
-  "quranAudioPlaybackErrorWithConnectionHint": "ऑडियो प्लेबैक विफल भ गेल। कृपया अपन कनेक्शन देखू।"
+  "quranAudioPlaybackErrorWithConnectionHint": "ऑडियो प्लेबैक विफल भ गेल। कृपया अपन कनेक्शन देखू।",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} क उपयोग कए क्षेत्रीय फॉलबैक. स्थानीय नमाज के समय के पुष्टि अपन मस्जिद या आधिकारिक धार्मिक प्राधिकारी के संग करू।"
 }

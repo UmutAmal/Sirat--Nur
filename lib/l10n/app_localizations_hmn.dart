@@ -879,6 +879,11 @@ class AppLocalizationsHmn extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Kev poob qis hauv cheeb tsam siv $sourceName. Txheeb xyuas lub sijhawm thov Vajtswv hauv zos nrog koj lub tsev teev ntuj lossis txoj cai kev cai dab qhuas.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Huab Tsav';
 
   @override

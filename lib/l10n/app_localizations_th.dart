@@ -876,6 +876,11 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'ทางเลือกระดับภูมิภาคโดยใช้ $sourceName ยืนยันเวลาละหมาดในท้องถิ่นกับมัสยิดหรือหน่วยงานทางศาสนาอย่างเป็นทางการ';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ขับเคลื่อนด้วยคลาวด์';
 
   @override

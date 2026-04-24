@@ -877,6 +877,11 @@ class AppLocalizationsFa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'بازگشت منطقه ای با استفاده از $sourceName. اوقات نماز محلی را با مسجد یا مرجع رسمی مذهبی خود تأیید کنید.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ابر رانده';
 
   @override

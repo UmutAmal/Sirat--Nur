@@ -885,6 +885,11 @@ class AppLocalizationsOm extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Kufaatii naannoo $sourceName fayyadamuun. Yeroo salaataa naannoo keessanii masjiida keessanii ykn abbaa taayitaa amantii ofiisaa waliin mirkaneessaa.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Duumeessa Kan Oofamu';
 
   @override

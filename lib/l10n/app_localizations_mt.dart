@@ -882,6 +882,11 @@ class AppLocalizationsMt extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Riżerva reġjonali bl-użu ta\' $sourceName. Ikkonferma l-ħinijiet tat-talb lokali mal-moskea jew l-awtorità reliġjuża uffiċjali tiegħek.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Sħab Immexxi';
 
   @override

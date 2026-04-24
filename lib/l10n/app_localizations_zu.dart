@@ -881,6 +881,11 @@ class AppLocalizationsZu extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Ukubuyela emuva kwesifunda usebenzisa $sourceName. Qinisekisa izikhathi zomkhuleko wasendaweni nge-mosque yakho noma isiphathimandla sezenkolo esisemthethweni.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Iqhutshwa ngamafu';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "La lectura de l'àudio a fracassat. Verificatz vòstra connexion."
+  "quranAudioPlaybackErrorWithConnectionHint": "La lectura de l'àudio a fracassat. Verificatz vòstra connexion.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Resultat regional en utilizant {sourceName}. Confirmatz los oraris de pregària locals amb vòstra mosquèa o autoritat religiosa oficiala."
 }

@@ -73,6 +73,30 @@ void main() {
     expect(find.byIcon(Icons.open_in_new_rounded), findsNothing);
   });
 
+  testWidgets('SettingsPage labels regional prayer fallbacks honestly', (
+    tester,
+  ) async {
+    await pumpSettingsPage(
+      tester,
+      prefsValues: const {
+        'calculationMethod': mwlPrayerMethod,
+        'madhab': shafiiMadhab,
+        'latitude': 52.5200,
+        'longitude': 13.4050,
+        'locationName': 'Berlin, Germany',
+        'countryCode': 'DE',
+        'timezone': 'Europe/Berlin',
+      },
+    );
+
+    expect(find.text('Prayer Authority'), findsOneWidget);
+    expect(
+      find.textContaining('Regional fallback using Muslim World League'),
+      findsOneWidget,
+    );
+    expect(find.textContaining('user-selected'), findsNothing);
+  });
+
   testWidgets(
     'SettingsPage does not mark madhab overrides as full official authority',
     (tester) async {

@@ -876,6 +876,11 @@ class AppLocalizationsHt extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Repiblik rejyonal lè l sèvi avèk $sourceName. Konfime lè lapriyè lokal yo ak moske w oswa otorite relijye ofisyèl ou.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

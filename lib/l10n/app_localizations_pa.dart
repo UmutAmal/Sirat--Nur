@@ -877,6 +877,11 @@ class AppLocalizationsPa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਖੇਤਰੀ ਫਾਲਬੈਕ। ਆਪਣੀ ਮਸਜਿਦ ਜਾਂ ਅਧਿਕਾਰਤ ਧਾਰਮਿਕ ਅਥਾਰਟੀ ਨਾਲ ਸਥਾਨਕ ਪ੍ਰਾਰਥਨਾ ਦੇ ਸਮੇਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ਕਲਾਊਡ ਡਰਾਈਵ';
 
   @override

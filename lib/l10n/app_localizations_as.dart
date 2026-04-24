@@ -878,6 +878,11 @@ class AppLocalizationsAs extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ব্যৱহাৰ কৰি আঞ্চলিক ফ\'লবেক। আপোনাৰ মছজিদ বা চৰকাৰী ধৰ্মীয় কৰ্তৃপক্ষৰ সৈতে স্থানীয় নামাজৰ সময় নিশ্চিত কৰক।';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ক্লাউড চালিত';
 
   @override

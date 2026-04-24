@@ -878,6 +878,11 @@ class AppLocalizationsNo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional reserve med $sourceName. Bekreft lokale bønnetider med din moske eller offisielle religiøse myndighet.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Skydrevet';
 
   @override

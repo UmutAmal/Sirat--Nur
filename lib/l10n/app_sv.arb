@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metod med användarvald {madhab} Asr-inställning",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ljuduppspelningen misslyckades. Kontrollera din anslutning."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ljuduppspelningen misslyckades. Kontrollera din anslutning.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional reserv med {sourceName}. Bekräfta lokala bönetider med din moské eller officiella religiösa myndighet."
 }

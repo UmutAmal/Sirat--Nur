@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Método {sourceName} com configuração Asr {madhab} selecionada pelo usuário",
-  "quranAudioPlaybackErrorWithConnectionHint": "A reprodução de áudio falhou. Por favor, verifique sua conexão."
+  "quranAudioPlaybackErrorWithConnectionHint": "A reprodução de áudio falhou. Por favor, verifique sua conexão.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback regional usando {sourceName}. Confirme os horários de oração locais com sua mesquita ou autoridade religiosa oficial."
 }

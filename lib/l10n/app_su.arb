@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Métode {sourceName} nganggo setélan {madhab} Asar anu dipilih ku pamaké",
-  "quranAudioPlaybackErrorWithConnectionHint": "Puteran audio gagal. Mangga parios sambungan anjeun."
+  "quranAudioPlaybackErrorWithConnectionHint": "Puteran audio gagal. Mangga parios sambungan anjeun.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback régional ngagunakeun {sourceName}. Konfirmasi waktos solat lokal sareng masjid anjeun atanapi otoritas agama resmi."
 }

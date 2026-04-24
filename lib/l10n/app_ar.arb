@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "طريقة {sourceName} مع إعداد {madhab} العصر الذي حدده المستخدم",
-  "quranAudioPlaybackErrorWithConnectionHint": "فشل تشغيل الصوت. يرجى التحقق من الاتصال الخاص بك."
+  "quranAudioPlaybackErrorWithConnectionHint": "فشل تشغيل الصوت. يرجى التحقق من الاتصال الخاص بك.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "الاحتياطي الإقليمي باستخدام {sourceName}. تأكد من أوقات الصلاة المحلية مع مسجدك أو السلطة الدينية الرسمية."
 }

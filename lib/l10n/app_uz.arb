@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} usuli, foydalanuvchi tanlagan {madhab} Asr sozlamasi",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio ijro qilinmadi. Iltimos, ulanishingizni tekshiring."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio ijro qilinmadi. Iltimos, ulanishingizni tekshiring.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} yordamida mintaqaviy qayta tiklash. Mahalliy namoz vaqtlarini masjidingiz yoki rasmiy diniy idorangiz bilan tasdiqlang."
 }

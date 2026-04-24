@@ -879,6 +879,11 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Dự phòng khu vực bằng cách sử dụng $sourceName. Xác nhận thời gian cầu nguyện tại địa phương với nhà thờ Hồi giáo hoặc cơ quan tôn giáo chính thức của bạn.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Điều khiển bằng đám mây';
 
   @override

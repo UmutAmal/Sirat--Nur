@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Jietna čuojaheapmi ii lihkostuvvan. Dárkkis du oktavuođa."
+  "quranAudioPlaybackErrorWithConnectionHint": "Jietna čuojaheapmi ii lihkostuvvan. Dárkkis du oktavuođa.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Guovllulaš čuovvumuš geavahit {sourceName}. Duođaš báikkálaš rohkosáiggiid iežat moskeijain dahje virggálaš oskkolaš eiseválddiin."
 }

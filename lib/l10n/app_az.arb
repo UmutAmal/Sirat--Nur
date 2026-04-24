@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "İstifadəçi tərəfindən seçilmiş {madhab} Əsr ayarı ilə {sourceName} metodu",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio oxutma uğursuz oldu. Bağlantınızı yoxlayın."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio oxutma uğursuz oldu. Bağlantınızı yoxlayın.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} istifadə edərək regional ehtiyat. Məscidiniz və ya rəsmi dini qurumla yerli namaz vaxtlarını təsdiqləyin."
 }

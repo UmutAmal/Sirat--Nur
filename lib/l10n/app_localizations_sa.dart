@@ -878,6 +878,11 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName इत्यस्य उपयोगेन क्षेत्रीयः फॉलबैक । स्वमस्जिदेन अथवा आधिकारिकधार्मिकप्राधिकरणेन सह स्थानीयनमाजसमयानां पुष्टिं कुर्वन्तु।';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'मेघ चालित';
 
   @override

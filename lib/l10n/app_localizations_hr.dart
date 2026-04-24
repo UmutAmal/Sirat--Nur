@@ -879,6 +879,11 @@ class AppLocalizationsHr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionalna zamjena pomoću $sourceName. Potvrdite lokalna vremena molitve kod svoje džamije ili službenog vjerskog autoriteta.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Vođen oblakom';
 
   @override

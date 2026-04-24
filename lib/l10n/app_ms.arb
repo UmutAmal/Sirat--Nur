@@ -782,5 +782,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Kaedah {sourceName} dengan tetapan Asar {madhab} yang dipilih pengguna",
-  "quranAudioPlaybackErrorWithConnectionHint": "Main balik audio gagal. Sila semak sambungan anda."
+  "quranAudioPlaybackErrorWithConnectionHint": "Main balik audio gagal. Sila semak sambungan anda.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Undur serantau menggunakan {sourceName}. Sahkan waktu solat setempat dengan masjid atau pihak berkuasa agama rasmi anda."
 }

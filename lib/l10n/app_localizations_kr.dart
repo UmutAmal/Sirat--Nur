@@ -875,6 +875,11 @@ class AppLocalizationsKr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

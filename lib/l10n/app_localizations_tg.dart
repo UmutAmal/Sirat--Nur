@@ -877,6 +877,11 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Бозгашти минтақавӣ бо истифода аз $sourceName. Вақтҳои намози маҳаллиро бо масҷиди худ ё мақомоти расмии динии худ тасдиқ кунед.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Абри рондашуда';
 
   @override

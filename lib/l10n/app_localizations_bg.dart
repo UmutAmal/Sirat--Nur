@@ -883,6 +883,11 @@ class AppLocalizationsBg extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Регионален резервен вариант с помощта на $sourceName. Потвърдете местните часове за молитва с вашата джамия или официален религиозен орган.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Облачно управление';
 
   @override

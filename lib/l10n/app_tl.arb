@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} na pamamaraan na may napiling user na {madhab} setting ng Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Nabigo ang pag-playback ng audio. Pakisuri ang iyong koneksyon."
+  "quranAudioPlaybackErrorWithConnectionHint": "Nabigo ang pag-playback ng audio. Pakisuri ang iyong koneksyon.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback gamit ang {sourceName}. Kumpirmahin ang mga lokal na oras ng pagdarasal sa iyong mosque o opisyal na awtoridad sa relihiyon."
 }

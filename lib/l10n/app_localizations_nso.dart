@@ -885,6 +885,11 @@ class AppLocalizationsNso extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Go wa morago ga selete ka go šomiša $sourceName. Netefatša dinako tša thapelo tša lefelong leo le mošate wa gago goba bolaodi bja semmušo bja bodumedi.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Leru le Kgannwago';
 
   @override

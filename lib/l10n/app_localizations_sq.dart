@@ -881,6 +881,11 @@ class AppLocalizationsSq extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Rikthim rajonal duke përdorur $sourceName. Konfirmoni kohën lokale të lutjes me xhaminë tuaj ose autoritetin zyrtar fetar.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Drejtuar nga rea';
 
   @override

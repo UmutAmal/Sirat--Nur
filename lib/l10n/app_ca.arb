@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Mètode {sourceName} amb la configuració d'ASR {madhab} seleccionada per l'usuari",
-  "quranAudioPlaybackErrorWithConnectionHint": "La reproducció d'àudio ha fallat. Comproveu la vostra connexió."
+  "quranAudioPlaybackErrorWithConnectionHint": "La reproducció d'àudio ha fallat. Comproveu la vostra connexió.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Alternativa regional mitjançant {sourceName}. Confirmeu els horaris de pregària locals amb la vostra mesquita o autoritat religiosa oficial."
 }

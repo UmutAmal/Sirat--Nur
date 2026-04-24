@@ -878,6 +878,11 @@ class AppLocalizationsBm extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Sigidaw ka kɔsegin baara kɛli ni $sourceName ye. Aw ye sigida delili waatiw dafa ni aw ka misiri walima diinɛ ɲɛmɔgɔba ye.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Sankaba bɛ boli';
 
   @override

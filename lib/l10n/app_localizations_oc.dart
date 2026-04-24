@@ -875,6 +875,11 @@ class AppLocalizationsOc extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Resultat regional en utilizant $sourceName. Confirmatz los oraris de pregària locals amb vòstra mosquèa o autoritat religiosa oficiala.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

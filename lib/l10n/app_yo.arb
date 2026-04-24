@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Ọna {sourceName} pẹlu olumulo-yan {madhab} Eto Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Sisisẹsẹhin ohun kuna. Jọwọ ṣayẹwo asopọ rẹ."
+  "quranAudioPlaybackErrorWithConnectionHint": "Sisisẹsẹhin ohun kuna. Jọwọ ṣayẹwo asopọ rẹ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Ipadabọ agbegbe ni lilo {sourceName}. Jẹrisi awọn akoko adura agbegbe pẹlu Mossalassi rẹ tabi aṣẹ ẹsin osise."
 }

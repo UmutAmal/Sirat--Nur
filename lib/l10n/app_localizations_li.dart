@@ -875,6 +875,11 @@ class AppLocalizationsLi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionale fallback met behulp vaan $sourceName. Bevestig de lokale gebedstieje mit eur moskee of officiële religieuze autoriteit.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

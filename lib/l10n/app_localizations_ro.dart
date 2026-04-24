@@ -883,6 +883,11 @@ class AppLocalizationsRo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Soluție regională folosind $sourceName. Confirmați orele locale de rugăciune cu moscheea sau autoritatea religioasă oficială.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Condus pe cloud';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} طريقو استعمال ڪندڙ جي چونڊيل {madhab} عصر سيٽنگ سان",
-  "quranAudioPlaybackErrorWithConnectionHint": "آڊيو پلے بیک ناڪام. مھرباني ڪري پنھنجو ڪنيڪشن چيڪ ڪريو."
+  "quranAudioPlaybackErrorWithConnectionHint": "آڊيو پلے بیک ناڪام. مھرباني ڪري پنھنجو ڪنيڪشن چيڪ ڪريو.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "علائقائي فال بيڪ استعمال ڪندي {sourceName}. توهان جي مسجد يا سرڪاري مذهبي اختيار سان مقامي نماز جي وقت جي تصديق ڪريو."
 }

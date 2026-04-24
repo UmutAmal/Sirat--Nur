@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} მეთოდი მომხმარებლის მიერ არჩეული {madhab} Asr პარამეტრით",
-  "quranAudioPlaybackErrorWithConnectionHint": "აუდიოს დაკვრა ვერ მოხერხდა. გთხოვთ, შეამოწმოთ თქვენი კავშირი."
+  "quranAudioPlaybackErrorWithConnectionHint": "აუდიოს დაკვრა ვერ მოხერხდა. გთხოვთ, შეამოწმოთ თქვენი კავშირი.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "რეგიონალური სარეზერვო {sourceName}-ის გამოყენებით. დაადასტურეთ ადგილობრივი ლოცვის დრო თქვენს მეჩეთთან ან ოფიციალურ რელიგიურ ხელისუფლებასთან."
 }

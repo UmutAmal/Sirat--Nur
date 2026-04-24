@@ -880,6 +880,11 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Региональный резерв с использованием $sourceName. Уточните местное время молитвы в своей мечети или официальном религиозном органе.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Облачное управление';
 
   @override

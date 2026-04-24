@@ -877,6 +877,11 @@ class AppLocalizationsUz extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName yordamida mintaqaviy qayta tiklash. Mahalliy namoz vaqtlarini masjidingiz yoki rasmiy diniy idorangiz bilan tasdiqlang.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Bulutga asoslangan';
 
   @override

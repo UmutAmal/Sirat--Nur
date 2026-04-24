@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} mokgwa wo o kgethilwego ke mosediriši {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Go bapala ga modumo go paletšwe. Hle hlahloba kgokagano ya gago."
+  "quranAudioPlaybackErrorWithConnectionHint": "Go bapala ga modumo go paletšwe. Hle hlahloba kgokagano ya gago.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Go wa morago ga selete ka go šomiša {sourceName}. Netefatša dinako tša thapelo tša lefelong leo le mošate wa gago goba bolaodi bja semmušo bja bodumedi."
 }

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио æвдыст нæ рауад. Дæ хорзæхæй, сбæрæг кæн дæ бастдзинад."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио æвдыст нæ рауад. Дæ хорзæхæй, сбæрæг кæн дæ бастдзинад.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Регионалон фæстæмæздæхт {sourceName}-йы фæрцы. Сбæлвырд кæнут бынæттон куывды рæстæг уæ мæзджыдæн кæнæ официалон дины хицауадæн."
 }

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metoda s uživatelem vybraným nastavením {madhab} Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Přehrávání zvuku se nezdařilo. Zkontrolujte prosím své připojení."
+  "quranAudioPlaybackErrorWithConnectionHint": "Přehrávání zvuku se nezdařilo. Zkontrolujte prosím své připojení.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionální záložní pomocí {sourceName}. Potvrďte místní modlitební časy u své mešity nebo oficiální náboženské autority."
 }

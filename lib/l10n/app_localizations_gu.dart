@@ -876,6 +876,11 @@ class AppLocalizationsGu extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName નો ઉપયોગ કરીને પ્રાદેશિક ફોલબેક. તમારી મસ્જિદ અથવા સત્તાવાર ધાર્મિક સત્તા સાથે સ્થાનિક પ્રાર્થના સમયની પુષ્ટિ કરો.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'મેઘ સંચાલિત';
 
   @override

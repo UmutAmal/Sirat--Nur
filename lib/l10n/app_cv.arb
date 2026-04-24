@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио янӑрама май килмерӗ. Ҫыхӑнӑва тӗрӗслӗр."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио янӑрама май килмерӗ. Ҫыхӑнӑва тӗрӗслӗр.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} усӑ курса регионти каялла тавӑрасси. Вырӑнти кӗлӗ вӑхӑчӗсене хӑвӑрӑн мечӗтпе е официаллӑ тӗн органӗпе ҫирӗплетӗр."
 }

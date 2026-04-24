@@ -883,6 +883,11 @@ class AppLocalizationsEs extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Reserva regional usando $sourceName. Confirme los horarios de oración locales con su mezquita o autoridad religiosa oficial.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Impulsado por la nube';
 
   @override

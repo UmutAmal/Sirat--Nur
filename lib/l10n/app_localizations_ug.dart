@@ -878,6 +878,11 @@ class AppLocalizationsUg extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName نى ئىشلىتىپ رايون خاراكتېرلىك چېكىنىش. مەسچىت ياكى رەسمىي دىنىي ھوقۇقىڭىز بىلەن يەرلىك دۇئا ۋاقتىنى جەزملەشتۈرۈڭ.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

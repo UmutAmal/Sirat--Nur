@@ -880,6 +880,11 @@ class AppLocalizationsNl extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionale terugval met $sourceName. Bevestig lokale gebedstijden bij uw moskee of officiële religieuze autoriteit.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloudgedreven';
 
   @override

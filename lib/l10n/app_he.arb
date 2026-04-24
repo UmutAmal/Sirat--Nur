@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "שיטת {sourceName} עם הגדרת {madhab} שנבחרה על ידי המשתמש",
-  "quranAudioPlaybackErrorWithConnectionHint": "הפעלת השמע נכשלה. אנא בדוק את החיבור שלך."
+  "quranAudioPlaybackErrorWithConnectionHint": "הפעלת השמע נכשלה. אנא בדוק את החיבור שלך.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "חזרה אזורית באמצעות {sourceName}. אשר את זמני התפילה המקומיים עם המסגד או הרשות הדתית הרשמית שלך."
 }

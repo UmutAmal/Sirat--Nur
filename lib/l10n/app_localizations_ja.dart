@@ -867,6 +867,11 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName を使用した地域フォールバック。現地の礼拝時間については、モスクまたは公式の宗教当局に確認してください。';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'クラウドドリブン';
 
   @override

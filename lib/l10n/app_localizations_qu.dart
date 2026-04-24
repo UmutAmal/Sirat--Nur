@@ -881,6 +881,11 @@ class AppLocalizationsQu extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional kutiy $sourceName llamk\'achispa. Mezquitaykiwan utaq autoridad religiosa oficialwan llaqtapi mañakuy pachakunata takyachiy.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Puyu purichisqa';
 
   @override

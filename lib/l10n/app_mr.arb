@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "वापरकर्त्याने निवडलेल्या {madhab} Asr सेटिंगसह {sourceName} पद्धत",
-  "quranAudioPlaybackErrorWithConnectionHint": "ऑडिओ प्लेबॅक अयशस्वी. कृपया तुमचे कनेक्शन तपासा."
+  "quranAudioPlaybackErrorWithConnectionHint": "ऑडिओ प्लेबॅक अयशस्वी. कृपया तुमचे कनेक्शन तपासा.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} वापरून प्रादेशिक फॉलबॅक. तुमच्या मशीद किंवा अधिकृत धार्मिक प्राधिकरणासह स्थानिक प्रार्थना वेळा निश्चित करा."
 }

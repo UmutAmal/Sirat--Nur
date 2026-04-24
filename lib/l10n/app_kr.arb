@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio waltǝm gǝnatǝdǝ teyero. Martəgəne kəltəramnəm wune."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio waltǝm gǝnatǝdǝ teyero. Martəgəne kəltəramnəm wune.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority."
 }

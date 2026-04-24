@@ -879,6 +879,11 @@ class AppLocalizationsTe extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceNameని ఉపయోగించి ప్రాంతీయ ఫాల్‌బ్యాక్. మీ మసీదు లేదా అధికారిక మతపరమైన అధికారంతో స్థానిక ప్రార్థన సమయాలను నిర్ధారించండి.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'క్లౌడ్ నడిచేది';
 
   @override

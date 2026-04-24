@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Metóda {sourceName} s používateľom vybratým nastavením {madhab} Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Prehrávanie zvuku zlyhalo. Skontrolujte svoje pripojenie."
+  "quranAudioPlaybackErrorWithConnectionHint": "Prehrávanie zvuku zlyhalo. Skontrolujte svoje pripojenie.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionálna záloha pomocou {sourceName}. Potvrďte miestne časy modlitieb vo svojej mešite alebo oficiálnej náboženskej autorite."
 }

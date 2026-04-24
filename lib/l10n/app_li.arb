@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audioafspeel is misluk. Controleer eur verbinding."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audioafspeel is misluk. Controleer eur verbinding.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback met behulp vaan {sourceName}. Bevestig de lokale gebedstieje mit eur moskee of officiële religieuze autoriteit."
 }

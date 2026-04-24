@@ -886,6 +886,11 @@ class AppLocalizationsTs extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Ku tlhelela endzhaku ka xifundzha hi ku tirhisa $sourceName. Tiyisisa minkarhi ya xikhongelo ya ndhawu na mosque ya wena kumbe vulawuri bya vukhongeri bya ximfumo.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Ku Fambiwa hi Mapapa';
 
   @override

@@ -883,6 +883,11 @@ class AppLocalizationsTa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ஐப் பயன்படுத்தி பிராந்திய ஃபால்பேக். உங்கள் மசூதி அல்லது அதிகாரப்பூர்வ மத அதிகாரத்துடன் உள்ளூர் பிரார்த்தனை நேரத்தை உறுதிப்படுத்தவும்.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'மேகம் இயக்கப்பட்டது';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Metoda {sourceName} cu setarea {madhab} selectată de utilizator",
-  "quranAudioPlaybackErrorWithConnectionHint": "Redarea audio a eșuat. Vă rugăm să vă verificați conexiunea."
+  "quranAudioPlaybackErrorWithConnectionHint": "Redarea audio a eșuat. Vă rugăm să vă verificați conexiunea.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Soluție regională folosind {sourceName}. Confirmați orele locale de rugăciune cu moscheea sau autoritatea religioasă oficială."
 }

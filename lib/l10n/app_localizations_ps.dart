@@ -875,6 +875,11 @@ class AppLocalizationsPs extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'سیمه ایز فال بیک د $sourceName په کارولو سره. د خپل جومات یا رسمي مذهبي واک سره د ځایی لمانځه وختونه تایید کړئ.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'بادل چلول';
 
   @override

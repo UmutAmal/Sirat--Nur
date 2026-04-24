@@ -879,6 +879,11 @@ class AppLocalizationsEe extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Nutome ƒe megbedede to $sourceName zazã me. Ðo kpe gbedodoɖaɣi siwo le mia gbɔ dzi kple wò mosque alo mawusubɔsubɔha si dziɖuɖua ɖo.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Alilikpo Ʋuʋu';
 
   @override

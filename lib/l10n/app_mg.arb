@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} fomba misy {madhab} Asr nofidin'ny mpampiasa",
-  "quranAudioPlaybackErrorWithConnectionHint": "Tsy nahomby ny famerenam-peo. Jereo azafady ny fifandraisanao."
+  "quranAudioPlaybackErrorWithConnectionHint": "Tsy nahomby ny famerenam-peo. Jereo azafady ny fifandraisanao.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Famerenana isam-paritra mampiasa {sourceName}. Hamafiso ny fotoam-bavaka eo an-toerana miaraka amin'ny moskenao na ny manampahefana ara-pivavahana ofisialy."
 }

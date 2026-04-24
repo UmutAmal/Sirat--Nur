@@ -121,9 +121,14 @@ String resolvePrayerSourceValue(
   PrayerCalculationProfile profile, {
   String? customSourceValue,
   String? hybridSourceValue,
+  String? regionalFallbackSourceValue,
 }) {
   if (isOfficialPrayerProfile(profile)) {
     return '${profile.sourceName} (${profile.sourceUrl})';
+  }
+
+  if (profile.isRegionalFallback) {
+    return regionalFallbackSourceValue ?? profile.sourceName;
   }
 
   if (hasInstitutionalPrayerMethodSource(profile)) {
@@ -285,9 +290,11 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
   Future<List<_DiagnosticRow>> _buildRows() async {
     final l10n = AppLocalizations.of(context)!;
     final settings = ref.read(settingsProvider);
-    final prayerProfile = profileForMethod(
-      settings.calculationMethod,
+    final prayerProfile = resolveActivePrayerProfile(
+      calculationMethod: settings.calculationMethod,
       madhab: settings.madhab,
+      countryCode: settings.countryCode,
+      timezone: settings.timezone,
     );
     final prayerProfileIsOfficial = isOfficialPrayerProfile(prayerProfile);
     final rows = <_DiagnosticRow>[
@@ -322,6 +329,10 @@ class _DiagnosticsPageState extends ConsumerState<DiagnosticsPage> {
         resolvePrayerSourceValue(
           prayerProfile,
           customSourceValue: l10n.diagnosticsPrayerCustomSource,
+          regionalFallbackSourceValue: l10n
+              .diagnosticsPrayerRegionalFallbackSource(
+                prayerProfile.sourceName,
+              ),
           hybridSourceValue: l10n.diagnosticsPrayerHybridSource(
             prayerProfile.sourceName,
             displayMadhabLabel(prayerProfile.madhab),

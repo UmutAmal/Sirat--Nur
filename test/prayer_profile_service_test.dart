@@ -44,6 +44,30 @@ void main() {
 
       expect(profile.calculationMethod, mwlPrayerMethod);
       expect(profile.madhab, shafiiMadhab);
+      expect(profile.isRegionalFallback, isTrue);
+      expect(hasOfficialPrayerAuthority(profile), isFalse);
+    });
+
+    test('marks regional fallbacks as non-official but sourced profiles', () {
+      final cases = const [
+        (countryCode: 'DE', timezone: 'Europe/Berlin', madhab: shafiiMadhab),
+        (countryCode: 'DZ', timezone: 'Africa/Algiers', madhab: malikiMadhab),
+        (countryCode: 'BD', timezone: 'Asia/Dhaka', madhab: hanafiMadhab),
+        (countryCode: null, timezone: 'Europe/Berlin', madhab: shafiiMadhab),
+      ];
+
+      for (final args in cases) {
+        final profile = resolvePrayerProfile(
+          countryCode: args.countryCode,
+          timezone: args.timezone,
+        );
+
+        expect(profile.calculationMethod, mwlPrayerMethod);
+        expect(profile.madhab, args.madhab);
+        expect(profile.isRegionalFallback, isTrue);
+        expect(hasOfficialPrayerAuthority(profile), isFalse);
+        expect(hasInstitutionalPrayerMethodSource(profile), isTrue);
+      }
     });
 
     test(
@@ -157,6 +181,26 @@ void main() {
         resolvePrayerProfile(timezone: 'America/Sao_Paulo').calculationMethod,
         mwlPrayerMethod,
       );
+    });
+
+    test('preserves regional fallback honesty for active stored profiles', () {
+      final regionalFallback = resolveActivePrayerProfile(
+        calculationMethod: mwlPrayerMethod,
+        madhab: shafiiMadhab,
+        countryCode: 'DE',
+        timezone: 'Europe/Berlin',
+      );
+      final explicitSelection = resolveActivePrayerProfile(
+        calculationMethod: diyanetPrayerMethod,
+        madhab: hanafiMadhab,
+        countryCode: 'DE',
+        timezone: 'Europe/Berlin',
+      );
+
+      expect(regionalFallback.isRegionalFallback, isTrue);
+      expect(hasOfficialPrayerAuthority(regionalFallback), isFalse);
+      expect(explicitSelection.isRegionalFallback, isFalse);
+      expect(hasOfficialPrayerAuthority(explicitSelection), isTrue);
     });
   });
 

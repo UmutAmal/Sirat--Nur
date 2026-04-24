@@ -875,6 +875,11 @@ class AppLocalizationsBr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional fallback en ur implijout $sourceName. Kadarnait eurioù ar bedenn lec\'hel gant ho moskeenn pe gant aotrouniezh relijiel ofisiel.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

@@ -869,6 +869,11 @@ class AppLocalizationsAm extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName በመጠቀም የክልል ውድቀት። ከመስጊድዎ ወይም ከኦፊሴላዊው የሃይማኖት ባለስልጣን ጋር የአካባቢውን የጸሎት ጊዜያት ያረጋግጡ።';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'በደመና የሚነዳ';
 
   @override

@@ -881,6 +881,11 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Fallback regional usando $sourceName. Confirme os horários de oração locais com sua mesquita ou autoridade religiosa oficial.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Orientado pela nuvem';
 
   @override

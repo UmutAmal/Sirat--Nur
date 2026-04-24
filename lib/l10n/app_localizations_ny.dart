@@ -881,6 +881,11 @@ class AppLocalizationsNy extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Kubwerera m\'chigawo pogwiritsa ntchito $sourceName. Tsimikizirani nthawi zamapemphero kwanuko ndi mzikiti wanu kapena akuluakulu achipembedzo.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Drived';
 
   @override

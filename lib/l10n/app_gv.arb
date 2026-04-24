@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Cha dod y chlashtyn clashtyn. Cur-my-ner dty cheshaght."
+  "quranAudioPlaybackErrorWithConnectionHint": "Cha dod y chlashtyn clashtyn. Cur-my-ner dty cheshaght.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority."
 }

@@ -878,6 +878,11 @@ class AppLocalizationsAk extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Mpɔtam hɔ fallback a wɔde $sourceName di dwuma. Wo ne wo asɔredan anaa nyamesom aban mpanyimfo si mpɔtam hɔ mpaebɔ bere so dua.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Mununkum a Wɔde Di Dwuma';
 
   @override

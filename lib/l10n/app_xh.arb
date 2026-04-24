@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} indlela ekhethwe ngumsebenzisi {madhab} Asr useto",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ukudlala kwakhona kwesandi akuphumelelanga. Nceda ujonge umdibaniso wakho."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ukudlala kwakhona kwesandi akuphumelelanga. Nceda ujonge umdibaniso wakho.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela umva kwingingqi usebenzisa {sourceName}. Qinisekisa amaxesha omthandazo wasekhaya kunye ne-mosque yakho okanye igunya lenkolo elisemthethweni."
 }

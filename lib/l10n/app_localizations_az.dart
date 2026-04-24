@@ -877,6 +877,11 @@ class AppLocalizationsAz extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName istifadə edərək regional ehtiyat. Məscidiniz və ya rəsmi dini qurumla yerli namaz vaxtlarını təsdiqləyin.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Buludla idarə olunur';
 
   @override

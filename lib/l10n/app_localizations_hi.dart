@@ -877,6 +877,11 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName का उपयोग करके क्षेत्रीय फ़ॉलबैक। अपनी मस्जिद या आधिकारिक धार्मिक प्राधिकरण से स्थानीय प्रार्थना समय की पुष्टि करें।';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'बादल संचालित';
 
   @override

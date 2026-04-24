@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Metode {sourceName} dengan pengaturan {madhab} Ashar yang dipilih pengguna",
-  "quranAudioPlaybackErrorWithConnectionHint": "Pemutaran audio gagal. Silakan periksa koneksi Anda."
+  "quranAudioPlaybackErrorWithConnectionHint": "Pemutaran audio gagal. Silakan periksa koneksi Anda.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Penggantian regional menggunakan {sourceName}. Konfirmasikan waktu sholat setempat dengan masjid atau otoritas keagamaan resmi Anda."
 }

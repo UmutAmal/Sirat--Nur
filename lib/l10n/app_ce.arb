@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио дӀаязъян аьтто ца баьлла. Хьайн зӀе хьажахьара ахь."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио дӀаязъян аьтто ца баьлла. Хьайн зӀе хьажахьара ахь.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority."
 }

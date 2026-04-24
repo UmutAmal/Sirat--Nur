@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} उपयोक्तृ-चयनितेन सह विधिः {madhab} Asr सेटिंग्",
-  "quranAudioPlaybackErrorWithConnectionHint": "श्रव्यस्य वाद्यं विफलम् अभवत् । कृपया स्वस्य संयोजनं पश्यन्तु।"
+  "quranAudioPlaybackErrorWithConnectionHint": "श्रव्यस्य वाद्यं विफलम् अभवत् । कृपया स्वस्य संयोजनं पश्यन्तु।",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} इत्यस्य उपयोगेन क्षेत्रीयः फॉलबैक । स्वमस्जिदेन अथवा आधिकारिकधार्मिकप्राधिकरणेन सह स्थानीयनमाजसमयानां पुष्टिं कुर्वन्तु।"
 }

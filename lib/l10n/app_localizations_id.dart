@@ -878,6 +878,11 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Penggantian regional menggunakan $sourceName. Konfirmasikan waktu sholat setempat dengan masjid atau otoritas keagamaan resmi Anda.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Didorong oleh Awan';
 
   @override

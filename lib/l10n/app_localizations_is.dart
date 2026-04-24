@@ -879,6 +879,11 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Svæðisbundin varahlutur með því að nota $sourceName. Staðfestu staðbundna bænatíma með mosku þinni eða opinberu trúarlegu yfirvaldi.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Skýdrifið';
 
   @override

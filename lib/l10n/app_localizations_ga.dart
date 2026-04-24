@@ -879,6 +879,11 @@ class AppLocalizationsGa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Cúltaca réigiúnach ag úsáid $sourceName. Deimhnigh amanna urnaí áitiúla le do mhosc nó le d’údarás oifigiúil reiligiúnach.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Scamall Tiomáinte';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} kwan a nea ɔde di dwuma no apaw {madhab} Asr nhyehyɛe",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio a wɔbɔ no antumi anyɛ yiye. Yɛsrɛ sɛ hwɛ wo nkitahodi no."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio a wɔbɔ no antumi anyɛ yiye. Yɛsrɛ sɛ hwɛ wo nkitahodi no.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Mpɔtam hɔ fallback a wɔde {sourceName} di dwuma. Wo ne wo asɔredan anaa nyamesom aban mpanyimfo si mpɔtam hɔ mpaebɔ bere so dua."
 }

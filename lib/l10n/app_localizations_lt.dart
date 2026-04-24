@@ -879,6 +879,11 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Atsarginis regionas naudojant $sourceName. Patvirtinkite vietos maldos laiką su savo mečete arba oficialia religine institucija.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Varomas debesų';
 
   @override

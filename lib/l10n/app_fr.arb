@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Méthode {sourceName} avec paramètre {madhab} Asr sélectionné par l'utilisateur",
-  "quranAudioPlaybackErrorWithConnectionHint": "La lecture audio a échoué. Veuillez vérifier votre connexion."
+  "quranAudioPlaybackErrorWithConnectionHint": "La lecture audio a échoué. Veuillez vérifier votre connexion.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Solution de secours régionale à l'aide de {sourceName}. Confirmez les heures de prière locales auprès de votre mosquée ou de votre autorité religieuse officielle."
 }

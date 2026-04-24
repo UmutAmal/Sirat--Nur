@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} طریقه د کارن لخوا ټاکل شوي {madhab} د عصر ترتیب سره",
-  "quranAudioPlaybackErrorWithConnectionHint": "د آډیو پلې بیک ناکام شو. مهرباني وکړئ خپل پیوستون وګورئ."
+  "quranAudioPlaybackErrorWithConnectionHint": "د آډیو پلې بیک ناکام شو. مهرباني وکړئ خپل پیوستون وګورئ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "سیمه ایز فال بیک د {sourceName} په کارولو سره. د خپل جومات یا رسمي مذهبي واک سره د ځایی لمانځه وختونه تایید کړئ."
 }

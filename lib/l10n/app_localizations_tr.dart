@@ -876,6 +876,11 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ile bölgesel fallback. Namaz vakitlerini yerel caminiz veya resmi dini kurumla doğrulayın.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Bulut Tabanlı';
 
   @override

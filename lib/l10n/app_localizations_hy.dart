@@ -882,6 +882,11 @@ class AppLocalizationsHy extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Տարածաշրջանային հետադարձ՝ օգտագործելով $sourceName: Հաստատեք տեղական աղոթքի ժամերը ձեր մզկիթի կամ պաշտոնական կրոնական իշխանության հետ:';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

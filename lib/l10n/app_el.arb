@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "μέθοδος {sourceName} με ρύθμιση {madhab} Asr επιλεγμένη από τον χρήστη",
-  "quranAudioPlaybackErrorWithConnectionHint": "Η αναπαραγωγή ήχου απέτυχε. Ελέγξτε τη σύνδεσή σας."
+  "quranAudioPlaybackErrorWithConnectionHint": "Η αναπαραγωγή ήχου απέτυχε. Ελέγξτε τη σύνδεσή σας.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Περιφερειακή εναλλακτική με χρήση {sourceName}. Επιβεβαιώστε τις τοπικές ώρες προσευχής με το τζαμί σας ή την επίσημη θρησκευτική αρχή."
 }

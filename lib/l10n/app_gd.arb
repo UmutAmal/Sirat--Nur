@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} modh le suidheachadh {madhab} air a thaghadh leis a’ chleachdaiche",
-  "quranAudioPlaybackErrorWithConnectionHint": "Dh'fhàillig ath-chluich fuaim. Feuch an toir thu sùil air a’ cheangal agad."
+  "quranAudioPlaybackErrorWithConnectionHint": "Dh'fhàillig ath-chluich fuaim. Feuch an toir thu sùil air a’ cheangal agad.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Tilleadh roinneil a’ cleachdadh {sourceName}. Dearbhaich amannan ùrnaigh ionadail leis a’ mhosc no an ùghdarras creideimh oifigeil agad."
 }

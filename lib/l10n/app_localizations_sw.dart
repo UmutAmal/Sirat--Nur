@@ -879,6 +879,11 @@ class AppLocalizationsSw extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Njia mbadala ya eneo kwa kutumia $sourceName. Thibitisha nyakati za maombi ya karibu na msikiti wako au mamlaka rasmi ya kidini.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Inaendeshwa na Wingu';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ପଦ୍ଧତି ଉପଭୋକ୍ତା-ମନୋନୀତ {madhab} ଆସ୍ର ସେଟିଂ ସହିତ |",
-  "quranAudioPlaybackErrorWithConnectionHint": "ଅଡିଓ ପ୍ଲେକ୍ ବିଫଳ ହେଲା | ଦୟାକରି ଆପଣଙ୍କର ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ |"
+  "quranAudioPlaybackErrorWithConnectionHint": "ଅଡିଓ ପ୍ଲେକ୍ ବିଫଳ ହେଲା | ଦୟାକରି ଆପଣଙ୍କର ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ |",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ବ୍ୟବହାର କରି ଆଞ୍ଚଳିକ ପତନ | ଆପଣଙ୍କର ମସଜିଦ କିମ୍ବା ସରକାରୀ ଧାର୍ମିକ ପ୍ରାଧିକରଣ ସହିତ ସ୍ଥାନୀୟ ପ୍ରାର୍ଥନା ସମୟ ନିଶ୍ଚିତ କରନ୍ତୁ |"
 }

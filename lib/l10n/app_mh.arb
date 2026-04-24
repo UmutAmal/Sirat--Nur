@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ear jab maroñ al al. Jouj im lale koneek eo am."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ear jab maroñ al al. Jouj im lale koneek eo am.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback ilo an kajerbal {sourceName}. Kōmeļeļeik iien jar ko ilo bukwōn eo am̧ ippān mosque eo am̧ ak ritōl in kabun̄ eo an kien."
 }

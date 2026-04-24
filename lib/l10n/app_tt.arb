@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ысулы белән кулланучылар сайлаган {madhab} Asr көйләнеше",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио уйнату уңышсыз калды. Зинһар, тоташуыгызны тикшерегез."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио уйнату уңышсыз калды. Зинһар, тоташуыгызны тикшерегез.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} кулланып региональ кире кайту. Мәчет яки рәсми дини хакимият белән җирле дога вакытларын раслагыз."
 }

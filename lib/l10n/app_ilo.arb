@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} a pamay-an nga addaan iti napili ti agar-aramat a {madhab} Asr a setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Napaay ti panagtokar ti audio. Pangngaasiyo ta kitaenyo ti koneksionyo."
+  "quranAudioPlaybackErrorWithConnectionHint": "Napaay ti panagtokar ti audio. Pangngaasiyo ta kitaenyo ti koneksionyo.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Rehional a panagsubli babaen ti panagusar ti {sourceName}. Pasingkedan dagiti lokal nga oras ti panagkararag iti moske wenno opisial a narelihiosuan nga autoridadmo."
 }

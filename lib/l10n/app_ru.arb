@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Метод {sourceName} с выбранной пользователем настройкой {madhab} Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Воспроизведение аудио не удалось. Пожалуйста, проверьте ваше соединение."
+  "quranAudioPlaybackErrorWithConnectionHint": "Воспроизведение аудио не удалось. Пожалуйста, проверьте ваше соединение.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Региональный резерв с использованием {sourceName}. Уточните местное время молитвы в своей мечети или официальном религиозном органе."
 }

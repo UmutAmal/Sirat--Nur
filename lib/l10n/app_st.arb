@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} mokhoa o khethiloeng ke mosebelisi {madhab} litlhophiso tsa Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ho hloleha ho bapala molumo. Ka kopo, sheba khokahano ea hau."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ho hloleha ho bapala molumo. Ka kopo, sheba khokahano ea hau.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Mokhoa oa ho khutlela sebakeng o sebelisa {sourceName}. Netefatsa linako tsa thapelo ea lehae le mosque oa hau kapa ba boholong ba bolumeli."
 }

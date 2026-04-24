@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "U tamba ha audio zwo kundelwa. Ndi khou humbela uri ni sedze vhuṱumani haṋu."
+  "quranAudioPlaybackErrorWithConnectionHint": "U tamba ha audio zwo kundelwa. Ndi khou humbela uri ni sedze vhuṱumani haṋu.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority."
 }

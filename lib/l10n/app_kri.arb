@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} we wit yuz-selekt {madhab} Asr sɛtin",
-  "quranAudioPlaybackErrorWithConnectionHint": "Di odio ple bak nɔ bin wok. Duya chɛk yu kɔnɛkshɔn."
+  "quranAudioPlaybackErrorWithConnectionHint": "Di odio ple bak nɔ bin wok. Duya chɛk yu kɔnɛkshɔn.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Rijinal fɔlbak we de yuz {sourceName}. Kɔnfɛm lokal prea tɛm wit yu moskɛt ɔ ɔfishal rilijɔn ɔtoriti."
 }

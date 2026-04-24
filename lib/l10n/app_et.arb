@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} meetod kasutaja valitud {madhab} Asr-sätetega",
-  "quranAudioPlaybackErrorWithConnectionHint": "Heli taasesitus ebaõnnestus. Kontrollige ühendust."
+  "quranAudioPlaybackErrorWithConnectionHint": "Heli taasesitus ebaõnnestus. Kontrollige ühendust.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Piirkondlik varu, kasutades {sourceName}. Kinnitage kohalikud palveajad oma mošee või ametliku usuasutusega."
 }

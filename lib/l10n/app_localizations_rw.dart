@@ -879,6 +879,11 @@ class AppLocalizationsRw extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Gusubira mu karere ukoresheje $sourceName. Emeza ibihe by\'amasengesho hamwe n\'umusigiti wawe cyangwa ubuyobozi bw\'amadini.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Igicu';
 
   @override

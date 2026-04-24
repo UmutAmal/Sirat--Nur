@@ -879,6 +879,11 @@ class AppLocalizationsMl extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ഉപയോഗിക്കുന്ന റീജിയണൽ ഫാൾബാക്ക്. നിങ്ങളുടെ പള്ളിയോ ഔദ്യോഗിക മത അധികാരമോ ഉപയോഗിച്ച് പ്രാദേശിക പ്രാർത്ഥന സമയം സ്ഥിരീകരിക്കുക.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ക്ലൗഡ് ഡ്രൈവൺ';
 
   @override

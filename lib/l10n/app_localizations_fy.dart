@@ -879,6 +879,11 @@ class AppLocalizationsFy extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionale fallback mei $sourceName. Befêstigje lokale gebedstiden mei jo moskee as offisjele religieuze autoriteit.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

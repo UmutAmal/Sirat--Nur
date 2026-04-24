@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metode ar lietotāja atlasītu {madhab} Asr iestatījumu",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio atskaņošana neizdevās. Lūdzu, pārbaudiet savienojumu."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio atskaņošana neizdevās. Lūdzu, pārbaudiet savienojumu.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Reģionālais atkāpšanās veids, izmantojot {sourceName}. Apstipriniet vietējos lūgšanu laikus savā mošejā vai oficiālajā reliģiskajā iestādē."
 }

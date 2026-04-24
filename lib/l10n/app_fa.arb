@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "روش {sourceName} با تنظیم عصر {madhab} انتخاب شده توسط کاربر",
-  "quranAudioPlaybackErrorWithConnectionHint": "پخش صدا انجام نشد. لطفا اتصال خود را بررسی کنید."
+  "quranAudioPlaybackErrorWithConnectionHint": "پخش صدا انجام نشد. لطفا اتصال خود را بررسی کنید.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "بازگشت منطقه ای با استفاده از {sourceName}. اوقات نماز محلی را با مسجد یا مرجع رسمی مذهبی خود تأیید کنید."
 }

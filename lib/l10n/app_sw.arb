@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} mbinu iliyochaguliwa na mtumiaji {madhab} mpangilio wa Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Uchezaji wa sauti umeshindwa. Tafadhali angalia muunganisho wako."
+  "quranAudioPlaybackErrorWithConnectionHint": "Uchezaji wa sauti umeshindwa. Tafadhali angalia muunganisho wako.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Njia mbadala ya eneo kwa kutumia {sourceName}. Thibitisha nyakati za maombi ya karibu na msikiti wako au mamlaka rasmi ya kidini."
 }

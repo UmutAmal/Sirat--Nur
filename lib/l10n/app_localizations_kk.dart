@@ -877,6 +877,11 @@ class AppLocalizationsKk extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName арқылы аймақтық қалпына келтіру. Жергілікті намаз уақытын мешітіңізбен немесе ресми діни мекемемен растаңыз.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Бұлтқа негізделген';
 
   @override

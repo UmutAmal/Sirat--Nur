@@ -879,6 +879,11 @@ class AppLocalizationsMk extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Регионална резервна копија со $sourceName. Потврдете ги локалните времиња на молитва со вашата џамија или официјална верска власт.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Облак управувано';
 
   @override

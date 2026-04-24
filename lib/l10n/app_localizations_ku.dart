@@ -877,6 +877,11 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Vegera herêmî ya $sourceName bikar tîne. Demên nimêja herêmî bi mizgefta xwe an desthilatdariya olî ya fermî piştrast bikin.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

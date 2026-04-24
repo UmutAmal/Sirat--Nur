@@ -175,6 +175,23 @@ void main() {
     );
   });
 
+  test('resolvePrayerSourceValue flags regional fallbacks honestly', () {
+    final profile = resolvePrayerProfile(
+      countryCode: 'DE',
+      timezone: 'Europe/Berlin',
+    );
+
+    expect(isOfficialPrayerProfile(profile), isFalse);
+    expect(profile.isRegionalFallback, isTrue);
+    expect(
+      resolvePrayerSourceValue(
+        profile,
+        regionalFallbackSourceValue: 'Regional fallback using MWL',
+      ),
+      'Regional fallback using MWL',
+    );
+  });
+
   test('resolvePrayerProfileValue flags custom profiles honestly', () {
     final profile = profileForMethod(customPrayerMethod, madhab: jafariMadhab);
 

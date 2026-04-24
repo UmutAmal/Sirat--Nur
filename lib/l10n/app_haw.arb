@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ala me {madhab} i koho ʻia e ka mea hoʻohana.",
-  "quranAudioPlaybackErrorWithConnectionHint": "Hāʻule ka pāʻani leo. E ʻoluʻolu e nānā i kāu pili."
+  "quranAudioPlaybackErrorWithConnectionHint": "Hāʻule ka pāʻani leo. E ʻoluʻolu e nānā i kāu pili.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Hoʻihoʻi ʻāina me {sourceName}. E hōʻoia i nā manawa pule kūloko me kāu mosque a i ʻole ka mana hoʻomana mana."
 }

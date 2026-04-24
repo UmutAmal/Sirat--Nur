@@ -883,6 +883,11 @@ class AppLocalizationsGn extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Fallback regional oiporúva $sourceName. Emoañete umi hora de oración local nde mezquita térã autoridad religiosa oficial ndive.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Arai Ñemboguata';
 
   @override

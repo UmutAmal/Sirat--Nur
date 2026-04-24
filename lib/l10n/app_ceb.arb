@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} nga pamaagi nga gipili sa user {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Napakyas ang playback sa audio. Palihug susiha ang imong koneksyon."
+  "quranAudioPlaybackErrorWithConnectionHint": "Napakyas ang playback sa audio. Palihug susiha ang imong koneksyon.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Rehiyonal nga fallback gamit ang {sourceName}. Kumpirma ang lokal nga mga oras sa pag-ampo uban sa imong mosque o opisyal nga awtoridad sa relihiyon."
 }

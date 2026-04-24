@@ -882,6 +882,11 @@ class AppLocalizationsGl extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Alternativa rexional mediante $sourceName. Confirma os horarios de oración locais coa túa mesquita ou coa autoridade relixiosa oficial.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Impulsado pola nube';
 
   @override

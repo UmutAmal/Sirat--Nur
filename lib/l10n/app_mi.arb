@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} tikanga me te {madhab} i kowhiria e te kaiwhakamahi te tautuhinga Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "I rahua te purei ororongo. Tena koa tirohia to hononga."
+  "quranAudioPlaybackErrorWithConnectionHint": "I rahua te purei ororongo. Tena koa tirohia to hononga.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Whakahoki a rohe ma te whakamahi {sourceName}. Whakapumautia nga wa karakia o to rohe me to whare whare karakia me to mana whakahaere whakapono."
 }

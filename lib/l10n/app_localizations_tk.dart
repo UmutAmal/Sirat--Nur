@@ -878,6 +878,11 @@ class AppLocalizationsTk extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ulanyp sebitleýin yza gaýtma. Doga wagtyňyzy metjidiňiz ýa-da resmi dini ygtyýaryňyz bilen tassyklaň.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Bulut sürülýär';
 
   @override

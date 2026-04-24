@@ -868,6 +868,11 @@ class AppLocalizationsTi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'ዞባዊ ምምላስ $sourceName ብምጥቃም። ናይ ከባቢኻ ናይ ጸሎት ሰዓታት ምስ መስጊድካ ወይ ወግዓዊ ሃይማኖታዊ በዓል መዚ ኣረጋግጽ።';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ደበና ዝመርሖ';
 
   @override

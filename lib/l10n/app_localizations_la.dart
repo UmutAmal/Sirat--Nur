@@ -879,6 +879,11 @@ class AppLocalizationsLa extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Fallacium regionale utens $sourceName. Confirma orationem localem temporibus tuis meschitis vel auctoritate religiosa officiali.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

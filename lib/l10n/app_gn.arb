@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} método orekóva puruhára oiporavóva {madhab} Asr ñemboheko",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio ñembopu ndoikói. Ehecháke ne joaju."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio ñembopu ndoikói. Ehecháke ne joaju.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback regional oiporúva {sourceName}. Emoañete umi hora de oración local nde mezquita térã autoridad religiosa oficial ndive."
 }

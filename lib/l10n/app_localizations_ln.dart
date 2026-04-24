@@ -882,6 +882,11 @@ class AppLocalizationsLn extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Fallback ya région na kosalelaka $sourceName. Confirmer ba heures ya losambo ya esika na yo na mosquée na yo to na autorité religieuse officielle.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Lipata Etambwisami';
 
   @override

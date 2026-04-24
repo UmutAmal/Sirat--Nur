@@ -882,6 +882,11 @@ class AppLocalizationsKy extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName аркылуу аймактык кайра кайтаруу. Жергиликтүү намаз убактысын мечитиңиз же расмий диний бийлик менен ырастаңыз.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

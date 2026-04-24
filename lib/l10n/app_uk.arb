@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} метод із вибраним користувачем налаштуванням {madhab} Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Помилка відтворення аудіо. Перевірте підключення."
+  "quranAudioPlaybackErrorWithConnectionHint": "Помилка відтворення аудіо. Перевірте підключення.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Регіональний резерв за допомогою {sourceName}. Уточніть місцевий час молитов у вашій мечеті чи офіційній релігійній владі."
 }

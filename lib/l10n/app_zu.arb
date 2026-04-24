@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} indlela ekhethwe umsebenzisi {madhab} Isilungiselelo se-Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ukudlalwa komsindo kuhlulekile. Sicela uhlole ukuxhumana kwakho."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ukudlalwa komsindo kuhlulekile. Sicela uhlole ukuxhumana kwakho.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela emuva kwesifunda usebenzisa {sourceName}. Qinisekisa izikhathi zomkhuleko wasendaweni nge-mosque yakho noma isiphathimandla sezenkolo esisemthethweni."
 }

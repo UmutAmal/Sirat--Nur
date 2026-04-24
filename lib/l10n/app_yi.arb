@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} אופֿן מיט באַניצער-געקליבן {madhab} אַסר באַשטעטיקן",
-  "quranAudioPlaybackErrorWithConnectionHint": "אַודיאָ פּלייבאַק ניט אַנדערש. ביטע טשעק דיין קשר."
+  "quranAudioPlaybackErrorWithConnectionHint": "אַודיאָ פּלייבאַק ניט אַנדערש. ביטע טשעק דיין קשר.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "רעגיאָנאַל פאַלבאַק ניצן {sourceName}. באַשטעטיקן היגע תפילה צייט מיט דיין מאָסקווע אָדער באַאַמטער רעליגיעז אויטאָריטעט."
 }

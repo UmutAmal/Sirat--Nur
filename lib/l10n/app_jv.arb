@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Metode {sourceName} nganggo setelan {madhab} sing dipilih pangguna",
-  "quranAudioPlaybackErrorWithConnectionHint": "Puter maneh audio gagal. Mangga priksa sambungan sampeyan."
+  "quranAudioPlaybackErrorWithConnectionHint": "Puter maneh audio gagal. Mangga priksa sambungan sampeyan.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Mundur regional nggunakake {sourceName}. Konfirmasi wektu sholat lokal karo masjid utawa otoritas agama resmi."
 }

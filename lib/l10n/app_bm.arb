@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} fɛɛrɛ ni baarakɛla ka sugandilen {madhab} Asr sigicogo",
-  "quranAudioPlaybackErrorWithConnectionHint": "Odio fɔli ma ɲɛ. Aw ye aw ka jɛgɛnsira lajɛ."
+  "quranAudioPlaybackErrorWithConnectionHint": "Odio fɔli ma ɲɛ. Aw ye aw ka jɛgɛnsira lajɛ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Sigidaw ka kɔsegin baara kɛli ni {sourceName} ye. Aw ye sigida delili waatiw dafa ni aw ka misiri walima diinɛ ɲɛmɔgɔba ye."
 }

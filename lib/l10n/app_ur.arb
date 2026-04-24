@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} طریقہ صارف کے منتخب کردہ {madhab} عصر کی ترتیب کے ساتھ",
-  "quranAudioPlaybackErrorWithConnectionHint": "آڈیو پلے بیک ناکام ہو گیا۔ براہ کرم اپنا کنکشن چیک کریں۔"
+  "quranAudioPlaybackErrorWithConnectionHint": "آڈیو پلے بیک ناکام ہو گیا۔ براہ کرم اپنا کنکشن چیک کریں۔",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} کا استعمال کرتے ہوئے علاقائی فال بیک۔ اپنی مسجد یا سرکاری مذہبی اتھارٹی کے ساتھ مقامی نماز کے اوقات کی تصدیق کریں۔"
 }

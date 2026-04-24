@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "C'hwitet en deus ar c'hoari son. Gwiriit ho kevreadenn mar plij."
+  "quranAudioPlaybackErrorWithConnectionHint": "C'hwitet en deus ar c'hoari son. Gwiriit ho kevreadenn mar plij.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback en ur implijout {sourceName}. Kadarnait eurioù ar bedenn lec'hel gant ho moskeenn pe gant aotrouniezh relijiel ofisiel."
 }

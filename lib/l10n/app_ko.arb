@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "사용자가 선택한 {madhab} Asr 설정이 포함된 {sourceName} 메서드",
-  "quranAudioPlaybackErrorWithConnectionHint": "오디오 재생에 실패했습니다. 연결을 확인해주세요."
+  "quranAudioPlaybackErrorWithConnectionHint": "오디오 재생에 실패했습니다. 연결을 확인해주세요.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName}을 사용하는 지역 대체. 모스크나 공식 종교 당국에 현지 기도 시간을 확인하세요."
 }

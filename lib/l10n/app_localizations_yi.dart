@@ -878,6 +878,11 @@ class AppLocalizationsYi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'רעגיאָנאַל פאַלבאַק ניצן $sourceName. באַשטעטיקן היגע תפילה צייט מיט דיין מאָסקווע אָדער באַאַמטער רעליגיעז אויטאָריטעט.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'וואָלקן געטריבן';
 
   @override

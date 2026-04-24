@@ -883,6 +883,11 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Περιφερειακή εναλλακτική με χρήση $sourceName. Επιβεβαιώστε τις τοπικές ώρες προσευχής με το τζαμί σας ή την επίσημη θρησκευτική αρχή.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

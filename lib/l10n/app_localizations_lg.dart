@@ -880,6 +880,11 @@ class AppLocalizationsLg extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Okudda emabega mu kitundu nga okozesa $sourceName. Kakasa ebiseera by’okusaba mu kitundu n’omuzikiti gwo oba ekitongole ky’eddiini ekitongole.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Ekire Ekivugibwa';
 
   @override

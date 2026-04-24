@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ukudlala umsindo kwehlulekile. Sibawa uhlole ukuxhumana kwakho."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ukudlala umsindo kwehlulekile. Sibawa uhlole ukuxhumana kwakho.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela emuva kwesifunda ngokusebenzisa {sourceName}. Qinisekisa isikhathi somthandazo wendawo ne-mosque yakho nofana igunya lezekolo elisemthethweni."
 }

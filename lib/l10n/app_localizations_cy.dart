@@ -881,6 +881,11 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Wrth gefn rhanbarthol gan ddefnyddio $sourceName. Cadarnhewch amseroedd gweddi lleol gyda\'ch mosg neu awdurdod crefyddol swyddogol.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Gyrrwr Cwmwl';
 
   @override

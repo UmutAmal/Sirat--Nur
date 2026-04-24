@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} menetelmä käyttäjän valitsemalla {madhab} Asr-asetuksella",
-  "quranAudioPlaybackErrorWithConnectionHint": "Äänen toisto epäonnistui. Tarkista yhteys."
+  "quranAudioPlaybackErrorWithConnectionHint": "Äänen toisto epäonnistui. Tarkista yhteys.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Alueellinen varavaihtoehto käyttämällä {sourceName}. Vahvista paikalliset rukousajat moskeijasi tai virallisen uskonnollisen viranomaisen kanssa."
 }

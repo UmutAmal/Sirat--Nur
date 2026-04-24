@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} lurawixa apnaqirina ajllitapampi {madhab} Asr wakicht’awimpi",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio uñtañax janiw phuqhaskänti. Ukhamaraki, uka conexión uñakipt’añamawa."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio uñtañax janiw phuqhaskänti. Ukhamaraki, uka conexión uñakipt’añamawa.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback ukax {sourceName} ukampiw lurasi. Mezquita jan ukax autoridad religiosa oficial ukamp local oración horas ukanakax chiqanchatawa."
 }

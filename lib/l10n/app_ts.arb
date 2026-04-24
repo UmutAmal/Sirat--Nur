@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ndlela leyi nga na xiyimiso xa Asr lexi hlawuriweke hi mutirhisi {madhab}",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ku tlanga ka mpfumawulo ku tsandzekile. Hi kombela u languta vuhlanganisi bya wena."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ku tlanga ka mpfumawulo ku tsandzekile. Hi kombela u languta vuhlanganisi bya wena.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Ku tlhelela endzhaku ka xifundzha hi ku tirhisa {sourceName}. Tiyisisa minkarhi ya xikhongelo ya ndhawu na mosque ya wena kumbe vulawuri bya vukhongeri bya ximfumo."
 }

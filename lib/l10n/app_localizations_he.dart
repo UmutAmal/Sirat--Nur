@@ -874,6 +874,11 @@ class AppLocalizationsHe extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'חזרה אזורית באמצעות $sourceName. אשר את זמני התפילה המקומיים עם המסגד או הרשות הדתית הרשמית שלך.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'מונע בענן';
 
   @override

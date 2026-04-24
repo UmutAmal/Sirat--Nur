@@ -874,6 +874,11 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'الاحتياطي الإقليمي باستخدام $sourceName. تأكد من أوقات الصلاة المحلية مع مسجدك أو السلطة الدينية الرسمية.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'سحابة مدفوعة';
 
   @override

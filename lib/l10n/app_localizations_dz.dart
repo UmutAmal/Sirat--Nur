@@ -875,6 +875,11 @@ class AppLocalizationsDz extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ལག་ལེན་འཐབ་ཐོག་ལས་ ལུང་ཕྱོགས་ཕོལབེཀ། ཁྱོད་རའི་ཁ་ཆེའི་ལྷ་ཁང་ཡང་ན་ གཞུང་འབྲེལ་ཆོས་ལུགས་དབང་འཛིན་དང་གཅིག་ཁར་ ས་གནས་ཀྱི་སྨོན་ལམ་བཏབ་པའི་དུས་ཚོད་ཚུ་ ངེས་གཏན་བཟོ།';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

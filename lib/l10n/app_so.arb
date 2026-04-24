@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} hab leh isticmaale-doortay {madhab} dejinta Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Dib-u-soo-celinta maqalka waa fashilantay. Fadlan hubi xidhiidhkaaga"
+  "quranAudioPlaybackErrorWithConnectionHint": "Dib-u-soo-celinta maqalka waa fashilantay. Fadlan hubi xidhiidhkaaga",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Dib u dhaca gobolka iyadoo la adeegsanayo {sourceName}. Ku xaqiiji wakhtiyada salaadda deegaanka masjidkaaga ama maamulka diinta ee rasmiga ah."
 }

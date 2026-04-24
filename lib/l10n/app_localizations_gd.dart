@@ -882,6 +882,11 @@ class AppLocalizationsGd extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Tilleadh roinneil a’ cleachdadh $sourceName. Dearbhaich amannan ùrnaigh ionadail leis a’ mhosc no an ùghdarras creideimh oifigeil agad.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud air a stiùireadh';
 
   @override

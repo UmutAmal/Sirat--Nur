@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metodoa erabiltzaileak hautatutako {madhab} Asr ezarpenarekin",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audioa erreproduzitzea huts egin du. Mesedez, egiaztatu zure konexioa."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audioa erreproduzitzea huts egin du. Mesedez, egiaztatu zure konexioa.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Eskualdeko ordezkapena {sourceName} erabiliz. Berretsi tokiko otoitz orduak zure meskitarekin edo agintari erlijioso ofizialarekin."
 }

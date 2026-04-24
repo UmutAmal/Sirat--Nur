@@ -876,6 +876,11 @@ class AppLocalizationsLo extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'ທາງເລືອກໃນພາກພື້ນໂດຍໃຊ້ $sourceName. ຢືນຢັນເວລາອະທິຖານໃນທ້ອງຖິ່ນກັບ mosque ຫຼືອໍານາດທາງສາສະຫນາຂອງເຈົ້າ.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

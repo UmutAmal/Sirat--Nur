@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metudu cù l'impostazione Asr {madhab} selezionata da l'utilizatori",
-  "quranAudioPlaybackErrorWithConnectionHint": "A riproduzione audio hà fiascatu. Per piacè verificate a vostra cunnessione."
+  "quranAudioPlaybackErrorWithConnectionHint": "A riproduzione audio hà fiascatu. Per piacè verificate a vostra cunnessione.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback regiunale usendu {sourceName}. Cunfirmà i tempi di preghiera lucali cù a vostra moschea o l'autorità religiosa ufficiale."
 }

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} enkola nga omukozesa alondeddwa {madhab} Asr okuteekawo",
-  "quranAudioPlaybackErrorWithConnectionHint": "Okuzannya amaloboozi kulemereddwa. Nsaba okebere omukutu gwo."
+  "quranAudioPlaybackErrorWithConnectionHint": "Okuzannya amaloboozi kulemereddwa. Nsaba okebere omukutu gwo.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Okudda emabega mu kitundu nga okozesa {sourceName}. Kakasa ebiseera by’okusaba mu kitundu n’omuzikiti gwo oba ekitongole ky’eddiini ekitongole."
 }

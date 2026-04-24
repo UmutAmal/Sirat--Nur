@@ -33,9 +33,11 @@ class SettingsPage extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
     final locationName = settings.locationName;
     final appVersion = resolveAppVersion();
-    final prayerProfile = profileForMethod(
-      settings.calculationMethod,
+    final prayerProfile = resolveActivePrayerProfile(
+      calculationMethod: settings.calculationMethod,
       madhab: settings.madhab,
+      countryCode: settings.countryCode,
+      timezone: settings.timezone,
     );
     final prayerAuthorityIsOfficial = hasOfficialPrayerAuthority(prayerProfile);
     final prayerMethodHasSource = hasInstitutionalPrayerMethodSource(
@@ -43,6 +45,8 @@ class SettingsPage extends ConsumerWidget {
     );
     final prayerAuthorityDetails = prayerAuthorityIsOfficial
         ? '${prayerProfile.sourceName}\n${prayerProfile.sourceUrl}'
+        : prayerProfile.isRegionalFallback
+        ? l10n.diagnosticsPrayerRegionalFallbackSource(prayerProfile.sourceName)
         : prayerMethodHasSource
         ? l10n.diagnosticsPrayerHybridSource(
             prayerProfile.sourceName,

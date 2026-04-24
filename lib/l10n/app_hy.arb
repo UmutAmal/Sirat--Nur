@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} մեթոդ՝ օգտագործողի կողմից ընտրված {madhab} Asr կարգավորումով",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ձայնի նվագարկումը ձախողվեց: Խնդրում ենք ստուգել ձեր կապը:"
+  "quranAudioPlaybackErrorWithConnectionHint": "Ձայնի նվագարկումը ձախողվեց: Խնդրում ենք ստուգել ձեր կապը:",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Տարածաշրջանային հետադարձ՝ օգտագործելով {sourceName}: Հաստատեք տեղական աղոթքի ժամերը ձեր մզկիթի կամ պաշտոնական կրոնական իշխանության հետ:"
 }

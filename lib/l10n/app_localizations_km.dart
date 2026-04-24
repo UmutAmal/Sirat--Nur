@@ -879,6 +879,11 @@ class AppLocalizationsKm extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'ថយក្រោយក្នុងតំបន់ដោយប្រើ $sourceName ។ បញ្ជាក់ម៉ោងអធិស្ឋានក្នុងតំបន់ជាមួយវិហារអ៊ីស្លាម ឬអាជ្ញាធរសាសនាផ្លូវការរបស់អ្នក។';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ដំណើរការលើពពក';
 
   @override

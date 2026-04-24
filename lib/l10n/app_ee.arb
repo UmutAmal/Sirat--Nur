@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} mɔnu si zãla tia {madhab} Asr ɖoɖo",
-  "quranAudioPlaybackErrorWithConnectionHint": "Odio ƒoƒo do kpo nu. Taflatse lé ŋku ɖe wò kadodoa ŋu."
+  "quranAudioPlaybackErrorWithConnectionHint": "Odio ƒoƒo do kpo nu. Taflatse lé ŋku ɖe wò kadodoa ŋu.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Nutome ƒe megbedede to {sourceName} zazã me. Ðo kpe gbedodoɖaɣi siwo le mia gbɔ dzi kple wò mosque alo mawusubɔsubɔha si dziɖuɖua ɖo."
 }

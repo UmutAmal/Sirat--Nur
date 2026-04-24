@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "dull {sourceName} gyda gosodiad {madhab} a ddewiswyd gan y defnyddiwr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Wedi methu chwarae sain. Gwiriwch eich cysylltiad."
+  "quranAudioPlaybackErrorWithConnectionHint": "Wedi methu chwarae sain. Gwiriwch eich cysylltiad.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Wrth gefn rhanbarthol gan ddefnyddio {sourceName}. Cadarnhewch amseroedd gweddi lleol gyda'ch mosg neu awdurdod crefyddol swyddogol."
 }

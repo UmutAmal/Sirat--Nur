@@ -879,6 +879,11 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Alueellinen varavaihtoehto käyttämällä $sourceName. Vahvista paikalliset rukousajat moskeijasi tai virallisen uskonnollisen viranomaisen kanssa.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Pilvivetoinen';
 
   @override

@@ -880,6 +880,11 @@ class AppLocalizationsSk extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionálna záloha pomocou $sourceName. Potvrďte miestne časy modlitieb vo svojej mešite alebo oficiálnej náboženskej autorite.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

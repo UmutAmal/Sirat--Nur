@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "modh {sourceName} le socrú Asr {madhab} roghnaithe ag an úsáideoir",
-  "quranAudioPlaybackErrorWithConnectionHint": "Theip ar athsheinm fuaime. Seiceáil do cheangal."
+  "quranAudioPlaybackErrorWithConnectionHint": "Theip ar athsheinm fuaime. Seiceáil do cheangal.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Cúltaca réigiúnach ag úsáid {sourceName}. Deimhnigh amanna urnaí áitiúla le do mhosc nó le d’údarás oifigiúil reiligiúnach."
 }

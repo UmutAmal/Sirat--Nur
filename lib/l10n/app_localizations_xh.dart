@@ -881,6 +881,11 @@ class AppLocalizationsXh extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Ukubuyela umva kwingingqi usebenzisa $sourceName. Qinisekisa amaxesha omthandazo wasekhaya kunye ne-mosque yakho okanye igunya lenkolo elisemthethweni.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

@@ -875,6 +875,11 @@ class AppLocalizationsNr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Ukubuyela emuva kwesifunda ngokusebenzisa $sourceName. Qinisekisa isikhathi somthandazo wendawo ne-mosque yakho nofana igunya lezekolo elisemthethweni.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

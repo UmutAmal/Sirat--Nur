@@ -880,6 +880,11 @@ class AppLocalizationsMn extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ашиглан бүс нутгийн нөөц. Орон нутгийн залбирлын цагийг сүм хийд эсвэл албан ёсны шашны байгууллагаас баталгаажуулна уу.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

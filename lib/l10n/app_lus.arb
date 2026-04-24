@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method hmangin user-in a thlan {madhab} Asr setting a awm",
-  "quranAudioPlaybackErrorWithConnectionHint": "Audio playback a hlawhchham. Khawngaihin i connection kha lo en ve teh."
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio playback a hlawhchham. Khawngaihin i connection kha lo en ve teh.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback chu {sourceName} hmangin a ni. I mosque emaw official sakhaw thuneitu emaw nen tualchhung tawngtai hun tur chu nemnghet rawh."
 }

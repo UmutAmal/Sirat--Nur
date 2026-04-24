@@ -875,6 +875,11 @@ class AppLocalizationsCh extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional fallback ni\' ma\'usa $sourceName. Na\'siguru na i tiempon tinayuyot gi i gima\'yu\'os-mu pat i ofisiåt na ahensian rilihoso.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

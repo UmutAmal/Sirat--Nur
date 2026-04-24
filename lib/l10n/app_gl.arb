@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Método {sourceName} coa configuración {madhab} seleccionada polo usuario",
-  "quranAudioPlaybackErrorWithConnectionHint": "Produciuse un erro na reprodución de audio. Comproba a túa conexión."
+  "quranAudioPlaybackErrorWithConnectionHint": "Produciuse un erro na reprodución de audio. Comproba a túa conexión.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Alternativa rexional mediante {sourceName}. Confirma os horarios de oración locais coa túa mesquita ou coa autoridade relixiosa oficial."
 }

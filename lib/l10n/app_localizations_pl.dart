@@ -880,6 +880,11 @@ class AppLocalizationsPl extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionalna rezerwa zastępcza przy użyciu $sourceName. Potwierdź lokalne godziny modlitw w swoim meczecie lub oficjalnym organie religijnym.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Napędzany chmurą';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Phương thức {sourceName} với cài đặt {madhab} Asr do người dùng chọn",
-  "quranAudioPlaybackErrorWithConnectionHint": "Phát lại âm thanh không thành công. Vui lòng kiểm tra kết nối của bạn."
+  "quranAudioPlaybackErrorWithConnectionHint": "Phát lại âm thanh không thành công. Vui lòng kiểm tra kết nối của bạn.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Dự phòng khu vực bằng cách sử dụng {sourceName}. Xác nhận thời gian cầu nguyện tại địa phương với nhà thờ Hồi giáo hoặc cơ quan tôn giáo chính thức của bạn."
 }

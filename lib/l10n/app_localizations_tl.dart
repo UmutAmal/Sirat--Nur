@@ -886,6 +886,11 @@ class AppLocalizationsTl extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional fallback gamit ang $sourceName. Kumpirmahin ang mga lokal na oras ng pagdarasal sa iyong mosque o opisyal na awtoridad sa relihiyon.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

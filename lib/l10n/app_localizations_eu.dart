@@ -877,6 +877,11 @@ class AppLocalizationsEu extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Eskualdeko ordezkapena $sourceName erabiliz. Berretsi tokiko otoitz orduak zure meskitarekin edo agintari erlijioso ofizialarekin.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Hodeian bultzatuta';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "వినియోగదారు ఎంచుకున్న {madhab} Asr సెట్టింగ్‌తో {sourceName} పద్ధతి",
-  "quranAudioPlaybackErrorWithConnectionHint": "ఆడియో ప్లేబ్యాక్ విఫలమైంది. దయచేసి మీ కనెక్షన్‌ని తనిఖీ చేయండి."
+  "quranAudioPlaybackErrorWithConnectionHint": "ఆడియో ప్లేబ్యాక్ విఫలమైంది. దయచేసి మీ కనెక్షన్‌ని తనిఖీ చేయండి.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName}ని ఉపయోగించి ప్రాంతీయ ఫాల్‌బ్యాక్. మీ మసీదు లేదా అధికారిక మతపరమైన అధికారంతో స్థానిక ప్రార్థన సమయాలను నిర్ధారించండి."
 }

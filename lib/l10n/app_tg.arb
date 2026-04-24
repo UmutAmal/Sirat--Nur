@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} усули бо интихоби корбар {madhab} танзими аср",
-  "quranAudioPlaybackErrorWithConnectionHint": "Навозиши аудио ноком шуд. Лутфан пайвасти худро санҷед."
+  "quranAudioPlaybackErrorWithConnectionHint": "Навозиши аудио ноком шуд. Лутфан пайвасти худро санҷед.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Бозгашти минтақавӣ бо истифода аз {sourceName}. Вақтҳои намози маҳаллиро бо масҷиди худ ё мақомоти расмии динии худ тасдиқ кунед."
 }

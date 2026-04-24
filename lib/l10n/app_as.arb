@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "ব্যৱহাৰকাৰী-নিৰ্বাচিত {madhab} Asr সংহতিৰ সৈতে {sourceName} পদ্ধতি",
-  "quranAudioPlaybackErrorWithConnectionHint": "অডিঅ' প্লেবেক বিফল হ'ল। অনুগ্ৰহ কৰি আপোনাৰ সংযোগ পৰীক্ষা কৰক।"
+  "quranAudioPlaybackErrorWithConnectionHint": "অডিঅ' প্লেবেক বিফল হ'ল। অনুগ্ৰহ কৰি আপোনাৰ সংযোগ পৰীক্ষা কৰক।",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ব্যৱহাৰ কৰি আঞ্চলিক ফ'লবেক। আপোনাৰ মছজিদ বা চৰকাৰী ধৰ্মীয় কৰ্তৃপক্ষৰ সৈতে স্থানীয় নামাজৰ সময় নিশ্চিত কৰক।"
 }

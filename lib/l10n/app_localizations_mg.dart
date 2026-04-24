@@ -882,6 +882,11 @@ class AppLocalizationsMg extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Famerenana isam-paritra mampiasa $sourceName. Hamafiso ny fotoam-bavaka eo an-toerana miaraka amin\'ny moskenao na ny manampahefana ara-pivavahana ofisialy.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

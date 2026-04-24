@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} uburyo hamwe nabakoresha-batoranijwe {madhab} Igenamiterere rya Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Gukina amajwi byarananiranye. Nyamuneka reba isano yawe."
+  "quranAudioPlaybackErrorWithConnectionHint": "Gukina amajwi byarananiranye. Nyamuneka reba isano yawe.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Gusubira mu karere ukoresheje {sourceName}. Emeza ibihe by'amasengesho hamwe n'umusigiti wawe cyangwa ubuyobozi bw'amadini."
 }

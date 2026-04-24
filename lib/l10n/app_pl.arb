@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Metoda {sourceName} z wybranym przez użytkownika ustawieniem {madhab} Asr",
-  "quranAudioPlaybackErrorWithConnectionHint": "Odtwarzanie dźwięku nie powiodło się. Sprawdź swoje połączenie."
+  "quranAudioPlaybackErrorWithConnectionHint": "Odtwarzanie dźwięku nie powiodło się. Sprawdź swoje połączenie.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regionalna rezerwa zastępcza przy użyciu {sourceName}. Potwierdź lokalne godziny modlitw w swoim meczecie lub oficjalnym organie religijnym."
 }

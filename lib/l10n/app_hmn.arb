@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} txoj kev nrog cov neeg siv xaiv {madhab} Asr teeb tsa",
-  "quranAudioPlaybackErrorWithConnectionHint": "Suab playback ua tsis tau tejyam. Thov xyuas koj qhov kev sib txuas."
+  "quranAudioPlaybackErrorWithConnectionHint": "Suab playback ua tsis tau tejyam. Thov xyuas koj qhov kev sib txuas.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Kev poob qis hauv cheeb tsam siv {sourceName}. Txheeb xyuas lub sijhawm thov Vajtswv hauv zos nrog koj lub tsev teev ntuj lossis txoj cai kev cai dab qhuas."
 }

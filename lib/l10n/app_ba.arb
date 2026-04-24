@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио уйнатыу уңышһыҙлыҡҡа осраны. Зинһар, тоташыуығыҙҙы тикшерегеҙ."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио уйнатыу уңышһыҙлыҡҡа осраны. Зинһар, тоташыуығыҙҙы тикшерегеҙ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority."
 }

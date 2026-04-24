@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} auala fa'atasi ai ma {madhab} fa'atulagaina o le Asr ua filifilia e le tagata.",
-  "quranAudioPlaybackErrorWithConnectionHint": "Ua le mafai ona toe taina leo. Fa'amolemole siaki lau feso'ota'iga."
+  "quranAudioPlaybackErrorWithConnectionHint": "Ua le mafai ona toe taina leo. Fa'amolemole siaki lau feso'ota'iga.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Fa'aitumalo fa'afo'i fa'aaoga {sourceName}. Fa'amautu taimi tatalo i le lotoifale i lau faletapuai po'o le pulega fa'alelotu aloa'ia."
 }

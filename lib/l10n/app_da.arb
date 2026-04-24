@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metode med brugervalgt {madhab} Asr indstilling",
-  "quranAudioPlaybackErrorWithConnectionHint": "Lydafspilning mislykkedes. Tjek venligst din forbindelse."
+  "quranAudioPlaybackErrorWithConnectionHint": "Lydafspilning mislykkedes. Tjek venligst din forbindelse.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional reserve ved hjælp af {sourceName}. Bekræft lokale bedetider med din moske eller officielle religiøse myndighed."
 }

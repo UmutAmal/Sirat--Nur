@@ -886,6 +886,11 @@ class AppLocalizationsFr extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Solution de secours régionale à l\'aide de $sourceName. Confirmez les heures de prière locales auprès de votre mosquée ou de votre autorité religieuse officielle.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Piloté par le cloud';
 
   @override

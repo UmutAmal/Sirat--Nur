@@ -878,6 +878,11 @@ class AppLocalizationsAf extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Streeksterugval deur $sourceName te gebruik. Bevestig plaaslike gebedstye met jou moskee of amptelike godsdienstige owerheid.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Wolkgedrewe';
 
   @override

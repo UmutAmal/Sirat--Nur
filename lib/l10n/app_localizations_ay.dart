@@ -892,6 +892,11 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regional fallback ukax $sourceName ukampiw lurasi. Mezquita jan ukax autoridad religiosa oficial ukamp local oración horas ukanakax chiqanchatawa.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Qhixu qhixu apnaqata';
 
   @override

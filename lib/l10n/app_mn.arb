@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "Хэрэглэгчийн сонгосон {madhab} Asr тохиргоотой {sourceName} арга",
-  "quranAudioPlaybackErrorWithConnectionHint": "Аудио тоглуулж чадсангүй. Холболтоо шалгана уу."
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио тоглуулж чадсангүй. Холболтоо шалгана уу.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ашиглан бүс нутгийн нөөц. Орон нутгийн залбирлын цагийг сүм хийд эсвэл албан ёсны шашны байгууллагаас баталгаажуулна уу."
 }

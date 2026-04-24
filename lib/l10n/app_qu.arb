@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} ruwaywan ruwaqpa akllasqan {madhab} Asr churaywan",
-  "quranAudioPlaybackErrorWithConnectionHint": "Uyarinapaq uyariyqa manam allinchu karqa. Ama hina kaspa, tinkisqaykita qhaway."
+  "quranAudioPlaybackErrorWithConnectionHint": "Uyarinapaq uyariyqa manam allinchu karqa. Ama hina kaspa, tinkisqaykita qhaway.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional kutiy {sourceName} llamk'achispa. Mezquitaykiwan utaq autoridad religiosa oficialwan llaqtapi mañakuy pachakunata takyachiy."
 }

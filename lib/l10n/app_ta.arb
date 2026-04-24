@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "பயனர் தேர்ந்தெடுத்த {sourceName} முறை {madhab} Asr அமைப்பு",
-  "quranAudioPlaybackErrorWithConnectionHint": "ஆடியோ பிளேபேக் தோல்வியடைந்தது. உங்கள் இணைப்பைச் சரிபார்க்கவும்."
+  "quranAudioPlaybackErrorWithConnectionHint": "ஆடியோ பிளேபேக் தோல்வியடைந்தது. உங்கள் இணைப்பைச் சரிபார்க்கவும்.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ஐப் பயன்படுத்தி பிராந்திய ஃபால்பேக். உங்கள் மசூதி அல்லது அதிகாரப்பூர்வ மத அதிகாரத்துடன் உள்ளூர் பிரார்த்தனை நேரத்தை உறுதிப்படுத்தவும்."
 }

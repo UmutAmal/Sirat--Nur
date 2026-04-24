@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} Method mat Benotzer-ausgewielten {madhab} Asr Astellung",
-  "quranAudioPlaybackErrorWithConnectionHint": "D'Audio-Playback ass gescheitert. Kuckt w.e.g. Är Verbindung."
+  "quranAudioPlaybackErrorWithConnectionHint": "D'Audio-Playback ass gescheitert. Kuckt w.e.g. Är Verbindung.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Regional Réckfall mat {sourceName}. Bestätegt lokal Gebiedszäite mat Ärer Moschee oder offiziell reliéiser Autoritéit."
 }

@@ -880,6 +880,11 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Regionális tartalék a $sourceName használatával. Erősítse meg a helyi imaidőpontokat mecsetjénél vagy hivatalos vallási hatóságánál.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Felhővezérelt';
 
   @override

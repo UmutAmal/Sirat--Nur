@@ -881,6 +881,11 @@ class AppLocalizationsLv extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Reģionālais atkāpšanās veids, izmantojot $sourceName. Apstipriniet vietējos lūgšanu laikus savā mošejā vai oficiālajā reliģiskajā iestādē.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Mākoņu vadīts';
 
   @override

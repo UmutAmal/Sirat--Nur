@@ -877,6 +877,11 @@ class AppLocalizationsSi extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName භාවිතයෙන් කලාපීය පසුබැසීම. ඔබේ පල්ලිය හෝ නිල ආගමික අධිකාරිය සමඟ ප්‍රාදේශීය යාඥා වේලාවන් තහවුරු කරන්න.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

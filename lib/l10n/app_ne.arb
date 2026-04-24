@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "प्रयोगकर्ता द्वारा चयन गरिएको {sourceName} विधि {madhab} Asr सेटिङ",
-  "quranAudioPlaybackErrorWithConnectionHint": "अडियो प्लेब्याक असफल भयो। कृपया आफ्नो जडान जाँच गर्नुहोस्।"
+  "quranAudioPlaybackErrorWithConnectionHint": "अडियो प्लेब्याक असफल भयो। कृपया आफ्नो जडान जाँच गर्नुहोस्।",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "क्षेत्रीय फलब्याक {sourceName} प्रयोग गरेर। आफ्नो मस्जिद वा आधिकारिक धार्मिक प्राधिकरण संग स्थानीय प्रार्थना समय पुष्टि गर्नुहोस्।"
 }

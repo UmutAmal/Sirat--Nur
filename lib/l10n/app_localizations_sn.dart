@@ -877,6 +877,11 @@ class AppLocalizationsSn extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return 'Kudzokera kumashure uchishandisa $sourceName. Simbisa nguva dzeminamato yemunharaunda nemosque yako kana vechitendero chepamutemo.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'Cloud Driven';
 
   @override

@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "{sourceName} metodu b'setting Asr {madhab} magħżul mill-utent",
-  "quranAudioPlaybackErrorWithConnectionHint": "Il-plejbek tal-awdjo falla. Jekk jogħġbok iċċekkja l-konnessjoni tiegħek."
+  "quranAudioPlaybackErrorWithConnectionHint": "Il-plejbek tal-awdjo falla. Jekk jogħġbok iċċekkja l-konnessjoni tiegħek.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "Riżerva reġjonali bl-użu ta' {sourceName}. Ikkonferma l-ħinijiet tat-talb lokali mal-moskea jew l-awtorità reliġjuża uffiċjali tiegħek."
 }

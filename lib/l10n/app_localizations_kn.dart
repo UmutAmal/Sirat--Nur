@@ -878,6 +878,11 @@ class AppLocalizationsKn extends AppLocalizations {
   }
 
   @override
+  String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
+    return '$sourceName ಬಳಸಿಕೊಂಡು ಪ್ರಾದೇಶಿಕ ಫಾಲ್‌ಬ್ಯಾಕ್. ನಿಮ್ಮ ಮಸೀದಿ ಅಥವಾ ಅಧಿಕೃತ ಧಾರ್ಮಿಕ ಅಧಿಕಾರದೊಂದಿಗೆ ಸ್ಥಳೀಯ ಪ್ರಾರ್ಥನೆ ಸಮಯವನ್ನು ದೃಢೀಕರಿಸಿ.';
+  }
+
+  @override
   String get diagnosticsCloudDriven => 'ಮೇಘ ಚಾಲಿತ';
 
   @override

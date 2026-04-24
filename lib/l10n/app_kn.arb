@@ -781,5 +781,13 @@
     }
   },
   "diagnosticsPrayerHybridSource": "ಬಳಕೆದಾರ-ಆಯ್ಕೆಮಾಡಿದ {madhab} Asr ಸೆಟ್ಟಿಂಗ್‌ನೊಂದಿಗೆ {sourceName} ವಿಧಾನ",
-  "quranAudioPlaybackErrorWithConnectionHint": "ಆಡಿಯೋ ಪ್ಲೇಬ್ಯಾಕ್ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ."
+  "quranAudioPlaybackErrorWithConnectionHint": "ಆಡಿಯೋ ಪ್ಲೇಬ್ಯಾಕ್ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.",
+  "@diagnosticsPrayerRegionalFallbackSource": {
+    "placeholders": {
+      "sourceName": {
+        "type": "String"
+      }
+    }
+  },
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ಬಳಸಿಕೊಂಡು ಪ್ರಾದೇಶಿಕ ಫಾಲ್‌ಬ್ಯಾಕ್. ನಿಮ್ಮ ಮಸೀದಿ ಅಥವಾ ಅಧಿಕೃತ ಧಾರ್ಮಿಕ ಅಧಿಕಾರದೊಂದಿಗೆ ಸ್ಥಳೀಯ ಪ್ರಾರ್ಥನೆ ಸಮಯವನ್ನು ದೃಢೀಕರಿಸಿ."
 }
