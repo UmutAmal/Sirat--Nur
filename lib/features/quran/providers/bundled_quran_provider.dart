@@ -186,10 +186,8 @@ List<Map<String, dynamic>>? normalizeCloudQuranRows({
     final revelationType =
         _nonEmptyString(surahRow['revelation_type']) ??
         _nonEmptyString(bundledSurah['revelationType']);
-    final source = _nonEmptyString(surahRow['source']);
-    final verifiedAt =
-        _nonEmptyString(surahRow['verified_at']) ??
-        _nonEmptyString(surahRow['verifiedAt']);
+    final source = _readVerifiedQuranSource(surahRow['source']);
+    final verifiedAt = _readVerifiedQuranTimestamp(surahRow);
 
     if (nameArabic == null ||
         transliteration == null ||
@@ -239,10 +237,8 @@ List<Map<String, dynamic>>? normalizeCloudQuranRows({
     final textArabic = _nonEmptyString(ayahRow['text_ar']);
     final textTurkish = _nonEmptyString(ayahRow['text_tr']);
     final textEnglish = _nonEmptyString(ayahRow['text_en']);
-    final source = _nonEmptyString(ayahRow['source']);
-    final verifiedAt =
-        _nonEmptyString(ayahRow['verified_at']) ??
-        _nonEmptyString(ayahRow['verifiedAt']);
+    final source = _readVerifiedQuranSource(ayahRow['source']);
+    final verifiedAt = _readVerifiedQuranTimestamp(ayahRow);
     final juzNumber =
         _toInt(ayahRow['juz_number']) ?? _toInt(bundledAyahMeta['juz']);
     if (textArabic == null ||
@@ -298,6 +294,20 @@ String? _nonEmptyString(dynamic value) {
     return null;
   }
   return normalized;
+}
+
+String? _readVerifiedQuranSource(dynamic value) {
+  final source = _nonEmptyString(value);
+  if (source == null || !isApprovedCloudContentSourceUrl(source)) {
+    return null;
+  }
+  return source;
+}
+
+String? _readVerifiedQuranTimestamp(Map<String, dynamic> row) {
+  final value =
+      _nonEmptyString(row['verified_at']) ?? _nonEmptyString(row['verifiedAt']);
+  return value == null || DateTime.tryParse(value) == null ? null : value;
 }
 
 final bundledQuranProvider = FutureProvider<List<Map<String, dynamic>>>((

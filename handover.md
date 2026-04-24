@@ -18085,3 +18085,30 @@
 
 ### Sonraki Adim
 - Targeted education/library testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Quran provider provenance guard'lari taranacak.
+
+## 2026-04-24 TUR-439 - Quran Cloud Rows Require Approved Source URL and Parseable Timestamp
+
+### MASTER Karari
+- Risk: Quran cloud surah/ayah normalizer'i `source` alanini yalniz bos olmayan metin olarak kabul ediyor, `verified_at` alanini da parse etmeden kullanilabilir sayiyordu. Bu, `Quran.com API` gibi URL olmayan kaynak metinlerinin veya `not-a-date` timestamp'lerinin complete cloud Quran setini guvenilir gostermesine izin verebilirdi.
+- Kanit:
+  - `lib/features/quran/providers/bundled_quran_provider.dart` once `source = _nonEmptyString(...)` ve `verifiedAt = _nonEmptyString(...)` kontroluyle yetiniyordu.
+  - `test/features/quran/providers/bundled_quran_provider_test.dart` fixture'i kaynak olarak URL yerine `Quran.com API` stringini kullaniyordu; bu test davranisi zayif guard'i mesrulastiriyordu.
+- Kullanici etkisi: Kur'an metni ve meali uygulamanin en hassas cekirdek icerigi oldugu icin kaynak zinciri URL/dogrulanabilir timestamp olmadan kabul edilmemeli.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25.
+- Rollback plani: `lib/features/quran/providers/bundled_quran_provider.dart`, `test/features/quran/providers/bundled_quran_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `_readVerifiedQuranSource` helper'i eklenecek; Quran cloud satirlari yalniz onayli HTTPS kaynak URL'si ile kabul edilecek.
+- `_readVerifiedQuranTimestamp` helper'i eklenecek; `verified_at`/`verifiedAt` yalniz `DateTime.tryParse` ile parse edilebiliyorsa kabul edilecek.
+- Normalize edilen reader payload'i degismeyecek; guven kapisini gecemeyen cloud dataset `null` donerek bundled fallback'e dusmeye devam edecek.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\quran\providers\bundled_quran_provider_test.dart --reporter compact` PASS, 14/14.
+- Yeni regresyonlar: URL olmayan kaynak (`Quran.com API`) ve `verified_at: not-a-date` cloud Quran datasetini reddedecek.
+
+### Risk Degisimi
+- Quran cloud weak provenance riski: `12/25 -> 1/25`.
+- Kalan risk: Audio provider timestamp parse guard'lari ve silent catch gorunurlugu ayrica taranacak.
+
+### Sonraki Adim
+- Targeted Quran provider testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan audio provider provenance guard'lari taranacak.

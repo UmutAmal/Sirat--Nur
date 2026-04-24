@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/providers/supabase_providers.dart';
 import 'package:sirat_i_nur/features/quran/providers/bundled_quran_provider.dart';
 
-const _verifiedSource = 'Quran.com API';
+const _verifiedSource = 'https://api.quran.com';
 const _verifiedAt = '2026-04-15T00:00:00Z';
 
 void main() {
@@ -231,6 +231,92 @@ void main() {
             'text_tr': 'Hamd Allah\'adır',
             'text_en': 'Praise belongs to Allah',
             'source': _verifiedSource,
+          },
+        ],
+        bundledRows: bundledRows,
+        expectedSurahCount: 1,
+        expectedAyahCount: 2,
+      );
+
+      expect(rows, isNull);
+    });
+
+    test('returns null when cloud Quran provenance is not approved', () {
+      final rows = normalizeCloudQuranRows(
+        surahRows: const [
+          {
+            'id': 11,
+            'surah_number': 1,
+            'name_ar': 'الفاتحة',
+            'name_en': 'The Opening',
+            'name_transliteration': 'Al-Fatihah',
+            'ayah_count': 2,
+            'revelation_type': 'Meccan',
+            'source': 'Quran.com API',
+            'verified_at': _verifiedAt,
+          },
+        ],
+        ayahRows: const [
+          {
+            'surah_id': 11,
+            'ayah_number': 1,
+            'text_ar': 'بِسْمِ اللَّهِ',
+            'text_tr': 'Rahman ve Rahim Allah\'ın adıyla',
+            'text_en': 'In the name of Allah',
+            'source': _verifiedSource,
+            'verified_at': _verifiedAt,
+          },
+          {
+            'surah_id': 11,
+            'ayah_number': 2,
+            'text_ar': 'الْحَمْدُ لِلَّهِ',
+            'text_tr': 'Hamd Allah\'adır',
+            'text_en': 'Praise belongs to Allah',
+            'source': _verifiedSource,
+            'verified_at': _verifiedAt,
+          },
+        ],
+        bundledRows: bundledRows,
+        expectedSurahCount: 1,
+        expectedAyahCount: 2,
+      );
+
+      expect(rows, isNull);
+    });
+
+    test('returns null when cloud Quran verified_at cannot be parsed', () {
+      final rows = normalizeCloudQuranRows(
+        surahRows: const [
+          {
+            'id': 11,
+            'surah_number': 1,
+            'name_ar': 'الفاتحة',
+            'name_en': 'The Opening',
+            'name_transliteration': 'Al-Fatihah',
+            'ayah_count': 2,
+            'revelation_type': 'Meccan',
+            'source': _verifiedSource,
+            'verified_at': _verifiedAt,
+          },
+        ],
+        ayahRows: const [
+          {
+            'surah_id': 11,
+            'ayah_number': 1,
+            'text_ar': 'بِسْمِ اللَّهِ',
+            'text_tr': 'Rahman ve Rahim Allah\'ın adıyla',
+            'text_en': 'In the name of Allah',
+            'source': _verifiedSource,
+            'verified_at': 'not-a-date',
+          },
+          {
+            'surah_id': 11,
+            'ayah_number': 2,
+            'text_ar': 'الْحَمْدُ لِلَّهِ',
+            'text_tr': 'Hamd Allah\'adır',
+            'text_en': 'Praise belongs to Allah',
+            'source': _verifiedSource,
+            'verified_at': _verifiedAt,
           },
         ],
         bundledRows: bundledRows,
