@@ -18058,3 +18058,30 @@
 
 ### Sonraki Adim
 - Full analyze/test/store readiness ve secret diff scan; gecerse commit/push. Ardindan education content timestamp/source guard esligini tara.
+
+## 2026-04-24 TUR-438 - Education Cloud Rows Require Parseable Verification Timestamp
+
+### MASTER Karari
+- Risk: Education category/topic cloud satirlari onayli kaynak URL'si tasisa bile `verified_at` yalniz bos olmayan string olarak kabul ediliyordu. `not-a-date` gibi bozuk degerler dini egitim icerigi icin verified provenance gibi gorunebilirdi.
+- Kanit:
+  - `lib/core/providers/supabase_providers.dart` icindeki `_hasVerifiedCloudContentProvenance` `_readCloudVerifiedAt(row) != null` sonucuna guveniyor.
+  - Ayni dosyadaki `_readCloudVerifiedAt` once `verified_at`/`verifiedAt` alanini parse etmeden direkt string olarak donduruyordu.
+  - `test/features/library/library_page_cloud_duas_test.dart` kategori/konu kaynak ve eksik provenance testlerine sahipti, fakat gecersiz tarih stringini yakalamiyordu.
+- Kullanici etkisi: Egitim bolumunde bozuk dogrulama tarihi tasiyan cloud icerigi guvenilir gorunebilir; bu, dini icerik icin kaynak zincirini zayiflatir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/features/library/library_page_cloud_duas_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `_readCloudVerifiedAt` artik `verified_at`/`verifiedAt` degerini `DateTime.tryParse` ile dogruluyor; parse edilemeyen degerler `null` kabul ediliyor.
+- Mevcut category/topic normalization sozlesmesi korunuyor: kabul edilen satirlarda kaynak timestamp stringi aynen saklaniyor, sadece gecersiz timestamp satirlari filtre disi kaliyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\library\library_page_cloud_duas_test.dart --reporter compact` PASS, 11/11.
+- Yeni regresyon: onayli kaynak URL'si olsa bile `verified_at: not-a-date` iceren education category/topic satirlari render'a giden sanitized listeye giremeyecek.
+
+### Risk Degisimi
+- Education cloud invalid verified_at riski: `9/25 -> 1/25`.
+- Kalan risk: Quran surah/ayah ve audio provider'larinda timestamp parse guard esligi ayrica taranacak; tek turda global rewrite yapilmadi.
+
+### Sonraki Adim
+- Targeted education/library testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan Quran provider provenance guard'lari taranacak.

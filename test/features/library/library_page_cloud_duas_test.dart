@@ -117,6 +117,12 @@ void main() {
           'verified_at': '2026-04-17T00:00:00Z',
         },
         {
+          'id': 'invalid-verified-at',
+          'title': 'Invalid verified_at',
+          'source': 'https://islamansiklopedisi.org.tr',
+          'verified_at': 'not-a-date',
+        },
+        {
           'id': 7,
           'title': 'Numeric id',
           'title_en': 99,
@@ -162,6 +168,12 @@ void main() {
             'title': 'Missing provenance',
             'content': 'Body without source',
             'source': 'https://islamansiklopedisi.org.tr',
+          },
+          {
+            'title': 'Invalid verified_at',
+            'content': 'Body with invalid verification timestamp',
+            'source': 'https://islamansiklopedisi.org.tr',
+            'verified_at': 'not-a-date',
           },
           {'title': 99, 'content': 'Non-string title'},
           {'title': 'Non-string content', 'content': 99},

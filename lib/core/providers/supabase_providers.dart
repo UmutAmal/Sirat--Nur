@@ -313,8 +313,9 @@ String? _readCloudProvenanceSource(Map<String, dynamic> row) {
 }
 
 String? _readCloudVerifiedAt(Map<String, dynamic> row) {
-  return _readCloudText(row['verified_at']) ??
-      _readCloudText(row['verifiedAt']);
+  final value =
+      _readCloudText(row['verified_at']) ?? _readCloudText(row['verifiedAt']);
+  return value == null || DateTime.tryParse(value) == null ? null : value;
 }
 
 String? resolveEducationCategoryId(Map<String, dynamic> row) {
