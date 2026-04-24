@@ -53,6 +53,47 @@ function Assert-NativeSuccess {
   }
 }
 
+function Assert-AdbDeviceAvailable {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$DeviceName
+  )
+
+  $previousErrorActionPreference = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
+  try {
+    $deviceOutput = adb devices 2>&1
+    $deviceExitCode = $LASTEXITCODE
+  } finally {
+    $ErrorActionPreference = $previousErrorActionPreference
+  }
+
+  if ($deviceExitCode -ne 0) {
+    $deviceMessage = ($deviceOutput | Out-String).Trim()
+    throw "adb devices failed before Appium smoke could start: $deviceMessage"
+  }
+
+  $readyPattern = "^\s*$([regex]::Escape($DeviceName))\s+device\s*$"
+  foreach ($line in $deviceOutput) {
+    if ([string]$line -match $readyPattern) {
+      return
+    }
+  }
+
+  $knownDevices = @()
+  foreach ($line in $deviceOutput) {
+    $trimmed = ([string]$line).Trim()
+    if ([string]::IsNullOrWhiteSpace($trimmed) -or $trimmed -like 'List of devices attached*') {
+      continue
+    }
+
+    $knownDevices += $trimmed
+  }
+
+  $knownDevicesText = if ($knownDevices.Count -gt 0) { $knownDevices -join '; ' } else { 'none' }
+  throw "ADB device '$DeviceName' is not connected and ready. Start the emulator, authorize USB debugging, or pass -DeviceName with a ready adb device before running Appium smoke. Current adb devices: $knownDevicesText"
+}
+
 function Install-CurrentWorkspaceApk {
   param(
     [Parameter(Mandatory = $true)][string]$DeviceName,
@@ -424,10 +465,15 @@ $apkLength = $null
 $apkPrepared = $false
 $releaseDartDefinesApplied = $false
 $apkReinstalledAfterSignatureMismatch = $false
+$requiresLocalAdb = (-not $SkipBuildInstall) -or (-not $SkipLogcat)
+
+if ($requiresLocalAdb) {
+  Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH, or pass both -SkipBuildInstall and -SkipLogcat only when using a remote Appium device.'
+  Assert-AdbDeviceAvailable -DeviceName $DeviceName
+}
 
 if (-not $SkipBuildInstall) {
   Require-Command -Name 'flutter' -InstallHint 'Install Flutter and ensure flutter is on PATH before running the Appium smoke script.'
-  Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH before running the Appium smoke script.'
 
   $flutterBuildArgs = @('build', 'apk', "--$BuildMode")
   $dartDefineArgs = Get-ReleaseDartDefineArguments -BuildMode $BuildMode
@@ -448,8 +494,6 @@ if (-not $SkipBuildInstall) {
 
   $apkReinstalledAfterSignatureMismatch = Install-CurrentWorkspaceApk -DeviceName $DeviceName -Package $Package -ApkPath $apkPath -NoReset ([bool]$NoReset)
   $apkPrepared = $true
-} elseif (-not $SkipLogcat) {
-  Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH, or pass -SkipLogcat explicitly.'
 }
 
 if (-not $SkipLogcat) {

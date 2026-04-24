@@ -46,6 +46,16 @@ void main() {
       expect(script, contains('Unhandled Exception'));
     });
 
+    test('fails fast when the selected adb device is not ready', () {
+      expect(script, contains('Assert-AdbDeviceAvailable'));
+      expect(script, contains('adb devices'));
+      expect(script, contains(r'[regex]::Escape($DeviceName)'));
+      expect(script, contains(r'$requiresLocalAdb'));
+      expect(script, contains('is not connected and ready'));
+      expect(script, contains('authorize USB debugging'));
+      expect(script, contains('Current adb devices'));
+    });
+
     test('prepares the current workspace apk before starting Appium', () {
       expect(script, contains(r'[string]$BuildMode = "debug"'));
       expect(script, contains(r'[switch]$SkipBuildInstall'));

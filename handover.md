@@ -17917,3 +17917,36 @@
 
 ### Sonraki Adim
 - Full analyze/test ve secret diff scan; gecerse commit/push. Ardindan silent catch/error visibility ve kalan l10n/content correctness taramasina devam et.
+
+## 2026-04-24 TUR-433 - Appium Smoke Fails Fast When ADB Device Is Not Ready
+
+### MASTER Karari
+- Risk: Appium runtime smoke hedef cihaz/emulator `adb devices` icinde `device` durumunda degilken once APK build/install veya logcat adimlarina girebiliyor, bu da release kanitini gec ve native hata metniyle bozuyordu.
+- Kanit:
+  - `tool/appium_runtime_smoke.ps1` once `adb` komutunun PATH'te olmasini denetliyordu, ancak `$DeviceName` icin `adb devices` readiness kontrolu yapmiyordu.
+  - `adb devices` bu turda bagli cihaz listelemedi.
+  - Appium 3.3.0 kurulu, fakat `http://127.0.0.1:4723/status` hazir degildi; canli smoke icin ortam eksikti.
+- Kullanici etkisi: Cihaz/emulator yokken script build/install maliyeti olusturabilir ve kok nedeni net soylemeden hata verebilir; store-ready runtime kanit zinciri tekrarlanabilir olmaz.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `Assert-AdbDeviceAvailable` eklendi; `adb devices` cikisini okuyor ve hedef cihaz yalniz `device` durumundaysa devam ediyor.
+- Hedef cihaz yoksa, offline ise veya USB authorization bekliyorsa script baslangicta acik mesajla duruyor: emulator baslat, USB debug yetkisi ver veya dogru `-DeviceName` kullan.
+- Lokal ADB gerektiren modlar tek `$requiresLocalAdb` kapisinda toplandi; remote Appium kullanan ve hem build/install hem logcat'i bilerek atlayan akis korunuyor.
+
+### TESTER Degisikligi
+- PowerShell parse check: PASS.
+- Targeted tests: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, 9/9.
+- No-device preflight proof: `.\tool\appium_runtime_smoke.ps1 -SkipBuildInstall` bagli ADB cihaz yokken build'e girmeden beklenen readiness hatasini verdi.
+- `flutter analyze`: PASS, no issues.
+- `flutter test --reporter compact`: PASS, 669/669.
+- `tool/check_store_readiness.ps1`: PASS; Supabase content/source checks, Quran audio mirror/distribution checks, analyze ve full test dahil store-ready kapisi yesil.
+- Secret diff scan: PASS; diff icinde Supabase DB URI, service token, password veya private key paterni yok.
+
+### Risk Degisimi
+- Appium no-device late/native failure riski: `12/25 -> 2/25`.
+- Kalan risk: Gercek emulator/cihaz baglandiginda ve Appium server baslatildiginda `-SmokeLocale en` ve `-SmokeLocale tr` release smoke kaniti alinmali; cihaz yokken sahte PASS uretilmeyecek.
+
+### Sonraki Adim
+- Commit/push; ardindan yeni dongude silent catch/error visibility, dependency freshness, religious content source fidelity ve kalan l10n/content correctness taramasina devam et.
