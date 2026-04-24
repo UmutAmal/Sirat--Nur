@@ -1259,6 +1259,10 @@ class AppLocalizationsDa extends AppLocalizations {
       'Verificerede Koran-lydkilder er ikke tilgængelige lige nu.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Lydafspilning mislykkedes. Tjek venligst din forbindelse.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Den bekræftede Koran-lydpakke er ufuldstændig ($available/$total). Prøv igen, efter at lydkataloget er opdateret.';
   }

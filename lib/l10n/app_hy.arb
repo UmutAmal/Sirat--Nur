@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} մեթոդ՝ օգտագործողի կողմից ընտրված {madhab} Asr կարգավորումով"
+  "diagnosticsPrayerHybridSource": "{sourceName} մեթոդ՝ օգտագործողի կողմից ընտրված {madhab} Asr կարգավորումով",
+  "quranAudioPlaybackErrorWithConnectionHint": "Ձայնի նվագարկումը ձախողվեց: Խնդրում ենք ստուգել ձեր կապը:"
 }

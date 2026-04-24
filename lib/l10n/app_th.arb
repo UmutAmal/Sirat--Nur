@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "วิธีการ {sourceName} ที่ผู้ใช้เลือก {madhab} การตั้งค่า Asr"
+  "diagnosticsPrayerHybridSource": "วิธีการ {sourceName} ที่ผู้ใช้เลือก {madhab} การตั้งค่า Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "การเล่นเสียงล้มเหลว กรุณาตรวจสอบการเชื่อมต่อของคุณ"
 }

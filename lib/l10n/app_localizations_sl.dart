@@ -1262,6 +1262,10 @@ class AppLocalizationsSl extends AppLocalizations {
       'Preverjeni zvočni viri iz Korana trenutno niso na voljo.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Predvajanje zvoka ni uspelo. Preverite povezavo.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Preverjen zvočni paket Quran je nepopoln ($available/$total). Poskusite znova, ko bo zvočni katalog posodobljen.';
   }

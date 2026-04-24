@@ -1255,6 +1255,10 @@ class AppLocalizationsNe extends AppLocalizations {
       'प्रमाणित कुरान अडियो स्रोतहरू अहिले उपलब्ध छैनन्।';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'अडियो प्लेब्याक असफल भयो। कृपया आफ्नो जडान जाँच गर्नुहोस्।';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'प्रमाणित कुरान अडियो प्याक अपूर्ण छ ($available/$total)। अडियो क्याटलग अपडेट भएपछि फेरि प्रयास गर्नुहोस्।';
   }

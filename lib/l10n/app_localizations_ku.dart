@@ -1257,6 +1257,10 @@ class AppLocalizationsKu extends AppLocalizations {
       'Çavkaniyên dengî yên Quranê yên rast niha ne berdest in.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Lîstika deng bi ser neket. Ji kerema xwe pêwendiya xwe kontrol bikin.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Pakêta dengî ya Quranê ya verastkirî ne temam e ($available/$total). Piştî nûvekirina kataloga dengî dîsa biceribîne.';
   }

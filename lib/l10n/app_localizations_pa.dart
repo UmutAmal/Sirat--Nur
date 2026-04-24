@@ -1257,6 +1257,10 @@ class AppLocalizationsPa extends AppLocalizations {
       'ਪ੍ਰਮਾਣਿਤ ਕੁਰਾਨ ਆਡੀਓ ਸਰੋਤ ਇਸ ਸਮੇਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ਆਡੀਓ ਪਲੇਬੈਕ ਅਸਫਲ ਰਿਹਾ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'ਪ੍ਰਮਾਣਿਤ ਕੁਰਾਨ ਆਡੀਓ ਪੈਕ ਅਧੂਰਾ ਹੈ ($available/$total)। ਆਡੀਓ ਕੈਟਾਲਾਗ ਅੱਪਡੇਟ ਹੋਣ ਤੋਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
   }

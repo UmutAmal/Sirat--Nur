@@ -1259,6 +1259,10 @@ class AppLocalizationsLa extends AppLocalizations {
       'Verified Quran audio fontes perpendat nunc.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio playback fallit. Quaeso nexum reprehendo tuum.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verificata Quran auditionis sarcina incompleta est ($available/$total). Iterum conare postquam catalogus audio renovatus est.';
   }

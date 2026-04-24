@@ -1264,6 +1264,10 @@ class AppLocalizationsSt extends AppLocalizations {
       'Mehloli ea molumo e netefalitsoeng ea Quran ha e fumanehe hajoale.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Ho hloleha ho bapala molumo. Ka kopo, sheba khokahano ea hau.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Sephutheloana sa molumo oa Quran se netefalitsoeng ha se ea fella ($available/$total). Leka hape ka mor\'a hore lethathamo la molumo le ntlafatsoe.';
   }

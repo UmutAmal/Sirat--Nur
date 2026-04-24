@@ -1261,6 +1261,10 @@ class AppLocalizationsSk extends AppLocalizations {
       'Overené zdroje zvuku Koránu sú momentálne nedostupné.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Prehrávanie zvuku zlyhalo. Skontrolujte svoje pripojenie.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Overený zvukový balík Koránu je neúplný ($available/$total). Skúste to znova po aktualizácii zvukového katalógu.';
   }

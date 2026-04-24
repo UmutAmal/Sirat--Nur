@@ -1262,6 +1262,10 @@ class AppLocalizationsSq extends AppLocalizations {
       'Burimet audio të verifikuara të Kuranit nuk janë të disponueshme për momentin.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Riprodhimi i audios dështoi. Ju lutemi kontrolloni lidhjen tuaj.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Paketa audio e verifikuar e Kuranit është e paplotë ($available/$total). Provo sërish pasi të përditësohet katalogu audio.';
   }

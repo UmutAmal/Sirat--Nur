@@ -1255,6 +1255,10 @@ class AppLocalizationsYo extends AppLocalizations {
       'Awọn orisun ohun afetigbọ Al-Qur’an ti a fọwọsi ko si ni bayi.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Sisisẹsẹhin ohun kuna. Jọwọ ṣayẹwo asopọ rẹ.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ididi ohun afetigbọ Al-Qur’an ti ko pe ($available/$total). Gbiyanju lẹẹkansi lẹhin ti o ti ni imudojuiwọn katalogi ohun.';
   }

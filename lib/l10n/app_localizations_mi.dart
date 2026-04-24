@@ -1263,6 +1263,10 @@ class AppLocalizationsMi extends AppLocalizations {
       'Ko nga puna ororongo Quran kua whakamanahia kaore i te waatea inaianei.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'I rahua te purei ororongo. Tena koa tirohia to hononga.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ko te kete ororongo Quran kua whakamanahia kaore i oti ($available/$total). Ngana ano i muri i te whakahōutanga o te putumōhio ororongo.';
   }

@@ -1257,6 +1257,10 @@ class AppLocalizationsAz extends AppLocalizations {
       'Təsdiqlənmiş Quran audio mənbələri hazırda əlçatan deyil.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio oxutma uğursuz oldu. Bağlantınızı yoxlayın.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Təsdiqlənmiş Quran audio paketi natamamdır ($available/$total). Audio kataloq yeniləndikdən sonra yenidən cəhd edin.';
   }

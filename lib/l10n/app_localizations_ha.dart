@@ -1258,6 +1258,10 @@ class AppLocalizationsHa extends AppLocalizations {
       'Ba a samun ingantattun hanyoyin sauti na Alqur\'ani a yanzu.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'An kasa sake kunna sautin. Da fatan za a duba haɗin ku.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

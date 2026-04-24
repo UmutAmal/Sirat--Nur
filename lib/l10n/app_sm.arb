@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} auala fa'atasi ai ma {madhab} fa'atulagaina o le Asr ua filifilia e le tagata."
+  "diagnosticsPrayerHybridSource": "{sourceName} auala fa'atasi ai ma {madhab} fa'atulagaina o le Asr ua filifilia e le tagata.",
+  "quranAudioPlaybackErrorWithConnectionHint": "Ua le mafai ona toe taina leo. Fa'amolemole siaki lau feso'ota'iga."
 }

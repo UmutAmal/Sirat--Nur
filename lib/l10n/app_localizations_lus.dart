@@ -1265,6 +1265,10 @@ class AppLocalizationsLus extends AppLocalizations {
       'Tunah hian Quran audio source verified a awm lo.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio playback a hlawhchham. Khawngaihin i connection kha lo en ve teh.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Quran audio pack finfiah tawh chu a kim lo ($available/$total). Audio catalog update hnuah han try leh teh.';
   }

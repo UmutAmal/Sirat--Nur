@@ -1260,6 +1260,10 @@ class AppLocalizationsSm extends AppLocalizations {
       'E le maua i le taimi nei puna\'oa fa\'alogo Quran fa\'amaonia.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Ua le mafai ona toe taina leo. Fa\'amolemole siaki lau feso\'ota\'iga.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'E le\'o atoatoa le pusa leo fa\'amaonia o le Quran ($available/$total). Toe taumafai pe a uma ona faafou le lisi o leo.';
   }

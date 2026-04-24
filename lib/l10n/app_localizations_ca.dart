@@ -1269,6 +1269,10 @@ class AppLocalizationsCa extends AppLocalizations {
       'Les fonts d\'àudio verificades de l\'Alcorà no estan disponibles en aquest moment.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'La reproducció d\'àudio ha fallat. Comproveu la vostra connexió.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'El paquet d\'àudio de l\'Alcorà verificat està incomplet ($available/$total). Torna-ho a provar un cop s\'hagi actualitzat el catàleg d\'àudio.';
   }

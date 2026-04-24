@@ -1260,6 +1260,10 @@ class AppLocalizationsTk extends AppLocalizations {
       'Barlanan Kuranyň ses çeşmeleri häzir elýeterli däl.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Ses görkezmek şowsuz. Baglanyşygyňyzy barlaň.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

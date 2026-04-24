@@ -1268,6 +1268,10 @@ class AppLocalizationsEl extends AppLocalizations {
       'Οι επαληθευμένες πηγές ήχου του Κορανίου δεν είναι διαθέσιμες αυτήν τη στιγμή.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Η αναπαραγωγή ήχου απέτυχε. Ελέγξτε τη σύνδεσή σας.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Το επαληθευμένο πακέτο ήχου Κορανίου δεν είναι πλήρες ($available/$total). Δοκιμάστε ξανά μετά την ενημέρωση του καταλόγου ήχου.';
   }

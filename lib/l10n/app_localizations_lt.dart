@@ -1261,6 +1261,10 @@ class AppLocalizationsLt extends AppLocalizations {
       'Patvirtinti Korano garso šaltiniai šiuo metu nepasiekiami.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Nepavyko atkurti garso. Patikrinkite ryšį.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Patvirtintas Korano garso paketas neužbaigtas ($available/$total). Bandykite dar kartą, kai garso įrašų katalogas bus atnaujintas.';
   }

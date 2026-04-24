@@ -1263,6 +1263,10 @@ class AppLocalizationsMg extends AppLocalizations {
       'Loharanom-peo Quran voamarina dia tsy misy amin\'izao fotoana izao.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Tsy nahomby ny famerenam-peo. Jereo azafady ny fifandraisanao.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ny fonosan-peo Quran voamarina dia tsy feno ($available/$total). Andramo indray rehefa avy nohavaozina ny katalaogin\'ny feo.';
   }

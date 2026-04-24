@@ -1259,6 +1259,10 @@ class AppLocalizationsUg extends AppLocalizations {
       'دەلىللەنگەن قۇرئان ئاۋاز مەنبەلىرىنى ھازىرچە ئىشلەتكىلى بولمايدۇ.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ئاۋاز قويۇش مەغلۇب بولدى. ئۇلىنىشىڭىزنى تەكشۈرۈپ بېقىڭ.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

@@ -1243,6 +1243,10 @@ class AppLocalizationsAm extends AppLocalizations {
       'የተረጋገጡ የቁርአን የድምጽ ምንጮች አሁን አይገኙም።';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'የድምጽ መልሶ ማጫወት አልተሳካም። እባክዎ ግንኙነትዎን ያረጋግጡ።';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'የተረጋገጠ የቁርአን ኦዲዮ ጥቅል አልተጠናቀቀም ($available/$total)። የድምጽ ካታሎግ ከተዘመነ በኋላ እንደገና ይሞክሩ።';
   }

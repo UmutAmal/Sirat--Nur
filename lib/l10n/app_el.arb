@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "μέθοδος {sourceName} με ρύθμιση {madhab} Asr επιλεγμένη από τον χρήστη"
+  "diagnosticsPrayerHybridSource": "μέθοδος {sourceName} με ρύθμιση {madhab} Asr επιλεγμένη από τον χρήστη",
+  "quranAudioPlaybackErrorWithConnectionHint": "Η αναπαραγωγή ήχου απέτυχε. Ελέγξτε τη σύνδεσή σας."
 }

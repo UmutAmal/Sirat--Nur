@@ -1263,6 +1263,10 @@ class AppLocalizationsKy extends AppLocalizations {
       'Тастыкталган Куран аудио булактары азыр жеткиликсиз.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Аудио ойнотуу ишке ашкан жок. Сураныч, байланышыңызды текшериңиз.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Текшерилген Курандын аудио топтому толук эмес ($available/$total). Аудио каталог жаңыртылгандан кийин кайра аракет кылыңыз.';
   }

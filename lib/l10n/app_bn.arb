@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "ব্যবহারকারী-নির্বাচিত {madhab} আছর সেটিং সহ {sourceName} পদ্ধতি"
+  "diagnosticsPrayerHybridSource": "ব্যবহারকারী-নির্বাচিত {madhab} আছর সেটিং সহ {sourceName} পদ্ধতি",
+  "quranAudioPlaybackErrorWithConnectionHint": "অডিও প্লেব্যাক ব্যর্থ হয়েছে. আপনার সংযোগ পরীক্ষা করুন."
 }

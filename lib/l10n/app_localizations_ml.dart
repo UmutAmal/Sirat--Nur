@@ -1261,6 +1261,10 @@ class AppLocalizationsMl extends AppLocalizations {
       'പരിശോധിച്ചുറപ്പിച്ച ഖുർആൻ ഓഡിയോ ഉറവിടങ്ങൾ ഇപ്പോൾ ലഭ്യമല്ല.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ഓഡിയോ പ്ലേബാക്ക് പരാജയപ്പെട്ടു. ദയവായി നിങ്ങളുടെ കണക്ഷൻ പരിശോധിക്കുക.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'പരിശോധിച്ച ഖുറാൻ ഓഡിയോ പായ്ക്ക് അപൂർണ്ണമാണ് ($available/$total). ഓഡിയോ കാറ്റലോഗ് അപ്ഡേറ്റ് ചെയ്ത ശേഷം വീണ്ടും ശ്രമിക്കുക.';
   }

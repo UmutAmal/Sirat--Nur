@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting"
+  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио янӑрама май килмерӗ. Ҫыхӑнӑва тӗрӗслӗр."
 }

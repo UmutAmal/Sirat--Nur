@@ -1259,6 +1259,10 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻole loaʻa nā kumu leo Quran i hōʻoia ʻia i kēia manawa.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Hāʻule ka pāʻani leo. E ʻoluʻolu e nānā i kāu pili.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'ʻAʻole i piha ka pūʻolo leo Quran i hōʻoia ʻia ($available/$total). E ho\'āʻo hou ma hope o ka hōʻano hou ʻana o ka waihona leo.';
   }

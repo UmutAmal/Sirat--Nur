@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "ব্যৱহাৰকাৰী-নিৰ্বাচিত {madhab} Asr সংহতিৰ সৈতে {sourceName} পদ্ধতি"
+  "diagnosticsPrayerHybridSource": "ব্যৱহাৰকাৰী-নিৰ্বাচিত {madhab} Asr সংহতিৰ সৈতে {sourceName} পদ্ধতি",
+  "quranAudioPlaybackErrorWithConnectionHint": "অডিঅ' প্লেবেক বিফল হ'ল। অনুগ্ৰহ কৰি আপোনাৰ সংযোগ পৰীক্ষা কৰক।"
 }

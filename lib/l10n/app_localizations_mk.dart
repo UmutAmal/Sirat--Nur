@@ -1260,6 +1260,10 @@ class AppLocalizationsMk extends AppLocalizations {
       'Потврдените аудиоизвори на Куранот не се достапни во моментов.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Репродукцијата на аудио не успеа. Ве молиме проверете ја вашата врска.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Потврдениот аудио пакет од Куранот е нецелосен ($available/$total). Обидете се повторно откако ќе се ажурира аудио каталогот.';
   }

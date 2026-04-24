@@ -1260,6 +1260,10 @@ class AppLocalizationsSw extends AppLocalizations {
       'Vyanzo vya sauti vya Kurani vilivyothibitishwa havipatikani kwa sasa.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Uchezaji wa sauti umeshindwa. Tafadhali angalia muunganisho wako.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Kifurushi cha sauti cha Kurani kilichothibitishwa hakijakamilika ($available/$total). Jaribu tena baada ya katalogi ya sauti kusasishwa.';
   }

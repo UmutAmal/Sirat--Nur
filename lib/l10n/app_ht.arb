@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} metòd ak itilizatè a chwazi {madhab} anviwònman Asr"
+  "diagnosticsPrayerHybridSource": "{sourceName} metòd ak itilizatè a chwazi {madhab} anviwònman Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Lektur odyo echwe. Tanpri tcheke koneksyon ou."
 }

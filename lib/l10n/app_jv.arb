@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Metode {sourceName} nganggo setelan {madhab} sing dipilih pangguna"
+  "diagnosticsPrayerHybridSource": "Metode {sourceName} nganggo setelan {madhab} sing dipilih pangguna",
+  "quranAudioPlaybackErrorWithConnectionHint": "Puter maneh audio gagal. Mangga priksa sambungan sampeyan."
 }

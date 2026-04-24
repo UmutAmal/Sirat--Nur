@@ -1264,6 +1264,10 @@ class AppLocalizationsZu extends AppLocalizations {
       'Imithombo yomsindo ye-Quran eqinisekisiwe ayitholakali okwamanje.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Ukudlalwa komsindo kuhlulekile. Sicela uhlole ukuxhumana kwakho.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Iphekhi yomsindo ye-Quran eqinisekisiwe ayiphelele ($available/$total). Zama futhi ngemva kokubuyekezwa kwekhathalogi yomsindo.';
   }

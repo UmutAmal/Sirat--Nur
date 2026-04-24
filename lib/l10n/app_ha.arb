@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting"
+  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "quranAudioPlaybackErrorWithConnectionHint": "An kasa sake kunna sautin. Da fatan za a duba haɗin ku."
 }

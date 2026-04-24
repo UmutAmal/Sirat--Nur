@@ -360,32 +360,42 @@ Future<Map<String, String>> _translateValues(
       );
     }
 
-    return {
-      for (var index = 0; index < tokenizedEntries.length; index++)
-        tokenizedEntries[index].key: resolveTranslatedArbValue(
-          key: tokenizedEntries[index].key,
-          source: tokenizedEntries[index].value.originalSource,
-          currentValue: currentValues[tokenizedEntries[index].key],
-          candidate: _withoutPromptFallback(
-            candidate: _restorePlaceholders(
-              parts[index].trim(),
-              tokenizedEntries[index].value.replacements,
-              tokenizedEntries[index].value.originalSource,
-            ),
-            tokenizedValue: tokenizedEntries[index].value,
+    final resolvedValues = <String, String>{};
+    final englishFallbackEntries = <MapEntry<String, _TokenizedValue>>[];
+    for (var index = 0; index < tokenizedEntries.length; index++) {
+      final entry = tokenizedEntries[index];
+      final resolved = resolveTranslatedArbValue(
+        key: entry.key,
+        source: entry.value.originalSource,
+        currentValue: currentValues[entry.key],
+        candidate: _withoutPromptFallback(
+          candidate: _restorePlaceholders(
+            parts[index].trim(),
+            entry.value.replacements,
+            entry.value.originalSource,
           ),
+          tokenizedValue: entry.value,
         ),
-    };
+      );
+      resolvedValues[entry.key] = resolved;
+      if (_isEnglishFallbackEquivalent(resolved, entry.value.originalSource)) {
+        englishFallbackEntries.add(entry);
+      }
+    }
+
+    if (englishFallbackEntries.isNotEmpty) {
+      resolvedValues.addAll(
+        await _translateValuesViaGtx(
+          englishFallbackEntries,
+          currentValues,
+          locale,
+        ),
+      );
+    }
+
+    return resolvedValues;
   } catch (_) {
-    return {
-      for (final entry in tokenizedEntries)
-        entry.key: resolveTranslatedArbValue(
-          key: entry.key,
-          source: entry.value.originalSource,
-          currentValue: currentValues[entry.key],
-          candidate: entry.value.originalSource,
-        ),
-    };
+    return _translateValuesViaGtx(tokenizedEntries, currentValues, locale);
   }
 }
 
@@ -414,6 +424,12 @@ Future<Map<String, String>> _translateValuesIndividually(
       candidate = entry.value.originalSource;
     }
 
+    if (_isEnglishFallbackEquivalent(candidate, entry.value.originalSource)) {
+      candidate =
+          await _translateOneValueViaGtx(entry.value, locale) ??
+          entry.value.originalSource;
+    }
+
     translatedValues[entry.key] = resolveTranslatedArbValue(
       key: entry.key,
       source: entry.value.originalSource,
@@ -426,6 +442,86 @@ Future<Map<String, String>> _translateValuesIndividually(
   }
 
   return translatedValues;
+}
+
+Future<Map<String, String>> _translateValuesViaGtx(
+  List<MapEntry<String, _TokenizedValue>> tokenizedEntries,
+  Map<String, dynamic> currentValues,
+  String locale,
+) async {
+  final translatedValues = <String, String>{};
+
+  for (final entry in tokenizedEntries) {
+    final candidate =
+        await _translateOneValueViaGtx(entry.value, locale) ??
+        entry.value.originalSource;
+    translatedValues[entry.key] = resolveTranslatedArbValue(
+      key: entry.key,
+      source: entry.value.originalSource,
+      currentValue: currentValues[entry.key],
+      candidate: candidate,
+    );
+  }
+
+  return translatedValues;
+}
+
+Future<String?> _translateOneValueViaGtx(
+  _TokenizedValue tokenizedValue,
+  String locale,
+) async {
+  final uri = Uri.https('translate.googleapis.com', '/translate_a/single', {
+    'client': 'gtx',
+    'sl': 'en',
+    'tl': locale,
+    'dt': 't',
+    'q': tokenizedValue.tokenizedSource,
+  });
+  final client = HttpClient()..connectionTimeout = const Duration(seconds: 15);
+
+  try {
+    final request = await client.getUrl(uri);
+    request.headers.set(
+      HttpHeaders.userAgentHeader,
+      'sirati-nur-l10n-tool/1.0',
+    );
+    final response = await request.close().timeout(const Duration(seconds: 30));
+    if (response.statusCode != HttpStatus.ok) {
+      return null;
+    }
+
+    final body = await utf8.decoder.bind(response).join();
+    final translated = extractGoogleTranslateGtxText(jsonDecode(body));
+    if (translated == null) {
+      return null;
+    }
+
+    return _restorePlaceholders(
+      translated,
+      tokenizedValue.replacements,
+      tokenizedValue.originalSource,
+    );
+  } catch (_) {
+    return null;
+  } finally {
+    client.close(force: true);
+  }
+}
+
+String? extractGoogleTranslateGtxText(Object? payload) {
+  if (payload is! List || payload.isEmpty || payload.first is! List) {
+    return null;
+  }
+
+  final buffer = StringBuffer();
+  for (final segment in payload.first as List) {
+    if (segment is List && segment.isNotEmpty && segment.first is String) {
+      buffer.write(segment.first as String);
+    }
+  }
+
+  final translated = buffer.toString().trim();
+  return translated.isEmpty ? null : translated;
 }
 
 _TokenizedValue _tokenizeValue(String key, String source) {
@@ -903,6 +999,7 @@ bool _mustStaySingleLine(String key) {
       key == 'qiblaLocationRequiredBody' ||
       key == 'downloadCompleted' ||
       key == 'quranAudioSourcesUnavailable' ||
+      key == 'quranAudioPlaybackErrorWithConnectionHint' ||
       key == 'quranAudioSourcesIncomplete' ||
       key == 'adhanNotificationChannelName' ||
       key == 'adhanNotificationChannelDescription' ||

@@ -1262,6 +1262,10 @@ class AppLocalizationsMn extends AppLocalizations {
       'Баталгаажсан Коран аудио эх сурвалжийг одоогоор ашиглах боломжгүй байна.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Аудио тоглуулж чадсангүй. Холболтоо шалгана уу.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Баталгаажсан Коран судрын аудио багц дутуу байна ($available/$total). Аудио каталог шинэчлэгдсэний дараа дахин оролдоно уу.';
   }

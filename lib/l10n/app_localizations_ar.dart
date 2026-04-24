@@ -1254,6 +1254,10 @@ class AppLocalizationsAr extends AppLocalizations {
       'المصادر الصوتية للقرآن الكريم التي تم التحقق منها غير متوفرة في الوقت الحالي.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'فشل تشغيل الصوت. يرجى التحقق من الاتصال الخاص بك.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'حزمة القرآن الصوتية التي تم التحقق منها غير مكتملة ($available/$total). حاول مرة أخرى بعد تحديث الكتالوج الصوتي.';
   }

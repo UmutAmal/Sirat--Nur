@@ -1264,6 +1264,10 @@ class AppLocalizationsBe extends AppLocalizations {
       'Правераныя аўдыякрыніцы Карана зараз недаступныя.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Памылка прайгравання аўдыя. Праверце падключэнне.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Пацверджаны аўдыяпакет Карана няпоўны ($available/$total). Паўтарыце спробу пасля абнаўлення аўдыякаталога.';
   }

@@ -1243,6 +1243,10 @@ class AppLocalizationsTi extends AppLocalizations {
       'ዝተረጋገጹ ምንጪ ድምጺ ቁርኣን ኣብዚ ሕጂ እዋን የለን።';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ድምጺ ምጽዋት ኣይተዓወተን። በጃኹም ርክብኩም ኣረጋግጹ።';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'ዝተረጋገጸ ናይ ቁርኣን ድምጺ ፓክ ምሉእ ኣይኮነን ($available/$total)። እቲ ናይ ድምጺ ካታሎግ ምስ ተሓድሰ እንደገና ፈትን።';
   }

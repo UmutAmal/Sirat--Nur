@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "ئىشلەتكۈچى تاللىغان {sourceName} ئۇسۇلى {madhab} Asr تەڭشىكى"
+  "diagnosticsPrayerHybridSource": "ئىشلەتكۈچى تاللىغان {sourceName} ئۇسۇلى {madhab} Asr تەڭشىكى",
+  "quranAudioPlaybackErrorWithConnectionHint": "ئاۋاز قويۇش مەغلۇب بولدى. ئۇلىنىشىڭىزنى تەكشۈرۈپ بېقىڭ."
 }

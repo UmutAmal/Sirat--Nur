@@ -1257,6 +1257,10 @@ class AppLocalizationsFa extends AppLocalizations {
       'منابع صوتی قرآن تأیید شده در حال حاضر در دسترس نیستند.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'پخش صدا انجام نشد. لطفا اتصال خود را بررسی کنید.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'بسته صوتی قرآن تأیید شده ناقص است ($available/$total). پس از به‌روزرسانی کاتالوگ صوتی، دوباره امتحان کنید.';
   }

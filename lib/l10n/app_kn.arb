@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "ಬಳಕೆದಾರ-ಆಯ್ಕೆಮಾಡಿದ {madhab} Asr ಸೆಟ್ಟಿಂಗ್‌ನೊಂದಿಗೆ {sourceName} ವಿಧಾನ"
+  "diagnosticsPrayerHybridSource": "ಬಳಕೆದಾರ-ಆಯ್ಕೆಮಾಡಿದ {madhab} Asr ಸೆಟ್ಟಿಂಗ್‌ನೊಂದಿಗೆ {sourceName} ವಿಧಾನ",
+  "quranAudioPlaybackErrorWithConnectionHint": "ಆಡಿಯೋ ಪ್ಲೇಬ್ಯಾಕ್ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ."
 }

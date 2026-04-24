@@ -1264,6 +1264,10 @@ class AppLocalizationsMt extends AppLocalizations {
       'Sorsi awdjo vverifikati tal-Quran mhumiex disponibbli bħalissa.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Il-plejbek tal-awdjo falla. Jekk jogħġbok iċċekkja l-konnessjoni tiegħek.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Il-pakkett tal-awdjo tal-Quran ivverifikat mhuwiex komplut ($available/$total). Erġa\' pprova wara li l-katalgu awdjo jiġi aġġornat.';
   }

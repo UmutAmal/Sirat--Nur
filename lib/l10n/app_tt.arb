@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} ысулы белән кулланучылар сайлаган {madhab} Asr көйләнеше"
+  "diagnosticsPrayerHybridSource": "{sourceName} ысулы белән кулланучылар сайлаган {madhab} Asr көйләнеше",
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио уйнату уңышсыз калды. Зинһар, тоташуыгызны тикшерегез."
 }

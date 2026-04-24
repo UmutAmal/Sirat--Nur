@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "روش {sourceName} با تنظیم عصر {madhab} انتخاب شده توسط کاربر"
+  "diagnosticsPrayerHybridSource": "روش {sourceName} با تنظیم عصر {madhab} انتخاب شده توسط کاربر",
+  "quranAudioPlaybackErrorWithConnectionHint": "پخش صدا انجام نشد. لطفا اتصال خود را بررسی کنید."
 }

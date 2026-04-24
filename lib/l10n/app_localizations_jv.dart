@@ -1256,6 +1256,10 @@ class AppLocalizationsJv extends AppLocalizations {
       'Sumber audio Quran sing wis diverifikasi saiki ora kasedhiya.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Puter maneh audio gagal. Mangga priksa sambungan sampeyan.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

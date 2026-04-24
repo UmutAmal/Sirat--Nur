@@ -109,6 +109,18 @@ void main() {
       expect(translateArbKeysUsage(), contains('[--report|--dry-run]'));
     });
 
+    test('extracts segmented Google Translate fallback output', () {
+      final translated = extractGoogleTranslateGtxText([
+        [
+          ['Xongolo digir radeh. ', 'Audio playback failed. '],
+          ['Ku maganak ku angaaraw ismit.', 'Please check your connection.'],
+        ],
+      ]);
+
+      expect(translated, 'Xongolo digir radeh. Ku maganak ku angaaraw ismit.');
+      expect(extractGoogleTranslateGtxText(['unexpected']), isNull);
+    });
+
     test('reports l10n debt without translating or mutating files', () {
       final report = buildL10nDebtReport(
         keys: ['downloadFinishedForReciter', 'downloadAction'],

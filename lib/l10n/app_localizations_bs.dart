@@ -1258,6 +1258,10 @@ class AppLocalizationsBs extends AppLocalizations {
       'Provjereni izvori zvuka Kur\'ana trenutno nisu dostupni.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio reprodukcija nije uspjela. Provjerite svoju vezu.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verificirani audio paket Kur\'ana je nepotpun ($available/$total). Pokušajte ponovo nakon što se audio katalog ažurira.';
   }

@@ -1259,6 +1259,10 @@ class AppLocalizationsEt extends AppLocalizations {
       'Kontrollitud Koraani heliallikad pole praegu saadaval.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Heli taasesitus ebaõnnestus. Kontrollige ühendust.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Kinnitatud Koraani helipakett ei ole täielik ($available/$total). Proovige uuesti pärast helikataloogi värskendamist.';
   }

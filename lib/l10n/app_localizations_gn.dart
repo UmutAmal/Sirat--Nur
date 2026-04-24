@@ -1264,6 +1264,10 @@ class AppLocalizationsGn extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio ñembopu ndoikói. Ehecháke ne joaju.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Corán audio paquete oñembohapéva ndojejapói ($available/$total). Eñeha’ã jey oñembopyahu rire pe catálogo de audio.';
   }

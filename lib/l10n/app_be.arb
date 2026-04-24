@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} метад з абранай карыстальнікам наладай {madhab} Asr"
+  "diagnosticsPrayerHybridSource": "{sourceName} метад з абранай карыстальнікам наладай {madhab} Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Памылка прайгравання аўдыя. Праверце падключэнне."
 }

@@ -17788,3 +17788,36 @@
 
 ### Sonraki Adim
 - Commit/push; ardindan runtime/UI/l10n ve store policy yuzeylerinde yeni risk taramasina devam et.
+
+## 2026-04-24 TUR-429 - Quran Audio Playback Error Uses One Localized Message
+
+### MASTER Karari
+- Risk: `SurahReadingPage` ses oynatma hatasinda iki ayri localized parcayi `'. '` ile birlestiriyordu. Bu, noktalama/cumle dizilimi farkli dillerde dogal olmayan veya bozuk hata mesaji uretir.
+- Kanit:
+  - `lib/features/quran/surah_reading_page.dart` snackbar copy'si `streamError` ve `checkConnection` degerlerini runtime'da string interpolation ile birlestiriyordu.
+  - Bu yuzey icin tek cumle olarak test edilen dedicated l10n anahtari yoktu.
+- Kullanici etkisi: Quran ses akisi basarisiz oldugunda bazi locale'lerde hatali veya yapay mesaj gorunur; bu hem localization kalitesini hem de hata anlasilirligini zedeler.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: `lib/features/quran/surah_reading_page.dart`, `lib/l10n/app_*.arb`, generated l10n dosyalari, `tool/translate_arb_keys.dart`, `test/features/quran/surah_reading_page_test.dart` ve `test/translate_arb_keys_test.dart` bu committen geri alinabilir.
+
+### BUILDER Degisikligi
+- `quranAudioPlaybackErrorWithConnectionHint` adli tek parca localized mesaj eklendi; snackbar artik iki parcayi runtime'da birlestirmiyor.
+- `resolveQuranAudioPlaybackErrorMessage` helper'i eklendi ve EN/TR davranisi widget helper testine baglandi.
+- Tum `app_*.arb` dosyalarina yeni anahtar eklendi ve `flutter gen-l10n` ile generated localization siniflari guncellendi.
+- `tool/translate_arb_keys.dart` dusuk-kaynak locale'lerde ana `translator` paketi Ingilizce fallback dondurdugunde Google GTX segment fallback'ini deneyerek temiz ceviri kurtaracak sekilde sertlestirildi.
+
+### TESTER Degisikligi
+- L10n raporu: `dart run tool\translate_arb_keys.dart --report quranAudioPlaybackErrorWithConnectionHint` -> missing/empty `0`, placeholder mismatch `0`, same-as-English `29`.
+- Not: Kalan 29 locale Google GTX tarafinda da desteklenmeyen veya dusuk guvenli antik/dusuk-kaynak dillerden olusuyor; `AGENTS.md`deki "belirsizlikte EN referans al, uydurma yapma" kuralina uygun olarak sahte ceviri yazilmadi.
+- Targeted tests: `flutter test test\features\quran\surah_reading_page_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
+- `flutter analyze`: PASS, no issues.
+- `flutter test --reporter compact`: PASS, 662/662.
+- `tool/check_store_readiness.ps1`: PASS; Supabase content/source checks, verified Quran audio mirrors, analyze ve full test dahil store-ready kapisi yesil.
+
+### Risk Degisimi
+- Quran audio playback snackbar composition riski: `12/25 -> 2/25`.
+- Dillerde eksik anahtar/placeholder riski: `12/25 -> 2/25`.
+- Kalan risk: 29 dusuk-guvenli locale Ingilizce fallback kullaniyor; dogrulanmis kaynak bulunana kadar uydurma lokalizasyon eklenmeyecek.
+
+### Sonraki Adim
+- Commit/push; ardindan yeni turda tum repo icin hardcoded string, TODO/stub, content correctness, dependency drift, Appium runtime ve store artefact taramasina devam et.

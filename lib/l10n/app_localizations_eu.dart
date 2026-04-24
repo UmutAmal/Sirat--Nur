@@ -1260,6 +1260,10 @@ class AppLocalizationsEu extends AppLocalizations {
       'Egiaztatutako Quran audio iturriak ez daude erabilgarri une honetan.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audioa erreproduzitzea huts egin du. Mesedez, egiaztatu zure konexioa.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Egiaztatutako Quran audio paketea osatu gabe dago ($available/$total). Saiatu berriro audio-katalogoa eguneratu ondoren.';
   }

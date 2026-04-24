@@ -1257,6 +1257,10 @@ class AppLocalizationsTg extends AppLocalizations {
       'Манбаъҳои аудиоии тасдиқшудаи Қуръон ҳоло дастрас нестанд.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Навозиши аудио ноком шуд. Лутфан пайвасти худро санҷед.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Бастаи аудиоии тасдиқшудаи Қуръон нопурра аст ($available/$total). Пас аз навсозии феҳристи аудио дубора кӯшиш кунед.';
   }

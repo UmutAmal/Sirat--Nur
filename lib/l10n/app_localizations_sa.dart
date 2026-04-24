@@ -1258,6 +1258,10 @@ class AppLocalizationsSa extends AppLocalizations {
       'सत्यापिताः कुरानस्य श्रव्यस्रोताः अधुना अनुपलब्धाः सन्ति।';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'श्रव्यस्य वाद्यं विफलम् अभवत् । कृपया स्वस्य संयोजनं पश्यन्तु।';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'सत्यापितं कुरान ऑडियो पैक अपूर्णम् अस्ति ($available/$total)। श्रव्यसूची अद्यतनीकरणानन्तरं पुनः प्रयासं कुर्वन्तु।';
   }

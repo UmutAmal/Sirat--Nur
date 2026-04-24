@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting"
+  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "quranAudioPlaybackErrorWithConnectionHint": "སྒྲ་སྒམ་གཏོང་མ་ཐུབ། འབྲེལ་མཐུད་ལ་ཞིབ་བཤེར་གནང་རོགས།"
 }

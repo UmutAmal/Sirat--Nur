@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} אופֿן מיט באַניצער-געקליבן {madhab} אַסר באַשטעטיקן"
+  "diagnosticsPrayerHybridSource": "{sourceName} אופֿן מיט באַניצער-געקליבן {madhab} אַסר באַשטעטיקן",
+  "quranAudioPlaybackErrorWithConnectionHint": "אַודיאָ פּלייבאַק ניט אַנדערש. ביטע טשעק דיין קשר."
 }

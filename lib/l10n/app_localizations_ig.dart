@@ -1257,6 +1257,10 @@ class AppLocalizationsIg extends AppLocalizations {
       'Isi mmalite ọdịyo Quran akwadoro adịghị ugbu a.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Nkpọghachi ọdịyo dara. Biko lelee njikọ gị.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ngwungwu ọdịyo nke Quran ezughị oke ($available/$total). Gbalịa ọzọ ka emelitere katalọgụ ọdịyo.';
   }

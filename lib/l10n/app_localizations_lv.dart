@@ -1262,6 +1262,10 @@ class AppLocalizationsLv extends AppLocalizations {
       'Verificētie Korāna audio avoti pašlaik nav pieejami.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio atskaņošana neizdevās. Lūdzu, pārbaudiet savienojumu.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verificētā Korāna audio pakotne ir nepilnīga ($available/$total). Mēģiniet vēlreiz pēc audio kataloga atjaunināšanas.';
   }

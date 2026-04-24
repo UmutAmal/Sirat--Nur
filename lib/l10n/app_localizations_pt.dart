@@ -1264,6 +1264,10 @@ class AppLocalizationsPt extends AppLocalizations {
       'Fontes de áudio verificadas do Alcorão não estão disponíveis no momento.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'A reprodução de áudio falhou. Por favor, verifique sua conexão.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'O pacote de áudio verificado do Alcorão está incompleto ($available/$total). Tente novamente depois que o catálogo de áudio for atualizado.';
   }

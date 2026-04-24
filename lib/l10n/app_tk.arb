@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Ulanyjy tarapyndan saýlanan {sourceName} usuly {madhab} Asr sazlamasy"
+  "diagnosticsPrayerHybridSource": "Ulanyjy tarapyndan saýlanan {sourceName} usuly {madhab} Asr sazlamasy",
+  "quranAudioPlaybackErrorWithConnectionHint": "Ses görkezmek şowsuz. Baglanyşygyňyzy barlaň."
 }

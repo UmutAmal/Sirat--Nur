@@ -1268,6 +1268,10 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Napaay ti panagtokar ti audio. Pangngaasiyo ta kitaenyo ti koneksionyo.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ti naberipikado nga audio pack ti Quran ket saan a kompleto ($available/$total). Padasem manen kalpasan a ma-update ti audio catalog.';
   }

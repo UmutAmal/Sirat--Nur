@@ -1258,6 +1258,10 @@ class AppLocalizationsEo extends AppLocalizations {
       'Konfirmitaj aŭdfontoj de Korano nun ne disponeblas.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Sona reproduktado malsukcesis. Bonvolu kontroli vian konekton.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Kontrolita Korana sonpako estas nekompleta ($available/$total). Provu denove post kiam la sonkatalogo estas ĝisdatigita.';
   }

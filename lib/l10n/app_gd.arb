@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} modh le suidheachadh {madhab} air a thaghadh leis a’ chleachdaiche"
+  "diagnosticsPrayerHybridSource": "{sourceName} modh le suidheachadh {madhab} air a thaghadh leis a’ chleachdaiche",
+  "quranAudioPlaybackErrorWithConnectionHint": "Dh'fhàillig ath-chluich fuaim. Feuch an toir thu sùil air a’ cheangal agad."
 }

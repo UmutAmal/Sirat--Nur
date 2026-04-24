@@ -781,5 +781,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Kaedah {sourceName} dengan tetapan Asar {madhab} yang dipilih pengguna"
+  "diagnosticsPrayerHybridSource": "Kaedah {sourceName} dengan tetapan Asar {madhab} yang dipilih pengguna",
+  "quranAudioPlaybackErrorWithConnectionHint": "Main balik audio gagal. Sila semak sambungan anda."
 }

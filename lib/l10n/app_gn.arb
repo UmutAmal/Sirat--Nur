@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} método orekóva puruhára oiporavóva {madhab} Asr ñemboheko"
+  "diagnosticsPrayerHybridSource": "{sourceName} método orekóva puruhára oiporavóva {madhab} Asr ñemboheko",
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio ñembopu ndoikói. Ehecháke ne joaju."
 }

@@ -24,6 +24,10 @@ bool shouldShowStandaloneBismillah(int surahNumber) {
   return surahNumber != 1 && surahNumber != 9;
 }
 
+String resolveQuranAudioPlaybackErrorMessage(AppLocalizations l10n) {
+  return l10n.quranAudioPlaybackErrorWithConnectionHint;
+}
+
 class SurahReadingPage extends ConsumerStatefulWidget {
   final int surahNumber;
 
@@ -170,9 +174,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
       if (mounted) {
         final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('${l10n.streamError}. ${l10n.checkConnection}'),
-          ),
+          SnackBar(content: Text(resolveQuranAudioPlaybackErrorMessage(l10n))),
         );
       }
 

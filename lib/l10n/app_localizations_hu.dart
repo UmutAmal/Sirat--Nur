@@ -1260,6 +1260,10 @@ class AppLocalizationsHu extends AppLocalizations {
       'Az ellenőrzött Korán hangforrások jelenleg nem érhetők el.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'A hanglejátszás nem sikerült. Kérjük, ellenőrizze a kapcsolatot.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Az ellenőrzött Korán hangcsomag hiányos ($available/$total). Próbálja újra az audiokatalógus frissítése után.';
   }

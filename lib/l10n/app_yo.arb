@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Ọna {sourceName} pẹlu olumulo-yan {madhab} Eto Asr"
+  "diagnosticsPrayerHybridSource": "Ọna {sourceName} pẹlu olumulo-yan {madhab} Eto Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Sisisẹsẹhin ohun kuna. Jọwọ ṣayẹwo asopọ rẹ."
 }

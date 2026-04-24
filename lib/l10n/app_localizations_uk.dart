@@ -1261,6 +1261,10 @@ class AppLocalizationsUk extends AppLocalizations {
       'Перевірені аудіоджерела Корану зараз недоступні.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Помилка відтворення аудіо. Перевірте підключення.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Перевірений аудіопакет Корану неповний ($available/$total). Повторіть спробу після оновлення аудіокаталогу.';
   }

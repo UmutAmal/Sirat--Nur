@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} metoda sa {madhab} postavkom Asr koju je izabrao korisnik"
+  "diagnosticsPrayerHybridSource": "{sourceName} metoda sa {madhab} postavkom Asr koju je izabrao korisnik",
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio reprodukcija nije uspjela. Provjerite svoju vezu."
 }

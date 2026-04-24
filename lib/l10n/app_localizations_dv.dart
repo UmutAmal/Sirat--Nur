@@ -1271,6 +1271,10 @@ class AppLocalizationsDv extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'އޯޑިއޯ ޕްލޭބެކް ފެއިލްވެއްޖެއެވެ. ކަނެކްޝަން ޗެކް ކުރައްވާށެވެ.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'ޔަޤީންކުރެވިފައިވާ ޤުރުއާން އޯޑިއޯ ޕެކް ފުރިހަމަ ނުވާކަން ($available/$total). އޯޑިއޯ ކެޓަލަގް އަޕްޑޭޓް ކުރުމަށްފަހު އަނެއްކާވެސް މަސައްކަތް ކުރާށެވެ.';
   }

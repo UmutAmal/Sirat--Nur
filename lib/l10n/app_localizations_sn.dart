@@ -1256,6 +1256,10 @@ class AppLocalizationsSn extends AppLocalizations {
       'Verified Quran audio sources haasi kuwanikwa pari zvino.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Kuridza redhiyo hakuna kukwanisa. Ndokumbira utarise kubatana kwako.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Everified Quran audio pack haina kukwana ($available/$total). Edza zvakare mushure mekunge bhuku reodhiyo ragadziridzwa.';
   }

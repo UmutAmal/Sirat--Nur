@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} mokhoa o khethiloeng ke mosebelisi {madhab} litlhophiso tsa Asr"
+  "diagnosticsPrayerHybridSource": "{sourceName} mokhoa o khethiloeng ke mosebelisi {madhab} litlhophiso tsa Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Ho hloleha ho bapala molumo. Ka kopo, sheba khokahano ea hau."
 }

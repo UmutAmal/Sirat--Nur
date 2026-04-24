@@ -1259,6 +1259,10 @@ class AppLocalizationsMs extends AppLocalizations {
       'Sumber audio Al-Quran yang disahkan tidak tersedia sekarang.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Main balik audio gagal. Sila semak sambungan anda.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

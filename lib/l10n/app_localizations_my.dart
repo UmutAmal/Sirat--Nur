@@ -1268,6 +1268,10 @@ class AppLocalizationsMy extends AppLocalizations {
       'အတည်ပြုထားသော ကုရ်အာန်အသံအရင်းအမြစ်များကို ယခုမရနိုင်ပါ။';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'အသံပြန်ဖွင့်ခြင်း မအောင်မြင်ပါ။ သင့်ချိတ်ဆက်မှုကို စစ်ဆေးပါ။';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'အတည်ပြုထားသော ကုရ်အာန် အသံအထုပ်သည် မပြည့်စုံပါ ($available/$total)။ အော်ဒီယိုကတ်တလောက်ကို အပ်ဒိတ်လုပ်ပြီးနောက် ထပ်လုပ်ကြည့်ပါ။';
   }

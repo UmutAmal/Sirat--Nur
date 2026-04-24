@@ -1250,6 +1250,10 @@ class AppLocalizationsHe extends AppLocalizations {
       'מקורות אודיו מאומתים של הקוראן אינם זמינים כעת.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'הפעלת השמע נכשלה. אנא בדוק את החיבור שלך.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'חבילת האודיו המאומתת של הקוראן אינה שלמה ($available/$total). נסה שוב לאחר עדכון קטלוג האודיו.';
   }

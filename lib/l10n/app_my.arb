@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "အသုံးပြုသူရွေးချယ်ထားသော {madhab} Asr ဆက်တင်ဖြင့် {sourceName} နည်းလမ်း"
+  "diagnosticsPrayerHybridSource": "အသုံးပြုသူရွေးချယ်ထားသော {madhab} Asr ဆက်တင်ဖြင့် {sourceName} နည်းလမ်း",
+  "quranAudioPlaybackErrorWithConnectionHint": "အသံပြန်ဖွင့်ခြင်း မအောင်မြင်ပါ။ သင့်ချိတ်ဆက်မှုကို စစ်ဆေးပါ။"
 }

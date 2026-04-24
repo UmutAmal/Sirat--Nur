@@ -1266,6 +1266,10 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଯାଞ୍ଚ ହୋଇଥିବା କୁରାନ ଅଡିଓ ଉତ୍ସଗୁଡ଼ିକ ବର୍ତ୍ତମାନ ଉପଲବ୍ଧ ନାହିଁ |';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ଅଡିଓ ପ୍ଲେକ୍ ବିଫଳ ହେଲା | ଦୟାକରି ଆପଣଙ୍କର ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ |';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

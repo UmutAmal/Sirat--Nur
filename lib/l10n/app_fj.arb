@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting"
+  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "quranAudioPlaybackErrorWithConnectionHint": "E sega ni rawa na vakatagitaki ni rorogo. Kerekere mo raica na nomu veitaratara."
 }

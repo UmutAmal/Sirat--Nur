@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "பயனர் தேர்ந்தெடுத்த {sourceName} முறை {madhab} Asr அமைப்பு"
+  "diagnosticsPrayerHybridSource": "பயனர் தேர்ந்தெடுத்த {sourceName} முறை {madhab} Asr அமைப்பு",
+  "quranAudioPlaybackErrorWithConnectionHint": "ஆடியோ பிளேபேக் தோல்வியடைந்தது. உங்கள் இணைப்பைச் சரிபார்க்கவும்."
 }

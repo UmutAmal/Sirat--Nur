@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Phương thức {sourceName} với cài đặt {madhab} Asr do người dùng chọn"
+  "diagnosticsPrayerHybridSource": "Phương thức {sourceName} với cài đặt {madhab} Asr do người dùng chọn",
+  "quranAudioPlaybackErrorWithConnectionHint": "Phát lại âm thanh không thành công. Vui lòng kiểm tra kết nối của bạn."
 }

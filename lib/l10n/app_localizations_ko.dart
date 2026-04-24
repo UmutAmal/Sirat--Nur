@@ -1238,6 +1238,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get quranAudioSourcesUnavailable => '검증된 꾸란 오디오 소스를 지금은 사용할 수 없습니다.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      '오디오 재생에 실패했습니다. 연결을 확인해주세요.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return '확인된 꾸란 오디오 팩이 불완전합니다($available/$total). 오디오 카탈로그가 업데이트된 후 다시 시도하세요.';
   }

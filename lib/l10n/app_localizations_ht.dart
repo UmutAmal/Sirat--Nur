@@ -1256,6 +1256,10 @@ class AppLocalizationsHt extends AppLocalizations {
       'Sous odyo koran verifye yo pa disponib kounye a.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Lektur odyo echwe. Tanpri tcheke koneksyon ou.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Pake odyo koran verifye pa konplè ($available/$total). Eseye ankò apre katalòg odyo a mete ajou.';
   }

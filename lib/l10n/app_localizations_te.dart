@@ -1260,6 +1260,10 @@ class AppLocalizationsTe extends AppLocalizations {
       'ధృవీకరించబడిన ఖురాన్ ఆడియో మూలాధారాలు ప్రస్తుతం అందుబాటులో లేవు.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ఆడియో ప్లేబ్యాక్ విఫలమైంది. దయచేసి మీ కనెక్షన్‌ని తనిఖీ చేయండి.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'ధృవీకరించబడిన ఖురాన్ ఆడియో ప్యాక్ అసంపూర్ణంగా ఉంది ($available/$total). ఆడియో కేటలాగ్ నవీకరించబడిన తర్వాత మళ్లీ ప్రయత్నించండి.';
   }

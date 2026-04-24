@@ -1269,6 +1269,10 @@ class AppLocalizationsTl extends AppLocalizations {
       'Hindi available sa ngayon ang mga na-verify na mapagkukunan ng audio ng Quran.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Nabigo ang pag-playback ng audio. Pakisuri ang iyong koneksyon.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ang na-verify na Quran audio pack ay hindi kumpleto ($available/$total). Subukang muli pagkatapos ma-update ang audio catalog.';
   }

@@ -1258,6 +1258,10 @@ class AppLocalizationsNy extends AppLocalizations {
       'Mawu otsimikizika a Quran sakupezeka pakali pano.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Kusewerera mawu kwalephera. Chonde onani kulumikizana kwanu.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Paketi yotsimikizika ya Korani yotsimikizika ndi yosakwanira ($available/$total). Yesaninso mndandanda wamawu ukasinthidwa.';
   }

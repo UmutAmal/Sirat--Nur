@@ -1260,6 +1260,10 @@ class AppLocalizationsSo extends AppLocalizations {
       'Ilaha maqalka Qur\'aanka ah ee la xaqiijiyay hadda lama heli karo.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Dib-u-soo-celinta maqalka waa fashilantay. Fadlan hubi xidhiidhkaaga';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

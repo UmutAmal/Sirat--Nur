@@ -1262,6 +1262,10 @@ class AppLocalizationsHmn extends AppLocalizations {
       'Txheeb xyuas Quran cov ntaub ntawv suab tsis muaj tam sim no.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Suab playback ua tsis tau tejyam. Thov xyuas koj qhov kev sib txuas.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Txheeb xyuas Quran lub pob tsis tiav ($available/$total). Sim dua tom qab lub suab catalog hloov kho.';
   }

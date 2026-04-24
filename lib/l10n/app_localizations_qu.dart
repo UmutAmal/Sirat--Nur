@@ -1264,6 +1264,10 @@ class AppLocalizationsQu extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Uyarinapaq uyariyqa manam allinchu karqa. Ama hina kaspa, tinkisqaykita qhaway.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Chiqapchasqa Quran uyarina paquete mana hunt\'asqachu ($available/$total). Audio catálogo musuqyachisqa kaptin hukmanta kallpanchakuy.';
   }

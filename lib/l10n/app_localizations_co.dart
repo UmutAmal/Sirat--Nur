@@ -1262,6 +1262,10 @@ class AppLocalizationsCo extends AppLocalizations {
       'E fonti audio verificate di u Coran ùn sò micca dispunibili avà.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'A riproduzione audio hà fiascatu. Per piacè verificate a vostra cunnessione.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'U pacchettu audio Coran verificatu hè incompletu ($available/$total). Pruvate di novu dopu chì u catalogu audio hè aghjurnatu.';
   }

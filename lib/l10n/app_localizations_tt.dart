@@ -1255,6 +1255,10 @@ class AppLocalizationsTt extends AppLocalizations {
       'Тикшерелгән Коръән аудио чыганаклары хәзер юк.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Аудио уйнату уңышсыз калды. Зинһар, тоташуыгызны тикшерегез.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

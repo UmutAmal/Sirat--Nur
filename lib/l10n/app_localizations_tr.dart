@@ -1257,6 +1257,10 @@ class AppLocalizationsTr extends AppLocalizations {
       'Doğrulanmış Kur\'an ses kaynakları şu anda kullanılamıyor.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Ses çalınamadı. Lütfen bağlantınızı kontrol edin.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Doğrulanmış Kur\'an ses paketi eksik ($available/$total). Ses kataloğu güncellendikten sonra tekrar deneyin.';
   }

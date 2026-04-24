@@ -1254,6 +1254,10 @@ class AppLocalizationsSd extends AppLocalizations {
       'تصديق ٿيل قرآن آڊيو ذريعن في الحال دستياب ناهي.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'آڊيو پلے بیک ناڪام. مھرباني ڪري پنھنجو ڪنيڪشن چيڪ ڪريو.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'تصديق ٿيل قرآن آڊيو پيڪ نامڪمل آهي ($available/$total). آڊيو فهرست اپڊيٽ ٿيڻ کان پوءِ ٻيهر ڪوشش ڪريو.';
   }

@@ -1260,6 +1260,10 @@ class AppLocalizationsFi extends AppLocalizations {
       'Vahvistetut Koraanin äänilähteet eivät ole tällä hetkellä saatavilla.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Äänen toisto epäonnistui. Tarkista yhteys.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Vahvistettu Koraanin äänipaketti on epätäydellinen ($available/$total). Yritä uudelleen, kun ääniluettelo on päivitetty.';
   }

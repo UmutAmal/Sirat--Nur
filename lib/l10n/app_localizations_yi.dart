@@ -1258,6 +1258,10 @@ class AppLocalizationsYi extends AppLocalizations {
       'וועראַפייד קאָראַן אַודיאָ קוואלן זענען אַנאַוויילאַבאַל רעכט איצט.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'אַודיאָ פּלייבאַק ניט אַנדערש. ביטע טשעק דיין קשר.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'וועראַפייד קווראַן אַודיאָ פּאַק איז דערענדיקט ($available/$total). פּרוּווט ווידער נאָך דערהייַנטיקט די אַודיאָ קאַטאַלאָג.';
   }

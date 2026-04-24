@@ -1255,6 +1255,10 @@ class AppLocalizationsGu extends AppLocalizations {
       'ચકાસાયેલ કુરાન ઓડિયો સ્ત્રોતો અત્યારે અનુપલબ્ધ છે.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ઑડિઓ પ્લેબેક નિષ્ફળ થયું. કૃપા કરીને તમારું કનેક્શન તપાસો.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'ચકાસાયેલ કુરાન ઓડિયો પેક અપૂર્ણ છે ($available/$total). ઑડિયો કૅટેલોગ અપડેટ થઈ જાય પછી ફરી પ્રયાસ કરો.';
   }

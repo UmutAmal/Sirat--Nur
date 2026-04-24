@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} metodo kun {madhab} Asr-agordo elektita de uzanto"
+  "diagnosticsPrayerHybridSource": "{sourceName} metodo kun {madhab} Asr-agordo elektita de uzanto",
+  "quranAudioPlaybackErrorWithConnectionHint": "Sona reproduktado malsukcesis. Bonvolu kontroli vian konekton."
 }

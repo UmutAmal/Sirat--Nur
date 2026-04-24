@@ -1260,6 +1260,10 @@ class AppLocalizationsSu extends AppLocalizations {
       'Sumber audio Quran anu diverifikasi henteu sayogi ayeuna.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Puteran audio gagal. Mangga parios sambungan anjeun.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} ਵਿਧੀ ਉਪਭੋਗਤਾ ਦੁਆਰਾ ਚੁਣੀ ਗਈ {madhab} Asr ਸੈਟਿੰਗ ਨਾਲ"
+  "diagnosticsPrayerHybridSource": "{sourceName} ਵਿਧੀ ਉਪਭੋਗਤਾ ਦੁਆਰਾ ਚੁਣੀ ਗਈ {madhab} Asr ਸੈਟਿੰਗ ਨਾਲ",
+  "quranAudioPlaybackErrorWithConnectionHint": "ਆਡੀਓ ਪਲੇਬੈਕ ਅਸਫਲ ਰਿਹਾ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
 }

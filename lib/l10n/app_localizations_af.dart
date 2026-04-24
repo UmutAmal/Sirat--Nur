@@ -1260,6 +1260,10 @@ class AppLocalizationsAf extends AppLocalizations {
       'Geverifieerde Koran-oudiobronne is nie tans beskikbaar nie.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Oudioterugspeel het misluk. Gaan asseblief jou verbinding na.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Geverifieerde Koran-oudiopak is onvolledig ($available/$total). Probeer weer nadat die oudiokatalogus opgedateer is.';
   }

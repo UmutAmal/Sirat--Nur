@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "dull {sourceName} gyda gosodiad {madhab} a ddewiswyd gan y defnyddiwr"
+  "diagnosticsPrayerHybridSource": "dull {sourceName} gyda gosodiad {madhab} a ddewiswyd gan y defnyddiwr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Wedi methu chwarae sain. Gwiriwch eich cysylltiad."
 }

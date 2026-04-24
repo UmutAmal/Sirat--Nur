@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} طريقو استعمال ڪندڙ جي چونڊيل {madhab} عصر سيٽنگ سان"
+  "diagnosticsPrayerHybridSource": "{sourceName} طريقو استعمال ڪندڙ جي چونڊيل {madhab} عصر سيٽنگ سان",
+  "quranAudioPlaybackErrorWithConnectionHint": "آڊيو پلے بیک ناڪام. مھرباني ڪري پنھنجو ڪنيڪشن چيڪ ڪريو."
 }

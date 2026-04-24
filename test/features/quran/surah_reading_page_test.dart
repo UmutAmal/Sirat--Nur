@@ -30,5 +30,19 @@ void main() {
       expect(shouldShowStandaloneBismillah(9), isFalse);
       expect(shouldShowStandaloneBismillah(2), isTrue);
     });
+
+    test('builds audio playback error as one localized sentence', () {
+      final en = lookupAppLocalizations(const Locale('en'));
+      final tr = lookupAppLocalizations(const Locale('tr'));
+
+      expect(
+        resolveQuranAudioPlaybackErrorMessage(en),
+        'Audio playback failed. Please check your connection.',
+      );
+      expect(
+        resolveQuranAudioPlaybackErrorMessage(tr),
+        'Ses çalınamadı. Lütfen bağlantınızı kontrol edin.',
+      );
+    });
   });
 }

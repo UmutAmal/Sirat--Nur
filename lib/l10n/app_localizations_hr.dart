@@ -1260,6 +1260,10 @@ class AppLocalizationsHr extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio reprodukcija nije uspjela. Provjerite vezu.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Potvrđeni audio paket Kur\'ana nije potpun ($available/$total). Pokušajte ponovno nakon ažuriranja audiokataloga.';
   }

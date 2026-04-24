@@ -1258,6 +1258,10 @@ class AppLocalizationsBn extends AppLocalizations {
       'যাচাইকৃত কুরআন অডিও উত্স এই মুহূর্তে অনুপলব্ধ.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'অডিও প্লেব্যাক ব্যর্থ হয়েছে. আপনার সংযোগ পরীক্ষা করুন.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'যাচাইকৃত কুরআন অডিও প্যাক অসম্পূর্ণ ($available/$total)। অডিও ক্যাটালগ আপডেট হওয়ার পরে আবার চেষ্টা করুন।';
   }

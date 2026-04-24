@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "វិធីសាស្រ្ត {sourceName} ជាមួយនឹងការកំណត់ {madhab} Asr ដែលបានជ្រើសរើសដោយអ្នកប្រើប្រាស់"
+  "diagnosticsPrayerHybridSource": "វិធីសាស្រ្ត {sourceName} ជាមួយនឹងការកំណត់ {madhab} Asr ដែលបានជ្រើសរើសដោយអ្នកប្រើប្រាស់",
+  "quranAudioPlaybackErrorWithConnectionHint": "ការ​ចាក់​សំឡេង​បាន​បរាជ័យ។ សូមពិនិត្យមើលការតភ្ជាប់របស់អ្នក។"
 }

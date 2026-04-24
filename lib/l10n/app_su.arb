@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Métode {sourceName} nganggo setélan {madhab} Asar anu dipilih ku pamaké"
+  "diagnosticsPrayerHybridSource": "Métode {sourceName} nganggo setélan {madhab} Asar anu dipilih ku pamaké",
+  "quranAudioPlaybackErrorWithConnectionHint": "Puteran audio gagal. Mangga parios sambungan anjeun."
 }

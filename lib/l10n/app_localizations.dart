@@ -2739,6 +2739,12 @@ abstract class AppLocalizations {
   /// **'Verified Quran audio sources are unavailable right now.'**
   String get quranAudioSourcesUnavailable;
 
+  /// No description provided for @quranAudioPlaybackErrorWithConnectionHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Audio playback failed. Please check your connection.'**
+  String get quranAudioPlaybackErrorWithConnectionHint;
+
   /// No description provided for @quranAudioSourcesIncomplete.
   ///
   /// In en, this message translates to:

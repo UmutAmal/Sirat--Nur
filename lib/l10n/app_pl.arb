@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Metoda {sourceName} z wybranym przez użytkownika ustawieniem {madhab} Asr"
+  "diagnosticsPrayerHybridSource": "Metoda {sourceName} z wybranym przez użytkownika ustawieniem {madhab} Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Odtwarzanie dźwięku nie powiodło się. Sprawdź swoje połączenie."
 }

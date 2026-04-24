@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} mbinu iliyochaguliwa na mtumiaji {madhab} mpangilio wa Asr"
+  "diagnosticsPrayerHybridSource": "{sourceName} mbinu iliyochaguliwa na mtumiaji {madhab} mpangilio wa Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Uchezaji wa sauti umeshindwa. Tafadhali angalia muunganisho wako."
 }

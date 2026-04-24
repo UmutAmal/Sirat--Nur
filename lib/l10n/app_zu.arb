@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} indlela ekhethwe umsebenzisi {madhab} Isilungiselelo se-Asr"
+  "diagnosticsPrayerHybridSource": "{sourceName} indlela ekhethwe umsebenzisi {madhab} Isilungiselelo se-Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Ukudlalwa komsindo kuhlulekile. Sicela uhlole ukuxhumana kwakho."
 }

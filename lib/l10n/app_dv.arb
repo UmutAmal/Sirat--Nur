@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} މެތޯޑް އާއި އެކު ޔޫޒަރ ސެލެކްޓް {madhab} Asr ސެޓިންގ"
+  "diagnosticsPrayerHybridSource": "{sourceName} މެތޯޑް އާއި އެކު ޔޫޒަރ ސެލެކްޓް {madhab} Asr ސެޓިންގ",
+  "quranAudioPlaybackErrorWithConnectionHint": "އޯޑިއޯ ޕްލޭބެކް ފެއިލްވެއްޖެއެވެ. ކަނެކްޝަން ޗެކް ކުރައްވާށެވެ."
 }

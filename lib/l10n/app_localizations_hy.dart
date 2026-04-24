@@ -1263,6 +1263,10 @@ class AppLocalizationsHy extends AppLocalizations {
       'Ղուրանի ստուգված աուդիո աղբյուրներն այս պահին անհասանելի են:';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Ձայնի նվագարկումը ձախողվեց: Խնդրում ենք ստուգել ձեր կապը:';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ստուգված Ղուրանի աուդիո փաթեթը թերի է ($available/$total): Նորից փորձեք աուդիո կատալոգը թարմացնելուց հետո:';
   }

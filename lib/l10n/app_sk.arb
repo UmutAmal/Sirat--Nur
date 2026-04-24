@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Metóda {sourceName} s používateľom vybratým nastavením {madhab} Asr"
+  "diagnosticsPrayerHybridSource": "Metóda {sourceName} s používateľom vybratým nastavením {madhab} Asr",
+  "quranAudioPlaybackErrorWithConnectionHint": "Prehrávanie zvuku zlyhalo. Skontrolujte svoje pripojenie."
 }

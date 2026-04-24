@@ -1261,6 +1261,10 @@ class AppLocalizationsCy extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Wedi methu chwarae sain. Gwiriwch eich cysylltiad.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Mae pecyn sain Verified Quran yn anghyflawn ($available/$total). Ceisiwch eto ar ôl i\'r catalog sain gael ei ddiweddaru.';
   }

@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "İstifadəçi tərəfindən seçilmiş {madhab} Əsr ayarı ilə {sourceName} metodu"
+  "diagnosticsPrayerHybridSource": "İstifadəçi tərəfindən seçilmiş {madhab} Əsr ayarı ilə {sourceName} metodu",
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio oxutma uğursuz oldu. Bağlantınızı yoxlayın."
 }

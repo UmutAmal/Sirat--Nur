@@ -1226,6 +1226,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get quranAudioSourcesUnavailable => '经过验证的《古兰经》音频源目前不可用。';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint => '音频播放失败。请检查您的连接。';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return '已验证的《古兰经》音频包不完整 ($available/$total)。更新音频目录后重试。';
   }
@@ -2879,6 +2882,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get quranAudioSourcesUnavailable => '经过验证的《古兰经》音频源目前不可用。';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint => '音频播放失败。请检查您的连接。';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return '已验证的《古兰经》音频包不完整 ($available/$total)。更新音频目录后重试。';
   }
@@ -4530,6 +4536,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get quranAudioSourcesUnavailable => '經過驗證的《古蘭經》音訊來源目前無法使用。';
+
+  @override
+  String get quranAudioPlaybackErrorWithConnectionHint => '音頻播放失敗。請檢查您的連線。';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {

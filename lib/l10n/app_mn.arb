@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Хэрэглэгчийн сонгосон {madhab} Asr тохиргоотой {sourceName} арга"
+  "diagnosticsPrayerHybridSource": "Хэрэглэгчийн сонгосон {madhab} Asr тохиргоотой {sourceName} арга",
+  "quranAudioPlaybackErrorWithConnectionHint": "Аудио тоглуулж чадсангүй. Холболтоо шалгана уу."
 }

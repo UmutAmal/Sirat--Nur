@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting"
+  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "quranAudioPlaybackErrorWithConnectionHint": "Naʻe ʻikai lava ʻa e vaʻinga ʻo e leʻó. Kataki 'o vakai'i ho'o fehokotaki'anga."
 }

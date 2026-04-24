@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "שיטת {sourceName} עם הגדרת {madhab} שנבחרה על ידי המשתמש"
+  "diagnosticsPrayerHybridSource": "שיטת {sourceName} עם הגדרת {madhab} שנבחרה על ידי המשתמש",
+  "quranAudioPlaybackErrorWithConnectionHint": "הפעלת השמע נכשלה. אנא בדוק את החיבור שלך."
 }

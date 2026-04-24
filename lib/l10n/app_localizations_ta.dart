@@ -1265,6 +1265,10 @@ class AppLocalizationsTa extends AppLocalizations {
       'சரிபார்க்கப்பட்ட குர்ஆன் ஆடியோ ஆதாரங்கள் இப்போது கிடைக்கவில்லை.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ஆடியோ பிளேபேக் தோல்வியடைந்தது. உங்கள் இணைப்பைச் சரிபார்க்கவும்.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'சரிபார்க்கப்பட்ட குர்ஆன் ஆடியோ பேக் முழுமையடையவில்லை ($available/$total). ஆடியோ அட்டவணை புதுப்பிக்கப்பட்ட பிறகு மீண்டும் முயற்சிக்கவும்.';
   }

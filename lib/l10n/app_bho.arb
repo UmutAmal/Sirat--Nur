@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} तरीका उपयोगकर्ता द्वारा चुनल {madhab} Asr सेटिंग के साथ"
+  "diagnosticsPrayerHybridSource": "{sourceName} तरीका उपयोगकर्ता द्वारा चुनल {madhab} Asr सेटिंग के साथ",
+  "quranAudioPlaybackErrorWithConnectionHint": "ऑडियो प्लेबैक फेल हो गइल. कृपया आपन कनेक्शन के जांच करीं।"
 }

@@ -1257,6 +1257,10 @@ class AppLocalizationsUz extends AppLocalizations {
       'Tasdiqlangan Qur\'on audio manbalari hozirda mavjud emas.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio ijro qilinmadi. Iltimos, ulanishingizni tekshiring.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Tasdiqlangan Qurʼon audio toʻplami toʻliq emas ($available/$total). Audio katalog yangilangandan keyin qayta urinib ko\'ring.';
   }

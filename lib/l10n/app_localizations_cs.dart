@@ -1259,6 +1259,10 @@ class AppLocalizationsCs extends AppLocalizations {
       'Ověřené zdroje zvuku z Koránu jsou momentálně nedostupné.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Přehrávání zvuku se nezdařilo. Zkontrolujte prosím své připojení.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ověřený zvukový balíček Koránu je neúplný ($available/$total). Zkuste to znovu po aktualizaci audio katalogu.';
   }

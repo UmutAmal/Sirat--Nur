@@ -604,6 +604,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Doğrulanmış Kur'an ses kaynakları şu anda kullanılamıyor.",
+  "quranAudioPlaybackErrorWithConnectionHint": "Ses çalınamadı. Lütfen bağlantınızı kontrol edin.",
   "quranAudioSourcesIncomplete": "Doğrulanmış Kur'an ses paketi eksik ({available}/{total}). Ses kataloğu güncellendikten sonra tekrar deneyin.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {

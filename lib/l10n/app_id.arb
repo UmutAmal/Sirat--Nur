@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Metode {sourceName} dengan pengaturan {madhab} Ashar yang dipilih pengguna"
+  "diagnosticsPrayerHybridSource": "Metode {sourceName} dengan pengaturan {madhab} Ashar yang dipilih pengguna",
+  "quranAudioPlaybackErrorWithConnectionHint": "Pemutaran audio gagal. Silakan periksa koneksi Anda."
 }

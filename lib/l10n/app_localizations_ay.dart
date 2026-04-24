@@ -1279,6 +1279,10 @@ class AppLocalizationsAy extends AppLocalizations {
       'Quran audio fuentes chiqapar uñjatanakax janiw jichhax utjkiti.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio uñtañax janiw phuqhaskänti. Ukhamaraki, uka conexión uñakipt’añamawa.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Quran audio pack chiqanchata ukax janiw phuqhatäkiti ($available/$total). Catálogo de audio ukax machaqar tukuyatäxi uka qhipatxa, mayamp yant’añamawa.';
   }

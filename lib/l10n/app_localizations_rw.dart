@@ -1259,6 +1259,10 @@ class AppLocalizationsRw extends AppLocalizations {
       'Inkomoko y\'amajwi ya Koran ntishoboka kuboneka nonaha.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Gukina amajwi byarananiranye. Nyamuneka reba isano yawe.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
   }

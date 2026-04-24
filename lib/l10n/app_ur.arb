@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} طریقہ صارف کے منتخب کردہ {madhab} عصر کی ترتیب کے ساتھ"
+  "diagnosticsPrayerHybridSource": "{sourceName} طریقہ صارف کے منتخب کردہ {madhab} عصر کی ترتیب کے ساتھ",
+  "quranAudioPlaybackErrorWithConnectionHint": "آڈیو پلے بیک ناکام ہو گیا۔ براہ کرم اپنا کنکشن چیک کریں۔"
 }

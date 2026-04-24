@@ -1259,6 +1259,10 @@ class AppLocalizationsLb extends AppLocalizations {
       'Verifizéiert Koran Audioquellen sinn elo net verfügbar.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'D\'Audio-Playback ass gescheitert. Kuckt w.e.g. Är Verbindung.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Verifizéiert Koran Audio Pack ass onkomplett ($available/$total). Try again after the audio catalog is updated.';
   }

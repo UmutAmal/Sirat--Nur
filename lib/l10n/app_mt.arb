@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} metodu b'setting Asr {madhab} magħżul mill-utent"
+  "diagnosticsPrayerHybridSource": "{sourceName} metodu b'setting Asr {madhab} magħżul mill-utent",
+  "quranAudioPlaybackErrorWithConnectionHint": "Il-plejbek tal-awdjo falla. Jekk jogħġbok iċċekkja l-konnessjoni tiegħek."
 }

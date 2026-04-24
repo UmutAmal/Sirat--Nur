@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} ala me {madhab} i koho ʻia e ka mea hoʻohana."
+  "diagnosticsPrayerHybridSource": "{sourceName} ala me {madhab} i koho ʻia e ka mea hoʻohana.",
+  "quranAudioPlaybackErrorWithConnectionHint": "Hāʻule ka pāʻani leo. E ʻoluʻolu e nānā i kāu pili."
 }

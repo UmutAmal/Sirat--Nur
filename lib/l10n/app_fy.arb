@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} metoade mei brûker selekteare {madhab} Asr ynstelling"
+  "diagnosticsPrayerHybridSource": "{sourceName} metoade mei brûker selekteare {madhab} Asr ynstelling",
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio ôfspieljen mislearre. Kontrolearje asjebleaft jo ferbining."
 }

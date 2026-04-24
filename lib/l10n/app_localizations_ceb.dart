@@ -1265,6 +1265,10 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Ang gipamatud-an nga mga tinubdan sa audio sa Quran dili magamit karon.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Napakyas ang playback sa audio. Palihug susiha ang imong koneksyon.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ang napamatud-an nga Quran audio pack dili kompleto ($available/$total). Sulayi pag-usab human ma-update ang audio catalog.';
   }

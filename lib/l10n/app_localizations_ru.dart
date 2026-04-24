@@ -1263,6 +1263,10 @@ class AppLocalizationsRu extends AppLocalizations {
       'Проверенные источники аудио Корана сейчас недоступны.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Воспроизведение аудио не удалось. Пожалуйста, проверьте ваше соединение.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Подтвержденный аудиопакет Корана неполный ($available/$total). Повторите попытку после обновления аудиокаталога.';
   }

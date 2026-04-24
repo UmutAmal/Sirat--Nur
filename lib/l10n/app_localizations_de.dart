@@ -1266,6 +1266,10 @@ class AppLocalizationsDe extends AppLocalizations {
       'Verifizierte Koran-Audioquellen sind derzeit nicht verfügbar.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Die Audiowiedergabe ist fehlgeschlagen. Bitte überprüfen Sie Ihre Verbindung.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Das bestätigte Koran-Audiopaket ist unvollständig ($available/$total). Versuchen Sie es erneut, nachdem der Audiokatalog aktualisiert wurde.';
   }

@@ -1260,6 +1260,10 @@ class AppLocalizationsVi extends AppLocalizations {
       'Các nguồn âm thanh Kinh Qur\'an đã được xác minh hiện không có sẵn.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Phát lại âm thanh không thành công. Vui lòng kiểm tra kết nối của bạn.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Gói âm thanh Kinh Qur\'an đã được xác minh chưa đầy đủ ($available/$total). Hãy thử lại sau khi danh mục âm thanh được cập nhật.';
   }

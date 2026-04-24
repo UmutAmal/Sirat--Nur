@@ -1257,6 +1257,10 @@ class AppLocalizationsSi extends AppLocalizations {
       'සත්‍යාපිත කුර්ආන් ශ්‍රව්‍ය මූලාශ්‍ර දැන් නොමැත.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ශ්‍රව්‍ය නැවත ධාවනය අසාර්ථක විය. කරුණාකර ඔබගේ සම්බන්ධතාවය පරීක්ෂා කරන්න.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'සත්‍යාපිත කුර්ආන් ශ්‍රව්‍ය ඇසුරුම අසම්පූර්ණයි ($available/$total). ශ්‍රව්‍ය නාමාවලිය යාවත්කාලීන කළ පසු නැවත උත්සාහ කරන්න.';
   }

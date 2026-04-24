@@ -1267,6 +1267,10 @@ class AppLocalizationsGd extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Dh\'fhàillig ath-chluich fuaim. Feuch an toir thu sùil air a’ cheangal agad.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Tha pasgan claisneachd Quran dearbhte neo-chrìochnach ($available/$total). Feuch ris a-rithist às deidh don chatalog claisneachd ùrachadh.';
   }

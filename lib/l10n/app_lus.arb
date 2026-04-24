@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method hmangin user-in a thlan {madhab} Asr setting a awm"
+  "diagnosticsPrayerHybridSource": "{sourceName} method hmangin user-in a thlan {madhab} Asr setting a awm",
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio playback a hlawhchham. Khawngaihin i connection kha lo en ve teh."
 }

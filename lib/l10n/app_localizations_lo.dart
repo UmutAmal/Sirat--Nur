@@ -1255,6 +1255,10 @@ class AppLocalizationsLo extends AppLocalizations {
       'ແຫຼ່ງສຽງ Quran ທີ່ຢັ້ງຢືນແລ້ວແມ່ນບໍ່ສາມາດໃຊ້ໄດ້ໃນຕອນນີ້.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ການຫຼິ້ນສຽງລົ້ມເຫລວ. ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ຂອງທ່ານ.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'ຊຸດສຽງ Quran ຢັ້ງຢືນບໍ່ຄົບຖ້ວນ ($available/$total). ລອງອີກຄັ້ງຫຼັງຈາກລາຍການສຽງຖືກອັບເດດ.';
   }

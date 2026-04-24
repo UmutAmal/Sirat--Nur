@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "具有使用者選擇的 {madhab} Asr 設定的 {sourceName} 方法"
+  "diagnosticsPrayerHybridSource": "具有使用者選擇的 {madhab} Asr 設定的 {sourceName} 方法",
+  "quranAudioPlaybackErrorWithConnectionHint": "音頻播放失敗。請檢查您的連線。"
 }

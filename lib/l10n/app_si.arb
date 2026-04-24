@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "පරිශීලක-තෝරාගත් {madhab} Asr සැකසුම සහිත {sourceName} ක්‍රමය"
+  "diagnosticsPrayerHybridSource": "පරිශීලක-තෝරාගත් {madhab} Asr සැකසුම සහිත {sourceName} ක්‍රමය",
+  "quranAudioPlaybackErrorWithConnectionHint": "ශ්‍රව්‍ය නැවත ධාවනය අසාර්ථක විය. කරුණාකර ඔබගේ සම්බන්ධතාවය පරීක්ෂා කරන්න."
 }

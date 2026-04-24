@@ -1261,6 +1261,10 @@ class AppLocalizationsKa extends AppLocalizations {
       'დადასტურებული ყურანის აუდიო წყაროები ამჟამად მიუწვდომელია.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'აუდიოს დაკვრა ვერ მოხერხდა. გთხოვთ, შეამოწმოთ თქვენი კავშირი.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'დადასტურებული ყურანის აუდიო პაკეტი არასრულია ($available/$total). სცადეთ ხელახლა აუდიო კატალოგის განახლების შემდეგ.';
   }

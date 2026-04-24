@@ -1261,6 +1261,10 @@ class AppLocalizationsBho extends AppLocalizations {
       'Verified Quran audio sources are unavailable right now.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'ऑडियो प्लेबैक फेल हो गइल. कृपया आपन कनेक्शन के जांच करीं।';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'सत्यापित कुरान ऑडियो पैक अधूरा बा ($available/$total)। ऑडियो कैटलॉग अपडेट होखला के बाद फेर से कोशिश करीं।';
   }

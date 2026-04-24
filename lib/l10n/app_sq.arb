@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Metoda {sourceName} me cilësimin e asr {madhab} të zgjedhur nga përdoruesi"
+  "diagnosticsPrayerHybridSource": "Metoda {sourceName} me cilësimin e asr {madhab} të zgjedhur nga përdoruesi",
+  "quranAudioPlaybackErrorWithConnectionHint": "Riprodhimi i audios dështoi. Ju lutemi kontrolloni lidhjen tuaj."
 }

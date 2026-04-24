@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "طريقة {sourceName} مع إعداد {madhab} العصر الذي حدده المستخدم"
+  "diagnosticsPrayerHybridSource": "طريقة {sourceName} مع إعداد {madhab} العصر الذي حدده المستخدم",
+  "quranAudioPlaybackErrorWithConnectionHint": "فشل تشغيل الصوت. يرجى التحقق من الاتصال الخاص بك."
 }

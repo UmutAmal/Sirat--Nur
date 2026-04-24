@@ -604,6 +604,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
+  "quranAudioPlaybackErrorWithConnectionHint": "Audio playback failed. Please check your connection.",
   "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Try again after the audio catalog is updated.",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {

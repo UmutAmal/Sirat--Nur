@@ -1258,6 +1258,10 @@ class AppLocalizationsFy extends AppLocalizations {
       'Ferifiearre Quran-audioboarnen binne op it stuit net beskikber.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'Audio ôfspieljen mislearre. Kontrolearje asjebleaft jo ferbining.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'Ferifiearre Quran-audiopakket is net kompleet ($available/$total). Besykje it nochris nei\'t de audiokatalogus bywurke is.';
   }

@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "ユーザーが選択した {madhab} Asr 設定を使用した {sourceName} メソッド"
+  "diagnosticsPrayerHybridSource": "ユーザーが選択した {madhab} Asr 設定を使用した {sourceName} メソッド",
+  "quranAudioPlaybackErrorWithConnectionHint": "音声の再生に失敗しました。接続を確認してください。"
 }

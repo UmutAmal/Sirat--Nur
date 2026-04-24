@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "modh {sourceName} le socrú Asr {madhab} roghnaithe ag an úsáideoir"
+  "diagnosticsPrayerHybridSource": "modh {sourceName} le socrú Asr {madhab} roghnaithe ag an úsáideoir",
+  "quranAudioPlaybackErrorWithConnectionHint": "Theip ar athsheinm fuaime. Seiceáil do cheangal."
 }

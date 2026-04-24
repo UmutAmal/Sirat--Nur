@@ -780,5 +780,6 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "Metodo {sourceName} con impostazione {madhab} selezionata dall'utente"
+  "diagnosticsPrayerHybridSource": "Metodo {sourceName} con impostazione {madhab} selezionata dall'utente",
+  "quranAudioPlaybackErrorWithConnectionHint": "La riproduzione audio non è riuscita. Per favore controlla la tua connessione."
 }

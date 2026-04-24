@@ -1255,6 +1255,10 @@ class AppLocalizationsPs extends AppLocalizations {
       'د قرآن کريم آډیو منابع اوس مهال شتون نلري.';
 
   @override
+  String get quranAudioPlaybackErrorWithConnectionHint =>
+      'د آډیو پلې بیک ناکام شو. مهرباني وکړئ خپل پیوستون وګورئ.';
+
+  @override
   String quranAudioSourcesIncomplete(String available, String total) {
     return 'تصدیق شوی د قرآن آډیو کڅوړه نیمګړې ده ($available/$total). د آډیو کتلاګ تازه کیدو وروسته بیا هڅه وکړئ.';
   }
