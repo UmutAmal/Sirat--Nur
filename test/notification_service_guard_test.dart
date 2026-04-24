@@ -93,25 +93,24 @@ void main() {
     expect(source, contains('androidScheduleMode: androidScheduleMode'));
   });
 
-  test(
-    'adhan scheduler clears partial schedules after scheduling failures',
-    () {
-      final source = File(
-        'lib/core/services/adhan_scheduler_service.dart',
-      ).readAsStringSync();
+  test('adhan scheduler clears partial schedules after scheduling failures', () {
+    final source = File(
+      'lib/core/services/adhan_scheduler_service.dart',
+    ).readAsStringSync();
 
-      final firstClear = source.indexOf('await _cancelScheduledAdhans();');
-      final guardedSchedule = source.indexOf('try {', firstClear);
-      final dailySchedule = source.indexOf('await _scheduleDailyEvents(');
-      final failureCleanup = source.indexOf(
-        'await _cancelScheduledAdhans();\n      rethrow;',
-        dailySchedule,
-      );
+    final firstClear = source.indexOf('await _cancelScheduledAdhans();');
+    final guardedSchedule = source.indexOf('try {', firstClear);
+    final dailySchedule = source.indexOf('await _scheduleDailyEvents(');
+    final failureCleanup = source.indexOf(
+      'await _cancelScheduledAdhans();\n'
+      "      debugPrint('Adhan scheduling failed; cleared partial adhan schedules');\n"
+      '      rethrow;',
+      dailySchedule,
+    );
 
-      expect(firstClear, isNonNegative);
-      expect(guardedSchedule, greaterThan(firstClear));
-      expect(dailySchedule, greaterThan(guardedSchedule));
-      expect(failureCleanup, greaterThan(dailySchedule));
-    },
-  );
+    expect(firstClear, isNonNegative);
+    expect(guardedSchedule, greaterThan(firstClear));
+    expect(dailySchedule, greaterThan(guardedSchedule));
+    expect(failureCleanup, greaterThan(dailySchedule));
+  });
 }

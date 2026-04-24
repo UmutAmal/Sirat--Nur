@@ -18333,3 +18333,29 @@
 
 ### Sonraki Adim
 - `dart format`, targeted tafsir page/service testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan UI catch bloklarini skorla.
+
+## 2026-04-24 TUR-448 - Adhan Scheduling Failure Cleanup Is Visible
+
+### MASTER Karari
+- Risk: Adhan scheduler failure durumunda partial notification schedule'lari temizleyip exception'i ust katmana iletiyor, ancak cleanup'in gerceklestigine dair kendi runtime kanitini uretmiyordu.
+- Kanit:
+  - `lib/core/services/adhan_scheduler_service.dart` icindeki `scheduleAdhans` catch blogu once `await _cancelScheduledAdhans(); rethrow;` yapiyordu.
+  - `test/notification_service_guard_test.dart` partial schedule cleanup siralamasini test ediyor, fakat cleanup logunu zorunlu tutmuyordu.
+- Kullanici etkisi: Bildirim schedule hatasi ust coordinator tarafinda loglansa da, partial schedule temizliginin calistigi release loglarinda ayrica gorunmez; bu prayer/notification hattinda saha teshisini zayiflatir.
+- Risk skoru: Etki 4 x Olasilik 2 = 8/25.
+- Rollback plani: `lib/core/services/adhan_scheduler_service.dart`, `test/notification_service_guard_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `scheduleAdhans` failure cleanup sonrasi sanitized debug log yazacak ve mevcut `rethrow` sozlesmesini koruyacak.
+- Loglarda exception detayi veya secret tasiyabilecek ham deger basilmayacak.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\notification_service_guard_test.dart --reporter compact` PASS, 5/5.
+- Yeni regresyon: Notification guard testi failure cleanup sirasinda sanitized logun rethrow'dan once oldugunu zorunlu tutacak.
+
+### Risk Degisimi
+- Adhan scheduling cleanup visibility riski: `8/25 -> 2/25`.
+- Kalan risk: UI init/bootstrap catch bloklari ve non-core parse catch'leri ayrica taranacak.
+
+### Sonraki Adim
+- `dart format`, targeted notification guard testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan `main.dart` bootstrap catch'lerini skorla.

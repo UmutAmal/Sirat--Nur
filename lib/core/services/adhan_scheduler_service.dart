@@ -91,6 +91,7 @@ class AdhanSchedulerService {
       }
     } catch (_) {
       await _cancelScheduledAdhans();
+      debugPrint('Adhan scheduling failed; cleared partial adhan schedules');
       rethrow;
     }
   }
