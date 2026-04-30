@@ -1377,7 +1377,7 @@ class AppLocalizationsCh extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Na\'setbe i lugat fine\'nina ya siña ma li\'e\' i moske siha, i nengkanno\' halal, yan i eskuelan Islam gi fi\'on-mu.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'Ti siña ma sodda\' i mapa';

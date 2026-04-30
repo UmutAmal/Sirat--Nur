@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Селтәр хатаһы. Зинһар, тағы ла тырышығыҙ.",
   "placesLocationRequiredTitle": "Урын кәрәк",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Тәүҙә урынды билдәләгеҙ, шулай итеп яҡындағы мәсеттәрҙе, хәләл ризыҡтарҙы, ислам мәктәптәрен дөрөҫ эҙләргә мөмкин.",
   "placesMapTilesUnavailableTitle": "Карта плиталары юҡ",
   "placesMapTilesUnavailableBody": "Был төҙөү өсөн әлегә раҫланған карта плиткә сығанағы конфигурацияланмаған. Яҡындағы урындар һаман да һеҙҙең һаҡланған урындан тейәп була.",
   "placesDataSourceUnavailableTitle": "Мәғлүмәттәр ҡулланылмаған урындар",

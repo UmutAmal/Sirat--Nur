@@ -1377,7 +1377,7 @@ class AppLocalizationsFf extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Set nokku arande ngam juulirɗe ɓadiije, nyaamdu halal, e duɗe lislaam mbaawa wiɗteede no haanirta nii.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'Tile karte keɓaaka';

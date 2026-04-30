@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Njuumte ci reso bi. Jéemaat.",
   "placesLocationRequiredTitle": "Barab biñu soxla",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Wutal barab bu njëkk suko defee nga mëna seetee bu baax Juma yi, ñam halal yi ak daara yi ci Islam.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
   "placesMapTilesUnavailableBody": "Ba tay amagul ab source mosail kart buñ firndeel ngir taax bii. Barab yi la gëna jege mën nañu ba leegi sarse ci barab bi nga denc.",
   "placesDataSourceUnavailableTitle": "Done yi amul",

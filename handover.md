@@ -18739,6 +18739,43 @@
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; her yeni ARB batch'inden sonra `flutter gen-l10n` ve `test/l10n_generated_sync_test.dart` mutlaka calistir.
 
+## 2026-04-30 TUR-462 - Places Location Required Body Runtime L10n Sync
+
+### MASTER Karari
+- Risk: Places ekrani konum ayari yokken gosterilen `placesLocationRequiredBody` aciklamasi dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu; bu, kullanicinin konum eksikligi durumunda secili dilde yonlendirme alamamasina neden oluyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:667` artik `"placesLocationRequiredBody": "naharal arac massos tonnal xayikket tan masjiditteey, halal maaqooqaa kee islaaminna barittoh buxaaxi gitah gorrisaanam duudumtah."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:667` artik `"placesLocationRequiredBody": "Wutal barab bu njëkk suko defee nga mëna seetee bu baax Juma yi, ñam halal yi ak daara yi ci Islam."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1379` ve `lib/l10n/app_localizations_wo.dart:1379` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/l10n_generated_sync_test.dart:27` `placesLocationRequiredBody` icin ARB/generated uyumunu kilitliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1268` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:333` body icin secili dusuk kaynakli locale'lerde Ingilizce fallback'i reddediyor; `test/translate_arb_keys_test.dart:359` ve `test/translate_arb_keys_test.dart:364` reddedilen `app_br` ve `app_gv` mixed-language/debris ciktilarini guard ediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1300 -> 1268` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Konum ayari yapilmadiginda Places harita/veri empty-state aciklamasi daha fazla locale'de runtime'da gercekten secili dilde gorunur; guvenilir olmayan Breton ve Manx arac ciktilari kabul edilmeden Ingilizce fallback'e birakildi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 32 ARB dosyasi, 32 generated l10n dosyasi, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesLocationRequiredBody` icin 32 guvenli dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `app_br` icin `resisted` kalintili Breton cikti ve `app_gv` icin `Set location` iceren mixed English/Manx cikti reddedildi; bu iki locale'de temiz Ingilizce fallback korundu.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+- `test/l10n_generated_sync_test.dart` yeni body anahtarini da ARB/generated karsilastirmasina ekledi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places location required body l10n/runtime sync riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1268` same-as-English fallback devam ediyor; `placesDataSourceUnavailableBody`, placeholder iceren found/distance copy ve download/diagnostics kumesi sonraki guvenli batchlerde azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; teknik token iceren `placesDataSourceUnavailableBody` icin `PLACES_OVERPASS_API_URL` koruma testiyle ilerle.
+
 ## 2026-04-30 TUR-461 - Places Data Source Title Runtime L10n Sync
 
 ### MASTER Karari

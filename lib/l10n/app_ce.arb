@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Сетан гӀалат ду. Юха хьажахьара ахь.",
   "placesLocationRequiredTitle": "Меттиг оьшу",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Хьалха меттиг билгалъяккха, гергарчу маьждигашкахь а, хьанал кхачанехь а, исламан школашкахь а нийса леха йиш хилийта.",
   "placesMapTilesUnavailableTitle": "Картан плиткаш яц",
   "placesMapTilesUnavailableBody": "ТӀечӀагӀдина картан плиткин хьоста хӀинца а дӀахӀоттийна дац оцу бинана. Уллера меттигаш хӀинца а хьан ларйинчу меттигера дӀаяха йиш ю.",
   "placesDataSourceUnavailableTitle": "Меттигаш даннаш лело йиш яц",

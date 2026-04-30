@@ -1377,7 +1377,7 @@ class AppLocalizationsSg extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Zia kozoni mbeni ndo tongaso si a lingbi ti gi na yâ ti amosquée so ayeke nduru, akobe so ayeke halal nga na a-ekole ti Islam nzoni.';
 
   @override
   String get placesMapTilesUnavailableTitle =>

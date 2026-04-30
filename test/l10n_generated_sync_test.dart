@@ -24,6 +24,10 @@ void main() {
           arb['placesLocationRequiredTitle'],
         );
         expect(
+          l10n.placesLocationRequiredBody,
+          arb['placesLocationRequiredBody'],
+        );
+        expect(
           l10n.placesMapTilesUnavailableTitle,
           arb['placesMapTilesUnavailableTitle'],
         );

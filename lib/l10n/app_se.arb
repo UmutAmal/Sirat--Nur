@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Neahttameattáhus. Geahččal fas.",
   "placesLocationRequiredTitle": "Gáibiduvvo báiki",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Bija vuos báikki nu ahte lagaš moskeat, halal-borramuš ja islamalaš skuvllat sáhttet ohcat dárkilit.",
   "placesMapTilesUnavailableTitle": "Kártatávvalat eai gávdno",
   "placesMapTilesUnavailableBody": "Duođaštuvvon kártatávvala gáldu ii leat vuos konfigurerejuvvon dán huksemii. Lagamus báikkit sáhttet ain lastadit du vurkejuvvon báikkis.",
   "placesDataSourceUnavailableTitle": "Báikkit dieđut eai leat gávdnamis",

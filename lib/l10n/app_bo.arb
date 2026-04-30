@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "དྲ་རྒྱའི་ནོར་འཁྲུལ། ཡང་བསྐྱར་ཚོད་ལྟ་གནང་རོགས།",
   "placesLocationRequiredTitle": "ས་གནས་དགོས་པ།",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "དང་པོ་ས་ཆ་ཞིག་གཏན་འབེབས་བྱས་ནས་ཉེ་འགྲམ་གྱི་ཁ་ཆེའི་ལྷ་ཁང་དང་། ཧ་ལལ་ཟ་མ། ཨིསི་ལམ་གྱི་སློབ་གྲྭ་བཅས་འཚོལ་ཞིབ་གཏན་འཁེལ་བྱེད་ཐུབ།",
   "placesMapTilesUnavailableTitle": "ས་ཁྲའི་རྡོ་གཡམ་ཐོབ་མི་ཐུབ།",
   "placesMapTilesUnavailableBody": "ད་དུང་བཟོ་སྐྲུན་འདིའི་ཆེད་དུ་བདེན་དཔང་བྱས་པའི་ས་ཁྲའི་བང་རིམ་གྱི་འབྱུང་ཁུངས་སྒྲིག་བཀོད་བྱས་མེད། ཁྱེད་ཀྱི་ཉར་ཚགས་བྱས་པའི་ས་ཆ་ནས་ཉེ་འགྲམ་གྱི་ས་ཆ་ད་དུང་ཡང་མངོན་ཐུབ།",
   "placesDataSourceUnavailableTitle": "གཞི་གྲངས་ཐོབ་མི་ཐུབ་པའི་ས་ཆ།",

@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Сеть йӑнӑшӗ. Тархасшӑн, тепӗр хут тытӑнса пӑхӑр.",
   "placesLocationRequiredTitle": "Вырӑн кирлӗ",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Малтан вырӑн палӑртӑр, вара ҫывӑхри мечӗтсене, халал апат-ҫимӗҫне тата ислам шкулӗсене тӗрӗс шырама пулать.",
   "placesMapTilesUnavailableTitle": "Карттӑ плиткисем ҫук",
   "placesMapTilesUnavailableBody": "Ку сборка валли тӗрӗсленӗ карттӑ плиткин ҫӑлкуҫӗ хальлӗхе настройка туман-ха. Ҫывӑхри вырӑнсем сирӗн упранӑ вырӑнтан ҫаплах ҫӗклеме пултараҫҫӗ.",
   "placesDataSourceUnavailableTitle": "Даннӑйсем ҫук вырӑнсем",

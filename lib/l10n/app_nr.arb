@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Iphutha lenethiwekhi. Sibawa ulinge godu.",
   "placesLocationRequiredTitle": "Indawo iyatlhogeka",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Beka indawo qangi ukwenzela bona ama-mosque aseduze, ukudla kwe-halal, kanye nezikolo zama-Islam zifunwe ngokunembileko.",
   "placesMapTilesUnavailableTitle": "Amathayili wemephu awatholakali",
   "placesMapTilesUnavailableBody": "Umthombo wamathayili wemephu oqinisekisiweko awukalungiselelwa ukwakha lokhu okwamanje. Iindawo eziseduze zingalayisha ukusuka endaweni yakho elondoloziweko.",
   "placesDataSourceUnavailableTitle": "Indawo idatha engatholakali",

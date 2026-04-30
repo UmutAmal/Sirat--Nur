@@ -1378,7 +1378,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'पहिले कवनो लोकेशन तय करीं जेहसे कि पास के मस्जिद, हलाल खाना, आ इस्लामी स्कूलन के सही खोजल जा सके.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'नक्शा के टाइल्स उपलब्ध नइखे';

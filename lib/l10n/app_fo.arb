@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Netverksfeilur. Vinarliga royn aftur.",
   "placesLocationRequiredTitle": "Staðseting krevst",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Set eitt stað fyrst, so nærliggjandi moskur, halal matur og islamskir skúlar kunnu leitast nágreiniliga.",
   "placesMapTilesUnavailableTitle": "Kortflísar ikki tøkar",
   "placesMapTilesUnavailableBody": "Ein váttað kortflísakelda er ikki uppsett til hesa bygging enn. Nærliggjandi støð kunnu framvegis heinta frá tínum goymda stað.",
   "placesDataSourceUnavailableTitle": "Setur dátur ótøkar",

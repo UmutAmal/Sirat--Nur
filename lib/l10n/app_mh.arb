@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Bōd ilo network eo. Jouj im bar kajeoñ.",
   "placesLocationRequiredTitle": "Jikin eo ej aikuj",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Kōmmane juon jikin mokta bwe mosque ko, mōñā ko redik, im jikuul ko an Islam ren maroñ in lukkun lale.",
   "placesMapTilesUnavailableTitle": "Map tiles ko rejjab maroñ",
   "placesMapTilesUnavailableBody": "Juon map tile source eo emōj an kamool ejjab kōmmane ñan build in kiõ. Jikin ko repaak remaroñ in load jen jikin eo kwar kejbãrok ie.",
   "placesDataSourceUnavailableTitle": "Jikin ko rejjab maroñ in bōk melele ko",

@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Hala 'a e netiueka. Kātaki ʻo toe feinga.",
   "placesLocationRequiredTitle": "Fiema'u 'a e feitu'u",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Fokotuʻu ha feituʻu ʻuluaki koeʻuhí ke lava ʻo kumi totonu ʻa e ngaahi mosque ofi, meʻakai halal, mo e ngaahi akoʻanga ʻIsilamí.",
   "placesMapTilesUnavailableTitle": "'Oku 'ikai ke ma'u 'a e ngaahi taila mape",
   "placesMapTilesUnavailableBody": "'Oku te'eki ke configured ha ma'u'anga tile mape kuo fakamo'oni'i ki he langa ko 'eni. 'Oku kei lava pe 'o uta 'a e ngaahi feitu'u ofi mei ho'o feitu'u kuo fakahaofi.",
   "placesDataSourceUnavailableTitle": "Ngaahi feitu'u 'oku 'ikai ke ma'u 'a e fakamatala",

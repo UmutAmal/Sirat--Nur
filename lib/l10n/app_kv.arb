@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Сетöм öшыбка. Пожалуйста, мӧдысь зіля.",
   "placesLocationRequiredTitle": "Колӧ места.",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Медводз лӧсьӧдӧй места, медым орчча мечетьяс, халяль сёян, исламскӧй школаяс позис тырвыйӧ корсьны.",
   "placesMapTilesUnavailableTitle": "Карта плиткаяс абуӧсь.",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",

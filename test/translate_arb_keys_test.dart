@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1300));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1268));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -305,6 +305,8 @@ void main() {
         final nearbyMosques = localeArbs[locale]!['nearbyMosques'] as String;
         final locationRequiredTitle =
             localeArbs[locale]!['placesLocationRequiredTitle'] as String;
+        final locationRequiredBody =
+            localeArbs[locale]!['placesLocationRequiredBody'] as String;
         expect(
           nearbyMosques,
           isNot(english['nearbyMosques']),
@@ -327,6 +329,22 @@ void main() {
           reason: 'app_$locale.arb has punctuation spacing debris',
         );
         expect(
+          locationRequiredBody,
+          isNot(english['placesLocationRequiredBody']),
+          reason:
+              'app_$locale.arb still uses English for placesLocationRequiredBody',
+        );
+        expect(
+          locationRequiredBody,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline location-required body copy',
+        );
+        expect(
+          locationRequiredBody,
+          isNot(contains(' .')),
+          reason: 'app_$locale.arb has punctuation spacing debris',
+        );
+        expect(
           localeArbs[locale]!['placesSearchArea'],
           isNot(english['placesSearchArea']),
           reason: 'app_$locale.arb still uses English for placesSearchArea',
@@ -337,6 +355,17 @@ void main() {
           reason: 'app_$locale.arb still uses English for placesNetworkError',
         );
       }
+      expect(
+        localeArbs['br']!['placesLocationRequiredBody'],
+        isNot(contains('resisted')),
+        reason: 'app_br.arb kept English debris in location-required body',
+      );
+      expect(
+        localeArbs['gv']!['placesLocationRequiredBody'],
+        isNot(contains('Set location')),
+        reason:
+            'app_gv.arb kept mixed English/Manx location-required body copy',
+      );
       for (final locale in ['aa', 'ab', 'ba', 'bo', 'ti']) {
         final mapTilesTitle =
             localeArbs[locale]!['placesMapTilesUnavailableTitle'] as String;

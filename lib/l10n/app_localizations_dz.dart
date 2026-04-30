@@ -1378,7 +1378,7 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'དང་པ་རང་ ས་གནས་ཅིག་གཞི་སྒྲིག་འབད་དེ་ ཉེ་འདབས་ལུ་ཡོད་པའི་ཁ་ཆེའི་ལྷ་ཁང་དང་ ཧ་ལཱལ་ཟ་འཐུང་ དེ་ལས་ ཨིསི་ལ་མིཀ་སློབ་གྲྭ་ཚུ་ གཏན་གཏན་སྦེ་ འཚོལ་ཞིབ་འབད་ཚུགས།';
 
   @override
   String get placesMapTilesUnavailableTitle => 'ས་ཁྲའི་ཊ་ཡིལ་ཚུ་འཐོབ་མི་ཚུགས།';

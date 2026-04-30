@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Kifu ya réseau. Meka diaka.",
   "placesLocationRequiredTitle": "Kisika kele mfunu",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Tula ntete kisika sambu bo sosa mbote-mbote ba mosquée, madia ya halal, mpi banzo-nkanda ya Bamizilma yina kele pene-pene.",
   "placesMapTilesUnavailableTitle": "Ba carreaux ya karte kele ve",
   "placesMapTilesUnavailableBody": "Ntu ya tile ya karte ya bo me ndima me yidikama ntete ve sambu na kutunga yai. Bisika ya pene-pene lenda katuka kaka na kisika yina nge me bumba.",
   "placesDataSourceUnavailableTitle": "Bansangu ya bisika kele ve",

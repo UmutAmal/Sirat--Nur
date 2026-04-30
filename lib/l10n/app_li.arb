@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Netwerkfout. Probeer nog ummer.",
   "placesLocationRequiredTitle": "Locatie vereis",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Stel iers ‘n locatie in zodat moskeeje, halal ete en islamitische sjaole in de buurt nauwkeurig kinne weure gezeuk.",
   "placesMapTilesUnavailableTitle": "Kaarttegels neet besjikbaar",
   "placesMapTilesUnavailableBody": "‘n Gecontroleerde kaarttegelbron is nog neet geconfigureerd veur deze build. Plaatse in de buurt kinne nog altied lade vanaaf eur opgesjlage locatie.",
   "placesDataSourceUnavailableTitle": "Gegevens neet besjikbaar plaats",

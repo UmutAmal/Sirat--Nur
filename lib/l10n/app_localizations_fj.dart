@@ -1377,7 +1377,7 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Tuvanaka taumada e dua na vanua me rawa ni vakasaqarai vakadodonu kina na veivalenilotu voleka, kakana halal, kei na koronivuli ni Islam.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'Sega ni tiko na taile ni mape';

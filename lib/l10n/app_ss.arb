@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Liphutsa lenethiwekhi. Sicela uphindze uzame.",
   "placesLocationRequiredTitle": "Indzawo ledzingekako",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Beka indzawo kucala kute emamosque lasedvute, kudla kwe halal, kanye netikolo tema Islam kungaseshwa kahle.",
   "placesMapTilesUnavailableTitle": "Emathayela ebalave awatfolakali",
   "placesMapTilesUnavailableBody": "Umtfombo we-tile yebalave locinisekisiwe awukalungiswa kulokwakha. Tindzawo letisedvute tisakhona kulayisha kusuka endzaweni yakho legciniwe.",
   "placesDataSourceUnavailableTitle": "Idatha yetindzawo ayitfolakali",

@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Ikosa ry'urubuga. Ndagusavye wongere ugerageze.",
   "placesLocationRequiredTitle": "Aho hantu hakenewe",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Ubanze ushireho ahantu kugira ngo imisigiti iri hafi, ivyokurya vya halal, n’amashure y’ubuyisilamu bishobore gushakishwa neza.",
   "placesMapTilesUnavailableTitle": "Amabuye y'ikarata ntaboneka",
   "placesMapTilesUnavailableBody": "Inkomoko y'ikarita yagenzuwe ntiyatunganijwe kuri iyi nyubakwa. Ibibanza vyo hafi birashobora gufunguka bivuye aho wabitse.",
   "placesDataSourceUnavailableTitle": "Amakuru y'ahantu ntaboneka",

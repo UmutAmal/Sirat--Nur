@@ -1377,7 +1377,7 @@ class AppLocalizationsCe extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Хьалха меттиг билгалъяккха, гергарчу маьждигашкахь а, хьанал кхачанехь а, исламан школашкахь а нийса леха йиш хилийта.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'Картан плиткаш яц';

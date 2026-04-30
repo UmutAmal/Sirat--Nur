@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Сетьалъул гъалатӀ. Цоги нухалъ хӀалбихье.",
   "placesLocationRequiredTitle": "ХӀажатаб бакӀ",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Цин бакӀ чӀезабе, аскӀор ругел мажгитазда, хӀалалаб квеналда ва исламиял школазда мухӀканго чӀухь базе рес букӀине.",
   "placesMapTilesUnavailableTitle": "Картаялъул плитаби гьечӀо",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",

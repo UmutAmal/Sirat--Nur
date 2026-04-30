@@ -1377,7 +1377,7 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'Tula ntete kisika sambu bo sosa mbote-mbote ba mosquée, madia ya halal, mpi banzo-nkanda ya Bamizilma yina kele pene-pene.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'Ba carreaux ya karte kele ve';

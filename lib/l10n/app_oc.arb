@@ -664,7 +664,7 @@
   },
   "placesNetworkError": "Error de ret. Ensajatz tornarmai.",
   "placesLocationRequiredTitle": "Emplaçament requerit",
-  "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
+  "placesLocationRequiredBody": "Definissètz d'en primièr un emplaçament per que las mosquèas, la noiridura halal e las escòlas islamicas pròchas pòscan èsser cercadas amb precision.",
   "placesMapTilesUnavailableTitle": "Los mosaïcs de mapa son pas disponibles",
   "placesMapTilesUnavailableBody": "Una font de mosaïc de mapa verificada es pas encara configurada per aquesta version. Los luòcs pròches pòdon encara se cargar dempuèi vòstre emplaçament enregistrat.",
   "placesDataSourceUnavailableTitle": "Plaça las donadas indisponiblas",

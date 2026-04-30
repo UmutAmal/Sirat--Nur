@@ -1377,7 +1377,7 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+      'ᐋᖅᑭᒃᓯᖅᑳᕐᓗᑎᑦ ᐃᓂᒃᓴᖓᓂᒃ ᖃᓂᒋᔭᖏᓐᓂ ᒪᔅᑭᑦ, ᕼᐋᓚᓪ ᓂᕿᑦ, ᐊᒻᒪᓗ ᐃᔅᓚᒥᒃᑯᑦ ᐃᓕᓐᓂᐊᕐᕖᑦ ᕿᓂᖅᑕᐅᑦᑎᐊᕈᓐᓇᖁᓪᓗᒋᑦ.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'ᓄᓇᙳᐊᑦ ᐊᑐᐃᓐᓇᐅᙱᑦᑐᑦ';
