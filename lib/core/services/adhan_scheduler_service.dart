@@ -68,6 +68,7 @@ class AdhanSchedulerService {
         latitude: lat,
         longitude: lon,
       );
+      final androidScheduleMode = await _resolveAndroidScheduleMode();
       final now = TimezoneUtils.nowForTimezone(resolvedTimezoneName);
       for (int i = 0; i < _scheduleDays; i++) {
         final date = now.add(Duration(days: i));
@@ -87,6 +88,7 @@ class AdhanSchedulerService {
           i,
           timezoneName: resolvedTimezoneName,
           languageCode: languageCode,
+          androidScheduleMode: androidScheduleMode,
         );
       }
     } catch (_) {
@@ -120,6 +122,7 @@ class AdhanSchedulerService {
     int dayIndex, {
     String? timezoneName,
     required String languageCode,
+    required AndroidScheduleMode androidScheduleMode,
   }) async {
     final dailyPrayers = {
       'Fajr': times.fajr,
@@ -132,7 +135,6 @@ class AdhanSchedulerService {
     int prayerIndex = 0;
     final now = TimezoneUtils.nowForTimezone(timezoneName);
     final normalizedLanguageCode = languageCode.trim();
-    final androidScheduleMode = await _resolveAndroidScheduleMode();
 
     for (var entry in dailyPrayers.entries) {
       final notificationId = adhanNotificationId(dayIndex, prayerIndex);

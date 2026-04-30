@@ -93,6 +93,45 @@ void main() {
     expect(source, contains('androidScheduleMode: androidScheduleMode'));
   });
 
+  test('adhan scheduler resolves exact alarm mode once per schedule batch', () {
+    final source = File(
+      'lib/core/services/adhan_scheduler_service.dart',
+    ).readAsStringSync();
+
+    final modeResolution = source.indexOf(
+      'final androidScheduleMode = await _resolveAndroidScheduleMode();',
+    );
+    final dailyLoop = source.indexOf('for (int i = 0; i < _scheduleDays; i++)');
+    final dailyScheduleCall = source.indexOf(
+      'await _scheduleDailyEvents(',
+      dailyLoop,
+    );
+    final privateDailyMethod = source.indexOf(
+      'Future<void> _scheduleDailyEvents(',
+    );
+    final passedMode = source.indexOf(
+      'androidScheduleMode: androidScheduleMode,',
+      dailyScheduleCall,
+    );
+    final requiredModeParameter = source.indexOf(
+      'required AndroidScheduleMode androidScheduleMode,',
+      privateDailyMethod,
+    );
+
+    expect(modeResolution, isNonNegative);
+    expect(dailyLoop, greaterThan(modeResolution));
+    expect(dailyScheduleCall, greaterThan(dailyLoop));
+    expect(passedMode, greaterThan(dailyScheduleCall));
+    expect(privateDailyMethod, greaterThan(dailyScheduleCall));
+    expect(requiredModeParameter, greaterThan(privateDailyMethod));
+    expect(
+      source.indexOf('_resolveAndroidScheduleMode();', privateDailyMethod),
+      isNegative,
+      reason:
+          'Exact alarm capability should not be queried once for every scheduled day.',
+    );
+  });
+
   test('adhan scheduler clears partial schedules after scheduling failures', () {
     final source = File(
       'lib/core/services/adhan_scheduler_service.dart',

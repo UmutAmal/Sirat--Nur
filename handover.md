@@ -19720,3 +19720,35 @@
 
 ### Sonraki Adim
 - Yeni dongude kod taramasina geri don: prayer/notification DST zinciri, Quran/audio runtime edge-case'leri ve l10n dusuk-kaynak borcu icin guvenilir aday ureten tek anahtarli batch'ler sirayla degerlendirilecek.
+
+## 2026-04-30 TUR-487 - Adhan Schedule Mode Batch Optimization
+
+### MASTER Karari
+- Risk: `lib/core/services/adhan_scheduler_service.dart:135` once `_resolveAndroidScheduleMode()` cagrisini `_scheduleDailyEvents` icinde yapiyordu; 30 gunluk adhan kurulumunda platform exact-alarm yetki sorgusu her gun icin tekrar calisabiliyordu.
+- Kanit:
+  - `lib/core/services/adhan_scheduler_service.dart:71` artik `final androidScheduleMode = await _resolveAndroidScheduleMode();` ile schedule batch basinda tek kez cozuyor.
+  - `lib/core/services/adhan_scheduler_service.dart:91` cozulen mode'u `_scheduleDailyEvents` cagrisina parametre olarak geciyor.
+  - `lib/core/services/adhan_scheduler_service.dart:125` gunluk helper `required AndroidScheduleMode androidScheduleMode` aliyor; helper icinde platform capability sorgusu kalmadi.
+  - `lib/core/services/adhan_scheduler_service.dart:176` `zonedSchedule` ayni `androidScheduleMode` degerini kullanmaya devam ediyor.
+  - `test/notification_service_guard_test.dart:96` yeni guard, `_resolveAndroidScheduleMode()` cagrisinin private daily helper icinde tekrar belirmesini engelliyor.
+- Kullanici etkisi: Namaz/ezan bildirimleri ayni notification id, timezone ve exact/inexact fallback davranisini koruyarak daha az platform kanal sorgusuyla planlanir; Android exact alarm izni yoksa yine inexact reminder fallback'i korunur.
+- Risk skoru: Etki 2 x Olasilik 3 = 6/25 -> 2/25.
+- Rollback plani: `lib/core/services/adhan_scheduler_service.dart` ve `test/notification_service_guard_test.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- `_resolveAndroidScheduleMode()` batch seviyesine tasindi.
+- `_scheduleDailyEvents` artik schedule mode'u parametre olarak aliyor; prayer id, skip-past-prayer, timezone ve notification body/title akisi degismedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\notification_service_guard_test.dart --reporter compact` PASS, `6/6`.
+- Prayer pipeline targeted tests: `flutter test test\prayer_notification_coordinator_test.dart test\notification_service_guard_test.dart test\prayer_times_service_test.dart test\timezone_utils_test.dart --reporter compact` PASS, `26/26`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `684/684`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS.
+
+### Risk Degisimi
+- Adhan schedule mode tekrar sorgu riski: `6/25 -> 2/25`.
+- Kalan risk: Prayer pipeline daha derin DST/runtime edge-case taramasina devam edilmeli; l10n dusuk-kaynak fallback borcu halen bilincli fallback olarak duruyor.
+
+### Sonraki Adim
+- Bir sonraki dongude prayer calendar/timezone edge-case testlerini genislet veya audio/Quran offline runtime false-success taramasina gec; en yuksek kanitli kusur secilecek.
