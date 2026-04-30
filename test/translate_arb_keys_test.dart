@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1116));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1106));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -286,6 +286,16 @@ void main() {
         localeArbs['ch']!['downloadCanceledForReciter'],
         isNot("Ma kansela i lina'la' para {reciter}."),
         reason: 'app_ch.arb maps downloadCanceledForReciter to life semantics',
+      );
+      expect(
+        localeArbs['bh']!['downloadFinishedForReciter'],
+        isNot(english['downloadFinishedForReciter']),
+      );
+      expect(
+        localeArbs['ch']!['downloadFinishedForReciter'],
+        isNot("Ma na'funhayan i {reciter}."),
+        reason:
+            'app_ch.arb maps downloadFinishedForReciter to ambiguous completion copy',
       );
       for (final locale in ['ca', 'gl', 'hy', 'ka', 'zh', 'zh_CN', 'zh_TW']) {
         final value = localeArbs[locale]!['resumeDownload'] as String;
@@ -1567,6 +1577,12 @@ void main() {
         currentValue: '',
         candidate: "Ma kansela i lina'la' para {reciter}.",
       );
+      final chamorroFinishedValue = resolveTranslatedArbValue(
+        key: 'downloadFinishedForReciter',
+        source: 'Download completed for {reciter}.',
+        currentValue: '',
+        candidate: "Ma na'funhayan i {reciter}.",
+      );
 
       expect(completeValue, 'Download Complete');
       expect(failedValue, 'Falha ao baixar');
@@ -1576,6 +1592,7 @@ void main() {
       expect(kongoDeleteValue, 'Delete Downloaded Files');
       expect(tahitianDeleteValue, 'Delete Downloaded Files');
       expect(chamorroCanceledValue, 'Download canceled for {reciter}.');
+      expect(chamorroFinishedValue, 'Download completed for {reciter}.');
     });
 
     test('rejects resume download translations that mean curriculum vitae', () {

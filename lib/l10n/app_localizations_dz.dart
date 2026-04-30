@@ -1238,7 +1238,7 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter གི་དོན་ལུ་ཕབ་ལེན་འབད་ཚར་ཡི།';
   }
 
   @override

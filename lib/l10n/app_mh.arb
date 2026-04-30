@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Download emoj an dedelok ñan {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

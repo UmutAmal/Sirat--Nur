@@ -845,6 +845,7 @@ const _knownDownloadTranslationDebris = [
   'Kufwa bafishe yina nge me baka',
   "Tamau i te mau hoho'a i tikiakehia",
   "Ma kansela i lina'la' para",
+  "Ma na'funhayan i",
 ];
 
 const _knownWeakDownloadActionCandidates = [

@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} валли скачать туса пӗтернӗ.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

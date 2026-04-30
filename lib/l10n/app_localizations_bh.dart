@@ -1237,7 +1237,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter खातिर डाउनलोड पूरा हो गइल।';
   }
 
   @override

@@ -1237,7 +1237,7 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Telecargament completat per $reciter.';
   }
 
   @override

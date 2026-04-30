@@ -19140,3 +19140,42 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `downloadFinishedForReciter` icin placeholder korumali tek-anahtarli batch uygulanacak.
+
+## 2026-04-30 TUR-472 - Download Finished For Reciter L10n Batch
+
+### MASTER Karari
+- Risk: `downloadFinishedForReciter` tamamlandi bildirimi 68 locale'de Ingilizce fallback olarak kaliyordu; `{reciter}` placeholder'i olan runtime snackbar metni oldugu icin hem karisik dil hem placeholder regresyon riski tasiyordu.
+- Kanit:
+  - `lib/l10n/app_bh.arb:562` artik `"downloadFinishedForReciter": "{reciter} खातिर डाउनलोड पूरा हो गइल।"` degerini tasiyor; once `Download completed for {reciter}.` idi.
+  - `lib/l10n/app_br.arb:562` artik `"downloadFinishedForReciter": "Pellgargañ echu evit {reciter}."` degerini tasiyor; once `Download completed for {reciter}.` idi.
+  - `lib/l10n/app_se.arb:562` artik `"downloadFinishedForReciter": "Ládden lea čađahuvvon {reciter}:ii."` degerini tasiyor; once `Download completed for {reciter}.` idi.
+  - `lib/l10n/app_localizations_bh.dart:1239`, `lib/l10n/app_localizations_br.dart:1239` ve `lib/l10n/app_localizations_se.dart:1239` generated runtime method'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:848` bilinen belirsiz Chamorro `Ma na'funhayan i` adayini download-copy debris listesine ekliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1106` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:291`-`test/translate_arb_keys_test.dart:298` kabul edilen `bh` cikisinin Ingilizce fallback olmadigini ve `app_ch` icin belirsiz completion cikisinin reddedildigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:1581`-`test/translate_arb_keys_test.dart:1592` translator fallback fonksiyonunun guvensiz Chamorro adayinda Ingilizce kaynaga geri dondugunu dogruluyor.
+  - `test/l10n_generated_sync_test.dart:127`-`test/l10n_generated_sync_test.dart:133` generated methodun `{reciter}` placeholder'ini ARB ile ayni sekilde runtime'a tasidigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1116 -> 1106` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Offline indirme tamamlandi bildirimi 10 ek locale'de secili dilde gorunur; `{reciter}` adi kaybolmadan mesaj icine yerlestirilir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 10 ARB dosyasi, 10 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `downloadFinishedForReciter` icin guvenli kabul edilen 10 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- Chamorro adayinda download nesnesi kayboldugu ve mesaj "tamamlandi" semantigini belirsiz tasidigi icin fallback korundu; bilinen kotu cikti translator/test kara listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 137/137.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 679/679.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Download finished snackbar fallback/placeholder riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1106` same-as-English fallback devam ediyor; diagnostics Quran cloud copy ve chatbot offline copy kumesi siradaki guvenli batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `diagnosticsQuranCloudTablesMissing` icin tek-anahtarli batch, debris guard ve generated-sync kapisi uygulanacak.

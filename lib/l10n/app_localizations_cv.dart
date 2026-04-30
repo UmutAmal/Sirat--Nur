@@ -1237,7 +1237,7 @@ class AppLocalizationsCv extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter валли скачать туса пӗтернӗ.';
   }
 
   @override

@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Pellgargañ echu evit {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

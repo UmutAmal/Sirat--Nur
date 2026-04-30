@@ -124,10 +124,13 @@ void main() {
         final l10n = await AppLocalizations.delegate.load(Locale(localeCode));
         final canceled = (arb['downloadCanceledForReciter'] as String)
             .replaceAll('{reciter}', 'Abdul Basit');
+        final finished = (arb['downloadFinishedForReciter'] as String)
+            .replaceAll('{reciter}', 'Abdul Basit');
 
         expect(l10n.resumeDownload, arb['resumeDownload']);
         expect(l10n.deleteDownloadedFiles, arb['deleteDownloadedFiles']);
         expect(l10n.downloadCanceledForReciter('Abdul Basit'), canceled);
+        expect(l10n.downloadFinishedForReciter('Abdul Basit'), finished);
       }
     },
   );
