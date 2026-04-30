@@ -1366,7 +1366,7 @@ class AppLocalizationsWo extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Njuumte API: $statusCode';
   }
 
   @override

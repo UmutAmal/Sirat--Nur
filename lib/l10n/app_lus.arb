@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API tihsual: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

@@ -19612,3 +19612,38 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesApiError` icin placeholder-guvenli, tek-anahtarli batch uygulanacak.
+
+## 2026-04-30 TUR-484 - Places API Error L10n Batch
+
+### MASTER Karari
+- Risk: `placesApiError` 69 locale'de Ingilizce fallback olarak kaliyordu; Places veri saglayicisi HTTP hata kodu dondurdugunde kullaniciya `{statusCode}` ile teknik hata durumu gosteriliyor, bu nedenle placeholder ve API hata baglami korunarak yerellesmesi gerekiyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:657` artik `"placesApiError": "API hoxa: {statusCode}"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_bo.arb:657` artik `"placesApiError": "API ནོར་འཁྲུལ། {statusCode}"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:657` artik `"placesApiError": "Njuumte API: {statusCode}"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1368`, `lib/l10n/app_localizations_bo.dart:1368` ve `lib/l10n/app_localizations_wo.dart:1368` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/translate_arb_keys_test.dart:235` kritik 23 l10n anahtari icin same-as-English esigini `788` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:513` ve `test/translate_arb_keys_test.dart:571` kabul edilen Places API hata locale'lerinin Ingilizce fallback olmadigini, `{statusCode}` placeholder'ini korudugunu, yalniz placeholder'a dusmedigini ve multiline uretmedigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report placesApiError` same-as-English borcunu `69 -> 35` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+  - 23 anahtarli kritik l10n debt reportu same-as-English toplam borcunu `822 -> 788`, missing/empty `0`, placeholder mismatch `0` olarak olctu.
+- Kullanici etkisi: Places API hata mesajlari 34 ek locale'de yerellesir; HTTP status kodu runtime'da kaybolmaz ve zayif tek-placeholder mesajlar kabul edilmez.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: Bu turdaki 34 ARB dosyasi, 34 generated l10n dosyasi, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesApiError` icin guvenli kabul edilen 34 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- Afar, Bambara, Dzongkha, Ewe, Lingala, Mizo, Northern Sotho, Oromo, Quechua ve Tsonga degerlerinde yapay bosluk/noktalama elle temizlendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 141/141.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 683/683.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+
+### Risk Degisimi
+- Places API error l10n riski: `16/25 -> 5/25`.
+- Kalan risk: `placesDataSourceUnavailableBody` 44 locale'de ve `distanceAwayKm` 44 locale'de Ingilizce fallback olarak kaliyor; `placesDataSourceUnavailableBody` kullaniciya veri kaynagi/proxy gereksinimini anlattigi icin siradaki runtime etkili aday.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesDataSourceUnavailableBody` icin `PLACES_OVERPASS_API_URL` teknik tokenini koruyan tek-anahtarli batch uygulanacak.

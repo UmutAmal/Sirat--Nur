@@ -1369,7 +1369,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Kuskuren API: $statusCode';
   }
 
   @override

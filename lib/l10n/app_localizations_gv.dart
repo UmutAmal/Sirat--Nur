@@ -1366,7 +1366,7 @@ class AppLocalizationsGv extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Fault API: $statusCode';
   }
 
   @override

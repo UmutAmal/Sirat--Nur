@@ -1374,7 +1374,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Libunga ya API: $statusCode';
   }
 
   @override

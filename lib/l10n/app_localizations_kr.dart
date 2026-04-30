@@ -1366,7 +1366,7 @@ class AppLocalizationsKr extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Taltǝ APIbe: $statusCode';
   }
 
   @override

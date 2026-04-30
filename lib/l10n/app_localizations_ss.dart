@@ -1366,7 +1366,7 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Liphutsa le-API: $statusCode';
   }
 
   @override

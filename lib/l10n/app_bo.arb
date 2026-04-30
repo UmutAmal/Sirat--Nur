@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API ནོར་འཁྲུལ། {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

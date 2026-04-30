@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Kifu ya API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

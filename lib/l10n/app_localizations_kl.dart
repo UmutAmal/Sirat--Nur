@@ -1366,7 +1366,7 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API-mi kukkuneq: $statusCode';
   }
 
   @override

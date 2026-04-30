@@ -1386,7 +1386,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Phošo ya API: $statusCode';
   }
 
   @override

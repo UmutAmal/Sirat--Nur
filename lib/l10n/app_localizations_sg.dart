@@ -1366,7 +1366,7 @@ class AppLocalizationsSg extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Faute ti API: $statusCode';
   }
 
   @override

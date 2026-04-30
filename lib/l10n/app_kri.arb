@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "API Mistek: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

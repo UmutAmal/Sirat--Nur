@@ -1366,7 +1366,7 @@ class AppLocalizationsRn extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Ikosa rya API: $statusCode';
   }
 
   @override

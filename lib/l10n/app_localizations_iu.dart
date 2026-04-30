@@ -1366,7 +1366,7 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API ᑕᒻᒪᖅᓯᒪᔪᖅ: $statusCode';
   }
 
   @override

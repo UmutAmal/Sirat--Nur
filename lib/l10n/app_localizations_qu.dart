@@ -1375,7 +1375,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API pantasqa: $statusCode';
   }
 
   @override

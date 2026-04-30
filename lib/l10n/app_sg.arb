@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Faute ti API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

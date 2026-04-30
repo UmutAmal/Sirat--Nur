@@ -232,7 +232,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(822));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(788));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -510,6 +510,64 @@ void main() {
         );
       }
       for (final locale in ['bh', 'br', 'cv', 'li', 'nr', 'oc', 'os', 'se']) {
+        final value = localeArbs[locale]!['placesApiError'] as String;
+        expect(
+          value,
+          isNot(english['placesApiError']),
+          reason: 'app_$locale.arb still uses English for placesApiError',
+        );
+        expect(
+          value,
+          contains('{statusCode}'),
+          reason: 'app_$locale.arb lost the statusCode placeholder',
+        );
+        expect(
+          value,
+          isNot('{statusCode}'),
+          reason: 'app_$locale.arb lost API error context',
+        );
+        expect(
+          value,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline API error copy',
+        );
+      }
+      for (final locale in [
+        'aa',
+        'ab',
+        'av',
+        'ba',
+        'bm',
+        'bo',
+        'ce',
+        'dz',
+        'ee',
+        'ff',
+        'fo',
+        'ga',
+        'gv',
+        'ha',
+        'ig',
+        'iu',
+        'kg',
+        'kl',
+        'kr',
+        'kri',
+        'kv',
+        'ln',
+        'lus',
+        'nso',
+        'om',
+        'qu',
+        'rn',
+        'sg',
+        'ss',
+        'to',
+        'ts',
+        'ty',
+        've',
+        'wo',
+      ]) {
         final value = localeArbs[locale]!['placesApiError'] as String;
         expect(
           value,

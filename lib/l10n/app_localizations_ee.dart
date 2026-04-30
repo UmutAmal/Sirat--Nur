@@ -1371,7 +1371,7 @@ class AppLocalizationsEe extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API vodada: $statusCode';
   }
 
   @override

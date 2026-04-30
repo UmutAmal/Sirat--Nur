@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Hala ʻo e API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

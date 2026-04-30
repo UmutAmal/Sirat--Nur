@@ -1368,7 +1368,7 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Mperi API: $statusCode';
   }
 
   @override

@@ -1366,7 +1366,7 @@ class AppLocalizationsAv extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API гъалатӀ: $statusCode';
   }
 
   @override

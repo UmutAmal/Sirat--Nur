@@ -1366,7 +1366,7 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Hapa API: $statusCode';
   }
 
   @override

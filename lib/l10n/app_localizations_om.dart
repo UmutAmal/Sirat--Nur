@@ -1378,7 +1378,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Dogoggora API: $statusCode';
   }
 
   @override

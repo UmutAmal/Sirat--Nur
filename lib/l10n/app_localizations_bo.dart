@@ -1366,7 +1366,7 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API ནོར་འཁྲུལ། $statusCode';
   }
 
   @override

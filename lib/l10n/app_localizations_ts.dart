@@ -1383,7 +1383,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Xihoxo xa API: $statusCode';
   }
 
   @override

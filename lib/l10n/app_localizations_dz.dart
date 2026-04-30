@@ -1367,7 +1367,7 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'ཨེ་པི་ཨའི་འཛོལ་བ: $statusCode';
   }
 
   @override

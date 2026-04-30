@@ -1370,7 +1370,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Earráid API: $statusCode';
   }
 
   @override

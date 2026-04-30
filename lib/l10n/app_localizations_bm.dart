@@ -1372,7 +1372,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API fili: $statusCode';
   }
 
   @override

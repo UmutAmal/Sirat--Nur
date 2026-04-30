@@ -1376,7 +1376,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'API tihsual: $statusCode';
   }
 
   @override

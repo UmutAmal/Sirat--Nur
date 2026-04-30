@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Hapa API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

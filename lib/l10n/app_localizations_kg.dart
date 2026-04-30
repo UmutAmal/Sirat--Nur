@@ -1366,7 +1366,7 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Kifu ya API: $statusCode';
   }
 
   @override

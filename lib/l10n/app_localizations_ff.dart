@@ -1366,7 +1366,7 @@ class AppLocalizationsFf extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Juumre API: $statusCode';
   }
 
   @override
