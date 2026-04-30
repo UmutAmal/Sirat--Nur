@@ -1361,7 +1361,7 @@ class AppLocalizationsBo extends AppLocalizations {
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance ཀི་ལོ་མི་ཊར་གྱི་སར་ཡོད།';
   }
 
   @override

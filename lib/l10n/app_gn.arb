@@ -646,7 +646,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km mombyry",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {

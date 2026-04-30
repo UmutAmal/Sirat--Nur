@@ -646,7 +646,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} km a hla a ni",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {

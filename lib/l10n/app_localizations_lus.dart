@@ -1371,7 +1371,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km a hla a ni';
   }
 
   @override

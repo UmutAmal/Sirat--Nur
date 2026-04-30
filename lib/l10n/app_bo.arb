@@ -646,7 +646,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} km away",
+  "distanceAwayKm": "{distance} ཀི་ལོ་མི་ཊར་གྱི་སར་ཡོད།",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {

@@ -232,7 +232,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(892));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(860));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -367,6 +367,84 @@ void main() {
           value,
           isNot('{distance}'),
           reason: 'app_$locale.arb lost distance-unit context',
+        );
+        expect(
+          value,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline distance copy',
+        );
+      }
+      const distanceAwayLocales = [
+        'aa',
+        'ab',
+        'ay',
+        'be',
+        'bg',
+        'bo',
+        'bs',
+        'ee',
+        'fo',
+        'gn',
+        'gv',
+        'ha',
+        'hr',
+        'it',
+        'iu',
+        'jv',
+        'kg',
+        'kl',
+        'kr',
+        'kri',
+        'la',
+        'lg',
+        'ln',
+        'lus',
+        'mg',
+        'mi',
+        'mk',
+        'ms',
+        'nso',
+        'oc',
+        'om',
+        'os',
+        'qu',
+        'rw',
+        'sg',
+        'so',
+        'ti',
+        'to',
+        'ts',
+        'ty',
+        'ug',
+        'uk',
+        've',
+      ];
+      const weakDistanceCopies = {
+        '{distance} bam',
+        '{distance} km',
+        '{distance} км',
+        '{distance} སྤྱི་ལེ།',
+        '{distance} ko kiloomeeteeruuji',
+        '{distance} ku birometero',
+        '{distance} emakhilomitha',
+        '{distance} dikilometara',
+      };
+      for (final locale in distanceAwayLocales) {
+        final value = localeArbs[locale]!['distanceAwayKm'] as String;
+        expect(
+          value,
+          isNot(english['distanceAwayKm']),
+          reason: 'app_$locale.arb still uses English for distanceAwayKm',
+        );
+        expect(
+          value,
+          contains('{distance}'),
+          reason: 'app_$locale.arb lost the distance placeholder',
+        );
+        expect(
+          weakDistanceCopies,
+          isNot(contains(value.trim().toLowerCase())),
+          reason: 'app_$locale.arb kept unit-only distance copy',
         );
         expect(
           value,
@@ -2095,6 +2173,25 @@ void main() {
       );
 
       expect(value, 'Map tiles unavailable');
+    });
+
+    test('rejects weak distance-away copy that drops away context', () {
+      final preservedValue = resolveTranslatedArbValue(
+        key: 'distanceAwayKm',
+        source: '{distance} km away',
+        currentValue: '{distance} km uzakta',
+        candidate: '{distance} km',
+      );
+
+      final fallbackValue = resolveTranslatedArbValue(
+        key: 'distanceAwayKm',
+        source: '{distance} km away',
+        currentValue: '',
+        candidate: '{distance} km',
+      );
+
+      expect(preservedValue, '{distance} km uzakta');
+      expect(fallbackValue, '{distance} km away');
     });
 
     test('preserves chatbot offline status token', () {

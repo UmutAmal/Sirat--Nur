@@ -1365,7 +1365,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km';
+    return '$distance km kure';
   }
 
   @override

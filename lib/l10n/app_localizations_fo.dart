@@ -1361,7 +1361,7 @@ class AppLocalizationsFo extends AppLocalizations {
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance km burtur';
   }
 
   @override

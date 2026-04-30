@@ -793,6 +793,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, _knownChatbotTranslationDebris);
   }
 
+  if (key == 'distanceAwayKm') {
+    return _isWeakDistanceAwayCopy(value);
+  }
+
   if (key == 'quranAudioSourcesIncomplete') {
     return _containsAny(value, _knownQuranAudioSourceStatusDebris);
   }
@@ -821,6 +825,19 @@ bool _isDiagnosticsCopyKey(String key) {
 
 bool _isChatbotCopyKey(String key) {
   return key.startsWith('chatbot');
+}
+
+bool _isWeakDistanceAwayCopy(String value) {
+  return const {
+    '{distance} bam',
+    '{distance} km',
+    '{distance} км',
+    '{distance} སྤྱི་ལེ།',
+    '{distance} ko kiloomeeteeruuji',
+    '{distance} ku birometero',
+    '{distance} emakhilomitha',
+    '{distance} dikilometara',
+  }.contains(value.trim().toLowerCase());
 }
 
 bool _isPrayerMethodOrNameKey(String key) {

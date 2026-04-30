@@ -19537,3 +19537,42 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; Places runtime sonuc sayaci veya diagnostics Quran Cloud juz metni icin tek-anahtarli batch uygulanacak.
+
+## 2026-04-30 TUR-482 - Places Distance Away L10n Batch
+
+### MASTER Karari
+- Risk: `distanceAwayKm` 76 locale'de Ingilizce fallback olarak kaliyordu; harita/yakin yer listelerinde mesafe etiketi dogrudan kullanici yonlendirme karari urettigi icin `{distance}` placeholder'i, `km` birimi ve "uzakta/mesafede" baglami korunmaliydi.
+- Kanit:
+  - `lib/l10n/app_aa.arb:649` artik `"distanceAwayKm": "{distance} km xexxaaral"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_be.arb:649` artik `"distanceAwayKm": "на адлегласці {distance} км"` degerini tasiyor; once zayif unit-only `{distance} км` idi.
+  - `lib/l10n/app_uk.arb:649` artik `"distanceAwayKm": "на відстані {distance} км"` degerini tasiyor; once zayif unit-only `{distance} км` idi.
+  - `lib/l10n/app_localizations_aa.dart:1363`, `lib/l10n/app_localizations_be.dart:1372` ve `lib/l10n/app_localizations_uk.dart:1369` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:796`-`tool/translate_arb_keys.dart:797` `distanceAwayKm` icin zayif mesafe kopyasi filtresini bagliyor; `tool/translate_arb_keys.dart:830`-`tool/translate_arb_keys.dart:839` sadece unit/placeholder kalan adaylari reddediyor.
+  - `test/translate_arb_keys_test.dart:235` kritik 23 l10n anahtari icin same-as-English esigini `860` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:377`-`test/translate_arb_keys_test.dart:455` 43 kabul edilen locale'in Ingilizce fallback olmadigini, `{distance}` placeholder'ini korudugunu, zayif unit-only kopya olmadigini ve multiline uretmedigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:2178` weak distance-away regression guard'inin `{distance} km` gibi baglam kaybeden adaylari reddettigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report distanceAwayKm` same-as-English borcunu `76 -> 44` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+  - 23 anahtarli kritik l10n debt reportu same-as-English toplam borcunu `892 -> 860`, missing/empty `0`, placeholder mismatch `0` olarak olctu.
+- Kullanici etkisi: Places ekraninda mesafe etiketi 32 net ek locale'de yerellesir; zayif "sadece km" kopyalari bilincli olarak reddedilir ve standart dillerde mesafe baglami elle netlestirilir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: Bu turdaki `distanceAwayKm` ARB/generate degisiklikleri, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `distanceAwayKm` icin guvenli kabul edilen locale'ler Ingilizce fallback'ten cikarildi; Belarusca, Bulgarca, Bosnakca, Hirvatca, Italyanca, Latince, Makedonca, Oksitanca, Kinyarwanda, Uygurca ve Ukraynaca unit-only eski kopyalar mesafe baglami tasiyan degerlerle degistirildi.
+- Translator guard, `{distance} km` ve benzeri zayif unit-only ciktilari artik otomatik reddediyor.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 141/141.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 683/683.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places distance-away l10n riski: `16/25 -> 5/25`.
+- Kalan risk: `placesFoundCount` 71 locale'de Ingilizce fallback olarak kaliyor; Places runtime copy grubunda siradaki en yuksek etkili tek-anahtarli batch adayi.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesFoundCount` icin placeholder-guvenli batch uygulanacak.

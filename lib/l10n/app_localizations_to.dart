@@ -1362,7 +1362,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String distanceAwayKm(String distance) {
-    return '$distance km away';
+    return '$distance kilomita \'a e mama\'o';
   }
 
   @override

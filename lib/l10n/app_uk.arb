@@ -646,7 +646,7 @@
       }
     }
   },
-  "distanceAwayKm": "{distance} км",
+  "distanceAwayKm": "на відстані {distance} км",
   "@distanceAwayKm": {
     "placeholders": {
       "distance": {
