@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback en ur implijout {sourceName}. Kadarnait eurioù ar bedenn lec'hel gant ho moskeenn pe gant aotrouniezh relijiel ofisiel."
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback en ur implijout {sourceName}. Kadarnait eurioù ar bedenn lec'hel gant ho moskeenn pe gant aotrouniezh relijiel ofisiel.",
+  "revelationMeccan": "Mekka",
+  "revelationMedinan": "Medinan"
 }

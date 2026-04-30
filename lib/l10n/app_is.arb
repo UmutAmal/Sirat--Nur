@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Svæðisbundin varahlutur með því að nota {sourceName}. Staðfestu staðbundna bænatíma með mosku þinni eða opinberu trúarlegu yfirvaldi."
+  "diagnosticsPrayerRegionalFallbackSource": "Svæðisbundin varahlutur með því að nota {sourceName}. Staðfestu staðbundna bænatíma með mosku þinni eða opinberu trúarlegu yfirvaldi.",
+  "revelationMeccan": "Mekka",
+  "revelationMedinan": "Medan"
 }

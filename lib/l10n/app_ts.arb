@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Ku tlhelela endzhaku ka xifundzha hi ku tirhisa {sourceName}. Tiyisisa minkarhi ya xikhongelo ya ndhawu na mosque ya wena kumbe vulawuri bya vukhongeri bya ximfumo."
+  "diagnosticsPrayerRegionalFallbackSource": "Ku tlhelela endzhaku ka xifundzha hi ku tirhisa {sourceName}. Tiyisisa minkarhi ya xikhongelo ya ndhawu na mosque ya wena kumbe vulawuri bya vukhongeri bya ximfumo.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

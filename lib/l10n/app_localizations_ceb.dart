@@ -363,6 +363,12 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get quranReading => 'Pagbasa sa Quran';
 
   @override
+  String get revelationMeccan => 'Meccan';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Mga pag-ampo';
 
   @override

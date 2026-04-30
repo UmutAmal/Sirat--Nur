@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Dib u dhaca gobolka iyadoo la adeegsanayo {sourceName}. Ku xaqiiji wakhtiyada salaadda deegaanka masjidkaaga ama maamulka diinta ee rasmiga ah."
+  "diagnosticsPrayerRegionalFallbackSource": "Dib u dhaca gobolka iyadoo la adeegsanayo {sourceName}. Ku xaqiiji wakhtiyada salaadda deegaanka masjidkaaga ama maamulka diinta ee rasmiga ah.",
+  "revelationMeccan": "Maka",
+  "revelationMedinan": "Madiina"
 }

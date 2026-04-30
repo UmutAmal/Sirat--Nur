@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Cúltaca réigiúnach ag úsáid {sourceName}. Deimhnigh amanna urnaí áitiúla le do mhosc nó le d’údarás oifigiúil reiligiúnach."
+  "diagnosticsPrayerRegionalFallbackSource": "Cúltaca réigiúnach ag úsáid {sourceName}. Deimhnigh amanna urnaí áitiúla le do mhosc nó le d’údarás oifigiúil reiligiúnach.",
+  "revelationMeccan": "Meicneach",
+  "revelationMedinan": "Méidín"
 }

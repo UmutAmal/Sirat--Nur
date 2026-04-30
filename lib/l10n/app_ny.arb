@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Kubwerera m'chigawo pogwiritsa ntchito {sourceName}. Tsimikizirani nthawi zamapemphero kwanuko ndi mzikiti wanu kapena akuluakulu achipembedzo."
+  "diagnosticsPrayerRegionalFallbackSource": "Kubwerera m'chigawo pogwiritsa ntchito {sourceName}. Tsimikizirani nthawi zamapemphero kwanuko ndi mzikiti wanu kapena akuluakulu achipembedzo.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Madina"
 }

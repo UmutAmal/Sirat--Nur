@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Бозгашти минтақавӣ бо истифода аз {sourceName}. Вақтҳои намози маҳаллиро бо масҷиди худ ё мақомоти расмии динии худ тасдиқ кунед."
+  "diagnosticsPrayerRegionalFallbackSource": "Бозгашти минтақавӣ бо истифода аз {sourceName}. Вақтҳои намози маҳаллиро бо масҷиди худ ё мақомоти расмии динии худ тасдиқ кунед.",
+  "revelationMeccan": "Макка",
+  "revelationMedinan": "Мадина"
 }

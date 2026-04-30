@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Mokhoa oa ho khutlela sebakeng o sebelisa {sourceName}. Netefatsa linako tsa thapelo ea lehae le mosque oa hau kapa ba boholong ba bolumeli."
+  "diagnosticsPrayerRegionalFallbackSource": "Mokhoa oa ho khutlela sebakeng o sebelisa {sourceName}. Netefatsa linako tsa thapelo ea lehae le mosque oa hau kapa ba boholong ba bolumeli.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

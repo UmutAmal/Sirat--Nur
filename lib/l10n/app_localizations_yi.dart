@@ -361,6 +361,12 @@ class AppLocalizationsYi extends AppLocalizations {
   String get quranReading => 'קוראַן לייענען';
 
   @override
+  String get revelationMeccan => 'מעקאַן';
+
+  @override
+  String get revelationMedinan => 'מעדינאַן';
+
+  @override
   String get prayers => 'תפילות';
 
   @override

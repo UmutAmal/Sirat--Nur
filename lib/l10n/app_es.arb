@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Reserva regional usando {sourceName}. Confirme los horarios de oración locales con su mezquita o autoridad religiosa oficial."
+  "diagnosticsPrayerRegionalFallbackSource": "Reserva regional usando {sourceName}. Confirme los horarios de oración locales con su mezquita o autoridad religiosa oficial.",
+  "revelationMeccan": "La Meca",
+  "revelationMedinan": "Medinan"
 }

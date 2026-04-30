@@ -361,6 +361,12 @@ class AppLocalizationsTn extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'Mecca';
+
+  @override
+  String get revelationMedinan => 'Medina';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

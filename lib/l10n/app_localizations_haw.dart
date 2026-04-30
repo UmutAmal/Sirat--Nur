@@ -361,6 +361,12 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get quranReading => 'Heluhelu Quran';
 
   @override
+  String get revelationMeccan => 'Mekani';
+
+  @override
+  String get revelationMedinan => 'Madinana';
+
+  @override
   String get prayers => 'Pule';
 
   @override

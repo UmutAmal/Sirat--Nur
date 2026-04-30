@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Fallback regionale utilizzando {sourceName}. Conferma gli orari di preghiera locali con la tua moschea o l'autorità religiosa ufficiale."
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback regionale utilizzando {sourceName}. Conferma gli orari di preghiera locali con la tua moschea o l'autorità religiosa ufficiale.",
+  "revelationMeccan": "Meccano",
+  "revelationMedinan": "Medina"
 }

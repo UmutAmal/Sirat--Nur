@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Sigidaw ka kɔsegin baara kɛli ni {sourceName} ye. Aw ye sigida delili waatiw dafa ni aw ka misiri walima diinɛ ɲɛmɔgɔba ye."
+  "diagnosticsPrayerRegionalFallbackSource": "Sigidaw ka kɔsegin baara kɛli ni {sourceName} ye. Aw ye sigida delili waatiw dafa ni aw ka misiri walima diinɛ ɲɛmɔgɔba ye.",
+  "revelationMeccan": "Mekan",
+  "revelationMedinan": "Medinan"
 }

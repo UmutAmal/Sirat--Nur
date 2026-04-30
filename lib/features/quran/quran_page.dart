@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/quran/providers/bundled_quran_provider.dart';
+import 'package:sirat_i_nur/features/quran/revelation_type_localization.dart';
 import 'package:sirat_i_nur/features/quran/surah_display_info.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
@@ -145,6 +146,10 @@ class _QuranPageState extends ConsumerState<QuranPage>
       itemBuilder: (context, index) {
         final l10n = AppLocalizations.of(context)!;
         final surah = surahs[index];
+        final revelationTypeLabel = localizeRevelationTypeLabel(
+          l10n,
+          surah.revelationType,
+        );
 
         return Container(
           margin: const EdgeInsets.only(bottom: 8),
@@ -231,7 +236,7 @@ class _QuranPageState extends ConsumerState<QuranPage>
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(
-                    '${surah.ayahCount} ${l10n.ayahs.toLowerCase()} • ${surah.revelationType}',
+                    '${surah.ayahCount} ${l10n.ayahs.toLowerCase()} • $revelationTypeLabel',
                     style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w700,

@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Repiblik rejyonal lè l sèvi avèk {sourceName}. Konfime lè lapriyè lokal yo ak moske w oswa otorite relijye ofisyèl ou."
+  "diagnosticsPrayerRegionalFallbackSource": "Repiblik rejyonal lè l sèvi avèk {sourceName}. Konfime lè lapriyè lokal yo ak moske w oswa otorite relijye ofisyèl ou.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

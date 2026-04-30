@@ -361,6 +361,12 @@ class AppLocalizationsGv extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'Meccanagh;';
+
+  @override
+  String get revelationMedinan => 'Meanagh';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

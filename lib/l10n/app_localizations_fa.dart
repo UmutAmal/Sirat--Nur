@@ -361,6 +361,12 @@ class AppLocalizationsFa extends AppLocalizations {
   String get quranReading => 'خواندن قرآن';
 
   @override
+  String get revelationMeccan => 'مکه';
+
+  @override
+  String get revelationMedinan => 'مدینه';
+
+  @override
   String get prayers => 'نمازها';
 
   @override

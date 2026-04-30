@@ -361,6 +361,12 @@ class AppLocalizationsCv extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'Мекка';
+
+  @override
+  String get revelationMedinan => 'Медина';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

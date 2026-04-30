@@ -170,6 +170,8 @@
   "ibadahTracker": "İbadet Takibi",
   "fasting": "Oruç",
   "quranReading": "Kur'an Okuma",
+  "revelationMeccan": "Mekki",
+  "revelationMedinan": "Medeni",
   "prayers": "Namazlar",
   "prayerRemainingHoursMinutes": "{hours}s {minutes}d",
   "@prayerRemainingHoursMinutes": {

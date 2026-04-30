@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Kufaatii naannoo {sourceName} fayyadamuun. Yeroo salaataa naannoo keessanii masjiida keessanii ykn abbaa taayitaa amantii ofiisaa waliin mirkaneessaa."
+  "diagnosticsPrayerRegionalFallbackSource": "Kufaatii naannoo {sourceName} fayyadamuun. Yeroo salaataa naannoo keessanii masjiida keessanii ykn abbaa taayitaa amantii ofiisaa waliin mirkaneessaa.",
+  "revelationMeccan": "Makkaa",
+  "revelationMedinan": "Madiinaan"
 }

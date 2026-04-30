@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionálna záloha pomocou {sourceName}. Potvrďte miestne časy modlitieb vo svojej mešite alebo oficiálnej náboženskej autorite."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionálna záloha pomocou {sourceName}. Potvrďte miestne časy modlitieb vo svojej mešite alebo oficiálnej náboženskej autorite.",
+  "revelationMeccan": "Mekcan",
+  "revelationMedinan": "Medinan"
 }

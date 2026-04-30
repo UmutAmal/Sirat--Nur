@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionaler Fallback mit {sourceName}. Bestätigen Sie die örtlichen Gebetszeiten mit Ihrer Moschee oder offiziellen religiösen Autorität."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionaler Fallback mit {sourceName}. Bestätigen Sie die örtlichen Gebetszeiten mit Ihrer Moschee oder offiziellen religiösen Autorität.",
+  "revelationMeccan": "Mekkan",
+  "revelationMedinan": "Medinan"
 }

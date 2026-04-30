@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "ዞባዊ ምምላስ {sourceName} ብምጥቃም። ናይ ከባቢኻ ናይ ጸሎት ሰዓታት ምስ መስጊድካ ወይ ወግዓዊ ሃይማኖታዊ በዓል መዚ ኣረጋግጽ።"
+  "diagnosticsPrayerRegionalFallbackSource": "ዞባዊ ምምላስ {sourceName} ብምጥቃም። ናይ ከባቢኻ ናይ ጸሎት ሰዓታት ምስ መስጊድካ ወይ ወግዓዊ ሃይማኖታዊ በዓል መዚ ኣረጋግጽ።",
+  "revelationMeccan": "መካዊ",
+  "revelationMedinan": "መዲናዊ"
 }

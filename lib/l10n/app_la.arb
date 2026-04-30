@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Fallacium regionale utens {sourceName}. Confirma orationem localem temporibus tuis meschitis vel auctoritate religiosa officiali."
+  "diagnosticsPrayerRegionalFallbackSource": "Fallacium regionale utens {sourceName}. Confirma orationem localem temporibus tuis meschitis vel auctoritate religiosa officiali.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

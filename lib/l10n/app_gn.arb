@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Fallback regional oiporúva {sourceName}. Emoañete umi hora de oración local nde mezquita térã autoridad religiosa oficial ndive."
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback regional oiporúva {sourceName}. Emoañete umi hora de oración local nde mezquita térã autoridad religiosa oficial ndive.",
+  "revelationMeccan": "Meca-pegua",
+  "revelationMedinan": "Medinan rehegua"
 }

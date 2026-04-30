@@ -170,6 +170,8 @@
   "ibadahTracker": "Ibadah Tracker",
   "fasting": "Fasting",
   "quranReading": "Quran Reading",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan",
   "prayers": "Prayers",
   "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
   "@prayerRemainingHoursMinutes": {

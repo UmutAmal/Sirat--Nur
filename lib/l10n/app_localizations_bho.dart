@@ -362,6 +362,12 @@ class AppLocalizationsBho extends AppLocalizations {
   String get quranReading => 'कुरान पढ़े के बा';
 
   @override
+  String get revelationMeccan => 'मक्का के ह';
+
+  @override
+  String get revelationMedinan => 'मदीनान के ह';
+
+  @override
   String get prayers => 'दुआ कइल जाला';
 
   @override

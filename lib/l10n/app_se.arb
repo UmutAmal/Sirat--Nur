@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Guovllulaš čuovvumuš geavahit {sourceName}. Duođaš báikkálaš rohkosáiggiid iežat moskeijain dahje virggálaš oskkolaš eiseválddiin."
+  "diagnosticsPrayerRegionalFallbackSource": "Guovllulaš čuovvumuš geavahit {sourceName}. Duođaš báikkálaš rohkosáiggiid iežat moskeijain dahje virggálaš oskkolaš eiseválddiin.",
+  "revelationMeccan": "Mekkálaš",
+  "revelationMedinan": "Medinan"
 }

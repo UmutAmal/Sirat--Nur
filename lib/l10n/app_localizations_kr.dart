@@ -361,6 +361,12 @@ class AppLocalizationsKr extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'Makkabe';
+
+  @override
+  String get revelationMedinan => 'Madina';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

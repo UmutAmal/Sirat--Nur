@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback met behulp vaan {sourceName}. Bevestig de lokale gebedstieje mit eur moskee of officiële religieuze autoriteit."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback met behulp vaan {sourceName}. Bevestig de lokale gebedstieje mit eur moskee of officiële religieuze autoriteit.",
+  "revelationMeccan": "Mekkaanse",
+  "revelationMedinan": "Medinan"
 }

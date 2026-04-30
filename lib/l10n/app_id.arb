@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Penggantian regional menggunakan {sourceName}. Konfirmasikan waktu sholat setempat dengan masjid atau otoritas keagamaan resmi Anda."
+  "diagnosticsPrayerRegionalFallbackSource": "Penggantian regional menggunakan {sourceName}. Konfirmasikan waktu sholat setempat dengan masjid atau otoritas keagamaan resmi Anda.",
+  "revelationMeccan": "Mekah",
+  "revelationMedinan": "Madinah"
 }

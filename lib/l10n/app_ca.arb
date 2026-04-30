@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Alternativa regional mitjançant {sourceName}. Confirmeu els horaris de pregària locals amb la vostra mesquita o autoritat religiosa oficial."
+  "diagnosticsPrayerRegionalFallbackSource": "Alternativa regional mitjançant {sourceName}. Confirmeu els horaris de pregària locals amb la vostra mesquita o autoritat religiosa oficial.",
+  "revelationMeccan": "La Meca",
+  "revelationMedinan": "Medina"
 }

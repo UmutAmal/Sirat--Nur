@@ -1132,6 +1132,18 @@ abstract class AppLocalizations {
   /// **'Quran Reading'**
   String get quranReading;
 
+  /// No description provided for @revelationMeccan.
+  ///
+  /// In en, this message translates to:
+  /// **'Meccan'**
+  String get revelationMeccan;
+
+  /// No description provided for @revelationMedinan.
+  ///
+  /// In en, this message translates to:
+  /// **'Medinan'**
+  String get revelationMedinan;
+
   /// No description provided for @prayers.
   ///
   /// In en, this message translates to:

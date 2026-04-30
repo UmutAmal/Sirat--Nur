@@ -361,6 +361,12 @@ class AppLocalizationsEt extends AppLocalizations {
   String get quranReading => 'Koraani lugemine';
 
   @override
+  String get revelationMeccan => 'Meka';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Palved';
 
   @override

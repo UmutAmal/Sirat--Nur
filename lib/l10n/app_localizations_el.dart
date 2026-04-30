@@ -363,6 +363,12 @@ class AppLocalizationsEl extends AppLocalizations {
   String get quranReading => 'Ανάγνωση Κορανίου';
 
   @override
+  String get revelationMeccan => 'Μεκκανός';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Προσευχές';
 
   @override

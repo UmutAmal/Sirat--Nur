@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "ทางเลือกระดับภูมิภาคโดยใช้ {sourceName} ยืนยันเวลาละหมาดในท้องถิ่นกับมัสยิดหรือหน่วยงานทางศาสนาอย่างเป็นทางการ"
+  "diagnosticsPrayerRegionalFallbackSource": "ทางเลือกระดับภูมิภาคโดยใช้ {sourceName} ยืนยันเวลาละหมาดในท้องถิ่นกับมัสยิดหรือหน่วยงานทางศาสนาอย่างเป็นทางการ",
+  "revelationMeccan": "เมกกะ",
+  "revelationMedinan": "เมดาน"
 }

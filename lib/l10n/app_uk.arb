@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Регіональний резерв за допомогою {sourceName}. Уточніть місцевий час молитов у вашій мечеті чи офіційній релігійній владі."
+  "diagnosticsPrayerRegionalFallbackSource": "Регіональний резерв за допомогою {sourceName}. Уточніть місцевий час молитов у вашій мечеті чи офіційній релігійній владі.",
+  "revelationMeccan": "Мекканський",
+  "revelationMedinan": "Медінан"
 }

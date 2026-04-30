@@ -361,6 +361,12 @@ class AppLocalizationsPs extends AppLocalizations {
   String get quranReading => 'د قرآن تلاوت';
 
   @override
+  String get revelationMeccan => 'مکه مکرمه';
+
+  @override
+  String get revelationMedinan => 'مدينه';
+
+  @override
   String get prayers => 'دعاګانې';
 
   @override

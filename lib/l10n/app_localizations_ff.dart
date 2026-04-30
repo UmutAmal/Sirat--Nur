@@ -361,6 +361,12 @@ class AppLocalizationsFf extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'Makkanaajo';
+
+  @override
+  String get revelationMedinan => 'Madiina';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

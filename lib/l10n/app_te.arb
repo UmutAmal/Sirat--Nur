@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName}ని ఉపయోగించి ప్రాంతీయ ఫాల్‌బ్యాక్. మీ మసీదు లేదా అధికారిక మతపరమైన అధికారంతో స్థానిక ప్రార్థన సమయాలను నిర్ధారించండి."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName}ని ఉపయోగించి ప్రాంతీయ ఫాల్‌బ్యాక్. మీ మసీదు లేదా అధికారిక మతపరమైన అధికారంతో స్థానిక ప్రార్థన సమయాలను నిర్ధారించండి.",
+  "revelationMeccan": "మక్కన్",
+  "revelationMedinan": "మదీనాన్"
 }

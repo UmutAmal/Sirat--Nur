@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ашиглан бүс нутгийн нөөц. Орон нутгийн залбирлын цагийг сүм хийд эсвэл албан ёсны шашны байгууллагаас баталгаажуулна уу."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ашиглан бүс нутгийн нөөц. Орон нутгийн залбирлын цагийг сүм хийд эсвэл албан ёсны шашны байгууллагаас баталгаажуулна уу.",
+  "revelationMeccan": "Мекка",
+  "revelationMedinan": "Медина"
 }

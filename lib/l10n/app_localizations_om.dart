@@ -363,6 +363,12 @@ class AppLocalizationsOm extends AppLocalizations {
   String get quranReading => 'Dubbisa Qur\'aana';
 
   @override
+  String get revelationMeccan => 'Makkaa';
+
+  @override
+  String get revelationMedinan => 'Madiinaan';
+
+  @override
   String get prayers => 'Kadhannaa';
 
   @override

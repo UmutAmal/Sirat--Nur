@@ -362,6 +362,12 @@ class AppLocalizationsKri extends AppLocalizations {
   String get quranReading => 'Ridin fɔ di Kɔran';
 
   @override
+  String get revelationMeccan => 'Meccan';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Prea dɛn we wi kin pre';
 
   @override

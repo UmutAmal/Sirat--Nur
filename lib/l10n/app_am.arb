@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} በመጠቀም የክልል ውድቀት። ከመስጊድዎ ወይም ከኦፊሴላዊው የሃይማኖት ባለስልጣን ጋር የአካባቢውን የጸሎት ጊዜያት ያረጋግጡ።"
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} በመጠቀም የክልል ውድቀት። ከመስጊድዎ ወይም ከኦፊሴላዊው የሃይማኖት ባለስልጣን ጋር የአካባቢውን የጸሎት ጊዜያት ያረጋግጡ።",
+  "revelationMeccan": "መካኛ",
+  "revelationMedinan": "መዲናን"
 }

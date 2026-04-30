@@ -361,6 +361,12 @@ class AppLocalizationsUg extends AppLocalizations {
   String get quranReading => 'قۇرئان ئوقۇش';
 
   @override
+  String get revelationMeccan => 'مەككە';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'دۇئا';
 
   @override

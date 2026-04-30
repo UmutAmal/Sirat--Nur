@@ -361,6 +361,12 @@ class AppLocalizationsCe extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'Макка';
+
+  @override
+  String get revelationMedinan => 'Мединан';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

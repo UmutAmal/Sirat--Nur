@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Регионалон фæстæмæздæхт {sourceName}-йы фæрцы. Сбæлвырд кæнут бынæттон куывды рæстæг уæ мæзджыдæн кæнæ официалон дины хицауадæн."
+  "diagnosticsPrayerRegionalFallbackSource": "Регионалон фæстæмæздæхт {sourceName}-йы фæрцы. Сбæлвырд кæнут бынæттон куывды рæстæг уæ мæзджыдæн кæнæ официалон дины хицауадæн.",
+  "revelationMeccan": "Меккаг",
+  "revelationMedinan": "Мединан"
 }

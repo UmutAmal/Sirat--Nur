@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Ipadabọ agbegbe ni lilo {sourceName}. Jẹrisi awọn akoko adura agbegbe pẹlu Mossalassi rẹ tabi aṣẹ ẹsin osise."
+  "diagnosticsPrayerRegionalFallbackSource": "Ipadabọ agbegbe ni lilo {sourceName}. Jẹrisi awọn akoko adura agbegbe pẹlu Mossalassi rẹ tabi aṣẹ ẹsin osise.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

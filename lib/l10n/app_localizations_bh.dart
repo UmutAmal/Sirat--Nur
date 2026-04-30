@@ -361,6 +361,12 @@ class AppLocalizationsBh extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'मक्का के ह';
+
+  @override
+  String get revelationMedinan => 'मदीनान के ह';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

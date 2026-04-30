@@ -361,6 +361,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get quranReading => 'Kur\'an Okuma';
 
   @override
+  String get revelationMeccan => 'Mekki';
+
+  @override
+  String get revelationMedinan => 'Medeni';
+
+  @override
   String get prayers => 'Namazlar';
 
   @override

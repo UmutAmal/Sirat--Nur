@@ -365,6 +365,12 @@ class AppLocalizationsAy extends AppLocalizations {
   String get quranReading => 'Quran Uñakipt’añataki';
 
   @override
+  String get revelationMeccan => 'Meca markankiri';
+
+  @override
+  String get revelationMedinan => 'Medina markanxa';
+
+  @override
   String get prayers => 'Oracionanaka';
 
   @override

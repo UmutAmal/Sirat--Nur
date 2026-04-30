@@ -6,6 +6,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/features/quran/providers/bundled_quran_provider.dart';
+import 'package:sirat_i_nur/features/quran/revelation_type_localization.dart';
 import 'package:sirat_i_nur/features/quran/surah_display_info.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
@@ -264,6 +265,10 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     final locale = Localizations.localeOf(context);
     final langCode = settings.languageCode ?? locale.languageCode;
     final isTr = langCode.toLowerCase().startsWith('tr');
+    final revelationTypeLabel = localizeRevelationTypeLabel(
+      l10n,
+      surahInfo.revelationType,
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -348,7 +353,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          '${surahInfo.ayahCount} ${l10n.ayahs} • ${surahInfo.revelationType}',
+                          '${surahInfo.ayahCount} ${l10n.ayahs} • $revelationTypeLabel',
                           style: TextStyle(
                             color: Colors.white.withValues(alpha: 0.6),
                             fontSize: 13,

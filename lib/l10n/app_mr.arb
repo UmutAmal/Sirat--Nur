@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} वापरून प्रादेशिक फॉलबॅक. तुमच्या मशीद किंवा अधिकृत धार्मिक प्राधिकरणासह स्थानिक प्रार्थना वेळा निश्चित करा."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} वापरून प्रादेशिक फॉलबॅक. तुमच्या मशीद किंवा अधिकृत धार्मिक प्राधिकरणासह स्थानिक प्रार्थना वेळा निश्चित करा.",
+  "revelationMeccan": "मक्कन",
+  "revelationMedinan": "मेदनान"
 }

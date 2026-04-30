@@ -361,6 +361,12 @@ class AppLocalizationsLo extends AppLocalizations {
   String get quranReading => 'ການ​ອ່ານ Quran​';
 
   @override
+  String get revelationMeccan => 'ເມກາ';
+
+  @override
+  String get revelationMedinan => 'ເມດິນັນ';
+
+  @override
   String get prayers => 'ອະທິຖານ';
 
   @override

@@ -364,6 +364,12 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get quranReading => 'Panagbasa iti Quran';
 
   @override
+  String get revelationMeccan => 'Meccan';
+
+  @override
+  String get revelationMedinan => 'Medinan nga';
+
+  @override
   String get prayers => 'Dagiti kararag';
 
   @override

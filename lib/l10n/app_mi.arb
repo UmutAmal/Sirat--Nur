@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Whakahoki a rohe ma te whakamahi {sourceName}. Whakapumautia nga wa karakia o to rohe me to whare whare karakia me to mana whakahaere whakapono."
+  "diagnosticsPrayerRegionalFallbackSource": "Whakahoki a rohe ma te whakamahi {sourceName}. Whakapumautia nga wa karakia o to rohe me to whare whare karakia me to mana whakahaere whakapono.",
+  "revelationMeccan": "Mekaana",
+  "revelationMedinan": "Medina"
 }

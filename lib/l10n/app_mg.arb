@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Famerenana isam-paritra mampiasa {sourceName}. Hamafiso ny fotoam-bavaka eo an-toerana miaraka amin'ny moskenao na ny manampahefana ara-pivavahana ofisialy."
+  "diagnosticsPrayerRegionalFallbackSource": "Famerenana isam-paritra mampiasa {sourceName}. Hamafiso ny fotoam-bavaka eo an-toerana miaraka amin'ny moskenao na ny manampahefana ara-pivavahana ofisialy.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medina"
 }

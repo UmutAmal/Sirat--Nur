@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Регионална резервна копија со {sourceName}. Потврдете ги локалните времиња на молитва со вашата џамија или официјална верска власт."
+  "diagnosticsPrayerRegionalFallbackSource": "Регионална резервна копија со {sourceName}. Потврдете ги локалните времиња на молитва со вашата џамија или официјална верска власт.",
+  "revelationMeccan": "мекански",
+  "revelationMedinan": "Мединан"
 }

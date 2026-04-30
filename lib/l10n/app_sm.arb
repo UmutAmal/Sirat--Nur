@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Fa'aitumalo fa'afo'i fa'aaoga {sourceName}. Fa'amautu taimi tatalo i le lotoifale i lau faletapuai po'o le pulega fa'alelotu aloa'ia."
+  "diagnosticsPrayerRegionalFallbackSource": "Fa'aitumalo fa'afo'i fa'aaoga {sourceName}. Fa'amautu taimi tatalo i le lotoifale i lau faletapuai po'o le pulega fa'alelotu aloa'ia.",
+  "revelationMeccan": "Mekani",
+  "revelationMedinan": "Medina"
 }

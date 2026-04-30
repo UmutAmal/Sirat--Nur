@@ -361,6 +361,12 @@ class AppLocalizationsKn extends AppLocalizations {
   String get quranReading => 'ಕುರಾನ್ ಓದುವಿಕೆ';
 
   @override
+  String get revelationMeccan => 'ಮೆಕ್ಕನ್';
+
+  @override
+  String get revelationMedinan => 'ಮದೀನಾನ್';
+
+  @override
   String get prayers => 'ಪ್ರಾರ್ಥನೆಗಳು';
 
   @override

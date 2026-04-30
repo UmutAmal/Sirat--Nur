@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ulanyp sebitleýin yza gaýtma. Doga wagtyňyzy metjidiňiz ýa-da resmi dini ygtyýaryňyz bilen tassyklaň."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ulanyp sebitleýin yza gaýtma. Doga wagtyňyzy metjidiňiz ýa-da resmi dini ygtyýaryňyz bilen tassyklaň.",
+  "revelationMeccan": "Mekge",
+  "revelationMedinan": "Medinan"
 }

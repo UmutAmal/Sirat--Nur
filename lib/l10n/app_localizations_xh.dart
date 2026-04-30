@@ -361,6 +361,12 @@ class AppLocalizationsXh extends AppLocalizations {
   String get quranReading => 'Ukufundwa kweQuran';
 
   @override
+  String get revelationMeccan => 'eMeccan';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Imithandazo';
 
   @override

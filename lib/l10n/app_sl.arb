@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionalna nadomestna uporaba {sourceName}. Potrdite lokalni čas molitve pri svoji mošeji ali uradni verski oblasti."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionalna nadomestna uporaba {sourceName}. Potrdite lokalni čas molitve pri svoji mošeji ali uradni verski oblasti.",
+  "revelationMeccan": "mekanski",
+  "revelationMedinan": "Medinan"
 }

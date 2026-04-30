@@ -362,6 +362,12 @@ class AppLocalizationsLus extends AppLocalizations {
   String get quranReading => 'Quran chhiar dan tur';
 
   @override
+  String get revelationMeccan => 'Mecca khawpuiah a awm';
+
+  @override
+  String get revelationMedinan => 'Medina khawpuiah a awm';
+
+  @override
   String get prayers => 'Tawngtaina';
 
   @override

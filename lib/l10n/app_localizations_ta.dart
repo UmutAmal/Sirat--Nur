@@ -363,6 +363,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get quranReading => 'குர்ஆன் வாசிப்பு';
 
   @override
+  String get revelationMeccan => 'மக்கா';
+
+  @override
+  String get revelationMedinan => 'மதீனான்';
+
+  @override
   String get prayers => 'பிரார்த்தனைகள்';
 
   @override

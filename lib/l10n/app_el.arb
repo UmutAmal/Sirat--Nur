@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Περιφερειακή εναλλακτική με χρήση {sourceName}. Επιβεβαιώστε τις τοπικές ώρες προσευχής με το τζαμί σας ή την επίσημη θρησκευτική αρχή."
+  "diagnosticsPrayerRegionalFallbackSource": "Περιφερειακή εναλλακτική με χρήση {sourceName}. Επιβεβαιώστε τις τοπικές ώρες προσευχής με το τζαμί σας ή την επίσημη θρησκευτική αρχή.",
+  "revelationMeccan": "Μεκκανός",
+  "revelationMedinan": "Medinan"
 }

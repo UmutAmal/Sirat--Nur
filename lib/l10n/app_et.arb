@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Piirkondlik varu, kasutades {sourceName}. Kinnitage kohalikud palveajad oma mošee või ametliku usuasutusega."
+  "diagnosticsPrayerRegionalFallbackSource": "Piirkondlik varu, kasutades {sourceName}. Kinnitage kohalikud palveajad oma mošee või ametliku usuasutusega.",
+  "revelationMeccan": "Meka",
+  "revelationMedinan": "Medinan"
 }

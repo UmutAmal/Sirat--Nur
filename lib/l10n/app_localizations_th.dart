@@ -360,6 +360,12 @@ class AppLocalizationsTh extends AppLocalizations {
   String get quranReading => 'การอ่านอัลกุรอาน';
 
   @override
+  String get revelationMeccan => 'เมกกะ';
+
+  @override
+  String get revelationMedinan => 'เมดาน';
+
+  @override
   String get prayers => 'คำอธิษฐาน';
 
   @override

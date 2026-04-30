@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Fallback regiunale usendu {sourceName}. Cunfirmà i tempi di preghiera lucali cù a vostra moschea o l'autorità religiosa ufficiale."
+  "diagnosticsPrayerRegionalFallbackSource": "Fallback regiunale usendu {sourceName}. Cunfirmà i tempi di preghiera lucali cù a vostra moschea o l'autorità religiosa ufficiale.",
+  "revelationMeccan": "Meccanu",
+  "revelationMedinan": "Medina"
 }

@@ -361,6 +361,12 @@ class AppLocalizationsRw extends AppLocalizations {
   String get quranReading => 'Gusoma Korowani';
 
   @override
+  String get revelationMeccan => 'Meka';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Amasengesho';
 
   @override

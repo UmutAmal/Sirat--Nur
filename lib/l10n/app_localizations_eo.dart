@@ -361,6 +361,12 @@ class AppLocalizationsEo extends AppLocalizations {
   String get quranReading => 'Legado de la Korano';
 
   @override
+  String get revelationMeccan => 'Mekko';
+
+  @override
+  String get revelationMedinan => 'Medinano';
+
+  @override
   String get prayers => 'Preĝoj';
 
   @override

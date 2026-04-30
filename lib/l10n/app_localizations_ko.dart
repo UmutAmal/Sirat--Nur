@@ -358,6 +358,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get quranReading => '꾸란 읽기';
 
   @override
+  String get revelationMeccan => '메칸';
+
+  @override
+  String get revelationMedinan => '메디난';
+
+  @override
   String get prayers => '기도';
 
   @override

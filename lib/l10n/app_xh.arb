@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela umva kwingingqi usebenzisa {sourceName}. Qinisekisa amaxesha omthandazo wasekhaya kunye ne-mosque yakho okanye igunya lenkolo elisemthethweni."
+  "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela umva kwingingqi usebenzisa {sourceName}. Qinisekisa amaxesha omthandazo wasekhaya kunye ne-mosque yakho okanye igunya lenkolo elisemthethweni.",
+  "revelationMeccan": "eMeccan",
+  "revelationMedinan": "Medinan"
 }

@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} භාවිතයෙන් කලාපීය පසුබැසීම. ඔබේ පල්ලිය හෝ නිල ආගමික අධිකාරිය සමඟ ප්‍රාදේශීය යාඥා වේලාවන් තහවුරු කරන්න."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} භාවිතයෙන් කලාපීය පසුබැසීම. ඔබේ පල්ලිය හෝ නිල ආගමික අධිකාරිය සමඟ ප්‍රාදේශීය යාඥා වේලාවන් තහවුරු කරන්න.",
+  "revelationMeccan": "මක්කන්",
+  "revelationMedinan": "මෙඩිනන්"
 }

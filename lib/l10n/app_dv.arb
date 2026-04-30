@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ބޭނުންކޮށްގެން ރީޖަނަލް ފޯލްބެކް. ލޯކަލް ނަމާދު ވަގުތުތައް ތިމާގެ މިސްކިތާ ނުވަތަ ރަސްމީ ދީނީ އިދާރާއާއެކު ކަށަވަރުކުރުން."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ބޭނުންކޮށްގެން ރީޖަނަލް ފޯލްބެކް. ލޯކަލް ނަމާދު ވަގުތުތައް ތިމާގެ މިސްކިތާ ނުވަތަ ރަސްމީ ދީނީ އިދާރާއާއެކު ކަށަވަރުކުރުން.",
+  "revelationMeccan": "މައްކާއެވެ",
+  "revelationMedinan": "މަދީނާން އެވެ"
 }

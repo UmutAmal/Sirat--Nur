@@ -361,6 +361,12 @@ class AppLocalizationsNy extends AppLocalizations {
   String get quranReading => 'Kuwerenga Korani';
 
   @override
+  String get revelationMeccan => 'Meccan';
+
+  @override
+  String get revelationMedinan => 'Madina';
+
+  @override
   String get prayers => 'Mapemphero';
 
   @override

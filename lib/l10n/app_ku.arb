@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Vegera herêmî ya {sourceName} bikar tîne. Demên nimêja herêmî bi mizgefta xwe an desthilatdariya olî ya fermî piştrast bikin."
+  "diagnosticsPrayerRegionalFallbackSource": "Vegera herêmî ya {sourceName} bikar tîne. Demên nimêja herêmî bi mizgefta xwe an desthilatdariya olî ya fermî piştrast bikin.",
+  "revelationMeccan": "Mekkî",
+  "revelationMedinan": "Medinan"
 }

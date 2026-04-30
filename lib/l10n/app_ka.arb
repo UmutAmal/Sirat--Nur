@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "რეგიონალური სარეზერვო {sourceName}-ის გამოყენებით. დაადასტურეთ ადგილობრივი ლოცვის დრო თქვენს მეჩეთთან ან ოფიციალურ რელიგიურ ხელისუფლებასთან."
+  "diagnosticsPrayerRegionalFallbackSource": "რეგიონალური სარეზერვო {sourceName}-ის გამოყენებით. დაადასტურეთ ადგილობრივი ლოცვის დრო თქვენს მეჩეთთან ან ოფიციალურ რელიგიურ ხელისუფლებასთან.",
+  "revelationMeccan": "მექელი",
+  "revelationMedinan": "მედინანი"
 }

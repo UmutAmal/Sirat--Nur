@@ -790,5 +790,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Undur serantau menggunakan {sourceName}. Sahkan waktu solat setempat dengan masjid atau pihak berkuasa agama rasmi anda."
+  "diagnosticsPrayerRegionalFallbackSource": "Undur serantau menggunakan {sourceName}. Sahkan waktu solat setempat dengan masjid atau pihak berkuasa agama rasmi anda.",
+  "revelationMeccan": "Mekah",
+  "revelationMedinan": "Madinah"
 }

@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "חזרה אזורית באמצעות {sourceName}. אשר את זמני התפילה המקומיים עם המסגד או הרשות הדתית הרשמית שלך."
+  "diagnosticsPrayerRegionalFallbackSource": "חזרה אזורית באמצעות {sourceName}. אשר את זמני התפילה המקומיים עם המסגד או הרשות הדתית הרשמית שלך.",
+  "revelationMeccan": "מכאן",
+  "revelationMedinan": "מדין"
 }

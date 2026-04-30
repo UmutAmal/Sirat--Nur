@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Komawar yanki ta amfani da {sourceName}. Tabbatar da lokutan sallar gida tare da masallacin ku ko ikon addini na hukuma."
+  "diagnosticsPrayerRegionalFallbackSource": "Komawar yanki ta amfani da {sourceName}. Tabbatar da lokutan sallar gida tare da masallacin ku ko ikon addini na hukuma.",
+  "revelationMeccan": "Makkan",
+  "revelationMedinan": "Madina"
 }

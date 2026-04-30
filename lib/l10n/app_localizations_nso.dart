@@ -364,6 +364,12 @@ class AppLocalizationsNso extends AppLocalizations {
   String get quranReading => 'Go Bala Quran';
 
   @override
+  String get revelationMeccan => 'Mecca ya Mecca';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Dithapelo';
 
   @override

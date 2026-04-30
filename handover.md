@@ -20051,3 +20051,41 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: kalan low-resource l10n fallback cluster'i, single-surah audio playback runtime smoke, veya prayer notification timezone/DST scheduling.
+
+## 2026-05-01 TUR-497 - Quran Revelation Type Localization
+
+### MASTER Karari
+- Risk: Quran sure listesi ve sure okuma basligi `revelationType` ham veri kodunu dogrudan UI'ya basiyordu; TR dahil tum dillerde "Meccan/Medinan" Ingilizce kalabiliyor, ayrica yeni anahtar batch'i bazi low-resource dillerde cok satirli veya yanlis sehir anlamli debris uretebiliyordu.
+- Kanit:
+  - `lib/features/quran/quran_page.dart:239` artik sure kartinda `$revelationTypeLabel` kullaniyor; once `${surah.revelationType}` dogrudan basiliyordu.
+  - `lib/features/quran/surah_reading_page.dart:356` artik sure basliginda `$revelationTypeLabel` kullaniyor; once `${surahInfo.revelationType}` dogrudan basiliyordu.
+  - `lib/features/quran/revelation_type_localization.dart:9` ve `lib/features/quran/revelation_type_localization.dart:10` raw `Meccan` / `Medinan` kodlarini l10n getter'larina bagliyor.
+  - `lib/l10n/app_tr.arb:173` ve `lib/l10n/app_tr.arb:174` TR UI icin `Mekki` / `Medeni` etiketlerini sagliyor.
+  - `lib/l10n/app_ti.arb:793` Tigrinya icin onceki makine cikti riski olan `መቐለ` yerine `መካዊ`, `lib/l10n/app_ti.arb:794` icin `መዲናዊ` kullaniyor.
+  - `test/features/quran/revelation_type_localization_test.dart:57` cok satirli/yanlis revelation label debris'ini regresyon guard'ina aliyor.
+- Kullanici etkisi: Quran metadata etiketi kullanicinin secili dilinde gorunur; TR'de dogru Islami terimler kullanilir ve low-resource ARB batch debris'i tekrar UI'ya sizmaz.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 3/25.
+- Rollback plani: `lib/features/quran/quran_page.dart`, `lib/features/quran/surah_reading_page.dart`, `lib/features/quran/revelation_type_localization.dart`, `test/features/quran/revelation_type_localization_test.dart`, `lib/l10n/app_*.arb` ve generated `lib/l10n/app_localizations*.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- `revelationMeccan` ve `revelationMedinan` anahtarlari app_en/app_tr referansi ile tum locale setine eklendi; `flutter gen-l10n` ile generated dosyalar senkronlandi.
+- QuranPage ve SurahReadingPage raw veri kodu yerine `localizeRevelationTypeLabel` helper'ini kullaniyor.
+- Mizo, Maithili, Sanskrit ve Tigrinya icin cok satirli/yanlis makine ciktilari elle temizlendi.
+
+### TESTER Degisikligi
+- Targeted tests:
+  - `flutter test test\features\quran\revelation_type_localization_test.dart --reporter compact` PASS, `3/3`.
+  - `flutter test test\features\quran\revelation_type_localization_test.dart test\features\quran\surah_reading_page_test.dart test\surah_display_info_test.dart --reporter compact` PASS, `12/12`.
+- L10n report: `dart run tool\translate_arb_keys.dart --report revelationMeccan revelationMedinan` -> same-as-English `128`, missing/empty `0`, placeholder mismatch `0`; kalanlar proper-term fallback olarak bilincli tutuldu.
+- L10n sync/coverage: `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `85/85`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `698/698`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `a0ac74d3-4262-4d43-9bcf-c2c654596299`, `homeContainsDailyVerse=true`, `homeContainsDailyVerseUnavailable=false`, `homeContainsNoInternetLegacy=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94074706`.
+
+### Risk Degisimi
+- Quran revelation type raw English UI riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: `revelationMeccan/revelationMedinan` icin 128 locale same-as-English kaldi; bu terimler bazi dillerde akademik/proper-term olarak aynen kullanildigi ve uydurma yapmamak gerektigi icin fallback kabul edildi.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: single-surah Appium playback smoke, prayer notification timezone/DST scheduling veya kalan low-resource l10n fallback cluster'i.

@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Eskualdeko ordezkapena {sourceName} erabiliz. Berretsi tokiko otoitz orduak zure meskitarekin edo agintari erlijioso ofizialarekin."
+  "diagnosticsPrayerRegionalFallbackSource": "Eskualdeko ordezkapena {sourceName} erabiliz. Berretsi tokiko otoitz orduak zure meskitarekin edo agintari erlijioso ofizialarekin.",
+  "revelationMeccan": "Mekak",
+  "revelationMedinan": "Medinan"
 }

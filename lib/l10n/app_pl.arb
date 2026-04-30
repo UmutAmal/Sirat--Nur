@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionalna rezerwa zastępcza przy użyciu {sourceName}. Potwierdź lokalne godziny modlitw w swoim meczecie lub oficjalnym organie religijnym."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionalna rezerwa zastępcza przy użyciu {sourceName}. Potwierdź lokalne godziny modlitw w swoim meczecie lub oficjalnym organie religijnym.",
+  "revelationMeccan": "Mekka",
+  "revelationMedinan": "Medyna"
 }

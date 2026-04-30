@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback mei {sourceName}. Befêstigje lokale gebedstiden mei jo moskee as offisjele religieuze autoriteit."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback mei {sourceName}. Befêstigje lokale gebedstiden mei jo moskee as offisjele religieuze autoriteit.",
+  "revelationMeccan": "Mekka",
+  "revelationMedinan": "Medan"
 }

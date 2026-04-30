@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Okudda emabega mu kitundu nga okozesa {sourceName}. Kakasa ebiseera by’okusaba mu kitundu n’omuzikiti gwo oba ekitongole ky’eddiini ekitongole."
+  "diagnosticsPrayerRegionalFallbackSource": "Okudda emabega mu kitundu nga okozesa {sourceName}. Kakasa ebiseera by’okusaba mu kitundu n’omuzikiti gwo oba ekitongole ky’eddiini ekitongole.",
+  "revelationMeccan": "Omumakka",
+  "revelationMedinan": "Medinan"
 }

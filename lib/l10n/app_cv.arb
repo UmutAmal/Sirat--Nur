@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} усӑ курса регионти каялла тавӑрасси. Вырӑнти кӗлӗ вӑхӑчӗсене хӑвӑрӑн мечӗтпе е официаллӑ тӗн органӗпе ҫирӗплетӗр."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} усӑ курса регионти каялла тавӑрасси. Вырӑнти кӗлӗ вӑхӑчӗсене хӑвӑрӑн мечӗтпе е официаллӑ тӗн органӗпе ҫирӗплетӗр.",
+  "revelationMeccan": "Мекка",
+  "revelationMedinan": "Медина"
 }

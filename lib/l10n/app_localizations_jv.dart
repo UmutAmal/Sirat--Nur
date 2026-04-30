@@ -361,6 +361,12 @@ class AppLocalizationsJv extends AppLocalizations {
   String get quranReading => 'Waosan Quran';
 
   @override
+  String get revelationMeccan => 'Mekah';
+
+  @override
+  String get revelationMedinan => 'Madinah';
+
+  @override
   String get prayers => 'sembahyang';
 
   @override

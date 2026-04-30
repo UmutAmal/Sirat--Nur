@@ -361,6 +361,12 @@ class AppLocalizationsDz extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'མེ་ཀཱན།';
+
+  @override
+  String get revelationMedinan => 'མེ་ཌི་ནན།';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

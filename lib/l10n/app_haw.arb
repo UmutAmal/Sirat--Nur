@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Hoʻihoʻi ʻāina me {sourceName}. E hōʻoia i nā manawa pule kūloko me kāu mosque a i ʻole ka mana hoʻomana mana."
+  "diagnosticsPrayerRegionalFallbackSource": "Hoʻihoʻi ʻāina me {sourceName}. E hōʻoia i nā manawa pule kūloko me kāu mosque a i ʻole ka mana hoʻomana mana.",
+  "revelationMeccan": "Mekani",
+  "revelationMedinan": "Madinana"
 }

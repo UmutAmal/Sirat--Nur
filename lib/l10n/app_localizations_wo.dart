@@ -361,6 +361,12 @@ class AppLocalizationsWo extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'Màkka';
+
+  @override
+  String get revelationMedinan => 'Medinaan';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

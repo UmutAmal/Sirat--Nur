@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback gamit ang {sourceName}. Kumpirmahin ang mga lokal na oras ng pagdarasal sa iyong mosque o opisyal na awtoridad sa relihiyon."
+  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback gamit ang {sourceName}. Kumpirmahin ang mga lokal na oras ng pagdarasal sa iyong mosque o opisyal na awtoridad sa relihiyon.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

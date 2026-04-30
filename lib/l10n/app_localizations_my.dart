@@ -363,6 +363,12 @@ class AppLocalizationsMy extends AppLocalizations {
   String get quranReading => 'ကုရ်အာန်ဖတ်ခြင်း။';
 
   @override
+  String get revelationMeccan => 'မက္ကန်';
+
+  @override
+  String get revelationMedinan => 'မီနန်';
+
+  @override
   String get prayers => 'ဆရာတော်များ';
 
   @override

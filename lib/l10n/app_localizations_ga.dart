@@ -361,6 +361,12 @@ class AppLocalizationsGa extends AppLocalizations {
   String get quranReading => 'Léamh Quran';
 
   @override
+  String get revelationMeccan => 'Meicneach';
+
+  @override
+  String get revelationMedinan => 'Méidín';
+
+  @override
   String get prayers => 'Paidreacha';
 
   @override

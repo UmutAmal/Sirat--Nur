@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "الاحتياطي الإقليمي باستخدام {sourceName}. تأكد من أوقات الصلاة المحلية مع مسجدك أو السلطة الدينية الرسمية."
+  "diagnosticsPrayerRegionalFallbackSource": "الاحتياطي الإقليمي باستخدام {sourceName}. تأكد من أوقات الصلاة المحلية مع مسجدك أو السلطة الدينية الرسمية.",
+  "revelationMeccan": "مكية",
+  "revelationMedinan": "مدني"
 }

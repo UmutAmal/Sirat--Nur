@@ -362,6 +362,12 @@ class AppLocalizationsSk extends AppLocalizations {
   String get quranReading => 'Čítanie Koránu';
 
   @override
+  String get revelationMeccan => 'Mekcan';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Modlitby';
 
   @override

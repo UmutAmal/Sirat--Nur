@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionális tartalék a {sourceName} használatával. Erősítse meg a helyi imaidőpontokat mecsetjénél vagy hivatalos vallási hatóságánál."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionális tartalék a {sourceName} használatával. Erősítse meg a helyi imaidőpontokat mecsetjénél vagy hivatalos vallási hatóságánál.",
+  "revelationMeccan": "mekkai",
+  "revelationMedinan": "Medinan"
 }

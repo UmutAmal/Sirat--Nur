@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} арқылы аймақтық қалпына келтіру. Жергілікті намаз уақытын мешітіңізбен немесе ресми діни мекемемен растаңыз."
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} арқылы аймақтық қалпына келтіру. Жергілікті намаз уақытын мешітіңізбен немесе ресми діни мекемемен растаңыз.",
+  "revelationMeccan": "Мекке",
+  "revelationMedinan": "Медина"
 }

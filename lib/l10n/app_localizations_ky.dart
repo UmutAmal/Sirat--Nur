@@ -364,6 +364,12 @@ class AppLocalizationsKy extends AppLocalizations {
   String get quranReading => 'Куран окуу';
 
   @override
+  String get revelationMeccan => 'Мекке';
+
+  @override
+  String get revelationMedinan => 'Медина';
+
+  @override
   String get prayers => 'Намаздар';
 
   @override

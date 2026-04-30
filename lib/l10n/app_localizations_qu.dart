@@ -363,6 +363,12 @@ class AppLocalizationsQu extends AppLocalizations {
   String get quranReading => 'Quran Ñawinchay';
 
   @override
+  String get revelationMeccan => 'Meca llaqtamanta';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Mañakuykuna';
 
   @override

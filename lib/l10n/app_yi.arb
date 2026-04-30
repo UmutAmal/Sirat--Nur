@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "רעגיאָנאַל פאַלבאַק ניצן {sourceName}. באַשטעטיקן היגע תפילה צייט מיט דיין מאָסקווע אָדער באַאַמטער רעליגיעז אויטאָריטעט."
+  "diagnosticsPrayerRegionalFallbackSource": "רעגיאָנאַל פאַלבאַק ניצן {sourceName}. באַשטעטיקן היגע תפילה צייט מיט דיין מאָסקווע אָדער באַאַמטער רעליגיעז אויטאָריטעט.",
+  "revelationMeccan": "מעקאַן",
+  "revelationMedinan": "מעדינאַן"
 }

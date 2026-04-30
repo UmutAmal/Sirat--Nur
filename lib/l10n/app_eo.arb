@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regiona repliko uzante {sourceName}. Konfirmu lokajn preĝtempojn kun via moskeo aŭ oficiala religia aŭtoritato."
+  "diagnosticsPrayerRegionalFallbackSource": "Regiona repliko uzante {sourceName}. Konfirmu lokajn preĝtempojn kun via moskeo aŭ oficiala religia aŭtoritato.",
+  "revelationMeccan": "Mekko",
+  "revelationMedinan": "Medinano"
 }

@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Rijinal fɔlbak we de yuz {sourceName}. Kɔnfɛm lokal prea tɛm wit yu moskɛt ɔ ɔfishal rilijɔn ɔtoriti."
+  "diagnosticsPrayerRegionalFallbackSource": "Rijinal fɔlbak we de yuz {sourceName}. Kɔnfɛm lokal prea tɛm wit yu moskɛt ɔ ɔfishal rilijɔn ɔtoriti.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

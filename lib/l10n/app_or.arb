@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ବ୍ୟବହାର କରି ଆଞ୍ଚଳିକ ପତନ | ଆପଣଙ୍କର ମସଜିଦ କିମ୍ବା ସରକାରୀ ଧାର୍ମିକ ପ୍ରାଧିକରଣ ସହିତ ସ୍ଥାନୀୟ ପ୍ରାର୍ଥନା ସମୟ ନିଶ୍ଚିତ କରନ୍ତୁ |"
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ବ୍ୟବହାର କରି ଆଞ୍ଚଳିକ ପତନ | ଆପଣଙ୍କର ମସଜିଦ କିମ୍ବା ସରକାରୀ ଧାର୍ମିକ ପ୍ରାଧିକରଣ ସହିତ ସ୍ଥାନୀୟ ପ୍ରାର୍ଥନା ସମୟ ନିଶ୍ଚିତ କରନ୍ତୁ |",
+  "revelationMeccan": "ମକ୍କାନ୍ |",
+  "revelationMedinan": "ମେଦିନ୍"
 }

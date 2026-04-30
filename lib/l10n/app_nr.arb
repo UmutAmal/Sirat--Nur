@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela emuva kwesifunda ngokusebenzisa {sourceName}. Qinisekisa isikhathi somthandazo wendawo ne-mosque yakho nofana igunya lezekolo elisemthethweni."
+  "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela emuva kwesifunda ngokusebenzisa {sourceName}. Qinisekisa isikhathi somthandazo wendawo ne-mosque yakho nofana igunya lezekolo elisemthethweni.",
+  "revelationMeccan": "I-Meccan",
+  "revelationMedinan": "I-Medinan"
 }

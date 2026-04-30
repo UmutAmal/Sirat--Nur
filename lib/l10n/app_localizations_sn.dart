@@ -360,6 +360,12 @@ class AppLocalizationsSn extends AppLocalizations {
   String get quranReading => 'Kuverenga Korani';
 
   @override
+  String get revelationMeccan => 'Meccan';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Minamato';
 
   @override

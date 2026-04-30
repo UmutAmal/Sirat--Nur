@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Streeksterugval deur {sourceName} te gebruik. Bevestig plaaslike gebedstye met jou moskee of amptelike godsdienstige owerheid."
+  "diagnosticsPrayerRegionalFallbackSource": "Streeksterugval deur {sourceName} te gebruik. Bevestig plaaslike gebedstye met jou moskee of amptelike godsdienstige owerheid.",
+  "revelationMeccan": "Mekkaan",
+  "revelationMedinan": "Medinan"
 }

@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Soluție regională folosind {sourceName}. Confirmați orele locale de rugăciune cu moscheea sau autoritatea religioasă oficială."
+  "diagnosticsPrayerRegionalFallbackSource": "Soluție regională folosind {sourceName}. Confirmați orele locale de rugăciune cu moscheea sau autoritatea religioasă oficială.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regionale terugval met {sourceName}. Bevestig lokale gebedstijden bij uw moskee of officiële religieuze autoriteit."
+  "diagnosticsPrayerRegionalFallbackSource": "Regionale terugval met {sourceName}. Bevestig lokale gebedstijden bij uw moskee of officiële religieuze autoriteit.",
+  "revelationMeccan": "Mekkaans",
+  "revelationMedinan": "Medina"
 }

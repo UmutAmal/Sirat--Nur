@@ -361,6 +361,12 @@ class AppLocalizationsIu extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get revelationMeccan => 'ᒪᑲᓐ';
+
+  @override
+  String get revelationMedinan => 'ᒥᑎᓇᓐ';
+
+  @override
   String get prayers => 'Prayers';
 
   @override

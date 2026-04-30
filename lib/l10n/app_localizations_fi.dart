@@ -362,6 +362,12 @@ class AppLocalizationsFi extends AppLocalizations {
   String get quranReading => 'Koraanin lukeminen';
 
   @override
+  String get revelationMeccan => 'Mekkalainen';
+
+  @override
+  String get revelationMedinan => 'Medinan';
+
+  @override
   String get prayers => 'Rukoukset';
 
   @override

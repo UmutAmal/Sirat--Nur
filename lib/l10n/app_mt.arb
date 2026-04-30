@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Riżerva reġjonali bl-użu ta' {sourceName}. Ikkonferma l-ħinijiet tat-talb lokali mal-moskea jew l-awtorità reliġjuża uffiċjali tiegħek."
+  "diagnosticsPrayerRegionalFallbackSource": "Riżerva reġjonali bl-użu ta' {sourceName}. Ikkonferma l-ħinijiet tat-talb lokali mal-moskea jew l-awtorità reliġjuża uffiċjali tiegħek.",
+  "revelationMeccan": "Mekkan",
+  "revelationMedinan": "Medinan"
 }

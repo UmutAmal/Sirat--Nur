@@ -361,6 +361,12 @@ class AppLocalizationsNe extends AppLocalizations {
   String get quranReading => 'कुरान पढाइ';
 
   @override
+  String get revelationMeccan => 'मक्कन';
+
+  @override
+  String get revelationMedinan => 'मेडिनान';
+
+  @override
   String get prayers => 'प्रार्थनाहरू';
 
   @override

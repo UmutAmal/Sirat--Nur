@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Mpɔtam hɔ fallback a wɔde {sourceName} di dwuma. Wo ne wo asɔredan anaa nyamesom aban mpanyimfo si mpɔtam hɔ mpaebɔ bere so dua."
+  "diagnosticsPrayerRegionalFallbackSource": "Mpɔtam hɔ fallback a wɔde {sourceName} di dwuma. Wo ne wo asɔredan anaa nyamesom aban mpanyimfo si mpɔtam hɔ mpaebɔ bere so dua.",
+  "revelationMeccan": "Meccafoɔ",
+  "revelationMedinan": "Medinan"
 }

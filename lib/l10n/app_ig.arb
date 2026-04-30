@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Ndaghachi azụ mpaghara na-eji {sourceName}. Jiri ụlọ alakụba gị ma ọ bụ ikike okpukperechi kwadoro oge ekpere mpaghara."
+  "diagnosticsPrayerRegionalFallbackSource": "Ndaghachi azụ mpaghara na-eji {sourceName}. Jiri ụlọ alakụba gị ma ọ bụ ikike okpukperechi kwadoro oge ekpere mpaghara.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

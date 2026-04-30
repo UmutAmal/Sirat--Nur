@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Tilleadh roinneil a’ cleachdadh {sourceName}. Dearbhaich amannan ùrnaigh ionadail leis a’ mhosc no an ùghdarras creideimh oifigeil agad."
+  "diagnosticsPrayerRegionalFallbackSource": "Tilleadh roinneil a’ cleachdadh {sourceName}. Dearbhaich amannan ùrnaigh ionadail leis a’ mhosc no an ùghdarras creideimh oifigeil agad.",
+  "revelationMeccan": "Meccan",
+  "revelationMedinan": "Medinan"
 }

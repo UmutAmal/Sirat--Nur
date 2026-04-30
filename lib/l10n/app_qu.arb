@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional kutiy {sourceName} llamk'achispa. Mezquitaykiwan utaq autoridad religiosa oficialwan llaqtapi mañakuy pachakunata takyachiy."
+  "diagnosticsPrayerRegionalFallbackSource": "Regional kutiy {sourceName} llamk'achispa. Mezquitaykiwan utaq autoridad religiosa oficialwan llaqtapi mañakuy pachakunata takyachiy.",
+  "revelationMeccan": "Meca llaqtamanta",
+  "revelationMedinan": "Medinan"
 }

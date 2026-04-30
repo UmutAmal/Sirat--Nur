@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਖੇਤਰੀ ਫਾਲਬੈਕ। ਆਪਣੀ ਮਸਜਿਦ ਜਾਂ ਅਧਿਕਾਰਤ ਧਾਰਮਿਕ ਅਥਾਰਟੀ ਨਾਲ ਸਥਾਨਕ ਪ੍ਰਾਰਥਨਾ ਦੇ ਸਮੇਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।"
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਖੇਤਰੀ ਫਾਲਬੈਕ। ਆਪਣੀ ਮਸਜਿਦ ਜਾਂ ਅਧਿਕਾਰਤ ਧਾਰਮਿਕ ਅਥਾਰਟੀ ਨਾਲ ਸਥਾਨਕ ਪ੍ਰਾਰਥਨਾ ਦੇ ਸਮੇਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।",
+  "revelationMeccan": "ਮੱਕਾ",
+  "revelationMedinan": "ਮੇਦੀਨ"
 }

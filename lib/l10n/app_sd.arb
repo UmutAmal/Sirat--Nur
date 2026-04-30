@@ -789,5 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "علائقائي فال بيڪ استعمال ڪندي {sourceName}. توهان جي مسجد يا سرڪاري مذهبي اختيار سان مقامي نماز جي وقت جي تصديق ڪريو."
+  "diagnosticsPrayerRegionalFallbackSource": "علائقائي فال بيڪ استعمال ڪندي {sourceName}. توهان جي مسجد يا سرڪاري مذهبي اختيار سان مقامي نماز جي وقت جي تصديق ڪريو.",
+  "revelationMeccan": "مڪي",
+  "revelationMedinan": "مديني"
 }
