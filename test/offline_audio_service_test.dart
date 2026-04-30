@@ -567,6 +567,50 @@ void main() {
     );
 
     test(
+      'deleteReciterAudio removes only managed files for the requested reciter',
+      () async {
+        final tempDir = await Directory.systemTemp.createTemp(
+          'sir_audio_delete_',
+        );
+        addTearDown(() => tempDir.delete(recursive: true));
+
+        const channel = MethodChannel('plugins.flutter.io/path_provider');
+        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+            .setMockMethodCallHandler(channel, (_) async => tempDir.path);
+        addTearDown(
+          () => TestDefaultBinaryMessengerBinding
+              .instance
+              .defaultBinaryMessenger
+              .setMockMethodCallHandler(channel, null),
+        );
+
+        final audioDir = Directory(p.join(tempDir.path, 'quran_audio'));
+        await audioDir.create(recursive: true);
+        final managedAlafasy = File(p.join(audioDir.path, 'alafasy_001.mp3'));
+        final invalidSurah = File(p.join(audioDir.path, 'alafasy_999.mp3'));
+        final unmanagedPrefix = File(
+          p.join(audioDir.path, 'alafasy_notes.mp3'),
+        );
+        final otherReciter = File(p.join(audioDir.path, 'sudais_001.mp3'));
+        final nonAudio = File(p.join(audioDir.path, 'alafasy_002.txt'));
+
+        await managedAlafasy.writeAsBytes(_quranMp3FixtureBytes());
+        await invalidSurah.writeAsBytes(_quranMp3FixtureBytes());
+        await unmanagedPrefix.writeAsBytes(_quranMp3FixtureBytes());
+        await otherReciter.writeAsBytes(_quranMp3FixtureBytes());
+        await nonAudio.writeAsString('not managed audio');
+
+        await OfflineAudioService.deleteReciterAudio('alafasy');
+
+        expect(await managedAlafasy.exists(), isFalse);
+        expect(await invalidSurah.exists(), isTrue);
+        expect(await unmanagedPrefix.exists(), isTrue);
+        expect(await otherReciter.exists(), isTrue);
+        expect(await nonAudio.exists(), isTrue);
+      },
+    );
+
+    test(
       'downloadSurahAudio rejects unowned or invalid requests before IO',
       () async {
         final validStorageUrl =

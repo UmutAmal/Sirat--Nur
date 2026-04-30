@@ -19752,3 +19752,34 @@
 
 ### Sonraki Adim
 - Bir sonraki dongude prayer calendar/timezone edge-case testlerini genislet veya audio/Quran offline runtime false-success taramasina gec; en yuksek kanitli kusur secilecek.
+
+## 2026-04-30 TUR-488 - Offline Audio Delete Scope Hardening
+
+### MASTER Karari
+- Risk: `OfflineAudioService.deleteReciterAudio` reciter prefix'iyle baslayan her `.mp3` dosyasini silebiliyordu; bu, `alafasy_notes.mp3` veya `alafasy_999.mp3` gibi yonetilmeyen/invalid dosyalarin ayni quran_audio klasorunde yanlislikla silinmesine yol acabilirdi.
+- Kanit:
+  - `lib/core/services/offline_audio_service.dart:223` zaten `_isManagedDownloadedQuranAudioFileName` helper'iyle sadece desteklenen reciter + 1..114 sure formatini ayirt ediyordu.
+  - `lib/core/services/offline_audio_service.dart:512` `deleteReciterAudio` kullanici "delete downloaded files" aksiyonunun servis ucuydu.
+  - `lib/core/services/offline_audio_service.dart:523` artik silmeden once hem `_isManagedDownloadedQuranAudioFileName(fileName)` hem de istenen reciter prefix'ini kontrol ediyor.
+  - `test/offline_audio_service_test.dart:570` yeni regresyon testi `alafasy_001.mp3` dosyasinin silindigini, `alafasy_999.mp3`, `alafasy_notes.mp3`, `sudais_001.mp3` ve `alafasy_002.txt` dosyalarinin korundugunu dogruluyor.
+- Kullanici etkisi: Offline Quran audio pack silme islemi sadece uygulamanin yonettigi gecmis sure mp3'lerini temizler; ayni klasorde yanlis adli veya farkli reciter'a ait dosyalar korunur.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25 -> 2/25.
+- Rollback plani: `lib/core/services/offline_audio_service.dart` ve `test/offline_audio_service_test.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- `deleteReciterAudio` silme filtresi, mevcut yonetilen dosya adi helper'iyle daraltildi.
+- Yeni abstraction veya dependency eklenmedi; download, validation, size calculation ve false-success result akislari degismedi.
+
+### TESTER Degisikligi
+- Targeted servis testi: `flutter test test\offline_audio_service_test.dart --reporter compact` PASS, `23/23`.
+- Offline UI + servis regresyonu: `flutter test test\features\downloads\offline_downloads_test.dart test\offline_audio_service_test.dart --reporter compact` PASS, `26/26`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `685/685`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Quran audio mirror manifest `684/684`, GitHub overflow `114`, Cloudflare partition `8.4 GB`, Supabase public content checks ve final analyze/test kapilari temiz.
+
+### Risk Degisimi
+- Offline audio delete overscope riski: `9/25 -> 2/25`.
+- Kalan bilincli risk: Audio/Quran runtime taramasi devam etmeli; ozellikle stream playback fallback, Supabase catalog empty-state ve dusuk-kaynak l10n fallback borclari kanitli yeni kusur bulunursa tek tek kapatilacak.
+
+### Sonraki Adim
+- Yeni dongude Quran reading playback hattini tara: local file validation, cloud catalog empty-state, stream fallback ve kullaniciya gosterilen hata mesajlarinda false-success/hardcoded copy kalip kalmadigi incelenecek.
