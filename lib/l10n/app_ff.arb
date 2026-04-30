@@ -548,7 +548,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Hoosugo do internaati",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "Jokku ƴettude",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

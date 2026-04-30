@@ -1222,7 +1222,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get downloadAction => 'Taunilouti';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Hokohoko atu hono download';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

@@ -1222,7 +1222,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get downloadAction => 'Gua\'åni';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Sige ha\' humuyong';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

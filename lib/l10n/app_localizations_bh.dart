@@ -1222,7 +1222,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get downloadAction => 'डाउनलोड करीं';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'डाउनलोड जारी रखे के बा';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

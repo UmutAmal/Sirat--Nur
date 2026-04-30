@@ -548,7 +548,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Laisolola",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "Tswelela o laisolola",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

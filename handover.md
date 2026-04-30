@@ -19032,3 +19032,39 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `resumeDownload` icin CV/resume yanlis anlam guard'lariyla ayni tek-anahtarli batch uygulanacak.
+
+## 2026-04-30 TUR-469 - Resume Download L10n Batch
+
+### MASTER Karari
+- Risk: `resumeDownload` indirme devam ettirme aksiyonu 63 locale'de Ingilizce fallback olarak kaliyordu; offline indirme akisi icin kullaniciya karisik dil gosteren P1 l10n borcuydu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:551` artik `"resumeDownload": "Oobisiyyat bisoh ixxic"` degerini tasiyor; once `Resume Download` idi.
+  - `lib/l10n/app_bh.arb:551` artik `"resumeDownload": "डाउनलोड जारी रखे के बा"` degerini tasiyor; once `Resume Download` idi.
+  - `lib/l10n/app_wo.arb:551` artik `"resumeDownload": "Wéyal yebbi"` degerini tasiyor; once `Resume Download` idi.
+  - `lib/l10n/app_localizations_aa.dart:1225`, `lib/l10n/app_localizations_bh.dart:1225` ve `lib/l10n/app_localizations_wo.dart:1225` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:842` ve `tool/translate_arb_keys.dart:843` bilinen yanlis `Lesh lesh` ve `Bandanya gukuraho` adaylarini download-copy debris listesine ekliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1157` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:250` ve `test/translate_arb_keys_test.dart:255` `app_gv` icin anlamsiz duplicate phrase'i, `app_rn` icin remove/delete semantigine kayan ciktiyi reddediyor.
+  - `test/l10n_generated_sync_test.dart:81` 34 dusuk kaynakli locale icin generated `resumeDownload` getter'inin ARB ile senkron kaldigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1189 -> 1157` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Offline indirmeye devam etme aksiyonu 32 ek locale'de secili dilde gorunur; guvenilmeyen `gv` ve `rn` ciktilari yanlis yerellestirme yerine bilincli fallback olarak birakildi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 32 ARB dosyasi, 32 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `resumeDownload` icin guvenli kabul edilen 32 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `app_gv` ve `app_rn` adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar hem translator debris listesine hem de test kara listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 137/137.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 679/679.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+
+### Risk Degisimi
+- Resume download UI fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1157` same-as-English fallback devam ediyor; `deleteDownloadedFiles`, download completion/cancel copy, diagnostics ve chatbot kumesi siradaki guvenli batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `deleteDownloadedFiles` icin ayni tek-anahtarli batch, debris guard ve generated-sync kapisi uygulanacak.

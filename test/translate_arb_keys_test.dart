@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1189));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1157));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -244,6 +244,16 @@ void main() {
       expect(
         localeArbs['ti']!['resumeDownload'],
         isNot(english['resumeDownload']),
+      );
+      expect(
+        localeArbs['gv']!['resumeDownload'],
+        isNot('Lesh lesh'),
+        reason: 'app_gv.arb maps resumeDownload to an invalid duplicate phrase',
+      );
+      expect(
+        localeArbs['rn']!['resumeDownload'],
+        isNot('Bandanya gukuraho'),
+        reason: 'app_rn.arb maps resumeDownload to remove/delete semantics',
       );
       for (final locale in ['ca', 'gl', 'hy', 'ka', 'zh', 'zh_CN', 'zh_TW']) {
         final value = localeArbs[locale]!['resumeDownload'] as String;
@@ -1529,10 +1539,24 @@ void main() {
         currentValue: 'რეზიუმეს ჩამოტვირთვა',
         candidate: 'ჩამოტვირთვის გაგრძელება',
       );
+      final manxValue = resolveTranslatedArbValue(
+        key: 'resumeDownload',
+        source: 'Resume Download',
+        currentValue: 'Resume Download',
+        candidate: 'Lesh lesh',
+      );
+      final kirundiValue = resolveTranslatedArbValue(
+        key: 'resumeDownload',
+        source: 'Resume Download',
+        currentValue: 'Resume Download',
+        candidate: 'Bandanya gukuraho',
+      );
 
       expect(catalanValue, 'Continua la baixada');
       expect(chineseValue, '继续下载');
       expect(georgianValue, 'ჩამოტვირთვის გაგრძელება');
+      expect(manxValue, 'Resume Download');
+      expect(kirundiValue, 'Resume Download');
     });
 
     test('rejects quran audio source status copy that exposes cloud seed', () {

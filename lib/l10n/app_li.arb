@@ -548,7 +548,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Douwnlood",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "Blijf downloade",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

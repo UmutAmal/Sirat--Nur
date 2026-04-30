@@ -1222,7 +1222,7 @@ class AppLocalizationsKr extends AppLocalizations {
   String get downloadAction => 'Sawo';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Sagǝdǝ gozagǝ kowo';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

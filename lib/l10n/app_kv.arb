@@ -548,7 +548,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Грузитны",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "Водзӧ скачайтны .",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

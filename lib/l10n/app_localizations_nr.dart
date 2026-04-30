@@ -1222,7 +1222,7 @@ class AppLocalizationsNr extends AppLocalizations {
   String get downloadAction => 'Dawunlowuda';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Ragela phambili ngokudawuniloda';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

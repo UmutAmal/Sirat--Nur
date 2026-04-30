@@ -548,7 +548,7 @@
   },
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "ཕབ་ལེན",
-  "resumeDownload": "Resume Download",
+  "resumeDownload": "མུ་མཐུད་དུ་ཕབ་ལེན།",
   "deleteDownloadedFiles": "Delete Downloaded Files",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",

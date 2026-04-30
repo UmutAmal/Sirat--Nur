@@ -1222,7 +1222,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get downloadAction => 'ཕབ་ལེན';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'མུ་མཐུད་དུ་ཕབ་ལེན།';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

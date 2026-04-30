@@ -1222,7 +1222,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get downloadAction => 'Douwnlood';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Blijf downloade';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

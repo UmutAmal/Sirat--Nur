@@ -1222,7 +1222,7 @@ class AppLocalizationsWo extends AppLocalizations {
   String get downloadAction => 'Wàcce';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Wéyal yebbi';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

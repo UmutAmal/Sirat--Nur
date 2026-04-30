@@ -1222,7 +1222,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get downloadAction => 'ᒥᓇᕆᓗᒍ';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'ᑲᔪᓯᓗᑎᑦ ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᓯᓗᑎᑦ';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

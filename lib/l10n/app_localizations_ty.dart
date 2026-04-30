@@ -1222,7 +1222,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get downloadAction => 'Huri mai';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'A tamau noa i te download';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

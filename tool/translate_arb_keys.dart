@@ -839,6 +839,8 @@ const _knownDownloadTranslationDebris = [
   'резюме',
   'Ռեզյում',
   'რეზიუმ',
+  'Lesh lesh',
+  'Bandanya gukuraho',
 ];
 
 const _knownWeakDownloadActionCandidates = [

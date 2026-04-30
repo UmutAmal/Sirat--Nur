@@ -1222,7 +1222,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get downloadAction => 'Lavetaka';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Tomana tikoga na lavetaki';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

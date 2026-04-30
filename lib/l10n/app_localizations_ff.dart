@@ -1222,7 +1222,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get downloadAction => 'Hoosugo do internaati';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Jokku ƴettude';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

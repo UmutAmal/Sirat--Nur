@@ -1222,7 +1222,7 @@ class AppLocalizationsDz extends AppLocalizations {
   String get downloadAction => 'ཕབས་ལེན';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'འཕྲོ་མཐུད་ཕབ་ལེན།';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

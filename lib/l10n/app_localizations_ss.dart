@@ -1222,7 +1222,7 @@ class AppLocalizationsSs extends AppLocalizations {
   String get downloadAction => 'Downiloda';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Chubeka ulandze';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

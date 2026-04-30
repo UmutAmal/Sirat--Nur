@@ -1222,7 +1222,7 @@ class AppLocalizationsCv extends AppLocalizations {
   String get downloadAction => 'Уçласа ил';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Малалла скачать ту';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

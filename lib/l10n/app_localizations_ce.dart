@@ -1222,7 +1222,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get downloadAction => 'Чудаккхар';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Кхин дӀа а скачать дан .';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

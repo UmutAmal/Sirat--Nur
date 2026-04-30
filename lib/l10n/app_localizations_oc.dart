@@ -1222,7 +1222,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get downloadAction => 'Descargar';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Contunhar lo telecargament';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

@@ -1222,7 +1222,7 @@ class AppLocalizationsVe extends AppLocalizations {
   String get downloadAction => 'Sudzulusa';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Bvelani phanḓa ni tshi dawuniḽouda';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';

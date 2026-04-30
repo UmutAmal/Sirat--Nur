@@ -1222,7 +1222,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get downloadAction => 'Kubaka';
 
   @override
-  String get resumeDownload => 'Resume Download';
+  String get resumeDownload => 'Landa kubaka';
 
   @override
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
