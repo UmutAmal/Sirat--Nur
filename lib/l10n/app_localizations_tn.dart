@@ -1185,7 +1185,7 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Go boela morago kwa ntle ga inthanete go kgontshitswe. Dikarabo tse di netefaditsweng tsa selegae tsa Boiselamo ga di ise di siamele.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';

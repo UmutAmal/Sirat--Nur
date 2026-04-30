@@ -19378,3 +19378,43 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `chatbotOfflineSwitched` icin tek-anahtarli batch, "offline fallback enabled" ve "verified local Islamic answers not ready" semantigi korunarak uygulanacak.
+
+## 2026-04-30 TUR-478 - Chatbot Offline Switched L10n Batch
+
+### MASTER Karari
+- Risk: `chatbotOfflineSwitched` 63 locale'de Ingilizce fallback olarak kaliyordu; offline fallback etkinlestikten sonra kullaniciya dogrulanmis yerel Islami cevaplarin henuz hazir olmadigini bildiren runtime status metni oldugu icin yanlis ceviri dini cevaplar hazir gibi guven uretebilir veya "offline fallback" baglamini tersine cevirebilirdi.
+- Kanit:
+  - `lib/l10n/app_aa.arb:514` artik `"chatbotOfflineSwitched": "Suuquntak iroh wadirih radiyya tekkeh. Diggowte baaxoh addah islaaminnah gacsitte uxih gulguluh matan."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_bh.arb:514` artik `"chatbotOfflineSwitched": "ऑफलाइन फॉलबैक सक्षम हो गइल बा. सत्यापन स्थानीय इस्लामी जवाब अभी तक तैयार नईखे।"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_ty.arb:514` artik `"chatbotOfflineSwitched": "Ua faati'ahia te fallback offline. Aita â te mau pahonoraa Islamic o te fenua iho i ineine."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1187`, `lib/l10n/app_localizations_bh.dart:1187` ve `lib/l10n/app_localizations_ty.dart:1187` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:885`, `tool/translate_arb_keys.dart:886` ve `tool/translate_arb_keys.dart:893` offline-switched icin Fijian internet-fallback, Inuktitut computer/online ve Sango eksik "not ready" baglamli guvensiz adaylari reddediyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `951` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:536`-`test/translate_arb_keys_test.dart:547` kabul edilen `aa` cikisinin Ingilizce fallback olmadigini ve `fj/iu/sg` kotu adaylarinin repo icinde tutulmadigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:1925`-`test/translate_arb_keys_test.dart:2010` translator fallback fonksiyonunun 3 guvensiz offline-switched adayinda Ingilizce kaynaga geri dondugunu dogruluyor.
+  - `test/l10n_generated_sync_test.dart:70` ve `test/l10n_generated_sync_test.dart:342`-`test/l10n_generated_sync_test.dart:343` generated low-resource chatbot getter'larinin ARB ile ayni runtime degerini verdigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report chatbotOfflineSwitched` same-as-English borcunu `63 -> 34` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+  - 23 anahtarli kritik l10n debt reportu same-as-English toplam borcunu `951`, missing/empty `0`, placeholder mismatch `0` olarak olctu.
+- Kullanici etkisi: Offline fallback acildiginda gorunen status mesaji 29 ek locale'de secili dilde gorunur; guvensiz 3 locale yanlis dini hazirlik bilgisi vermek yerine bilincli fallback'te kalir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 29 ARB dosyasi, 29 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `chatbotOfflineSwitched` icin guvenli kabul edilen 29 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `fj`, `iu` ve `sg` adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar chatbot debris listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 139/139.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 681/681.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Chatbot offline switched fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `951` same-as-English fallback devam ediyor; `downloadCanceledForReciter`, `downloadFinishedForReciter`, `diagnosticsQuranCloudTablesMissing` ve Places runtime copy grubu siradaki batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; en yuksek runtime etkili kalan anahtar olarak `downloadCanceledForReciter` veya `downloadFinishedForReciter` icin tek-anahtarli, placeholder-guvenli batch uygulanacak.

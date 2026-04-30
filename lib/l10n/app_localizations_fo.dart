@@ -1185,7 +1185,7 @@ class AppLocalizationsFo extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Afturgongd uttan netlinju er virkið. Staðfest lokal islamsk svar eru ikki klár enn.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';

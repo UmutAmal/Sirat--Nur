@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Base ya nzayilu ya Islam yina bo me zikisaka na nganda ya Internet ke landa kusalama kaka. Nge lenda pesa nzila na fallback ya kukonda nzila ntangu yai, kansi yo ta songa kaka bansangu ya fioti ya lutaninu tii kuna kimvuka ya bansangu ya kisina ta vanda ya kuyilama.\n\nKeti nge ke zola kupesa nzila na fallback yina kele ve na nzila?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Fallback ya kukonda nzila me salama. Bamvutu ya Islam ya bwala yina bo me zikisaka kele ntete ve ya kuyilama.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

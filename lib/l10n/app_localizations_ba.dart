@@ -1185,7 +1185,7 @@ class AppLocalizationsBa extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Офлайн резерв өҫтөндә эшләй. Тикшерелгән урындағы ислам яуаптары әлегә әҙер түгел.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';

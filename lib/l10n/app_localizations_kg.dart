@@ -1185,7 +1185,7 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+      'Fallback ya kukonda nzila me salama. Bamvutu ya Islam ya bwala yina bo me zikisaka kele ntete ve ya kuyilama.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';

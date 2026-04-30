@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Тадсикъ гьабураб офлайн исламияб лъаялъул базаялъул жеги курирование гьабулеб бугин. Гьанже нужеца офлайн-резервалъулаб хӀалтӀи гьабизе бегьула, амма гьелъ гӀицӀго мукъсанал хӀинкъи гьечӀел лъазабиял рихьизаризе руго, источникалъул дандеруссин хӀадурлъизегӀан.\n\nБокьилаанищ дуе офлайналда резервалъулаб хӀалтӀи гьабизе?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Офлайналда гьоркьоб лъураб рес. Тадсикъ гьарурал бакӀалъулал исламиял жавабал жеги хӀадурал гьечӀо.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Staðfesta offline islamska vitanargrundarlagið er framvegis kuraterað. Tú kanst virkja offline fallback nú, men tað vísir bert avmarkað trygg boð til keldudátusettið er klárt.\n\nVilt tú virkja afturgongd uttan net?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Afturgongd uttan netlinju er virkið. Staðfest lokal islamsk svar eru ikki klár enn.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

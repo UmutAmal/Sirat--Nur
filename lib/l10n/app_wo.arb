@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Ba leegi ñu ngi liggéey ci xam-xam islaam biñ firndeel te nekkul ci net bi. Mën nga amaale fallback offline leegi, waaye du wane mesaas yu wóor yu néew ba keroog done yiñ jëlee pare.\n\nBëgg nga may fallback bi nekk ci net bi?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Fallback bi nekkul ci net bi. Tontu islaam yuñ firndeel ba leegi amagul.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

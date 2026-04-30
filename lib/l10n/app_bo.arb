@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "བདེན་དཔང་བྱས་པའི་དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཨིསི་ལམ་ཤེས་བྱའི་གཞི་རྩ་དེ་ད་དུང་ཡང་བདག་གཉེར་བྱེད་བཞིན་ཡོད། ཁྱེད་ཀྱིས་ད་ལྟ་དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཕྱིར་ལོག་ལྕོགས་ཅན་བཟོ་ཐུབ། འོན་ཀྱང་འབྱུང་ཁུངས་ཀྱི་གནས་སྡུད་ཆ་ཚང་གྲ་སྒྲིག་མ་བྱུང་བར་དུ་དེས་ཚད་གཞི་ཅན་གྱི་ཉེན་མེད་བརྡ་འཕྲིན་ཁོ་ན་སྟོན་ཐུབ།\n\nཁྱེད་རང་དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཕྱིར་ལོག་བྱེད་འདོད་དམ།",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་རྒྱབ་ལོག་ལྕོགས་ཅན་བཟོས། བདེན་དཔང་བྱས་པའི་ས་གནས་ཀྱི་ཨིསི་ལམ་གྱི་ལན་ད་དུང་གྲ་སྒྲིག་མེད་པ་རེད།",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

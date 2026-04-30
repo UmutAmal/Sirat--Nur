@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Sisekelo selwati lwe-Islamic lesicinisekisiwe lesingekho ku-inthanethi sisalungiswa. Ungavumela kubuyela emuva lokungekho ku-inthanethi nyalo, kepha kutawukhombisa kuphela imilayeto lephephile lelinganiselwe kuze kube ngulapho idathaset letfolwe seyilungile.\n\nUngatsandza yini kuniketa emandla ekubuyela emuva ngaphandle kwe-inthanethi?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Kuvunyelwe kubuyela emuva ngaphandle kwe-inthanethi. Timphendvulo leticinisekisiwe tendzawo temaSulumane atikalungeli.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

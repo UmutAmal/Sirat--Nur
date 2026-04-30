@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(980));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(951));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -532,6 +532,23 @@ void main() {
         reason:
             'app_iu.arb kept wrong-context online/computer wording for offline prompt',
       );
+      expect(
+        localeArbs['aa']!['chatbotOfflineSwitched'],
+        isNot(english['chatbotOfflineSwitched']),
+      );
+      const badChatbotOfflineSwitchedFragments = {
+        'fj': 'lutu mai na initaneti',
+        'iu': 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑭᖑᕝᕕᐅᑎ',
+        'sg': 'A kiri tënë na akiringo tënë ti Islam',
+      };
+      for (final entry in badChatbotOfflineSwitchedFragments.entries) {
+        expect(
+          localeArbs[entry.key]!['chatbotOfflineSwitched'],
+          isNot(contains(entry.value)),
+          reason:
+              'app_${entry.key}.arb kept wrong-context chatbot offline switched copy',
+        );
+      }
       expect(
         localeArbs['th']!['placesLocationRequiredBody'],
         isNot(english['placesLocationRequiredBody']),
@@ -1905,6 +1922,8 @@ void main() {
           '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
       const offlinePromptSource =
           'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      const offlineSwitchedSource =
+          'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
       const badLocalNoInfoCandidates = [
         '[OFFLINE] Тадсикъ гьабураб бакӀалъулаб исламияб нухмалъи жеги гьечӀо. Переключитесь на Cloud AI для источниковых ответов.',
         "[OFFLINE] Ti siña ma'ayek i guinahan Islam ni' ma'ayek. Na'lå'la' i Cloud AI para i ineppe siha.",
@@ -1916,6 +1935,11 @@ void main() {
       ];
       const badOfflinePromptCandidates = [
         'ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ ᐃᓛᒥᒃᑯᑦ ᖃᐅᔨᒪᓂᖏᑦ ᓱᓕ ᐋᖅᑭᒃᓱᖅᑕᐅᕙᓪᓕᐊᔪᑦ.\n\nᐱᔪᓐᓇᖅᑎᑦᑎᔪᒪᕕᑦ?',
+      ];
+      const badOfflineSwitchedCandidates = [
+        'Sa vakatarai na lutu mai na initaneti. Na isau ni vanua vakadeitaki ni Islam e se bera ni vakarau tu.',
+        'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑭᖑᕝᕕᐅᑎᔪᓐᓇᕐᓂᖅ ᐱᔪᓐᓇᖅᑎᑕᐅᕗᖅ. ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᑦ ᓄᓇᓕᖕᓂ ᐃᓛᒥᒃᑯᑦ ᑭᐅᔾᔪᑎᖏᑦ ᐊᑐᐃᓐᓇᐅᙱᓚᑦ ᓱᓕ.',
+        'Fallback so ayeke na lege ni pëpe. A kiri tënë na akiringo tënë ti Islam ti ndo ni so a vérifié ni awe.',
       ];
       final translatedPrefixValue = resolveTranslatedArbValue(
         key: 'chatbotLocalNoInfo',
@@ -1973,6 +1997,17 @@ void main() {
             candidate: candidate,
           ),
           offlinePromptSource,
+        );
+      }
+      for (final candidate in badOfflineSwitchedCandidates) {
+        expect(
+          resolveTranslatedArbValue(
+            key: 'chatbotOfflineSwitched',
+            source: offlineSwitchedSource,
+            currentValue: '',
+            candidate: candidate,
+          ),
+          offlineSwitchedSource,
         );
       }
     });

@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Ilmu Islambe offlinelan tawattəgənadə kuwami yaye ngalwotəyin. Raktə offline fallback dəga yita gattəyin, amma kawuli gana laa fəlejin hatta dataset də dawartəna lan.\n\nOffline lan waltǝm bayantǝgǝ ragǝma?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Offline lan ngawo kalaktə mowonzəna. Jaawuwa Islambe tawattəgənadə kuwamiyayi dawartənyi.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

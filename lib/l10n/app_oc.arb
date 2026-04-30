@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "La basa de coneissença islamica fòra linha verificada es encara en cors de comissariat. Podètz activar lo retorn fòra linha ara, mas aficharà pas que de messatges segurs limitats fins que l'ensemble de donadas font es prèst.\n\nVolètz activar lo retorn fòra linha ?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Retrodiment fòra linha activat. Las responsas islamicas localas verificadas son pas encara prèstas.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "'Oku kei curated 'a e 'ilo faka-'Isilami offline kuo fakamo'oni'i. Te ke lava 'o faka'ata 'a e offline fallback he taimi ni, ka 'e fakahaa'i pe 'e he ngaahi fekau malu fakangatangata kae 'oua kuo mateuteu 'a e dataset sourced.\n\nTe ke fie faka'ata 'a e fallback 'o e offline?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Kuo fakaʻatā ʻa e fallback ʻi tuʻa mei he ʻinitanetí. 'Oku te'eki ke mateuteu 'a e ngaahi tali fakalotofonua 'o e 'Isilami kuo fakamo'oni'i.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

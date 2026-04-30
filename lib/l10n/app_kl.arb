@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Offline-imik islamimiut ilisimatusarfiat uppernarsarneqarsimasoq suli kuratereqarpoq. Offline fallback maanna atulersissinnaavat, kisiannili sourced dataset piareersarnissaata tungaanut isumannaatsumik nalunaarutit aalajangersimasut takutinneqassapput.\n\nOffline-imik fallback-imik atuisinnaalersitsisinnaavit?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Offline-imik taarsersuineq atulersinneqarpoq. Sumiiffinni islamimiut akissutaat uppernarsarneqarsimasut suli piareersimanngillat.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

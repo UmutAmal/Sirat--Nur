@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Emañ an diaz anaoudegezh islamek ezlinenn kadarnaet o vezañ kempennet c'hoazh. Gallout a rit gweredekaat an distro ezlinenn bremañ, met ne ziskouez nemet kemennadennoù diogel bevennet betek ma vo prest an dastumad roadennoù orin.\n\nHa fellout a ra deoc'h gweredekaat an distro ezlinenn ?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Gweredekaet eo an distro ezlinenn. N'eo ket prest c'hoazh ar respontoù islamek lec'hel kadarnaet.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

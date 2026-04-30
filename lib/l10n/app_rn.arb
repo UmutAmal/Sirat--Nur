@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Ubumenyi bw’ubuyisilamu bwagenzuwe butari ku murongo buracariko buratunganirizwa. Ushobora gukoresha gusubira inyuma ubu, ariko bizokwerekana gusa ubutumwa butekanye gushika urutonde rw'amakuru rwiteguye.\n\nWoba wipfuza gukoresha fallback itari mu murongo?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Gusubira inyuma bitari ku murongo vyashobojwe. Inyishu z’ubuyisilamu zo mu karere zigenzuwe ntizirategurwa.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

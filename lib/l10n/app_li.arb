@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "De gecontroleerde offline islamitische kinnesbasis weurt nog steeds gecureerd. Geer kin noe offline fallback insjakele, mer ‘t zal allein beperkde veilige boodsjappe toene totdat de brongegevensset klaor is.\n\nWilt geer offline fallback insjakele?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Offline fallback ingeschakeld. Gecontroleerde lokale islamitische antwoorde zien nog neet klaor.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

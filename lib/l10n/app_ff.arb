@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Ganndal lislaam hoolkisaangal ngal alaa e laylaytol ina jokki e cureede haa jooni. Aɗa waawi softinde fallback offline jooni, kono maa ɗum hollu tan mesasuuji kisal keewɗi haa nde doggol dokke iwdi ngol hesɗi.\n\nAɗa yiɗi softinde fallback mo alaa e laylaytol?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Fallback mo alaa e laylaytol ena softi. Jaabawuuli lislaam nokkuuji hoolkisaaɗi ɗii peewnaaka tawo.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "diggowteh gitak iroh islaaminna ixxigah rakiibo uxih daylimak geytimta. Atu away gitak iroh radim abtam duddah, takkay immay raceenah oyti daffeyna gulguluh gactam fan waado le farmooma taybulle.\n\natu suuquntak iroh nikso abtam faxxaa?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Suuquntak iroh wadirih radiyya tekkeh. Diggowte baaxoh addah islaaminnah gacsitte uxih gulguluh matan.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",

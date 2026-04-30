@@ -511,7 +511,7 @@
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
   "chatbotOfflinePrompt": "Duođaštuvvon offline-islámalaš máhttovuođđu lea ain čohkkejuvvon. Dál sáhtát álggahit offline fallback, muhto dat čájeha dušše ráddjejuvvon dorvvolaš dieđuid dassážii go gávdnon diehtovuođđu lea gárvvis.\n\nHáliidat go álggahit offline fallback?",
-  "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
+  "chatbotOfflineSwitched": "Offline-ruovttoluotta lea álggahuvvon. Duođaštuvvon báikkálaš islamalaš vástádusat eai leat vuos gárvásat.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
