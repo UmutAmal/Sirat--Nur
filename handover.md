@@ -18594,3 +18594,38 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; en yuksek etkili tek anahtar icin guvenli ceviri batch'i uygula veya kod/test taramasinda daha yuksek riskli false-success varsa once onu kapat.
+
+## 2026-04-30 TUR-457 - Nearby Mosques Low-Resource L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Places ekranindaki `nearbyMosques` basligi dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu; cami arama/listesi acilisinda secili dil tutarliligi bozuluyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:639` artik `"nearbyMosques": "xayikkel tan masjiiditte"` degerini tasiyor; once `Nearby Mosques` idi.
+  - `lib/l10n/app_ab.arb:639`, `lib/l10n/app_ba.arb:639`, `lib/l10n/app_bo.arb:639` ve `lib/l10n/app_wo.arb:639` ayni UI anahtarinda Ingilizce fallback'ten cikti.
+  - `lib/l10n/app_ba.arb:639` ve `lib/l10n/app_kv.arb:639` icin arac kaynakli nokta-oncesi bosluk temizlendi.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1430` seviyesine sikilastirdi.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1464 -> 1430` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Places cami listesi basligi daha fazla locale'de secili dilde gorunur; guvenli ceviri bulunamayan nadir locale'lerde uydurma yapilmadan Ingilizce fallback korundu.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `nearbyMosques` icin 34 dusuk kaynakli ARB locale'i guvenli ceviri araci ile Ingilizce fallback'ten cikarildi.
+- Iki locale'de olusan ` .` noktalama araligi elle temizlendi.
+- `test/translate_arb_keys_test.dart` debt esigi `1430` seviyesine indirildi.
+- Regresyon guard'i `aa`, `ab`, `ba`, `bo`, `wo` locale'lerinde `nearbyMosques` degerinin Ingilizce fallback'e ve ` .` noktalama debris'ine donmemesini zorunlu tutuyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart --reporter compact` PASS, 135/135.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 677/677.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Nearby mosques l10n fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1430` same-as-English fallback devam ediyor; `distanceAwayKm`, `placesFoundCount`, `placesApiError`, download ve diagnostics kumesi sonraki dongulerde ele alinacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; placeholder iceren `placesFoundCount` veya `distanceAwayKm` icin risk yuksekse once tek anahtarlik dry-run/guard ile dogrula.
