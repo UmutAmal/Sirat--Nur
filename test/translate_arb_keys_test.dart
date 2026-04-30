@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1222));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1221));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -450,7 +450,7 @@ void main() {
         reason:
             'app_gv.arb kept mixed English/Manx location-required body copy',
       );
-      for (final locale in ['aa', 'ab', 'ba', 'bo', 'ti']) {
+      for (final locale in ['aa', 'ab', 'ba', 'bo', 'ti', 'wo']) {
         final mapTilesTitle =
             localeArbs[locale]!['placesMapTilesUnavailableTitle'] as String;
         expect(

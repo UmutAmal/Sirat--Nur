@@ -18962,3 +18962,37 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; siradaki dusuk riskli tek anahtarda (`placesNetworkError` veya download action kumesi) ayni minimal patch/test kapisini uygula.
+
+## 2026-04-30 TUR-467 - Wolof Map Tiles Title L10n Guard
+
+### MASTER Karari
+- Risk: `placesMapTilesUnavailableTitle` icin Wolof locale'i Ingilizce fallback'teydi; otomatik arac bu turda `Carreaux de carte amul` gibi Fransizca/Wolof karisik bir cikti urettigi icin dogrudan kabul edilirse kalite regresyonu olusacakti.
+- Kanit:
+  - `lib/l10n/app_wo.arb:668` artik `"placesMapTilesUnavailableTitle": "Mosail kart yi amul"` degerini tasiyor; once `Map tiles unavailable` idi, arac ara ciktisi ise `Carreaux de carte amul` idi ve reddedildi.
+  - `lib/l10n/app_localizations_wo.dart:1383` generated runtime getter'i ARB degeriyle senkron hale geldi.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1221` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:455`-`test/translate_arb_keys_test.dart:475` `app_wo` icin Ingilizce fallback'i, punctuation debris'i ve bilinen mixed-language `Carreaux de carte amul` cikisini reddediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1222 -> 1221` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Wolof kullanicisi map tile hata basligini Ingilizce veya karisik Fransizca/Wolof yerine yerel, dosyanin mevcut body terminolojisiyle uyumlu metin olarak gorur.
+- Risk skoru: Etki 2 x Olasilik 4 = 8/25.
+- Rollback plani: `lib/l10n/app_wo.arb`, `lib/l10n/app_localizations_wo.dart`, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Otomatik aracin mixed-language ciktisi reddedildi.
+- Wolof title, ayni dosyadaki mevcut `placesMapTilesUnavailableBody` terminolojisi (`mosail kart`) ile uyumlu olacak sekilde `Mosail kart yi amul` yapildi.
+- `flutter gen-l10n` calistirilarak runtime generated dosya senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Wolof map tiles unavailable title l10n/mixed-language riski: `8/25 -> 3/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1221` same-as-English fallback devam ediyor; `placesNetworkError` bu turda guvenli yeni cikti uretmedigi icin degistirilmedi.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; download/diagnostics/chatbot kumesinde daha fazla safe locale ureten tek anahtarli batchlere gec.

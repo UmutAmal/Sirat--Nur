@@ -665,7 +665,7 @@
   "placesNetworkError": "Njuumte ci reso bi. Jéemaat.",
   "placesLocationRequiredTitle": "Barab biñu soxla",
   "placesLocationRequiredBody": "Wutal barab bu njëkk suko defee nga mëna seetee bu baax Juma yi, ñam halal yi ak daara yi ci Islam.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableTitle": "Mosail kart yi amul",
   "placesMapTilesUnavailableBody": "Ba tay amagul ab source mosail kart buñ firndeel ngir taax bii. Barab yi la gëna jege mën nañu ba leegi sarse ci barab bi nga denc.",
   "placesDataSourceUnavailableTitle": "Done yi amul",
   "placesDataSourceUnavailableBody": "Ba leegi amagul benn poñ de done yuñ firndeel ngir tabax bii. Def PLACES_OVERPASS_API_URL ci ab proxy wala joxekat buñu nangu balaa ngay may seetug jege.",

@@ -1380,7 +1380,7 @@ class AppLocalizationsWo extends AppLocalizations {
       'Wutal barab bu njëkk suko defee nga mëna seetee bu baax Juma yi, ñam halal yi ak daara yi ci Islam.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Mosail kart yi amul';
 
   @override
   String get placesMapTilesUnavailableBody =>
