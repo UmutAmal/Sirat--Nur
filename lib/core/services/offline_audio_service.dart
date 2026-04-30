@@ -263,20 +263,27 @@ Future<void> _deleteDownloadedQuranAudioFile(String filePath) async {
   }
 }
 
-Future<bool> validateDownloadedQuranAudioFile(String filePath) async {
+Future<bool> validateDownloadedQuranAudioFile(
+  String filePath, {
+  bool Function(File file) hasLikelyHeader = hasLikelyMp3Header,
+}) async {
   try {
     final file = File(filePath);
     if (!await file.exists()) {
       return false;
     }
 
-    if (!hasLikelyMp3Header(file)) {
+    if (!hasLikelyHeader(file)) {
       await _deleteDownloadedQuranAudioFile(filePath);
       return false;
     }
 
     return true;
   } catch (_) {
+    await _deleteDownloadedQuranAudioFile(filePath);
+    debugPrint(
+      'Downloaded Quran audio validation failed; treating file as unavailable',
+    );
     return false;
   }
 }

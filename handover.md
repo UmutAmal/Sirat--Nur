@@ -18500,3 +18500,34 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude pure-Dart `quran_audio_file_validation.dart` catch davranisini ve store/tool catch bloklarini skorla; false-success ureten bir durum varsa en kucuk patch ile kapat.
+
+## 2026-04-30 TUR-454 - Offline Audio Validation Exceptions Self-Heal
+
+### MASTER Karari
+- Risk: Download edilmis Quran audio dosyasi validation sirasinda IO/header exception uretirse `validateDownloadedQuranAudioFile()` sessizce `false` donuyor ve dosya best-effort temizlenmeden kalabiliyordu.
+- Kanit:
+  - `lib/core/services/offline_audio_service.dart:266` downloaded Quran audio dosyasini app sinirinda dogruluyor.
+  - `lib/core/services/offline_audio_service.dart:276` MP3 header kontrolu false donerse dosyayi siliyordu.
+  - `lib/core/services/offline_audio_service.dart:283` catch blogu once sadece `return false` yapiyordu; exception kok sebebi loglanmiyor ve dosya tekrar tekrar corrupt/okunamaz halde kalabiliyordu.
+- Kullanici etkisi: Offline audio UI false-success gostermiyor, ancak bozuk veya okunamayan dosya tekrar denemelerde ayni sessiz basarisizlik durumunu uretebilir; saha teshisi zorlasir.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/services/offline_audio_service.dart`, `test/offline_audio_service_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `validateDownloadedQuranAudioFile()` icin test edilebilir `hasLikelyHeader` seam'i eklendi; production default davranis `hasLikelyMp3Header` olarak korundu.
+- Validation exception catch blogu corrupt/okunamayan dosyayi best-effort silmeye calisiyor.
+- Ayni catch blogu sanitized debug log yaziyor; raw exception, dosya path'i veya credential detayi basilmaz.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\offline_audio_service_test.dart --reporter compact` PASS, 22/22.
+- Audio targeted tests: `flutter test test\quran_audio_file_validation_test.dart test\offline_audio_service_test.dart --reporter compact` PASS, 26/26.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 677/677.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase checks, audio mirror manifest, Cloudflare/GitHub partition checks, analyze ve full tests temiz.
+
+### Risk Degisimi
+- Offline audio validation exception persistence riski: `9/25 -> 2/25`.
+- Kalan risk: Store/tool catch bloklarinda sanitized failure reporting ve l10n same-as-English fallback borcu sonraki dongulerde skorlanacak.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude store/tool catch bloklarini ve remaining l10n debt reportunu skorla; false-success veya secret-leaking log riski cikarsa en kucuk patch ile kapat.

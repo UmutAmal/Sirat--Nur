@@ -415,6 +415,46 @@ void main() {
     );
 
     test(
+      'validateDownloadedQuranAudioFile logs and deletes validation exceptions',
+      () async {
+        final tempDir = await Directory.systemTemp.createTemp(
+          'sir_audio_validate_exception_',
+        );
+        addTearDown(() => tempDir.delete(recursive: true));
+
+        final messages = <String>[];
+        final previousDebugPrint = debugPrint;
+        addTearDown(() => debugPrint = previousDebugPrint);
+        debugPrint = (String? message, {int? wrapWidth}) {
+          if (message != null) {
+            messages.add(message);
+          }
+        };
+
+        final audioFile = File(p.join(tempDir.path, '001.mp3'));
+        await audioFile.writeAsBytes(_quranMp3FixtureBytes());
+
+        expect(
+          await validateDownloadedQuranAudioFile(
+            audioFile.path,
+            hasLikelyHeader: (_) => throw StateError('raw validation detail'),
+          ),
+          isFalse,
+        );
+
+        expect(await audioFile.exists(), isFalse);
+        expect(
+          messages,
+          contains(
+            'Downloaded Quran audio validation failed; treating file as unavailable',
+          ),
+        );
+        expect(messages.join('\n'), isNot(contains('raw validation detail')));
+        expect(messages.join('\n'), isNot(contains(audioFile.path)));
+      },
+    );
+
+    test(
       'getDownloadedSurahs ignores and removes corrupt audio files',
       () async {
         final tempDir = await Directory.systemTemp.createTemp(
