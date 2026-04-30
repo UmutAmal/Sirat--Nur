@@ -663,7 +663,7 @@
     }
   },
   "placesNetworkError": "Phoso ya neteweke. Tsweetswee leka gape.",
-  "placesLocationRequiredTitle": "Location required",
+  "placesLocationRequiredTitle": "Go tlhokega lefelo",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",

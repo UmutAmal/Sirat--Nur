@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1430));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1396));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -303,6 +303,8 @@ void main() {
       );
       for (final locale in ['aa', 'ab', 'ba', 'bo', 'wo']) {
         final nearbyMosques = localeArbs[locale]!['nearbyMosques'] as String;
+        final locationRequiredTitle =
+            localeArbs[locale]!['placesLocationRequiredTitle'] as String;
         expect(
           nearbyMosques,
           isNot(english['nearbyMosques']),
@@ -310,6 +312,17 @@ void main() {
         );
         expect(
           nearbyMosques,
+          isNot(contains(' .')),
+          reason: 'app_$locale.arb has punctuation spacing debris',
+        );
+        expect(
+          locationRequiredTitle,
+          isNot(english['placesLocationRequiredTitle']),
+          reason:
+              'app_$locale.arb still uses English for placesLocationRequiredTitle',
+        );
+        expect(
+          locationRequiredTitle,
           isNot(contains(' .')),
           reason: 'app_$locale.arb has punctuation spacing debris',
         );

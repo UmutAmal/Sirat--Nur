@@ -663,7 +663,7 @@
     }
   },
   "placesNetworkError": "नेटवर्क में त्रुटि हो गइल बा. कृपया दोबारा कोशिश करीं।",
-  "placesLocationRequiredTitle": "Location required",
+  "placesLocationRequiredTitle": "लोकेशन के जरूरत बा",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
