@@ -551,7 +551,7 @@
   "resumeDownload": "Ragela phambili ngokudawuniloda",
   "deleteDownloadedFiles": "Susa amafayela alandiweko",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Ukudawuniloda kukhanseliwe {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

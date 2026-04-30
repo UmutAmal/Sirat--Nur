@@ -551,7 +551,7 @@
   "resumeDownload": "Blijf downloade",
   "deleteDownloadedFiles": "Gedownloade bestande wisse",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Download geannuleerd veur {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

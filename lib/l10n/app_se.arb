@@ -551,7 +551,7 @@
   "resumeDownload": "Joatkit viežžat",
   "deleteDownloadedFiles": "Slette viežžan fiillaid",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} lea heaittihuvvon viežžan.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

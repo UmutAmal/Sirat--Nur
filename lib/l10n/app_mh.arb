@@ -551,7 +551,7 @@
   "resumeDownload": "Wōnm̧aanlok wōt im bōk",
   "deleteDownloadedFiles": "Jolok file ko kar bōki",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Download eo emōj an bōjrak ñan {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

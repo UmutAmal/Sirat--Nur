@@ -122,9 +122,12 @@ void main() {
             jsonDecode(File('lib/l10n/app_$localeCode.arb').readAsStringSync())
                 as Map<String, dynamic>;
         final l10n = await AppLocalizations.delegate.load(Locale(localeCode));
+        final canceled = (arb['downloadCanceledForReciter'] as String)
+            .replaceAll('{reciter}', 'Abdul Basit');
 
         expect(l10n.resumeDownload, arb['resumeDownload']);
         expect(l10n.deleteDownloadedFiles, arb['deleteDownloadedFiles']);
+        expect(l10n.downloadCanceledForReciter('Abdul Basit'), canceled);
       }
     },
   );

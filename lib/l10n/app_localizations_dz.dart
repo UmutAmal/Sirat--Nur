@@ -1233,7 +1233,7 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter གི་དོན་ལུ་ཕབ་ལེན་འབད་བཤོལ་ཡོདཔ།';
   }
 
   @override

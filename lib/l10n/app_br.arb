@@ -551,7 +551,7 @@
   "resumeDownload": "Kenderc'hel da bellgargañ",
   "deleteDownloadedFiles": "Dilemel ar restroù pellgarget",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Nullet eo bet ar pellgargañ evit {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

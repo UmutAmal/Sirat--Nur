@@ -551,7 +551,7 @@
   "resumeDownload": "Contunhar lo telecargament",
   "deleteDownloadedFiles": "Suprimir los fichièrs telecargats",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Telecargament anullat per {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

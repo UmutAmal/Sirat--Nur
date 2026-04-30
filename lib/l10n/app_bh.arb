@@ -551,7 +551,7 @@
   "resumeDownload": "डाउनलोड जारी रखे के बा",
   "deleteDownloadedFiles": "डाउनलोड भइल फाइल के हटा दिहल जाव",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} खातिर डाउनलोड रद्द हो गइल।",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

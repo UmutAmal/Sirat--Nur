@@ -1232,7 +1232,7 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Telecargament anullat per $reciter.';
   }
 
   @override

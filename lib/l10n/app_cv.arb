@@ -551,7 +551,7 @@
   "resumeDownload": "Малалла скачать ту",
   "deleteDownloadedFiles": "Скачать тунӑ файлсене пӗтер",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} валли скачать пӑрахӑҫланӑ.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

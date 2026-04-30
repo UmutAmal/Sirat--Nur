@@ -551,7 +551,7 @@
   "resumeDownload": "Дарддæр кæнут æрбакæнын",
   "deleteDownloadedFiles": "Æрбакæнгæ файлтæ фесафын",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter}-æн æрбакæнын æрцыд æрæхгæд.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {
