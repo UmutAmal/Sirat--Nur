@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} кулланып региональ кире кайту. Мәчет яки рәсми дини хакимият белән җирле дога вакытларын раслагыз.",
   "revelationMeccan": "Мәккә",
-  "revelationMedinan": "Мәдинә"
+  "revelationMedinan": "Мәдинә",
+  "playSurahAudio": "Аудио сүрәсен уйнагыз",
+  "pauseSurahAudio": "Аудио сүрәсен туктатыгыз"
 }

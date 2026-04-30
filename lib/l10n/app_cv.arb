@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} усӑ курса регионти каялла тавӑрасси. Вырӑнти кӗлӗ вӑхӑчӗсене хӑвӑрӑн мечӗтпе е официаллӑ тӗн органӗпе ҫирӗплетӗр.",
   "revelationMeccan": "Мекка",
-  "revelationMedinan": "Медина"
+  "revelationMedinan": "Медина",
+  "playSurahAudio": "Сура аудио выляса парӑр",
+  "pauseSurahAudio": "Пауза сура аудио"
 }

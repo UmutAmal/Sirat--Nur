@@ -361,6 +361,12 @@ class AppLocalizationsKg extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get playSurahAudio => 'Tula ndinga ya surah';
+
+  @override
+  String get pauseSurahAudio => 'Pemisa ndinga ya surah';
+
+  @override
   String get revelationMeccan => 'Mecque';
 
   @override

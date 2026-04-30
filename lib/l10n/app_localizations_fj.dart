@@ -361,6 +361,12 @@ class AppLocalizationsFj extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get playSurahAudio => 'Vakatagitaka na rorogo ni surah';
+
+  @override
+  String get pauseSurahAudio => 'Cegu na rorogo ni surah';
+
+  @override
   String get revelationMeccan => 'Meka';
 
   @override

@@ -361,6 +361,12 @@ class AppLocalizationsTe extends AppLocalizations {
   String get quranReading => 'ఖురాన్ పఠనం';
 
   @override
+  String get playSurahAudio => 'సూరా ఆడియోను ప్లే చేయండి';
+
+  @override
+  String get pauseSurahAudio => 'సూరా ఆడియోను పాజ్ చేయండి';
+
+  @override
   String get revelationMeccan => 'మక్కన్';
 
   @override

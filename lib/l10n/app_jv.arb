@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Mundur regional nggunakake {sourceName}. Konfirmasi wektu sholat lokal karo masjid utawa otoritas agama resmi.",
   "revelationMeccan": "Mekah",
-  "revelationMedinan": "Madinah"
+  "revelationMedinan": "Madinah",
+  "playSurahAudio": "Puter audio surah",
+  "pauseSurahAudio": "Ngaso surah audio"
 }

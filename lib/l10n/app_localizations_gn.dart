@@ -364,6 +364,12 @@ class AppLocalizationsGn extends AppLocalizations {
   String get quranReading => 'Corán Moñe’ẽrã';
 
   @override
+  String get playSurahAudio => 'Embopu audio surah rehegua';
+
+  @override
+  String get pauseSurahAudio => 'Pausa audio surah rehegua';
+
+  @override
   String get revelationMeccan => 'Meca-pegua';
 
   @override

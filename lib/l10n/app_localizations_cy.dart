@@ -363,6 +363,12 @@ class AppLocalizationsCy extends AppLocalizations {
   String get quranReading => 'Darllen Quran';
 
   @override
+  String get playSurahAudio => 'Chwarae sain surah';
+
+  @override
+  String get pauseSurahAudio => 'Seibio sain surah';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

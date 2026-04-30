@@ -362,6 +362,12 @@ class AppLocalizationsLv extends AppLocalizations {
   String get quranReading => 'Korāna lasīšana';
 
   @override
+  String get playSurahAudio => 'Atskaņot surah audio';
+
+  @override
+  String get pauseSurahAudio => 'Apturēt surah audio';
+
+  @override
   String get revelationMeccan => 'Mekānis';
 
   @override

@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback en ur implijout {sourceName}. Kadarnait eurioù ar bedenn lec'hel gant ho moskeenn pe gant aotrouniezh relijiel ofisiel.",
   "revelationMeccan": "Mekka",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Seniñ kleweled ar surah",
+  "pauseSurahAudio": "Paouez gant kleweled ar surah"
 }

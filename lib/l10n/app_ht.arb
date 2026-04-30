@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Repiblik rejyonal lè l sèvi avèk {sourceName}. Konfime lè lapriyè lokal yo ak moske w oswa otorite relijye ofisyèl ou.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Jwe sourate odyo",
+  "pauseSurahAudio": "Pran yon poz odyo soure"
 }

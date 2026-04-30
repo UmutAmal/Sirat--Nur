@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional kutiy {sourceName} llamk'achispa. Mezquitaykiwan utaq autoridad religiosa oficialwan llaqtapi mañakuy pachakunata takyachiy.",
   "revelationMeccan": "Meca llaqtamanta",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Surah audiota uyarichiy",
+  "pauseSurahAudio": "Pausa surah audio nisqa"
 }

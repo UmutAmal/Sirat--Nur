@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional reserv med {sourceName}. Bekräfta lokala bönetider med din moské eller officiella religiösa myndighet.",
   "revelationMeccan": "Meckan",
-  "revelationMedinan": "Medan"
+  "revelationMedinan": "Medan",
+  "playSurahAudio": "Spela surah-ljud",
+  "pauseSurahAudio": "Pausa surah-ljud"
 }

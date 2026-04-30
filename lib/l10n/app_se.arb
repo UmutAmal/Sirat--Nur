@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Guovllulaš čuovvumuš geavahit {sourceName}. Duođaš báikkálaš rohkosáiggiid iežat moskeijain dahje virggálaš oskkolaš eiseválddiin.",
   "revelationMeccan": "Mekkálaš",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Čuojahit surah-jietna",
+  "pauseSurahAudio": "Bisset surah-jietna"
 }

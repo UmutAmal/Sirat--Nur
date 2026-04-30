@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Rijinal fɔlbak we de yuz {sourceName}. Kɔnfɛm lokal prea tɛm wit yu moskɛt ɔ ɔfishal rilijɔn ɔtoriti.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Ple surah odio",
+  "pauseSurahAudio": "Pauz di surah odio"
 }

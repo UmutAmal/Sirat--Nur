@@ -1126,6 +1126,8 @@ bool _mustStaySingleLine(String key) {
       key == 'deletedOfflineFilesForReciter' ||
       key == 'splashTagline' ||
       key == 'audioPlayFailed' ||
+      key == 'playSurahAudio' ||
+      key == 'pauseSurahAudio' ||
       key == 'diagnostics' ||
       key == 'diagnosticsUiAudioAssets' ||
       key == 'diagnosticsQuranAudioAssets' ||

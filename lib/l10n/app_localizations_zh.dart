@@ -352,6 +352,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get quranReading => '《古兰经》阅读';
 
   @override
+  String get playSurahAudio => '播放古兰经音频';
+
+  @override
+  String get pauseSurahAudio => '暂停古兰经音频';
+
+  @override
   String get revelationMeccan => '麦加';
 
   @override
@@ -2019,6 +2025,12 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get quranReading => '《古兰经》阅读';
 
   @override
+  String get playSurahAudio => '播放古兰经音频';
+
+  @override
+  String get pauseSurahAudio => '暂停古兰经音频';
+
+  @override
   String get revelationMeccan => '麦加';
 
   @override
@@ -3684,6 +3696,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get quranReading => '《古蘭經》閱讀';
+
+  @override
+  String get playSurahAudio => '播放古蘭經音頻';
+
+  @override
+  String get pauseSurahAudio => '暫停古蘭經音頻';
 
   @override
   String get revelationMeccan => '麥加';

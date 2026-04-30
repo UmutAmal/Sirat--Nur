@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} በመጠቀም የክልል ውድቀት። ከመስጊድዎ ወይም ከኦፊሴላዊው የሃይማኖት ባለስልጣን ጋር የአካባቢውን የጸሎት ጊዜያት ያረጋግጡ።",
   "revelationMeccan": "መካኛ",
-  "revelationMedinan": "መዲናን"
+  "revelationMedinan": "መዲናን",
+  "playSurahAudio": "የሱራ ድምጽ አጫውት።",
+  "pauseSurahAudio": "የሱራ ኦዲዮን ባለበት አቁም"
 }

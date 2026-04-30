@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regionalna rezerwa zastępcza przy użyciu {sourceName}. Potwierdź lokalne godziny modlitw w swoim meczecie lub oficjalnym organie religijnym.",
   "revelationMeccan": "Mekka",
-  "revelationMedinan": "Medyna"
+  "revelationMedinan": "Medyna",
+  "playSurahAudio": "Odtwórz dźwięk Sura",
+  "pauseSurahAudio": "Wstrzymaj dźwięk sury"
 }

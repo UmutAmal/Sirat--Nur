@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} इत्यस्य उपयोगेन क्षेत्रीयः फॉलबैक । स्वमस्जिदेन अथवा आधिकारिकधार्मिकप्राधिकरणेन सह स्थानीयनमाजसमयानां पुष्टिं कुर्वन्तु।",
   "revelationMeccan": "मक्की",
-  "revelationMedinan": "मदनी"
+  "revelationMedinan": "मदनी",
+  "playSurahAudio": "सूरः श्रव्यं वादयन्तु",
+  "pauseSurahAudio": "सूरः श्रव्यं विरमयतु"
 }

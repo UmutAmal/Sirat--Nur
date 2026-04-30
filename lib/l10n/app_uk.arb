@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Регіональний резерв за допомогою {sourceName}. Уточніть місцевий час молитов у вашій мечеті чи офіційній релігійній владі.",
   "revelationMeccan": "Мекканський",
-  "revelationMedinan": "Медінан"
+  "revelationMedinan": "Медінан",
+  "playSurahAudio": "Відтворити суру",
+  "pauseSurahAudio": "Призупинити звук сури"
 }

@@ -358,6 +358,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get quranReading => '꾸란 읽기';
 
   @override
+  String get playSurahAudio => '수라 오디오 재생해 줘';
+
+  @override
+  String get pauseSurahAudio => '수라 오디오 일시중지';
+
+  @override
   String get revelationMeccan => '메칸';
 
   @override

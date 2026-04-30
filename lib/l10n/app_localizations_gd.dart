@@ -364,6 +364,12 @@ class AppLocalizationsGd extends AppLocalizations {
   String get quranReading => 'Leughadh an Quran';
 
   @override
+  String get playSurahAudio => 'Cluich fuaim Surah';
+
+  @override
+  String get pauseSurahAudio => 'Stad fuaim Surah';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

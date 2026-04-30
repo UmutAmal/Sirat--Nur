@@ -415,6 +415,10 @@ function Get-SmokeTextBundle {
     onboarding1Title = Get-ArbString -Messages $messages -Key 'onboarding1Title' -Fallback 'Welcome to Sirat-ı Nur'
     home = Get-ArbString -Messages $messages -Key 'home' -Fallback 'Home'
     quran = Get-ArbString -Messages $messages -Key 'quran' -Fallback 'Quran'
+    playSurahAudio = Get-ArbString -Messages $messages -Key 'playSurahAudio' -Fallback 'Play surah audio'
+    pauseSurahAudio = Get-ArbString -Messages $messages -Key 'pauseSurahAudio' -Fallback 'Pause surah audio'
+    quranAudioPlaybackErrorWithConnectionHint = Get-ArbString -Messages $messages -Key 'quranAudioPlaybackErrorWithConnectionHint' -Fallback 'Audio playback failed. Please check your connection.'
+    audioPlayFailed = Get-ArbString -Messages $messages -Key 'audioPlayFailed' -Fallback 'Audio playback failed'
     qibla = Get-ArbString -Messages $messages -Key 'qibla' -Fallback 'Qibla'
     zikr = Get-ArbString -Messages $messages -Key 'zikr' -Fallback 'Zikr'
     calendar = Get-ArbString -Messages $messages -Key 'calendar' -Fallback 'Calendar'
@@ -446,6 +450,24 @@ function Click-AnyDescriptionOrText {
         (Click-TextContains -SessionId $SessionId -Label $candidate)) {
       return $true
     }
+  }
+
+  return $false
+}
+
+function Wait-ClickAnyDescriptionOrText {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string[]]$Candidates,
+    [int]$Attempts = 8,
+    [int]$DelayMilliseconds = 700
+  )
+
+  for ($attempt = 0; $attempt -lt $Attempts; $attempt++) {
+    if (Click-AnyDescriptionOrText -SessionId $SessionId -Candidates $Candidates) {
+      return $true
+    }
+    Start-Sleep -Milliseconds $DelayMilliseconds
   }
 
   return $false
@@ -556,6 +578,16 @@ $summary = [ordered]@{
   homeContainsDailyVerseUnavailable = $false
   homeContainsNoInternetLegacy = $false
   bottomNavResults = @()
+  quranPlayback = [ordered]@{
+    clickedQuran = $false
+    openedSurah = $false
+    containsSurahHeader = $false
+    clickedPlay = $false
+    containsPauseControl = $false
+    containsPlaybackError = $false
+    logcatPlaybackFailure = $false
+    containsAndroidSettings = $false
+  }
   quickAccessResults = @()
   logcatCrashFree = $true
   logcatCaptured = $false
@@ -609,6 +641,45 @@ try {
       containsAndroidSettings = $xml.Contains("Settings suggestions") -or $xml.Contains("Android Settings") -or $xml.Contains("Alarms & reminders")
     }
   }
+
+  $quranPlayback = [ordered]@{
+    clickedQuran = $false
+    openedSurah = $false
+    containsSurahHeader = $false
+    clickedPlay = $false
+    containsPauseControl = $false
+    containsPlaybackError = $false
+    logcatPlaybackFailure = $false
+    containsAndroidSettings = $false
+  }
+  $quranPlayback.clickedQuran = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.quran, 'Quran')) -Attempts 4
+  if ($quranPlayback.clickedQuran) {
+    Save-AppiumSource -SessionId $sessionId -Name "quran-playback-list" | Out-Null
+    $quranPlayback.openedSurah = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @('Al-Fatihah', 'The Opening', 'الفاتحة')) -Attempts 8
+    Start-Sleep -Seconds 2
+    $surahXml = Save-AppiumSource -SessionId $sessionId -Name "quran-playback-surah"
+    $quranPlayback.containsSurahHeader = Test-ContainsAny -Source $surahXml -Needles (Select-NonEmptyUniqueStrings @('Al-Fatihah', 'The Opening', 'الفاتحة'))
+    $quranPlayback.containsAndroidSettings = $surahXml.Contains("Settings suggestions") -or $surahXml.Contains("Android Settings") -or $surahXml.Contains("Alarms & reminders")
+    if ($quranPlayback.openedSurah -and $quranPlayback.containsSurahHeader) {
+      $quranPlayback.clickedPlay = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.playSurahAudio, 'Play surah audio')) -Attempts 4
+      $afterPlayXml = Save-AppiumSource -SessionId $sessionId -Name "quran-playback-after-play"
+      $playbackErrorNeedles = Select-NonEmptyUniqueStrings @($smokeText.quranAudioPlaybackErrorWithConnectionHint, $smokeText.audioPlayFailed, 'Audio playback failed')
+      $quranPlayback.containsPlaybackError = Test-ContainsAny -Source $afterPlayXml -Needles $playbackErrorNeedles
+      for ($attempt = 0; $attempt -lt 16 -and -not $quranPlayback.containsPauseControl -and -not $quranPlayback.containsPlaybackError; $attempt++) {
+        Start-Sleep -Seconds 1
+        $currentXml = Get-AppiumSource -SessionId $sessionId
+        $quranPlayback.containsPauseControl = Test-ContainsAny -Source $currentXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.pauseSurahAudio, 'Pause surah audio'))
+        $quranPlayback.containsPlaybackError = Test-ContainsAny -Source $currentXml -Needles $playbackErrorNeedles
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "quran-playback-final" | Out-Null
+      if ($quranPlayback.containsPauseControl) {
+        Click-AnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.pauseSurahAudio, 'Pause surah audio')) | Out-Null
+      }
+    }
+  }
+  $summary.quranPlayback = $quranPlayback
+  Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+  Start-Sleep -Milliseconds 800
 
   Click-AnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.home, 'Home')) | Out-Null
   $quickExpectations = @(
@@ -665,6 +736,7 @@ if (-not $SkipLogcat) {
     $logcatText = [string]::Join("`n", $logcat)
     $summary.logcatCaptured = $true
     $summary.logcatCrashFree = -not ($logcatText -match "FATAL EXCEPTION|E/flutter|Unhandled Exception")
+    $summary.quranPlayback.logcatPlaybackFailure = $logcatText -match "Audio playback failed for all verified sources"
   } catch {
     $summary.logcatCrashFree = $false
     $summary.logcatError = "adb logcat read failed: $($_.Exception.Message)"
@@ -697,6 +769,27 @@ foreach ($item in $summary.bottomNavResults) {
   if ($item.containsAndroidSettings) {
     $failures += "Bottom nav '$($item.label)' opened Android Settings."
   }
+}
+if (-not $summary.quranPlayback.clickedQuran) {
+  $failures += "Quran playback smoke could not reopen the Quran tab."
+}
+if (-not $summary.quranPlayback.openedSurah -or -not $summary.quranPlayback.containsSurahHeader) {
+  $failures += "Quran playback smoke could not open Al-Fatihah reading page."
+}
+if (-not $summary.quranPlayback.clickedPlay) {
+  $failures += "Quran playback smoke could not click the localized play audio control."
+}
+if ($summary.quranPlayback.containsPlaybackError) {
+  $failures += "Quran playback smoke showed an audio playback error."
+}
+if ($summary.quranPlayback.logcatPlaybackFailure) {
+  $failures += "Logcat contains Quran audio playback failure marker."
+}
+if (-not $summary.quranPlayback.containsPauseControl) {
+  $failures += "Quran playback smoke did not expose the pause control after starting audio."
+}
+if ($summary.quranPlayback.containsAndroidSettings) {
+  $failures += "Quran playback smoke opened Android Settings."
 }
 foreach ($item in $summary.quickAccessResults) {
   if (-not $item.clicked) {

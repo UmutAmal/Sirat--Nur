@@ -361,6 +361,12 @@ class AppLocalizationsSm extends AppLocalizations {
   String get quranReading => 'Faitauina o le Quran';
 
   @override
+  String get playSurahAudio => 'Ta\'alo leo surah';
+
+  @override
+  String get pauseSurahAudio => 'Taofi surah leo';
+
+  @override
   String get revelationMeccan => 'Mekani';
 
   @override

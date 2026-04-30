@@ -74,7 +74,7 @@ supported locale) when validating a localized candidate instead of relying on
 English-only selectors.
 
 ## Quran Audio Sovereignty Workflow
-The runtime requires verified `storage_path` rows and first-party distribution endpoints for playable Quran audio. Supabase stores only metadata/path rows; the 11.6 GB Quran MP3 catalog is not uploaded to Supabase Storage. The planned split is Cloudflare R2/CDN for every reciter except `abdul_basit_murattal`, and GitHub Releases for the complete `abdul_basit_murattal` overflow set. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks.
+The runtime requires verified `storage_path` rows and first-party distribution endpoints for playable Quran audio. Supabase stores only metadata/path rows; the 11.6 GB Quran MP3 catalog is not uploaded to Supabase Storage. The planned split is Cloudflare R2/CDN for every reciter except `abdul_basit_murattal`, GitHub Releases for the complete `abdul_basit_murattal` overflow set, and a GitHub Releases mirror for the Cloudflare partition so device playback still has a first-party reachable source when a public R2 endpoint is unavailable. `content_seed_quran_audio.sql` and external audio URLs in seed data are mirror inputs only; they are not runtime playback seeds or fallbacks.
 
 The mirror manifest is the integrity contract between download, provider upload, and seed generation. Every file row must include `size_bytes` and a 64-character `sha256` checksum produced by `tool/download_verified_quran_audio.dart`. `tool/generate_quran_audio_storage_seed.dart` rejects old manifests that do not include this evidence, so regenerate `build/verified_quran_audio/manifest.json` after pulling changes that update the manifest schema.
 
@@ -90,10 +90,10 @@ dart run tool/generate_quran_audio_storage_seed.dart \
   --output=content_seed_quran_audio_storage.sql
 ```
 
-3. Upload the mirrored MP3 files to the selected first-party distribution providers. First produce the provider split plan, then keep `abdul_basit_murattal` as the GitHub overflow partition and all other reciters as the Cloudflare partition. The upload script validates the manifest and writes `build/quran_audio_distribution_upload_summary.json`; the readiness checker rejects dry-run or missing summaries so provider upload cannot be marked complete by documentation alone.
+3. Upload the mirrored MP3 files to the selected first-party distribution providers. First produce the provider split plan, then keep `abdul_basit_murattal` as the GitHub overflow partition, all other reciters as the Cloudflare partition, and mirror the Cloudflare partition to GitHub as `{reciter}_{surah}.mp3`. The upload script validates the manifest and writes `build/quran_audio_distribution_upload_summary.json`; the readiness checker rejects dry-run, missing summaries, or missing live mirror probes so provider upload cannot be marked complete by documentation alone.
 ```powershell
 .\tool\upload_quran_audio_distribution.ps1 -DryRun
-.\tool\upload_quran_audio_distribution.ps1 -CloudflareBucket <r2-bucket-name> -GithubReleaseTag quran-audio-v1
+.\tool\upload_quran_audio_distribution.ps1 -CloudflareBucket <r2-bucket-name> -GithubReleaseTag quran-audio-v1 -MirrorCloudflareToGithub
 ```
 
 4. Generate the verified hadith and tafsir seeds only after an operator supplies sourced manifests. Do not invent, scrape ad-hoc, or placeholder religious text. The hadith generator requires every supported collection and at least 100 verified rows per collection; the tafsir generator requires a complete 6,236-ayah catalog per tafsir source. Both require `source`, `source_license`, and `verified_at` provenance before SQL can be written.

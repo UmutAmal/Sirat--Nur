@@ -361,6 +361,12 @@ class AppLocalizationsDa extends AppLocalizations {
   String get quranReading => 'Koranlæsning';
 
   @override
+  String get playSurahAudio => 'Afspil surah lyd';
+
+  @override
+  String get pauseSurahAudio => 'Sæt surah lyd på pause';
+
+  @override
   String get revelationMeccan => 'Mekkaner';
 
   @override

@@ -360,6 +360,12 @@ class AppLocalizationsSn extends AppLocalizations {
   String get quranReading => 'Kuverenga Korani';
 
   @override
+  String get playSurahAudio => 'Ridza odhiyo yeSurah';
+
+  @override
+  String get pauseSurahAudio => 'Imbomira musurah audio';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

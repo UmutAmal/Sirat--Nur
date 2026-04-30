@@ -362,6 +362,12 @@ class AppLocalizationsSk extends AppLocalizations {
   String get quranReading => 'Čítanie Koránu';
 
   @override
+  String get playSurahAudio => 'Prehrajte zvuk súry';
+
+  @override
+  String get pauseSurahAudio => 'Pozastaviť zvuk súry';
+
+  @override
   String get revelationMeccan => 'Mekcan';
 
   @override

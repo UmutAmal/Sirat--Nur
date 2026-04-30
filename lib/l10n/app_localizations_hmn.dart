@@ -361,6 +361,12 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get quranReading => 'Nyeem Quran';
 
   @override
+  String get playSurahAudio => 'Ua si surah audio';
+
+  @override
+  String get pauseSurahAudio => 'Pause surah audio';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

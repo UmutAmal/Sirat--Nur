@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Alternativa rexional mediante {sourceName}. Confirma os horarios de oración locais coa túa mesquita ou coa autoridade relixiosa oficial.",
   "revelationMeccan": "A Meca",
-  "revelationMedinan": "Medinán"
+  "revelationMedinan": "Medinán",
+  "playSurahAudio": "Reproducir audio de sura",
+  "pauseSurahAudio": "Pausa o audio da sura"
 }

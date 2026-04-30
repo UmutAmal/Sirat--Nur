@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Cúltaca réigiúnach ag úsáid {sourceName}. Deimhnigh amanna urnaí áitiúla le do mhosc nó le d’údarás oifigiúil reiligiúnach.",
   "revelationMeccan": "Meicneach",
-  "revelationMedinan": "Méidín"
+  "revelationMedinan": "Méidín",
+  "playSurahAudio": "Seinn Surah fuaime",
+  "pauseSurahAudio": "Sos Surah fuaime"
 }

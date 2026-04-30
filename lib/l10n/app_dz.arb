@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ལག་ལེན་འཐབ་ཐོག་ལས་ ལུང་ཕྱོགས་ཕོལབེཀ། ཁྱོད་རའི་ཁ་ཆེའི་ལྷ་ཁང་ཡང་ན་ གཞུང་འབྲེལ་ཆོས་ལུགས་དབང་འཛིན་དང་གཅིག་ཁར་ ས་གནས་ཀྱི་སྨོན་ལམ་བཏབ་པའི་དུས་ཚོད་ཚུ་ ངེས་གཏན་བཟོ།",
   "revelationMeccan": "མེ་ཀཱན།",
-  "revelationMedinan": "མེ་ཌི་ནན།"
+  "revelationMedinan": "མེ་ཌི་ནན།",
+  "playSurahAudio": "སུ་ར་སྒྲ་སྒྲོག།",
+  "pauseSurahAudio": "སུ་ར་སྒྲ་སྐད་མཚམས་འཇོག།"
 }

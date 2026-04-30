@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Rikthim rajonal duke përdorur {sourceName}. Konfirmoni kohën lokale të lutjes me xhaminë tuaj ose autoritetin zyrtar fetar.",
   "revelationMeccan": "mekas",
-  "revelationMedinan": "Medinas"
+  "revelationMedinan": "Medinas",
+  "playSurahAudio": "Luaj audion e sures",
+  "pauseSurahAudio": "Ndalo audion e sures"
 }

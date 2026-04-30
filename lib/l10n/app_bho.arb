@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} के उपयोग करके क्षेत्रीय फॉलबैक। स्थानीय नमाज के समय के पुष्टि अपना मस्जिद या आधिकारिक धार्मिक प्राधिकरण से करीं।",
   "revelationMeccan": "मक्का के ह",
-  "revelationMedinan": "मदीनान के ह"
+  "revelationMedinan": "मदीनान के ह",
+  "playSurahAudio": "सूरह के ऑडियो चलाईं",
+  "pauseSurahAudio": "सूरह ऑडियो के रोक दिहल जाव"
 }

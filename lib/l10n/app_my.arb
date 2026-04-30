@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ကို အသုံးပြု၍ ဒေသဆိုင်ရာ တုန့်ပြန်မှု။ သင်၏ဗလီ သို့မဟုတ် တရားဝင်ဘာသာရေးအာဏာပိုင်ဖြင့် ဒေသန္တရဆုတောင်းချိန်များကို အတည်ပြုပါ။",
   "revelationMeccan": "မက္ကန်",
-  "revelationMedinan": "မီနန်"
+  "revelationMedinan": "မီနန်",
+  "playSurahAudio": "စူရဟ်အသံကို ဖွင့်ပါ။",
+  "pauseSurahAudio": "စူရဟ်အသံကို ခဏရပ်ပါ။"
 }

@@ -361,6 +361,12 @@ class AppLocalizationsMn extends AppLocalizations {
   String get quranReading => 'Коран уншлага';
 
   @override
+  String get playSurahAudio => 'Сураны аудио тоглуулах';
+
+  @override
+  String get pauseSurahAudio => 'Сураны аудиог түр зогсоох';
+
+  @override
   String get revelationMeccan => 'Мекка';
 
   @override

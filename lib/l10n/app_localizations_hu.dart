@@ -363,6 +363,12 @@ class AppLocalizationsHu extends AppLocalizations {
   String get quranReading => 'Korán olvasás';
 
   @override
+  String get playSurahAudio => 'Játssz szúra hangot';
+
+  @override
+  String get pauseSurahAudio => 'Szúra hang szüneteltetése';
+
+  @override
   String get revelationMeccan => 'mekkai';
 
   @override

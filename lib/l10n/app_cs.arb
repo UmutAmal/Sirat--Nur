@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regionální záložní pomocí {sourceName}. Potvrďte místní modlitební časy u své mešity nebo oficiální náboženské autority.",
   "revelationMeccan": "Mekcan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Přehrajte zvuk súry",
+  "pauseSurahAudio": "Pozastavit zvuk súry"
 }

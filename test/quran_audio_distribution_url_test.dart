@@ -20,6 +20,41 @@ void main() {
       );
     });
 
+    test('keeps GitHub mirror candidates for non-overflow reciters', () {
+      expect(
+        resolveQuranAudioDistributionUrls(
+          reciterId: 'alafasy',
+          surahNumber: 1,
+          storagePath: 'quran-audio/alafasy/001.mp3',
+          cloudflareBaseUrl: cloudflareBaseUrl,
+          githubUrlTemplate: githubTemplate,
+        ),
+        const [
+          'https://audio.siratinur.example/quran/alafasy/001.mp3',
+          'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/alafasy_001.mp3',
+        ],
+      );
+    });
+
+    test(
+      'prefers GitHub mirror when Cloudflare public R2 is unreachable-prone',
+      () {
+        expect(
+          resolveQuranAudioDistributionUrls(
+            reciterId: 'alafasy',
+            surahNumber: 1,
+            storagePath: 'quran-audio/alafasy/001.mp3',
+            cloudflareBaseUrl: 'https://pub-example.r2.dev',
+            githubUrlTemplate: githubTemplate,
+          ),
+          const [
+            'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/alafasy_001.mp3',
+            'https://pub-example.r2.dev/alafasy/001.mp3',
+          ],
+        );
+      },
+    );
+
     test('routes Abdul Basit Murattal to GitHub release assets', () {
       expect(
         resolveQuranAudioDistributionUrl(
@@ -56,7 +91,7 @@ void main() {
       );
     });
 
-    test('rejects missing or unsafe provider configuration', () {
+    test('falls back to safe GitHub mirrors when Cloudflare config is unusable', () {
       expect(
         resolveQuranAudioDistributionUrl(
           reciterId: 'alafasy',
@@ -65,7 +100,17 @@ void main() {
           cloudflareBaseUrl: '',
           githubUrlTemplate: githubTemplate,
         ),
-        isNull,
+        'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/alafasy_001.mp3',
+      );
+      expect(
+        resolveQuranAudioDistributionUrl(
+          reciterId: 'alafasy',
+          surahNumber: 1,
+          storagePath: 'quran-audio/alafasy/001.mp3',
+          cloudflareBaseUrl: 'https://token@audio.siratinur.example/quran',
+          githubUrlTemplate: githubTemplate,
+        ),
+        'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/alafasy_001.mp3',
       );
       expect(
         resolveQuranAudioDistributionUrl(
@@ -83,8 +128,9 @@ void main() {
           reciterId: 'alafasy',
           surahNumber: 1,
           storagePath: 'quran-audio/alafasy/001.mp3',
-          cloudflareBaseUrl: 'https://token@audio.siratinur.example/quran',
-          githubUrlTemplate: githubTemplate,
+          cloudflareBaseUrl: '',
+          githubUrlTemplate:
+              'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/static.mp3',
         ),
         isNull,
       );
@@ -94,6 +140,17 @@ void main() {
       expect(
         isExpectedQuranAudioDistributionUrl(
           audioUrl: 'https://audio.siratinur.example/quran/alafasy/001.mp3',
+          reciterId: 'alafasy',
+          surahNumber: 1,
+          cloudflareBaseUrl: cloudflareBaseUrl,
+          githubUrlTemplate: githubTemplate,
+        ),
+        isTrue,
+      );
+      expect(
+        isExpectedQuranAudioDistributionUrl(
+          audioUrl:
+              'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/alafasy_001.mp3',
           reciterId: 'alafasy',
           surahNumber: 1,
           cloudflareBaseUrl: cloudflareBaseUrl,

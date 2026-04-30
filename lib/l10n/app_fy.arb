@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback mei {sourceName}. Befêstigje lokale gebedstiden mei jo moskee as offisjele religieuze autoriteit.",
   "revelationMeccan": "Mekka",
-  "revelationMedinan": "Medan"
+  "revelationMedinan": "Medan",
+  "playSurahAudio": "Spielje surah audio",
+  "pauseSurahAudio": "Paus surah audio"
 }

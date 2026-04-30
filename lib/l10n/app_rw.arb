@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Gusubira mu karere ukoresheje {sourceName}. Emeza ibihe by'amasengesho hamwe n'umusigiti wawe cyangwa ubuyobozi bw'amadini.",
   "revelationMeccan": "Meka",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Kina amajwi ya sura",
+  "pauseSurahAudio": "Hagarika amajwi ya sura"
 }

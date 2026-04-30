@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
   "revelationMeccan": "iMecca",
-  "revelationMedinan": "iMedina"
+  "revelationMedinan": "iMedina",
+  "playSurahAudio": "Dlala umsindvo we surah",
+  "pauseSurahAudio": "Misa umsindvo we surah"
 }

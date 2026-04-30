@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Fallacium regionale utens {sourceName}. Confirma orationem localem temporibus tuis meschitis vel auctoritate religiosa officiali.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Surah ludere audio",
+  "pauseSurahAudio": "Laetabuntur surah audio"
 }

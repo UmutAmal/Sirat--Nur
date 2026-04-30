@@ -6,6 +6,7 @@ param(
   [string]$GithubRepo = 'UmutAmal/Sirat--Nur',
   [string]$GithubReleaseTag = 'quran-audio-v1',
   [switch]$CreateGithubRelease,
+  [switch]$MirrorCloudflareToGithub,
   [switch]$DryRun
 )
 
@@ -86,6 +87,13 @@ function New-HardLinkedGithubAsset {
   return $assetPath
 }
 
+function Get-GithubMirrorAssetName {
+  param([Parameter(Mandatory = $true)]$Object)
+
+  $paddedSurah = ([int]$Object.surah_number).ToString('000')
+  return "$($Object.reciter)_$paddedSurah.mp3"
+}
+
 Push-Location $repoRoot
 try {
   Require-Command -Name 'dart' -InstallHint 'Install Flutter/Dart and ensure dart is on PATH.'
@@ -133,6 +141,12 @@ try {
         files = [int]$plan.github.files
         uploaded = 0
         bytes = [Int64]$plan.github.bytes
+      }
+      github_mirror = [ordered]@{
+        enabled = [bool]$MirrorCloudflareToGithub
+        files = if ($MirrorCloudflareToGithub) { [int]$plan.cloudflare.files } else { 0 }
+        uploaded = 0
+        bytes = if ($MirrorCloudflareToGithub) { [Int64]$plan.cloudflare.bytes } else { [Int64]0 }
       }
     }
     Write-JsonFile -Value $summary -Path $SummaryOutput
@@ -191,6 +205,22 @@ try {
     $githubUploaded += 1
   }
 
+  $githubMirrorUploaded = 0
+  if ($MirrorCloudflareToGithub) {
+    foreach ($object in $plan.cloudflare.objects) {
+      $sourcePath = if ([System.IO.Path]::IsPathRooted($object.local_path)) {
+        $object.local_path
+      } else {
+        Join-Path $repoRoot $object.local_path
+      }
+      $assetName = Get-GithubMirrorAssetName -Object $object
+      $assetPath = New-HardLinkedGithubAsset -SourcePath $sourcePath -AssetName $assetName
+      gh release upload $GithubReleaseTag "$assetPath" --repo $GithubRepo --clobber
+      Assert-NativeSuccess -Description "GitHub Quran audio mirror upload $assetName"
+      $githubMirrorUploaded += 1
+    }
+  }
+
   $summary = [ordered]@{
     generated_at = (Get-Date).ToUniversalTime().ToString('o')
     dry_run = $false
@@ -208,9 +238,15 @@ try {
       uploaded = $githubUploaded
       bytes = [Int64]$plan.github.bytes
     }
+    github_mirror = [ordered]@{
+      enabled = [bool]$MirrorCloudflareToGithub
+      files = if ($MirrorCloudflareToGithub) { [int]$plan.cloudflare.files } else { 0 }
+      uploaded = $githubMirrorUploaded
+      bytes = if ($MirrorCloudflareToGithub) { [Int64]$plan.cloudflare.bytes } else { [Int64]0 }
+    }
   }
   Write-JsonFile -Value $summary -Path $SummaryOutput
-  Write-Host "Upload complete: cloudflare=$cloudflareUploaded/$($plan.cloudflare.files), github=$githubUploaded/$($plan.github.files), summary=$SummaryOutput"
+  Write-Host "Upload complete: cloudflare=$cloudflareUploaded/$($plan.cloudflare.files), github=$githubUploaded/$($plan.github.files), github_mirror=$githubMirrorUploaded/$($plan.cloudflare.files), summary=$SummaryOutput"
 } finally {
   Pop-Location
 }

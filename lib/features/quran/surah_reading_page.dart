@@ -198,11 +198,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
   Future<List<String>> _audioCandidatesForVoice(String normalizedVoice) async {
     final reciterId = quranReciterIdForAudioVoice(normalizedVoice);
-    final url = await OfflineReciters.getSurahUrl(
-      reciterId,
-      widget.surahNumber,
-    );
-    return [if (url != null && url.isNotEmpty) url];
+    return OfflineReciters.getSurahUrls(reciterId, widget.surahNumber);
   }
 
   Future<void> _shareAyah({
@@ -308,6 +304,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                         : Icons.volume_up_rounded,
                   ),
             color: _isPlaying || _isAudioLoading ? AppColors.emerald : null,
+            tooltip: _isPlaying ? l10n.pauseSurahAudio : l10n.playSurahAudio,
             onPressed: () => _togglePlay(settings.audioVoice),
           ),
         ],

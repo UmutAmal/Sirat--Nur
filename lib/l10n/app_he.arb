@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "חזרה אזורית באמצעות {sourceName}. אשר את זמני התפילה המקומיים עם המסגד או הרשות הדתית הרשמית שלך.",
   "revelationMeccan": "מכאן",
-  "revelationMedinan": "מדין"
+  "revelationMedinan": "מדין",
+  "playSurahAudio": "נגן אודיו סורה",
+  "pauseSurahAudio": "השהה אודיו של סורה"
 }

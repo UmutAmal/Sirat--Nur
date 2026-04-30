@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "क्षेत्रीय फलब्याक {sourceName} प्रयोग गरेर। आफ्नो मस्जिद वा आधिकारिक धार्मिक प्राधिकरण संग स्थानीय प्रार्थना समय पुष्टि गर्नुहोस्।",
   "revelationMeccan": "मक्कन",
-  "revelationMedinan": "मेडिनान"
+  "revelationMedinan": "मेडिनान",
+  "playSurahAudio": "सुरा अडियो प्ले गर्नुहोस्",
+  "pauseSurahAudio": "सुरा अडियो रोक्नुहोस्"
 }

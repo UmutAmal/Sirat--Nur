@@ -361,6 +361,12 @@ class AppLocalizationsEe extends AppLocalizations {
   String get quranReading => 'Quran Xexlẽ';
 
   @override
+  String get playSurahAudio => 'Ƒo surah ƒe odio';
+
+  @override
+  String get pauseSurahAudio => 'Tsɔ surah odio tɔ vie';
+
+  @override
   String get revelationMeccan => 'Meccatɔwo';
 
   @override

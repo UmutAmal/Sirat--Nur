@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Wrth gefn rhanbarthol gan ddefnyddio {sourceName}. Cadarnhewch amseroedd gweddi lleol gyda'ch mosg neu awdurdod crefyddol swyddogol.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Chwarae sain surah",
+  "pauseSurahAudio": "Seibio sain surah"
 }

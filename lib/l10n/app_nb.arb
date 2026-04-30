@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional reserve med {sourceName}. Bekreft lokale bønnetider med din moske eller offisielle religiøse myndighet.",
   "revelationMeccan": "Mekkaner",
-  "revelationMedinan": "Medan"
+  "revelationMedinan": "Medan",
+  "playSurahAudio": "Spill surah-lyd",
+  "pauseSurahAudio": "Sett surah-lyden på pause"
 }

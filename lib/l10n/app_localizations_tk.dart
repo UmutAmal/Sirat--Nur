@@ -362,6 +362,12 @@ class AppLocalizationsTk extends AppLocalizations {
   String get quranReading => 'Kuran okamak';
 
   @override
+  String get playSurahAudio => 'Ses sesini çalyň';
+
+  @override
+  String get pauseSurahAudio => 'Sesi süresini duruzyň';
+
+  @override
   String get revelationMeccan => 'Mekge';
 
   @override

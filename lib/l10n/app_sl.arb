@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regionalna nadomestna uporaba {sourceName}. Potrdite lokalni čas molitve pri svoji mošeji ali uradni verski oblasti.",
   "revelationMeccan": "mekanski",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Predvajaj zvok sure",
+  "pauseSurahAudio": "Začasno ustavite zvok sure"
 }

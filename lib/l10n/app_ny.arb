@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Kubwerera m'chigawo pogwiritsa ntchito {sourceName}. Tsimikizirani nthawi zamapemphero kwanuko ndi mzikiti wanu kapena akuluakulu achipembedzo.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Madina"
+  "revelationMedinan": "Madina",
+  "playSurahAudio": "Sewerani mawu a surah",
+  "pauseSurahAudio": "Imitsani mawu a surah"
 }

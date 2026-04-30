@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Регионален резервен вариант с помощта на {sourceName}. Потвърдете местните часове за молитва с вашата джамия или официален религиозен орган.",
   "revelationMeccan": "мекански",
-  "revelationMedinan": "Мединан"
+  "revelationMedinan": "Мединан",
+  "playSurahAudio": "Възпроизвеждане на аудио сура",
+  "pauseSurahAudio": "Поставяне на аудио сура на пауза"
 }

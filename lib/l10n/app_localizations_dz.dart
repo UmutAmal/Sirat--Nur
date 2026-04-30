@@ -361,6 +361,12 @@ class AppLocalizationsDz extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get playSurahAudio => 'སུ་ར་སྒྲ་སྒྲོག།';
+
+  @override
+  String get pauseSurahAudio => 'སུ་ར་སྒྲ་སྐད་མཚམས་འཇོག།';
+
+  @override
   String get revelationMeccan => 'མེ་ཀཱན།';
 
   @override

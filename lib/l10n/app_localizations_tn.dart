@@ -361,6 +361,12 @@ class AppLocalizationsTn extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get playSurahAudio => 'Tshameka modumo wa surah';
+
+  @override
+  String get pauseSurahAudio => 'Emisa modumo wa surah';
+
+  @override
   String get revelationMeccan => 'Mecca';
 
   @override

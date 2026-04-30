@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} аркылуу аймактык кайра кайтаруу. Жергиликтүү намаз убактысын мечитиңиз же расмий диний бийлик менен ырастаңыз.",
   "revelationMeccan": "Мекке",
-  "revelationMedinan": "Медина"
+  "revelationMedinan": "Медина",
+  "playSurahAudio": "Суранын аудиосун ойнотуу",
+  "pauseSurahAudio": "Сүрөөнүн үнүн тындыруу"
 }

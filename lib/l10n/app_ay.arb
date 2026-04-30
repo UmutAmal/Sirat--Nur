@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback ukax {sourceName} ukampiw lurasi. Mezquita jan ukax autoridad religiosa oficial ukamp local oración horas ukanakax chiqanchatawa.",
   "revelationMeccan": "Meca markankiri",
-  "revelationMedinan": "Medina markanxa"
+  "revelationMedinan": "Medina markanxa",
+  "playSurahAudio": "Surah audio uñt’ayaña",
+  "pauseSurahAudio": "Pause surah audio ukax mä juk’a pachakiwa"
 }

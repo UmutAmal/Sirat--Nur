@@ -361,6 +361,12 @@ class AppLocalizationsMai extends AppLocalizations {
   String get quranReading => 'कुरान पढ़ना';
 
   @override
+  String get playSurahAudio => 'सूरह ऑडियो बजाउ';
+
+  @override
+  String get pauseSurahAudio => 'सूरह ऑडियो विराम करू';
+
+  @override
   String get revelationMeccan => 'मक्की';
 
   @override

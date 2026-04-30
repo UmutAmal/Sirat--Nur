@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regionale fallback met behulp vaan {sourceName}. Bevestig de lokale gebedstieje mit eur moskee of officiële religieuze autoriteit.",
   "revelationMeccan": "Mekkaanse",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Speel sura-audio aaf",
+  "pauseSurahAudio": "Pause surah audio"
 }

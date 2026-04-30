@@ -364,6 +364,12 @@ class AppLocalizationsDv extends AppLocalizations {
   String get quranReading => 'ޤުރުއާން ކިޔެވުން';
 
   @override
+  String get playSurahAudio => 'ސޫރަތުގެ އޯޑިއޯ ކުޅެން';
+
+  @override
+  String get pauseSurahAudio => 'ސޫރަތު އޯޑިއޯ މަޑުޖައްސާލާށެވެ';
+
+  @override
   String get revelationMeccan => 'މައްކާއެވެ';
 
   @override

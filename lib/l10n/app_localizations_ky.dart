@@ -364,6 +364,12 @@ class AppLocalizationsKy extends AppLocalizations {
   String get quranReading => 'Куран окуу';
 
   @override
+  String get playSurahAudio => 'Суранын аудиосун ойнотуу';
+
+  @override
+  String get pauseSurahAudio => 'Сүрөөнүн үнүн тындыруу';
+
+  @override
   String get revelationMeccan => 'Мекке';
 
   @override

@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback chu {sourceName} hmangin a ni. I mosque emaw official sakhaw thuneitu emaw nen tualchhung tawngtai hun tur chu nemnghet rawh.",
   "revelationMeccan": "Mecca khawpuiah a awm",
-  "revelationMedinan": "Medina khawpuiah a awm"
+  "revelationMedinan": "Medina khawpuiah a awm",
+  "playSurahAudio": "Surah audio chu play rawh",
+  "pauseSurahAudio": "Surah audio chu chawlhsan rawh"
 }

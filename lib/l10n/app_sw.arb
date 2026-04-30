@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Njia mbadala ya eneo kwa kutumia {sourceName}. Thibitisha nyakati za maombi ya karibu na msikiti wako au mamlaka rasmi ya kidini.",
   "revelationMeccan": "Makka",
-  "revelationMedinan": "Madina"
+  "revelationMedinan": "Madina",
+  "playSurahAudio": "Cheza sauti ya surah",
+  "pauseSurahAudio": "Sitisha sauti ya surah"
 }

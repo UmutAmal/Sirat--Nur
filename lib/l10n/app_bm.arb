@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Sigidaw ka kɔsegin baara kɛli ni {sourceName} ye. Aw ye sigida delili waatiw dafa ni aw ka misiri walima diinɛ ɲɛmɔgɔba ye.",
   "revelationMeccan": "Mekan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Surah audio fɔ",
+  "pauseSurahAudio": "Pause surah audio la"
 }

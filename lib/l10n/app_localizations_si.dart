@@ -361,6 +361,12 @@ class AppLocalizationsSi extends AppLocalizations {
   String get quranReading => 'අල් කුර්ආනය කියවීම';
 
   @override
+  String get playSurahAudio => 'සූරා ශ්‍රව්‍ය වාදනය කරන්න';
+
+  @override
+  String get pauseSurahAudio => 'සූරා ශ්‍රව්‍ය විරාම කරන්න';
+
+  @override
   String get revelationMeccan => 'මක්කන්';
 
   @override

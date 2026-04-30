@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Resultat regional en utilizant {sourceName}. Confirmatz los oraris de pregària locals amb vòstra mosquèa o autoritat religiosa oficiala.",
   "revelationMeccan": "Mecana",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Reproduire l'àudio de la sura",
+  "pauseSurahAudio": "Pausa de l'àudio de la sura"
 }

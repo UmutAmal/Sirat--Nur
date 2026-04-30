@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regionaler Fallback mit {sourceName}. Bestätigen Sie die örtlichen Gebetszeiten mit Ihrer Moschee oder offiziellen religiösen Autorität.",
   "revelationMeccan": "Mekkan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Spielen Sie Sure-Audio ab",
+  "pauseSurahAudio": "Pausieren Sie den Sure-Ton"
 }

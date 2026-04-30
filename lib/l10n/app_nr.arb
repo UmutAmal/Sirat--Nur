@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela emuva kwesifunda ngokusebenzisa {sourceName}. Qinisekisa isikhathi somthandazo wendawo ne-mosque yakho nofana igunya lezekolo elisemthethweni.",
   "revelationMeccan": "I-Meccan",
-  "revelationMedinan": "I-Medinan"
+  "revelationMedinan": "I-Medinan",
+  "playSurahAudio": "Dlala i-surah audio",
+  "pauseSurahAudio": "Umsindo we-surah"
 }

@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "ዞባዊ ምምላስ {sourceName} ብምጥቃም። ናይ ከባቢኻ ናይ ጸሎት ሰዓታት ምስ መስጊድካ ወይ ወግዓዊ ሃይማኖታዊ በዓል መዚ ኣረጋግጽ።",
   "revelationMeccan": "መካዊ",
-  "revelationMedinan": "መዲናዊ"
+  "revelationMedinan": "መዲናዊ",
+  "playSurahAudio": "ሱራ ድምጺ ምጽዋት",
+  "pauseSurahAudio": "ሱራ ድምጺ ደው ኣብል"
 }

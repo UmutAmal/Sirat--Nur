@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Fallback regiunale usendu {sourceName}. Cunfirmà i tempi di preghiera lucali cù a vostra moschea o l'autorità religiosa ufficiale.",
   "revelationMeccan": "Meccanu",
-  "revelationMedinan": "Medina"
+  "revelationMedinan": "Medina",
+  "playSurahAudio": "Riproduce l'audio surah",
+  "pauseSurahAudio": "Pausa l'audio sura"
 }

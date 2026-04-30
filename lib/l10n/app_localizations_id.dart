@@ -361,6 +361,12 @@ class AppLocalizationsId extends AppLocalizations {
   String get quranReading => 'Bacaan Quran';
 
   @override
+  String get playSurahAudio => 'Putar audio surah';
+
+  @override
+  String get pauseSurahAudio => 'Jeda audio surah';
+
+  @override
   String get revelationMeccan => 'Mekah';
 
   @override

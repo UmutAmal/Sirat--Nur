@@ -112,6 +112,31 @@ void main() {
       expect(script, contains(r'$smokeText.quran'));
       expect(script, contains(r'$smokeText.dailyVerse'));
       expect(script, contains(r'$smokeText.offlineQuranAudioPacks'));
+      expect(script, contains(r'$smokeText.playSurahAudio'));
+      expect(script, contains(r'$smokeText.pauseSurahAudio'));
+    });
+
+    test('deep checks Quran surah audio playback at runtime', () {
+      expect(script, contains('quranPlayback'));
+      expect(script, contains('logcatPlaybackFailure'));
+      expect(script, contains('Al-Fatihah'));
+      expect(script, contains('Play surah audio'));
+      expect(script, contains('Pause surah audio'));
+      expect(script, contains('quranAudioPlaybackErrorWithConnectionHint'));
+      expect(
+        script,
+        contains('Audio playback failed for all verified sources'),
+      );
+      expect(
+        script,
+        contains('Logcat contains Quran audio playback failure marker.'),
+      );
+      expect(
+        script,
+        contains(
+          'Quran playback smoke did not expose the pause control after starting audio.',
+        ),
+      );
     });
 
     test('writes reproducible summary and XML artifacts under build', () {

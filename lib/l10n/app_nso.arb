@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Go wa morago ga selete ka go šomiša {sourceName}. Netefatša dinako tša thapelo tša lefelong leo le mošate wa gago goba bolaodi bja semmušo bja bodumedi.",
   "revelationMeccan": "Mecca ya Mecca",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Bapala surah mamelwang",
+  "pauseSurahAudio": "Khutša surah mamelwang"
 }

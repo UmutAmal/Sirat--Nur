@@ -361,6 +361,12 @@ class AppLocalizationsHr extends AppLocalizations {
   String get quranReading => 'Čitanje Kur\'ana';
 
   @override
+  String get playSurahAudio => 'Pusti zvuk sure';
+
+  @override
+  String get pauseSurahAudio => 'Pauziraj zvuk sure';
+
+  @override
   String get revelationMeccan => 'mekanski';
 
   @override

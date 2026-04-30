@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "بازگشت منطقه ای با استفاده از {sourceName}. اوقات نماز محلی را با مسجد یا مرجع رسمی مذهبی خود تأیید کنید.",
   "revelationMeccan": "مکه",
-  "revelationMedinan": "مدینه"
+  "revelationMedinan": "مدینه",
+  "playSurahAudio": "پخش صوت سوره",
+  "pauseSurahAudio": "مکث صوتی سوره"
 }

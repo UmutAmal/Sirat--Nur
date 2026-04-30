@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} کا استعمال کرتے ہوئے علاقائی فال بیک۔ اپنی مسجد یا سرکاری مذہبی اتھارٹی کے ساتھ مقامی نماز کے اوقات کی تصدیق کریں۔",
   "revelationMeccan": "مکہ",
-  "revelationMedinan": "مدینہ"
+  "revelationMedinan": "مدینہ",
+  "playSurahAudio": "سورہ آڈیو چلائیں۔",
+  "pauseSurahAudio": "سورہ آڈیو کو روکیں۔"
 }

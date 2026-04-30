@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
   "revelationMeccan": "Meccanagh;",
-  "revelationMedinan": "Meanagh"
+  "revelationMedinan": "Meanagh",
+  "playSurahAudio": "Cleaysh clashtyn surah",
+  "pauseSurahAudio": "Pause clashtyn surah"
 }

@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Alternativa regional mitjançant {sourceName}. Confirmeu els horaris de pregària locals amb la vostra mesquita o autoritat religiosa oficial.",
   "revelationMeccan": "La Meca",
-  "revelationMedinan": "Medina"
+  "revelationMedinan": "Medina",
+  "playSurahAudio": "Reprodueix l'àudio de la sura",
+  "pauseSurahAudio": "Posa en pausa l'àudio de la sura"
 }

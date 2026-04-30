@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Տարածաշրջանային հետադարձ՝ օգտագործելով {sourceName}: Հաստատեք տեղական աղոթքի ժամերը ձեր մզկիթի կամ պաշտոնական կրոնական իշխանության հետ:",
   "revelationMeccan": "Մեքքական",
-  "revelationMedinan": "Մեդինան"
+  "revelationMedinan": "Մեդինան",
+  "playSurahAudio": "Նվագարկել սուրայի աուդիո",
+  "pauseSurahAudio": "Դադարեցնել սուրայի ձայնը"
 }

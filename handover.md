@@ -20089,3 +20089,43 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah Appium playback smoke, prayer notification timezone/DST scheduling veya kalan low-resource l10n fallback cluster'i.
+
+## 2026-05-01 TUR-498 - Quran Audio Runtime Mirror Hardening
+
+### MASTER Karari
+- Risk: Release runtime'da Quran sure sesi Cloudflare public R2 endpoint'ine dogrudan baglandiginda Windows/emulator TLS reset/stall davranisi goruldu; bu, store readiness "icerik yuklu" dese bile kullanicida oynatma hatasina donusebilecek false-ready riskiydi.
+- Kanit:
+  - `lib/core/network/quran_audio_distribution_url.dart:56` artik tek URL yerine `resolveQuranAudioDistributionUrls` ile sirali aday liste uretiyor.
+  - `lib/core/network/quran_audio_distribution_url.dart:92` public `r2.dev` host'unda GitHub mirror'i Cloudflare'den once koyuyor; custom CDN gelirse Cloudflare yine primary kalabiliyor.
+  - `lib/core/network/quran_audio_distribution_url.dart:105` expected URL dogrulamasi artik tum adaylari kabul ediyor, boylece mirror failover store/runtime guard'lariyla uyumlu.
+  - `lib/core/services/offline_audio_service.dart:54` cloud audio cozumlemesini coklu aday listeye tasiyor; `lib/core/services/offline_audio_service.dart:594` reciter/surah lookup icin `getSurahUrls` kullaniyor.
+  - `lib/features/quran/surah_reading_page.dart:201` Surah ekraninda tum aday URL'leri player fallback zincirine veriyor; `lib/features/quran/surah_reading_page.dart:307` play/pause control'u localize tooltip ile Appium tarafindan bulunabilir hale getiriyor.
+  - `tool/appium_runtime_smoke.ps1:645` release smoke'a Quran playback akisini ekliyor; `tool/appium_runtime_smoke.ps1:739` logcat'te `Audio playback failed for all verified sources` marker'ini fail sebebi yapiyor.
+  - `tool/check_store_readiness.ps1` GitHub mirror ve overflow audio byte problarini zorunlu hale getirdi; public R2 sadece secondary oldugunda fail sebebi olmuyor.
+- Kullanici etkisi: Quran audio runtime artik public R2 TLS dalgalanmasina bagimli degil; GitHub mirror birinci aday olarak oynatma akisini kurtariyor, Cloudflare ise secondary/custom-domain hazirlikli kalmaya devam ediyor.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 -> 4/25.
+- Rollback plani: `lib/core/network/quran_audio_distribution_url.dart`, `lib/core/services/offline_audio_service.dart`, `lib/features/quran/surah_reading_page.dart`, ilgili l10n/test/tool/docs diff'leri ve GitHub mirror upload script degisikligi geri alinabilir; GitHub release asset'leri koddan bagimsiz oldugu icin runtime eski tek-kaynak davranisa doner.
+
+### BUILDER Degisikligi
+- Quran audio resolver'i provider-neutral storage path'ten sirali URL adaylari uretir hale getirildi.
+- Public Cloudflare R2 host'u goruldugunde GitHub release mirror primary, R2 secondary olacak sekilde runtime tercih sirasi duzenlendi.
+- `abdul_basit_murattal` GitHub overflow akisi korunurken, Cloudflare partition'indaki 570 MP3 GitHub release'e mirror asset olarak yuklendi.
+- `playSurahAudio` ve `pauseSurahAudio` anahtarlari tum ARB dosyalarina eklendi, `flutter gen-l10n` ile generated dosyalar senkronlandi, sorunlu low-resource ciktilar elle temizlendi.
+- Upload ve readiness araclari `github_mirror` durumunu raporlayip dogrulayacak sekilde genisletildi.
+- README ve store release checklist Quran audio sovereignty notlari yeni mirror mimarisiyle guncellendi.
+
+### TESTER Degisikligi
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `704/704`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; GitHub mirror `alafasy/001.mp3` ve overflow `abdul_basit_murattal/001.mp3` HTTP 206 audio byte dondu, Supabase Quran/tafsir/hadith/public content kontrolleri gecti.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `3c66b4b7-8254-423c-8671-0acfa7f4649c`, `quranPlayback.clickedPlay=true`, `containsPauseControl=true`, `containsPlaybackError=false`, `logcatPlaybackFailure=false`, `failures=[]`, release APK size `94238546`.
+- GitHub release verification: `gh release view quran-audio-v1 --repo UmutAmal/Sirat--Nur --json assets --jq '.assets | length'` -> `684`.
+- Distribution summary: Cloudflare `570/570`, GitHub overflow `114/114`, GitHub mirror `570/570`, mirror bytes `9024412526`.
+- Secret scan: unstaged sensitive pattern scan PASS; Supabase DB password veya service-role secret dosyaya yazilmadi.
+
+### Risk Degisimi
+- Quran audio runtime false-ready/playback failure riski: `20/25 -> 4/25`.
+- Kalan bilincli risk: Yerel Wrangler/Cloudflare auth token'i gecersiz oldugu icin R2 custom domain yonetimi bu turda yapilmadi; public R2 secondary olarak kaldi. Custom Cloudflare domain daha sonra baglanirsa readiness araci onu primary olarak probe edecek.
+
+### Sonraki Adim
+- Yeni dongude AGENTS odak listesinden en yuksek kalan riski sec: prayer notification timezone/DST scheduling derin denetimi, kalan low-resource l10n fallback cluster'i veya offline download single-surah fixture ile daha derin runtime indirme testi.

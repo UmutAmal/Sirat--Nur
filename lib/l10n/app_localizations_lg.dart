@@ -361,6 +361,12 @@ class AppLocalizationsLg extends AppLocalizations {
   String get quranReading => 'Okusoma Quran';
 
   @override
+  String get playSurahAudio => 'Zanya surah audio';
+
+  @override
+  String get pauseSurahAudio => 'Yimirirako surah audio';
+
+  @override
   String get revelationMeccan => 'Omumakka';
 
   @override

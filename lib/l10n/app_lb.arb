@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional Réckfall mat {sourceName}. Bestätegt lokal Gebiedszäite mat Ärer Moschee oder offiziell reliéiser Autoritéit.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medan"
+  "revelationMedinan": "Medan",
+  "playSurahAudio": "Spillt Surah Audio",
+  "pauseSurahAudio": "Paus Surah Audio"
 }

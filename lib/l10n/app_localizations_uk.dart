@@ -362,6 +362,12 @@ class AppLocalizationsUk extends AppLocalizations {
   String get quranReading => 'Читання Корану';
 
   @override
+  String get playSurahAudio => 'Відтворити суру';
+
+  @override
+  String get pauseSurahAudio => 'Призупинити звук сури';
+
+  @override
   String get revelationMeccan => 'Мекканський';
 
   @override

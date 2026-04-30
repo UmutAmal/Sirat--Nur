@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback gamit ang {sourceName}. Kumpirmahin ang mga lokal na oras ng pagdarasal sa iyong mosque o opisyal na awtoridad sa relihiyon.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "I-play ang surah audio",
+  "pauseSurahAudio": "I-pause ang audio ng surah"
 }

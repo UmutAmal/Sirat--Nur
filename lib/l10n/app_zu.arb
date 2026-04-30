@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Ukubuyela emuva kwesifunda usebenzisa {sourceName}. Qinisekisa izikhathi zomkhuleko wasendaweni nge-mosque yakho noma isiphathimandla sezenkolo esisemthethweni.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Dlala umsindo we-surah",
+  "pauseSurahAudio": "Misa isikhashana umsindo we-surah"
 }

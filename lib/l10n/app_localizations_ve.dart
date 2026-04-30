@@ -361,6 +361,12 @@ class AppLocalizationsVe extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get playSurahAudio => 'Tambani zwipfi zwa surah';
+
+  @override
+  String get pauseSurahAudio => 'Imisa zwipfi zwa surah';
+
+  @override
   String get revelationMeccan => 'Mecca';
 
   @override

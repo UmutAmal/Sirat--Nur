@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Kudzokera kumashure uchishandisa {sourceName}. Simbisa nguva dzeminamato yemunharaunda nemosque yako kana vechitendero chepamutemo.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Ridza odhiyo yeSurah",
+  "pauseSurahAudio": "Imbomira musurah audio"
 }

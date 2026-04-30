@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ব্যৱহাৰ কৰি আঞ্চলিক ফ'লবেক। আপোনাৰ মছজিদ বা চৰকাৰী ধৰ্মীয় কৰ্তৃপক্ষৰ সৈতে স্থানীয় নামাজৰ সময় নিশ্চিত কৰক।",
   "revelationMeccan": "মক্কান",
-  "revelationMedinan": "মদীনান"
+  "revelationMedinan": "মদীনান",
+  "playSurahAudio": "চুৰা অডিঅ' বজাওক",
+  "pauseSurahAudio": "চুৰা অডিঅ' থমকি ৰ'ব"
 }

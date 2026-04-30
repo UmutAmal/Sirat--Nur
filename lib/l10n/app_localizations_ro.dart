@@ -364,6 +364,12 @@ class AppLocalizationsRo extends AppLocalizations {
   String get quranReading => 'Citirea Coranului';
 
   @override
+  String get playSurahAudio => 'Redați audio surah';
+
+  @override
+  String get pauseSurahAudio => 'Întrerupeți sunetul surei';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

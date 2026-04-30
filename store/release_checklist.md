@@ -89,16 +89,20 @@ dart run tool/generate_quran_audio_storage_seed.dart --manifest=build/verified_q
   must report this partition below 10 GB.
 - GitHub Releases overflow partition: complete `abdul_basit_murattal` set
   with 114 files.
+- GitHub Releases mirror partition: every Cloudflare-partitioned reciter, also
+  uploaded as `{reciter}_{surah}.mp3`, so runtime playback can prefer the
+  reachable mirror when a public R2 endpoint is not reachable from devices.
 - Use the tracked upload gate so the release has machine-readable evidence:
 
 ```powershell
 .\tool\upload_quran_audio_distribution.ps1 -DryRun
-.\tool\upload_quran_audio_distribution.ps1 -CloudflareBucket <r2-bucket-name> -GithubReleaseTag quran-audio-v1
+.\tool\upload_quran_audio_distribution.ps1 -CloudflareBucket <r2-bucket-name> -GithubReleaseTag quran-audio-v1 -MirrorCloudflareToGithub
 ```
 
 The real upload must write
 `build/quran_audio_distribution_upload_summary.json` with `dry_run=false`,
-Cloudflare `uploaded=570`, and GitHub `uploaded=114`.
+Cloudflare `uploaded=570`, GitHub overflow `uploaded=114`, and GitHub mirror
+`uploaded=570`.
 
 4. Generate verified hadith and tafsir seeds from operator-reviewed manifests.
 Do not write placeholder or unsourced religious content.

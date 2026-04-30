@@ -361,6 +361,12 @@ class AppLocalizationsKn extends AppLocalizations {
   String get quranReading => 'ಕುರಾನ್ ಓದುವಿಕೆ';
 
   @override
+  String get playSurahAudio => 'ಸೂರಾ ಆಡಿಯೋ ಪ್ಲೇ ಮಾಡಿ';
+
+  @override
+  String get pauseSurahAudio => 'ಸೂರಾ ಆಡಿಯೋವನ್ನು ವಿರಾಮಗೊಳಿಸಿ';
+
+  @override
   String get revelationMeccan => 'ಮೆಕ್ಕನ್';
 
   @override

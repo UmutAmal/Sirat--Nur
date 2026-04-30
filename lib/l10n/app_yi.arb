@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "רעגיאָנאַל פאַלבאַק ניצן {sourceName}. באַשטעטיקן היגע תפילה צייט מיט דיין מאָסקווע אָדער באַאַמטער רעליגיעז אויטאָריטעט.",
   "revelationMeccan": "מעקאַן",
-  "revelationMedinan": "מעדינאַן"
+  "revelationMedinan": "מעדינאַן",
+  "playSurahAudio": "שפּיל סוראַה אַודיאָ",
+  "pauseSurahAudio": "פּויזע סוראַה אַודיאָ"
 }

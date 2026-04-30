@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "ทางเลือกระดับภูมิภาคโดยใช้ {sourceName} ยืนยันเวลาละหมาดในท้องถิ่นกับมัสยิดหรือหน่วยงานทางศาสนาอย่างเป็นทางการ",
   "revelationMeccan": "เมกกะ",
-  "revelationMedinan": "เมดาน"
+  "revelationMedinan": "เมดาน",
+  "playSurahAudio": "เล่นเสียงซูเราะห์",
+  "pauseSurahAudio": "หยุดเสียงซูเราะห์ชั่วคราว"
 }

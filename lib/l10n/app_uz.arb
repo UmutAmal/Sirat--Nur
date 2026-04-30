@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} yordamida mintaqaviy qayta tiklash. Mahalliy namoz vaqtlarini masjidingiz yoki rasmiy diniy idorangiz bilan tasdiqlang.",
   "revelationMeccan": "Makkalik",
-  "revelationMedinan": "Madinalik"
+  "revelationMedinan": "Madinalik",
+  "playSurahAudio": "Suraning audiosini tinglash",
+  "pauseSurahAudio": "Suraning ovozini pauza qilish"
 }

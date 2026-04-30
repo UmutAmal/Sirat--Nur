@@ -43,11 +43,28 @@ String? resolveQuranAudioDistributionUrl({
   String cloudflareBaseUrl = QuranAudioDistributionConfig.cloudflareBaseUrl,
   String githubUrlTemplate = QuranAudioDistributionConfig.githubUrlTemplate,
 }) {
+  final urls = resolveQuranAudioDistributionUrls(
+    reciterId: reciterId,
+    surahNumber: surahNumber,
+    storagePath: storagePath,
+    cloudflareBaseUrl: cloudflareBaseUrl,
+    githubUrlTemplate: githubUrlTemplate,
+  );
+  return urls.isEmpty ? null : urls.first;
+}
+
+List<String> resolveQuranAudioDistributionUrls({
+  required String reciterId,
+  required int surahNumber,
+  required String storagePath,
+  String cloudflareBaseUrl = QuranAudioDistributionConfig.cloudflareBaseUrl,
+  String githubUrlTemplate = QuranAudioDistributionConfig.githubUrlTemplate,
+}) {
   final normalizedReciterId = reciterId.trim();
   if (!_isSafeReciterId(normalizedReciterId) ||
       surahNumber < 1 ||
       surahNumber > 114) {
-    return null;
+    return const [];
   }
 
   final normalizedPath = normalizeQuranAudioObjectPath(storagePath);
@@ -56,22 +73,33 @@ String? resolveQuranAudioDistributionUrl({
     surahNumber: surahNumber,
   );
   if (normalizedPath != expectedPath) {
-    return null;
+    return const [];
   }
 
-  final resolved = normalizedReciterId == kQuranAudioGithubReciterId
-      ? _buildFromGithubTemplate(
-          githubUrlTemplate,
-          reciterId: normalizedReciterId,
-          surahNumber: surahNumber,
-          objectPath: normalizedPath,
-        )
-      : _buildFromCloudflareBase(cloudflareBaseUrl, objectPath: normalizedPath);
-  if (resolved == null || !_isCleanHttpsUrl(resolved)) {
-    return null;
+  final githubUrl = _buildFromGithubTemplate(
+    githubUrlTemplate,
+    reciterId: normalizedReciterId,
+    surahNumber: surahNumber,
+    objectPath: normalizedPath,
+  );
+  final cloudflareUrl = _buildFromCloudflareBase(
+    cloudflareBaseUrl,
+    objectPath: normalizedPath,
+  );
+
+  final urls = <String>[];
+  if (normalizedReciterId == kQuranAudioGithubReciterId ||
+      _shouldPreferGithubMirror(cloudflareBaseUrl)) {
+    _addCleanUrl(urls, githubUrl);
+    if (normalizedReciterId != kQuranAudioGithubReciterId) {
+      _addCleanUrl(urls, cloudflareUrl);
+    }
+  } else {
+    _addCleanUrl(urls, cloudflareUrl);
+    _addCleanUrl(urls, githubUrl);
   }
 
-  return resolved;
+  return List.unmodifiable(urls);
 }
 
 bool isExpectedQuranAudioDistributionUrl({
@@ -81,7 +109,7 @@ bool isExpectedQuranAudioDistributionUrl({
   String cloudflareBaseUrl = QuranAudioDistributionConfig.cloudflareBaseUrl,
   String githubUrlTemplate = QuranAudioDistributionConfig.githubUrlTemplate,
 }) {
-  final expected = resolveQuranAudioDistributionUrl(
+  final expectedUrls = resolveQuranAudioDistributionUrls(
     reciterId: reciterId,
     surahNumber: surahNumber,
     storagePath: expectedQuranAudioObjectPath(
@@ -91,7 +119,7 @@ bool isExpectedQuranAudioDistributionUrl({
     cloudflareBaseUrl: cloudflareBaseUrl,
     githubUrlTemplate: githubUrlTemplate,
   );
-  return expected != null && audioUrl.trim() == expected;
+  return expectedUrls.contains(audioUrl.trim());
 }
 
 String? _buildFromCloudflareBase(
@@ -177,4 +205,21 @@ bool _isSafeReciterId(String reciterId) {
 
 bool _hasUnsafeSegments(Iterable<String> segments) {
   return segments.any((segment) => segment == '.' || segment == '..');
+}
+
+void _addCleanUrl(List<String> urls, String? candidate) {
+  if (candidate == null || !_isCleanHttpsUrl(candidate)) {
+    return;
+  }
+
+  final normalized = candidate.trim();
+  if (!urls.contains(normalized)) {
+    urls.add(normalized);
+  }
+}
+
+bool _shouldPreferGithubMirror(String cloudflareBaseUrl) {
+  final uri = Uri.tryParse(cloudflareBaseUrl.trim());
+  final host = uri?.host.toLowerCase() ?? '';
+  return host == 'r2.dev' || host.endsWith('.r2.dev');
 }

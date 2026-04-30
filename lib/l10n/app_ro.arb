@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Soluție regională folosind {sourceName}. Confirmați orele locale de rugăciune cu moscheea sau autoritatea religioasă oficială.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Redați audio surah",
+  "pauseSurahAudio": "Întrerupeți sunetul surei"
 }

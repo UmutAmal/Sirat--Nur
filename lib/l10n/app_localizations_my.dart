@@ -363,6 +363,12 @@ class AppLocalizationsMy extends AppLocalizations {
   String get quranReading => 'ကုရ်အာန်ဖတ်ခြင်း။';
 
   @override
+  String get playSurahAudio => 'စူရဟ်အသံကို ဖွင့်ပါ။';
+
+  @override
+  String get pauseSurahAudio => 'စူရဟ်အသံကို ခဏရပ်ပါ။';
+
+  @override
   String get revelationMeccan => 'မက္ကန်';
 
   @override

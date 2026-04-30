@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} ஐப் பயன்படுத்தி பிராந்திய ஃபால்பேக். உங்கள் மசூதி அல்லது அதிகாரப்பூர்வ மத அதிகாரத்துடன் உள்ளூர் பிரார்த்தனை நேரத்தை உறுதிப்படுத்தவும்.",
   "revelationMeccan": "மக்கா",
-  "revelationMedinan": "மதீனான்"
+  "revelationMedinan": "மதீனான்",
+  "playSurahAudio": "சூரா ஆடியோவை இயக்கவும்",
+  "pauseSurahAudio": "சூரா ஆடியோவை இடைநிறுத்து"
 }

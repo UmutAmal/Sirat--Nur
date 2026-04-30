@@ -361,6 +361,12 @@ class AppLocalizationsTy extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get playSurahAudio => 'A faaroo i te surah';
+
+  @override
+  String get pauseSurahAudio => 'Tape\'a i te reo surah';
+
+  @override
   String get revelationMeccan => 'Mecca';
 
   @override

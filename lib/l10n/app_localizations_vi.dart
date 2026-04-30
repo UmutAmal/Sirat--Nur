@@ -361,6 +361,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get quranReading => 'Đọc Kinh Qur\'an';
 
   @override
+  String get playSurahAudio => 'Phát âm thanh Surah';
+
+  @override
+  String get pauseSurahAudio => 'Tạm dừng âm thanh surah';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

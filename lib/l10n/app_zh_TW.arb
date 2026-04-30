@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "使用 {sourceName} 進行區域後備。與您的清真寺或官方宗教權威確認當地的祈禱時間。",
   "revelationMeccan": "麥加",
-  "revelationMedinan": "麥地那"
+  "revelationMedinan": "麥地那",
+  "playSurahAudio": "播放古蘭經音頻",
+  "pauseSurahAudio": "暫停古蘭經音頻"
 }

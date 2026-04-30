@@ -361,6 +361,12 @@ class AppLocalizationsKu extends AppLocalizations {
   String get quranReading => 'Xwendina Quranê';
 
   @override
+  String get playSurahAudio => 'Dengê sûreyê bilîze';
+
+  @override
+  String get pauseSurahAudio => 'Dengê sûre rawestînin';
+
+  @override
   String get revelationMeccan => 'Mekkî';
 
   @override

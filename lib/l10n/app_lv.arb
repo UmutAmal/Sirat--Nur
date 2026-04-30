@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Reģionālais atkāpšanās veids, izmantojot {sourceName}. Apstipriniet vietējos lūgšanu laikus savā mošejā vai oficiālajā reliģiskajā iestādē.",
   "revelationMeccan": "Mekānis",
-  "revelationMedinan": "Medināna"
+  "revelationMedinan": "Medināna",
+  "playSurahAudio": "Atskaņot surah audio",
+  "pauseSurahAudio": "Apturēt surah audio"
 }

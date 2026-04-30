@@ -2001,6 +2001,57 @@ void main() {
       },
     );
 
+    test('Quran audio runtime controls stay single-line and debris-free', () {
+      const keys = ['playSurahAudio', 'pauseSurahAudio'];
+      const reviewedLocales = ['lus', 'mai', 'sa', 'ti'];
+      const forbiddenFragments = [
+        'means the following',
+        'a ni.\n',
+        'के लिये।',
+        'इति .',
+        'ዝብል ቃል',
+      ];
+
+      for (final file
+          in Directory('lib/l10n').listSync().whereType<File>().where(
+            (file) => file.path.endsWith('.arb'),
+          )) {
+        final arb = _readArb(file.path);
+        for (final key in keys) {
+          final value = arb[key] as String;
+          expect(
+            value.trim(),
+            isNotEmpty,
+            reason: '${file.uri.pathSegments.last} has empty $key',
+          );
+          expect(
+            value,
+            isNot(contains('\n')),
+            reason: '${file.uri.pathSegments.last} has multiline $key',
+          );
+          for (final fragment in forbiddenFragments) {
+            expect(
+              value,
+              isNot(contains(fragment)),
+              reason:
+                  '${file.uri.pathSegments.last} kept machine debris in $key',
+            );
+          }
+        }
+      }
+
+      for (final locale in reviewedLocales) {
+        final arb = _readArb('lib/l10n/app_$locale.arb');
+        for (final key in keys) {
+          expect(
+            arb[key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
+
     test('quran audio incomplete copy does not expose cloud seed jargon', () {
       const staleFragments = [
         'Refresh cloud seed',

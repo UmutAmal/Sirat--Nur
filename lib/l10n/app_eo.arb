@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regiona repliko uzante {sourceName}. Konfirmu lokajn preĝtempojn kun via moskeo aŭ oficiala religia aŭtoritato.",
   "revelationMeccan": "Mekko",
-  "revelationMedinan": "Medinano"
+  "revelationMedinan": "Medinano",
+  "playSurahAudio": "Ludu surahaŭdon",
+  "pauseSurahAudio": "Paŭzi suraan sonadon"
 }

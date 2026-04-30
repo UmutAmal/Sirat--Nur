@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Rehional a panagsubli babaen ti panagusar ti {sourceName}. Pasingkedan dagiti lokal nga oras ti panagkararag iti moske wenno opisial a narelihiosuan nga autoridadmo.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan nga"
+  "revelationMedinan": "Medinan nga",
+  "playSurahAudio": "Ipatokar ti surah audio",
+  "pauseSurahAudio": "Isardeng ti surah audio"
 }

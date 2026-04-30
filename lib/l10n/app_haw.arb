@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Hoʻihoʻi ʻāina me {sourceName}. E hōʻoia i nā manawa pule kūloko me kāu mosque a i ʻole ka mana hoʻomana mana.",
   "revelationMeccan": "Mekani",
-  "revelationMedinan": "Madinana"
+  "revelationMedinan": "Madinana",
+  "playSurahAudio": "Hoʻokani leo surah",
+  "pauseSurahAudio": "Hoʻomaha leo surah"
 }

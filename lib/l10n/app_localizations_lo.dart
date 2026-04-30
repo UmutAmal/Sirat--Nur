@@ -361,6 +361,12 @@ class AppLocalizationsLo extends AppLocalizations {
   String get quranReading => 'ການ​ອ່ານ Quran​';
 
   @override
+  String get playSurahAudio => 'ຫຼິ້ນສຽງ Surah';
+
+  @override
+  String get pauseSurahAudio => 'ຢຸດສຽງ Surah ໄວ້ຊົ່ວຄາວ';
+
+  @override
   String get revelationMeccan => 'ເມກາ';
 
   @override

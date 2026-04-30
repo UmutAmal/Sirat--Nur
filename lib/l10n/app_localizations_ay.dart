@@ -365,6 +365,12 @@ class AppLocalizationsAy extends AppLocalizations {
   String get quranReading => 'Quran Uñakipt’añataki';
 
   @override
+  String get playSurahAudio => 'Surah audio uñt’ayaña';
+
+  @override
+  String get pauseSurahAudio => 'Pause surah audio ukax mä juk’a pachakiwa';
+
+  @override
   String get revelationMeccan => 'Meca markankiri';
 
   @override

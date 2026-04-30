@@ -361,6 +361,12 @@ class AppLocalizationsRw extends AppLocalizations {
   String get quranReading => 'Gusoma Korowani';
 
   @override
+  String get playSurahAudio => 'Kina amajwi ya sura';
+
+  @override
+  String get pauseSurahAudio => 'Hagarika amajwi ya sura';
+
+  @override
   String get revelationMeccan => 'Meka';
 
   @override

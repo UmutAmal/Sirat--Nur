@@ -362,6 +362,12 @@ class AppLocalizationsFi extends AppLocalizations {
   String get quranReading => 'Koraanin lukeminen';
 
   @override
+  String get playSurahAudio => 'Toista suura ääni';
+
+  @override
+  String get pauseSurahAudio => 'Keskeytä suura-ääni';
+
+  @override
   String get revelationMeccan => 'Mekkalainen';
 
   @override

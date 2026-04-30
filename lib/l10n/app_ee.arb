@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Nutome ƒe megbedede to {sourceName} zazã me. Ðo kpe gbedodoɖaɣi siwo le mia gbɔ dzi kple wò mosque alo mawusubɔsubɔha si dziɖuɖua ɖo.",
   "revelationMeccan": "Meccatɔwo",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Ƒo surah ƒe odio",
+  "pauseSurahAudio": "Tsɔ surah odio tɔ vie"
 }

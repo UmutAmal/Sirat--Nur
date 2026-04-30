@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback ni' ma'usa {sourceName}. Na'siguru na i tiempon tinayuyot gi i gima'yu'os-mu pat i ofisiåt na ahensian rilihoso.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Na'lå'la' i surah audio",
+  "pauseSurahAudio": "Pause surah audio"
 }

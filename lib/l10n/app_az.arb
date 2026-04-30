@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} istifadə edərək regional ehtiyat. Məscidiniz və ya rəsmi dini qurumla yerli namaz vaxtlarını təsdiqləyin.",
   "revelationMeccan": "Məkkə",
-  "revelationMedinan": "Mədinə"
+  "revelationMedinan": "Mədinə",
+  "playSurahAudio": "Surə audio çalın",
+  "pauseSurahAudio": "Surənin səsini dayandırın"
 }

@@ -363,6 +363,12 @@ class AppLocalizationsEl extends AppLocalizations {
   String get quranReading => 'Ανάγνωση Κορανίου';
 
   @override
+  String get playSurahAudio => 'Αναπαραγωγή ήχου σούρα';
+
+  @override
+  String get pauseSurahAudio => 'Παύση ήχου σούρα';
+
+  @override
   String get revelationMeccan => 'Μεκκανός';
 
   @override

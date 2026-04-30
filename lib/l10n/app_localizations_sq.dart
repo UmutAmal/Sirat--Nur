@@ -362,6 +362,12 @@ class AppLocalizationsSq extends AppLocalizations {
   String get quranReading => 'Leximi i Kuranit';
 
   @override
+  String get playSurahAudio => 'Luaj audion e sures';
+
+  @override
+  String get pauseSurahAudio => 'Ndalo audion e sures';
+
+  @override
   String get revelationMeccan => 'mekas';
 
   @override

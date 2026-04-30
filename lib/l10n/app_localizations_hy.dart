@@ -363,6 +363,12 @@ class AppLocalizationsHy extends AppLocalizations {
   String get quranReading => 'Ղուրանի ընթերցանություն';
 
   @override
+  String get playSurahAudio => 'Նվագարկել սուրայի աուդիո';
+
+  @override
+  String get pauseSurahAudio => 'Դադարեցնել սուրայի ձայնը';
+
+  @override
   String get revelationMeccan => 'Մեքքական';
 
   @override

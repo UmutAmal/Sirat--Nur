@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "سیمه ایز فال بیک د {sourceName} په کارولو سره. د خپل جومات یا رسمي مذهبي واک سره د ځایی لمانځه وختونه تایید کړئ.",
   "revelationMeccan": "مکه مکرمه",
-  "revelationMedinan": "مدينه"
+  "revelationMedinan": "مدينه",
+  "playSurahAudio": "د سورت غږ غږول",
+  "pauseSurahAudio": "د سورت غږ بند کړئ"
 }

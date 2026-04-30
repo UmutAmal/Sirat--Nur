@@ -361,6 +361,12 @@ class AppLocalizationsZu extends AppLocalizations {
   String get quranReading => 'Ukufundwa kwe-Quran';
 
   @override
+  String get playSurahAudio => 'Dlala umsindo we-surah';
+
+  @override
+  String get pauseSurahAudio => 'Misa isikhashana umsindo we-surah';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

@@ -1132,6 +1132,18 @@ abstract class AppLocalizations {
   /// **'Quran Reading'**
   String get quranReading;
 
+  /// No description provided for @playSurahAudio.
+  ///
+  /// In en, this message translates to:
+  /// **'Play surah audio'**
+  String get playSurahAudio;
+
+  /// No description provided for @pauseSurahAudio.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause surah audio'**
+  String get pauseSurahAudio;
+
   /// No description provided for @revelationMeccan.
   ///
   /// In en, this message translates to:

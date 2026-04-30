@@ -363,6 +363,12 @@ class AppLocalizationsBe extends AppLocalizations {
   String get quranReading => 'Чытанне Карана';
 
   @override
+  String get playSurahAudio => 'Прайграць аўдыё суры';
+
+  @override
+  String get pauseSurahAudio => 'Прыпыніць гук суры';
+
+  @override
   String get revelationMeccan => 'меканскі';
 
   @override

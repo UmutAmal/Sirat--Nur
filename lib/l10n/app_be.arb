@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Рэгіянальны рэзервовы варыянт з выкарыстаннем {sourceName}. Пацвердзіце мясцовы час малітвы ў вашай мячэці або афіцыйным рэлігійным органам.",
   "revelationMeccan": "меканскі",
-  "revelationMedinan": "Медынан"
+  "revelationMedinan": "Медынан",
+  "playSurahAudio": "Прайграць аўдыё суры",
+  "pauseSurahAudio": "Прыпыніць гук суры"
 }

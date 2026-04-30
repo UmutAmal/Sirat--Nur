@@ -174,6 +174,10 @@ void main() {
       );
       expect(script, contains('Get-SupabaseRestCount'));
       expect(script, contains('Get-SupabaseRestRows'));
+      expect(script, contains('Assert-HttpAudioProbe'));
+      expect(script, contains('Test-PublicR2Host'));
+      expect(script, contains('GitHub Quran audio mirror probe'));
+      expect(script, contains('GitHub Quran audio overflow probe'));
       expect(script, contains('Assert-SupabaseTableMinimumCount'));
       expect(script, contains('Assert-SupabaseTableApprovedSourceUrls'));
       expect(script, contains('Test-ApprovedStoreSourceUrl'));
@@ -253,6 +257,7 @@ void main() {
         script,
         contains('Quran audio distribution upload summary is complete'),
       );
+      expect(script, contains('GitHub mirror 570 files'));
       expect(
         script,
         contains('Supabase content apply summary includes schema'),
@@ -282,6 +287,8 @@ void main() {
       );
       expect(uploadScript, contains('npx --yes wrangler@latest r2 object put'));
       expect(uploadScript, contains('gh release upload'));
+      expect(uploadScript, contains('MirrorCloudflareToGithub'));
+      expect(uploadScript, contains('Get-GithubMirrorAssetName'));
       expect(uploadScript, contains('Assert-NativeSuccess'));
       expect(
         uploadScript,
@@ -291,6 +298,11 @@ void main() {
         uploadScript,
         contains(r'GitHub Quran audio upload $($object.asset_name)'),
       );
+      expect(
+        uploadScript,
+        contains('GitHub Quran audio mirror upload'),
+      );
+      expect(uploadScript, contains('github_mirror'));
       expect(uploadScript, contains(r'dry_run = $false'));
       expect(supabaseApplyScript, contains('import_release_environment.ps1'));
       expect(supabaseApplyScript, contains('Initialize-ReleaseEnvironment'));

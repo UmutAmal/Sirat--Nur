@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Регионалон фæстæмæздæхт {sourceName}-йы фæрцы. Сбæлвырд кæнут бынæттон куывды рæстæг уæ мæзджыдæн кæнæ официалон дины хицауадæн.",
   "revelationMeccan": "Меккаг",
-  "revelationMedinan": "Мединан"
+  "revelationMedinan": "Мединан",
+  "playSurahAudio": "Ахъуыды кæнын сурæйы аудио",
+  "pauseSurahAudio": "Сурæйы аудио æрлæууын кæнын"
 }

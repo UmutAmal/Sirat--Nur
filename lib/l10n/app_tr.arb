@@ -170,6 +170,8 @@
   "ibadahTracker": "İbadet Takibi",
   "fasting": "Oruç",
   "quranReading": "Kur'an Okuma",
+  "playSurahAudio": "Sure sesini çal",
+  "pauseSurahAudio": "Sure sesini duraklat",
   "revelationMeccan": "Mekki",
   "revelationMedinan": "Medeni",
   "prayers": "Namazlar",

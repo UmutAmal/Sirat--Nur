@@ -361,6 +361,12 @@ class AppLocalizationsFf extends AppLocalizations {
   String get quranReading => 'Quran Reading';
 
   @override
+  String get playSurahAudio => 'Fijo suura odiyo';
+
+  @override
+  String get pauseSurahAudio => 'Jokku suura oodiyo';
+
+  @override
   String get revelationMeccan => 'Makkanaajo';
 
   @override

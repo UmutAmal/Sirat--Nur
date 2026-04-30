@@ -47,6 +47,13 @@ function Test-BlockedHost {
   return $false
 }
 
+function Test-PublicR2Host {
+  param([Parameter(Mandatory = $true)][string]$HostName)
+
+  $normalizedHost = $HostName.ToLowerInvariant()
+  return $normalizedHost -eq 'r2.dev' -or $normalizedHost.EndsWith('.r2.dev')
+}
+
 function Test-CleanHttpsUrl {
   param(
     [Parameter(Mandatory = $true)][string]$Name,
@@ -75,6 +82,60 @@ function Test-CleanHttpsUrl {
   }
 
   return $uri
+}
+
+function Resolve-QuranAudioGithubProbeUrl {
+  param(
+    [Parameter(Mandatory = $true)][string]$Template,
+    [Parameter(Mandatory = $true)][string]$Reciter,
+    [Parameter(Mandatory = $true)][int]$SurahNumber
+  )
+
+  $paddedSurah = $SurahNumber.ToString('000')
+  return $Template.Replace('{reciter}', $Reciter).Replace('{surah}', $paddedSurah).Replace('{file}', "$paddedSurah.mp3").Replace('{path}', "$Reciter/$paddedSurah.mp3")
+}
+
+function Resolve-QuranAudioCloudflareProbeUrl {
+  param(
+    [Parameter(Mandatory = $true)][string]$BaseUrl,
+    [Parameter(Mandatory = $true)][string]$Reciter,
+    [Parameter(Mandatory = $true)][int]$SurahNumber
+  )
+
+  $paddedSurah = $SurahNumber.ToString('000')
+  return "$($BaseUrl.TrimEnd('/'))/$Reciter/$paddedSurah.mp3"
+}
+
+function Assert-HttpAudioProbe {
+  param(
+    [Parameter(Mandatory = $true)][string]$Url,
+    [Parameter(Mandatory = $true)][string]$Description
+  )
+
+  try {
+    $response = Invoke-WebRequest -UseBasicParsing -Uri $Url -Method Get -Headers @{ Range = 'bytes=0-15' } -MaximumRedirection 5 -TimeoutSec 30
+    if ($response.StatusCode -ne 200 -and $response.StatusCode -ne 206) {
+      Add-Failure "$Description failed with HTTP $($response.StatusCode)."
+      return
+    }
+
+    $length = if ($response.RawContentLength -gt 0) {
+      [int64]$response.RawContentLength
+    } elseif ($response.Content -is [byte[]]) {
+      [int64]$response.Content.Count
+    } else {
+      [int64]([string]$response.Content).Length
+    }
+
+    if ($length -le 0) {
+      Add-Failure "$Description returned an empty response."
+      return
+    }
+
+    Add-Pass "$Description returned HTTP $($response.StatusCode) with audio bytes."
+  } catch {
+    Add-Failure "$Description failed: $($_.Exception.Message)"
+  }
 }
 
 function Require-File {
@@ -498,6 +559,23 @@ try {
     Test-CleanHttpsUrl -Name 'QURAN_AUDIO_GITHUB_URL_TEMPLATE' -Value $githubProbe | Out-Null
   }
 
+  if (-not $SkipNetwork -and -not [string]::IsNullOrWhiteSpace($quranGithubTemplate)) {
+    $githubAlafasyProbe = Resolve-QuranAudioGithubProbeUrl -Template $quranGithubTemplate -Reciter 'alafasy' -SurahNumber 1
+    $githubMurattalProbe = Resolve-QuranAudioGithubProbeUrl -Template $quranGithubTemplate -Reciter 'abdul_basit_murattal' -SurahNumber 1
+    Assert-HttpAudioProbe -Url $githubAlafasyProbe -Description 'GitHub Quran audio mirror probe for alafasy/001.mp3'
+    Assert-HttpAudioProbe -Url $githubMurattalProbe -Description 'GitHub Quran audio overflow probe for abdul_basit_murattal/001.mp3'
+
+    if (-not [string]::IsNullOrWhiteSpace($quranCloudflareBaseUrl)) {
+      $cloudflareUri = [System.Uri]$quranCloudflareBaseUrl
+      if (Test-PublicR2Host -HostName $cloudflareUri.Host) {
+        Add-Pass 'Cloudflare public R2 endpoint is configured as a secondary Quran audio source; GitHub mirror probes cover runtime primary playback.'
+      } else {
+        $cloudflareProbe = Resolve-QuranAudioCloudflareProbeUrl -BaseUrl $quranCloudflareBaseUrl -Reciter 'alafasy' -SurahNumber 1
+        Assert-HttpAudioProbe -Url $cloudflareProbe -Description 'Cloudflare Quran audio primary probe for alafasy/001.mp3'
+      }
+    }
+  }
+
   $tileTemplate = [Environment]::GetEnvironmentVariable('PLACES_TILE_URL_TEMPLATE')
   if (-not [string]::IsNullOrWhiteSpace($tileTemplate)) {
     foreach ($token in @('{z}', '{x}', '{y}')) {
@@ -621,11 +699,14 @@ try {
         $distributionSummary.cloudflare.files -eq 570 -and
         $distributionSummary.cloudflare.uploaded -eq 570 -and
         $distributionSummary.github.files -eq 114 -and
-        $distributionSummary.github.uploaded -eq 114
+        $distributionSummary.github.uploaded -eq 114 -and
+        $distributionSummary.github_mirror.enabled -eq $true -and
+        $distributionSummary.github_mirror.files -eq 570 -and
+        $distributionSummary.github_mirror.uploaded -eq 570
       ) {
-        Add-Pass 'Quran audio distribution upload summary is complete: Cloudflare 570 files, GitHub 114 files.'
+        Add-Pass 'Quran audio distribution upload summary is complete: Cloudflare 570 files, GitHub 114 files, GitHub mirror 570 files.'
       } else {
-        Add-Failure "Quran audio distribution upload summary is incomplete: Cloudflare $($distributionSummary.cloudflare.uploaded)/$($distributionSummary.cloudflare.files), GitHub $($distributionSummary.github.uploaded)/$($distributionSummary.github.files)."
+        Add-Failure "Quran audio distribution upload summary is incomplete: Cloudflare $($distributionSummary.cloudflare.uploaded)/$($distributionSummary.cloudflare.files), GitHub $($distributionSummary.github.uploaded)/$($distributionSummary.github.files), GitHub mirror $($distributionSummary.github_mirror.uploaded)/$($distributionSummary.github_mirror.files)."
       }
     } catch {
       Add-Failure 'Quran audio distribution upload summary is not valid JSON.'

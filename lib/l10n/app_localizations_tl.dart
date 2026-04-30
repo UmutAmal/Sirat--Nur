@@ -365,6 +365,12 @@ class AppLocalizationsTl extends AppLocalizations {
   String get quranReading => 'Pagbasa ng Quran';
 
   @override
+  String get playSurahAudio => 'I-play ang surah audio';
+
+  @override
+  String get pauseSurahAudio => 'I-pause ang audio ng surah';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override

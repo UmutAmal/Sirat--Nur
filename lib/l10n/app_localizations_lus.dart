@@ -362,6 +362,12 @@ class AppLocalizationsLus extends AppLocalizations {
   String get quranReading => 'Quran chhiar dan tur';
 
   @override
+  String get playSurahAudio => 'Surah audio chu play rawh';
+
+  @override
+  String get pauseSurahAudio => 'Surah audio chu chawlhsan rawh';
+
+  @override
   String get revelationMeccan => 'Mecca khawpuiah a awm';
 
   @override

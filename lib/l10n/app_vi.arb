@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Dự phòng khu vực bằng cách sử dụng {sourceName}. Xác nhận thời gian cầu nguyện tại địa phương với nhà thờ Hồi giáo hoặc cơ quan tôn giáo chính thức của bạn.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Phát âm thanh Surah",
+  "pauseSurahAudio": "Tạm dừng âm thanh surah"
 }

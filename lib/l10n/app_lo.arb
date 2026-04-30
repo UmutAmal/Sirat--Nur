@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "ທາງເລືອກໃນພາກພື້ນໂດຍໃຊ້ {sourceName}. ຢືນຢັນເວລາອະທິຖານໃນທ້ອງຖິ່ນກັບ mosque ຫຼືອໍານາດທາງສາສະຫນາຂອງເຈົ້າ.",
   "revelationMeccan": "ເມກາ",
-  "revelationMedinan": "ເມດິນັນ"
+  "revelationMedinan": "ເມດິນັນ",
+  "playSurahAudio": "ຫຼິ້ນສຽງ Surah",
+  "pauseSurahAudio": "ຢຸດສຽງ Surah ໄວ້ຊົ່ວຄາວ"
 }

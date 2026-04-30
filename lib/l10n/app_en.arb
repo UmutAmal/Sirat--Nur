@@ -170,6 +170,8 @@
   "ibadahTracker": "Ibadah Tracker",
   "fasting": "Fasting",
   "quranReading": "Quran Reading",
+  "playSurahAudio": "Play surah audio",
+  "pauseSurahAudio": "Pause surah audio",
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "prayers": "Prayers",

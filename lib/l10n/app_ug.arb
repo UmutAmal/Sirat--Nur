@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "{sourceName} نى ئىشلىتىپ رايون خاراكتېرلىك چېكىنىش. مەسچىت ياكى رەسمىي دىنىي ھوقۇقىڭىز بىلەن يەرلىك دۇئا ۋاقتىنى جەزملەشتۈرۈڭ.",
   "revelationMeccan": "مەككە",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "سۈرە ئاۋازنى قويۇڭ",
+  "pauseSurahAudio": "سۈرە سۈرىتىنى توختىتىڭ"
 }

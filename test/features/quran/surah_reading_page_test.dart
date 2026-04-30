@@ -74,7 +74,23 @@ void main() {
       ).readAsStringSync();
 
       expect(source, contains('quranReciterIdForAudioVoice(normalizedVoice)'));
+      expect(source, contains('OfflineReciters.getSurahUrls'));
+      expect(source, isNot(contains('OfflineReciters.getSurahUrl(')));
       expect(source, isNot(contains('_reciterIdForVoice')));
+    });
+
+    test('exposes localized audio control tooltips for runtime automation', () {
+      final source = File(
+        'lib/features/quran/surah_reading_page.dart',
+      ).readAsStringSync();
+
+      expect(
+        source,
+        contains(
+          'tooltip: _isPlaying ? l10n.pauseSurahAudio : l10n.playSurahAudio',
+        ),
+      );
+      expect(source, isNot(contains('tooltip: \'Play')));
     });
 
     test('returns only verified local Quran audio paths', () async {

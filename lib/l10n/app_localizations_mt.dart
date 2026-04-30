@@ -362,6 +362,12 @@ class AppLocalizationsMt extends AppLocalizations {
   String get quranReading => 'Qari tal-Quran';
 
   @override
+  String get playSurahAudio => 'Ilgħab awdjo tas-surah';
+
+  @override
+  String get pauseSurahAudio => 'Waqqaf l-awdjo tas-surah';
+
+  @override
   String get revelationMeccan => 'Mekkan';
 
   @override

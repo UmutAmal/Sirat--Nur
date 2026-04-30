@@ -42,6 +42,23 @@ String? resolvePlayableCloudAudioUrl(
   String quranGithubUrlTemplate =
       QuranAudioDistributionConfig.githubUrlTemplate,
 }) {
+  final urls = resolvePlayableCloudAudioUrls(
+    row,
+    bucketName: bucketName,
+    quranCloudflareBaseUrl: quranCloudflareBaseUrl,
+    quranGithubUrlTemplate: quranGithubUrlTemplate,
+  );
+  return urls.isEmpty ? null : urls.first;
+}
+
+List<String> resolvePlayableCloudAudioUrls(
+  Map<String, dynamic> row, {
+  String bucketName = '',
+  String quranCloudflareBaseUrl =
+      QuranAudioDistributionConfig.cloudflareBaseUrl,
+  String quranGithubUrlTemplate =
+      QuranAudioDistributionConfig.githubUrlTemplate,
+}) {
   final storagePath = row['storage_path']?.toString().trim();
   if (storagePath != null && storagePath.isNotEmpty) {
     final type = row['type']?.toString().trim().toLowerCase();
@@ -54,10 +71,10 @@ String? resolvePlayableCloudAudioUrl(
         _ => null,
       };
       if (reciterId == null || surahNumber == null) {
-        return null;
+        return const [];
       }
 
-      return resolveQuranAudioDistributionUrl(
+      return resolveQuranAudioDistributionUrls(
         reciterId: reciterId,
         surahNumber: surahNumber,
         storagePath: storagePath,
@@ -67,20 +84,22 @@ String? resolvePlayableCloudAudioUrl(
     }
 
     if (bucketName.trim().isEmpty) {
-      return null;
+      return const [];
     }
 
     try {
-      return storage_url.buildSupabaseStoragePublicUrl(
-        storagePath,
-        bucketName: bucketName,
-      );
+      return [
+        storage_url.buildSupabaseStoragePublicUrl(
+          storagePath,
+          bucketName: bucketName,
+        ),
+      ];
     } on FormatException {
-      return null;
+      return const [];
     }
   }
 
-  return null;
+  return const [];
 }
 
 String _readCloudAudioString(Map<String, dynamic> row, List<String> keys) {
@@ -568,7 +587,15 @@ class OfflineReciters {
   };
 
   static Future<String?> getSurahUrl(String reciterId, int surahNumber) async {
-    if (!reciters.containsKey(reciterId)) return null;
+    final urls = await getSurahUrls(reciterId, surahNumber);
+    return urls.isEmpty ? null : urls.first;
+  }
+
+  static Future<List<String>> getSurahUrls(
+    String reciterId,
+    int surahNumber,
+  ) async {
+    if (!reciters.containsKey(reciterId)) return const [];
 
     try {
       final row = await Supabase.instance.client
@@ -581,18 +608,18 @@ class OfflineReciters {
           .eq('surah_number', surahNumber)
           .maybeSingle();
       if (row == null) {
-        return null;
+        return const [];
       }
 
       final audioRow = Map<String, dynamic>.from(row);
       if (!hasVerifiedCloudAudioProvenance(audioRow)) {
-        return null;
+        return const [];
       }
 
-      return resolvePlayableCloudAudioUrl(audioRow);
+      return resolvePlayableCloudAudioUrls(audioRow);
     } catch (_) {
       debugPrint('Quran audio cloud URL lookup failed; returning no stream');
-      return null;
+      return const [];
     }
   }
 

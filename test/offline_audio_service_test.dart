@@ -290,6 +290,26 @@ void main() {
       expect(url, 'https://audio.siratinur.example/quran/alafasy/001.mp3');
     });
 
+    test('returns GitHub mirror before public R2 for runtime playback', () {
+      final urls = resolvePlayableCloudAudioUrls(
+        const {
+          'type': 'quran_surah',
+          'reciter': 'alafasy',
+          'surah_number': 1,
+          'storage_path': 'quran-audio/alafasy/001.mp3',
+          'source': _approvedQuranAudioSource,
+          'verified_at': '2026-04-15T00:00:00Z',
+        },
+        quranCloudflareBaseUrl: 'https://pub-example.r2.dev',
+        quranGithubUrlTemplate: _quranGithubUrlTemplate,
+      );
+
+      expect(urls, const [
+        'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/alafasy_001.mp3',
+        'https://pub-example.r2.dev/alafasy/001.mp3',
+      ]);
+    });
+
     test('does not expose external urls as playable cloud audio', () {
       final url = resolvePlayableCloudAudioUrl(const {
         'type': 'quran_surah',

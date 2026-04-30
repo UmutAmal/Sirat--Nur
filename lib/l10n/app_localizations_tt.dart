@@ -361,6 +361,12 @@ class AppLocalizationsTt extends AppLocalizations {
   String get quranReading => 'Коръән уку';
 
   @override
+  String get playSurahAudio => 'Аудио сүрәсен уйнагыз';
+
+  @override
+  String get pauseSurahAudio => 'Аудио сүрәсен туктатыгыз';
+
+  @override
   String get revelationMeccan => 'Мәккә';
 
   @override

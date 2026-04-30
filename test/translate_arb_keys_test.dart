@@ -1520,8 +1520,22 @@ void main() {
         currentValue: 'Ses calinamadi',
         candidate: 'means the following.\nSes calinamadi',
       );
+      final playControl = resolveTranslatedArbValue(
+        key: 'playSurahAudio',
+        source: 'Play surah audio',
+        currentValue: 'Sure sesini cal',
+        candidate: 'means the following.\nSure sesini cal',
+      );
+      final pauseControl = resolveTranslatedArbValue(
+        key: 'pauseSurahAudio',
+        source: 'Pause surah audio',
+        currentValue: 'Sure sesini duraklat',
+        candidate: 'means the following.\nSure sesini duraklat',
+      );
 
       expect(value, 'Ses calinamadi');
+      expect(playControl, 'Sure sesini cal');
+      expect(pauseControl, 'Sure sesini duraklat');
     });
 
     test('rejects multiline zikr counter hint output', () {

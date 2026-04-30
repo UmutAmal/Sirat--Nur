@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Mokhoa oa ho khutlela sebakeng o sebelisa {sourceName}. Netefatsa linako tsa thapelo ea lehae le mosque oa hau kapa ba boholong ba bolumeli.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Bapala molumo oa surah",
+  "pauseSurahAudio": "Emisa molumo oa surah"
 }

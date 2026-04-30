@@ -361,6 +361,12 @@ class AppLocalizationsFy extends AppLocalizations {
   String get quranReading => 'Koranlêzing';
 
   @override
+  String get playSurahAudio => 'Spielje surah audio';
+
+  @override
+  String get pauseSurahAudio => 'Paus surah audio';
+
+  @override
   String get revelationMeccan => 'Mekka';
 
   @override

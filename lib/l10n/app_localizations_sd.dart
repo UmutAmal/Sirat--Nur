@@ -361,6 +361,12 @@ class AppLocalizationsSd extends AppLocalizations {
   String get quranReading => 'قرآن پڙهڻ';
 
   @override
+  String get playSurahAudio => 'سورت آڊيو کيڏيو';
+
+  @override
+  String get pauseSurahAudio => 'سورت آڊيو کي روڪيو';
+
+  @override
   String get revelationMeccan => 'مڪي';
 
   @override

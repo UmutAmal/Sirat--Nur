@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regional fallback ilo an kajerbal {sourceName}. Kōmeļeļeik iien jar ko ilo bukwōn eo am̧ ippān mosque eo am̧ ak ritōl in kabun̄ eo an kien.",
   "revelationMeccan": "Meccan",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Kōjan̄jan̄ surah audio",
+  "pauseSurahAudio": "Bōjrak ainikien surah"
 }

@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Fallback ya région na kosalelaka {sourceName}. Confirmer ba heures ya losambo ya esika na yo na mosquée na yo to na autorité religieuse officielle.",
   "revelationMeccan": "Bato ya Mecque",
-  "revelationMedinan": "Medinani"
+  "revelationMedinan": "Medinani",
+  "playSurahAudio": "Beta audio ya surah",
+  "pauseSurahAudio": "Pause na audio ya surah"
 }

@@ -359,6 +359,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get quranReading => 'クルアーンの読誦';
 
   @override
+  String get playSurahAudio => 'スーラオーディオを再生する';
+
+  @override
+  String get pauseSurahAudio => 'スーラ音声を一時停止する';
+
+  @override
   String get revelationMeccan => 'メッカ';
 
   @override

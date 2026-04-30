@@ -791,5 +791,7 @@
   },
   "diagnosticsPrayerRegionalFallbackSource": "Regionális tartalék a {sourceName} használatával. Erősítse meg a helyi imaidőpontokat mecsetjénél vagy hivatalos vallási hatóságánál.",
   "revelationMeccan": "mekkai",
-  "revelationMedinan": "Medinan"
+  "revelationMedinan": "Medinan",
+  "playSurahAudio": "Játssz szúra hangot",
+  "pauseSurahAudio": "Szúra hang szüneteltetése"
 }

@@ -363,6 +363,12 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get quranReading => 'Pagbasa sa Quran';
 
   @override
+  String get playSurahAudio => 'I-play ang audio sa surah';
+
+  @override
+  String get pauseSurahAudio => 'Ihunong ang audio sa surah';
+
+  @override
   String get revelationMeccan => 'Meccan';
 
   @override
