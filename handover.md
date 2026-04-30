@@ -19878,3 +19878,32 @@
 
 ### Sonraki Adim
 - Yeni dongude uygulama runtime smoke veya content/l10n kalite taramasina gec; kanitli P1 cikarsa tek sorun tek patch prensibiyle kapat.
+
+## 2026-04-30 TUR-492 - Appium Release Runtime Smoke Evidence
+
+### MASTER Karari
+- Risk: Statik testler release APK'nin gercek Android runtime'da ilk acilis, onboarding, bottom navigation ve quick access akisini dogrulamiyordu; Appium smoke gecmeden store-ready iddiasi eksik kalirdi.
+- Kanit:
+  - `adb devices` ilk basta bos dondu; `Medium_Phone_API_36.1` AVD tespit edildi ve `emulator-5554` olarak baslatildi.
+  - `appium --version` `3.3.0`, `appium driver list --installed` `uiautomator2@7.1.2` kurulu oldugunu gosterdi.
+  - `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` release APK'yi store dart-define'larla build/install etti ve PASS dondu.
+  - Smoke ozeti: `firstContainsWelcome=true`, `firstContainsAndroidSettings=false`, onboarding `next-1/next-2/start` clicked, Quran/Qibla/Zikr/Calendar bottom nav clicked + label found, Places/Downloads/Analytics/Premium quick access clicked + expected content found, `logcatCrashFree=true`, `failures=[]`.
+  - Release APK evidence: `build\app\outputs\flutter-apk\app-release.apk`, size `94009170` bytes, `apkPrepared=true`, signature mismatch recovery applied.
+- Kullanici etkisi: Uygulama release modda emulatorde aciliyor, ilk kurulum ve ana gezinti akislari crash vermeden calisiyor; Android alarm/settings hijack riski runtime smoke ile yeniden reddedildi.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 -> 2/25.
+- Rollback plani: Kod degisikligi yok; yalniz bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- Kod degisikligi yapilmadi; bu tur runtime verification turudur.
+
+### TESTER Degisikligi
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS.
+- Build mode: `release`; locale: `en`; Appium session: `76b713f6-311e-43b8-89fe-37fc03d86519`.
+- Logcat crash check: PASS.
+
+### Risk Degisimi
+- Release runtime smoke kanit boslugu: `15/25 -> 2/25`.
+- Kalan bilincli risk: Appium smoke temel akislari dogruladi; derin sure playback, offline download, Supabase latency ve cihaz cesitliligi icin ileride ek runtime senaryolari eklenebilir.
+
+### Sonraki Adim
+- Yeni dongude Appium smoke'un kapsamadigi en yuksek riskli akisi sec: Quran playback/download, Supabase content empty-state, l10n priority fallback veya store artifact metadata.
