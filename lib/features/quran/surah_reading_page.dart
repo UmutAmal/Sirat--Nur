@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
@@ -26,6 +24,17 @@ bool shouldShowStandaloneBismillah(int surahNumber) {
 
 String resolveQuranAudioPlaybackErrorMessage(AppLocalizations l10n) {
   return l10n.quranAudioPlaybackErrorWithConnectionHint;
+}
+
+Future<String?> resolveVerifiedLocalQuranAudioPath({
+  required int surahNumber,
+  required String reciterId,
+}) async {
+  if (!await OfflineAudioService.isAudioDownloaded(surahNumber, reciterId)) {
+    return null;
+  }
+
+  return OfflineAudioService.getAudioPath(surahNumber, reciterId);
 }
 
 class SurahReadingPage extends ConsumerStatefulWidget {
@@ -139,11 +148,11 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
       final reciterId = _reciterIdForVoice(normalizedVoice);
       if (reciterId != null) {
         try {
-          final localPath = await OfflineAudioService.getAudioPath(
-            widget.surahNumber,
-            reciterId,
+          final localPath = await resolveVerifiedLocalQuranAudioPath(
+            surahNumber: widget.surahNumber,
+            reciterId: reciterId,
           );
-          if (await File(localPath).exists()) {
+          if (localPath != null) {
             try {
               await _audioPlayer.setFilePath(localPath);
               await _audioPlayer.play();

@@ -19783,3 +19783,34 @@
 
 ### Sonraki Adim
 - Yeni dongude Quran reading playback hattini tara: local file validation, cloud catalog empty-state, stream fallback ve kullaniciya gosterilen hata mesajlarinda false-success/hardcoded copy kalip kalmadigi incelenecek.
+
+## 2026-04-30 TUR-489 - Quran Reader Local Audio Validation
+
+### MASTER Karari
+- Risk: Quran reader playback akisi yerel dosya icin sadece varlik kontrolu yapiyordu; corrupt veya eksik MP3 `File.exists()` ile player'a verilebilir, offline audio validation zinciri UI playback tarafinda atlanabilirdi.
+- Kanit:
+  - `lib/features/quran/surah_reading_page.dart:29` yeni `resolveVerifiedLocalQuranAudioPath` helper'i local path'i kullanmadan once `OfflineAudioService.isAudioDownloaded` dogrulamasina bagladi.
+  - `lib/features/quran/surah_reading_page.dart:33` corrupt/invalid dosyalar icin `null` donuyor; servis bu sirada `validateDownloadedQuranAudioFile` uzerinden bozuk dosyayi temizliyor.
+  - `lib/features/quran/surah_reading_page.dart:151` `_togglePlay` artik local playback'e yalniz dogrulanmis path ile giriyor; remote fallback ve kullaniciya gosterilen localized hata mesaji akisi degismedi.
+  - `test/features/quran/surah_reading_page_test.dart:71` yeni test valid MP3 fixture icin path dondugunu, corrupt HTML dosyasinin `null` donup silindigini dogruluyor.
+- Kullanici etkisi: Indirilmis gibi gorunen ama bozuk olan Quran audio dosyasi player'a teslim edilmez; dosya temizlenir ve uygulama verified cloud fallback/hata mesaji hattina duser.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 2/25.
+- Rollback plani: `lib/features/quran/surah_reading_page.dart` ve `test/features/quran/surah_reading_page_test.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- `dart:io` bagimliligi SurahReadingPage'den kaldirildi; dosya varligi yerine `OfflineAudioService.isAudioDownloaded` kullanildi.
+- `resolveVerifiedLocalQuranAudioPath` test edilebilir helper olarak eklendi; remote source candidate, snackbar copy ve playback loop mantigi degistirilmedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\features\quran\surah_reading_page_test.dart --reporter compact` PASS, `4/4`.
+- Quran/audio regresyon grubu: `flutter test test\features\quran\surah_reading_page_test.dart test\features\quran\quran_error_copy_test.dart test\offline_audio_service_test.dart --reporter compact` PASS, `30/30`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `686/686`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; mirror manifest, Cloudflare/GitHub partition, Supabase content checks ve final analyze/test kapilari temiz.
+
+### Risk Degisimi
+- Quran reader corrupt local audio playback riski: `12/25 -> 2/25`.
+- Kalan bilincli risk: Remote stream empty-state ve network failure runtime akisi Appium/emulator ile daha sonra smoke edilebilir; dusuk-kaynak l10n fallback borcu sahte ceviri yapmadan guvenilir aday geldikce kapatilacak.
+
+### Sonraki Adim
+- Yeni dongude Prayer/calendar DST ve notification scheduling hattina geri don; ozellikle timezone inference, midnight boundary ve yarinin Fajr hesabi icin kanitli test boslugu aranacak.
