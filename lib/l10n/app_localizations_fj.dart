@@ -1219,7 +1219,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Lavetaka';
 
   @override
   String get resumeDownload => 'Resume Download';

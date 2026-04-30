@@ -1219,7 +1219,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Huri mai';
 
   @override
   String get resumeDownload => 'Resume Download';

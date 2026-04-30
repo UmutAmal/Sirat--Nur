@@ -18996,3 +18996,39 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; download/diagnostics/chatbot kumesinde daha fazla safe locale ureten tek anahtarli batchlere gec.
+
+## 2026-04-30 TUR-468 - Download Action L10n Batch
+
+### MASTER Karari
+- Risk: `downloadAction` ana aksiyon metni 70 locale'de Ingilizce fallback olarak kaliyordu; offline indirme ekraninda en gorunur buton oldugu icin karisik dil UX riski yuksekti.
+- Kanit:
+  - `lib/l10n/app_aa.arb:550` artik `"downloadAction": "Oobis"` degerini tasiyor; once `Download` idi.
+  - `lib/l10n/app_bh.arb:550` artik `"downloadAction": "डाउनलोड करीं"` degerini tasiyor; once `Download` idi.
+  - `lib/l10n/app_wo.arb:550` artik `"downloadAction": "Wàcce"` degerini tasiyor; once `Download` idi.
+  - `lib/l10n/app_localizations_aa.dart:1222`, `lib/l10n/app_localizations_bh.dart:1222` ve `lib/l10n/app_localizations_wo.dart:1222` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1189` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:235` ve `test/translate_arb_keys_test.dart:240` `app_gv` icin Irish `Íoslódáil` cikisini, `app_kl` icin download yerine open anlamina kayan `Aavaa` cikisini reddediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1221 -> 1189` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Offline indirme butonu 32 ek locale'de secili dilde gorunur; guvenilmeyen `gv` ve `kl` ciktilari yanlis yerellestirme yerine bilincli fallback olarak birakildi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 32 ARB dosyasi, 32 generated l10n dosyasi, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `downloadAction` icin guvenli kabul edilen 32 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `app_gv` ve `app_kl` adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar test kara listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Download action UI fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1189` same-as-English fallback devam ediyor; `resumeDownload`, `deleteDownloadedFiles`, download completion/cancel copy, diagnostics ve chatbot kumesi siradaki guvenli batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `resumeDownload` icin CV/resume yanlis anlam guard'lariyla ayni tek-anahtarli batch uygulanacak.

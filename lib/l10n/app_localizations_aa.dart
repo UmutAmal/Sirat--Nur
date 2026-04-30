@@ -1219,7 +1219,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Oobis';
 
   @override
   String get resumeDownload => 'Resume Download';

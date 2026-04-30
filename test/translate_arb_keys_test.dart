@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1221));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1189));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -230,6 +230,16 @@ void main() {
       expect(
         localeArbs['ti']!['downloadAction'],
         isNot(english['downloadAction']),
+      );
+      expect(
+        localeArbs['gv']!['downloadAction'],
+        isNot('Íoslódáil'),
+        reason: 'app_gv.arb maps downloadAction to Irish copy',
+      );
+      expect(
+        localeArbs['kl']!['downloadAction'],
+        isNot('Aavaa'),
+        reason: 'app_kl.arb maps downloadAction to open instead of download',
       );
       expect(
         localeArbs['ti']!['resumeDownload'],

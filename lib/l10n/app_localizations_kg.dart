@@ -1219,7 +1219,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get redownloadMissingRepair => 'Repair / Download Missing';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Kubaka';
 
   @override
   String get resumeDownload => 'Resume Download';
