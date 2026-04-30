@@ -338,6 +338,55 @@ void main() {
     );
 
     test(
+      'updateCustomAngles rejects non-finite and out-of-range values',
+      () async {
+        final notifier = SettingsNotifier(prefs);
+
+        await expectLater(
+          notifier.updateCustomAngles(double.nan, 14.0),
+          throwsArgumentError,
+        );
+        await expectLater(
+          notifier.updateCustomAngles(18.0, double.infinity),
+          throwsArgumentError,
+        );
+        await expectLater(
+          notifier.updateCustomAngles(-1.0, 14.0),
+          throwsArgumentError,
+        );
+        await expectLater(
+          notifier.updateCustomAngles(18.0, 31.0),
+          throwsArgumentError,
+        );
+
+        expect(notifier.state.calculationMethod, diyanetPrayerMethod);
+        expect(notifier.state.fajrAngle, 18.0);
+        expect(notifier.state.ishaAngle, 17.0);
+        expect(prefs.containsKey('calculationMethod'), isFalse);
+        expect(prefs.containsKey('fajrAngle'), isFalse);
+        expect(prefs.containsKey('ishaAngle'), isFalse);
+      },
+    );
+
+    test('loads and repairs invalid stored custom angles', () async {
+      SharedPreferences.setMockInitialValues({
+        'calculationMethod': customPrayerMethod,
+        'fajrAngle': double.nan,
+        'ishaAngle': 99.0,
+      });
+      prefs = await SharedPreferences.getInstance();
+
+      final notifier = SettingsNotifier(prefs);
+      await Future<void>.delayed(Duration.zero);
+
+      expect(notifier.state.calculationMethod, customPrayerMethod);
+      expect(notifier.state.fajrAngle, 18.0);
+      expect(notifier.state.ishaAngle, 17.0);
+      expect(prefs.getDouble('fajrAngle'), 18.0);
+      expect(prefs.getDouble('ishaAngle'), 17.0);
+    });
+
+    test(
       'clearManualLocation removes timezone and country from state and storage',
       () async {
         SharedPreferences.setMockInitialValues({

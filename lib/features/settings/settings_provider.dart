@@ -164,6 +164,8 @@ class SettingsState {
 }
 
 const Object _unset = Object();
+const double _minCustomPrayerAngle = 0.0;
+const double _maxCustomPrayerAngle = 30.0;
 
 class SettingsNotifier extends StateNotifier<SettingsState> {
   final SharedPreferences _prefs;
@@ -171,6 +173,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   SettingsNotifier(this._prefs) : super(_loadSettingsState(_prefs)) {
     _repairStoredLocation();
     _repairStoredTimezone();
+    _repairStoredCustomAngles();
   }
 
   void _repairStoredLocation() {
@@ -208,6 +211,24 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
 
     if (storedTimezone != resolvedTimezone) {
       unawaited(_prefs.setString('timezone', resolvedTimezone));
+    }
+  }
+
+  void _repairStoredCustomAngles() {
+    final storedMethod = normalizeCalculationMethod(
+      _prefs.getString('calculationMethod') ?? state.calculationMethod,
+    );
+    if (storedMethod != customPrayerMethod) {
+      return;
+    }
+
+    final storedFajr = _prefs.getDouble('fajrAngle');
+    final storedIsha = _prefs.getDouble('ishaAngle');
+    if (!_isValidCustomPrayerAngle(storedFajr)) {
+      unawaited(_prefs.setDouble('fajrAngle', state.fajrAngle));
+    }
+    if (!_isValidCustomPrayerAngle(storedIsha)) {
+      unawaited(_prefs.setDouble('ishaAngle', state.ishaAngle));
     }
   }
 
@@ -252,6 +273,8 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   }
 
   Future<void> updateCustomAngles(double fajr, double isha) async {
+    _assertValidCustomPrayerAngle(fajr, 'fajr');
+    _assertValidCustomPrayerAngle(isha, 'isha');
     await _prefs.setString('calculationMethod', customPrayerMethod);
     await _prefs.setDouble('fajrAngle', fajr);
     await _prefs.setDouble('ishaAngle', isha);
@@ -395,10 +418,10 @@ SettingsState _loadSettingsState(SharedPreferences prefs) {
     qiblaOffset: prefs.getDouble('qiblaOffset') ?? 0.0,
     qiblaSmoothingEnabled: prefs.getBool('qiblaSmoothingEnabled') ?? true,
     fajrAngle: storedMethod == customPrayerMethod
-        ? prefs.getDouble('fajrAngle') ?? 18.0
+        ? _loadCustomPrayerAngle(prefs, 'fajrAngle', 18.0)
         : defaultFajrAngle,
     ishaAngle: storedMethod == customPrayerMethod
-        ? prefs.getDouble('ishaAngle') ?? 17.0
+        ? _loadCustomPrayerAngle(prefs, 'ishaAngle', 17.0)
         : defaultIshaAngle,
     languageCode: prefs.getString('languageCode'),
     latitude: latitude,
@@ -410,6 +433,35 @@ SettingsState _loadSettingsState(SharedPreferences prefs) {
     timezone: timezone,
     isDarkMode: prefs.getBool('isDarkMode') ?? true,
   );
+}
+
+double _loadCustomPrayerAngle(
+  SharedPreferences prefs,
+  String key,
+  double fallback,
+) {
+  final value = prefs.getDouble(key);
+  return _isValidCustomPrayerAngle(value) ? value! : fallback;
+}
+
+void _assertValidCustomPrayerAngle(double value, String name) {
+  if (_isValidCustomPrayerAngle(value)) {
+    return;
+  }
+
+  throw ArgumentError.value(
+    value,
+    name,
+    'Custom prayer angle must be finite and between '
+    '$_minCustomPrayerAngle and $_maxCustomPrayerAngle degrees.',
+  );
+}
+
+bool _isValidCustomPrayerAngle(double? value) {
+  return value != null &&
+      value.isFinite &&
+      value >= _minCustomPrayerAngle &&
+      value <= _maxCustomPrayerAngle;
 }
 
 (double, double) _defaultAnglesForMethod(String method) {

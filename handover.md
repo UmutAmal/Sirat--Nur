@@ -19846,3 +19846,35 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kanitli kusuru sec: prayer notification/timezone runtime edge-case, Supabase content fallback, Appium runtime smoke veya l10n priority-locale fallback borcu.
+
+## 2026-04-30 TUR-491 - Custom Prayer Angle Validation
+
+### MASTER Karari
+- Risk: Custom namaz hesap acilari provider seviyesinde dogrulanmadan saklanabiliyordu; `NaN`, `Infinity`, negatif veya asiri buyuk degerler pref/state uzerinden prayer time calculation hattina tasinabilirdi.
+- Kanit:
+  - `lib/features/settings/settings_provider.dart:275` `updateCustomAngles` artik yazmadan once Fajr ve Isha degerlerini validate ediyor.
+  - `lib/features/settings/settings_provider.dart:217` custom modda eski bozuk stored angle degerlerini state fallback'iyle tamir ediyor.
+  - `lib/features/settings/settings_provider.dart:421` ve `lib/features/settings/settings_provider.dart:424` custom mod load akisi invalid pref'i state'e almadan varsayilana dusuyor.
+  - `test/settings_provider_test.dart:341` `NaN`, `Infinity`, negatif ve `30` derece ustu degerlerin reddedildigini ve storage'a yazilmadigini dogruluyor.
+  - `test/settings_provider_test.dart:371` eski bozuk pref'lerin `18.0/17.0` default custom angle degerlerine tamir edildigini dogruluyor.
+- Kullanici etkisi: Ozel aci ayari veya eski pref bozulmasi kullaniciyi hatali namaz vakti hesabina suruklemez; hesap hattina sadece finite ve makul derece araligindaki degerler girer.
+- Risk skoru: Etki 5 x Olasilik 3 = 15/25 -> 3/25.
+- Rollback plani: `lib/features/settings/settings_provider.dart` ve `test/settings_provider_test.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- Custom prayer angle araligi `0.0..30.0` derece olarak merkezi helper ile tanimlandi.
+- `updateCustomAngles` invalid input'ta `ArgumentError` firlatacak sekilde yazma oncesi durduruldu.
+- Load akisi invalid stored custom angle'i state'e almiyor; constructor tamiri pref'i guvenli fallback ile esitleyerek sonraki acilislar icin de kalici duzeltiyor.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\settings_provider_test.dart --reporter compact` PASS, `22/22`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `688/688`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content checks, Quran audio mirror/partition checks, analyze ve full test kapilari temiz.
+
+### Risk Degisimi
+- Custom prayer angle corruption riski: `15/25 -> 3/25`.
+- Kalan bilincli risk: Custom aci UI henuz sinirli gorunuyor, fakat provider/API seviyesi artik guvenli. Sonraki turda runtime smoke/Appium veya kalan l10n priority-locale fallback borcu kanitla secilecek.
+
+### Sonraki Adim
+- Yeni dongude uygulama runtime smoke veya content/l10n kalite taramasina gec; kanitli P1 cikarsa tek sorun tek patch prensibiyle kapat.
