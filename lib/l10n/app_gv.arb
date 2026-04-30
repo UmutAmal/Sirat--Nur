@@ -638,7 +638,7 @@
   "placesSearchArea": "Lhig da'n ard shoh",
   "nearbyMosques": "Mosqueyn ry-cheilley",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} er ny gheddyn",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

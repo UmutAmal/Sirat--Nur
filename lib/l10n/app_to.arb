@@ -638,7 +638,7 @@
   "placesSearchArea": "Fekumi ki he feitu'u ko 'eni .",
   "nearbyMosques": "Ngaahi Mosque ofi",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} kuo ma'u",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

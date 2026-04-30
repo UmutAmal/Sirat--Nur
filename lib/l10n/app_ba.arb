@@ -638,7 +638,7 @@
   "placesSearchArea": "Был өлкәлә эҙләү",
   "nearbyMosques": "Яҡындағы мәсеттәр.",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} табылған",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

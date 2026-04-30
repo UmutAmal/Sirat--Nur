@@ -1357,7 +1357,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count kuo ma\'u';
   }
 
   @override

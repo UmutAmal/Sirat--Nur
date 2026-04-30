@@ -638,7 +638,7 @@
   "placesSearchArea": "Sosa kisika yayi",
   "nearbyMosques": "Ba Mosquée ya pene-pene",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} me monana",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

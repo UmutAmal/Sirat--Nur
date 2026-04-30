@@ -638,7 +638,7 @@
   "placesSearchArea": "Ta arac gorris",
   "nearbyMosques": "xayikkel tan masjiiditte",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} geytimeh",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

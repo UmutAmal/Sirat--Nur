@@ -638,7 +638,7 @@
   "placesSearchArea": "Seetal barab bii",
   "nearbyMosques": "Juma yu jege",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ñu gis",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

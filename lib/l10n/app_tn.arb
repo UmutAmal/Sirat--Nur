@@ -638,7 +638,7 @@
   "placesSearchArea": "Batla lefelo leno",
   "nearbyMosques": "Dimoseke tse di gaufi",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} e bonwe",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

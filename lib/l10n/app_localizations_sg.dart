@@ -1356,7 +1356,7 @@ class AppLocalizationsSg extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count a wara';
   }
 
   @override

@@ -1356,7 +1356,7 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count nassaarineqarpoq';
   }
 
   @override

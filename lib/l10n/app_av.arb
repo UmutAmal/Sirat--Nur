@@ -638,7 +638,7 @@
   "placesSearchArea": "Гьаб бакӀалда цӀех-рех гьабе",
   "nearbyMosques": "АскӀор ругел мажгитал",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} батана",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

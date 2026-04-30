@@ -638,7 +638,7 @@
   "placesSearchArea": "Rondera aha hantu",
   "nearbyMosques": "Imisigiti iri hafi",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} vyabonetse",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

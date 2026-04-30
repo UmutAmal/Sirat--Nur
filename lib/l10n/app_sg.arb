@@ -638,7 +638,7 @@
   "placesSearchArea": "Gi ndo so .",
   "nearbyMosques": "Amosquée so ayeke nduru",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} a wara",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

@@ -638,7 +638,7 @@
   "placesSearchArea": "A imi i teie vahi",
   "nearbyMosques": "Te mau mosques fatata mai",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ua itehia",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

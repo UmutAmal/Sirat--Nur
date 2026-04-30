@@ -638,7 +638,7 @@
   "placesSearchArea": "Kay kitipi maskay",
   "nearbyMosques": "Mezquitakuna qayllapi",
   "islamicSchools": "Islam Yachay Wasikuna",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} tarisqa",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

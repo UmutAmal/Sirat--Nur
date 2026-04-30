@@ -638,7 +638,7 @@
   "placesSearchArea": "Setsha fhethu uhu",
   "nearbyMosques": "Mosque dza tsini",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} yo wanala",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

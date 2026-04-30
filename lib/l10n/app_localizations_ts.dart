@@ -1373,7 +1373,7 @@ class AppLocalizationsTs extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count yi kumiwile';
   }
 
   @override

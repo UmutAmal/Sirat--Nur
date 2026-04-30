@@ -638,7 +638,7 @@
   "placesSearchArea": "Sumiiffimmi tassani ujaarlerit",
   "nearbyMosques": "Qanittukkut Moskee",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} nassaarineqarpoq",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

@@ -638,7 +638,7 @@
   "placesSearchArea": "He hmunah hian zawng rawh",
   "nearbyMosques": "A bul hnaia Mosque awmte",
   "islamicSchools": "Islamic School hrang hrangah a awm a",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} hmuh a ni",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

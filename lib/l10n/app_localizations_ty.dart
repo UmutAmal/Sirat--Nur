@@ -1356,7 +1356,7 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count ua itehia';
   }
 
   @override

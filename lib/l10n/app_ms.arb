@@ -638,7 +638,7 @@
   "placesSearchArea": "Cari kawasan ini",
   "nearbyMosques": "Masjid Berdekatan",
   "islamicSchools": "Sekolah Islam",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ditemui",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

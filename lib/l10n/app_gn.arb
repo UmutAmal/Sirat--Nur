@@ -638,7 +638,7 @@
   "placesSearchArea": "Eheka ko área",
   "nearbyMosques": "Mezquita-kuéra hi’aguĩva",
   "islamicSchools": "Mbo’ehao Islámico-kuéra",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ojejuhu",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

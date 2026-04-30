@@ -638,7 +638,7 @@
   "placesSearchArea": "Агур ацы ран",
   "nearbyMosques": "Хæстæг мæзджыдтæ",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ссардтой",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

@@ -638,7 +638,7 @@
   "placesSearchArea": "Noonya ekitundu kino",
   "nearbyMosques": "Emizikiti egiriraanyewo",
   "islamicSchools": "Amasomero g’Obusiraamu",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} yazuuliddwa",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

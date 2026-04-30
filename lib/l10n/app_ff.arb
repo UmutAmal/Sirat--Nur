@@ -638,7 +638,7 @@
   "placesSearchArea": "Yiylo nokku oo",
   "nearbyMosques": "Juulirɗe ɓadiiɗe",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} tawaama",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

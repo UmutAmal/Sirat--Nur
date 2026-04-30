@@ -638,7 +638,7 @@
   "placesSearchArea": "Leita í hesum økinum",
   "nearbyMosques": "Moskur í nærheit",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} funnið",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

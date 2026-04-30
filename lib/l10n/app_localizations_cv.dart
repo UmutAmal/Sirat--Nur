@@ -1356,7 +1356,7 @@ class AppLocalizationsCv extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count тупнӑ';
   }
 
   @override

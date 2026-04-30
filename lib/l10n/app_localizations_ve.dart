@@ -1356,7 +1356,7 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count yo wanala';
   }
 
   @override

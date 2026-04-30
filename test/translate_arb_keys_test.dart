@@ -232,7 +232,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(860));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(822));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -334,6 +334,63 @@ void main() {
         );
       }
       for (final locale in ['bh', 'br', 'ch', 'li', 'mh', 'nr', 'oc', 'se']) {
+        final value = localeArbs[locale]!['placesFoundCount'] as String;
+        expect(
+          value,
+          isNot(english['placesFoundCount']),
+          reason: 'app_$locale.arb still uses English for placesFoundCount',
+        );
+        expect(
+          value,
+          contains('{count}'),
+          reason: 'app_$locale.arb lost the count placeholder',
+        );
+        expect(
+          value,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline places found count copy',
+        );
+      }
+      for (final locale in [
+        'aa',
+        'ab',
+        'av',
+        'ay',
+        'ba',
+        'bm',
+        'bo',
+        'cv',
+        'dz',
+        'ee',
+        'ff',
+        'fo',
+        'gn',
+        'gv',
+        'iu',
+        'jv',
+        'kg',
+        'kl',
+        'kr',
+        'lg',
+        'ln',
+        'lus',
+        'mg',
+        'ms',
+        'nso',
+        'om',
+        'os',
+        'qu',
+        'rn',
+        'sg',
+        'ss',
+        'ti',
+        'tn',
+        'to',
+        'ts',
+        'ty',
+        've',
+        'wo',
+      ]) {
         final value = localeArbs[locale]!['placesFoundCount'] as String;
         expect(
           value,

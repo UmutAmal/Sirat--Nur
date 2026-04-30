@@ -638,7 +638,7 @@
   "placesSearchArea": "Telusuri wilayah iki",
   "nearbyMosques": "Mesjid sacedhake",
   "islamicSchools": "Sekolah Islam",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ketemu",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

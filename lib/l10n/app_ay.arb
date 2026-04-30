@@ -638,7 +638,7 @@
   "placesSearchArea": "Aka chiqanx thaqhapxam",
   "nearbyMosques": "Uka jak’an Mezquitas ukanaka",
   "islamicSchools": "Escuelas Islámicas ukanakan yatiqañ utanakapa",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} jikxatasiwayi",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

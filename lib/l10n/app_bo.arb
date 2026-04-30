@@ -638,7 +638,7 @@
   "placesSearchArea": "ས་ཁུལ་འདིར་འཚོལ་ཞིབ།",
   "nearbyMosques": "ཉེ་འགྲམ་གྱི་ཁ་ཆེའི་ལྷ་ཁང་།",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} རྙེད།",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

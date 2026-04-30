@@ -638,7 +638,7 @@
   "placesSearchArea": "ኣብዚ ከባቢ ድለዩ።",
   "nearbyMosques": "ኣብ ቀረባ ዝርከቡ መሳጊድ",
   "islamicSchools": "ኣብያተ ትምህርቲ እስላም",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ተረኺቡ።",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

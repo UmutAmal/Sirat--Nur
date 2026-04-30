@@ -638,7 +638,7 @@
   "placesSearchArea": "Nyaka lefelo le",
   "nearbyMosques": "Mamosleme a Kgauswi",
   "islamicSchools": "Dikolo tša Boiselamo",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} e hweditšwe",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

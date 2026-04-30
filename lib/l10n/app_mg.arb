@@ -638,7 +638,7 @@
   "placesSearchArea": "Tadiavo ity faritra ity",
   "nearbyMosques": "Moske akaiky",
   "islamicSchools": "Sekoly Islamika",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} hita",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

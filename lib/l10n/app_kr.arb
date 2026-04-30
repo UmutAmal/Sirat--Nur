@@ -638,7 +638,7 @@
   "placesSearchArea": "Na adə kulasne",
   "nearbyMosques": "Mashidiwa Karǝngǝ",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} tǝbandǝna",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

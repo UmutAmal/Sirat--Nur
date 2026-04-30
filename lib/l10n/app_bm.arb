@@ -638,7 +638,7 @@
   "placesSearchArea": "Aw ye nin yɔrɔ in ɲini",
   "nearbyMosques": "Misiri minnu bɛ kɛrɛfɛ",
   "islamicSchools": "Silamɛya Lakɔlisow",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} sɔrɔla",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

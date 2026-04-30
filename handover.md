@@ -19576,3 +19576,39 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesFoundCount` icin placeholder-guvenli batch uygulanacak.
+
+## 2026-04-30 TUR-483 - Places Found Count L10n Batch
+
+### MASTER Karari
+- Risk: `placesFoundCount` 71 locale'de Ingilizce fallback olarak kaliyordu; Places ekraninda bulunan sonuc sayisi dogrudan harita/liste guveni ve kullanici yonlendirmesi urettigi icin `{count}` placeholder'i korunarak yerel dilde gorunmeliydi.
+- Kanit:
+  - `lib/l10n/app_aa.arb:641` artik `"placesFoundCount": "{count} geytimeh"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_bo.arb:641` artik `"placesFoundCount": "{count} རྙེད།"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:641` artik `"placesFoundCount": "{count} ñu gis"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1358`, `lib/l10n/app_localizations_bo.dart:1358` ve `lib/l10n/app_localizations_wo.dart:1358` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/translate_arb_keys_test.dart:235` kritik 23 l10n anahtari icin same-as-English esigini `822` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:337` ve `test/translate_arb_keys_test.dart:394` kabul edilen Places sonuc sayaci locale'lerinin Ingilizce fallback olmadigini, `{count}` placeholder'ini korudugunu ve multiline uretmedigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report placesFoundCount` same-as-English borcunu `71 -> 33` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+  - 23 anahtarli kritik l10n debt reportu same-as-English toplam borcunu `860 -> 822`, missing/empty `0`, placeholder mismatch `0` olarak olctu.
+- Kullanici etkisi: Places ekraninda sonuc sayisi 38 ek locale'de yerellesir; sayi placeholder'i runtime'da korunur ve yanlis cok satirli copy kabul edilmez.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: Bu turdaki 38 ARB dosyasi, 38 generated l10n dosyasi, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesFoundCount` icin guvenli kabul edilen 38 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- Afar ve Tibetan degerlerinde placeholder ile metin arasindaki okunabilirlik boslugu elle netlestirildi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Ortam: `flutter doctor` Android toolchain ve bagli cihazlar icin PASS; Chrome ve Visual Studio eksikleri web/Windows desktop hedeflerine ait non-blocking uyari olarak kaldi.
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 141/141.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 683/683.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+
+### Risk Degisimi
+- Places found-count l10n riski: `16/25 -> 5/25`.
+- Kalan risk: `placesApiError` 69 locale'de Ingilizce fallback olarak kaliyor; API hata durumunda teknik `{statusCode}` placeholder'i korunarak yerellesmesi gereken siradaki en yuksek Places runtime copy adayi.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesApiError` icin placeholder-guvenli, tek-anahtarli batch uygulanacak.

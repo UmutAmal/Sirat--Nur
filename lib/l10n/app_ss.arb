@@ -638,7 +638,7 @@
   "placesSearchArea": "Sesha lendzawo",
   "nearbyMosques": "Emamoski lasedvute",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} kutfolakele",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

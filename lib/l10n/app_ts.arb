@@ -638,7 +638,7 @@
   "placesSearchArea": "Lavisisa ndhawu leyi",
   "nearbyMosques": "Timosque ta le kusuhi",
   "islamicSchools": "Swikolo swa Vuislem",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} yi kumiwile",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
