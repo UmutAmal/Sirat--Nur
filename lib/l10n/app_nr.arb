@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Amathayili wemephu awatholakali",
   "placesMapTilesUnavailableBody": "Umthombo wamathayili wemephu oqinisekisiweko awukalungiselelwa ukwakha lokhu okwamanje. Iindawo eziseduze zingalayisha ukusuka endaweni yakho elondoloziweko.",
   "placesDataSourceUnavailableTitle": "Indawo idatha engatholakali",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Indawo yokugcina yedatha yeendawo eqinisekisiweko ayikalungiselelwa ukwakha lokhu okwamanje. Setha PLACES_OVERPASS_API_URL kummeleli ovunyelweko nofana umhlinzeki ngaphambi kokuvumela ukusesha okuseduze.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

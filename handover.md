@@ -18776,6 +18776,43 @@
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; teknik token iceren `placesDataSourceUnavailableBody` icin `PLACES_OVERPASS_API_URL` koruma testiyle ilerle.
 
+## 2026-04-30 TUR-463 - Places Data Source Body Runtime L10n Sync
+
+### MASTER Karari
+- Risk: Places veri saglayicisi kapali/yanlis oldugunda gosterilen `placesDataSourceUnavailableBody` aciklamasi dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu; metin teknik `PLACES_OVERPASS_API_URL` token'i tasidigi icin yanlis ceviri config yonlendirmesini bozabilirdi.
+- Kanit:
+  - `lib/l10n/app_ab.arb:671` artik `PLACES_OVERPASS_API_URL` token'ini koruyan localized `placesDataSourceUnavailableBody` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:671` artik `PLACES_OVERPASS_API_URL` token'ini koruyan localized `placesDataSourceUnavailableBody` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_ab.dart:1393` ve `lib/l10n/app_localizations_wo.dart:1393` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/l10n_generated_sync_test.dart:43` `placesDataSourceUnavailableBody` icin ARB/generated uyumunu kilitliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1246` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:301` secili dusuk kaynakli locale'lerde Ingilizce fallback'i reddediyor; `test/translate_arb_keys_test.dart:485` ve `test/translate_arb_keys_test.dart:490` reddedilen `app_av` ve `app_gv` mixed-language/debris ciktilarini guard ediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1268 -> 1246` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Places data-source hata aciklamasi daha fazla locale'de runtime'da gercekten secili dilde gorunur; config token'i korunur, guvenilir olmayan Avar ve Manx ciktilari kabul edilmeden Ingilizce fallback'e birakildi.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: Bu turdaki 22 ARB dosyasi, 22 generated l10n dosyasi, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesDataSourceUnavailableBody` icin 22 guvenli dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `app_av` icin Rusca/Avar karisik cikti ve `app_gv` icin `endpoint data places verify` iceren mixed English/Manx cikti reddedildi; bu iki locale'de temiz Ingilizce fallback korundu.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+- `test/l10n_generated_sync_test.dart` data-source body anahtarini da ARB/generated karsilastirmasina ekledi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places data source unavailable body l10n/runtime sync riski: `16/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1246` same-as-English fallback devam ediyor; placeholder iceren `placesFoundCount`/`distanceAwayKm` ve download/diagnostics/chatbot kumesi sonraki guvenli batchlerde azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; placeholder iceren Places count/distance anahtarlari icin once placeholder guard'lariyla ilerle.
+
 ## 2026-04-30 TUR-461 - Places Data Source Title Runtime L10n Sync
 
 ### MASTER Karari

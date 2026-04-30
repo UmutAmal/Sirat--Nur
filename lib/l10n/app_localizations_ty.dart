@@ -1393,7 +1393,7 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Aita â te hoê vahi hopea o te mau haamaramaramaraa i haamauhia no teie paturaa. Hou a faaohipa \' i i te maimiraa i pihai iho mai, a taui i te PLACES_OVERPASS_API_URL i ni\'a i te hoê ti\'a faatere aore râ, te hoê taata horo\'a.';
 
   @override
   String get unknownPlaceName => 'Unknown Name';

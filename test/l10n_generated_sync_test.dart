@@ -39,6 +39,10 @@ void main() {
           l10n.placesDataSourceUnavailableTitle,
           arb['placesDataSourceUnavailableTitle'],
         );
+        expect(
+          l10n.placesDataSourceUnavailableBody,
+          arb['placesDataSourceUnavailableBody'],
+        );
       }
     },
   );

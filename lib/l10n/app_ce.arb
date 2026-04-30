@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Картан плиткаш яц",
   "placesMapTilesUnavailableBody": "ТӀечӀагӀдина картан плиткин хьоста хӀинца а дӀахӀоттийна дац оцу бинана. Уллера меттигаш хӀинца а хьан ларйинчу меттигера дӀаяха йиш ю.",
   "placesDataSourceUnavailableTitle": "Меттигаш даннаш лело йиш яц",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "ТӀечӀагӀйина меттигийн даннийн чаккхенан точка цкъачунна дӀахӀоттийна яц оцу биначу дӀахӀоттаман. PLACES_OVERPASS_API_URL дӀахӀоттае къобалдина прокси я провайдер гергахь лехар дӀахӀоттале.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Kaarttegels neet besjikbaar",
   "placesMapTilesUnavailableBody": "‘n Gecontroleerde kaarttegelbron is nog neet geconfigureerd veur deze build. Plaatse in de buurt kinne nog altied lade vanaaf eur opgesjlage locatie.",
   "placesDataSourceUnavailableTitle": "Gegevens neet besjikbaar plaats",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "‘n Gecontroleerd plaatsdata-eindpunt is nog neet geconfigureerd veur deze build. Stel PLACES_OVERPASS_API_URL in op un goodgekeurde proxy of provider veurtot u de zeuk in de buurt inschakelt.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

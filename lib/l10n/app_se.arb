@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Kártatávvalat eai gávdno",
   "placesMapTilesUnavailableBody": "Duođaštuvvon kártatávvala gáldu ii leat vuos konfigurerejuvvon dán huksemii. Lagamus báikkit sáhttet ain lastadit du vurkejuvvon báikkis.",
   "placesDataSourceUnavailableTitle": "Báikkit dieđut eai leat gávdnamis",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Duođaštuvvon báikkiid dieđuid loahppačuokkis ii leat vuos konfigurerejuvvon dán huksemii. Bija PLACES_OVERPASS_API_URL dohkkehuvvon proxy dahje fálaldahkii ovdal go álggahat lagaš ohcama.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

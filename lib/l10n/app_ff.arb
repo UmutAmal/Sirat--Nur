@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Tile karte keɓaaka",
   "placesMapTilesUnavailableBody": "Iwdi tile karte hoolkisaande ndee feewnaaka tawo ngam ndee mahdi. Nokkuuji ɓadiiɗi ina mbaawi loowde haa jooni gila e nokku mo keɓ-ɗaa oo.",
   "placesDataSourceUnavailableTitle": "Nokkuuji dokke ɗe keɓaaka",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Toɓɓere joofnirde domen nokkuuji hoolkisaande ndee feewnaaka tawo ngam ndee mahdi. Seŋo PLACES_OVERPASS_API_URL e kuutorgal walla dokkoowo jaɓaaɗo hade maa softinde njiylawu ɓadiiɗo.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

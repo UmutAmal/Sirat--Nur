@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "ናይ ካርታ ታይላት ኣይርከባን",
   "placesMapTilesUnavailableBody": "ዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።",
   "placesDataSourceUnavailableTitle": "ዳታ ኣብ ዘይርከብ ቦታ የቐምጥ",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "ዝተረጋገጸ ናይ ቦታታት ዳታ መወዳእታ ነጥቢ ነዚ ህንጸት ገና ኣይተዋቕረን። ቅድሚ ኣብ ቀረባ ዝርከብ ምድላይ ምኽፋትካ PLACES_OVERPASS_API_URL ናብ ዝጸደቐ ፕሮክሲ ወይ ኣቕራቢ ኣቐምጦ።",
   "unknownPlaceName": "ዘይፍለጥ ስም",
   "islamicPlaceFallback": "እስላማዊ ቦታ",
   "asmaMeaning1": "እቲ ገባሪ ሰናይ",

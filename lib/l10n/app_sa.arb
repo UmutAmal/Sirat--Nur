@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "नक्शा टाइल्स अनुपलब्ध",
   "placesMapTilesUnavailableBody": "अस्य निर्माणस्य कृते अद्यापि सत्यापितः मानचित्रटाइलस्रोतः विन्यस्तः नास्ति । समीपस्थानि स्थानानि अद्यापि भवतः रक्षितस्थानात् लोड् कर्तुं शक्नुवन्ति ।",
   "placesDataSourceUnavailableTitle": "दत्तांशं अनुपलब्धं स्थापयति",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "अस्य निर्माणस्य कृते अद्यापि सत्यापितः स्थानदत्तांशः अन्त्यबिन्दुः विन्यस्तः नास्ति । समीपस्थं अन्वेषणं सक्षमीकरणात् पूर्वं PLACES_OVERPASS_API_URL इत्येतत् अनुमोदितं प्रॉक्सी अथवा प्रदातृं प्रति सेट् कुर्वन्तु ।",
   "unknownPlaceName": "अज्ञात नाम",
   "islamicPlaceFallback": "इस्लामिक स्थान",
   "asmaMeaning1": "परोपकारी",

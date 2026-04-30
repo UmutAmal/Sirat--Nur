@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Карта плиткаяс абуӧсь.",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Верифицируйтӧм местаяс даннӧйяс конечнӧй точка абу настроитӧм тайӧ лӧсьӧдӧм вылӧ. Матысса корсьӧм лэдзӧм бӧрын пуктӧй PLACES_OVERPASS_API_URL сӧгласуйтӧм прокси либӧ провайдер вылӧ.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

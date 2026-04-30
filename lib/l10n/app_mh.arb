@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Map tiles ko rejjab maroñ",
   "placesMapTilesUnavailableBody": "Juon map tile source eo emōj an kamool ejjab kōmmane ñan build in kiõ. Jikin ko repaak remaroñ in load jen jikin eo kwar kejbãrok ie.",
   "placesDataSourceUnavailableTitle": "Jikin ko rejjab maroñ in bōk melele ko",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Juon jemlok in data in jikin ko emōj an kamool ejjab kōmmane ñan build in kiõ. Kōmman PLACES_OVERPASS_API_URL ñan juon proxy ak provider eo emōj an kar kōtlok mokta jen am kōtlok pukōt eo epaak.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

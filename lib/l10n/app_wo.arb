@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
   "placesMapTilesUnavailableBody": "Ba tay amagul ab source mosail kart buñ firndeel ngir taax bii. Barab yi la gëna jege mën nañu ba leegi sarse ci barab bi nga denc.",
   "placesDataSourceUnavailableTitle": "Done yi amul",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Ba leegi amagul benn poñ de done yuñ firndeel ngir tabax bii. Def PLACES_OVERPASS_API_URL ci ab proxy wala joxekat buñu nangu balaa ngay may seetug jege.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Thaela dza mapa a dzi wanali",
   "placesMapTilesUnavailableBody": "Tshisima tsha thaela ya mapa tsho khwaṱhisedzwaho a tshi athu dzudzanywa kha u fhaṱa uhu. Fhethu ha tsini hu nga kha ḓi ḓadza u bva fhethu he na vhulunga hone.",
   "placesDataSourceUnavailableTitle": "U vhea data i siho",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Magumo a datha ya fhethu ho khwaṱhisedzwaho a hu athu dzudzanywa kha u fhaṱa uhu. Setha PLACES_OVERPASS_API_URL kha muimeleli o tendelwaho kana muṋetshedzi phanḓa ha musi ni tshi tendela ṱhoḓisiso ya tsini.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

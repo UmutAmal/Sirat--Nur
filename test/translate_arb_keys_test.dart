@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1268));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1246));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -293,6 +293,26 @@ void main() {
         localeArbs['ay']!['placesDataSourceUnavailableBody'],
         isNot(english['placesDataSourceUnavailableBody']),
       );
+      for (final locale in ['ab', 'bo', 'br', 'ti', 'wo']) {
+        final dataSourceBody =
+            localeArbs[locale]!['placesDataSourceUnavailableBody'] as String;
+        expect(
+          dataSourceBody,
+          isNot(english['placesDataSourceUnavailableBody']),
+          reason:
+              'app_$locale.arb still uses English for placesDataSourceUnavailableBody',
+        );
+        expect(
+          dataSourceBody,
+          contains('PLACES_OVERPASS_API_URL'),
+          reason: 'app_$locale.arb changed the PLACES_OVERPASS_API_URL token',
+        );
+        expect(
+          dataSourceBody,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline places data-source body copy',
+        );
+      }
       expect(
         localeArbs['ga']!['diagnosticsQuranCloudTablesMissing'],
         isNot(english['diagnosticsQuranCloudTablesMissing']),
@@ -460,6 +480,16 @@ void main() {
         localeArbs['gv']!['placesDataSourceUnavailableTitle'],
         isNot(contains('Places data nagh vel')),
         reason: 'app_gv.arb kept English/Manx mixed places data title debris',
+      );
+      expect(
+        localeArbs['av']!['placesDataSourceUnavailableBody'],
+        isNot(contains('Проверенная конечная')),
+        reason: 'app_av.arb kept Russian/Avar places data body debris',
+      );
+      expect(
+        localeArbs['gv']!['placesDataSourceUnavailableBody'],
+        isNot(contains('endpoint data places verify')),
+        reason: 'app_gv.arb kept English/Manx mixed places data body copy',
       );
     });
 

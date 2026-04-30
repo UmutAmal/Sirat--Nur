@@ -1391,7 +1391,7 @@ class AppLocalizationsFf extends AppLocalizations {
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Toɓɓere joofnirde domen nokkuuji hoolkisaande ndee feewnaaka tawo ngam ndee mahdi. Seŋo PLACES_OVERPASS_API_URL e kuutorgal walla dokkoowo jaɓaaɗo hade maa softinde njiylawu ɓadiiɗo.';
 
   @override
   String get unknownPlaceName => 'Unknown Name';

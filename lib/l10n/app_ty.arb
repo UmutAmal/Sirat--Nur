@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Aita te mau hoho'a fenua e vai ra",
   "placesMapTilesUnavailableBody": "Aita â te hoê puna hoho'a fenua i haamauhia no teie paturaa. E nehenehe â te mau vahi tapiri e faauta mai i to outou vahi i tapeahia.",
   "placesDataSourceUnavailableTitle": "Aita te mau haamaramaramaraa e vai ra",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Aita â te hoê vahi hopea o te mau haamaramaramaraa i haamauhia no teie paturaa. Hou a faaohipa ' i i te maimiraa i pihai iho mai, a taui i te PLACES_OVERPASS_API_URL i ni'a i te hoê ti'a faatere aore râ, te hoê taata horo'a.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

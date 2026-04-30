@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Ti siña ma sodda' i mapa",
   "placesMapTilesUnavailableBody": "Ti makonfigura i fuetsan mapa ni' ma'aprueba para este na fina'tinas på'go. I lugat siha gi fi'on-mu siña ha' ma'a'atan ginen i ma'a'atan na lugat-mu.",
   "placesDataSourceUnavailableTitle": "I lugat siha ni' ti siña ma sodda' i dañu",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Ti makonfigura i endpoint na lugåt siha ni' ma'ayek para este na konstruksion. Na'setbe PLACES_OVERPASS_API_URL gi un proxy pat prufesiunåt ni' ma'aprueba antes di un na'siña i inaligao gi fi'on-mu.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",
