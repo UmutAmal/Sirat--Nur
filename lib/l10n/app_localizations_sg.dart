@@ -1388,7 +1388,7 @@ class AppLocalizationsSg extends AppLocalizations {
       'A leke pëpe mbeni source ti carte ti carte so a vérifié ni awe ndali ti lekengo ye so. Ando so ayeke nduru alingbi ti ngbâ ti charge na ndo so mo bata ni dä.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'A zia asango na ndo ni pëpe';
 
   @override
   String get placesDataSourceUnavailableBody =>

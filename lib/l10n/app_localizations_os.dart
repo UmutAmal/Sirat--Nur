@@ -1388,7 +1388,8 @@ class AppLocalizationsOs extends AppLocalizations {
       'Бæлвырдгонд картæйы плитæйы равзæрæн нырма нæу конфигурацигонд ацы амадæн. Хæстæг бынæттæн сæ бон у нырма дæ хъахъхъæд бынатæй æрбакæнын.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Бæрæггæнæнтæ æнæрайсгæ бынæтты';
 
   @override
   String get placesDataSourceUnavailableBody =>

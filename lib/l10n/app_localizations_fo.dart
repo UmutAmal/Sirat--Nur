@@ -1387,7 +1387,7 @@ class AppLocalizationsFo extends AppLocalizations {
       'Ein váttað kortflísakelda er ikki uppsett til hesa bygging enn. Nærliggjandi støð kunnu framvegis heinta frá tínum goymda stað.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Setur dátur ótøkar';
 
   @override
   String get placesDataSourceUnavailableBody =>

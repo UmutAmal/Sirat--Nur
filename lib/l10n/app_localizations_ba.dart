@@ -1387,7 +1387,8 @@ class AppLocalizationsBa extends AppLocalizations {
       'Был төҙөү өсөн әлегә раҫланған карта плиткә сығанағы конфигурацияланмаған. Яҡындағы урындар һаман да һеҙҙең һаҡланған урындан тейәп була.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Мәғлүмәттәр ҡулланылмаған урындар';
 
   @override
   String get placesDataSourceUnavailableBody =>

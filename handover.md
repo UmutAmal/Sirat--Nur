@@ -18738,3 +18738,40 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; her yeni ARB batch'inden sonra `flutter gen-l10n` ve `test/l10n_generated_sync_test.dart` mutlaka calistir.
+
+## 2026-04-30 TUR-461 - Places Data Source Title Runtime L10n Sync
+
+### MASTER Karari
+- Risk: Places veri saglayicisi kapali/yanlis oldugunda gosterilen `placesDataSourceUnavailableTitle` basligi dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:670` artik `"placesDataSourceUnavailableTitle": "Arooca oyti mageytima"` degerini tasiyor; once `Places data unavailable` idi.
+  - `lib/l10n/app_wo.arb:670` artik `"placesDataSourceUnavailableTitle": "Done yi amul"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1390` ve `lib/l10n/app_localizations_wo.dart:1390` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/l10n_generated_sync_test.dart:35` `placesDataSourceUnavailableTitle` icin ARB/generated uyumunu kilitliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1300` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:407` ve `test/translate_arb_keys_test.dart:426` body/title l10n guard'larini genisleterek `app_av` ve `app_gv` icin karisik Rusca/Ingizlice ciktilari reddediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1331 -> 1300` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Places data-source hata basligi daha fazla locale'de runtime'da gercekten secili dilde gorunur; guvenilir olmayan `app_av` ve `app_gv` ciktilari uydurma kabul edilmeden Ingilizce fallback'e birakildi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 31 ARB dosyasi, 31 generated l10n dosyasi, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesDataSourceUnavailableTitle` icin 31 guvenli dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `app_av` ve `app_gv` icin mixed-language arac ciktisi reddedildi ve temiz Ingilizce fallback korundu.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+- `test/l10n_generated_sync_test.dart` yeni anahtari da ARB/generated karsilastirmasina ekledi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places data source unavailable title l10n/runtime sync riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1300` same-as-English fallback devam ediyor; `placesLocationRequiredBody`, `placesDataSourceUnavailableBody`, placeholder iceren found/distance copy ve download/diagnostics kumesi sonraki guvenli batchlerde azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; uzun body anahtarlarinda teknik token ve newline guard'larini once calistir.

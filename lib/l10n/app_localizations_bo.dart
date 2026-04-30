@@ -1388,7 +1388,7 @@ class AppLocalizationsBo extends AppLocalizations {
       'ད་དུང་བཟོ་སྐྲུན་འདིའི་ཆེད་དུ་བདེན་དཔང་བྱས་པའི་ས་ཁྲའི་བང་རིམ་གྱི་འབྱུང་ཁུངས་སྒྲིག་བཀོད་བྱས་མེད། ཁྱེད་ཀྱི་ཉར་ཚགས་བྱས་པའི་ས་ཆ་ནས་ཉེ་འགྲམ་གྱི་ས་ཆ་ད་དུང་ཡང་མངོན་ཐུབ།';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'གཞི་གྲངས་ཐོབ་མི་ཐུབ་པའི་ས་ཆ།';
 
   @override
   String get placesDataSourceUnavailableBody =>

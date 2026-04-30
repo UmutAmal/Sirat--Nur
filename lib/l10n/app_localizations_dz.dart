@@ -1388,7 +1388,8 @@ class AppLocalizationsDz extends AppLocalizations {
       'བཟོ་བརྩིགས་འདི་གི་དོན་ལུ་ བདེན་བཤད་འབད་ཡོད་པའི་སབ་ཁྲའི་ཊ་ཡིལ་འབྱུང་ཁུངས་ཅིག་ ད་ལྟོ་ཡང་རིམ་སྒྲིག་མ་འབད་བས། ཉེ་འདབས་ཀྱི་ས་གནས་ཚུ་གིས་ ད་ལྟོ་ཡང་ ཁྱོད་རའི་སྲུང་བཞག་འབད་ཡོད་པའི་གནས་ཁོངས་ལས་ མངོན་གསལ་འབད་ཚུགས།';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'གནད་སྡུད་འཐོབ་མ་ཚུགས་པའི་ས་གནས་ཚུ།';
 
   @override
   String get placesDataSourceUnavailableBody =>

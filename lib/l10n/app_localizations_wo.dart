@@ -1387,7 +1387,7 @@ class AppLocalizationsWo extends AppLocalizations {
       'Ba tay amagul ab source mosail kart buñ firndeel ngir taax bii. Barab yi la gëna jege mën nañu ba leegi sarse ci barab bi nga denc.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Done yi amul';
 
   @override
   String get placesDataSourceUnavailableBody =>

@@ -1388,7 +1388,7 @@ class AppLocalizationsBh extends AppLocalizations {
       'एह बिल्ड खातिर अबहिन ले कौनों सत्यापन कइल मैप टाइल स्रोत कॉन्फ़िगर नइखे कइल गइल। पास के जगह अबहियों रउरा सेव कइल लोकेशन से लोड हो सकेला.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'डेटा के अनुपलब्ध बना देला';
 
   @override
   String get placesDataSourceUnavailableBody =>

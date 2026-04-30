@@ -1387,7 +1387,8 @@ class AppLocalizationsFj extends AppLocalizations {
       'E dua na ivurevure ni tile ni mape vakadeitaki e se bera ni vakarautaki me baleta na tara oqo. Na veivanua voleka e rawa ni se vakavodoki mai na nomu vanua maroroi.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Vanua itukutuku sega ni rawati';
 
   @override
   String get placesDataSourceUnavailableBody =>

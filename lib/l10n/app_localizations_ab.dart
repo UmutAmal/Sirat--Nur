@@ -1387,7 +1387,7 @@ class AppLocalizationsAb extends AppLocalizations {
       'Игәаҭоу ахсаала ахыҵхырҭа ари аргыларазы макьана еиқәыршәаӡам. Ааигәа иҟоу аҭыԥқәа уажәгьы еиқәырханы иҟоу аҭыԥ аҟынтәи иҭагалахар рылшоит.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Адыррақәа ыҟаӡам аҭыԥқәа';
 
   @override
   String get placesDataSourceUnavailableBody =>

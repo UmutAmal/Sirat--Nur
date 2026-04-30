@@ -1388,7 +1388,7 @@ class AppLocalizationsRn extends AppLocalizations {
       'Inkomoko y\'ikarita yagenzuwe ntiyatunganijwe kuri iyi nyubakwa. Ibibanza vyo hafi birashobora gufunguka bivuye aho wabitse.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Amakuru y\'ahantu ntaboneka';
 
   @override
   String get placesDataSourceUnavailableBody =>

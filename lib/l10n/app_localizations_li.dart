@@ -1387,7 +1387,8 @@ class AppLocalizationsLi extends AppLocalizations {
       '‘n Gecontroleerde kaarttegelbron is nog neet geconfigureerd veur deze build. Plaatse in de buurt kinne nog altied lade vanaaf eur opgesjlage locatie.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Gegevens neet besjikbaar plaats';
 
   @override
   String get placesDataSourceUnavailableBody =>

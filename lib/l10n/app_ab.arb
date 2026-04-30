@@ -667,7 +667,7 @@
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Ахсаала акаҵкәырқәа ыҟаӡам",
   "placesMapTilesUnavailableBody": "Игәаҭоу ахсаала ахыҵхырҭа ари аргыларазы макьана еиқәыршәаӡам. Ааигәа иҟоу аҭыԥқәа уажәгьы еиқәырханы иҟоу аҭыԥ аҟынтәи иҭагалахар рылшоит.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableTitle": "Адыррақәа ыҟаӡам аҭыԥқәа",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",

@@ -1388,7 +1388,8 @@ class AppLocalizationsTy extends AppLocalizations {
       'Aita â te hoê puna hoho\'a fenua i haamauhia no teie paturaa. E nehenehe â te mau vahi tapiri e faauta mai i to outou vahi i tapeahia.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Aita te mau haamaramaramaraa e vai ra';
 
   @override
   String get placesDataSourceUnavailableBody =>

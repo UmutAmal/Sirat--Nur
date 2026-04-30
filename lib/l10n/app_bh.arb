@@ -667,7 +667,7 @@
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "नक्शा के टाइल्स उपलब्ध नइखे",
   "placesMapTilesUnavailableBody": "एह बिल्ड खातिर अबहिन ले कौनों सत्यापन कइल मैप टाइल स्रोत कॉन्फ़िगर नइखे कइल गइल। पास के जगह अबहियों रउरा सेव कइल लोकेशन से लोड हो सकेला.",
-  "placesDataSourceUnavailableTitle": "Places data unavailable",
+  "placesDataSourceUnavailableTitle": "डेटा के अनुपलब्ध बना देला",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",

@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1331));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1300));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -401,6 +401,36 @@ void main() {
         localeArbs['kv']!['placesMapTilesUnavailableBody'],
         isNot(contains('Верифицируйтӧм карта плитка источник')),
         reason: 'app_kv.arb kept mixed Russian/Komi map tile body debris',
+      );
+      for (final locale in ['aa', 'ab', 'ba', 'bo', 'wo']) {
+        final dataSourceTitle =
+            localeArbs[locale]!['placesDataSourceUnavailableTitle'] as String;
+        expect(
+          dataSourceTitle,
+          isNot(english['placesDataSourceUnavailableTitle']),
+          reason:
+              'app_$locale.arb still uses English for placesDataSourceUnavailableTitle',
+        );
+        expect(
+          dataSourceTitle,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline places data title copy',
+        );
+        expect(
+          dataSourceTitle,
+          isNot(contains(' .')),
+          reason: 'app_$locale.arb has punctuation spacing debris',
+        );
+      }
+      expect(
+        localeArbs['av']!['placesDataSourceUnavailableTitle'],
+        isNot(contains('БакӀал данные недоступны')),
+        reason: 'app_av.arb kept mixed Russian/Avar places data title debris',
+      );
+      expect(
+        localeArbs['gv']!['placesDataSourceUnavailableTitle'],
+        isNot(contains('Places data nagh vel')),
+        reason: 'app_gv.arb kept English/Manx mixed places data title debris',
       );
     });
 

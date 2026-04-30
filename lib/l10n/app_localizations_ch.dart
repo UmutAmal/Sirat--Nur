@@ -1387,7 +1387,8 @@ class AppLocalizationsCh extends AppLocalizations {
       'Ti makonfigura i fuetsan mapa ni\' ma\'aprueba para este na fina\'tinas på\'go. I lugat siha gi fi\'on-mu siña ha\' ma\'a\'atan ginen i ma\'a\'atan na lugat-mu.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'I lugat siha ni\' ti siña ma sodda\' i dañu';
 
   @override
   String get placesDataSourceUnavailableBody =>

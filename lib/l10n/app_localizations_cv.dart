@@ -1388,7 +1388,7 @@ class AppLocalizationsCv extends AppLocalizations {
       'Ку сборка валли тӗрӗсленӗ карттӑ плиткин ҫӑлкуҫӗ хальлӗхе настройка туман-ха. Ҫывӑхри вырӑнсем сирӗн упранӑ вырӑнтан ҫаплах ҫӗклеме пултараҫҫӗ.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Даннӑйсем ҫук вырӑнсем';
 
   @override
   String get placesDataSourceUnavailableBody =>

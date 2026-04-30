@@ -31,6 +31,10 @@ void main() {
           l10n.placesMapTilesUnavailableBody,
           arb['placesMapTilesUnavailableBody'],
         );
+        expect(
+          l10n.placesDataSourceUnavailableTitle,
+          arb['placesDataSourceUnavailableTitle'],
+        );
       }
     },
   );

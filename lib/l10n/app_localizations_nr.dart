@@ -1388,7 +1388,7 @@ class AppLocalizationsNr extends AppLocalizations {
       'Umthombo wamathayili wemephu oqinisekisiweko awukalungiselelwa ukwakha lokhu okwamanje. Iindawo eziseduze zingalayisha ukusuka endaweni yakho elondoloziweko.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Indawo idatha engatholakali';
 
   @override
   String get placesDataSourceUnavailableBody =>

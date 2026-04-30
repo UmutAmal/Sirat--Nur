@@ -1387,7 +1387,7 @@ class AppLocalizationsIu extends AppLocalizations {
       'ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᓄᓇᙳᐊᖅ ᐋᖅᑭᒃᑕᐅᓯᒪᙱᓚᖅ ᓱᓕ ᑖᔅᓱᒧᖓ ᓴᓇᔭᐅᔪᒧᑦ. ᖃᓂᒋᔭᖏᓐᓂ ᐃᓂᐅᔪᑦ ᓱᓕ ᐴᖅᑲᐃᔪᓐᓇᖅᑐᑦ ᓴᓂᕐᕙᒃᓯᒪᔭᕐᓂᒃ ᐃᓂᒋᔭᕐᓂᒃ.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'ᐃᓂᐅᔪᑦ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᑦ ᐊᑐᐃᓐᓇᐅᙱᑦᑐᑦ';
 
   @override
   String get placesDataSourceUnavailableBody =>

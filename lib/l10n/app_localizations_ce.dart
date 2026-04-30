@@ -1387,7 +1387,7 @@ class AppLocalizationsCe extends AppLocalizations {
       'ТӀечӀагӀдина картан плиткин хьоста хӀинца а дӀахӀоттийна дац оцу бинана. Уллера меттигаш хӀинца а хьан ларйинчу меттигера дӀаяха йиш ю.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Меттигаш даннаш лело йиш яц';
 
   @override
   String get placesDataSourceUnavailableBody =>

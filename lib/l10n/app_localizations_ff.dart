@@ -1387,7 +1387,7 @@ class AppLocalizationsFf extends AppLocalizations {
       'Iwdi tile karte hoolkisaande ndee feewnaaka tawo ngam ndee mahdi. Nokkuuji ɓadiiɗi ina mbaawi loowde haa jooni gila e nokku mo keɓ-ɗaa oo.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Nokkuuji dokke ɗe keɓaaka';
 
   @override
   String get placesDataSourceUnavailableBody =>

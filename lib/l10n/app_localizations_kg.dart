@@ -1387,7 +1387,7 @@ class AppLocalizationsKg extends AppLocalizations {
       'Ntu ya tile ya karte ya bo me ndima me yidikama ntete ve sambu na kutunga yai. Bisika ya pene-pene lenda katuka kaka na kisika yina nge me bumba.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Bansangu ya bisika kele ve';
 
   @override
   String get placesDataSourceUnavailableBody =>

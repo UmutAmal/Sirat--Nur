@@ -1389,7 +1389,8 @@ class AppLocalizationsSs extends AppLocalizations {
       'Umtfombo we-tile yebalave locinisekisiwe awukalungiswa kulokwakha. Tindzawo letisedvute tisakhona kulayisha kusuka endzaweni yakho legciniwe.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Idatha yetindzawo ayitfolakali';
 
   @override
   String get placesDataSourceUnavailableBody =>

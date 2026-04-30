@@ -1388,7 +1388,8 @@ class AppLocalizationsKl extends AppLocalizations {
       'Uppernarsarneqarsimasoq nunap assingani fliser killiffik sanaartornermut tassunga suli aaqqissuunneqanngilaq. Sumiiffiit qaninnerpaat suli sumiiffimmi annaaneqarsimasumit ikkussinnaapput.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Sumiiffiit datat atorneqarsinnaanngitsut';
 
   @override
   String get placesDataSourceUnavailableBody =>

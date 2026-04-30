@@ -1387,7 +1387,8 @@ class AppLocalizationsMh extends AppLocalizations {
       'Juon map tile source eo emōj an kamool ejjab kōmmane ñan build in kiõ. Jikin ko repaak remaroñ in load jen jikin eo kwar kejbãrok ie.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Jikin ko rejjab maroñ in bōk melele ko';
 
   @override
   String get placesDataSourceUnavailableBody =>

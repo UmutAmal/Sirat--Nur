@@ -1387,7 +1387,7 @@ class AppLocalizationsAa extends AppLocalizations {
       'diggowteh tan kartah fiddimaamih raceena ta xisneh taham fan mabicinna. xayi arooca uxih quukam duuddah atu daanisse aracak.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Arooca oyti mageytima';
 
   @override
   String get placesDataSourceUnavailableBody =>

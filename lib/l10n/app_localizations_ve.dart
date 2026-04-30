@@ -1388,7 +1388,7 @@ class AppLocalizationsVe extends AppLocalizations {
       'Tshisima tsha thaela ya mapa tsho khwaṱhisedzwaho a tshi athu dzudzanywa kha u fhaṱa uhu. Fhethu ha tsini hu nga kha ḓi ḓadza u bva fhethu he na vhulunga hone.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'U vhea data i siho';
 
   @override
   String get placesDataSourceUnavailableBody =>

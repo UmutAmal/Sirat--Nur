@@ -1387,7 +1387,8 @@ class AppLocalizationsSe extends AppLocalizations {
       'Duođaštuvvon kártatávvala gáldu ii leat vuos konfigurerejuvvon dán huksemii. Lagamus báikkit sáhttet ain lastadit du vurkejuvvon báikkis.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Báikkit dieđut eai leat gávdnamis';
 
   @override
   String get placesDataSourceUnavailableBody =>

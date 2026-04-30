@@ -1387,7 +1387,7 @@ class AppLocalizationsKr extends AppLocalizations {
       'Map tile source tawattəgənadə gar adəro tətandənyi. Nawa karəngəyedə kuwami yaye na gənatənadən load sadin.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Nawa bayanna mbeji';
 
   @override
   String get placesDataSourceUnavailableBody =>

@@ -1388,7 +1388,7 @@ class AppLocalizationsBr extends AppLocalizations {
       'N\'eo ket bet kefluniet ur vammenn kartenn gwiriekaet evit ar sevel-mañ c\'hoazh. Al lec\'hioù tost a c\'hall c\'hoazh kargañ diwar ho lec\'hiadur enrollet.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle => 'Lec\'hioù n\'int ket hegerz';
 
   @override
   String get placesDataSourceUnavailableBody =>

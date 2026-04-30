@@ -1387,7 +1387,8 @@ class AppLocalizationsTn extends AppLocalizations {
       'Motswedi wa dithaele tsa mmapa o o netefaditsweng ga o ise o rulaganyediwe kago eno. Mafelo a a gaufi a sa ntse a ka laisa go tswa mo lefelong la gago le le bolokilweng.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'E dira gore tshedimosetso e se ka ya nna teng';
 
   @override
   String get placesDataSourceUnavailableBody =>

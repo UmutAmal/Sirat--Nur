@@ -1388,7 +1388,8 @@ class AppLocalizationsOc extends AppLocalizations {
       'Una font de mosaïc de mapa verificada es pas encara configurada per aquesta version. Los luòcs pròches pòdon encara se cargar dempuèi vòstre emplaçament enregistrat.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Plaça las donadas indisponiblas';
 
   @override
   String get placesDataSourceUnavailableBody =>

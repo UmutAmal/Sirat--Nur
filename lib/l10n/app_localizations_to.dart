@@ -1388,7 +1388,8 @@ class AppLocalizationsTo extends AppLocalizations {
       '\'Oku te\'eki ke configured ha ma\'u\'anga tile mape kuo fakamo\'oni\'i ki he langa ko \'eni. \'Oku kei lava pe \'o uta \'a e ngaahi feitu\'u ofi mei ho\'o feitu\'u kuo fakahaofi.';
 
   @override
-  String get placesDataSourceUnavailableTitle => 'Places data unavailable';
+  String get placesDataSourceUnavailableTitle =>
+      'Ngaahi feitu\'u \'oku \'ikai ke ma\'u \'a e fakamatala';
 
   @override
   String get placesDataSourceUnavailableBody =>
