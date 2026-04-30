@@ -549,7 +549,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Sawo",
   "resumeDownload": "Sagǝdǝ gozagǝ kowo",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Fayil Sagǝdǝnadǝ Cinne",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

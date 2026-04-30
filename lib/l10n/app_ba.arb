@@ -549,7 +549,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Йөктәтергә",
   "resumeDownload": "Дауам итеү скачать",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Йөкөрөлгән файлдарҙы юйырға",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

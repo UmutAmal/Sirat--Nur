@@ -1225,7 +1225,8 @@ class AppLocalizationsTo extends AppLocalizations {
   String get resumeDownload => 'Hokohoko atu hono download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles =>
+      'Tamate\'i \'a e ngaahi faile kuo download';
 
   @override
   String get downloadCancelling => 'Cancelling...';

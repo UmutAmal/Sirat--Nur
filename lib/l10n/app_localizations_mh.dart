@@ -1225,7 +1225,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get resumeDownload => 'Wōnm̧aanlok wōt im bōk';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Jolok file ko kar bōki';
 
   @override
   String get downloadCancelling => 'Cancelling...';

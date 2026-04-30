@@ -1225,7 +1225,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get resumeDownload => 'Kenderc\'hel da bellgargañ';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Dilemel ar restroù pellgarget';
 
   @override
   String get downloadCancelling => 'Cancelling...';

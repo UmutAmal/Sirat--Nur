@@ -841,6 +841,9 @@ const _knownDownloadTranslationDebris = [
   'რეზიუმ',
   'Lesh lesh',
   'Bandanya gukuraho',
+  'Smooinee er coadanyn',
+  'Kufwa bafishe yina nge me baka',
+  "Tamau i te mau hoho'a i tikiakehia",
 ];
 
 const _knownWeakDownloadActionCandidates = [

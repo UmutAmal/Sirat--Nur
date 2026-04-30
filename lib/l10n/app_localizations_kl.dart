@@ -1225,7 +1225,7 @@ class AppLocalizationsKl extends AppLocalizations {
   String get resumeDownload => 'Aallaasersorneq ingerlateqqiguk';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Filet download-erneqarsimasut piiakkit';
 
   @override
   String get downloadCancelling => 'Cancelling...';

@@ -549,7 +549,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Gukurura",
   "resumeDownload": "Resume Download",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Gukuraho amadosiye yavanwe",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

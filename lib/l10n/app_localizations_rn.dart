@@ -1225,7 +1225,7 @@ class AppLocalizationsRn extends AppLocalizations {
   String get resumeDownload => 'Resume Download';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Gukuraho amadosiye yavanwe';
 
   @override
   String get downloadCancelling => 'Cancelling...';

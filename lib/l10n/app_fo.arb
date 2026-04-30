@@ -549,7 +549,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Niðurtøka",
   "resumeDownload": "Halt áfram at heinta",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Strika heintaðar fílur",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

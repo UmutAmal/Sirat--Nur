@@ -1225,7 +1225,7 @@ class AppLocalizationsAv extends AppLocalizations {
   String get resumeDownload => 'Халат бахъинабизе скачать';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Удалить загруженные файлы';
 
   @override
   String get downloadCancelling => 'Cancelling...';

@@ -1225,7 +1225,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get resumeDownload => 'Blijf downloade';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Gedownloade bestande wisse';
 
   @override
   String get downloadCancelling => 'Cancelling...';

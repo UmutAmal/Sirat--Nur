@@ -1225,7 +1225,7 @@ class AppLocalizationsFo extends AppLocalizations {
   String get resumeDownload => 'Halt áfram at heinta';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Strika heintaðar fílur';
 
   @override
   String get downloadCancelling => 'Cancelling...';

@@ -1225,7 +1225,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get resumeDownload => 'Sige ha\' humuyong';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Na\'suha i Ma\'u\'usa na File siha';
 
   @override
   String get downloadCancelling => 'Cancelling...';

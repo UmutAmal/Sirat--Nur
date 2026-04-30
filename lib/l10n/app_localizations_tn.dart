@@ -1225,7 +1225,7 @@ class AppLocalizationsTn extends AppLocalizations {
   String get resumeDownload => 'Tswelela o laisolola';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Phimola Difaele tse di Laisolotsweng';
 
   @override
   String get downloadCancelling => 'Cancelling...';

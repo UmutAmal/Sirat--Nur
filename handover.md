@@ -19068,3 +19068,39 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `deleteDownloadedFiles` icin ayni tek-anahtarli batch, debris guard ve generated-sync kapisi uygulanacak.
+
+## 2026-04-30 TUR-470 - Delete Downloaded Files L10n Batch
+
+### MASTER Karari
+- Risk: `deleteDownloadedFiles` offline dosya silme aksiyonu 65 locale'de Ingilizce fallback olarak kaliyordu; indirme yonetimi ekraninda kullaniciya karisik dil ve yanlis anlasilabilecek aksiyon metni gosteren P1 l10n borcuydu.
+- Kanit:
+  - `lib/l10n/app_bh.arb:552` artik `"deleteDownloadedFiles": "डाउनलोड भइल फाइल के हटा दिहल जाव"` degerini tasiyor; once `Delete Downloaded Files` idi.
+  - `lib/l10n/app_wo.arb:552` artik `"deleteDownloadedFiles": "efaase fichier yiñ yebbi"` degerini tasiyor; once `Delete Downloaded Files` idi.
+  - `lib/l10n/app_aa.arb:552` artik `"deleteDownloadedFiles": "Oobiseenih yanin sibaabi duuga"` degerini tasiyor; once `Delete Downloaded Files` idi.
+  - `lib/l10n/app_localizations_bh.dart:1228`, `lib/l10n/app_localizations_wo.dart:1228` ve `lib/l10n/app_localizations_aa.dart:1228` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:844`-`tool/translate_arb_keys.dart:846` bilinen yanlis `Smooinee er coadanyn`, `Kufwa bafishe yina nge me baka` ve `Tamau i te mau hoho'a i tikiakehia` adaylarini download-copy debris listesine ekliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1126` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:267`-`test/translate_arb_keys_test.dart:279` `app_gv`, `app_kg` ve `app_ty` icin guvensiz silme adaylarini reddediyor.
+  - `test/l10n_generated_sync_test.dart:127` generated `deleteDownloadedFiles` getter'inin ARB ile senkron kaldigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1157 -> 1126` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Offline indirilmis dosyalari silme aksiyonu 31 ek locale'de secili dilde gorunur; guvenilmeyen `gv`, `kg` ve `ty` ciktilari yanlis yerellestirme yerine bilincli fallback olarak birakildi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 31 ARB dosyasi, 31 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `deleteDownloadedFiles` icin guvenli kabul edilen 31 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `app_gv`, `app_kg` ve `app_ty` adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar hem translator debris listesine hem de test kara listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 137/137.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 679/679.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+
+### Risk Degisimi
+- Delete downloaded files UI fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1126` same-as-English fallback devam ediyor; download completion/cancel copy, diagnostics ve chatbot kumesi siradaki guvenli batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `downloadCanceledForReciter` icin placeholder korumali tek-anahtarli batch uygulanacak.

@@ -1225,7 +1225,7 @@ class AppLocalizationsSg extends AppLocalizations {
   String get resumeDownload => 'Ngbâ ti téléchargé ni .';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Effacé afichier so a téléchargé ni';
 
   @override
   String get downloadCancelling => 'Cancelling...';

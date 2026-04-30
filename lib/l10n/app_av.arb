@@ -549,7 +549,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "Реххизе",
   "resumeDownload": "Халат бахъинабизе скачать",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "Удалить загруженные файлы",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

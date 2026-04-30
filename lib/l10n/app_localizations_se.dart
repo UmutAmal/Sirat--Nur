@@ -1225,7 +1225,7 @@ class AppLocalizationsSe extends AppLocalizations {
   String get resumeDownload => 'Joatkit viežžat';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Slette viežžan fiillaid';
 
   @override
   String get downloadCancelling => 'Cancelling...';

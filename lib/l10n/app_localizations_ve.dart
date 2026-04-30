@@ -1225,7 +1225,7 @@ class AppLocalizationsVe extends AppLocalizations {
   String get resumeDownload => 'Bvelani phanḓa ni tshi dawuniḽouda';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Phumula faila dzo dawuniḽoudiwaho';
 
   @override
   String get downloadCancelling => 'Cancelling...';

@@ -1225,7 +1225,7 @@ class AppLocalizationsKr extends AppLocalizations {
   String get resumeDownload => 'Sagǝdǝ gozagǝ kowo';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'Fayil Sagǝdǝnadǝ Cinne';
 
   @override
   String get downloadCancelling => 'Cancelling...';

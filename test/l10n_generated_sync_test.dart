@@ -124,6 +124,7 @@ void main() {
         final l10n = await AppLocalizations.delegate.load(Locale(localeCode));
 
         expect(l10n.resumeDownload, arb['resumeDownload']);
+        expect(l10n.deleteDownloadedFiles, arb['deleteDownloadedFiles']);
       }
     },
   );

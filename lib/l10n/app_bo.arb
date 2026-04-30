@@ -549,7 +549,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "ཕབ་ལེན",
   "resumeDownload": "མུ་མཐུད་དུ་ཕབ་ལེན།",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "ཕབ་ལེན་བྱས་པའི་ཡིག་ཆ་སུབ་པ།",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

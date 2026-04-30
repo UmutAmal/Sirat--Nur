@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1157));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1126));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -254,6 +254,29 @@ void main() {
         localeArbs['rn']!['resumeDownload'],
         isNot('Bandanya gukuraho'),
         reason: 'app_rn.arb maps resumeDownload to remove/delete semantics',
+      );
+      expect(
+        localeArbs['bh']!['deleteDownloadedFiles'],
+        isNot(english['deleteDownloadedFiles']),
+      );
+      expect(
+        localeArbs['wo']!['deleteDownloadedFiles'],
+        isNot(english['deleteDownloadedFiles']),
+      );
+      expect(
+        localeArbs['gv']!['deleteDownloadedFiles'],
+        isNot('Smooinee er coadanyn'),
+        reason: 'app_gv.arb maps deleteDownloadedFiles to think/code copy',
+      );
+      expect(
+        localeArbs['kg']!['deleteDownloadedFiles'],
+        isNot('Kufwa bafishe yina nge me baka'),
+        reason: 'app_kg.arb maps deleteDownloadedFiles to unsafe semantics',
+      );
+      expect(
+        localeArbs['ty']!['deleteDownloadedFiles'],
+        isNot("Tamau i te mau hoho'a i tikiakehia"),
+        reason: 'app_ty.arb maps deleteDownloadedFiles to keep/image semantics',
       );
       for (final locale in ['ca', 'gl', 'hy', 'ka', 'zh', 'zh_CN', 'zh_TW']) {
         final value = localeArbs[locale]!['resumeDownload'] as String;
@@ -1511,11 +1534,32 @@ void main() {
         currentValue: '',
         candidate: 'Fichier Téléchargées (Filew Téléchargements) Bɔ',
       );
+      final manxDeleteValue = resolveTranslatedArbValue(
+        key: 'deleteDownloadedFiles',
+        source: 'Delete Downloaded Files',
+        currentValue: '',
+        candidate: 'Smooinee er coadanyn',
+      );
+      final kongoDeleteValue = resolveTranslatedArbValue(
+        key: 'deleteDownloadedFiles',
+        source: 'Delete Downloaded Files',
+        currentValue: '',
+        candidate: 'Kufwa bafishe yina nge me baka',
+      );
+      final tahitianDeleteValue = resolveTranslatedArbValue(
+        key: 'deleteDownloadedFiles',
+        source: 'Delete Downloaded Files',
+        currentValue: '',
+        candidate: "Tamau i te mau hoho'a i tikiakehia",
+      );
 
       expect(completeValue, 'Download Complete');
       expect(failedValue, 'Falha ao baixar');
       expect(managerValue, 'Download Manager');
       expect(deleteValue, 'Delete Downloaded Files');
+      expect(manxDeleteValue, 'Delete Downloaded Files');
+      expect(kongoDeleteValue, 'Delete Downloaded Files');
+      expect(tahitianDeleteValue, 'Delete Downloaded Files');
     });
 
     test('rejects resume download translations that mean curriculum vitae', () {

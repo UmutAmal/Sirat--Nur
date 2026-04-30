@@ -549,7 +549,7 @@
   "redownloadMissingRepair": "Repair / Download Missing",
   "downloadAction": "ཕབས་ལེན",
   "resumeDownload": "འཕྲོ་མཐུད་ཕབ་ལེན།",
-  "deleteDownloadedFiles": "Delete Downloaded Files",
+  "deleteDownloadedFiles": "ཕབ་ལེན་འབད་ཡོད་པའི་ཡིག་སྣོད་ཚུ་བཏོན་གཏང་།",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

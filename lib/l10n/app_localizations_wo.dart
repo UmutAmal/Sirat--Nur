@@ -1225,7 +1225,7 @@ class AppLocalizationsWo extends AppLocalizations {
   String get resumeDownload => 'Wéyal yebbi';
 
   @override
-  String get deleteDownloadedFiles => 'Delete Downloaded Files';
+  String get deleteDownloadedFiles => 'efaase fichier yiñ yebbi';
 
   @override
   String get downloadCancelling => 'Cancelling...';
