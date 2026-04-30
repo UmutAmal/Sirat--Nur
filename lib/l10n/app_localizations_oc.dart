@@ -1346,10 +1346,10 @@ class AppLocalizationsOc extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Cercatz aquesta zòna';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mosquèas pròchas';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,21 +1370,22 @@ class AppLocalizationsOc extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Error de ret. Ensajatz tornarmai.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Emplaçament requerit';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle =>
+      'Los mosaïcs de mapa son pas disponibles';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Una font de mosaïc de mapa verificada es pas encara configurada per aquesta version. Los luòcs pròches pòdon encara se cargar dempuèi vòstre emplaçament enregistrat.';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';

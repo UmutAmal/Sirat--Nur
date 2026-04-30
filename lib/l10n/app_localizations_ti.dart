@@ -1368,7 +1368,7 @@ class AppLocalizationsTi extends AppLocalizations {
       'ኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'ናይ ካርታ ታይላት ኣይርከባን';
 
   @override
   String get placesMapTilesUnavailableBody =>

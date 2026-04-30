@@ -1346,10 +1346,10 @@ class AppLocalizationsAv extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Гьаб бакӀалда цӀех-рех гьабе';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'АскӀор ругел мажгитал';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,17 +1370,17 @@ class AppLocalizationsAv extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Сетьалъул гъалатӀ. Цоги нухалъ хӀалбихье.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'ХӀажатаб бакӀ';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Картаялъул плитаби гьечӀо';
 
   @override
   String get placesMapTilesUnavailableBody =>

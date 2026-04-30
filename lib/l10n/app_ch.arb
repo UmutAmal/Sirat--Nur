@@ -666,7 +666,7 @@
   "placesLocationRequiredTitle": "nisisåriu i lugat",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Ti siña ma sodda' i mapa",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesMapTilesUnavailableBody": "Ti makonfigura i fuetsan mapa ni' ma'aprueba para este na fina'tinas på'go. I lugat siha gi fi'on-mu siña ha' ma'a'atan ginen i ma'a'atan na lugat-mu.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",

@@ -1346,10 +1346,10 @@ class AppLocalizationsNr extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Setjha indawo le';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'AmaMosque aseduze';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,21 +1370,22 @@ class AppLocalizationsNr extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Iphutha lenethiwekhi. Sibawa ulinge godu.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Indawo iyatlhogeka';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle =>
+      'Amathayili wemephu awatholakali';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Umthombo wamathayili wemephu oqinisekisiweko awukalungiselelwa ukwakha lokhu okwamanje. Iindawo eziseduze zingalayisha ukusuka endaweni yakho elondoloziweko.';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';

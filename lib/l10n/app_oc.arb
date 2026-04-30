@@ -666,7 +666,7 @@
   "placesLocationRequiredTitle": "Emplaçament requerit",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Los mosaïcs de mapa son pas disponibles",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesMapTilesUnavailableBody": "Una font de mosaïc de mapa verificada es pas encara configurada per aquesta version. Los luòcs pròches pòdon encara se cargar dempuèi vòstre emplaçament enregistrat.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",

@@ -666,7 +666,7 @@
   "placesLocationRequiredTitle": "Te vahi e titauhia",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Aita te mau hoho'a fenua e vai ra",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesMapTilesUnavailableBody": "Aita â te hoê puna hoho'a fenua i haamauhia no teie paturaa. E nehenehe â te mau vahi tapiri e faauta mai i to outou vahi i tapeahia.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",

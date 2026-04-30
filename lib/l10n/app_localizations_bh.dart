@@ -1346,10 +1346,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'एह इलाका में खोज करीं';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'पास के मस्जिद बाड़ी सऽ';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,21 +1370,22 @@ class AppLocalizationsBh extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'नेटवर्क में त्रुटि हो गइल बा. कृपया दोबारा कोशिश करीं।';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'लोकेशन के जरूरत बा';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'नक्शा के टाइल्स उपलब्ध नइखे';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'एह बिल्ड खातिर अबहिन ले कौनों सत्यापन कइल मैप टाइल स्रोत कॉन्फ़िगर नइखे कइल गइल। पास के जगह अबहियों रउरा सेव कइल लोकेशन से लोड हो सकेला.';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';

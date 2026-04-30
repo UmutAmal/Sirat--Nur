@@ -18701,3 +18701,40 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; uzun body anahtarlari icin newline, placeholder ve teknik anlam guard'larini one alarak bir sonraki tek anahtarlik patch'i sec.
+
+## 2026-04-30 TUR-460 - Places Map Tile Body Runtime L10n Sync
+
+### MASTER Karari
+- Risk: Places harita tile hata aciklamasi `placesMapTilesUnavailableBody` dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu; ek olarak onceki ARB-only iyilestirmeler generated `app_localizations_*.dart` dosyalarina yansimadigi icin runtime'da eski metin gosterebilirdi.
+- Kanit:
+  - `lib/l10n/app_aa.arb:669` artik `"placesMapTilesUnavailableBody": "diggowteh tan kartah fiddimaamih raceena ta xisneh taham fan mabicinna. xayi arooca uxih quukam duuddah atu daanisse aracak."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:669` artik Wolof body degerini tasiyor; `lib/l10n/app_wo.arb:668` icin title guvenilir ceviri olmadigindan temiz Ingilizce fallback olarak korundu.
+  - `lib/l10n/app_localizations_aa.dart:1386` ve `lib/l10n/app_localizations_wo.dart:1386` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/l10n_generated_sync_test.dart:20`-`test/l10n_generated_sync_test.dart:32` dusuk kaynakli Places anahtarlarinda generated getter ile ARB degerini karsilastiriyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1331` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:367` ve `test/translate_arb_keys_test.dart:391` body icin Ingilizce fallback, multiline, teknik token, noktalama debris'i ve reddedilen mixed-language ciktilari kilitliyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1362 -> 1331` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Places harita tile hata aciklamasi daha fazla locale'de runtime'da gercekten secili dilde gorunur; guvenilir olmayan `app_av`, `app_gv`, `app_kv` ciktilari uydurma kabul edilmeden Ingilizce fallback'e birakildi.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25; runtime generated dosya uyumsuzlugu dogrudan kullaniciya eski copy gosterebilir.
+- Rollback plani: Bu turdaki 31 ARB dosyasi, 35 generated l10n dosyasi, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesMapTilesUnavailableBody` icin 31 guvenli dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `app_av`, `app_gv`, `app_kv` icin Rusca/word-salad/mixed-language arac ciktisi reddedildi ve temiz Ingilizce fallback korundu.
+- `flutter gen-l10n` calistirilarak onceki Places ARB iyilestirmeleri dahil runtime `app_localizations_*.dart` dosyalari senkronlandi.
+- Yeni `test/l10n_generated_sync_test.dart` ile `aa`, `ab`, `ba`, `bo`, `ti`, `wo` locale'lerinde ARB/generated uyumu kilitlendi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places map tile unavailable body l10n/runtime sync riski: `16/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1331` same-as-English fallback devam ediyor; `placesDataSourceUnavailableTitle`, `placesLocationRequiredBody`, download ve diagnostics kumesi sonraki guvenli batchlerde azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; her yeni ARB batch'inden sonra `flutter gen-l10n` ve `test/l10n_generated_sync_test.dart` mutlaka calistir.

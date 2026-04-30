@@ -1346,10 +1346,10 @@ class AppLocalizationsKr extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Na adə kulasne';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Mashidiwa Karǝngǝ';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,21 +1370,21 @@ class AppLocalizationsKr extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Taltǝ networkbe. Martǝne waltǝ jarabne.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Na mǝradǝtǝna';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Tiles taswirabedǝ bawo';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'Map tile source tawattəgənadə gar adəro tətandənyi. Nawa karəngəyedə kuwami yaye na gənatənadən load sadin.';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';

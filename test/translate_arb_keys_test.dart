@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1362));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1331));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -361,6 +361,46 @@ void main() {
         localeArbs['wo']!['placesMapTilesUnavailableTitle'],
         isNot('Carreaux de carte amul'),
         reason: 'app_wo.arb has mixed-language map tile copy',
+      );
+      for (final locale in ['aa', 'ab', 'ba', 'bo', 'wo']) {
+        final mapTilesBody =
+            localeArbs[locale]!['placesMapTilesUnavailableBody'] as String;
+        expect(
+          mapTilesBody,
+          isNot(english['placesMapTilesUnavailableBody']),
+          reason:
+              'app_$locale.arb still uses English for placesMapTilesUnavailableBody',
+        );
+        expect(
+          mapTilesBody,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline map tile body copy',
+        );
+        expect(
+          mapTilesBody,
+          isNot(contains(' .')),
+          reason: 'app_$locale.arb has punctuation spacing debris',
+        );
+        expect(
+          mapTilesBody,
+          isNot(contains('PLACES_')),
+          reason: 'app_$locale.arb exposes technical configuration tokens',
+        );
+      }
+      expect(
+        localeArbs['av']!['placesMapTilesUnavailableBody'],
+        isNot(contains('Проверенный источник плитки карты')),
+        reason: 'app_av.arb kept Russian map tile body debris',
+      );
+      expect(
+        localeArbs['gv']!['placesMapTilesUnavailableBody'],
+        isNot(contains('source tile map verify')),
+        reason: 'app_gv.arb kept English word-salad map tile body debris',
+      );
+      expect(
+        localeArbs['kv']!['placesMapTilesUnavailableBody'],
+        isNot(contains('Верифицируйтӧм карта плитка источник')),
+        reason: 'app_kv.arb kept mixed Russian/Komi map tile body debris',
       );
     });
 

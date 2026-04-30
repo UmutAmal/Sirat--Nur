@@ -666,7 +666,7 @@
   "placesLocationRequiredTitle": "Go tlhokega lefelo",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Dithaele tsa mmapa ga di yo",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesMapTilesUnavailableBody": "Motswedi wa dithaele tsa mmapa o o netefaditsweng ga o ise o rulaganyediwe kago eno. Mafelo a a gaufi a sa ntse a ka laisa go tswa mo lefelong la gago le le bolokilweng.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",

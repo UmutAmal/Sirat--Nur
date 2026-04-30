@@ -1346,10 +1346,10 @@ class AppLocalizationsCe extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ХӀокху меттигехь лехамаш бе .';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Уллехь долу маьждигаш';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,21 +1370,21 @@ class AppLocalizationsCe extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Сетан гӀалат ду. Юха хьажахьара ахь.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Меттиг оьшу';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'Картан плиткаш яц';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'ТӀечӀагӀдина картан плиткин хьоста хӀинца а дӀахӀоттийна дац оцу бинана. Уллера меттигаш хӀинца а хьан ларйинчу меттигера дӀаяха йиш ю.';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';

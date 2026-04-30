@@ -1346,10 +1346,10 @@ class AppLocalizationsDz extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'ས་ཁོངས་འདི་འཚོལ།';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'ཉེ་འདབས་ཀྱི་ཁ་ཆེའི་ལྷ་ཁང་།';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,21 +1370,22 @@ class AppLocalizationsDz extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError =>
+      'ཡོངས་འབྲེལ་འཛོལ་བ། ལོག་སྟེ་འབད་རྩོལ་བསྐྱེད་གནང་།';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'ས་གནས་དགོས་པ།';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle => 'ས་ཁྲའི་ཊ་ཡིལ་ཚུ་འཐོབ་མི་ཚུགས།';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      'བཟོ་བརྩིགས་འདི་གི་དོན་ལུ་ བདེན་བཤད་འབད་ཡོད་པའི་སབ་ཁྲའི་ཊ་ཡིལ་འབྱུང་ཁུངས་ཅིག་ ད་ལྟོ་ཡང་རིམ་སྒྲིག་མ་འབད་བས། ཉེ་འདབས་ཀྱི་ས་གནས་ཚུ་གིས་ ད་ལྟོ་ཡང་ ཁྱོད་རའི་སྲུང་བཞག་འབད་ཡོད་པའི་གནས་ཁོངས་ལས་ མངོན་གསལ་འབད་ཚུགས།';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';

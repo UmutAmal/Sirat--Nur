@@ -666,7 +666,7 @@
   "placesLocationRequiredTitle": "Barab biñu soxla",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesMapTilesUnavailableBody": "Ba tay amagul ab source mosail kart buñ firndeel ngir taax bii. Barab yi la gëna jege mën nañu ba leegi sarse ci barab bi nga denc.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",

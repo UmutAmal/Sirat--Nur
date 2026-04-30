@@ -666,7 +666,7 @@
   "placesLocationRequiredTitle": "A hunda ndo ti duti dä.",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Carte ti carte ni ayeke dä pëpe",
-  "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
+  "placesMapTilesUnavailableBody": "A leke pëpe mbeni source ti carte ti carte so a vérifié ni awe ndali ti lekengo ye so. Ando so ayeke nduru alingbi ti ngbâ ti charge na ndo so mo bata ni dä.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
   "unknownPlaceName": "Unknown Name",

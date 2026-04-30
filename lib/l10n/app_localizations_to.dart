@@ -1346,10 +1346,10 @@ class AppLocalizationsTo extends AppLocalizations {
   String get halalFood => 'Halal Food';
 
   @override
-  String get placesSearchArea => 'Search this area';
+  String get placesSearchArea => 'Fekumi ki he feitu\'u ko \'eni .';
 
   @override
-  String get nearbyMosques => 'Nearby Mosques';
+  String get nearbyMosques => 'Ngaahi Mosque ofi';
 
   @override
   String get islamicSchools => 'Islamic Schools';
@@ -1370,21 +1370,22 @@ class AppLocalizationsTo extends AppLocalizations {
   }
 
   @override
-  String get placesNetworkError => 'Network error. Please try again.';
+  String get placesNetworkError => 'Hala \'a e netiueka. Kātaki ʻo toe feinga.';
 
   @override
-  String get placesLocationRequiredTitle => 'Location required';
+  String get placesLocationRequiredTitle => 'Fiema\'u \'a e feitu\'u';
 
   @override
   String get placesLocationRequiredBody =>
       'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
-  String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
+  String get placesMapTilesUnavailableTitle =>
+      '\'Oku \'ikai ke ma\'u \'a e ngaahi taila mape';
 
   @override
   String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+      '\'Oku te\'eki ke configured ha ma\'u\'anga tile mape kuo fakamo\'oni\'i ki he langa ko \'eni. \'Oku kei lava pe \'o uta \'a e ngaahi feitu\'u ofi mei ho\'o feitu\'u kuo fakahaofi.';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';
