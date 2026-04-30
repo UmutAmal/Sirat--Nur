@@ -858,7 +858,14 @@ const _knownDownloadTranslationDebris = [
 
 const _knownDiagnosticsTranslationDebris = [
   "taolennoù ar c'hoad",
+  "metaroadennoù ar c'hoad",
   'recòrd en paquet',
+  'Ti guaha metadata gi i cloud',
+  'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᐃᑦ',
+  'джуджыд метаданнӧйяс',
+  'Imethadatha yamafu ilahlekile',
+  'Las metadonadas del nívol',
+  'Мигъы метабæрæггæнæнтæ',
 ];
 
 const _knownWeakDownloadActionCandidates = [

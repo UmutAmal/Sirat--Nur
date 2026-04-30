@@ -410,7 +410,7 @@
       }
     }
   },
-  "diagnosticsQuranCloudJuzMissing": "Cloud juz metadata missing; bundled structural fallback active",
+  "diagnosticsQuranCloudJuzMissing": "Métadonnée juz cloud amul; fallback buñ boole muy dox",
   "diagnosticsQuranCloudStructuralCheckFailed": "Cloud structural check failed: {error}",
   "@diagnosticsQuranCloudStructuralCheckFailed": {
     "placeholders": {

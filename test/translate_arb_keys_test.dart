@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1097));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1065));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -457,6 +457,27 @@ void main() {
         isNot(contains('recòrd en paquet')),
         reason: 'app_oc.arb mapped fallback to record/package semantics',
       );
+      expect(
+        localeArbs['aa']!['diagnosticsQuranCloudJuzMissing'],
+        isNot(english['diagnosticsQuranCloudJuzMissing']),
+      );
+      const badDiagnosticsJuzFragments = {
+        'br': "metaroadennoù ar c'hoad",
+        'ch': 'Ti guaha metadata gi i cloud',
+        'iu': 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᐃᑦ',
+        'kv': 'джуджыд метаданнӧйяс',
+        'nr': 'Imethadatha yamafu ilahlekile',
+        'oc': 'Las metadonadas del nívol',
+        'os': 'Мигъы метабæрæггæнæнтæ',
+      };
+      for (final entry in badDiagnosticsJuzFragments.entries) {
+        expect(
+          localeArbs[entry.key]!['diagnosticsQuranCloudJuzMissing'],
+          isNot(contains(entry.value)),
+          reason:
+              'app_${entry.key}.arb kept wrong-context Quran cloud juz diagnostics copy',
+        );
+      }
       expect(
         localeArbs['th']!['placesLocationRequiredBody'],
         isNot(english['placesLocationRequiredBody']),
@@ -1754,6 +1775,17 @@ void main() {
         candidate:
             'De taulas de nívol mancan dins Supabase; recòrd en paquet actiu',
       );
+      const diagnosticsJuzSource =
+          'Cloud juz metadata missing; bundled structural fallback active';
+      const badDiagnosticsJuzCandidates = [
+        "Mankout a ra metaroadennoù ar c'hoad; oberiant en-dro frammadurel strollet",
+        "Ti guaha metadata gi i cloud; ma'a'atan i estrukturan fallback ni' aktibu",
+        'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᐃᑦ ᐱᑕᖃᙱᒻᒪᑕ; ᑲᑎᙵᔪᑦ ᐋᖅᑭᒃᓯᒪᓂᖏᑦ ᓇᓪᓕᐅᒃᑯᒫᑦ ᐊᑐᖅᑐᑦ',
+        'Облачнӧй джуджыд метаданнӧйяс абуӧсь; пучок структурнӧй запас активнӧй .',
+        'Imethadatha yamafu ilahlekile; ukubuyiselwa emuva kwesakhiwo okuhlanganisiweko okusebenzako',
+        'Las metadonadas del nívol mancan; retrograda estructural en paquet actiu',
+        'Мигъы метабæрæггæнæнтæ нæй; æмбырдгонд структурон фæстæмæздæхт активон',
+      ];
 
       final reciterValue = resolveTranslatedArbValue(
         key: 'audioVoiceMisharyAlafasy',
@@ -1779,6 +1811,17 @@ void main() {
         occitanDiagnosticsValue,
         'Cloud tables missing in Supabase; bundled fallback active',
       );
+      for (final candidate in badDiagnosticsJuzCandidates) {
+        expect(
+          resolveTranslatedArbValue(
+            key: 'diagnosticsQuranCloudJuzMissing',
+            source: diagnosticsJuzSource,
+            currentValue: '',
+            candidate: candidate,
+          ),
+          diagnosticsJuzSource,
+        );
+      }
       expect(reciterValue, 'Male (Mishary Alafasy)');
       expect(localizedReciterValue, 'Masculino (Abdul Basit)');
     });

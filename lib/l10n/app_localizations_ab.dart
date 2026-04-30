@@ -935,7 +935,7 @@ class AppLocalizationsAb extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+      'Аԥсҭҳәа juz аметадатақәа ыҟам; еидҵоу аилазаашьатә шьҭахьҟа ацара активуп';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {

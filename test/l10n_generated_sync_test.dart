@@ -138,7 +138,43 @@ void main() {
   test(
     'generated low-resource diagnostics strings stay in sync with ARB files',
     () async {
-      const locales = ['bh', 'ch', 'cv', 'dz', 'li', 'mh', 'nr', 'os', 'se'];
+      const locales = [
+        'aa',
+        'ab',
+        'av',
+        'ay',
+        'ba',
+        'bh',
+        'bo',
+        'ce',
+        'ch',
+        'cv',
+        'dz',
+        'ff',
+        'fj',
+        'fo',
+        'gv',
+        'kg',
+        'kl',
+        'kr',
+        'li',
+        'lus',
+        'mai',
+        'mh',
+        'nr',
+        'os',
+        'rn',
+        'sa',
+        'se',
+        'sg',
+        'ss',
+        'ti',
+        'tn',
+        'to',
+        'ty',
+        've',
+        'wo',
+      ];
 
       for (final localeCode in locales) {
         final arb =
@@ -149,6 +185,10 @@ void main() {
         expect(
           l10n.diagnosticsQuranCloudTablesMissing,
           arb['diagnosticsQuranCloudTablesMissing'],
+        );
+        expect(
+          l10n.diagnosticsQuranCloudJuzMissing,
+          arb['diagnosticsQuranCloudJuzMissing'],
         );
       }
     },
