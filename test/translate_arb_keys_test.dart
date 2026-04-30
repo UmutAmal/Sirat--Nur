@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1106));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1097));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -442,6 +442,20 @@ void main() {
       expect(
         localeArbs['ga']!['diagnosticsQuranCloudTablesMissing'],
         isNot(english['diagnosticsQuranCloudTablesMissing']),
+      );
+      expect(
+        localeArbs['bh']!['diagnosticsQuranCloudTablesMissing'],
+        isNot(english['diagnosticsQuranCloudTablesMissing']),
+      );
+      expect(
+        localeArbs['br']!['diagnosticsQuranCloudTablesMissing'],
+        isNot(contains("taolennoù ar c'hoad")),
+        reason: 'app_br.arb mapped cloud to wood/forest semantics',
+      );
+      expect(
+        localeArbs['oc']!['diagnosticsQuranCloudTablesMissing'],
+        isNot(contains('recòrd en paquet')),
+        reason: 'app_oc.arb mapped fallback to record/package semantics',
       );
       expect(
         localeArbs['th']!['placesLocationRequiredBody'],
@@ -1726,6 +1740,20 @@ void main() {
         currentValue: 'सुपाबेस में क्लाउड टेबल गायब बा; बंडल फॉलबैक सक्रिय बा',
         candidate: 'Supabase icinde bulut tablolari eksik; paket yedek aktif.',
       );
+      final bretonDiagnosticsValue = resolveTranslatedArbValue(
+        key: 'diagnosticsQuranCloudTablesMissing',
+        source: 'Cloud tables missing in Supabase; bundled fallback active',
+        currentValue: '',
+        candidate:
+            "Mankout a ra taolennoù ar c'hoad e Supabase; oberiant en-dro paket",
+      );
+      final occitanDiagnosticsValue = resolveTranslatedArbValue(
+        key: 'diagnosticsQuranCloudTablesMissing',
+        source: 'Cloud tables missing in Supabase; bundled fallback active',
+        currentValue: '',
+        candidate:
+            'De taulas de nívol mancan dins Supabase; recòrd en paquet actiu',
+      );
 
       final reciterValue = resolveTranslatedArbValue(
         key: 'audioVoiceMisharyAlafasy',
@@ -1743,6 +1771,14 @@ void main() {
 
       expect(placesValue, contains('PLACES_OVERPASS_API_URL'));
       expect(diagnosticsValue, contains('Supabase'));
+      expect(
+        bretonDiagnosticsValue,
+        'Cloud tables missing in Supabase; bundled fallback active',
+      );
+      expect(
+        occitanDiagnosticsValue,
+        'Cloud tables missing in Supabase; bundled fallback active',
+      );
       expect(reciterValue, 'Male (Mishary Alafasy)');
       expect(localizedReciterValue, 'Masculino (Abdul Basit)');
     });

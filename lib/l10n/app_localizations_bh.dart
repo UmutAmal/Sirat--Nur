@@ -926,7 +926,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      'Supabase में क्लाउड टेबल गायब बा; बंडल फॉलबैक सक्रिय बा';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

@@ -19179,3 +19179,43 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `diagnosticsQuranCloudTablesMissing` icin tek-anahtarli batch, debris guard ve generated-sync kapisi uygulanacak.
+
+## 2026-04-30 TUR-473 - Diagnostics Quran Cloud Tables L10n Batch
+
+### MASTER Karari
+- Risk: `diagnosticsQuranCloudTablesMissing` 64 locale'de Ingilizce fallback olarak kaliyordu; Supabase Quran cloud tablo eksigini gosteren runtime diagnostics metni oldugu icin kullaniciya karisik dil ve teknik durum belirsizligi olusturuyordu.
+- Kanit:
+  - `lib/l10n/app_bh.arb:404` artik `"diagnosticsQuranCloudTablesMissing": "Supabase में क्लाउड टेबल गायब बा; बंडल फॉलबैक सक्रिय बा"` degerini tasiyor; once `Cloud tables missing in Supabase; bundled fallback active` idi.
+  - `lib/l10n/app_ch.arb:404` artik `"diagnosticsQuranCloudTablesMissing": "Mafañagu i lamasa siha gi i Supabase; ma'a'atan i fallback ni' aktibu"` degerini tasiyor; once `Cloud tables missing in Supabase; bundled fallback active` idi.
+  - `lib/l10n/app_se.arb:404` artik `"diagnosticsQuranCloudTablesMissing": "Cloud tabeallat váilot Supabase:s; čohkkejuvvon fallback aktiiva"` degerini tasiyor; once `Cloud tables missing in Supabase; bundled fallback active` idi.
+  - `lib/l10n/app_localizations_bh.dart:928`, `lib/l10n/app_localizations_ch.dart:928` ve `lib/l10n/app_localizations_se.dart:928` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:786`-`tool/translate_arb_keys.dart:787` diagnostics copy icin bilinen kotu baglam filtresini uyguluyor.
+  - `tool/translate_arb_keys.dart:859`-`tool/translate_arb_keys.dart:861` Breton `taolennoù ar c'hoad` wood/forest kaymasini ve Occitan `recòrd en paquet` fallback/record kaymasini reddediyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1097` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:447`-`test/translate_arb_keys_test.dart:457` kabul edilen `bh` cikisinin Ingilizce fallback olmadigini ve `br`/`oc` kotu adaylarinin repo icinde tutulmadigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:1738`-`test/translate_arb_keys_test.dart:1755` translator fallback fonksiyonunun guvensiz Breton ve Occitan adaylarinda Ingilizce kaynaga geri dondugunu dogruluyor.
+  - `test/l10n_generated_sync_test.dart:150`-`test/l10n_generated_sync_test.dart:151` generated diagnostics getter'inin ARB ile ayni runtime degerini verdigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1106 -> 1097` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Quran cloud tablo eksigi tanisi 9 ek locale'de secili dilde gorunur; teknik `Supabase` tokeni korunur ve guvensiz Breton/Occitan ciktilari bilincli fallback olarak birakilir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 9 ARB dosyasi, 9 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `diagnosticsQuranCloudTablesMissing` icin guvenli kabul edilen 9 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- Breton ve Occitan adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar diagnostics debris listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 138/138.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 680/680.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Diagnostics Quran cloud tables fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1097` same-as-English fallback devam ediyor; `diagnosticsQuranCloudJuzMissing` ve chatbot offline copy kumesi siradaki guvenli batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `diagnosticsQuranCloudJuzMissing` icin tek-anahtarli batch, diagnostics debris guard ve generated-sync kapisi uygulanacak.

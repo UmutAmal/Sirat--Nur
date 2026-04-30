@@ -783,6 +783,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, _knownDownloadTranslationDebris);
   }
 
+  if (_isDiagnosticsCopyKey(key)) {
+    return _containsAny(value, _knownDiagnosticsTranslationDebris);
+  }
+
   if (key == 'quranAudioSourcesIncomplete') {
     return _containsAny(value, _knownQuranAudioSourceStatusDebris);
   }
@@ -803,6 +807,10 @@ bool _hasKnownWrongContext(String key, String value) {
 
 bool _isDownloadCopyKey(String key) {
   return key.toLowerCase().contains('download');
+}
+
+bool _isDiagnosticsCopyKey(String key) {
+  return key.startsWith('diagnostics');
 }
 
 bool _isPrayerMethodOrNameKey(String key) {
@@ -846,6 +854,11 @@ const _knownDownloadTranslationDebris = [
   "Tamau i te mau hoho'a i tikiakehia",
   "Ma kansela i lina'la' para",
   "Ma na'funhayan i",
+];
+
+const _knownDiagnosticsTranslationDebris = [
+  "taolennoù ar c'hoad",
+  'recòrd en paquet',
 ];
 
 const _knownWeakDownloadActionCandidates = [
