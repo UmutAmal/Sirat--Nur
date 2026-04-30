@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1498));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1464));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -302,6 +302,11 @@ void main() {
         isNot(english['placesLocationRequiredBody']),
       );
       for (final locale in ['aa', 'ab', 'ba', 'bo', 'wo']) {
+        expect(
+          localeArbs[locale]!['placesSearchArea'],
+          isNot(english['placesSearchArea']),
+          reason: 'app_$locale.arb still uses English for placesSearchArea',
+        );
         expect(
           localeArbs[locale]!['placesNetworkError'],
           isNot(english['placesNetworkError']),
