@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1036));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1009));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -495,6 +495,27 @@ void main() {
           isNot(contains(entry.value)),
           reason:
               'app_${entry.key}.arb kept wrong-context chatbot cloud fallback copy',
+        );
+      }
+      expect(
+        localeArbs['aa']!['chatbotLocalNoInfo'],
+        isNot(english['chatbotLocalNoInfo']),
+      );
+      const badChatbotLocalFragments = {
+        'av': 'Переключитесь на Cloud AI для источниковых ответов',
+        'ch': "Ti siña ma'ayek i guinahan Islam ni' ma'ayek",
+        'fj': 'vaka-Isireli',
+        'gv': 'verify ry-gheddyn',
+        'iu': 'ᐃᓛᒃᑰᖅᑐᑦ ᑐᑭᒧᐊᒍᑎᖏᑦ',
+        'mh': 'Verified local Islamic guidance ejjab',
+        'ty': 'Aita â te aratairaa Islama no te fenua iho i roaa mai',
+      };
+      for (final entry in badChatbotLocalFragments.entries) {
+        expect(
+          localeArbs[entry.key]!['chatbotLocalNoInfo'],
+          isNot(contains(entry.value)),
+          reason:
+              'app_${entry.key}.arb kept wrong-context chatbot local fallback copy',
         );
       }
       expect(
@@ -1866,10 +1887,20 @@ void main() {
         "Cloud API is not configured. 'Oku te'eki ke ma'u 'a e fakahinohino faka-'Isilami offline kuo fakamo'oni'i.",
         'Aita te Cloud API i haamauhia. Aita â te aratairaa Islamic i itehia i nia i te Internet.',
       ];
+      const localNoInfoSource =
+          '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      const badLocalNoInfoCandidates = [
+        '[OFFLINE] Тадсикъ гьабураб бакӀалъулаб исламияб нухмалъи жеги гьечӀо. Переключитесь на Cloud AI для источниковых ответов.',
+        "[OFFLINE] Ti siña ma'ayek i guinahan Islam ni' ma'ayek. Na'lå'la' i Cloud AI para i ineppe siha.",
+        '[OFFLINE] E se bera ni vakarautaki na idusidusi vaka-Isireli ni vanua vakadeitaki. Veisau ki na AI ni o me baleta na isau ni ivurevure.',
+        "[OFFLINE] Cha nel stiurey Islamagh 'sy valley verify ry-gheddyn foast. Smooinee er Cloud AI son freggyrtyn source.",
+        '[OFFLINE] ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᑦ ᓄᓇᓕᖕᓂ ᐃᓛᒃᑰᖅᑐᑦ ᑐᑭᒧᐊᒍᑎᖏᑦ ᓱᓕ ᐊᑐᐃᓐᓇᐅᙱᓚᑦ. ᐊᓯᐊᓄᑦ Cloud AI-ᒧᑦ ᑭᐅᔾᔪᑎᒃᓴᓄᑦ.',
+        '[OFFLINE] Verified local Islamic guidance ejjab maroñ in walok kiõ. Oktak ñan Cloud AI ñan uwaak ko jen source.',
+        '[OFFLINE] Aita â te aratairaa Islama no te fenua iho i roaa mai. A taui i te Cloud AI no te mau pahonoraa.',
+      ];
       final translatedPrefixValue = resolveTranslatedArbValue(
         key: 'chatbotLocalNoInfo',
-        source:
-            '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.',
+        source: localNoInfoSource,
         currentValue:
             '[OFFLINE] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
         candidate:
@@ -1878,8 +1909,7 @@ void main() {
 
       final missingPrefixValue = resolveTranslatedArbValue(
         key: 'chatbotLocalNoInfo',
-        source:
-            '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.',
+        source: localNoInfoSource,
         currentValue:
             '[OFFLINE] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
         candidate: 'Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
@@ -1902,6 +1932,17 @@ void main() {
             candidate: candidate,
           ),
           cloudNotConfiguredSource,
+        );
+      }
+      for (final candidate in badLocalNoInfoCandidates) {
+        expect(
+          resolveTranslatedArbValue(
+            key: 'chatbotLocalNoInfo',
+            source: localNoInfoSource,
+            currentValue: '',
+            candidate: candidate,
+          ),
+          localNoInfoSource,
         );
       }
     });

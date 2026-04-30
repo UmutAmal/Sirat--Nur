@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API ii leat konfigurerejuvvon. Duođaštuvvon offline islamlaš rávvagat eai leat vuos gávdnamis.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Duođaštuvvon báikkálaš islamalaš rávvagat eai leat vuos gávdnamis. Sirdde Cloud AI:i vai oaččut gávdnon vástádusaid.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Ohca dán guovllu",

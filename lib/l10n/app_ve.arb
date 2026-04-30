@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API a i athu dzudzanywa. Vhulivhisi ha Islam ho khwaṱhisedzwaho vhu siho kha inthanethe a vhu athu wanala.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Vhulivhisi ha Islam hapo ho khwaṱhisedzwaho a vhu athu wanala. Tshintshani kha Cloud AI u itela phindulo dzo bvaho.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Setsha fhethu uhu",

@@ -1337,7 +1337,7 @@ class AppLocalizationsBa extends AppLocalizations {
 
   @override
   String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      '[OFFLINE] Тикшерелгән урындағы ислам етәкселеге әлегә юҡ. Сығанаҡлы яуаптар өсөн Cloud AI-ға күсегеҙ.';
 
   @override
   String get mosques => 'Mosques';

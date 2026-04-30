@@ -5,6 +5,36 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
+const _chatbotLocalNoInfoGeneratedSyncLocales = {
+  'aa',
+  'ab',
+  'ba',
+  'bh',
+  'bo',
+  'br',
+  'ce',
+  'cv',
+  'dz',
+  'ff',
+  'fo',
+  'kg',
+  'kl',
+  'kr',
+  'kv',
+  'li',
+  'nr',
+  'oc',
+  'os',
+  'rn',
+  'se',
+  'sg',
+  'ss',
+  'tn',
+  'to',
+  've',
+  'wo',
+};
+
 void main() {
   test(
     'generated low-resource Places strings stay in sync with ARB files',
@@ -116,7 +146,6 @@ void main() {
         've',
         'wo',
       ];
-
       for (final localeCode in locales) {
         final arb =
             jsonDecode(File('lib/l10n/app_$localeCode.arb').readAsStringSync())
@@ -175,7 +204,6 @@ void main() {
         've',
         'wo',
       ];
-
       for (final localeCode in locales) {
         final arb =
             jsonDecode(File('lib/l10n/app_$localeCode.arb').readAsStringSync())
@@ -225,6 +253,7 @@ void main() {
         'sg',
         'ss',
         'tn',
+        'to',
         've',
         'wo',
       ];
@@ -239,6 +268,9 @@ void main() {
           l10n.chatbotCloudNotConfigured,
           arb['chatbotCloudNotConfigured'],
         );
+        if (_chatbotLocalNoInfoGeneratedSyncLocales.contains(localeCode)) {
+          expect(l10n.chatbotLocalNoInfo, arb['chatbotLocalNoInfo']);
+        }
       }
     },
   );

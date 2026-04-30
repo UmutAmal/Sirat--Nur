@@ -648,7 +648,7 @@ String resolveTranslatedArbValue({
   );
 
   final existingValue = currentValue;
-  if (existingValue is String) {
+  if (existingValue is String && existingValue.trim().isNotEmpty) {
     final processedExistingValue = _postProcessTranslation(
       key: key,
       translated: existingValue,
@@ -671,7 +671,7 @@ String resolveTranslatedArbValue({
     }
   }
 
-  if (existingValue is String) {
+  if (existingValue is String && existingValue.trim().isNotEmpty) {
     final processedExistingValue = _postProcessTranslation(
       key: key,
       translated: existingValue,
@@ -882,6 +882,13 @@ const _knownChatbotTranslationDebris = [
   'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑐᑭᒧᐊᒍᑎᒃᓴᖅ',
   "Cloud API is not configured. 'Oku",
   'i nia i te Internet',
+  'Переключитесь на Cloud AI для источниковых ответов',
+  "Ti siña ma'ayek i guinahan Islam ni' ma'ayek",
+  'vaka-Isireli',
+  "verify ry-gheddyn",
+  'ᐃᓛᒃᑰᖅᑐᑦ ᑐᑭᒧᐊᒍᑎᖏᑦ',
+  'Verified local Islamic guidance ejjab',
+  'Aita â te aratairaa Islama no te fenua iho i roaa mai',
 ];
 
 const _knownWeakDownloadActionCandidates = [

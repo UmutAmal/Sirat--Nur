@@ -19297,3 +19297,45 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `chatbotLocalNoInfo` icin tek-anahtarli batch, OFFLINE tokeni ve "verified/sourced Islamic guidance" semantigi korunarak uygulanacak.
+
+## 2026-04-30 TUR-476 - Chatbot Local No Info L10n Batch
+
+### MASTER Karari
+- Risk: `chatbotLocalNoInfo` 63 locale'de Ingilizce fallback olarak kaliyordu; metin `[OFFLINE]` runtime durum tokenini, dogrulanmis yerel Islami rehberlik olmadigini ve kaynakli cevaplar icin Cloud AI'a gecis yonlendirmesini tasiyor. Yanlis ceviri kullaniciya hazir olmayan dini icerik varmis gibi guven veya yanlis "Israeli/online/source" baglami verebilirdi.
+- Kanit:
+  - `lib/l10n/app_aa.arb:635` artik `"chatbotLocalNoInfo": "[OFFLINE] diggowte baaxoh addah islaaminna miracsenta awakâ fanah mageytimta. raceenah gacsitte geytuh Qammurre AI fan milaaga."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_bh.arb:635` artik `"chatbotLocalNoInfo": "[OFFLINE] सत्यापित स्थानीय इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे। स्रोत से मिलल जवाब खातिर क्लाउड एआई पर स्विच करीं।"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_to.arb:635` artik `"chatbotLocalNoInfo": "[OFFLINE] 'Oku te'eki ke ma'u 'a e fakahinohino fakalotofonua 'o e 'Isilami kuo fakamo'oni'i. Fetongi ki he Cloud AI ki he ngaahi tali sourced."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1339`, `lib/l10n/app_localizations_bh.dart:1339` ve `lib/l10n/app_localizations_to.dart:1340` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:651`, `tool/translate_arb_keys.dart:674` ve `tool/translate_arb_keys.dart:687` bos `currentValue` degerlerinin post-process sonrasi sahte `[OFFLINE] ` cevirisi olarak kabul edilmesini engelliyor.
+  - `tool/translate_arb_keys.dart:879`-`tool/translate_arb_keys.dart:891` Avar/Russian mix, Chamorro wrong-context, Fijian `vaka-Isireli`, Manx mixed output, Inuktitut Islam/source dusmesi, Marshallese yari-Ingilizce ve Tahitian semantik dusme adaylarini reddediyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1009` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:501`-`test/translate_arb_keys_test.dart:517` kabul edilen `aa` cikisinin Ingilizce fallback olmadigini ve `av/ch/fj/gv/iu/mh/ty` kotu adaylarinin repo icinde tutulmadigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:1892`-`test/translate_arb_keys_test.dart:1940` translator fallback fonksiyonunun 7 guvensiz chatbot local adayinda Ingilizce kaynaga geri dondugunu ve bos mevcut degerden `[OFFLINE] ` uretmedigini dogruluyor.
+  - `test/l10n_generated_sync_test.dart:8`-`test/l10n_generated_sync_test.dart:35` generated sync locale listesini sabitliyor; `test/l10n_generated_sync_test.dart:271`-`test/l10n_generated_sync_test.dart:272` generated getter ile ARB degerini karsilastiriyor.
+  - `dart run tool\translate_arb_keys.dart --report chatbotLocalNoInfo` same-as-English borcunu `63 -> 36` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Chatbot offline bilgi yok mesaji 27 ek locale'de secili dilde gorunur; `[OFFLINE]` tokeni korunur ve guvensiz 7 locale yanlis bilgi vermek yerine bilincli fallback'te kalir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 27 ARB dosyasi, 27 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `chatbotLocalNoInfo` icin guvenli kabul edilen 27 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `av`, `ch`, `fj`, `gv`, `iu`, `mh` ve `ty` adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar chatbot debris listesine eklendi.
+- `resolveTranslatedArbValue` bos mevcut stringleri post-process edip gecerlilik kazanmis gibi kullanmayacak sekilde sertlestirildi; bu, `[OFFLINE] ` sahte basari riskini kapatti.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 139/139.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 681/681.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Chatbot local-no-info fallback riski: `12/25 -> 4/25`.
+- Translator bos-existing sahte `[OFFLINE] ` riski: `12/25 -> 3/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1009` same-as-English fallback devam ediyor; `chatbotOfflinePrompt` ve `chatbotOfflineSwitched` siradaki guvenli batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `chatbotOfflinePrompt` icin cok satirli prompt semantigi ve newline yapisi korunarak tek-anahtarli batch uygulanacak.

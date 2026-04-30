@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API is neet geconfigureerd. Gecontroleerde offline islamitische begeleiding is nog neet besjikbaar.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Gecontroleerde lokale islamitische begeleiding is nog neet besjikbaar. Wissel euver nao Cloud AI veur gebronne antwoorde.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Zoek in dit gebeed",

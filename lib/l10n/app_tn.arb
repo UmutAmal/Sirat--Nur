@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API ga e a rulaganngwa. Kaelo e e netefaditsweng ya Boiselamo e e seng mo inthaneteng ga e ise e nne teng.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Kaelo e e netefaditsweng ya selegae ya Boiselamo ga e ise e nne teng. Fetogela kwa Cloud AI go bona dikarabo tse di tswang mo motsweding.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Batla lefelo leno",

@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "क्लाउड एपीआई कॉन्फ़िगर नइखे भइल. सत्यापन ऑफलाइन इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे।",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] सत्यापित स्थानीय इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे। स्रोत से मिलल जवाब खातिर क्लाउड एआई पर स्विच करीं।",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "एह इलाका में खोज करीं",

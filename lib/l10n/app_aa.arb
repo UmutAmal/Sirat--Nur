@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Qammurreera API mabicinna. Diggooweh yan gitak iroh islaaminna miracsenta awakâ fanah mageytimta.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] diggowte baaxoh addah islaaminna miracsenta awakâ fanah mageytimta. raceenah gacsitte geytuh Qammurre AI fan milaaga.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Ta arac gorris",

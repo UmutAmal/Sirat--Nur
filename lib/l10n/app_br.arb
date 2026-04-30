@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "N'eo ket kefluniet an API Cloud. N'eo ket bet kavet c'hoazh titouroù islamek ezlinenn kadarnaet.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] N'eus ket c'hoazh titouroù islamek lec'hel kadarnaet. Tremen da Cloud AI evit kaout respontoù orin.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Klask en takad-mañ",

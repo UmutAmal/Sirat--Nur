@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API-mik atorneqanngilaq. Uppernarsarneqarsimasoq offline-imi islamimik najoqqutassiaq suli pissarsiarineqarsinnaanngilaq.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Sumiiffimmi islamimik najoqqutassiaq uppernarsarneqarsimasoq suli pissarsiarineqarsinnaanngilaq. Cloud AI-mut ikkukkit akissutissat source-it pissarsiariniarlugit.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Sumiiffimmi tassani ujaarlerit",

@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "I-Cloud API ayikalungiswa. Iinqophiso zama-Islam eziqinisekisiweko ezingekho ku-inthanethi azikatholakali okwamanje.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Iinqophiso zendawo zama-Islam eziqinisekisiweko azikatholakali okwamanje. Tjhugulukela ku-Cloud AI ukuthola iimpendulo ezitholakalako.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Setjha indawo le",

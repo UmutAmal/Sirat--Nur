@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "API Cloud oo ƴettaaka. Ardorde lislaam hoolkisaande tawa ko e laylaytol alaa tawo.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Ardorde lislaam nokkuure hoolkisaande heɓaaka tawo. Waylu to Cloud AI ngam heɓde jaabawuuli ƴoogirɗe.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Yiylo nokku oo",

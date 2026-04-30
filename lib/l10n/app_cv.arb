@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Пӗлӗт API-не настройка туман. Тӗрӗсленӗ офлайн ислам ҫул-йӗрӗ хальлӗхе ҫук-ха.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Тӗрӗсленӗ вырӑнти ислам ҫул-йӗрӗ хальлӗхе ҫук-ха. Ҫӑлкуҫсенчен илнӗ хуравсемшӗн Cloud AI ҫине куҫӑр.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Ку тӑрӑхра шырӑр",

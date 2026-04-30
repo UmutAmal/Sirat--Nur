@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "API ya matuti kele ve ya kuyidika. Lutwadisu ya Islam yina bo me zikisaka na nganda ya Internet kele ntete ve.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Lutwadisu ya Islam ya bwala yina bo me zikisaka kele ntete ve. Soba na Cloud AI sambu na bamvutu ya kisina.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Sosa kisika yayi",

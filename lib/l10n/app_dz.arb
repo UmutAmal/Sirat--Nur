@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "ཀླད་ཀོར་ཨེ་པི་ཨའི་རིམ་སྒྲིག་མ་འབད་བས། བདེན་དཔྱད་འབད་ཡོད་པའི་ཨོཕ་ལའིན་ཨིསི་ལཱ་མིཀ་ལམ་སྟོན་འདི་ད་ལྟོ་ཡང་མ་ཐོབ་པས།",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] བདེན་དཔང་བྱས་པའི་ས་གནས་ཀྱི་ཨིསི་ལམ་གྱི་ལམ་སྟོན་ད་དུང་ཡང་མ་ཐོབ། འབྱུང་ཁུངས་ལན་ཚུ་གི་དོན་ལུ་ ཀླད་ཀོར་ཨེ་ཨའི་ལུ་སོར་བསྒྱུར་འབད།",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "ས་ཁོངས་འདི་འཚོལ།",

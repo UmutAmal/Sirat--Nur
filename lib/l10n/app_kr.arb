@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "Cloud API dəga təmmaro tədənyi. Shimo Islambe offlinelan tawattəgənadə kuwami yaye mbeji.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Shimo Islambe fatobe tawattəgənadə kuwami yaye mbeji. Cloud AI ro faltə jaawuwa sourcedbe nankaro.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Na adə kulasne",

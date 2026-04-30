@@ -632,7 +632,7 @@
     }
   },
   "chatbotCloudNotConfigured": "API cloud bi defaruwul. Ba leegi amagul tegtal islaam buñ firndeel te nekkul ci net bi.",
-  "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
+  "chatbotLocalNoInfo": "[OFFLINE] Ba leegi amagul tegtali islaam yuñ firndeel. Weccoo ci Cloud AI ngir am tontu yu baax.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",
   "placesSearchArea": "Seetal barab bii",
