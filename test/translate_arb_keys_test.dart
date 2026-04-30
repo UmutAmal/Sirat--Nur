@@ -1777,9 +1777,33 @@ void main() {
         candidate: 'Maghrib ukax mä juk’a pachanakanwa',
       );
 
+      final fajrAngleValue = resolveTranslatedArbValue(
+        key: 'fajrAngle',
+        source: 'Fajr Angle',
+        currentValue: '',
+        candidate: 'Fajr Angle a ɛyɛ fɛ',
+      );
+
+      final ishaAngleValue = resolveTranslatedArbValue(
+        key: 'ishaAngle',
+        source: 'Isha Angle',
+        currentValue: '',
+        candidate: 'Isha Angle na ɔkyerɛwee',
+      );
+
+      final preservedFajrAngleValue = resolveTranslatedArbValue(
+        key: 'fajrAngle',
+        source: 'Fajr Angle',
+        currentValue: 'İmsak Açısı',
+        candidate: 'Fajr Ángulo ukax mä juk’a pachanakanwa',
+      );
+
       expect(madhabValue, 'Asr Juristic Method');
       expect(dhuhrValue, 'Dhuhr');
       expect(maghribValue, 'Maghrib');
+      expect(fajrAngleValue, 'Fajr Angle');
+      expect(ishaAngleValue, 'Isha Angle');
+      expect(preservedFajrAngleValue, 'İmsak Açısı');
     });
 
     test('rejects known runtime status debris', () {

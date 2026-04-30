@@ -19814,3 +19814,35 @@
 
 ### Sonraki Adim
 - Yeni dongude Prayer/calendar DST ve notification scheduling hattina geri don; ozellikle timezone inference, midnight boundary ve yarinin Fajr hesabi icin kanitli test boslugu aranacak.
+
+## 2026-04-30 TUR-490 - Prayer Angle Translation Guard
+
+### MASTER Karari
+- Risk: `fajrAngle` / `ishaAngle` l10n borcunu kapatmak icin denenebilecek otomatik batch, angle label'lari icin baglam disi veya aciklama kirintisi iceren makine cevirilerini kabul edebiliyordu; bu, namaz hesap ayarlarinda kullaniciya yanlis/garip teknik etiket gosterebilirdi.
+- Kanit:
+  - `dart run tool\translate_arb_keys.dart --report fajrAngle ishaAngle` raporu `376` same-as-English locale gosterdi; eksik placeholder yok, fakat guvenli aday kalitesi halen riskli.
+  - Onceki batch denemesinde `app_ak.arb` icin `Fajr Angle a ɛyɛ fɛ` / `Isha Angle na ɔkyerɛwee`, `app_ay.arb` icin `Fajr Ángulo ukax ...` gibi baglam-disi adaylar uredi; batch icerik diff'i geri alindi ve Git index refresh ile calisma agaci temizlendi.
+  - `tool/translate_arb_keys.dart:843` artik `fajrAngle` ve `ishaAngle` anahtarlarini prayer method/name kalite guard kapsaminda ele aliyor.
+  - `tool/translate_arb_keys.dart:956` bilinen angle debris fragment'lerini reddediyor.
+  - `test/translate_arb_keys_test.dart:1780` yeni regresyon testi unsafe Akan/Aymara angle adaylarini source'a dusuruyor ve mevcut iyi yerel degeri koruyor.
+- Kullanici etkisi: Dini saat hesap ayarlarinda otomatik ceviri aracinin sacma veya yanlis baglamli angle label'larini ARB'lere yazma riski azalir; guvenli ceviri yoksa bilincli fallback korunur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 3/25.
+- Rollback plani: `tool/translate_arb_keys.dart` ve `test/translate_arb_keys_test.dart` bu turdaki diff kadar geri alinabilir; ARB icerigi degistirilmedi.
+
+### BUILDER Degisikligi
+- `fajrAngle` ve `ishaAngle`, mevcut `_isPrayerMethodOrNameKey` kalite kapisina eklendi.
+- Onceki denemede yakalanan bilinen kotu ceviri parcalari `_knownPrayerMethodOrNameDebris` listesine eklendi.
+- ARB dosyalarina sahte veya belirsiz ceviri yazilmadi; l10n borcu guvenilir adayla kapatilana kadar kontrollu fallback olarak birakildi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `56/56`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `686/686`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content checks, Quran audio mirror/partition checks, analyze ve full test kapilari temiz.
+
+### Risk Degisimi
+- Prayer angle l10n unsafe batch riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: `fajrAngle` / `ishaAngle` bircok locale'de halen English fallback; ancak sahte/yanlis ceviri yazmak yerine ceviri guard guclendirildi. Sonraki turda guvenilir priority locale cevirileri veya prayer runtime scheduling riskleri kanitla secilecek.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kanitli kusuru sec: prayer notification/timezone runtime edge-case, Supabase content fallback, Appium runtime smoke veya l10n priority-locale fallback borcu.

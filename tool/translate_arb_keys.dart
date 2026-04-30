@@ -841,7 +841,13 @@ bool _isWeakDistanceAwayCopy(String value) {
 }
 
 bool _isPrayerMethodOrNameKey(String key) {
-  return const {'madhab', 'dhuhr', 'maghrib'}.contains(key);
+  return const {
+    'madhab',
+    'dhuhr',
+    'maghrib',
+    'fajrAngle',
+    'ishaAngle',
+  }.contains(key);
 }
 
 bool _isRuntimeStatusKey(String key) {
@@ -947,7 +953,14 @@ const _knownGeneralTranslationDebris = [
   'ukax mä juk’a pachanakanwa',
 ];
 
-const _knownPrayerMethodOrNameDebris = ['Método Jurídico', 'ukat juk’ampinaka'];
+const _knownPrayerMethodOrNameDebris = [
+  'Método Jurídico',
+  'ukat juk’ampinaka',
+  'a ɛyɛ fɛ',
+  'na ɔkyerɛwee',
+  'Ángulo ukax',
+  'Angle ukax',
+];
 
 const _knownRuntimeStatusDebris = ['Ukax mä...'];
 
