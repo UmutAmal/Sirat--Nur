@@ -106,6 +106,12 @@ void main() {
     () async {
       final prefs = await SharedPreferences.getInstance();
       final cachedAt = DateTime.now().toUtc();
+      final debugMessages = <String>[];
+      final previousDebugPrint = debugPrint;
+      addTearDown(() => debugPrint = previousDebugPrint);
+      debugPrint = (String? message, {int? wrapWidth}) {
+        if (message != null) debugMessages.add(message);
+      };
 
       await cacheDailyAyat(prefs, {
         'content_ar': 'آية محفوظة',
@@ -130,6 +136,13 @@ void main() {
 
       expect(ayat['content_en'], 'Cached verse');
       expect(ayat['reference'], 'Al-Fatihah 1:1');
+      expect(
+        debugMessages,
+        contains(
+          'Supabase client unavailable; using local fallback when possible',
+        ),
+      );
+      expect(debugMessages.join('\n'), isNot(contains('supabase_unavailable')));
     },
   );
 
@@ -185,6 +198,12 @@ void main() {
       'lib/core/providers/supabase_providers.dart',
     ).readAsStringSync();
 
+    expect(
+      source,
+      contains(
+        'Supabase client unavailable; using local fallback when possible',
+      ),
+    );
     expect(
       source,
       contains('Sukun audio cloud source load failed; returning empty map'),

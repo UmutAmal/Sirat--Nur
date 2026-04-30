@@ -21,6 +21,9 @@ SupabaseClient? readOptionalSupabaseClient(Ref ref) {
   try {
     return ref.read(supabaseClientProvider);
   } catch (_) {
+    debugPrint(
+      'Supabase client unavailable; using local fallback when possible',
+    );
     return null;
   }
 }

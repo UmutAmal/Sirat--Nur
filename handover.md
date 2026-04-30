@@ -18531,3 +18531,33 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi yeni dongude store/tool catch bloklarini ve remaining l10n debt reportunu skorla; false-success veya secret-leaking log riski cikarsa en kucuk patch ile kapat.
+
+## 2026-04-30 TUR-455 - Supabase Optional Client Fallback Is Visible
+
+### MASTER Karari
+- Risk: Optional Supabase client okunamadiginda cloud-backed ama local fallback destekleyen provider'lar sessizce cache/bundled fallback yoluna geciyordu.
+- Kanit:
+  - `lib/core/providers/supabase_providers.dart:20` `readOptionalSupabaseClient()` Supabase client'i okuyor.
+  - `lib/core/providers/supabase_providers.dart:23` catch blogu once sadece `return null` yapiyordu.
+  - `lib/core/providers/supabase_providers.dart:171`, `:253`, `:421`, `:443` daily ayat, sukun audio, daily duas ve Asma-ul-Husna provider'lari bu optional client sonucuna gore fallback'e geciyor.
+- Kullanici etkisi: Kullanici offline/cache fallback sayesinde akisi kaybetmez, fakat Supabase init/config arizasi saha loglarinda gorunmezse cloud icerik eksikliginin kok sebebi gec bulunur.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/daily_ayat_provider_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `readOptionalSupabaseClient()` catch blogu sanitized debug log yazacak sekilde guncellendi.
+- Log mesaji raw exception, endpoint, token veya credential degeri basmaz; sadece local fallback'in devreye girebilecegini belirtir.
+- Daily ayat cache fallback davranisi aynen korundu.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS, 9/9.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 677/677.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, content/audio manifests, analyze ve full tests temiz.
+
+### Risk Degisimi
+- Supabase optional client silent fallback riski: `9/25 -> 2/25`.
+- Kalan risk: Remaining l10n same-as-English fallback borcu ve non-critical parser fallback'leri siradaki dongulerde skorlanacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu guncelle ve en yuksek etkili tek anahtar icin guvenli ceviri batch'i uygula; uydurma veya placeholder mismatch cikarsa batch'i koruma araclariyla reddet.
