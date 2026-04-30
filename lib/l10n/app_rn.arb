@@ -631,7 +631,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API is not configured. Verified offline Islamic guidance is not available yet.",
+  "chatbotCloudNotConfigured": "API y'igicu ntiyatunganijwe. Impanuro z’ubuyisilamu zagenzuwe zitari ku rubuga ntiziraboneka.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",

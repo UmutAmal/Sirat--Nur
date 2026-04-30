@@ -19258,3 +19258,42 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `chatbotCloudNotConfigured` icin tek-anahtarli batch, OFFLINE/Gemini/Supabase teknik token guard'lari korunarak uygulanacak.
+
+## 2026-04-30 TUR-475 - Chatbot Cloud Not Configured L10n Batch
+
+### MASTER Karari
+- Risk: `chatbotCloudNotConfigured` 63 locale'de Ingilizce fallback olarak kaliyordu; bulut API kurulmadiginda chatbot ekraninda dogrulanmis offline Islami rehberlik durumunu anlatan runtime metin oldugu icin karisik dil ve yanlis "online/internet" anlami uretme riski tasiyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:634` artik `"chatbotCloudNotConfigured": "Qammurreera API mabicinna. Diggooweh yan gitak iroh islaaminna miracsenta awakâ fanah mageytimta."` degerini tasiyor; once `Cloud API is not configured. Verified offline Islamic guidance is not available yet.` idi.
+  - `lib/l10n/app_bh.arb:634` artik `"chatbotCloudNotConfigured": "क्लाउड एपीआई कॉन्फ़िगर नइखे भइल. सत्यापन ऑफलाइन इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे।"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:634` artik `"chatbotCloudNotConfigured": "API cloud bi defaruwul. Ba leegi amagul tegtal islaam buñ firndeel te nekkul ci net bi."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1335`, `lib/l10n/app_localizations_bh.dart:1335` ve `lib/l10n/app_localizations_wo.dart:1335` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:791` chatbot copy icin bilinen kotu baglam filtresini uyguluyor; `tool/translate_arb_keys.dart:879`-`tool/translate_arb_keys.dart:884` Chamorro/Fijian/Inuktitut/Tongan/Tahitian guvensiz adaylarini reddediyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1036` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:482`-`test/translate_arb_keys_test.dart:494` kabul edilen `aa` cikisinin Ingilizce fallback olmadigini ve `ch/fj/iu/to/ty` kotu adaylarinin repo icinde tutulmadigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:1862`-`test/translate_arb_keys_test.dart:1899` translator fallback fonksiyonunun 5 guvensiz chatbot cloud adayinda Ingilizce kaynaga geri dondugunu dogruluyor.
+  - `test/l10n_generated_sync_test.dart:198`-`test/l10n_generated_sync_test.dart:240` generated low-resource chatbot getter'larinin ARB ile ayni runtime degerini verdigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report chatbotCloudNotConfigured` same-as-English borcunu `63 -> 34` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Bulut API yapilandirilmadiginda gorunen chatbot aciklamasi 29 ek locale'de secili dilde gorunur; online/internet yonu tersine donen veya yari-Ingilizce kalan 5 locale bilincli fallback'te tutulur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 29 ARB dosyasi, 29 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `chatbotCloudNotConfigured` icin guvenli kabul edilen 29 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `ch`, `fj`, `iu`, `to` ve `ty` adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar chatbot debris listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 139/139.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 681/681.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Chatbot cloud-not-configured fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1036` same-as-English fallback devam ediyor; `chatbotLocalNoInfo`, `chatbotOfflinePrompt` ve `chatbotOfflineSwitched` siradaki guvenli batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `chatbotLocalNoInfo` icin tek-anahtarli batch, OFFLINE tokeni ve "verified/sourced Islamic guidance" semantigi korunarak uygulanacak.

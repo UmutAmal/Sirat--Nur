@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1065));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1036));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -476,6 +476,25 @@ void main() {
           isNot(contains(entry.value)),
           reason:
               'app_${entry.key}.arb kept wrong-context Quran cloud juz diagnostics copy',
+        );
+      }
+      expect(
+        localeArbs['aa']!['chatbotCloudNotConfigured'],
+        isNot(english['chatbotCloudNotConfigured']),
+      );
+      const badChatbotCloudFragments = {
+        'ch': 'gi i internet',
+        'fj': 'ena initaneti',
+        'iu': 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑐᑭᒧᐊᒍᑎᒃᓴᖅ',
+        'to': "Cloud API is not configured. 'Oku",
+        'ty': 'i nia i te Internet',
+      };
+      for (final entry in badChatbotCloudFragments.entries) {
+        expect(
+          localeArbs[entry.key]!['chatbotCloudNotConfigured'],
+          isNot(contains(entry.value)),
+          reason:
+              'app_${entry.key}.arb kept wrong-context chatbot cloud fallback copy',
         );
       }
       expect(
@@ -1838,6 +1857,15 @@ void main() {
     });
 
     test('preserves chatbot offline status token', () {
+      const cloudNotConfiguredSource =
+          'Cloud API is not configured. Verified offline Islamic guidance is not available yet.';
+      const badCloudNotConfiguredCandidates = [
+        "Ti makonfigura i Cloud API. Ti siña ma'ayek i guinahan Islam ni' ma'ayek gi i internet.",
+        'E sega ni vakarautaki na API ni o. Vakadeitaki na idusidusi ni Islam ena initaneti e se bera ni tiko.',
+        'ᖃᕆᑕᐅᔭᒃᑯᑦ API ᐋᖅᑭᒃᑕᐅᓯᒪᙱᓚᖅ. ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑐᑭᒧᐊᒍᑎᒃᓴᖅ ᐊᑐᐃᓐᓇᐅᙱᓚᖅ ᓱᓕ.',
+        "Cloud API is not configured. 'Oku te'eki ke ma'u 'a e fakahinohino faka-'Isilami offline kuo fakamo'oni'i.",
+        'Aita te Cloud API i haamauhia. Aita â te aratairaa Islamic i itehia i nia i te Internet.',
+      ];
       final translatedPrefixValue = resolveTranslatedArbValue(
         key: 'chatbotLocalNoInfo',
         source:
@@ -1865,6 +1893,17 @@ void main() {
         missingPrefixValue,
         '[OFFLINE] Dogrulanmis yerel Islami rehberlik henuz hazir degil.',
       );
+      for (final candidate in badCloudNotConfiguredCandidates) {
+        expect(
+          resolveTranslatedArbValue(
+            key: 'chatbotCloudNotConfigured',
+            source: cloudNotConfiguredSource,
+            currentValue: '',
+            candidate: candidate,
+          ),
+          cloudNotConfiguredSource,
+        );
+      }
     });
   });
 }

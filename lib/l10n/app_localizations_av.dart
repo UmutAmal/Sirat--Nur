@@ -1333,7 +1333,7 @@ class AppLocalizationsAv extends AppLocalizations {
 
   @override
   String get chatbotCloudNotConfigured =>
-      'Cloud API is not configured. Verified offline Islamic guidance is not available yet.';
+      'НакӀкӀил API настройка гьабун гьечӀо. Тадсикъ гьабураб офлайн исламияб нухмалъи жеги гьечӀо.';
 
   @override
   String get chatbotLocalNoInfo =>

@@ -631,7 +631,7 @@
       }
     }
   },
-  "chatbotCloudNotConfigured": "Cloud API is not configured. Verified offline Islamic guidance is not available yet.",
+  "chatbotCloudNotConfigured": "Cha nel API Cloud er ny chowraghey. Cha nel stiurey Islamagh offline er ny verify ry-gheddyn foast.",
   "chatbotLocalNoInfo": "[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.",
   "mosques": "Mosques",
   "halalFood": "Halal Food",

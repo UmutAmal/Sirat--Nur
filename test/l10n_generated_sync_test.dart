@@ -193,4 +193,53 @@ void main() {
       }
     },
   );
+
+  test(
+    'generated low-resource chatbot strings stay in sync with ARB files',
+    () async {
+      const locales = [
+        'aa',
+        'ab',
+        'av',
+        'ba',
+        'bh',
+        'bo',
+        'br',
+        'ce',
+        'cv',
+        'dz',
+        'ff',
+        'fo',
+        'gv',
+        'kg',
+        'kl',
+        'kr',
+        'kv',
+        'li',
+        'mh',
+        'nr',
+        'oc',
+        'os',
+        'rn',
+        'se',
+        'sg',
+        'ss',
+        'tn',
+        've',
+        'wo',
+      ];
+
+      for (final localeCode in locales) {
+        final arb =
+            jsonDecode(File('lib/l10n/app_$localeCode.arb').readAsStringSync())
+                as Map<String, dynamic>;
+        final l10n = await AppLocalizations.delegate.load(Locale(localeCode));
+
+        expect(
+          l10n.chatbotCloudNotConfigured,
+          arb['chatbotCloudNotConfigured'],
+        );
+      }
+    },
+  );
 }

@@ -787,6 +787,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, _knownDiagnosticsTranslationDebris);
   }
 
+  if (_isChatbotCopyKey(key)) {
+    return _containsAny(value, _knownChatbotTranslationDebris);
+  }
+
   if (key == 'quranAudioSourcesIncomplete') {
     return _containsAny(value, _knownQuranAudioSourceStatusDebris);
   }
@@ -811,6 +815,10 @@ bool _isDownloadCopyKey(String key) {
 
 bool _isDiagnosticsCopyKey(String key) {
   return key.startsWith('diagnostics');
+}
+
+bool _isChatbotCopyKey(String key) {
+  return key.startsWith('chatbot');
 }
 
 bool _isPrayerMethodOrNameKey(String key) {
@@ -866,6 +874,14 @@ const _knownDiagnosticsTranslationDebris = [
   'Imethadatha yamafu ilahlekile',
   'Las metadonadas del nívol',
   'Мигъы метабæрæггæнæнтæ',
+];
+
+const _knownChatbotTranslationDebris = [
+  'gi i internet',
+  'ena initaneti',
+  'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑐᑭᒧᐊᒍᑎᒃᓴᖅ',
+  "Cloud API is not configured. 'Oku",
+  'i nia i te Internet',
 ];
 
 const _knownWeakDownloadActionCandidates = [
