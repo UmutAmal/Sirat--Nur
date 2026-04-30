@@ -9,7 +9,22 @@ void main() {
   test(
     'generated low-resource Places strings stay in sync with ARB files',
     () async {
-      const locales = ['aa', 'ab', 'ba', 'bo', 'br', 'se', 'ti', 'wo'];
+      const locales = [
+        'aa',
+        'ab',
+        'ba',
+        'bh',
+        'bo',
+        'br',
+        'cv',
+        'li',
+        'nr',
+        'oc',
+        'os',
+        'se',
+        'ti',
+        'wo',
+      ];
 
       for (final localeCode in locales) {
         final arb =
@@ -24,11 +39,16 @@ void main() {
           '{distance}',
           '3.5',
         );
+        final apiError = (arb['placesApiError'] as String).replaceAll(
+          '{statusCode}',
+          '503',
+        );
 
         expect(l10n.placesSearchArea, arb['placesSearchArea']);
         expect(l10n.nearbyMosques, arb['nearbyMosques']);
         expect(l10n.placesFoundCount('7'), foundCount);
         expect(l10n.distanceAwayKm('3.5'), distanceAway);
+        expect(l10n.placesApiError('503'), apiError);
         expect(
           l10n.placesLocationRequiredTitle,
           arb['placesLocationRequiredTitle'],

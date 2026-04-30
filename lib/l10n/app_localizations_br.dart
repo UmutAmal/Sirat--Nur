@@ -1366,7 +1366,7 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Fazi API : $statusCode';
   }
 
   @override

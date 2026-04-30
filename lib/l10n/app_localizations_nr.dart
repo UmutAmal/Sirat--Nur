@@ -1366,7 +1366,7 @@ class AppLocalizationsNr extends AppLocalizations {
 
   @override
   String placesApiError(String statusCode) {
-    return 'API Error: $statusCode';
+    return 'Iphutha le-API: $statusCode';
   }
 
   @override

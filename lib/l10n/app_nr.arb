@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "Iphutha le-API: {statusCode}",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {

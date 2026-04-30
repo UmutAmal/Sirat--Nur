@@ -654,7 +654,7 @@
       }
     }
   },
-  "placesApiError": "API Error: {statusCode}",
+  "placesApiError": "एपीआई त्रुटि: {statusCode} बा।",
   "@placesApiError": {
     "placeholders": {
       "statusCode": {
