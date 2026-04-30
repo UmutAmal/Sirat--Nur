@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Dithaele tsa mmapa ga di yo",
   "placesMapTilesUnavailableBody": "Motswedi wa dithaele tsa mmapa o o netefaditsweng ga o ise o rulaganyediwe kago eno. Mafelo a a gaufi a sa ntse a ka laisa go tswa mo lefelong la gago le le bolokilweng.",
   "placesDataSourceUnavailableTitle": "E dira gore tshedimosetso e se ka ya nna teng",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Ntlha ya bofelo ya tshedimosetso ya mafelo e e netefaditsweng ga e ise e rulaganyediwe kago eno. Seta PLACES_OVERPASS_API_URL go kemedi kgotsa moabi yo o amogetsweng pele ga o kgontsha patlo e e gaufi.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

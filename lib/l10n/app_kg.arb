@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Ba carreaux ya karte kele ve",
   "placesMapTilesUnavailableBody": "Ntu ya tile ya karte ya bo me ndima me yidikama ntete ve sambu na kutunga yai. Bisika ya pene-pene lenda katuka kaka na kisika yina nge me bumba.",
   "placesDataSourceUnavailableTitle": "Bansangu ya bisika kele ve",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Nsuka ya bansangu ya bisika ya bo me zikisaka me yidikama ntete ve sambu na kutunga yai. Tula PLACES_OVERPASS_API_URL na proxy to na muntu ya me ndimama na ntwala ya kupesa nzila na kusosa ya pene-pene.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

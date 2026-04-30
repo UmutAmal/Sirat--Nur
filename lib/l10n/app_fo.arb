@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Kortflísar ikki tøkar",
   "placesMapTilesUnavailableBody": "Ein váttað kortflísakelda er ikki uppsett til hesa bygging enn. Nærliggjandi støð kunnu framvegis heinta frá tínum goymda stað.",
   "placesDataSourceUnavailableTitle": "Setur dátur ótøkar",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Eitt váttað staðdátuendapunkt er ikki uppsett til hesa bygging enn. Set PLACES_OVERPASS_API_URL til ein góðkendan proxy ella veitara áðrenn tú gert nærliggjandi leitan virkna.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

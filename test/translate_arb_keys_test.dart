@@ -232,7 +232,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(788));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(777));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -760,6 +760,38 @@ void main() {
           reason: 'app_$locale.arb has multiline places data-source body copy',
         );
       }
+      for (final locale in [
+        'aa',
+        'ba',
+        'fj',
+        'fo',
+        'iu',
+        'kg',
+        'kl',
+        'kr',
+        'rn',
+        'sg',
+        'tn',
+      ]) {
+        final dataSourceBody =
+            localeArbs[locale]!['placesDataSourceUnavailableBody'] as String;
+        expect(
+          dataSourceBody,
+          isNot(english['placesDataSourceUnavailableBody']),
+          reason:
+              'app_$locale.arb still uses English for placesDataSourceUnavailableBody',
+        );
+        expect(
+          dataSourceBody,
+          contains('PLACES_OVERPASS_API_URL'),
+          reason: 'app_$locale.arb changed the PLACES_OVERPASS_API_URL token',
+        );
+        expect(
+          dataSourceBody,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline places data-source body copy',
+        );
+      }
       expect(
         localeArbs['ga']!['diagnosticsQuranCloudTablesMissing'],
         isNot(english['diagnosticsQuranCloudTablesMissing']),
@@ -1104,6 +1136,11 @@ void main() {
         localeArbs['gv']!['placesDataSourceUnavailableBody'],
         isNot(contains('endpoint data places verify')),
         reason: 'app_gv.arb kept English/Manx mixed places data body copy',
+      );
+      expect(
+        localeArbs['to']!['placesDataSourceUnavailableBody'],
+        isNot(contains('configured ha endpoint')),
+        reason: 'app_to.arb kept English/Tongan mixed places data body copy',
       );
     });
 

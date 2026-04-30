@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Nunap assingani fliser atorneqarsinnaanngillat",
   "placesMapTilesUnavailableBody": "Uppernarsarneqarsimasoq nunap assingani fliser killiffik sanaartornermut tassunga suli aaqqissuunneqanngilaq. Sumiiffiit qaninnerpaat suli sumiiffimmi annaaneqarsimasumit ikkussinnaapput.",
   "placesDataSourceUnavailableTitle": "Sumiiffiit datat atorneqarsinnaanngitsut",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "Sumiiffiit data endpoint-iat uppernarsarneqarsimasoq suli sanaartornermut matumunnga aaqqissuunneqanngilaq. Qanittukkut ujarlerneq atuutilersinnagu PLACES_OVERPASS_API_URL akuerineqarsimasumut proxymut imaluunniit pilersuisumut inissiguk.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

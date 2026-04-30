@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Kartah balaatitte mageytimta",
   "placesMapTilesUnavailableBody": "diggowteh tan kartah fiddimaamih raceena ta xisneh taham fan mabicinna. xayi arooca uxih quukam duuddah atu daanisse aracak.",
   "placesDataSourceUnavailableTitle": "Arooca oyti mageytima",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "diggowte arooca oytih ellecabo ximmo ta xisneh uxih mabicinna. massos PLACES_OVERPASS_API_URL faaticimte awlaytu akkek xayyoyse xayikkel tan goranto duudusak naharal.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

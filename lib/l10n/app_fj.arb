@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "Sega ni tiko na taile ni mape",
   "placesMapTilesUnavailableBody": "E dua na ivurevure ni tile ni mape vakadeitaki e se bera ni vakarautaki me baleta na tara oqo. Na veivanua voleka e rawa ni se vakavodoki mai na nomu vanua maroroi.",
   "placesDataSourceUnavailableTitle": "Vanua itukutuku sega ni rawati",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "E dua na vanua vakadeitaki itukutuku ni itinitini e se bera ni vakarautaki me baleta na tara oqo se bera. Semati PLACES_OVERPASS_API_URL ki na dua na mata se dauveiqaravi vakadonui ni bera ni vakatarai na vakasaqaqara voleka.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

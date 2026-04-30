@@ -668,7 +668,7 @@
   "placesMapTilesUnavailableTitle": "ᓄᓇᙳᐊᑦ ᐊᑐᐃᓐᓇᐅᙱᑦᑐᑦ",
   "placesMapTilesUnavailableBody": "ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᓄᓇᙳᐊᖅ ᐋᖅᑭᒃᑕᐅᓯᒪᙱᓚᖅ ᓱᓕ ᑖᔅᓱᒧᖓ ᓴᓇᔭᐅᔪᒧᑦ. ᖃᓂᒋᔭᖏᓐᓂ ᐃᓂᐅᔪᑦ ᓱᓕ ᐴᖅᑲᐃᔪᓐᓇᖅᑐᑦ ᓴᓂᕐᕙᒃᓯᒪᔭᕐᓂᒃ ᐃᓂᒋᔭᕐᓂᒃ.",
   "placesDataSourceUnavailableTitle": "ᐃᓂᐅᔪᑦ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᑦ ᐊᑐᐃᓐᓇᐅᙱᑦᑐᑦ",
-  "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",
+  "placesDataSourceUnavailableBody": "ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᐃᓂᐅᔪᑦ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᐃᑦ ᐋᖅᑭᒃᑕᐅᓯᒪᙱᓚᑦ ᓱᓕ ᑖᔅᓱᒧᖓ ᓴᓇᔭᐅᔪᒧᑦ. ᐋᖅᑭᒃᓯᓗᑎᑦ PLACES_OVERPASS_API_URL ᐊᖏᖅᑕᐅᓯᒪᔪᒧᑦ ᑭᒡᒐᖅᑐᐃᔨᒧᑦ ᐅᕝᕙᓘᓐᓃᑦ ᐱᔨᑦᑎᕋᖅᑎᒧᑦ ᐱᔪᓐᓇᖅᑎᑦᑎᓚᐅᙱᓐᓂᕐᓂ ᖃᓂᒋᔭᕐᓂ ᕿᓂᕐᓂᕐᒥᒃ.",
   "unknownPlaceName": "Unknown Name",
   "islamicPlaceFallback": "Islamic Place",
   "asmaMeaning1": "The Beneficent",

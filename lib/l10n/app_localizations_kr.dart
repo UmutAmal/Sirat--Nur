@@ -1391,7 +1391,7 @@ class AppLocalizationsKr extends AppLocalizations {
 
   @override
   String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+      'Nawa tawattəgənadə data endpointdə gar adəro kuwamiyayi tədənyi. PLACES_OVERPASS_API_URL dəga proxy au awo yiwoma kasatkataro yike kawu kulashi karəngəye dəga yita gattəyinro.';
 
   @override
   String get unknownPlaceName => 'Unknown Name';

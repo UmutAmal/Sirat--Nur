@@ -19647,3 +19647,39 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesDataSourceUnavailableBody` icin `PLACES_OVERPASS_API_URL` teknik tokenini koruyan tek-anahtarli batch uygulanacak.
+
+## 2026-04-30 TUR-485 - Places Data Source Body L10n Batch
+
+### MASTER Karari
+- Risk: `placesDataSourceUnavailableBody` 44 locale'de Ingilizce fallback olarak kaliyordu; Places veri kaynagi/proxy yapilandirilmadiginda kullaniciya yakindaki aramanin neden kapali oldugunu ve `PLACES_OVERPASS_API_URL` teknik ayarini anlatan runtime metni oldugu icin token korunarak yerellesmesi gerekiyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:671` artik `PLACES_OVERPASS_API_URL` tokenini koruyan Afar kopyasini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_ba.arb:671` artik `PLACES_OVERPASS_API_URL` tokenini koruyan Baskurtca kopyasini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_iu.arb:671` artik `PLACES_OVERPASS_API_URL` tokenini koruyan Inuktitut kopyasini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1393`, `lib/l10n/app_localizations_ba.dart:1394` ve `lib/l10n/app_localizations_iu.dart:1393` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `test/translate_arb_keys_test.dart:235` kritik 23 l10n anahtari icin same-as-English esigini `777` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:777` kabul edilen yeni data-source body locale'lerinin Ingilizce fallback olmadigini, `PLACES_OVERPASS_API_URL` teknik tokenini korudugunu ve multiline uretmedigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:1131`-`test/translate_arb_keys_test.dart:1142` Avar/Rusca, Manx/Ingilizce ve Tongan/Ingilizce karisik guvensiz adaylarin repo icinde tutulmadigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report placesDataSourceUnavailableBody` same-as-English borcunu `44 -> 33` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+  - 23 anahtarli kritik l10n debt reportu same-as-English toplam borcunu `788 -> 777`, missing/empty `0`, placeholder mismatch `0` olarak olctu.
+- Kullanici etkisi: Places veri kaynagi kapali oldugunda 11 ek locale'de kullaniciya neden ve hangi teknik ayarin gerektigi yerel dilde anlatilir; karisik/guvensiz uzun metinler bilincli fallback'te kalir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: Bu turdaki 11 ARB dosyasi, 11 generated l10n dosyasi, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesDataSourceUnavailableBody` icin guvenli kabul edilen 11 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- Avar, Manx ve Tongan adaylari karisik dil/kelime salatasi riski nedeniyle Ingilizce fallback'e geri alindi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 141/141.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 683/683.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+
+### Risk Degisimi
+- Places data-source body l10n riski: `16/25 -> 7/25`.
+- Kalan risk: `distanceAwayKm` 44 locale'de ve `diagnosticsQuranCloudJuzMissing` 36 locale'de Ingilizce fallback olarak kaliyor; mevcut Places grubunda `distanceAwayKm` kalan debt sayisi yuksek fakat onceki guard kapsaminda zayif unit-only adaylar reddediliyor.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `diagnosticsQuranCloudJuzMissing` icin diagnostics runtime copy batch'i veya `distanceAwayKm` icin guvenli ek aday taramasi uygulanacak.
