@@ -993,7 +993,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'ᖃᐅᔨᓴᕐᓂᖅ';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1200,7 +1200,7 @@ class AppLocalizationsIu extends AppLocalizations {
       'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'ᐱᔪᓐᓇᖅᑎᓪᓗᒍ ᖃᕆᑕᐅᔭᒃᑯᑦ ᐅᑎᕐᕕᐅᔪᓐᓇᖅᑐᖅ';
 
   @override
   String get downloadPreparing => 'ᐸᕐᓇᒃᐸᓪᓕᐊᔪᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᕐᒧᑦ...';
@@ -1314,13 +1314,13 @@ class AppLocalizationsIu extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'ᑐᒃᓯᐊᕐᓂᖅ ᐱᔭᕇᖅᑕᐅᓂᖓ';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ᓇᓗᓇᐃᒃᑯᑕᐃᑦ';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'ᐅᓪᓗᒃᑯᑦ';
 
   @override
   String get bestStreak => 'Best streak';

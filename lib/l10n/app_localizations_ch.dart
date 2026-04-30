@@ -1200,7 +1200,7 @@ class AppLocalizationsCh extends AppLocalizations {
       'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Na\'siña i Offline Fallback';
 
   @override
   String get downloadPreparing => 'Manlisto para u ma\'apåsi...';
@@ -1315,13 +1315,13 @@ class AppLocalizationsCh extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Finatton i Tinayuyot';
 
   @override
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Ha\'åni na lina\'la\'';
 
   @override
   String get bestStreak => 'Best streak';
@@ -1333,7 +1333,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Usa i Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Enable Offline Fallback';

@@ -998,7 +998,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get library => 'Lub tsev qiv ntawv';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Kev tsom xam';
 
   @override
   String get dailyDuas => 'Daily Duas';

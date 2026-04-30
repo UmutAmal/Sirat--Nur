@@ -994,7 +994,7 @@ class AppLocalizationsDz extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'དབྱེ་དཔྱད།';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1201,7 +1201,7 @@ class AppLocalizationsDz extends AppLocalizations {
       'ཨོཕ་ལ་ཡིན་ཕོལ་བེཀ་ལྕོགས་ཅན་བཟོ་ཡོདཔ། བདེན་དཔྱད་འབད་ཡོད་པའི་ས་གནས་ཀྱི་ཨིསི་ལཱ་མིཀ་ལན་ཚུ་ད་ལྟོ་ཡང་གྲ་སྒྲིག་མེདཔ་ཨིན།';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'ཨོཕ་ལ་ཡིན་ཕོལ་བེཀ་ལྕོགས་ཅན་བཟོ།';
 
   @override
   String get downloadPreparing => 'ཕབ་ལེན་གྲ་སྒྲིག་འབད་དོ།';
@@ -1317,13 +1317,13 @@ class AppLocalizationsDz extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'སྨོན་ལམ་མཇུག་བསྡུ།';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'ཐིག་རིས།';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'ཉིནམ་རིམ་སྒྲིག།';
 
   @override
   String get bestStreak => 'Best streak';

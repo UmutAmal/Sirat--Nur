@@ -993,7 +993,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Аналитика';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1200,7 +1200,7 @@ class AppLocalizationsCe extends AppLocalizations {
       'Офлайн хьалха дӀахӀоттийна. ТӀечӀагӀдина меттигера исламан жоьпаш кийча дац цкъачунна.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Офлайнехь дӀаяздар дӀахӀоттаде';
 
   @override
   String get downloadPreparing => 'Скачать дан кечам беш...';
@@ -1315,13 +1315,13 @@ class AppLocalizationsCe extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Ламаз чекхдаккхар .';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Стрикаш';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Ден мур';
 
   @override
   String get bestStreak => 'Best streak';

@@ -20129,3 +20129,39 @@
 
 ### Sonraki Adim
 - Yeni dongude AGENTS odak listesinden en yuksek kalan riski sec: prayer notification timezone/DST scheduling derin denetimi, kalan low-resource l10n fallback cluster'i veya offline download single-surah fixture ile daha derin runtime indirme testi.
+
+## 2026-05-01 TUR-499 - Analytics Chatbot Places L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Analytics, Chatbot mode controls ve Places yakin nokta copy'lerinde dusuk kaynakli locale'lerde app_en ile birebir kalan metinler vardi; bu, cok dilli UI hedefinde kullanicinin gorunur kart/quick access alanlarinda Ingilizce fallback gormesine yol aciyordu.
+- Kanit:
+  - `dart run tool\translate_arb_keys.dart --report analytics prayerCompletion streaks dayStreak chatbotUseCloudAi chatbotOfflineDownloadLabel nearbyMosques placesFoundCount distanceAwayKm` bu tur sonunda 9 anahtarda same-as-English `339`, missing/empty `0`, placeholder mismatch `0` raporladi; onceki taramada ayni kume `527` same-as-English idi.
+  - `lib/l10n/app_aa.arb:434` artik `analytics` icin `Makeelisso`, `lib/l10n/app_aa.arb:618` artik `prayerCompletion` icin `Dooqak gaba kalti` kullaniyor.
+  - `lib/l10n/app_bo.arb:434` artik Tibetan analytics copy'si, `lib/l10n/app_bo.arb:624` artik `chatbotUseCloudAi` icin Gemini proper noun'unu koruyan yerel copy tutuyor.
+  - `lib/l10n/app_ff.arb:515` artik chatbot offline fallback dugmesini Fula copy ile veriyor.
+  - `lib/l10n/app_kg.arb:624` artik `chatbotUseCloudAi` icin Kongo copy kullaniyor.
+  - `test/translate_arb_keys_test.dart:1148` yeni regresyon guard'i 9 anahtarlik gorunur kume icin same-as-English esigini `<=339` yapip `aa/bo/ff/kg` orneklerinin tekrar Ingilizceye donmesini engelliyor.
+- Kullanici etkisi: Analytics kartlari, chatbot bulut/offline secimi ve Places yakin nokta metinlerinde dusuk kaynakli dillerde daha az Ingilizce fallback gorulur; placeholderlar korunur ve belirsiz dillerde uydurma yerine guvenli fallback kalir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir; runtime kod akisi etkilenmedi.
+
+### BUILDER Degisikligi
+- `analytics`, `prayerCompletion`, `streaks`, `dayStreak`, `chatbotUseCloudAi`, `chatbotOfflineDownloadLabel`, `nearbyMosques`, `placesFoundCount`, `distanceAwayKm` anahtarlarinda guvenli dusuk kaynakli locale batch'i uygulandi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB kaynaklariyla senkronlandi.
+- Riskli veya belirsiz kalan locale'lerde app_en fallback'i bilincli olarak korundu; sahte dini/teknik copy uretilmedi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `139/139`.
+- L10n debt report: 9 anahtarda same-as-English `339`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `705/705`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio GitHub/Cloudflare distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `c19f310c-731e-4f69-8c5c-be88ecbd297a`, `quranPlayback.clickedPlay=true`, `containsPauseControl=true`, `containsPlaybackError=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94254930`.
+- Diff hygiene: `git diff --check` PASS; added-line secret scan PASS.
+
+### Risk Degisimi
+- Gorunur Analytics/Chatbot/Places low-resource English fallback riski: `12/25 -> 6/25`.
+- Kalan bilincli risk: Ayni 9 anahtarda 339 locale-key fallback kaldi; bunlar dusuk kaynakli/proper-term belirsizligi nedeniyle uydurma yapmamak icin korundu ve sonraki turlarda guvenli kume halinde azaltilecek.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: prayer notification timezone/DST scheduling derin denetimi, kalan low-resource l10n fallback cluster'i veya offline download single-surah fixture ile daha derin runtime indirme testi.

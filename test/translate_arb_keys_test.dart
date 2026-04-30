@@ -1144,6 +1144,96 @@ void main() {
       );
     });
 
+    test(
+      'tracks high-visibility analytics chatbot places l10n debt reduction',
+      () {
+        const keys = [
+          'analytics',
+          'prayerCompletion',
+          'streaks',
+          'dayStreak',
+          'chatbotUseCloudAi',
+          'chatbotOfflineDownloadLabel',
+          'nearbyMosques',
+          'placesFoundCount',
+          'distanceAwayKm',
+        ];
+        final english = _readArbFile('lib/l10n/app_en.arb');
+        final localeArbs = <String, Map<String, dynamic>>{};
+
+        for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+          final name = file.uri.pathSegments.last;
+          if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+            continue;
+          }
+          final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+          localeArbs[locale] = _readArbFile(file.path);
+        }
+
+        final report = buildL10nDebtReport(
+          keys: keys,
+          english: english,
+          localeArbs: localeArbs,
+        );
+
+        expect(report.missingOrEmptyCount, 0);
+        expect(report.placeholderMismatchCount, 0);
+        expect(report.sameAsEnglishCount, lessThanOrEqualTo(339));
+
+        const newlyLocalizedLocales = {
+          'aa': [
+            'analytics',
+            'prayerCompletion',
+            'streaks',
+            'dayStreak',
+            'chatbotUseCloudAi',
+            'chatbotOfflineDownloadLabel',
+          ],
+          'bo': [
+            'analytics',
+            'prayerCompletion',
+            'streaks',
+            'dayStreak',
+            'chatbotUseCloudAi',
+            'chatbotOfflineDownloadLabel',
+          ],
+          'ff': [
+            'analytics',
+            'prayerCompletion',
+            'streaks',
+            'dayStreak',
+            'chatbotUseCloudAi',
+            'chatbotOfflineDownloadLabel',
+          ],
+          'kg': [
+            'analytics',
+            'prayerCompletion',
+            'streaks',
+            'dayStreak',
+            'chatbotUseCloudAi',
+            'chatbotOfflineDownloadLabel',
+          ],
+        };
+
+        for (final entry in newlyLocalizedLocales.entries) {
+          final arb = localeArbs[entry.key]!;
+          for (final key in entry.value) {
+            final value = arb[key] as String;
+            expect(
+              value,
+              isNot(english[key]),
+              reason: 'app_${entry.key}.arb still uses English for $key',
+            );
+            expect(
+              value,
+              isNot(contains('\n')),
+              reason: 'app_${entry.key}.arb has multiline copy for $key',
+            );
+          }
+        }
+      },
+    );
+
     test('tracks Quran and diagnostics runtime error l10n debt reduction', () {
       const keys = [
         'quranCheckFailed',

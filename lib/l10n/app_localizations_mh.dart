@@ -1200,7 +1200,7 @@ class AppLocalizationsMh extends AppLocalizations {
       'Offline fallback emoj an maroñ. Uwaak ko an Islam rejjab pojak kiõ.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Kōjerbal Offline Fallback';
 
   @override
   String get downloadPreparing => 'Kōppopo ñan bōk...';
@@ -1315,13 +1315,13 @@ class AppLocalizationsMh extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kajemlok jar';
 
   @override
   String get streaks => 'Streaks';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Ran eo';
 
   @override
   String get bestStreak => 'Best streak';
@@ -1333,7 +1333,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Kōjerbal Cloud AI (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Enable Offline Fallback';

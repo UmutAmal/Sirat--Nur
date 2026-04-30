@@ -994,7 +994,7 @@ class AppLocalizationsSs extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Kuhlatiya';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1201,7 +1201,8 @@ class AppLocalizationsSs extends AppLocalizations {
       'Kuvunyelwe kubuyela emuva ngaphandle kwe-inthanethi. Timphendvulo leticinisekisiwe tendzawo temaSulumane atikalungeli.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel =>
+      'Nika emandla kubuyela emuva lokungekho ku-inthanethi';
 
   @override
   String get downloadPreparing => 'Ngilungiselela kulandza...';
@@ -1317,13 +1318,13 @@ class AppLocalizationsSs extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Kucedvwa kweMthantazo';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Imigca';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Kulandzelana kwelilanga';
 
   @override
   String get bestStreak => 'Best streak';
@@ -1335,7 +1336,7 @@ class AppLocalizationsSs extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Sebentisa i-AI yelifu (Gemini)';
 
   @override
   String get chatbotDownloadLocalAi => 'Enable Offline Fallback';

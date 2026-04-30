@@ -993,7 +993,7 @@ class AppLocalizationsKr extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Fifiltə';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1200,7 +1200,7 @@ class AppLocalizationsKr extends AppLocalizations {
       'Offline lan ngawo kalaktə mowonzəna. Jaawuwa Islambe tawattəgənadə kuwamiyayi dawartənyi.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Ngawo Offlinebe yitagattəgə';
 
   @override
   String get downloadPreparing => 'Sagǝdǝro dawartǝ...';
@@ -1315,13 +1315,13 @@ class AppLocalizationsKr extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Sala tamotǝgǝ';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Layi';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Kawu streak';
 
   @override
   String get bestStreak => 'Best streak';
@@ -1333,7 +1333,7 @@ class AppLocalizationsKr extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Fowo AI (Gemini) faidatǝne';
 
   @override
   String get chatbotDownloadLocalAi => 'Enable Offline Fallback';

@@ -993,7 +993,7 @@ class AppLocalizationsKl extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Misissuinerit';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1200,7 +1200,8 @@ class AppLocalizationsKl extends AppLocalizations {
       'Offline-imik taarsersuineq atulersinneqarpoq. Sumiiffinni islamimiut akissutaat uppernarsarneqarsimasut suli piareersimanngillat.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel =>
+      'Offline-imik taarsersuineq atulersikkit';
 
   @override
   String get downloadPreparing => 'Aallaasersornissamut piareersarneq...';
@@ -1317,13 +1318,13 @@ class AppLocalizationsKl extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Qinnuteqaat naammassineq';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Streak-it';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Ulloq streak';
 
   @override
   String get bestStreak => 'Best streak';

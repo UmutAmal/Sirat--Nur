@@ -993,7 +993,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Analaiso';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1200,7 +1200,8 @@ class AppLocalizationsTo extends AppLocalizations {
       'Kuo fakaʻatā ʻa e fallback ʻi tuʻa mei he ʻinitanetí. \'Oku te\'eki ke mateuteu \'a e ngaahi tali fakalotofonua \'o e \'Isilami kuo fakamo\'oni\'i.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel =>
+      'Faka\'ata \'a e Fallback \'o e \'Offline\'';
 
   @override
   String get downloadPreparing => 'Teuteu ke download...';
@@ -1317,13 +1318,13 @@ class AppLocalizationsTo extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Fakakakato \'o e Lotu .';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Ngaahi laine';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Fakahokohoko \'o e \'aho';
 
   @override
   String get bestStreak => 'Best streak';

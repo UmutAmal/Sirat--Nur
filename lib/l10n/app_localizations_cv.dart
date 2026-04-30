@@ -993,7 +993,7 @@ class AppLocalizationsCv extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'Analytics';
+  String get analytics => 'Аналитика';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1200,7 +1200,7 @@ class AppLocalizationsCv extends AppLocalizations {
       'Офлайн каялла таврӑнма май панӑ. Тӗрӗсленӗ вырӑнти ислам хуравӗсем хальлӗхе хатӗр мар-ха.';
 
   @override
-  String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
+  String get chatbotOfflineDownloadLabel => 'Офлайн ҫыхӑнӑвне ӗҫлеттер';
 
   @override
   String get downloadPreparing => 'Скачать тума хатӗрленетпӗр...';
@@ -1315,13 +1315,13 @@ class AppLocalizationsCv extends AppLocalizations {
       'This build does not include the required Sukun soundscape assets yet.';
 
   @override
-  String get prayerCompletion => 'Prayer Completion';
+  String get prayerCompletion => 'Кӗлӗ вӗҫленни';
 
   @override
-  String get streaks => 'Streaks';
+  String get streaks => 'Йӑрӑмсем';
 
   @override
-  String get dayStreak => 'Day streak';
+  String get dayStreak => 'Кун йӗрӗ';
 
   @override
   String get bestStreak => 'Best streak';
@@ -1333,7 +1333,7 @@ class AppLocalizationsCv extends AppLocalizations {
   String get chatbotLocalAiLabel => 'Offline Fallback';
 
   @override
-  String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
+  String get chatbotUseCloudAi => 'Cloud AI (Gemini) усӑ курӑр';
 
   @override
   String get chatbotDownloadLocalAi => 'Enable Offline Fallback';
