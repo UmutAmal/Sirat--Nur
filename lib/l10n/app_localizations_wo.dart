@@ -1237,7 +1237,7 @@ class AppLocalizationsWo extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Yebbi nañu ko bamu jeex ngir $reciter.';
   }
 
   @override

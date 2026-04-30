@@ -873,6 +873,11 @@ const _knownDownloadTranslationDebris = [
   'Téléchargé ni na',
   'Kulandza kukhanseliwe',
   'Ua faaorehia te {reciter}',
+  'Sosde timmi ngam',
+  'Lurgaghey cliaghtey son',
+  'Gukuraho vyarangiye kuri',
+  'Kuo fakakakato hono download',
+  'Ua oti te {reciter} no te tikiake',
 ];
 
 const _knownDiagnosticsTranslationDebris = [

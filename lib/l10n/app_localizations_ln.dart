@@ -1245,7 +1245,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Téléchargement esili mpo na $reciter.';
   }
 
   @override

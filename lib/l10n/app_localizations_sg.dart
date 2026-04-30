@@ -1237,7 +1237,7 @@ class AppLocalizationsSg extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Téléchargé ni awe ndali ti $reciter.';
   }
 
   @override

@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter}-mut aallaasersorneq naammassineqarpoq.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

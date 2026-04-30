@@ -1237,7 +1237,7 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Kubaka me manisa sambu na $reciter.';
   }
 
   @override

@@ -1249,7 +1249,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter tiif buufachuun xumurame.';
   }
 
   @override

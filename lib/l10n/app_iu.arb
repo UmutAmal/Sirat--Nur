@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᖅ ᐱᔭᕇᖅᓯᒪᔪᖅ {reciter}-ᒧᑦ.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

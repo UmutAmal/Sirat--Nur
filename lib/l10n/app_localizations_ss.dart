@@ -1237,7 +1237,7 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Kulandvwa sekuphelile kwe $reciter.';
   }
 
   @override

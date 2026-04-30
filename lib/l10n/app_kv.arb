@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Скачайтны помавсьӧ {reciter} вылӧ.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

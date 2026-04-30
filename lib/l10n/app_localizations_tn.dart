@@ -1237,7 +1237,7 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Laisolola e weditswe ya $reciter.';
   }
 
   @override

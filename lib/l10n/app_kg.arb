@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Kubaka me manisa sambu na {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

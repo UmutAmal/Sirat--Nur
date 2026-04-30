@@ -1237,7 +1237,7 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'U dawuniḽouda zwo fhela zwa $reciter.';
   }
 
   @override

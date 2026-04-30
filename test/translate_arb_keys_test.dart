@@ -232,7 +232,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(932));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(911));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -479,6 +479,64 @@ void main() {
           isNot(english['downloadFinishedForReciter']),
           reason:
               'app_$locale.arb still uses English for downloadFinishedForReciter',
+        );
+      }
+      for (final locale in [
+        'aa',
+        'ab',
+        'av',
+        'ba',
+        'bo',
+        'ce',
+        'ee',
+        'fo',
+        'iu',
+        'kg',
+        'kl',
+        'kr',
+        'kv',
+        'ln',
+        'nso',
+        'om',
+        'sg',
+        'ss',
+        'tn',
+        've',
+        'wo',
+      ]) {
+        final value =
+            localeArbs[locale]!['downloadFinishedForReciter'] as String;
+        expect(
+          value,
+          isNot(english['downloadFinishedForReciter']),
+          reason:
+              'app_$locale.arb still uses English for downloadFinishedForReciter',
+        );
+        expect(
+          value,
+          contains('{reciter}'),
+          reason:
+              'app_$locale.arb lost the reciter placeholder for downloadFinishedForReciter',
+        );
+        expect(
+          value,
+          isNot(contains('\n')),
+          reason:
+              'app_$locale.arb has multiline downloadFinishedForReciter copy',
+        );
+      }
+      const badDownloadFinishedFragments = {
+        'ff': 'Sosde timmi ngam',
+        'gv': 'Lurgaghey cliaghtey son',
+        'rn': 'Gukuraho vyarangiye kuri',
+        'to': 'Kuo fakakakato hono download',
+        'ty': 'Ua oti te {reciter} no te tikiake',
+      };
+      for (final entry in badDownloadFinishedFragments.entries) {
+        expect(
+          localeArbs[entry.key]!['downloadFinishedForReciter'],
+          isNot(contains(entry.value)),
+          reason: 'app_${entry.key}.arb kept unsafe finished-download copy',
         );
       }
       expect(

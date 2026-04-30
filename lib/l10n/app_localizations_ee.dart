@@ -1242,7 +1242,7 @@ class AppLocalizationsEe extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Wowu eƒe kɔpi nu na $reciter.';
   }
 
   @override

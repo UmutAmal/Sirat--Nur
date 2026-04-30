@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Wowu eƒe kɔpi nu na {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

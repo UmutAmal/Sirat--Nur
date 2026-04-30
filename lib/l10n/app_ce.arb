@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Скачать чекхъяьлла {reciter} дӀа.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

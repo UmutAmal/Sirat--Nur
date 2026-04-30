@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} tiif buufachuun xumurame.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

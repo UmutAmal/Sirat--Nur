@@ -1256,7 +1256,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'Download e phethilwe bakeng sa $reciter.';
   }
 
   @override

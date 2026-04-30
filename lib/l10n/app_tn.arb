@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Laisolola e weditswe ya {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

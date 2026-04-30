@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "{reciter} ཕབ་ལེན་མཇུག་སྒྲིལ་ཡོད།",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

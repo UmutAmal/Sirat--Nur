@@ -559,7 +559,7 @@
       }
     }
   },
-  "downloadFinishedForReciter": "Download completed for {reciter}.",
+  "downloadFinishedForReciter": "Heinta liðugt fyri {reciter}.",
   "@downloadFinishedForReciter": {
     "placeholders": {
       "reciter": {

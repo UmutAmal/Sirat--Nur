@@ -1237,7 +1237,7 @@ class AppLocalizationsKr extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return '$reciter nankaro tamotəna.';
   }
 
   @override

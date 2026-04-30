@@ -1237,7 +1237,7 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String downloadFinishedForReciter(String reciter) {
-    return 'Download completed for $reciter.';
+    return 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᖅ ᐱᔭᕇᖅᓯᒪᔪᖅ $reciter-ᒧᑦ.';
   }
 
   @override
