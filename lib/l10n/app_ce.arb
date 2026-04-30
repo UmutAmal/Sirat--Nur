@@ -551,7 +551,7 @@
   "resumeDownload": "Кхин дӀа а скачать дан .",
   "deleteDownloadedFiles": "Схьаэцна файлаш дӀаяха",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Скачать {reciter} дӀаяьккхина.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

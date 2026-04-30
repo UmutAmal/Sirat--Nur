@@ -1232,7 +1232,7 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᖅ ᓄᖅᑲᖅᑎᑕᐅᕗᖅ $reciter-ᒧᑦ.';
   }
 
   @override

@@ -109,6 +109,16 @@ void main() {
       expect(translateArbKeysUsage(), contains('[--report|--dry-run]'));
     });
 
+    test('uses language-neutral placeholder tokens for provider calls', () {
+      expect(translationTokenForArbPlaceholder(0), '__VAR0__');
+      expect(translationTokenForArbPlaceholder(1), '__VAR1__');
+      expect(translationTokenForArbPlaceholder(0), isNot(contains('PRAYER')));
+      expect(
+        translationTokenForArbPlaceholder(0),
+        isNot(contains('PLACEHOLDER')),
+      );
+    });
+
     test('extracts segmented Google Translate fallback output', () {
       final translated = extractGoogleTranslateGtxText([
         [
@@ -222,7 +232,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(951));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(932));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -401,6 +411,66 @@ void main() {
           isNot(english['downloadCanceledForReciter']),
           reason:
               'app_$locale.arb still uses English for downloadCanceledForReciter',
+        );
+      }
+      for (final locale in [
+        'aa',
+        'ab',
+        'av',
+        'ba',
+        'bo',
+        'ce',
+        'ee',
+        'fo',
+        'iu',
+        'kl',
+        'kr',
+        'kv',
+        'ln',
+        'nso',
+        'om',
+        'tn',
+        'to',
+        've',
+        'wo',
+      ]) {
+        final value =
+            localeArbs[locale]!['downloadCanceledForReciter'] as String;
+        expect(
+          value,
+          isNot(english['downloadCanceledForReciter']),
+          reason:
+              'app_$locale.arb still uses English for downloadCanceledForReciter',
+        );
+        expect(
+          value,
+          contains('{reciter}'),
+          reason:
+              'app_$locale.arb lost the reciter placeholder for downloadCanceledForReciter',
+        );
+        expect(
+          value,
+          isNot(contains('\n')),
+          reason:
+              'app_$locale.arb has multiline downloadCanceledForReciter copy',
+        );
+      }
+      const badDownloadCanceledFragments = {
+        'ch': 'Ma kansela i dinestrosa para',
+        'ff': 'Sosde ɗum dartinaama',
+        'fj': 'Lavetaka na',
+        'gv': "Ta'n {reciter} er ny scughey",
+        'kg': 'Kubaka me katuka',
+        'rn': 'Gukuraho vyasubitswe kubera',
+        'sg': 'Téléchargé ni na',
+        'ss': 'Kulandza kukhanseliwe',
+        'ty': 'Ua faaorehia te {reciter}',
+      };
+      for (final entry in badDownloadCanceledFragments.entries) {
+        expect(
+          localeArbs[entry.key]!['downloadCanceledForReciter'],
+          isNot(contains(entry.value)),
+          reason: 'app_${entry.key}.arb kept unsafe canceled-download copy',
         );
       }
       for (final locale in ['ay', 'lus', 'mai', 'sa', 'ti']) {

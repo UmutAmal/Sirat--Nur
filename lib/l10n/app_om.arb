@@ -551,7 +551,7 @@
   "resumeDownload": "Download itti fufaa",
   "deleteDownloadedFiles": "Faayilota Buufaman Haquu",
   "downloadCancelling": "Haquu...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter}'f buufachuun haqame.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

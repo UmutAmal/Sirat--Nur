@@ -534,7 +534,7 @@ _TokenizedValue _tokenizeValue(String key, String source) {
 
   for (var index = 0; index < placeholderMatches.length; index++) {
     final placeholder = placeholderMatches[index].group(0)!;
-    final token = '__PRAYER_PLACEHOLDER_${index}__';
+    final token = translationTokenForArbPlaceholder(replacements.length);
     tokenizedSource = tokenizedSource.replaceFirst(placeholder, token);
     replacements.add(MapEntry(token, placeholder));
   }
@@ -543,7 +543,7 @@ _TokenizedValue _tokenizeValue(String key, String source) {
     if (!tokenizedSource.contains(protectedToken)) {
       continue;
     }
-    final token = '__PRAYER_PROTECTED_TOKEN_${replacements.length}__';
+    final token = translationTokenForArbPlaceholder(replacements.length);
     tokenizedSource = tokenizedSource.replaceAll(protectedToken, token);
     replacements.add(MapEntry(token, protectedToken));
   }
@@ -555,6 +555,8 @@ _TokenizedValue _tokenizeValue(String key, String source) {
     replacements: replacements,
   );
 }
+
+String translationTokenForArbPlaceholder(int index) => '__VAR${index}__';
 
 String _translationPromptSourceForKey(String key, String source) {
   switch (key) {
@@ -862,6 +864,15 @@ const _knownDownloadTranslationDebris = [
   "Tamau i te mau hoho'a i tikiakehia",
   "Ma kansela i lina'la' para",
   "Ma na'funhayan i",
+  'Ma kansela i dinestrosa para',
+  'Lavetaka na',
+  "Ta'n {reciter} er ny scughey",
+  'Sosde ɗum dartinaama',
+  'Kubaka me katuka',
+  'Gukuraho vyasubitswe kubera',
+  'Téléchargé ni na',
+  'Kulandza kukhanseliwe',
+  'Ua faaorehia te {reciter}',
 ];
 
 const _knownDiagnosticsTranslationDebris = [

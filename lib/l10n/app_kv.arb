@@ -551,7 +551,7 @@
   "resumeDownload": "Водзӧ скачайтны .",
   "deleteDownloadedFiles": "Удалитны лэдзӧм файлӧвӧй тэчасъяс .",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Скачайтны бырӧдӧма {reciter} вылӧ.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

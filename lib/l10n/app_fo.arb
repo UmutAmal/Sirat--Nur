@@ -551,7 +551,7 @@
   "resumeDownload": "Halt áfram at heinta",
   "deleteDownloadedFiles": "Strika heintaðar fílur",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Heinta avlýst fyri {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

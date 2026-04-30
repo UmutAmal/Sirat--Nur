@@ -551,7 +551,7 @@
   "resumeDownload": "Koba ko télécharger",
   "deleteDownloadedFiles": "Bolongola ba fichiers oyo o télécharger",
   "downloadCancelling": "Kolongolama...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Téléchargement elongolami mpo na {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

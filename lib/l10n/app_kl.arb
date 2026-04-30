@@ -551,7 +551,7 @@
   "resumeDownload": "Aallaasersorneq ingerlateqqiguk",
   "deleteDownloadedFiles": "Filet download-erneqarsimasut piiakkit",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter}-mut aallaasersorneq unitsinneqarpoq.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

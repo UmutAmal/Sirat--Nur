@@ -1232,7 +1232,7 @@ class AppLocalizationsAa extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Oobisiyya duugumteh $reciter.';
   }
 
   @override

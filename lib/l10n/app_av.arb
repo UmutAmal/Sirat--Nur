@@ -551,7 +551,7 @@
   "resumeDownload": "Халат бахъинабизе скачать",
   "deleteDownloadedFiles": "Удалить загруженные файлы",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Загрузка отменена для {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

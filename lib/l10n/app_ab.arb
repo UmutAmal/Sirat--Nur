@@ -551,7 +551,7 @@
   "resumeDownload": "Аҭагалара иацҵатәуп",
   "deleteDownloadedFiles": "Ианыхтәуп иҭагалоу афаилқәа",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Аҭагалара аанкылоуп {reciter} азы.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

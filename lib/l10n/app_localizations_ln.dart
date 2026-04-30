@@ -1240,7 +1240,7 @@ class AppLocalizationsLn extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Téléchargement elongolami mpo na $reciter.';
   }
 
   @override

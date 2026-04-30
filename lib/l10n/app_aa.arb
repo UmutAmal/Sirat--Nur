@@ -551,7 +551,7 @@
   "resumeDownload": "Oobisiyyat bisoh ixxic",
   "deleteDownloadedFiles": "Oobiseenih yanin sibaabi duuga",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Oobisiyya duugumteh {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

@@ -551,7 +551,7 @@
   "resumeDownload": "Hokohoko atu hono download",
   "deleteDownloadedFiles": "Tamate'i 'a e ngaahi faile kuo download",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Kuo kaniseli 'a e download ki he {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

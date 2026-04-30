@@ -551,7 +551,7 @@
   "resumeDownload": "མུ་མཐུད་དུ་ཕབ་ལེན།",
   "deleteDownloadedFiles": "ཕབ་ལེན་བྱས་པའི་ཡིག་ཆ་སུབ་པ།",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} ཕབ་ལེན་ཆ་མེད་དུ་བཏང་ཡོད།",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

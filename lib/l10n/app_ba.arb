@@ -551,7 +551,7 @@
   "resumeDownload": "Дауам итеү скачать",
   "deleteDownloadedFiles": "Йөкөрөлгән файлдарҙы юйырға",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} өсөн скачивание отменено.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

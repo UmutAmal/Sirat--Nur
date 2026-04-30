@@ -551,7 +551,7 @@
   "resumeDownload": "Bvelani phanḓa ni tshi dawuniḽouda",
   "deleteDownloadedFiles": "Phumula faila dzo dawuniḽoudiwaho",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "U dawuniḽouda zwo khanselwa kha {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

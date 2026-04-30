@@ -551,7 +551,7 @@
   "resumeDownload": "Sagǝdǝ gozagǝ kowo",
   "deleteDownloadedFiles": "Fayil Sagǝdǝnadǝ Cinne",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "{reciter} nankaro sakəna.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

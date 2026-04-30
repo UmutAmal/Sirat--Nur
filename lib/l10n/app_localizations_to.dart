@@ -1233,7 +1233,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return 'Kuo kaniseli \'a e download ki he $reciter.';
   }
 
   @override

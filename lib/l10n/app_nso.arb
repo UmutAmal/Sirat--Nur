@@ -551,7 +551,7 @@
   "resumeDownload": "Tswela pele go taonelouta",
   "deleteDownloadedFiles": "Phimola Difaele tše di Taoneloutšwago",
   "downloadCancelling": "Go phumola...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Download e phumotšwe bakeng sa {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

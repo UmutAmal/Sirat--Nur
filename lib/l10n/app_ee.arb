@@ -551,7 +551,7 @@
   "resumeDownload": "Yi edzi nànɔ eƒe kɔpi wɔm",
   "deleteDownloadedFiles": "Tsɔ Faɛl Siwo Woɖe Ðe Internet Dzi la Tutu",
   "downloadCancelling": "Tete ɖe...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Wote fli ɖe kɔpi wɔwɔ me na {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

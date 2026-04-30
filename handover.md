@@ -19418,3 +19418,46 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; en yuksek runtime etkili kalan anahtar olarak `downloadCanceledForReciter` veya `downloadFinishedForReciter` icin tek-anahtarli, placeholder-guvenli batch uygulanacak.
+
+## 2026-04-30 TUR-479 - Download Canceled Reciter L10n Batch
+
+### MASTER Karari
+- Risk: `downloadCanceledForReciter` 58 locale'de Ingilizce fallback olarak kaliyordu; reciter bazli offline indirme iptalinde gorunen snackbar runtime metni oldugu icin kullanici indirme iptal sonucunu kendi dilinde goremez ve `{reciter}` placeholder'i bozulursa yanlis kisi/durum metni uretilebilir.
+- Kanit:
+  - `lib/l10n/app_aa.arb:554` artik `"downloadCanceledForReciter": "Oobisiyya duugumteh {reciter}."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_bo.arb:554` artik `"downloadCanceledForReciter": "{reciter} ཕབ་ལེན་ཆ་མེད་དུ་བཏང་ཡོད།"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:554` artik `"downloadCanceledForReciter": "Fomm nañu yebbi ndax {reciter}."` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:1234`, `lib/l10n/app_localizations_bo.dart:1234` ve `lib/l10n/app_localizations_wo.dart:1234` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:537`, `tool/translate_arb_keys.dart:546` ve `tool/translate_arb_keys.dart:559` provider'a giden placeholder tokenlarini `__VAR0__` gibi dil-nothr stabil tokenlara tasidi; once `PRAYER_PLACEHOLDER` kelimesi dusuk kaynakli dillerde cevrilip placeholder restore'u bozuyordu.
+  - `tool/translate_arb_keys.dart:867`, `tool/translate_arb_keys.dart:873` ve `tool/translate_arb_keys.dart:875` Chamorro/Fijian/Manx/Fulani/Kongo/Kirundi/Sango/Swati/Tahitian guvensiz canceled-download adaylarini reddediyor.
+  - `test/translate_arb_keys_test.dart:112` placeholder tokeninin `PRAYER`/`PLACEHOLDER` kelimeleri tasimadigini dogruluyor.
+  - `test/translate_arb_keys_test.dart:235` kritik 23 l10n anahtari icin same-as-English esigini `932` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:438`-`test/translate_arb_keys_test.dart:475` 19 kabul edilen locale'in Ingilizce fallback olmadigini, `{reciter}` placeholder'ini korudugunu ve 9 guvensiz aday parcasinin repo icinde tutulmadigini dogruluyor.
+  - `test/l10n_generated_sync_test.dart:189`, `test/l10n_generated_sync_test.dart:200`, `test/l10n_generated_sync_test.dart:203` ve `test/l10n_generated_sync_test.dart:206` yeni generated-sync locale kapsamlarini ekliyor; `test/l10n_generated_sync_test.dart:229` runtime getter ile ARB degerini karsilastiriyor.
+  - `dart run tool\translate_arb_keys.dart --report downloadCanceledForReciter` same-as-English borcunu `58 -> 39` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+  - 23 anahtarli kritik l10n debt reportu same-as-English toplam borcunu `951 -> 932`, missing/empty `0`, placeholder mismatch `0` olarak olctu.
+- Kullanici etkisi: Offline Quran audio indirmesi iptal edildiginde 19 ek locale'de reciter adi dogru placeholder ile yerellesir; 9 guvensiz aday yanlis anlam vermek yerine bilincli fallback'te kalir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 19 ARB dosyasi, 19 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `downloadCanceledForReciter` icin guvenli kabul edilen 19 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- Provider token root cause'u duzeltildi: anlamli `PRAYER_PLACEHOLDER` tokeni yerine `__VAR{n}__` kullaniliyor; bu, ceviri servisinin placeholder tokenini cevirmesini engelleyerek `{reciter}` restore zincirini guclendiriyor.
+- `ch`, `ff`, `fj`, `gv`, `kg`, `rn`, `sg`, `ss` ve `ty` adaylari semantik olarak guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar download debris listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 140/140.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 682/682.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Download canceled reciter l10n riski: `12/25 -> 4/25`.
+- Placeholder-token restore riski: `12/25 -> 3/25`.
+- Kalan risk: `downloadFinishedForReciter` 58 locale'de Ingilizce fallback olarak kaliyor; ayni placeholder-token iyilestirmesinden yararlanarak siradaki tek-anahtarli batch adayi.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `downloadFinishedForReciter` icin tek-anahtarli, placeholder-guvenli batch uygulanacak.

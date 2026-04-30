@@ -551,7 +551,7 @@
   "resumeDownload": "Wéyal yebbi",
   "deleteDownloadedFiles": "efaase fichier yiñ yebbi",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Fomm nañu yebbi ndax {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

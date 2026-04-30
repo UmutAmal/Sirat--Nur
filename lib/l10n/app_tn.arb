@@ -551,7 +551,7 @@
   "resumeDownload": "Tswelela o laisolola",
   "deleteDownloadedFiles": "Phimola Difaele tse di Laisolotsweng",
   "downloadCancelling": "Cancelling...",
-  "downloadCanceledForReciter": "Download canceled for {reciter}.",
+  "downloadCanceledForReciter": "Laisolola e khansetswe ya {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {
       "reciter": {

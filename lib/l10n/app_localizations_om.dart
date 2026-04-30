@@ -1244,7 +1244,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String downloadCanceledForReciter(String reciter) {
-    return 'Download canceled for $reciter.';
+    return '$reciter\'f buufachuun haqame.';
   }
 
   @override
