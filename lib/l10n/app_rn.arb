@@ -401,7 +401,7 @@
   "diagnosticsQuranSurahs": "Quran Surahs",
   "diagnosticsQuranAyahs": "Quran Ayahs",
   "diagnosticsQuranJuzMetadata": "Quran Juz Metadata",
-  "diagnosticsQuranCloudTablesMissing": "Cloud tables missing in Supabase; bundled fallback active",
+  "diagnosticsQuranCloudTablesMissing": "Imbonerahamwe z'igicu zibuze muri Supabase; gusubira inyuma gukora",
   "diagnosticsQuranCloudCheckFailed": "Cloud check failed: {error}",
   "@diagnosticsQuranCloudCheckFailed": {
     "placeholders": {

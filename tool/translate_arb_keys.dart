@@ -890,6 +890,11 @@ const _knownDiagnosticsTranslationDebris = [
   'Imethadatha yamafu ilahlekile',
   'Las metadonadas del nívol',
   'Мигъы метабæрæггæнæнтæ',
+  'activo de retroceso agrupado',
+  'bundnað afturhaldsvirkið',
+  'fallback glan',
+  'Te mau arii i roto i te Supabase',
+  "te ho'i-faahou-raa",
 ];
 
 const _knownChatbotTranslationDebris = [

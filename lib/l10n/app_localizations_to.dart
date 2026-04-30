@@ -926,7 +926,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+      '\'Oku mole \'a e ngaahi tepile \'o e \'ao \'i he Supabase; fallback fakatahataha\'i \'oku ngaue';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {

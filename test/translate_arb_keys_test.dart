@@ -232,7 +232,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(911));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(892));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -575,6 +575,48 @@ void main() {
         localeArbs['bh']!['diagnosticsQuranCloudTablesMissing'],
         isNot(english['diagnosticsQuranCloudTablesMissing']),
       );
+      for (final locale in [
+        'aa',
+        'ab',
+        'av',
+        'ba',
+        'bo',
+        'ce',
+        'ff',
+        'iu',
+        'kg',
+        'kl',
+        'kr',
+        'kv',
+        'rn',
+        'sg',
+        'ss',
+        'tn',
+        'to',
+        've',
+        'wo',
+      ]) {
+        final diagnosticsTables =
+            localeArbs[locale]!['diagnosticsQuranCloudTablesMissing'] as String;
+        expect(
+          diagnosticsTables,
+          isNot(english['diagnosticsQuranCloudTablesMissing']),
+          reason:
+              'app_$locale.arb still uses English for diagnosticsQuranCloudTablesMissing',
+        );
+        expect(
+          diagnosticsTables,
+          contains('Supabase'),
+          reason:
+              'app_$locale.arb lost the Supabase token for diagnosticsQuranCloudTablesMissing',
+        );
+        expect(
+          diagnosticsTables,
+          isNot(contains('\n')),
+          reason:
+              'app_$locale.arb has multiline diagnosticsQuranCloudTablesMissing copy',
+        );
+      }
       expect(
         localeArbs['br']!['diagnosticsQuranCloudTablesMissing'],
         isNot(contains("taolennoù ar c'hoad")),
@@ -584,6 +626,25 @@ void main() {
         localeArbs['oc']!['diagnosticsQuranCloudTablesMissing'],
         isNot(contains('recòrd en paquet')),
         reason: 'app_oc.arb mapped fallback to record/package semantics',
+      );
+      const badDiagnosticsTablesFragments = {
+        'fj': 'activo de retroceso agrupado',
+        'fo': 'bundnað afturhaldsvirkið',
+        'gv': 'fallback glan',
+        'ty': 'Te mau arii i roto i te Supabase',
+      };
+      for (final entry in badDiagnosticsTablesFragments.entries) {
+        expect(
+          localeArbs[entry.key]!['diagnosticsQuranCloudTablesMissing'],
+          isNot(contains(entry.value)),
+          reason:
+              'app_${entry.key}.arb kept wrong-context Quran cloud table diagnostics copy',
+        );
+      }
+      expect(
+        localeArbs['ty']!['diagnosticsQuranCloudTablesMissing'],
+        isNot(contains("te ho'i-faahou-raa")),
+        reason: 'app_ty.arb kept incomplete Tahitian fallback-only copy',
       );
       expect(
         localeArbs['aa']!['diagnosticsQuranCloudJuzMissing'],

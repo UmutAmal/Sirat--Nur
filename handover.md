@@ -19499,3 +19499,41 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; diagnostics Quran Cloud tablo/juz metinlerinden en yuksek runtime etkili olan anahtar icin tek-anahtarli batch uygulanacak.
+
+## 2026-04-30 TUR-481 - Diagnostics Quran Cloud Tables L10n Batch
+
+### MASTER Karari
+- Risk: `diagnosticsQuranCloudTablesMissing` 55 locale'de Ingilizce fallback olarak kaliyordu; Supabase Quran Cloud tablo kontrolu basarisiz oldugunda kullaniciya bundled fallback'in aktif oldugunu anlatan operasyonel teşhis metni oldugu icin yanlis dil veya yanlis "cloud/fallback" anlami store-ready destek ve hata ayiklama akisini zayiflatir.
+- Kanit:
+  - `lib/l10n/app_aa.arb:404` artik `"diagnosticsQuranCloudTablesMissing": "Qammurreera qarwalitte waytimta Supabase; axawah tan wadirih nikso abinal tan"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_bo.arb:404` artik `"diagnosticsQuranCloudTablesMissing": "Supabase ནང་དུ་སྤྲིན་པའི་ཐིག་ཁྲམ་མེད་པ་རེད། བསྡུ་སྒྲིག་བྱས་པའི་ཕྱིར་ལོག་བྱེད་ཤུགས་ལྡན་པ།"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_wo.arb:404` artik `"diagnosticsQuranCloudTablesMissing": "Tablo niir yi amul ci Supabase; fallback buñ boole muy dox"` degerini tasiyor; once Ingilizce fallback idi.
+  - `lib/l10n/app_localizations_aa.dart:928`, `lib/l10n/app_localizations_bo.dart:928` ve `lib/l10n/app_localizations_wo.dart:928` generated runtime getter'lari ARB degerleriyle senkron hale geldi.
+  - `tool/translate_arb_keys.dart:893`-`tool/translate_arb_keys.dart:897` Fijian/Faroese/Manx/Tahitian icin guvensiz diagnostics table adaylarini reddediyor.
+  - `test/translate_arb_keys_test.dart:235` kritik 23 l10n anahtari icin same-as-English esigini `892` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:600`-`test/translate_arb_keys_test.dart:647` 19 kabul edilen locale'in Ingilizce fallback olmadigini, `Supabase` teknik tokenini korudugunu, multiline uretmedigini ve 5 guvensiz aday parcasinin repo icinde tutulmadigini dogruluyor.
+  - `dart run tool\translate_arb_keys.dart --report diagnosticsQuranCloudTablesMissing` same-as-English borcunu `55 -> 36` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+  - 23 anahtarli kritik l10n debt reportu same-as-English toplam borcunu `911 -> 892`, missing/empty `0`, placeholder mismatch `0` olarak olctu.
+- Kullanici etkisi: Quran Cloud tablo eksigi tespit edildiginde 19 ek locale'de Supabase ve bundled fallback durumu yerel dilde, tek satir ve teknik token korunarak gorunur; guvensiz adaylar bilincli fallback'te kalir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25.
+- Rollback plani: Bu turdaki 19 ARB dosyasi, 19 generated l10n dosyasi, `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `diagnosticsQuranCloudTablesMissing` icin guvenli kabul edilen 19 dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `fj`, `fo`, `gv` ve `ty` adaylari semantik veya dil-karisimi acisindan guvensiz bulundu; fallback korundu ve bilinen kotu ciktilar diagnostics debris listesine eklendi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 140/140.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 682/682.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Diagnostics Quran Cloud tables l10n riski: `16/25 -> 5/25`.
+- Kalan risk: `placesFoundCount` 71 locale'de ve `diagnosticsQuranCloudJuzMissing` 36 locale'de Ingilizce fallback olarak kaliyor; siradaki en yuksek etkili batch adaylari.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; Places runtime sonuc sayaci veya diagnostics Quran Cloud juz metni icin tek-anahtarli batch uygulanacak.
