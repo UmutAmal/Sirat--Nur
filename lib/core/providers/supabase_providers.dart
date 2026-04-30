@@ -84,7 +84,11 @@ Map<String, dynamic>? normalizeDailyAyat(Map<String, dynamic>? row) {
   return hasMissingField ? null : normalized;
 }
 
-Map<String, dynamic>? normalizeDailyAyatCandidate(Object? candidate) {
+Map<String, dynamic>? normalizeDailyAyatCandidate(
+  Object? candidate, {
+  bool rotateIterable = false,
+  DateTime? now,
+}) {
   if (candidate is Map<String, dynamic>) {
     return normalizeDailyAyat(candidate);
   }
@@ -94,15 +98,35 @@ Map<String, dynamic>? normalizeDailyAyatCandidate(Object? candidate) {
   }
 
   if (candidate is Iterable) {
+    final ayats = <Map<String, dynamic>>[];
     for (final row in candidate) {
       final ayat = normalizeDailyAyatCandidate(row);
       if (ayat != null) {
-        return ayat;
+        if (!rotateIterable) {
+          return ayat;
+        }
+
+        ayats.add(ayat);
       }
+    }
+
+    if (ayats.isNotEmpty) {
+      return ayats[_dailyAyatRotationIndex(ayats.length, now: now)];
     }
   }
 
   return null;
+}
+
+int _dailyAyatRotationIndex(int itemCount, {DateTime? now}) {
+  if (itemCount <= 1) {
+    return 0;
+  }
+
+  final current = (now ?? DateTime.now()).toUtc();
+  final currentDay = DateTime.utc(current.year, current.month, current.day);
+  final epochDay = DateTime.utc(1970);
+  return currentDay.difference(epochDay).inDays % itemCount;
 }
 
 Future<void> cacheDailyAyat(
@@ -170,16 +194,29 @@ Future<Map<String, dynamic>> resolveDailyAyat({
   final totalAttempts = cloudRetryAttempts < 0 ? 1 : cloudRetryAttempts + 1;
 
   for (var attempt = 0; attempt < totalAttempts; attempt++) {
-    for (final fetch in [fetchScheduledAyat, fetchFallbackAyat]) {
-      try {
-        final ayat = normalizeDailyAyatCandidate(await fetch());
-        if (ayat != null) {
-          await cacheDailyAyat(prefs, ayat, now: currentTime());
-          return ayat;
-        }
-      } catch (_) {
-        debugPrint('Daily ayat cloud fetch failed; trying fallback/cache');
+    try {
+      final ayat = normalizeDailyAyatCandidate(await fetchScheduledAyat());
+      if (ayat != null) {
+        await cacheDailyAyat(prefs, ayat, now: currentTime());
+        return ayat;
       }
+    } catch (_) {
+      debugPrint('Daily ayat cloud fetch failed; trying fallback/cache');
+    }
+
+    try {
+      final nowForFallback = currentTime();
+      final ayat = normalizeDailyAyatCandidate(
+        await fetchFallbackAyat(),
+        rotateIterable: true,
+        now: nowForFallback,
+      );
+      if (ayat != null) {
+        await cacheDailyAyat(prefs, ayat, now: nowForFallback);
+        return ayat;
+      }
+    } catch (_) {
+      debugPrint('Daily ayat cloud fetch failed; trying fallback/cache');
     }
 
     if (attempt < totalAttempts - 1 && cloudRetryDelay > Duration.zero) {

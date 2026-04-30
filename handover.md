@@ -19944,3 +19944,37 @@
 
 ### Sonraki Adim
 - Yeni dongude Appium smoke'un kapsamadigi en yuksek runtime riskini sec: Quran audio streaming/offline download, dua/education cloud content, timezone-prayer scheduling veya store artifact metadata.
+
+## 2026-04-30 TUR-494 - Daily Verse Fallback Rotation Continuity
+
+### MASTER Karari
+- Risk: Daily Verse Supabase seed'i `seed.sql:66` ile yalniz `CURRENT_DATE + 0..7` penceresi olusturuyor; bu seed tekrar uygulanmazsa scheduled sorgu bosalabilir ve fallback her gun ayni son dogrulanmis ayete kilitlenebilirdi.
+- Kanit:
+  - `seed.sql:68` ile `seed.sql:75` arasinda sadece 8 gunluk display date penceresi var.
+  - `lib/core/providers/supabase_providers.dart:217` scheduled query bugunku/gelecek satirlari ariyor.
+  - `lib/core/providers/supabase_providers.dart:225` fallback query son 8 satiri donduruyor; rotasyon yoksa ilk valid satir her gun ayni kalirdi.
+  - `lib/core/providers/supabase_providers.dart:121` gun bazli rotation index eklendi.
+  - `lib/core/providers/supabase_providers.dart:209` fallback listesi `rotateIterable: true` ile normalize ediliyor.
+  - `test/daily_ayat_provider_test.dart:115` scheduled bosken verified fallback listesinde gun bazli farkli ayet secildigini dogruluyor.
+- Kullanici etkisi: Supabase seed penceresi eskise bile verified daily ayat karti ayni son satira kilitlenmez; mevcut dogrulanmis satirlar gun bazli doner ve cache secilen ayete gore guncellenir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 3/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart` ve `test/daily_ayat_provider_test.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- `normalizeDailyAyatCandidate` Iterable kaynaklarda opsiyonel rotasyon destekli hale getirildi.
+- `_dailyAyatRotationIndex` UTC gun sayisini kullanarak deterministik ve timezone-edge'e daha dayanikli index uretiyor.
+- Scheduled sonuc ilk valid adayi koruyor; sadece fallback aday listesi rotasyonla seciliyor.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\daily_ayat_provider_test.dart --reporter compact` PASS, `12/12`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `691/691`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `122fcb8f-377d-417c-b135-2cf462692c8e`, `homeContainsDailyVerse=true`, `homeContainsDailyVerseUnavailable=false`, `failures=[]`.
+
+### Risk Degisimi
+- Daily Verse seed horizon stale fallback riski: `16/25 -> 3/25`.
+- Kalan bilincli risk: Daily Verse verified row havuzu sadece 8 ayet; ileride 30/365 gunluk verified ayet havuzu Supabase'e eklenirse icerik cesitliligi artar.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan runtime riskini sec: Quran audio playback/offline download Appium senaryosu veya prayer notification timezone scheduling.

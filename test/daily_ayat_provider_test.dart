@@ -111,6 +111,49 @@ void main() {
     },
   );
 
+  test(
+    'resolveDailyAyat rotates verified fallback rows when schedule is empty',
+    () async {
+      final prefs = await SharedPreferences.getInstance();
+
+      final ayat = await resolveDailyAyat(
+        prefs: prefs,
+        now: () => DateTime.utc(1970, 1, 2),
+        cloudRetryDelay: Duration.zero,
+        fetchScheduledAyat: () async => null,
+        fetchFallbackAyat: () async => [
+          {
+            'content_ar': 'الأول',
+            'content_tr': 'Birinci',
+            'content_en': 'First fallback',
+            'reference': 'Al-Baqarah 2:201',
+            'source': approvedDailyAyatSource,
+            'verified_at': '2026-04-08T00:00:00Z',
+          },
+          {
+            'content_ar': 'الثاني',
+            'content_tr': 'Ikinci',
+            'content_en': 'Second fallback',
+            'reference': 'Al-Baqarah 2:286',
+            'source': approvedDailyAyatSource,
+            'verified_at': '2026-04-08T00:00:00Z',
+          },
+          {
+            'content_ar': 'الثالث',
+            'content_tr': 'Ucuncu',
+            'content_en': 'Third fallback',
+            'reference': 'Ali Imran 3:8',
+            'source': approvedDailyAyatSource,
+            'verified_at': '2026-04-08T00:00:00Z',
+          },
+        ],
+      );
+
+      expect(ayat['content_en'], 'Second fallback');
+      expect(ayat['reference'], 'Al-Baqarah 2:286');
+    },
+  );
+
   test('resolveDailyAyat uses a fresh cache when cloud fetch fails', () async {
     final prefs = await SharedPreferences.getInstance();
     final cachedAt = DateTime.utc(2026, 4, 8, 8);
