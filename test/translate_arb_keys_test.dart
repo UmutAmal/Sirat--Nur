@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1009));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(980));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -518,6 +518,20 @@ void main() {
               'app_${entry.key}.arb kept wrong-context chatbot local fallback copy',
         );
       }
+      final aaOfflinePrompt =
+          localeArbs['aa']!['chatbotOfflinePrompt'] as String;
+      expect(aaOfflinePrompt, isNot(english['chatbotOfflinePrompt']));
+      expect(
+        aaOfflinePrompt,
+        contains('\n\n'),
+        reason: 'app_aa.arb lost the chatbot offline prompt paragraph break',
+      );
+      expect(
+        localeArbs['iu']!['chatbotOfflinePrompt'],
+        isNot(contains('ᖃᕆᑕᐅᔭᒃᑯᑦ ᐃᓛᒥᒃᑯᑦ')),
+        reason:
+            'app_iu.arb kept wrong-context online/computer wording for offline prompt',
+      );
       expect(
         localeArbs['th']!['placesLocationRequiredBody'],
         isNot(english['placesLocationRequiredBody']),
@@ -1889,6 +1903,8 @@ void main() {
       ];
       const localNoInfoSource =
           '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+      const offlinePromptSource =
+          'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
       const badLocalNoInfoCandidates = [
         '[OFFLINE] Тадсикъ гьабураб бакӀалъулаб исламияб нухмалъи жеги гьечӀо. Переключитесь на Cloud AI для источниковых ответов.',
         "[OFFLINE] Ti siña ma'ayek i guinahan Islam ni' ma'ayek. Na'lå'la' i Cloud AI para i ineppe siha.",
@@ -1897,6 +1913,9 @@ void main() {
         '[OFFLINE] ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᑦ ᓄᓇᓕᖕᓂ ᐃᓛᒃᑰᖅᑐᑦ ᑐᑭᒧᐊᒍᑎᖏᑦ ᓱᓕ ᐊᑐᐃᓐᓇᐅᙱᓚᑦ. ᐊᓯᐊᓄᑦ Cloud AI-ᒧᑦ ᑭᐅᔾᔪᑎᒃᓴᓄᑦ.',
         '[OFFLINE] Verified local Islamic guidance ejjab maroñ in walok kiõ. Oktak ñan Cloud AI ñan uwaak ko jen source.',
         '[OFFLINE] Aita â te aratairaa Islama no te fenua iho i roaa mai. A taui i te Cloud AI no te mau pahonoraa.',
+      ];
+      const badOfflinePromptCandidates = [
+        'ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ ᐃᓛᒥᒃᑯᑦ ᖃᐅᔨᒪᓂᖏᑦ ᓱᓕ ᐋᖅᑭᒃᓱᖅᑕᐅᕙᓪᓕᐊᔪᑦ.\n\nᐱᔪᓐᓇᖅᑎᑦᑎᔪᒪᕕᑦ?',
       ];
       final translatedPrefixValue = resolveTranslatedArbValue(
         key: 'chatbotLocalNoInfo',
@@ -1943,6 +1962,17 @@ void main() {
             candidate: candidate,
           ),
           localNoInfoSource,
+        );
+      }
+      for (final candidate in badOfflinePromptCandidates) {
+        expect(
+          resolveTranslatedArbValue(
+            key: 'chatbotOfflinePrompt',
+            source: offlinePromptSource,
+            currentValue: '',
+            candidate: candidate,
+          ),
+          offlinePromptSource,
         );
       }
     });

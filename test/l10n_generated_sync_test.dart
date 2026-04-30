@@ -35,6 +35,38 @@ const _chatbotLocalNoInfoGeneratedSyncLocales = {
   'wo',
 };
 
+const _chatbotOfflinePromptGeneratedSyncLocales = {
+  'aa',
+  'ab',
+  'av',
+  'ba',
+  'bh',
+  'bo',
+  'br',
+  'ce',
+  'cv',
+  'dz',
+  'ff',
+  'fo',
+  'kg',
+  'kl',
+  'kr',
+  'kv',
+  'li',
+  'mh',
+  'nr',
+  'oc',
+  'os',
+  'rn',
+  'se',
+  'sg',
+  'ss',
+  'tn',
+  'to',
+  've',
+  'wo',
+};
+
 void main() {
   test(
     'generated low-resource Places strings stay in sync with ARB files',
@@ -270,6 +302,9 @@ void main() {
         );
         if (_chatbotLocalNoInfoGeneratedSyncLocales.contains(localeCode)) {
           expect(l10n.chatbotLocalNoInfo, arb['chatbotLocalNoInfo']);
+        }
+        if (_chatbotOfflinePromptGeneratedSyncLocales.contains(localeCode)) {
+          expect(l10n.chatbotOfflinePrompt, arb['chatbotOfflinePrompt']);
         }
       }
     },

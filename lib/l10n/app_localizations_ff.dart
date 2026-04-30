@@ -1181,7 +1181,7 @@ class AppLocalizationsFf extends AppLocalizations {
 
   @override
   String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+      'Ganndal lislaam hoolkisaangal ngal alaa e laylaytol ina jokki e cureede haa jooni. Aɗa waawi softinde fallback offline jooni, kono maa ɗum hollu tan mesasuuji kisal keewɗi haa nde doggol dokke iwdi ngol hesɗi.\n\nAɗa yiɗi softinde fallback mo alaa e laylaytol?';
 
   @override
   String get chatbotOfflineSwitched =>

@@ -510,7 +510,7 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
+  "chatbotOfflinePrompt": "Nḓivho ya Islamic yo khwaṱhisedzwaho i siho kha inthanethe i kha ḓi ṱhogomelwa. Ni nga tendela fallback i siho kha inthanethe zwino, fhedzi i ḓo sumbedza fhedzi milaedza yo tsireledzeaho yo linganelaho u swikela dataset yo ṱanganedzwaho i tshi lugela.\n\nNi nga takalela u tendela fallback i siho kha inthanethe?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",

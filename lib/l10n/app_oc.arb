@@ -510,7 +510,7 @@
   "chatbotGreeting": "Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.",
   "chatbotLimitReached": "Daily query limit reached. Upgrade to Premium for unlimited.",
   "chatbotErrorMsg": "I could not generate a response. Please try again.",
-  "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
+  "chatbotOfflinePrompt": "La basa de coneissença islamica fòra linha verificada es encara en cors de comissariat. Podètz activar lo retorn fòra linha ara, mas aficharà pas que de messatges segurs limitats fins que l'ensemble de donadas font es prèst.\n\nVolètz activar lo retorn fòra linha ?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
   "downloadPreparing": "Preparing download...",

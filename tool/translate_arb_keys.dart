@@ -887,6 +887,7 @@ const _knownChatbotTranslationDebris = [
   'vaka-Isireli',
   "verify ry-gheddyn",
   'ᐃᓛᒃᑰᖅᑐᑦ ᑐᑭᒧᐊᒍᑎᖏᑦ',
+  'ᖃᕆᑕᐅᔭᒃᑯᑦ ᐃᓛᒥᒃᑯᑦ',
   'Verified local Islamic guidance ejjab',
   'Aita â te aratairaa Islama no te fenua iho i roaa mai',
 ];
