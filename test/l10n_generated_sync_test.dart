@@ -20,10 +20,15 @@ void main() {
           '{count}',
           '7',
         );
+        final distanceAway = (arb['distanceAwayKm'] as String).replaceAll(
+          '{distance}',
+          '3.5',
+        );
 
         expect(l10n.placesSearchArea, arb['placesSearchArea']);
         expect(l10n.nearbyMosques, arb['nearbyMosques']);
         expect(l10n.placesFoundCount('7'), foundCount);
+        expect(l10n.distanceAwayKm('3.5'), distanceAway);
         expect(
           l10n.placesLocationRequiredTitle,
           arb['placesLocationRequiredTitle'],

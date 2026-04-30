@@ -18886,3 +18886,41 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; uzun body anahtarlarinda teknik token ve newline guard'larini once calistir.
+
+## 2026-04-30 TUR-465 - Places Distance Placeholder L10n Sync
+
+### MASTER Karari
+- Risk: Places mesafe metni `distanceAwayKm` dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu; metin `{distance}` placeholder'i tasidigi icin yanlis ceviri runtime'da mesafe degerini bozabilir veya kullaniciya Ingilizce karisik arayuz gosterebilirdi.
+- Kanit:
+  - `lib/l10n/app_bh.arb:649` artik `"distanceAwayKm": "{distance} किमी दूर बा"` degerini tasiyor; once `{distance} km away` idi.
+  - `lib/l10n/app_br.arb:649` artik `"distanceAwayKm": "{distance} km diouzhtu"` degerini tasiyor; once `{distance} km away` idi.
+  - `lib/l10n/app_se.arb:649` artik `"distanceAwayKm": "{distance} km eret"` degerini tasiyor; once `{distance} km away` idi.
+  - `lib/l10n/app_localizations_bh.dart:1363`, `lib/l10n/app_localizations_br.dart:1363` ve `lib/l10n/app_localizations_se.dart:1363` generated runtime method'lari ARB degerleriyle senkron hale geldi.
+  - `test/l10n_generated_sync_test.dart:23` ve `test/l10n_generated_sync_test.dart:31` `distanceAwayKm('3.5')` runtime cikti ile ARB placeholder replacement uyumunu kilitliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1230` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:283` secili locale'lerde Ingilizce fallback'i, `{distance}` placeholder kaybini, yalniz placeholder'a dusmeyi ve multiline bozulmayi reddediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1238 -> 1230` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Places mesafe etiketi daha fazla locale'de secili dilde gorunur ve mesafe placeholder'i runtime'da korunur; Hindi/Bhojpuri gibi dillerde yerel `किमी` birim yazimi kabul edildi.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 8 ARB dosyasi, 8 generated l10n dosyasi, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `distanceAwayKm` icin 8 guvenli dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `{distance}` placeholder'i butun kabul edilen ciktida korundu; birim baglami yalniz Latin `km` ile sinirlanmadi, dilin dogal birim yazimi kabul edildi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+- `test/l10n_generated_sync_test.dart` placeholder'li runtime method comparison ile genisletildi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places distance placeholder l10n/runtime sync riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1230` same-as-English fallback devam ediyor; placeholder iceren `placesApiError` ve download/diagnostics/chatbot kumesi sonraki guvenli batchlerde azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesApiError` icin `{statusCode}` placeholder guard'i ve teknik hata baglami korunarak ayni minimal yaklasimi uygula.

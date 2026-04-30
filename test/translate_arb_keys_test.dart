@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1238));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1230));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -277,6 +277,29 @@ void main() {
           value,
           isNot(contains('\n')),
           reason: 'app_$locale.arb has multiline places found count copy',
+        );
+      }
+      for (final locale in ['bh', 'br', 'ch', 'li', 'mh', 'nr', 'oc', 'se']) {
+        final value = localeArbs[locale]!['distanceAwayKm'] as String;
+        expect(
+          value,
+          isNot(english['distanceAwayKm']),
+          reason: 'app_$locale.arb still uses English for distanceAwayKm',
+        );
+        expect(
+          value,
+          contains('{distance}'),
+          reason: 'app_$locale.arb lost the distance placeholder',
+        );
+        expect(
+          value,
+          isNot('{distance}'),
+          reason: 'app_$locale.arb lost distance-unit context',
+        );
+        expect(
+          value,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline distance copy',
         );
       }
       for (final locale in ['lus', 'mai', 'sa', 'ti']) {
