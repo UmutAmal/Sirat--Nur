@@ -18813,6 +18813,43 @@
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; placeholder iceren Places count/distance anahtarlari icin once placeholder guard'lariyla ilerle.
 
+## 2026-04-30 TUR-464 - Places Found Count Placeholder L10n Sync
+
+### MASTER Karari
+- Risk: Places sonuc sayaci `placesFoundCount` dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu; metin `{count}` placeholder'i tasidigi icin yanlis ceviri sonuc sayisini runtime'da bozabilirdi.
+- Kanit:
+  - `lib/l10n/app_br.arb:641` artik `"placesFoundCount": "{count} kavet"` degerini tasiyor; once `{count} found` idi.
+  - `lib/l10n/app_se.arb:641` artik `"placesFoundCount": "{count} gávdnui"` degerini tasiyor; once `{count} found` idi.
+  - `lib/l10n/app_localizations_br.dart:1358` ve `lib/l10n/app_localizations_se.dart:1358` generated runtime method'lari ARB degerleriyle senkron hale geldi.
+  - `test/l10n_generated_sync_test.dart:26` `placesFoundCount('7')` runtime cikti ile ARB placeholder replacement uyumunu kilitliyor.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1238` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:265`-`test/translate_arb_keys_test.dart:274` secili locale'lerde Ingilizce fallback'i, `{count}` placeholder kaybini ve multiline bozulmayi reddediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1246 -> 1238` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Places sonuc sayaci daha fazla locale'de secili dilde gorunur ve sonuc sayisi placeholder'i runtime'da korunur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki 8 ARB dosyasi, 8 generated l10n dosyasi, `test/translate_arb_keys_test.dart`, `test/l10n_generated_sync_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesFoundCount` icin 8 guvenli dusuk kaynakli ARB locale'i Ingilizce fallback'ten cikarildi.
+- `{count}` placeholder'i butun kabul edilen ciktida korundu; placeholder koruyamayan locale'ler arac tarafindan unchanged/fallback kaldi.
+- `flutter gen-l10n` calistirilarak runtime `app_localizations_*.dart` dosyalari senkronlandi.
+- `test/l10n_generated_sync_test.dart` placeholder'li runtime method comparison ile genisletildi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, 136/136.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 678/678.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places found count placeholder l10n/runtime sync riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1238` same-as-English fallback devam ediyor; `distanceAwayKm` placeholder copy ve download/diagnostics/chatbot kumesi sonraki guvenli batchlerde azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `distanceAwayKm` icin `{distance}` placeholder guard'i ile ayni minimal yaklasimi uygula.
+
 ## 2026-04-30 TUR-461 - Places Data Source Title Runtime L10n Sync
 
 ### MASTER Karari

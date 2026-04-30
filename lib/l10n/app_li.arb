@@ -638,7 +638,7 @@
   "placesSearchArea": "Zoek in dit gebeed",
   "nearbyMosques": "Moskeeje in de buurt",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} gevonde",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

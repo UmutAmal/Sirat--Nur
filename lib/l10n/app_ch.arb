@@ -638,7 +638,7 @@
   "placesSearchArea": "Li'e' este na lugåt",
   "nearbyMosques": "Moske siha gi fi'on-måmi",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} ma sodda'",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

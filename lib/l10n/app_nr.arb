@@ -638,7 +638,7 @@
   "placesSearchArea": "Setjha indawo le",
   "nearbyMosques": "AmaMosque aseduze",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} itholakele",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

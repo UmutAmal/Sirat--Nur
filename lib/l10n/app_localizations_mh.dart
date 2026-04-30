@@ -1356,7 +1356,7 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String placesFoundCount(String count) {
-    return '$count found';
+    return '$count kar loe';
   }
 
   @override

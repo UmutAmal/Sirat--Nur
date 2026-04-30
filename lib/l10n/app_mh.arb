@@ -638,7 +638,7 @@
   "placesSearchArea": "Pukot jikin in",
   "nearbyMosques": "Mosque ko iturin",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} kar loe",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

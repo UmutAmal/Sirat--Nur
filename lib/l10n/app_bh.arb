@@ -638,7 +638,7 @@
   "placesSearchArea": "एह इलाका में खोज करीं",
   "nearbyMosques": "पास के मस्जिद बाड़ी सऽ",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} मिलल बा",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

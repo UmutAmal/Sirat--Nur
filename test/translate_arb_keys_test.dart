@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1246));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1238));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -259,6 +259,24 @@ void main() {
             'not a CV/resume-noun translation',
           ),
           reason: 'app_$locale.arb maps resumeDownload to a CV/resume noun',
+        );
+      }
+      for (final locale in ['bh', 'br', 'ch', 'li', 'mh', 'nr', 'oc', 'se']) {
+        final value = localeArbs[locale]!['placesFoundCount'] as String;
+        expect(
+          value,
+          isNot(english['placesFoundCount']),
+          reason: 'app_$locale.arb still uses English for placesFoundCount',
+        );
+        expect(
+          value,
+          contains('{count}'),
+          reason: 'app_$locale.arb lost the count placeholder',
+        );
+        expect(
+          value,
+          isNot(contains('\n')),
+          reason: 'app_$locale.arb has multiline places found count copy',
         );
       }
       for (final locale in ['lus', 'mai', 'sa', 'ti']) {

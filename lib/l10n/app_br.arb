@@ -638,7 +638,7 @@
   "placesSearchArea": "Klask en takad-mañ",
   "nearbyMosques": "Moskeennoù e-kichen",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} kavet",
   "@placesFoundCount": {
     "placeholders": {
       "count": {

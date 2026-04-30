@@ -638,7 +638,7 @@
   "placesSearchArea": "Cercatz aquesta zòna",
   "nearbyMosques": "Mosquèas pròchas",
   "islamicSchools": "Islamic Schools",
-  "placesFoundCount": "{count} found",
+  "placesFoundCount": "{count} trobat",
   "@placesFoundCount": {
     "placeholders": {
       "count": {
