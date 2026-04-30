@@ -19683,3 +19683,40 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `diagnosticsQuranCloudJuzMissing` icin diagnostics runtime copy batch'i veya `distanceAwayKm` icin guvenli ek aday taramasi uygulanacak.
+
+## 2026-04-30 TUR-486 - Readiness and Appium Runtime Sweep
+
+### MASTER Karari
+- Risk: TUR-485 sonrasi kalan is, kod patch'i degil dogrulama ve devralma riskiydi; l10n dusuk-kaynak borcunu sahte ceviriyle azaltmak yerine store-ready ve runtime kanitlari tekrar alinmaliydi.
+- Kanit:
+  - `dart run tool\translate_arb_keys.dart --report diagnosticsQuranCloudJuzMissing` same-as-English borcunu `36`, missing/empty `0`, placeholder mismatch `0` olarak olctu; otomatik batch guvenilir yeni aday uretmedi ve ARB dosyalari degismedi.
+  - `dart run tool\translate_arb_keys.dart placesNetworkError` da kalan dusuk-kaynak locale'lerde guvenilir aday uretmedi; repo temiz kaldi.
+  - `flutter analyze` PASS, no issues found.
+  - `dart run tool\find_orphans.dart` PASS, orphan file listesi bos.
+  - 23 anahtarli l10n debt reportu same-as-English `777`, missing/empty `0`, placeholder mismatch `0` olarak kaldi.
+  - `flutter test --reporter compact` PASS, `683/683`.
+  - `.\tool\check_store_readiness.ps1` PASS; `tool/check_store_readiness.ps1:535` audio manifest, `tool/check_store_readiness.ps1:556` Cloudflare 10 GB partition, `tool/check_store_readiness.ps1:361` Supabase public row checks ve `tool/check_store_readiness.ps1:765` final readiness pass guard'lari calisti.
+  - Appium runtime smoke `tool/appium_runtime_smoke.ps1:558` bottom nav, `tool/appium_runtime_smoke.ps1:559` quick access, `tool/appium_runtime_smoke.ps1:593` legacy offline copy ve `tool/appium_runtime_smoke.ps1:667` crash-marker kontrolleriyle PASS dondu.
+  - Runtime artifact `build/appium-runtime-smoke-summary.json` session `a33f8bf0-0e08-40ad-9224-3aeb3f47314a`, debug APK `222961238` byte, onboarding clicked `3/3`, bottom nav clicked `4/4`, quick access clicked `4/4`, `homeContainsNoInternetLegacy=false`, `logcatCrashFree=true`, `failures=[]`.
+- Kullanici etkisi: Uygulamanin test matrisi sadece unit/widget seviyesinde degil, gercek Android emulator + Appium navigasyonu ile de dogrulandi; sahte dusuk-kaynak ceviri eklenmedi.
+- Risk skoru: Runtime devralma/dogrulama boslugu Etki 3 x Olasilik 3 = 9/25 -> 2/25.
+- Rollback plani: Bu handover kaydi geri alinabilir; kod/ARB/runtime kaynak dosyasi degismedi.
+
+### BUILDER Degisikligi
+- Kod veya ARB patch'i uygulanmadi; `diagnosticsQuranCloudJuzMissing` ve `placesNetworkError` icin otomatik arac guvenilir ceviri uretmeyince Ingilizce fallback bilincli olarak korundu.
+- Appium server arka planda baslatildi, smoke tamamlaninca server ve emulator kapatildi.
+
+### TESTER Degisikligi
+- `flutter doctor`: Android toolchain ve cihaz altyapisi kullanilabilir; Chrome/Visual Studio uyarilari web/Windows desktop hedefleri icin non-blocking.
+- Full analyze: `flutter analyze` PASS.
+- Orphan scan: `dart run tool\find_orphans.dart` PASS, orphan yok.
+- Full tests: `flutter test --reporter compact` PASS, `683/683`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS.
+- Runtime smoke: `.\tool\appium_runtime_smoke.ps1 -DeviceName emulator-5554 -BuildMode debug -SmokeLocale en` PASS, `failures=[]`.
+
+### Risk Degisimi
+- Store/runtime confidence: `9/25 -> 2/25`.
+- Kalan bilincli risk: 23 kritik l10n anahtarinda `777` same-as-English dusuk-kaynak locale fallback'i var; missing key, empty value ve placeholder mismatch yok. Sonraki turda yalniz guvenilir aday uretilen locale'ler kabul edilmeli, aksi halde fallback korunmali.
+
+### Sonraki Adim
+- Yeni dongude kod taramasina geri don: prayer/notification DST zinciri, Quran/audio runtime edge-case'leri ve l10n dusuk-kaynak borcu icin guvenilir aday ureten tek anahtarli batch'ler sirayla degerlendirilecek.
