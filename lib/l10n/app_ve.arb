@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Mulanguli wa u Dauniḽouda a siho kha inthanethe",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Nḓivho ya Islamic yo khwaṱhisedzwaho i siho kha inthanethe i kha ḓi ṱhogomelwa. Ni nga tendela fallback i siho kha inthanethe zwino, fhedzi i ḓo sumbedza fhedzi milaedza yo tsireledzeaho yo linganelaho u swikela dataset yo ṱanganedzwaho i tshi lugela.\n\nNi nga takalela u tendela fallback i siho kha inthanethe?",
   "chatbotOfflineSwitched": "U vhuyelela murahu hu siho kha inthanethe zwo tendelwa. Phindulo dza Islam dzapo dzo khwaṱhisedzwaho a dzi athu lugela.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ndi khou lugisela u dawuniḽouda...",
+  "downloadingSurah": "U ṱalutshedzela sura {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Surah dzothe dzo no downloadiwa dza muvhali uyu.",
+  "offlineQuranAudioPacks": "Phakhethe dza zwipfi zwa Quran zwi siho kha inthanethe",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah dzo dawuniḽoudiwa",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Lugisani / Download zwi siho",
   "downloadAction": "Sudzulusa",
   "resumeDownload": "Bvelani phanḓa ni tshi dawuniḽouda",
   "deleteDownloadedFiles": "Phumula faila dzo dawuniḽoudiwaho",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "U khansela...",
   "downloadCanceledForReciter": "U dawuniḽouda zwo khanselwa kha {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

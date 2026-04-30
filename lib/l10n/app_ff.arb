@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Gardiiɗo ƴettugol tawa alaa e laylaytol",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Ganndal lislaam hoolkisaangal ngal alaa e laylaytol ina jokki e cureede haa jooni. Aɗa waawi softinde fallback offline jooni, kono maa ɗum hollu tan mesasuuji kisal keewɗi haa nde doggol dokke iwdi ngol hesɗi.\n\nAɗa yiɗi softinde fallback mo alaa e laylaytol?",
   "chatbotOfflineSwitched": "Fallback mo alaa e laylaytol ena softi. Jaabawuuli lislaam nokkuuji hoolkisaaɗi ɗii peewnaaka tawo.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Heɓde ƴettugol...",
+  "downloadingSurah": "Download suura {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Denndaangal suuraaji ɗi ƴettaa ngam oo janngoowo.",
+  "offlineQuranAudioPacks": "Packs Audio Qur'aana mo alaa e laylaytol",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suuraaji ɗi njippinaa",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Feewnitde / Sosde Ko ŋakki",
   "downloadAction": "Hoosugo do internaati",
   "resumeDownload": "Jokku ƴettude",
   "deleteDownloadedFiles": "Mumtu Fiildeeji ƴettaaɗi ɗii",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Woppude...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

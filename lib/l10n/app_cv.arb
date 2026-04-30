@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Офлайн скачать менеджерӗ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Тӗрӗсленӗ офлайн ислам пӗлӗвӗн базине халӗ те хатӗрлеҫҫӗ. Халӗ эсир офлайн каялла таврӑнассине ӗҫлеттерме пултаратӑр, анчах та вӑл ҫӑлкуҫ даннӑйӗсен пуххи хатӗр пуличчен хӑрушсӑрлӑх хыпарӗсене ҫеҫ кӑтартӗ.\n\nЭсир офлайн каялла тавӑрассине ӗҫлеттересшӗн-и?",
   "chatbotOfflineSwitched": "Офлайн каялла таврӑнма май панӑ. Тӗрӗсленӗ вырӑнти ислам хуравӗсем хальлӗхе хатӗр мар-ха.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Скачать тума хатӗрленетпӗр...",
+  "downloadingSurah": "{surah} / {total} сурӑна скачать тӑватӑп",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Ҫак вулакан валли пур сурӑсене те скачать тунӑ ӗнтӗ.",
+  "offlineQuranAudioPacks": "Офлайн Коран аудио пакетӗсем",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} сурӑсем скачать тунӑ",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Юсав / Скачать Ҫук",
   "downloadAction": "Уçласа ил",
   "resumeDownload": "Малалла скачать ту",
   "deleteDownloadedFiles": "Скачать тунӑ файлсене пӗтер",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Пӑрахӑҫлатӑп...",
   "downloadCanceledForReciter": "{reciter} валли скачать пӑрахӑҫланӑ.",
   "@downloadCanceledForReciter": {
     "placeholders": {

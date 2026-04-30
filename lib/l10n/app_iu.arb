@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᕐᒧᑦ ᐊᐅᓚᑦᑎᔨ",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "ᐸᕐᓇᒃᐸᓪᓕᐊᔪᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᕐᒧᑦ...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "ᓱᕋᓕᒫᑦ ᖃᕋᓴᐅᔭᕐᒧᑦ ᑎᒍᔭᐅᓯᒪᓕᕇᖅᑐᑦ ᑖᔅᓱᒧᖓ ᐅᖃᓕᒫᖅᑎᒧᑦ.",
+  "offlineQuranAudioPacks": "ᖃᕆᑕᐅᔭᒃᑯᑦ ᑯᕌᓐ ᓂᐱᓕᐅᖅᓯᒪᔪᑦ ᐸᐃᑉᐹᑦ",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ᓱᕋᐃᑦ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᔭᐅᓯᒪᔪᑦ",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ᓴᓇᔭᐅᒋᐊᕐᓂᖅ / ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᓯᓂᖅ ᐱᑕᖃᙱᑦᑐᖅ",
   "downloadAction": "ᒥᓇᕆᓗᒍ",
   "resumeDownload": "ᑲᔪᓯᓗᑎᑦ ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᓯᓗᑎᑦ",
   "deleteDownloadedFiles": "ᐲᖅᓯᓗᑎᑦ ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᔭᐅᓯᒪᔪᓂᒃ ᑎᑎᖅᑲᓂᒃ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ᓄᖅᑲᖅᑎᑕᐅᓂᖓ...",
   "downloadCanceledForReciter": "ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᖅ ᓄᖅᑲᖅᑎᑕᐅᕗᖅ {reciter}-ᒧᑦ.",
   "@downloadCanceledForReciter": {
     "placeholders": {

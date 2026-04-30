@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "އޮފްލައިން ފޯލްބެކް އެނެބަލްކޮށްފައި. ވެރިފައިޑް ލޯކަލް އިސްލާމިކް ޖަވާބުތައް އަދި ތައްޔާރު ނުވެއެވެ.",
   "chatbotOfflineDownloadLabel": "އޮފްލައިން ފޯލްބެކް އެނެބަލް ކުރާށެވެ",
   "downloadPreparing": "ޑައުންލޯޑް ތައްޔާރު ކުރަމުން...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "{surah} / {total} ސޫރަތް ޑައުންލޯޑް ކުރަނީ",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ސޫރަތްތައް ޑައުންލޯޑް ކޮށްފިއެވެ",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

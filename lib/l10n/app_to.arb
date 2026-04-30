@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Pule Download 'o e 'Offline'",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "'Oku kei curated 'a e 'ilo faka-'Isilami offline kuo fakamo'oni'i. Te ke lava 'o faka'ata 'a e offline fallback he taimi ni, ka 'e fakahaa'i pe 'e he ngaahi fekau malu fakangatangata kae 'oua kuo mateuteu 'a e dataset sourced.\n\nTe ke fie faka'ata 'a e fallback 'o e offline?",
   "chatbotOfflineSwitched": "Kuo fakaʻatā ʻa e fallback ʻi tuʻa mei he ʻinitanetí. 'Oku te'eki ke mateuteu 'a e ngaahi tali fakalotofonua 'o e 'Isilami kuo fakamo'oni'i.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Teuteu ke download...",
+  "downloadingSurah": "Ko hono download 'o e surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Ko e ngaahi surah kotoa pe kuo 'osi download ki he tokotaha lau ko 'eni.",
+  "offlineQuranAudioPacks": "Ngaahi Paaka Le'o 'o e Quran 'i he 'Initaneti",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ngaahi surah kuo download",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Fakalelei'i / Download 'Oku Mole",
   "downloadAction": "Taunilouti",
   "resumeDownload": "Hokohoko atu hono download",
   "deleteDownloadedFiles": "Tamate'i 'a e ngaahi faile kuo download",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Kaniseli...",
   "downloadCanceledForReciter": "Kuo kaniseli 'a e download ki he {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

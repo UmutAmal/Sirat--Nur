@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Offline fallback tih theih a ni. Verified local Islamic chhanna chu a la inpeih lo.",
   "chatbotOfflineDownloadLabel": "Offline Fallback tih kha enable rawh",
   "downloadPreparing": "Download buatsaih mek...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Surah {surah} / {total} download theih a ni.",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs download a ni",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Repair / Download a awm lo",
   "downloadAction": "Download rawh",
   "resumeDownload": "Download chhunzawm zel rawh",
   "deleteDownloadedFiles": "Download tawh file te chu Delete rawh",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Cancel a nih chuan...",
   "downloadCanceledForReciter": "{reciter} tan download tihtawp a ni.",
   "@downloadCanceledForReciter": {
     "placeholders": {

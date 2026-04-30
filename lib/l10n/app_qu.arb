@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Mana tinkisqa fallback atichisqa. Chiqapchasqa llaqta islam kutichiykuna manaraqmi wakichisqachu.",
   "chatbotOfflineDownloadLabel": "Mana tinkisqa Fallback nisqa atichiy",
   "downloadPreparing": "Descargata wakichispa...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Sura {surah} / {total} nisqamanta hurquspa.",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahkuna uraykachisqa",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

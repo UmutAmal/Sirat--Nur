@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Manaja Offlinebe",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Ilmu Islambe offlinelan tawattəgənadə kuwami yaye ngalwotəyin. Raktə offline fallback dəga yita gattəyin, amma kawuli gana laa fəlejin hatta dataset də dawartəna lan.\n\nOffline lan waltǝm bayantǝgǝ ragǝma?",
   "chatbotOfflineSwitched": "Offline lan ngawo kalaktə mowonzəna. Jaawuwa Islambe tawattəgənadə kuwamiyayi dawartənyi.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Sagǝdǝro dawartǝ...",
+  "downloadingSurah": "Sura {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Surawa samma kəratəma adə nankaro satuluwuna.",
+  "offlineQuranAudioPacks": "Kowowa Kowobe Alquranbe Layilan Ba",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Yasa / Fatǝna",
   "downloadAction": "Sawo",
   "resumeDownload": "Sagǝdǝ gozagǝ kowo",
   "deleteDownloadedFiles": "Fayil Sagǝdǝnadǝ Cinne",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Daptə...",
   "downloadCanceledForReciter": "{reciter} nankaro sakəna.",
   "@downloadCanceledForReciter": {
     "placeholders": {

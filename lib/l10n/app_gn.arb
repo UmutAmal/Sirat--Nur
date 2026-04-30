@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Ojeheja rei fallback offline-pe. Umi respuesta islámica local verificado noĩri gueteri listo.",
   "chatbotOfflineDownloadLabel": "Emboguata Fallback Offline rehegua",
   "downloadPreparing": "Oñembosako'ívo descarga...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Ojegueru haguã sura {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs ojegueru",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

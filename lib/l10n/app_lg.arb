@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Offline fallback esobozeseddwa. Eby'okuddamu by'Obusiraamu eby'omu kitundu ebikakasibwa tebinnaba kwetegekera.",
   "chatbotOfflineDownloadLabel": "Ssobozesa Okugwa ku mutimbagano",
   "downloadPreparing": "Okuteekateeka okuwanula...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Okuwanula suura {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suura eziwanuliddwa",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

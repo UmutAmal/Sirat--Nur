@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "सत्यापितं अफलाइन इस्लामिकज्ञानकोशम् अद्यापि क्यूरेटिङ्ग् क्रियते। इदानीं भवान् offline fallback सक्षमं कर्तुं शक्नोति, परन्तु स्रोतः दत्तांशसमूहः सज्जः न भवति तावत् केवलं सीमितसुरक्षितसन्देशान् एव दर्शयिष्यति ।\n\nकिं भवान् अफलाइन-फॉलबैक् सक्षमं कर्तुम् इच्छति?",
   "chatbotOfflineSwitched": "अफलाइन fallback सक्षमम्। सत्यापितस्थानीय इस्लामिक उत्तराणि अद्यापि सज्जाः न सन्ति।",
   "chatbotOfflineDownloadLabel": "Offline Fallback सक्षमं कुर्वन्तु",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "डाउनलोडस्य सज्जता...",
+  "downloadingSurah": "डाउनलोडिंग सूरह {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} सूरा डाउनलोड",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "मरम्मत / डाउनलोड अनुपलब्ध",
   "downloadAction": "डाउनलोड करें",
   "resumeDownload": "डाउनलोड् करणं निरन्तरं कुर्वन्तु",
   "deleteDownloadedFiles": "डाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "रद्दं कुर्वन्...",
   "downloadCanceledForReciter": "{reciter} कृते डाउनलोड् रद्दम्।",
   "@downloadCanceledForReciter": {
     "placeholders": {

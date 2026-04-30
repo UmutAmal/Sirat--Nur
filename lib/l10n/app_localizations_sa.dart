@@ -1194,11 +1194,11 @@ class AppLocalizationsSa extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Offline Fallback सक्षमं कुर्वन्तु';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'डाउनलोडस्य सज्जता...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'डाउनलोडिंग सूरह $surah / $total';
   }
 
   @override
@@ -1215,11 +1215,11 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total सूरा डाउनलोड';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'मरम्मत / डाउनलोड अनुपलब्ध';
 
   @override
   String get downloadAction => 'डाउनलोड करें';
@@ -1231,7 +1231,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get deleteDownloadedFiles => 'डाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'रद्दं कुर्वन्...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

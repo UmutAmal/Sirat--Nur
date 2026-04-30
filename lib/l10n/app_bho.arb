@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "ऑफलाइन फॉलबैक सक्षम हो गइल बा. सत्यापन स्थानीय इस्लामी जवाब अभी तक तैयार नईखे।",
   "chatbotOfflineDownloadLabel": "ऑफलाइन फॉलबैक के सक्षम करीं",
   "downloadPreparing": "डाउनलोड के तइयारी हो रहल बा...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "सूरह {surah} / {total} डाउनलोड कइल जा रहल बा।",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {

@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Umphathi wokudawuniloda ongaxhunyiwe ku-inthanethi",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Isisekelo selwazi lama-Islam esiqinisekisiweko esingaxhunyiwe ku-inthanethi sisalungiswa. Ungakghonakalisa ukubuyela emuva ngaphandle kwe-inthanethi kwanje, kodwana kuzokutjengisa imilayezo ephephileko elinganiselwe kwaphela bekube kulapho isethi yedatha etholakalako sele ilungile.\n\nUngathanda ukuvumela ukubuyela emuva ngaphandle kwe-inthanethi?",
   "chatbotOfflineSwitched": "Ukubuyela emuva ngaphandle kwe-inthanethi kunikwe amandla. Iimpendulo eziqinisekisiweko zama-Islam zendawo azikakulungeli.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ngilungiselela ukudawuniloda...",
+  "downloadingSurah": "Ukudawuniloda i-surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Woke ama-surah sele alandwa mfundi lo.",
+  "offlineQuranAudioPacks": "Amaphakheji womdumo we-Quran angasebenzi ku-inthanethi",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ama-surah alandwe",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ukulungisa / ukudawuniloda kulahlekileko",
   "downloadAction": "Dawunlowuda",
   "resumeDownload": "Ragela phambili ngokudawuniloda",
   "deleteDownloadedFiles": "Susa amafayela alandiweko",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ukukhansela...",
   "downloadCanceledForReciter": "Ukudawuniloda kukhanseliwe {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -727,7 +727,7 @@ class AppLocalizationsFj extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Manidia ni lavetaki mai na initaneti';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,7 +1191,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Vakarautaka na lavetaki...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1200,10 +1200,11 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Na surah kece sa lavetaki oti me baleta na dauwiliwili oqo.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Pakete ni rorogo ni Quran sega ni initaneti';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1228,7 +1229,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get deleteDownloadedFiles => 'Bokoca na faile sa lavetaki oti';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Vakadaroya...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

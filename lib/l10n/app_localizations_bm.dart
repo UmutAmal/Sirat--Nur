@@ -1200,7 +1200,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Télécharger sura $surah / $total .';
   }
 
   @override
@@ -1218,7 +1218,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total suraw telesarse';
   }
 
   @override

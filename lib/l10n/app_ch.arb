@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Manlisto para u ma'apåsi...",
+  "downloadingSurah": "Hu na'halom i surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Todu i surah siha esta ma na'halom para este na kåtga.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} na surah siha ma na'halom",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ma na'huyong / Ma na'huyong",
   "downloadAction": "Gua'åni",
   "resumeDownload": "Sige ha' humuyong",
   "deleteDownloadedFiles": "Na'suha i Ma'u'usa na File siha",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ma kansela...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

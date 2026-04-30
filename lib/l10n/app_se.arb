@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Offline-láddenhálddašeaddji",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Duođaštuvvon offline-islámalaš máhttovuođđu lea ain čohkkejuvvon. Dál sáhtát álggahit offline fallback, muhto dat čájeha dušše ráddjejuvvon dorvvolaš dieđuid dassážii go gávdnon diehtovuođđu lea gárvvis.\n\nHáliidat go álggahit offline fallback?",
   "chatbotOfflineSwitched": "Offline-ruovttoluotta lea álggahuvvon. Duođaštuvvon báikkálaš islamalaš vástádusat eai leat vuos gárvásat.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Válmmaštallan viežžat...",
+  "downloadingSurah": "Laddat surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Buot surat leat juo viežžan dán lohkki várás.",
+  "offlineQuranAudioPacks": "Offline Korana jietnapakeahtat",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahat leat viežžan",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Divvun / viežžan váilu",
   "downloadAction": "Viežžat",
   "resumeDownload": "Joatkit viežžat",
   "deleteDownloadedFiles": "Slette viežžan fiillaid",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Heaittihan...",
   "downloadCanceledForReciter": "{reciter} lea heaittihuvvon viežžan.",
   "@downloadCanceledForReciter": {
     "placeholders": {

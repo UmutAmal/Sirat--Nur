@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Fallback hors ligne efungolami. Ba réponses islamiques locales vérifiées ezali nanu prêt te.",
   "chatbotOfflineDownloadLabel": "Activer Fallback hors ligne",
   "downloadPreparing": "Kobongisa téléchargement...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Téléchargement sura {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ba surahs oyo ezwami",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

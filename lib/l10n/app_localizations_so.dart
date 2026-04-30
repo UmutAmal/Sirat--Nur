@@ -1217,7 +1217,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total suuradaha la soo dejiyay';
   }
 
   @override

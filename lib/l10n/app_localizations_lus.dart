@@ -1204,7 +1204,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Surah $surah / $total download theih a ni.';
   }
 
   @override
@@ -1222,11 +1222,11 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surahs download a ni';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Repair / Download a awm lo';
 
   @override
   String get downloadAction => 'Download rawh';
@@ -1238,7 +1238,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get deleteDownloadedFiles => 'Download tawh file te chu Delete rawh';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Cancel a nih chuan...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

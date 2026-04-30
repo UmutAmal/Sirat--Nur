@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Офлайн буцаалтыг идэвхжүүлсэн. Баталгаажсан орон нутгийн Исламын хариулт хараахан бэлэн болоогүй байна.",
   "chatbotOfflineDownloadLabel": "Офлайн буцаалтыг идэвхжүүлэх",
   "downloadPreparing": "Татаж авахад бэлтгэж байна...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "{surah} / {total}-г татаж байна",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {

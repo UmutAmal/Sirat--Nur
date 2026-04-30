@@ -727,7 +727,8 @@ class AppLocalizationsVe extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Mulanguli wa u Dauniḽouda a siho kha inthanethe';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1192,20 @@ class AppLocalizationsVe extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ndi khou lugisela u dawuniḽouda...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'U ṱalutshedzela sura $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Surah dzothe dzo no downloadiwa dza muvhali uyu.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Phakhethe dza zwipfi zwa Quran zwi siho kha inthanethe';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1214,11 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surah dzo dawuniḽoudiwa';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Lugisani / Download zwi siho';
 
   @override
   String get downloadAction => 'Sudzulusa';
@@ -1228,7 +1230,7 @@ class AppLocalizationsVe extends AppLocalizations {
   String get deleteDownloadedFiles => 'Phumula faila dzo dawuniḽoudiwaho';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'U khansela...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

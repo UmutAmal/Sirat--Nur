@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Umucungerezi wo gukuraho kuri interineti",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Ubumenyi bw’ubuyisilamu bwagenzuwe butari ku murongo buracariko buratunganirizwa. Ushobora gukoresha gusubira inyuma ubu, ariko bizokwerekana gusa ubutumwa butekanye gushika urutonde rw'amakuru rwiteguye.\n\nWoba wipfuza gukoresha fallback itari mu murongo?",
   "chatbotOfflineSwitched": "Gusubira inyuma bitari ku murongo vyashobojwe. Inyishu z’ubuyisilamu zo mu karere zigenzuwe ntizirategurwa.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Gutegura gukuraho...",
+  "downloadingSurah": "Gukuraho sura {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Ama surah yose amaze gukurwako kuri uyu musomyi.",
+  "offlineQuranAudioPacks": "Amajwi ya Korowani atari kuri interineti",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} amashura yakuwe kuri interineti",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Gusana / Gukuraho Bibuze",
   "downloadAction": "Gukurura",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Gukuraho amadosiye yavanwe",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Gusubiramwo...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Sandaran luar talian didayakan. Jawapan Islam tempatan yang disahkan masih belum bersedia.",
   "chatbotOfflineDownloadLabel": "Dayakan Saling Balik Luar Talian",
   "downloadPreparing": "Menyediakan muat turun...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Memuat turun surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah dimuat turun",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

@@ -727,7 +727,8 @@ class AppLocalizationsRn extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Umucungerezi wo gukuraho kuri interineti';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1192,20 @@ class AppLocalizationsRn extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Gutegura gukuraho...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Gukuraho sura $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Ama surah yose amaze gukurwako kuri uyu musomyi.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Amajwi ya Korowani atari kuri interineti';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1214,11 @@ class AppLocalizationsRn extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total amashura yakuwe kuri interineti';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Gusana / Gukuraho Bibuze';
 
   @override
   String get downloadAction => 'Gukurura';
@@ -1228,7 +1230,7 @@ class AppLocalizationsRn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Gukuraho amadosiye yavanwe';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Gusubiramwo...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

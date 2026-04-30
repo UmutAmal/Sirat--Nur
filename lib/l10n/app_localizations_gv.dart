@@ -727,7 +727,7 @@ class AppLocalizationsGv extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Reesht Lught-reill Offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1191,19 @@ class AppLocalizationsGv extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Reayll y lhoobey...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'T\'eh ry-loadaghey surah $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'All surahs t\'er nyn skeaylley er-dy-henney son y reciter shoh.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Packaghyn clashtyn y Quran er-lheh';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,14 +1212,14 @@ class AppLocalizationsGv extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surahyn';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Repair / Download er-mayrn';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Laadey neose';
 
   @override
   String get resumeDownload => 'Resume Download';
@@ -1228,7 +1228,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Cur stiagh...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

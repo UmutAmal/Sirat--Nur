@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Офлайн æрбакæныны менеджер",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Бæлвырдгонд офлайн пысылмон зонындзинæдты базæ нырма дæр æвзæрст цæуы. Ныртæккæ дæ бон у æнæфæзынгæ фæстæмæздæхт æрæвæрын, фæлæ уый æрмæстдæр æвдисдзæн арæнгонд æдас хъусынгæнинæгтæ, цалынмæ æрмæстдæр æрмæг цæттæ уа, уæдмæ.\n\nФæнды дæ офлайн фæстæмæздæхт æххæст кæнын?",
   "chatbotOfflineSwitched": "Офлайн фæстæмæздæхт æххæстгонд у. Бæлвырдгонд бынæттон пысылмон дзуаппытæ нырма цæттæ не сты.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Цæттæ кæнын æрбакæнын...",
+  "downloadingSurah": "Скачать сурæ {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Æппæт сурæтæ ныридæгæн æрбакастысты ацы кæсæгæн.",
+  "offlineQuranAudioPacks": "Офлайн Хъуыраны аудиопакеттæ",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} сурæтæ æрбакастысты",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Цалцæг / Æрбакæнын Æнæхай",
   "downloadAction": "Раппарын",
   "resumeDownload": "Дарддæр кæнут æрбакæнын",
   "deleteDownloadedFiles": "Æрбакæнгæ файлтæ фесафын",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Æрлæууын...",
   "downloadCanceledForReciter": "{reciter}-æн æрбакæнын æрцыд æрæхгæд.",
   "@downloadCanceledForReciter": {
     "placeholders": {

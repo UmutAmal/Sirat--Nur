@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Offline fallback bɛ se ka kɛ. Sigida silamɛya jaabi sɛgɛsɛgɛlenw ma labɛn fɔlɔ.",
   "chatbotOfflineDownloadLabel": "A’ ye Offline Fallback daminɛ",
   "downloadPreparing": "Téléchargement labɛnni...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Télécharger sura {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suraw telesarse",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

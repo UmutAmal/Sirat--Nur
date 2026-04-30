@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "An kunna koma baya na layi. Ingantattun amsoshi na Musulunci na cikin gida ba su shirya ba tukuna.",
   "chatbotOfflineDownloadLabel": "Kunna Faɗuwar Wajen Layi",
   "downloadPreparing": "Ana shirin zazzagewa...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Ana sauke surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} an sauke surorin",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

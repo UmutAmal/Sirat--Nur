@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Gestionari de telecargaments fòra linha",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "La basa de coneissença islamica fòra linha verificada es encara en cors de comissariat. Podètz activar lo retorn fòra linha ara, mas aficharà pas que de messatges segurs limitats fins que l'ensemble de donadas font es prèst.\n\nVolètz activar lo retorn fòra linha ?",
   "chatbotOfflineSwitched": "Retrodiment fòra linha activat. Las responsas islamicas localas verificadas son pas encara prèstas.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "En preparacion de telecargament...",
+  "downloadingSurah": "Descargament de surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Todas las surahs ya telecargadas para este recitador.",
+  "offlineQuranAudioPacks": "Paquets d'àudio de l'Alcoran fòra linha",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} souras telecargadas",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparacion / Telecargament Manca",
   "downloadAction": "Descargar",
   "resumeDownload": "Contunhar lo telecargament",
   "deleteDownloadedFiles": "Suprimir los fichièrs telecargats",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "En anullant...",
   "downloadCanceledForReciter": "Telecargament anullat per {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

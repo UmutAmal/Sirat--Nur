@@ -727,7 +727,8 @@ class AppLocalizationsOc extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Gestionari de telecargaments fòra linha';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1192,20 @@ class AppLocalizationsOc extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'En preparacion de telecargament...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Descargament de surah $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Todas las surahs ya telecargadas para este recitador.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Paquets d\'àudio de l\'Alcoran fòra linha';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1214,11 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total souras telecargadas';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Reparacion / Telecargament Manca';
 
   @override
   String get downloadAction => 'Descargar';
@@ -1228,7 +1230,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get deleteDownloadedFiles => 'Suprimir los fichièrs telecargats';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'En anullant...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

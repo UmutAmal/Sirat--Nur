@@ -727,7 +727,7 @@ class AppLocalizationsTo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Pule Download \'o e \'Offline\'';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1191,20 @@ class AppLocalizationsTo extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Teuteu ke download...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Ko hono download \'o e surah $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Ko e ngaahi surah kotoa pe kuo \'osi download ki he tokotaha lau ko \'eni.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Ngaahi Paaka Le\'o \'o e Quran \'i he \'Initaneti';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1213,11 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total ngaahi surah kuo download';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Fakalelei\'i / Download \'Oku Mole';
 
   @override
   String get downloadAction => 'Taunilouti';
@@ -1229,7 +1230,7 @@ class AppLocalizationsTo extends AppLocalizations {
       'Tamate\'i \'a e ngaahi faile kuo download';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Kaniseli...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

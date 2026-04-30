@@ -1196,7 +1196,7 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Ngundhuh surah $surah / $total';
   }
 
   @override
@@ -1213,7 +1213,7 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surah diundhuh';
   }
 
   @override

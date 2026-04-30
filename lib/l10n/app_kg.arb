@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Gestionnaire de téléchargement sans ligne",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Base ya nzayilu ya Islam yina bo me zikisaka na nganda ya Internet ke landa kusalama kaka. Nge lenda pesa nzila na fallback ya kukonda nzila ntangu yai, kansi yo ta songa kaka bansangu ya fioti ya lutaninu tii kuna kimvuka ya bansangu ya kisina ta vanda ya kuyilama.\n\nKeti nge ke zola kupesa nzila na fallback yina kele ve na nzila?",
   "chatbotOfflineSwitched": "Fallback ya kukonda nzila me salama. Bamvutu ya Islam ya bwala yina bo me zikisaka kele ntete ve ya kuyilama.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Kubongisa kubaka...",
+  "downloadingSurah": "Kubaka sura {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Ba surah yonso me bakama dezia sambu na mutangi yai.",
+  "offlineQuranAudioPacks": "Ba paquet ya audio ya Coran ya kele ve na internet",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ba sora ya bo me baka",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Kuyidika / Kubaka Kukonda",
   "downloadAction": "Kubaka",
   "resumeDownload": "Landa kubaka",
   "deleteDownloadedFiles": "Delete Downloaded Files",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Kukatula...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

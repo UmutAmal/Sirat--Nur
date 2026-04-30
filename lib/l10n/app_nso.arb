@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Fallback ya ka ntle ga inthanete e kgontšhitšwe. Dikarabo tša selegae tša Boiselamo tše di netefaditšwego ga se tša lokela ga bjale.",
   "chatbotOfflineDownloadLabel": "Kgontšha Fallback ya ka ntle ga inthanete",
   "downloadPreparing": "Go lokišetša go taonelouta...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Go taonelouta surah {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} di-surah tše di taoneloutšwago",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

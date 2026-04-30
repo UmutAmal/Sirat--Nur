@@ -1201,7 +1201,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'सूरह $surah / $total डाउनलोड कइल जा रहल बा।';
   }
 
   @override

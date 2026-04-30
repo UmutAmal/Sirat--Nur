@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Kufaatii sarara ala ta'e dandeessifameera. Deebiin Islaamaa naannoo mirkanaa'e ammallee qophii miti.",
   "chatbotOfflineDownloadLabel": "Fallback Sarara Alaa dandeessisi",
   "downloadPreparing": "Buufachuuf qopheessuu...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Suuraa {surah} / {total} buufachuu .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suuraawwan buufaman",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

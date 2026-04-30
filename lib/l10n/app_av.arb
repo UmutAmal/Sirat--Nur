@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Офлайн-менеджер скачивания",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Тадсикъ гьабураб офлайн исламияб лъаялъул базаялъул жеги курирование гьабулеб бугин. Гьанже нужеца офлайн-резервалъулаб хӀалтӀи гьабизе бегьула, амма гьелъ гӀицӀго мукъсанал хӀинкъи гьечӀел лъазабиял рихьизаризе руго, источникалъул дандеруссин хӀадурлъизегӀан.\n\nБокьилаанищ дуе офлайналда резервалъулаб хӀалтӀи гьабизе?",
   "chatbotOfflineSwitched": "Офлайналда гьоркьоб лъураб рес. Тадсикъ гьарурал бакӀалъулал исламиял жавабал жеги хӀадурал гьечӀо.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "ХӀадур гьабулеб скачать гьабизе...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Все суры уже скачали для этого читателя.",
+  "offlineQuranAudioPacks": "Офлайн Къуръаналъул аудио пакетал",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Ремонт / Скачать Нет",
   "downloadAction": "Реххизе",
   "resumeDownload": "Халат бахъинабизе скачать",
   "deleteDownloadedFiles": "Удалить загруженные файлы",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Нахъе бахъулеб...",
   "downloadCanceledForReciter": "Загрузка отменена для {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

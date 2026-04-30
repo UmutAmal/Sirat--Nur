@@ -727,7 +727,7 @@ class AppLocalizationsWo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Responsable de téléchargement offline';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1191,18 @@ class AppLocalizationsWo extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Waajal yebbi...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Télécharger la suura $surah / $total';
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => 'Surah yépp jota yebbi ngir jàngkat bii.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Pack audio Al Quran bu amul ligne';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1211,11 @@ class AppLocalizationsWo extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total soras téléchargés';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Defar / Télécharger lu ñàkk';
 
   @override
   String get downloadAction => 'Wàcce';
@@ -1228,7 +1227,7 @@ class AppLocalizationsWo extends AppLocalizations {
   String get deleteDownloadedFiles => 'efaase fichier yiñ yebbi';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Fomm...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} suuradaha la soo dejiyay",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

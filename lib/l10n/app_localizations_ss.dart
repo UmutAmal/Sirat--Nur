@@ -727,7 +727,8 @@ class AppLocalizationsSs extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Imenenja yekulandza ngaphandle kwe-inthanethi';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,7 +1192,7 @@ class AppLocalizationsSs extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ngilungiselela kulandza...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1200,10 +1201,11 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Onkhe ema-surahs kakade alandzelwe kulo mfundzi.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Emaphakheji Ekulalelwako e-Quran langasebenti ku-inthanethi';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1216,7 +1218,7 @@ class AppLocalizationsSs extends AppLocalizations {
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Lungisa / Layisha Lokulahlekile';
 
   @override
   String get downloadAction => 'Downiloda';
@@ -1228,7 +1230,7 @@ class AppLocalizationsSs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Cisha emafayela lalandvwako';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Kukhansela...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

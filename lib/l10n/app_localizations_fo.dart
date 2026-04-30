@@ -727,7 +727,7 @@ class AppLocalizationsFo extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Heinta leiðari uttan net';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1191,19 @@ class AppLocalizationsFo extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Fyrireika niðurtøku...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Sækja surah $surah / $total .';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Allar surahs longu heintaðar til hendan lesara.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Ljóðpakkar úr Koranini uttan net';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1212,11 @@ class AppLocalizationsFo extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total sururnar heintaðar';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Viðgerð / Heinta Manglar';
 
   @override
   String get downloadAction => 'Niðurtøka';
@@ -1228,7 +1228,7 @@ class AppLocalizationsFo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Strika heintaðar fílur';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Avlýsa...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

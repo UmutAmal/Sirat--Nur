@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Manidia ni lavetaki mai na initaneti",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Vakarautaka na lavetaki...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Na surah kece sa lavetaki oti me baleta na dauwiliwili oqo.",
+  "offlineQuranAudioPacks": "Pakete ni rorogo ni Quran sega ni initaneti",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -550,7 +550,7 @@
   "downloadAction": "Lavetaka",
   "resumeDownload": "Tomana tikoga na lavetaki",
   "deleteDownloadedFiles": "Bokoca na faile sa lavetaki oti",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Vakadaroya...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

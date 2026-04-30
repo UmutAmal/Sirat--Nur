@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "ऑफलाइन फॉलबैक सक्षम। सत्यापित स्थानीय इस्लामी जवाब एखन धरि तैयार नहि अछि।",
   "chatbotOfflineDownloadLabel": "ऑफलाइन फॉलबैक सक्षम करू",
   "downloadPreparing": "डाउनलोड के तैयारी में...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "सूरह {surah} / {total} डाउनलोड करब।",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} सूरह डाउनलोड",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "मरम्मत / डाउनलोड गायब",
   "downloadAction": "डाउनलोड करू",
   "resumeDownload": "डाउनलोड जारी रखें",
   "deleteDownloadedFiles": "डाउनलोड फाइल मेटाउ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "रद्द क रहल अछि...",
   "downloadCanceledForReciter": "{reciter} क लेल डाउनलोड रद्द कएल गेल.",
   "@downloadCanceledForReciter": {
     "placeholders": {

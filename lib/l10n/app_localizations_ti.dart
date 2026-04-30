@@ -1180,11 +1180,11 @@ class AppLocalizationsTi extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'ካብ መስመር ወጻኢ Fallback ኣንቅሕ';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'ምድላው ዳውንሎድ...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'ሱራ $surah / $total ምውራድ';
   }
 
   @override
@@ -1200,11 +1200,11 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total ሱራታት ኣውሪዱ';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'ጽገና / ምውራድ ዝጎደለ';
 
   @override
   String get downloadAction => 'ምውራድ';
@@ -1216,7 +1216,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get deleteDownloadedFiles => 'ዝወረዱ ፋይላት ምድምሳስ';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'ምስራዝ...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

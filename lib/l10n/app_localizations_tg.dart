@@ -1197,7 +1197,7 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Зеркашии сураи $surah / $total';
   }
 
   @override

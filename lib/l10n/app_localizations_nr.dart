@@ -727,7 +727,8 @@ class AppLocalizationsNr extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Umphathi wokudawuniloda ongaxhunyiwe ku-inthanethi';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1192,19 @@ class AppLocalizationsNr extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ngilungiselela ukudawuniloda...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Ukudawuniloda i-surah $surah / $total';
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => 'Woke ama-surah sele alandwa mfundi lo.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Amaphakheji womdumo we-Quran angasebenzi ku-inthanethi';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1213,12 @@ class AppLocalizationsNr extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total ama-surah alandwe';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair =>
+      'Ukulungisa / ukudawuniloda kulahlekileko';
 
   @override
   String get downloadAction => 'Dawunlowuda';
@@ -1228,7 +1230,7 @@ class AppLocalizationsNr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Susa amafayela alandiweko';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Ukukhansela...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

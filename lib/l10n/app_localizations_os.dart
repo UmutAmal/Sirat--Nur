@@ -727,7 +727,7 @@ class AppLocalizationsOs extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Офлайн æрбакæныны менеджер';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1191,19 @@ class AppLocalizationsOs extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Цæттæ кæнын æрбакæнын...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Скачать сурæ $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Æппæт сурæтæ ныридæгæн æрбакастысты ацы кæсæгæн.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Офлайн Хъуыраны аудиопакеттæ';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1212,11 @@ class AppLocalizationsOs extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total сурæтæ æрбакастысты';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Цалцæг / Æрбакæнын Æнæхай';
 
   @override
   String get downloadAction => 'Раппарын';
@@ -1228,7 +1228,7 @@ class AppLocalizationsOs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Æрбакæнгæ файлтæ фесафын';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Æрлæууын...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

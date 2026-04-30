@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Бозгашти офлайнӣ фаъол аст. Ҷавобҳои тасдиқшудаи исломии маҳаллӣ ҳанӯз омода нестанд.",
   "chatbotOfflineDownloadLabel": "Бозгашти офлайнро фаъол созед",
   "downloadPreparing": "Зеркашӣ омода мешавад...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Зеркашии сураи {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {

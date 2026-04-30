@@ -727,7 +727,8 @@ class AppLocalizationsSg extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager =>
+      'Gestionnaire ti téléchargement hors ligne';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1192,20 @@ class AppLocalizationsSg extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Ti leke ti téléchargé...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Télécharger sourate $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'A-surah kue so a téléchargé ni awe ndali ti zo so ayeke diko mbeti so.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'A-audio ti Coran so ayeke na ndo ti Internet pëpe';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1214,11 @@ class AppLocalizationsSg extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total a-soura so a téléchargé ni';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Réparation / Téléchargement manque';
 
   @override
   String get downloadAction => 'Mu aye';
@@ -1228,7 +1230,7 @@ class AppLocalizationsSg extends AppLocalizations {
   String get deleteDownloadedFiles => 'Effacé afichier so a téléchargé ni';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Ti annulé...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Offline fallback wowɔ dɔ. Islamtɔwo ƒe ŋuɖoɖo siwo ŋu woɖo kpee le nutoa me la mesu te haɖe o.",
   "chatbotOfflineDownloadLabel": "Na Offline Fallback nawɔ dɔ",
   "downloadPreparing": "Dzadzraɖo ɖe download dzi...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Wole surah {surah} / {total} ƒe kɔpi wɔm.",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah siwo woɖe ɖe go",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Jeļāļo̧kjeņ eo an Islam eo em̧ōj an kam̧ool ej pād wōt ilo kōllaajrak. Kwomaroñ kōmman offline fallback kiõ, ak enaj kwalok wōt jet message ko rejimwe mae ien eo dataset eo ej pojak.\n\nKwokōnaan ke kōmman bwe en maroñ offline fallback?",
   "chatbotOfflineSwitched": "Offline fallback emoj an maroñ. Uwaak ko an Islam rejjab pojak kiõ.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Kōppopo ñan bōk...",
+  "downloadingSurah": "download surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,7 +525,7 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
+  "downloadCompleted": "Aolep surah ko emōj aer download ñan ri riit in.",
   "offlineQuranAudioPacks": "Offline Quran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah ko kar bōk",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Repair / Download Ej jako",
   "downloadAction": "Taunōḷot",
   "resumeDownload": "Wōnm̧aanlok wōt im bōk",
   "deleteDownloadedFiles": "Jolok file ko kar bōki",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Kanne...",
   "downloadCanceledForReciter": "Download eo emōj an bōjrak ñan {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

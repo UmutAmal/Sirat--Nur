@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "እቲ ዝተረጋገጸ ካብ መስመር ወጻኢ ዝኾነ እስላማዊ ፍልጠት መሰረት ገና ይሕሎ ኣሎ። ሕጂ ካብ መስመር ወጻኢ ምምላስ ከተኽእሎ ትኽእል ኢኻ፡ ግን እቲ ምንጪ ዳታሴት ድሉው ክሳብ ዝኸውን ውሱን ውሑስ መልእኽትታት ጥራይ እዩ ዘርኢ።\n\nካብ መስመር ወጻኢ ዝግበር ምምላስ (offline fallback) ከተኽእሉ ትደልዩ ዶ?",
   "chatbotOfflineSwitched": "ካብ መስመር ወጻኢ ፋልባክ ተኸፊቱ። ዝተረጋገጹ ናይ ከባቢ እስላማዊ መልስታት ገና ድሉዋት ኣይኮኑን።",
   "chatbotOfflineDownloadLabel": "ካብ መስመር ወጻኢ Fallback ኣንቅሕ",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ምድላው ዳውንሎድ...",
+  "downloadingSurah": "ሱራ {surah} / {total} ምውራድ",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ሱራታት ኣውሪዱ",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "ጽገና / ምውራድ ዝጎደለ",
   "downloadAction": "ምውራድ",
   "resumeDownload": "ምውራድ ቀጽል",
   "deleteDownloadedFiles": "ዝወረዱ ፋይላት ምድምሳስ",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ምስራዝ...",
   "downloadCanceledForReciter": "ን {reciter} ዳውንሎድ ተሰሪዙ።",
   "@downloadCanceledForReciter": {
     "placeholders": {

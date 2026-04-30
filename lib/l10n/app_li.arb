@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "De gecontroleerde offline islamitische kinnesbasis weurt nog steeds gecureerd. Geer kin noe offline fallback insjakele, mer ‘t zal allein beperkde veilige boodsjappe toene totdat de brongegevensset klaor is.\n\nWilt geer offline fallback insjakele?",
   "chatbotOfflineSwitched": "Offline fallback ingeschakeld. Gecontroleerde lokale islamitische antwoorde zien nog neet klaor.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Veurbereie op de download...",
+  "downloadingSurah": "Surah {surah} / {total} downloade",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Alle sura’s zien al gedownload veur deze reciter.",
+  "offlineQuranAudioPacks": "Offline Koran Audio Packs",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surahs gedownload",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Reparatie / Download Missing",
   "downloadAction": "Douwnlood",
   "resumeDownload": "Blijf downloade",
   "deleteDownloadedFiles": "Gedownloade bestande wisse",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Annulere...",
   "downloadCanceledForReciter": "Download geannuleerd veur {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

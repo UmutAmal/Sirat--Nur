@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "অফলাইন ফ'লবেক সামৰ্থবান কৰা হৈছে। পৰীক্ষিত স্থানীয় ইছলামিক উত্তৰ এতিয়াও সাজু হোৱা নাই।",
   "chatbotOfflineDownloadLabel": "অফলাইন ফ'লবেক সামৰ্থবান কৰক",
   "downloadPreparing": "ডাউনলোড প্ৰস্তুত কৰা হৈছে...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "চুৰা {surah} / {total} ডাউনলোড কৰা হৈছে",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {

@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Nalefa ny fiverenana an-tserasera. Tsy mbola vonona ny valinteny islamika voamarina ao an-toerana.",
   "chatbotOfflineDownloadLabel": "Alefaso ny Fallback an-tserasera",
   "downloadPreparing": "Manomana fampidinana...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Misintona ny surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah nalaina",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

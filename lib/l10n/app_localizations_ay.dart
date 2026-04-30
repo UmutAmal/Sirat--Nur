@@ -1214,11 +1214,11 @@ class AppLocalizationsAy extends AppLocalizations {
       'Offline Fallback ukar ch’amanchaña';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Uñt’ayañataki wakicht’aña...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Surah $surah / $total ukar apkatañataki.';
   }
 
   @override
@@ -1236,11 +1236,11 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surahs ukanakax apkatatawa';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Askichaña / Uñstayaña Chhaqhata';
 
   @override
   String get downloadAction => 'Apaqaña';
@@ -1252,7 +1252,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Uñstayata Archivonaka chhaqtayaña';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Cancelañatakix...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

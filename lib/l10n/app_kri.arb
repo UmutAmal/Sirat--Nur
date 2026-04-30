@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Ɔflayn fɔlbak dɔn ɛnabul. Verified lokal Islamic ansa dem no redi yet.",
   "chatbotOfflineDownloadLabel": "Enable Ɔflayn Fɔlbak",
   "downloadPreparing": "We yu de pripia fɔ dawnlod...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "We yu de dawnlod di surah {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {

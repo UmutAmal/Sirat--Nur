@@ -1198,7 +1198,7 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'চুৰা $surah / $total ডাউনলোড কৰা হৈছে';
   }
 
   @override

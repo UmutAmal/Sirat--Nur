@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Offline-imik allagarsiivimmi aqutsisoq",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "Offline-imik islamimiut ilisimatusarfiat uppernarsarneqarsimasoq suli kuratereqarpoq. Offline fallback maanna atulersissinnaavat, kisiannili sourced dataset piareersarnissaata tungaanut isumannaatsumik nalunaarutit aalajangersimasut takutinneqassapput.\n\nOffline-imik fallback-imik atuisinnaalersitsisinnaavit?",
   "chatbotOfflineSwitched": "Offline-imik taarsersuineq atulersinneqarpoq. Sumiiffinni islamimiut akissutaat uppernarsarneqarsimasut suli piareersimanngillat.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Aallaasersornissamut piareersarneq...",
+  "downloadingSurah": "Surah {surah} / {total} aallaasersorlugu.",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Surah-it tamarmik atuartitsisartumut tassunga aaneqarsimapput.",
+  "offlineQuranAudioPacks": "Offline-imik Koranimik tusarnaartitsineq",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surat aaneqarsimasut",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
-  "downloadAction": "Download",
+  "redownloadMissingRepair": "Iluarsaaqqinneq / Aallaasersorneq Nammineq",
+  "downloadAction": "Aalleruk",
   "resumeDownload": "Aallaasersorneq ingerlateqqiguk",
   "deleteDownloadedFiles": "Filet download-erneqarsimasut piiakkit",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ataatsimeersuarneq...",
   "downloadCanceledForReciter": "{reciter}-mut aallaasersorneq unitsinneqarpoq.",
   "@downloadCanceledForReciter": {
     "placeholders": {

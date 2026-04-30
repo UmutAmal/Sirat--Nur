@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "བདེན་དཔང་བྱས་པའི་དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཨིསི་ལམ་ཤེས་བྱའི་གཞི་རྩ་དེ་ད་དུང་ཡང་བདག་གཉེར་བྱེད་བཞིན་ཡོད། ཁྱེད་ཀྱིས་ད་ལྟ་དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཕྱིར་ལོག་ལྕོགས་ཅན་བཟོ་ཐུབ། འོན་ཀྱང་འབྱུང་ཁུངས་ཀྱི་གནས་སྡུད་ཆ་ཚང་གྲ་སྒྲིག་མ་བྱུང་བར་དུ་དེས་ཚད་གཞི་ཅན་གྱི་ཉེན་མེད་བརྡ་འཕྲིན་ཁོ་ན་སྟོན་ཐུབ།\n\nཁྱེད་རང་དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཕྱིར་ལོག་བྱེད་འདོད་དམ།",
   "chatbotOfflineSwitched": "དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་རྒྱབ་ལོག་ལྕོགས་ཅན་བཟོས། བདེན་དཔང་བྱས་པའི་ས་གནས་ཀྱི་ཨིསི་ལམ་གྱི་ལན་ད་དུང་གྲ་སྒྲིག་མེད་པ་རེད།",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "ཕབ་ལེན་གྲ་སྒྲིག་བྱེད་བཞིན་ཡོད།",
+  "downloadingSurah": "ཕབ་ལེན་བྱེད་བཞིན་པ། {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "ཀློག་མཁན་འདིའི་ཆེད་དུ་སུ་ར་ཚང་མ་ཕབ་ལེན་བྱས་ཟིན།",
+  "offlineQuranAudioPacks": "དྲ་རྒྱའི་ཕྱི་རོལ་གྱི་ཁུ་རཱན་སྒྲ་སྒམ།",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} སུ་རཱ་ཕབ་ལེན་བྱས།",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "བཟོ་བཅོས།/ཕབ་ལེན་བརླག་པ།",
   "downloadAction": "ཕབ་ལེན",
   "resumeDownload": "མུ་མཐུད་དུ་ཕབ་ལེན།",
   "deleteDownloadedFiles": "ཕབ་ལེན་བྱས་པའི་ཡིག་ཆ་སུབ་པ།",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "ཆ་མེད་གཏོང་བ།",
   "downloadCanceledForReciter": "{reciter} ཕབ་ལེན་ཆ་མེད་དུ་བཏང་ཡོད།",
   "@downloadCanceledForReciter": {
     "placeholders": {

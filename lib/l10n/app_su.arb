@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Offline fallback diaktipkeun. Jawaban Islam lokal anu diverifikasi henteu acan siap.",
   "chatbotOfflineDownloadLabel": "Aktipkeun Offline Fallback",
   "downloadPreparing": "Nyiapkeun undeuran...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Ngundeur surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} surah diundeur",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

@@ -727,7 +727,7 @@ class AppLocalizationsBr extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Merour pellgargañ ezlinenn';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1191,19 @@ class AppLocalizationsBr extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'O prientiñ pellgargañ...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Pellgargañ ar surah $surah / $total';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Pellgarget eo bet an holl souraoù dija evit al lenner-mañ.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'Pakadoù kleweled ar C\'horan ezlinenn';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1212,11 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total sourahoù pellgarget';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'Dresañ / Pellgargañ mankout';
 
   @override
   String get downloadAction => 'Pellgargañ';
@@ -1228,7 +1228,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Dilemel ar restroù pellgarget';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'O nullañ...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

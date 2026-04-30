@@ -1196,7 +1196,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'We yu de dawnlod di surah $surah / $total .';
   }
 
   @override

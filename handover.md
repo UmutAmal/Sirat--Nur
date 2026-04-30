@@ -20015,3 +20015,39 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: prayer notification timezone/DST scheduling, single-surah audio playback runtime smoke, veya low-resource locale kalan English fallback borcu.
+
+## 2026-05-01 TUR-496 - Download Shell Low-Resource L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Offline download/download shell kumesinde dusuk kaynakli locale'lerde cok sayida app_en ile birebir kalan metin vardi; bu, kullanicinin indirme durumlarini kendi dilinde anlayamamasina ve bazi makine cevirisi debris'lerinin UI'ya sizmasina yol acabilirdi.
+- Kanit:
+  - `tool\translate_arb_keys.dart --report offlineDownloadManager downloadPreparing downloadingSurah downloadCompleted offlineQuranAudioPacks downloadedSurahProgress redownloadMissingRepair downloadAction downloadCancelling` oncesinde 9 anahtarda 634 same-as-English locale raporlanmisti.
+  - `lib/l10n/app_aa.arb:323` artik `offlineDownloadManager` icin Ingilizce fallback yerine Afar copy tutuyor.
+  - `lib/l10n/app_ff.arb:553` artik `downloadCancelling` icin Ingilizce fallback yerine Fula copy tutuyor.
+  - `lib/l10n/app_gv.arb:550` `downloadAction` icin yanlis Irish copy yerine Manx `Laadey neose` kullaniyor.
+  - `lib/l10n/app_kl.arb:550` `downloadAction` icin "open" anlamina kayan `Aavaa` yerine download/fetch eylemine uygun `Aalleruk` kullaniyor.
+  - `test/translate_arb_keys_test.dart:1335` download shell borc esigini 896'ya indirip Afar/Fula regresyon guard'larini ekliyor.
+- Kullanici etkisi: Download/offline audio yonetimi metinleri daha fazla locale'de yerellesir; yanlis baglamli `open`/karisik dil download aksiyonlari tekrar girerse test yakalar.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart` ve `test/translate_arb_keys_test.dart` diff'i geri alinabilir; runtime kod akisi etkilenmedi.
+
+### BUILDER Degisikligi
+- `offlineDownloadManager`, `downloadPreparing`, `downloadingSurah`, `downloadCompleted`, `offlineQuranAudioPacks`, `downloadedSurahProgress`, `redownloadMissingRepair`, `downloadAction`, `downloadCancelling` anahtarlarinda 63 dusuk kaynakli ARB dosyasi batch olarak iyilestirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB kaynagi ile tekrar senkronlandi.
+- Manx ve Kalaallisut download action copy'leri elle duzeltildi; karisik dil ve "open" anlam kaymasi giderildi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `56/56`.
+- L10n sync/coverage: `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `85/85`.
+- L10n debt report: 9 anahtarda same-as-English `323`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `695/695`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio mirror/partition, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `e6dcc761-fe3e-4edb-afc3-334c38470213`, `homeContainsDailyVerse=true`, `homeContainsDailyVerseUnavailable=false`, `homeContainsNoInternetLegacy=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94058322`.
+
+### Risk Degisimi
+- Download shell low-resource English fallback/debris riski: `16/25 -> 6/25`.
+- Kalan bilincli risk: 9 download shell anahtarinda halen 323 low-resource same-as-English fallback var; belirsiz dillerde uydurma yapmamak icin fallback korundu. Sonraki turlarda guvenli cluster'lar halinde azaltilecek.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: kalan low-resource l10n fallback cluster'i, single-surah audio playback runtime smoke, veya prayer notification timezone/DST scheduling.

@@ -727,7 +727,7 @@ class AppLocalizationsIu extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᕐᒧᑦ ᐊᐅᓚᑦᑎᔨ';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,7 +1191,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'ᐸᕐᓇᒃᐸᓪᓕᐊᔪᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᕐᒧᑦ...';
 
   @override
   String downloadingSurah(String surah, String total) {
@@ -1199,11 +1199,10 @@ class AppLocalizationsIu extends AppLocalizations {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => 'ᓱᕋᓕᒫᑦ ᖃᕋᓴᐅᔭᕐᒧᑦ ᑎᒍᔭᐅᓯᒪᓕᕇᖅᑐᑦ ᑖᔅᓱᒧᖓ ᐅᖃᓕᒫᖅᑎᒧᑦ.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks => 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑯᕌᓐ ᓂᐱᓕᐅᖅᓯᒪᔪᑦ ᐸᐃᑉᐹᑦ';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,11 +1211,11 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total ᓱᕋᐃᑦ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᔭᐅᓯᒪᔪᑦ';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'ᓴᓇᔭᐅᒋᐊᕐᓂᖅ / ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᓯᓂᖅ ᐱᑕᖃᙱᑦᑐᖅ';
 
   @override
   String get downloadAction => 'ᒥᓇᕆᓗᒍ';
@@ -1228,7 +1227,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get deleteDownloadedFiles => 'ᐲᖅᓯᓗᑎᑦ ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᔭᐅᓯᒪᔪᓂᒃ ᑎᑎᖅᑲᓂᒃ';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'ᓄᖅᑲᖅᑎᑕᐅᓂᖓ...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

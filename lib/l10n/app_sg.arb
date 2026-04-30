@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Gestionnaire ti téléchargement hors ligne",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "A yeke ngbâ ti sara kua na base ti hingango ye ti Islam so ayeke vérifié offline. Mo lingbi ti sara si fallback so ayeke na lege ni pëpe aga fadeso, me a yeke fa gi ambeni message so ayeke na sécurité juska a-ensemble ti asango so alondo dä aga nzoni.\n\nMo ye ti tene a sara kua na fallback?",
   "chatbotOfflineSwitched": "Offline fallback enabled. Verified local Islamic answers are not ready yet.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "Ti leke ti téléchargé...",
+  "downloadingSurah": "Télécharger sourate {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "A-surah kue so a téléchargé ni awe ndali ti zo so ayeke diko mbeti so.",
+  "offlineQuranAudioPacks": "A-audio ti Coran so ayeke na ndo ti Internet pëpe",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} a-soura so a téléchargé ni",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Réparation / Téléchargement manque",
   "downloadAction": "Mu aye",
   "resumeDownload": "Ngbâ ti téléchargé ni .",
   "deleteDownloadedFiles": "Effacé afichier so a téléchargé ni",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Ti annulé...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

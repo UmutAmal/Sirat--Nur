@@ -1202,7 +1202,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return '$surah / $total-г татаж байна';
   }
 
   @override

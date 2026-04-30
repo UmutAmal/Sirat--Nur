@@ -1196,7 +1196,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'सूरह $surah / $total डाउनलोड करब।';
   }
 
   @override
@@ -1213,11 +1213,11 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total सूरह डाउनलोड';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair => 'मरम्मत / डाउनलोड गायब';
 
   @override
   String get downloadAction => 'डाउनलोड करू';
@@ -1229,7 +1229,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get deleteDownloadedFiles => 'डाउनलोड फाइल मेटाउ';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'रद्द क रहल अछि...';
 
   @override
   String downloadCanceledForReciter(String reciter) {

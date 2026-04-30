@@ -1213,7 +1213,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Go taonelouta surah $surah / $total .';
   }
 
   @override
@@ -1231,7 +1231,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total di-surah tše di taoneloutšwago';
   }
 
   @override

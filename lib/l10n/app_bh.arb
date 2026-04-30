@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "ऑफलाइन डाउनलोड प्रबंधक के बा",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,8 +513,8 @@
   "chatbotOfflinePrompt": "सत्यापन कइल ऑफलाइन इस्लामी ज्ञान के आधार के अबहीं ले क्यूरेट कइल जा रहल बा. अब रउआँ ऑफलाइन फॉलबैक सक्षम क सकत बानी, बाकी ई तबले सीमित सुरक्षित संदेश तब ले देखावे ला जब ले सोर्स कइल गइल डाटासेट तइयार ना हो जाई।\n\nका रउआँ ऑफलाइन फॉलबैक सक्षम कइल चाहत बानी?",
   "chatbotOfflineSwitched": "ऑफलाइन फॉलबैक सक्षम हो गइल बा. सत्यापन स्थानीय इस्लामी जवाब अभी तक तैयार नईखे।",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadPreparing": "डाउनलोड के तइयारी हो रहल बा...",
+  "downloadingSurah": "सूरह {surah} / {total} डाउनलोड कइल जा रहल बा।",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "एह पाठक खातिर सगरी सूरह पहिलहीं से डाउनलोड हो चुकल बा.",
+  "offlineQuranAudioPacks": "ऑफलाइन कुरान ऑडियो पैक बा",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} सूरह डाउनलोड हो गइल बा",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "मरम्मत / डाउनलोड गायब बा",
   "downloadAction": "डाउनलोड करीं",
   "resumeDownload": "डाउनलोड जारी रखे के बा",
   "deleteDownloadedFiles": "डाउनलोड भइल फाइल के हटा दिहल जाव",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "रद्द हो रहल बा...",
   "downloadCanceledForReciter": "{reciter} खातिर डाउनलोड रद्द हो गइल।",
   "@downloadCanceledForReciter": {
     "placeholders": {

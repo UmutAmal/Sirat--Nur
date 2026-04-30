@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Na-enable ti offline a fallback. Saan pay a nakasagana dagiti naberipikado a lokal nga Islamiko a sungbat.",
   "chatbotOfflineDownloadLabel": "Pagbalinen nga Offline Fallback",
   "downloadPreparing": "Panagsagana ti download...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Pag-download ti surah {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} dagiti surah a nai-download",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

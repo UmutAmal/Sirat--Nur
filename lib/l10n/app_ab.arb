@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Аоффлаин Аҭагалара Аменеџьер",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Игәаҭоу офлаинтәи аԥсылмантә дыррақәа рышьаҭа уажәгьы акурациа мҩаԥысуеит. Уажәы иҟашәҵар шәылшоит аофлайн ашьҭахьҟа ацара, аха уи иаанарԥшуеит ԥкра змам ашәарҭадаратә дырраҭарақәа, ахыҵхырҭатә дыррақәа ргәыԥ мазеихаанӡа.\n\nИшәҭахума офлаин ашьҭахьҟа ацара аус арура?",
   "chatbotOfflineSwitched": "Аофлайн ашьҭахьҟа ацара аус ауеит. Игәаҭоу аҭыԥантәи аԥсылмантә ҭакқәа макьана иазыхиам.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Аҭагалара аҽазыҟаҵара...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Аԥхьаҩ изы асурақәа зегьы хҩылаауп.",
+  "offlineQuranAudioPacks": "Аоффлаин Аҟәырҟан Аудиопакетқәа",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Аиҭашьақәыргылара / Ахгара Ибжьаӡыз",
   "downloadAction": "Аҭгара",
   "resumeDownload": "Аҭагалара иацҵатәуп",
   "deleteDownloadedFiles": "Ианыхтәуп иҭагалоу афаилқәа",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Аԥыхра...",
   "downloadCanceledForReciter": "Аҭагалара аанкылоуп {reciter} азы.",
   "@downloadCanceledForReciter": {
     "placeholders": {

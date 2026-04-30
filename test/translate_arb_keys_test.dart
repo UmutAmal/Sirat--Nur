@@ -1332,7 +1332,15 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1299));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(896));
+      expect(
+        localeArbs['aa']!['offlineDownloadManager'],
+        isNot(english['offlineDownloadManager']),
+      );
+      expect(
+        localeArbs['ff']!['downloadCancelling'],
+        isNot(english['downloadCancelling']),
+      );
       expect(
         localeArbs['as']!['downloadManager'],
         isNot(english['downloadManager']),

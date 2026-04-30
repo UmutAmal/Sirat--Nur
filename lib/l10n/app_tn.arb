@@ -320,7 +320,7 @@
   "premiumVerified": "Premium verified.",
   "premiumNotFound": "Premium not found.",
   "premiumRefreshError": "Could not refresh premium status: {error}",
-  "offlineDownloadManager": "Offline Download Manager",
+  "offlineDownloadManager": "Molaodi wa go Laisolola o se mo Inthaneteng",
   "manageDatasets": "Manage massive offline audio & dataset packs.",
   "freeStorage": "Free up internal device storage.",
   "quranIntegrity": "Quran Integrity",
@@ -513,7 +513,7 @@
   "chatbotOfflinePrompt": "Motheo wa kitso ya Boiselamo o o netefaditsweng o o seng mo inthaneteng o sa ntse o tlhokomelwa. O ka kgontsha go boela morago ga ntle le inthanete jaanong, mme e tla bontsha fela melaetsa e e babalesegileng e e lekanyeditsweng go fitlha sete ya tshedimosetso e e tswang mo motsweding e siame.\n\nA o ka rata go kgontsha go boela morago kwa ntle ga inthanete?",
   "chatbotOfflineSwitched": "Go boela morago kwa ntle ga inthanete go kgontshitswe. Dikarabo tse di netefaditsweng tsa selegae tsa Boiselamo ga di ise di siamele.",
   "chatbotOfflineDownloadLabel": "Enable Offline Fallback",
-  "downloadPreparing": "Preparing download...",
+  "downloadPreparing": "Go baakanyetsa go laisolola...",
   "downloadingSurah": "Downloading surah {surah} / {total}",
   "@downloadingSurah": {
     "placeholders": {
@@ -525,8 +525,8 @@
       }
     }
   },
-  "downloadCompleted": "All surahs already downloaded for this reciter.",
-  "offlineQuranAudioPacks": "Offline Quran Audio Packs",
+  "downloadCompleted": "Di-surah tsotlhe di setse di laisolotswe tsa mmadi yono.",
+  "offlineQuranAudioPacks": "Diphuthelwana tsa Modumo wa Quran tse di seng mo Inthaneteng",
   "storedOnDeviceMb": "Stored on device: {size} MB",
   "@storedOnDeviceMb": {
     "placeholders": {
@@ -546,11 +546,11 @@
       }
     }
   },
-  "redownloadMissingRepair": "Repair / Download Missing",
+  "redownloadMissingRepair": "Baakanya / Laisolola e tlhaetse",
   "downloadAction": "Laisolola",
   "resumeDownload": "Tswelela o laisolola",
   "deleteDownloadedFiles": "Phimola Difaele tse di Laisolotsweng",
-  "downloadCancelling": "Cancelling...",
+  "downloadCancelling": "Go khansela...",
   "downloadCanceledForReciter": "Laisolola e khansetswe ya {reciter}.",
   "@downloadCanceledForReciter": {
     "placeholders": {

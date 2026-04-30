@@ -514,7 +514,7 @@
   "chatbotOfflineSwitched": "Offline fallback yi tirhisiwile. Tinhlamulo ta Xiislam ta laha kaya leti tiyisisiweke a ti si lungheka.",
   "chatbotOfflineDownloadLabel": "Endla leswaku Offline Fallback yi tirha",
   "downloadPreparing": "Ku lunghiselela ku dawuniloda...",
-  "downloadingSurah": "Downloading surah {surah} / {total}",
+  "downloadingSurah": "Ku dawuniloda surah {surah} / {total} .",
   "@downloadingSurah": {
     "placeholders": {
       "surah": {
@@ -535,7 +535,7 @@
       }
     }
   },
-  "downloadedSurahProgress": "{downloaded} / {total} surahs downloaded",
+  "downloadedSurahProgress": "{downloaded} / {total} ti- surah ti dawunilodiwile",
   "@downloadedSurahProgress": {
     "placeholders": {
       "downloaded": {

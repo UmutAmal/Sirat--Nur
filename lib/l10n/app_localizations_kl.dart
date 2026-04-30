@@ -727,7 +727,7 @@ class AppLocalizationsKl extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'Offline Download Manager';
+  String get offlineDownloadManager => 'Offline-imik allagarsiivimmi aqutsisoq';
 
   @override
   String get manageDatasets => 'Manage massive offline audio & dataset packs.';
@@ -1191,19 +1191,20 @@ class AppLocalizationsKl extends AppLocalizations {
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
 
   @override
-  String get downloadPreparing => 'Preparing download...';
+  String get downloadPreparing => 'Aallaasersornissamut piareersarneq...';
 
   @override
   String downloadingSurah(String surah, String total) {
-    return 'Downloading surah $surah / $total';
+    return 'Surah $surah / $total aallaasersorlugu.';
   }
 
   @override
   String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+      'Surah-it tamarmik atuartitsisartumut tassunga aaneqarsimapput.';
 
   @override
-  String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
+  String get offlineQuranAudioPacks =>
+      'Offline-imik Koranimik tusarnaartitsineq';
 
   @override
   String storedOnDeviceMb(String size) {
@@ -1212,14 +1213,15 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String downloadedSurahProgress(String downloaded, String total) {
-    return '$downloaded / $total surahs downloaded';
+    return '$downloaded / $total surat aaneqarsimasut';
   }
 
   @override
-  String get redownloadMissingRepair => 'Repair / Download Missing';
+  String get redownloadMissingRepair =>
+      'Iluarsaaqqinneq / Aallaasersorneq Nammineq';
 
   @override
-  String get downloadAction => 'Download';
+  String get downloadAction => 'Aalleruk';
 
   @override
   String get resumeDownload => 'Aallaasersorneq ingerlateqqiguk';
@@ -1228,7 +1230,7 @@ class AppLocalizationsKl extends AppLocalizations {
   String get deleteDownloadedFiles => 'Filet download-erneqarsimasut piiakkit';
 
   @override
-  String get downloadCancelling => 'Cancelling...';
+  String get downloadCancelling => 'Ataatsimeersuarneq...';
 
   @override
   String downloadCanceledForReciter(String reciter) {
