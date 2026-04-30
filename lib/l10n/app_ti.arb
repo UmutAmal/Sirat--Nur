@@ -665,7 +665,7 @@
   "placesNetworkError": "ናይ መርበብ ጌጋ። በጃኹም ደጊምኩም ፈትኑ።",
   "placesLocationRequiredTitle": "ቦታ የድሊ",
   "placesLocationRequiredBody": "ኣብ ቀረባ ዝርከቡ መሳጊድ፡ ሓላል መግቢ፡ ከምኡ’ውን ኣብያተ ትምህርቲ እስላም ብትኽክል ምእንቲ ክድለዩ መጀመርታ ቦታ ኣቐምጥ።",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableTitle": "ናይ ካርታ ታይላት ኣይርከባን",
   "placesMapTilesUnavailableBody": "ዝተረጋገጸ ምንጪ ካርታ ታይል ነዚ ህንጸት ገና ኣይተዋቕረን። ኣብ ቀረባ ዝርከቡ ቦታታት ገና ካብቲ ዝተዓቀብካዮ ቦታ ክጽዕኑ ይኽእሉ እዮም።",
   "placesDataSourceUnavailableTitle": "ዳታ ኣብ ዘይርከብ ቦታ የቐምጥ",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",

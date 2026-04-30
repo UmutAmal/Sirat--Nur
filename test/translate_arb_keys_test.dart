@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1396));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1362));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -337,6 +337,31 @@ void main() {
           reason: 'app_$locale.arb still uses English for placesNetworkError',
         );
       }
+      for (final locale in ['aa', 'ab', 'ba', 'bo', 'ti']) {
+        final mapTilesTitle =
+            localeArbs[locale]!['placesMapTilesUnavailableTitle'] as String;
+        expect(
+          mapTilesTitle,
+          isNot(english['placesMapTilesUnavailableTitle']),
+          reason:
+              'app_$locale.arb still uses English for placesMapTilesUnavailableTitle',
+        );
+        expect(
+          mapTilesTitle,
+          isNot(contains(' .')),
+          reason: 'app_$locale.arb has punctuation spacing debris',
+        );
+        expect(
+          mapTilesTitle,
+          isNot(contains('ስርሓት ስርሓት')),
+          reason: 'app_$locale.arb has repeated machine-translation debris',
+        );
+      }
+      expect(
+        localeArbs['wo']!['placesMapTilesUnavailableTitle'],
+        isNot('Carreaux de carte amul'),
+        reason: 'app_wo.arb has mixed-language map tile copy',
+      );
     });
 
     test('tracks Quran and diagnostics runtime error l10n debt reduction', () {

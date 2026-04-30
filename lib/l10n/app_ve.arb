@@ -665,7 +665,7 @@
   "placesNetworkError": "Vhukhakhi ha nethiweke. Ndi khou humbela uri ni lingedze hafhu.",
   "placesLocationRequiredTitle": "Fhethu hu khou todea",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
-  "placesMapTilesUnavailableTitle": "Map tiles unavailable",
+  "placesMapTilesUnavailableTitle": "Thaela dza mapa a dzi wanali",
   "placesMapTilesUnavailableBody": "A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.",
   "placesDataSourceUnavailableTitle": "Places data unavailable",
   "placesDataSourceUnavailableBody": "A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.",

@@ -18664,3 +18664,40 @@
 
 ### Sonraki Adim
 - Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; `placesLocationRequiredBody` uzun metin oldugu icin once arac ciktisinda newline, teknik anlam ve dini/konum baglami debris'i olup olmadigini kontrol et.
+
+## 2026-04-30 TUR-459 - Places Map Tile Title L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Places harita hata durumunda gosterilen `placesMapTilesUnavailableTitle` basligi dusuk kaynakli locale kumesinde Ingilizce fallback olarak kaliyordu; harita tile saglayicisi kapali/yanlis oldugunda secili dil tutarliligi bozuluyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:668` artik `"placesMapTilesUnavailableTitle": "Kartah balaatitte mageytimta"` degerini tasiyor; once `Map tiles unavailable` idi.
+  - `lib/l10n/app_ab.arb:668`, `lib/l10n/app_ba.arb:668`, `lib/l10n/app_bo.arb:668` ve `lib/l10n/app_ti.arb:668` ayni UI anahtarinda Ingilizce fallback'ten cikti.
+  - `lib/l10n/app_ti.arb:668` icin tekrar eden Tigrinya makine-ceviri debris'i temizlendi; `rg -n '"placesMapTilesUnavailableTitle": ".* \."|Carreaux de carte|ስርሓት ስርሓት' lib\l10n` temiz dondu.
+  - `lib/l10n/app_wo.arb:668` guvenilir Wolof ceviri uretilemedigi icin uydurma/mixed-language `Carreaux de carte amul` kabul edilmedi ve guvenli Ingilizce fallback korundu.
+  - `test/translate_arb_keys_test.dart:225` kritik 23 l10n anahtari icin same-as-English esigini `1362` seviyesine sikilastirdi.
+  - `test/translate_arb_keys_test.dart:342` ve `test/translate_arb_keys_test.dart:361` yeni regresyon guard'lari `placesMapTilesUnavailableTitle` icin Ingilizce fallback, ` .`, tekrar eden Tigrinya debris'i ve mixed-language Wolof/French ciktiyi reddediyor.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu `1396 -> 1362` olarak olctu; missing/empty `0`, placeholder mismatch `0`.
+- Kullanici etkisi: Places harita tile hata basligi daha fazla locale'de secili dilde gorunur; guvenli ceviri bulunamayan nadir locale'lerde uydurma yapilmadan Ingilizce fallback korundu.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesMapTilesUnavailableTitle` icin 34 dusuk kaynakli ARB locale'i guvenli ceviri araci ile Ingilizce fallback'ten cikarildi.
+- `app_kv`, `app_ti` ve `app_wo` arac ciktisi elle denetlendi; noktalama araligi, tekrar eden makine debris'i ve mixed-language hatasi reddedildi.
+- `test/translate_arb_keys_test.dart` debt esigi `1362` seviyesine indirildi.
+- Regresyon guard'i `aa`, `ab`, `ba`, `bo`, `ti` locale'lerinde title'in Ingilizce fallback'e, ` .` noktalama debris'ine ve tekrar eden Tigrinya debris'ine donmemesini zorunlu tutuyor; `wo` icin hatali mixed-language ciktiyi yasakliyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart --reporter compact` PASS, 135/135.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 677/677.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places map tile unavailable title l10n fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1362` same-as-English fallback devam ediyor; `placesMapTilesUnavailableBody`, `placesDataSourceUnavailableTitle`, download ve diagnostics kumesi sonraki guvenli batchlerde azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi remaining l10n debt reportunu tekrar guncelle; uzun body anahtarlari icin newline, placeholder ve teknik anlam guard'larini one alarak bir sonraki tek anahtarlik patch'i sec.
