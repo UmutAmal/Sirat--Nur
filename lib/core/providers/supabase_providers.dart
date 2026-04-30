@@ -84,6 +84,27 @@ Map<String, dynamic>? normalizeDailyAyat(Map<String, dynamic>? row) {
   return hasMissingField ? null : normalized;
 }
 
+Map<String, dynamic>? normalizeDailyAyatCandidate(Object? candidate) {
+  if (candidate is Map<String, dynamic>) {
+    return normalizeDailyAyat(candidate);
+  }
+
+  if (candidate is Map) {
+    return normalizeDailyAyat(Map<String, dynamic>.from(candidate));
+  }
+
+  if (candidate is Iterable) {
+    for (final row in candidate) {
+      final ayat = normalizeDailyAyatCandidate(row);
+      if (ayat != null) {
+        return ayat;
+      }
+    }
+  }
+
+  return null;
+}
+
 Future<void> cacheDailyAyat(
   SharedPreferences prefs,
   Map<String, dynamic> ayat, {
@@ -139,21 +160,30 @@ Map<String, dynamic>? readCachedDailyAyat(
 
 Future<Map<String, dynamic>> resolveDailyAyat({
   required SharedPreferences prefs,
-  required Future<Map<String, dynamic>?> Function() fetchScheduledAyat,
-  required Future<Map<String, dynamic>?> Function() fetchFallbackAyat,
+  required Future<Object?> Function() fetchScheduledAyat,
+  required Future<Object?> Function() fetchFallbackAyat,
   DateTime Function()? now,
+  int cloudRetryAttempts = 1,
+  Duration cloudRetryDelay = const Duration(milliseconds: 800),
 }) async {
   final currentTime = now ?? DateTime.now;
+  final totalAttempts = cloudRetryAttempts < 0 ? 1 : cloudRetryAttempts + 1;
 
-  for (final fetch in [fetchScheduledAyat, fetchFallbackAyat]) {
-    try {
-      final ayat = normalizeDailyAyat(await fetch());
-      if (ayat != null) {
-        await cacheDailyAyat(prefs, ayat, now: currentTime());
-        return ayat;
+  for (var attempt = 0; attempt < totalAttempts; attempt++) {
+    for (final fetch in [fetchScheduledAyat, fetchFallbackAyat]) {
+      try {
+        final ayat = normalizeDailyAyatCandidate(await fetch());
+        if (ayat != null) {
+          await cacheDailyAyat(prefs, ayat, now: currentTime());
+          return ayat;
+        }
+      } catch (_) {
+        debugPrint('Daily ayat cloud fetch failed; trying fallback/cache');
       }
-    } catch (_) {
-      debugPrint('Daily ayat cloud fetch failed; trying fallback/cache');
+    }
+
+    if (attempt < totalAttempts - 1 && cloudRetryDelay > Duration.zero) {
+      await Future<void>.delayed(cloudRetryDelay);
     }
   }
 
@@ -187,18 +217,17 @@ final dailyAyatProvider = FutureProvider<Map<String, dynamic>>((ref) async {
           .eq('content_type', 'ayat')
           .gte('display_date', formattedDate)
           .order('display_date', ascending: true)
-          .limit(1)
-          .maybeSingle();
-      return res == null ? null : Map<String, dynamic>.from(res);
+          .limit(8);
+      return List<Map<String, dynamic>>.from(res);
     },
     fetchFallbackAyat: () async {
       final res = await supabase
           .from('daily_content')
           .select()
           .eq('content_type', 'ayat')
-          .limit(1)
-          .maybeSingle();
-      return res == null ? null : Map<String, dynamic>.from(res);
+          .order('display_date', ascending: false)
+          .limit(8);
+      return List<Map<String, dynamic>>.from(res);
     },
   );
 });
@@ -299,8 +328,8 @@ bool isApprovedCloudContentSourceUrl(String source) {
       !uri.isScheme('https') ||
       uri.host.trim().isEmpty ||
       uri.userInfo.isNotEmpty ||
-      uri.hasQuery ||
-      uri.hasFragment) {
+      uri.hasFragment ||
+      _hasUnsafeCloudSourceQuery(uri)) {
     return false;
   }
 
@@ -308,6 +337,38 @@ bool isApprovedCloudContentSourceUrl(String source) {
   return _approvedCloudContentSourceHosts.any(
     (approvedHost) => host == approvedHost || host.endsWith('.$approvedHost'),
   );
+}
+
+bool _hasUnsafeCloudSourceQuery(Uri uri) {
+  if (!uri.hasQuery) {
+    return false;
+  }
+
+  const unsafeQueryKeys = {
+    'apikey',
+    'api-key',
+    'api_key',
+    'token',
+    'secret',
+    'password',
+    'signature',
+    'sig',
+  };
+
+  for (final key in uri.queryParametersAll.keys) {
+    if (unsafeQueryKeys.contains(key.trim().toLowerCase())) {
+      return true;
+    }
+  }
+
+  try {
+    return RegExp(
+      r'(^|[&;])\s*(api[_-]?key|token|secret|password|signature|sig)\s*=',
+      caseSensitive: false,
+    ).hasMatch(Uri.decodeFull(uri.query));
+  } catch (_) {
+    return true;
+  }
 }
 
 bool _hasVerifiedCloudContentProvenance(Map<String, dynamic> row) {

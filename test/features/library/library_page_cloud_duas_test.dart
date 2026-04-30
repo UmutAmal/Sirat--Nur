@@ -81,6 +81,12 @@ void main() {
         isApprovedCloudContentSourceUrl('https://www.islamhouse.com/lessons'),
         isTrue,
       );
+      expect(
+        isApprovedCloudContentSourceUrl(
+          'https://api.quran.com/api/v4/verses/by_chapter/25?fields=text_uthmani&translations=52,85&per_page=300&page=1',
+        ),
+        isTrue,
+      );
 
       for (final source in const [
         'TDV Islam Ansiklopedisi',

@@ -19907,3 +19907,40 @@
 
 ### Sonraki Adim
 - Yeni dongude Appium smoke'un kapsamadigi en yuksek riskli akisi sec: Quran playback/download, Supabase content empty-state, l10n priority fallback veya store artifact metadata.
+
+## 2026-04-30 TUR-493 - Daily Verse Cloud Provenance Runtime Fix
+
+### MASTER Karari
+- Risk: Appium release smoke ana ekranda `Daily Verse` kartini goruyor ama ayni anda `Daily verse unavailable` gosteriyordu; onceki smoke bunu PASS saydigi icin gercek release false-success riski vardi.
+- Kanit:
+  - `build/appium-runtime-smoke-summary.json` onceki kosuda `homeContainsDailyVerse=true` ve `homeContainsDailyVerseUnavailable=true` dondu.
+  - Canli Supabase public REST kontrolu `daily_content` icin `2026-04-30` tarihli `Al-Furqan 25:74` satirinin geldigini, `source`, `verified_at`, `content_ar`, `content_tr`, `content_en` alanlarinin dolu oldugunu gosterdi.
+  - Gecici release log teshisi Supabase sorgularinin runtime'da `scheduled rows: 1`, `fallback rows: 8` dondurdugunu kanitladi; kok neden veri yoklugu degil, `isApprovedCloudContentSourceUrl` filtresinin Quran.com API `fields/translations/page` query parametreli dogrulanmis kaynak URL'sini reddetmesiydi.
+  - `lib/core/providers/supabase_providers.dart:328` artik approved HTTPS hostlarda secretsiz query parametrelerine izin veriyor, ancak `apikey`, `api-key`, `api_key`, `token`, `secret`, `password`, `signature`, `sig` query key'lerini reddediyor.
+  - `lib/core/providers/supabase_providers.dart:87` ve `lib/core/providers/supabase_providers.dart:166` Daily Verse resolver'i artik liste sonuclarindan ilk dogrulanmis adayi seciyor ve transient ilk acilis fetch hatasinda kisa retry yapiyor.
+  - `tool/appium_runtime_smoke.ps1:684` release smoke artik `Daily verse unavailable` gorurse FAIL ediyor.
+- Kullanici etkisi: Store release APK ana ekranda Supabase'deki dogrulanmis gunluk ayeti gosteriyor; dogrulanmis icerik varken kullaniciya yanlis unavailable mesaji verilmez ve bu regresyon Appium tarafinda sessiz gecmez.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 -> 3/25.
+- Rollback plani: `lib/core/providers/supabase_providers.dart`, `test/daily_ayat_provider_test.dart`, `test/features/library/library_page_cloud_duas_test.dart`, `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- Daily ayat Supabase sorgulari tek `maybeSingle()` yerine 8 adaylik liste cekiyor; scheduled liste display date artan, fallback liste display date azalan sirali geliyor.
+- `normalizeDailyAyatCandidate` eklendi; Map ve Iterable kaynaklardan ilk dogrulanmis ayeti seciyor.
+- Cloud fetch akisi bir kez retry yapiyor; cihaz/network ilk acilista gec hazir olursa cache error'a dusmeden tekrar dener.
+- Approved cloud content source filtresi store-readiness davranisiyla hizalandi: approved host + HTTPS + userInfo/fragment yok + secretsiz query kabul, gizli anahtar benzeri query reddi.
+- Appium release smoke unavailable kartini artik failure listesine ekliyor.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\daily_ayat_provider_test.dart test\features\library\library_page_cloud_duas_test.dart --reporter compact` PASS, `22/22`.
+- Appium release runtime smoke once beklenen sekilde FAIL etti ve false-success'i kanitladi: `homeContainsDailyVerseUnavailable=true`.
+- Appium release runtime smoke fix sonrasi PASS: session `a6b7ce40-a5e2-4e28-b134-7badec896b05`, `homeContainsDailyVerse=true`, `homeContainsDailyVerseUnavailable=false`, `failures=[]`, `logcatCrashFree=true`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `690/690`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio mirror/partition, analyze ve full test kapilari temiz.
+
+### Risk Degisimi
+- Daily Verse release unavailable / smoke false-success riski: `20/25 -> 3/25`.
+- Kalan bilincli risk: Appium smoke temel release akisini ve Daily Verse kartini dogruluyor; daha derin audio playback/download ve offline cache senaryolari sonraki risk taramasinda ele alinacak.
+
+### Sonraki Adim
+- Yeni dongude Appium smoke'un kapsamadigi en yuksek runtime riskini sec: Quran audio streaming/offline download, dua/education cloud content, timezone-prayer scheduling veya store artifact metadata.

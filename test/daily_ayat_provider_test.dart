@@ -40,6 +40,77 @@ void main() {
     },
   );
 
+  test(
+    'resolveDailyAyat selects the first verified row from cloud lists',
+    () async {
+      final prefs = await SharedPreferences.getInstance();
+
+      final ayat = await resolveDailyAyat(
+        prefs: prefs,
+        cloudRetryDelay: Duration.zero,
+        fetchScheduledAyat: () async => [
+          {
+            'content_ar': 'غير موثق',
+            'content_tr': 'Dogrulanmamis',
+            'content_en': 'Unverified',
+            'reference': 'Al-Fatihah 1:1',
+            'source': 'https://example.com/ayat',
+            'verified_at': '2026-04-08T00:00:00Z',
+          },
+          {
+            'content_ar': 'آية موثقة',
+            'content_tr': 'Dogrulanmis ayet',
+            'content_en': 'Verified verse',
+            'reference': 'Al-Furqan 25:74',
+            'source': 'https://api.quran.com/api/v4/verses/25:74',
+            'verified_at': '2026-04-08T00:00:00Z',
+          },
+        ],
+        fetchFallbackAyat: () async => null,
+      );
+
+      expect(ayat['content_en'], 'Verified verse');
+      expect(ayat['reference'], 'Al-Furqan 25:74');
+    },
+  );
+
+  test(
+    'resolveDailyAyat retries transient startup fetch failures before cache',
+    () async {
+      final prefs = await SharedPreferences.getInstance();
+      var scheduledCalls = 0;
+      var fallbackCalls = 0;
+
+      final ayat = await resolveDailyAyat(
+        prefs: prefs,
+        cloudRetryDelay: Duration.zero,
+        fetchScheduledAyat: () async {
+          scheduledCalls += 1;
+          if (scheduledCalls == 1) {
+            throw Exception('network not ready');
+          }
+
+          return {
+            'content_ar': 'آية بعد الإعادة',
+            'content_tr': 'Yeniden deneme ayeti',
+            'content_en': 'Retry verse',
+            'reference': 'Al-Baqarah 2:286',
+            'source': approvedDailyAyatSource,
+            'verified_at': '2026-04-08T00:00:00Z',
+          };
+        },
+        fetchFallbackAyat: () async {
+          fallbackCalls += 1;
+          return null;
+        },
+      );
+
+      expect(ayat['content_en'], 'Retry verse');
+      expect(scheduledCalls, 2);
+      expect(fallbackCalls, 1);
+    },
+  );
+
   test('resolveDailyAyat uses a fresh cache when cloud fetch fails', () async {
     final prefs = await SharedPreferences.getInstance();
     final cachedAt = DateTime.utc(2026, 4, 8, 8);
@@ -62,6 +133,7 @@ void main() {
     final ayat = await resolveDailyAyat(
       prefs: prefs,
       now: () => cachedAt.add(const Duration(hours: 2)),
+      cloudRetryDelay: Duration.zero,
       fetchScheduledAyat: () async => throw Exception('offline'),
       fetchFallbackAyat: () async => null,
     );
@@ -93,6 +165,7 @@ void main() {
         () => resolveDailyAyat(
           prefs: prefs,
           now: () => cachedAt.add(const Duration(days: 2)),
+          cloudRetryDelay: Duration.zero,
           fetchScheduledAyat: () async => null,
           fetchFallbackAyat: () async => null,
         ),
@@ -309,7 +382,8 @@ void main() {
         'text_tr': 'Ayet',
         'text_en': 'Verse',
         'reference': 'Al-Fatihah 1:1',
-        'source': approvedDailyAyatSource,
+        'source':
+            'https://api.quran.com/api/v4/verses/by_chapter/1?fields=text_uthmani&translations=52,85&per_page=300&page=1',
         'verifiedAt': '2026-04-08T00:00:00Z',
       }),
       {
@@ -317,7 +391,8 @@ void main() {
         'content_tr': 'Ayet',
         'content_en': 'Verse',
         'reference': 'Al-Fatihah 1:1',
-        'source': approvedDailyAyatSource,
+        'source':
+            'https://api.quran.com/api/v4/verses/by_chapter/1?fields=text_uthmani&translations=52,85&per_page=300&page=1',
         'verified_at': '2026-04-08T00:00:00Z',
       },
     );

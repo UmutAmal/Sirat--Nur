@@ -681,6 +681,9 @@ if ($summary.firstContainsAndroidSettings) {
 if (-not $summary.homeContainsDailyVerse) {
   $failures += "Home did not show Daily Verse after onboarding."
 }
+if ($summary.homeContainsDailyVerseUnavailable) {
+  $failures += "Home showed Daily Verse unavailable instead of verified cloud or cached content."
+}
 if ($summary.homeContainsNoInternetLegacy) {
   $failures += "Home showed legacy No Internet Connection copy."
 }
