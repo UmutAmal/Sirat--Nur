@@ -18468,3 +18468,35 @@
 
 ### Sonraki Adim
 - `dart format`, targeted places map testleri, analyze, full test, store readiness ve secret diff scan; gecerse commit/push. Ardindan pure-Dart audio validation ve store tooling risklerini skorla.
+
+## 2026-04-30 TUR-453 - Places Network Error L10n Debt Reduced
+
+### MASTER Karari
+- Risk: Places runtime hata copy kumesinde `placesNetworkError` bir bolum dusuk kaynakli locale icin Ingilizce fallback olarak kaliyordu; bu, harita ag hatasi aninda kullanicinin secili dilinde net mesaj gormeme riskini artiriyordu.
+- Kanit:
+  - `lib/l10n/app_aa.arb:662` once `Network error. Please try again.` degerini tasiyordu.
+  - `lib/l10n/app_ab.arb:665`, `lib/l10n/app_ba.arb:665`, `lib/l10n/app_bo.arb:665` ve `lib/l10n/app_wo.arb:665` ayni UI anahtarinda Ingilizce fallback kullaniyordu.
+  - `dart run tool\translate_arb_keys.dart --report ...` 23 kritik anahtarda same-as-English toplam borcunu onceki turdan `1532`, bu turda `1498` olarak olctu; eksik/empty ve placeholder mismatch `0`.
+- Kullanici etkisi: Places ag hatasi daha fazla locale'de kullanicinin secili dilinde gorunur; kalan 29 locale arac tarafindan guvenli ceviri bulunamadigi icin uydurma yapilmadan Ingilizce fallback'te tutuldu.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, `test/translate_arb_keys_test.dart` ve bu handover kaydi geri alinabilir.
+
+### BUILDER Degisikligi
+- `placesNetworkError` icin 34 dusuk kaynakli ARB locale'i guvenli ceviri araci ile Ingilizce fallback'ten cikarildi.
+- `test/translate_arb_keys_test.dart` debt esigi `1498` seviyesine sikilastirildi.
+- Regresyon guard'i `aa`, `ab`, `ba`, `bo`, `wo` locale'lerinde `placesNetworkError` degerinin Ingilizce fallback'e donmemesini zorunlu tutuyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart test\arb_coverage_test.dart --reporter compact` PASS, 135/135.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, 676/676.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public table checks, Quran audio mirrors, Cloudflare/GitHub partitions, analyze ve full tests temiz.
+- Diff hygiene: `git diff --check` PASS.
+- Secret scan: Added diff lines icin DB URI, elevated key, private key ve bilinen credential patternleri tarandi; PASS.
+
+### Risk Degisimi
+- Places network error l10n fallback riski: `12/25 -> 4/25`.
+- Kalan risk: Secili 23 kritik l10n anahtarinda `1498` same-as-English fallback devam ediyor; ozellikle `downloadAction`, diagnostics, chatbot ve places honest-state copy kumesi sonraki dusuk riskli batchlerde guvenli ceviri araci ile azaltilacak.
+
+### Sonraki Adim
+- Commit/push sonrasi yeni dongude pure-Dart `quran_audio_file_validation.dart` catch davranisini ve store/tool catch bloklarini skorla; false-success ureten bir durum varsa en kucuk patch ile kapat.

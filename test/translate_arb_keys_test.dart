@@ -222,7 +222,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1532));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(1498));
       expect(
         localeArbs['ak']!['downloadAction'],
         isNot(english['downloadAction']),
@@ -301,6 +301,13 @@ void main() {
         localeArbs['th']!['placesLocationRequiredBody'],
         isNot(english['placesLocationRequiredBody']),
       );
+      for (final locale in ['aa', 'ab', 'ba', 'bo', 'wo']) {
+        expect(
+          localeArbs[locale]!['placesNetworkError'],
+          isNot(english['placesNetworkError']),
+          reason: 'app_$locale.arb still uses English for placesNetworkError',
+        );
+      }
     });
 
     test('tracks Quran and diagnostics runtime error l10n debt reduction', () {

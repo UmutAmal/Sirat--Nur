@@ -662,7 +662,7 @@
       }
     }
   },
-  "placesNetworkError": "Network error. Please try again.",
+  "placesNetworkError": "Vhukhakhi ha nethiweke. Ndi khou humbela uri ni lingedze hafhu.",
   "placesLocationRequiredTitle": "Location required",
   "placesLocationRequiredBody": "Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.",
   "placesMapTilesUnavailableTitle": "Map tiles unavailable",
