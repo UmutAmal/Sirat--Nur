@@ -19978,3 +19978,40 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan runtime riskini sec: Quran audio playback/offline download Appium senaryosu veya prayer notification timezone scheduling.
+
+## 2026-04-30 TUR-495 - Quran Audio Reciter Selection Parity
+
+### MASTER Karari
+- Risk: Offline Quran audio manager 6 reciter paketi sunarken ayarlar/okuma ekrani yalniz 3 legacy ses secimine bagliydi; kullanici Husary, Shuraim veya Abdul Basit Mujawwad paketini indirebilir ama SurahReadingPage playback icin secemeyebilirdi.
+- Kanit:
+  - `lib/core/services/offline_audio_service.dart:560` ve devaminda `alafasy`, `husary`, `abdul_basit_murattal`, `abdul_basit_mujawwad`, `shuraim`, `sudais` paketleri runtime katalogda var.
+  - `lib/features/settings/settings_provider.dart:23` artik `selectableAudioVoices` listesini 6 paketin tamamini temsil edecek sekilde tutuyor.
+  - `lib/features/settings/settings_provider.dart:80` `quranReciterIdForAudioVoice` ile legacy UI degeri ile oynatilabilir `reciter` id'si tek canonical mapping'e baglandi.
+  - `lib/features/quran/surah_reading_page.dart:148` local dosya aramasinda, `lib/features/quran/surah_reading_page.dart:199` remote stream adayinda ayni mapping kullaniliyor.
+  - `lib/features/settings/settings_page.dart:17` ayar etiketlerini `OfflineReciters.reciters` adlariyla gosteriyor; indirilebilir paket adi ile secilebilir ses adi ayni hattan geliyor.
+- Kullanici etkisi: Offline indirilebilen her Kur'an ses paketi ayarlarda gorunur, secilebilir ve Surah okuma ekraninda local-first/remote fallback playback zincirine ayni reciter id ile girer.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 3/25.
+- Rollback plani: `lib/features/settings/settings_provider.dart`, `lib/features/settings/settings_page.dart`, `lib/features/quran/surah_reading_page.dart`, `test/settings_provider_test.dart`, `test/features/settings/settings_page_test.dart`, `test/features/quran/surah_reading_page_test.dart` bu turdaki diff kadar geri alinabilir.
+
+### BUILDER Degisikligi
+- Ayarlar ses listesi 6 reciter paketini kapsayacak sekilde genisletildi; eski `mishary_alafasy`, `abdul_baset`, `sudais` pref degerleri korunarak geriye uyumluluk saglandi.
+- Legacy label/typo normalize akisi genisletildi: Alafasy, Husary, Abdul Basit Murattal/Mujawwad, Shuraim ve Sudais ad varyantlari canonical ayar degerine donuyor.
+- SurahReadingPage private 3-secim mapping'i kaldirildi; local dosya ve cloud stream adaylari ayni `quranReciterIdForAudioVoice` sonucunu kullaniyor.
+- SettingsPage ses secimi proper reciter adlarini offline katalogdan okuyor; yeni ARB anahtari eklenmedi, cunku bu alan tercume edilecek UI cumlesi degil dogrulanmis okuyucu/proper-name katalogu.
+
+### TESTER Degisikligi
+- Targeted tests:
+  - `flutter test test\settings_provider_test.dart --reporter compact` PASS, `24/24`.
+  - `flutter test test\features\settings\settings_page_test.dart --reporter compact` PASS, `9/9`.
+  - `flutter test test\features\quran\surah_reading_page_test.dart --reporter compact` PASS, `5/5`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `695/695`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase content, 684/684 Quran audio rows, Cloudflare/GitHub distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `3a13ff5f-2391-4b4d-95c5-a65f0aa46996`, `homeContainsDailyVerseUnavailable=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94025554`.
+
+### Risk Degisimi
+- Offline indirilebilir reciter paketi ile oynatma secimi uyumsuzlugu: `16/25 -> 3/25`.
+- Kalan bilincli risk: Appium smoke Downloads ekranini aciyor ama bilerek 114 surelik buyuk indirme baslatmiyor; ileride kucuk fixture veya single-surah debug-only indirme senaryosu eklenirse runtime download davranisi daha derin dogrulanabilir.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: prayer notification timezone/DST scheduling, single-surah audio playback runtime smoke, veya low-resource locale kalan English fallback borcu.

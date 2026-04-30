@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:sirat_i_nur/core/constants/app_constants.dart';
 import 'package:sirat_i_nur/core/services/app_metadata_service.dart';
+import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
 import 'package:sirat_i_nur/core/utils/external_url.dart';
@@ -13,6 +14,12 @@ import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 String displayAudioVoiceLabel(AppLocalizations l10n, String voice) {
+  final reciterId = quranReciterIdForAudioVoice(voice);
+  final reciterName = OfflineReciters.reciters[reciterId]?['name'];
+  if (reciterName != null && reciterName.isNotEmpty) {
+    return reciterName;
+  }
+
   switch (normalizeAudioVoice(voice)) {
     case abdulBasetVoice:
       return l10n.audioVoiceAbdulBaset;

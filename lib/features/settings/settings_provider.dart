@@ -15,11 +15,17 @@ final sharedPreferencesProvider = Provider<SharedPreferences>((ref) {
 
 const misharyAlafasyVoice = 'mishary_alafasy';
 const abdulBasetVoice = 'abdul_baset';
+const husaryVoice = 'husary';
+const abdulBasitMujawwadVoice = 'abdul_basit_mujawwad';
+const shuraimVoice = 'shuraim';
 const sudaisVoice = 'sudais';
 
 const selectableAudioVoices = [
   misharyAlafasyVoice,
+  husaryVoice,
   abdulBasetVoice,
+  abdulBasitMujawwadVoice,
+  shuraimVoice,
   sudaisVoice,
 ];
 
@@ -30,19 +36,63 @@ String normalizeAudioVoice(String voice) {
     case 'male (mishary alafasy)':
     case 'mishary alafasy':
     case 'mishary rashid alafasy':
+    case 'alafasy':
       return misharyAlafasyVoice;
     case abdulBasetVoice:
+    case 'abdul_basit_murattal':
     case 'male (abdulbaset)':
     case 'male (abdul basit)':
+    case 'male (abdul basit murattal)':
     case 'abdulbaset':
     case 'abdul baset':
     case 'abdul basit':
+    case 'abdul basit (murattal)':
+    case 'abdulbaset abdulsamad (murattal)':
       return abdulBasetVoice;
+    case husaryVoice:
+    case 'al-husary':
+    case 'al husary':
+    case 'mahmoud khalil al-husary':
+    case 'mahmoud khalil al husary':
+      return husaryVoice;
+    case abdulBasitMujawwadVoice:
+    case 'male (abdul basit mujawwad)':
+    case 'abdul basit (mujawwad)':
+    case 'abdulbaset abdulsamad (mujawwad)':
+      return abdulBasitMujawwadVoice;
+    case shuraimVoice:
+    case 'al-shuraim':
+    case 'al shuraim':
+    case 'saoud al-shuraim':
+    case 'saoud al shuraim':
+    case 'saud ash-shuraym':
+      return shuraimVoice;
     case sudaisVoice:
     case 'male (sudais)':
+    case 'abdul rahman al-sudais':
+    case 'abdur-rahman as-sudais':
       return sudaisVoice;
     default:
       return misharyAlafasyVoice;
+  }
+}
+
+String quranReciterIdForAudioVoice(String voice) {
+  switch (normalizeAudioVoice(voice)) {
+    case misharyAlafasyVoice:
+      return 'alafasy';
+    case abdulBasetVoice:
+      return 'abdul_basit_murattal';
+    case husaryVoice:
+      return 'husary';
+    case abdulBasitMujawwadVoice:
+      return 'abdul_basit_mujawwad';
+    case shuraimVoice:
+      return 'shuraim';
+    case sudaisVoice:
+      return 'sudais';
+    default:
+      return 'alafasy';
   }
 }
 

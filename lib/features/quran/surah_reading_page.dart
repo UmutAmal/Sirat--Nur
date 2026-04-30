@@ -145,26 +145,24 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
     try {
       var hadAudioFailure = false;
-      final reciterId = _reciterIdForVoice(normalizedVoice);
-      if (reciterId != null) {
-        try {
-          final localPath = await resolveVerifiedLocalQuranAudioPath(
-            surahNumber: widget.surahNumber,
-            reciterId: reciterId,
-          );
-          if (localPath != null) {
-            try {
-              await _audioPlayer.setFilePath(localPath);
-              await _audioPlayer.play();
-              return;
-            } catch (_) {
-              hadAudioFailure = true;
-              debugPrint('Local Quran audio playback failed');
-            }
+      final reciterId = quranReciterIdForAudioVoice(normalizedVoice);
+      try {
+        final localPath = await resolveVerifiedLocalQuranAudioPath(
+          surahNumber: widget.surahNumber,
+          reciterId: reciterId,
+        );
+        if (localPath != null) {
+          try {
+            await _audioPlayer.setFilePath(localPath);
+            await _audioPlayer.play();
+            return;
+          } catch (_) {
+            hadAudioFailure = true;
+            debugPrint('Local Quran audio playback failed');
           }
-        } catch (_) {
-          debugPrint('Local Quran audio lookup failed');
         }
+      } catch (_) {
+        debugPrint('Local Quran audio lookup failed');
       }
 
       final candidates = await _audioCandidatesForVoice(normalizedVoice);
@@ -197,23 +195,8 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     }
   }
 
-  String? _reciterIdForVoice(String normalizedVoice) {
-    if (normalizedVoice.contains('sudais')) {
-      return 'sudais';
-    }
-    if (normalizedVoice.contains('abdulbaset') ||
-        normalizedVoice.contains('abdulbasit')) {
-      return 'abdul_basit_murattal';
-    }
-    if (normalizedVoice.contains('alafasy') ||
-        normalizedVoice.contains('mishary')) {
-      return 'alafasy';
-    }
-    return 'alafasy';
-  }
-
   Future<List<String>> _audioCandidatesForVoice(String normalizedVoice) async {
-    final reciterId = _reciterIdForVoice(normalizedVoice) ?? 'alafasy';
+    final reciterId = quranReciterIdForAudioVoice(normalizedVoice);
     final url = await OfflineReciters.getSurahUrl(
       reciterId,
       widget.surahNumber,

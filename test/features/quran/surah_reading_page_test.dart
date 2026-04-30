@@ -68,6 +68,15 @@ void main() {
   });
 
   group('SurahReadingPage local audio helpers', () {
+    test('uses canonical settings reciter mapping for playback', () {
+      final source = File(
+        'lib/features/quran/surah_reading_page.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('quranReciterIdForAudioVoice(normalizedVoice)'));
+      expect(source, isNot(contains('_reciterIdForVoice')));
+    });
+
     test('returns only verified local Quran audio paths', () async {
       final tempDir = await Directory.systemTemp.createTemp(
         'sir_surah_reader_audio_',

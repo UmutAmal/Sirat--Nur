@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/misc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sirat_i_nur/core/services/offline_audio_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:timezone/data/latest.dart' as tzdata;
@@ -426,6 +427,33 @@ void main() {
     test('normalizeAudioVoice still accepts legacy typo labels', () {
       expect(normalizeAudioVoice('Male (AbdulBaset)'), abdulBasetVoice);
       expect(normalizeAudioVoice('Male (Abdul Basit)'), abdulBasetVoice);
+    });
+
+    test('audio voice choices cover every offline Quran reciter pack', () {
+      final selectableReciterIds = selectableAudioVoices
+          .map(quranReciterIdForAudioVoice)
+          .toSet();
+
+      expect(selectableAudioVoices, hasLength(selectableReciterIds.length));
+      expect(
+        selectableReciterIds,
+        equals(OfflineReciters.reciters.keys.toSet()),
+      );
+    });
+
+    test('audio voice settings resolve to playable Quran reciter ids', () {
+      expect(quranReciterIdForAudioVoice(misharyAlafasyVoice), 'alafasy');
+      expect(
+        quranReciterIdForAudioVoice(abdulBasetVoice),
+        'abdul_basit_murattal',
+      );
+      expect(quranReciterIdForAudioVoice(husaryVoice), 'husary');
+      expect(
+        quranReciterIdForAudioVoice(abdulBasitMujawwadVoice),
+        'abdul_basit_mujawwad',
+      );
+      expect(quranReciterIdForAudioVoice(shuraimVoice), 'shuraim');
+      expect(quranReciterIdForAudioVoice(sudaisVoice), 'sudais');
     });
   });
 }

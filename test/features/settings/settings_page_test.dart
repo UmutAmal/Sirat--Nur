@@ -163,7 +163,7 @@ void main() {
   });
 
   testWidgets(
-    'SettingsPage localizes audio voice labels from canonical state',
+    'SettingsPage shows the canonical reciter name from audio state',
     (tester) async {
       await pumpSettingsPage(
         tester,
@@ -172,7 +172,28 @@ void main() {
       );
 
       expect(find.text('Ses Seçimi'), findsOneWidget);
-      expect(find.text('Erkek (Sudais)'), findsOneWidget);
+      expect(find.text('Abdul Rahman Al-Sudais'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'SettingsPage exposes every offline Quran reciter in voice picker',
+    (tester) async {
+      await pumpSettingsPage(
+        tester,
+        prefsValues: const {'audioVoice': misharyAlafasyVoice},
+        locale: const Locale('tr'),
+      );
+
+      await tester.tap(find.text('Ses Seçimi'));
+      await tester.pumpAndSettle();
+
+      expect(find.text('Mishary Rashid Alafasy'), findsWidgets);
+      expect(find.text('Mahmoud Khalil Al-Husary'), findsOneWidget);
+      expect(find.text('Abdul Basit (Murattal)'), findsOneWidget);
+      expect(find.text('Abdul Basit (Mujawwad)'), findsOneWidget);
+      expect(find.text('Saoud Al-Shuraim'), findsOneWidget);
+      expect(find.text('Abdul Rahman Al-Sudais'), findsOneWidget);
     },
   );
 
