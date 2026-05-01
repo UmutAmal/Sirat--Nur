@@ -15,6 +15,27 @@ void main() {
       expect(localeKey(locale!), 'zh_Hant_TW');
     });
 
+    test('rejects malformed locale codes before building Locale objects', () {
+      for (final code in [
+        '!!!',
+        'english',
+        'en_@',
+        'tr-1234',
+        'zh-Hant-TW-extra',
+        'en-US-!',
+      ]) {
+        expect(parseLocaleCode(code), isNull, reason: code);
+      }
+    });
+
+    test('keeps valid numeric region subtags canonical', () {
+      final locale = parseLocaleCode('en-419');
+
+      expect(locale?.languageCode, 'en');
+      expect(locale?.countryCode, '419');
+      expect(localeKey(locale!), 'en_419');
+    });
+
     test(
       'resolves exact region and language fallbacks without force unwraps',
       () {

@@ -21513,3 +21513,44 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude sayisal preference sanitization, Quran/Juz malformed data guards, l10n kalite borcu ve Supabase/audio source provenance icin yeniden tarama baslat.
+
+## 2026-05-01 TUR-539 - Locale Code Malformed Input Guard
+
+### MASTER Karari
+- Risk: Stored/configured locale kodu bozulursa `parseLocaleCode` daha once dil/script/region alt etiketlerini bicimsel olarak dogrulamadan `Locale.fromSubtags` olusturuyordu. `english`, `en_@`, `zh-Hant-TW-extra` gibi malformed degerler locale bootstrap ve supported-locale fallback zincirinde gecersiz state veya debug assert riski olusturabilirdi.
+- Kanit:
+  - Baslangic: `lib/core/utils/locale_utils.dart:15` dil kodunu yalnizca lowercase yapiyordu; harf uzunlugu ve ASCII kontrolu yoktu.
+  - Baslangic: `lib/core/utils/locale_utils.dart:22` sonraki parcalari uzunluga gore yorumluyor, gecersiz ekstra parcayi reddetmeden devam edebiliyordu.
+  - Son durum: `lib/core/utils/locale_utils.dart:15` ve `lib/core/utils/locale_utils.dart:16` language subtag'i `2/3` ASCII harf ile sinirliyor.
+  - Son durum: `lib/core/utils/locale_utils.dart:23` script subtag'i yalnizca 4 ASCII harf olunca kabul ediyor.
+  - Son durum: `lib/core/utils/locale_utils.dart:27` region subtag'i `2` ASCII harf veya `3` ASCII rakam olunca kabul ediyor.
+  - Son durum: `lib/core/utils/locale_utils.dart:32` taninmayan/ekstra alt etiketleri `null` ile reddediyor.
+  - Son durum: `lib/core/utils/locale_utils.dart:42` ve `lib/core/utils/locale_utils.dart:50` validation kurallari merkezi helper'lara tasindi.
+  - Regresyon guard: `test/locale_utils_test.dart:18` malformed locale kodlarini `Locale` nesnesi olusturmadan reddediyor.
+  - Regresyon guard: `test/locale_utils_test.dart:31` valid numeric region `en-419` kodunun canonical kaldigini test ediyor.
+- Kullanici etkisi: Kullanici/veri katmani bozuk locale kodu yazsa bile app acilisi guvenli fallback'e doner; gecerli script ve numeric region locale'leri korunur.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25 -> 2/25.
+- Rollback plani: Bu turdaki `lib/core/utils/locale_utils.dart`, `test/locale_utils_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Locale parser dil/script/region subtag validasyonuna baglandi.
+- Taninmayan veya fazla alt etiket iceren locale kodlari artik sessizce yarim kabul edilmiyor; `null` donerek mevcut fallback zincirini kullanmaya zorlaniyor.
+- BCP-47 numeric region pratigi (`en-419`) korunarak kapsam dar tutuldu.
+
+### TESTER Degisikligi
+- Targeted locale test: `flutter test test\locale_utils_test.dart --reporter compact` PASS, `4/4`.
+- Targeted settings provider test: `flutter test test\settings_provider_test.dart --reporter compact` PASS, `27/27`.
+- Targeted settings page test: `flutter test test\features\settings\settings_page_test.dart --reporter compact` PASS, `11/11`.
+- Targeted prayer coordinator test: `flutter test test\prayer_notification_coordinator_test.dart --reporter compact` PASS, `11/11`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `756/756`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `f8ffe09b-40c2-4eef-bb1e-a0b9c21c874a`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Malformed stored/configured locale code bootstrap riski: `9/25 -> 2/25`.
+- Kalan bilincli risk: Settings icindeki diger enum/string preference degerleri normalize edilse de storage repair davranisi yeniden taranmali; Quran/Juz data cast guardlari ve l10n kalite borcu sonraki dongude onceliklendirilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude persisted settings canonical repair, Quran/Juz malformed data guardlari, l10n same-as-English borcu ve Supabase/audio source provenance icin yeni risk taramasi baslat.

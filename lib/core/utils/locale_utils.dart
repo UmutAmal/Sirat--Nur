@@ -13,17 +13,23 @@ Locale? parseLocaleCode(String? rawCode) {
   if (parts.isEmpty) return null;
 
   final languageCode = parts.first.toLowerCase();
+  if (!_isValidLanguageSubtag(languageCode)) {
+    return null;
+  }
   String? scriptCode;
   String? countryCode;
 
   for (final part in parts.skip(1)) {
-    if (part.length == 4 && scriptCode == null) {
+    if (_isValidScriptSubtag(part) && scriptCode == null) {
       scriptCode = '${part[0].toUpperCase()}${part.substring(1).toLowerCase()}';
       continue;
     }
-    if ((part.length == 2 || part.length == 3) && countryCode == null) {
-      countryCode = part.toUpperCase();
+    if (_isValidRegionSubtag(part) && countryCode == null) {
+      countryCode = part.length == 2 ? part.toUpperCase() : part;
+      continue;
     }
+
+    return null;
   }
 
   return Locale.fromSubtags(
@@ -31,6 +37,39 @@ Locale? parseLocaleCode(String? rawCode) {
     scriptCode: scriptCode,
     countryCode: countryCode,
   );
+}
+
+bool _isValidLanguageSubtag(String value) {
+  return (value.length == 2 || value.length == 3) && _isAsciiLetters(value);
+}
+
+bool _isValidScriptSubtag(String value) {
+  return value.length == 4 && _isAsciiLetters(value);
+}
+
+bool _isValidRegionSubtag(String value) {
+  return (value.length == 2 && _isAsciiLetters(value)) ||
+      (value.length == 3 && _isAsciiDigits(value));
+}
+
+bool _isAsciiLetters(String value) {
+  for (final unit in value.codeUnits) {
+    final isUpper = unit >= 0x41 && unit <= 0x5A;
+    final isLower = unit >= 0x61 && unit <= 0x7A;
+    if (!isUpper && !isLower) {
+      return false;
+    }
+  }
+  return value.isNotEmpty;
+}
+
+bool _isAsciiDigits(String value) {
+  for (final unit in value.codeUnits) {
+    if (unit < 0x30 || unit > 0x39) {
+      return false;
+    }
+  }
+  return value.isNotEmpty;
 }
 
 String localeKey(Locale locale) {
