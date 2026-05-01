@@ -681,10 +681,10 @@ class AppLocalizationsKri extends AppLocalizations {
   String get resetQazaDebtQuestion => 'Riset Qaza Dɛt?';
 
   @override
-  String get rawatib => 'Rawatib bin de tɔk bɔt am';
+  String get rawatib => 'Rawatib';
 
   @override
-  String get tahajjud => 'Tahajjud we de na di wɔl';
+  String get tahajjud => 'Tahajjud';
 
   @override
   String get dailyProgress => 'Di Prɔgrɛs we De De Ɛvride';

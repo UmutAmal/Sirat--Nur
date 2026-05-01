@@ -683,10 +683,10 @@ class AppLocalizationsLus extends AppLocalizations {
   String get resetQazaDebtQuestion => 'Qaza Leiba chu reset rawh?';
 
   @override
-  String get rawatib => 'Rawatib chuan a sawi';
+  String get rawatib => 'Rawatib';
 
   @override
-  String get tahajjud => 'Tahajjud a ni';
+  String get tahajjud => 'Tahajjud';
 
   @override
   String get dailyProgress => 'Nitin Hmasawnna';

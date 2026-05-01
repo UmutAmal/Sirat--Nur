@@ -680,10 +680,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get resetQazaDebtQuestion => 'काजा कर्ज के रीसेट करीं?';
 
   @override
-  String get rawatib => 'रावतीब के ह';
+  String get rawatib => 'रवातिब';
 
   @override
-  String get tahajjud => 'तहज्जुद के ह';
+  String get tahajjud => 'तहज्जुद';
 
   @override
   String get dailyProgress => 'रोजाना प्रगति के बा';

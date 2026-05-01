@@ -689,7 +689,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get rawatib => 'Rawatib';
 
   @override
-  String get tahajjud => 'Tahajjud ni Tahajjud';
+  String get tahajjud => 'Tahajjud';
 
   @override
   String get dailyProgress => 'Inaldaw a Panagrang-ay';

@@ -20724,3 +20724,38 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude bariz makine ceviri artigi olan dini label dosyalarini tara. Ilk adaylar: `lib/l10n/app_bho.arb:304`, `lib/l10n/app_bho.arb:305`, `lib/l10n/app_ilo.arb:305`, `lib/l10n/app_kri.arb:304`, `lib/l10n/app_kri.arb:305`, `lib/l10n/app_lus.arb:304`, `lib/l10n/app_lus.arb:305`, `lib/l10n/app_nso.arb:305`.
+
+## 2026-05-01 TUR-516 - Low Resource Prayer Label Debris Cleanup
+
+### MASTER Karari
+- Risk: `rawatib` ve `tahajjud` dini namaz etiketleri bazi dusuk kaynakli locale'lerde UI etiketi olmaktan cikmis, makine ceviri aciklama kalintisi gibi gorunuyordu. Bu turda tam dini ceviri uydurulmadan, yanlis aciklama parcalari canonical dini terim/transliteration ile temizlendi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:304` `रावतीब के ह`, `lib/l10n/app_bho.arb:305` `तहज्जुद के ह`, `lib/l10n/app_ilo.arb:305` `Tahajjud ni Tahajjud`, `lib/l10n/app_kri.arb:304` `Rawatib bin de tɔk bɔt am`, `lib/l10n/app_kri.arb:305` `Tahajjud we de na di wɔl`, `lib/l10n/app_lus.arb:304` `Rawatib chuan a sawi`, `lib/l10n/app_lus.arb:305` `Tahajjud a ni`, `lib/l10n/app_nso.arb:305` `Tahajjud wa go swana le yena`.
+  - Son durum: `lib/l10n/app_bho.arb:304` `रवातिब`, `lib/l10n/app_bho.arb:305` `तहज्जुद`.
+  - Son durum: `lib/l10n/app_ilo.arb:304`, `lib/l10n/app_ilo.arb:305`, `lib/l10n/app_kri.arb:304`, `lib/l10n/app_kri.arb:305`, `lib/l10n/app_lus.arb:304`, `lib/l10n/app_lus.arb:305`, `lib/l10n/app_nso.arb:304`, `lib/l10n/app_nso.arb:305` canonical loanword `Rawatib` / `Tahajjud`.
+  - `test/arb_religious_localization_test.dart:80` yeni guard bu 5 locale'de `के ह`, `ni Tahajjud`, `chuan a sawi`, `a ni`, `tɔk bɔt`, `wɔl`, `swana le yena` artigini bu iki dini label icin geri getirmeyi engeller.
+- Kullanici etkisi: Dini ibadet listesinde anlamsiz/yanlis aciklama kirintilari kalkar; dusuk kaynakli Latin script locale'lerde sahte ceviri yerine durust canonical dini terim gorunur.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 5/25.
+- Rollback plani: Bu turdaki 5 `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/arb_religious_localization_test.dart` ek guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `app_bho.arb` `rawatib/tahajjud` degerleri Devanagari transliteration'a alindi.
+- `app_ilo.arb`, `app_kri.arb`, `app_lus.arb`, `app_nso.arb` ilgili dini label'lar icin aciklama artigi yerine canonical loanword kullanildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB kaynaklariyla senkronlandi.
+- Same-as-English metriğinin `366 -> 372` cikmasi bilincli kabul edildi; bu durum Latin yazili dusuk kaynakli locale'lerde yanlis aciklama yerine guvenli canonical dini terim seciminden kaynaklanir, ceviri kalitesi gerilemesi olarak yorumlanmamalidir.
+
+### TESTER Degisikligi
+- Targeted religious l10n test: `flutter test test\arb_religious_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `7/7`.
+- Translation debt raporu: `dart run tool\translate_arb_keys.dart rawatib tahajjud --report` PASS; same-as-English `372`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `728/728`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `3edb274d-ad42-4cc9-a720-fb6c32faa8d6`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94812042`.
+
+### Risk Degisimi
+- Dusuk kaynakli dini label aciklama artigi: `12/25 -> 5/25`.
+- Kalan bilincli risk: Daha genis `app_bho`, `app_lus`, `app_kri` UI kopyalarinda benzer makine kaliplari bulundu; bu tur kapsam disinda birakildi ve sonraki minimal patch icin ayrildi.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude genis locale-debris cluster'ini skorla. Ilk adaylar: `app_bho` UI temel label'larinda `के बारे में बतावल गइल बा`/`के ह`, `app_lus` temel navigation label'larinda `a ni`, `app_kri` temel UI label'larinda `we de na di wɔl`/`bin de tɔk bɔt am`.

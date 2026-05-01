@@ -688,7 +688,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get rawatib => 'Rawatib';
 
   @override
-  String get tahajjud => 'Tahajjud wa go swana le yena';
+  String get tahajjud => 'Tahajjud';
 
   @override
   String get dailyProgress => 'Kgatelopele ya Letšatši le Letšatši';

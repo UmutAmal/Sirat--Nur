@@ -75,6 +75,40 @@ void main() {
         }
       },
     );
+
+    test(
+      'known low-resource Rawatib and Tahajjud labels do not keep explanatory debris',
+      () {
+        const expected = {
+          'bho': {'rawatib': 'रवातिब', 'tahajjud': 'तहज्जुद'},
+          'ilo': {'rawatib': 'Rawatib', 'tahajjud': 'Tahajjud'},
+          'kri': {'rawatib': 'Rawatib', 'tahajjud': 'Tahajjud'},
+          'lus': {'rawatib': 'Rawatib', 'tahajjud': 'Tahajjud'},
+          'nso': {'rawatib': 'Rawatib', 'tahajjud': 'Tahajjud'},
+        };
+        final debris = RegExp(
+          'के ह|ni Tahajjud|chuan a sawi|a ni|tɔk bɔt|wɔl|swana le yena',
+        );
+
+        for (final entry in expected.entries) {
+          final arb = _readArb('lib/l10n/app_${entry.key}.arb');
+          for (final key in ['rawatib', 'tahajjud']) {
+            final value = arb[key] as String;
+            expect(
+              value,
+              entry.value[key],
+              reason: 'app_${entry.key}.arb must keep canonical $key copy',
+            );
+            expect(
+              value,
+              isNot(contains(debris)),
+              reason:
+                  'app_${entry.key}.arb keeps explanatory machine output for $key',
+            );
+          }
+        }
+      },
+    );
   });
 }
 
