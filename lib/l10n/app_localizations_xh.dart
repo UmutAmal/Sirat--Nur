@@ -585,7 +585,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get removeAds => 'Susa iintengiso';
 
   @override
-  String get unlockAll => 'NONE';
+  String get unlockAll => 'Vula wonke umxholo';
 
   @override
   String get exclusiveContent => 'Umxholo Okhethekileyo';
@@ -764,7 +764,7 @@ class AppLocalizationsXh extends AppLocalizations {
       'Qinisekisa iisurah ezili-114 kunye nee-ayah ezingama-6236.';
 
   @override
-  String get checkingQuranDb => 'NONE';
+  String get checkingQuranDb => 'Kujongwa iQuran Database...';
 
   @override
   String get okLabel => 'KULUNGILE';

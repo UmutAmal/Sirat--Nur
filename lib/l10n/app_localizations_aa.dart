@@ -585,7 +585,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get removeAds => 'Remove ads';
 
   @override
-  String get unlockAll => 'Kulli addatino fake';
+  String get unlockAll => 'Kulli addatino fak';
 
   @override
   String get exclusiveContent => 'dubuh yan addatino';

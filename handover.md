@@ -21332,3 +21332,40 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude fake/static UI data, hardcoded fallback ve gercek l10n borcu icin yeni risk taramasi baslat.
+
+## 2026-05-01 TUR-534 - ARB Fake/NONE Debris Removal Guard
+
+### MASTER Karari
+- Risk: Uretim ARB degerlerinde kullaniciya gorunebilecek `fake` ve `NONE` kalintilari vardi. Bu, ozellikle premium ve Quran diagnostics yuzeylerinde bozuk/guvensiz metin gosterebilecek P1 localization/content guveni riskidir.
+- Kanit:
+  - Baslangic taramasi: `rg -n '"[^"]*\b(NONE|TODO|FIXME|dummy|lorem|placeholder|fake)\b[^"]*"' lib\l10n -g 'app_*.arb'` yalnizca `lib/l10n/app_aa.arb:274`, `lib/l10n/app_xh.arb:274`, `lib/l10n/app_xh.arb:329` sonucunu verdi.
+  - Son durum: `lib/l10n/app_aa.arb:274` `unlockAll` degeri `Kulli addatino fak`; Afar `fak=open` dogrulamasi icin Glosbe Afar-English sozluk kaynagi kullanildi: `https://en.glosbe.com/aa/en/fak`.
+  - Son durum: `lib/l10n/app_xh.arb:274` `unlockAll` degeri `Vula wonke umxholo`; `lib/l10n/app_xh.arb:329` `checkingQuranDb` degeri `Kujongwa iQuran Database...`.
+  - Generated l10n senkronu: `lib/l10n/app_localizations_aa.dart:588`, `lib/l10n/app_localizations_xh.dart:588`, `lib/l10n/app_localizations_xh.dart:767`.
+  - Regresyon guard: `test/arb_coverage_test.dart:111` her ARB mesajinda standalone debris kontrolu cagiriyor; `test/arb_coverage_test.dart:608` `NONE` ve standalone `fake` blocker helper'i.
+- Kullanici etkisi: Premium ve Quran diagnostics UI yuzeylerinde artik `fake` veya `NONE` gibi bozuk metin gorunmez; gelecekte ayni sinif batch debris ARB'ye girerse test paketi yakalar.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 4/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_aa.arb`, `lib/l10n/app_xh.arb`, generated `app_localizations_aa.dart`, `app_localizations_xh.dart`, `test/arb_coverage_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Afar `unlockAll` degeri standalone `fake` kalintisindan arindirildi ve source-backed `fak` fiiliyle guncellendi.
+- Xhosa `unlockAll` ve `checkingQuranDb` degerleri `NONE` placeholder'i yerine gercek UI kopyasina cevrildi.
+- `flutter gen-l10n` ile generated localization dart dosyalari ARB ile senkronlandi.
+- ARB coverage testine tam `NONE` ve standalone `fake` degerlerini engelleyen guard eklendi; Javanese `Aktifake` gibi gercek kelimeleri false-positive yapmamak icin word-boundary kullanildi.
+
+### TESTER Degisikligi
+- Targeted ARB debris test: `flutter test test\arb_coverage_test.dart --plain-name "arb message values do not contain batch debris" --reporter compact` PASS.
+- Targeted l10n debt test: `flutter test test\translate_arb_keys_test.dart --plain-name "tracks settings utility and premium l10n debt reduction" --reporter compact` PASS.
+- Production ARB debris scan: `rg -n '"[^"]*\b(NONE|TODO|FIXME|dummy|lorem|placeholder|fake)\b[^"]*"' lib\l10n -g 'app_*.arb'` no matches.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `748/748`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `64995df9-d9a7-43fa-a703-885bc6ce6bef`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Uretim ARB fake/NONE debris riski: `16/25 -> 4/25`.
+- Kalan bilincli risk: ARB'lerde daha ince kalite sorunlari olabilir; bundan sonraki dongude same-as-English ve known bad translation pattern taramalari kucuk, dogrulanabilir batch'lerle devam etmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude l10n same-as-English borcu, fake/static UI data ve runtime fallback metinleri icin yeniden tarama yap.

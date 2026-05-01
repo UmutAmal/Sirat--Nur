@@ -108,6 +108,14 @@ void main() {
           }
 
           expect(
+            _hasForbiddenStandaloneDebris(normalized),
+            isFalse,
+            reason:
+                '${file.path} contains forbidden standalone debris in "$key": '
+                '$normalized',
+          );
+
+          expect(
             _hasRepeatedWordRun(normalized),
             isFalse,
             reason:
@@ -596,6 +604,14 @@ const _translationBatchFragments = {
   'Fichier Téléchargées',
   'Filew Téléchargements',
 };
+
+bool _hasForbiddenStandaloneDebris(String value) {
+  final trimmed = value.trim();
+  if (trimmed == 'NONE') {
+    return true;
+  }
+  return RegExp(r'\bfake\b', caseSensitive: false).hasMatch(trimmed);
+}
 
 bool _hasRepeatedWordRun(String value) {
   final words = value
