@@ -21229,3 +21229,36 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude 23 gercek UI l10n kumesinden en guvenli batch'i veya runtime/Appium onboarding timing riskini skorla.
+
+## 2026-05-01 TUR-531 - L10n Debt Report Duplicate Key Guard
+
+### MASTER Karari
+- Risk: `translate_arb_keys.dart --report` komutuna ayni anahtar iki kez verilince rapor ayni l10n borcunu iki kez sayiyordu. Bu, sonraki dongulerde same-as-English sayilarini sisirip yanlis risk siralamasina ve gereksiz ceviri patch'lerine neden olabilecek P1 kalite araci dogruluk riskiydi.
+- Kanit:
+  - Baslangic davranisi: `dart run tool\translate_arb_keys.dart --report downloadFinishedForReciter downloadFinishedForReciter` duplicate girdiyle `Keys: 2`, `Same-as-English locales: 74` raporluyordu; tekil girdi ayni anahtar icin `Keys: 1`, `Same-as-English locales: 37` veriyordu.
+  - Son durum: `tool/translate_arb_keys.dart:39` CLI argumanlarini sira koruyarak tekillestiriyor; `tool/translate_arb_keys.dart:157` public `buildL10nDebtReport` girisini de ayni guard ile tekillestiriyor; `tool/translate_arb_keys.dart:200` helper implementasyonu.
+  - Regresyon guard: `test/translate_arb_keys_test.dart:189` `deduplicates repeated report keys before counting debt`.
+- Kullanici etkisi: Handover ve risk dongulerinde l10n borcu tekil anahtar bazinda dogru sayilir; sahte/yinelenen borc sayimi gercek ceviri islerini maskelemez.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 4/25.
+- Rollback plani: Bu turdaki `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- CLI `keys` listesi `toSetPreservingOrder()` ile tekillestirildi.
+- `buildL10nDebtReport` fonksiyonu dogrudan test veya baska arac tarafindan duplicate listeyle cagrilsa bile rapor girdilerini tekil tutacak sekilde sertlestirildi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\translate_arb_keys_test.dart --plain-name "deduplicates repeated report keys before counting debt" --reporter compact` PASS.
+- Duplicate report: `dart run tool\translate_arb_keys.dart --report downloadFinishedForReciter downloadFinishedForReciter` PASS; `Keys: 1`, `Same-as-English locales: 37`, missing/empty `0`, placeholder mismatch `0`.
+- Single report: `dart run tool\translate_arb_keys.dart --report downloadFinishedForReciter` PASS; `Keys: 1`, `Same-as-English locales: 37`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `743/743`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS after starting local Appium server; session `f3b2ea10-237d-4431-8e92-1b2722cee6d9`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Duplicate l10n report key false-count riski: `16/25 -> 4/25`.
+- Kalan bilincli risk: 23 gercek UI anahtarinda `775` same-as-English borc gorunur kaldi; sonraki dongude bu borc icinden dini anlam uydurmadan dogrulanabilir en guvenli batch secilmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude 23 gercek UI l10n kumesi veya Appium/server preflight ergonomisi yeniden skorlanmali.

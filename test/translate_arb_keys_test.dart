@@ -186,6 +186,26 @@ void main() {
       );
     });
 
+    test('deduplicates repeated report keys before counting debt', () {
+      final report = buildL10nDebtReport(
+        keys: ['downloadFinishedForReciter', 'downloadFinishedForReciter'],
+        english: {
+          'downloadFinishedForReciter': 'Download completed for {reciter}.',
+        },
+        localeArbs: {
+          'en': {
+            'downloadFinishedForReciter': 'Download completed for {reciter}.',
+          },
+          'fr': {
+            'downloadFinishedForReciter': 'Download completed for {reciter}.',
+          },
+        },
+      );
+
+      expect(report.entries, hasLength(1));
+      expect(report.sameAsEnglishCount, 1);
+    });
+
     test('does not count neutral symbolic placeholders as English debt', () {
       final report = buildL10nDebtReport(
         keys: ['prayerRemainingUnavailable'],

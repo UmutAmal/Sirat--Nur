@@ -36,7 +36,7 @@ Future<void> main(List<String> arguments) async {
       arguments.contains(_reportFlag) || arguments.contains(_dryRunFlag);
   final keys = arguments
       .where((argument) => !_optionFlags.contains(argument))
-      .toList();
+      .toSetPreservingOrder();
 
   if (keys.isEmpty) {
     stderr.writeln(translateArbKeysUsage());
@@ -154,7 +154,7 @@ L10nDebtReport buildL10nDebtReport({
 }) {
   final entries = <L10nDebtEntry>[];
 
-  for (final key in keys) {
+  for (final key in keys.toSetPreservingOrder()) {
     final englishValue = english[key];
     final sameAsEnglishLocales = <String>[];
     final missingOrEmptyLocales = <String>[];
@@ -194,6 +194,19 @@ L10nDebtReport buildL10nDebtReport({
 
 List<String> _sorted(List<String> values) {
   return values..sort();
+}
+
+extension _IterableStringDedupe on Iterable<String> {
+  List<String> toSetPreservingOrder() {
+    final seen = <String>{};
+    final ordered = <String>[];
+    for (final value in this) {
+      if (seen.add(value)) {
+        ordered.add(value);
+      }
+    }
+    return ordered;
+  }
 }
 
 class L10nDebtReport {
