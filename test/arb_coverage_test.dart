@@ -161,6 +161,35 @@ void main() {
         );
       }
     });
+
+    test('Bhojpuri core shell labels do not keep explanatory debris', () {
+      final arb = _readArb('lib/l10n/app_bho.arb');
+      const expected = {
+        'quran': 'कुरान',
+        'settings': 'सेटिंग्स',
+        'method': 'गणना के तरीका',
+        'surahs': 'सूरह सभ',
+        'fajr': 'फजर',
+        'maghrib': 'मगरिब',
+        'dataStorage': 'डाटा अउर स्टोरेज',
+        'language': 'भाषा',
+      };
+      final debris = RegExp(r'के बारे में बतावल गइल बा| के ह$');
+
+      for (final entry in expected.entries) {
+        final value = arb[entry.key] as String;
+        expect(
+          value,
+          entry.value,
+          reason: 'app_bho.arb must keep concise ${entry.key} copy',
+        );
+        expect(
+          value,
+          isNot(contains(debris)),
+          reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+        );
+      }
+    });
   });
 }
 

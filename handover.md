@@ -20759,3 +20759,36 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude genis locale-debris cluster'ini skorla. Ilk adaylar: `app_bho` UI temel label'larinda `के बारे में बतावल गइल बा`/`के ह`, `app_lus` temel navigation label'larinda `a ni`, `app_kri` temel UI label'larinda `we de na di wɔl`/`bin de tɔk bɔt am`.
+
+## 2026-05-01 TUR-517 - Bhojpuri Core Shell Label Debris Cleanup
+
+### MASTER Karari
+- Risk: Bhojpuri ana shell ve namaz/kuran navigation label'larinda kisa UI metni yerine aciklama kalintisi bulunuyordu. `settings`, `method`, `surahs`, `dataStorage`, `language` gibi etiketlerde `के बारे में बतावल गइल बा`; `quran`, `fajr`, `maghrib` gibi dini label'larda `के ह` eki kullaniciya dogrudan gorunuyordu.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:6` `कुरान के ह`, `lib/l10n/app_bho.arb:10` `सेटिंग्स के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:17` `गणना के तरीका के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:19` `सूरह के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:21` `फजर के ह`, `lib/l10n/app_bho.arb:25` `मगरिब के ह`, `lib/l10n/app_bho.arb:43` `डाटा एंड स्टोरेज के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:47` `भाषा के बारे में बतावल गइल बा`.
+  - Son durum: `lib/l10n/app_bho.arb:6` `कुरान`, `lib/l10n/app_bho.arb:10` `सेटिंग्स`, `lib/l10n/app_bho.arb:17` `गणना के तरीका`, `lib/l10n/app_bho.arb:19` `सूरह सभ`, `lib/l10n/app_bho.arb:21` `फजर`, `lib/l10n/app_bho.arb:25` `मगरिब`, `lib/l10n/app_bho.arb:43` `डाटा अउर स्टोरेज`, `lib/l10n/app_bho.arb:47` `भाषा`.
+  - `test/arb_coverage_test.dart:165` yeni guard bu 8 Bhojpuri core shell label'inda `के बारे में बतावल गइल बा` ve satir sonu ` के ह` debris'ini geri getirmeyi engeller.
+- Kullanici etkisi: Bhojpuri kullanicilar ana Quran/settings/prayer shell yuzeylerinde aciklama cumlesi degil, kisa ve okunabilir UI label gorur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 8 Bhojpuri core shell label'i kisa UI copy'ye indirildi.
+- `flutter gen-l10n` ile generated Bhojpuri localization dosyasi ARB ile senkronlandi.
+- Scope bilincli olarak ilk gorunen shell/namaz etiketleriyle sinirli tutuldu; Asma anlamlari ve daha genis Bhojpuri copy borcu sonraki tur icin ayrildi.
+
+### TESTER Degisikligi
+- Targeted ARB/generated test: `flutter test test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `9/9`.
+- Translation report: `dart run tool\translate_arb_keys.dart quran settings method surahs fajr maghrib dataStorage language --report` PASS; same-as-English `687`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `729/729`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: Ilk deneme Appium/ADB `pm clear` 20s timeout verdi; manuel `adb -s emulator-5554 shell pm clear com.umutamal.sirat_i_nur` PASS, `io.appium.uiautomator2.server` ve `.server.test` temizligi sonrasi tekrar `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `c12bcc76-fa45-4b04-bdb2-60ae67201c56`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94812042`.
+
+### Risk Degisimi
+- Bhojpuri core shell aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho` icinde hadith/diagnostics/Asma/zakat gibi baska yuzeylerde `के बारे में बतावल गइल बा` ve `के ह` kaliplari devam ediyor. Bunlar sonraki minimal patch'lerde alan alan temizlenmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Bhojpuri ikinci cluster'i skorla: hadith/library/diagnostics/quick-access label'lari (`hadithCollection`, `hadithBooks`, `privacyPolicy`, `spiritualGrowth`, `quranIntegrity`, `diagnosticsAudioAssets`, `diagnosticsLocalizationLocales`, `quickAccess`, `analytics`, `islamicEducation`, `sukunAudioTitle`, `hadithCollections`).

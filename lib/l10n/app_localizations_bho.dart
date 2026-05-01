@@ -18,7 +18,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get home => 'घर के बा';
 
   @override
-  String get quran => 'कुरान के ह';
+  String get quran => 'कुरान';
 
   @override
   String get qibla => 'किबला के बा';
@@ -30,7 +30,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get calendar => 'कैलेंडर के बा';
 
   @override
-  String get settings => 'सेटिंग्स के बारे में बतावल गइल बा';
+  String get settings => 'सेटिंग्स';
 
   @override
   String get nextPrayer => 'अगिला प्रार्थना बा';
@@ -51,19 +51,19 @@ class AppLocalizationsBho extends AppLocalizations {
   String get prayerCalculation => 'प्रार्थना के गणना कइल जाला';
 
   @override
-  String get method => 'गणना के तरीका के बारे में बतावल गइल बा';
+  String get method => 'गणना के तरीका';
 
   @override
   String get madhab => 'असर न्यायिक विधि के बा';
 
   @override
-  String get surahs => 'सूरह के बारे में बतावल गइल बा';
+  String get surahs => 'सूरह सभ';
 
   @override
   String get ayahs => 'अयहस के बा';
 
   @override
-  String get fajr => 'फजर के ह';
+  String get fajr => 'फजर';
 
   @override
   String get sunrise => 'सूर्योदय के बा';
@@ -75,7 +75,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get asr => 'अस्र के बा';
 
   @override
-  String get maghrib => 'मगरिब के ह';
+  String get maghrib => 'मगरिब';
 
   @override
   String get isha => 'ईशा के बा';
@@ -91,7 +91,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'डाटा एंड स्टोरेज के बारे में बतावल गइल बा';
+  String get dataStorage => 'डाटा अउर स्टोरेज';
 
   @override
   String get clearCache => 'कैश के साफ कर दिहल जाव';
@@ -103,7 +103,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get location => 'लोकेशन के बा';
 
   @override
-  String get language => 'भाषा के बारे में बतावल गइल बा';
+  String get language => 'भाषा';
 
   @override
   String get selectLanguage => 'भाषा के चयन करीं';
