@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -14,9 +15,15 @@ import 'package:sirat_i_nur/l10n/app_localizations.dart';
 // Persistent tracker providers — date-keyed, surviving app restarts
 // ──────────────────────────────────────────────────────────────
 
+const _trackedPrayerKeys = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+
 String _todayKey() {
   return todayActivityDateKey();
 }
+
+Map<String, bool> _defaultPrayerState() => {
+  for (final prayer in _trackedPrayerKeys) prayer: false,
+};
 
 class TrackerNotifier extends StateNotifier<Map<String, bool>> {
   final SharedPreferences _prefs;
@@ -25,17 +32,30 @@ class TrackerNotifier extends StateNotifier<Map<String, bool>> {
   static Map<String, bool> _load(SharedPreferences prefs) {
     final key = 'prayers_${_todayKey()}';
     final json = prefs.getString(key);
-    if (json != null) {
-      final decoded = jsonDecode(json) as Map<String, dynamic>;
-      return decoded.map((k, v) => MapEntry(k, v as bool));
+    if (json == null || json.trim().isEmpty) {
+      return _defaultPrayerState();
     }
-    return {
-      'Fajr': false,
-      'Dhuhr': false,
-      'Asr': false,
-      'Maghrib': false,
-      'Isha': false,
-    };
+
+    try {
+      final decoded = jsonDecode(json);
+      if (decoded is! Map<String, dynamic>) {
+        unawaited(prefs.remove(key));
+        return _defaultPrayerState();
+      }
+
+      final state = _defaultPrayerState();
+      for (final prayer in _trackedPrayerKeys) {
+        final value = decoded[prayer];
+        if (value is bool) {
+          state[prayer] = value;
+        }
+      }
+      return state;
+    } catch (_) {
+      debugPrint('Tracker prayer state decode failed; cleared corrupt data');
+      unawaited(prefs.remove(key));
+      return _defaultPrayerState();
+    }
   }
 
   void toggle(String prayer) {

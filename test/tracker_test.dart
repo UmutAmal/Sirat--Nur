@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sirat_i_nur/core/utils/activity_date_key.dart';
 import 'package:sirat_i_nur/features/tracker/tracker_page.dart';
 
 void main() {
@@ -28,6 +31,37 @@ void main() {
       notifier.toggle('Fajr');
       notifier.toggle('Fajr');
       expect(notifier.state['Fajr'], false);
+    });
+
+    test('repairs corrupt stored prayer state without crashing', () async {
+      await prefs.setString('prayers_${todayActivityDateKey()}', 'not-json');
+
+      final notifier = TrackerNotifier(prefs);
+
+      expect(notifier.state.length, 5);
+      expect(notifier.state.values.every((value) => !value), isTrue);
+    });
+
+    test('ignores unknown and non-bool stored prayer values', () async {
+      await prefs.setString(
+        'prayers_${todayActivityDateKey()}',
+        jsonEncode({
+          'Fajr': true,
+          'Dhuhr': 'yes',
+          'Asr': false,
+          'Unknown': true,
+        }),
+      );
+
+      final notifier = TrackerNotifier(prefs);
+
+      expect(notifier.state, {
+        'Fajr': true,
+        'Dhuhr': false,
+        'Asr': false,
+        'Maghrib': false,
+        'Isha': false,
+      });
     });
   });
 

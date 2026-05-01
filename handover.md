@@ -21433,3 +21433,41 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude l10n kalite borcu, hardcoded dini icerik, Supabase source provenance ve store runtime riskleri yeniden taranacak.
+
+## 2026-05-01 TUR-537 - Tracker Prayer State Corrupt Cache Guard
+
+### MASTER Karari
+- Risk: Tracker namaz takibi yerel `SharedPreferences` verisini `jsonDecode(json) as Map<String, dynamic>` ve `v as bool` ile korumasiz aciyordu. Bozuk JSON, liste/numara gibi yanlis tip veya string bool degeri kullanicinin TrackerPage acilisinda provider crash riski olusturuyordu.
+- Kanit:
+  - Baslangic: `lib/features/tracker/tracker_page.dart:29` dogrudan `jsonDecode(json) as Map<String, dynamic>` yapiyordu.
+  - Baslangic: `lib/features/tracker/tracker_page.dart:30` tum degerleri `v as bool` ile zorluyordu.
+  - Son durum: `lib/features/tracker/tracker_page.dart:18` canonical 5 namaz anahtari tek listede tutuluyor.
+  - Son durum: `lib/features/tracker/tracker_page.dart:35` null/bos veri icin default state donuyor.
+  - Son durum: `lib/features/tracker/tracker_page.dart:39` map disi cache verisini temizleyip default state'e dusuyor.
+  - Son durum: `lib/features/tracker/tracker_page.dart:44` yalnizca bool degerleri kabul ediyor; bilinmeyen veya yanlis tipli alanlari yok sayiyor.
+  - Regresyon guard: `test/tracker_test.dart:36` bozuk JSON'un crash yaratmadan default state'e dondugunu test ediyor.
+  - Regresyon guard: `test/tracker_test.dart:45` bilinmeyen ve non-bool prayer alanlarinin yok sayildigini test ediyor.
+- Kullanici etkisi: Kullanici verisi bozulsa bile ibadet takip ekrani acilmaya devam eder; yanlis tipli yerel veri sahte tamamlanmis namaz olarak sayilmaz.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 3/25.
+- Rollback plani: Bu turdaki `lib/features/tracker/tracker_page.dart`, `test/tracker_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Tracker prayer state icin `_trackedPrayerKeys` ve `_defaultPrayerState()` eklendi.
+- Cache okuma try/catch ile sarildi; malformed JSON ve map disi degerlerde bozuk kayit temizlenip default state'e donuluyor.
+- Partial valid map'lerde sadece canonical prayer key + bool degerler kabul ediliyor; unknown/non-bool alanlar ibadet durumunu etkilemiyor.
+
+### TESTER Degisikligi
+- Targeted unit test: `flutter test test\tracker_test.dart --reporter compact` PASS, `10/10`.
+- Targeted widget test: `flutter test test\features\tracker\tracker_page_test.dart --reporter compact` PASS, `2/2`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `751/751`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `2c3cf05d-c48a-4ade-a44d-4868e465c4cc`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Tracker bozuk yerel prayer state crash riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: Diger `SharedPreferences` ve JSON okuma yuzeyleri ayni sekilde taranmaya devam edilmeli; ozellikle settings, Quran provider ve cloud fallback cache zincirleri bir sonraki dongude yeniden incelenecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude runtime cache dayanimi, l10n same-as-English borcu, hardcoded dini icerik ve Supabase/audio source provenance icin yeni risk taramasi baslat.
