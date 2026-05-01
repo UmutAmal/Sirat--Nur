@@ -414,7 +414,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get tomorrow => 'काल्हु';
 
   @override
-  String get yesterday => 'काल्हु के भइल';
+  String get yesterday => 'बीते काल्हु';
 
   @override
   String get specialDays => 'खास दिन';
@@ -639,7 +639,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'लक्ष्य: $target के बा।';
+    return 'लक्ष्य: $target';
   }
 
   @override
@@ -671,7 +671,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get dailyChecklist => 'रोजाना के चेकलिस्ट बा';
 
   @override
-  String get qazaDebt => 'काजा (कर्ज) के बा।';
+  String get qazaDebt => 'काजा (कर्ज)';
 
   @override
   String get resetQazaData => 'काजा डेटा के रीसेट करीं';
@@ -775,7 +775,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String statusLabel(Object status) {
-    return 'स्थिति: $status के बा।';
+    return 'स्थिति: $status';
   }
 
   @override
@@ -795,17 +795,17 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String missingTurkish(Object count) {
-    return 'लापता तुर्की: $count के बा।';
+    return 'लापता तुर्की: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'डीबी संस्करण: $version के बा।';
+    return 'डीबी संस्करण: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'पथ: $path के बा।';
+    return 'पथ: $path';
   }
 
   @override
@@ -875,7 +875,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'कस्टम / $madhab के बा।';
+    return 'कस्टम / $madhab';
   }
 
   @override

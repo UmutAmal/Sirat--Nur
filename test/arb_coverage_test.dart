@@ -464,6 +464,37 @@ void main() {
       },
     );
 
+    test('Bhojpuri runtime status labels preserve placeholders', () {
+      final arb = _readArb('lib/l10n/app_bho.arb');
+      const expected = {
+        'yesterday': 'बीते काल्हु',
+        'targetCount': 'लक्ष्य: {target}',
+        'qazaDebt': 'काजा (कर्ज)',
+        'statusLabel': 'स्थिति: {status}',
+        'missingTurkish': 'लापता तुर्की: {count}',
+        'dbVersion': 'डीबी संस्करण: {version}',
+        'dbPath': 'पथ: {path}',
+        'diagnosticsPrayerCustomProfile': 'कस्टम / {madhab}',
+      };
+      final debris = RegExp(
+        r'के बारे में बतावल गइल बा| के ह$| के बा[।.]?$| के भइल$',
+      );
+
+      for (final entry in expected.entries) {
+        final value = arb[entry.key] as String;
+        expect(
+          value,
+          entry.value,
+          reason: 'app_bho.arb must keep concise ${entry.key} copy',
+        );
+        expect(
+          value,
+          isNot(contains(debris)),
+          reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+        );
+      }
+    });
+
     test('Bihari visible labels do not keep explanatory debris', () {
       final arb = _readArb('lib/l10n/app_bh.arb');
       const expected = {

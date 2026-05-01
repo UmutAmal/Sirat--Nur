@@ -21062,3 +21062,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude kalan `app_bho` runtime/status/qaza label kalintilarini dini anlam metinlerinden ayirarak skorla.
+
+## 2026-05-01 TUR-526 - Bhojpuri Runtime Status Placeholder Label Cleanup
+
+### MASTER Karari
+- Risk: `app_bho.arb` icinde tarih navigasyonu, hedef sayaci, qaza borcu ve diagnostics/runtime status label'lari placeholder'li olmasina ragmen satir sonu `के बा`/`के भइल` artigi tasiyordu. Bu hem UI kalitesini dusuruyor hem de placeholder'li teknik metinlerde okunabilirlik riskini artiriyordu; P1 l10n kalite borcu olarak ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:202` `काल्हु के भइल`, `lib/l10n/app_bho.arb:291` `लक्ष्य: {target} के बा।`, `lib/l10n/app_bho.arb:301` `काजा (कर्ज) के बा।`, `lib/l10n/app_bho.arb:334` `स्थिति: {status} के बा।`, `lib/l10n/app_bho.arb:338` `लापता तुर्की: {count} के बा।`, `lib/l10n/app_bho.arb:339` `डीबी संस्करण: {version} के बा।`, `lib/l10n/app_bho.arb:340` `पथ: {path} के बा।`, `lib/l10n/app_bho.arb:361` `कस्टम / {madhab} के बा।`.
+  - Son durum: `lib/l10n/app_bho.arb:202` `बीते काल्हु`, `lib/l10n/app_bho.arb:291` `लक्ष्य: {target}`, `lib/l10n/app_bho.arb:301` `काजा (कर्ज)`, `lib/l10n/app_bho.arb:334` `स्थिति: {status}`, `lib/l10n/app_bho.arb:338` `लापता तुर्की: {count}`, `lib/l10n/app_bho.arb:339` `डीबी संस्करण: {version}`, `lib/l10n/app_bho.arb:340` `पथ: {path}`, `lib/l10n/app_bho.arb:361` `कस्टम / {madhab}`.
+  - `test/arb_coverage_test.dart` icine eklenen `Bhojpuri runtime status labels preserve placeholders` guard'i 8 anahtarda placeholder'lari ve kisa copy'yi kilitler.
+  - Debris taramasi: `rg -n '"(yesterday|targetCount|qazaDebt|statusLabel|missingTurkish|dbVersion|dbPath|diagnosticsPrayerCustomProfile)".*(के बा|के भइल)' lib\l10n\app_bho.arb` sonucu bos.
+- Kullanici etkisi: Bhojpuri locale'de tracker, qaza, diagnostics ve runtime status alanlari placeholder'lari kaybetmeden kisa ve okunur gorunur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 8 Bhojpuri runtime/status label'i temizlendi: `yesterday`, `targetCount`, `qazaDebt`, `statusLabel`, `missingTurkish`, `dbVersion`, `dbPath`, `diagnosticsPrayerCustomProfile`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bho.dart` ARB ile senkronlandi.
+- Scope dini meaning cumlelerinden ayrildi: `about` dogal "hakkinda" cevirisi oldugu icin, `quranAudioSourcesIncomplete` ve `duaMeaning3` cumle/meaning baglami tasidigi icin bu turda degistirilmedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\arb_coverage_test.dart --plain-name "Bhojpuri runtime status labels preserve placeholders" --reporter compact` PASS.
+- Translation report: `dart run tool\translate_arb_keys.dart yesterday targetCount qazaDebt statusLabel missingTurkish dbVersion dbPath diagnosticsPrayerCustomProfile --report` PASS; missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `738/738`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `58205ff8-2d06-4847-bb14-ded4d54f5c6b`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+
+### Risk Degisimi
+- Bhojpuri runtime/status placeholder label aciklama-debris riski: `16/25 -> 6/25`.
+- Kalan bilincli risk: `app_bho.arb` icinde gorunen kisa UI label'larinda kaba `के बा` kalintisi buyuk olcude kapandi; sonraki dongude tum `app_bho` icin genis regex yeniden kosulup gercek dini cümleler ile UI label'lar ayrilmali. Ayrica `app_bh.arb` benzer kaliplar icin ayri skorlanmali.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude tum Bhojpuri/Bihari kalinti taramasini yenile ve dini meaning metinlerine dokunmadan kalan UI label borcunu sirala.
