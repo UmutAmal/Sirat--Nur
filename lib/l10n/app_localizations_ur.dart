@@ -680,10 +680,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get resetQazaDebtQuestion => 'قضا قرض کو دوبارہ ترتیب دیں؟';
 
   @override
-  String get rawatib => 'Rawatib';
+  String get rawatib => 'سننِ راتبہ';
 
   @override
-  String get tahajjud => 'Tahajjud';
+  String get tahajjud => 'تہجد';
 
   @override
   String get dailyProgress => 'روزانہ کی پیشرفت';

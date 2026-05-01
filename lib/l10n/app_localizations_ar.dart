@@ -677,10 +677,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get resetQazaDebtQuestion => 'إعادة ضبط ديون القزة؟';
 
   @override
-  String get rawatib => 'Rawatib';
+  String get rawatib => 'السنن الرواتب';
 
   @override
-  String get tahajjud => 'Tahajjud';
+  String get tahajjud => 'التهجد';
 
   @override
   String get dailyProgress => 'التقدم اليومي';

@@ -680,10 +680,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get resetQazaDebtQuestion => 'Qaza قەرزىنى ئەسلىگە كەلتۈرەمسىز؟';
 
   @override
-  String get rawatib => 'Rawatib';
+  String get rawatib => 'راتىب سۈننەتلەر';
 
   @override
-  String get tahajjud => 'Tahajjud';
+  String get tahajjud => 'تەھەججۇد';
 
   @override
   String get dailyProgress => 'كۈندىلىك ئىلگىرىلەش';

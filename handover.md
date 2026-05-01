@@ -20685,3 +20685,42 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude proper-name/symbol olmayan en yuksek UI/dini label kumesini skorla. Adaylar: `rawatib`, `tahajjud`, `ahkab`, `masaail`, `qibla`, `tasbih`, `tafsir`, `ramadan`, `eidAlFitr`, `eidAlAdha`; dini terimlerde uydurma yapmadan canonical/transliteration policy kullan.
+
+## 2026-05-01 TUR-515 - Arabic Script Prayer Label Localization Guard
+
+### MASTER Karari
+- Risk: `rawatib` ve `tahajjud` dini namaz etiketleri Arap yazisini kullanan oncelikli locale'lerde Latin/English fallback olarak gorunuyordu. Bu, dini UI yuzeyinde kullanicinin kendi yazisinda olmayan temel ibadet etiketleri gormesine neden olan P1 l10n/icerik kalitesi borcudur.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report rawatib tahajjud` same-as-English `378`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 2 anahtarda same-as-English `366`, missing/empty `0`, placeholder mismatch `0`.
+  - `lib/l10n/app_ar.arb:304` `rawatib` degeri `السنن الرواتب`, `lib/l10n/app_ar.arb:305` `tahajjud` degeri `التهجد`.
+  - `lib/l10n/app_fa.arb:304` `rawatib` degeri `نمازهای راتبه`, `lib/l10n/app_fa.arb:305` `tahajjud` degeri `نماز تهجد`.
+  - `lib/l10n/app_ps.arb:304` `rawatib` degeri `راتبه سنتونه`, `lib/l10n/app_ps.arb:305` `tahajjud` degeri `تهجد`.
+  - `lib/l10n/app_sd.arb:304` `rawatib` degeri `سنن راتبه`, `lib/l10n/app_sd.arb:305` `tahajjud` degeri `تهجد`.
+  - `lib/l10n/app_ug.arb:304` `rawatib` degeri `راتىب سۈننەتلەر`, `lib/l10n/app_ug.arb:305` `tahajjud` degeri `تەھەججۇد`.
+  - `lib/l10n/app_ur.arb:304` `rawatib` degeri `سننِ راتبہ`, `lib/l10n/app_ur.arb:305` `tahajjud` degeri `تہجد`.
+  - `test/arb_religious_localization_test.dart:52` yeni guard bu 6 locale'de iki etiketin canonical script ile kalmasini ve Latin `[A-Za-z]` fallback'e donmemesini kilitler.
+- Kullanici etkisi: Arap, Fars, Pustu, Sindhi, Uygur ve Urdu kullanicilari temel ibadet etiketlerini kendi yazilarinda gorur; dini terimler sahte/genel makine cevirisiyle degil kontrollu canonical dini terimlerle sunulur.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 4/25.
+- Rollback plani: Bu turdaki 6 `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/arb_religious_localization_test.dart` ek guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `ar`, `fa`, `ps`, `sd`, `ug`, `ur` locale'lerinde `rawatib` ve `tahajjud` Latin fallback yerine canonical Arap yazili karsiliklara alindi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB kaynaklariyla senkronlandi.
+- Scope ozellikle 6 yuksek guvenli Arap yazili locale ile sinirli tutuldu; diger locale'lerde dini terimler uydurulmadi.
+
+### TESTER Degisikligi
+- Targeted religious l10n test: `flutter test test\arb_religious_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `6/6`.
+- Translation debt raporu: `dart run tool\translate_arb_keys.dart rawatib tahajjud --report` PASS; same-as-English `366`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `727/727`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `061a42c0-8fec-482d-8635-33c597d7f767`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94812042`.
+
+### Risk Degisimi
+- Arap yazili oncelikli dini namaz label borcu: `12/25 -> 4/25`.
+- Kalan bilincli risk: `rawatib/tahajjud` icin 366 same-as-English deger kaldi; bunlar dusuk kaynakli veya Latin yazili locale'lerde ayrica canonical policy gerektirir. Sahte dini metin uretmemek icin bu turda sadece yuksek guvenli 6 locale kapsandi.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude bariz makine ceviri artigi olan dini label dosyalarini tara. Ilk adaylar: `lib/l10n/app_bho.arb:304`, `lib/l10n/app_bho.arb:305`, `lib/l10n/app_ilo.arb:305`, `lib/l10n/app_kri.arb:304`, `lib/l10n/app_kri.arb:305`, `lib/l10n/app_lus.arb:304`, `lib/l10n/app_lus.arb:305`, `lib/l10n/app_nso.arb:305`.

@@ -679,10 +679,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get resetQazaDebtQuestion => 'د قضا پور بیا تنظیم کړئ؟';
 
   @override
-  String get rawatib => 'Rawatib';
+  String get rawatib => 'راتبه سنتونه';
 
   @override
-  String get tahajjud => 'Tahajjud';
+  String get tahajjud => 'تهجد';
 
   @override
   String get dailyProgress => 'ورځنی پرمختګ';

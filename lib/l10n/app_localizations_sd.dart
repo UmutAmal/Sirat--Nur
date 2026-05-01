@@ -679,10 +679,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get resetQazaDebtQuestion => 'قضا قرض ري سيٽ ڪريو؟';
 
   @override
-  String get rawatib => 'Rawatib';
+  String get rawatib => 'سنن راتبه';
 
   @override
-  String get tahajjud => 'Tahajjud';
+  String get tahajjud => 'تهجد';
 
   @override
   String get dailyProgress => 'روزاني ترقي';

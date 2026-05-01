@@ -680,10 +680,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get resetQazaDebtQuestion => 'بازنشانی بدهی قزا؟';
 
   @override
-  String get rawatib => 'Rawatib';
+  String get rawatib => 'نمازهای راتبه';
 
   @override
-  String get tahajjud => 'Tahajjud';
+  String get tahajjud => 'نماز تهجد';
 
   @override
   String get dailyProgress => 'پیشرفت روزانه';
