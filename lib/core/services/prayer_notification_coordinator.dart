@@ -32,7 +32,7 @@ class PrayerNotificationCoordinator {
       await init();
     }
 
-    final fingerprint = _runtimeSyncFingerprint(settings);
+    final fingerprint = await _runtimeSyncFingerprint(settings);
     if (_activeSync == null &&
         _queuedSettings == null &&
         _lastFingerprint == fingerprint) {
@@ -70,7 +70,7 @@ class PrayerNotificationCoordinator {
       }
 
       _queuedSettings = null;
-      final fingerprint = _runtimeSyncFingerprint(settings);
+      final fingerprint = await _runtimeSyncFingerprint(settings);
       if (_lastFingerprint == fingerprint) {
         continue;
       }
@@ -105,7 +105,7 @@ class PrayerNotificationCoordinator {
     return settingsFingerprint(previous) != settingsFingerprint(next);
   }
 
-  String _runtimeSyncFingerprint(SettingsState settings) {
+  Future<String> _runtimeSyncFingerprint(SettingsState settings) async {
     final baseFingerprint = settingsFingerprint(settings);
     final latitude = settings.latitude;
     final longitude = settings.longitude;
@@ -115,6 +115,7 @@ class PrayerNotificationCoordinator {
       return '$baseFingerprint|no-schedule-window';
     }
 
+    final scheduleCapability = await _scheduler.scheduleCapabilityFingerprint();
     final anchor =
         _scheduleAnchorClock?.call(settings) ??
         TimezoneUtils.nowForTimezone(
@@ -125,7 +126,7 @@ class PrayerNotificationCoordinator {
           ),
         );
 
-    return '$baseFingerprint|${_dateKey(anchor)}';
+    return '$baseFingerprint|${_dateKey(anchor)}|$scheduleCapability';
   }
 
   static String _dateKey(DateTime dateTime) {

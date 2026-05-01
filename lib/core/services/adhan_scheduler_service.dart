@@ -47,6 +47,13 @@ class AdhanSchedulerService {
     await _cancelScheduledAdhans();
   }
 
+  Future<String> scheduleCapabilityFingerprint() async {
+    final mode = await _resolveAndroidScheduleMode();
+    return mode == AndroidScheduleMode.exactAllowWhileIdle
+        ? 'exact-allow-while-idle'
+        : 'inexact-allow-while-idle';
+  }
+
   /// Proactive 30-Day Adhan Scheduling
   /// Hardened against OS battery optimizations.
   Future<void> scheduleAdhans(

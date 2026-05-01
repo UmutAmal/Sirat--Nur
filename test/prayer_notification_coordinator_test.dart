@@ -14,6 +14,8 @@ class FakeAdhanSchedulerService extends AdhanSchedulerService {
   int permissionCalls = 0;
   int clearCalls = 0;
   int scheduleCalls = 0;
+  int capabilityFingerprintCalls = 0;
+  String scheduleCapability = 'exact-allow-while-idle';
 
   double? lat;
   double? lon;
@@ -37,6 +39,12 @@ class FakeAdhanSchedulerService extends AdhanSchedulerService {
   @override
   Future<void> clearScheduledAdhans() async {
     clearCalls++;
+  }
+
+  @override
+  Future<String> scheduleCapabilityFingerprint() async {
+    capabilityFingerprintCalls++;
+    return scheduleCapability;
   }
 
   @override
@@ -193,6 +201,31 @@ void main() {
 
       expect(scheduler.scheduleCalls, 1);
     });
+
+    test(
+      'refreshes identical settings when exact alarm capability changes',
+      () async {
+        final scheduler = FakeAdhanSchedulerService();
+        final coordinator = PrayerNotificationCoordinator(scheduler: scheduler);
+        final settings = SettingsState(
+          latitude: 41.0082,
+          longitude: 28.9784,
+          locationName: 'Istanbul, Turkey',
+          timezone: 'Europe/Istanbul',
+        );
+
+        await coordinator.sync(settings);
+        await coordinator.sync(settings);
+
+        expect(scheduler.scheduleCalls, 1);
+
+        scheduler.scheduleCapability = 'inexact-allow-while-idle';
+        await coordinator.sync(settings);
+
+        expect(scheduler.scheduleCalls, 2);
+        expect(scheduler.capabilityFingerprintCalls, greaterThanOrEqualTo(3));
+      },
+    );
 
     test(
       'refreshes identical settings when the local schedule window date changes',

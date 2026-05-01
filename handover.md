@@ -20304,6 +20304,38 @@
 ### Sonraki Adim
 - Full analyze/test/store readiness kapilarini calistir, commit/push yap, sonra bir sonraki en yuksek riske gec: prayer/notification DST-OEM scheduling audit'i veya Supabase-backed verified content ingestion hattinda hardcoded dini icerik temizligi.
 
+## 2026-05-01 TUR-507 - Exact Alarm Capability Reschedule Guard
+
+### MASTER Karari
+- Risk: Android exact alarm izni/kapasitesi ayni gun icinde degistiginde `PrayerNotificationCoordinator` fingerprint'i sadece settings + tarih kullaniyordu. `main.dart` resume'da sync cagirdigi halde fingerprint ayni kaldigi icin scheduler'a inilmeden cikilabiliyor, eski inexact schedule 30 gunluk pencerede sessizce kalabiliyordu.
+- Kanit:
+  - `lib/core/services/prayer_notification_coordinator.dart:35` ve `lib/core/services/prayer_notification_coordinator.dart:73` runtime fingerprint artik async hesaplanir.
+  - `lib/core/services/prayer_notification_coordinator.dart:118` scheduler capability fingerprint'i runtime fingerprint'e eklenir.
+  - `lib/core/services/adhan_scheduler_service.dart:50` exact/inexact Android schedule modu tekil, testlenebilir fingerprint olarak dondurulur.
+  - `test/prayer_notification_coordinator_test.dart:206` ayni settings ile exact alarm capability degisince ikinci schedule cagrisi geldigini kilitler.
+- Kullanici etkisi: Kullanici Android ayarlarindan exact alarm iznini acip/kapatip uygulamaya dondugunde, namaz bildirimleri ayni gun icinde yeni cihaz kapasitesine gore yeniden planlanir; hassas vakitlerde eski inexact planin sessizce kalma riski azalir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 4/25.
+- Rollback plani: `lib/core/services/adhan_scheduler_service.dart`, `lib/core/services/prayer_notification_coordinator.dart`, `test/prayer_notification_coordinator_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `AdhanSchedulerService.scheduleCapabilityFingerprint()` eklendi; Android exact schedule modu `exact-allow-while-idle` / `inexact-allow-while-idle` olarak stabil string'e cevrildi.
+- `PrayerNotificationCoordinator` runtime fingerprint'i async hale getirildi ve schedule capability ile genisletildi.
+- Konum yok/invalid durumda `no-schedule-window` davranisi korunarak gereksiz platform capability sorgusu yapilmadi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\prayer_notification_coordinator_test.dart test\notification_service_guard_test.dart --reporter compact` PASS, `17/17`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `720/720`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `d0d9eb6a-83c8-4f93-8d41-e47088d373f1`, `quranPlayback.clickedPlay=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94599050`.
+
+### Risk Degisimi
+- Exact alarm capability drift riski: `12/25 -> 4/25`.
+- Kalan bilincli risk: OEM battery optimization davranisi cihaz/uretici bazinda degisir; mevcut patch izin/kapasite degisimi sonrasi yeniden schedule garantisini guclendirir fakat OEM'in scheduled alarm teslimini tamamen garanti edemez.
+
+### Sonraki Adim
+- Full analyze/test/store readiness kapilarini calistir, commit/push yap, sonra prayer notification pipeline'da timezone/DST edge case veya verified content hardcoded dini icerik riskini tara.
+
 ## 2026-05-01 TUR-504 - Cancellable Offline Download Runtime Smoke
 
 ### MASTER Karari
