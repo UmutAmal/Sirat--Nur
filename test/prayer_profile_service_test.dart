@@ -129,6 +129,24 @@ void main() {
       }
     });
 
+    test('maps Oman to an honest Ibadi regional fallback', () {
+      for (final args in const [
+        (countryCode: 'OM', timezone: 'Asia/Muscat'),
+        (countryCode: null, timezone: 'Asia/Muscat'),
+      ]) {
+        final profile = resolvePrayerProfile(
+          countryCode: args.countryCode,
+          timezone: args.timezone,
+        );
+
+        expect(profile.calculationMethod, mwlPrayerMethod);
+        expect(profile.madhab, ibadiMadhab);
+        expect(profile.isRegionalFallback, isTrue);
+        expect(hasOfficialPrayerAuthority(profile), isFalse);
+        expect(hasInstitutionalPrayerMethodSource(profile), isTrue);
+      }
+    });
+
     test(
       'does not masquerade Bangladesh or Afghanistan as Karachi profiles',
       () {
@@ -210,6 +228,12 @@ void main() {
       expect(normalizeCalculationMethod('ISNA'), isnaPrayerMethod);
       expect(normalizeCalculationMethod('Umm Al-Qura'), ummAlQuraPrayerMethod);
       expect(normalizeCalculationMethod('Singapore'), muisPrayerMethod);
+    });
+
+    test('normalizes and displays Ibadi madhab labels', () {
+      expect(normalizeMadhab('Ibadhi'), ibadiMadhab);
+      expect(displayMadhabLabel(ibadiMadhab), 'Ibadi');
+      expect(resolveAdhanMadhab(ibadiMadhab), Madhab.shafi);
     });
 
     test('builds official interval profile for Umm al-Qura', () {

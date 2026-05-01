@@ -91,7 +91,7 @@ class SettingsPage extends ConsumerWidget {
                     context,
                     icon: Icons.account_balance_rounded,
                     title: l10n.madhab,
-                    value: settings.madhab,
+                    value: displayMadhabLabel(settings.madhab),
                     onTap: () => _showMadhabPicker(context, ref),
                   ),
                   const Divider(height: 1),

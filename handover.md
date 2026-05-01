@@ -20165,3 +20165,40 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: prayer notification timezone/DST scheduling derin denetimi, kalan low-resource l10n fallback cluster'i veya offline download single-surah fixture ile daha derin runtime indirme testi.
+
+## 2026-05-01 TUR-500 - Oman Ibadi Prayer Profile Honesty
+
+### MASTER Karari
+- Risk: Oman/Muscat profili generic MWL Shafii fallback'e dusuyordu; bu, Oman'in Ibadi agirlikli dini baglaminda "her mezhebe uygun" hedefiyle uyumsuzdu ve kullaniciya mezhep secimi eksik gorunebilirdi.
+- Kanit:
+  - Resmi Oman Foreign Ministry sayfasi Omanlilarin cogunun Ibadi school'a mensup oldugunu ve Sunniler/Sii'lerin de bulundugunu yazar: https://www.fm.gov.om/en/about-oman/state/religious-freedom/
+  - MARA/Gov.om sayfalari Ministry of Endowments and Religious Affairs'in Oman'da religious affairs alanindan sorumlu resmi kurum oldugunu dogrular: https://mara.om/mara/the-ministry/ ve https://gov.om/en/ministry-of-endowments-and-religious-affairs
+  - `lib/core/services/prayer_profile_service.dart:62` artik `ibadiMadhab` sabitini taniyor; `lib/core/services/prayer_profile_service.dart:87` secilebilir mezhep listesine ekliyor.
+  - `lib/core/services/prayer_profile_service.dart:322` `Asia/Muscat` timezone'unu Ibadi etiketli MWL regional fallback'e bagliyor; `lib/core/services/prayer_profile_service.dart:535` `OM` country code icin ayni profile donuyor.
+  - `lib/core/services/prayer_profile_service.dart:618` Ibadi Asr ayarini adhan paketindeki standard Asr shadow factor'a bagliyor; resmi Oman hesap tablosu uydurulmadigi icin profil regional fallback olarak kaliyor.
+  - `lib/features/settings/settings_page.dart:94` Settings ekranindaki mezhep degeri artik raw `Jafari/Shafii` yerine `Ja'fari/Shafi'i/Ibadi` formatli label gosteriyor.
+  - `test/prayer_profile_service_test.dart:132` Oman profilinin Ibadi regional fallback oldugunu, official authority gibi maskelenmedigini test ediyor.
+  - `test/features/settings/settings_page_test.dart:123` Settings ekraninin tum mezhep label'larini, Ibadi dahil, gosterdigini test ediyor.
+- Kullanici etkisi: Oman kullanicisi artik Sunni-only generic Shafii varsayimi gormez; uygulama Ibadi baglami taniyip yine de resmi saatleri yerel cami/resmi kurumla dogrulama uyarisini korur.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 4/25.
+- Rollback plani: `lib/core/services/prayer_profile_service.dart`, `lib/features/settings/settings_page.dart`, `test/prayer_profile_service_test.dart`, `test/features/settings/settings_page_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `Ibadi` mezhep secenegi, normalization ve display label zincirine eklendi.
+- Oman country code ve `Asia/Muscat` timezone fallback'i Ibadi etiketli MWL regional profile'a baglandi.
+- Settings ekranindaki madhab tile'i canonical display label kullanacak sekilde duzeltildi.
+
+### TESTER Degisikligi
+- Targeted settings/profile tests: `flutter test test\prayer_profile_service_test.dart test\settings_provider_test.dart test\features\settings\settings_page_test.dart --reporter compact` PASS, `56/56`.
+- Prayer pipeline tests: `flutter test test\prayer_times_service_test.dart test\prayer_calendar_service_test.dart test\prayer_notification_coordinator_test.dart test\timezone_utils_test.dart --reporter compact` PASS, `26/26`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `708/708`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `affedd0d-83c0-458e-8f4c-4409460e2d42`, `quranPlayback.clickedPlay=true`, `containsPauseControl=true`, `containsPlaybackError=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94254930`.
+
+### Risk Degisimi
+- Oman/Ibadi mezhep baglami eksikligi: `12/25 -> 4/25`.
+- Kalan bilincli risk: Oman icin resmi bakanlik namaz tablosu API entegrasyonu yok; bu nedenle hesaplama MWL regional fallback olarak duruyor ve UI resmi kurum/cami teyidi uyarisini gostermeye devam ediyor.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: resmi kurum bazli ulke profilleri icin daha fazla bolge audit'i, kalan low-resource l10n fallback cluster'i veya offline download single-surah fixture ile runtime indirme testi.

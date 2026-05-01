@@ -120,6 +120,30 @@ void main() {
     },
   );
 
+  testWidgets('SettingsPage formats and exposes all madhab labels', (
+    tester,
+  ) async {
+    await pumpSettingsPage(
+      tester,
+      prefsValues: const {
+        'calculationMethod': mwlPrayerMethod,
+        'madhab': jafariMadhab,
+      },
+    );
+
+    expect(find.text("Ja'fari"), findsWidgets);
+
+    await tester.tap(find.text('Asr Juristic Method'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Hanafi'), findsOneWidget);
+    expect(find.text("Shafi'i"), findsOneWidget);
+    expect(find.text('Maliki'), findsOneWidget);
+    expect(find.text('Hanbali'), findsOneWidget);
+    expect(find.text("Ja'fari"), findsWidgets);
+    expect(find.text('Ibadi'), findsOneWidget);
+  });
+
   testWidgets('SettingsPage builds localized share text from app metadata', (
     tester,
   ) async {

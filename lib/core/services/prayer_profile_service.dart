@@ -59,6 +59,7 @@ const String shafiiMadhab = 'Shafii';
 const String malikiMadhab = 'Maliki';
 const String hanbaliMadhab = 'Hanbali';
 const String jafariMadhab = 'Jafari';
+const String ibadiMadhab = 'Ibadi';
 
 const List<String> selectablePrayerMethods = <String>[
   diyanetPrayerMethod,
@@ -83,6 +84,7 @@ const List<String> selectableMadhabs = <String>[
   malikiMadhab,
   hanbaliMadhab,
   jafariMadhab,
+  ibadiMadhab,
 ];
 
 const PrayerCalculationProfile _diyanetProfile = PrayerCalculationProfile(
@@ -217,6 +219,15 @@ const PrayerCalculationProfile _mwlMalikiRegionalFallbackProfile =
       isRegionalFallback: true,
     );
 
+const PrayerCalculationProfile _mwlIbadiRegionalFallbackProfile =
+    PrayerCalculationProfile(
+      calculationMethod: mwlPrayerMethod,
+      madhab: ibadiMadhab,
+      sourceName: 'Muslim World League',
+      sourceUrl: 'https://www.mwl.net/en',
+      isRegionalFallback: true,
+    );
+
 const PrayerCalculationProfile _moroccoProfile = PrayerCalculationProfile(
   calculationMethod: moroccoPrayerMethod,
   madhab: malikiMadhab,
@@ -308,6 +319,7 @@ const Map<String, PrayerCalculationProfile> _timezoneProfileFallbacks =
       'Asia/Kuching': _jakimProfile,
       'Asia/Kuwait': _kuwaitProfile,
       'Asia/Makassar': _kemenagProfile,
+      'Asia/Muscat': _mwlIbadiRegionalFallbackProfile,
       'Asia/Pontianak': _kemenagProfile,
       'Asia/Qatar': _qatarProfile,
       'Asia/Riyadh': _ummAlQuraProfile,
@@ -375,6 +387,9 @@ String normalizeMadhab(String madhab) {
       return hanbaliMadhab;
     case jafariMadhab:
       return jafariMadhab;
+    case 'Ibadhi':
+    case ibadiMadhab:
+      return ibadiMadhab;
     case hanafiMadhab:
     default:
       return hanafiMadhab;
@@ -387,6 +402,8 @@ String displayMadhabLabel(String madhab) {
       return "Shafi'i";
     case jafariMadhab:
       return "Ja'fari";
+    case ibadiMadhab:
+      return 'Ibadi';
     default:
       return normalizeMadhab(madhab);
   }
@@ -515,6 +532,8 @@ PrayerCalculationProfile resolvePrayerProfile({
     case 'BD':
     case 'AF':
       return _mwlHanafiRegionalFallbackProfile;
+    case 'OM':
+      return _mwlIbadiRegionalFallbackProfile;
     case 'IR':
       return _tehranProfile;
     case 'US':
@@ -596,7 +615,10 @@ Madhab resolveAdhanMadhab(String madhab) {
     case malikiMadhab:
     case hanbaliMadhab:
     case jafariMadhab:
+    case ibadiMadhab:
     default:
+      // The adhan package exposes Hanafi vs standard Asr shadow factors.
+      // Maliki/Hanbali/Ja'fari/Ibadi use the standard factor in this engine.
       return Madhab.shafi;
   }
 }
