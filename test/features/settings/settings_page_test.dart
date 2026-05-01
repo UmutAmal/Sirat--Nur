@@ -97,6 +97,30 @@ void main() {
     expect(find.textContaining('user-selected'), findsNothing);
   });
 
+  testWidgets('SettingsPage does not mark Morocco MWL fallback as official', (
+    tester,
+  ) async {
+    await pumpSettingsPage(
+      tester,
+      prefsValues: const {
+        'calculationMethod': moroccoPrayerMethod,
+        'madhab': malikiMadhab,
+        'latitude': 33.5731,
+        'longitude': -7.5898,
+        'locationName': 'Casablanca, Morocco',
+        'countryCode': 'MA',
+        'timezone': 'Africa/Casablanca',
+      },
+    );
+
+    expect(find.text('Prayer Authority'), findsOneWidget);
+    expect(
+      find.textContaining('Regional fallback using Muslim World League'),
+      findsOneWidget,
+    );
+    expect(find.textContaining('Morocco Ministry of Awqaf'), findsNothing);
+  });
+
   testWidgets(
     'SettingsPage does not mark madhab overrides as full official authority',
     (tester) async {

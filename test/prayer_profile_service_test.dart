@@ -92,6 +92,30 @@ void main() {
       },
     );
 
+    test(
+      'marks Morocco as a MWL Maliki fallback until a native engine profile exists',
+      () {
+        for (final args in const [
+          (countryCode: 'MA', timezone: 'Africa/Casablanca'),
+          (countryCode: null, timezone: 'Africa/Casablanca'),
+        ]) {
+          final profile = resolvePrayerProfile(
+            countryCode: args.countryCode,
+            timezone: args.timezone,
+          );
+          final params = buildCalculationParameters(profile.calculationMethod);
+
+          expect(profile.calculationMethod, moroccoPrayerMethod);
+          expect(profile.madhab, malikiMadhab);
+          expect(profile.sourceName, 'Muslim World League');
+          expect(profile.sourceUrl, 'https://www.mwl.net/en');
+          expect(profile.isRegionalFallback, isTrue);
+          expect(hasOfficialPrayerAuthority(profile), isFalse);
+          expect(params.method, CalculationMethod.muslim_world_league);
+        }
+      },
+    );
+
     test('maps Gulf timezones when country code is unavailable', () {
       final cases = <String, String>{
         'Asia/Riyadh': ummAlQuraPrayerMethod,

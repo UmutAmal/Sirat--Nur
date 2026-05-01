@@ -20310,6 +20310,34 @@
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: kalan low-resource l10n fallback cluster'i, resmi kurum bazli ulke profilleri audit'i veya notification/OEM exact alarm cihaz davranisi dokumantasyon-test derinlestirmesi.
 
+## 2026-05-01 TUR-505 - Morocco Prayer Profile Honesty Guard
+
+### MASTER Karari
+- Risk: Morocco/Moroccan profile, app tarafinda `Morocco Ministry of Awqaf` resmi otoritesi gibi gorunebiliyordu; fakat mevcut `adhan` engine'inde native Morocco calculation method yok ve `moroccoPrayerMethod` `CalculationMethod.muslim_world_league` parametrelerine dusuyordu. Bu, namaz vakti kaynak bilgisinde "resmiymis gibi gosterme" riski olusturuyordu.
+- Kanit:
+  - `lib/core/services/prayer_profile_service.dart:231` Morocco profili artik `Muslim World League` kaynakli ve `isRegionalFallback: true`.
+  - `lib/core/services/prayer_profile_service.dart:592` `moroccoPrayerMethod` halen MWL parametrelerini kullanir; davranis ile UI kaynak iddiasi artik ayni seviyede durust.
+  - `test/prayer_profile_service_test.dart:96` Morocco `MA` ve `Africa/Casablanca` icin MWL/Maliki fallback oldugunu, resmi otorite sayilmadigini ve engine method'un MWL oldugunu kilitler.
+  - `test/features/settings/diagnostics_page_test.dart:195` diagnostics kaynak metninin Morocco fallback'i official gostermedigini kilitler.
+  - `test/features/settings/settings_page_test.dart:100` Settings UI'da `Morocco Ministry of Awqaf` metninin artik gorunmedigini ve regional fallback copy'sinin gorundugunu kilitler.
+- Kullanici etkisi: Fas secili kullanicilar uygulamada yanlis resmi otorite guvencesi gormez; vakit motoru MWL/Maliki fallback olarak durustce aciklanir ve kullanici yerel cami/resmi otoriteyle dogrulama copy'sini gorur.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 5/25.
+- Rollback plani: `lib/core/services/prayer_profile_service.dart`, `test/prayer_profile_service_test.dart`, `test/features/settings/diagnostics_page_test.dart`, `test/features/settings/settings_page_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `_moroccoProfile` sourceName/sourceUrl MWL ile uyumlu hale getirildi.
+- `_moroccoProfile.isRegionalFallback` true yapildi; `hasOfficialPrayerAuthority` artik Morocco fallback'i resmi otorite olarak dondurmez.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\prayer_profile_service_test.dart test\features\settings\diagnostics_page_test.dart test\features\settings\settings_page_test.dart --reporter compact` PASS, `51/51`.
+
+### Risk Degisimi
+- Morocco resmi otorite false-claim riski: `12/25 -> 5/25`.
+- Kalan bilincli risk: Fas icin native resmi hesap engine'i veya dogrudan resmi vakit API entegrasyonu yoksa uygulama MWL/Maliki fallback ile kalir; bu nedenle UI bilincli olarak official degil, regional fallback der.
+
+### Sonraki Adim
+- Full analyze/test/store readiness kapilarini calistir, commit/push yap, sonra bir sonraki ulke/profil/l10n riskini tara.
+
 ## 2026-05-01 TUR-503 - Settings Hadith Low-Resource L10n Debt Reduction
 
 ### MASTER Karari

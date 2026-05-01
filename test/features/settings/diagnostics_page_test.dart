@@ -192,6 +192,25 @@ void main() {
     );
   });
 
+  test('resolvePrayerSourceValue does not label Morocco fallback official', () {
+    final profile = resolvePrayerProfile(
+      countryCode: 'MA',
+      timezone: 'Africa/Casablanca',
+    );
+
+    expect(profile.calculationMethod, moroccoPrayerMethod);
+    expect(profile.isRegionalFallback, isTrue);
+    expect(isOfficialPrayerProfile(profile), isFalse);
+    expect(
+      resolvePrayerSourceValue(
+        profile,
+        regionalFallbackSourceValue:
+            'Regional fallback using ${profile.sourceName}',
+      ),
+      'Regional fallback using Muslim World League',
+    );
+  });
+
   test('resolvePrayerProfileValue flags custom profiles honestly', () {
     final profile = profileForMethod(customPrayerMethod, madhab: jafariMadhab);
 

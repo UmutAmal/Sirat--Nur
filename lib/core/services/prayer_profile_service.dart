@@ -231,8 +231,9 @@ const PrayerCalculationProfile _mwlIbadiRegionalFallbackProfile =
 const PrayerCalculationProfile _moroccoProfile = PrayerCalculationProfile(
   calculationMethod: moroccoPrayerMethod,
   madhab: malikiMadhab,
-  sourceName: 'Morocco Ministry of Awqaf',
-  sourceUrl: 'https://www.habous.gov.ma',
+  sourceName: 'Muslim World League',
+  sourceUrl: 'https://www.mwl.net/en',
+  isRegionalFallback: true,
 );
 
 const PrayerCalculationProfile _tehranProfile = PrayerCalculationProfile(
