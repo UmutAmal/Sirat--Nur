@@ -20202,3 +20202,37 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: resmi kurum bazli ulke profilleri icin daha fazla bolge audit'i, kalan low-resource l10n fallback cluster'i veya offline download single-surah fixture ile runtime indirme testi.
+
+## 2026-05-01 TUR-501 - Prayer Notification Schedule Window Refresh
+
+### MASTER Karari
+- Risk: Adhan bildirimleri 30 gunluk pencere olarak kuruluyor, fakat uygulama uzun sure arka planda/onde kalirsa ayni settings fingerprint'i nedeniyle pencere yeni gune tasininca yenilenmeyebilirdi. Bu durum kullanicida bir sure sonra adhan bildirimlerinin sessizce bitmesine yol acabilirdi.
+- Kanit:
+  - `lib/core/services/adhan_scheduler_service.dart` 30 gunluk schedule penceresi kuruyor ve coordinator ayni ayarlari gordugunde tekrar schedule etmiyordu.
+  - `lib/core/services/prayer_notification_coordinator.dart:35` artik runtime fingerprint'i kullanir; `lib/core/services/prayer_notification_coordinator.dart:108` settings fingerprint'ine yerel schedule tarih anahtarini ekler.
+  - `lib/core/services/prayer_notification_coordinator.dart:119` test edilebilir `PrayerScheduleAnchorClock` ile, production'da `TimezoneUtils.nowForTimezone` ile kullanicinin resolved timezone gununu hesaplar.
+  - `lib/main.dart:161` app state'i `WidgetsBindingObserver` yapar; `lib/main.dart:216` app `resumed` oldugunda mevcut settings ile runtime yuzeylerini yeniden senkronlar.
+  - `test/prayer_notification_coordinator_test.dart:198` ayni ayarlarin ayni gunde tekrar schedule edilmedigini, tarih degisince yeniden schedule edildigini dogrular.
+  - `test/features/common/main_bootstrap_logging_test.dart:42` app resume lifecycle guard'ini kaynak seviyesinde korur.
+- Kullanici etkisi: Uygulama uzun sure acik veya arka planda kalsa bile resume aninda yeni yerel gun gorulurse adhan bildirim penceresi tazelenir; ayni gunde gereksiz yeniden schedule yapilmaz.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 3/25.
+- Rollback plani: `lib/core/services/prayer_notification_coordinator.dart`, `lib/main.dart`, `test/prayer_notification_coordinator_test.dart`, `test/features/common/main_bootstrap_logging_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- PrayerNotificationCoordinator'a gun bazli runtime sync fingerprint'i eklendi.
+- Fingerprint, lokasyon yokken sabit `no-schedule-window` anahtari kullanir; lokasyon varken resolved timezone'un yerel tarihini kullanir.
+- SiratINurApp lifecycle observer oldu; app resume aninda notification sync, prayer/qibla widget sync ve ayah widget sync ayni runtime helper uzerinden tetiklenir.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\prayer_notification_coordinator_test.dart test\features\common\main_bootstrap_logging_test.dart test\prayer_times_service_test.dart test\prayer_calendar_service_test.dart test\timezone_utils_test.dart --reporter compact` PASS, `30/30`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `710/710`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `a35707ec-2d8c-42bf-a94d-2d1d02b6d597`, `quranPlayback.clickedPlay=true`, `containsPauseControl=true`, `containsPlaybackError=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94254930`.
+
+### Risk Degisimi
+- Adhan notification schedule pencere bayatlama riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: Android OS exact alarm izni veya OEM battery optimization davranisi kullanici cihazina baglidir; app exact/inexact mode'u zaten capability'e gore seciyor ve store declaration korunuyor.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: offline download single-surah runtime indirme testi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.

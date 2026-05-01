@@ -1,12 +1,19 @@
 import 'package:flutter/widgets.dart';
 import 'package:sirat_i_nur/core/services/adhan_scheduler_service.dart';
+import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 
+typedef PrayerScheduleAnchorClock = DateTime Function(SettingsState settings);
+
 class PrayerNotificationCoordinator {
-  PrayerNotificationCoordinator({AdhanSchedulerService? scheduler})
-    : _scheduler = scheduler ?? AdhanSchedulerService();
+  PrayerNotificationCoordinator({
+    AdhanSchedulerService? scheduler,
+    PrayerScheduleAnchorClock? scheduleAnchorClock,
+  }) : _scheduler = scheduler ?? AdhanSchedulerService(),
+       _scheduleAnchorClock = scheduleAnchorClock;
 
   final AdhanSchedulerService _scheduler;
+  final PrayerScheduleAnchorClock? _scheduleAnchorClock;
   bool _isInitialized = false;
   String? _lastFingerprint;
   SettingsState? _queuedSettings;
@@ -25,7 +32,7 @@ class PrayerNotificationCoordinator {
       await init();
     }
 
-    final fingerprint = settingsFingerprint(settings);
+    final fingerprint = _runtimeSyncFingerprint(settings);
     if (_activeSync == null &&
         _queuedSettings == null &&
         _lastFingerprint == fingerprint) {
@@ -63,7 +70,7 @@ class PrayerNotificationCoordinator {
       }
 
       _queuedSettings = null;
-      final fingerprint = settingsFingerprint(settings);
+      final fingerprint = _runtimeSyncFingerprint(settings);
       if (_lastFingerprint == fingerprint) {
         continue;
       }
@@ -96,6 +103,36 @@ class PrayerNotificationCoordinator {
 
   static bool shouldResync(SettingsState? previous, SettingsState next) {
     return settingsFingerprint(previous) != settingsFingerprint(next);
+  }
+
+  String _runtimeSyncFingerprint(SettingsState settings) {
+    final baseFingerprint = settingsFingerprint(settings);
+    final latitude = settings.latitude;
+    final longitude = settings.longitude;
+    if (latitude == null ||
+        longitude == null ||
+        !hasValidLocationCoordinates(latitude, longitude)) {
+      return '$baseFingerprint|no-schedule-window';
+    }
+
+    final anchor =
+        _scheduleAnchorClock?.call(settings) ??
+        TimezoneUtils.nowForTimezone(
+          TimezoneUtils.resolveTimezoneName(
+            timezoneName: settings.timezone,
+            latitude: latitude,
+            longitude: longitude,
+          ),
+        );
+
+    return '$baseFingerprint|${_dateKey(anchor)}';
+  }
+
+  static String _dateKey(DateTime dateTime) {
+    final year = dateTime.year.toString().padLeft(4, '0');
+    final month = dateTime.month.toString().padLeft(2, '0');
+    final day = dateTime.day.toString().padLeft(2, '0');
+    return '$year-$month-$day';
   }
 
   @visibleForTesting

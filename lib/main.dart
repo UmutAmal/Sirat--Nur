@@ -157,7 +157,8 @@ class SiratINurApp extends ConsumerStatefulWidget {
   ConsumerState<SiratINurApp> createState() => _SiratINurAppState();
 }
 
-class _SiratINurAppState extends ConsumerState<SiratINurApp> {
+class _SiratINurAppState extends ConsumerState<SiratINurApp>
+    with WidgetsBindingObserver {
   bool _showSplash = true;
   final PrayerNotificationCoordinator _prayerNotificationCoordinator =
       PrayerNotificationCoordinator();
@@ -170,6 +171,7 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     Future.delayed(const Duration(milliseconds: 2500), () {
       if (mounted) setState(() => _showSplash = false);
     });
@@ -192,9 +194,7 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
           if (!PrayerNotificationCoordinator.shouldResync(previous, next)) {
             return;
           }
-          unawaited(_prayerNotificationCoordinator.sync(next));
-          unawaited(_updateHomeWidgets(next));
-          _syncCurrentAyahWidget();
+          _syncRuntimeSurfaces(next);
         },
         fireImmediately: true,
       );
@@ -210,6 +210,21 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
     } catch (_) {
       debugPrint('Prayer notification bootstrap failed');
     }
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state != AppLifecycleState.resumed || !mounted) {
+      return;
+    }
+
+    _syncRuntimeSurfaces(ref.read(settingsProvider));
+  }
+
+  void _syncRuntimeSurfaces(SettingsState settings) {
+    unawaited(_prayerNotificationCoordinator.sync(settings));
+    unawaited(_updateHomeWidgets(settings));
+    _syncCurrentAyahWidget();
   }
 
   Future<void> _updateHomeWidgets(SettingsState settings) async {
@@ -288,6 +303,7 @@ class _SiratINurAppState extends ConsumerState<SiratINurApp> {
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     _settingsSubscription?.close();
     _dailyAyatSubscription?.close();
     super.dispose();

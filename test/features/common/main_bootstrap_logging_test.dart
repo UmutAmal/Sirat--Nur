@@ -38,4 +38,18 @@ void main() {
     expect(source, contains('QiblaUtils.calculateQiblaDirection'));
     expect(source, contains('dailyAyatProvider'));
   });
+
+  test('main bootstrap refreshes prayer runtime surfaces on app resume', () {
+    final source = File('lib/main.dart').readAsStringSync();
+
+    expect(source, contains('with WidgetsBindingObserver'));
+    expect(source, contains('WidgetsBinding.instance.addObserver(this)'));
+    expect(source, contains('didChangeAppLifecycleState'));
+    expect(source, contains('AppLifecycleState.resumed'));
+    expect(
+      source,
+      contains('_syncRuntimeSurfaces(ref.read(settingsProvider))'),
+    );
+    expect(source, contains('WidgetsBinding.instance.removeObserver(this)'));
+  });
 }

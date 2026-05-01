@@ -6,6 +6,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/services/adhan_scheduler_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_notification_coordinator.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
+import 'package:timezone/data/latest.dart' as tzdata;
+import 'package:timezone/timezone.dart' as tz;
 
 class FakeAdhanSchedulerService extends AdhanSchedulerService {
   int initCalls = 0;
@@ -128,6 +130,8 @@ class BlockingAdhanSchedulerService extends FakeAdhanSchedulerService {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  tzdata.initializeTimeZones();
+  tz.setLocalLocation(tz.getLocation('Etc/UTC'));
 
   group('PrayerNotificationCoordinator', () {
     test('clears schedules when location is missing', () async {
@@ -189,6 +193,34 @@ void main() {
 
       expect(scheduler.scheduleCalls, 1);
     });
+
+    test(
+      'refreshes identical settings when the local schedule window date changes',
+      () async {
+        final scheduler = FakeAdhanSchedulerService();
+        var scheduleAnchor = DateTime(2026, 5, 1, 8);
+        final coordinator = PrayerNotificationCoordinator(
+          scheduler: scheduler,
+          scheduleAnchorClock: (_) => scheduleAnchor,
+        );
+        final settings = SettingsState(
+          latitude: 41.0082,
+          longitude: 28.9784,
+          locationName: 'Istanbul, Turkey',
+          timezone: 'Europe/Istanbul',
+        );
+
+        await coordinator.sync(settings);
+        await coordinator.sync(settings);
+
+        expect(scheduler.scheduleCalls, 1);
+
+        scheduleAnchor = DateTime(2026, 5, 2, 8);
+        await coordinator.sync(settings);
+
+        expect(scheduler.scheduleCalls, 2);
+      },
+    );
 
     test('shouldResync ignores unrelated UI-only settings changes', () {
       final previous = SettingsState(
