@@ -95,6 +95,8 @@ void main() {
         'https://audit@islamansiklopedisi.org.tr',
         'https://islamansiklopedisi.org.tr?token=1',
         'https://islamansiklopedisi.org.tr#fragment',
+        'https://mp3quran.net/audio',
+        'https://everyayah.com/data',
       ]) {
         expect(
           isApprovedCloudContentSourceUrl(source),

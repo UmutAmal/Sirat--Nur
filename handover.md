@@ -21400,3 +21400,36 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude AGENTS.md Section 13'e gore hardcoded dini icerik, Supabase content baglantisi, audio source ownership ve l10n kalite borcu icin yeniden risk taramasi baslat.
+
+## 2026-05-01 TUR-536 - General Content Source Allowlist Excludes Audio-Only Hosts
+
+### MASTER Karari
+- Risk: Genel dini/metinsel icerik provenance allowlist'i audio-only kaynak hostlari olan `mp3quran.net` ve `everyayah.com` alanlarini da kabul ediyordu. Bu hostlar AGENTS.md Section 13'te ses dosyalari icin kabul edilebilir olsa da education/daily ayat/Quran text gibi genel icerik kaynak zincirinde kullanilmamalidir. Bu, yanlis kategoride kaynak kabulune acik P2/P1 siniri icerik provenance riskidir.
+- Kanit:
+  - Baslangic: `lib/core/providers/supabase_providers.dart:349` genel content source host listesinde `mp3quran.net` ve `everyayah.com` vardi.
+  - Son durum: `lib/core/providers/supabase_providers.dart:349` `_approvedCloudContentSourceHosts` artik yalnizca genel icerik icin uygun resmi/dogrulanmis hostlari iceriyor.
+  - Son durum: `lib/core/services/offline_audio_service.dart:121` ve `lib/core/services/offline_audio_service.dart:122` audio provenance allowlist'i audio-only hostlari koruyor; Quran/ses akisi bozulmadi.
+  - Regresyon guard: `test/features/library/library_page_cloud_duas_test.dart:71` education source domain testinde `test/features/library/library_page_cloud_duas_test.dart:98` ve `test/features/library/library_page_cloud_duas_test.dart:99` audio-only hostlarin genel content source olarak reddedildigini dogruluyor.
+- Kullanici etkisi: Metinsel/dini icerik kaynak dogrulamasi kategori olarak daha dogru hale geldi; ses kaynaklari ise sadece audio pipeline tarafinda kabul edilmeye devam ediyor.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 3/25.
+- Rollback plani: Bu turdaki `lib/core/providers/supabase_providers.dart`, `test/features/library/library_page_cloud_duas_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Genel cloud content allowlist'inden `mp3quran.net` ve `everyayah.com` kaldirildi.
+- Audio pipeline allowlist'ine dokunulmadi; boylece MP3Quran/EveryAyah yalnizca ses provenance sinifinda kaldi.
+
+### TESTER Degisikligi
+- Targeted content policy test: `flutter test test\features\library\library_page_cloud_duas_test.dart --plain-name "trusts only approved HTTPS education source domains" --reporter compact` PASS.
+- Targeted audio regression tests: `flutter test test\offline_audio_service_test.dart --plain-name "rejects quran rows from unapproved source domains" --reporter compact` PASS; `flutter test test\offline_audio_service_test.dart --plain-name "uses provider-neutral quran rows when storage_path is present" --reporter compact` PASS.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `749/749`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `69e978c5-14e5-46e6-ba39-fbf47c421754`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Genel icerik icin audio-only kaynak host kabul riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: L10n same-as-English borcu raporunda 27 secili anahtar icin `973` same-as-English locale kaldi; sahte ceviri uretmeden kucuk, dogrulanabilir batch'lerle devam edilmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude l10n kalite borcu, hardcoded dini icerik, Supabase source provenance ve store runtime riskleri yeniden taranacak.

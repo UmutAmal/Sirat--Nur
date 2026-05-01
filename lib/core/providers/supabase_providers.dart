@@ -355,8 +355,6 @@ const Set<String> _approvedCloudContentSourceHosts = {
   'quran.com',
   'sunnah.com',
   'islamhouse.com',
-  'mp3quran.net',
-  'everyayah.com',
 };
 
 bool isApprovedCloudContentSourceUrl(String source) {
