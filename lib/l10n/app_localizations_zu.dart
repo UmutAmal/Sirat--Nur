@@ -830,7 +830,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get audioVoiceSudais => 'Owesilisa (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'I-Angle ye-Fajr';
 
   @override
   String get ishaAngle => 'Isha Angle';
@@ -880,12 +880,12 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Ngokwezifiso / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ama-engeli angokwezifiso (awukho umthombo wesikhungo)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {

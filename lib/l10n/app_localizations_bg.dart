@@ -832,10 +832,10 @@ class AppLocalizationsBg extends AppLocalizations {
   String get audioVoiceSudais => 'Мъжки (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Ъгъл Фаджр';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Иша Ъгъл';
 
   @override
   String get qiblaCalibration => 'Калибриране на Qibla';

@@ -831,10 +831,10 @@ class AppLocalizationsBe extends AppLocalizations {
   String get audioVoiceSudais => 'Мужчына (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Кут Фаджр';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Іша кут';
 
   @override
   String get qiblaCalibration => 'Каліброўка Qibla';

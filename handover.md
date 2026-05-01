@@ -20273,6 +20273,37 @@
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
 
+## 2026-05-01 TUR-506 - Prayer Diagnostics Low-Resource L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Prayer/diagnostics gorunur UI copy kumesinde dusuk kaynakli locale'lerde Ingilizce fallback kalmasi, "tum dillerde tam kapsam" hedefini zedeliyordu. Namaz vakti proper-name/liturgical anahtarlari (`Fajr`, `Asr`, `Isha` vb.) bu turda bilerek kapsam disi tutuldu; bunlari zorla cevirmek sahte dini kalite ve yanlis transliterasyon riski uretebilirdi.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report method madhab fajr sunrise dhuhr asr maghrib isha fajrAngle ishaAngle diagnosticsPrayerProfile diagnosticsPrayerSource diagnosticsPrayerCustomProfile diagnosticsPrayerCustomSource diagnosticsPrayerHybridSource diagnosticsPrayerRegionalFallbackSource` same-as-English `1665`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 16 anahtarda same-as-English `1191`, missing/empty `0`, placeholder mismatch `0`.
+  - Secili 8 aciklayici anahtar raporu: `fajrAngle`, `ishaAngle`, `diagnosticsPrayerProfile`, `diagnosticsPrayerSource`, `diagnosticsPrayerCustomProfile`, `diagnosticsPrayerCustomSource`, `diagnosticsPrayerHybridSource`, `diagnosticsPrayerRegionalFallbackSource` same-as-English `332`, missing/empty `0`, placeholder mismatch `0`.
+  - `lib/l10n/app_sa.arb:347` ve `lib/l10n/app_sa.arb:361` batch artigi newline/`इति .` kalintisindan temizlendi.
+  - `lib/l10n/app_ti.arb:347` ve `lib/l10n/app_ti.arb:361` batch artigi newline/`ዝብል...` kalintisindan temizlendi.
+- Kullanici etkisi: Prayer settings/diagnostics ekrani daha fazla dilde yerel aciklama gosterir; resmi/bolgesel/custom kaynak copy'lerinde placeholder butunlugu korunur ve batch artigi kullaniciya sizmaz.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 8 aciklayici prayer/diagnostics anahtari icin kontrollu l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- Sanskrit (`app_sa`) ve Tigrinya (`app_ti`) batch artigi degerler tek satir, placeholder-korumali UI copy ile temizlendi.
+- Prayer name proper-name/transliteration anahtarlari bu turda cevrilmedi; dini terimlerin yanlis veya uydurma hale gelmemesi icin mevcut durust fallback policy korundu.
+
+### TESTER Degisikligi
+- Targeted l10n tests: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `143/143`.
+- Batch debris scan: `rg -n -g "app_*.arb" "इति \\.|ዝብል ቃል ንምርካብ| अङ्गल्" lib\l10n` no matches.
+
+### Risk Degisimi
+- Prayer/diagnostics low-resource fallback borcu: `12/25 -> 6/25`.
+- Kalan bilincli risk: 8 aciklayici anahtarda 332 same-as-English locale-key kaldi; bunlar ceviri aracinin guvenle ceviremedigi cok dusuk kaynakli dillerde EN fallback olarak korundu. Liturgical prayer-name proper noun kumesi intentionally same-as-English kalabilir.
+
+### Sonraki Adim
+- Full analyze/test/store readiness kapilarini calistir, commit/push yap, sonra bir sonraki en yuksek riske gec: prayer/notification DST-OEM scheduling audit'i veya Supabase-backed verified content ingestion hattinda hardcoded dini icerik temizligi.
+
 ## 2026-05-01 TUR-504 - Cancellable Offline Download Runtime Smoke
 
 ### MASTER Karari

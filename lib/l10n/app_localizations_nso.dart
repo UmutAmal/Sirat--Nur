@@ -884,7 +884,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Tlwaelo / $madhab .';
   }
 
   @override

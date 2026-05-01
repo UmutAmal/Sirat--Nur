@@ -356,8 +356,8 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsPrayerProfile": "Bwebwenato in Jar",
+  "diagnosticsPrayerSource": "maroñ in jar",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Angle ko rej kōmmane kin pein (ejjelok jikin)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} wāween eo ippān armej eo ej kālete {madhab} Asr setting",
   "quranAudioPlaybackErrorWithConnectionHint": "Ear jab maroñ al al. Jouj im lale koneek eo am.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {

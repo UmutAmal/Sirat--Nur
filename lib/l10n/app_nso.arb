@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Ga se ya bewa",
   "diagnosticsPrayerProfile": "Profaele ya Thapelo",
   "diagnosticsPrayerSource": "Bolaodi bja Thapelo",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Tlwaelo / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

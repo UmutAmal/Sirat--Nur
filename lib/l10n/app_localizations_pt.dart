@@ -830,10 +830,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get audioVoiceSudais => 'Masculino (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Ângulo Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Ângulo Isha';
 
   @override
   String get qiblaCalibration => 'Calibração Qibla';

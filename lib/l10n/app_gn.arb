@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Ángulo Fajr rehegua",
+  "ishaAngle": "Isha Ángulo rehegua",
   "qiblaCalibration": "Qibla Calibración rehegua",
   "compassSmoothing": "Brújula Ñemopotĩ",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Noñemoĩri",
   "diagnosticsPrayerProfile": "Perfil Ñembo’e rehegua",
   "diagnosticsPrayerSource": "Autoridad de Oración rehegua",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Jepokuaa / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

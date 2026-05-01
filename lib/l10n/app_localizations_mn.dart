@@ -829,10 +829,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get audioVoiceSudais => 'Эрэгтэй (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Фажрын өнцөг';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Иша өнцөг';
 
   @override
   String get qiblaCalibration => 'Кибла тохируулга';

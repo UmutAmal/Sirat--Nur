@@ -833,10 +833,10 @@ class AppLocalizationsDv extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ފަޖުރު އެންގްލް އެވެ';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'އިޝާ އެންގްލް އެވެ';
 
   @override
   String get qiblaCalibration => 'ޤިބްލާ ކެލިބްރޭޝަން';
@@ -883,7 +883,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'ކަސްޓަމް / $madhab';
   }
 
   @override

@@ -825,10 +825,10 @@ class AppLocalizationsKl extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr-imik vinkel';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha-p vinkel-ia';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -868,28 +868,28 @@ class AppLocalizationsKl extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Qinnuteqaat Profili';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Qinnuteqarnissamut Oqartussaaneq';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Tulluusimaarneq / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Qinnguartaatit manuelt naleqqussagaasut (institutionelle killeqanngilaq)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName periuseq atuisumit toqqarneqarsimasoq $madhab Asr-imik inissititertoq';
   }
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return '$sourceName atorlugu nunap immikkoortuani tunuarsimaarneq. Sumiiffimmi qinuffissaq moskeemut imaluunniit pisortatigoortumik upperisaqarnermut oqartussanut uppernarsaruk.';
   }
 
   @override

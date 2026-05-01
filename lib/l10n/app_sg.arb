@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Angle ti Fajr",
+  "ishaAngle": "Angle ti Isha",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "Profil ti sambela",
+  "diagnosticsPrayerSource": "Kota zo ti sambela .",
+  "diagnosticsPrayerCustomProfile": "Personnalisé / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Angle ti zo mveni (source ti ndokua ayeke dä pëpe)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} kode ti salango kusala na ni {madhab} paramètre ti Asr .",
   "quranAudioPlaybackErrorWithConnectionHint": "Audio ni ayeke dä pëpe. Pardon, bâ connexion ti mo.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "Azo ti kodoro ni ayeke sara kua na {sourceName}. Fa ngoi ti sambela ti ndo ni na mosquée ti mo wala na akota zo ti vorongo ti kodoro.",
   "revelationMeccan": "Mecque",
   "revelationMedinan": "Médien",
   "playSurahAudio": "Zia audio ti surah",

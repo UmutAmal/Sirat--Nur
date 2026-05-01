@@ -884,7 +884,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Aadaa / $madhab .';
   }
 
   @override

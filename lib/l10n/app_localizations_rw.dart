@@ -828,7 +828,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get audioVoiceSudais => 'Umugabo (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Inguni ya Fajr';
 
   @override
   String get ishaAngle => 'Isha Angle';

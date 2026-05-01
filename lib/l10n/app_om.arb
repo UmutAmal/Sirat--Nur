@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Hin saagamne",
   "diagnosticsPrayerProfile": "Profaayilii Kadhannaa",
   "diagnosticsPrayerSource": "Abbaa Taayitaa Kadhannaa",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Aadaa / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

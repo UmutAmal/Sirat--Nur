@@ -827,7 +827,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get audioVoiceSudais => 'Lanang (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Sudut Subuh';
 
   @override
   String get ishaAngle => 'Isha Angle';
@@ -877,7 +877,7 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Kustom / $madhab';
   }
 
   @override

@@ -823,10 +823,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get audioVoiceSudais => 'זכר (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'זווית פאג\'ר';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'אשה אנגל';
 
   @override
   String get qiblaCalibration => 'כיול קיבלה';

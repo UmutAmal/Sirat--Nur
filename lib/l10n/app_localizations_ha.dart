@@ -828,7 +828,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get audioVoiceSudais => 'Namiji (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Angle Fajr';
 
   @override
   String get ishaAngle => 'Isha Angle';
@@ -887,7 +887,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return 'Hanyar $sourceName tare da zaɓaɓɓen mai amfani $madhab saitin Asr';
   }
 
   @override

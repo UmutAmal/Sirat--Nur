@@ -343,7 +343,7 @@
   "audioVoiceMisharyAlafasy": "Lalaki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lalaki (Abdul Basit)",
   "audioVoiceSudais": "Lalaki (Sudais)",
-  "fajrAngle": "Fajr Angle",
+  "fajrAngle": "Subuh Subuh",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kalibrasi Kiblat",
   "compassSmoothing": "Kompas Smoothing",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Teu diatur",
   "diagnosticsPrayerProfile": "Propil Doa",
   "diagnosticsPrayerSource": "Pangawasa Sholat",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Adat / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

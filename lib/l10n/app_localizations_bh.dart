@@ -825,10 +825,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'फजर एंगल के बा';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ईशा एंगल के ह';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -868,23 +868,23 @@ class AppLocalizationsBh extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'प्रार्थना के प्रोफाइल बा';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'प्रार्थना प्राधिकरण के ह';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'कस्टम / $madhab के बा।';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'मैनुअल कस्टम कोण (कोई संस्थागत स्रोत ना)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return 'उपयोगकर्ता द्वारा चुनल $madhab Asr सेटिंग के साथ $sourceName विधि';
   }
 
   @override

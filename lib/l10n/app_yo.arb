@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Okunrin (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Okunrin (Abdul Basit)",
   "audioVoiceSudais": "Okunrin (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Igun Fajr",
+  "ishaAngle": "Igun Isha",
   "qiblaCalibration": "Iṣatunṣe Qibla",
   "compassSmoothing": "Kompasi Din",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Ko ṣeto",
   "diagnosticsPrayerProfile": "Profaili Adura",
   "diagnosticsPrayerSource": "Alase Adura",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Aṣa / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Awọn igun aṣa afọwọṣe (ko si orisun igbekalẹ)",
   "diagnosticsCloudDriven": "Awọsanma wakọ",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Dukia",

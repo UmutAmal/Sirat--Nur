@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "זכר (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "זכר (Abdul Basit)",
   "audioVoiceSudais": "זכר (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "פאַדזשר ווינקל",
+  "ishaAngle": "ישא ווינקל",
   "qiblaCalibration": "קיבלאַ קאַלאַבריישאַן",
   "compassSmoothing": "קאָמפּאַס סמאָאָאָטינג",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "ניט באַשטימט",
   "diagnosticsPrayerProfile": "תפילה פּראָפיל",
   "diagnosticsPrayerSource": "תפילה אויטאָריטעט",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "מנהג / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "מאַנואַל מנהג אַנגלעס (קיין ינסטיטושאַנאַל מקור)",
   "diagnosticsCloudDriven": "וואָלקן געטריבן",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI אַודיאָ אַסעץ",

@@ -828,10 +828,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get audioVoiceSudais => 'მამაკაცი (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ფაჯრის კუთხე';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'იშა კუთხე';
 
   @override
   String get qiblaCalibration => 'ქიბლას კალიბრაცია';

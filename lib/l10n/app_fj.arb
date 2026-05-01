@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Na tutu ni Fajr",
+  "ishaAngle": "Na tutu ni Isha",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "iTukutuku ni Masu",
+  "diagnosticsPrayerSource": "Masu ni Masu .",
+  "diagnosticsPrayerCustomProfile": "Vakatovotovo / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Angles vakaitaukei ni ivola (sega na ivurevure ni isoqosoqo)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} iwalewale kei na vakayagataki-digitaki {madhab} ituvatuva ni Asr",
   "quranAudioPlaybackErrorWithConnectionHint": "E sega ni rawa na vakatagitaki ni rorogo. Kerekere mo raica na nomu veitaratara.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "Vakacacani ni yasana ena kena vakayagataki na {sourceName}. Vakadeitaka na gauna ni masu ni vanua kei na nomu mosque se vakailesilesi vakamatanitu vakalotu.",
   "revelationMeccan": "Meka",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Vakatagitaka na rorogo ni surah",

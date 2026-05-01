@@ -829,10 +829,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get audioVoiceSudais => 'Мужчина (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Фаджр Угол';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Иша Энгл';
 
   @override
   String get qiblaCalibration => 'Калибровка Киблы';

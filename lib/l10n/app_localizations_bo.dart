@@ -825,10 +825,10 @@ class AppLocalizationsBo extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ཕ་ཇར་ཟུར།';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ཨི་ཤ་ཟུར།';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -868,28 +868,28 @@ class AppLocalizationsBo extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'སྨོན་ལམ་ངོ་སྤྲོད།';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'སྨོན་ལམ་དབང་འཛིན།';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'སྲོལ་སྒྲིག/$madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'ལག་ཐོག་སྒྲིག་བཀོད་ཀྱི་ཟུར་ཁུག་(གཙུག་ལག་ཁང་གི་ཐོན་ཁུངས་མེད།)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName ཐབས་ལམ་སྤྱོད་མཁན་གྱིས་འདེམས་པའི་$madhab Asrསྒྲིག་སྟངས་དང་མཉམ་དུ།';
   }
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return '$sourceName བཀོལ་ནས་ས་ཁུལ་གྱི་ཕྱིར་ལོག ཁྱེད་རང་གི་ཁ་ཆེའི་ལྷ་ཁང་ཡང་ན་གཞུང་འབྲེལ་གྱི་ཆོས་ལུགས་དབང་འཛིན་དང་མཉམ་དུ་ས་གནས་ཀྱི་སྨོན་ལམ་གྱི་དུས་ཚོད་གཏན་འཁེལ་བྱོས།';
   }
 
   @override

@@ -830,10 +830,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get audioVoiceSudais => 'Tane (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Koki Waahi';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Koki Iha';
 
   @override
   String get qiblaCalibration => 'Whakatau Kipi';

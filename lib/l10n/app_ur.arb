@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "مرد (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "مرد (Abdul Basit)",
   "audioVoiceSudais": "مرد (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "فجر زاویہ",
+  "ishaAngle": "عشاء زاویہ",
   "qiblaCalibration": "قبلہ کیلیبریشن",
   "compassSmoothing": "کمپاس ہموار کرنا",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "سیٹ نہیں ہے۔",
   "diagnosticsPrayerProfile": "نماز کا پروفائل",
   "diagnosticsPrayerSource": "نماز اتھارٹی",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "حسب ضرورت / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "دستی حسب ضرورت زاویہ (کوئی ادارہ جاتی ذریعہ نہیں)",
   "diagnosticsCloudDriven": "کلاؤڈ سے چلنے والا",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI آڈیو اثاثے۔",

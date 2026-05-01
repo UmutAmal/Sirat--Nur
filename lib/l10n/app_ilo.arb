@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Saan a naikeddeng",
   "diagnosticsPrayerProfile": "Profile ti Kararag",
   "diagnosticsPrayerSource": "Autoridad ti Kararag",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Kostumbre / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

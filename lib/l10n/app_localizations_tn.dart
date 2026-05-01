@@ -826,10 +826,10 @@ class AppLocalizationsTn extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Enkele ya Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Khutlo ya Isha';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -869,19 +869,19 @@ class AppLocalizationsTn extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Porofaele ya Thapelo';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Taolo ya Thapelo';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Tlwaelo / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Dikhutlo tse di itiretsweng tsa seatla (ga go na motswedi wa setheo)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
@@ -890,7 +890,7 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return 'Go boela morago ga kgaolo go dirisiwa $sourceName. Tlhomamisa dinako tsa thapelo tsa lefelo leo le mosque wa gago kgotsa bothati jwa semmuso jwa bodumedi.';
   }
 
   @override

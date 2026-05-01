@@ -827,7 +827,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get audioVoiceSudais => 'Nwoke (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Akụkụ Fajr';
 
   @override
   String get ishaAngle => 'Isha Angle';
@@ -886,7 +886,7 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return 'Usoro $sourceName nwere ntọala Asr $madhab ahọpụtara onye ọrụ';
   }
 
   @override

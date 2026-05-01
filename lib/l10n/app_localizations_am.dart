@@ -819,10 +819,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get audioVoiceSudais => 'ወንድ (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ፈጅር አንግል';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ኢሻ አንግል';
 
   @override
   String get qiblaCalibration => 'የቂብላ መለኪያ';

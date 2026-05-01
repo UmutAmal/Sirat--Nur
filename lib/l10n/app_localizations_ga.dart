@@ -828,10 +828,10 @@ class AppLocalizationsGa extends AppLocalizations {
   String get audioVoiceSudais => 'Fir (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Uillinn Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Uillinn';
 
   @override
   String get qiblaCalibration => 'Calabrú Qibla';

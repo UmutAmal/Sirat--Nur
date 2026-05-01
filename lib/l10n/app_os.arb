@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Фаджры къуым",
+  "ishaAngle": "Иша Англ",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "Куывды профил",
+  "diagnosticsPrayerSource": "Куывды бар",
+  "diagnosticsPrayerCustomProfile": "Æмбæлон / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Къухæй æмбæлон къуымтæ (нæй институционалон равзæрæн)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} метод пайдагæнæджы æвзæрст {madhab} Asr æвæрдимæ",
   "quranAudioPlaybackErrorWithConnectionHint": "Аудио æвдыст нæ рауад. Дæ хорзæхæй, сбæрæг кæн дæ бастдзинад.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {

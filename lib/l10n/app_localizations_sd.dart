@@ -824,10 +824,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get audioVoiceSudais => 'مرد (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'فجر جي زاويه';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ايشا اينگل';
 
   @override
   String get qiblaCalibration => 'قبلا حساب';

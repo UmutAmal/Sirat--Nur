@@ -823,10 +823,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get audioVoiceSudais => 'ذكر (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'زاوية الفجر';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'زاوية العشاء';
 
   @override
   String get qiblaCalibration => 'معايرة القبلة';

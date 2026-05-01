@@ -824,10 +824,10 @@ class AppLocalizationsLi extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr-hook';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha-hook';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -867,10 +867,10 @@ class AppLocalizationsLi extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Gebedsprofiel';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Gebedsbevoegdheid';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -879,11 +879,11 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Manueel aangepaste hoeke (geen institutionele bron)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName methode mit door de gebruker geselecteerde $madhab Asr-instelling';
   }
 
   @override

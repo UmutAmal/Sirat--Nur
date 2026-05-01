@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Fajr Ángulo",
+  "ishaAngle": "Isha Ángulo nisqa",
   "qiblaCalibration": "Qibla Calibración",
   "compassSmoothing": "Brújula Sumaqchay",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Mana churasqachu",
   "diagnosticsPrayerProfile": "Mañakuymanta Perfil",
   "diagnosticsPrayerSource": "Mañakuy Autoridad",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Sapanchasqa / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

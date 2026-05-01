@@ -829,10 +829,10 @@ class AppLocalizationsNl extends AppLocalizations {
   String get audioVoiceSudais => 'Man (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr-hoek';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Hoek';
 
   @override
   String get qiblaCalibration => 'Qibla-kalibratie';

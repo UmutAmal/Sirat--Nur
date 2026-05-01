@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Koki Fajr",
+  "ishaAngle": "Koki Isha",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "Hoho'a no te pure",
+  "diagnosticsPrayerSource": "Mana no te pure",
+  "diagnosticsPrayerCustomProfile": "Meere / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Te mau koki matauhia (aita hoê a'e puna)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} rave'a e te taata faaohipa {madhab} Asr",
   "quranAudioPlaybackErrorWithConnectionHint": "Aita te faarooraa audio i manuïa. A hi'opo'a na i to outou taairaa.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "Te faaho'i-faahou-raa mai i te fenua ma te faaohipa i te {sourceName}. A haapapu i te mau taime no te pure i te fenua iho e ta outou mosque e aore râ, i te mana faaroo.",
   "revelationMeccan": "Mecca",
   "revelationMedinan": "Medina",
   "playSurahAudio": "A faaroo i te surah",

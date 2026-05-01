@@ -343,7 +343,7 @@
   "audioVoiceMisharyAlafasy": "Namiji (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Namiji (Abdul Basit)",
   "audioVoiceSudais": "Namiji (Sudais)",
-  "fajrAngle": "Fajr Angle",
+  "fajrAngle": "Angle Fajr",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smooting",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "Hanyar {sourceName} tare da zaɓaɓɓen mai amfani {madhab} saitin Asr",
   "quranAudioPlaybackErrorWithConnectionHint": "An kasa sake kunna sautin. Da fatan za a duba haɗin ku.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {

@@ -828,10 +828,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get audioVoiceSudais => 'పురుషులు (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ఫజర్ కోణం';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ఇషా యాంగిల్';
 
   @override
   String get qiblaCalibration => 'ఖిబ్లా క్రమాంకనం';

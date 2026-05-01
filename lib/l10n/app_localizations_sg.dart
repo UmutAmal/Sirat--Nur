@@ -826,10 +826,10 @@ class AppLocalizationsSg extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Angle ti Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Angle ti Isha';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -869,28 +869,28 @@ class AppLocalizationsSg extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Profil ti sambela';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Kota zo ti sambela .';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Personnalisé / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Angle ti zo mveni (source ti ndokua ayeke dä pëpe)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName kode ti salango kusala na ni $madhab paramètre ti Asr .';
   }
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return 'Azo ti kodoro ni ayeke sara kua na $sourceName. Fa ngoi ti sambela ti ndo ni na mosquée ti mo wala na akota zo ti vorongo ti kodoro.';
   }
 
   @override

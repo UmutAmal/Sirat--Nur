@@ -827,7 +827,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get audioVoiceSudais => 'Mann (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr vinkel';
 
   @override
   String get ishaAngle => 'Isha Angle';

@@ -825,10 +825,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get audioVoiceSudais => 'ชาย (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ฟาจร์ แองเกิล';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'อิชา แองเกิล';
 
   @override
   String get qiblaCalibration => 'การสอบเทียบกิบลัต';

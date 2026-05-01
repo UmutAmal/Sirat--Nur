@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "ᕚᔾ ᐋᓐᒍᓪ",
+  "ishaAngle": "ᐃᓴ ᐋᓐᒍᓪ",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "ᑐᒃᓯᐊᕐᓂᐅᑉ ᒥᒃᓵᓄᑦ",
+  "diagnosticsPrayerSource": "ᑐᒃᓯᐊᕐᓂᕐᒧᑦ ᐱᔪᓐᓇᕐᓂᖅ",
+  "diagnosticsPrayerCustomProfile": "ᐋᖅᑭᒃᓱᖅᑕᐅᓯᒪᔪᖅ / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "ᐊᒡᒐᒃᑯᑦ ᐋᖅᑭᒃᓱᖅᓯᒪᔪᑦ ᓴᖑᓂᖏᑦ (ᑎᒥᐅᔪᓄᑦ ᑐᙵᕕᖃᙱᑦᑐᖅ)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} ᐊᑐᖅᑕᐅᕙᒃᑐᖅ ᐊᑐᖅᑎᒧᑦ ᓂᕈᐊᖅᑕᐅᓯᒪᔪᖅ {madhab} Asr ᐋᖅᑭᒃᓯᒪᓂᖓ",
   "quranAudioPlaybackErrorWithConnectionHint": "ᓂᐱᓕᐅᕆᓂᖅ ᑲᔪᓯᑦᑎᐊᓚᐅᙱᓚᖅ. ᐊᑏ ᖃᐅᔨᒋᐊᕐᓗᒍ ᑲᓱᖅᓯᒪᓂᕆᔭᐃᑦ.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "ᐊᕕᒃᑐᖅᓯᒪᔪᓂ ᑭᖑᕝᕕᐅᑎᔪᑦ ᐊᑐᕐᓗᑎᒃ {sourceName}. ᓇᓗᓇᐃᖅᓯᓗᑎᑦ ᓄᓇᓕᖕᓂ ᑐᒃᓯᐊᕐᓇᐅᓂᐊᖅᑐᓂᒃ ᒪᔅᑭᒃᑯᑦ ᐅᕝᕙᓘᓐᓃᑦ ᐅᑉᐱᕐᓂᓕᕆᓂᕐᒧᑦ ᑲᒪᔨᐅᔪᓄᑦ.",
   "revelationMeccan": "ᒪᑲᓐ",
   "revelationMedinan": "ᒥᑎᓇᓐ",
   "playSurahAudio": "ᓂᐱᓕᐅᕐᓗᒍ ᓱᕋ ᓂᐱᖓ",

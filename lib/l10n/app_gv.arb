@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Corneil Fajr",
+  "ishaAngle": "Corneil Isha",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,8 +356,8 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsPrayerProfile": "Profail Padjer",
+  "diagnosticsPrayerSource": "Authority Padjer",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Angleyn custom liorish laue (cha nel fondagh institiudagh)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} moghrey lesh {madhab} Asr roshtyn liorish y cleaysh",
   "quranAudioPlaybackErrorWithConnectionHint": "Cha dod y chlashtyn clashtyn. Cur-my-ner dty cheshaght.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "Fall-back rannagh liorish {sourceName}. Dearbhagh ooraghyn padjer ynnydagh rish dty mosque ny urree creeoil oifigagh.",
   "revelationMeccan": "Meccanagh;",
   "revelationMedinan": "Meanagh",
   "playSurahAudio": "Cleaysh clashtyn surah",

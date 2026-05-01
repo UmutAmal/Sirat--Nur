@@ -827,10 +827,10 @@ class AppLocalizationsDa extends AppLocalizations {
   String get audioVoiceSudais => 'Mand (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr vinkel';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha vinkel';
 
   @override
   String get qiblaCalibration => 'Qibla kalibrering';

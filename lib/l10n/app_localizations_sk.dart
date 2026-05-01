@@ -829,10 +829,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get audioVoiceSudais => 'Muž (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr Uhol';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Angleová';
 
   @override
   String get qiblaCalibration => 'Kalibrácia Qibla';

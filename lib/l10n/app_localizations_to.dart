@@ -826,10 +826,10 @@ class AppLocalizationsTo extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Tuliki Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Tuliki ʻo ʻIsa';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -869,28 +869,28 @@ class AppLocalizationsTo extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Fakamatala Lotu';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Mafai Lotu .';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Angamaheni / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ngaahi tuliki angamaheni tohi fakahinohino (\'ikai ha ma\'u\'anga fakamatala faka-inisititiuti)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName founga mo e tokotaha ngaue-fili $madhab Asr fokotu\'utu\'u';
   }
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return 'Fakafoki fakavahefonua \'o faka\'aonga\'i \'a e $sourceName. Fakapapauʻi ʻa e ngaahi taimi lotu fakalotofonuá mo hoʻo mosque pe pule fakalotu fakaʻofisialé.';
   }
 
   @override

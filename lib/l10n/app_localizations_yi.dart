@@ -827,10 +827,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get audioVoiceSudais => 'זכר (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'פאַדזשר ווינקל';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ישא ווינקל';
 
   @override
   String get qiblaCalibration => 'קיבלאַ קאַלאַבריישאַן';
@@ -877,12 +877,12 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'מנהג / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'מאַנואַל מנהג אַנגלעס (קיין ינסטיטושאַנאַל מקור)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {

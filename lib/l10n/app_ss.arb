@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "I-Engeli ye-Fajr",
+  "ishaAngle": "I-Isha Ingeli",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,8 +356,8 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsPrayerProfile": "Iphrofayili yemthantazo",
+  "diagnosticsPrayerSource": "Ligunya Lemthantazo",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ema-engeli labhalwe ngesandla (kute umtfombo wesikhungo)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "Kubuya emuva kwesifundza kusetjentiswa {sourceName}. Cinisekisa tikhatsi temthandazo wendzawo ne-mosque yakho noma ligunya lenkholo lelisemtsetfweni.",
   "revelationMeccan": "iMecca",
   "revelationMedinan": "iMedina",
   "playSurahAudio": "Dlala umsindvo we surah",

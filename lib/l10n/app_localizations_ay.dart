@@ -891,7 +891,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Ukax / $madhab .';
   }
 
   @override

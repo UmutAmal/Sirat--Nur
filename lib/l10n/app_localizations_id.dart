@@ -827,10 +827,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get audioVoiceSudais => 'Pria (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Sudut Subuh';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Sudut Isya';
 
   @override
   String get qiblaCalibration => 'Kalibrasi Kiblat';

@@ -343,7 +343,7 @@
   "audioVoiceMisharyAlafasy": "Owesilisa (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Owesilisa (Abdul Basit)",
   "audioVoiceSudais": "Owesilisa (Sudais)",
-  "fajrAngle": "Fajr Angle",
+  "fajrAngle": "I-Angle ye-Fajr",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Ukulinganisa kwe-Qibla",
   "compassSmoothing": "I-Compass Smoothing",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Akusethiwe",
   "diagnosticsPrayerProfile": "Iphrofayili Yomkhuleko",
   "diagnosticsPrayerSource": "Igunya Lokuthandaza",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Ngokwezifiso / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ama-engeli angokwezifiso (awukho umthombo wesikhungo)",
   "diagnosticsCloudDriven": "Iqhutshwa ngamafu",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "I-UI Audio Assets",

@@ -828,10 +828,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get audioVoiceSudais => 'പുരുഷൻ (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ഫജർ ആംഗിൾ';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ഇഷ ആംഗിൾ';
 
   @override
   String get qiblaCalibration => 'ഖിബ്ല കാലിബ്രേഷൻ';

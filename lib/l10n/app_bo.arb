@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "ཕ་ཇར་ཟུར།",
+  "ishaAngle": "ཨི་ཤ་ཟུར།",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "སྨོན་ལམ་ངོ་སྤྲོད།",
+  "diagnosticsPrayerSource": "སྨོན་ལམ་དབང་འཛིན།",
+  "diagnosticsPrayerCustomProfile": "སྲོལ་སྒྲིག/{madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "ལག་ཐོག་སྒྲིག་བཀོད་ཀྱི་ཟུར་ཁུག་(གཙུག་ལག་ཁང་གི་ཐོན་ཁུངས་མེད།)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} ཐབས་ལམ་སྤྱོད་མཁན་གྱིས་འདེམས་པའི་{madhab} Asrསྒྲིག་སྟངས་དང་མཉམ་དུ།",
   "quranAudioPlaybackErrorWithConnectionHint": "སྒྲ་སྒམ་གཏོང་མ་ཐུབ། འབྲེལ་མཐུད་ལ་ཞིབ་བཤེར་གནང་རོགས།",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} བཀོལ་ནས་ས་ཁུལ་གྱི་ཕྱིར་ལོག ཁྱེད་རང་གི་ཁ་ཆེའི་ལྷ་ཁང་ཡང་ན་གཞུང་འབྲེལ་གྱི་ཆོས་ལུགས་དབང་འཛིན་དང་མཉམ་དུ་ས་གནས་ཀྱི་སྨོན་ལམ་གྱི་དུས་ཚོད་གཏན་འཁེལ་བྱོས།",
   "revelationMeccan": "མེ་ཁཱན།",
   "revelationMedinan": "མེ་ཌི་ནན།",
   "playSurahAudio": "སུ་རཱ་སྒྲ་སྒམ།",

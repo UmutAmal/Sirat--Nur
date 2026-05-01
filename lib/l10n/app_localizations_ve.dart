@@ -827,10 +827,10 @@ class AppLocalizationsVe extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Khona ya Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Khona ya Isha';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -870,19 +870,19 @@ class AppLocalizationsVe extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Phurofaili ya thabelo';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Maanḓalanga a Thabelo';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Nḓowetshumo / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Angle dza mvelele dza zwanḓa (a hu na tshisima tsha tshiimiswa)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
@@ -891,7 +891,7 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return 'U vhuyelela murahu ha dzingu hu tshi shumiswa $sourceName. Kha vha khwaṱhisedze zwifhinga zwa thabelo zwapo na mosque wavho kana maanḓalanga a vhurereli a tshiofisi.';
   }
 
   @override

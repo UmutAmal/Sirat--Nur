@@ -829,10 +829,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get audioVoiceSudais => 'Férfi (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr Szög';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha szög';
 
   @override
   String get qiblaCalibration => 'Qibla kalibráció';

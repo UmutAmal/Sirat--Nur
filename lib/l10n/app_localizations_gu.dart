@@ -825,10 +825,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get audioVoiceSudais => 'પુરુષ (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ફજર એંગલ';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ઈશા એન્ગલ';
 
   @override
   String get qiblaCalibration => 'કિબલા કેલિબ્રેશન';
@@ -875,7 +875,7 @@ class AppLocalizationsGu extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'કસ્ટમ / $madhab';
   }
 
   @override

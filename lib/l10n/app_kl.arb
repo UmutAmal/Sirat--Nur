@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Fajr-imik vinkel",
+  "ishaAngle": "Isha-p vinkel-ia",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "Qinnuteqaat Profili",
+  "diagnosticsPrayerSource": "Qinnuteqarnissamut Oqartussaaneq",
+  "diagnosticsPrayerCustomProfile": "Tulluusimaarneq / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Qinnguartaatit manuelt naleqqussagaasut (institutionelle killeqanngilaq)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} periuseq atuisumit toqqarneqarsimasoq {madhab} Asr-imik inissititertoq",
   "quranAudioPlaybackErrorWithConnectionHint": "Nipit tusarnaartitsinerat iluatsinngilaq. Attaveqaatit misissoruk.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "{sourceName} atorlugu nunap immikkoortuani tunuarsimaarneq. Sumiiffimmi qinuffissaq moskeemut imaluunniit pisortatigoortumik upperisaqarnermut oqartussanut uppernarsaruk.",
   "revelationMeccan": "Mekkamiut",
   "revelationMedinan": "Medianimiittoq",
   "playSurahAudio": "Surah-mik tusarnaartitsineq",

@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "ފަޖުރު އެންގްލް އެވެ",
+  "ishaAngle": "އިޝާ އެންގްލް އެވެ",
   "qiblaCalibration": "ޤިބްލާ ކެލިބްރޭޝަން",
   "compassSmoothing": "ކޮމްޕަސް ސްމޫތިންގ އެވެ",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "ސެޓް ނުކުރެވޭ",
   "diagnosticsPrayerProfile": "ދުޢާ ޕްރޮފައިލް",
   "diagnosticsPrayerSource": "ނަމާދު އޮތޯރިޓީ އެވެ",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "ކަސްޓަމް / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "सेट नहि",
   "diagnosticsPrayerProfile": "प्रार्थना प्रोफाइल",
   "diagnosticsPrayerSource": "प्रार्थना प्राधिकरण",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "कस्टम / {madhab} 1।",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

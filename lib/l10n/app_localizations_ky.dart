@@ -831,10 +831,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get audioVoiceSudais => 'Эркек (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Фажр бурчу';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Иша бурч';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';

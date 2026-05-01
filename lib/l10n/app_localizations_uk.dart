@@ -829,10 +829,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get audioVoiceSudais => 'Чоловік (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Кут Фаджр';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Іша Кут';
 
   @override
   String get qiblaCalibration => 'Калібрування Qibla';
@@ -879,12 +879,12 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Спеціальний / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Користувальницькі кути вручну (без інституційного джерела)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {

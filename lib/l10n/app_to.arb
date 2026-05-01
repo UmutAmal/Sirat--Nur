@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Tuliki Fajr",
+  "ishaAngle": "Tuliki ʻo ʻIsa",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "Fakamatala Lotu",
+  "diagnosticsPrayerSource": "Mafai Lotu .",
+  "diagnosticsPrayerCustomProfile": "Angamaheni / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ngaahi tuliki angamaheni tohi fakahinohino ('ikai ha ma'u'anga fakamatala faka-inisititiuti)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} founga mo e tokotaha ngaue-fili {madhab} Asr fokotu'utu'u",
   "quranAudioPlaybackErrorWithConnectionHint": "Naʻe ʻikai lava ʻa e vaʻinga ʻo e leʻó. Kataki 'o vakai'i ho'o fehokotaki'anga.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "Fakafoki fakavahefonua 'o faka'aonga'i 'a e {sourceName}. Fakapapauʻi ʻa e ngaahi taimi lotu fakalotofonuá mo hoʻo mosque pe pule fakalotu fakaʻofisialé.",
   "revelationMeccan": "Meka",
   "revelationMedinan": "Metinani",
   "playSurahAudio": "Tā ʻa e leʻo ʻo e surah",

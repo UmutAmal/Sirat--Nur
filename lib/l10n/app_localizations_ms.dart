@@ -828,10 +828,10 @@ class AppLocalizationsMs extends AppLocalizations {
   String get audioVoiceSudais => 'Lelaki (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Sudut Subuh';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Sudut Isha';
 
   @override
   String get qiblaCalibration => 'Penentukuran Kiblat';
@@ -878,7 +878,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Tersuai / $madhab';
   }
 
   @override

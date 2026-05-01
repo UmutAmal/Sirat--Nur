@@ -343,7 +343,7 @@
   "audioVoiceMisharyAlafasy": "Lanang (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lanang (Abdul Basit)",
   "audioVoiceSudais": "Lanang (Sudais)",
-  "fajrAngle": "Fajr Angle",
+  "fajrAngle": "Sudut Subuh",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Kalibrasi Kiblat",
   "compassSmoothing": "Kompas Smoothing",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Ora disetel",
   "diagnosticsPrayerProfile": "Profil Pandonga",
   "diagnosticsPrayerSource": "Panguwasa Sholat",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Kustom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

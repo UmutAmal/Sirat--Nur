@@ -877,7 +877,7 @@ class AppLocalizationsAk extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Amanneɛbɔ / $madhab .';
   }
 
   @override

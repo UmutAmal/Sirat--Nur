@@ -343,7 +343,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
+  "fajrAngle": "Anglo' Fajr",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "Prufil gi i tinayuyot",
+  "diagnosticsPrayerSource": "Atoridat gi Tinayuyot",
+  "diagnosticsPrayerCustomProfile": "Kustumbre / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Anglo' siha ni' ma'usa gi i kannai (taya' ginen i inestudia)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} na manera yan i {madhab} Asr na setbisio ni' ma selekta ni' i taotao",
   "quranAudioPlaybackErrorWithConnectionHint": "Ti siña ma'usa i audio. På'go, chek i koneksion-mu.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {

@@ -826,10 +826,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get audioVoiceSudais => 'පිරිමි (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr කෝණය';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ඉෂා කෝණය';
 
   @override
   String get qiblaCalibration => 'කිබ්ලා ක්රමාංකනය';

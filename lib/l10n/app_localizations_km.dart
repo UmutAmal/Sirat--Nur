@@ -828,10 +828,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get audioVoiceSudais => 'ប្រុស (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'មុំ Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'មុំអ៊ីសា';
 
   @override
   String get qiblaCalibration => 'ការក្រិតកម្រិត Qibla';

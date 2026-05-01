@@ -826,10 +826,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get audioVoiceSudais => 'مرد (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'فجر زاویہ';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'عشاء زاویہ';
 
   @override
   String get qiblaCalibration => 'قبلہ کیلیبریشن';
@@ -876,12 +876,12 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'حسب ضرورت / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'دستی حسب ضرورت زاویہ (کوئی ادارہ جاتی ذریعہ نہیں)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {

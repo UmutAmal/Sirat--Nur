@@ -875,7 +875,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'कस्टम / $madhab 1।';
   }
 
   @override

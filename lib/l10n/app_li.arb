@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Fajr-hook",
+  "ishaAngle": "Isha-hook",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,8 +356,8 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsPrayerProfile": "Gebedsprofiel",
+  "diagnosticsPrayerSource": "Gebedsbevoegdheid",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Manueel aangepaste hoeke (geen institutionele bron)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} methode mit door de gebruker geselecteerde {madhab} Asr-instelling",
   "quranAudioPlaybackErrorWithConnectionHint": "Audioafspeel is misluk. Controleer eur verbinding.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {

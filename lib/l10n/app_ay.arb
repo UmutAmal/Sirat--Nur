@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Janiwa utt’ayatakiti",
   "diagnosticsPrayerProfile": "Perfil de mayisiña",
   "diagnosticsPrayerSource": "Oración Autoridad ukax mä jach’a uñacht’äwiwa",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Ukax / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

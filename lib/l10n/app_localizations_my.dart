@@ -835,7 +835,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get audioVoiceSudais => 'အမျိုးသား (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr ထောင့်';
 
   @override
   String get ishaAngle => 'Isha Angle';

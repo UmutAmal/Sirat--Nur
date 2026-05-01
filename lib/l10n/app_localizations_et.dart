@@ -827,10 +827,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get audioVoiceSudais => 'Mees (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr nurk';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha nurk';
 
   @override
   String get qiblaCalibration => 'Qibla kalibreerimine';

@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Фаджр угловӧй .",
+  "ishaAngle": "Иша уголь .",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,8 +356,8 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
+  "diagnosticsPrayerProfile": "Молитва йылысь профиль .",
+  "diagnosticsPrayerSource": "Молитва власьт .",
   "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Ручнӧй пользовательскӧй угольяс (институциональнӧй источник абу)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "{sourceName} метод пользовательӧн бӧрйӧм {madhab} Asr настройкаӧн .",
   "quranAudioPlaybackErrorWithConnectionHint": "Аудио воспроизведение эз артмы. Прӧверитӧй, пӧжалуйста, ассьыныд йитӧднытӧ.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
@@ -789,7 +789,7 @@
       }
     }
   },
-  "diagnosticsPrayerRegionalFallbackSource": "Regional fallback using {sourceName}. Confirm local prayer times with your mosque or official religious authority.",
+  "diagnosticsPrayerRegionalFallbackSource": "Региональнӧй ӧтувъялун {sourceName} отсӧгӧн. Меставывса молитва кадъяссӧ лӧсьӧдӧй асланыд мечетькӧд либӧ официальнӧй дінмуса органкӧд.",
   "revelationMeccan": "Меккаса",
   "revelationMedinan": "Медян",
   "playSurahAudio": "Ворсны сура аудио .",

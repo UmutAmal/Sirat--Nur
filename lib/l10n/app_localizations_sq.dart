@@ -830,7 +830,7 @@ class AppLocalizationsSq extends AppLocalizations {
   String get audioVoiceSudais => 'Mashkull (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Këndi i sabahut';
 
   @override
   String get ishaAngle => 'Isha Angle';

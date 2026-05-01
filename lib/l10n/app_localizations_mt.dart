@@ -834,7 +834,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get fajrAngle => 'Fajr Angle';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Angolu';
 
   @override
   String get qiblaCalibration => 'Qibla Kalibrazzjoni';

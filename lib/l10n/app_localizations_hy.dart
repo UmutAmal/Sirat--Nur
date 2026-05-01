@@ -831,10 +831,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get audioVoiceSudais => 'Տղամարդ (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Ֆաջրի անկյուն';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Իշա Անգլ';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';

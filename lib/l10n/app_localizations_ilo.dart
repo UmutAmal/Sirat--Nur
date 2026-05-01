@@ -884,7 +884,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Kostumbre / $madhab .';
   }
 
   @override

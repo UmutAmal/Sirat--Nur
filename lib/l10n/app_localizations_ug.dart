@@ -882,7 +882,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'قولدا ئىختىيارى بۇلۇڭ (تۈزۈم مەنبەسى يوق)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {

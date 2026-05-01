@@ -830,10 +830,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get audioVoiceSudais => 'Gwryw (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr Ongl';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Angle Isha';
 
   @override
   String get qiblaCalibration => 'Calibradu Qibla';

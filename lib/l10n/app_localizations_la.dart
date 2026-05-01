@@ -828,10 +828,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get audioVoiceSudais => 'Masculum (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr Anglus';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Anglus';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';

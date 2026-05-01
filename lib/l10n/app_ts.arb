@@ -343,7 +343,7 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
+  "fajrAngle": "Fajr Angle ya xirhendzevutani",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Ku Kalibhara ka Qibla",
   "compassSmoothing": "Ku Olovisa Khampasi",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "A swi vekiwanga",
   "diagnosticsPrayerProfile": "Profayile ya Xikhongelo",
   "diagnosticsPrayerSource": "Vulawuri bya Xikhongelo",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Xihlawuhlawu / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

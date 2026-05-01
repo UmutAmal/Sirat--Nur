@@ -827,7 +827,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get audioVoiceSudais => 'Kāne (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ʻAle ʻAha';
 
   @override
   String get ishaAngle => 'Isha Angle';

@@ -825,10 +825,10 @@ class AppLocalizationsTt extends AppLocalizations {
   String get audioVoiceSudais => 'Ир-ат (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Фажр почмагы';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Иша почмагы';
 
   @override
   String get qiblaCalibration => 'Кибла Калибрлау';
@@ -880,7 +880,7 @@ class AppLocalizationsTt extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Кул белән кулланылган почмаклар (институциональ чыганак юк)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {

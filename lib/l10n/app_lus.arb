@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Set lo",
   "diagnosticsPrayerProfile": "Tawngtai Profile",
   "diagnosticsPrayerSource": "Tawngtai Thuneihna",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Custom / {madhab} tih a ni.",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

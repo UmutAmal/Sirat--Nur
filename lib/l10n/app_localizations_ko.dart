@@ -816,10 +816,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get audioVoiceSudais => '남성(Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => '파즈르 각도';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => '이샤 앵글';
 
   @override
   String get qiblaCalibration => 'Qibla 교정';

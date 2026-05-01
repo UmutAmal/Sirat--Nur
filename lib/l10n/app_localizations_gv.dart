@@ -825,10 +825,10 @@ class AppLocalizationsGv extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Corneil Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Corneil Isha';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -868,10 +868,10 @@ class AppLocalizationsGv extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Profail Padjer';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Authority Padjer';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -880,16 +880,16 @@ class AppLocalizationsGv extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Angleyn custom liorish laue (cha nel fondagh institiudagh)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName moghrey lesh $madhab Asr roshtyn liorish y cleaysh';
   }
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return 'Fall-back rannagh liorish $sourceName. Dearbhagh ooraghyn padjer ynnydagh rish dty mosque ny urree creeoil oifigagh.';
   }
 
   @override

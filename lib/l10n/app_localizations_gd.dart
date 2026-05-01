@@ -831,10 +831,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get audioVoiceSudais => 'Fireann (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Ceàrn Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Ceàrn';
 
   @override
   String get qiblaCalibration => 'Calibration Qibla';

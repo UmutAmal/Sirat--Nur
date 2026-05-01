@@ -827,10 +827,10 @@ class AppLocalizationsTk extends AppLocalizations {
   String get audioVoiceSudais => 'Erkek (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr burçy';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Işa burçy';
 
   @override
   String get qiblaCalibration => 'Kibla kalibrlemesi';

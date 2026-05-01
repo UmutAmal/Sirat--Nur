@@ -826,10 +826,10 @@ class AppLocalizationsDz extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ཕ་ཇར་ཟུར་ཁུག།';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ཨི་ཤ་ཟུར་ཁུག།';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -869,23 +869,23 @@ class AppLocalizationsDz extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'སྨོན་ལམ་ངོ་སྤྲོད།';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'སྨོན་ལམ་དབང་འཛིན།';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'སྲོལ་སྒྲིག / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'ལག་ཐོག་སྲོལ་སྒྲིག་ཟུར་ཁུག་ (གཙུག་སྡེའི་འབྱུང་ཁུངས་མེད།)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName ལག་ལེན་པ་གིས་སེལ་འཐུ་འབད་ཡོད་མི་ $madhab Asr སྒྲིག་སྟངས་དང་གཅིག་ཁར་ཐབས་ལམ།';
   }
 
   @override

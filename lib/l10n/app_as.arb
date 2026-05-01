@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "ফজৰ এংগেল",
+  "ishaAngle": "ইছা এংগেল",
   "qiblaCalibration": "Qibla মানাংকন",
   "compassSmoothing": "কম্পাছ মসৃণ কৰা",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "ছেট কৰা হোৱা নাই",
   "diagnosticsPrayerProfile": "প্ৰাৰ্থনাৰ প্ৰফাইল",
   "diagnosticsPrayerSource": "প্ৰাৰ্থনা কৰ্তৃপক্ষ",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "কাষ্টম / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

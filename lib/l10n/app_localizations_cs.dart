@@ -830,7 +830,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get fajrAngle => 'Fajr Angle';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Angleová';
 
   @override
   String get qiblaCalibration => 'Kalibrace Qibla';

@@ -826,10 +826,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get audioVoiceSudais => 'Ер (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Таң бұрышы';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Иша бұрышы';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';

@@ -879,7 +879,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Custom / $madhab tih a ni.';
   }
 
   @override

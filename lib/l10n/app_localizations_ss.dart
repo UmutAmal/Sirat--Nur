@@ -826,10 +826,10 @@ class AppLocalizationsSs extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'I-Engeli ye-Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'I-Isha Ingeli';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -869,10 +869,10 @@ class AppLocalizationsSs extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Iphrofayili yemthantazo';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Ligunya Lemthantazo';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -881,7 +881,7 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ema-engeli labhalwe ngesandla (kute umtfombo wesikhungo)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
@@ -890,7 +890,7 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return 'Kubuya emuva kwesifundza kusetjentiswa $sourceName. Cinisekisa tikhatsi temthandazo wendzawo ne-mosque yakho noma ligunya lenkholo lelisemtsetfweni.';
   }
 
   @override

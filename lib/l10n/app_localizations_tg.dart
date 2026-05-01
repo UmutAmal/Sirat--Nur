@@ -826,10 +826,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get audioVoiceSudais => 'Мард (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Кунҷи Фаҷр';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Ишо кунҷи';
 
   @override
   String get qiblaCalibration => 'Калибргузории қибла';

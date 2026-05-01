@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "نارینه (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "نارینه (Abdul Basit)",
   "audioVoiceSudais": "نارینه (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "د فجر زاویه",
+  "ishaAngle": "ایشا زاویه",
   "qiblaCalibration": "د قبلې انډول",
   "compassSmoothing": "د کمپاس نرمول",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "ټاکل شوی نه دی",
   "diagnosticsPrayerProfile": "د لمانځه پروفایل",
   "diagnosticsPrayerSource": "د لمانځه اداره",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "دودیز / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

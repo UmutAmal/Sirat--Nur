@@ -826,10 +826,10 @@ class AppLocalizationsKg extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Angle ya Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Angle ya Isha';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -869,28 +869,28 @@ class AppLocalizationsKg extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Profile ya kisambu';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Luyalu ya Kisambu';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Kuyidika / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ba angle ya bo me yidika na maboko (kisika mosi ve)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName metode ti $madhab Asr ya bo me pona na muntu ya ke sadila yo';
   }
 
   @override
   String diagnosticsPrayerRegionalFallbackSource(String sourceName) {
-    return 'Regional fallback using $sourceName. Confirm local prayer times with your mosque or official religious authority.';
+    return 'Kuvutuka na nima ya kizunga na kusadilaka $sourceName. Ndimisa bangunga ya bisambu ya bwala na beno ti mosquée to mfumu ya dibundu na beno.';
   }
 
   @override

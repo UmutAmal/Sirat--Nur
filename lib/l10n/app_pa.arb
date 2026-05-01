@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "ਮਰਦ (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "ਮਰਦ (Abdul Basit)",
   "audioVoiceSudais": "ਮਰਦ (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "ਫਜ਼ਰ ਕੋਣ",
+  "ishaAngle": "ਈਸ਼ਾ ਕੋਣ",
   "qiblaCalibration": "ਕਿਬਲਾ ਕੈਲੀਬ੍ਰੇਸ਼ਨ",
   "compassSmoothing": "ਕੰਪਾਸ ਸਮੂਥਿੰਗ",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "ਸੈੱਟ ਨਹੀਂ ਹੈ",
   "diagnosticsPrayerProfile": "ਪ੍ਰਾਰਥਨਾ ਪ੍ਰੋਫਾਈਲ",
   "diagnosticsPrayerSource": "ਪ੍ਰਾਰਥਨਾ ਅਥਾਰਟੀ",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "ਕਸਟਮ / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

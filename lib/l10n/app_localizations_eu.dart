@@ -826,10 +826,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get audioVoiceSudais => 'Gizonezkoa (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr Angelu';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Angelu';
 
   @override
   String get qiblaCalibration => 'Qibla Kalibrazioa';

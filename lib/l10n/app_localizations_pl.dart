@@ -829,7 +829,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get audioVoiceSudais => 'Mężczyzna (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Kąt Fajra';
 
   @override
   String get ishaAngle => 'Isha Angle';

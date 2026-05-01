@@ -826,7 +826,7 @@ class AppLocalizationsNr extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'I-Fajr Angle';
 
   @override
   String get ishaAngle => 'Isha Angle';
@@ -869,23 +869,23 @@ class AppLocalizationsNr extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Iphrofayili yomthandazo';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'Igunya lokuthandaza';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Isiko / $madhab';
   }
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Ama-engeli wesintu wesandla (akunamthombo wesikhungo)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName indlela ene-$madhab Asr ekhethwe ngumsebenzisi';
   }
 
   @override

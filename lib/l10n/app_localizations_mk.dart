@@ -828,10 +828,10 @@ class AppLocalizationsMk extends AppLocalizations {
   String get audioVoiceSudais => 'Машко (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Фаџр агол';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Иша Англ';
 
   @override
   String get qiblaCalibration => 'Калибрација на Qibla';

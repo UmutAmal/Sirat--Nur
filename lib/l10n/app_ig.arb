@@ -343,7 +343,7 @@
   "audioVoiceMisharyAlafasy": "Nwoke (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Nwoke (Abdul Basit)",
   "audioVoiceSudais": "Nwoke (Sudais)",
-  "fajrAngle": "Fajr Angle",
+  "fajrAngle": "Akụkụ Fajr",
   "ishaAngle": "Isha Angle",
   "qiblaCalibration": "Nhazi nke Qibla",
   "compassSmoothing": "Kompas na-amụmụ ọnụ ọchị",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "Usoro {sourceName} nwere ntọala Asr {madhab} ahọpụtara onye ọrụ",
   "quranAudioPlaybackErrorWithConnectionHint": "Nkpọghachi ọdịyo dara. Biko lelee njikọ gị.",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {

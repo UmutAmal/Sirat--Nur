@@ -828,10 +828,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get audioVoiceSudais => 'Nam (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Góc Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Góc Isha';
 
   @override
   String get qiblaCalibration => 'Hiệu chỉnh Qibla';

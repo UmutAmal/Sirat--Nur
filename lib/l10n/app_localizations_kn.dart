@@ -827,10 +827,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get audioVoiceSudais => 'ಪುರುಷ (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ಫಜರ್ ಕೋನ';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'ಇಶಾ ಆಂಗಲ್';
 
   @override
   String get qiblaCalibration => 'ಕಿಬ್ಲಾ ಮಾಪನಾಂಕ ನಿರ್ಣಯ';

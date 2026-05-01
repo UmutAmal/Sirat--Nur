@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Ɛnyɛ nea wɔde asi hɔ",
   "diagnosticsPrayerProfile": "Mpaebɔ Ho Nsɛm",
   "diagnosticsPrayerSource": "Mpaebɔ Tumi",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Amanneɛbɔ / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

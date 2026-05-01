@@ -828,10 +828,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get audioVoiceSudais => 'Vyras (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Fajr kampas';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha kampas';
 
   @override
   String get qiblaCalibration => 'Qibla kalibravimas';

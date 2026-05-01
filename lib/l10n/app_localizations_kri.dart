@@ -875,7 +875,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'Custom / $madhab';
+    return 'Kastam / $madhab .';
   }
 
   @override

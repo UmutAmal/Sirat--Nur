@@ -826,7 +826,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get audioVoiceSudais => 'Mêr (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Angle Fajr';
 
   @override
   String get ishaAngle => 'Isha Angle';

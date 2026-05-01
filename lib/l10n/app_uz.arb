@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Erkak (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Erkak (Abdul Basit)",
   "audioVoiceSudais": "Erkak (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Bomdod burchagi",
+  "ishaAngle": "Isha burchagi",
   "qiblaCalibration": "Qibla kalibrlash",
   "compassSmoothing": "Kompasni tekislash",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Belgilanmagan",
   "diagnosticsPrayerProfile": "Namoz profili",
   "diagnosticsPrayerSource": "Namoz hokimiyati",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Maxsus / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Qo'lda moslashtirilgan burchaklar (institutsional manba yo'q)",
   "diagnosticsCloudDriven": "Bulutga asoslangan",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI audio aktivlari",

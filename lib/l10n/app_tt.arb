@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Ир-ат (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Ир-ат (Abdul Basit)",
   "audioVoiceSudais": "Ир-ат (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Фажр почмагы",
+  "ishaAngle": "Иша почмагы",
   "qiblaCalibration": "Кибла Калибрлау",
   "compassSmoothing": "Компас тигезләү",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Кул белән кулланылган почмаклар (институциональ чыганак юк)",
   "diagnosticsCloudDriven": "Болыт",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI аудио активлары",

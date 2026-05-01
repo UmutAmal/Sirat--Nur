@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Lelaki (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Lelaki (Abdul Basit)",
   "audioVoiceSudais": "Lelaki (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Sudut Subuh",
+  "ishaAngle": "Sudut Isha",
   "qiblaCalibration": "Penentukuran Kiblat",
   "compassSmoothing": "Melicinkan Kompas",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Tidak ditetapkan",
   "diagnosticsPrayerProfile": "Profil Doa",
   "diagnosticsPrayerSource": "Kuasa Solat",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Tersuai / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

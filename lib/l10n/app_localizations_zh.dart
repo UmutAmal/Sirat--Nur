@@ -809,10 +809,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get audioVoiceSudais => '男 (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => '晨光角';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => '伊莎角';
 
   @override
   String get qiblaCalibration => '朝拜校准';
@@ -2485,10 +2485,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get audioVoiceSudais => '男 (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => '晨光角';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => '伊莎角';
 
   @override
   String get qiblaCalibration => '朝拜校准';
@@ -4161,10 +4161,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get audioVoiceSudais => '男 (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => '晨光角';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => '伊莎角';
 
   @override
   String get qiblaCalibration => '朝拜校準';

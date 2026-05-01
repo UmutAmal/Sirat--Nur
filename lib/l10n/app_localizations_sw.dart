@@ -828,7 +828,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get audioVoiceSudais => 'Mwanaume (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Pembe ya Fajr';
 
   @override
   String get ishaAngle => 'Isha Angle';

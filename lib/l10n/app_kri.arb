@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Nɔto we dɛn dɔn sɛt",
   "diagnosticsPrayerProfile": "Prea Profayl",
   "diagnosticsPrayerSource": "Di Atɔriti fɔ Prea",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Kastam / {madhab} .",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {

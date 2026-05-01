@@ -867,10 +867,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get diagnosticsNotSet => 'Not set';
 
   @override
-  String get diagnosticsPrayerProfile => 'Prayer Profile';
+  String get diagnosticsPrayerProfile => 'Bwebwenato in Jar';
 
   @override
-  String get diagnosticsPrayerSource => 'Prayer Authority';
+  String get diagnosticsPrayerSource => 'maroñ in jar';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -879,11 +879,11 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+      'Angle ko rej kōmmane kin pein (ejjelok jikin)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
-    return '$sourceName method with user-selected $madhab Asr setting';
+    return '$sourceName wāween eo ippān armej eo ej kālete $madhab Asr setting';
   }
 
   @override

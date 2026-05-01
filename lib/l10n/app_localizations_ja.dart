@@ -817,10 +817,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get audioVoiceSudais => '男性 (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'ファジルアングル';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'イシャ・アングル';
 
   @override
   String get qiblaCalibration => 'キブラのキャリブレーション';

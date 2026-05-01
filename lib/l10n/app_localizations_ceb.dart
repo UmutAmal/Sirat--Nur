@@ -832,10 +832,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get audioVoiceSudais => 'Lalaki (Sudais)';
 
   @override
-  String get fajrAngle => 'Fajr Angle';
+  String get fajrAngle => 'Anggulo sa Fajr';
 
   @override
-  String get ishaAngle => 'Isha Angle';
+  String get ishaAngle => 'Isha Anggulo';
 
   @override
   String get qiblaCalibration => 'Pag-calibrate sa Qibla';

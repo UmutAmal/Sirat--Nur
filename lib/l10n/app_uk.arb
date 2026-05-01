@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Чоловік (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Чоловік (Abdul Basit)",
   "audioVoiceSudais": "Чоловік (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "Кут Фаджр",
+  "ishaAngle": "Іша Кут",
   "qiblaCalibration": "Калібрування Qibla",
   "compassSmoothing": "Компасне згладжування",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Не встановлено",
   "diagnosticsPrayerProfile": "Молитовний профіль",
   "diagnosticsPrayerSource": "Авторитет молитви",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerCustomProfile": "Спеціальний / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "Користувальницькі кути вручну (без інституційного джерела)",
   "diagnosticsCloudDriven": "Керований хмарою",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "Аудіоресурси інтерфейсу користувача",

@@ -343,8 +343,8 @@
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
   "audioVoiceAbdulBaset": "Male (Abdul Basit)",
   "audioVoiceSudais": "Male (Sudais)",
-  "fajrAngle": "Fajr Angle",
-  "ishaAngle": "Isha Angle",
+  "fajrAngle": "फजर एंगल के बा",
+  "ishaAngle": "ईशा एंगल के ह",
   "qiblaCalibration": "Qibla Calibration",
   "compassSmoothing": "Compass Smoothing",
   "reduceSensorJitter": "Reduce sensor jitter for a steadier needle.",
@@ -356,9 +356,9 @@
   "rerunSetup": "Re-run the initial setup process.",
   "diagnostics": "Diagnostics",
   "diagnosticsNotSet": "Not set",
-  "diagnosticsPrayerProfile": "Prayer Profile",
-  "diagnosticsPrayerSource": "Prayer Authority",
-  "diagnosticsPrayerCustomProfile": "Custom / {madhab}",
+  "diagnosticsPrayerProfile": "प्रार्थना के प्रोफाइल बा",
+  "diagnosticsPrayerSource": "प्रार्थना प्राधिकरण के ह",
+  "diagnosticsPrayerCustomProfile": "कस्टम / {madhab} के बा।",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -366,7 +366,7 @@
       }
     }
   },
-  "diagnosticsPrayerCustomSource": "Manual custom angles (no institutional source)",
+  "diagnosticsPrayerCustomSource": "मैनुअल कस्टम कोण (कोई संस्थागत स्रोत ना)",
   "diagnosticsCloudDriven": "Cloud Driven",
   "diagnosticsAdhanAudioAssets": "Adhan Audio Assets",
   "diagnosticsUiAudioAssets": "UI Audio Assets",
@@ -780,7 +780,7 @@
       }
     }
   },
-  "diagnosticsPrayerHybridSource": "{sourceName} method with user-selected {madhab} Asr setting",
+  "diagnosticsPrayerHybridSource": "उपयोगकर्ता द्वारा चुनल {madhab} Asr सेटिंग के साथ {sourceName} विधि",
   "quranAudioPlaybackErrorWithConnectionHint": "ऑडियो प्लेबैक फेल हो गइल. कृपया आपन कनेक्शन के जांच करीं।",
   "@diagnosticsPrayerRegionalFallbackSource": {
     "placeholders": {
