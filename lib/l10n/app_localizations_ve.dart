@@ -743,10 +743,12 @@ class AppLocalizationsVe extends AppLocalizations {
       'Mulanguli wa u Dauniḽouda a siho kha inthanethe';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Langulani zwipfi zwinzhi zwi siho kha inthanethe & phakhethe dza dataset.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage =>
+      'Vhofhololani vhudzulo ha nga ngomu ha tshishumiswa.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +815,7 @@ class AppLocalizationsVe extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Ipfi la Audio';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1069,11 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Zwiṱanganedzwa zwo khwaṱhisedzwaho zwa hadith a zwi athu wanala .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'U fhaṱa uhu hu kha ḓi ḓitika nga zwiḽiwa zwa hadith zwa nnḓa zwi songo khwaṱhisedzwaho. U ṱola hadith zwi dzula zwo thivhelwa u swikela dataset yo bveledzwaho i tshi ṱanganyiswa.';
 
   @override
   String get paywallUnlockAll =>

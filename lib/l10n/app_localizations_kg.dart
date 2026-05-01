@@ -743,10 +743,11 @@ class AppLocalizationsKg extends AppLocalizations {
       'Gestionnaire de téléchargement sans ligne';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Landa ba paquet ya audio mpi ya bansangu ya kele ve na internet.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Katula kisika ya kubumba bima ya kati.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +814,7 @@ class AppLocalizationsKg extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Ndinga ya kuwidikila';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1068,11 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Ba nsangu ya ba hadith ya bo me zikisaka kele ntete ve .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Kutunga yai ke tadila kaka madia ya hadith ya nganda yina bo me zikisaka ve. Kutala na Hadith ke bikalaka ya kukangama tii kuna bo ta vukisa bansangu yina bo me baka na kisina.';
 
   @override
   String get paywallUnlockAll =>

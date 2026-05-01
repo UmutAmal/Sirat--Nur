@@ -742,10 +742,12 @@ class AppLocalizationsTy extends AppLocalizations {
   String get offlineDownloadManager => 'Faatere no te download';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'A faatere i te mau rave\'a faaroo rahi e te mau haamaramaramaraa.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage =>
+      'A faati\'a i te vahi tape\'araa mau rave\'a i roto.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +814,7 @@ class AppLocalizationsTy extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Reo Audio';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1068,11 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Aita â te mau haaputuputuraa hadith i itehia';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'E faatumu noa â teie paturaa i nia i te hoê haapurororaa hadith i rapae mai aita i haapapuhia. E tapeahia te hi\'opoaraa i te mau Hadith e tae roa \' tu i te taime ua faaauhia te hoê hu\'ahu\'a haamaramaramaraa.';
 
   @override
   String get paywallUnlockAll =>

@@ -743,10 +743,11 @@ class AppLocalizationsDz extends AppLocalizations {
       'དྲ་རྒྱའི་ནང་མེད་པའི་ཕབ་ལེན་འཛིན་སྐྱོང་པ།';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'ཨོཕ་ལ་ཡིན་སྒྲ་སྐད་དང་ གནད་སྡུད་ཆ་ཚན་ཐུམ་སྒྲིལ་སྦོམ་ཚུ་འཛིན་སྐྱོང་འཐབ།';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'ནང་འཁོད་ཐབས་འཕྲུལ་གསོག་འཇོག་འདི་རང་དབང་བཟོ།';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +814,7 @@ class AppLocalizationsDz extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'སྒྲ་སྐད་སྐད།';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1068,11 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'བདེན་དཔྱད་འབད་ཡོད་པའི་ཧ་ཌི་ཐི་བསྡུ་སྒྲིག་ཚུ་ད་ལྟོ་ཡང་མ་ཐོབ་པས།';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'འ་ནི་བཟོ་བསྐྲུན་འདི་ད་ལྟོ་ཡང་ བདེན་དཔྱད་མ་འབད་བའི་ཕྱིའི་ཧ་ཌིསི་ཕིཌ་ལུ་རག་ལསཔ་ཨིན། འབྱུང་ཁུངས་གནད་སྡུད་ཆ་ཚན་ཅིག་མཉམ་འབྱུང་མ་འབད་ཚུན་ཚོད་ ཧ་ཌིཐ་བརྡ་འཚོལ་འདི་ལྕོགས་མིན་བཟོ་སྟེ་སྡོདཔ་ཨིན།';
 
   @override
   String get paywallUnlockAll =>

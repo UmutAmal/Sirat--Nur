@@ -743,10 +743,11 @@ class AppLocalizationsOc extends AppLocalizations {
       'Gestionari de telecargaments fòra linha';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Gerir de paquets d\'àudio e de donadas massís fòra linha.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Liberar l\'emmagazinatge intèrne del periferic.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +814,7 @@ class AppLocalizationsOc extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Votz àudio';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1068,11 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Las colleccions de hadiths verificadas son pas encara disponiblas';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Aquesta construccion depend encara d\'un flux de hadith extèrne non verificat. La navigacion per Hadith demòra desactivada fins qu\'un ensemble de donadas font siá sincronizat.';
 
   @override
   String get paywallUnlockAll =>

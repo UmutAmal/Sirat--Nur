@@ -742,10 +742,12 @@ class AppLocalizationsTo extends AppLocalizations {
   String get offlineDownloadManager => 'Pule Download \'o e \'Offline\'';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Pule\'i \'a e ngaahi pack \'o e ongo \'o e offline lahi & dataset.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage =>
+      'Fakatau\'ataina\'i \'a e tanaki\'anga \'o e device \'i loto.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +814,7 @@ class AppLocalizationsTo extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Le\'o Le\'o';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1068,11 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      '\'Oku te\'eki ke ma\'u \'a e ngaahi tanaki\'anga hadith kuo fakamo\'oni\'i .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      '\'Oku kei fakafalala \'a e langa ko \'eni ki ha fafanga hadith \'i tu\'a \'oku te\'eki ke fakamo\'oni\'i. \'Oku nofo \'a e browsing \'o e Hadith \'o \'ikai ke ngaue kae \'oua kuo sync ha dataset sourced.';
 
   @override
   String get paywallUnlockAll =>

@@ -742,10 +742,10 @@ class AppLocalizationsLi extends AppLocalizations {
   String get offlineDownloadManager => 'Offline Download Manager';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'Beheer enorme offline audio- en datasetpakke.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Maak interne opsjlaag veur apparate vrij.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +812,7 @@ class AppLocalizationsLi extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Audiostum';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1066,11 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Gecontroleerde hadithverzamelinge zien nog neet besjikbaar';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Deze build is nog altied aafhankelik vaan un neet gecontroleerde externe hadith-feed. Hadith-browse blief oetgeschakeld totdat ‘n brongegevensset is gesynchroniseerd.';
 
   @override
   String get paywallUnlockAll =>

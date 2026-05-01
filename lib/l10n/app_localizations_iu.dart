@@ -742,10 +742,11 @@ class AppLocalizationsIu extends AppLocalizations {
   String get offlineDownloadManager => 'ᖃᕆᑕᐅᔭᒃᑯᑦ ᑎᒍᓯᓂᕐᒧᑦ ᐊᐅᓚᑦᑎᔨ';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'ᐊᐅᓚᑦᑎᓗᑎᑦ ᐊᖏᔪᐊᓗᖕᓂᒃ ᖃᕆᑕᐅᔭᒃᑯᑦ ᓂᐱᓕᐅᕈᑎᓂᒃ ᐊᒻᒪ ᖃᕆᑕᐅᔭᒃᑯᑦ ᑲᑎᖅᓱᐃᔾᔪᑎᓂᒃ.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'ᐃᓱᒪᖅᓱᕐᓗᒍ ᐃᓗᐊᓂ ᑐᖅᑯᐃᕕᒃ.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +813,7 @@ class AppLocalizationsIu extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ᓂᐱᖃᖅᑐᖅ';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1067,11 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᑦ ᕼᐊᑎᔅ ᑲᑎᖅᓱᖅᑕᐅᓯᒪᔪᑦ ᐊᑐᐃᓐᓇᐅᙱᓚᑦ ᓱᓕ';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ᑖᓐᓇ ᓴᓇᔭᐅᓂᖓ ᓱᓕ ᑐᙵᕕᖃᖅᐳᖅ ᓇᓗᓇᐃᖅᑕᐅᓯᒪᙱᑦᑐᒥᒃ ᓯᓚᑖᓂ ᕼᐊᑎᔅ ᓂᕿᒥᒃ. ᕼᐊᑎᔅ ᕿᓂᕐᓂᖅ ᒪᑐᔭᐅᓯᒪᐃᓐᓇᖅᑐᖅ ᑭᓯᐊᓂ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᐃᑦ ᑐᑭᓕᐊᖅᑎᑕᐅᒃᐸᑕ.';
 
   @override
   String get paywallUnlockAll =>

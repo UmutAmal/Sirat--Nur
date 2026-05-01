@@ -742,10 +742,11 @@ class AppLocalizationsBa extends AppLocalizations {
   String get offlineDownloadManager => 'Офлайн скачивание менеджеры';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Идара итеү массив офлайн аудио & мәғлүмәттәр йыйылмаһы пакеттары.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Эске ҡоролма һаҡлау урынын бушатыу.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +813,7 @@ class AppLocalizationsBa extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Аудио тауыш';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1067,11 @@ class AppLocalizationsBa extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Тикшерелгән хәҙис йыйынтыҡтары әлегә юҡ .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Был төҙөү һаман да раҫланмаған тышҡы хәҙис каналына бәйле. Хәҙистәрҙе ҡарау сығанаҡ мәғлүмәттәр йыйылмаһы синхронлаштырылғанға тиклем өҙөлгән ҡала.';
 
   @override
   String get paywallUnlockAll =>

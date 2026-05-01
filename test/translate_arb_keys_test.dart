@@ -1481,13 +1481,28 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(590));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(411));
       for (final key in keys) {
         expect(
           localeArbs['am']![key],
           isNot(english[key]),
           reason: 'app_am.arb still uses English for $key',
         );
+      }
+      for (final locale in ['aa', 'bo', 'ff', 'fo', 'iu']) {
+        for (final key in [
+          'manageDatasets',
+          'freeStorage',
+          'audioVoice',
+          'hadithUnavailableTitle',
+          'hadithUnavailableBody',
+        ]) {
+          expect(
+            localeArbs[locale]![key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
       }
     });
 

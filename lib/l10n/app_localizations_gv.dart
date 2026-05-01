@@ -742,10 +742,11 @@ class AppLocalizationsGv extends AppLocalizations {
   String get offlineDownloadManager => 'Reesht Lught-reill Offline';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Riaghlagh packaghyn clashtyn & dataset mooarey offline.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Free up storage innid.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +813,7 @@ class AppLocalizationsGv extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Goo Clashtyn';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1067,11 @@ class AppLocalizationsGv extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Cha nel co-chruinnaghyn hadith ry-gheddyn foast .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ta\'n towse shoh ry-akin foast er feed hadith sheshoil nagh vel er ny verify. Ta\'n browsing Hadith staydys dys \'sy \'dataset\' sourced.';
 
   @override
   String get paywallUnlockAll =>

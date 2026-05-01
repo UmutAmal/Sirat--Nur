@@ -743,10 +743,11 @@ class AppLocalizationsRn extends AppLocalizations {
       'Umucungerezi wo gukuraho kuri interineti';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Gucungera amajwi menshi atari kuri interineti n\'amapaki y\'amakuru.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Gufungura ububiko bw’ibikoresho vyo mu mutima.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +814,7 @@ class AppLocalizationsRn extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Ijwi ry\'amajwi';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1068,11 @@ class AppLocalizationsRn extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Amakoraniro ya hadithi yagenzuwe ntabwo araboneka .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ivyo vyubatswe biracari bishingiye ku ngaburo ya hadithi yo hanze itagenzuwe. Gusura Hadith biguma bizimye gushika amakuru y’inkomoko ahujwe.';
 
   @override
   String get paywallUnlockAll =>

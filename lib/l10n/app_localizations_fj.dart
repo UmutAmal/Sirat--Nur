@@ -742,10 +742,11 @@ class AppLocalizationsFj extends AppLocalizations {
   String get offlineDownloadManager => 'Manidia ni lavetaki mai na initaneti';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Vakatulewataka na rorogo levu ni initaneti & pakete ni itukutuku.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Vakagalalataka na maroroi ni misini ena loma.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +813,7 @@ class AppLocalizationsFj extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Vosa ni Rogo';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1067,11 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Na veisoqoni ni hadith vakadeitaki e se bera ni rawati .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Na tara oqo e se vakatau tikoga ena dua na kakana ni hadith e tautuba sega ni vakadeitaki. Na vakadidike ni Hadith e tiko vakatani me yacova ni sa vakatautauvatataki e dua na itukutuku ni ivurevure.';
 
   @override
   String get paywallUnlockAll =>

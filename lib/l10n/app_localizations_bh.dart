@@ -742,10 +742,11 @@ class AppLocalizationsBh extends AppLocalizations {
   String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक के बा';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'भारी ऑफलाइन ऑडियो & डाटासेट पैक के प्रबंधन करीं।';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'आंतरिक डिवाइस भंडारण के मुक्त कर दीं।';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +813,7 @@ class AppLocalizationsBh extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'ऑडियो आवाज बा';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1066,11 +1067,11 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'सत्यापन कइल हदीस संग्रह अभी तक उपलब्ध नइखे';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'ई बिल्ड अबहियों एगो असत्यापित बाहरी हदीस फीड पर निर्भर बा. जबले कवनो सोर्स कइल डाटासेट सिंक ना हो जाला तबले हदीस ब्राउजिंग अक्षम रहेला.';
 
   @override
   String get paywallUnlockAll =>

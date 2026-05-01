@@ -743,10 +743,11 @@ class AppLocalizationsTn extends AppLocalizations {
       'Molaodi wa go Laisolola o se mo Inthaneteng';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Laola diphuthelwana tse dintsi tsa modumo le dataset tse di seng mo inthaneteng.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Golola polokelo ya sediriswa sa ka fa gare.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +814,7 @@ class AppLocalizationsTn extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Lentswe la Modumo';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1068,11 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Dikokoanyo tsa dihadith tse di netefaditsweng ga di ise di nne teng';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Go aga gono go sa ntse go ikaegile ka phepo ya hadith ya kwa ntle e e sa netefadiwang. Go batla mo dihadith go nna go thibetswe go fitlha setlhopha sa tshedimosetso se se tswang mo motsweding se tsamaisana.';
 
   @override
   String get paywallUnlockAll =>

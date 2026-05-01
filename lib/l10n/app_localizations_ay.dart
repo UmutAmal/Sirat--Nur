@@ -827,7 +827,7 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voz ukax mä juk’a pachanakanwa';
+  String get audioVoice => 'Audio Voice';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1087,11 +1087,11 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Chiqapa hadith apthapitanakax janiw jichhakamax utjkiti';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Aka lurawix waliw mä jan chiqapar uñjat anqäx hadith manq’añat dependi. Hadith uñakipañax jan ch’amanchataw qhiparaski, mä fuente de datos ukan sincronización ukar puriñkama.';
 
   @override
   String get paywallUnlockAll =>

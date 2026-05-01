@@ -743,10 +743,11 @@ class AppLocalizationsNr extends AppLocalizations {
       'Umphathi wokudawuniloda ongaxhunyiwe ku-inthanethi';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Phatha amaphakheji amakhulu womsindo ongaxhunyiwe ku-inthanethi namasethi wedatha.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Khulula isitoreji sangaphakathi sedivayisi.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +814,7 @@ class AppLocalizationsNr extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Ilizwi elizwakalako';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1068,11 @@ class AppLocalizationsNr extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Amaqoqo we-hadith aqinisekisiweko awakatholakali';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Ukwakhiwa lokhu kusathembele ekuphakeleni kwe-hadith kwangaphandle okungakaqinisekiswa. Ukuphequlula i-Hadith kuhlala kukhubazekile bekube kulapho isethi yedatha etholakalako ivumelaniswa.';
 
   @override
   String get paywallUnlockAll =>

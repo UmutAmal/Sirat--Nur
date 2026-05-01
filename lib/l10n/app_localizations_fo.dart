@@ -742,10 +742,10 @@ class AppLocalizationsFo extends AppLocalizations {
   String get offlineDownloadManager => 'Heinta leiðari uttan net';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets => 'Umsita stórar offline ljóð- og dátusettpakkar.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Frígera innanhýsis goymslu á tólum.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -812,7 +812,7 @@ class AppLocalizationsFo extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Ljóðrødd';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1065,12 +1065,11 @@ class AppLocalizationsFo extends AppLocalizations {
   String get hadithSourcePending => 'Verified source pending';
 
   @override
-  String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+  String get hadithUnavailableTitle => 'Staðfest hadithsøvn eru ikki tøk enn';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'Hendan byggingin er framvegis treytað av einum óváttaðum uttanhýsis hadithfóðri. Hadith-kagan verður sløkt, til eitt keldudátusetti er synkroniserað.';
 
   @override
   String get paywallUnlockAll =>

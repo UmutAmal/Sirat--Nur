@@ -20272,3 +20272,38 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
+
+## 2026-05-01 TUR-503 - Settings Hadith Low-Resource L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Ayarlar/Downloads/Hadith gorunur UI metinlerinde dusuk kaynakli locale'lerde Ingilizce fallback kalmasi, "tum dillerde tam kapsam" hedefini zedeliyordu. Proper-name okuyucu etiketleri bu turda bilerek kapsam disi tutuldu; `Mishary Alafasy`, `Abdul Basit` ve `Sudais` isimlerini cevirmek sahte kalite uretebilirdi.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report manageDatasets freeStorage audioVoice hadithUnavailableTitle hadithUnavailableBody` same-as-English `332`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 5 anahtarda same-as-English `153`, missing/empty `0`, placeholder mismatch `0`.
+  - 8 anahtarli gorunur Settings/Hadith kumesi `590 -> 411` same-as-English'e dustu; kalan farkin buyuk bolumu canonical reciter proper-name etiketlerinden geliyor.
+  - `lib/l10n/app_aa.arb:324`, `lib/l10n/app_aa.arb:325`, `lib/l10n/app_aa.arb:342`, `lib/l10n/app_aa.arb:464`, `lib/l10n/app_aa.arb:465` artik bu 5 anahtarda Ingilizce degil.
+  - `lib/l10n/app_bo.arb:324`, `lib/l10n/app_bo.arb:325`, `lib/l10n/app_bo.arb:342`, `lib/l10n/app_bo.arb:464`, `lib/l10n/app_bo.arb:465` artik bu 5 anahtarda Ingilizce degil.
+  - `lib/l10n/app_ff.arb:324`, `lib/l10n/app_ff.arb:325`, `lib/l10n/app_ff.arb:342`, `lib/l10n/app_ff.arb:464`, `lib/l10n/app_ff.arb:465` artik bu 5 anahtarda Ingilizce degil.
+  - `test/translate_arb_keys_test.dart:1484` debt guard esigini `<= 411` olarak kilitler; `test/translate_arb_keys_test.dart:1495` dusuk kaynakli `aa/bo/ff/fo/iu` orneklerinin ayni 5 anahtarda Ingilizceye geri dusmesini engeller.
+- Kullanici etkisi: Downloads veri yonetimi, depolama bosaltma, audio voice ve verified hadith unavailable durum metinleri daha fazla dilde yerel gorunur; hadith tarafinda kaynak dogrulanmadan browsing acilmadigi durust copy korunur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `manageDatasets`, `freeStorage`, `audioVoice`, `hadithUnavailableTitle`, `hadithUnavailableBody` icin kontrollu l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- Reciter proper-name anahtarlari bu turda cevrilmedi; canonical isimlerin bozulmamasi icin mevcut policy korundu.
+
+### TESTER Degisikligi
+- Targeted l10n tests: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `143/143`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `714/714`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio mirror/overflow probes, Cloudflare partition, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `0fd1c5fc-0616-437d-b922-cd2341c7d45f`, `quranPlayback.clickedPlay=true`, `containsPauseControl=true`, `containsPlaybackError=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94271314`.
+
+### Risk Degisimi
+- Settings/Hadith 5 anahtarli low-resource fallback borcu: `12/25 -> 6/25`.
+- Kalan bilincli risk: 5 anahtarda 153 same-as-English locale-key kaldi; bunlar ceviri aracinin guvenle ceviremedigi cok dusuk kaynakli dillerde EN fallback olarak korundu. Proper-name reciter anahtarlari ise intentionally same-as-English kalabilir.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.

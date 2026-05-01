@@ -743,10 +743,11 @@ class AppLocalizationsSg extends AppLocalizations {
       'Gestionnaire ti téléchargement hors ligne';
 
   @override
-  String get manageDatasets => 'Manage massive offline audio & dataset packs.';
+  String get manageDatasets =>
+      'Sara kua na akota paquet ti audio & ti asango so ayeke na ndö ti Internet ape.';
 
   @override
-  String get freeStorage => 'Free up internal device storage.';
+  String get freeStorage => 'Liberté appareil ti batango ye na yâ ni.';
 
   @override
   String get quranIntegrity => 'Quran Integrity';
@@ -813,7 +814,7 @@ class AppLocalizationsSg extends AppLocalizations {
   }
 
   @override
-  String get audioVoice => 'Audio Voice';
+  String get audioVoice => 'Voix ti audio';
 
   @override
   String get audioVoiceMisharyAlafasy => 'Male (Mishary Alafasy)';
@@ -1067,11 +1068,11 @@ class AppLocalizationsSg extends AppLocalizations {
 
   @override
   String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+      'Abungbi ti hadith so a vérifié ni awe ayeke dä pëpe .';
 
   @override
   String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+      'A leke ni encore na ndö ti mbeni hadith ti ita so a vérifié ni ape. Navigation ti Hadith angbâ ti sara kua juska a synchronisé mbeni source ti asango.';
 
   @override
   String get paywallUnlockAll =>
