@@ -15,19 +15,19 @@ class AppLocalizationsBho extends AppLocalizations {
   String get splashTagline => 'Islamic Way of Light';
 
   @override
-  String get home => 'घर के बा';
+  String get home => 'घर';
 
   @override
   String get quran => 'कुरान';
 
   @override
-  String get qibla => 'किबला के बा';
+  String get qibla => 'किबला';
 
   @override
-  String get zikr => 'जिक्र के बा';
+  String get zikr => 'जिक्र';
 
   @override
-  String get calendar => 'कैलेंडर के बा';
+  String get calendar => 'कैलेंडर';
 
   @override
   String get settings => 'सेटिंग्स';
@@ -54,31 +54,31 @@ class AppLocalizationsBho extends AppLocalizations {
   String get method => 'गणना के तरीका';
 
   @override
-  String get madhab => 'असर न्यायिक विधि के बा';
+  String get madhab => 'असर न्यायिक विधि';
 
   @override
   String get surahs => 'सूरह सभ';
 
   @override
-  String get ayahs => 'अयहस के बा';
+  String get ayahs => 'आयत सभ';
 
   @override
   String get fajr => 'फजर';
 
   @override
-  String get sunrise => 'सूर्योदय के बा';
+  String get sunrise => 'सूर्योदय';
 
   @override
-  String get dhuhr => 'धुहर के बा';
+  String get dhuhr => 'धुहर';
 
   @override
-  String get asr => 'अस्र के बा';
+  String get asr => 'अस्र';
 
   @override
   String get maghrib => 'मगरिब';
 
   @override
-  String get isha => 'ईशा के बा';
+  String get isha => 'ईशा';
 
   @override
   String prayerNotificationTitle(String prayerName) {
@@ -100,7 +100,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get cacheClearedSuccess => 'कैश सफलतापूर्वक साफ हो गइल';
 
   @override
-  String get location => 'लोकेशन के बा';
+  String get location => 'लोकेशन';
 
   @override
   String get language => 'भाषा';
@@ -130,7 +130,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count शहरन के बा';
+    return '$count शहर';
   }
 
   @override
@@ -168,7 +168,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get cancel => 'रद्द कर दिहल जाव';
 
   @override
-  String get save => 'बचावे के बा';
+  String get save => 'बचाईं';
 
   @override
   String get delete => 'Delete';
@@ -189,7 +189,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get no => 'ना';
 
   @override
-  String get surah => 'सूरह के बा';
+  String get surah => 'सूरह';
 
   @override
   String ayahLabel(String ayah) {
@@ -197,10 +197,10 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get juz => 'जुज के बा';
+  String get juz => 'जुज';
 
   @override
-  String get page => 'पन्ना के बा';
+  String get page => 'पन्ना';
 
   @override
   String get reading => 'पढ़त बानी';
@@ -209,10 +209,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get recitation => 'पाठ कइल जाला';
 
   @override
-  String get translation => 'अनुवाद के बा';
+  String get translation => 'अनुवाद';
 
   @override
-  String get tafsir => 'तफसीर के बा';
+  String get tafsir => 'तफसीर';
 
   @override
   String get tafsirLoading => 'तफसीर लोड हो रहल बा...';
@@ -311,16 +311,16 @@ class AppLocalizationsBho extends AppLocalizations {
   String get eveningZikr => 'शाम के जिक्र';
 
   @override
-  String get tasbih => 'तसबीह के बा';
+  String get tasbih => 'तसबीह';
 
   @override
-  String get ahkab => 'अहकम के बा';
+  String get ahkab => 'अहकम';
 
   @override
-  String get masaail => 'मसा\'इल के बा';
+  String get masaail => 'मसा\'इल';
 
   @override
-  String get hadith => 'हदीस के बा';
+  String get hadith => 'हदीस';
 
   @override
   String get hadithCollection => 'हदीस संग्रह';
@@ -353,13 +353,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get openInYoutube => 'यूट्यूब में खुलल बा';
 
   @override
-  String get ibadahTracker => 'इबादा ट्रैकर के बा';
+  String get ibadahTracker => 'इबादत ट्रैकर';
 
   @override
-  String get fasting => 'उपवास के बा';
+  String get fasting => 'रोजा';
 
   @override
-  String get quranReading => 'कुरान पढ़े के बा';
+  String get quranReading => 'कुरान पढ़ाई';
 
   @override
   String get playSurahAudio => 'सूरह के ऑडियो चलाईं';
@@ -390,13 +390,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get prayerRemainingUnavailable => '--';
 
   @override
-  String get dhikrCount => 'ढिकर गिनती के बा';
+  String get dhikrCount => 'ढिकर गिनती';
 
   @override
-  String get weeklyProgress => 'साप्ताहिक प्रगति के बा';
+  String get weeklyProgress => 'साप्ताहिक प्रगति';
 
   @override
-  String get monthlyProgress => 'मासिक प्रगति के बा';
+  String get monthlyProgress => 'मासिक प्रगति';
 
   @override
   String get statistics => 'आँकड़ा के जानकारी दिहल गइल बा';

@@ -192,6 +192,58 @@ void main() {
     });
 
     test(
+      'Bhojpuri shell and reading labels do not keep explanatory debris',
+      () {
+        final arb = _readArb('lib/l10n/app_bho.arb');
+        const expected = {
+          'home': 'घर',
+          'qibla': 'किबला',
+          'zikr': 'जिक्र',
+          'calendar': 'कैलेंडर',
+          'madhab': 'असर न्यायिक विधि',
+          'ayahs': 'आयत सभ',
+          'sunrise': 'सूर्योदय',
+          'dhuhr': 'धुहर',
+          'asr': 'अस्र',
+          'isha': 'ईशा',
+          'location': 'लोकेशन',
+          'citiesCount': '{count} शहर',
+          'save': 'बचाईं',
+          'surah': 'सूरह',
+          'juz': 'जुज',
+          'page': 'पन्ना',
+          'translation': 'अनुवाद',
+          'tafsir': 'तफसीर',
+          'tasbih': 'तसबीह',
+          'ahkab': 'अहकम',
+          'masaail': "मसा'इल",
+          'hadith': 'हदीस',
+          'ibadahTracker': 'इबादत ट्रैकर',
+          'fasting': 'रोजा',
+          'quranReading': 'कुरान पढ़ाई',
+          'dhikrCount': 'ढिकर गिनती',
+          'weeklyProgress': 'साप्ताहिक प्रगति',
+          'monthlyProgress': 'मासिक प्रगति',
+        };
+        final debris = RegExp(r'के बारे में बतावल गइल बा| के ह$| के बा$');
+
+        for (final entry in expected.entries) {
+          final value = arb[entry.key] as String;
+          expect(
+            value,
+            entry.value,
+            reason: 'app_bho.arb must keep concise ${entry.key} copy',
+          );
+          expect(
+            value,
+            isNot(contains(debris)),
+            reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+          );
+        }
+      },
+    );
+
+    test(
       'Bhojpuri library and diagnostics labels do not keep explanatory debris',
       () {
         final arb = _readArb('lib/l10n/app_bho.arb');

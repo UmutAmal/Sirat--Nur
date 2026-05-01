@@ -20926,3 +20926,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Indic locale taramasini daralt: `app_bho` genel shell/action label'larinda kalan `के बा` kaliplarini risk skorla, dini anlam olmayan kisa UI label'lari onceliklendir.
+
+## 2026-05-01 TUR-522 - Bhojpuri Shell Reading Label Debris Cleanup
+
+### MASTER Karari
+- Risk: `app_bho.arb` icinde ana navigasyon, namaz vakti, Quran okuma ve tracker label'lari kisa UI etiketi yerine satir sonu `के बा` kalibiyla cumle gibi gorunuyordu. Bu, kullanicinin en cok gordugu shell yuzeylerinde P1 l10n kalite riski olarak ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:5` `घर के बा`, `lib/l10n/app_bho.arb:7` `किबला के बा`, `lib/l10n/app_bho.arb:18` `असर न्यायिक विधि के बा`, `lib/l10n/app_bho.arb:20` `अयहस के बा`, `lib/l10n/app_bho.arb:55` `{count} शहरन के बा`, `lib/l10n/app_bho.arb:74` `बचावे के बा`, `lib/l10n/app_bho.arb:170` `इबादा ट्रैकर के बा`, `lib/l10n/app_bho.arb:171` `उपवास के बा`, `lib/l10n/app_bho.arb:172` `कुरान पढ़े के बा`, `lib/l10n/app_bho.arb:194` `ढिकर गिनती के बा`.
+  - Son durum: `lib/l10n/app_bho.arb:5` `घर`, `lib/l10n/app_bho.arb:7` `किबला`, `lib/l10n/app_bho.arb:18` `असर न्यायिक विधि`, `lib/l10n/app_bho.arb:20` `आयत सभ`, `lib/l10n/app_bho.arb:55` `{count} शहर`, `lib/l10n/app_bho.arb:74` `बचाईं`, `lib/l10n/app_bho.arb:170` `इबादत ट्रैकर`, `lib/l10n/app_bho.arb:171` `रोजा`, `lib/l10n/app_bho.arb:172` `कुरान पढ़ाई`, `lib/l10n/app_bho.arb:194` `ढिकर गिनती`.
+  - `test/arb_coverage_test.dart:195` yeni guard 28 Bhojpuri shell/reading label'inda `के बारे में बतावल गइल बा`, satir sonu ` के ह` ve satir sonu ` के बा` debris'ini geri getirmeyi engeller.
+  - Debris taramasi: `rg -n -g 'app_bho.arb' '"(home|qibla|zikr|calendar|madhab|ayahs|sunrise|dhuhr|asr|isha|location|citiesCount|save|surah|juz|page|translation|tafsir|tasbih|ahkab|masaail|hadith|ibadahTracker|fasting|quranReading|dhikrCount|weeklyProgress|monthlyProgress)": ".*(के बा|के ह|बतावल गइल)' lib\l10n` sonucu bos.
+- Kullanici etkisi: Bhojpuri locale secildiginde ana tablar, Quran okuma, namaz vakti ve ibadet takip ekranlari kisa, okunabilir ve dini baglama daha uygun label'lar gosterir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 28 Bhojpuri shell/reading label'i kisa UI copy'ye indirildi: `home`, `qibla`, `zikr`, `calendar`, `madhab`, `ayahs`, `sunrise`, `dhuhr`, `asr`, `isha`, `location`, `citiesCount`, `save`, `surah`, `juz`, `page`, `translation`, `tafsir`, `tasbih`, `ahkab`, `masaail`, `hadith`, `ibadahTracker`, `fasting`, `quranReading`, `dhikrCount`, `weeklyProgress`, `monthlyProgress`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bho.dart` ARB ile senkronlandi.
+- Scope yalnizca kisa UI shell/reading label'lariyla sinirli tutuldu; dua/Asma/hadith anlam cumleleri bu turda degistirilmedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\arb_coverage_test.dart --plain-name "Bhojpuri shell and reading labels do not keep explanatory debris" --reporter compact` PASS.
+- Translation report: `dart run tool\translate_arb_keys.dart home qibla zikr calendar madhab ayahs sunrise dhuhr asr isha location citiesCount save surah juz page translation tafsir tasbih ahkab masaail hadith ibadahTracker fasting quranReading dhikrCount weeklyProgress monthlyProgress --report` PASS; missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `734/734`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `0f429c44-92af-4f4a-a941-1139857e4aed`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+
+### Risk Degisimi
+- Bhojpuri shell/reading label aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho.arb` icinde ayarlar, premium, diagnostics, places ve sukun gibi baska kisa UI label'larinda satir sonu `के बा` borcu olabilir. Bunlar bir sonraki dar cluster'da temizlenmeli; dini anlam cumleleri yine ayrica ele alinmali.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude `app_bho` settings/premium/diagnostics/action label'larinda kalan `के बा` kaliplarini skorla ve dini anlam olmayan kisa UI copy'leri temizle.
