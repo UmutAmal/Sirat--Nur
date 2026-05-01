@@ -1243,6 +1243,9 @@ class AppLocalizationsFy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Wiskje ynladen triemmen';
 
   @override
+  String get cancelDownloadAction => 'Ofbrekke download';
+
+  @override
   String get downloadCancelling => 'Annulearje...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkaans",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Speel soera-audio af",
-  "pauseSurahAudio": "Pauzeer soera-audio"
+  "pauseSurahAudio": "Pauzeer soera-audio",
+  "cancelDownloadAction": "Downloaden annuleren"
 }

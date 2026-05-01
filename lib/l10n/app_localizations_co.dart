@@ -1247,6 +1247,9 @@ class AppLocalizationsCo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Sguassà i schedari telecaricati';
 
   @override
+  String get cancelDownloadAction => 'Annulla u scaricamentu';
+
+  @override
   String get downloadCancelling => 'Annulazione...';
 
   @override

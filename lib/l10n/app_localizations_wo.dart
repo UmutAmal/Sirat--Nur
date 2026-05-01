@@ -1241,6 +1241,9 @@ class AppLocalizationsWo extends AppLocalizations {
   String get deleteDownloadedFiles => 'efaase fichier yiñ yebbi';
 
   @override
+  String get cancelDownloadAction => 'Fomm yebbi';
+
+  @override
   String get downloadCancelling => 'Fomm...';
 
   @override

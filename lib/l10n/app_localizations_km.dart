@@ -1246,6 +1246,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get deleteDownloadedFiles => 'លុបឯកសារដែលបានទាញយក';
 
   @override
+  String get cancelDownloadAction => 'បោះបង់ការទាញយក';
+
+  @override
   String get downloadCancelling => 'កំពុងលុបចោល...';
 
   @override

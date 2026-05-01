@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Cluich fuaim Surah",
-  "pauseSurahAudio": "Stad fuaim Surah"
+  "pauseSurahAudio": "Stad fuaim Surah",
+  "cancelDownloadAction": "Sguir dheth luchdadh a-nuas"
 }

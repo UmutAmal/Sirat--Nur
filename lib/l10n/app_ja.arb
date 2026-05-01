@@ -793,5 +793,6 @@
   "revelationMeccan": "メッカ",
   "revelationMedinan": "メディナン",
   "playSurahAudio": "スーラオーディオを再生する",
-  "pauseSurahAudio": "スーラ音声を一時停止する"
+  "pauseSurahAudio": "スーラ音声を一時停止する",
+  "cancelDownloadAction": "ダウンロードをキャンセルする"
 }

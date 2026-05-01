@@ -1243,6 +1243,9 @@ class AppLocalizationsNy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Chotsani Mafayilo Otsitsa';
 
   @override
+  String get cancelDownloadAction => 'Letsani kutsitsa';
+
+  @override
   String get downloadCancelling => 'Ikuletsa...';
 
   @override

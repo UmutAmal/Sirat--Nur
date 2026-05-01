@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkanac",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Pustite zvuk sure",
-  "pauseSurahAudio": "Pauzirajte zvuk sure"
+  "pauseSurahAudio": "Pauzirajte zvuk sure",
+  "cancelDownloadAction": "Otkažite preuzimanje"
 }

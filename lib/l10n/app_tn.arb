@@ -793,5 +793,6 @@
   "revelationMeccan": "Mecca",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Tshameka modumo wa surah",
-  "pauseSurahAudio": "Emisa modumo wa surah"
+  "pauseSurahAudio": "Emisa modumo wa surah",
+  "cancelDownloadAction": "Khansela go laisolola"
 }

@@ -1241,6 +1241,9 @@ class AppLocalizationsBh extends AppLocalizations {
   String get deleteDownloadedFiles => 'डाउनलोड भइल फाइल के हटा दिहल जाव';
 
   @override
+  String get cancelDownloadAction => 'डाउनलोड रद्द कर दीं';
+
+  @override
   String get downloadCancelling => 'रद्द हो रहल बा...';
 
   @override

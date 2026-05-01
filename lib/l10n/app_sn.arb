@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Ridza odhiyo yeSurah",
-  "pauseSurahAudio": "Imbomira musurah audio"
+  "pauseSurahAudio": "Imbomira musurah audio",
+  "cancelDownloadAction": "Cancel download"
 }

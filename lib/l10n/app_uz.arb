@@ -793,5 +793,6 @@
   "revelationMeccan": "Makkalik",
   "revelationMedinan": "Madinalik",
   "playSurahAudio": "Suraning audiosini tinglash",
-  "pauseSurahAudio": "Suraning ovozini pauza qilish"
+  "pauseSurahAudio": "Suraning ovozini pauza qilish",
+  "cancelDownloadAction": "Yuklashni bekor qilish"
 }

@@ -1245,6 +1245,9 @@ class AppLocalizationsAf extends AppLocalizations {
   String get deleteDownloadedFiles => 'Vee afgelaaide lêers uit';
 
   @override
+  String get cancelDownloadAction => 'Kanselleer aflaai';
+
+  @override
   String get downloadCancelling => 'Kanselleer tans …';
 
   @override

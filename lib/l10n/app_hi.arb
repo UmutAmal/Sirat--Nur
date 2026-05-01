@@ -793,5 +793,6 @@
   "revelationMeccan": "मक्का",
   "revelationMedinan": "मेडिनान",
   "playSurahAudio": "सूरह ऑडियो चलाएं",
-  "pauseSurahAudio": "सूरा ऑडियो रोकें"
+  "pauseSurahAudio": "सूरा ऑडियो रोकें",
+  "cancelDownloadAction": "डाउनलोड रद्द करें"
 }

@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkansk",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Spæl surah ljóð",
-  "pauseSurahAudio": "Steðga surah ljóðinum"
+  "pauseSurahAudio": "Steðga surah ljóðinum",
+  "cancelDownloadAction": "Avlýs niðurtøku"
 }

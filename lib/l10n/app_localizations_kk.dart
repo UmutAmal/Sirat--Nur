@@ -1240,6 +1240,9 @@ class AppLocalizationsKk extends AppLocalizations {
   String get deleteDownloadedFiles => 'Жүктелген файлдарды жою';
 
   @override
+  String get cancelDownloadAction => 'Жүктеп алудан бас тарту';
+
+  @override
   String get downloadCancelling => 'Бас тартуда...';
 
   @override

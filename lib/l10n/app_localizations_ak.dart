@@ -1246,6 +1246,9 @@ class AppLocalizationsAk extends AppLocalizations {
   String get deleteDownloadedFiles => 'Popa Fael Ahorow a Wɔatwe no';
 
   @override
+  String get cancelDownloadAction => 'Twa mu twe a wobɛtwe no mu';
+
+  @override
   String get downloadCancelling => 'Wɔretwa mu...';
 
   @override

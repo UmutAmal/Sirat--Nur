@@ -1252,6 +1252,9 @@ class AppLocalizationsGd extends AppLocalizations {
       'Sguab às Faidhlichean a chaidh a luchdachadh sìos';
 
   @override
+  String get cancelDownloadAction => 'Sguir dheth luchdadh a-nuas';
+
+  @override
   String get downloadCancelling => 'A\' cur dheth...';
 
   @override

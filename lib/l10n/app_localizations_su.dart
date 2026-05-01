@@ -1245,6 +1245,9 @@ class AppLocalizationsSu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Pupus Payil anu Diunduh';
 
   @override
+  String get cancelDownloadAction => 'Ngabolaykeun download';
+
+  @override
   String get downloadCancelling => 'Ngabolaykeun...';
 
   @override

@@ -1243,6 +1243,9 @@ class AppLocalizationsOc extends AppLocalizations {
   String get deleteDownloadedFiles => 'Suprimir los fichièrs telecargats';
 
   @override
+  String get cancelDownloadAction => 'Anullar lo telecargament';
+
+  @override
   String get downloadCancelling => 'En anullant...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "eMeccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Dlala i-surah audio",
-  "pauseSurahAudio": "Misa isandi se-surah"
+  "pauseSurahAudio": "Misa isandi se-surah",
+  "cancelDownloadAction": "Rhoxisa ukhuphelo"
 }

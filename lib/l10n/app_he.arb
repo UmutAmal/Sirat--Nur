@@ -793,5 +793,6 @@
   "revelationMeccan": "מכאן",
   "revelationMedinan": "מדין",
   "playSurahAudio": "נגן אודיו סורה",
-  "pauseSurahAudio": "השהה אודיו של סורה"
+  "pauseSurahAudio": "השהה אודיו של סורה",
+  "cancelDownloadAction": "בטל הורדה"
 }

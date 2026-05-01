@@ -1243,6 +1243,9 @@ class AppLocalizationsHa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Share Fayilolin da Aka Sauke';
 
   @override
+  String get cancelDownloadAction => 'Soke zazzagewa';
+
+  @override
   String get downloadCancelling => 'Ana sokewa...';
 
   @override

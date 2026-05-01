@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Kōjan̄jan̄ surah audio",
-  "pauseSurahAudio": "Bōjrak ainikien surah"
+  "pauseSurahAudio": "Bōjrak ainikien surah",
+  "cancelDownloadAction": "Kanne download"
 }

@@ -1243,6 +1243,9 @@ class AppLocalizationsYi extends AppLocalizations {
   String get deleteDownloadedFiles => 'ויסמעקן דאַונלאָודיד טעקעס';
 
   @override
+  String get cancelDownloadAction => 'באָטל מאַכן אראפקאפיע';
+
+  @override
   String get downloadCancelling => 'קאַנסאַלד ...';
 
   @override

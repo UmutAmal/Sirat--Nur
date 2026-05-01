@@ -793,5 +793,6 @@
   "revelationMeccan": "Макка",
   "revelationMedinan": "Мадина",
   "playSurahAudio": "Садои сураро навозед",
-  "pauseSurahAudio": "Таваққуфи садои сура"
+  "pauseSurahAudio": "Таваққуфи садои сура",
+  "cancelDownloadAction": "Бекор кардани зеркашӣ"
 }

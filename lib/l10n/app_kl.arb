@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkamiut",
   "revelationMedinan": "Medianimiittoq",
   "playSurahAudio": "Surah-mik tusarnaartitsineq",
-  "pauseSurahAudio": "Surah-mik nipilersorneq unitsiguk"
+  "pauseSurahAudio": "Surah-mik nipilersorneq unitsiguk",
+  "cancelDownloadAction": "Aallaasersorneq unitsiguk"
 }

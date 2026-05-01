@@ -1244,6 +1244,9 @@ class AppLocalizationsFf extends AppLocalizations {
   String get deleteDownloadedFiles => 'Mumtu Fiildeeji ƴettaaɗi ɗii';
 
   @override
+  String get cancelDownloadAction => 'Woppu ƴettugol';
+
+  @override
   String get downloadCancelling => 'Woppude...';
 
   @override

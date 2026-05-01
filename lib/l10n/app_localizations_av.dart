@@ -1240,6 +1240,9 @@ class AppLocalizationsAv extends AppLocalizations {
   String get deleteDownloadedFiles => 'Удалить загруженные файлы';
 
   @override
+  String get cancelDownloadAction => 'Отменить загрузку';
+
+  @override
   String get downloadCancelling => 'Нахъе бахъулеб...';
 
   @override

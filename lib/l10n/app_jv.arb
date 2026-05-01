@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekah",
   "revelationMedinan": "Madinah",
   "playSurahAudio": "Puter audio surah",
-  "pauseSurahAudio": "Ngaso surah audio"
+  "pauseSurahAudio": "Ngaso surah audio",
+  "cancelDownloadAction": "Batal download"
 }

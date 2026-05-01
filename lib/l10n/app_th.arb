@@ -793,5 +793,6 @@
   "revelationMeccan": "เมกกะ",
   "revelationMedinan": "เมดาน",
   "playSurahAudio": "เล่นเสียงซูเราะห์",
-  "pauseSurahAudio": "หยุดเสียงซูเราะห์ชั่วคราว"
+  "pauseSurahAudio": "หยุดเสียงซูเราะห์ชั่วคราว",
+  "cancelDownloadAction": "ยกเลิกการดาวน์โหลด"
 }

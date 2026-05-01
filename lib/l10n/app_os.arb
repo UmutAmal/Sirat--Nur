@@ -793,5 +793,6 @@
   "revelationMeccan": "Меккаг",
   "revelationMedinan": "Мединан",
   "playSurahAudio": "Ахъуыды кæнын сурæйы аудио",
-  "pauseSurahAudio": "Сурæйы аудио æрлæууын кæнын"
+  "pauseSurahAudio": "Сурæйы аудио æрлæууын кæнын",
+  "cancelDownloadAction": "Æрлæууын кæнын"
 }

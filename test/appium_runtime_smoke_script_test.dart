@@ -19,6 +19,10 @@ void main() {
 
     test('uses accessibility description selectors for runtime navigation', () {
       expect(script, contains('descriptionContains'));
+      expect(
+        script,
+        contains(r'descriptionContains(`"$Label`").clickable(true)'),
+      );
       expect(script, contains('Click-AnyDescriptionOrText'));
       for (final label in [
         'Quran',
@@ -106,6 +110,8 @@ void main() {
       expect(script, contains('Get-SmokeTextBundle'));
       expect(script, contains(r'app_$LocaleTag.arb'));
       expect(script, contains("app_en.arb"));
+      expect(script, contains(r'[int]$TimeoutSec = 60'));
+      expect(script, contains('-TimeoutSec 120'));
       expect(script, contains(r'"appium:language" = $smokeLanguage'));
       expect(script, contains('"appium:locale"'));
       expect(script, contains(r'smokeLocale = $normalizedSmokeLocale'));
@@ -114,6 +120,8 @@ void main() {
       expect(script, contains(r'$smokeText.offlineQuranAudioPacks'));
       expect(script, contains(r'$smokeText.playSurahAudio'));
       expect(script, contains(r'$smokeText.pauseSurahAudio'));
+      expect(script, contains(r'$smokeText.downloadAction'));
+      expect(script, contains(r'$smokeText.cancelDownloadAction'));
     });
 
     test('deep checks Quran surah audio playback at runtime', () {
@@ -135,6 +143,34 @@ void main() {
         script,
         contains(
           'Quran playback smoke did not expose the pause control after starting audio.',
+        ),
+      );
+    });
+
+    test('deep checks cancellable offline download runtime flow', () {
+      expect(script, contains('downloadRuntime'));
+      expect(script, contains('clickedDownloadControl'));
+      expect(script, contains('downloads-active'));
+      expect(script, contains('downloads-after-cancel'));
+      expect(script, contains('cancelDownloadAction'));
+      expect(script, contains('Download runtime smoke could not click'));
+      expect(script, contains('Download runtime smoke could not start'));
+      expect(
+        script,
+        contains(
+          'Download runtime smoke did not show active download progress or cancel affordance.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Download runtime smoke could not click the localized cancel download control.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Download runtime smoke did not show the cancelling or canceled state after cancel was requested.',
         ),
       );
     });

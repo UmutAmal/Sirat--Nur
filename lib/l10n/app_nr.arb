@@ -793,5 +793,6 @@
   "revelationMeccan": "I-Meccan",
   "revelationMedinan": "I-Medinan",
   "playSurahAudio": "Dlala i-surah audio",
-  "pauseSurahAudio": "Umsindo we-surah"
+  "pauseSurahAudio": "Umsindo we-surah",
+  "cancelDownloadAction": "Khansela ukudawuniloda"
 }

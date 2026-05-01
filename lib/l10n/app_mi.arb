@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekaana",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Whakatangihia te ororongo surah",
-  "pauseSurahAudio": "Pause surah audio"
+  "pauseSurahAudio": "Pause surah audio",
+  "cancelDownloadAction": "Whakakore i te tikiake"
 }

@@ -1246,6 +1246,9 @@ class AppLocalizationsMl extends AppLocalizations {
   String get deleteDownloadedFiles => 'ഡൗൺലോഡ് ചെയ്ത ഫയലുകൾ ഇല്ലാതാക്കുക';
 
   @override
+  String get cancelDownloadAction => 'ഡൗൺലോഡ് റദ്ദാക്കുക';
+
+  @override
   String get downloadCancelling => 'റദ്ദാക്കുന്നു...';
 
   @override

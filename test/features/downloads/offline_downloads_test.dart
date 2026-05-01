@@ -83,5 +83,18 @@ void main() {
       expect(source, contains('downloadAllSurahsFromCandidates'));
       expect(source, isNot(contains('getAllSurahUrls(reciterId)')));
     });
+
+    test('download controls expose localized accessibility labels', () {
+      final source = File(
+        'lib/features/downloads/offline_downloads_page.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('tooltip: l10n.downloadAction'));
+      expect(source, contains('tooltip: l10n.cancelDownloadAction'));
+      expect(source, contains('!isDownloading && downloaded == 0'));
+      expect(source, contains('!isDownloading && downloaded > 0'));
+      expect(source, contains('Icons.download_rounded'));
+      expect(source, isNot(contains('tooltip: \'Cancel download\'')));
+    });
   });
 }

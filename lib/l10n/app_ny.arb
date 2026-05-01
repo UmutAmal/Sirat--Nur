@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Madina",
   "playSurahAudio": "Sewerani mawu a surah",
-  "pauseSurahAudio": "Imitsani mawu a surah"
+  "pauseSurahAudio": "Imitsani mawu a surah",
+  "cancelDownloadAction": "Letsani kutsitsa"
 }

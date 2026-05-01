@@ -1224,6 +1224,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get deleteDownloadedFiles => 'ダウンロードしたファイルを削除する';
 
   @override
+  String get cancelDownloadAction => 'ダウンロードをキャンセルする';
+
+  @override
   String get downloadCancelling => 'キャンセル中...';
 
   @override

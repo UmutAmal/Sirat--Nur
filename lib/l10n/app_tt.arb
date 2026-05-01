@@ -793,5 +793,6 @@
   "revelationMeccan": "Мәккә",
   "revelationMedinan": "Мәдинә",
   "playSurahAudio": "Аудио сүрәсен уйнагыз",
-  "pauseSurahAudio": "Аудио сүрәсен туктатыгыз"
+  "pauseSurahAudio": "Аудио сүрәсен туктатыгыз",
+  "cancelDownloadAction": "Йөкләүдән баш тарту"
 }

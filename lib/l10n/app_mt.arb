@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Ilgħab awdjo tas-surah",
-  "pauseSurahAudio": "Waqqaf l-awdjo tas-surah"
+  "pauseSurahAudio": "Waqqaf l-awdjo tas-surah",
+  "cancelDownloadAction": "Ikkanċella t-tniżżil"
 }

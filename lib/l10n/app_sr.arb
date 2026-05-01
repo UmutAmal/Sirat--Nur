@@ -793,5 +793,6 @@
   "revelationMeccan": "Меццан",
   "revelationMedinan": "Мединан",
   "playSurahAudio": "Пусти звук суре",
-  "pauseSurahAudio": "Паузирајте звук суре"
+  "pauseSurahAudio": "Паузирајте звук суре",
+  "cancelDownloadAction": "Откажите преузимање"
 }

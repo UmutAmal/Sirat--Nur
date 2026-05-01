@@ -793,5 +793,6 @@
   "revelationMeccan": "მექელი",
   "revelationMedinan": "მედინანი",
   "playSurahAudio": "დაუკარით სურა აუდიო",
-  "pauseSurahAudio": "შეაჩერე სურა აუდიო"
+  "pauseSurahAudio": "შეაჩერე სურა აუდიო",
+  "cancelDownloadAction": "ჩამოტვირთვის გაუქმება"
 }

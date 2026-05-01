@@ -793,5 +793,6 @@
   "revelationMeccan": "麦加",
   "revelationMedinan": "麦地那",
   "playSurahAudio": "播放古兰经音频",
-  "pauseSurahAudio": "暂停古兰经音频"
+  "pauseSurahAudio": "暂停古兰经音频",
+  "cancelDownloadAction": "取消下载"
 }

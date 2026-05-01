@@ -1244,6 +1244,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Padam Fail yang Dimuat Turun';
 
   @override
+  String get cancelDownloadAction => 'Batalkan muat turun';
+
+  @override
   String get downloadCancelling => 'Membatalkan...';
 
   @override

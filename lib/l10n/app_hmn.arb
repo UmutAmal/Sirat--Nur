@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medan",
   "playSurahAudio": "Ua si surah audio",
-  "pauseSurahAudio": "Pause surah audio"
+  "pauseSurahAudio": "Pause surah audio",
+  "cancelDownloadAction": "Ncua tseg download"
 }

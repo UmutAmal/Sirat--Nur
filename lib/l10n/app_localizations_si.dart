@@ -1242,6 +1242,9 @@ class AppLocalizationsSi extends AppLocalizations {
   String get deleteDownloadedFiles => 'බාගත කළ ගොනු මකන්න';
 
   @override
+  String get cancelDownloadAction => 'බාගැනීම අවලංගු කරන්න';
+
+  @override
   String get downloadCancelling => 'අවලංගු කරමින්...';
 
   @override

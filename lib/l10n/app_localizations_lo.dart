@@ -1240,6 +1240,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get deleteDownloadedFiles => 'ລຶບໄຟລ໌ທີ່ດາວໂຫລດມາ';
 
   @override
+  String get cancelDownloadAction => 'ຍົກເລີກການດາວໂຫຼດ';
+
+  @override
   String get downloadCancelling => 'ກຳລັງຍົກເລີກ...';
 
   @override

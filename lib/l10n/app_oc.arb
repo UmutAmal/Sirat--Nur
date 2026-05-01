@@ -793,5 +793,6 @@
   "revelationMeccan": "Mecana",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Reproduire l'àudio de la sura",
-  "pauseSurahAudio": "Pausa de l'àudio de la sura"
+  "pauseSurahAudio": "Pausa de l'àudio de la sura",
+  "cancelDownloadAction": "Anullar lo telecargament"
 }

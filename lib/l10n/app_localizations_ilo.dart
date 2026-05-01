@@ -1253,6 +1253,9 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Buraken Dagiti Nai-download a File';
 
   @override
+  String get cancelDownloadAction => 'Kanselaen ti panag-download';
+
+  @override
   String get downloadCancelling => 'Panagkansela ti...';
 
   @override

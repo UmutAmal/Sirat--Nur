@@ -793,5 +793,6 @@
   "revelationMeccan": "Meka",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Vakatagitaka na rorogo ni surah",
-  "pauseSurahAudio": "Cegu na rorogo ni surah"
+  "pauseSurahAudio": "Cegu na rorogo ni surah",
+  "cancelDownloadAction": "Bokoca na lavetaki"
 }

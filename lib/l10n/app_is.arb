@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekka",
   "revelationMedinan": "Medan",
   "playSurahAudio": "Spilaðu Surah hljóð",
-  "pauseSurahAudio": "Gerðu hlé á hljóði surah"
+  "pauseSurahAudio": "Gerðu hlé á hljóði surah",
+  "cancelDownloadAction": "Hætta við niðurhal"
 }

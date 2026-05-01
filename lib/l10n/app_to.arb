@@ -793,5 +793,6 @@
   "revelationMeccan": "Meka",
   "revelationMedinan": "Metinani",
   "playSurahAudio": "Tā ʻa e leʻo ʻo e surah",
-  "pauseSurahAudio": "Tuʻu ʻa e leʻo ʻo e surah"
+  "pauseSurahAudio": "Tuʻu ʻa e leʻo ʻo e surah",
+  "cancelDownloadAction": "Kaniseli hono download"
 }

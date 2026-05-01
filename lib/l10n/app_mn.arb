@@ -793,5 +793,6 @@
   "revelationMeccan": "Мекка",
   "revelationMedinan": "Медина",
   "playSurahAudio": "Сураны аудио тоглуулах",
-  "pauseSurahAudio": "Сураны аудиог түр зогсоох"
+  "pauseSurahAudio": "Сураны аудиог түр зогсоох",
+  "cancelDownloadAction": "Татаж авахыг цуцлах"
 }

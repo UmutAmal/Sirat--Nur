@@ -1240,6 +1240,9 @@ class AppLocalizationsHo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
+  String get cancelDownloadAction => 'Cancel download';
+
+  @override
   String get downloadCancelling => 'Cancelling...';
 
   @override

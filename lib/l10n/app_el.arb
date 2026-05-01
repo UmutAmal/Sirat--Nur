@@ -793,5 +793,6 @@
   "revelationMeccan": "Μεκκανός",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Αναπαραγωγή ήχου σούρα",
-  "pauseSurahAudio": "Παύση ήχου σούρα"
+  "pauseSurahAudio": "Παύση ήχου σούρα",
+  "cancelDownloadAction": "Ακύρωση λήψης"
 }

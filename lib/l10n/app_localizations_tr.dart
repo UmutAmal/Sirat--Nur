@@ -1242,6 +1242,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get deleteDownloadedFiles => 'İndirilen Dosyaları Sil';
 
   @override
+  String get cancelDownloadAction => 'İndirmeyi iptal et';
+
+  @override
   String get downloadCancelling => 'İptal ediliyor...';
 
   @override

@@ -1245,6 +1245,9 @@ class AppLocalizationsSm extends AppLocalizations {
   String get deleteDownloadedFiles => 'Aveese faila ua siiina mai';
 
   @override
+  String get cancelDownloadAction => 'Fa\'aleaogaina le la\'uina';
+
+  @override
   String get downloadCancelling => 'Fa\'aleaogaina...';
 
   @override

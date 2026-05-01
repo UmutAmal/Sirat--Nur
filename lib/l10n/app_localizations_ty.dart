@@ -1243,6 +1243,9 @@ class AppLocalizationsTy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
+  String get cancelDownloadAction => 'A faaore i te download';
+
+  @override
   String get downloadCancelling => 'Te faaoreraa...';
 
   @override

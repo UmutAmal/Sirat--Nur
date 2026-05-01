@@ -1243,6 +1243,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get deleteDownloadedFiles => 'Hapus File yang Diunduh';
 
   @override
+  String get cancelDownloadAction => 'Batalkan unduhan';
+
+  @override
   String get downloadCancelling => 'Membatalkan...';
 
   @override

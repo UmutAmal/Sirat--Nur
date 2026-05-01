@@ -1245,6 +1245,9 @@ class AppLocalizationsHr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Brisanje preuzetih datoteka';
 
   @override
+  String get cancelDownloadAction => 'Otkaži preuzimanje';
+
+  @override
   String get downloadCancelling => 'Otkazivanje...';
 
   @override

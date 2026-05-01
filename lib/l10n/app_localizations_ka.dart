@@ -1246,6 +1246,9 @@ class AppLocalizationsKa extends AppLocalizations {
   String get deleteDownloadedFiles => 'ჩამოტვირთული ფაილების წაშლა';
 
   @override
+  String get cancelDownloadAction => 'ჩამოტვირთვის გაუქმება';
+
+  @override
   String get downloadCancelling => 'გაუქმება...';
 
   @override

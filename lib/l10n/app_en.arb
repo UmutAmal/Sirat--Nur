@@ -573,6 +573,7 @@
   "downloadAction": "Download",
   "resumeDownload": "Resume Download",
   "deleteDownloadedFiles": "Delete Downloaded Files",
+  "cancelDownloadAction": "Cancel download",
   "downloadCancelling": "Cancelling...",
   "downloadCanceledForReciter": "Download canceled for {reciter}.",
   "@downloadCanceledForReciter": {

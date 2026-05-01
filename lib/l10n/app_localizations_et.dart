@@ -1244,6 +1244,9 @@ class AppLocalizationsEt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Kustuta allalaaditud failid';
 
   @override
+  String get cancelDownloadAction => 'Tühista allalaadimine';
+
+  @override
   String get downloadCancelling => 'Tühistamine...';
 
   @override

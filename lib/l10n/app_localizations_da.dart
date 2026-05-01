@@ -1244,6 +1244,9 @@ class AppLocalizationsDa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Slet downloadede filer';
 
   @override
+  String get cancelDownloadAction => 'Annuller download';
+
+  @override
   String get downloadCancelling => 'Annullerer...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "Маккаялъул",
   "revelationMedinan": "Мадинан",
   "playSurahAudio": "Сура аудио воспроизвести .",
-  "pauseSurahAudio": "Пауза сурат аудио"
+  "pauseSurahAudio": "Пауза сурат аудио",
+  "cancelDownloadAction": "Отменить загрузку"
 }

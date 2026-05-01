@@ -793,5 +793,6 @@
   "revelationMeccan": "메칸",
   "revelationMedinan": "메디난",
   "playSurahAudio": "수라 오디오 재생해 줘",
-  "pauseSurahAudio": "수라 오디오 일시중지"
+  "pauseSurahAudio": "수라 오디오 일시중지",
+  "cancelDownloadAction": "다운로드 취소"
 }

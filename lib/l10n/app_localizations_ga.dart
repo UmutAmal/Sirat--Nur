@@ -1244,6 +1244,9 @@ class AppLocalizationsGa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Scrios Comhaid Íosluchtaithe';
 
   @override
+  String get cancelDownloadAction => 'Cealaigh íoslódáil';
+
+  @override
   String get downloadCancelling => 'Á chealú...';
 
   @override

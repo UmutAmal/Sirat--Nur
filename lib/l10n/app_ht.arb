@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Jwe sourate odyo",
-  "pauseSurahAudio": "Pran yon poz odyo soure"
+  "pauseSurahAudio": "Pran yon poz odyo soure",
+  "cancelDownloadAction": "Anile download"
 }

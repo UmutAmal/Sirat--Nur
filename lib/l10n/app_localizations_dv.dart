@@ -1256,6 +1256,9 @@ class AppLocalizationsDv extends AppLocalizations {
       'ޑައުންލޯޑް ކުރެވިފައިވާ ފައިލްތައް ޑިލީޓްކުރުން';
 
   @override
+  String get cancelDownloadAction => 'ޑައުންލޯޑް ކެންސަލް ކުރުން';
+
+  @override
   String get downloadCancelling => 'ކެންސަލް ކުރަނީ...';
 
   @override

@@ -1241,6 +1241,9 @@ class AppLocalizationsBa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Йөкөрөлгән файлдарҙы юйырға';
 
   @override
+  String get cancelDownloadAction => 'Отменить скачивание';
+
+  @override
   String get downloadCancelling => 'Отмена...';
 
   @override

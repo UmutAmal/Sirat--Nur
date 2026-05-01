@@ -145,16 +145,17 @@ function Invoke-AppiumJson {
   param(
     [Parameter(Mandatory = $true)][string]$Method,
     [Parameter(Mandatory = $true)][string]$Path,
-    [object]$Body = $null
+    [object]$Body = $null,
+    [int]$TimeoutSec = 60
   )
 
   $uri = "$AppiumUrl$Path"
   if ($null -eq $Body) {
-    return Invoke-RestMethod -Method $Method -Uri $uri -ContentType "application/json" -TimeoutSec 30
+    return Invoke-RestMethod -Method $Method -Uri $uri -ContentType "application/json" -TimeoutSec $TimeoutSec
   }
 
   $json = $Body | ConvertTo-Json -Depth 20
-  return Invoke-RestMethod -Method $Method -Uri $uri -Body $json -ContentType "application/json" -TimeoutSec 30
+  return Invoke-RestMethod -Method $Method -Uri $uri -Body $json -ContentType "application/json" -TimeoutSec $TimeoutSec
 }
 
 function Get-AppiumValue {
@@ -263,7 +264,7 @@ function Click-DescriptionContains {
     [Parameter(Mandatory = $true)][string]$Label
   )
 
-  $selector = "new UiSelector().descriptionContains(`"$Label`")"
+  $selector = "new UiSelector().descriptionContains(`"$Label`").clickable(true)"
   $element = Find-AppiumElement -SessionId $SessionId -Using "-android uiautomator" -Selector $selector
   if ($null -eq $element) {
     return $false
@@ -404,10 +405,25 @@ function Get-ArbString {
   return [string]$property.Value
 }
 
+function Get-TemplatePrefix {
+  param(
+    [Parameter(Mandatory = $true)][string]$Template,
+    [Parameter(Mandatory = $true)][string]$Placeholder
+  )
+
+  $index = $Template.IndexOf($Placeholder)
+  if ($index -lt 0) {
+    return $Template.Trim()
+  }
+
+  return $Template.Substring(0, $index).Trim()
+}
+
 function Get-SmokeTextBundle {
   param([Parameter(Mandatory = $true)][string]$LocaleTag)
 
   $messages = Read-ArbMessages -LocaleTag $LocaleTag
+  $downloadCanceledForReciter = Get-ArbString -Messages $messages -Key 'downloadCanceledForReciter' -Fallback 'Download canceled for {reciter}.'
   return [ordered]@{
     locale = $LocaleTag
     next = Get-ArbString -Messages $messages -Key 'next' -Fallback 'Next'
@@ -431,6 +447,12 @@ function Get-SmokeTextBundle {
     downloads = Get-ArbString -Messages $messages -Key 'downloads' -Fallback 'Downloads'
     offlineQuranAudioPacks = Get-ArbString -Messages $messages -Key 'offlineQuranAudioPacks' -Fallback 'Offline Quran Audio Packs'
     offlineDownloadManager = Get-ArbString -Messages $messages -Key 'offlineDownloadManager' -Fallback 'Offline Download Manager'
+    downloadAction = Get-ArbString -Messages $messages -Key 'downloadAction' -Fallback 'Download'
+    cancelDownloadAction = Get-ArbString -Messages $messages -Key 'cancelDownloadAction' -Fallback 'Cancel download'
+    downloadPreparing = Get-ArbString -Messages $messages -Key 'downloadPreparing' -Fallback 'Preparing download...'
+    downloading = Get-ArbString -Messages $messages -Key 'downloading' -Fallback 'Downloading...'
+    downloadCancelling = Get-ArbString -Messages $messages -Key 'downloadCancelling' -Fallback 'Cancelling...'
+    downloadCanceledForReciterPrefix = Get-TemplatePrefix -Template $downloadCanceledForReciter -Placeholder '{reciter}'
     analytics = Get-ArbString -Messages $messages -Key 'analytics' -Fallback 'Analytics'
     prayerCompletion = Get-ArbString -Messages $messages -Key 'prayerCompletion' -Fallback 'Prayer Completion'
     streaks = Get-ArbString -Messages $messages -Key 'streaks' -Fallback 'Streaks'
@@ -548,7 +570,7 @@ $created = Invoke-AppiumJson -Method "POST" -Path "/session" -Body @{
   capabilities = @{
     alwaysMatch = $alwaysMatch
   }
-}
+} -TimeoutSec 120
 
 $sessionValue = Get-AppiumValue $created
 $sessionId = $sessionValue.sessionId
@@ -589,6 +611,15 @@ $summary = [ordered]@{
     containsAndroidSettings = $false
   }
   quickAccessResults = @()
+  downloadRuntime = [ordered]@{
+    clickedDownloadControl = $false
+    startedDownload = $false
+    showedActiveProgress = $false
+    clickedCancel = $false
+    showedCancellingState = $false
+    containsCanceledMessage = $false
+    containsAndroidSettings = $false
+  }
   logcatCrashFree = $true
   logcatCaptured = $false
   logcatError = $null
@@ -716,6 +747,49 @@ try {
       containsExpected = Test-ContainsAny -Source $xml -Needles $target.expected
       containsAndroidSettings = $xml.Contains("Settings suggestions") -or $xml.Contains("Android Settings") -or $xml.Contains("Alarms & reminders")
     }
+    if ($target.label -eq 'Downloads' -and $clicked) {
+      $downloadRuntime = [ordered]@{
+        clickedDownloadControl = $false
+        startedDownload = $false
+        showedActiveProgress = $false
+        clickedCancel = $false
+        showedCancellingState = $false
+        containsCanceledMessage = $false
+        containsAndroidSettings = $false
+      }
+
+      $downloadRuntime.clickedDownloadControl = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.downloadAction, 'Download')) -Attempts 6
+      $downloadRuntime.startedDownload = $downloadRuntime.clickedDownloadControl
+      if ($downloadRuntime.startedDownload) {
+          $activeNeedles = Select-NonEmptyUniqueStrings @(
+            $smokeText.cancelDownloadAction,
+            $smokeText.downloadPreparing,
+            $smokeText.downloading,
+            'Cancel download',
+            'Preparing download',
+            'Downloading surah',
+            '0%',
+            '1%'
+          )
+          for ($attempt = 0; $attempt -lt 12 -and -not $downloadRuntime.showedActiveProgress; $attempt++) {
+            Start-Sleep -Milliseconds 750
+            $downloadXml = Get-AppiumSource -SessionId $sessionId
+            $downloadRuntime.showedActiveProgress = Test-ContainsAny -Source $downloadXml -Needles $activeNeedles
+            $downloadRuntime.containsAndroidSettings = $downloadRuntime.containsAndroidSettings -or $downloadXml.Contains("Settings suggestions") -or $downloadXml.Contains("Android Settings") -or $downloadXml.Contains("Alarms & reminders")
+          }
+          Save-AppiumSource -SessionId $sessionId -Name "downloads-active" | Out-Null
+
+          $downloadRuntime.clickedCancel = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.cancelDownloadAction, 'Cancel download')) -Attempts 8
+          if ($downloadRuntime.clickedCancel) {
+            Start-Sleep -Milliseconds 600
+            $afterCancelXml = Save-AppiumSource -SessionId $sessionId -Name "downloads-after-cancel"
+            $downloadRuntime.showedCancellingState = Test-ContainsAny -Source $afterCancelXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.downloadCancelling, 'Cancelling'))
+            $downloadRuntime.containsCanceledMessage = Test-ContainsAny -Source $afterCancelXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.downloadCanceledForReciterPrefix, 'Download canceled'))
+            $downloadRuntime.containsAndroidSettings = $downloadRuntime.containsAndroidSettings -or $afterCancelXml.Contains("Settings suggestions") -or $afterCancelXml.Contains("Android Settings") -or $afterCancelXml.Contains("Alarms & reminders")
+          }
+      }
+      $summary.downloadRuntime = $downloadRuntime
+    }
     Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
     Start-Sleep -Milliseconds 800
   }
@@ -790,6 +864,24 @@ if (-not $summary.quranPlayback.containsPauseControl) {
 }
 if ($summary.quranPlayback.containsAndroidSettings) {
   $failures += "Quran playback smoke opened Android Settings."
+}
+if (-not $summary.downloadRuntime.clickedDownloadControl) {
+  $failures += "Download runtime smoke could not click the first reciter localized download control."
+}
+if (-not $summary.downloadRuntime.startedDownload) {
+  $failures += "Download runtime smoke could not start the first reciter download action."
+}
+if (-not $summary.downloadRuntime.showedActiveProgress) {
+  $failures += "Download runtime smoke did not show active download progress or cancel affordance."
+}
+if (-not $summary.downloadRuntime.clickedCancel) {
+  $failures += "Download runtime smoke could not click the localized cancel download control."
+}
+if (-not $summary.downloadRuntime.showedCancellingState -and -not $summary.downloadRuntime.containsCanceledMessage) {
+  $failures += "Download runtime smoke did not show the cancelling or canceled state after cancel was requested."
+}
+if ($summary.downloadRuntime.containsAndroidSettings) {
+  $failures += "Download runtime smoke opened Android Settings."
 }
 foreach ($item in $summary.quickAccessResults) {
   if (-not $item.clicked) {

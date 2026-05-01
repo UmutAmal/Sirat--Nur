@@ -793,5 +793,6 @@
   "revelationMeccan": "Makka",
   "revelationMedinan": "Madina",
   "playSurahAudio": "Cheza sauti ya surah",
-  "pauseSurahAudio": "Sitisha sauti ya surah"
+  "pauseSurahAudio": "Sitisha sauti ya surah",
+  "cancelDownloadAction": "Ghairi upakuaji"
 }

@@ -1242,6 +1242,9 @@ class AppLocalizationsBr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Dilemel ar restroù pellgarget';
 
   @override
+  String get cancelDownloadAction => 'Nullañ ar pellgargañ';
+
+  @override
   String get downloadCancelling => 'O nullañ...';
 
   @override

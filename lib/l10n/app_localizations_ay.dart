@@ -1264,6 +1264,9 @@ class AppLocalizationsAy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Uñstayata Archivonaka chhaqtayaña';
 
   @override
+  String get cancelDownloadAction => 'Cancel download';
+
+  @override
   String get downloadCancelling => 'Cancelañatakix...';
 
   @override

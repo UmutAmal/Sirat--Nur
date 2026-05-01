@@ -793,5 +793,6 @@
   "revelationMeccan": "مکه مکرمه",
   "revelationMedinan": "مدينه",
   "playSurahAudio": "د سورت غږ غږول",
-  "pauseSurahAudio": "د سورت غږ بند کړئ"
+  "pauseSurahAudio": "د سورت غږ بند کړئ",
+  "cancelDownloadAction": "کښته کول لغوه کړئ"
 }

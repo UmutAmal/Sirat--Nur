@@ -1212,6 +1212,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get deleteDownloadedFiles => '删除下载的文件';
 
   @override
+  String get cancelDownloadAction => '取消下载';
+
+  @override
   String get downloadCancelling => '正在取消...';
 
   @override
@@ -2885,6 +2888,9 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get deleteDownloadedFiles => '删除下载的文件';
 
   @override
+  String get cancelDownloadAction => '取消下载';
+
+  @override
   String get downloadCancelling => '正在取消...';
 
   @override
@@ -4556,6 +4562,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get deleteDownloadedFiles => '刪除下載的文件';
+
+  @override
+  String get cancelDownloadAction => '取消下載';
 
   @override
   String get downloadCancelling => '正在取消...';

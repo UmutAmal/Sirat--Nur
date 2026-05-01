@@ -1235,6 +1235,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get deleteDownloadedFiles => 'מחק קבצים שהורדת';
 
   @override
+  String get cancelDownloadAction => 'בטל הורדה';
+
+  @override
   String get downloadCancelling => 'מבטל...';
 
   @override

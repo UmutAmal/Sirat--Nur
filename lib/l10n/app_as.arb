@@ -793,5 +793,6 @@
   "revelationMeccan": "মক্কান",
   "revelationMedinan": "মদীনান",
   "playSurahAudio": "চুৰা অডিঅ' বজাওক",
-  "pauseSurahAudio": "চুৰা অডিঅ' থমকি ৰ'ব"
+  "pauseSurahAudio": "চুৰা অডিঅ' থমকি ৰ'ব",
+  "cancelDownloadAction": "ডাউনলোড বাতিল কৰক"
 }

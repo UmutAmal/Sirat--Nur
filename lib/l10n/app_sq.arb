@@ -793,5 +793,6 @@
   "revelationMeccan": "mekas",
   "revelationMedinan": "Medinas",
   "playSurahAudio": "Luaj audion e sures",
-  "pauseSurahAudio": "Ndalo audion e sures"
+  "pauseSurahAudio": "Ndalo audion e sures",
+  "cancelDownloadAction": "Anulo shkarkimin"
 }

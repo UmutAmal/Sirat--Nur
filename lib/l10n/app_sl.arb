@@ -793,5 +793,6 @@
   "revelationMeccan": "mekanski",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Predvajaj zvok sure",
-  "pauseSurahAudio": "Začasno ustavite zvok sure"
+  "pauseSurahAudio": "Začasno ustavite zvok sure",
+  "cancelDownloadAction": "Prekliči prenos"
 }

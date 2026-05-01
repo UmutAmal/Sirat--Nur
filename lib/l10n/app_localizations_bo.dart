@@ -1241,6 +1241,9 @@ class AppLocalizationsBo extends AppLocalizations {
   String get deleteDownloadedFiles => 'ཕབ་ལེན་བྱས་པའི་ཡིག་ཆ་སུབ་པ།';
 
   @override
+  String get cancelDownloadAction => 'ཕབ་ལེན་མེད་པར་བཟོས།';
+
+  @override
   String get downloadCancelling => 'ཆ་མེད་གཏོང་བ།';
 
   @override

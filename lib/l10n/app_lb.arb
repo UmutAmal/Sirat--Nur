@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medan",
   "playSurahAudio": "Spillt Surah Audio",
-  "pauseSurahAudio": "Paus Surah Audio"
+  "pauseSurahAudio": "Paus Surah Audio",
+  "cancelDownloadAction": "Download eroflueden"
 }

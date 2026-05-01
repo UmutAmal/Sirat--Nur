@@ -573,6 +573,7 @@
   "downloadAction": "İndir",
   "resumeDownload": "İndirmeye Devam Et",
   "deleteDownloadedFiles": "İndirilen Dosyaları Sil",
+  "cancelDownloadAction": "İndirmeyi iptal et",
   "downloadCancelling": "İptal ediliyor...",
   "downloadCanceledForReciter": "{reciter} için indirme iptal edildi.",
   "@downloadCanceledForReciter": {

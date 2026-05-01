@@ -793,5 +793,6 @@
   "revelationMeccan": "Mecca",
   "revelationMedinan": "Medina",
   "playSurahAudio": "A faaroo i te surah",
-  "pauseSurahAudio": "Tape'a i te reo surah"
+  "pauseSurahAudio": "Tape'a i te reo surah",
+  "cancelDownloadAction": "A faaore i te download"
 }

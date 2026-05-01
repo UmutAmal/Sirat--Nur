@@ -793,5 +793,6 @@
   "revelationMeccan": "मक्कन",
   "revelationMedinan": "मेडिनान",
   "playSurahAudio": "सुरा अडियो प्ले गर्नुहोस्",
-  "pauseSurahAudio": "सुरा अडियो रोक्नुहोस्"
+  "pauseSurahAudio": "सुरा अडियो रोक्नुहोस्",
+  "cancelDownloadAction": "डाउनलोड रद्द गर्नुहोस्"
 }

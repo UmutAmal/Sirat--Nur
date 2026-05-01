@@ -1251,6 +1251,9 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଗୁଡିକ ବିଲୋପ କରନ୍ତୁ |';
 
   @override
+  String get cancelDownloadAction => 'ଡାଉନଲୋଡ୍ ବାତିଲ୍ କରନ୍ତୁ |';
+
+  @override
   String get downloadCancelling => 'ବାତିଲ୍ ...';
 
   @override

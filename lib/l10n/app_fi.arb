@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkalainen",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Toista suura ääni",
-  "pauseSurahAudio": "Keskeytä suura-ääni"
+  "pauseSurahAudio": "Keskeytä suura-ääni",
+  "cancelDownloadAction": "Peruuta lataus"
 }

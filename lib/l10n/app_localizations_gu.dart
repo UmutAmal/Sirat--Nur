@@ -1240,6 +1240,9 @@ class AppLocalizationsGu extends AppLocalizations {
   String get deleteDownloadedFiles => 'ડાઉનલોડ કરેલી ફાઇલો કાઢી નાખો';
 
   @override
+  String get cancelDownloadAction => 'ડાઉનલોડ રદ કરો';
+
+  @override
   String get downloadCancelling => 'રદ કરી રહ્યું છે...';
 
   @override

@@ -1242,6 +1242,9 @@ class AppLocalizationsFa extends AppLocalizations {
   String get deleteDownloadedFiles => 'حذف فایل های دانلود شده';
 
   @override
+  String get cancelDownloadAction => 'لغو دانلود';
+
+  @override
   String get downloadCancelling => 'در حال لغو...';
 
   @override

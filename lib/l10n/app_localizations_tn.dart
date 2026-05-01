@@ -1244,6 +1244,9 @@ class AppLocalizationsTn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Phimola Difaele tse di Laisolotsweng';
 
   @override
+  String get cancelDownloadAction => 'Khansela go laisolola';
+
+  @override
   String get downloadCancelling => 'Go khansela...';
 
   @override

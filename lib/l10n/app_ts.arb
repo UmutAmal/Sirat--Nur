@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Tlanga surah audio",
-  "pauseSurahAudio": "Yimanyana surah audio"
+  "pauseSurahAudio": "Yimanyana surah audio",
+  "cancelDownloadAction": "Khansela ku dawuniloda"
 }

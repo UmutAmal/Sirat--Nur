@@ -1249,6 +1249,9 @@ class AppLocalizationsZu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Susa Amafayela Alandiwe';
 
   @override
+  String get cancelDownloadAction => 'Khansela ukulanda';
+
+  @override
   String get downloadCancelling => 'Iyakhansela...';
 
   @override

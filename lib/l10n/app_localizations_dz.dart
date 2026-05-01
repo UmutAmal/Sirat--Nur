@@ -1243,6 +1243,9 @@ class AppLocalizationsDz extends AppLocalizations {
       'ཕབ་ལེན་འབད་ཡོད་པའི་ཡིག་སྣོད་ཚུ་བཏོན་གཏང་།';
 
   @override
+  String get cancelDownloadAction => 'ཕབ་ལེན་ཆ་མེད་གཏང་།';
+
+  @override
   String get downloadCancelling => 'ཆ་མེད་གཏང་དོ།';
 
   @override

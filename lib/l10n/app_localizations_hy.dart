@@ -1248,6 +1248,9 @@ class AppLocalizationsHy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ջնջել ներբեռնված ֆայլերը';
 
   @override
+  String get cancelDownloadAction => 'Չեղարկել ներբեռնումը';
+
+  @override
   String get downloadCancelling => 'Չեղարկում...';
 
   @override

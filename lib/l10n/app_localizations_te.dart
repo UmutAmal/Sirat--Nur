@@ -1245,6 +1245,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get deleteDownloadedFiles => 'డౌన్‌లోడ్ చేసిన ఫైల్‌లను తొలగించండి';
 
   @override
+  String get cancelDownloadAction => 'డౌన్‌లోడ్ రద్దు చేయండి';
+
+  @override
   String get downloadCancelling => 'రద్దు చేస్తోంది...';
 
   @override

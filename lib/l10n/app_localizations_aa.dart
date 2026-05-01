@@ -1242,6 +1242,9 @@ class AppLocalizationsAa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Oobiseenih yanin sibaabi duuga';
 
   @override
+  String get cancelDownloadAction => 'oobisiyyi duuga';
+
+  @override
   String get downloadCancelling => 'Duugaanam...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "Umunyameka",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Gukina amajwi ya surah",
-  "pauseSurahAudio": "Hagarika amajwi ya surah"
+  "pauseSurahAudio": "Hagarika amajwi ya surah",
+  "cancelDownloadAction": "Gukuraho gukuraho"
 }

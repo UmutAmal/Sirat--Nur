@@ -1241,6 +1241,9 @@ class AppLocalizationsMai extends AppLocalizations {
   String get deleteDownloadedFiles => 'डाउनलोड फाइल मेटाउ';
 
   @override
+  String get cancelDownloadAction => 'डाउनलोड रद्द करू';
+
+  @override
   String get downloadCancelling => 'रद्द क रहल अछि...';
 
   @override

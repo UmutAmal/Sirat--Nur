@@ -793,5 +793,6 @@
   "revelationMeccan": "mekkai",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Játssz szúra hangot",
-  "pauseSurahAudio": "Szúra hang szüneteltetése"
+  "pauseSurahAudio": "Szúra hang szüneteltetése",
+  "cancelDownloadAction": "Letöltés megszakítása"
 }

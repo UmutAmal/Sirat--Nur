@@ -1245,6 +1245,9 @@ class AppLocalizationsVe extends AppLocalizations {
   String get deleteDownloadedFiles => 'Phumula faila dzo dawuniḽoudiwaho';
 
   @override
+  String get cancelDownloadAction => 'Khansela u dawuniḽouda';
+
+  @override
   String get downloadCancelling => 'U khansela...';
 
   @override

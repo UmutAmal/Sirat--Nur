@@ -1244,6 +1244,9 @@ class AppLocalizationsLb extends AppLocalizations {
   String get deleteDownloadedFiles => 'Läschen erofgeluede Dateien';
 
   @override
+  String get cancelDownloadAction => 'Download eroflueden';
+
+  @override
   String get downloadCancelling => 'Annuléiert ...';
 
   @override

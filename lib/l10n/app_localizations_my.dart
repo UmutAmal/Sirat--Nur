@@ -1253,6 +1253,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get deleteDownloadedFiles => 'ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကိုဖျက်ပါ။';
 
   @override
+  String get cancelDownloadAction => 'ဒေါင်းလုဒ်လုပ်တော့မည်။';
+
+  @override
   String get downloadCancelling => 'ပယ်ဖျက်နေသည်...';
 
   @override

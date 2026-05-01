@@ -1243,6 +1243,9 @@ class AppLocalizationsNr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Susa amafayela alandiweko';
 
   @override
+  String get cancelDownloadAction => 'Khansela ukudawuniloda';
+
+  @override
   String get downloadCancelling => 'Ukukhansela...';
 
   @override

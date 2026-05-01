@@ -1246,6 +1246,9 @@ class AppLocalizationsLt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ištrinkite atsisiųstus failus';
 
   @override
+  String get cancelDownloadAction => 'Atšaukti atsisiuntimą';
+
+  @override
   String get downloadCancelling => 'Atšaukiama...';
 
   @override

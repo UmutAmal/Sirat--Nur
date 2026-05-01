@@ -793,5 +793,6 @@
   "revelationMeccan": "Meka",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Kina amajwi ya sura",
-  "pauseSurahAudio": "Hagarika amajwi ya sura"
+  "pauseSurahAudio": "Hagarika amajwi ya sura",
+  "cancelDownloadAction": "Hagarika gukuramo"
 }

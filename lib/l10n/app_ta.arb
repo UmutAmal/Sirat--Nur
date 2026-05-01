@@ -793,5 +793,6 @@
   "revelationMeccan": "மக்கா",
   "revelationMedinan": "மதீனான்",
   "playSurahAudio": "சூரா ஆடியோவை இயக்கவும்",
-  "pauseSurahAudio": "சூரா ஆடியோவை இடைநிறுத்து"
+  "pauseSurahAudio": "சூரா ஆடியோவை இடைநிறுத்து",
+  "cancelDownloadAction": "பதிவிறக்கத்தை ரத்துசெய்"
 }

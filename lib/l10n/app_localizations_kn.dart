@@ -1244,6 +1244,9 @@ class AppLocalizationsKn extends AppLocalizations {
   String get deleteDownloadedFiles => 'ಡೌನ್‌ಲೋಡ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳನ್ನು ಅಳಿಸಿ';
 
   @override
+  String get cancelDownloadAction => 'ಡೌನ್‌ಲೋಡ್ ರದ್ದುಮಾಡಿ';
+
+  @override
   String get downloadCancelling => 'ರದ್ದುಗೊಳಿಸಲಾಗುತ್ತಿದೆ...';
 
   @override

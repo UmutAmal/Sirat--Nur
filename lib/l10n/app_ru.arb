@@ -793,5 +793,6 @@
   "revelationMeccan": "Мекканец",
   "revelationMedinan": "Мединан",
   "playSurahAudio": "Воспроизвести аудио суры",
-  "pauseSurahAudio": "Приостановить воспроизведение суры"
+  "pauseSurahAudio": "Приостановить воспроизведение суры",
+  "cancelDownloadAction": "Отменить загрузку"
 }

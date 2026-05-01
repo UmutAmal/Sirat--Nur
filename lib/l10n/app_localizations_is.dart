@@ -1244,6 +1244,9 @@ class AppLocalizationsIs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Eyða niðurhaluðum skrám';
 
   @override
+  String get cancelDownloadAction => 'Hætta við niðurhal';
+
+  @override
   String get downloadCancelling => 'Hættir við...';
 
   @override

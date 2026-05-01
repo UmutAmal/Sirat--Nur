@@ -1254,6 +1254,9 @@ class AppLocalizationsCa extends AppLocalizations {
   String get deleteDownloadedFiles => 'Suprimeix els fitxers descarregats';
 
   @override
+  String get cancelDownloadAction => 'Cancel·la la descàrrega';
+
+  @override
   String get downloadCancelling => 'S\'està cancel·lant...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "ਮੱਕਾ",
   "revelationMedinan": "ਮੇਦੀਨ",
   "playSurahAudio": "ਸੂਰਾ ਆਡੀਓ ਚਲਾਓ",
-  "pauseSurahAudio": "ਸੁਰਾਹ ਆਡੀਓ ਨੂੰ ਰੋਕੋ"
+  "pauseSurahAudio": "ਸੁਰਾਹ ਆਡੀਓ ਨੂੰ ਰੋਕੋ",
+  "cancelDownloadAction": "ਡਾਊਨਲੋਡ ਰੱਦ ਕਰੋ"
 }

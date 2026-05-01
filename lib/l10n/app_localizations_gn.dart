@@ -1249,6 +1249,9 @@ class AppLocalizationsGn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Embogue umi Archivo Ojegueruva’ekue';
 
   @override
+  String get cancelDownloadAction => 'Ombogue ñemboguejy';
+
+  @override
   String get downloadCancelling => 'Oñemboykévo...';
 
   @override

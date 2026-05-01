@@ -1239,6 +1239,9 @@ class AppLocalizationsSd extends AppLocalizations {
   String get deleteDownloadedFiles => 'ڊائون لوڊ ڪيل فائلن کي ختم ڪريو';
 
   @override
+  String get cancelDownloadAction => 'ڊائون لوڊ منسوخ ڪريو';
+
+  @override
   String get downloadCancelling => 'منسوخ ٿي رهيو آهي...';
 
   @override

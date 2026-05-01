@@ -1239,6 +1239,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get deleteDownloadedFiles => 'حذف الملفات التي تم تنزيلها';
 
   @override
+  String get cancelDownloadAction => 'إلغاء التنزيل';
+
+  @override
   String get downloadCancelling => 'جارٍ الإلغاء...';
 
   @override

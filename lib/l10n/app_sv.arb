@@ -793,5 +793,6 @@
   "revelationMeccan": "Meckan",
   "revelationMedinan": "Medan",
   "playSurahAudio": "Spela surah-ljud",
-  "pauseSurahAudio": "Pausa surah-ljud"
+  "pauseSurahAudio": "Pausa surah-ljud",
+  "cancelDownloadAction": "Avbryt nedladdning"
 }

@@ -1240,6 +1240,9 @@ class AppLocalizationsPs extends AppLocalizations {
   String get deleteDownloadedFiles => 'ډاونلوډ شوي فایلونه حذف کړئ';
 
   @override
+  String get cancelDownloadAction => 'کښته کول لغوه کړئ';
+
+  @override
   String get downloadCancelling => 'لغوه کول...';
 
   @override

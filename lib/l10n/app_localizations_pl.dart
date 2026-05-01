@@ -1248,6 +1248,9 @@ class AppLocalizationsPl extends AppLocalizations {
   String get deleteDownloadedFiles => 'Usuń pobrane pliki';
 
   @override
+  String get cancelDownloadAction => 'Anuluj pobieranie';
+
+  @override
   String get downloadCancelling => 'Anulowanie...';
 
   @override

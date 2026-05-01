@@ -793,5 +793,6 @@
   "revelationMeccan": "मक्की",
   "revelationMedinan": "मदनी",
   "playSurahAudio": "सूरः श्रव्यं वादयन्तु",
-  "pauseSurahAudio": "सूरः श्रव्यं विरमयतु"
+  "pauseSurahAudio": "सूरः श्रव्यं विरमयतु",
+  "cancelDownloadAction": "डाउनलोड् रद्दं कुर्वन्तु"
 }

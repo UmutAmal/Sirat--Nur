@@ -793,5 +793,6 @@
   "revelationMeccan": "Meka",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Esitage suura heli",
-  "pauseSurahAudio": "Peatage suuraheli"
+  "pauseSurahAudio": "Peatage suuraheli",
+  "cancelDownloadAction": "Tühista allalaadimine"
 }

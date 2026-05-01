@@ -793,5 +793,6 @@
   "revelationMeccan": "Meca llaqtamanta",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Surah audiota uyarichiy",
-  "pauseSurahAudio": "Pausa surah audio nisqa"
+  "pauseSurahAudio": "Pausa surah audio nisqa",
+  "cancelDownloadAction": "Cancelar descarga"
 }

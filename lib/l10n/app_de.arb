@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Spielen Sie Sure-Audio ab",
-  "pauseSurahAudio": "Pausieren Sie den Sure-Ton"
+  "pauseSurahAudio": "Pausieren Sie den Sure-Ton",
+  "cancelDownloadAction": "Download abbrechen"
 }

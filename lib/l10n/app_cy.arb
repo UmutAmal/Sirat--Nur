@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Chwarae sain surah",
-  "pauseSurahAudio": "Seibio sain surah"
+  "pauseSurahAudio": "Seibio sain surah",
+  "cancelDownloadAction": "Canslo llwytho i lawr"
 }

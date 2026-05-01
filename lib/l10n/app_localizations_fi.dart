@@ -1245,6 +1245,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get deleteDownloadedFiles => 'Poista ladatut tiedostot';
 
   @override
+  String get cancelDownloadAction => 'Peruuta lataus';
+
+  @override
   String get downloadCancelling => 'Peruutetaan...';
 
   @override

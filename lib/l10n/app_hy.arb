@@ -793,5 +793,6 @@
   "revelationMeccan": "Մեքքական",
   "revelationMedinan": "Մեդինան",
   "playSurahAudio": "Նվագարկել սուրայի աուդիո",
-  "pauseSurahAudio": "Դադարեցնել սուրայի ձայնը"
+  "pauseSurahAudio": "Դադարեցնել սուրայի ձայնը",
+  "cancelDownloadAction": "Չեղարկել ներբեռնումը"
 }

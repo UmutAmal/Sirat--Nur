@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Phát âm thanh Surah",
-  "pauseSurahAudio": "Tạm dừng âm thanh surah"
+  "pauseSurahAudio": "Tạm dừng âm thanh surah",
+  "cancelDownloadAction": "Hủy tải xuống"
 }

@@ -793,5 +793,6 @@
   "revelationMeccan": "ເມກາ",
   "revelationMedinan": "ເມດິນັນ",
   "playSurahAudio": "ຫຼິ້ນສຽງ Surah",
-  "pauseSurahAudio": "ຢຸດສຽງ Surah ໄວ້ຊົ່ວຄາວ"
+  "pauseSurahAudio": "ຢຸດສຽງ Surah ໄວ້ຊົ່ວຄາວ",
+  "cancelDownloadAction": "ຍົກເລີກການດາວໂຫຼດ"
 }

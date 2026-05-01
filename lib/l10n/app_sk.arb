@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekcan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Prehrajte zvuk súry",
-  "pauseSurahAudio": "Pozastaviť zvuk súry"
+  "pauseSurahAudio": "Pozastaviť zvuk súry",
+  "cancelDownloadAction": "Zrušiť sťahovanie"
 }

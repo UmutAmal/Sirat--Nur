@@ -793,5 +793,6 @@
   "revelationMeccan": "መካኛ",
   "revelationMedinan": "መዲናን",
   "playSurahAudio": "የሱራ ድምጽ አጫውት።",
-  "pauseSurahAudio": "የሱራ ኦዲዮን ባለበት አቁም"
+  "pauseSurahAudio": "የሱራ ኦዲዮን ባለበት አቁም",
+  "cancelDownloadAction": "ማውረድ ሰርዝ"
 }

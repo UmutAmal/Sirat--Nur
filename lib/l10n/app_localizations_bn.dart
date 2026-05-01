@@ -1243,6 +1243,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get deleteDownloadedFiles => 'ডাউনলোড করা ফাইল মুছুন';
 
   @override
+  String get cancelDownloadAction => 'ডাউনলোড বাতিল করুন';
+
+  @override
   String get downloadCancelling => 'বাতিল হচ্ছে...';
 
   @override

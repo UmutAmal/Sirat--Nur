@@ -793,5 +793,6 @@
   "revelationMeccan": "La Mecque",
   "revelationMedinan": "Médine",
   "playSurahAudio": "Lire l'audio de la sourate",
-  "pauseSurahAudio": "Mettre en pause l'audio de la sourate"
+  "pauseSurahAudio": "Mettre en pause l'audio de la sourate",
+  "cancelDownloadAction": "Annuler le téléchargement"
 }

@@ -793,5 +793,6 @@
   "revelationMeccan": "মক্কান",
   "revelationMedinan": "মেদিনান",
   "playSurahAudio": "সূরা অডিও চালান",
-  "pauseSurahAudio": "সূরা অডিও থামান"
+  "pauseSurahAudio": "সূরা অডিও থামান",
+  "cancelDownloadAction": "ডাউনলোড বাতিল করুন"
 }

@@ -1227,6 +1227,9 @@ class AppLocalizationsTi extends AppLocalizations {
   String get deleteDownloadedFiles => 'ዝወረዱ ፋይላት ምድምሳስ';
 
   @override
+  String get cancelDownloadAction => 'ምውራድ ስርዝ ድልዝ';
+
+  @override
   String get downloadCancelling => 'ምስራዝ...';
 
   @override

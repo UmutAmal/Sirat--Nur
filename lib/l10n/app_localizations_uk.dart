@@ -1246,6 +1246,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get deleteDownloadedFiles => 'Видалити завантажені файли';
 
   @override
+  String get cancelDownloadAction => 'Скасувати завантаження';
+
+  @override
   String get downloadCancelling => 'Скасування...';
 
   @override

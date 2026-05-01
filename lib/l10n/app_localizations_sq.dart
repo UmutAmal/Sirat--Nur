@@ -1247,6 +1247,9 @@ class AppLocalizationsSq extends AppLocalizations {
   String get deleteDownloadedFiles => 'Fshi skedarët e shkarkuar';
 
   @override
+  String get cancelDownloadAction => 'Anulo shkarkimin';
+
+  @override
   String get downloadCancelling => 'Po anulohet...';
 
   @override

@@ -1250,6 +1250,9 @@ class AppLocalizationsLus extends AppLocalizations {
   String get deleteDownloadedFiles => 'Download tawh file te chu Delete rawh';
 
   @override
+  String get cancelDownloadAction => 'Download chu cancel rawh';
+
+  @override
   String get downloadCancelling => 'Cancel a nih chuan...';
 
   @override

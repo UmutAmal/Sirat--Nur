@@ -1250,6 +1250,9 @@ class AppLocalizationsTa extends AppLocalizations {
       'பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை நீக்கவும்';
 
   @override
+  String get cancelDownloadAction => 'பதிவிறக்கத்தை ரத்துசெய்';
+
+  @override
   String get downloadCancelling => 'ரத்துசெய்கிறது...';
 
   @override

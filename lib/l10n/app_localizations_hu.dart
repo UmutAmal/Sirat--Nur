@@ -1245,6 +1245,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Letöltött fájlok törlése';
 
   @override
+  String get cancelDownloadAction => 'Letöltés megszakítása';
+
+  @override
   String get downloadCancelling => 'Lemondás...';
 
   @override

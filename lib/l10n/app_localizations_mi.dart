@@ -1248,6 +1248,9 @@ class AppLocalizationsMi extends AppLocalizations {
   String get deleteDownloadedFiles => 'Mukua nga Kōnae kua Tikiake';
 
   @override
+  String get cancelDownloadAction => 'Whakakore i te tikiake';
+
+  @override
   String get downloadCancelling => 'Whakakore...';
 
   @override

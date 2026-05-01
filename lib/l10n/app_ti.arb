@@ -793,5 +793,6 @@
   "revelationMeccan": "መካዊ",
   "revelationMedinan": "መዲናዊ",
   "playSurahAudio": "ሱራ ድምጺ ምጽዋት",
-  "pauseSurahAudio": "ሱራ ድምጺ ደው ኣብል"
+  "pauseSurahAudio": "ሱራ ድምጺ ደው ኣብል",
+  "cancelDownloadAction": "ምውራድ ስርዝ ድልዝ"
 }

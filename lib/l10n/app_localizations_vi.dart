@@ -1245,6 +1245,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get deleteDownloadedFiles => 'Xóa các tập tin đã tải xuống';
 
   @override
+  String get cancelDownloadAction => 'Hủy tải xuống';
+
+  @override
   String get downloadCancelling => 'Đang hủy...';
 
   @override

@@ -1245,6 +1245,9 @@ class AppLocalizationsTk extends AppLocalizations {
   String get deleteDownloadedFiles => 'Göçürilen faýllary poz';
 
   @override
+  String get cancelDownloadAction => 'Göçürip al';
+
+  @override
   String get downloadCancelling => 'Elatyrmak ...';
 
   @override

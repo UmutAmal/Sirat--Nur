@@ -1241,6 +1241,9 @@ class AppLocalizationsKri extends AppLocalizations {
   String get deleteDownloadedFiles => 'Dilit Fayl dɛn we yu dɔn Daunlod';
 
   @override
+  String get cancelDownloadAction => 'Kansel fɔ dawnlod am';
+
+  @override
   String get downloadCancelling => 'We yu de kansel...';
 
   @override

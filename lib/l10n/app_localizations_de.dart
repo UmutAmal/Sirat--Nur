@@ -1251,6 +1251,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get deleteDownloadedFiles => 'Heruntergeladene Dateien löschen';
 
   @override
+  String get cancelDownloadAction => 'Download abbrechen';
+
+  @override
   String get downloadCancelling => 'Stornierung...';
 
   @override

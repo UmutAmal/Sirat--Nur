@@ -1251,6 +1251,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ștergeți fișierele descărcate';
 
   @override
+  String get cancelDownloadAction => 'Anulați descărcarea';
+
+  @override
   String get downloadCancelling => 'Se anulează...';
 
   @override

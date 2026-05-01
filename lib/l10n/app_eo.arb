@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekko",
   "revelationMedinan": "Medinano",
   "playSurahAudio": "Ludu surahaŭdon",
-  "pauseSurahAudio": "Paŭzi suraan sonadon"
+  "pauseSurahAudio": "Paŭzi suraan sonadon",
+  "cancelDownloadAction": "Nuligi elŝuton"
 }

@@ -1241,6 +1241,9 @@ class AppLocalizationsCv extends AppLocalizations {
   String get deleteDownloadedFiles => 'Скачать тунӑ файлсене пӗтер';
 
   @override
+  String get cancelDownloadAction => 'Скачать тума пӑрахӑҫла';
+
+  @override
   String get downloadCancelling => 'Пӑрахӑҫлатӑп...';
 
   @override

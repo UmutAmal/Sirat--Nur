@@ -793,5 +793,6 @@
   "revelationMeccan": "མེ་ཀཱན།",
   "revelationMedinan": "མེ་ཌི་ནན།",
   "playSurahAudio": "སུ་ར་སྒྲ་སྒྲོག།",
-  "pauseSurahAudio": "སུ་ར་སྒྲ་སྐད་མཚམས་འཇོག།"
+  "pauseSurahAudio": "སུ་ར་སྒྲ་སྐད་མཚམས་འཇོག།",
+  "cancelDownloadAction": "ཕབ་ལེན་ཆ་མེད་གཏང་།"
 }

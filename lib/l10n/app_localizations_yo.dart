@@ -1240,6 +1240,9 @@ class AppLocalizationsYo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Pa awọn faili ti a gbasile';
 
   @override
+  String get cancelDownloadAction => 'Fagilee gbigba lati ayelujara';
+
+  @override
   String get downloadCancelling => 'N fagilee...';
 
   @override

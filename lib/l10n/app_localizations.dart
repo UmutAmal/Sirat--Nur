@@ -2728,6 +2728,12 @@ abstract class AppLocalizations {
   /// **'Delete Downloaded Files'**
   String get deleteDownloadedFiles;
 
+  /// No description provided for @cancelDownloadAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel download'**
+  String get cancelDownloadAction;
+
   /// No description provided for @downloadCancelling.
   ///
   /// In en, this message translates to:

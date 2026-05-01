@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekge",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Ses sesini çalyň",
-  "pauseSurahAudio": "Sesi süresini duruzyň"
+  "pauseSurahAudio": "Sesi süresini duruzyň",
+  "cancelDownloadAction": "Göçürip al"
 }

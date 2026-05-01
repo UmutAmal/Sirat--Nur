@@ -1242,6 +1242,9 @@ class AppLocalizationsKu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Pelên dakêşandî jêbirin';
 
   @override
+  String get cancelDownloadAction => 'Daxistinê betal bike';
+
+  @override
   String get downloadCancelling => 'Betalkirin...';
 
   @override

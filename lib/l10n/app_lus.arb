@@ -793,5 +793,6 @@
   "revelationMeccan": "Mecca khawpuiah a awm",
   "revelationMedinan": "Medina khawpuiah a awm",
   "playSurahAudio": "Surah audio chu play rawh",
-  "pauseSurahAudio": "Surah audio chu chawlhsan rawh"
+  "pauseSurahAudio": "Surah audio chu chawlhsan rawh",
+  "cancelDownloadAction": "Download chu cancel rawh"
 }

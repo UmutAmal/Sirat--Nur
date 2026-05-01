@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekka",
   "revelationMedinan": "Medan",
   "playSurahAudio": "Spielje surah audio",
-  "pauseSurahAudio": "Paus surah audio"
+  "pauseSurahAudio": "Paus surah audio",
+  "cancelDownloadAction": "Ofbrekke download"
 }

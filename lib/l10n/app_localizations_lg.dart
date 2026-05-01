@@ -1248,6 +1248,9 @@ class AppLocalizationsLg extends AppLocalizations {
   String get deleteDownloadedFiles => 'Sazaamu Fayiro Eziwanuliddwa';
 
   @override
+  String get cancelDownloadAction => 'Sazaamu okuwanula';
+
+  @override
   String get downloadCancelling => 'Okusazaamu...';
 
   @override

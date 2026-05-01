@@ -1243,6 +1243,9 @@ class AppLocalizationsEo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Forigu elŝutitajn dosierojn';
 
   @override
+  String get cancelDownloadAction => 'Nuligi elŝuton';
+
+  @override
   String get downloadCancelling => 'Nuligo...';
 
   @override

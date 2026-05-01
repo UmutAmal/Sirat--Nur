@@ -1240,6 +1240,9 @@ class AppLocalizationsNe extends AppLocalizations {
   String get deleteDownloadedFiles => 'डाउनलोड गरिएका फाइलहरू मेटाउनुहोस्';
 
   @override
+  String get cancelDownloadAction => 'डाउनलोड रद्द गर्नुहोस्';
+
+  @override
   String get downloadCancelling => 'रद्द गर्दै...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Redați audio surah",
-  "pauseSurahAudio": "Întrerupeți sunetul surei"
+  "pauseSurahAudio": "Întrerupeți sunetul surei",
+  "cancelDownloadAction": "Anulați descărcarea"
 }

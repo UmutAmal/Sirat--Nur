@@ -1249,6 +1249,9 @@ class AppLocalizationsBe extends AppLocalizations {
   String get deleteDownloadedFiles => 'Выдаліць спампаваныя файлы';
 
   @override
+  String get cancelDownloadAction => 'Адмяніць загрузку';
+
+  @override
   String get downloadCancelling => 'Адмена...';
 
   @override

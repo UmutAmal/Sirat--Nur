@@ -1243,6 +1243,9 @@ class AppLocalizationsFj extends AppLocalizations {
   String get deleteDownloadedFiles => 'Bokoca na faile sa lavetaki oti';
 
   @override
+  String get cancelDownloadAction => 'Bokoca na lavetaki';
+
+  @override
   String get downloadCancelling => 'Vakadaroya...';
 
   @override

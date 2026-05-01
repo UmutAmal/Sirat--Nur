@@ -1254,6 +1254,9 @@ class AppLocalizationsTl extends AppLocalizations {
   String get deleteDownloadedFiles => 'Tanggalin ang mga Na-download na File';
 
   @override
+  String get cancelDownloadAction => 'Kanselahin ang pag-download';
+
+  @override
   String get downloadCancelling => 'Kinakansela...';
 
   @override

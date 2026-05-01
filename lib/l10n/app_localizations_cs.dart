@@ -1244,6 +1244,9 @@ class AppLocalizationsCs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Smazat stažené soubory';
 
   @override
+  String get cancelDownloadAction => 'Zrušit stahování';
+
+  @override
   String get downloadCancelling => 'Rušení...';
 
   @override

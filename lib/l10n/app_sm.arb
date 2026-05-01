@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekani",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Ta'alo leo surah",
-  "pauseSurahAudio": "Taofi surah leo"
+  "pauseSurahAudio": "Taofi surah leo",
+  "cancelDownloadAction": "Fa'aleaogaina le la'uina"
 }

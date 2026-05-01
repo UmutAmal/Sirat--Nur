@@ -1259,6 +1259,9 @@ class AppLocalizationsNso extends AppLocalizations {
   String get deleteDownloadedFiles => 'Phimola Difaele tše di Taoneloutšwago';
 
   @override
+  String get cancelDownloadAction => 'Khansela go taonelouta';
+
+  @override
   String get downloadCancelling => 'Go phumola...';
 
   @override

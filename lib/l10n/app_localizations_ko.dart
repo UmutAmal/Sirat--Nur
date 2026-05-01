@@ -1224,6 +1224,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get deleteDownloadedFiles => '다운로드한 파일 삭제';
 
   @override
+  String get cancelDownloadAction => '다운로드 취소';
+
+  @override
   String get downloadCancelling => '취소 중...';
 
   @override

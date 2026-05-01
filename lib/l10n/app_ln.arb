@@ -793,5 +793,6 @@
   "revelationMeccan": "Bato ya Mecque",
   "revelationMedinan": "Medinani",
   "playSurahAudio": "Beta audio ya surah",
-  "pauseSurahAudio": "Pause na audio ya surah"
+  "pauseSurahAudio": "Pause na audio ya surah",
+  "cancelDownloadAction": "Annuler téléchargement"
 }

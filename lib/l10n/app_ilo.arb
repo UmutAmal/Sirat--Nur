@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan nga",
   "playSurahAudio": "Ipatokar ti surah audio",
-  "pauseSurahAudio": "Isardeng ti surah audio"
+  "pauseSurahAudio": "Isardeng ti surah audio",
+  "cancelDownloadAction": "Kanselaen ti panag-download"
 }

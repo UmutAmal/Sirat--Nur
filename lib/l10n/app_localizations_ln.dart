@@ -1248,6 +1248,9 @@ class AppLocalizationsLn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Bolongola ba fichiers oyo o télécharger';
 
   @override
+  String get cancelDownloadAction => 'Annuler téléchargement';
+
+  @override
   String get downloadCancelling => 'Kolongolama...';
 
   @override

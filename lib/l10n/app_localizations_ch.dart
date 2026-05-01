@@ -1242,6 +1242,9 @@ class AppLocalizationsCh extends AppLocalizations {
   String get deleteDownloadedFiles => 'Na\'suha i Ma\'u\'usa na File siha';
 
   @override
+  String get cancelDownloadAction => 'Kansela i dinidåklåda';
+
+  @override
   String get downloadCancelling => 'Ma kansela...';
 
   @override

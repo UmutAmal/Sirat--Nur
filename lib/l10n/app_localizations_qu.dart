@@ -1249,6 +1249,9 @@ class AppLocalizationsQu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Descargasqa Archivokunata chinkachiy';
 
   @override
+  String get cancelDownloadAction => 'Cancelar descarga';
+
+  @override
   String get downloadCancelling => 'Cancelando...';
 
   @override

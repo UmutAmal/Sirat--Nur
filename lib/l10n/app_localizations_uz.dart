@@ -1242,6 +1242,9 @@ class AppLocalizationsUz extends AppLocalizations {
   String get deleteDownloadedFiles => 'Yuklab olingan fayllarni o\'chirish';
 
   @override
+  String get cancelDownloadAction => 'Yuklashni bekor qilish';
+
+  @override
   String get downloadCancelling => 'Bekor qilinmoqda...';
 
   @override

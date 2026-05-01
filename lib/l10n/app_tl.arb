@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "I-play ang surah audio",
-  "pauseSurahAudio": "I-pause ang audio ng surah"
+  "pauseSurahAudio": "I-pause ang audio ng surah",
+  "cancelDownloadAction": "Kanselahin ang pag-download"
 }

@@ -1242,6 +1242,9 @@ class AppLocalizationsPa extends AppLocalizations {
   String get deleteDownloadedFiles => 'ਡਾਊਨਲੋਡ ਕੀਤੀਆਂ ਫ਼ਾਈਲਾਂ ਨੂੰ ਮਿਟਾਓ';
 
   @override
+  String get cancelDownloadAction => 'ਡਾਊਨਲੋਡ ਰੱਦ ਕਰੋ';
+
+  @override
   String get downloadCancelling => 'ਰੱਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...';
 
   @override

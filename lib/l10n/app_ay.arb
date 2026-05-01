@@ -793,5 +793,6 @@
   "revelationMeccan": "Meca markankiri",
   "revelationMedinan": "Medina markanxa",
   "playSurahAudio": "Surah audio uñt’ayaña",
-  "pauseSurahAudio": "Pause surah audio ukax mä juk’a pachakiwa"
+  "pauseSurahAudio": "Pause surah audio ukax mä juk’a pachakiwa",
+  "cancelDownloadAction": "Cancel download"
 }

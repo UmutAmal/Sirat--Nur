@@ -1239,6 +1239,9 @@ class AppLocalizationsKr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Fayil Sagǝdǝnadǝ Cinne';
 
   @override
+  String get cancelDownloadAction => 'Sagǝdǝ dafne';
+
+  @override
   String get downloadCancelling => 'Daptə...';
 
   @override

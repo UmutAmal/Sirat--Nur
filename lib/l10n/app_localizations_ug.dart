@@ -1244,6 +1244,9 @@ class AppLocalizationsUg extends AppLocalizations {
   String get deleteDownloadedFiles => 'چۈشۈرۈلگەن ھۆججەتلەرنى ئۆچۈرۈڭ';
 
   @override
+  String get cancelDownloadAction => 'چۈشۈرۈشنى بىكار قىلىڭ';
+
+  @override
   String get downloadCancelling => 'بىكار قىلىش ...';
 
   @override

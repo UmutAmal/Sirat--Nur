@@ -793,5 +793,6 @@
   "revelationMeccan": "مکه",
   "revelationMedinan": "مدینه",
   "playSurahAudio": "پخش صوت سوره",
-  "pauseSurahAudio": "مکث صوتی سوره"
+  "pauseSurahAudio": "مکث صوتی سوره",
+  "cancelDownloadAction": "لغو دانلود"
 }

@@ -1241,6 +1241,9 @@ class AppLocalizationsHt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Efase fichye telechaje yo';
 
   @override
+  String get cancelDownloadAction => 'Anile download';
+
+  @override
   String get downloadCancelling => 'Anile...';
 
   @override

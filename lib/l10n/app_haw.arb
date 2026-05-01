@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekani",
   "revelationMedinan": "Madinana",
   "playSurahAudio": "Hoʻokani leo surah",
-  "pauseSurahAudio": "Hoʻomaha leo surah"
+  "pauseSurahAudio": "Hoʻomaha leo surah",
+  "cancelDownloadAction": "Hoʻopau i ka hoʻoiho ʻana"
 }

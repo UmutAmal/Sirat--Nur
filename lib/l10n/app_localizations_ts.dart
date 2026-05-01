@@ -1256,6 +1256,9 @@ class AppLocalizationsTs extends AppLocalizations {
   String get deleteDownloadedFiles => 'Susa Tifayili Leti Dawunilodiweke';
 
   @override
+  String get cancelDownloadAction => 'Khansela ku dawuniloda';
+
+  @override
   String get downloadCancelling => 'Ku khansela...';
 
   @override

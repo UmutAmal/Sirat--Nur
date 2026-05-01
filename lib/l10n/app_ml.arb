@@ -793,5 +793,6 @@
   "revelationMeccan": "മക്കൻ",
   "revelationMedinan": "മദീനൻ",
   "playSurahAudio": "സൂറ ഓഡിയോ പ്ലേ ചെയ്യുക",
-  "pauseSurahAudio": "സൂറ ഓഡിയോ താൽക്കാലികമായി നിർത്തുക"
+  "pauseSurahAudio": "സൂറ ഓഡിയോ താൽക്കാലികമായി നിർത്തുക",
+  "cancelDownloadAction": "ഡൗൺലോഡ് റദ്ദാക്കുക"
 }

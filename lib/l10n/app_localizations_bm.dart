@@ -1246,6 +1246,9 @@ class AppLocalizationsBm extends AppLocalizations {
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
+  String get cancelDownloadAction => 'Téléchargement (téléchargement) dabila';
+
+  @override
   String get downloadCancelling => 'A bɛ ka kansɛli kɛ...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccano",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Riproduci l'audio della sura",
-  "pauseSurahAudio": "Metti in pausa l'audio della sura"
+  "pauseSurahAudio": "Metti in pausa l'audio della sura",
+  "cancelDownloadAction": "Annulla il download"
 }

@@ -1241,6 +1241,9 @@ class AppLocalizationsGv extends AppLocalizations {
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
+  String get cancelDownloadAction => 'Cur stiagh lusaghey';
+
+  @override
   String get downloadCancelling => 'Cur stiagh...';
 
   @override

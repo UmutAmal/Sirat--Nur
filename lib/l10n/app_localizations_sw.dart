@@ -1245,6 +1245,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get deleteDownloadedFiles => 'Futa Faili Zilizopakuliwa';
 
   @override
+  String get cancelDownloadAction => 'Ghairi upakuaji';
+
+  @override
   String get downloadCancelling => 'Inaghairi...';
 
   @override

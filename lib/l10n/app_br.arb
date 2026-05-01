@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekka",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Seniñ kleweled ar surah",
-  "pauseSurahAudio": "Paouez gant kleweled ar surah"
+  "pauseSurahAudio": "Paouez gant kleweled ar surah",
+  "cancelDownloadAction": "Nullañ ar pellgargañ"
 }

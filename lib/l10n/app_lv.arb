@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekānis",
   "revelationMedinan": "Medināna",
   "playSurahAudio": "Atskaņot surah audio",
-  "pauseSurahAudio": "Apturēt surah audio"
+  "pauseSurahAudio": "Apturēt surah audio",
+  "cancelDownloadAction": "Atcelt lejupielādi"
 }

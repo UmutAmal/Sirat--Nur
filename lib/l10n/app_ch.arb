@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Na'lå'la' i surah audio",
-  "pauseSurahAudio": "Pause surah audio"
+  "pauseSurahAudio": "Pause surah audio",
+  "cancelDownloadAction": "Kansela i dinidåklåda"
 }

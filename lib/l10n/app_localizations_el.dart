@@ -1253,6 +1253,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get deleteDownloadedFiles => 'Διαγραφή ληφθέντων αρχείων';
 
   @override
+  String get cancelDownloadAction => 'Ακύρωση λήψης';
+
+  @override
   String get downloadCancelling => 'Ακύρωση...';
 
   @override

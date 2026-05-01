@@ -1247,6 +1247,9 @@ class AppLocalizationsMn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Татаж авсан файлуудыг устгах';
 
   @override
+  String get cancelDownloadAction => 'Татаж авахыг цуцлах';
+
+  @override
   String get downloadCancelling => 'Цуцалж байна...';
 
   @override

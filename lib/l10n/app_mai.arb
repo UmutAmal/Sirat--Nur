@@ -793,5 +793,6 @@
   "revelationMeccan": "मक्की",
   "revelationMedinan": "मदनी",
   "playSurahAudio": "सूरह ऑडियो बजाउ",
-  "pauseSurahAudio": "सूरह ऑडियो विराम करू"
+  "pauseSurahAudio": "सूरह ऑडियो विराम करू",
+  "cancelDownloadAction": "डाउनलोड रद्द करू"
 }

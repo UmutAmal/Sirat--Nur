@@ -793,5 +793,6 @@
   "revelationMeccan": "Makkanaajo",
   "revelationMedinan": "Madiina",
   "playSurahAudio": "Fijo suura odiyo",
-  "pauseSurahAudio": "Jokku suura oodiyo"
+  "pauseSurahAudio": "Jokku suura oodiyo",
+  "cancelDownloadAction": "Woppu ƴettugol"
 }

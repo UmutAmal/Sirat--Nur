@@ -20273,6 +20273,43 @@
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
 
+## 2026-05-01 TUR-504 - Cancellable Offline Download Runtime Smoke
+
+### MASTER Karari
+- Risk: Appium release smoke Downloads ekranini aciyor fakat gercek offline indirme aksiyonunu baslatip iptal etmiyordu. Bu, offline indirme pipeline'inda UI/runtime false-success riskini acik birakiyordu.
+- Kanit:
+  - `lib/features/downloads/offline_downloads_page.dart:316` artik hic indirilmemis paket icin dogrudan lokalize download butonu gosteriyor; ilk indirme uc nokta menusune gomulu degil.
+  - `lib/features/downloads/offline_downloads_page.dart:351` cancel butonu `l10n.cancelDownloadAction` tooltip'i ile erisilebilir hale geldi.
+  - `lib/l10n/app_en.arb:576` yeni `cancelDownloadAction` anahtarini tanimliyor; `dart run tool\translate_arb_keys.dart --report cancelDownloadAction` missing/empty `0`, placeholder mismatch `0`.
+  - `tool/appium_runtime_smoke.ps1:267` description tabanli tiklamayi artik `clickable(true)` ile sinirliyor; pasif basliklarin false-success uretmesi engellendi.
+  - `tool/appium_runtime_smoke.ps1:614` ve `tool/appium_runtime_smoke.ps1:751` `downloadRuntime` ozetini ekliyor.
+  - `tool/appium_runtime_smoke.ps1:761` ilk reciter download kontrolunu tiklar; `tool/appium_runtime_smoke.ps1:774` aktif ilerleme/cancel affordance bekler; `tool/appium_runtime_smoke.ps1:782` lokalize cancel kontrolunu tiklar.
+  - `test/appium_runtime_smoke_script_test.dart:151` runtime download smoke guard'ini, `test/features/downloads/offline_downloads_test.dart:93` lokalize erisilebilirlik label guard'ini korur.
+- Kullanici etkisi: Ilk offline Quran audio indirmesi daha gorunur ve erisilebilir oldu; release smoke artik gercek indirme baslatma, ilerleme gosterme, iptal etme ve canceled sonucunu dogruluyor.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 4/25.
+- Rollback plani: `lib/features/downloads/offline_downloads_page.dart`, `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `tool/appium_runtime_smoke.ps1`, ilgili testler ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Downloads kartlarinda `downloaded == 0` icin dogrudan `Icons.download_rounded` aksiyonu eklendi; resume/delete menusu sadece indirilmis veya tamamlanmis paketlerde kaldi.
+- `cancelDownloadAction` tum l10n zincirine eklendi ve `flutter gen-l10n` ile generated dosyalar yenilendi.
+- Appium smoke, pasif description false-positive'lerini engellemek icin clickable description selector kullanir hale getirildi.
+- Appium smoke, Downloads quick access sonrasinda gercek download/cancel runtime akisini ozetleyen `downloadRuntime` kapisini ekledi.
+
+### TESTER Degisikligi
+- PowerShell parser: `tool\appium_runtime_smoke.ps1` PASS.
+- Targeted tests: `flutter test test\appium_runtime_smoke_script_test.dart test\features\downloads\offline_downloads_test.dart --reporter compact` PASS, `16/16`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `716/716`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `57b737fe-cfb6-4e10-b3e8-f7af4d365800`, `downloadRuntime.clickedDownloadControl=true`, `startedDownload=true`, `showedActiveProgress=true`, `clickedCancel=true`, `containsCanceledMessage=true`, `failures=[]`, release APK size `94353290`.
+
+### Risk Degisimi
+- Offline download runtime smoke boslugu: `12/25 -> 4/25`.
+- Kalan bilincli risk: Appium smoke iptal istegini gercek runtime'da dogrular fakat 114 surelik tam paket indirmeyi bilincli olarak tamamlatmaz; tam paket indirme, maliyet/sure nedeniyle store readiness'taki manifest/mirror probe ve service-level testlerle kapsanir.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: kalan low-resource l10n fallback cluster'i, resmi kurum bazli ulke profilleri audit'i veya notification/OEM exact alarm cihaz davranisi dokumantasyon-test derinlestirmesi.
+
 ## 2026-05-01 TUR-503 - Settings Hadith Low-Resource L10n Debt Reduction
 
 ### MASTER Karari

@@ -1248,6 +1248,9 @@ class AppLocalizationsKy extends AppLocalizations {
   String get deleteDownloadedFiles => 'Жүктөлгөн файлдарды жок кылуу';
 
   @override
+  String get cancelDownloadAction => 'Жүктөөнү жокко чыгаруу';
+
+  @override
   String get downloadCancelling => 'Жокко чыгарылууда...';
 
   @override

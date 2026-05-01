@@ -1247,6 +1247,9 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get deleteDownloadedFiles => 'Rho tawm cov ntaub ntawv Downloaded';
 
   @override
+  String get cancelDownloadAction => 'Ncua tseg download';
+
+  @override
   String get downloadCancelling => 'Ncua tseg...';
 
   @override

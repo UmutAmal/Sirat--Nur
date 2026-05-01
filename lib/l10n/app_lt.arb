@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekas",
   "revelationMedinan": "Medinas",
   "playSurahAudio": "Leisti surah garsą",
-  "pauseSurahAudio": "Pristabdyti surah garsą"
+  "pauseSurahAudio": "Pristabdyti surah garsą",
+  "cancelDownloadAction": "Atšaukti atsisiuntimą"
 }

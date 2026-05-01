@@ -1248,6 +1248,9 @@ class AppLocalizationsMg extends AppLocalizations {
   String get deleteDownloadedFiles => 'Fafao ny rakitra voasintona';
 
   @override
+  String get cancelDownloadAction => 'Foana ny fampidinana';
+
+  @override
   String get downloadCancelling => 'Manafoana...';
 
   @override

@@ -1241,6 +1241,9 @@ class AppLocalizationsSe extends AppLocalizations {
   String get deleteDownloadedFiles => 'Slette viežžan fiillaid';
 
   @override
+  String get cancelDownloadAction => 'Heaittihit viežžama';
+
+  @override
   String get downloadCancelling => 'Heaittihan...';
 
   @override

@@ -1249,6 +1249,9 @@ class AppLocalizationsSt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Hlakola Lifaele tse Jarollotsoeng';
 
   @override
+  String get cancelDownloadAction => 'Hlakola ho khoasolla';
+
+  @override
   String get downloadCancelling => 'E ea hlakola...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "Meicneach",
   "revelationMedinan": "Méidín",
   "playSurahAudio": "Seinn Surah fuaime",
-  "pauseSurahAudio": "Sos Surah fuaime"
+  "pauseSurahAudio": "Sos Surah fuaime",
+  "cancelDownloadAction": "Cealaigh íoslódáil"
 }

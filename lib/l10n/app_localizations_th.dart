@@ -1242,6 +1242,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get deleteDownloadedFiles => 'ลบไฟล์ที่ดาวน์โหลด';
 
   @override
+  String get cancelDownloadAction => 'ยกเลิกการดาวน์โหลด';
+
+  @override
   String get downloadCancelling => 'กำลังยกเลิก...';
 
   @override

@@ -310,8 +310,15 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
                                   ],
                                 ),
                               ),
-                              if (!isDownloading)
+                              if (!isDownloading && downloaded == 0)
+                                IconButton(
+                                  tooltip: l10n.downloadAction,
+                                  icon: const Icon(Icons.download_rounded),
+                                  onPressed: () => _startDownload(reciterId),
+                                ),
+                              if (!isDownloading && downloaded > 0)
                                 PopupMenuButton<String>(
+                                  tooltip: l10n.downloadAction,
                                   icon: const Icon(Icons.more_vert_rounded),
                                   onSelected: (action) {
                                     if (action == 'download') {
@@ -341,6 +348,7 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
                                 ),
                               if (isDownloading)
                                 IconButton(
+                                  tooltip: l10n.cancelDownloadAction,
                                   icon: const Icon(
                                     Icons.cancel_rounded,
                                     color: Colors.redAccent,

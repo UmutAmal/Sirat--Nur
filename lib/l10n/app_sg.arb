@@ -793,5 +793,6 @@
   "revelationMeccan": "Mecque",
   "revelationMedinan": "Médien",
   "playSurahAudio": "Zia audio ti surah",
-  "pauseSurahAudio": "Pause audio ti surah"
+  "pauseSurahAudio": "Pause audio ti surah",
+  "cancelDownloadAction": "Annuler téléchargement ni"
 }

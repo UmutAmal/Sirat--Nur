@@ -1241,6 +1241,9 @@ class AppLocalizationsCe extends AppLocalizations {
   String get deleteDownloadedFiles => 'Схьаэцна файлаш дӀаяха';
 
   @override
+  String get cancelDownloadAction => 'Отменить скачать';
+
+  @override
   String get downloadCancelling => 'ДӀаяккхар...';
 
   @override

@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekak",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Erreproduzitu surah audioa",
-  "pauseSurahAudio": "Pausatu suraren audioa"
+  "pauseSurahAudio": "Pausatu suraren audioa",
+  "cancelDownloadAction": "Deskarga bertan behera utzi"
 }

@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Bapala molumo oa surah",
-  "pauseSurahAudio": "Emisa molumo oa surah"
+  "pauseSurahAudio": "Emisa molumo oa surah",
+  "cancelDownloadAction": "Hlakola ho khoasolla"
 }

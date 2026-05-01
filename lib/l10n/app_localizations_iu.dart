@@ -1240,6 +1240,9 @@ class AppLocalizationsIu extends AppLocalizations {
   String get deleteDownloadedFiles => 'ᐲᖅᓯᓗᑎᑦ ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᔭᐅᓯᒪᔪᓂᒃ ᑎᑎᖅᑲᓂᒃ';
 
   @override
+  String get cancelDownloadAction => 'ᓄᖅᑲᖅᑎᓪᓗᒍ ᖃᕆᑕᐅᔭᕐᒧᑦ ᑎᒍᓯᓂᖅ';
+
+  @override
   String get downloadCancelling => 'ᓄᖅᑲᖅᑎᑕᐅᓂᖓ...';
 
   @override

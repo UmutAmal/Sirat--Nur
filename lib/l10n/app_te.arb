@@ -793,5 +793,6 @@
   "revelationMeccan": "మక్కన్",
   "revelationMedinan": "మదీనాన్",
   "playSurahAudio": "సూరా ఆడియోను ప్లే చేయండి",
-  "pauseSurahAudio": "సూరా ఆడియోను పాజ్ చేయండి"
+  "pauseSurahAudio": "సూరా ఆడియోను పాజ్ చేయండి",
+  "cancelDownloadAction": "డౌన్‌లోడ్ రద్దు చేయండి"
 }

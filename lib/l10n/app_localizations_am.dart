@@ -1228,6 +1228,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get deleteDownloadedFiles => 'የወረዱ ፋይሎችን ሰርዝ';
 
   @override
+  String get cancelDownloadAction => 'ማውረድ ሰርዝ';
+
+  @override
   String get downloadCancelling => 'በመሰረዝ ላይ...';
 
   @override

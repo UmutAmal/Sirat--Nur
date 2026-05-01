@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkaan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Speel surah klank",
-  "pauseSurahAudio": "Onderbreek surah-oudio"
+  "pauseSurahAudio": "Onderbreek surah-oudio",
+  "cancelDownloadAction": "Kanselleer aflaai"
 }

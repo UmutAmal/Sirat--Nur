@@ -1244,6 +1244,9 @@ class AppLocalizationsNo extends AppLocalizations {
   String get deleteDownloadedFiles => 'Slett nedlastede filer';
 
   @override
+  String get cancelDownloadAction => 'Avbryt nedlasting';
+
+  @override
   String get downloadCancelling => 'Avbryter …';
 
   @override

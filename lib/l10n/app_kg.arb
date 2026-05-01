@@ -793,5 +793,6 @@
   "revelationMeccan": "Mecque",
   "revelationMedinan": "Medina",
   "playSurahAudio": "Tula ndinga ya surah",
-  "pauseSurahAudio": "Pemisa ndinga ya surah"
+  "pauseSurahAudio": "Pemisa ndinga ya surah",
+  "cancelDownloadAction": "Katula kubaka"
 }

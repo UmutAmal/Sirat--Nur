@@ -1245,6 +1245,9 @@ class AppLocalizationsTo extends AppLocalizations {
       'Tamate\'i \'a e ngaahi faile kuo download';
 
   @override
+  String get cancelDownloadAction => 'Kaniseli hono download';
+
+  @override
   String get downloadCancelling => 'Kaniseli...';
 
   @override

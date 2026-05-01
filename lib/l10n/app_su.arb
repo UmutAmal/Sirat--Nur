@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekah",
   "revelationMedinan": "Madinah",
   "playSurahAudio": "Puterkeun audio surah",
-  "pauseSurahAudio": "Ngareureuhkeun surah audio"
+  "pauseSurahAudio": "Ngareureuhkeun surah audio",
+  "cancelDownloadAction": "Ngabolaykeun download"
 }

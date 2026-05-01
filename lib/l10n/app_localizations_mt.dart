@@ -1249,6 +1249,9 @@ class AppLocalizationsMt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ħassar Fajls Mniżżla';
 
   @override
+  String get cancelDownloadAction => 'Ikkanċella t-tniżżil';
+
+  @override
   String get downloadCancelling => 'Tħassir...';
 
   @override

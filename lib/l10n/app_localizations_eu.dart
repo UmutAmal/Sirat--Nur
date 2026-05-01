@@ -1245,6 +1245,9 @@ class AppLocalizationsEu extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ezabatu deskargatutako fitxategiak';
 
   @override
+  String get cancelDownloadAction => 'Deskarga bertan behera utzi';
+
+  @override
   String get downloadCancelling => 'Bertan behera uzten...';
 
   @override

@@ -1244,6 +1244,9 @@ class AppLocalizationsSr extends AppLocalizations {
   String get deleteDownloadedFiles => 'Избришите преузете датотеке';
 
   @override
+  String get cancelDownloadAction => 'Откажите преузимање';
+
+  @override
   String get downloadCancelling => 'Отказивање...';
 
   @override

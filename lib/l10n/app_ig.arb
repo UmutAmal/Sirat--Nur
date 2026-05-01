@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccan",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Kpọọ surah audio",
-  "pauseSurahAudio": "Kwụsị surah ọdịyo"
+  "pauseSurahAudio": "Kwụsị surah ọdịyo",
+  "cancelDownloadAction": "Kagbuo nbudata"
 }

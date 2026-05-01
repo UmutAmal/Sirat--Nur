@@ -793,5 +793,6 @@
   "revelationMeccan": "مكية",
   "revelationMedinan": "مدني",
   "playSurahAudio": "تشغيل صوت السورة",
-  "pauseSurahAudio": "وقفة سورة الصوت"
+  "pauseSurahAudio": "وقفة سورة الصوت",
+  "cancelDownloadAction": "إلغاء التنزيل"
 }

@@ -1244,6 +1244,9 @@ class AppLocalizationsKg extends AppLocalizations {
   String get deleteDownloadedFiles => 'Delete Downloaded Files';
 
   @override
+  String get cancelDownloadAction => 'Katula kubaka';
+
+  @override
   String get downloadCancelling => 'Kukatula...';
 
   @override

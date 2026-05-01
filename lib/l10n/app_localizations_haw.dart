@@ -1244,6 +1244,9 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get deleteDownloadedFiles => 'Holoi i nā faila i hoʻoiho ʻia';
 
   @override
+  String get cancelDownloadAction => 'Hoʻopau i ka hoʻoiho ʻana';
+
+  @override
   String get downloadCancelling => 'Ke kāpae nei...';
 
   @override

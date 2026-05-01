@@ -1241,6 +1241,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get deleteDownloadedFiles => 'Ta bort nedladdade filer';
 
   @override
+  String get cancelDownloadAction => 'Avbryt nedladdning';
+
+  @override
   String get downloadCancelling => 'Avbryter...';
 
   @override

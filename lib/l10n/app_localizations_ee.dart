@@ -1245,6 +1245,9 @@ class AppLocalizationsEe extends AppLocalizations {
       'Tsɔ Faɛl Siwo Woɖe Ðe Internet Dzi la Tutu';
 
   @override
+  String get cancelDownloadAction => 'Te fli ɖe eƒe kɔpi wɔwɔ me';
+
+  @override
   String get downloadCancelling => 'Tete ɖe...';
 
   @override

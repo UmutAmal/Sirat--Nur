@@ -1243,6 +1243,9 @@ class AppLocalizationsSa extends AppLocalizations {
   String get deleteDownloadedFiles => 'डाउनलोड् कृतानि सञ्चिकाः विलोपयन्तु';
 
   @override
+  String get cancelDownloadAction => 'डाउनलोड् रद्दं कुर्वन्तु';
+
+  @override
   String get downloadCancelling => 'रद्दं कुर्वन्...';
 
   @override

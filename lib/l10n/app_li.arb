@@ -793,5 +793,6 @@
   "revelationMeccan": "Mekkaanse",
   "revelationMedinan": "Medinan",
   "playSurahAudio": "Speel sura-audio aaf",
-  "pauseSurahAudio": "Pause surah audio"
+  "pauseSurahAudio": "Pause surah audio",
+  "cancelDownloadAction": "Download annulere"
 }

@@ -793,5 +793,6 @@
   "revelationMeccan": "Meccanagh;",
   "revelationMedinan": "Meanagh",
   "playSurahAudio": "Cleaysh clashtyn surah",
-  "pauseSurahAudio": "Pause clashtyn surah"
+  "pauseSurahAudio": "Pause clashtyn surah",
+  "cancelDownloadAction": "Cur stiagh lusaghey"
 }

@@ -1242,6 +1242,9 @@ class AppLocalizationsIg extends AppLocalizations {
   String get deleteDownloadedFiles => 'Hichapụ faịlụ ebudatara';
 
   @override
+  String get cancelDownloadAction => 'Kagbuo nbudata';
+
+  @override
   String get downloadCancelling => 'Na-akagbu...';
 
   @override

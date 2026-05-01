@@ -1249,6 +1249,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get deleteDownloadedFiles => 'Excluir arquivos baixados';
 
   @override
+  String get cancelDownloadAction => 'Cancelar download';
+
+  @override
   String get downloadCancelling => 'Cancelando...';
 
   @override
