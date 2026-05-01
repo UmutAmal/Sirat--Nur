@@ -171,7 +171,7 @@ L10nDebtReport buildL10nDebtReport({
         missingOrEmptyLocales.add(locale);
       } else if (englishValue is String &&
           _isEnglishFallbackEquivalent(currentValue, englishValue) &&
-          !_isNeutralNonLinguisticValue(englishValue)) {
+          !_isIntentionallyUntranslatedL10nValue(key, englishValue)) {
         sameAsEnglishLocales.add(locale);
       } else if (englishValue is String &&
           !_hasMatchingPlaceholders(currentValue, englishValue)) {
@@ -724,8 +724,22 @@ bool _isEnglishFallbackEquivalent(String value, String source) {
       _englishFallbackComparisonToken(source);
 }
 
+bool _isIntentionallyUntranslatedL10nValue(String key, String value) {
+  return _isNeutralNonLinguisticValue(value) || _isCanonicalProperNounKey(key);
+}
+
 bool _isNeutralNonLinguisticValue(String value) {
   return const {'--'}.contains(value.trim());
+}
+
+bool _isCanonicalProperNounKey(String key) {
+  return const {
+    'duaSourceBukhari',
+    'duaSourceMuslim',
+    'duaSourceAbuDawud',
+    'duaSourceTirmidhi',
+    'duaSourceAhmad',
+  }.contains(key);
 }
 
 String _englishFallbackComparisonToken(String value) {

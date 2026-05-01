@@ -202,6 +202,51 @@ void main() {
       expect(report.format(), contains('No l10n debt found'));
     });
 
+    test('does not count canonical hadith source names as English debt', () {
+      final report = buildL10nDebtReport(
+        keys: [
+          'duaSourceBukhari',
+          'duaSourceMuslim',
+          'duaSourceAbuDawud',
+          'duaSourceTirmidhi',
+          'duaSourceAhmad',
+        ],
+        english: {
+          'duaSourceBukhari': 'Bukhari',
+          'duaSourceMuslim': 'Muslim',
+          'duaSourceAbuDawud': 'Abu Dawud',
+          'duaSourceTirmidhi': 'Tirmidhi',
+          'duaSourceAhmad': 'Ahmad',
+        },
+        localeArbs: {
+          'en': {
+            'duaSourceBukhari': 'Bukhari',
+            'duaSourceMuslim': 'Muslim',
+            'duaSourceAbuDawud': 'Abu Dawud',
+            'duaSourceTirmidhi': 'Tirmidhi',
+            'duaSourceAhmad': 'Ahmad',
+          },
+          'tr': {
+            'duaSourceBukhari': 'Bukhari',
+            'duaSourceMuslim': 'Muslim',
+            'duaSourceAbuDawud': 'Abu Dawud',
+            'duaSourceTirmidhi': 'Tirmidhi',
+            'duaSourceAhmad': 'Ahmad',
+          },
+          'ar': {
+            'duaSourceBukhari': 'Bukhari',
+            'duaSourceMuslim': 'Muslim',
+            'duaSourceAbuDawud': 'Abu Dawud',
+            'duaSourceTirmidhi': 'Tirmidhi',
+            'duaSourceAhmad': 'Ahmad',
+          },
+        },
+      );
+
+      expect(report.sameAsEnglishCount, 0);
+      expect(report.hasDebt, isFalse);
+    });
+
     test('tracks committed low-resource l10n debt reduction', () {
       const keys = [
         'downloadAction',

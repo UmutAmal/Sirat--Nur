@@ -21195,3 +21195,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude proper-name/canonical dini terimleri l10n debt raporundan ayri siniflandirma veya kalan gercek UI same-as-English metinleri icin guvenli batch secimi yap.
+
+## 2026-05-01 TUR-530 - Canonical Hadith Source Names L10n Debt Classification
+
+### MASTER Karari
+- Risk: L10n debt raporu, testlerle bilincli canonical tutulmasi zorunlu hadis kaynak adlarini (`Bukhari`, `Muslim`, `Abu Dawud`, `Tirmidhi`, `Ahmad`) same-as-English borcu gibi sayiyordu. Bu false-positive, sonraki ceviri dongulerinde guvenilir dini kaynak adlarini gereksiz veya yanlis sekilde yerellestirme riski tasiyordu; P1 dini/proper-name raporlama dogrulugu olarak ele alindi.
+- Kanit:
+  - `test/arb_proper_noun_test.dart:27` hadis kaynak anahtarlarinin canonical isimlerini tum locale'lerde korumayi zorunlu kiliyor.
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report prayerRemainingUnavailable duaSourceBukhari duaSourceMuslim duaSourceTirmidhi duaSourceAhmad duaSourceAbuDawud` TUR-529 sonrasi bile `975` same-as-English gosteriyordu; bu 5 hadis kaynak anahtarinin her biri tum non-English locale'lerde bilincli canonical kalmasindan kaynaklaniyordu.
+  - Son durum: `tool/translate_arb_keys.dart:174` same-as-English sayimina girmeden once intentionally untranslated degerleri disliyor; `tool/translate_arb_keys.dart:727` neutral/proper-name classifier, `tool/translate_arb_keys.dart:735` canonical hadis kaynak anahtarlari seti.
+  - Regresyon guard: `test/translate_arb_keys_test.dart:205` `does not count canonical hadith source names as English debt`.
+- Kullanici etkisi: Dini kaynak adlari uygulamada canonical ve guvenilir kalir; l10n borc raporu gercek cevrilebilir UI metinlerine odaklanir ve sahte dini ceviri uretme baskisi azalir.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 -> 5/25.
+- Rollback plani: Bu turdaki `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- L10n debt report classifier, neutral placeholder (`--`) ve canonical hadis kaynak proper-name anahtarlarini "intentionally untranslated" olarak ayirdi.
+- ARB dosyalarina dokunulmadi; hadis kaynak isimleri aynen korundu.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\translate_arb_keys_test.dart --plain-name "does not count canonical hadith source names as English debt" --reporter compact` PASS.
+- Proper-name/source report: `dart run tool\translate_arb_keys.dart --report prayerRemainingUnavailable duaSourceBukhari duaSourceMuslim duaSourceTirmidhi duaSourceAhmad duaSourceAbuDawud` PASS; same-as-English `0`, missing/empty `0`, placeholder mismatch `0`.
+- Critical UI report: 23 gercek UI/l10n anahtarinda same-as-English `775`, missing/empty `0`, placeholder mismatch `0`; bu borc bilincli olarak gorunur kaldi ve proper-name false-positive ile karismadi.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `742/742`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `4098e7ad-235c-4c99-8959-85789b33189e`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Canonical hadis kaynak adlarinin false l10n debt sayilip bozulma riski: `20/25 -> 5/25`.
+- Kalan bilincli risk: 23 gercek UI anahtarinda `775` same-as-English dusuk-kaynak fallback kaldi; sonraki dongude bu kume icinden guvenli, dini anlam uydurmayan tek anahtar/locale batch'i secilmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude 23 gercek UI l10n kumesinden en guvenli batch'i veya runtime/Appium onboarding timing riskini skorla.
