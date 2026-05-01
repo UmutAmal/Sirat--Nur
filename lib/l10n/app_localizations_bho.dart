@@ -368,10 +368,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get pauseSurahAudio => 'सूरह ऑडियो के रोक दिहल जाव';
 
   @override
-  String get revelationMeccan => 'मक्का के ह';
+  String get revelationMeccan => 'मक्का';
 
   @override
-  String get revelationMedinan => 'मदीनान के ह';
+  String get revelationMedinan => 'मदीना';
 
   @override
   String get prayers => 'दुआ कइल जाला';
@@ -453,7 +453,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get specialDayDateMawlidAnNabi => '12 रबी अल-अववाल के बा';
 
   @override
-  String get laylatAlQadr => 'लैलात अल-कदर के ह';
+  String get laylatAlQadr => 'लैलात अल-कदर';
 
   @override
   String get qiblaDirection => 'किबला डायरेक्शन के बा';
@@ -626,7 +626,7 @@ class AppLocalizationsBho extends AppLocalizations {
       'कुरान पढ़ीं, आपन पढ़ाई के ट्रैक करीं, आ इस्लामी सामग्री के खोज करीं';
 
   @override
-  String get dhikrLibrary => 'ढिकर लाइब्रेरी के ह';
+  String get dhikrLibrary => 'ढिकर लाइब्रेरी';
 
   @override
   String get resetCounter => 'काउंटर के रीसेट करीं';
@@ -646,7 +646,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get tapToCount => 'गिनती करे खातिर टैप करीं';
 
   @override
-  String get zikrCompletedMashAllah => 'पूरा हो गइल! मशअल्लाह के ह';
+  String get zikrCompletedMashAllah => 'पूरा हो गइल! मशअल्लाह';
 
   @override
   String get zikrMeaningSubhanAllah => 'अल्लाह हर अपूर्णता से बहुत ऊपर बाड़े।';
@@ -829,7 +829,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get fajrAngle => 'फजर एंगल के बा';
 
   @override
-  String get ishaAngle => 'ईशा एंगल के ह';
+  String get ishaAngle => 'ईशा एंगल';
 
   @override
   String get qiblaCalibration => 'किबला कैलिब्रेशन के बा';
@@ -871,7 +871,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get diagnosticsPrayerProfile => 'प्रार्थना के प्रोफाइल बा';
 
   @override
-  String get diagnosticsPrayerSource => 'प्रार्थना प्राधिकरण के ह';
+  String get diagnosticsPrayerSource => 'प्रार्थना प्राधिकरण';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -929,14 +929,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get diagnosticsQuranDataset => 'कुरान के डाटासेट के बा';
 
   @override
-  String get diagnosticsQuranSurahs => 'कुरान के सूरह के बारे में बतावल गइल बा';
+  String get diagnosticsQuranSurahs => 'कुरान के सूरह सभ';
 
   @override
   String get diagnosticsQuranAyahs => 'कुरान के अयह के बा';
 
   @override
-  String get diagnosticsQuranJuzMetadata =>
-      'कुरान जुज मेटाडाटा के बारे में बतावल गइल बा';
+  String get diagnosticsQuranJuzMetadata => 'कुरान जुज मेटाडाटा';
 
   @override
   String get diagnosticsQuranCloudTablesMissing =>
@@ -1103,8 +1102,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get paywallFeature3Title => 'एक्सक्लूसिव डिजाइन के बा';
 
   @override
-  String get paywallFeature3Desc =>
-      'प्रीमियम थीम & फॉन्ट के बारे में बतावल गइल बा';
+  String get paywallFeature3Desc => 'प्रीमियम थीम अउर फॉन्ट';
 
   @override
   String get paywallFeature4Title => 'विज्ञापन मुक्त बा';
@@ -1146,8 +1144,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get zakatTotalAmount => 'कुल राशि के बा';
 
   @override
-  String get zakatInventoryValue =>
-      'इन्वेंट्री के मूल्य के बारे में बतावल गइल बा';
+  String get zakatInventoryValue => 'इन्वेंट्री के मूल्य';
 
   @override
   String get zakatDebts => 'कर्जा के बा';
@@ -1179,7 +1176,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get zakatCashZakat => 'नकद जकात के बा';
 
   @override
-  String get zakatBusinessZakat => 'बिजनेस जकात के बारे में बतावल गइल बा';
+  String get zakatBusinessZakat => 'बिजनेस जकात';
 
   @override
   String get zakatInvestmentZakat => 'निवेश के जकात के बा';
@@ -1372,7 +1369,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get nearbyMosques => 'पास के मस्जिद बाड़ी सऽ';
 
   @override
-  String get islamicSchools => 'इस्लामिक स्कूलन के बारे में बतावल गइल बा';
+  String get islamicSchools => 'इस्लामिक स्कूलन';
 
   @override
   String placesFoundCount(String count) {
@@ -1418,7 +1415,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get unknownPlaceName => 'अज्ञात नाम के बा';
 
   @override
-  String get islamicPlaceFallback => 'इस्लामी जगह के बारे में बतावल गइल बा';
+  String get islamicPlaceFallback => 'इस्लामी जगह';
 
   @override
   String get asmaMeaning1 => 'द बेनिफिसेंट के ह';

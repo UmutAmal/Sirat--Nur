@@ -20825,3 +20825,36 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Bhojpuri ucuncu cluster'i skorla: prayer/zikr/zakat/places kisa label'lari (`laylatAlQadr`, `dhikrLibrary`, `zikrCompletedMashAllah`, `ishaAngle`, `diagnosticsPrayerSource`, `diagnosticsQuranSurahs`, `diagnosticsQuranJuzMetadata`, `paywallFeature3Desc`, `zakatInventoryValue`, `zakatBusinessZakat`, `islamicSchools`, `islamicPlaceFallback`, `revelationMeccan`, `revelationMedinan`).
+
+## 2026-05-01 TUR-519 - Bhojpuri Prayer Zikr Zakat Places Label Debris Cleanup
+
+### MASTER Karari
+- Risk: Bhojpuri prayer/zikr/zakat/places/revelation kisa label'larinda `के ह` ve `के बारे में बतावल गइल बा` artigi devam ediyordu. Bu alanlar dini navigasyon ve kullaniciya gorunen durum etiketleri oldugu icin, Asma anlamlari gibi hassas iceriklere dokunmadan sadece kisa UI label borcu ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:215` `लैलात अल-कदर के ह`, `lib/l10n/app_bho.arb:287` `ढिकर लाइब्रेरी के ह`, `lib/l10n/app_bho.arb:293` `पूरा हो गइल! मशअल्लाह के ह`, `lib/l10n/app_bho.arb:347` `ईशा एंगल के ह`, `lib/l10n/app_bho.arb:360` `प्रार्थना प्राधिकरण के ह`, `lib/l10n/app_bho.arb:401` `कुरान के सूरह के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:403` `कुरान जुज मेटाडाटा के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:474` `प्रीमियम थीम & फॉन्ट के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:488` `इन्वेंट्री के मूल्य के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:508` `बिजनेस जकात के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:640` `इस्लामिक स्कूलन के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:673` `इस्लामी जगह के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:793` `मक्का के ह`, `lib/l10n/app_bho.arb:794` `मदीनान के ह`.
+  - Son durum: `lib/l10n/app_bho.arb:215` `लैलात अल-कदर`, `lib/l10n/app_bho.arb:287` `ढिकर लाइब्रेरी`, `lib/l10n/app_bho.arb:293` `पूरा हो गइल! मशअल्लाह`, `lib/l10n/app_bho.arb:347` `ईशा एंगल`, `lib/l10n/app_bho.arb:360` `प्रार्थना प्राधिकरण`, `lib/l10n/app_bho.arb:401` `कुरान के सूरह सभ`, `lib/l10n/app_bho.arb:403` `कुरान जुज मेटाडाटा`, `lib/l10n/app_bho.arb:474` `प्रीमियम थीम अउर फॉन्ट`, `lib/l10n/app_bho.arb:488` `इन्वेंट्री के मूल्य`, `lib/l10n/app_bho.arb:508` `बिजनेस जकात`, `lib/l10n/app_bho.arb:640` `इस्लामिक स्कूलन`, `lib/l10n/app_bho.arb:673` `इस्लामी जगह`, `lib/l10n/app_bho.arb:793` `मक्का`, `lib/l10n/app_bho.arb:794` `मदीना`.
+  - `test/arb_coverage_test.dart:231` yeni guard bu 14 Bhojpuri label'inda `के बारे में बतावल गइल बा` ve satir sonu ` के ह` debris'ini geri getirmeyi engeller.
+- Kullanici etkisi: Bhojpuri kullanicilar prayer, zikr, zakat, places ve revelation label'larinda aciklama kalintisi yerine kisa UI label gorur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 14 Bhojpuri prayer/zikr/zakat/places/revelation label'i kisa UI copy'ye indirildi.
+- `flutter gen-l10n` ile generated Bhojpuri localization dosyasi ARB ile senkronlandi.
+- `zikrMeaningAlhamdulillah` ve Asma anlamlari gibi cumle/icerik anlamlari bu turda bilerek degistirilmedi; onlar icin kaynak dogrulama ve daha dar kapsam gerekir.
+
+### TESTER Degisikligi
+- Targeted ARB/generated test: `flutter test test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `11/11`.
+- Translation report: `dart run tool\translate_arb_keys.dart laylatAlQadr dhikrLibrary zikrCompletedMashAllah ishaAngle diagnosticsPrayerSource diagnosticsQuranSurahs diagnosticsQuranJuzMetadata paywallFeature3Desc zakatInventoryValue zakatBusinessZakat islamicSchools islamicPlaceFallback revelationMeccan revelationMedinan --report` PASS; same-as-English `994`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `731/731`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `5699dba4-a410-4dfd-9b31-1e0b8d9ec897`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94812042`.
+
+### Risk Degisimi
+- Bhojpuri prayer/zikr/zakat/places label aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho` icinde Asma-ul-Husna meaning degerlerinde makine ceviri/debris izleri var (`asmaMeaning*`). Bunlar dini isim anlamlari oldugu icin sadece guvenilir kaynak/kanonik anlam politikasiyla, ayri ve cok dikkatli turda ele alinmali.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Bhojpuri Asma meaning cluster'ini dogrudan degistirmeden once kaynak/dataset politikasini ve mevcut Asma seed dogrulama testlerini incele. Dini anlamlar icin uydurma ceviri yapma; gerekirse EN fallback veya verified source mapping kullan.

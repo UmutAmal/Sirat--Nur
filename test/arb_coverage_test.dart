@@ -226,6 +226,44 @@ void main() {
         }
       },
     );
+
+    test(
+      'Bhojpuri prayer zikr zakat and places labels do not keep explanatory debris',
+      () {
+        final arb = _readArb('lib/l10n/app_bho.arb');
+        const expected = {
+          'laylatAlQadr': 'लैलात अल-कदर',
+          'dhikrLibrary': 'ढिकर लाइब्रेरी',
+          'zikrCompletedMashAllah': 'पूरा हो गइल! मशअल्लाह',
+          'ishaAngle': 'ईशा एंगल',
+          'diagnosticsPrayerSource': 'प्रार्थना प्राधिकरण',
+          'diagnosticsQuranSurahs': 'कुरान के सूरह सभ',
+          'diagnosticsQuranJuzMetadata': 'कुरान जुज मेटाडाटा',
+          'paywallFeature3Desc': 'प्रीमियम थीम अउर फॉन्ट',
+          'zakatInventoryValue': 'इन्वेंट्री के मूल्य',
+          'zakatBusinessZakat': 'बिजनेस जकात',
+          'islamicSchools': 'इस्लामिक स्कूलन',
+          'islamicPlaceFallback': 'इस्लामी जगह',
+          'revelationMeccan': 'मक्का',
+          'revelationMedinan': 'मदीना',
+        };
+        final debris = RegExp(r'के बारे में बतावल गइल बा| के ह$');
+
+        for (final entry in expected.entries) {
+          final value = arb[entry.key] as String;
+          expect(
+            value,
+            entry.value,
+            reason: 'app_bho.arb must keep concise ${entry.key} copy',
+          );
+          expect(
+            value,
+            isNot(contains(debris)),
+            reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+          );
+        }
+      },
+    );
   });
 }
 
