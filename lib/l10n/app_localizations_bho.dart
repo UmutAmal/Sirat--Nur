@@ -323,10 +323,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get hadith => 'हदीस के बा';
 
   @override
-  String get hadithCollection => 'हदीस संग्रह के बारे में बतावल गइल बा';
+  String get hadithCollection => 'हदीस संग्रह';
 
   @override
-  String get hadithBooks => 'हदीस के किताबन के बारे में बतावल गइल बा';
+  String get hadithBooks => 'हदीस के किताबन';
 
   @override
   String get searchHadith => 'हदीस के खोज करीं';
@@ -529,7 +529,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get version => 'संस्करण के बा';
 
   @override
-  String get privacyPolicy => 'गोपनीयता नीति के बारे में बतावल गइल बा';
+  String get privacyPolicy => 'गोपनीयता नीति';
 
   @override
   String get termsOfService => 'सेवा के शर्त बा';
@@ -695,7 +695,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get sunnahAndOthers => 'सुन्नत अउर अन्य लोग';
 
   @override
-  String get spiritualGrowth => 'आध्यात्मिक विकास के बारे में बतावल गइल बा';
+  String get spiritualGrowth => 'आध्यात्मिक विकास';
 
   @override
   String get mandatoryDuty => 'अनिवार्य कर्तव्य के बा';
@@ -750,7 +750,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get freeStorage => 'आंतरिक डिवाइस भंडारण के मुक्त कर दीं।';
 
   @override
-  String get quranIntegrity => 'कुरान के अखंडता के बारे में बतावल गइल बा';
+  String get quranIntegrity => 'कुरान के अखंडता';
 
   @override
   String get checkQuranDb => 'कुरान डाटाबेस के जांच करीं';
@@ -905,7 +905,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get diagnosticsQuranAudioAssets => 'कुरान के ऑडियो संपत्ति बा';
 
   @override
-  String get diagnosticsAudioAssets => 'ऑडियो एसेट्स के बारे में बतावल गइल बा';
+  String get diagnosticsAudioAssets => 'ऑडियो एसेट्स';
 
   @override
   String diagnosticsFilesCount(String count) {
@@ -918,8 +918,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsLocalizationLocales =>
-      'स्थानीयकरण लोकेल के बारे में बतावल गइल बा';
+  String get diagnosticsLocalizationLocales => 'स्थानीयकरण लोकेल';
 
   @override
   String diagnosticsSupportedCount(String count) {
@@ -985,7 +984,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get todaysIbadah => 'आज के इबादा के बा';
 
   @override
-  String get quickAccess => 'त्वरित पहुँच के बारे में बतावल गइल बा';
+  String get quickAccess => 'त्वरित पहुँच';
 
   @override
   String get assistant => 'सहायक';
@@ -997,7 +996,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get library => 'पुस्तकालय';
 
   @override
-  String get analytics => 'विश्लेषणात्मकता के बारे में बतावल गइल बा';
+  String get analytics => 'विश्लेषण';
 
   @override
   String get dailyDuas => 'रोजाना दुआस के बा';
@@ -1057,13 +1056,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'इस्लामी शिक्षा के बारे में बतावल गइल बा';
+  String get islamicEducation => 'इस्लामी शिक्षा';
 
   @override
-  String get sukunAudioTitle => 'सुकुन साउंडस्केप के बारे में बतावल गइल बा';
+  String get sukunAudioTitle => 'सुकुन साउंडस्केप';
 
   @override
-  String get hadithCollections => 'हदीस संग्रह के बारे में बतावल गइल बा';
+  String get hadithCollections => 'हदीस संग्रह';
 
   @override
   String get hadithSourcePending => 'सत्यापन स्रोत लंबित बा';

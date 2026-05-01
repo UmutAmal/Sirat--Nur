@@ -20792,3 +20792,36 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Bhojpuri ikinci cluster'i skorla: hadith/library/diagnostics/quick-access label'lari (`hadithCollection`, `hadithBooks`, `privacyPolicy`, `spiritualGrowth`, `quranIntegrity`, `diagnosticsAudioAssets`, `diagnosticsLocalizationLocales`, `quickAccess`, `analytics`, `islamicEducation`, `sukunAudioTitle`, `hadithCollections`).
+
+## 2026-05-01 TUR-518 - Bhojpuri Library Diagnostics Label Debris Cleanup
+
+### MASTER Karari
+- Risk: Bhojpuri library, diagnostics, quick access ve education yuzeylerinde 12 label kisa UI metni yerine `के बारे में बतावल गइल बा` aciklama kalintisi tasiyordu. Bu alanlar ana ekran/diagnostics ve icerik navigasyonunda gorunur oldugu icin P1 l10n kalite borcu olarak ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:160` `हदीस संग्रह के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:161` `हदीस के किताबन के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:246` `गोपनीयता नीति के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:309` `आध्यात्मिक विकास के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:326` `कुरान के अखंडता के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:374` `ऑडियो एसेट्स के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:391` `स्थानीयकरण लोकेल के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:430` `त्वरित पहुँच के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:434` `विश्लेषणात्मकता के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:460` `इस्लामी शिक्षा के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:461` `सुकुन साउंडस्केप के बारे में बतावल गइल बा`, `lib/l10n/app_bho.arb:462` `हदीस संग्रह के बारे में बतावल गइल बा`.
+  - Son durum: `lib/l10n/app_bho.arb:160` `हदीस संग्रह`, `lib/l10n/app_bho.arb:161` `हदीस के किताबन`, `lib/l10n/app_bho.arb:246` `गोपनीयता नीति`, `lib/l10n/app_bho.arb:309` `आध्यात्मिक विकास`, `lib/l10n/app_bho.arb:326` `कुरान के अखंडता`, `lib/l10n/app_bho.arb:374` `ऑडियो एसेट्स`, `lib/l10n/app_bho.arb:391` `स्थानीयकरण लोकेल`, `lib/l10n/app_bho.arb:430` `त्वरित पहुँच`, `lib/l10n/app_bho.arb:434` `विश्लेषण`, `lib/l10n/app_bho.arb:460` `इस्लामी शिक्षा`, `lib/l10n/app_bho.arb:461` `सुकुन साउंडस्केप`, `lib/l10n/app_bho.arb:462` `हदीस संग्रह`.
+  - `test/arb_coverage_test.dart:195` yeni guard bu 12 Bhojpuri label'inda `के बारे में बतावल गइल बा` ve satir sonu ` के ह` debris'ini geri getirmeyi engeller.
+- Kullanici etkisi: Bhojpuri kullanicilar hadith, diagnostics, analytics, Islamic education ve Sukun yuzeylerinde aciklama cumlesi yerine kisa ve okunabilir label gorur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 12 Bhojpuri library/diagnostics label'i kisa UI copy'ye indirildi.
+- `flutter gen-l10n` ile generated Bhojpuri localization dosyasi ARB ile senkronlandi.
+- Scope Asma anlamlari, zakat ve places label'lari disinda tutuldu; bunlar dini/semantik hassasiyet nedeniyle sonraki minimal turda ayrica ele alinacak.
+
+### TESTER Degisikligi
+- Targeted ARB/generated test: `flutter test test\arb_coverage_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `10/10`.
+- Translation report: `dart run tool\translate_arb_keys.dart hadithCollection hadithBooks privacyPolicy spiritualGrowth quranIntegrity diagnosticsAudioAssets diagnosticsLocalizationLocales quickAccess analytics islamicEducation sukunAudioTitle hadithCollections --report` PASS; same-as-English `766`, missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `730/730`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `dab6d970-28b6-411d-8de7-8d84e39cd8f8`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94812042`.
+
+### Risk Degisimi
+- Bhojpuri library/diagnostics aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho` icinde prayer/zikr/zakat/places/Asma/revelation label ve anlamlarinda baska `के बारे में बतावल गइल बा`/`के ह` kaliplari devam ediyor. Dini icerik anlamlari icin sahte ceviri yapmadan, daha dar ve kanitli cluster'lar halinde devam edilmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Bhojpuri ucuncu cluster'i skorla: prayer/zikr/zakat/places kisa label'lari (`laylatAlQadr`, `dhikrLibrary`, `zikrCompletedMashAllah`, `ishaAngle`, `diagnosticsPrayerSource`, `diagnosticsQuranSurahs`, `diagnosticsQuranJuzMetadata`, `paywallFeature3Desc`, `zakatInventoryValue`, `zakatBusinessZakat`, `islamicSchools`, `islamicPlaceFallback`, `revelationMeccan`, `revelationMedinan`).

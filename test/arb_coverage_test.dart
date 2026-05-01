@@ -190,6 +190,42 @@ void main() {
         );
       }
     });
+
+    test(
+      'Bhojpuri library and diagnostics labels do not keep explanatory debris',
+      () {
+        final arb = _readArb('lib/l10n/app_bho.arb');
+        const expected = {
+          'hadithCollection': 'हदीस संग्रह',
+          'hadithBooks': 'हदीस के किताबन',
+          'privacyPolicy': 'गोपनीयता नीति',
+          'spiritualGrowth': 'आध्यात्मिक विकास',
+          'quranIntegrity': 'कुरान के अखंडता',
+          'diagnosticsAudioAssets': 'ऑडियो एसेट्स',
+          'diagnosticsLocalizationLocales': 'स्थानीयकरण लोकेल',
+          'quickAccess': 'त्वरित पहुँच',
+          'analytics': 'विश्लेषण',
+          'islamicEducation': 'इस्लामी शिक्षा',
+          'sukunAudioTitle': 'सुकुन साउंडस्केप',
+          'hadithCollections': 'हदीस संग्रह',
+        };
+        final debris = RegExp(r'के बारे में बतावल गइल बा| के ह$');
+
+        for (final entry in expected.entries) {
+          final value = arb[entry.key] as String;
+          expect(
+            value,
+            entry.value,
+            reason: 'app_bho.arb must keep concise ${entry.key} copy',
+          );
+          expect(
+            value,
+            isNot(contains(debris)),
+            reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+          );
+        }
+      },
+    );
   });
 }
 
