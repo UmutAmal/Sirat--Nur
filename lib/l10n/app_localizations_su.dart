@@ -270,7 +270,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikir poean';
 
   @override
   String get duaMeaning1 =>
@@ -396,10 +396,10 @@ class AppLocalizationsSu extends AppLocalizations {
   String get weeklyProgress => 'Kamajuan mingguan';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Kamajuan Bulanan';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Statistik';
 
   @override
   String get hijriCalendar => 'Kalender Hijriah';
@@ -671,16 +671,16 @@ class AppLocalizationsSu extends AppLocalizations {
       'Teu aya kakuatan sareng kakuatan iwal ti Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Daptar pariksa poean';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Hutang)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Reset Data Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Reset Hutang Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -692,25 +692,25 @@ class AppLocalizationsSu extends AppLocalizations {
   String get dailyProgress => 'Kamajuan poean';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Sholat Wajib';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Sejenna';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Tumuwuh Spiritual';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Kawajiban Wajib';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Sholat total';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Hutang Sholat';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Hutang Puasa';
 
   @override
   String get reset => 'Reset';

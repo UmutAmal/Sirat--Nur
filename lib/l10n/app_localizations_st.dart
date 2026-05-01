@@ -271,7 +271,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikr ea letsatsi le letsatsi';
 
   @override
   String get duaMeaning1 =>
@@ -397,10 +397,10 @@ class AppLocalizationsSt extends AppLocalizations {
   String get weeklyProgress => 'Tsoelo-pele ea Beke';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Khatelo-pele ea Khoeli';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Lipalo-palo';
 
   @override
   String get hijriCalendar => 'Khalendara ea Hijri';
@@ -673,16 +673,16 @@ class AppLocalizationsSt extends AppLocalizations {
       'Ha ho matla le matla haese ka Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Lethathamo la Letsatsi le Letsatsi';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Mokoloto)';
 
   @override
   String get resetQazaData => 'Reset Qaza Data';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Seta botjha sekoloto sa Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -694,25 +694,25 @@ class AppLocalizationsSt extends AppLocalizations {
   String get dailyProgress => 'Tsoelo-pele ea Letsatsi le Letsatsi';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Lithapelo tse Tlamang';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah le ba bang';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Khōlo ea Moea';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Mosebetsi o Tlamang';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Kakaretso ea Lithapelo';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Sekoloto sa Thapelo';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Sekoloto sa ho itima lijo';
 
   @override
   String get reset => 'Reset';

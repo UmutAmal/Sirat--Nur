@@ -672,16 +672,16 @@ class AppLocalizationsCy extends AppLocalizations {
       'Nid oes unrhyw bŵer a dim cryfder ac eithrio trwy Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Rhestr Wirio Ddyddiol';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Dyled)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Ailosod Data Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Ailosod Dyled Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -693,25 +693,25 @@ class AppLocalizationsCy extends AppLocalizations {
   String get dailyProgress => 'Cynnydd Dyddiol';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Gweddiau Gorfodol';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah ac Eraill';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Twf Ysbrydol';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Dyletswydd Gorfodol';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Gweddiau Cyflawn';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Dyled Gweddi';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Dyled Ymprydio';
 
   @override
   String get reset => 'Reset';

@@ -269,7 +269,7 @@ class AppLocalizationsBa extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Көндәлек зикр';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsBa extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Айлыҡ алға китеш';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Статистика';
 
   @override
   String get hijriCalendar => 'Hijri Calendar';
@@ -669,16 +669,16 @@ class AppLocalizationsBa extends AppLocalizations {
       'There is no power and no strength except through Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Көндәлек тикшереү исемлеге';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Ҡаза (Бурыс)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Ҡаза мәғлүмәттәрен ҡайтанан тергеҙеү';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Сбросить Ҡаза бурыс?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsBa extends AppLocalizations {
   String get dailyProgress => 'Daily Progress';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Мотлаҡ намаҙҙар';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Сөннәт һәм башҡалар';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Рухи үҫеш .';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Мотлаҡ бурыс';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Дөйөм доғалар';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Намаҙ бурысы';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Ураҙа бурысы .';
 
   @override
   String get reset => 'Reset';

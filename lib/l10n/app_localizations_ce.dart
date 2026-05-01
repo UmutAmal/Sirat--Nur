@@ -395,10 +395,10 @@ class AppLocalizationsCe extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Баттахь кхиамаш';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Статистика';
 
   @override
   String get hijriCalendar => 'Hijri Calendar';
@@ -668,16 +668,16 @@ class AppLocalizationsCe extends AppLocalizations {
       'There is no power and no strength except through Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Денна лерина тептар';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Къаза (Декхар) .';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Сбросить Къаза Дата';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Сбросить Къаза Декхар?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -689,25 +689,25 @@ class AppLocalizationsCe extends AppLocalizations {
   String get dailyProgress => 'Daily Progress';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Фарз ламазаш .';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Суннат & кхидерш';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Духовни кхиар .';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'ТӀедиллина декхар';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Дерриге а ламазаш';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Ламазан декхар .';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Марха декхар .';
 
   @override
   String get reset => 'Reset';

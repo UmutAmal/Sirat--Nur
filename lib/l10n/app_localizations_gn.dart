@@ -672,16 +672,16 @@ class AppLocalizationsGn extends AppLocalizations {
       'Ndaipóri pu’aka ha mbarete ndaha’éiramo Allah rupive.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Lista de comprobación ára ha ára';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Deuda) rehegua .';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Reset Qaza Datos rehegua';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => '¿Reset Qaza Deuda rehegua?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -693,25 +693,25 @@ class AppLocalizationsGn extends AppLocalizations {
   String get dailyProgress => 'Progreso ára ha ára';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Ñembo’e Obligatorio rehegua';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Ambuekuéra';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Kakuaa Espiritual rehegua';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Deber Obligatorio rehegua';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Ñembo’e Total rehegua';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Ñembo’e Deuda rehegua';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Deuda de Ayuno rehegua';
 
   @override
   String get reset => 'Reset';

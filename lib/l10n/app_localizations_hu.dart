@@ -271,7 +271,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Napi Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -397,10 +397,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get weeklyProgress => 'Heti haladás';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Havi fejlődés';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Statisztika';
 
   @override
   String get hijriCalendar => 'Hijri naptár';
@@ -670,16 +670,16 @@ class AppLocalizationsHu extends AppLocalizations {
       'Nincs hatalom és nincs erő, csak Allah által.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Napi ellenőrzőlista';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (adósság)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Állítsa vissza a Qaza adatokat';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Visszaállítja a Qaza adósságát?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsHu extends AppLocalizations {
   String get dailyProgress => 'Napi fejlődés';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Kötelező imák';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah és mások';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Szellemi növekedés';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Kötelező kötelesség';
 
   @override
   String get totalPrayers => 'Total Prayers';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Imaadósság';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Böjt adósság';
 
   @override
   String get reset => 'Reset';

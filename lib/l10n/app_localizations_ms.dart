@@ -670,16 +670,16 @@ class AppLocalizationsMs extends AppLocalizations {
       'Tiada daya dan kekuatan melainkan dengan pertolongan Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Senarai Semak Harian';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Hutang)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Tetapkan Semula Data Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Tetapkan semula Hutang Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsMs extends AppLocalizations {
   String get dailyProgress => 'Kemajuan Harian';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Solat Wajib';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Lain-lain';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Pertumbuhan Rohani';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Kewajipan Wajib';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Jumlah Doa';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Hutang Solat';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Hutang Puasa';
 
   @override
   String get reset => 'Reset';

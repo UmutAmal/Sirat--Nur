@@ -670,16 +670,16 @@ class AppLocalizationsKa extends AppLocalizations {
       'არ არსებობს ძალა და ძალა, გარდა ალლაჰის მეშვეობით.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'ყოველდღიური საკონტროლო სია';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'ყაზა (ვალი)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'ყაზას მონაცემების გადატვირთვა';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'ყაზას დავალიანების გადაყენება?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsKa extends AppLocalizations {
   String get dailyProgress => 'ყოველდღიური პროგრესი';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'სავალდებულო ლოცვები';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'სუნა და სხვები';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'სულიერი ზრდა';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'სავალდებულო მოვალეობა';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'სულ ლოცვები';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'ლოცვის ვალი';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'მარხვის ვალი';
 
   @override
   String get reset => 'Reset';

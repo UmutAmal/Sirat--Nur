@@ -674,16 +674,16 @@ class AppLocalizationsDv extends AppLocalizations {
       'الله ގެ ޙަޟްރަތުން މެނުވީ އެއްވެސް ބާރެއް އަދި ބާރެއް ނެތެވެ.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'ދުވަހުން ދުވަހަށް ޗެކްލިސްޓް';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'ޤާޒާ (ދަރަނި)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'ޤާޒާ ޑޭޓާ ރީސެޓްކުރުން';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'ޤާޒާ ދަރަނި ރީސެޓް ކުރުން؟';
 
   @override
   String get rawatib => 'Rawatib';
@@ -695,25 +695,25 @@ class AppLocalizationsDv extends AppLocalizations {
   String get dailyProgress => 'ދުވަހުން ދުވަހަށް ކުރިއެރުން';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'ލާޒިމު ނަމާދުތައް';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'ސުންނަތް އެންޑް އެހެނިހެން';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'ރޫޙާނީ ކުރިއެރުން';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'ކޮންމެހެން ޑިއުޓީ';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'ޖުމްލަ ދުޢާތައް';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'ނަމާދު ދަރަނި';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'ރޯދަ ދަރަނި';
 
   @override
   String get reset => 'Reset';

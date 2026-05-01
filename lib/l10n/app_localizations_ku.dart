@@ -269,7 +269,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Rojane Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Pêşveçûna mehane';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Jimare';
 
   @override
   String get hijriCalendar => 'Salnameya Hicrî';
@@ -668,16 +668,16 @@ class AppLocalizationsKu extends AppLocalizations {
       'Ji Xwedê pê ve tu hêz û hêz tune ye.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Lîsteya kontrolê ya rojane';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Deyn)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Daneyên Qazayê vegerînin';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Deynê Qaza ji nû ve bike?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -689,25 +689,25 @@ class AppLocalizationsKu extends AppLocalizations {
   String get dailyProgress => 'Pêşveçûna rojane';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Nimêjên Mecbûrî';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnet & Yên din';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Mezinbûna Ruhanî';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Erka mecbûrî';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Tevahiya Duayan';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Deynê Nimêjê';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Deynê Rojiyê';
 
   @override
   String get reset => 'Reset';

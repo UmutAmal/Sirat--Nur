@@ -663,16 +663,16 @@ class AppLocalizationsAm extends AppLocalizations {
       'በአላህ ካልሆነ በስተቀር ምንም ሃይል እና ጥንካሬ የለም።';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'ዕለታዊ ዝርዝር';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'ቃዛ (ዕዳ)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'የቃዛ ውሂብን ዳግም አስጀምር';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'የቃዛ ዕዳ ዳግም ይጀመር?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -684,25 +684,25 @@ class AppLocalizationsAm extends AppLocalizations {
   String get dailyProgress => 'ዕለታዊ እድገት';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'አስገዳጅ ጸሎቶች';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'ሱና እና ሌሎችም።';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'መንፈሳዊ እድገት';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'የግዴታ ግዴታ';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'ጠቅላላ ጸሎቶች';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'የጸሎት ዕዳ';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'የጾም ዕዳ';
 
   @override
   String get reset => 'Reset';

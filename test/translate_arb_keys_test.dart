@@ -1506,6 +1506,55 @@ void main() {
       }
     });
 
+    test('tracks ibadah and qaza dashboard l10n debt reduction', () {
+      const keys = [
+        'fastingDebt',
+        'dailyChecklist',
+        'mandatoryDuty',
+        'mandatoryPrayers',
+        'prayerDebt',
+        'qazaDebt',
+        'resetQazaData',
+        'resetQazaDebtQuestion',
+        'sunnahAndOthers',
+        'totalPrayers',
+        'spiritualGrowth',
+        'monthlyProgress',
+        'statistics',
+        'dailyZikr',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(435));
+      for (final locale in ['aa', 'am', 'ar', 'bo', 'ff', 'ur', 'zh_CN']) {
+        for (final key in keys) {
+          expect(
+            localeArbs[locale]![key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+        }
+      }
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',

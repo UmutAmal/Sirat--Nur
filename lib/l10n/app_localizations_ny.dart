@@ -672,16 +672,16 @@ class AppLocalizationsNy extends AppLocalizations {
       'Palibe mphamvu ndi mphamvu koma kudzera mwa Mulungu.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Mndandanda watsiku ndi tsiku';
 
   @override
   String get qazaDebt => 'Qaza (Debt)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Bwezerani Qaza Data';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Kodi mungakonzenso Ngongole ya Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -693,25 +693,25 @@ class AppLocalizationsNy extends AppLocalizations {
   String get dailyProgress => 'Kupita Kwatsiku ndi Tsiku';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Mapemphero Okakamiza';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah ndi zina';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Kukula Mwauzimu';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Ntchito Yovomerezeka';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Mapemphero Onse';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Ngongole ya Pemphero';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Ngongole Yosala';
 
   @override
   String get reset => 'Reset';

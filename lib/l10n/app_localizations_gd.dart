@@ -673,16 +673,16 @@ class AppLocalizationsGd extends AppLocalizations {
       'Chan eil cumhachd no neart ann ach tro Dhia.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Liosta-sgrùdaidh làitheil';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (fiachan)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Ath-shuidheachadh Qaza Data';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Ath-shuidhich fiachan Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -694,25 +694,25 @@ class AppLocalizationsGd extends AppLocalizations {
   String get dailyProgress => 'Adhartas Làitheil';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Ùrnaighean Riatanach';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah agus feadhainn eile';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Fàs Spioradail';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Dleasdanas Riatanach';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Ùrnaighean iomlan';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Fiach Urnuigh';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Fiachan Fastaidh';
 
   @override
   String get reset => 'Reset';

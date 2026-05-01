@@ -269,7 +269,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'ប្រចាំថ្ងៃ Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get weeklyProgress => 'វឌ្ឍនភាពប្រចាំសប្តាហ៍';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'វឌ្ឍនភាពប្រចាំខែ';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'ស្ថិតិ';
 
   @override
   String get hijriCalendar => 'ប្រតិទិន Hijri';
@@ -670,16 +670,16 @@ class AppLocalizationsKm extends AppLocalizations {
       'គ្មានអំណាច និងគ្មានកម្លាំងទេ លើកលែងតែតាមរយៈអល់ឡោះ។';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'បញ្ជីត្រួតពិនិត្យប្រចាំថ្ងៃ';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'កាហ្សា (បំណុល)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'កំណត់ទិន្នន័យ Qaza ឡើងវិញ';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'កំណត់បំណុល Qaza ឡើងវិញ?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsKm extends AppLocalizations {
   String get dailyProgress => 'វឌ្ឍនភាពប្រចាំថ្ងៃ';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'ការអធិស្ឋានជាកាតព្វកិច្ច';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah និងអ្នកដទៃ';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'ការលូតលាស់ខាងវិញ្ញាណ';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'កាតព្វកិច្ចជាកាតព្វកិច្ច';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'ការអធិស្ឋានសរុប';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'បំណុលការអធិស្ឋាន';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'បំណុលលឿន';
 
   @override
   String get reset => 'Reset';

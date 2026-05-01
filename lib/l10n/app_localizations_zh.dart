@@ -653,16 +653,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get zikrMeaningLaHawlaWaLaQuwwata => '除了安拉之外，没有任何力量和力量。';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => '每日检查清单';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => '卡扎（债务）';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => '重置Qaza数据';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => '重置卡扎债务？';
 
   @override
   String get rawatib => 'Rawatib';
@@ -674,25 +674,25 @@ class AppLocalizationsZh extends AppLocalizations {
   String get dailyProgress => '每日进步';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => '强制性祈祷';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => '圣行及其他';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => '心灵成长';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => '强制义务';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => '总祈祷';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => '祷告债';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => '禁食债务';
 
   @override
   String get reset => 'Reset';
@@ -2329,16 +2329,16 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get zikrMeaningLaHawlaWaLaQuwwata => '除了安拉之外，没有任何力量和力量。';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => '每日检查清单';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => '卡扎（债务）';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => '重置Qaza数据';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => '重置卡扎债务？';
 
   @override
   String get rawatib => 'Rawatib';
@@ -2350,25 +2350,25 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get dailyProgress => '每日进步';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => '强制性祈祷';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => '圣行及其他';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => '心灵成长';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => '强制义务';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => '总祈祷';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => '祷告债';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => '禁食债务';
 
   @override
   String get reset => 'Reset';
@@ -4005,16 +4005,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get zikrMeaningLaHawlaWaLaQuwwata => '除了安拉之外，沒有任何力量和力量。';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => '每日檢查清單';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => '卡扎（債務）';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => '重置Qaza數據';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => '重置卡扎債務？';
 
   @override
   String get rawatib => 'Rawatib';
@@ -4026,25 +4026,25 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get dailyProgress => '每日進步';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => '強制性祈禱';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => '聖行及其他';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => '心靈成長';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => '強制義務';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => '總祈禱';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => '禱告債';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => '禁食債務';
 
   @override
   String get reset => 'Reset';

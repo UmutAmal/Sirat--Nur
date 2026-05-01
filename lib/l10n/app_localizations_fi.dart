@@ -670,16 +670,16 @@ class AppLocalizationsFi extends AppLocalizations {
       'Ei ole voimaa eikä voimaa muuten kuin Allahin kautta.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Päivittäinen tarkistuslista';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (velka)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Nollaa Qaza-tiedot';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Nollataanko Qazan velka?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsFi extends AppLocalizations {
   String get dailyProgress => 'Päivittäinen edistyminen';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Pakolliset rukoukset';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunna ja muut';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Henkinen kasvu';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Pakollinen velvollisuus';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Yhteensä rukouksia';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Rukousvelka';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Paastovelka';
 
   @override
   String get reset => 'Reset';

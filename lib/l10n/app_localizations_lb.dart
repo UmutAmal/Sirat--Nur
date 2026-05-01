@@ -269,7 +269,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Deeglech Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsLb extends AppLocalizations {
   String get weeklyProgress => 'Wochemaart Fortschrëtt';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Mount Fortschrëtt';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Statistiken';
 
   @override
   String get hijriCalendar => 'Hijri Kalenner';
@@ -671,16 +671,16 @@ class AppLocalizationsLb extends AppLocalizations {
       'Et gëtt keng Kraaft a keng Kraaft ausser duerch Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Deeglech Checkliste';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Schold)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qaza Daten zrécksetzen';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Qaza Schold zrécksetzen?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -692,25 +692,25 @@ class AppLocalizationsLb extends AppLocalizations {
   String get dailyProgress => 'Deeglech Fortschrëtt';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Obligatoresch Gebieder';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & anerer';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Geeschtleche Wuesstem';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Obligatoresch Pflicht';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Total Gebieder';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Gebied Schold';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Fasting Schold';
 
   @override
   String get reset => 'Reset';

@@ -270,7 +270,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikr ia ra';
 
   @override
   String get duaMeaning1 =>
@@ -396,10 +396,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get weeklyProgress => 'Te ahunga whakamua o ia wiki';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Te ahunga whakamua o ia marama';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Tauanga';
 
   @override
   String get hijriCalendar => 'Maramataka Hijri';
@@ -672,16 +672,16 @@ class AppLocalizationsMi extends AppLocalizations {
       'Karekau he kaha me te kaha engari ma Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Rārangi Arowhai o ia rā';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Tarewa)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Tautuhi Raraunga Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Tautuhi ano i te nama Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -693,25 +693,25 @@ class AppLocalizationsMi extends AppLocalizations {
   String get dailyProgress => 'Te ahunga whakamua o ia ra';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Nga Karakia Whakahau';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah me etahi atu';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Te Tipu Wairua';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Te Mahi Whakatau';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Katoa nga Karakia';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Inoi nama';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Puta Utu';
 
   @override
   String get reset => 'Reset';

@@ -269,7 +269,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Daglig Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsNn extends AppLocalizations {
   String get weeklyProgress => 'Ukentlig fremgang';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Månedlig fremgang';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Statistikk';
 
   @override
   String get hijriCalendar => 'Hijri-kalender';
@@ -669,16 +669,16 @@ class AppLocalizationsNn extends AppLocalizations {
       'Det er ingen kraft og ingen styrke uten gjennom Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Daglig sjekkliste';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (gjeld)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Tilbakestill Qaza-data';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Tilbakestille Qaza-gjelden?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsNn extends AppLocalizations {
   String get dailyProgress => 'Daglig fremgang';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Obligatoriske bønner';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah og andre';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Åndelig vekst';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Obligatorisk plikt';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Totale bønner';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Bønnegjeld';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Fastende gjeld';
 
   @override
   String get reset => 'Reset';

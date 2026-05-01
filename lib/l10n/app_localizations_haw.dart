@@ -669,16 +669,16 @@ class AppLocalizationsHaw extends AppLocalizations {
       'ʻAʻohe mana a ʻaʻohe ikaika ke ʻole ma ke Akua.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Ka papa inoa o kēlā me kēia lā';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (ʻaiʻē)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Hoʻoponopono hou i ka ʻikepili Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Hoʻoponopono hou iā Qaza aie?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get dailyProgress => 'Holomua o na la a pau';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Pule Kauoha';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Nā mea ʻē aʻe';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Ulu uhane';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Dute Kauoha';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Pule Nui';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Pule aie';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Aie hookeai';
 
   @override
   String get reset => 'Reset';

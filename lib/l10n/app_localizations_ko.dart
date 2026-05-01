@@ -267,7 +267,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => '데일리 지크르';
 
   @override
   String get duaMeaning1 =>
@@ -392,10 +392,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get weeklyProgress => '주간 진행 상황';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => '월별 진행 상황';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => '통계';
 
   @override
   String get hijriCalendar => '회교식 달력';
@@ -660,16 +660,16 @@ class AppLocalizationsKo extends AppLocalizations {
   String get zikrMeaningLaHawlaWaLaQuwwata => '알라를 통하지 않고는 힘도 없고 힘도 없습니다.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => '일일 체크리스트';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => '카자(부채)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => '카자 데이터 재설정';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => '카자 부채를 재설정하시겠습니까?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -681,25 +681,25 @@ class AppLocalizationsKo extends AppLocalizations {
   String get dailyProgress => '일일 진행 상황';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => '필수기도';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => '순나 및 기타';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => '영적 성장';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => '의무의무';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => '총 기도 횟수';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => '기도의 빚';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => '단식 부채';
 
   @override
   String get reset => 'Reset';

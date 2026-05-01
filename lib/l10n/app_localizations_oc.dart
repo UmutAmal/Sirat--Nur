@@ -271,7 +271,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikr quotidian';
 
   @override
   String get duaMeaning1 =>
@@ -397,10 +397,10 @@ class AppLocalizationsOc extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Progrès mensual';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Estatisticas';
 
   @override
   String get hijriCalendar => 'Hijri Calendar';
@@ -671,16 +671,16 @@ class AppLocalizationsOc extends AppLocalizations {
       'There is no power and no strength except through Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Lista de verificacion quotidiana';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Deute)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Reïnicializar las donadas de Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Reïnicializar lo deute de Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -692,25 +692,25 @@ class AppLocalizationsOc extends AppLocalizations {
   String get dailyProgress => 'Daily Progress';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Pregàrias obligatòrias';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Autres';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Creissença esperitala';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Dever obligatòri';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Total de pregàrias';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Deute de pregària';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Deute de june';
 
   @override
   String get reset => 'Reset';

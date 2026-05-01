@@ -676,16 +676,16 @@ class AppLocalizationsTl extends AppLocalizations {
       'Walang kapangyarihan at walang lakas maliban sa pamamagitan ng Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Pang-araw-araw na Checklist';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Utang)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'I-reset ang Qaza Data';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'I-reset ang Qaza Utang?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -697,25 +697,25 @@ class AppLocalizationsTl extends AppLocalizations {
   String get dailyProgress => 'Araw-araw na Pag-unlad';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Mandatoryong Panalangin';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah at Iba pa';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Espirituwal na Paglago';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Mandatoryong Tungkulin';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Kabuuang Panalangin';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Utang sa Panalangin';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Pag-aayuno Utang';
 
   @override
   String get reset => 'Reset';

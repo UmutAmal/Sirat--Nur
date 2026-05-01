@@ -269,7 +269,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'ورځنی ذکر';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get weeklyProgress => 'د اونۍ پرمختګ';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'میاشتنی پرمختګ';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'احصایې';
 
   @override
   String get hijriCalendar => 'هجري تقویم';
@@ -667,16 +667,16 @@ class AppLocalizationsPs extends AppLocalizations {
       'د الله جل جلاله له لاری پرته هیڅ ځواک او قوت نشته.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'ورځنی چک لیست';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'قضا (قرض)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'د قضا ډاټا بیا تنظیم کړئ';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'د قضا پور بیا تنظیم کړئ؟';
 
   @override
   String get rawatib => 'Rawatib';
@@ -688,25 +688,25 @@ class AppLocalizationsPs extends AppLocalizations {
   String get dailyProgress => 'ورځنی پرمختګ';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'فرض لمونځونه';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'سنت او نور';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'روحاني وده';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'لازمي دنده';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'ټول لمونځونه';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'د لمانځه قرض';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'روژه پور';
 
   @override
   String get reset => 'Reset';

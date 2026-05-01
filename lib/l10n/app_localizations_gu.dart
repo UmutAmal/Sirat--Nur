@@ -667,16 +667,16 @@ class AppLocalizationsGu extends AppLocalizations {
       'અલ્લાહ સિવાય કોઈ શક્તિ અને શક્તિ નથી.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'દૈનિક ચેકલિસ્ટ';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'કઝા (દેવું)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'કાઝા ડેટા રીસેટ કરો';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'કઝા દેવું રીસેટ કરીએ?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -688,25 +688,25 @@ class AppLocalizationsGu extends AppLocalizations {
   String get dailyProgress => 'દૈનિક પ્રગતિ';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'ફરજિયાત પ્રાર્થના';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'સુન્નાહ અને અન્ય';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'આધ્યાત્મિક વૃદ્ધિ';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'ફરજિયાત ફરજ';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'કુલ પ્રાર્થના';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'પ્રાર્થના દેવું';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'ઉપવાસ દેવું';
 
   @override
   String get reset => 'Reset';

@@ -673,16 +673,16 @@ class AppLocalizationsBg extends AppLocalizations {
       'Няма сила и сила освен чрез Аллах.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Ежедневен контролен списък';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Каза (Дълг)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Нулирайте данните на Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Нулиране на Qaza дълг?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -694,25 +694,25 @@ class AppLocalizationsBg extends AppLocalizations {
   String get dailyProgress => 'Ежедневен напредък';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Задължителни молитви';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Сунна и други';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Духовно израстване';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Задължително задължение';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Общо молитви';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Молитвен дълг';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Дълг на гладно';
 
   @override
   String get reset => 'Reset';

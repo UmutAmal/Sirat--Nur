@@ -20273,6 +20273,39 @@
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
 
+## 2026-05-01 TUR-509 - Ibadah Qaza Dashboard L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Ibadah tracker, qaza/borc, aylik ilerleme ve istatistik kartlarinda cok sayida locale Ingilizce fallback gosteriyordu. Bu ekranlar kullanicinin dini sorumluluk takibiyle dogrudan ilgili oldugu icin yanlis veya yarim copy guven ve anlasilirlik riski olusturuyordu.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report fastingDebt dailyChecklist mandatoryDuty mandatoryPrayers prayerDebt qazaDebt resetQazaData resetQazaDebtQuestion sunnahAndOthers totalPrayers spiritualGrowth monthlyProgress statistics dailyZikr` same-as-English `2463`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 14 anahtarda same-as-English `435`, missing/empty `0`, placeholder mismatch `0`.
+  - `test/translate_arb_keys_test.dart` yeni `tracks ibadah and qaza dashboard l10n debt reduction` guard'i bu kume icin `<= 435` esigini ve `aa/am/ar/bo/ff/ur/zh_CN` ornek locale'lerinde English fallback olmamasini kilitler.
+  - Batch debris taramasi once `lib/l10n/app_sa.arb` ve `lib/l10n/app_ti.arb` icinde multiline/prefix cikti yakaladi; bu iki dosyada yalniz kirli degerler tek satirli guvenli copy'ye indirildi.
+- Kullanici etkisi: Qaza borcu, farz namaz, oruc borcu, gunluk checklist, aylik ilerleme ve istatistik metinleri daha fazla dilde yerel gorunur; kirli makine ciktilari testle temizlenir.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 14 ibadah/qaza dashboard anahtari icin kontrollu l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- `app_sa` ve `app_ti` batch prefix/multiline degerleri elle temizlendi; dini copy'ye yeni hukuki/fikhi iddia eklenmedi.
+
+### TESTER Degisikligi
+- Batch debris scan: PASS, `No batch debris/repeated-run violations.`
+- Targeted l10n tests: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `144/144`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `721/721`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `c50b12b2-f9d5-4965-8932-251636e3435b`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94631818`.
+
+### Risk Degisimi
+- Ibadah/Qaza dashboard 14 anahtarli low-resource fallback borcu: `12/25 -> 6/25`.
+- Kalan bilincli risk: 435 same-as-English locale-key cok dusuk kaynakli dillerde veya guvenli ceviri uretilemeyen durumlarda korunuyor; anlamsiz dini sorumluluk metni uretmek yerine English fallback daha guvenli.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: kalan l10n fallback cluster'lari, official prayer profile audit'i, OEM notification exact alarm davranisi veya offline audio sureklilik kontrolleri.
+
 ## 2026-05-01 TUR-508 - Home Location Notification Onboarding L10n Debt Reduction
 
 ### MASTER Karari

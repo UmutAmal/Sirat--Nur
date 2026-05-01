@@ -669,16 +669,16 @@ class AppLocalizationsAf extends AppLocalizations {
       'Daar is geen krag en geen krag behalwe deur Allah nie.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Daaglikse kontrolelys';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Skuld)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Stel Qaza-data terug';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Stel Qaza-skuld terug?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsAf extends AppLocalizations {
   String get dailyProgress => 'Daaglikse vordering';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Verpligte gebede';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah en ander';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Geestelike Groei';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Verpligte Plig';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Totale gebede';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Gebedskuld';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Vas skuld';
 
   @override
   String get reset => 'Reset';

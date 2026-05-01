@@ -270,7 +270,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'ଦ Daily ନିକ ଜିକ୍ର |';
 
   @override
   String get duaMeaning1 =>
@@ -396,10 +396,10 @@ class AppLocalizationsOr extends AppLocalizations {
   String get weeklyProgress => 'ସାପ୍ତାହିକ ପ୍ରଗତି |';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'ମାସିକ ପ୍ରଗତି |';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'ପରିସଂଖ୍ୟାନ';
 
   @override
   String get hijriCalendar => 'ହିଜ୍ରି କ୍ୟାଲେଣ୍ଡର |';
@@ -673,16 +673,16 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଆଲ୍ଲା ବ୍ୟତୀତ କ no ଣସି ଶକ୍ତି ଏବଂ ଶକ୍ତି ନାହିଁ |';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'ଦ Daily ନିକ ଯାଞ୍ଚ ତାଲିକା |';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'କାଜା (t ଣ)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'କାଜା ଡାଟା ପୁନ Res ସେଟ୍ କରନ୍ତୁ |';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'କାଜା t ଣ ପୁନ Res ସେଟ୍ କରିବେ କି?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -694,25 +694,25 @@ class AppLocalizationsOr extends AppLocalizations {
   String get dailyProgress => 'ଦ Daily ନିକ ପ୍ରଗତି |';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'ବାଧ୍ୟତାମୂଳକ ପ୍ରାର୍ଥନା |';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'ସୁନା ଏବଂ ଅନ୍ୟମାନେ |';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'ଆଧ୍ୟାତ୍ମିକ ଅଭିବୃଦ୍ଧି |';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'ବାଧ୍ୟତାମୂଳକ କର୍ତ୍ତବ୍ୟ |';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'ସମୁଦାୟ ପ୍ରାର୍ଥନା |';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'ପ୍ରାର୍ଥନା t ଣ';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'ଉପବାସ t ଣ';
 
   @override
   String get reset => 'Reset';

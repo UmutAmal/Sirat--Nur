@@ -668,16 +668,16 @@ class AppLocalizationsUr extends AppLocalizations {
       'اللہ کے سوا کوئی طاقت اور طاقت نہیں ہے۔';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'روزانہ چیک لسٹ';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'قضا (قرض)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'قضا ڈیٹا کو دوبارہ ترتیب دیں۔';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'قضا قرض کو دوبارہ ترتیب دیں؟';
 
   @override
   String get rawatib => 'Rawatib';
@@ -689,25 +689,25 @@ class AppLocalizationsUr extends AppLocalizations {
   String get dailyProgress => 'روزانہ کی پیشرفت';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'فرض نمازیں۔';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'سنت اور دیگر';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'روحانی ترقی';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'لازمی ڈیوٹی';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'کل دعائیں';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'نماز کا قرض';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'روزہ قرض';
 
   @override
   String get reset => 'Reset';

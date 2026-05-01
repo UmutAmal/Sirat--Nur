@@ -669,16 +669,16 @@ class AppLocalizationsCs extends AppLocalizations {
       'Neexistuje žádná síla a žádná síla než skrze Alláha.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Denní kontrolní seznam';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (dluh)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Resetujte data Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Resetovat dluh Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsCs extends AppLocalizations {
   String get dailyProgress => 'Denní pokrok';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Povinné modlitby';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunna a další';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Duchovní růst';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Povinná povinnost';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Úplné modlitby';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Modlitební dluh';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Postní dluh';
 
   @override
   String get reset => 'Reset';

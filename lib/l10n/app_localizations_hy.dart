@@ -673,16 +673,16 @@ class AppLocalizationsHy extends AppLocalizations {
       'Չկա ուժ և ուժ, բացի Ալլահի միջոցով:';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Ամենօրյա ստուգաթերթ';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Քազա (պարտք)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Վերականգնել Qaza Data-ը';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Վերակայե՞լ Քազայի պարտքը';
 
   @override
   String get rawatib => 'Rawatib';
@@ -694,25 +694,25 @@ class AppLocalizationsHy extends AppLocalizations {
   String get dailyProgress => 'Ամենօրյա առաջընթաց';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Պարտադիր աղոթքներ';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Սուննա և այլք';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Հոգևոր աճ';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Պարտադիր պարտականություն';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Ընդհանուր աղոթքներ';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Աղոթքի պարտք';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Պահքի պարտք';
 
   @override
   String get reset => 'Reset';

@@ -681,16 +681,16 @@ class AppLocalizationsAy extends AppLocalizations {
       'Janiw kuna ch’amas ch’amas utjkiti jan ukasti Allah tuqikiw utji.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Sapa uru Uñakipañataki Lista';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Manu) 1.1.';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qaza Datos ukar kutt’ayaña';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Qaza Manu kutt’ayaña?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -702,25 +702,25 @@ class AppLocalizationsAy extends AppLocalizations {
   String get dailyProgress => 'Daily Progress';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Oración obligatorias ukanaka';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Yaqhanaka';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Ajay tuqit Jiltañataki';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Deber Obligatorio ukaxa';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Taqpach Mayisiñanaka';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Oración Manu';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Ayuno Manüña';
 
   @override
   String get reset => 'Reset';

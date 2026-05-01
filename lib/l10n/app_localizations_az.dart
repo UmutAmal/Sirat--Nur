@@ -668,16 +668,16 @@ class AppLocalizationsAz extends AppLocalizations {
       'Allahdan başqa heç bir güc və güc yoxdur.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Gündəlik Yoxlama Siyahısı';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (borc)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qaza Datasını sıfırlayın';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Qaza borcunu sıfırlayın?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -689,25 +689,25 @@ class AppLocalizationsAz extends AppLocalizations {
   String get dailyProgress => 'Gündəlik Tərəqqi';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Məcburi Namazlar';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sünnə və başqaları';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Mənəvi artım';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Məcburi vəzifə';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Ümumi dualar';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Namaz borcu';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Oruc borcu';
 
   @override
   String get reset => 'Reset';

@@ -269,7 +269,7 @@ class AppLocalizationsTn extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikr ya letsatsi le letsatsi';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsTn extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Kgatelopele ya Kgwedi le Kgwedi';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Dipalopalo';
 
   @override
   String get hijriCalendar => 'Hijri Calendar';
@@ -669,16 +669,16 @@ class AppLocalizationsTn extends AppLocalizations {
       'There is no power and no strength except through Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Lenaanenetefatso la Letsatsi';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Sekoloto)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Seta gape Tshedimosetso ya Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Seta gape Sekoloto sa Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsTn extends AppLocalizations {
   String get dailyProgress => 'Daily Progress';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Dithapelo tse di Patelediwang';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah le tse dingwe';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Go Gola Semoyeng';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Tiro e e Patelesegang';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Palogotlhe ya Dithapelo';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Molato wa Thapelo';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Sekoloto sa go Itima';
 
   @override
   String get reset => 'Reset';

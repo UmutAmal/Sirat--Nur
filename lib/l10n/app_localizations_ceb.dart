@@ -673,16 +673,16 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Walay gahum ug walay kusog gawas kon pinaagi ni Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Adlaw-adlaw nga Checklist';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Utang)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'I-reset ang Qaza Data';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'I-reset ang Utang sa Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -694,25 +694,25 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get dailyProgress => 'Adlaw-adlaw nga Pag-uswag';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Mandatoryong mga Pag-ampo';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah ug uban pa';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Espirituwal nga Pag-uswag';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Mandatory nga Katungdanan';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Kinatibuk-ang mga Pag-ampo';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Utang sa Pag-ampo';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Pagpuasa Utang';
 
   @override
   String get reset => 'Reset';

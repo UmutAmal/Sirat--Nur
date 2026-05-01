@@ -271,7 +271,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Sapa punchaw Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -397,10 +397,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get weeklyProgress => 'Sapa semana Progreso';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Killamanta Ñawpaqman puriy';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Estadísticas nisqamanta';
 
   @override
   String get hijriCalendar => 'Hijri Calendario nisqa';
@@ -672,16 +672,16 @@ class AppLocalizationsQu extends AppLocalizations {
       'Manan kanchu atiypas, manan kallpapas kanchu, aswanpas Allah nisqawanmi.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Sapa punchaw Lista de comprobación';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Manu) .';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qaza Datos nisqakunata kutichiy';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Qaza Manuta kutichiy?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -693,25 +693,25 @@ class AppLocalizationsQu extends AppLocalizations {
   String get dailyProgress => 'Sapa punchaw ñawpariy';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Mañakuykuna Obligatorio';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Hukkuna';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Espiritual Wiñay';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Deber Obligatorio nisqa';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Total Mañakuykuna';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Mañakuy Manu';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Ayuna Manukuy';
 
   @override
   String get reset => 'Reset';

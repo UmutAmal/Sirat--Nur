@@ -670,16 +670,16 @@ class AppLocalizationsHr extends AppLocalizations {
       'Nema moći i snage osim kroz Allaha.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Dnevni kontrolni popis';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Dug)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Poništi Qaza podatke';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Resetirati Qaza dug?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsHr extends AppLocalizations {
   String get dailyProgress => 'Dnevni napredak';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Obavezne molitve';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnet i drugi';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Duhovni rast';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Obavezna dužnost';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Totalne molitve';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Molitveni dug';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Postni dug';
 
   @override
   String get reset => 'Reset';

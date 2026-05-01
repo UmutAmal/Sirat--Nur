@@ -395,10 +395,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get weeklyProgress => 'ھەپتىلىك ئىلگىرىلەش';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'ئايلىق ئىلگىرىلەش';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'ستاتىستىكا';
 
   @override
   String get hijriCalendar => 'ھىجرىيە كالېندارى';
@@ -668,16 +668,16 @@ class AppLocalizationsUg extends AppLocalizations {
   String get zikrMeaningLaHawlaWaLaQuwwata => 'ئاللاھتىن باشقا كۈچ ۋە كۈچ يوق.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'كۈندىلىك تەكشۈرۈش تىزىملىكى';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (قەرز)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qaza سانلىق مەلۇماتلىرىنى ئەسلىگە كەلتۈرۈڭ';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Qaza قەرزىنى ئەسلىگە كەلتۈرەمسىز؟';
 
   @override
   String get rawatib => 'Rawatib';
@@ -689,25 +689,25 @@ class AppLocalizationsUg extends AppLocalizations {
   String get dailyProgress => 'كۈندىلىك ئىلگىرىلەش';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'پەرز ناماز';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'سۈننەت ۋە باشقىلار';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'روھىي جەھەتتىن ئۆسۈپ يېتىلىش';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'مەجبۇرىي ۋەزىپە';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'ئومۇمىي دۇئا';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'ناماز قەرزى';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'روزا تۇتقان قەرز';
 
   @override
   String get reset => 'Reset';

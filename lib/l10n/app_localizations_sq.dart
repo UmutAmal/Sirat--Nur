@@ -671,16 +671,16 @@ class AppLocalizationsSq extends AppLocalizations {
       'Nuk ka fuqi dhe fuqi përveçse nëpërmjet Allahut.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Lista kontrolluese ditore';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (borxhi)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Rivendos të dhënat e Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Rivendos borxhin Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -692,25 +692,25 @@ class AppLocalizationsSq extends AppLocalizations {
   String get dailyProgress => 'Përparimi ditor';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Lutjet e detyrueshme';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Suneti dhe të tjerët';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Rritja shpirtërore';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Detyrë e Detyrueshme';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Lutjet totale';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Borxhi i lutjes';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Borxhi i agjërimit';
 
   @override
   String get reset => 'Reset';

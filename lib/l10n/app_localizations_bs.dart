@@ -672,13 +672,13 @@ class AppLocalizationsBs extends AppLocalizations {
   String get dailyChecklist => 'Daily Checklist';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Dug)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Resetujte Qaza podatke';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Resetirati Qaza dug?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,10 +690,10 @@ class AppLocalizationsBs extends AppLocalizations {
   String get dailyProgress => 'Dnevni napredak';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Obavezne molitve';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnet i ostali';
 
   @override
   String get spiritualGrowth => 'Spiritual Growth';
@@ -708,7 +708,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get prayerDebt => 'Prayer Debt';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Fasting Dug';
 
   @override
   String get reset => 'Reset';

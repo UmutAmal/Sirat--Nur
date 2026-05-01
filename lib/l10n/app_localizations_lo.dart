@@ -269,7 +269,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikr ປະຈໍາວັນ';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get weeklyProgress => 'ຄວາມຄືບຫນ້າປະຈໍາອາທິດ';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'ຄວາມຄືບຫນ້າປະຈໍາເດືອນ';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'ສະຖິຕິ';
 
   @override
   String get hijriCalendar => 'ປະຕິທິນ Hijri';
@@ -668,16 +668,16 @@ class AppLocalizationsLo extends AppLocalizations {
       'ບໍ່ມີພະລັງງານແລະບໍ່ມີຄວາມເຂັ້ມແຂງຍົກເວັ້ນໂດຍຜ່ານ Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'ລາຍການກວດປະຈໍາວັນ';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'ຄາຊາ (ໜີ້ສິນ)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'ຣີເຊັດຂໍ້ມູນ Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'ຣີເຊັດໜີ້ Qaza ບໍ?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -689,25 +689,25 @@ class AppLocalizationsLo extends AppLocalizations {
   String get dailyProgress => 'ຄວາມຄືບຫນ້າປະຈໍາວັນ';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'ການອະທິຖານບັງຄັບ';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah ແລະ ອື່ນໆ';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'ການຂະຫຍາຍຕົວທາງວິນຍານ';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'ໜ້າທີ່ບັງຄັບ';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'ຄໍາ​ອະ​ທິ​ຖານ​ທັງ​ຫມົດ​';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'ຫນີ້ສິນອະທິຖານ';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'ໜີ້ສິນ';
 
   @override
   String get reset => 'Reset';

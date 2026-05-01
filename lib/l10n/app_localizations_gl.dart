@@ -672,16 +672,16 @@ class AppLocalizationsGl extends AppLocalizations {
       'Non hai poder nin forza excepto por Deus.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Lista de verificación diaria';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (débeda)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Restablecer datos de Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Restablecer a débeda de Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -693,25 +693,25 @@ class AppLocalizationsGl extends AppLocalizations {
   String get dailyProgress => 'Progreso diario';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Oracións obrigatorias';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah e outros';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Crecemento espiritual';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Deber Obrigatorio';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Oracións totais';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Débeda de oración';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Débeda en xaxún';
 
   @override
   String get reset => 'Reset';

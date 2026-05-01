@@ -669,16 +669,16 @@ class AppLocalizationsEo extends AppLocalizations {
       'Ne ekzistas potenco kaj forto krom per Alaho.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Ĉiutaga Kontrollisto';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Ŝuldo)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Restarigi Qaza Datumojn';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Restarigi Qaza Ŝuldon?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsEo extends AppLocalizations {
   String get dailyProgress => 'Ĉiutaga Progreso';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Devigaj Preĝoj';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunao & Aliaj';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Spirita Kresko';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Deviga Devo';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Tutaj Preĝoj';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Preĝa Ŝuldo';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Fasta Ŝuldo';
 
   @override
   String get reset => 'Reset';

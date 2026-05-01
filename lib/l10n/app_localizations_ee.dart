@@ -669,16 +669,16 @@ class AppLocalizationsEe extends AppLocalizations {
       'Ŋusẽ kple ŋusẽ aɖeke meli o negbe to Allah dzi ko.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Gbesiagbe Dzodzro ƒe Ŋkɔwo';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Fenyinyi) .';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Gbugbɔ ɖo Qaza Nyatakakawo';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Gbugbɔ Ðo Qaza Fetua?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsEe extends AppLocalizations {
   String get dailyProgress => 'Gbesiagbe Ŋgɔyiyi';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Gbedodoɖa Siwo Wòle Be Woawɔ';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Ame Bubuwo';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Gbɔgbɔme Dzidziɖedzi';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Dɔdasi si Wobia tso Ame Ŋu';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Gbedodoɖawo Katã';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Gbedodoɖa ƒe Fenyinyi';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Nutsitsidɔ ƒe Fenyinyi';
 
   @override
   String get reset => 'Reset';

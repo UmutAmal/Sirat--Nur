@@ -269,7 +269,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikr raan otemjej';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Wōnm̧aanļo̧k eo an allōn̄ otemjej';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Bōnbōn ko';
 
   @override
   String get hijriCalendar => 'Hijri Calendar';
@@ -669,13 +669,13 @@ class AppLocalizationsMh extends AppLocalizations {
       'There is no power and no strength except through Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Laajrak in lale raan otemjej';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Muri)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Bar kōkāāl Qaza Data';
 
   @override
   String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
@@ -690,25 +690,25 @@ class AppLocalizationsMh extends AppLocalizations {
   String get dailyProgress => 'Daily Progress';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Jar ko rej aikuj';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Bar jet';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Eddōklok ilo Jitõb';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Jerbal eo ej aikuj';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Jar ko otemjej';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'M̧uri in Jar';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'M̧uri in jitlo̧k';
 
   @override
   String get reset => 'Reset';

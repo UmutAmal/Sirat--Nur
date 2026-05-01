@@ -269,7 +269,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Zikr hàng ngày';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get weeklyProgress => 'Tiến độ hàng tuần';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Tiến độ hàng tháng';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Thống kê';
 
   @override
   String get hijriCalendar => 'Lịch Hijri';
@@ -670,16 +670,16 @@ class AppLocalizationsVi extends AppLocalizations {
       'Không có sức mạnh và sức mạnh nào ngoại trừ thông qua Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Danh sách kiểm tra hàng ngày';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Nợ)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Đặt lại dữ liệu Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Đặt lại nợ Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsVi extends AppLocalizations {
   String get dailyProgress => 'Tiến độ hàng ngày';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Lời cầu nguyện bắt buộc';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah và những người khác';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Tăng trưởng tâm linh';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Nhiệm vụ bắt buộc';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Tổng số lời cầu nguyện';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Nợ cầu nguyện';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Nợ nhịn ăn';
 
   @override
   String get reset => 'Reset';

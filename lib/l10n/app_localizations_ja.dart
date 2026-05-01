@@ -267,7 +267,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'デイリージクル';
 
   @override
   String get duaMeaning1 =>
@@ -393,10 +393,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get weeklyProgress => '週ごとの進捗状況';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => '毎月の進捗状況';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => '統計';
 
   @override
   String get hijriCalendar => 'ヒジュラ暦';
@@ -661,16 +661,16 @@ class AppLocalizationsJa extends AppLocalizations {
   String get zikrMeaningLaHawlaWaLaQuwwata => 'アッラーを通してでなければ力も強さもありません。';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => '毎日のチェックリスト';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'カザ（借金）';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qazaデータをリセット';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Qazaの借金をリセットしますか？';
 
   @override
   String get rawatib => 'Rawatib';
@@ -682,25 +682,25 @@ class AppLocalizationsJa extends AppLocalizations {
   String get dailyProgress => '日々の進歩';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => '必須の祈り';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'スンナとその他';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => '精神的な成長';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => '義務的な義務';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => '合計の祈り';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => '祈りの負債';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => '断食中の借金';
 
   @override
   String get reset => 'Reset';

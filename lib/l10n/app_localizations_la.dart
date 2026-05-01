@@ -269,7 +269,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Cotidiana Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -395,7 +395,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Menstrua Progressio';
 
   @override
   String get statistics => 'Statistics';
@@ -670,16 +670,16 @@ class AppLocalizationsLa extends AppLocalizations {
       'Non est virtus et non virtus nisi per Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Cotidiana Genus';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Debitum)';
 
   @override
   String get resetQazaData => 'Reset Qaza Data';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Reset Qaza Debitum?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -691,25 +691,25 @@ class AppLocalizationsLa extends AppLocalizations {
   String get dailyProgress => 'Cotidiana Progressio';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Orationes amet';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Alii';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Spiritualis Augmentum';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Officium amet';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Summa Orationum';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Oratio Debitum';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Ieiunium Debitum';
 
   @override
   String get reset => 'Reset';

@@ -269,7 +269,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get lastRead => 'Last Read';
 
   @override
-  String get dailyZikr => 'Daily Zikr';
+  String get dailyZikr => 'Mokolo na mokolo Zikr';
 
   @override
   String get duaMeaning1 =>
@@ -395,10 +395,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get weeklyProgress => 'Bokóli ya Pɔsɔ na Pɔsɔ';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Bokoli ya sanza na sanza';
 
   @override
-  String get statistics => 'Statistics';
+  String get statistics => 'Statistiques ya ba statistiques';
 
   @override
   String get hijriCalendar => 'Manáka ya Hijri';
@@ -671,16 +671,16 @@ class AppLocalizationsLn extends AppLocalizations {
       'Nguya pe makasi ezali te longola se na nzela ya Allah.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Liste ya vérification ya mokolo na mokolo';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Nyongo) .';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Réinitialiser ba Données ya Qaza';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Réinitialiser Nyongo ya Qaza?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -692,25 +692,25 @@ class AppLocalizationsLn extends AppLocalizations {
   String get dailyProgress => 'Bokoli ya mokolo na mokolo';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Mabondeli oyo esɛngami';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Basusu';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Bokoli ya Molimo';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Mosala ya Obligatoire';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Mabondeli ya mobimba';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Nyongo ya losambo';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Nyongo ya kokila bilei';
 
   @override
   String get reset => 'Reset';

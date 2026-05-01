@@ -394,7 +394,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get weeklyProgress => 'Kufambira mberi Kwevhiki Nevhiki';
 
   @override
-  String get monthlyProgress => 'Monthly Progress';
+  String get monthlyProgress => 'Mwedzi Kubudirira';
 
   @override
   String get statistics => 'Statistics';
@@ -671,7 +671,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get dailyChecklist => 'Daily Checklist';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Chikwereti)';
 
   @override
   String get resetQazaData => 'Reset Qaza Data';
@@ -689,25 +689,25 @@ class AppLocalizationsSn extends AppLocalizations {
   String get dailyProgress => 'Kufambira Mberi Kwezuva Nezuva';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Minamato Inosungirwa';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah nevamwe';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Kukura Pakunamata';
 
   @override
   String get mandatoryDuty => 'Mandatory Duty';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Yese minamato';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Munamato Chikwereti';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Kutsanya Chikwereti';
 
   @override
   String get reset => 'Reset';

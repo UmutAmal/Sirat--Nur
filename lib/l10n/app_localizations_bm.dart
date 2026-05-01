@@ -669,16 +669,16 @@ class AppLocalizationsBm extends AppLocalizations {
       'Fanga ni fanga foyi tɛ yen fo Allah fɛ.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Don o don sɛgɛsɛgɛli sɛbɛn';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (Jɔrɔ) .';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qaza Donanw Lasegin';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Reset Qaza ka juru?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsBm extends AppLocalizations {
   String get dailyProgress => 'Don o don ɲɛtaa';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Delili minnu wajibiyalen don';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah & Mɔgɔ wɛrɛw';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Bonya Alako ta fan fɛ';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Baara wajibiyalen';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Deliliw bɛɛ lajɛlen';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Delili juru';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Sunɔgɔ juru';
 
   @override
   String get reset => 'Reset';

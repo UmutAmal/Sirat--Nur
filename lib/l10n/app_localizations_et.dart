@@ -669,16 +669,16 @@ class AppLocalizationsEt extends AppLocalizations {
       'Pole jõudu ega jõudu, välja arvatud Allahi kaudu.';
 
   @override
-  String get dailyChecklist => 'Daily Checklist';
+  String get dailyChecklist => 'Igapäevane kontrollnimekiri';
 
   @override
-  String get qazaDebt => 'Qaza (Debt)';
+  String get qazaDebt => 'Qaza (võlg)';
 
   @override
-  String get resetQazaData => 'Reset Qaza Data';
+  String get resetQazaData => 'Qaza andmete lähtestamine';
 
   @override
-  String get resetQazaDebtQuestion => 'Reset Qaza Debt?';
+  String get resetQazaDebtQuestion => 'Kas lähtestada Qaza võlg?';
 
   @override
   String get rawatib => 'Rawatib';
@@ -690,25 +690,25 @@ class AppLocalizationsEt extends AppLocalizations {
   String get dailyProgress => 'Igapäevane edenemine';
 
   @override
-  String get mandatoryPrayers => 'Mandatory Prayers';
+  String get mandatoryPrayers => 'Kohustuslikud palved';
 
   @override
-  String get sunnahAndOthers => 'Sunnah & Others';
+  String get sunnahAndOthers => 'Sunnah ja teised';
 
   @override
-  String get spiritualGrowth => 'Spiritual Growth';
+  String get spiritualGrowth => 'Vaimne kasv';
 
   @override
-  String get mandatoryDuty => 'Mandatory Duty';
+  String get mandatoryDuty => 'Kohustuslik kohustus';
 
   @override
-  String get totalPrayers => 'Total Prayers';
+  String get totalPrayers => 'Kokku palved';
 
   @override
-  String get prayerDebt => 'Prayer Debt';
+  String get prayerDebt => 'Palvevõlg';
 
   @override
-  String get fastingDebt => 'Fasting Debt';
+  String get fastingDebt => 'Paastuvõlg';
 
   @override
   String get reset => 'Reset';
