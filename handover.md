@@ -20858,3 +20858,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Bhojpuri Asma meaning cluster'ini dogrudan degistirmeden once kaynak/dataset politikasini ve mevcut Asma seed dogrulama testlerini incele. Dini anlamlar icin uydurma ceviri yapma; gerekirse EN fallback veya verified source mapping kullan.
+
+## 2026-05-01 TUR-520 - Bhojpuri Asma Meaning Safe Fallback Cleanup
+
+### MASTER Karari
+- Risk: Bhojpuri Asma-ul-Husna meaning kumesinde dini anlamlar kirik makine ceviri/debris tasiyordu. Asma anlamlari kaynak dogrulama gerektirdigi icin, uydurma Bhojpuri dini icerik uretmek yerine proje politikasindaki guvenli EN fallback uygulandi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:674` `द बेनिफिसेंट के ह`, `lib/l10n/app_bho.arb:680` `गार्जियन के ह`, `lib/l10n/app_bho.arb:690` `द सस्टेनर के ह`, `lib/l10n/app_bho.arb:704` `द ऑल अवेयर के ह`, `lib/l10n/app_bho.arb:701` `जज साहब के कहना बा`, `lib/l10n/app_bho.arb:721` `सबसे गौरवशाली आदमी के बा`, `lib/l10n/app_bho.arb:737` `द फाइंडर के ह`, `lib/l10n/app_bho.arb:766` `द लाइट के बारे में बतावल गइल बा`.
+  - Son durum: `lib/l10n/app_bho.arb:674` `The Beneficent`, `lib/l10n/app_bho.arb:680` `The Watchful Guardian, who observes and safeguards all creation.`, `lib/l10n/app_bho.arb:690` `The Sustainer`, `lib/l10n/app_bho.arb:704` `The All Aware`, `lib/l10n/app_bho.arb:701` `The Judge`, `lib/l10n/app_bho.arb:721` `The Most Glorious One`, `lib/l10n/app_bho.arb:737` `The Finder`, `lib/l10n/app_bho.arb:766` `The Light`.
+  - `test/arb_ui_localization_test.dart:1691` yeni guard Bhojpuri `asmaMeaning1..99` degerlerinin dogrulanmis `app_en.arb` fallback'iyle birebir ayni kalmasini zorunlu kilar.
+  - Debris taramasi: `rg -n 'asmaMeaning[0-9]+": "(द |.*के ह|.*के बा|.*के नाम से जानल जाला|.*के कहल जाला|.*के बारे में बतावल गइल बा|.*साहब|.*आदमी)' lib\l10n\app_bho.arb` sonucu bos.
+- Kullanici etkisi: Bhojpuri kullanicilar Asma-ul-Husna ekraninda yanlis veya komik makine dini anlamlari gormez; dogrulanmis EN anlamlar kaynakli ve tutarli fallback olarak sunulur.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_ui_localization_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `lib/l10n/app_bho.arb` icindeki 99 Asma meaning degeri, sahte Bhojpuri dini ceviri yerine `app_en.arb` ile ayni guvenli fallback'e cekildi.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bho.dart` ARB ile senkronlandi.
+- Scope yalnizca Bhojpuri Asma meaning kumesiyle sinirli tutuldu; safe-priority locale'lerde mevcut dogrulanmis yerel Asma cevirilerine dokunulmadi.
+
+### TESTER Degisikligi
+- Targeted testler: `flutter test test\arb_ui_localization_test.dart --plain-name "Bhojpuri asma meanings use verified English fallback" --reporter compact` PASS; `extended high-risk asma meanings fall back safely when uncertain` PASS; `all locales avoid stale English high-risk asma fragments` PASS.
+- Not: Ilk hedef test paralel kosuda Flutter Windows native-assets kopyalama yarisi nedeniyle tool crash verdi (`NativeAssetsManifest.json` PathExistsException); ayni test seri calistirilinca PASS. Uygulama regresyonu degil, eszamanli `flutter test` build klasoru cakismasi.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `732/732`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `0972d037-1e1f-40e0-8d3d-b4724184d431`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+
+### Risk Degisimi
+- Bhojpuri Asma meaning dini icerik debris riski: `20/25 -> 7/25`.
+- Kalan bilincli risk: Bhojpuri icin bu fallback dogru/guvenli ama tam yerel dini ceviri degildir. Tam Bhojpuri Asma anlamlari ancak guvenilir dini kaynak + Bhojpuri dil uzmani onayi ile EN fallback'ten yerel copy'ye yukseltilmeli; sahte otomatik ceviri kullanilmayacak.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude l10n debt taramasini genislet. Oncelik: diger low-resource locale'lerde Asma/dua/hadith dini anlamlarinda komik makine debris var mi kanitla; varsa EN fallback veya onayli kaynak mapping ile kucuk patch'ler halinde temizle.

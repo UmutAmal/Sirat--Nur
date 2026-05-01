@@ -1688,6 +1688,20 @@ void main() {
       },
     );
 
+    test('Bhojpuri asma meanings use verified English fallback', () {
+      final bhojpuri = _readArb('lib/l10n/app_bho.arb');
+
+      for (var index = 1; index <= 99; index += 1) {
+        final key = 'asmaMeaning$index';
+
+        expect(
+          bhojpuri[key],
+          english[key],
+          reason: 'app_bho.arb $key must not keep unverified religious copy',
+        );
+      }
+    });
+
     test('priority high-risk asma meanings avoid known machine fragments', () {
       const staleByLocale = {
         'fr': [
