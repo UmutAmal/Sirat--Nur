@@ -179,8 +179,27 @@ Map<int, String> resolveCloudQuranSurahUrls(
   String quranGithubUrlTemplate =
       QuranAudioDistributionConfig.githubUrlTemplate,
 }) {
-  final urls = <int, String>{};
+  final candidates = resolveCloudQuranSurahUrlCandidates(
+    rows,
+    reciterId: reciterId,
+    quranCloudflareBaseUrl: quranCloudflareBaseUrl,
+    quranGithubUrlTemplate: quranGithubUrlTemplate,
+  );
 
+  return Map.unmodifiable({
+    for (final entry in candidates.entries) entry.key: entry.value.first,
+  });
+}
+
+Map<int, List<String>> resolveCloudQuranSurahUrlCandidates(
+  List<Map<String, dynamic>> rows, {
+  required String reciterId,
+  String quranCloudflareBaseUrl =
+      QuranAudioDistributionConfig.cloudflareBaseUrl,
+  String quranGithubUrlTemplate =
+      QuranAudioDistributionConfig.githubUrlTemplate,
+}) {
+  final urlCandidates = <int, List<String>>{};
   for (final row in rows) {
     final type = row['type']?.toString().trim().toLowerCase();
     if (type != 'quran_surah') {
@@ -206,19 +225,19 @@ Map<int, String> resolveCloudQuranSurahUrls(
       continue;
     }
 
-    final url = resolvePlayableCloudAudioUrl(
+    final urls = resolvePlayableCloudAudioUrls(
       row,
       quranCloudflareBaseUrl: quranCloudflareBaseUrl,
       quranGithubUrlTemplate: quranGithubUrlTemplate,
     );
-    if (url == null) {
+    if (urls.isEmpty) {
       continue;
     }
 
-    urls.putIfAbsent(surahNumber, () => url);
+    urlCandidates.putIfAbsent(surahNumber, () => List.unmodifiable(urls));
   }
 
-  return Map.unmodifiable(urls);
+  return Map.unmodifiable(urlCandidates);
 }
 
 List<int> missingQuranSurahAudioSources(Map<int, String> surahUrls) {
@@ -226,6 +245,24 @@ List<int> missingQuranSurahAudioSources(Map<int, String> surahUrls) {
 
   for (var surahNumber = 1; surahNumber <= 114; surahNumber++) {
     if (!surahUrls.containsKey(surahNumber)) {
+      missing.add(surahNumber);
+    }
+  }
+
+  return List.unmodifiable(missing);
+}
+
+List<int> missingQuranSurahAudioSourceCandidates(
+  Map<int, List<String>> surahUrlCandidates,
+) {
+  final availableSurahs = <int>{
+    for (final entry in surahUrlCandidates.entries)
+      if (entry.value.isNotEmpty) entry.key,
+  };
+  final missing = <int>[];
+
+  for (var surahNumber = 1; surahNumber <= 114; surahNumber++) {
+    if (!availableSurahs.contains(surahNumber)) {
       missing.add(surahNumber);
     }
   }
@@ -314,23 +351,45 @@ Map<String, Map<int, String>> resolveCloudQuranAudioCatalog(
   String quranGithubUrlTemplate =
       QuranAudioDistributionConfig.githubUrlTemplate,
 }) {
-  final catalog = <String, Map<int, String>>{};
+  final candidateCatalog = resolveCloudQuranAudioCatalogCandidates(
+    rows,
+    quranCloudflareBaseUrl: quranCloudflareBaseUrl,
+    quranGithubUrlTemplate: quranGithubUrlTemplate,
+  );
+
+  return Map.unmodifiable({
+    for (final catalogEntry in candidateCatalog.entries)
+      catalogEntry.key: Map<int, String>.unmodifiable({
+        for (final surahEntry in catalogEntry.value.entries)
+          surahEntry.key: surahEntry.value.first,
+      }),
+  });
+}
+
+Map<String, Map<int, List<String>>> resolveCloudQuranAudioCatalogCandidates(
+  List<Map<String, dynamic>> rows, {
+  String quranCloudflareBaseUrl =
+      QuranAudioDistributionConfig.cloudflareBaseUrl,
+  String quranGithubUrlTemplate =
+      QuranAudioDistributionConfig.githubUrlTemplate,
+}) {
+  final catalog = <String, Map<int, List<String>>>{};
 
   for (final reciterId in OfflineReciters.reciters.keys) {
-    final surahUrls = resolveCloudQuranSurahUrls(
+    final surahUrlCandidates = resolveCloudQuranSurahUrlCandidates(
       rows,
       reciterId: reciterId,
       quranCloudflareBaseUrl: quranCloudflareBaseUrl,
       quranGithubUrlTemplate: quranGithubUrlTemplate,
     );
-    if (surahUrls.isNotEmpty) {
-      catalog[reciterId] = surahUrls;
+    if (surahUrlCandidates.isNotEmpty) {
+      catalog[reciterId] = surahUrlCandidates;
     }
   }
 
   return Map.unmodifiable({
     for (final entry in catalog.entries)
-      entry.key: Map<int, String>.unmodifiable(entry.value),
+      entry.key: Map<int, List<String>>.unmodifiable(entry.value),
   });
 }
 
@@ -412,6 +471,33 @@ class OfflineAudioService {
     }
   }
 
+  static Future<bool> downloadSurahAudioFromCandidates({
+    required int surahNumber,
+    required String reciterId,
+    required List<String> audioUrls,
+    void Function(double progress)? onProgress,
+    CancelToken? cancelToken,
+  }) async {
+    for (final audioUrl in audioUrls) {
+      if (cancelToken?.isCancelled == true) {
+        return false;
+      }
+
+      final success = await downloadSurahAudio(
+        surahNumber: surahNumber,
+        reciterId: reciterId,
+        audioUrl: audioUrl,
+        onProgress: onProgress,
+        cancelToken: cancelToken,
+      );
+      if (success) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   static Future<OfflineDownloadBatchResult> downloadAllSurahs({
     required String reciterId,
     required Map<int, String> surahUrls,
@@ -419,7 +505,25 @@ class OfflineAudioService {
     void Function(int surahNumber, bool success)? onSurahComplete,
     bool Function()? shouldCancel,
   }) async {
-    final sortedEntries = surahUrls.entries.toList()
+    return downloadAllSurahsFromCandidates(
+      reciterId: reciterId,
+      surahUrlCandidates: {
+        for (final entry in surahUrls.entries) entry.key: [entry.value],
+      },
+      onProgress: onProgress,
+      onSurahComplete: onSurahComplete,
+      shouldCancel: shouldCancel,
+    );
+  }
+
+  static Future<OfflineDownloadBatchResult> downloadAllSurahsFromCandidates({
+    required String reciterId,
+    required Map<int, List<String>> surahUrlCandidates,
+    SurahDownloadProgress? onProgress,
+    void Function(int surahNumber, bool success)? onSurahComplete,
+    bool Function()? shouldCancel,
+  }) async {
+    final sortedEntries = surahUrlCandidates.entries.toList()
       ..sort((left, right) => left.key.compareTo(right.key));
     final total = sortedEntries.length;
     var completed = 0;
@@ -437,12 +541,12 @@ class OfflineAudioService {
       }
 
       final surahNumber = entry.key;
-      final url = entry.value;
+      final urls = entry.value;
       final cancelToken = CancelToken();
-      final success = await downloadSurahAudio(
+      final success = await downloadSurahAudioFromCandidates(
         surahNumber: surahNumber,
         reciterId: reciterId,
-        audioUrl: url,
+        audioUrls: urls,
         cancelToken: cancelToken,
         onProgress: (singleProgress) {
           if (shouldCancel?.call() == true) {
@@ -639,6 +743,24 @@ class OfflineReciters {
     }
   }
 
+  static Future<Map<int, List<String>>> getAllSurahUrlCandidates(
+    String reciterId,
+  ) async {
+    if (!reciters.containsKey(reciterId)) {
+      return const {};
+    }
+
+    try {
+      final catalog = await getQuranAudioCatalogCandidates();
+      return catalog[reciterId] ?? const {};
+    } catch (_) {
+      debugPrint(
+        'Quran audio reciter catalog lookup failed; returning empty map',
+      );
+      return const {};
+    }
+  }
+
   static Future<Map<String, Map<int, String>>> getQuranAudioCatalog() async {
     try {
       final rows = await Supabase.instance.client
@@ -651,6 +773,27 @@ class OfflineReciters {
           .order('surah_number', ascending: true);
 
       return resolveCloudQuranAudioCatalog(
+        List<Map<String, dynamic>>.from(rows),
+      );
+    } catch (_) {
+      debugPrint('Quran audio cloud catalog load failed; returning empty map');
+      return const {};
+    }
+  }
+
+  static Future<Map<String, Map<int, List<String>>>>
+  getQuranAudioCatalogCandidates() async {
+    try {
+      final rows = await Supabase.instance.client
+          .from('audio_files')
+          .select(
+            'type, reciter, surah_number, url, storage_path, source, verified_at',
+          )
+          .eq('type', 'quran_surah')
+          .order('reciter', ascending: true)
+          .order('surah_number', ascending: true);
+
+      return resolveCloudQuranAudioCatalogCandidates(
         List<Map<String, dynamic>>.from(rows),
       );
     } catch (_) {

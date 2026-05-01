@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -69,6 +71,17 @@ void main() {
 
       // Page should be loading initially because pathProvider future hangs in simple test mock
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
+    });
+
+    test('download flow keeps all mirror candidates for batch downloads', () {
+      final source = File(
+        'lib/features/downloads/offline_downloads_page.dart',
+      ).readAsStringSync();
+
+      expect(source, contains('getAllSurahUrlCandidates'));
+      expect(source, contains('missingQuranSurahAudioSourceCandidates'));
+      expect(source, contains('downloadAllSurahsFromCandidates'));
+      expect(source, isNot(contains('getAllSurahUrls(reciterId)')));
     });
   });
 }

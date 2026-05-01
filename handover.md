@@ -20236,3 +20236,39 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: offline download single-surah runtime indirme testi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
+
+## 2026-05-01 TUR-502 - Offline Quran Audio Multi-Mirror Downloads
+
+### MASTER Karari
+- Risk: Quran runtime playback coklu mirror adayi kullanabiliyordu, fakat offline indirme katalogu her sure icin yalniz ilk URL'yi sakliyordu. GitHub primary mirror gecici dalgalanirsa Cloudflare secondary hazir oldugu halde offline indirme fail edebilirdi.
+- Kanit:
+  - `lib/core/services/offline_audio_service.dart:194` artik her sure icin tum oynatilabilir mirror adaylarini `resolveCloudQuranSurahUrlCandidates` ile koruyor.
+  - `lib/core/services/offline_audio_service.dart:255` bos aday listelerini eksik kaynak sayan `missingQuranSurahAudioSourceCandidates` helper'ini ekliyor.
+  - `lib/core/services/offline_audio_service.dart:474` `downloadSurahAudioFromCandidates` ile ayni sure icin aday URL'leri sirayla deniyor.
+  - `lib/core/services/offline_audio_service.dart:519` batch download'u coklu aday map'i ile calistiriyor; legacy `downloadAllSurahs` tek URL davranisini singleton aday listesine sararak geriye uyumlu tutuyor.
+  - `lib/core/services/offline_audio_service.dart:746` ve `lib/core/services/offline_audio_service.dart:785` Supabase katalogundan coklu adayli reciter katalogu donduruyor.
+  - `lib/features/downloads/offline_downloads_page.dart:78` Downloads ekraninda artik `getAllSurahUrlCandidates`; `lib/features/downloads/offline_downloads_page.dart:133` coklu adayli batch indirme kullaniyor.
+  - `test/offline_audio_service_test.dart:322` GitHub + Cloudflare adaylarinin korunmasini; `test/offline_audio_service_test.dart:752` batch yolunun mirror adaylarini dusurmemesini dogrular.
+  - `test/features/downloads/offline_downloads_test.dart:81` Downloads sayfasinin tek-URL kataloguna geri donmesini engeller.
+- Kullanici etkisi: Offline Quran audio indirme, runtime playback ile ayni mirror dayanıkliligina kavustu; birincil mirror gecici basarisiz olursa ayni sure icin secondary aday denenebilir.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 4/25.
+- Rollback plani: `lib/core/services/offline_audio_service.dart`, `lib/features/downloads/offline_downloads_page.dart`, `test/offline_audio_service_test.dart`, `test/features/downloads/offline_downloads_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Provider-neutral Quran audio row cozumleyici tek URL map'ine ek olarak coklu URL aday map'i uretir hale getirildi.
+- Offline download service tek sure ve batch seviyesinde aday URL'leri sirayla deneyen yeni API'ler kazandi.
+- OfflineDownloadsPage eksik kaynak ve kalan indirme hesabini coklu aday map'i uzerinden yapacak sekilde baglandi.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\offline_audio_service_test.dart test\features\downloads\offline_downloads_test.dart test\quran_audio_distribution_url_test.dart test\quran_audio_distribution_plan_test.dart --reporter compact` PASS, `41/41`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `714/714`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase content, Quran audio mirror/overflow probes, Cloudflare partition, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `56ddb166-bc2d-4eac-80de-9f7326054fbf`, Downloads quick access acildi, Quran playback true, `containsPlaybackError=false`, `logcatCrashFree=true`, `failures=[]`, release APK size `94254930`.
+
+### Risk Degisimi
+- Offline Quran audio indirme tek mirror bagimliligi: `12/25 -> 4/25`.
+- Kalan bilincli risk: Appium smoke Downloads ekranini acar ama 114 surelik buyuk indirmeyi bilerek baslatmaz; ileride kucuk fixture/proxy destekli single-surah runtime download smoke eklenirse gercek indirme UI akisi daha derin dogrulanabilir.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.

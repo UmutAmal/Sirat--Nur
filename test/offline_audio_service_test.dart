@@ -310,6 +310,48 @@ void main() {
       ]);
     });
 
+    test('keeps every quran mirror candidate for offline downloads', () {
+      const row = {
+        'type': 'quran_surah',
+        'reciter': 'alafasy',
+        'surah_number': 1,
+        'storage_path': 'quran-audio/alafasy/001.mp3',
+        'source': _approvedQuranAudioSource,
+        'verified_at': '2026-04-15T00:00:00Z',
+      };
+      final candidates = resolveCloudQuranSurahUrlCandidates(
+        const [row],
+        reciterId: 'alafasy',
+        quranCloudflareBaseUrl: 'https://pub-example.r2.dev',
+        quranGithubUrlTemplate: _quranGithubUrlTemplate,
+      );
+
+      expect(candidates[1], const [
+        'https://github.com/UmutAmal/Sirat--Nur/releases/download/quran-audio-v1/alafasy_001.mp3',
+        'https://pub-example.r2.dev/alafasy/001.mp3',
+      ]);
+      expect(
+        resolveCloudQuranSurahUrls(
+          const [row],
+          reciterId: 'alafasy',
+          quranCloudflareBaseUrl: 'https://pub-example.r2.dev',
+          quranGithubUrlTemplate: _quranGithubUrlTemplate,
+        )[1],
+        candidates[1]!.first,
+      );
+    });
+
+    test('missing source check rejects empty candidate lists', () {
+      final missing = missingQuranSurahAudioSourceCandidates(const {
+        1: ['https://github.com/example/audio.mp3'],
+        2: [],
+      });
+
+      expect(missing, contains(2));
+      expect(missing, isNot(contains(1)));
+      expect(missing, hasLength(113));
+    });
+
     test('does not expose external urls as playable cloud audio', () {
       final url = resolvePlayableCloudAudioUrl(const {
         'type': 'quran_surah',
@@ -703,6 +745,37 @@ void main() {
         expect(result.failedSurahs, const [1, 2]);
         expect(completedSurahs, const [1, 2]);
         expect(source, isNot(contains('surahUrls[surahNumber]!')));
+      },
+    );
+
+    test(
+      'downloadAllSurahsFromCandidates drains sorted candidates without dropping mirrors',
+      () async {
+        final completedSurahs = <int>[];
+        final result =
+            await OfflineAudioService.downloadAllSurahsFromCandidates(
+              reciterId: 'alafasy',
+              surahUrlCandidates: const {
+                2: ['https://cdn.example.com/alafasy/002.mp3'],
+                1: [
+                  'https://cdn.example.com/alafasy/001-primary.mp3',
+                  'https://cdn.example.com/alafasy/001-secondary.mp3',
+                ],
+              },
+              onSurahComplete: (surahNumber, _) {
+                completedSurahs.add(surahNumber);
+              },
+            );
+        final source = File(
+          'lib/core/services/offline_audio_service.dart',
+        ).readAsStringSync();
+
+        expect(result.totalSurahs, 2);
+        expect(result.succeededSurahs, 0);
+        expect(result.failedSurahs, const [1, 2]);
+        expect(completedSurahs, const [1, 2]);
+        expect(source, contains('downloadSurahAudioFromCandidates('));
+        expect(source, isNot(contains('audioUrls.first')));
       },
     );
 

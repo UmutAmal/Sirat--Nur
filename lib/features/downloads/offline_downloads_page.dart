@@ -75,12 +75,16 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
     });
 
     final downloaded = await OfflineAudioService.getDownloadedSurahs(reciterId);
-    final allUrls = await OfflineReciters.getAllSurahUrls(reciterId);
-    final missingSources = missingQuranSurahAudioSources(allUrls);
-    final remainingUrls = <int, String>{};
-    for (final entry in allUrls.entries) {
+    final allUrlCandidates = await OfflineReciters.getAllSurahUrlCandidates(
+      reciterId,
+    );
+    final missingSources = missingQuranSurahAudioSourceCandidates(
+      allUrlCandidates,
+    );
+    final remainingUrlCandidates = <int, List<String>>{};
+    for (final entry in allUrlCandidates.entries) {
       if (!downloaded.contains(entry.key)) {
-        remainingUrls[entry.key] = entry.value;
+        remainingUrlCandidates[entry.key] = entry.value;
       }
     }
 
@@ -113,7 +117,7 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
       return;
     }
 
-    if (remainingUrls.isEmpty) {
+    if (remainingUrlCandidates.isEmpty) {
       if (!mounted) return;
       setState(() {
         _isDownloading[reciterId] = false;
@@ -126,9 +130,9 @@ class _OfflineDownloadsPageState extends State<OfflineDownloadsPage> {
       return;
     }
 
-    final result = await OfflineAudioService.downloadAllSurahs(
+    final result = await OfflineAudioService.downloadAllSurahsFromCandidates(
       reciterId: reciterId,
-      surahUrls: remainingUrls,
+      surahUrlCandidates: remainingUrlCandidates,
       onProgress: (progress, surahNumber, totalSurahs) {
         if (!mounted) return;
         setState(() {
