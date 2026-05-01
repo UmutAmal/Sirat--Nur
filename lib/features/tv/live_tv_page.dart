@@ -39,6 +39,24 @@ bool _isLiveTvSearchResultUrl(Uri uri) {
   return _isTrustedLiveTvHost(uri.host) && uri.path.contains('/results');
 }
 
+bool isSafeLiveTvNavigationUrl(String rawUrl) {
+  final trimmed = rawUrl.trim();
+  if (trimmed.isEmpty || trimmed.startsWith('intent://')) {
+    return false;
+  }
+
+  final uri = Uri.tryParse(trimmed);
+  if (uri == null) {
+    return false;
+  }
+
+  if (uri.scheme == 'about' && uri.path == 'blank') {
+    return true;
+  }
+
+  return _isAllowedLiveTvUrl(uri) && !_isLiveTvSearchResultUrl(uri);
+}
+
 String _normalizeLiveTvCandidateUrl(Uri uri, {required bool mutedByDefault}) {
   final queryParams = <String, String>{
     ...uri.queryParameters,
@@ -165,7 +183,7 @@ class _LiveTvPageState extends ConsumerState<LiveTvPage> {
             setState(() => _isLoading = false);
           },
           onNavigationRequest: (request) {
-            if (request.url.startsWith('intent://')) {
+            if (!isSafeLiveTvNavigationUrl(request.url)) {
               return NavigationDecision.prevent;
             }
             return NavigationDecision.navigate;

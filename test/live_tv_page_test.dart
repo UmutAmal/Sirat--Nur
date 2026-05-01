@@ -88,6 +88,38 @@ void main() {
       );
     });
 
+    test('webview navigation guard prevents non-YouTube escapes', () {
+      expect(
+        isSafeLiveTvNavigationUrl('https://www.youtube.com/embed/live'),
+        isTrue,
+      );
+      expect(isSafeLiveTvNavigationUrl('about:blank'), isTrue);
+      expect(isSafeLiveTvNavigationUrl('intent://youtube/live'), isFalse);
+      expect(
+        isSafeLiveTvNavigationUrl('http://www.youtube.com/embed/live'),
+        isFalse,
+      );
+      expect(
+        isSafeLiveTvNavigationUrl('https://example.com/embed/live'),
+        isFalse,
+      );
+      expect(
+        isSafeLiveTvNavigationUrl(
+          'https://www.youtube.com/results?search_query=adhan',
+        ),
+        isFalse,
+      );
+      expect(
+        isSafeLiveTvNavigationUrl('https://token@www.youtube.com/embed/live'),
+        isFalse,
+      );
+      expect(
+        isSafeLiveTvNavigationUrl('https://www.youtube.com/embed/live#secret'),
+        isFalse,
+      );
+      expect(isSafeLiveTvNavigationUrl('javascript:alert(1)'), isFalse);
+    });
+
     test(
       'candidate resolver normalizes valid streams and rejects unsafe rows',
       () {

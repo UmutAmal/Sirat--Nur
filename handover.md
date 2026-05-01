@@ -21369,3 +21369,34 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude l10n same-as-English borcu, fake/static UI data ve runtime fallback metinleri icin yeniden tarama yap.
+
+## 2026-05-01 TUR-535 - Live TV WebView Navigation Allowlist Guard
+
+### MASTER Karari
+- Risk: Live TV akisi ilk stream adaylarini YouTube allowlist ile temizliyordu, ancak WebView icindeki runtime navigation delegate yalnizca `intent://` URL'lerini engelliyordu. Bu, kullanici tiklamasi veya redirect ile YouTube disi HTTPS, `javascript:`, user-info, fragment veya arama sonucu sayfasina uygulama icinde gecis riski olusturan P1 guvenlik/icerik-guveni acigiydi.
+- Kanit:
+  - Son durum: `lib/features/tv/live_tv_page.dart:42` `isSafeLiveTvNavigationUrl` runtime navigation guard'ini merkezi hale getiriyor.
+  - Son durum: `lib/features/tv/live_tv_page.dart:185` `onNavigationRequest` artik her URL icin `isSafeLiveTvNavigationUrl` sonucunu kullaniyor; allowlist disi URL'ler `NavigationDecision.prevent` ile durduruluyor.
+  - Regresyon guard: `test/live_tv_page_test.dart:91` non-YouTube, HTTP, `intent://`, user-info, fragment, `javascript:` ve YouTube search result kacislarini test ediyor.
+- Kullanici etkisi: Canli TV WebView artik yalnizca guvenli YouTube/YouTube-nocookie embed navigasyonlarini veya `about:blank` teknik gecisini kabul ediyor; uygulama ici yayin yuzeyi dis siteye sessizce kacmiyor.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 4/25.
+- Rollback plani: Bu turdaki `lib/features/tv/live_tv_page.dart`, `test/live_tv_page_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `isSafeLiveTvNavigationUrl` eklendi; bos/malformed URL, `intent://`, HTTP, non-YouTube host, user-info, fragment, `javascript:` ve YouTube `/results` sayfalari bloklaniyor.
+- Mevcut stream candidate sanitizer korunarak kapsam buyutulmedi; sadece WebView runtime navigation katmani ayni guvenlik politikasina baglandi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\live_tv_page_test.dart --reporter compact` PASS, `11/11`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `749/749`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `f631301b-9b0c-4c48-8550-dfab41a14517`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarisi var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Live TV WebView runtime navigation escape riski: `16/25 -> 4/25`.
+- Kalan bilincli risk: Live TV kanallari verified Supabase seed ile geliyor; sonraki dongude dini/icerik kaynaklari ve runtime fallback zincirleri tekrar taranacak.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude AGENTS.md Section 13'e gore hardcoded dini icerik, Supabase content baglantisi, audio source ownership ve l10n kalite borcu icin yeniden risk taramasi baslat.
