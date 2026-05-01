@@ -332,6 +332,46 @@ void main() {
     );
 
     test(
+      'Bhojpuri calendar and special day labels do not keep explanatory debris',
+      () {
+        final arb = _readArb('lib/l10n/app_bho.arb');
+        const expected = {
+          'hijriCalendar': 'हिजरी कैलेंडर',
+          'tomorrow': 'काल्हु',
+          'specialDays': 'खास दिन',
+          'ramadan': 'रमजान',
+          'eidAlFitr': 'ईद अल-फितर',
+          'eidAlAdha': 'ईद अल-अधा',
+          'islamicNewYear': 'इस्लामी नया साल',
+          'mawlidAnNabi': 'मौलिद अन-नबी',
+          'specialDayDateRamadanStart': '1 रमजान',
+          'specialDayDateLaylatAlQadr': '27 रमजान',
+          'specialDayDateEidAlFitr': '1 शव्वाल',
+          'specialDayDateEidAlAdha': '10 धुल हिज्जा',
+          'specialDayDateIslamicNewYear': '1 मुहर्रम',
+          'specialDayDateMawlidAnNabi': '12 रबी अल-अव्वल',
+        };
+        final debris = RegExp(
+          r'के बारे में बतावल गइल बा| के ह$| के बा[।.]?$| के भइल$',
+        );
+
+        for (final entry in expected.entries) {
+          final value = arb[entry.key] as String;
+          expect(
+            value,
+            entry.value,
+            reason: 'app_bho.arb must keep concise ${entry.key} copy',
+          );
+          expect(
+            value,
+            isNot(contains(debris)),
+            reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+          );
+        }
+      },
+    );
+
+    test(
       'Bhojpuri prayer zikr zakat and places labels do not keep explanatory debris',
       () {
         final arb = _readArb('lib/l10n/app_bho.arb');

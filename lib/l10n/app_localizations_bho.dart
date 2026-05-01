@@ -402,7 +402,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get statistics => 'आँकड़ा के जानकारी दिहल गइल बा';
 
   @override
-  String get hijriCalendar => 'हिजरी कैलेंडर के बा';
+  String get hijriCalendar => 'हिजरी कैलेंडर';
 
   @override
   String get gregorianCalendar => 'ग्रेगोरियन कैलेंडर';
@@ -411,46 +411,46 @@ class AppLocalizationsBho extends AppLocalizations {
   String get today => 'आज के समय में';
 
   @override
-  String get tomorrow => 'काल्हु के बा';
+  String get tomorrow => 'काल्हु';
 
   @override
   String get yesterday => 'काल्हु के भइल';
 
   @override
-  String get specialDays => 'खास दिन के बा';
+  String get specialDays => 'खास दिन';
 
   @override
-  String get ramadan => 'रमजान के बा';
+  String get ramadan => 'रमजान';
 
   @override
-  String get eidAlFitr => 'ईद अल फितर के बा';
+  String get eidAlFitr => 'ईद अल-फितर';
 
   @override
-  String get eidAlAdha => 'ईद अल अधा के बा';
+  String get eidAlAdha => 'ईद अल-अधा';
 
   @override
-  String get islamicNewYear => 'इस्लामी नया साल के बा';
+  String get islamicNewYear => 'इस्लामी नया साल';
 
   @override
-  String get mawlidAnNabi => 'मौलिद अन-नबी के बा';
+  String get mawlidAnNabi => 'मौलिद अन-नबी';
 
   @override
-  String get specialDayDateRamadanStart => '१ रमजान के बा';
+  String get specialDayDateRamadanStart => '1 रमजान';
 
   @override
-  String get specialDayDateLaylatAlQadr => '27 रमजान के भइल';
+  String get specialDayDateLaylatAlQadr => '27 रमजान';
 
   @override
-  String get specialDayDateEidAlFitr => '१ शववाल के बा';
+  String get specialDayDateEidAlFitr => '1 शव्वाल';
 
   @override
-  String get specialDayDateEidAlAdha => '10 धुल हिज्जा के बा';
+  String get specialDayDateEidAlAdha => '10 धुल हिज्जा';
 
   @override
-  String get specialDayDateIslamicNewYear => '१ मुहर्रम के बा';
+  String get specialDayDateIslamicNewYear => '1 मुहर्रम';
 
   @override
-  String get specialDayDateMawlidAnNabi => '12 रबी अल-अववाल के बा';
+  String get specialDayDateMawlidAnNabi => '12 रबी अल-अव्वल';
 
   @override
   String get laylatAlQadr => 'लैलात अल-कदर';

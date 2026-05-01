@@ -20994,3 +20994,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude `app_bho` calendar/special-days ve zakat/sukun/places kisa label kalintilarini skorla.
+
+## 2026-05-01 TUR-524 - Bhojpuri Calendar Special Day Label Debris Cleanup
+
+### MASTER Karari
+- Risk: `app_bho.arb` icindeki Hijri takvim ve ozel gun label/tarih metinleri kisa UI etiketi yerine satir sonu `के बा` veya `के भइल` aciklama artigi tasiyordu. Bu alanlar Calendar ekraninda dogrudan gorundugu ve dini tarihlerin yanlis/garip gorunmesi guven etkisini zedeledigi icin P1 l10n kalite borcu olarak ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:198` `हिजरी कैलेंडर के बा`, `lib/l10n/app_bho.arb:201` `काल्हु के बा`, `lib/l10n/app_bho.arb:203` `खास दिन के बा`, `lib/l10n/app_bho.arb:204` `रमजान के बा`, `lib/l10n/app_bho.arb:205` `ईद अल फितर के बा`, `lib/l10n/app_bho.arb:210` `27 रमजान के भइल`, `lib/l10n/app_bho.arb:214` `12 रबी अल-अववाल के बा`.
+  - Son durum: `lib/l10n/app_bho.arb:198` `हिजरी कैलेंडर`, `lib/l10n/app_bho.arb:201` `काल्हु`, `lib/l10n/app_bho.arb:203` `खास दिन`, `lib/l10n/app_bho.arb:204` `रमजान`, `lib/l10n/app_bho.arb:205` `ईद अल-फितर`, `lib/l10n/app_bho.arb:210` `27 रमजान`, `lib/l10n/app_bho.arb:214` `12 रबी अल-अव्वल`.
+  - `test/arb_coverage_test.dart` icine eklenen `Bhojpuri calendar and special day labels do not keep explanatory debris` guard'i 14 takvim/ozel gun anahtarinda `के बारे में बतावल गइल बा`, satir sonu ` के ह`, ` के बा` ve ` के भइल` kalintisini geri getirmeyi engeller.
+  - Debris taramasi: `rg -n '"(hijriCalendar|tomorrow|specialDays|ramadan|eidAlFitr|eidAlAdha|islamicNewYear|mawlidAnNabi|specialDayDateRamadanStart|specialDayDateLaylatAlQadr|specialDayDateEidAlFitr|specialDayDateEidAlAdha|specialDayDateIslamicNewYear|specialDayDateMawlidAnNabi)".*(के बा|के भइल)' lib\l10n\app_bho.arb` sonucu bos.
+- Kullanici etkisi: Bhojpuri locale'de Calendar ekranindaki Hijri takvim, Ramadan, Eid ve diger ozel gun tarihleri kisa, okunabilir ve UI baglamina uygun gorunur; dini tarih degerleri degistirilmedi, yalnizca bozuk cumle artigi temizlendi.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 14 Bhojpuri takvim/ozel gun label'i kisa UI copy'ye indirildi: `hijriCalendar`, `tomorrow`, `specialDays`, `ramadan`, `eidAlFitr`, `eidAlAdha`, `islamicNewYear`, `mawlidAnNabi`, `specialDayDateRamadanStart`, `specialDayDateLaylatAlQadr`, `specialDayDateEidAlFitr`, `specialDayDateEidAlAdha`, `specialDayDateIslamicNewYear`, `specialDayDateMawlidAnNabi`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bho.dart` ARB ile senkronlandi.
+- Scope yalnizca Calendar UI label/tarih copy'siyle sinirli tutuldu; dua/Asma/hadith anlam cumleleri veya dini hukum iceren metinlere dokunulmadi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\arb_coverage_test.dart --plain-name "Bhojpuri calendar and special day labels do not keep explanatory debris" --reporter compact` PASS.
+- Translation report: `dart run tool\translate_arb_keys.dart hijriCalendar tomorrow specialDays ramadan eidAlFitr eidAlAdha islamicNewYear mawlidAnNabi specialDayDateRamadanStart specialDayDateLaylatAlQadr specialDayDateEidAlFitr specialDayDateEidAlAdha specialDayDateIslamicNewYear specialDayDateMawlidAnNabi --report` PASS; missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `736/736`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Appium release runtime smoke: ilk kosuda splash/onboarding zamanlamasi nedeniyle `next-1` tiklamasi kacirildi ve test false-negative verdi; `adb pm clear` ve UiAutomator2 paket temizligi sonrasi tekrar kosu PASS. Gecerli PASS session `4e4f8429-af1e-46e7-af7a-bd5ee360d39d`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+
+### Risk Degisimi
+- Bhojpuri calendar/special-days label aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho.arb` icinde zakat, sukun, chatbot, places ve bazi dashboard label'larinda `के बा` kalintilari devam ediyor. Dini anlam metinleriyle karistirilmadan ayri kucuk turlarda temizlenmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude `app_bho` zakat/sukun/chatbot/places kisa label kalintilarini skorla.
