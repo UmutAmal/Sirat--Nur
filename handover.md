@@ -21028,3 +21028,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude `app_bho` zakat/sukun/chatbot/places kisa label kalintilarini skorla.
+
+## 2026-05-01 TUR-525 - Bhojpuri Dashboard Zakat Sukun Chatbot Places Label Cleanup
+
+### MASTER Karari
+- Risk: `app_bho.arb` icinde dashboard, dua kategori, premium, zakat, Sukun, chatbot ve Places kisa UI label'lari satir sonu `के बा` veya `के बात बा` artigi tasiyordu. Bu metinler ana ekran, premium/paywall, zakat hesaplayici, Sukun ses mikseri, chatbot mod secimi ve harita kategorilerinde dogrudan gorundugu icin P1 l10n kalite borcu olarak ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:145` `रोजाना जिक्र के बा`, `lib/l10n/app_bho.arb:426` `दैनिक छंद के बा`, `lib/l10n/app_bho.arb:453` `माफी के बात बा`, `lib/l10n/app_bho.arb:479` `जकात कैलकुलेटर के बा`, `lib/l10n/app_bho.arb:485` `वजन (छ) के बा।`, `lib/l10n/app_bho.arb:609` `प्रकृति & कुरान मिक्सर के बा`, `lib/l10n/app_bho.arb:622` `क्लाउड एआई के बा`, `lib/l10n/app_bho.arb:636` `मस्जिद के बा`, `lib/l10n/app_bho.arb:672` `अज्ञात नाम के बा`.
+  - Son durum: `lib/l10n/app_bho.arb:145` `रोजाना जिक्र`, `lib/l10n/app_bho.arb:426` `दैनिक आयत`, `lib/l10n/app_bho.arb:453` `माफी`, `lib/l10n/app_bho.arb:479` `जकात कैलकुलेटर`, `lib/l10n/app_bho.arb:485` `वजन (ग्राम)`, `lib/l10n/app_bho.arb:609` `प्रकृति अउर कुरान मिक्सर`, `lib/l10n/app_bho.arb:622` `क्लाउड एआई`, `lib/l10n/app_bho.arb:636` `मस्जिद सभ`, `lib/l10n/app_bho.arb:672` `अनजान नाम`.
+  - `test/arb_coverage_test.dart` icine eklenen `Bhojpuri dashboard zakat sukun chatbot and places labels stay concise` guard'i 29 anahtarda `के बारे में बतावल गइल बा`, satir sonu ` के ह`, ` के बा` ve ` के बात बा` kalintisini geri getirmeyi engeller.
+  - Debris taramasi: `rg -n '"(dailyZikr|dailyVerse|todaysIbadah|dailyDuas|duaCategoryTasbih|duaCategoryForgiveness|paywallFeature1Title|paywallFeature3Title|zakatCalculator|zakatGold|zakatSilver|zakatCashBank|zakatInvestments|zakatWeightGrams|zakatPricePerGram|zakatTotalAmount|zakatDebts|totalZakat|zakatCashZakat|zakatInvestmentZakat|sukunMixerSubtitle|sukunNatureLabel|sukunGardenOfPeace|sukunOceanTawheed|chatbotCloudAiLabel|chatbotLocalAiLabel|mosques|halalFood|unknownPlaceName)".*(के बा|के बात बा)' lib\l10n\app_bho.arb` sonucu bos.
+- Kullanici etkisi: Bhojpuri locale'de dashboard, zakat hesaplama, Sukun ses mikseri, chatbot ve Places ekranlari kisa, okunabilir ve UI baglamina uygun label'lar gosterir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 29 Bhojpuri kisa UI label'i temizlendi: `dailyZikr`, `dailyVerse`, `todaysIbadah`, `dailyDuas`, `duaCategoryTasbih`, `duaCategoryForgiveness`, `paywallFeature1Title`, `paywallFeature3Title`, `zakatCalculator`, `zakatGold`, `zakatSilver`, `zakatCashBank`, `zakatInvestments`, `zakatWeightGrams`, `zakatPricePerGram`, `zakatTotalAmount`, `zakatDebts`, `totalZakat`, `zakatCashZakat`, `zakatInvestmentZakat`, `sukunMixerSubtitle`, `sukunNatureLabel`, `sukunGardenOfPeace`, `sukunOceanTawheed`, `chatbotCloudAiLabel`, `chatbotLocalAiLabel`, `mosques`, `halalFood`, `unknownPlaceName`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bho.dart` ARB ile senkronlandi.
+- Scope yalnizca kisa UI label'lariyla sinirli tutuldu; dua/Asma/hadith anlam cumleleri ve dini kaynak metinleri degistirilmedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\arb_coverage_test.dart --plain-name "Bhojpuri dashboard zakat sukun chatbot and places labels stay concise" --reporter compact` PASS.
+- Translation report: `dart run tool\translate_arb_keys.dart dailyZikr dailyVerse todaysIbadah dailyDuas duaCategoryTasbih duaCategoryForgiveness paywallFeature1Title paywallFeature3Title zakatCalculator zakatGold zakatSilver zakatCashBank zakatInvestments zakatWeightGrams zakatPricePerGram zakatTotalAmount zakatDebts totalZakat zakatCashZakat zakatInvestmentZakat sukunMixerSubtitle sukunNatureLabel sukunGardenOfPeace sukunOceanTawheed chatbotCloudAiLabel chatbotLocalAiLabel mosques halalFood unknownPlaceName --report` PASS; missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `737/737`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: ilk kosuda UiAutomator2 instrumentation `30000ms` timeout verdi; app data ve UiAutomator2 paket temizligi sonrasi tekrar kosu PASS. Gecerli PASS session `904eb52a-9a28-482b-b7d3-19aeee6db5c6`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+
+### Risk Degisimi
+- Bhojpuri dashboard/zakat/sukun/chatbot/places label aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho.arb` icinde `yesterday`, bazi qaza/diagnostics runtime status label'lari ve dini anlam olmayan tekil label'larda kalinti olabilir; ayrica duaMeaning gibi dini icerik cumleleri yalnizca guvenilir kaynak/EN fallback stratejisiyle ele alinmali.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude kalan `app_bho` runtime/status/qaza label kalintilarini dini anlam metinlerinden ayirarak skorla.

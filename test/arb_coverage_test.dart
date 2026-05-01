@@ -409,6 +409,61 @@ void main() {
       },
     );
 
+    test(
+      'Bhojpuri dashboard zakat sukun chatbot and places labels stay concise',
+      () {
+        final arb = _readArb('lib/l10n/app_bho.arb');
+        const expected = {
+          'dailyZikr': 'रोजाना जिक्र',
+          'dailyVerse': 'दैनिक आयत',
+          'todaysIbadah': 'आज के इबादत',
+          'dailyDuas': 'रोजाना दुआ',
+          'duaCategoryTasbih': 'तसबीह',
+          'duaCategoryForgiveness': 'माफी',
+          'paywallFeature1Title': 'न्यूरल असिस्टेंट प्लस',
+          'paywallFeature3Title': 'एक्सक्लूसिव डिजाइन',
+          'zakatCalculator': 'जकात कैलकुलेटर',
+          'zakatGold': 'सोना (Altın)',
+          'zakatSilver': 'चांदी (Gümüş)',
+          'zakatCashBank': 'नकद / बैंक',
+          'zakatInvestments': 'निवेश',
+          'zakatWeightGrams': 'वजन (ग्राम)',
+          'zakatPricePerGram': 'दाम/ग्राम',
+          'zakatTotalAmount': 'कुल रकम',
+          'zakatDebts': 'कर्ज',
+          'totalZakat': 'कुल जकात',
+          'zakatCashZakat': 'नकद जकात',
+          'zakatInvestmentZakat': 'निवेश जकात',
+          'sukunMixerSubtitle': 'प्रकृति अउर कुरान मिक्सर',
+          'sukunNatureLabel': 'सुकुन (प्रकृति)',
+          'sukunGardenOfPeace': 'शांति के बगीचा',
+          'sukunOceanTawheed': 'तौहीद के समुंदर',
+          'chatbotCloudAiLabel': 'क्लाउड एआई',
+          'chatbotLocalAiLabel': 'ऑफलाइन फॉलबैक',
+          'mosques': 'मस्जिद सभ',
+          'halalFood': 'हलाल खाना',
+          'unknownPlaceName': 'अनजान नाम',
+        };
+        final debris = RegExp(
+          r'के बारे में बतावल गइल बा| के ह$| के बा[।.]?$| के बात बा$',
+        );
+
+        for (final entry in expected.entries) {
+          final value = arb[entry.key] as String;
+          expect(
+            value,
+            entry.value,
+            reason: 'app_bho.arb must keep concise ${entry.key} copy',
+          );
+          expect(
+            value,
+            isNot(contains(debris)),
+            reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+          );
+        }
+      },
+    );
+
     test('Bihari visible labels do not keep explanatory debris', () {
       final arb = _readArb('lib/l10n/app_bh.arb');
       const expected = {

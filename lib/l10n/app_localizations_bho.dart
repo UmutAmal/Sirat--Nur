@@ -270,7 +270,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get lastRead => 'आखिरी बेर पढ़ल गइल';
 
   @override
-  String get dailyZikr => 'रोजाना जिक्र के बा';
+  String get dailyZikr => 'रोजाना जिक्र';
 
   @override
   String get duaMeaning1 =>
@@ -970,7 +970,7 @@ class AppLocalizationsBho extends AppLocalizations {
       'कैलिब्रेशन के जरूरत बा। चित्र-8 में डिवाइस के घुमावल जाला।';
 
   @override
-  String get dailyVerse => 'दैनिक छंद के बा';
+  String get dailyVerse => 'दैनिक आयत';
 
   @override
   String get dailyVerseUnavailableTitle => 'दैनिक छंद अनुपलब्ध बा';
@@ -980,7 +980,7 @@ class AppLocalizationsBho extends AppLocalizations {
       'सत्यापन कइल गइल दैनिक छंद सामग्री एह बिल्ड खातिर अबहीं ले कॉन्फ़िगर नइखे कइल गइल। ब्राउजिंग से पहिले क्लाउड स्रोत से कनेक्ट करीं भा कवनो सत्यापन कैश के सिंक करीं.';
 
   @override
-  String get todaysIbadah => 'आज के इबादा के बा';
+  String get todaysIbadah => 'आज के इबादत';
 
   @override
   String get quickAccess => 'त्वरित पहुँच';
@@ -998,7 +998,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get analytics => 'विश्लेषण';
 
   @override
-  String get dailyDuas => 'रोजाना दुआस के बा';
+  String get dailyDuas => 'रोजाना दुआ';
 
   @override
   String essentialDuas(String count) {
@@ -1019,7 +1019,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get duaCategoryMorningEvening => 'सुबह & शाम के समय';
 
   @override
-  String get duaCategoryTasbih => 'तसबीह के बा';
+  String get duaCategoryTasbih => 'तसबीह';
 
   @override
   String get duaCategoryProtection => 'संरक्षण के काम होला';
@@ -1034,7 +1034,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get duaCategoryFoodDrink => 'खाए-पीए के सामान';
 
   @override
-  String get duaCategoryForgiveness => 'माफी के बात बा';
+  String get duaCategoryForgiveness => 'माफी';
 
   @override
   String get duaCategoryHome => 'घर';
@@ -1087,7 +1087,7 @@ class AppLocalizationsBho extends AppLocalizations {
       'खरीददारी पूरा ना हो पावल। कृपया दोबारा कोशिश करीं।';
 
   @override
-  String get paywallFeature1Title => 'न्यूरल असिस्टेंट प्लस के बा';
+  String get paywallFeature1Title => 'न्यूरल असिस्टेंट प्लस';
 
   @override
   String get paywallFeature1Desc => 'असीमित एआई से चले वाला क्यू एंड ए';
@@ -1099,7 +1099,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get paywallFeature2Desc => 'सगरी पाठ डाउनलोड करीं';
 
   @override
-  String get paywallFeature3Title => 'एक्सक्लूसिव डिजाइन के बा';
+  String get paywallFeature3Title => 'एक्सक्लूसिव डिजाइन';
 
   @override
   String get paywallFeature3Desc => 'प्रीमियम थीम अउर फॉन्ट';
@@ -1117,37 +1117,37 @@ class AppLocalizationsBho extends AppLocalizations {
   String get restorePurchases => 'खरीददारी के बहाल कर दिहल जाव';
 
   @override
-  String get zakatCalculator => 'जकात कैलकुलेटर के बा';
+  String get zakatCalculator => 'जकात कैलकुलेटर';
 
   @override
-  String get zakatGold => 'सोना (अल्टिन) के बा।';
+  String get zakatGold => 'सोना (Altın)';
 
   @override
-  String get zakatSilver => 'चांदी (गुमुश) के बा।';
+  String get zakatSilver => 'चांदी (Gümüş)';
 
   @override
-  String get zakatCashBank => 'नकद / बैंक के बा';
+  String get zakatCashBank => 'नकद / बैंक';
 
   @override
   String get zakatBusiness => 'कारोबार';
 
   @override
-  String get zakatInvestments => 'निवेश के बा';
+  String get zakatInvestments => 'निवेश';
 
   @override
-  String get zakatWeightGrams => 'वजन (छ) के बा।';
+  String get zakatWeightGrams => 'वजन (ग्राम)';
 
   @override
-  String get zakatPricePerGram => 'कीमत/जी के बा';
+  String get zakatPricePerGram => 'दाम/ग्राम';
 
   @override
-  String get zakatTotalAmount => 'कुल राशि के बा';
+  String get zakatTotalAmount => 'कुल रकम';
 
   @override
   String get zakatInventoryValue => 'इन्वेंट्री के मूल्य';
 
   @override
-  String get zakatDebts => 'कर्जा के बा';
+  String get zakatDebts => 'कर्ज';
 
   @override
   String get zakatTotal => 'कुल';
@@ -1159,7 +1159,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get nisabNotReached => 'निसाब ना पहुँचल। जकात जरूरी नइखे।';
 
   @override
-  String get totalZakat => 'कुल जकात के बा';
+  String get totalZakat => 'कुल जकात';
 
   @override
   String nisabSummary(String nisab, String assets) {
@@ -1173,13 +1173,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get zakatSilverZakat => 'चांदी के जकात दिहल गइल';
 
   @override
-  String get zakatCashZakat => 'नकद जकात के बा';
+  String get zakatCashZakat => 'नकद जकात';
 
   @override
   String get zakatBusinessZakat => 'बिजनेस जकात';
 
   @override
-  String get zakatInvestmentZakat => 'निवेश के जकात के बा';
+  String get zakatInvestmentZakat => 'निवेश जकात';
 
   @override
   String get chatbotGreeting =>
@@ -1292,25 +1292,25 @@ class AppLocalizationsBho extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'प्रकृति & कुरान मिक्सर के बा';
+  String get sukunMixerSubtitle => 'प्रकृति अउर कुरान मिक्सर';
 
   @override
   String get audioPlayFailed => 'ऑडियो प्लेबैक फेल हो गइल';
 
   @override
-  String get sukunNatureLabel => 'सुकुन (प्रकृति) के बा।';
+  String get sukunNatureLabel => 'सुकुन (प्रकृति)';
 
   @override
   String get sukunRainOfMercy => 'दया के बरखा हो गइल';
 
   @override
-  String get sukunGardenOfPeace => 'शांति के बगीचा के बा';
+  String get sukunGardenOfPeace => 'शांति के बगीचा';
 
   @override
   String get sukunMidnightCalm => 'आधा रात के शांत हो गइल';
 
   @override
-  String get sukunOceanTawheed => 'ओशन तौहीद के बा';
+  String get sukunOceanTawheed => 'तौहीद के समुंदर';
 
   @override
   String get sukunUnavailableTitle => 'साउंडस्केप उपलब्ध नइखे';
@@ -1332,10 +1332,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get bestStreak => 'सबसे बढ़िया लकीर बा';
 
   @override
-  String get chatbotCloudAiLabel => 'क्लाउड एआई के बा';
+  String get chatbotCloudAiLabel => 'क्लाउड एआई';
 
   @override
-  String get chatbotLocalAiLabel => 'ऑफलाइन फॉलबैक के बा';
+  String get chatbotLocalAiLabel => 'ऑफलाइन फॉलबैक';
 
   @override
   String get chatbotUseCloudAi => 'Use Cloud AI (Gemini)';
@@ -1357,10 +1357,10 @@ class AppLocalizationsBho extends AppLocalizations {
       '[OFFLINE] सत्यापन स्थानीय इस्लामी मार्गदर्शन अभी तक उपलब्ध नइखे। स्रोत से मिलल जवाब खातिर क्लाउड एआई पर स्विच करीं।';
 
   @override
-  String get mosques => 'मस्जिद के बा';
+  String get mosques => 'मस्जिद सभ';
 
   @override
-  String get halalFood => 'हलाल फूड के बा';
+  String get halalFood => 'हलाल खाना';
 
   @override
   String get placesSearchArea => 'एह इलाका में खोज करीं';
@@ -1412,7 +1412,7 @@ class AppLocalizationsBho extends AppLocalizations {
       'एह बिल्ड खातिर अबहिन ले कौनों सत्यापन कइल जगह डेटा एंडपॉइंट कॉन्फ़िगर नइखे कइल गइल। पास के खोज के सक्षम करे से पहिले PLACES_OVERPASS_API_URL के कवनो मंजूर प्रॉक्सी भा प्रदाता पर सेट करीं।';
 
   @override
-  String get unknownPlaceName => 'अज्ञात नाम के बा';
+  String get unknownPlaceName => 'अनजान नाम';
 
   @override
   String get islamicPlaceFallback => 'इस्लामी जगह';
