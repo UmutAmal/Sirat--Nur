@@ -48,7 +48,7 @@ class SurahReadingPage extends ConsumerStatefulWidget {
 }
 
 class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
-  List<dynamic> _ayahs = [];
+  List<Map<String, dynamic>> _ayahs = const [];
   Map<String, dynamic>? _surahData;
   bool _isLoading = true;
   String? _error;
@@ -115,10 +115,13 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
 
       if (!mounted) return;
       final l10n = AppLocalizations.of(context)!;
+      final ayahs = readQuranMapRows(
+        surahData?['ayahs'],
+      ).toList(growable: false);
       setState(() {
         _surahData = surahData;
-        _ayahs = surahData?['ayahs'] as List<dynamic>? ?? const <dynamic>[];
-        _error = surahData == null ? l10n.noResults : null;
+        _ayahs = ayahs;
+        _error = surahData == null || ayahs.isEmpty ? l10n.noResults : null;
         _isLoading = false;
       });
     } catch (_) {
@@ -206,11 +209,11 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
     required Map<String, dynamic> ayah,
     required bool isTr,
   }) async {
-    final ayahNumber = ayah['numberInSurah']?.toString() ?? '-';
-    final arabicText = (ayah['text'] ?? '').toString().trim();
-    final translation = (isTr ? ayah['tr_translation'] : ayah['en_translation'])
-        ?.toString()
-        .trim();
+    final ayahNumber = readQuranInt(ayah['numberInSurah'])?.toString() ?? '-';
+    final arabicText = readQuranString(ayah['text']).trim();
+    final translation = readQuranString(
+      isTr ? ayah['tr_translation'] : ayah['en_translation'],
+    ).trim();
 
     final l10n = AppLocalizations.of(context)!;
     final header = buildAyahShareHeader(l10n, surahInfo, ayahNumber);
@@ -220,7 +223,7 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
         text: [
           header,
           arabicText,
-          if (translation != null && translation.isNotEmpty) translation,
+          if (translation.isNotEmpty) translation,
         ].join('\n\n'),
       ),
     );
@@ -381,13 +384,12 @@ class _SurahReadingPageState extends ConsumerState<SurahReadingPage> {
                   return const SizedBox.shrink();
                 }
 
-                final ayah = _ayahs[i - 2] as Map<String, dynamic>;
-                final textAr = (ayah['text'] ?? '').toString();
-                final textTrans =
-                    (isTr ? ayah['tr_translation'] : ayah['en_translation'])
-                        ?.toString() ??
-                    '';
-                final ayahNumber = ayah['numberInSurah'] as int? ?? 0;
+                final ayah = _ayahs[i - 2];
+                final textAr = readQuranString(ayah['text']);
+                final textTrans = readQuranString(
+                  isTr ? ayah['tr_translation'] : ayah['en_translation'],
+                );
+                final ayahNumber = readQuranInt(ayah['numberInSurah']) ?? 0;
                 final isAyahBookmarked = _bookmarkedAyahs.contains(ayahNumber);
 
                 return Container(

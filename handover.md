@@ -21601,3 +21601,53 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Quran/Juz malformed data guardlari, ARB kalite borcu ve Supabase/audio source provenance icin yeni risk taramasi baslat.
+
+## 2026-05-01 TUR-541 - Quran Reader Ayah Row Guard
+
+### MASTER Karari
+- Risk: Quran reader UI provider verisini genelde normalize edilmis kabul ediyordu; fakat test override, bozuk bundled fallback veya kismi cloud fallback durumunda ayah listesine map disi entry girerse Juz/Surah reader render akisi `as Map<String, dynamic>` cast'i ile crash edebilirdi.
+- Kanit:
+  - Baslangic: `lib/features/quran/juz_reading_page.dart:49` ayah entry'yi dogrudan `as Map<String, dynamic>` yapiyordu.
+  - Baslangic: `lib/features/quran/surah_reading_page.dart:384` list item render'da ayah entry'yi dogrudan `as Map<String, dynamic>` yapiyordu.
+  - Baslangic: `lib/features/quran/providers/bundled_quran_provider.dart:30` surah lookup surah number'i `as num?` ile okuyordu; numeric string veya bozuk row crash riski tasiyordu.
+  - Son durum: `lib/features/quran/providers/bundled_quran_provider.dart:30` surah lookup artik `readQuranInt` ile numeric string/bozuk row toleransli.
+  - Son durum: `lib/features/quran/providers/bundled_quran_provider.dart:38` `readQuranMapRows` non-iterable ayah payload'larini bos kabul ediyor.
+  - Son durum: `lib/features/quran/providers/bundled_quran_provider.dart:43` map disi ayah entry'leri atliyor.
+  - Son durum: `lib/features/quran/providers/bundled_quran_provider.dart:48` sadece string key'li map alanlarini UI'ya geciriyor.
+  - Son durum: `lib/features/quran/providers/bundled_quran_provider.dart:62` ve `lib/features/quran/providers/bundled_quran_provider.dart:64` UI icin sayi/metin okuma helper'lari merkezi hale geldi.
+  - Son durum: `lib/features/quran/juz_reading_page.dart:46` Juz ayetleri guvenli map iterator'u uzerinden okunuyor.
+  - Son durum: `lib/features/quran/juz_reading_page.dart:55` ayet numarasi cast yerine `readQuranInt` ile okunuyor.
+  - Son durum: `lib/features/quran/surah_reading_page.dart:51` Surah ayet state'i artik `List<Map<String, dynamic>>` olarak tutuluyor.
+  - Son durum: `lib/features/quran/surah_reading_page.dart:118` load asamasinda ayetler guvenli map iterator'u ile filtreleniyor.
+  - Son durum: `lib/features/quran/surah_reading_page.dart:124` surah bulunup ayet listesi tamamen bos kalirsa crash yerine localized `noResults` state'e dusuyor.
+  - Son durum: `lib/features/quran/surah_reading_page.dart:212` share metni cast yerine guvenli int/string helper'lari ile kuruluyor.
+  - Son durum: `lib/features/quran/surah_reading_page.dart:387` render yolu artik cast yapmadan typed ayah map kullaniyor.
+  - Regresyon guard: `test/features/quran/providers/bundled_quran_provider_test.dart:50` numeric string surah id'nin lookup'ta crash yaratmadigini test ediyor.
+  - Regresyon guard: `test/features/quran/providers/bundled_quran_provider_test.dart:61` malformed ayah entry'lerin atlandigini test ediyor.
+  - Regresyon guard: `test/features/quran/providers/bundled_quran_provider_test.dart:77` non-list ayah payload'inin bos kabul edildigini test ediyor.
+- Kullanici etkisi: Quran/Juz okuyucu bozuk tekil entry yuzunden tamamen kapanmaz; gecerli ayetler gorunmeye devam eder, tum ayet payload'i bos/bozuksa kullanici localized bos durum gorur.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 3/25.
+- Rollback plani: Bu turdaki `lib/features/quran/providers/bundled_quran_provider.dart`, `lib/features/quran/juz_reading_page.dart`, `lib/features/quran/surah_reading_page.dart`, `test/features/quran/providers/bundled_quran_provider_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Quran ayah row okuma helper'lari provider modulune eklendi; non-map ve non-string-key map entry'leri reader katmanina gecmiyor.
+- Surah lookup numeric guard ayni helper'a baglandi; numeric string veya bozuk number alani artik lookup crash'i uretmiyor.
+- Juz reader map/int/string cast yollarini helper'lara bagladi.
+- Surah reader ayah state'ini typed map listesine cevirdi; load, share ve render yollari ayni guvenli helper'lari kullaniyor.
+
+### TESTER Degisikligi
+- Targeted provider test: `flutter test test\features\quran\providers\bundled_quran_provider_test.dart --reporter compact` PASS, `17/17`.
+- Targeted Surah reader test: `flutter test test\features\quran\surah_reading_page_test.dart --reporter compact` PASS, `6/6`.
+- Targeted Quran error-copy test: `flutter test test\features\quran\quran_error_copy_test.dart --reporter compact` PASS, `3/3`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `762/762`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `250e4fa4-d295-477e-ad2c-a71f6cf76246`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Quran/Juz page-level row cast ve surah lookup numeric crash riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: ARB kalite borcu ve dini icerik provenance kontrolleri devam edecek; Quran reader row-cast yuzeyinde bilinen acik kalmadi.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude ARB kalite borcu, verified religious content provenance ve kalan runtime cast yuzeyleri icin taramaya devam et.

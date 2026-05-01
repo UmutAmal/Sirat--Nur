@@ -27,13 +27,41 @@ Map<String, dynamic>? findBundledSurahData(
   int surahNumber,
 ) {
   for (final row in rows) {
-    if ((row['number'] as num?)?.toInt() == surahNumber) {
+    if (readQuranInt(row['number']) == surahNumber) {
       return row;
     }
   }
 
   return null;
 }
+
+Iterable<Map<String, dynamic>> readQuranMapRows(Object? value) sync* {
+  if (value is! Iterable) {
+    return;
+  }
+
+  for (final item in value) {
+    if (item is! Map) {
+      continue;
+    }
+
+    final row = <String, dynamic>{};
+    for (final entry in item.entries) {
+      final key = entry.key;
+      if (key is String) {
+        row[key] = entry.value;
+      }
+    }
+
+    if (row.isNotEmpty) {
+      yield row;
+    }
+  }
+}
+
+int? readQuranInt(Object? value) => _toInt(value);
+
+String readQuranString(Object? value) => value?.toString() ?? '';
 
 Future<List<Map<String, dynamic>>> loadBundledQuranRows(
   AssetBundle assetBundle,

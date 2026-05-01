@@ -39,15 +39,12 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
 
       for (final surah in data) {
         final surahMap = surah;
-        final surahNumber = (surahMap['number'] as num?)?.toInt() ?? 0;
-        final surahArabicName = (surahMap['name'] ?? '').toString();
-        final surahEnglishName = (surahMap['englishName'] ?? '').toString();
+        final surahNumber = readQuranInt(surahMap['number']) ?? 0;
+        final surahArabicName = readQuranString(surahMap['name']);
+        final surahEnglishName = readQuranString(surahMap['englishName']);
 
-        final ayahs =
-            (surahMap['ayahs'] as List<dynamic>? ?? const <dynamic>[]);
-        for (final ayah in ayahs) {
-          final ayahMap = ayah as Map<String, dynamic>;
-          final juz = (ayahMap['juz'] as num?)?.toInt();
+        for (final ayahMap in readQuranMapRows(surahMap['ayahs'])) {
+          final juz = readQuranInt(ayahMap['juz']);
           if (juz != widget.juzNumber) continue;
 
           entries.add(
@@ -55,10 +52,10 @@ class _JuzReadingPageState extends ConsumerState<JuzReadingPage> {
               surahNumber: surahNumber,
               surahArabicName: surahArabicName,
               surahEnglishName: surahEnglishName,
-              numberInSurah: (ayahMap['numberInSurah'] as num?)?.toInt() ?? 0,
-              arabicText: (ayahMap['text'] ?? '').toString(),
-              englishTranslation: (ayahMap['en_translation'] ?? '').toString(),
-              turkishTranslation: (ayahMap['tr_translation'] ?? '').toString(),
+              numberInSurah: readQuranInt(ayahMap['numberInSurah']) ?? 0,
+              arabicText: readQuranString(ayahMap['text']),
+              englishTranslation: readQuranString(ayahMap['en_translation']),
+              turkishTranslation: readQuranString(ayahMap['tr_translation']),
             ),
           );
         }

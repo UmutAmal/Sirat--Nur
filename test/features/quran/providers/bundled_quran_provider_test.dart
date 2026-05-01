@@ -46,6 +46,38 @@ void main() {
       expect(findBundledSurahData(rows, 2)?['name'], 'البقرة');
       expect(findBundledSurahData(rows, 3), isNull);
     });
+
+    test('accepts numeric string surah ids without throwing', () {
+      final rows = [
+        {'number': '2', 'name': 'البقرة', 'ayahs': const []},
+        {'number': 'not-number', 'name': 'invalid', 'ayahs': const []},
+      ];
+
+      expect(findBundledSurahData(rows, 2)?['name'], 'البقرة');
+      expect(findBundledSurahData(rows, 3), isNull);
+    });
+  });
+
+  group('Quran row guards', () {
+    test('readQuranMapRows skips malformed ayah entries without throwing', () {
+      final rows = readQuranMapRows([
+        {'numberInSurah': '1', 'text': 'الفاتحة'},
+        'not a map',
+        {1: 'non-string key'},
+        {'numberInSurah': 2, 'text': 'الرحمن'},
+      ]).toList();
+
+      expect(rows, hasLength(2));
+      expect(readQuranInt(rows.first['numberInSurah']), 1);
+      expect(readQuranString(rows.first['text']), 'الفاتحة');
+      expect(readQuranInt(rows.last['numberInSurah']), 2);
+      expect(readQuranString(null), '');
+    });
+
+    test('readQuranMapRows treats non-list ayah payloads as empty', () {
+      expect(readQuranMapRows({'numberInSurah': 1}), isEmpty);
+      expect(readQuranMapRows(null), isEmpty);
+    });
   });
 
   group('normalizeCloudQuranRows', () {
