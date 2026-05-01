@@ -20575,3 +20575,39 @@
 
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
+
+## 2026-05-01 TUR-512 - Prayer Remaining Duration L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Ana ekrandaki kalan namaz vakti sure formatlari `prayerRemainingHoursMinutes` ve `prayerRemainingMinutes`, cok sayida locale'de Ingilizce `h/m` fallback olarak kaliyordu. `prayerRemainingUnavailable` bilincli sembol `--` oldugu icin ceviri kapsamindan disarida tutuldu.
+- Kanit:
+  - `lib/features/home/home_page.dart:14`, `lib/features/home/home_page.dart:21`, `lib/features/home/home_page.dart:27` bu anahtarlari ana ekrandaki kalan vakit metni icin kullanir.
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report prayerRemainingHoursMinutes prayerRemainingMinutes` same-as-English `310`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 2 anahtarda same-as-English `266`, missing/empty `0`, placeholder mismatch `0`.
+  - `test/arb_ui_localization_test.dart:2547` `prayerRemainingUnavailable` degerinin tum locale'lerde `--` kalmasini bilincli olarak kilitler.
+  - `test/translate_arb_keys_test.dart` yeni guard ile debt esigi `<= 266`; `am/as/ay/bh/bho/dv/fi/gn/lus/mai/sa/th/ti` orneklerinde Ingilizce fallback, cok satirli copy, `kk` yanlis dakika birimi, `Ukaxa/ukat/rehegua/ke ba` baglam artigi ve placeholder kaybi engellenir.
+- Kullanici etkisi: Ana ekrandaki sure formatlari daha fazla dilde yerel gorunur; Fince dakika degeri `kk` (ay baglami) hatasindan `min` formatina cekildi; Aymara, Guarani, Bhojpuri, Mizo, Maithili, Sanskrit, Thai ve Tigrinya sure metinlerinde batch kalintisi paketlenmez.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 5/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `prayerRemainingHoursMinutes` ve `prayerRemainingMinutes` icin kontrollu l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- Batch sonrasi `app_lus.arb`, `app_mai.arb`, `app_sa.arb`, `app_ti.arb` cok satirli aciklama kalintisindan temizlendi.
+- `app_ay.arb`, `app_bh.arb`, `app_bho.arb`, `app_gn.arb`, `app_th.arb` baglam disi machine-translation artigindan arindirildi; `app_fi.arb` dakika birimi `kk` -> `min` yapildi.
+
+### TESTER Degisikligi
+- Prayer duration debris/placeholder scan: PASS; hedef 2 anahtarda newline, `which means/means/meaning`, `इति`, `ዝብል`, `Ukaxa/ukat/rehegua/ke ba`, repeated-run, `kk` yanlis birimi ve placeholder kaybi yok.
+- Targeted l10n tests: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `147/147`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `724/724`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `d30aa8fd-d5eb-4a59-9271-9a801d801b6e`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Prayer remaining duration 2 anahtarli l10n fallback borcu: `12/25 -> 5/25`.
+- Kalan bilincli risk: Global i18n listesinde `duaSource*` proper-name kaynak adlari ve `prayerRemainingUnavailable` sembolu yuksek gorunur fakat ceviri zorunlulugu degildir. Siradaki gercek UI borcu `rawatib`, `tahajjud`, `ahkab`, `masaail`, `qibla`, `tasbih`, `tafsir`, `premium`, `ok` gibi gorunur label kumesidir; dini terimler icin uydurma ceviri yapmadan canonical/transliteration policy ile ele alinmalidir.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude proper-name/symbol olmayan en yuksek UI label kumesini skorlayip minimal l10n guard ile azalt.

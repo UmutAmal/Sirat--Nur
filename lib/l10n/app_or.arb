@@ -171,7 +171,7 @@
   "fasting": "ଉପବାସ",
   "quranReading": "କୁରାନ ପଠନ |",
   "prayers": "ପ୍ରାର୍ଥନା |",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingHoursMinutes": "{hours}h {minutes}m |",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {
       "hours": {

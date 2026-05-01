@@ -171,7 +171,7 @@
   "fasting": "Panagayuno",
   "quranReading": "Panagbasa iti Quran",
   "prayers": "Dagiti kararag",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingHoursMinutes": "{hours}h nga {minutes}m",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {
       "hours": {
@@ -182,7 +182,7 @@
       }
     }
   },
-  "prayerRemainingMinutes": "{minutes}m",
+  "prayerRemainingMinutes": "{minutes}m nga",
   "@prayerRemainingMinutes": {
     "placeholders": {
       "minutes": {

@@ -383,7 +383,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}kk';
+    return '${minutes}min';
   }
 
   @override

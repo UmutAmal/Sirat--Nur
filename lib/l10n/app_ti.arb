@@ -171,7 +171,7 @@
   "fasting": "Fasting",
   "quranReading": "Quran Reading",
   "prayers": "Prayers",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingHoursMinutes": "{hours} ሰዓት {minutes} ደቂቕ",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {
       "hours": {
@@ -182,7 +182,7 @@
       }
     }
   },
-  "prayerRemainingMinutes": "{minutes}m",
+  "prayerRemainingMinutes": "{minutes} ደቂቕ",
   "@prayerRemainingMinutes": {
     "placeholders": {
       "minutes": {

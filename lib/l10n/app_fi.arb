@@ -182,7 +182,7 @@
       }
     }
   },
-  "prayerRemainingMinutes": "{minutes}kk",
+  "prayerRemainingMinutes": "{minutes}min",
   "@prayerRemainingMinutes": {
     "placeholders": {
       "minutes": {

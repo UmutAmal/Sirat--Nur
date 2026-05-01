@@ -377,12 +377,12 @@ class AppLocalizationsAs extends AppLocalizations {
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
-    return '${hours}h ${minutes}m';
+    return '${hours}h $minutesমি';
   }
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}m';
+    return '$minutesমি';
   }
 
   @override

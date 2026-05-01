@@ -380,12 +380,12 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
-    return '${hours}h ${minutes}m';
+    return '${hours}h nga ${minutes}m';
   }
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}m';
+    return '${minutes}m nga';
   }
 
   @override

@@ -384,7 +384,7 @@ class AppLocalizationsTw extends AppLocalizations {
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}m';
+    return '${minutes}m na ɛwɔ hɔ';
   }
 
   @override

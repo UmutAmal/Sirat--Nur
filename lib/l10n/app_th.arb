@@ -171,7 +171,7 @@
   "fasting": "การถือศีลอด",
   "quranReading": "การอ่านอัลกุรอาน",
   "prayers": "คำอธิษฐาน",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingHoursMinutes": "{hours} ชม. {minutes} นาที",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {
       "hours": {
@@ -182,7 +182,7 @@
       }
     }
   },
-  "prayerRemainingMinutes": "{minutes}m",
+  "prayerRemainingMinutes": "{minutes} นาที",
   "@prayerRemainingMinutes": {
     "placeholders": {
       "minutes": {

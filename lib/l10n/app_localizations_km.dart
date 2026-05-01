@@ -382,7 +382,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}m';
+    return '$minutesម';
   }
 
   @override

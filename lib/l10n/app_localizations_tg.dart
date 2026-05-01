@@ -377,12 +377,12 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
-    return '${hours}h ${minutes}m';
+    return '$hoursч $minutesм';
   }
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}m';
+    return '$minutesм';
   }
 
   @override

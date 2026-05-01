@@ -171,7 +171,7 @@
   "fasting": "Fasting",
   "quranReading": "Quran Reading",
   "prayers": "Prayers",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingHoursMinutes": "{hours}h{minutes}m",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {
       "hours": {

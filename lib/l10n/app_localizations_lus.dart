@@ -378,12 +378,12 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
-    return '${hours}h ${minutes}m';
+    return '$hours darkar $minutes minit';
   }
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}m';
+    return '$minutes minit';
   }
 
   @override

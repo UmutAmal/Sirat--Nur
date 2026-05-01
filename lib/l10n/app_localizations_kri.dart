@@ -383,7 +383,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String prayerRemainingMinutes(String minutes) {
-    return '${minutes}m';
+    return '${minutes}m na di wan';
   }
 
   @override
