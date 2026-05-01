@@ -270,7 +270,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get lastRead => 'आखिरी बेर पढ़ल गइल';
 
   @override
-  String get dailyZikr => 'रोजाना जिक्र के बा';
+  String get dailyZikr => 'रोजाना जिक्र';
 
   @override
   String get duaMeaning1 =>
@@ -368,10 +368,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get pauseSurahAudio => 'सूरह ऑडियो के रोक दिहल जाव';
 
   @override
-  String get revelationMeccan => 'मक्का के ह';
+  String get revelationMeccan => 'मक्का';
 
   @override
-  String get revelationMedinan => 'मदीनान के ह';
+  String get revelationMedinan => 'मदीना';
 
   @override
   String get prayers => 'Prayers';
@@ -396,7 +396,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get weeklyProgress => 'Weekly Progress';
 
   @override
-  String get monthlyProgress => 'मासिक प्रगति के बा';
+  String get monthlyProgress => 'मासिक प्रगति';
 
   @override
   String get statistics => 'आँकड़ा के जानकारी दिहल गइल बा';
@@ -627,13 +627,13 @@ class AppLocalizationsBh extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'ढिकर लाइब्रेरी के ह';
+  String get dhikrLibrary => 'ढिकर लाइब्रेरी';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'लक्ष्य बदले के बा';
+  String get changeTarget => 'लक्ष्य बदलीं';
 
   @override
   String get newTarget => 'नया लक्ष्य बा';
@@ -696,10 +696,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get sunnahAndOthers => 'सुन्नत अउर अन्य लोग';
 
   @override
-  String get spiritualGrowth => 'आध्यात्मिक विकास के बारे में बतावल गइल बा';
+  String get spiritualGrowth => 'आध्यात्मिक विकास';
 
   @override
-  String get mandatoryDuty => 'अनिवार्य कर्तव्य के बा';
+  String get mandatoryDuty => 'अनिवार्य कर्तव्य';
 
   @override
   String get totalPrayers => 'कुल प्रार्थना कइल गइल';
@@ -714,10 +714,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get reset => 'रीसेट हो गइल बा';
 
   @override
-  String get days => 'दिन भर के बा';
+  String get days => 'दिन';
 
   @override
-  String get premiumIntegrity => 'प्रीमियम इंटीग्रेटी के बा';
+  String get premiumIntegrity => 'प्रीमियम अखंडता';
 
   @override
   String get recheckPremium => 'Recheck Premium Status';
@@ -740,7 +740,7 @@ class AppLocalizationsBh extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक के बा';
+  String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक';
 
   @override
   String get manageDatasets =>
@@ -750,7 +750,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get freeStorage => 'आंतरिक डिवाइस भंडारण के मुक्त कर दीं।';
 
   @override
-  String get quranIntegrity => 'कुरान के अखंडता के बारे में बतावल गइल बा';
+  String get quranIntegrity => 'कुरान के अखंडता';
 
   @override
   String get checkQuranDb => 'कुरान डाटाबेस के जांच करीं';
@@ -826,10 +826,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'फजर एंगल के बा';
+  String get fajrAngle => 'फजर एंगल';
 
   @override
-  String get ishaAngle => 'ईशा एंगल के ह';
+  String get ishaAngle => 'ईशा एंगल';
 
   @override
   String get qiblaCalibration => 'Qibla Calibration';
@@ -841,7 +841,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get reduceSensorJitter => 'स्थिर सुई खातिर सेंसर के जिटर कम करीं।';
 
   @override
-  String get calibrationOffset => 'कैलिब्रेशन ऑफसेट के बा';
+  String get calibrationOffset => 'कैलिब्रेशन ऑफसेट';
 
   @override
   String currentOffset(Object offset) {
@@ -871,7 +871,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get diagnosticsPrayerProfile => 'प्रार्थना के प्रोफाइल बा';
 
   @override
-  String get diagnosticsPrayerSource => 'प्रार्थना प्राधिकरण के ह';
+  String get diagnosticsPrayerSource => 'प्रार्थना प्राधिकरण';
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
@@ -995,7 +995,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get library => 'Library';
 
   @override
-  String get analytics => 'विश्लेषणात्मकता के बारे में बतावल गइल बा';
+  String get analytics => 'विश्लेषण';
 
   @override
   String get dailyDuas => 'Daily Duas';
@@ -1236,7 +1236,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get downloadAction => 'डाउनलोड करीं';
 
   @override
-  String get resumeDownload => 'डाउनलोड जारी रखे के बा';
+  String get resumeDownload => 'डाउनलोड जारी राखीं';
 
   @override
   String get deleteDownloadedFiles => 'डाउनलोड भइल फाइल के हटा दिहल जाव';

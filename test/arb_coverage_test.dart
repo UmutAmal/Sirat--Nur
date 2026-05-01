@@ -264,6 +264,45 @@ void main() {
         }
       },
     );
+
+    test('Bihari visible labels do not keep explanatory debris', () {
+      final arb = _readArb('lib/l10n/app_bh.arb');
+      const expected = {
+        'dailyZikr': 'रोजाना जिक्र',
+        'monthlyProgress': 'मासिक प्रगति',
+        'dhikrLibrary': 'ढिकर लाइब्रेरी',
+        'changeTarget': 'लक्ष्य बदलीं',
+        'spiritualGrowth': 'आध्यात्मिक विकास',
+        'mandatoryDuty': 'अनिवार्य कर्तव्य',
+        'days': 'दिन',
+        'premiumIntegrity': 'प्रीमियम अखंडता',
+        'offlineDownloadManager': 'ऑफलाइन डाउनलोड प्रबंधक',
+        'quranIntegrity': 'कुरान के अखंडता',
+        'fajrAngle': 'फजर एंगल',
+        'ishaAngle': 'ईशा एंगल',
+        'calibrationOffset': 'कैलिब्रेशन ऑफसेट',
+        'diagnosticsPrayerSource': 'प्रार्थना प्राधिकरण',
+        'analytics': 'विश्लेषण',
+        'resumeDownload': 'डाउनलोड जारी राखीं',
+        'revelationMeccan': 'मक्का',
+        'revelationMedinan': 'मदीना',
+      };
+      final debris = RegExp(r'के बारे में बतावल गइल बा| के ह$| के बा$');
+
+      for (final entry in expected.entries) {
+        final value = arb[entry.key] as String;
+        expect(
+          value,
+          entry.value,
+          reason: 'app_bh.arb must keep concise ${entry.key} copy',
+        );
+        expect(
+          value,
+          isNot(contains(debris)),
+          reason: 'app_bh.arb keeps explanatory debris in ${entry.key}',
+        );
+      }
+    });
   });
 }
 

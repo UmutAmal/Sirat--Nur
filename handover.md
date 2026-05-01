@@ -20892,3 +20892,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude l10n debt taramasini genislet. Oncelik: diger low-resource locale'lerde Asma/dua/hadith dini anlamlarinda komik makine debris var mi kanitla; varsa EN fallback veya onayli kaynak mapping ile kucuk patch'ler halinde temizle.
+
+## 2026-05-01 TUR-521 - Bihari Visible Label Debris Cleanup
+
+### MASTER Karari
+- Risk: `app_bh.arb` Bihari locale'inde ana ekran/zikr/diagnostics/download/revelation gibi gorunur kisa label'lar `के बा`, `के ह` ve `के बारे में बतावल गइल बा` aciklama artigi tasiyordu. Bu, Bhojpuri'de temizlenen ayni kok sebebin Bihari varyantinda devam ettigini gosterdi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bh.arb:145` `रोजाना जिक्र के बा`, `lib/l10n/app_bh.arb:196` `मासिक प्रगति के बा`, `lib/l10n/app_bh.arb:287` `ढिकर लाइब्रेरी के ह`, `lib/l10n/app_bh.arb:309` `आध्यात्मिक विकास के बारे में बतावल गइल बा`, `lib/l10n/app_bh.arb:326` `कुरान के अखंडता के बारे में बतावल गइल बा`, `lib/l10n/app_bh.arb:347` `ईशा एंगल के ह`, `lib/l10n/app_bh.arb:360` `प्रार्थना प्राधिकरण के ह`, `lib/l10n/app_bh.arb:434` `विश्लेषणात्मकता के बारे में बतावल गइल बा`, `lib/l10n/app_bh.arb:551` `डाउनलोड जारी रखे के बा`, `lib/l10n/app_bh.arb:793` `मक्का के ह`, `lib/l10n/app_bh.arb:794` `मदीनान के ह`.
+  - Son durum: `lib/l10n/app_bh.arb:145` `रोजाना जिक्र`, `lib/l10n/app_bh.arb:196` `मासिक प्रगति`, `lib/l10n/app_bh.arb:287` `ढिकर लाइब्रेरी`, `lib/l10n/app_bh.arb:309` `आध्यात्मिक विकास`, `lib/l10n/app_bh.arb:326` `कुरान के अखंडता`, `lib/l10n/app_bh.arb:347` `ईशा एंगल`, `lib/l10n/app_bh.arb:360` `प्रार्थना प्राधिकरण`, `lib/l10n/app_bh.arb:434` `विश्लेषण`, `lib/l10n/app_bh.arb:551` `डाउनलोड जारी राखीं`, `lib/l10n/app_bh.arb:793` `मक्का`, `lib/l10n/app_bh.arb:794` `मदीना`.
+  - `test/arb_coverage_test.dart:270` yeni guard 18 Bihari visible label'inda `के बारे में बतावल गइल बा`, satir sonu ` के ह` ve satir sonu ` के बा` debris'ini geri getirmeyi engeller.
+  - Debris taramasi: `rg -n -g 'app_bh.arb' 'के बारे में बतावल गइल बा| के ह"| के बा"|नाम से जानल जाला|बतावल गइल' lib\l10n` sonucu bos.
+- Kullanici etkisi: Bihari locale secildiginde zikr, dashboard, diagnostics, qibla ayarlari, download ve revelation label'lari aciklama cumlesi yerine kisa UI metni olarak gorunur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bh.arb`, generated `lib/l10n/app_localizations_bh.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `dailyZikr`, `monthlyProgress`, `dhikrLibrary`, `changeTarget`, `spiritualGrowth`, `mandatoryDuty`, `days`, `premiumIntegrity`, `offlineDownloadManager`, `quranIntegrity`, `fajrAngle`, `ishaAngle`, `calibrationOffset`, `diagnosticsPrayerSource`, `analytics`, `resumeDownload`, `revelationMeccan`, `revelationMedinan` Bihari kisa label'lari temizlendi.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bh.dart` ARB ile senkronlandi.
+- Scope yalnizca Bihari visible label kumesiyle sinirli tutuldu; dini anlam cumleleri ve Asma fallback kumesi bu turda degistirilmedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\arb_coverage_test.dart --plain-name "Bihari visible labels do not keep explanatory debris" --reporter compact` PASS.
+- Translation report: `dart run tool\translate_arb_keys.dart dailyZikr monthlyProgress dhikrLibrary changeTarget spiritualGrowth mandatoryDuty days premiumIntegrity offlineDownloadManager quranIntegrity fajrAngle ishaAngle calibrationOffset diagnosticsPrayerSource analytics resumeDownload revelationMeccan revelationMedinan --report` PASS; missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `733/733`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `d81bd871-fbf5-44d3-90f1-d62081ced68c`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+
+### Risk Degisimi
+- Bihari visible label aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho.arb` ve baska Indic low-resource locale'lerde kisa UI label'larinda satir sonu `के बा` benzeri zayifliklar hala olabilir. Bunlar dini anlam cumlelerinden ayrilmali ve kanitli kucuk cluster'lar halinde temizlenmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Indic locale taramasini daralt: `app_bho` genel shell/action label'larinda kalan `के बा` kaliplarini risk skorla, dini anlam olmayan kisa UI label'lari onceliklendir.
