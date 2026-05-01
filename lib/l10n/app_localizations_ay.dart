@@ -729,7 +729,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Integridad Premium ukaxa';
 
   @override
   String get recheckPremium => 'Recheck Premium Status';
@@ -738,7 +738,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get syncStore => 'Sync with the store to confirm your entitlement.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Uñakipt’añatakix estado de primas...';
 
   @override
   String get premiumVerified => 'Premium verified.';
@@ -763,13 +763,13 @@ class AppLocalizationsAy extends AppLocalizations {
   String get freeStorage => 'Dispositivo manqhankir imañanak qhispiyaña.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Quran Integridad ukat juk’ampinaka';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Quran ukan Base de Datos ukar uñakipt’aña';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114 surahs ukat 6236 ayahs uñakipt’aña.';
 
   @override
   String get checkingQuranDb => 'Checking Quran database...';
@@ -778,10 +778,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Jan phuqhata';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Janiw jatha ch’uqt’atäkiti';
 
   @override
   String get quranDbStatus => 'Quran Database Status';
@@ -793,22 +793,22 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Surahs: $count (114 suyt’ata) .';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (6236 suyt’ata)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Árabe aru chhaqhata: $count .';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Turco aru chhaqhata: $count';
   }
 
   @override
@@ -874,7 +874,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get resetOnboarding => 'Reset Onboarding';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Qallta wakicht’awi lurawi mayampi phuqhaña.';
 
   @override
   String get diagnostics => 'Diagnósticos ukanaka';
@@ -973,7 +973,8 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'K’umar jakañ uñakipañanak apnaqaña ukat sistema ukan estado uñakipaña.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

@@ -717,7 +717,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Integridat Premium';
 
   @override
   String get recheckPremium => 'Recheck Premium Status';
@@ -726,7 +726,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get syncStore => 'Sync with the store to confirm your entitlement.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Hu chek i estao i premium...';
 
   @override
   String get premiumVerified => 'Premium verified.';
@@ -751,13 +751,13 @@ class AppLocalizationsCh extends AppLocalizations {
       'Na\'libre i lugåt para u ma\'a\'atan i dipattamenton-mu.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Integridat gi i Quran';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Chek i Quran Database';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Na\'siguru 114 na surah yan 6236 na ayah.';
 
   @override
   String get checkingQuranDb => 'Checking Quran database...';
@@ -766,10 +766,10 @@ class AppLocalizationsCh extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Ti kumple';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Ti ma\'a\'atan';
 
   @override
   String get quranDbStatus => 'Quran Database Status';
@@ -781,22 +781,22 @@ class AppLocalizationsCh extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Surahs: $count (ma espipiha 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (ma espipiha 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Ti ma tungo\' i fino\' CHamoru: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Turkish ni\' ti ma tungo\': $count';
   }
 
   @override
@@ -806,7 +806,7 @@ class AppLocalizationsCh extends AppLocalizations {
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Chalan: $path';
   }
 
   @override
@@ -861,7 +861,8 @@ class AppLocalizationsCh extends AppLocalizations {
   String get resetOnboarding => 'Reset Onboarding';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup =>
+      'Na\'lå\'la\' ta\'lo i fine\'nina na prugråman inatan.';
 
   @override
   String get diagnostics => 'Diagnostics';
@@ -958,7 +959,8 @@ class AppLocalizationsCh extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Na\'i che\'cho\' salut ya un li\'e\' i estao i sistema.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

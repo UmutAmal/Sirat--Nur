@@ -719,7 +719,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Ubuqotho be-Premium';
 
   @override
   String get recheckPremium => 'Hlola kabusha isimo sokubhaliselwe kwe-premium';
@@ -729,7 +729,7 @@ class AppLocalizationsZu extends AppLocalizations {
       'Vumelanisa nesitolo sohlelo lokusebenza ukuze uqinisekise ukubhalisa kwakho kwe-premium.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Ihlola isimo se-premium...';
 
   @override
   String get premiumVerified => 'Ukubhaliswa kwe-Premium kuqinisekisiwe.';
@@ -754,13 +754,14 @@ class AppLocalizationsZu extends AppLocalizations {
   String get freeStorage => 'Khulula isitoreji sedivayisi yangaphakathi.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Quran Ubuqotho';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Bheka i-Quran Database';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent =>
+      'Qinisekisa ama-surah angu-114 nama-ayah angu-6236.';
 
   @override
   String get checkingQuranDb => 'Ihlola i-Quran database...';
@@ -769,10 +770,10 @@ class AppLocalizationsZu extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Akuphelele';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Ayimbewu';
 
   @override
   String get quranDbStatus => 'Isimo se-Quran Database';
@@ -784,32 +785,32 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Ama-Surah: $count (okulindeleke ku-114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ama-Ayah: $count (okulindeleke ku-6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Isi-Arabhu esingekho: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Isi-Turkish esilahlekile: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Inguqulo ye-DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Indlela: $path';
   }
 
   @override
@@ -864,7 +865,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get resetOnboarding => 'Setha kabusha ukusethwa kwesingeniso';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Qalisa kabusha inqubo yokusetha yokuqala.';
 
   @override
   String get diagnostics => 'Ukuxilonga';
@@ -961,7 +962,8 @@ class AppLocalizationsZu extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Yenza ukuhlolwa kwezempilo futhi ubuke isimo sesistimu.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

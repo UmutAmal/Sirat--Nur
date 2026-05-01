@@ -701,7 +701,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => '优质诚信';
 
   @override
   String get recheckPremium => '重新检查高级订阅状态';
@@ -710,7 +710,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get syncStore => '与应用商店同步以确认您的高级订阅。';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => '正在检查保费状态...';
 
   @override
   String get premiumVerified => '高级订阅已验证。';
@@ -733,13 +733,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get freeStorage => '释放内部设备存储空间。';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => '古兰经的完整性';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => '检查古兰经数据库';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '验证 114 章古兰经和 6236 章经文。';
 
   @override
   String get checkingQuranDb => '检查古兰经数据库...';
@@ -748,10 +748,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => '不完整';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => '未播种';
 
   @override
   String get quranDbStatus => '古兰经数据库状态';
@@ -763,32 +763,32 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return '古兰经：$count（预计 114）';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return '阿亚斯：$count（预计 6236）';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return '缺少阿拉伯语：$count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return '缺少土耳其语：$count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return '数据库版本：$version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return '路径：$path';
   }
 
   @override
@@ -842,7 +842,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get resetOnboarding => '重置简介设置';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => '重新运行初始设置过程。';
 
   @override
   String get diagnostics => '诊断';
@@ -936,7 +936,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc => '运行健康检查并查看系统状态。';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';
@@ -2377,7 +2377,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => '优质诚信';
 
   @override
   String get recheckPremium => '重新检查高级订阅状态';
@@ -2386,7 +2386,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get syncStore => '与应用商店同步以确认您的高级订阅。';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => '正在检查保费状态...';
 
   @override
   String get premiumVerified => '高级订阅已验证。';
@@ -2409,13 +2409,13 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get freeStorage => '释放内部设备存储空间。';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => '古兰经的完整性';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => '检查古兰经数据库';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '验证 114 章古兰经和 6236 章经文。';
 
   @override
   String get checkingQuranDb => '检查古兰经数据库...';
@@ -2424,10 +2424,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => '不完整';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => '未播种';
 
   @override
   String get quranDbStatus => '古兰经数据库状态';
@@ -2439,32 +2439,32 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return '古兰经：$count（预计 114）';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return '阿亚斯：$count（预计 6236）';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return '缺少阿拉伯语：$count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return '缺少土耳其语：$count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return '数据库版本：$version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return '路径：$path';
   }
 
   @override
@@ -2518,7 +2518,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get resetOnboarding => '重置简介设置';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => '重新运行初始设置过程。';
 
   @override
   String get diagnostics => '诊断';
@@ -2612,7 +2612,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc => '运行健康检查并查看系统状态。';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';
@@ -4053,7 +4053,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => '優質誠信';
 
   @override
   String get recheckPremium => '重新檢查高級訂閱狀態';
@@ -4062,7 +4062,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get syncStore => '與應用程式商店同步以確認您的高級訂閱。';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => '正在檢查保費狀態...';
 
   @override
   String get premiumVerified => '高級訂閱已驗證。';
@@ -4085,13 +4085,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get freeStorage => '釋放內部設備儲存空間。';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => '古蘭經的完整性';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => '檢查古蘭經資料庫';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '驗證 114 章古蘭經和 6236 章經文。';
 
   @override
   String get checkingQuranDb => '檢查古蘭經資料庫...';
@@ -4100,10 +4100,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => '不完整';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => '未播種';
 
   @override
   String get quranDbStatus => '古蘭經資料庫狀態';
@@ -4115,32 +4115,32 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return '古蘭經：$count（預計 114）';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return '阿亞斯：$count（預計 6236）';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return '缺少阿拉伯語：$count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return '缺少土耳其語：$count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return '資料庫版本：$version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return '路徑：$path';
   }
 
   @override
@@ -4194,7 +4194,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get resetOnboarding => '重置簡介設定';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => '重新運行初始設定程序。';
 
   @override
   String get diagnostics => '診斷';
@@ -4288,7 +4288,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc => '執行健康檢查並查看系統狀態。';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

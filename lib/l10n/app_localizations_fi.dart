@@ -728,7 +728,7 @@ class AppLocalizationsFi extends AppLocalizations {
       'Synkronoi sovelluskaupan kanssa vahvistaaksesi premium-tilauksesi.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Tarkistetaan premium-tilaa...';
 
   @override
   String get premiumVerified => 'Premium-tilaus vahvistettu.';
@@ -752,13 +752,13 @@ class AppLocalizationsFi extends AppLocalizations {
   String get freeStorage => 'Vapauta laitteen sisäistä tallennustilaa.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Koraanin eheys';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Tarkista Koraani-tietokanta';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Tarkista 114 suuraa ja 6236 ayaaa.';
 
   @override
   String get checkingQuranDb => 'Tarkistetaan Koraani-tietokantaa...';
@@ -767,10 +767,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Epätäydellinen';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Ei kylvetty';
 
   @override
   String get quranDbStatus => 'Koraanitietokannan tila';
@@ -782,32 +782,32 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Suurat: $count (odotettu 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (odotettu 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Puuttuva arabia: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Puuttuva turkki: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB-versio: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Polku: $path';
   }
 
   @override
@@ -862,7 +862,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get resetOnboarding => 'Palauta esittelyasetukset';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Suorita alkuasetusprosessi uudelleen.';
 
   @override
   String get diagnostics => 'Diagnostiikka';
@@ -959,7 +959,8 @@ class AppLocalizationsFi extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Suorita terveystarkastukset ja tarkastele järjestelmän tilaa.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

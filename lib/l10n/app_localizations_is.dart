@@ -718,7 +718,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Hágæða heiðarleiki';
 
   @override
   String get recheckPremium => 'Athugaðu stöðu aukagjaldaáskriftar aftur';
@@ -728,7 +728,7 @@ class AppLocalizationsIs extends AppLocalizations {
       'Samstilltu við app-verslunina til að staðfesta úrvalsáskriftina þína.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Athugar iðgjaldastöðu...';
 
   @override
   String get premiumVerified => 'Premium áskrift staðfest.';
@@ -752,13 +752,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get freeStorage => 'Losaðu um geymslurými tækisins.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Heiðarleiki Kóransins';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Athugaðu Kóraninn gagnagrunn';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Staðfestu 114 surahs og 6236 ayahs.';
 
   @override
   String get checkingQuranDb => 'Athugar gagnagrunn Kóranans...';
@@ -767,10 +767,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Ófullnægjandi';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Ekki sáð';
 
   @override
   String get quranDbStatus => 'Staða Kórangagnagrunns';
@@ -782,32 +782,32 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Surahs: $count (væntust 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (væntanleg 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Vantar arabísku: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Vantar tyrknesku: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB útgáfa: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Slóð: $path';
   }
 
   @override
@@ -862,7 +862,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get resetOnboarding => 'Endurstilla inngangsuppsetningu';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Keyrðu upphafsuppsetningarferlið aftur.';
 
   @override
   String get diagnostics => 'Greining';
@@ -959,7 +959,7 @@ class AppLocalizationsIs extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc => 'Keyra heilsufarsskoðun og skoða kerfisstöðu.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

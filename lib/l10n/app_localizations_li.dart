@@ -726,7 +726,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get syncStore => 'Sync with the store to confirm your entitlement.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Premiumstatus controlere...';
 
   @override
   String get premiumVerified => 'Premium verified.';
@@ -749,13 +749,13 @@ class AppLocalizationsLi extends AppLocalizations {
   String get freeStorage => 'Maak interne opsjlaag veur apparate vrij.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Koranintegriteit';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Controleer de korandatabase';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Controleer 114 sura’s en 6236 ayah’s.';
 
   @override
   String get checkingQuranDb => 'Checking Quran database...';
@@ -764,10 +764,10 @@ class AppLocalizationsLi extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Onvolledig';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Neet gezaod';
 
   @override
   String get quranDbStatus => 'Quran Database Status';
@@ -779,22 +779,22 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Surahs: $count (verwach 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (verwach 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Ontbrekend Arabisch: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Vermis Turks: $count';
   }
 
   @override
@@ -804,7 +804,7 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Paad: $path';
   }
 
   @override
@@ -859,7 +859,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get resetOnboarding => 'Reset Onboarding';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Laat ‘t ierste installatieproces opnuuj oet.';
 
   @override
   String get diagnostics => 'Diagnostics';
@@ -956,7 +956,8 @@ class AppLocalizationsLi extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Voer gezondheidscontroles oet en bekiek de status vaan ‘t systeem.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

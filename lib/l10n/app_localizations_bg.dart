@@ -721,7 +721,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Първокласна почтеност';
 
   @override
   String get recheckPremium =>
@@ -732,7 +732,7 @@ class AppLocalizationsBg extends AppLocalizations {
       'Синхронизирайте с магазина за приложения, за да потвърдите своя премиум абонамент.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Премиум статусът се проверява...';
 
   @override
   String get premiumVerified => 'Премиум абонаментът е потвърден.';
@@ -756,13 +756,13 @@ class AppLocalizationsBg extends AppLocalizations {
   String get freeStorage => 'Освободете вътрешната памет на устройството.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Целостта на Корана';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Проверете базата данни на Корана';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Проверете 114 сури и 6236 аята.';
 
   @override
   String get checkingQuranDb => 'Проверка на базата данни на Корана...';
@@ -771,10 +771,10 @@ class AppLocalizationsBg extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Непълен';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Не семена';
 
   @override
   String get quranDbStatus => 'Състояние на базата данни на Корана';
@@ -786,32 +786,32 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Сура: $count (очаква се 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Аят: $count (очаква се 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Липсващ арабски: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Липсващ турски: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Версия на DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Път: $path';
   }
 
   @override
@@ -866,7 +866,8 @@ class AppLocalizationsBg extends AppLocalizations {
   String get resetOnboarding => 'Нулирайте интро настройките';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup =>
+      'Стартирайте отново процеса на първоначална настройка.';
 
   @override
   String get diagnostics => 'Диагностика';
@@ -964,7 +965,8 @@ class AppLocalizationsBg extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Изпълнявайте проверки на здравето и вижте състоянието на системата.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

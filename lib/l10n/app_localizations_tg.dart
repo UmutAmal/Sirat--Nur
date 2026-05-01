@@ -716,7 +716,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Беайбии Premium';
 
   @override
   String get recheckPremium => 'Ҳолати обунаи премиумро аз нав санҷед';
@@ -726,7 +726,7 @@ class AppLocalizationsTg extends AppLocalizations {
       'Бо мағозаи барномаҳо ҳамоҳанг созед, то обунаи мукофоти худро тасдиқ кунед.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Санҷиши ҳолати премиум...';
 
   @override
   String get premiumVerified => 'Обунаи Premium тасдиқ карда шуд.';
@@ -750,13 +750,13 @@ class AppLocalizationsTg extends AppLocalizations {
   String get freeStorage => 'Захираи дохилии дастгоҳро холӣ кунед.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Ҳаққи Қуръон';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Маълумоти Қуръонро тафтиш кунед';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114 сура ва 6236 оятро тасдиқ кунед.';
 
   @override
   String get checkingQuranDb => 'Санҷиши махзани Қуръон...';
@@ -765,10 +765,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Нопурра';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Тухмӣ нест';
 
   @override
   String get quranDbStatus => 'Ҳолати пойгоҳи додаҳои Қуръон';
@@ -780,32 +780,32 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Сураҳо: $count (интизор 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Оятҳо: $count (интизор меравад 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Набудани арабӣ: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Набудани туркӣ: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Версияи DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Роҳ: $path';
   }
 
   @override
@@ -860,7 +860,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get resetOnboarding => 'Танзимоти муқаддимаро аз нав барқарор кунед';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Раванди танзимоти ибтидоиро дубора иҷро кунед.';
 
   @override
   String get diagnostics => 'Диагностика';
@@ -957,7 +957,8 @@ class AppLocalizationsTg extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Санҷиши саломатиро иҷро кунед ва ҳолати системаро бубинед.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

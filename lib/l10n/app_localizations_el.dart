@@ -721,7 +721,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Ακεραιότητα Premium';
 
   @override
   String get recheckPremium => 'Ελέγξτε ξανά την κατάσταση συνδρομής premium';
@@ -731,7 +731,7 @@ class AppLocalizationsEl extends AppLocalizations {
       'Συγχρονίστε με το κατάστημα εφαρμογών για να επιβεβαιώσετε την premium συνδρομή σας.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Έλεγχος της κατάστασης premium...';
 
   @override
   String get premiumVerified => 'Επαληθεύτηκε η συνδρομή Premium.';
@@ -756,13 +756,13 @@ class AppLocalizationsEl extends AppLocalizations {
       'Ελευθερώστε τον εσωτερικό χώρο αποθήκευσης της συσκευής.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Ακεραιότητα Κορανίου';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Ελέγξτε τη βάση δεδομένων του Κορανίου';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Επαληθεύστε 114 σούρες και 6236 αγιές.';
 
   @override
   String get checkingQuranDb => 'Έλεγχος της βάσης δεδομένων του Κορανίου...';
@@ -771,10 +771,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Ημιτελής';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Χωρίς σπόρους';
 
   @override
   String get quranDbStatus => 'Κατάσταση βάσης δεδομένων Κορανίου';
@@ -786,32 +786,32 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Σούρες: $count (αναμενόμενο 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (αναμενόμενο 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Λείπουν αραβικά: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Λείπουν τουρκικά: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Έκδοση DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Διαδρομή: $path';
   }
 
   @override
@@ -866,7 +866,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get resetOnboarding => 'Επαναφορά της εισαγωγής εγκατάστασης';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Εκτελέστε ξανά την αρχική διαδικασία εγκατάστασης.';
 
   @override
   String get diagnostics => 'Διαγνωστικά';
@@ -963,7 +963,8 @@ class AppLocalizationsEl extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Εκτελέστε ελέγχους υγείας και δείτε την κατάσταση του συστήματος.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

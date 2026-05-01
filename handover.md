@@ -20439,6 +20439,43 @@
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: kalan low-resource l10n fallback cluster'i, resmi kurum bazli ulke profilleri audit'i veya notification/OEM exact alarm cihaz davranisi dokumantasyon-test derinlestirmesi.
 
+## 2026-05-01 TUR-510 - Diagnostics Quran Integrity L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Diagnostik, premium saglik kontrolu ve Quran butunlugu ekranlarinda 15 gorunur anahtar 180+ locale'de genis olcude Ingilizce fallback'e dusuyordu. Bu uygulamayi bozmaz fakat "tum dillerde tam kapsam" hedefini ve store kalite algisini zedeler.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report dbVersion quranIntegrity checkQuranDb healthCheckDesc incomplete missingArabic missingTurkish notSeeded premiumIntegrity verifyQuranContent ayahsCount surahsCount dbPath checkingPremium rerunSetup` same-as-English `2808`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 15 anahtarda same-as-English `483`, missing/empty `0`, placeholder mismatch `0`.
+  - `lib/l10n/app_aa.arb:316`, `lib/l10n/app_aa.arb:326`, `lib/l10n/app_aa.arb:335`, `lib/l10n/app_aa.arb:339`, `lib/l10n/app_aa.arb:422` artik hedef diagnostik copy'lerinde Ingilizceye dusmez.
+  - `lib/l10n/app_sa.arb:316`, `lib/l10n/app_sa.arb:326`, `lib/l10n/app_sa.arb:335`, `lib/l10n/app_sa.arb:340`, `lib/l10n/app_sa.arb:422` cok satirli `इति` batch kalintisindan temizlendi.
+  - `lib/l10n/app_ti.arb:316`, `lib/l10n/app_ti.arb:326`, `lib/l10n/app_ti.arb:335`, `lib/l10n/app_ti.arb:340`, `lib/l10n/app_ti.arb:422` cok satirli `ዝብል` batch kalintisindan temizlendi.
+  - `test/translate_arb_keys_test.dart:1558` yeni guard 15 anahtarda debt esigini `<= 483` olarak kilitler; `aa/am/ar/bo/ff/sa/ti/ur` orneklerinde Ingilizce fallback, cok satirli copy ve placeholder kaybi engellenir.
+- Kullanici etkisi: Diagnostik, Quran database saglik kontrolu, premium integrity ve Quran sayim/status metinleri cok daha fazla dilde yerel gorunur; hatali cok satirli makine ceviri kalintilari paketlenmez.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `dbVersion`, `quranIntegrity`, `checkQuranDb`, `healthCheckDesc`, `incomplete`, `missingArabic`, `missingTurkish`, `notSeeded`, `premiumIntegrity`, `verifyQuranContent`, `ayahsCount`, `surahsCount`, `dbPath`, `checkingPremium`, `rerunSetup` anahtar kumesi icin kontrollu l10n batch calistirildi.
+- `app_sa.arb` ve `app_ti.arb` uzerindeki cok satirli batch kalintilari elle temizlendi; `{version}`, `{path}` ve `{count}` placeholder'lari korundu.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- Kalan 483 same-as-English locale-key, ceviri aracinin guvenli ceviremedigi cok dusuk kaynakli dillerde EN fallback olarak birakildi; dini veya teknik anlam uydurulmadi.
+
+### TESTER Degisikligi
+- Batch debris/placeholder scan: PASS; hedef 15 anahtarda newline, `which means/means/meaning`, `इति`, `ዝብል`, repeated-run ve placeholder kaybi yok.
+- Targeted l10n tests: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `145/145`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `722/722`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `d8e2520e-fad8-4f70-9444-882025749c20`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94631818`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Diagnostics/Quran integrity 15 anahtarli l10n fallback borcu: `16/25 -> 6/25`.
+- Kalan bilincli risk: Canonical hadis kaynak adlari (`Bukhari`, `Muslim`, `Tirmidhi`, `Abu Dawud`, `Ahmad`) proper-name oldugu icin ayni kalabilir. Siradaki gercek UI borcu `okLabel`, `reset`, `days`, `changeTarget`, `newTarget`, `qiblaAligned`, `rotateToFindQibla`, `reduceSensorJitter` gibi ayar/diagnostik aksiyon metinleridir.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude ayar/diagnostik aksiyon metinleri icin l10n fallback borcunu ayni guard + full validation zinciriyle azalt.
+
 ## 2026-05-01 TUR-505 - Morocco Prayer Profile Honesty Guard
 
 ### MASTER Karari

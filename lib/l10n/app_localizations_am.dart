@@ -711,7 +711,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'ፕሪሚየም ታማኝነት';
 
   @override
   String get recheckPremium => 'የፕሪሚየም የደንበኝነት ምዝገባ ሁኔታን እንደገና ያረጋግጡ';
@@ -720,7 +720,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get syncStore => 'የፕሪሚየም ደንበኝነት ምዝገባዎን ለማረጋገጥ ከመተግበሪያው መደብር ጋር ያመሳስሉ።';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'የፕሪሚየም ሁኔታን በመፈተሽ ላይ...';
 
   @override
   String get premiumVerified => 'የፕሪሚየም ምዝገባ ተረጋግጧል።';
@@ -743,13 +743,13 @@ class AppLocalizationsAm extends AppLocalizations {
   String get freeStorage => 'የውስጥ መሣሪያ ማከማቻ ያስለቅቁ።';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'የቁርኣን ታማኝነት';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'የቁርኣን ዳታቤዝ አረጋግጥ';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114 ሱራዎች እና 6236 አያህ አረጋግጥ።';
 
   @override
   String get checkingQuranDb => 'የቁርኣን ዳታቤዝ በመፈተሽ ላይ...';
@@ -758,10 +758,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'ያልተሟላ';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'ዘር አይደለም';
 
   @override
   String get quranDbStatus => 'የቁርአን ዳታቤዝ ሁኔታ';
@@ -773,32 +773,32 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'ሱራዎች፡$count(114 የሚጠበቀው)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'አያህ፡ $count (የተጠበቀው 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'የጠፋ አረብኛ፡ $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'የጠፋ ቱርክ፡ $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'ዲቢ ስሪት፡ $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'መንገድ፡ $path';
   }
 
   @override
@@ -853,7 +853,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get resetOnboarding => 'የመግቢያ ማዋቀርን ዳግም አስጀምር';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'የመጀመሪያውን የማዋቀር ሂደት እንደገና ያሂዱ።';
 
   @override
   String get diagnostics => 'ምርመራዎች';
@@ -949,7 +949,7 @@ class AppLocalizationsAm extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc => 'የጤና ምርመራዎችን ያካሂዱ እና የስርዓት ሁኔታን ይመልከቱ።';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

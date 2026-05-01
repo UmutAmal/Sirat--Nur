@@ -728,7 +728,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get syncStore => 'Sync with the store to confirm your entitlement.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'S\'cosoylagh dy vel stayd premium...';
 
   @override
   String get premiumVerified => 'Premium verified.';
@@ -752,13 +752,13 @@ class AppLocalizationsGv extends AppLocalizations {
   String get freeStorage => 'Free up storage innid.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Injil y Quran';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Cur-my-ner bun-data Quran';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114 sura as 6236 aya.';
 
   @override
   String get checkingQuranDb => 'Checking Quran database...';
@@ -767,10 +767,10 @@ class AppLocalizationsGv extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Neu-choilley.';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Cha nel eh er ny seed';
 
   @override
   String get quranDbStatus => 'Quran Database Status';
@@ -782,32 +782,32 @@ class AppLocalizationsGv extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Sura: $count (114 t\'er ny choyrt)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayrnyn: $count (6236 er nyn doshiaght)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Gaelg caillt: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Turkish caillt: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Version DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Raad: $path';
   }
 
   @override
@@ -862,7 +862,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get resetOnboarding => 'Reset Onboarding';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Re-run y phroses setup toshiaght.';
 
   @override
   String get diagnostics => 'Diagnostics';
@@ -959,7 +959,8 @@ class AppLocalizationsGv extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Reih scansh slaynt as cur-my-ner stayd y system.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

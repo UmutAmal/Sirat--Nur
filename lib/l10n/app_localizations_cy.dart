@@ -720,7 +720,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Uniondeb Premiwm';
 
   @override
   String get recheckPremium => 'Ailwirio statws tanysgrifiad premiwm';
@@ -730,7 +730,7 @@ class AppLocalizationsCy extends AppLocalizations {
       'Cysoni gyda\'r app store i gadarnhau eich tanysgrifiad premiwm.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Wrthi\'n gwirio statws premiwm...';
 
   @override
   String get premiumVerified => 'Tanysgrifiad premiwm wedi\'i ddilysu.';
@@ -754,13 +754,13 @@ class AppLocalizationsCy extends AppLocalizations {
   String get freeStorage => 'Rhyddhau storfa ddyfais fewnol.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Uniondeb Quran';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Gwiriwch Gronfa Ddata Quran';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Dilyswch 114 swrah a 6236 ayahs.';
 
   @override
   String get checkingQuranDb => 'Wrthi\'n gwirio cronfa ddata Quran...';
@@ -769,10 +769,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Anghyflawn';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Heb ei hadu';
 
   @override
   String get quranDbStatus => 'Statws Cronfa Ddata Quran';
@@ -784,32 +784,32 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Surahs: $count (disgwylir 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (disgwylir 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Arabeg Coll: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Twrceg Coll: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Fersiwn DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Llwybr: $path';
   }
 
   @override
@@ -864,7 +864,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get resetOnboarding => 'Ailosod gosodiad y cyflwyniad';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Ailredwch y broses sefydlu gychwynnol.';
 
   @override
   String get diagnostics => 'Diagnosteg';
@@ -961,7 +961,8 @@ class AppLocalizationsCy extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Cynnal gwiriadau iechyd a gweld statws system.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

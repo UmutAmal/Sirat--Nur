@@ -720,7 +720,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Integridade Premium';
 
   @override
   String get recheckPremium =>
@@ -731,7 +731,7 @@ class AppLocalizationsGl extends AppLocalizations {
       'Sincroniza coa tenda de aplicacións para confirmar a túa subscrición premium.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Comprobando o estado da prima...';
 
   @override
   String get premiumVerified => 'Subscrición Premium verificada.';
@@ -755,13 +755,13 @@ class AppLocalizationsGl extends AppLocalizations {
   String get freeStorage => 'Libera almacenamento interno do dispositivo.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Integridade do Corán';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Consulta a base de datos do Corán';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Verifique 114 suras e 6236 áiahs.';
 
   @override
   String get checkingQuranDb => 'Comprobando a base de datos do Corán...';
@@ -770,10 +770,10 @@ class AppLocalizationsGl extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Incompleto';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Non sementado';
 
   @override
   String get quranDbStatus => 'Estado da base de datos do Corán';
@@ -785,32 +785,32 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Suras: $count (espérase 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (espérase 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Falta o árabe: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Falta o turco: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Versión de base de datos: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Ruta: $path';
   }
 
   @override
@@ -865,7 +865,7 @@ class AppLocalizationsGl extends AppLocalizations {
   String get resetOnboarding => 'Restablecer a configuración da introdución';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Volve executar o proceso de configuración inicial.';
 
   @override
   String get diagnostics => 'Diagnóstico';
@@ -963,7 +963,8 @@ class AppLocalizationsGl extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Realiza comprobacións de saúde e consulta o estado do sistema.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

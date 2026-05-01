@@ -716,7 +716,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'प्रीमियम सत्यनिष्ठा';
 
   @override
   String get recheckPremium => 'प्रीमियम सदस्यता स्थिति पुनः जाँचें';
@@ -726,7 +726,7 @@ class AppLocalizationsHi extends AppLocalizations {
       'अपनी प्रीमियम सदस्यता की पुष्टि करने के लिए ऐप स्टोर के साथ सिंक करें।';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'प्रीमियम स्थिति की जाँच की जा रही है...';
 
   @override
   String get premiumVerified => 'प्रीमियम सदस्यता सत्यापित.';
@@ -750,13 +750,13 @@ class AppLocalizationsHi extends AppLocalizations {
   String get freeStorage => 'आंतरिक डिवाइस संग्रहण खाली करें.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'कुरान अखंडता';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'कुरान डेटाबेस की जाँच करें';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114 सूरह और 6236 आयतों का सत्यापन करें।';
 
   @override
   String get checkingQuranDb => 'कुरान डेटाबेस की जाँच हो रही है...';
@@ -765,10 +765,10 @@ class AppLocalizationsHi extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'अधूरा';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'बीजित नहीं';
 
   @override
   String get quranDbStatus => 'कुरान डेटाबेस स्थिति';
@@ -780,32 +780,32 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'सूरह: $count (अपेक्षित 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'आयतें: $count (अपेक्षित 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'लुप्त अरबी: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'गुम तुर्की: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'डीबी संस्करण: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'पथ: $path';
   }
 
   @override
@@ -860,7 +860,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get resetOnboarding => 'परिचय सेटअप रीसेट करें';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'प्रारंभिक सेटअप प्रक्रिया को पुनः चलाएँ।';
 
   @override
   String get diagnostics => 'निदान';
@@ -957,7 +957,7 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc => 'स्वास्थ्य जांच चलाएँ और सिस्टम स्थिति देखें।';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

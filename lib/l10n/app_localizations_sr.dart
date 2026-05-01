@@ -717,7 +717,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Премиум Интегрити';
 
   @override
   String get recheckPremium => 'Поново проверите статус премиум претплате';
@@ -727,7 +727,7 @@ class AppLocalizationsSr extends AppLocalizations {
       'Синхронизујте са продавницом апликација да бисте потврдили своју премиум претплату.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Проверавам премиум статус...';
 
   @override
   String get premiumVerified => 'Премијум претплата је верификована.';
@@ -751,13 +751,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get freeStorage => 'Ослободите интерну меморију уређаја.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Куран Интегрити';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Проверите базу података Кур\'ана';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Провери 114 сура и 6236 ајата.';
 
   @override
   String get checkingQuranDb => 'Провера базе података Курана...';
@@ -766,10 +766,10 @@ class AppLocalizationsSr extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Непотпуно';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Није засејан';
 
   @override
   String get quranDbStatus => 'Статус базе података Курана';
@@ -861,7 +861,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get resetOnboarding => 'Ресетујте уводно подешавање';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Поново покрените почетни процес подешавања.';
 
   @override
   String get diagnostics => 'Дијагностика';
@@ -959,7 +959,8 @@ class AppLocalizationsSr extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Покрените провере здравља и погледајте статус система.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

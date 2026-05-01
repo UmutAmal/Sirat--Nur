@@ -716,7 +716,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'প্রিমিয়াম ইন্টিগ্রিটি';
 
   @override
   String get recheckPremium =>
@@ -727,7 +727,7 @@ class AppLocalizationsBn extends AppLocalizations {
       'আপনার প্রিমিয়াম সদস্যতা নিশ্চিত করতে অ্যাপ স্টোরের সাথে সিঙ্ক করুন।';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'প্রিমিয়াম স্থিতি পরীক্ষা করা হচ্ছে...';
 
   @override
   String get premiumVerified => 'প্রিমিয়াম সদস্যতা যাচাই করা হয়েছে।';
@@ -751,13 +751,13 @@ class AppLocalizationsBn extends AppLocalizations {
   String get freeStorage => 'অভ্যন্তরীণ ডিভাইস স্টোরেজ খালি করুন।';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'কুরআনের সততা';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'কুরআন ডাটাবেস চেক করুন';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114টি সূরা এবং 6236টি আয়াত যাচাই করুন।';
 
   @override
   String get checkingQuranDb => 'কুরআন ডাটাবেস পরীক্ষা করা হচ্ছে...';
@@ -766,10 +766,10 @@ class AppLocalizationsBn extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'অসম্পূর্ণ';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'বীজযুক্ত নয়';
 
   @override
   String get quranDbStatus => 'কুরআন ডাটাবেস স্ট্যাটাস';
@@ -781,32 +781,32 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'সূরা: $count (প্রত্যাশিত 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'আয়াত: $count (প্রত্যাশিত 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'অনুপস্থিত আরবি: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'অনুপস্থিত তুর্কি: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB সংস্করণ: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'পথ: $path';
   }
 
   @override
@@ -861,7 +861,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get resetOnboarding => 'ভূমিকা সেটআপ রিসেট করুন';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'প্রাথমিক সেটআপ প্রক্রিয়া পুনরায় চালান।';
 
   @override
   String get diagnostics => 'ডায়াগনস্টিকস';
@@ -958,7 +958,8 @@ class AppLocalizationsBn extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'স্বাস্থ্য পরীক্ষা চালান এবং সিস্টেমের অবস্থা দেখুন।';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

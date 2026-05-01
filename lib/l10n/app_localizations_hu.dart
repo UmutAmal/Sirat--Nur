@@ -718,7 +718,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Prémium integritás';
 
   @override
   String get recheckPremium =>
@@ -729,7 +729,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'Szinkronizáljon az alkalmazásbolttal a prémium előfizetés megerősítéséhez.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Prémium állapot ellenőrzése...';
 
   @override
   String get premiumVerified => 'Prémium előfizetés ellenőrizve.';
@@ -753,13 +753,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get freeStorage => 'Szabadítson fel belső eszköztárhelyet.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Korán integritása';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Ellenőrizze a Korán adatbázist';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Ellenőrizzen 114 szúrát és 6236 ayah-t.';
 
   @override
   String get checkingQuranDb => 'A Korán adatbázis ellenőrzése...';
@@ -768,10 +768,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Hiányos';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Nem magozott';
 
   @override
   String get quranDbStatus => 'Korán adatbázis állapota';
@@ -783,32 +783,32 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Szúrák: $count (várhatóan 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (várhatóan 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Hiányzó arab: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Hiányzó török nyelv: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB verzió: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Elérési út: $path';
   }
 
   @override
@@ -863,7 +863,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get resetOnboarding => 'Állítsa vissza a bevezető beállítást';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Futtassa újra a kezdeti beállítási folyamatot.';
 
   @override
   String get diagnostics => 'Diagnosztika';
@@ -960,7 +960,8 @@ class AppLocalizationsHu extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Futtassa az állapotellenőrzéseket és tekintse meg a rendszer állapotát.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

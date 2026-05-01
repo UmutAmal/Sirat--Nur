@@ -731,7 +731,7 @@ class AppLocalizationsKy extends AppLocalizations {
       'Премиум жазылууңузду ырастоо үчүн колдонмо дүкөнү менен синхрондоңуз.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Премиум статусу текшерилүүдө...';
 
   @override
   String get premiumVerified => 'Премиум жазылуу текшерилди.';
@@ -755,13 +755,13 @@ class AppLocalizationsKy extends AppLocalizations {
   String get freeStorage => 'Түзмөктүн ички сактагычын бошотуңуз.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Куран бүтүндүгү';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Куран маалымат базасын текшерүү';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114 сүрөөнү жана 6236 аятты тактаңыз.';
 
   @override
   String get checkingQuranDb => 'Куран базасы текшерилүүдө...';
@@ -770,10 +770,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Толук эмес';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Үрөн эмес';
 
   @override
   String get quranDbStatus => 'Куран маалымат базасынын абалы';
@@ -785,32 +785,32 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Сүрөлөр: $count (күтүлүүчү 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Аяттар: $count (күтүлгөн 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Арабча жок: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Түркчө жок: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB версиясы: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Жол: $path';
   }
 
   @override
@@ -865,7 +865,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get resetOnboarding => 'Киришүү жөндөөлөрүн баштапкы абалга келтирүү';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Баштапкы орнотуу процессин кайра иштетиңиз.';
 
   @override
   String get diagnostics => 'Диагностика';
@@ -962,7 +962,8 @@ class AppLocalizationsKy extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Ден соолук текшерүүлөрүн жүргүзүп, системанын абалын көрүңүз.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

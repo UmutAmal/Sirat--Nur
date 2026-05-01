@@ -336,7 +336,7 @@
   "ayahsCount": "Ayahs: {count} (go letetšwe 6236) .",
   "missingArabic": "Searabia se se hlaelelago: {count}",
   "missingTurkish": "Seturkey se se timetšego: {count} .",
-  "dbVersion": "DB Version: {version}",
+  "dbVersion": "Mofuta wa DB: {version} .",
   "dbPath": "Tsela: {path} .",
   "quranCheckFailed": "Tlhahlobo ya Quran e paletšwe: {error}",
   "audioVoice": "Lentšu la Mamelwang",

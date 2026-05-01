@@ -718,7 +718,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Dina cecere';
 
   @override
   String get recheckPremium => 'Recheck Premium Status';
@@ -727,7 +727,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get syncStore => 'Sync with the store to confirm your entitlement.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Raica na ituvaki ni premium...';
 
   @override
   String get premiumVerified => 'Premium verified.';
@@ -751,13 +751,14 @@ class AppLocalizationsFj extends AppLocalizations {
   String get freeStorage => 'Vakagalalataka na maroroi ni misini ena loma.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Na yalodina ni Quran';
 
   @override
   String get checkQuranDb => 'Check Quran Database';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent =>
+      'Vakadeitaka na 114 na sura kei na 6236 na aya.';
 
   @override
   String get checkingQuranDb => 'Checking Quran database...';
@@ -766,10 +767,10 @@ class AppLocalizationsFj extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Sega ni taucoko';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Sega ni vakatuburi';
 
   @override
   String get quranDbStatus => 'Quran Database Status';
@@ -781,22 +782,22 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Sura: $count (namaki 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Aya: $count (namaki 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Yali na vosa vaka-Arapea: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Yali na vosa vaka-Turkey: $count';
   }
 
   @override
@@ -861,7 +862,8 @@ class AppLocalizationsFj extends AppLocalizations {
   String get resetOnboarding => 'Reset Onboarding';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup =>
+      'Vakayacora tale na iwalewale ni vakarautaki taumada.';
 
   @override
   String get diagnostics => 'Diagnostics';

@@ -717,7 +717,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Pono Pono';
 
   @override
   String get recheckPremium => 'E nānā hou i ke kūlana kau inoa';
@@ -727,7 +727,7 @@ class AppLocalizationsHaw extends AppLocalizations {
       'Hoʻopili me ka hale kūʻai app e hōʻoia i kāu kau inoa premium.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Ke nānā nei i ke kūlana premium...';
 
   @override
   String get premiumVerified => 'Ua hōʻoia ʻia ke kau inoa premium.';
@@ -751,13 +751,14 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get freeStorage => 'E hoʻokuʻu i ka waihona o loko.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Ko\'anu Pono';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'E nānā i ka ʻikepili Quran';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent =>
+      'E hōʻoia i nā surah 114 a me 6236 mau ʻāpana.';
 
   @override
   String get checkingQuranDb => 'Ke nānā nei i ka waihona Quran...';
@@ -766,10 +767,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'ʻAʻole i piha';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'ʻAʻole i kanu ʻia';
 
   @override
   String get quranDbStatus => 'Kūlana ʻIkepili Quran';
@@ -781,32 +782,32 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Nā Surah: $count (manaʻo ʻia 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'ʻĀpana: $count (manaʻo ʻia 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Nalo ʻAlapia: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Nalo ʻo Tureke: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Mana DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Alanui: $path';
   }
 
   @override
@@ -861,7 +862,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get resetOnboarding => 'Hoʻonohonoho hou i ka hoʻonohonoho hoʻomaka';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'E holo hou i ke kaʻina hana hoʻonohonoho mua.';
 
   @override
   String get diagnostics => 'ʻIkepili';
@@ -958,7 +959,8 @@ class AppLocalizationsHaw extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'E holo i nā nānā olakino a nānā i ke kūlana ʻōnaehana.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

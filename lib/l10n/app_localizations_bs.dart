@@ -727,7 +727,7 @@ class AppLocalizationsBs extends AppLocalizations {
       'Sinhronizirajte s trgovinom aplikacija da potvrdite svoju premium pretplatu.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Provjera premium statusa...';
 
   @override
   String get premiumVerified => 'Premium pretplata je potvrđena.';
@@ -754,10 +754,10 @@ class AppLocalizationsBs extends AppLocalizations {
   String get quranIntegrity => 'Quran Integrity';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Provjerite bazu podataka Kur\'ana';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Provjeri 114 sura i 6236 ajeta.';
 
   @override
   String get checkingQuranDb => 'Provjera baze podataka Kur\'ana...';
@@ -766,10 +766,10 @@ class AppLocalizationsBs extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Nepotpuno';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Nije zasijano';
 
   @override
   String get quranDbStatus => 'Status baze podataka Kur\'ana';
@@ -781,32 +781,32 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Sure: $count (očekivano 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Aje: $count (očekivano 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Nedostaje arapski: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Nedostaje turski: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB verzija: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Put: $path';
   }
 
   @override
@@ -861,7 +861,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get resetOnboarding => 'Resetirajte uvodnu postavku';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Ponovo pokrenite proces početnog podešavanja.';
 
   @override
   String get diagnostics => 'Dijagnostika';
@@ -958,7 +958,8 @@ class AppLocalizationsBs extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Pokrenite provjere zdravlja i pogledajte status sistema.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

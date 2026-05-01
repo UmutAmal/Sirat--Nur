@@ -726,7 +726,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get syncStore => 'Sync with the store to confirm your entitlement.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Lale jekjek in premium eo...';
 
   @override
   String get premiumVerified => 'Premium verified.';
@@ -752,10 +752,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get quranIntegrity => 'Quran Integrity';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Lale Quran Database';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Kalikar 114 surahs im 6236 ayahs.';
 
   @override
   String get checkingQuranDb => 'Checking Quran database...';
@@ -764,10 +764,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Ejjab jejjet';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Ejjab ine';
 
   @override
   String get quranDbStatus => 'Quran Database Status';
@@ -789,12 +789,12 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Ejjelok kajin Arabic: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Turkish eo ej jako: $count';
   }
 
   @override
@@ -804,7 +804,7 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Ial: $path';
   }
 
   @override
@@ -859,7 +859,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get resetOnboarding => 'Reset Onboarding';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Bar kōmmane jerbal in kōmmane eo jinoin.';
 
   @override
   String get diagnostics => 'Diagnostics';
@@ -956,7 +956,8 @@ class AppLocalizationsMh extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Kōmmane lale ājmour im lale jekjek in system eo.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

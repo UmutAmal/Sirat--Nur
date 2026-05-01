@@ -721,7 +721,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Ionracas Premium';
 
   @override
   String get recheckPremium => 'Dèan ath-sgrùdadh air inbhe ballrachd premium';
@@ -731,7 +731,7 @@ class AppLocalizationsGd extends AppLocalizations {
       'Sioncronaich leis an app store gus do phrìomh fho-sgrìobhadh a dhearbhadh.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'A’ sgrùdadh inbhe premium...';
 
   @override
   String get premiumVerified => 'Fo-sgrìobhadh Premium air a dhearbhadh.';
@@ -755,13 +755,13 @@ class AppLocalizationsGd extends AppLocalizations {
   String get freeStorage => 'Stòradh inneal taobh a-staigh an-asgaidh.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Ionracas an Quran';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Luchdaich a-nuas an stòr-dàta Quran';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Dearbhaich 114 surahs agus 6236 ayahs.';
 
   @override
   String get checkingQuranDb => 'Luchdaich a-nuas an stòr-dàta Quran. . .';
@@ -770,10 +770,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Neo-iomlan';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Gun sìol';
 
   @override
   String get quranDbStatus => 'Stòr-dàta Quran inbhean';
@@ -785,32 +785,32 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Surahs: $count (an dùil 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (an dùil 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Arabais a dhìth: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Turcais a dhìth: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Tionndadh DB: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Slighe: $path';
   }
 
   @override
@@ -865,7 +865,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get resetOnboarding => 'Ath-shuidhich suidheachadh intro';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Ath-ruith am pròiseas rèiteachaidh tùsail.';
 
   @override
   String get diagnostics => 'Diagnosachd';
@@ -962,7 +962,8 @@ class AppLocalizationsGd extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Ruith sgrùdaidhean slàinte agus faic inbhe an t-siostaim.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

@@ -717,7 +717,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Aukščiausios kokybės vientisumas';
 
   @override
   String get recheckPremium =>
@@ -728,7 +728,7 @@ class AppLocalizationsLt extends AppLocalizations {
       'Sinchronizuokite su programų parduotuve, kad patvirtintumėte aukščiausios kokybės prenumeratą.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Tikrinama aukščiausios kokybės būsena...';
 
   @override
   String get premiumVerified => '„Premium“ prenumerata patvirtinta.';
@@ -752,13 +752,13 @@ class AppLocalizationsLt extends AppLocalizations {
   String get freeStorage => 'Atlaisvinkite vidinę įrenginio saugyklą.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Korano vientisumas';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Patikrinkite Korano duomenų bazę';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Patikrinkite 114 surahų ir 6236 ayah.';
 
   @override
   String get checkingQuranDb => 'Tikrinama Korano duomenų bazė...';
@@ -767,10 +767,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Nebaigta';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Nesėtos';
 
   @override
   String get quranDbStatus => 'Korano duomenų bazės būsena';
@@ -782,32 +782,32 @@ class AppLocalizationsLt extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Suros: $count (tikimasi 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (tikimasi 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Trūksta arabų kalbos: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Trūksta turkų kalbos: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB versija: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Kelias: $path';
   }
 
   @override
@@ -862,7 +862,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get resetOnboarding => 'Iš naujo nustatyti įvadinę sąranką';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Iš naujo paleiskite pradinį sąrankos procesą.';
 
   @override
   String get diagnostics => 'Diagnostika';
@@ -959,7 +959,8 @@ class AppLocalizationsLt extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Atlikite sveikatos patikrinimus ir peržiūrėkite sistemos būseną.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

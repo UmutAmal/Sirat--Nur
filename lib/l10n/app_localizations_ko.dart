@@ -708,7 +708,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => '프리미엄 무결성';
 
   @override
   String get recheckPremium => '프리미엄 구독 상태 다시 확인';
@@ -717,7 +717,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get syncStore => '프리미엄 구독을 확인하려면 앱 스토어와 동기화하세요.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => '프리미엄 상태 확인 중...';
 
   @override
   String get premiumVerified => '프리미엄 구독이 확인되었습니다.';
@@ -740,13 +740,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get freeStorage => '내부 장치 저장 공간을 확보하세요.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => '꾸란 무결성';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => '꾸란 데이터베이스 확인';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => '114개의 수라와 6236개의 아야를 확인하세요.';
 
   @override
   String get checkingQuranDb => '꾸란 데이터베이스를 확인하는 중...';
@@ -755,10 +755,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => '미완성';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => '시드되지 않음';
 
   @override
   String get quranDbStatus => '꾸란 데이터베이스 상태';
@@ -770,32 +770,32 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return '수라: $count(114개 예상)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayahs: $count (예상 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return '누락된 아랍어: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return '누락된 터키어: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'DB 버전: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return '경로: $path';
   }
 
   @override
@@ -850,7 +850,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get resetOnboarding => '인트로 설정 재설정';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => '초기 설정 프로세스를 다시 실행하십시오.';
 
   @override
   String get diagnostics => '진단';
@@ -946,7 +946,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc => '상태 확인을 실행하고 시스템 상태를 봅니다.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';

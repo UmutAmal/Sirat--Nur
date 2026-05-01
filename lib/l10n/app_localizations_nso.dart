@@ -808,7 +808,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Mofuta wa DB: $version .';
   }
 
   @override

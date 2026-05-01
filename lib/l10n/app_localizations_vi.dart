@@ -718,7 +718,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get days => 'Days';
 
   @override
-  String get premiumIntegrity => 'Premium Integrity';
+  String get premiumIntegrity => 'Tính toàn vẹn cao cấp';
 
   @override
   String get recheckPremium => 'Kiểm tra lại trạng thái đăng ký trả phí';
@@ -728,7 +728,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Đồng bộ hóa với cửa hàng ứng dụng để xác nhận đăng ký trả phí của bạn.';
 
   @override
-  String get checkingPremium => 'Checking premium status...';
+  String get checkingPremium => 'Đang kiểm tra trạng thái ưu đãi...';
 
   @override
   String get premiumVerified => 'Đã xác minh đăng ký trả phí.';
@@ -752,13 +752,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get freeStorage => 'Giải phóng bộ nhớ trong của thiết bị.';
 
   @override
-  String get quranIntegrity => 'Quran Integrity';
+  String get quranIntegrity => 'Kinh Qur\'an toàn vẹn';
 
   @override
-  String get checkQuranDb => 'Check Quran Database';
+  String get checkQuranDb => 'Kiểm tra cơ sở dữ liệu Kinh Qur\'an';
 
   @override
-  String get verifyQuranContent => 'Verify 114 surahs and 6236 ayahs.';
+  String get verifyQuranContent => 'Xác minh 114 surah và 6236 ayah.';
 
   @override
   String get checkingQuranDb => 'Đang kiểm tra cơ sở dữ liệu Kinh Qur\'an...';
@@ -767,10 +767,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get okLabel => 'OK';
 
   @override
-  String get incomplete => 'Incomplete';
+  String get incomplete => 'Chưa hoàn thành';
 
   @override
-  String get notSeeded => 'Not seeded';
+  String get notSeeded => 'Không gieo hạt';
 
   @override
   String get quranDbStatus => 'Trạng thái cơ sở dữ liệu Kinh Qur\'an';
@@ -782,32 +782,32 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String surahsCount(Object count) {
-    return 'Surahs: $count (expected 114)';
+    return 'Surah: $count (dự kiến 114)';
   }
 
   @override
   String ayahsCount(Object count) {
-    return 'Ayahs: $count (expected 6236)';
+    return 'Ayah: $count (dự kiến 6236)';
   }
 
   @override
   String missingArabic(Object count) {
-    return 'Missing Arabic: $count';
+    return 'Thiếu tiếng Ả Rập: $count';
   }
 
   @override
   String missingTurkish(Object count) {
-    return 'Missing Turkish: $count';
+    return 'Thiếu tiếng Thổ Nhĩ Kỳ: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'DB Version: $version';
+    return 'Phiên bản cơ sở dữ liệu: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'Path: $path';
+    return 'Đường dẫn: $path';
   }
 
   @override
@@ -862,7 +862,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get resetOnboarding => 'Đặt lại thiết lập phần giới thiệu';
 
   @override
-  String get rerunSetup => 'Re-run the initial setup process.';
+  String get rerunSetup => 'Chạy lại quá trình thiết lập ban đầu.';
 
   @override
   String get diagnostics => 'Chẩn đoán';
@@ -960,7 +960,8 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get healthCheckDesc => 'Run health checks and view system status.';
+  String get healthCheckDesc =>
+      'Chạy kiểm tra tình trạng và xem trạng thái hệ thống.';
 
   @override
   String get qiblaAligned => 'Qibla Aligned';
