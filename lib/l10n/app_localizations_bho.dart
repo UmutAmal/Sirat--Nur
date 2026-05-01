@@ -115,7 +115,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get systemDefault => 'सिस्टम डिफ़ॉल्ट बा';
 
   @override
-  String get currentLocation => 'वर्तमान स्थान (जीपीएस) के बा।';
+  String get currentLocation => 'वर्तमान स्थान (जीपीएस)';
 
   @override
   String get locationServiceDisabled => 'लोकेशन सेवा अक्षम बा।';
@@ -456,10 +456,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get laylatAlQadr => 'लैलात अल-कदर';
 
   @override
-  String get qiblaDirection => 'किबला डायरेक्शन के बा';
+  String get qiblaDirection => 'किबला दिशा';
 
   @override
-  String get compass => 'कम्पास के बा';
+  String get compass => 'कम्पास';
 
   @override
   String get degrees => 'डिग्री';
@@ -508,16 +508,16 @@ class AppLocalizationsBho extends AppLocalizations {
   String get notificationTime => 'सूचना के समय बा';
 
   @override
-  String get beforePrayer => 'नमाज से कुछ मिनट पहिले के बा';
+  String get beforePrayer => 'नमाज से कुछ मिनट पहिले';
 
   @override
-  String get theme => 'विषय के बा';
+  String get theme => 'थीम';
 
   @override
-  String get lightMode => 'लाइट मोड के बा';
+  String get lightMode => 'लाइट मोड';
 
   @override
-  String get darkMode => 'डार्क मोड के बा';
+  String get darkMode => 'डार्क मोड';
 
   @override
   String get systemTheme => 'सिस्टम थीम';
@@ -526,7 +526,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get about => 'के बारे में';
 
   @override
-  String get version => 'संस्करण के बा';
+  String get version => 'संस्करण';
 
   @override
   String get privacyPolicy => 'गोपनीयता नीति';
@@ -538,10 +538,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get contactUs => 'हमनी से संपर्क करीं';
 
   @override
-  String get rateApp => 'रेट ऐप के बा';
+  String get rateApp => 'ऐप रेट करीं';
 
   @override
-  String get shareApp => 'शेयर ऐप के बा';
+  String get shareApp => 'ऐप शेयर करीं';
 
   @override
   String shareAppMessage(String appName, String url) {
@@ -549,7 +549,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get downloadManager => 'डाउनलोड प्रबंधक के बा';
+  String get downloadManager => 'डाउनलोड प्रबंधक';
 
   @override
   String get downloads => 'डाउनलोड हो गइल बा';
@@ -564,7 +564,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get downloadFailed => 'डाउनलोड फेल हो गइल';
 
   @override
-  String get offlineMode => 'ऑफलाइन मोड के बा';
+  String get offlineMode => 'ऑफलाइन मोड';
 
   @override
   String get noInternet => 'No Internet Connection';
@@ -573,7 +573,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get checkConnection => 'कृपया आपन कनेक्शन के जांच करीं';
 
   @override
-  String get premium => 'प्रीमियम के बा';
+  String get premium => 'प्रीमियम';
 
   @override
   String get upgradeToPro => 'प्रो में अपग्रेड करीं';
@@ -600,7 +600,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get skip => 'छोड़ दिहल जाव';
 
   @override
-  String get next => 'आगे के बात बा';
+  String get next => 'आगे';
 
   @override
   String get done => 'हो गइल बा';
@@ -632,7 +632,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get resetCounter => 'काउंटर के रीसेट करीं';
 
   @override
-  String get changeTarget => 'लक्ष्य बदले के बा';
+  String get changeTarget => 'लक्ष्य बदलीं';
 
   @override
   String get newTarget => 'नया लक्ष्य बा';
@@ -686,7 +686,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get tahajjud => 'तहज्जुद';
 
   @override
-  String get dailyProgress => 'रोजाना प्रगति के बा';
+  String get dailyProgress => 'रोजाना प्रगति';
 
   @override
   String get mandatoryPrayers => 'अनिवार्य प्रार्थना कइल जाला';
@@ -698,7 +698,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get spiritualGrowth => 'आध्यात्मिक विकास';
 
   @override
-  String get mandatoryDuty => 'अनिवार्य कर्तव्य के बा';
+  String get mandatoryDuty => 'अनिवार्य कर्तव्य';
 
   @override
   String get totalPrayers => 'कुल प्रार्थना कइल गइल';
@@ -713,10 +713,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get reset => 'रीसेट हो गइल बा';
 
   @override
-  String get days => 'दिन भर के बा';
+  String get days => 'दिन';
 
   @override
-  String get premiumIntegrity => 'प्रीमियम इंटीग्रेटी के बा';
+  String get premiumIntegrity => 'प्रीमियम अखंडता';
 
   @override
   String get recheckPremium => 'प्रीमियम सदस्यता के स्थिति के दोबारा जांच करीं';
@@ -740,7 +740,7 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक के बा';
+  String get offlineDownloadManager => 'ऑफलाइन डाउनलोड प्रबंधक';
 
   @override
   String get manageDatasets =>
@@ -826,13 +826,13 @@ class AppLocalizationsBho extends AppLocalizations {
   String get audioVoiceSudais => 'Male (Sudais)';
 
   @override
-  String get fajrAngle => 'फजर एंगल के बा';
+  String get fajrAngle => 'फजर एंगल';
 
   @override
   String get ishaAngle => 'ईशा एंगल';
 
   @override
-  String get qiblaCalibration => 'किबला कैलिब्रेशन के बा';
+  String get qiblaCalibration => 'किबला कैलिब्रेशन';
 
   @override
   String get compassSmoothing => 'कम्पास स्मूथिंग के काम होला';
@@ -841,7 +841,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get reduceSensorJitter => 'स्थिर सुई खातिर सेंसर के जिटर कम करीं।';
 
   @override
-  String get calibrationOffset => 'कैलिब्रेशन ऑफसेट के बा';
+  String get calibrationOffset => 'कैलिब्रेशन ऑफसेट';
 
   @override
   String currentOffset(Object offset) {
@@ -896,10 +896,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get diagnosticsCloudDriven => 'बादल संचालित बा';
 
   @override
-  String get diagnosticsAdhanAudioAssets => 'अधान ऑडियो एसेट्स के बा';
+  String get diagnosticsAdhanAudioAssets => 'अधान ऑडियो एसेट्स';
 
   @override
-  String get diagnosticsUiAudioAssets => 'यूआई ऑडियो संपत्ति के बा';
+  String get diagnosticsUiAudioAssets => 'यूआई ऑडियो एसेट्स';
 
   @override
   String get diagnosticsQuranAudioAssets => 'कुरान के ऑडियो संपत्ति बा';
@@ -909,7 +909,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String diagnosticsFilesCount(String count) {
-    return '$count फाइल के बा';
+    return '$count फाइल';
   }
 
   @override
@@ -926,13 +926,13 @@ class AppLocalizationsBho extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsQuranDataset => 'कुरान के डाटासेट के बा';
+  String get diagnosticsQuranDataset => 'कुरान डेटासेट';
 
   @override
   String get diagnosticsQuranSurahs => 'कुरान के सूरह सभ';
 
   @override
-  String get diagnosticsQuranAyahs => 'कुरान के अयह के बा';
+  String get diagnosticsQuranAyahs => 'कुरान के आयत सभ';
 
   @override
   String get diagnosticsQuranJuzMetadata => 'कुरान जुज मेटाडाटा';

@@ -280,6 +280,58 @@ void main() {
     );
 
     test(
+      'Bhojpuri settings download and diagnostics labels do not keep explanatory debris',
+      () {
+        final arb = _readArb('lib/l10n/app_bho.arb');
+        const expected = {
+          'currentLocation': 'वर्तमान स्थान (जीपीएस)',
+          'qiblaDirection': 'किबला दिशा',
+          'compass': 'कम्पास',
+          'beforePrayer': 'नमाज से कुछ मिनट पहिले',
+          'theme': 'थीम',
+          'lightMode': 'लाइट मोड',
+          'darkMode': 'डार्क मोड',
+          'version': 'संस्करण',
+          'rateApp': 'ऐप रेट करीं',
+          'shareApp': 'ऐप शेयर करीं',
+          'downloadManager': 'डाउनलोड प्रबंधक',
+          'offlineMode': 'ऑफलाइन मोड',
+          'premium': 'प्रीमियम',
+          'next': 'आगे',
+          'changeTarget': 'लक्ष्य बदलीं',
+          'dailyProgress': 'रोजाना प्रगति',
+          'mandatoryDuty': 'अनिवार्य कर्तव्य',
+          'days': 'दिन',
+          'premiumIntegrity': 'प्रीमियम अखंडता',
+          'offlineDownloadManager': 'ऑफलाइन डाउनलोड प्रबंधक',
+          'fajrAngle': 'फजर एंगल',
+          'qiblaCalibration': 'किबला कैलिब्रेशन',
+          'calibrationOffset': 'कैलिब्रेशन ऑफसेट',
+          'diagnosticsAdhanAudioAssets': 'अधान ऑडियो एसेट्स',
+          'diagnosticsUiAudioAssets': 'यूआई ऑडियो एसेट्स',
+          'diagnosticsFilesCount': '{count} फाइल',
+          'diagnosticsQuranDataset': 'कुरान डेटासेट',
+          'diagnosticsQuranAyahs': 'कुरान के आयत सभ',
+        };
+        final debris = RegExp(r'के बारे में बतावल गइल बा| के ह$| के बा[।.]?$');
+
+        for (final entry in expected.entries) {
+          final value = arb[entry.key] as String;
+          expect(
+            value,
+            entry.value,
+            reason: 'app_bho.arb must keep concise ${entry.key} copy',
+          );
+          expect(
+            value,
+            isNot(contains(debris)),
+            reason: 'app_bho.arb keeps explanatory debris in ${entry.key}',
+          );
+        }
+      },
+    );
+
+    test(
       'Bhojpuri prayer zikr zakat and places labels do not keep explanatory debris',
       () {
         final arb = _readArb('lib/l10n/app_bho.arb');

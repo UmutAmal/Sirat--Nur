@@ -20960,3 +20960,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude `app_bho` settings/premium/diagnostics/action label'larinda kalan `के बा` kaliplarini skorla ve dini anlam olmayan kisa UI copy'leri temizle.
+
+## 2026-05-01 TUR-523 - Bhojpuri Settings Download Diagnostics Label Debris Cleanup
+
+### MASTER Karari
+- Risk: `app_bho.arb` icindeki settings, Qibla ayari, download, premium ve diagnostics kisa label'lari satir sonu `के बा`/`के ह` artigi tasiyordu. Bu alanlar ayarlar ve teknik saglik ekranlarinda dogrudan gorundugu icin P1 l10n kalite borcu olarak ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bho.arb:51` `वर्तमान स्थान (जीपीएस) के बा।`, `lib/l10n/app_bho.arb:216` `किबला डायरेक्शन के बा`, `lib/l10n/app_bho.arb:239` `नमाज से कुछ मिनट पहिले के बा`, `lib/l10n/app_bho.arb:270` `प्रीमियम के बा`, `lib/l10n/app_bho.arb:289` `लक्ष्य बदले के बा`, `lib/l10n/app_bho.arb:316` `प्रीमियम इंटीग्रेटी के बा`, `lib/l10n/app_bho.arb:371` `अधान ऑडियो एसेट्स के बा`, `lib/l10n/app_bho.arb:400` `कुरान के डाटासेट के बा`, `lib/l10n/app_bho.arb:402` `कुरान के अयह के बा`.
+  - Son durum: `lib/l10n/app_bho.arb:51` `वर्तमान स्थान (जीपीएस)`, `lib/l10n/app_bho.arb:216` `किबला दिशा`, `lib/l10n/app_bho.arb:239` `नमाज से कुछ मिनट पहिले`, `lib/l10n/app_bho.arb:270` `प्रीमियम`, `lib/l10n/app_bho.arb:289` `लक्ष्य बदलीं`, `lib/l10n/app_bho.arb:316` `प्रीमियम अखंडता`, `lib/l10n/app_bho.arb:371` `अधान ऑडियो एसेट्स`, `lib/l10n/app_bho.arb:400` `कुरान डेटासेट`, `lib/l10n/app_bho.arb:402` `कुरान के आयत सभ`.
+  - `test/arb_coverage_test.dart:283` yeni guard 28 Bhojpuri settings/download/diagnostics label'inda `के बारे में बतावल गइल बा`, satir sonu ` के ह` ve satir sonu ` के बा` debris'ini geri getirmeyi engeller.
+  - Debris taramasi: `rg -n -g 'app_bho.arb' '"(currentLocation|qiblaDirection|compass|beforePrayer|theme|lightMode|darkMode|version|rateApp|shareApp|downloadManager|offlineMode|premium|next|changeTarget|dailyProgress|mandatoryDuty|days|premiumIntegrity|offlineDownloadManager|fajrAngle|qiblaCalibration|calibrationOffset|diagnosticsAdhanAudioAssets|diagnosticsUiAudioAssets|diagnosticsFilesCount|diagnosticsQuranDataset|diagnosticsQuranAyahs)": ".*(के बा|के ह|बतावल गइल)' lib\l10n` sonucu bos.
+- Kullanici etkisi: Bhojpuri locale'de ayarlar, Qibla kalibrasyon, offline download ve diagnostics yuzeylerinde kisa ve okunabilir label'lar gorunur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 7/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bho.arb`, generated `lib/l10n/app_localizations_bho.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 28 Bhojpuri settings/download/diagnostics label'i kisa UI copy'ye indirildi; placeholder'li `diagnosticsFilesCount` degeri `{count}` placeholder'ini koruyarak guncellendi.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bho.dart` ARB ile senkronlandi.
+- Scope yalnizca kisa UI label'lariyla sinirli tutuldu; dua, zikr meaning ve dini tarih cumleleri bu turda degistirilmedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\arb_coverage_test.dart --plain-name "Bhojpuri settings download and diagnostics labels do not keep explanatory debris" --reporter compact` PASS.
+- Translation report: `dart run tool\translate_arb_keys.dart currentLocation qiblaDirection compass beforePrayer theme lightMode darkMode version rateApp shareApp downloadManager offlineMode premium next changeTarget dailyProgress mandatoryDuty days premiumIntegrity offlineDownloadManager fajrAngle qiblaCalibration calibrationOffset diagnosticsAdhanAudioAssets diagnosticsUiAudioAssets diagnosticsFilesCount diagnosticsQuranDataset diagnosticsQuranAyahs --report` PASS; missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `735/735`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `4d298ae4-34e8-4d61-b00d-98f8ac6f1b2c`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+
+### Risk Degisimi
+- Bhojpuri settings/download/diagnostics label aciklama-debris riski: `16/25 -> 7/25`.
+- Kalan bilincli risk: `app_bho.arb` icinde calendar/special days, zakat, sukun, chatbot ve places gibi diger kisa label cluster'larinda `के बा` kalintilari devam ediyor. Bunlar dini anlam cumleleriyle karistirilmadan ayri turlarda temizlenmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude `app_bho` calendar/special-days ve zakat/sukun/places kisa label kalintilarini skorla.
