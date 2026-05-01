@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
+import 'package:sirat_i_nur/core/utils/locale_utils.dart';
 import 'package:sirat_i_nur/core/utils/timezone_utils.dart';
 
 const String kSharedPreferencesProviderNotBootstrappedErrorCode =
@@ -234,6 +235,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   SettingsNotifier(this._prefs) : super(_loadSettingsState(_prefs)) {
     _repairStoredLocation();
     _repairStoredTimezone();
+    _repairStoredCanonicalSettings();
     _repairStoredQiblaOffset();
     _repairStoredCustomAngles();
   }
@@ -273,6 +275,56 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
 
     if (storedTimezone != resolvedTimezone) {
       unawaited(_prefs.setString('timezone', resolvedTimezone));
+    }
+  }
+
+  void _repairStoredCanonicalSettings() {
+    _repairCanonicalStringPreference(
+      key: 'calculationMethod',
+      canonicalValue: state.calculationMethod,
+    );
+    _repairCanonicalStringPreference(
+      key: 'madhab',
+      canonicalValue: state.madhab,
+    );
+    _repairCanonicalStringPreference(
+      key: 'audioVoice',
+      canonicalValue: state.audioVoice,
+    );
+    _repairOptionalCanonicalStringPreference(
+      key: 'languageCode',
+      canonicalValue: state.languageCode,
+    );
+    _repairOptionalCanonicalStringPreference(
+      key: 'countryCode',
+      canonicalValue: state.countryCode,
+    );
+  }
+
+  void _repairCanonicalStringPreference({
+    required String key,
+    required String canonicalValue,
+  }) {
+    final storedValue = _prefs.getString(key);
+    if (storedValue != null && storedValue != canonicalValue) {
+      unawaited(_prefs.setString(key, canonicalValue));
+    }
+  }
+
+  void _repairOptionalCanonicalStringPreference({
+    required String key,
+    required String? canonicalValue,
+  }) {
+    final storedValue = _prefs.getString(key);
+    if (canonicalValue == null) {
+      if (storedValue != null) {
+        unawaited(_prefs.remove(key));
+      }
+      return;
+    }
+
+    if (storedValue != canonicalValue) {
+      unawaited(_prefs.setString(key, canonicalValue));
     }
   }
 
@@ -361,8 +413,8 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   }
 
   Future<void> updateLanguage(String? langCode) async {
-    final normalized = langCode?.trim().replaceAll('-', '_');
-    if (normalized == null || normalized.isEmpty) {
+    final normalized = _normalizeOptionalLanguageCode(langCode);
+    if (normalized == null) {
       await _prefs.remove('languageCode');
       state = state.copyWith(languageCode: null);
     } else {
@@ -498,7 +550,9 @@ SettingsState _loadSettingsState(SharedPreferences prefs) {
     ishaAngle: storedMethod == customPrayerMethod
         ? _loadCustomPrayerAngle(prefs, 'ishaAngle', 17.0)
         : defaultIshaAngle,
-    languageCode: prefs.getString('languageCode'),
+    languageCode: _normalizeOptionalLanguageCode(
+      prefs.getString('languageCode'),
+    ),
     latitude: latitude,
     longitude: longitude,
     locationName: hasValidLocation ? prefs.getString('locationName') : null,
@@ -555,4 +609,13 @@ String? _normalizeOptionalCountryCode(String? countryCode) {
   }
 
   return normalizedCountryCode;
+}
+
+String? _normalizeOptionalLanguageCode(String? languageCode) {
+  final locale = parseLocaleCode(languageCode);
+  if (locale == null) {
+    return null;
+  }
+
+  return localeKey(locale);
 }

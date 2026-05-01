@@ -21554,3 +21554,50 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude persisted settings canonical repair, Quran/Juz malformed data guardlari, l10n same-as-English borcu ve Supabase/audio source provenance icin yeni risk taramasi baslat.
+
+## 2026-05-01 TUR-540 - Persisted Settings Canonical Repair
+
+### MASTER Karari
+- Risk: Settings state load yolu prayer method, madhab, audio voice, country ve language degerlerini normalize ediyordu; fakat legacy/bozuk raw degerler `SharedPreferences` icinde kalmaya devam ediyordu. Runtime state dogru olsa bile widget/notification veya sonraki servis okumalarinda ayni raw pref tekrar dolasima girebilir ve kullanici her acilista ayni onarimi yasayabilirdi.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_provider.dart:516` calculation method normalize ediliyor ama storage repair edilmiyordu.
+  - Baslangic: `lib/features/settings/settings_provider.dart:519` madhab normalize ediliyor ama storage repair edilmiyordu.
+  - Baslangic: `lib/features/settings/settings_provider.dart:542` audio voice normalize ediliyor ama storage repair edilmiyordu.
+  - Baslangic: `lib/features/settings/settings_provider.dart:553` language code raw olarak state'e tasinabiliyordu.
+  - Baslangic: `lib/features/settings/settings_provider.dart:559` country code state'te normalize ediliyor ama storage repair edilmiyordu.
+  - Son durum: `lib/features/settings/settings_provider.dart:238` constructor repair zincirine canonical settings repair eklendi.
+  - Son durum: `lib/features/settings/settings_provider.dart:281` calculation method, madhab, audio voice, language code ve country code ayni repair fonksiyonundan geciyor.
+  - Son durum: `lib/features/settings/settings_provider.dart:304` ve `lib/features/settings/settings_provider.dart:314` string preference repair helper'lari absent default'u yazmadan yalnizca bozuk/legacy existing degerleri onariyor.
+  - Son durum: `lib/features/settings/settings_provider.dart:415` `updateLanguage` locale parser canonicalization zincirine baglandi.
+  - Son durum: `lib/features/settings/settings_provider.dart:553` load state malformed language degerlerini state'e tasimadan `null` fallback'e dusuyor.
+  - Son durum: `lib/features/settings/settings_provider.dart:614` optional language code canonical helper'i `parseLocaleCode` + `localeKey` kullaniyor.
+  - Regresyon guard: `test/settings_provider_test.dart:154` legacy calculation/madhab/audio/language/country degerlerinin persisted storage'da canonical hale geldigini test ediyor.
+  - Regresyon guard: `test/settings_provider_test.dart:183` malformed stored language code'un state ve storage'dan dustugunu test ediyor.
+  - Regresyon guard: `test/settings_provider_test.dart:506` `updateLanguage` yolunun yalnizca canonical locale kodu persist ettigini test ediyor.
+- Kullanici etkisi: Eski label/typo/bozuk ayar degerleri tek acilista kalici olarak temizlenir; namaz profili, reciter secimi ve locale fallback zinciri sonraki servislerde de canonical veri gorur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 3/25.
+- Rollback plani: Bu turdaki `lib/features/settings/settings_provider.dart`, `test/settings_provider_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Settings constructor repair zincirine `_repairStoredCanonicalSettings` eklendi.
+- Calculation method, madhab ve audio voice icin existing legacy string prefs canonical degerlere onariliyor.
+- Language code artik `parseLocaleCode`/`localeKey` ile canonical hale geliyor; malformed degerler state'e alinmadan siliniyor.
+- Country code valid location varken uppercase canonical storage'a geri yaziliyor; invalid location repair davranisi korunuyor.
+
+### TESTER Degisikligi
+- Targeted settings test: `flutter test test\settings_provider_test.dart --reporter compact` PASS, `30/30`.
+- Targeted settings page test: `flutter test test\features\settings\settings_page_test.dart --reporter compact` PASS, `11/11`.
+- Targeted locale test: `flutter test test\locale_utils_test.dart --reporter compact` PASS, `4/4`.
+- Targeted prayer coordinator test: `flutter test test\prayer_notification_coordinator_test.dart --reporter compact` PASS, `11/11`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `759/759`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `64e80197-72e1-4356-9930-efb432fa5228`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Persisted settings canonical drift riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: Quran/Juz reading sayfalarinda provider output'u genel olarak normalize edilse de page-level cast guardlari tekrar taranmali; l10n same-as-English borcu ve dini icerik provenance kontrolleri devam edecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Quran/Juz malformed data guardlari, ARB kalite borcu ve Supabase/audio source provenance icin yeni risk taramasi baslat.

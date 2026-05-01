@@ -151,6 +151,46 @@ void main() {
       },
     );
 
+    test('repairs legacy canonical settings in persisted storage', () async {
+      SharedPreferences.setMockInitialValues({
+        'calculationMethod': 'Turkey',
+        'madhab': "Shafi'i",
+        'audioVoice': 'Male (AbdulBaset)',
+        'languageCode': ' zh-hant-tw ',
+        'latitude': 41.0082,
+        'longitude': 28.9784,
+        'locationName': 'Istanbul, Turkey',
+        'countryCode': ' tr ',
+        'timezone': 'Europe/Istanbul',
+      });
+      prefs = await SharedPreferences.getInstance();
+
+      final notifier = SettingsNotifier(prefs);
+      await Future<void>.delayed(Duration.zero);
+
+      expect(notifier.state.calculationMethod, diyanetPrayerMethod);
+      expect(notifier.state.madhab, shafiiMadhab);
+      expect(notifier.state.audioVoice, abdulBasetVoice);
+      expect(notifier.state.languageCode, 'zh_Hant_TW');
+      expect(notifier.state.countryCode, 'TR');
+      expect(prefs.getString('calculationMethod'), diyanetPrayerMethod);
+      expect(prefs.getString('madhab'), shafiiMadhab);
+      expect(prefs.getString('audioVoice'), abdulBasetVoice);
+      expect(prefs.getString('languageCode'), 'zh_Hant_TW');
+      expect(prefs.getString('countryCode'), 'TR');
+    });
+
+    test('drops malformed stored language codes', () async {
+      SharedPreferences.setMockInitialValues({'languageCode': 'english'});
+      prefs = await SharedPreferences.getInstance();
+
+      final notifier = SettingsNotifier(prefs);
+      await Future<void>.delayed(Duration.zero);
+
+      expect(notifier.state.languageCode, isNull);
+      expect(prefs.containsKey('languageCode'), isFalse);
+    });
+
     test('repairs invalid stored timezone from saved coordinates', () async {
       SharedPreferences.setMockInitialValues({
         'latitude': 41.0082,
@@ -462,6 +502,18 @@ void main() {
         expect(prefs.getString('audioVoice'), abdulBasetVoice);
       },
     );
+
+    test('updateLanguage persists only canonical locale codes', () async {
+      final notifier = SettingsNotifier(prefs);
+
+      await notifier.updateLanguage(' zh-hant-tw ');
+      expect(notifier.state.languageCode, 'zh_Hant_TW');
+      expect(prefs.getString('languageCode'), 'zh_Hant_TW');
+
+      await notifier.updateLanguage('not a locale');
+      expect(notifier.state.languageCode, isNull);
+      expect(prefs.containsKey('languageCode'), isFalse);
+    });
 
     test('normalizeAudioVoice still accepts legacy typo labels', () {
       expect(normalizeAudioVoice('Male (AbdulBaset)'), abdulBasetVoice);
