@@ -627,16 +627,16 @@ class AppLocalizationsGa extends AppLocalizations {
       'Léigh an Quran, rianaigh do léamh, agus fiosraigh ábhar Ioslamach';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Leabharlann Dhikr';
 
   @override
   String get resetCounter => 'Athshocraigh Áiritheoir';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Athrú Sprioc';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Sprioc Nua';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsGa extends AppLocalizations {
   String get fastingDebt => 'Fiach Fasting';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Athshocraigh';
 
   @override
-  String get days => 'Days';
+  String get days => 'Laethanta';
 
   @override
   String get premiumIntegrity => 'Ionracas Préimh';
@@ -764,7 +764,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get checkingQuranDb => 'Bunachar sonraí Quran a sheiceáil. .';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ceart go leor';
 
   @override
   String get incomplete => 'Neamhiomlán';
@@ -841,7 +841,7 @@ class AppLocalizationsGa extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Laghdaigh giodam braite le haghaidh snáthaid níos seasta.';
 
   @override
   String get calibrationOffset => 'Fritháireamh Calabrúcháin';
@@ -963,10 +963,10 @@ class AppLocalizationsGa extends AppLocalizations {
       'Rith seiceálacha sláinte agus féach ar stádas an chórais.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Ailínithe';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Rothlaigh chun Qibla a Aimsiú';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -633,10 +633,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ukōt Target eo';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Target Ekãl';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get fastingDebt => 'M̧uri in jitlo̧k';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Bar kōmmane';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ran ko';
 
   @override
   String get premiumIntegrity => 'Premium Integrity';
@@ -761,7 +761,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'EMMON';
 
   @override
   String get incomplete => 'Ejjab jejjet';
@@ -838,19 +838,19 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Kōmman bwe en diiklok an sensor jitter ñan juon needle eo emmanlok.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Kiiō: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Kōmmane elañe compass eo am ej aikuj in kōmmane ilo pein. Men ko remman rej oktak ilo tu-kadu.';
 
   @override
   String get apply => 'Apply';
@@ -963,7 +963,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Oktak ñan Pukot Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -628,16 +628,16 @@ class AppLocalizationsRw extends AppLocalizations {
       'Soma Qor\'ani, ukurikirane ibyo usoma, kandi ushakishe ibiri muri kisilamu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Isomero rya Dhikr';
 
   @override
   String get resetCounter => 'Ongera usubize Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Hindura Intego';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Intego nshya';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsRw extends AppLocalizations {
   String get fastingDebt => 'Umwenda wo kwiyiriza ubusa';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Gusubiramo';
 
   @override
-  String get days => 'Days';
+  String get days => 'Iminsi';
 
   @override
   String get premiumIntegrity => 'Ubunyangamugayo';
@@ -764,7 +764,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get checkingQuranDb => 'Kugenzura ububiko bwa Korowani ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Nibyo';
 
   @override
   String get incomplete => 'Ntibyuzuye';
@@ -841,7 +841,7 @@ class AppLocalizationsRw extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Mugabanye sensor jitter ya inshinge ya steadier.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -963,10 +963,10 @@ class AppLocalizationsRw extends AppLocalizations {
       'Kora igenzura ryubuzima urebe sisitemu yimiterere.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Yahujwe';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Kuzenguruka kugirango ubone Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

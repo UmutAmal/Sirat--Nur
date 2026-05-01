@@ -627,16 +627,16 @@ class AppLocalizationsNr extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Ilayibhrari ye-Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Tjhugulula ithagethi';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Ithagethi etja';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsNr extends AppLocalizations {
   String get fastingDebt => 'Isikwelede sokuzila ukudla';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Setha kabutjha';
 
   @override
-  String get days => 'Days';
+  String get days => 'Amalanga';
 
   @override
   String get premiumIntegrity => 'Ukuthembeka okuphezulu';
@@ -764,7 +764,7 @@ class AppLocalizationsNr extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'NGITHOKOZILE';
 
   @override
   String get incomplete => 'Akukapheleli';
@@ -837,23 +837,23 @@ class AppLocalizationsNr extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Ukubuthakathaka kweKhampasi';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Yehlisa ukuthuthumela kwenzwa ukwenzela inalithi eqinileko.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'I-Offset yokulinganisa';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Okwamanje: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Lungisa nangabe ikhampasi yakho itlhoga ukulungiswa ngesandla. Amanani amahle ajikeleza ngendlela yewashi.';
 
   @override
   String get apply => 'Apply';
@@ -962,10 +962,10 @@ class AppLocalizationsNr extends AppLocalizations {
   String get healthCheckDesc => 'Hlola ipilo begodu ubuke ubujamo besistimu.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'I-Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Phendulela ukuthola i-Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

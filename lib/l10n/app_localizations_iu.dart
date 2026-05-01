@@ -626,16 +626,16 @@ class AppLocalizationsIu extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ᑎᑯ ᐅᖃᓕᒫᒐᖃᕐᕕᒃ';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ᐊᓯᔾᔨᕐᓗᒍ ᑐᕌᒐᒃᓴᖅ';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ᓄᑖᖅ ᑐᕌᒐᒃᓴᖅ';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsIu extends AppLocalizations {
   String get fastingDebt => 'ᓂᕆᑦᑕᐃᓕᒪᓂᕐᒧᑦ ᐊᑭᓕᒃᓴᖅ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ᐋᖅᑭᒃᑲᓐᓂᕐᓗᒍ';
 
   @override
-  String get days => 'Days';
+  String get days => 'ᐅᓪᓗᐃᑦ';
 
   @override
   String get premiumIntegrity => 'ᐊᑭᑐᓂᖅᐹᖅ ᓱᓕᑦᑎᐊᕐᓂᖅ';
@@ -761,7 +761,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ᐊᑏ';
 
   @override
   String get incomplete => 'ᐱᔭᕇᖅᓯᒪᙱᑦᑐᖅ';
@@ -834,23 +834,23 @@ class AppLocalizationsIu extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'ᓇᓗᓇᐃᒃᑯᑕᖅ ᒪᑐᐃᖓᑎᑕᐅᓂᖓ';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'ᒥᑭᓪᓕᒋᐊᕐᓗᒍ ᐃᒃᐱᒍᓱᒍᑎᐅᑉ ᖁᐊᖅᓵᕐᓇᕐᓂᖓ ᑲᐱᔭᐅᑦᑎᐊᕐᓂᖅᓴᐅᖁᓪᓗᒍ.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'ᐋᖅᑭᒃᓯᒪᓂᖓ ᑭᖑᕝᕕᖅᑕᐅᓂᖓ';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'ᒫᓐᓇᐅᔪᖅ: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ᐋᖅᑭᒋᐊᕐᓗᒍ ᓇᓗᓇᐃᒃᑯᑕᐃᑦ ᐋᖅᑭᒋᐊᖅᑕᐅᔭᕆᐊᖃᖅᐸᑦ. ᐱᐅᔪᑦ ᓈᓴᐅᑎᖏᑦ ᓴᖑᕙᒃᐳᑦ ᓯᕿᙳᔭᐅᑉ ᓴᖑᓂᖓᓄᑦ.';
 
   @override
   String get apply => 'Apply';
@@ -960,10 +960,10 @@ class AppLocalizationsIu extends AppLocalizations {
       'ᐊᐅᓚᑦᑎᓗᑎᑦ ᐋᓐᓂᐊᖃᕐᓇᙱᑦᑐᓕᕆᓂᕐᒧᑦ ᖃᐅᔨᓴᕈᑎᓂᒃ ᐊᒻᒪᓗ ᑕᑯᓗᒋᑦ ᖃᕆᑕᐅᔭᒃᑯᑦ ᖃᓄᐃᓕᖓᓕᕐᓂᖏᑦ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'ᕿᑉᓚ ᐋᖅᑭᒃᓱᖅᓯᒪᔪᖅ';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'ᓇᓕᐊᓐᓄᕋᕐᓗᒍ ᓇᓂᓯᓗᑎᑦ ᕿᑉᓚᒥᒃ';
 
   @override
   String get calibrationRequiredFigure8 =>

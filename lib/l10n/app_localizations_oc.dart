@@ -629,16 +629,16 @@ class AppLocalizationsOc extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Bibliotèca Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Cambiar la tòca';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Novèla cibla';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsOc extends AppLocalizations {
   String get fastingDebt => 'Deute de june';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Reïnicializar';
 
   @override
-  String get days => 'Days';
+  String get days => 'Jorns';
 
   @override
   String get premiumIntegrity => 'Integritat Premium';
@@ -765,7 +765,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ÒC BEN';
 
   @override
   String get incomplete => 'Incomplet';
@@ -838,23 +838,23 @@ class AppLocalizationsOc extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Alisament de la brújula';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Reduire lo tremolament del captor per una agulha mai establa.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Decalatge de calibratge';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Actual: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Ajustatz se vòstra bossòla a besonh d\'una correccion manuala. Las valors positivas viran dins lo sens orari.';
 
   @override
   String get apply => 'Apply';
@@ -965,10 +965,10 @@ class AppLocalizationsOc extends AppLocalizations {
       'Executatz de contraròtles de santat e visualizatz l\'estat del sistèma.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla alinhat';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Virar per trobar lo Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

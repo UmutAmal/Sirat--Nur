@@ -628,16 +628,16 @@ class AppLocalizationsLg extends AppLocalizations {
       'Soma Quran, olondoole okusoma kwo, era onoonye ebirimu eby’Obusiraamu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Etterekero ly’ebitabo erya Dhikr';
 
   @override
   String get resetCounter => 'Okuzzaawo Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Kyuusa Ekiruubirirwa';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Ekiruubirirwa Ekipya';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsLg extends AppLocalizations {
   String get fastingDebt => 'Ebbanja ly\'okusiiba';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Okuddamu okuteekawo';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ennaku';
 
   @override
   String get premiumIntegrity => 'Obugolokofu bwa Premium';
@@ -765,7 +765,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get checkingQuranDb => 'Okukebera database ya Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'KALE';
 
   @override
   String get incomplete => 'Tebituukiridde';
@@ -842,14 +842,14 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Kendeeza ku sensor jitter okusobola okufuna empiso enywevu.';
 
   @override
   String get calibrationOffset => 'Okukyusakyusa mu kupima';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Mu kiseera kino: $offset°';
   }
 
   @override
@@ -969,7 +969,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Zingulula Okuzuula Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

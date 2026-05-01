@@ -633,10 +633,10 @@ class AppLocalizationsCh extends AppLocalizations {
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Na\'lå\'la\' i Puntan-mu';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'nuebu na punta';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsCh extends AppLocalizations {
   String get fastingDebt => 'Dibi gi Ayunat';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Na\'lå\'la\' ta\'lo';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ha\'åni';
 
   @override
   String get premiumIntegrity => 'Integridat Premium';
@@ -763,7 +763,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ESTA';
 
   @override
   String get incomplete => 'Ti kumple';
@@ -836,23 +836,23 @@ class AppLocalizationsCh extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'I Kompas na Manma\'å\'ñao';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Na\'menos i linao i sensor para u mas fitme i aguila.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Offset gi i Kalibrasion';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'På\'go: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Na\'lå\'la\' i kompas-mu yanggen nisisåriu na u ma\'arekla. I balotu siha ni\' manposipble manma\'a\'atan gi direksion i relo.';
 
   @override
   String get apply => 'Apply';
@@ -966,7 +966,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Bira para un sodda\' Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

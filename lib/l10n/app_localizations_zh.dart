@@ -612,16 +612,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get onboarding3Desc => '阅读《古兰经》、跟踪您的阅读情况并探索伊斯兰内容';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => '迪克尔图书馆';
 
   @override
   String get resetCounter => '重置计数器';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => '改变目标';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => '新目标';
 
   @override
   String targetCount(Object target) {
@@ -695,10 +695,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get fastingDebt => '禁食债务';
 
   @override
-  String get reset => 'Reset';
+  String get reset => '重置';
 
   @override
-  String get days => 'Days';
+  String get days => '天数';
 
   @override
   String get premiumIntegrity => '优质诚信';
@@ -745,7 +745,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get checkingQuranDb => '检查古兰经数据库...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => '好的';
 
   @override
   String get incomplete => '不完整';
@@ -821,8 +821,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get compassSmoothing => '罗盘平滑';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => '减少传感器抖动以获得更稳定的针。';
 
   @override
   String get calibrationOffset => '校准偏移';
@@ -939,10 +938,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get healthCheckDesc => '运行健康检查并查看系统状态。';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => '朝拜对齐';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => '旋转找到朝拜';
 
   @override
   String get calibrationRequiredFigure8 => '需要校准。旋转图 8 中的设备。';
@@ -2288,16 +2287,16 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get onboarding3Desc => '阅读《古兰经》、跟踪您的阅读情况并探索伊斯兰内容';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => '迪克尔图书馆';
 
   @override
   String get resetCounter => '重置计数器';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => '改变目标';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => '新目标';
 
   @override
   String targetCount(Object target) {
@@ -2371,10 +2370,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get fastingDebt => '禁食债务';
 
   @override
-  String get reset => 'Reset';
+  String get reset => '重置';
 
   @override
-  String get days => 'Days';
+  String get days => '天数';
 
   @override
   String get premiumIntegrity => '优质诚信';
@@ -2421,7 +2420,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get checkingQuranDb => '检查古兰经数据库...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => '好的';
 
   @override
   String get incomplete => '不完整';
@@ -2497,8 +2496,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get compassSmoothing => '罗盘平滑';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => '减少传感器抖动以获得更稳定的针。';
 
   @override
   String get calibrationOffset => '校准偏移';
@@ -2615,10 +2613,10 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
   String get healthCheckDesc => '运行健康检查并查看系统状态。';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => '朝拜对齐';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => '旋转找到朝拜';
 
   @override
   String get calibrationRequiredFigure8 => '需要校准。旋转图 8 中的设备。';
@@ -3964,16 +3962,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get onboarding3Desc => '閱讀《古蘭經》、追蹤您的閱讀情況並探索伊斯蘭內容';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => '迪克爾圖書館';
 
   @override
   String get resetCounter => '重置計數器';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => '改變目標';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => '新目標';
 
   @override
   String targetCount(Object target) {
@@ -4047,10 +4045,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get fastingDebt => '禁食債務';
 
   @override
-  String get reset => 'Reset';
+  String get reset => '重置';
 
   @override
-  String get days => 'Days';
+  String get days => '天數';
 
   @override
   String get premiumIntegrity => '優質誠信';
@@ -4097,7 +4095,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get checkingQuranDb => '檢查古蘭經資料庫...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => '好的';
 
   @override
   String get incomplete => '不完整';
@@ -4173,8 +4171,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get compassSmoothing => '羅盤平滑';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => '減少感測器抖動以獲得更穩定的針。';
 
   @override
   String get calibrationOffset => '校準偏移';
@@ -4291,10 +4288,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get healthCheckDesc => '執行健康檢查並查看系統狀態。';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => '朝拜對齊';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => '旋轉找到朝拜';
 
   @override
   String get calibrationRequiredFigure8 => '需要校準。旋轉圖 8 中的設備。';

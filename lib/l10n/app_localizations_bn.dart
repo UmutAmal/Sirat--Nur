@@ -626,16 +626,16 @@ class AppLocalizationsBn extends AppLocalizations {
       'কুরআন পড়ুন, আপনার পড়া ট্র্যাক করুন এবং ইসলামিক কন্টেন্ট আবিষ্কার করুন';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ঝিকর লাইব্রেরী';
 
   @override
   String get resetCounter => 'কাউন্টার রিসেট করুন';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'লক্ষ্য পরিবর্তন করুন';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'নতুন টার্গেট';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsBn extends AppLocalizations {
   String get fastingDebt => 'রোজা ঋণ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'রিসেট করুন';
 
   @override
-  String get days => 'Days';
+  String get days => 'দিন';
 
   @override
   String get premiumIntegrity => 'প্রিমিয়াম ইন্টিগ্রিটি';
@@ -763,7 +763,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get checkingQuranDb => 'কুরআন ডাটাবেস পরীক্ষা করা হচ্ছে...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ঠিক আছে';
 
   @override
   String get incomplete => 'অসম্পূর্ণ';
@@ -840,7 +840,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'একটি স্থির সূঁচের জন্য সেন্সর ধাক্কা কমিয়ে দিন।';
 
   @override
   String get calibrationOffset => 'ক্রমাঙ্কন অফসেট';
@@ -962,10 +962,10 @@ class AppLocalizationsBn extends AppLocalizations {
       'স্বাস্থ্য পরীক্ষা চালান এবং সিস্টেমের অবস্থা দেখুন।';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'কিবলা সারিবদ্ধ';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'কিবলা খুঁজতে ঘোরান';
 
   @override
   String get calibrationRequiredFigure8 =>

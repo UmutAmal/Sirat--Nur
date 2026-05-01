@@ -626,16 +626,16 @@ class AppLocalizationsYi extends AppLocalizations {
       'לייענען קווראַן, שפּור דיין לייענען און ויספאָרשן יסלאַמיק אינהאַלט';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'דהיקר ביבליאָטעק';
 
   @override
   String get resetCounter => 'באַשטעטיק קאָונטער';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'טוישן ציל';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ניו ציל';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get fastingDebt => 'פאסטן כויוו';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'באַשטעטיק';
 
   @override
-  String get days => 'Days';
+  String get days => 'טעג';
 
   @override
   String get premiumIntegrity => 'פּרעמיום אָרנטלעכקייַט';
@@ -763,7 +763,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get checkingQuranDb => 'קאָנטראָלירן די קאָראַן דאַטאַבייס ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'גוט';
 
   @override
   String get incomplete => 'דערענדיקט';
@@ -840,7 +840,7 @@ class AppLocalizationsYi extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'רעדוצירן סענסער דזשיטער פֿאַר אַ פעסט נאָדל.';
 
   @override
   String get calibrationOffset => 'קאַלאַבריישאַן אָפסעט';
@@ -961,10 +961,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get healthCheckDesc => 'לויפן געזונט טשעקס און זען סיסטעם סטאַטוס.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'קיבלאַ אַליינד';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'דרייען צו געפֿינען Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

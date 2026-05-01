@@ -630,16 +630,16 @@ class AppLocalizationsHy extends AppLocalizations {
       'Կարդացեք Ղուրանը, հետևեք ձեր ընթերցանությանը և ուսումնասիրեք իսլամական բովանդակությունը';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Դիքր գրադարան';
 
   @override
   String get resetCounter => 'Վերականգնել հաշվիչը';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Փոխել թիրախը';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Նոր թիրախ';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get fastingDebt => 'Պահքի պարտք';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Վերականգնել';
 
   @override
-  String get days => 'Days';
+  String get days => 'Օրեր';
 
   @override
   String get premiumIntegrity => 'Պրեմիում ամբողջականություն';
@@ -767,7 +767,7 @@ class AppLocalizationsHy extends AppLocalizations {
   String get checkingQuranDb => 'Ղուրանի տվյալների բազայի ստուգում...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Լավ';
 
   @override
   String get incomplete => 'Անավարտ';
@@ -844,7 +844,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Նվազեցրեք սենսորային ցնցումը ավելի կայուն ասեղի համար:';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -966,10 +966,10 @@ class AppLocalizationsHy extends AppLocalizations {
       'Գործարկեք առողջության ստուգումներ և դիտեք համակարգի կարգավիճակը:';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Քիբլա հավասարեցված';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Պտտեք՝ Քիբլան գտնելու համար';
 
   @override
   String get calibrationRequiredFigure8 =>

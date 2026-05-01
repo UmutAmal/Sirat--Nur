@@ -628,16 +628,16 @@ class AppLocalizationsHu extends AppLocalizations {
       'Olvassa el a Koránt, kövesse nyomon az olvasást, és fedezze fel az iszlám tartalmat';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr könyvtár';
 
   @override
   String get resetCounter => 'Számláló visszaállítása';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Cél módosítása';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Új célpont';
 
   @override
   String targetCount(Object target) {
@@ -715,7 +715,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Napok';
 
   @override
   String get premiumIntegrity => 'Prémium integritás';
@@ -765,7 +765,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get checkingQuranDb => 'A Korán adatbázis ellenőrzése...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'RENDBEN';
 
   @override
   String get incomplete => 'Hiányos';
@@ -842,7 +842,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Csökkentse az érzékelő rezgését a stabilabb tű érdekében.';
 
   @override
   String get calibrationOffset => 'Kalibrálási eltolás';
@@ -964,10 +964,10 @@ class AppLocalizationsHu extends AppLocalizations {
       'Futtassa az állapotellenőrzéseket és tekintse meg a rendszer állapotát.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla igazítva';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Forgassa el a Find Qibla lehetőséghez';
 
   @override
   String get calibrationRequiredFigure8 =>

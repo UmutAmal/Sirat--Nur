@@ -626,16 +626,16 @@ class AppLocalizationsUg extends AppLocalizations {
       'قۇرئان ئوقۇش ، ئوقۇشۇڭنى ئىز قوغلاش ۋە ئىسلام مەزمۇنى ئۈستىدە ئىزدىنىش';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr كۈتۈپخانىسى';
 
   @override
   String get resetCounter => 'Counter نى ئەسلىگە كەلتۈرۈش';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'نىشاننى ئۆزگەرتىش';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'يېڭى نىشان';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get fastingDebt => 'روزا تۇتقان قەرز';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ئەسلىگە قايتۇرۇش';
 
   @override
-  String get days => 'Days';
+  String get days => 'كۈنلەر';
 
   @override
   String get premiumIntegrity => 'ئەلا سۈپەتلىك';
@@ -763,7 +763,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get checkingQuranDb => 'قۇرئان ساندانىنى تەكشۈرۈش ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ماقۇل';
 
   @override
   String get incomplete => 'تولۇق ئەمەس';
@@ -839,8 +839,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get compassSmoothing => 'Compass Smoothing';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'تۇراقلىق يىڭنە ئۈچۈن سېنزورنى ئازايتىڭ.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -962,10 +961,10 @@ class AppLocalizationsUg extends AppLocalizations {
       'سالامەتلىك تەكشۈرتۈش ۋە سىستېما ھالىتىنى كۆرۈش.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'قىبلە ماسلاشتى';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'قىبلانى تېپىش ئۈچۈن ئايلىنىش';
 
   @override
   String get calibrationRequiredFigure8 =>

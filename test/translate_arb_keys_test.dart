@@ -1623,6 +1623,72 @@ void main() {
       }
     });
 
+    test('tracks settings qibla and zikr action l10n debt reduction', () {
+      const keys = [
+        'okLabel',
+        'reset',
+        'days',
+        'changeTarget',
+        'newTarget',
+        'dhikrLibrary',
+        'reduceSensorJitter',
+        'rotateToFindQibla',
+        'qiblaAligned',
+        'compassSmoothing',
+        'calibrationOffset',
+        'currentOffset',
+        'manualCorrectionDesc',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(495));
+      for (final locale in [
+        'aa',
+        'am',
+        'ar',
+        'bo',
+        'ff',
+        'sa',
+        'sd',
+        'ti',
+        'ur',
+        'zh_CN',
+      ]) {
+        for (final key in keys) {
+          final value = localeArbs[locale]![key] as String;
+          expect(
+            value,
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+          expect(
+            value,
+            isNot(contains('\n')),
+            reason: 'app_$locale.arb has multiline settings copy for $key',
+          );
+        }
+        expect(localeArbs[locale]!['currentOffset'], contains('{offset}'));
+      }
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',

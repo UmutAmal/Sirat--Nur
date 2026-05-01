@@ -626,16 +626,16 @@ class AppLocalizationsId extends AppLocalizations {
       'Baca Quran, lacak bacaan Anda, dan jelajahi konten Islami';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Perpustakaan Dzikir';
 
   @override
   String get resetCounter => 'Setel Ulang Penghitung';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ubah Sasaran';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Sasaran Baru';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get fastingDebt => 'Hutang Puasa';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Setel ulang';
 
   @override
-  String get days => 'Days';
+  String get days => 'hari';
 
   @override
   String get premiumIntegrity => 'Integritas Premium';
@@ -763,7 +763,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get checkingQuranDb => 'Memeriksa database Al-Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Oke';
 
   @override
   String get incomplete => 'Tidak lengkap';
@@ -840,7 +840,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Kurangi jitter sensor untuk jarum yang lebih stabil.';
 
   @override
   String get calibrationOffset => 'Kalibrasi Offset';
@@ -962,10 +962,10 @@ class AppLocalizationsId extends AppLocalizations {
       'Jalankan pemeriksaan kesehatan dan lihat status sistem.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kiblat Sejajar';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Putar untuk Menemukan Kiblat';
 
   @override
   String get calibrationRequiredFigure8 =>

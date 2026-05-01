@@ -627,16 +627,16 @@ class AppLocalizationsXh extends AppLocalizations {
       'Funda iKurani, ulandelele ukufunda kwakho, kwaye ujonge umxholo wamaSilamsi';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Ithala leencwadi leDhikr';
 
   @override
   String get resetCounter => 'Seta kwakhona i-Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Guqula Ekujoliswe kuko';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Ujoliso olutsha';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get fastingDebt => 'Ityala lokuzila ukutya';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Lungisa kwakhona';
 
   @override
-  String get days => 'Days';
+  String get days => 'Iintsuku';
 
   @override
   String get premiumIntegrity => 'Imfezeko yePremium';
@@ -767,7 +767,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get checkingQuranDb => 'NONE';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'KULUNGILE';
 
   @override
   String get incomplete => 'Ayiphelelanga';
@@ -844,7 +844,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Nciphisa ijitha yoluvo lwenaliti ezinzileyo.';
 
   @override
   String get calibrationOffset => 'I-Calibration Offset';
@@ -966,10 +966,10 @@ class AppLocalizationsXh extends AppLocalizations {
       'Qhuba iitshekhi zezempilo kwaye ujonge isimo senkqubo.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Ilungelelanisiwe';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Jikelezisa ukuze ufumane iQibla';
 
   @override
   String get calibrationRequiredFigure8 =>

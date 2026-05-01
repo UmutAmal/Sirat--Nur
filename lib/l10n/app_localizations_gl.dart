@@ -629,16 +629,16 @@ class AppLocalizationsGl extends AppLocalizations {
       'Le o Corán, rastrexa a túa lectura e explora contido islámico';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Biblioteca Dhikr';
 
   @override
   String get resetCounter => 'Restablecer contador';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Cambiar destino';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Novo obxectivo';
 
   @override
   String targetCount(Object target) {
@@ -714,10 +714,10 @@ class AppLocalizationsGl extends AppLocalizations {
   String get fastingDebt => 'Débeda en xaxún';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Restablecer';
 
   @override
-  String get days => 'Days';
+  String get days => 'Días';
 
   @override
   String get premiumIntegrity => 'Integridade Premium';
@@ -844,7 +844,7 @@ class AppLocalizationsGl extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Reduce a vibración do sensor para unha agulla máis estable.';
 
   @override
   String get calibrationOffset => 'Offset de calibración';
@@ -967,10 +967,10 @@ class AppLocalizationsGl extends AppLocalizations {
       'Realiza comprobacións de saúde e consulta o estado do sistema.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla aliñada';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Xira para atopar Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

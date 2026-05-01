@@ -627,16 +627,16 @@ class AppLocalizationsFf extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Defterdu Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Waylu Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Target keso';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsFf extends AppLocalizations {
   String get fastingDebt => 'Ñamaale koorka';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Resndo';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ñalɗi';
 
   @override
   String get premiumIntegrity => 'Nuunɗal Premium';
@@ -763,7 +763,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'TO';
 
   @override
   String get incomplete => 'Ko timmaani';
@@ -836,23 +836,23 @@ class AppLocalizationsFf extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompaas Mooftugol';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Ustu jitter sensor ngam njuumri ɓurndi tiiɗde.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibraasiyoŋ Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Jooni: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Reento so tawii kompas maa ina haani feewnireede e junngo. Nafooje moƴƴe ina njirloo e dow waktu.';
 
   @override
   String get apply => 'Apply';
@@ -961,10 +961,10 @@ class AppLocalizationsFf extends AppLocalizations {
   String get healthCheckDesc => 'Doggo ƴeewndo cellal e ƴeewde ngonka system.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kibla ina jokki';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Yirlo ngam yiytude Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -630,16 +630,16 @@ class AppLocalizationsMy extends AppLocalizations {
       'ကုရ်အာန်ကိုဖတ်ပါ၊ သင်၏ဖတ်ရှုခြင်းကိုခြေရာခံပါ၊ အစ္စလာမ့်အကြောင်းအရာများကိုလေ့လာပါ။';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr စာကြည့်တိုက်';
 
   @override
   String get resetCounter => 'ကောင်တာကို ပြန်သတ်မှတ်ပါ။';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ပစ်မှတ်ကိုပြောင်းပါ။';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ပစ်မှတ်အသစ်';
 
   @override
   String targetCount(Object target) {
@@ -718,10 +718,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get fastingDebt => 'ဥပုသ်ကြွေး';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ပြန်လည်သတ်မှတ်ပါ။';
 
   @override
-  String get days => 'Days';
+  String get days => 'နေ့ရက်များ';
 
   @override
   String get premiumIntegrity => 'ပရီမီယံသမာဓိ';
@@ -771,7 +771,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get checkingQuranDb => 'ကုရ်အာန်ဒေတာဘေ့စ်ကို စစ်ဆေးနေသည်...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'အိုကေ';
 
   @override
   String get incomplete => 'မပြည့်စုံ';
@@ -848,7 +848,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'ပိုတည်ငြိမ်သော အပ်တစ်ချောင်းအတွက် အာရုံခံတုန်လှုပ်ခြင်းကို လျှော့ချပါ။';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -970,10 +970,10 @@ class AppLocalizationsMy extends AppLocalizations {
       'ကျန်းမာရေးစစ်ဆေးမှုများကို လုပ်ဆောင်ပြီး စနစ်အခြေအနေကို ကြည့်ရှုပါ။';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla ညှိထားသည်။';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qibla ကိုရှာရန်လှည့်ပါ။';
 
   @override
   String get calibrationRequiredFigure8 =>

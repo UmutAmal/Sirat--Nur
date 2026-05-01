@@ -630,16 +630,16 @@ class AppLocalizationsGn extends AppLocalizations {
       'Emoñe’ẽ Corán, esegui ne moñe’ẽrã ha ehesa’ỹijo contenido islámico';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Biblioteca Dhikr rehegua';
 
   @override
   String get resetCounter => 'Reset Contador rehegua';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Omoambue Meta';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Meta Pyahu';
 
   @override
   String targetCount(Object target) {
@@ -714,10 +714,10 @@ class AppLocalizationsGn extends AppLocalizations {
   String get fastingDebt => 'Deuda de Ayuno rehegua';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Reset jey';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ára';
 
   @override
   String get premiumIntegrity => 'Integridad de Prima rehegua';
@@ -768,7 +768,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get checkingQuranDb => 'Ojesarekóva Corán base de datos rehe...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'OĨMA';
 
   @override
   String get incomplete => 'Incompleto';
@@ -845,7 +845,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Omboguejy sensor jitter peteĩ aguja constantevévape g̃uarã.';
 
   @override
   String get calibrationOffset => 'Desplazamiento de calibración rehegua';
@@ -967,10 +967,10 @@ class AppLocalizationsGn extends AppLocalizations {
       'Emomba’apo umi jesareko tesãi rehegua ha ehecha sistema reko.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Alineado';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Ojere ojejuhu hagua Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

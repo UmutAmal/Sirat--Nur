@@ -628,16 +628,16 @@ class AppLocalizationsUk extends AppLocalizations {
       'Читайте Коран, відстежуйте своє читання та досліджуйте ісламський вміст';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Бібліотека Зікр';
 
   @override
   String get resetCounter => 'Скинути лічильник';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Змінити ціль';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Нова ціль';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get fastingDebt => 'Пісний борг';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Скинути';
 
   @override
-  String get days => 'Days';
+  String get days => 'днів';
 
   @override
   String get premiumIntegrity => 'Преміальна цілісність';
@@ -765,7 +765,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get checkingQuranDb => 'Перевірка бази даних Корану...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'добре';
 
   @override
   String get incomplete => 'Неповний';
@@ -842,7 +842,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Зменште тремтіння датчика для стабільнішої голки.';
 
   @override
   String get calibrationOffset => 'Зсув калібрування';
@@ -965,10 +965,10 @@ class AppLocalizationsUk extends AppLocalizations {
       'Виконуйте перевірку працездатності та переглядайте стан системи.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Вирівняна Кібла';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Поверніть, щоб знайти Кіблу';
 
   @override
   String get calibrationRequiredFigure8 =>

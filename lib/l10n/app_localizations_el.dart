@@ -629,16 +629,16 @@ class AppLocalizationsEl extends AppLocalizations {
       'Διαβάστε το Κοράνι, παρακολουθήστε την ανάγνωσή σας και εξερευνήστε το ισλαμικό περιεχόμενο';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Βιβλιοθήκη Dhikr';
 
   @override
   String get resetCounter => 'Επαναφορά μετρητή';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Αλλαγή στόχου';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Νέος στόχος';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get fastingDebt => 'Νηστεύσιμο χρέος';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Επαναφορά';
 
   @override
-  String get days => 'Days';
+  String get days => 'Μέρες';
 
   @override
   String get premiumIntegrity => 'Ακεραιότητα Premium';
@@ -768,7 +768,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get checkingQuranDb => 'Έλεγχος της βάσης δεδομένων του Κορανίου...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ΟΚ';
 
   @override
   String get incomplete => 'Ημιτελής';
@@ -845,7 +845,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Μειώστε το jitter του αισθητήρα για πιο σταθερή βελόνα.';
 
   @override
   String get calibrationOffset => 'Μετατόπιση βαθμονόμησης';
@@ -967,10 +967,10 @@ class AppLocalizationsEl extends AppLocalizations {
       'Εκτελέστε ελέγχους υγείας και δείτε την κατάσταση του συστήματος.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Ευθυγραμμισμένη Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Περιστρέψτε για να βρείτε Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -635,16 +635,16 @@ class AppLocalizationsAy extends AppLocalizations {
       'Quran uñxatt’aña, ullart’awinakam arknaqaña, ukat contenido islámico ukar uñakipt’aña';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Biblioteca ukat juk’ampinaka';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Mayjt’ayaña Amtawi';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Machaq Target';
 
   @override
   String targetCount(Object target) {
@@ -726,7 +726,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Urunaka';
 
   @override
   String get premiumIntegrity => 'Integridad Premium ukaxa';
@@ -775,7 +775,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ukhamajj walikïskiwa';
 
   @override
   String get incomplete => 'Jan phuqhata';
@@ -849,23 +849,24 @@ class AppLocalizationsAy extends AppLocalizations {
       'Qibla Calibración ukax mä jach’a uñacht’äwiwa';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Brújula ukax Sumanchatawa';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Mä aguja juk’ampi ch’amanchañataki sensor jitter jisk’achaña.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset =>
+      'Calibración ukaxa mä juk’a pachanakwa lurasi';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Jichhax: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Brújula ukax manual corrección munaspa ukhax askichañamawa. Positivo valores ukanakax reloj ukar uñtatawa.';
 
   @override
   String get apply => 'Mayjt’awinaka apnaqaña';
@@ -977,10 +978,10 @@ class AppLocalizationsAy extends AppLocalizations {
       'K’umar jakañ uñakipañanak apnaqaña ukat sistema ukan estado uñakipaña.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Alineado ukhamawa';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qibla Jiskt’añataki Muyuntaña';
 
   @override
   String get calibrationRequiredFigure8 =>

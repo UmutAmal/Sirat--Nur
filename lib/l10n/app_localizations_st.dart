@@ -630,16 +630,16 @@ class AppLocalizationsSt extends AppLocalizations {
       'Bala Quran, latela seo u se balileng, \'me u hlahlobe litaba tsa Islamic';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Laeborari ea Dhikr';
 
   @override
   String get resetCounter => 'Khutlisa Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Fetola Sepheo';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Sepheo se Secha';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsSt extends AppLocalizations {
   String get fastingDebt => 'Sekoloto sa ho itima lijo';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Seta bocha';
 
   @override
-  String get days => 'Days';
+  String get days => 'Matsatsi';
 
   @override
   String get premiumIntegrity => 'Botšepehi ba Premium';
@@ -768,7 +768,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get checkingQuranDb => 'E lekola polokelo ea Koran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ho lokile';
 
   @override
   String get incomplete => 'E sa fellang';
@@ -845,7 +845,7 @@ class AppLocalizationsSt extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Fokotsa jitter ea sensor bakeng sa nale e tsitsitseng.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -967,10 +967,10 @@ class AppLocalizationsSt extends AppLocalizations {
       'Etsa litlhahlobo tsa bophelo bo botle \'me u shebe boemo ba sistimi.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla e Tsepamisitsoe';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Fetola ho fumana Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

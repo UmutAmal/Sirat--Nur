@@ -628,16 +628,16 @@ class AppLocalizationsSo extends AppLocalizations {
       'Qur\'aanka akhri, akhrintaada raadi, oo sahmi nuxurka Islaamka';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Maktabadda Dhikr';
 
   @override
   String get resetCounter => 'Dib u dajin Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Beddel Bartilmaameedka';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Bartilmaameed Cusub';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsSo extends AppLocalizations {
   String get fastingDebt => 'Soonka Deynta';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Dib u dajin';
 
   @override
-  String get days => 'Days';
+  String get days => 'Maalmo';
 
   @override
   String get premiumIntegrity => 'Daacadnimada Premium';
@@ -842,7 +842,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Iska yaree dareenka dareemaha cirbad joogto ah.';
 
   @override
   String get calibrationOffset => 'Dib u habeynta';
@@ -964,10 +964,10 @@ class AppLocalizationsSo extends AppLocalizations {
       'Samee hubinta caafimaadka oo arag heerka nidaamka';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla oo isku toosan';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'U rog si aad Qibla u hesho';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -629,16 +629,16 @@ class AppLocalizationsKl extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Atuagaarniarfik';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Target allanngortiguk';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nutaaq Target';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsKl extends AppLocalizations {
   String get fastingDebt => 'Faste Akiitsoq';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Nutarterineq';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ullut';
 
   @override
   String get premiumIntegrity => 'Ataatsimooqatigiinneq Premium';
@@ -838,23 +838,23 @@ class AppLocalizationsKl extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompassimik Sullissineq';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Sensor jitter-i annikillisiguk, stabilere næl-imut.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibrering Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ullumikkut: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Kompassi manuelt korrektion pisariaqartinneqarpat naleqqussaruk. Positivit pingaarnertut ullup ingerlanerani ingerlapput.';
 
   @override
   String get apply => 'Apply';
@@ -964,10 +964,10 @@ class AppLocalizationsKl extends AppLocalizations {
       'Peqqissutsimik misissuinerit ingerlakkit aamma systemip inissisimanera takuuk.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Naliginnaasoq';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qibla nassaariniarlugu rotere';
 
   @override
   String get calibrationRequiredFigure8 =>

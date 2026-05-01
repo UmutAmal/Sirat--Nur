@@ -627,16 +627,16 @@ class AppLocalizationsBa extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Зикр китапханаһы';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Маҡсатты үҙгәртеү';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Яңы маҡсат';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsBa extends AppLocalizations {
   String get fastingDebt => 'Ураҙа бурысы .';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Сброс';
 
   @override
-  String get days => 'Days';
+  String get days => 'Көндәр .';
 
   @override
   String get premiumIntegrity => 'Премиум бөтөнлөк';
@@ -762,7 +762,7 @@ class AppLocalizationsBa extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ЯРАР';
 
   @override
   String get incomplete => 'Тулы булмаған';
@@ -835,14 +835,13 @@ class AppLocalizationsBa extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Компас тигеҙләү';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Датчик дрожь кәметергә өсөн стабиль энә.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Калибровка офсеты';
 
   @override
   String currentOffset(Object offset) {
@@ -851,7 +850,7 @@ class AppLocalizationsBa extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Компасты ҡул менән төҙәтеү кәрәк булһа, көйләгеҙ. Ыңғай ҡиммәттәр сәғәт йүнәлеше буйынса әйләнә.';
 
   @override
   String get apply => 'Apply';
@@ -961,10 +960,10 @@ class AppLocalizationsBa extends AppLocalizations {
       'Һаулыҡты тикшерергә һәм система статусын ҡарарға.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Ҡибла тигеҙләнгән';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Ҡибла табыу өсөн әйләндерегеҙ';
 
   @override
   String get calibrationRequiredFigure8 =>

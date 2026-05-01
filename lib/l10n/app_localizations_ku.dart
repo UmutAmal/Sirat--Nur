@@ -626,16 +626,16 @@ class AppLocalizationsKu extends AppLocalizations {
       'Quranê bixwînin, xwendina xwe bişopînin û naveroka îslamî bikolin';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Pirtûkxaneya Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Target biguherînin';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Armanca Nû';
 
   @override
   String targetCount(Object target) {
@@ -839,7 +839,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Jitter sensor ji bo derziyê steadier kêm bike.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -964,7 +964,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Bizivirin da ku Qibla bibînin';
 
   @override
   String get calibrationRequiredFigure8 =>

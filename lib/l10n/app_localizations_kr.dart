@@ -626,16 +626,16 @@ class AppLocalizationsKr extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Kǝra kǝrabe Dhikrbe';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Nganzatənadə faltə';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nganza Bǝlin';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsKr extends AppLocalizations {
   String get fastingDebt => 'Kusuwu';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Waltǝm yasa';
 
   @override
-  String get days => 'Days';
+  String get days => 'Kawu';
 
   @override
   String get premiumIntegrity => 'Nǝmngǝla Premiumbe';
@@ -760,7 +760,7 @@ class AppLocalizationsKr extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'YO';
 
   @override
   String get incomplete => 'Kamil gǝnyi';
@@ -833,23 +833,22 @@ class AppLocalizationsKr extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Komfasbe Tǝlalaro';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Jitter sensorbe fulune liwula kalkalro.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Ngaltəram Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Kǝrma: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Compassnǝmdǝ muskon yasa mǝradǝzǝnaro waljiya. Daraja positivebedə letə agogobero kokortin.';
 
   @override
   String get apply => 'Apply';
@@ -959,10 +958,10 @@ class AppLocalizationsKr extends AppLocalizations {
       'Kulastǝ nǝlefabe-a kuru kǝndaram nizamdǝbe-a wune.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Sagata';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qibla Matǝro Kokortǝ';
 
   @override
   String get calibrationRequiredFigure8 =>

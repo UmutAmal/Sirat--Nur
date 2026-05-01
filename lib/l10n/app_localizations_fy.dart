@@ -626,16 +626,16 @@ class AppLocalizationsFy extends AppLocalizations {
       'Lês de Koran, folgje jo lêzen en ferkenne islamityske ynhâld';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Bibleteek';
 
   @override
   String get resetCounter => 'Teller weromsette';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Feroarje Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nije Doel';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsFy extends AppLocalizations {
   String get fastingDebt => 'Fasting Debt';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Weromsette';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dagen';
 
   @override
   String get premiumIntegrity => 'Premium yntegriteit';
@@ -841,7 +841,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Ferminderje sensorjitter foar in fêstere naald.';
 
   @override
   String get calibrationOffset => 'Kalibraasje offset';
@@ -965,7 +965,7 @@ class AppLocalizationsFy extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Rotearje om Qibla te finen';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -627,16 +627,16 @@ class AppLocalizationsVi extends AppLocalizations {
       'Đọc Kinh Qur\'an, theo dõi việc đọc của bạn và khám phá nội dung Hồi giáo';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Thư viện Dhikr';
 
   @override
   String get resetCounter => 'Đặt lại bộ đếm';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Thay đổi mục tiêu';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Mục tiêu mới';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get fastingDebt => 'Nợ nhịn ăn';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Đặt lại';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ngày';
 
   @override
   String get premiumIntegrity => 'Tính toàn vẹn cao cấp';
@@ -764,7 +764,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get checkingQuranDb => 'Đang kiểm tra cơ sở dữ liệu Kinh Qur\'an...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'được rồi';
 
   @override
   String get incomplete => 'Chưa hoàn thành';
@@ -841,7 +841,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Giảm hiện tượng giật cảm biến để kim ổn định hơn.';
 
   @override
   String get calibrationOffset => 'Hiệu chuẩn bù đắp';
@@ -964,10 +964,10 @@ class AppLocalizationsVi extends AppLocalizations {
       'Chạy kiểm tra tình trạng và xem trạng thái hệ thống.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Căn chỉnh Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Xoay để tìm Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

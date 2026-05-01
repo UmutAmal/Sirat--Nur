@@ -626,16 +626,16 @@ class AppLocalizationsIg extends AppLocalizations {
       'Gua Quran, soro agụmagụ gị wee chọpụta ọdịnaya Islam';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Ụlọ akwụkwọ Dhikr';
 
   @override
   String get resetCounter => 'Tọgharịa Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Gbanwee ebumnuche';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Ebumnuche ọhụrụ';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsIg extends AppLocalizations {
   String get fastingDebt => 'Ụgwọ ibu ọnụ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Tọgharia';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ụbọchị';
 
   @override
   String get premiumIntegrity => 'Iguzosi ike n\'ezi ihe';
@@ -763,7 +763,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get checkingQuranDb => 'Na-elele nchekwa data Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ọ DỊ MMA';
 
   @override
   String get incomplete => 'Ezughi oke';
@@ -839,8 +839,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get compassSmoothing => 'Kompas na-amụmụ ọnụ ọchị';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Belata jitter sensọ maka agịga kwụ ọtọ.';
 
   @override
   String get calibrationOffset => 'Mmezi mmezi';
@@ -961,10 +960,10 @@ class AppLocalizationsIg extends AppLocalizations {
   String get healthCheckDesc => 'Gbaa nyocha ahụike wee lelee ọkwa sistemụ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla kwadoro';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Tụgharịa ka ịchọta Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

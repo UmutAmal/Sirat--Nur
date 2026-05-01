@@ -621,16 +621,16 @@ class AppLocalizationsAm extends AppLocalizations {
   String get onboarding3Desc => 'ቁርኣንን አንብብ፣ ንባብህን ተከታተል እና ኢስላማዊ ይዘትን አስስ';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ዚክር ላይብረሪ';
 
   @override
   String get resetCounter => 'ቆጣሪን ዳግም አስጀምር';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ዒላማ ቀይር';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'አዲስ ኢላማ';
 
   @override
   String targetCount(Object target) {
@@ -705,10 +705,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get fastingDebt => 'የጾም ዕዳ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ዳግም አስጀምር';
 
   @override
-  String get days => 'Days';
+  String get days => 'ቀናት';
 
   @override
   String get premiumIntegrity => 'ፕሪሚየም ታማኝነት';
@@ -755,7 +755,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get checkingQuranDb => 'የቁርኣን ዳታቤዝ በመፈተሽ ላይ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'እሺ';
 
   @override
   String get incomplete => 'ያልተሟላ';
@@ -831,8 +831,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get compassSmoothing => 'ኮምፓስ ማለስለስ';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'ለተረጋጋ መርፌ ሴንሰር ጅረትን ይቀንሱ።';
 
   @override
   String get calibrationOffset => 'የካሊብሬሽን ማካካሻ';
@@ -952,10 +951,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get healthCheckDesc => 'የጤና ምርመራዎችን ያካሂዱ እና የስርዓት ሁኔታን ይመልከቱ።';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'ቂብላ የተሰለፈ';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'ቂብላን ለማግኘት አሽከርክር';
 
   @override
   String get calibrationRequiredFigure8 => 'ልኬት ያስፈልጋል። መሣሪያውን በስእል-8 አሽከርክር።';

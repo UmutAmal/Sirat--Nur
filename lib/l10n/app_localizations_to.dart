@@ -629,16 +629,16 @@ class AppLocalizationsTo extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Laipeli Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Liliu e Taketi';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Taketi Fo\'ou';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsTo extends AppLocalizations {
   String get fastingDebt => 'Moʻua ʻAukai .';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Toe fakafoki';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ngaahi \'aho';
 
   @override
   String get premiumIntegrity => 'Faitotonu Premium';
@@ -766,7 +766,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'SAI';
 
   @override
   String get incomplete => 'Ta\'e kakato';
@@ -839,23 +839,23 @@ class AppLocalizationsTo extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Fakamolemole\'i ​​\'o e kāpasa';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Fakasi\'isi\'i \'a e sensor jitter ki ha tuitui tu\'uma\'u ange.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Fakafetongi ʻo e Fakafuofuá';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Lolotonga: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Fakatonutonu kapau ʻoku fie maʻu ʻe hoʻo kāpasá ha fakatonutonu tohi. Ko e ngaahi mahuʻinga leleí ʻoku nau vilo fakauati.';
 
   @override
   String get apply => 'Apply';
@@ -965,10 +965,10 @@ class AppLocalizationsTo extends AppLocalizations {
       'Fakalele \'a e ngaahi sivi mo\'ui lelei pea vakai ki he tu\'unga \'o e sisitemi.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Fakafe\'unga\'i';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Vilo ke kumi \'a e Qibla .';
 
   @override
   String get calibrationRequiredFigure8 =>

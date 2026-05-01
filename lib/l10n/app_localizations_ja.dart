@@ -620,16 +620,16 @@ class AppLocalizationsJa extends AppLocalizations {
   String get onboarding3Desc => 'コーランを読み、読書を追跡し、イスラムのコンテンツを探索します';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ディクル図書館';
 
   @override
   String get resetCounter => 'カウンタをリセットする';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ターゲットの変更';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => '新たなターゲット';
 
   @override
   String targetCount(Object target) {
@@ -703,10 +703,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get fastingDebt => '断食中の借金';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'リセット';
 
   @override
-  String get days => 'Days';
+  String get days => '日数';
 
   @override
   String get premiumIntegrity => 'プレミアムな誠実さ';
@@ -753,7 +753,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get checkingQuranDb => 'コーラン データベースをチェックしています...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'わかりました';
 
   @override
   String get incomplete => '不完全';
@@ -829,8 +829,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get compassSmoothing => 'コンパスのスムージング';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'センサーのジッターを軽減し、針をより安定させます。';
 
   @override
   String get calibrationOffset => 'キャリブレーションオフセット';
@@ -950,10 +949,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get healthCheckDesc => 'ヘルスチェックを実行し、システムステータスを表示します。';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'キブラ整列';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => '回転してキブラを見つけます';
 
   @override
   String get calibrationRequiredFigure8 => '校正が必要です。デバイスを図-8のように回転させます。';

@@ -627,16 +627,16 @@ class AppLocalizationsMn extends AppLocalizations {
       'Коран судар уншиж, уншсанаа хянаж, Исламын контентыг судлаарай';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Зикр номын сан';
 
   @override
   String get resetCounter => 'Тоолуурыг дахин тохируулах';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Зорилтотыг өөрчлөх';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Шинэ зорилт';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get fastingDebt => 'Мацаг барих өр';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Дахин тохируулах';
 
   @override
-  String get days => 'Days';
+  String get days => 'Өдөр';
 
   @override
   String get premiumIntegrity => 'Дээд зэрэглэлийн бүрэн бүтэн байдал';
@@ -842,7 +842,7 @@ class AppLocalizationsMn extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Зүүг тогтвортой байлгахын тулд мэдрэгчийн чичиргээг багасгана.';
 
   @override
   String get calibrationOffset => 'Шалгалт тохируулгын офсет';
@@ -967,7 +967,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Кибла олохын тулд эргүүлнэ үү';
 
   @override
   String get calibrationRequiredFigure8 =>

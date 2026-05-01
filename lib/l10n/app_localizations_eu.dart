@@ -626,16 +626,16 @@ class AppLocalizationsEu extends AppLocalizations {
       'Irakurri Quran, jarraitu zure irakurketa eta arakatu islamiar edukia';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Liburutegia';
 
   @override
   String get resetCounter => 'Berrezarri kontagailua';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Aldatu Helburua';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Helburu berria';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get fastingDebt => 'Barau-zorra';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Berrezarri';
 
   @override
-  String get days => 'Days';
+  String get days => 'Egunak';
 
   @override
   String get premiumIntegrity => 'Premium Osotasuna';
@@ -762,7 +762,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get checkingQuranDb => 'Quran datu-basea egiaztatzen...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ados';
 
   @override
   String get incomplete => 'Osatu gabe';
@@ -839,7 +839,7 @@ class AppLocalizationsEu extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Murriztu sentsorearen jitter orratz egonkorrago bat izateko.';
 
   @override
   String get calibrationOffset => 'Kalibrazio-offset';
@@ -961,10 +961,10 @@ class AppLocalizationsEu extends AppLocalizations {
       'Egin osasun-egiaztapenak eta ikusi sistemaren egoera.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla lerrokatuta';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Biratu Qibla aurkitzeko';
 
   @override
   String get calibrationRequiredFigure8 =>

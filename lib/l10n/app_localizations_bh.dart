@@ -627,16 +627,16 @@ class AppLocalizationsBh extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ढिकर लाइब्रेरी के ह';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'लक्ष्य बदले के बा';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'नया लक्ष्य बा';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get fastingDebt => 'उपवास के कर्जा बा';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'रीसेट हो गइल बा';
 
   @override
-  String get days => 'Days';
+  String get days => 'दिन भर के बा';
 
   @override
   String get premiumIntegrity => 'प्रीमियम इंटीग्रेटी के बा';
@@ -762,7 +762,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ठीक बा';
 
   @override
   String get incomplete => 'अधूरा बा';
@@ -835,23 +835,22 @@ class AppLocalizationsBh extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'कम्पास स्मूथिंग के काम होला';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'स्थिर सुई खातिर सेंसर के जिटर कम करीं।';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'कैलिब्रेशन ऑफसेट के बा';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'वर्तमान: $offset° बा';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'अगर आपके कम्पास के मैनुअल सुधार के जरूरत बा त समायोजित करीं। सकारात्मक मान घड़ी के दिशा में घूमेला।';
 
   @override
   String get apply => 'Apply';
@@ -961,10 +960,10 @@ class AppLocalizationsBh extends AppLocalizations {
       'स्वास्थ्य जांच चलाईं आ सिस्टम के स्थिति देखीं.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'किबला संरेखित हो गइल';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'किबला के खोजे खातिर घुमाईं';
 
   @override
   String get calibrationRequiredFigure8 =>

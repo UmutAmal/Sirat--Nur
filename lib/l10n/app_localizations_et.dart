@@ -626,16 +626,16 @@ class AppLocalizationsEt extends AppLocalizations {
       'Lugege Koraani, jälgige oma lugemist ja uurige islami sisu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikri raamatukogu';
 
   @override
   String get resetCounter => 'Lähtestage loendur';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Muuda sihtmärki';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Uus sihtmärk';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get fastingDebt => 'Paastuvõlg';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Lähtesta';
 
   @override
-  String get days => 'Days';
+  String get days => 'Päevad';
 
   @override
   String get premiumIntegrity => 'Esmaklassiline terviklikkus';
@@ -840,7 +840,7 @@ class AppLocalizationsEt extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Vähendage anduri värinat, et nõel oleks stabiilsem.';
 
   @override
   String get calibrationOffset => 'Kalibreerimise nihe';
@@ -962,10 +962,10 @@ class AppLocalizationsEt extends AppLocalizations {
       'Käivitage tervisekontroll ja vaadake süsteemi olekut.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla joondatud';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Pöörake, et leida Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

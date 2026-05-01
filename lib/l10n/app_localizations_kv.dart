@@ -626,16 +626,16 @@ class AppLocalizationsKv extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Зикр библиотека';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Вежны тшупӧд .';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Выль цель .';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsKv extends AppLocalizations {
   String get fastingDebt => 'Пасьтана долг .';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Сброс';
 
   @override
-  String get days => 'Days';
+  String get days => 'Лунъяс';
 
   @override
   String get premiumIntegrity => 'Премиум интегритет .';
@@ -761,7 +761,7 @@ class AppLocalizationsKv extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ЛАДНӦ';
 
   @override
   String get incomplete => 'Неполнӧй';
@@ -834,14 +834,14 @@ class AppLocalizationsKv extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Компасӧн лӧсьӧдӧм .';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Датчиклысь дрожьсӧ чинтыны стабильнӧйджык иглы вылӧ.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Калибровка ӧтувъялун .';
 
   @override
   String currentOffset(Object offset) {
@@ -850,7 +850,7 @@ class AppLocalizationsKv extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Регулируйтӧй, колӧ кӧ тіян компаслы киӧн лӧсьӧдны. Положительнӧй значениеяс бергалӧны часі серти.';
 
   @override
   String get apply => 'Apply';
@@ -960,10 +960,10 @@ class AppLocalizationsKv extends AppLocalizations {
       'Вӧчны дзоньвидзалун видлалӧм да видзӧдны системалысь статуссӧ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Кибла лӧсьӧдӧм .';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Ротация да корсьны кибла .';
 
   @override
   String get calibrationRequiredFigure8 =>

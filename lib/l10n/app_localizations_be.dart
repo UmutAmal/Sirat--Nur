@@ -630,16 +630,16 @@ class AppLocalizationsBe extends AppLocalizations {
       'Чытайце Каран, адсочвайце сваё чытанне і вывучайце ісламскі кантэнт';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Бібліятэка Зікр';
 
   @override
   String get resetCounter => 'Скінуць лічыльнік';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Змяніць мэта';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Новая мэта';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsBe extends AppLocalizations {
   String get fastingDebt => 'Посны доўг';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Скінуць';
 
   @override
-  String get days => 'Days';
+  String get days => 'дзён';
 
   @override
   String get premiumIntegrity => 'Прэміум Сумленнасць';
@@ -767,7 +767,7 @@ class AppLocalizationsBe extends AppLocalizations {
   String get checkingQuranDb => 'Праверка базы дадзеных Карана...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'добра';
 
   @override
   String get incomplete => 'Няпоўная';
@@ -844,7 +844,7 @@ class AppLocalizationsBe extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Паменшыце дрыгаценне датчыка для больш устойлівай іголкі.';
 
   @override
   String get calibrationOffset => 'Зрушэнне каліброўкі';
@@ -966,10 +966,10 @@ class AppLocalizationsBe extends AppLocalizations {
       'Запускайце праверкі стану і праглядайце стан сістэмы.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Выраўнаваная Кібла';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Павярніце, каб знайсці Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

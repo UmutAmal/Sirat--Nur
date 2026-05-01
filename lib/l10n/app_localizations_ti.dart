@@ -621,16 +621,16 @@ class AppLocalizationsTi extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ቤተ መጻሕፍቲ ዝክር';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ዕላማ ቀይሩ';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ሓድሽ ዕላማ';
 
   @override
   String targetCount(Object target) {
@@ -704,10 +704,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get fastingDebt => 'ጾም ዕዳ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ዳግማይ ኣቐምጥ';
 
   @override
-  String get days => 'Days';
+  String get days => 'መዓልታት';
 
   @override
   String get premiumIntegrity => 'ፕሪምየም ሙሉእነት';
@@ -754,7 +754,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'እሺ';
 
   @override
   String get incomplete => 'ዘይተማልአ';
@@ -827,23 +827,22 @@ class AppLocalizationsTi extends AppLocalizations {
   String get qiblaCalibration => 'ቂብላ ምዕቃን';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'ኮምፓስ ምልስላስ';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'ንዝጸንዐ መርፍእ ናይ ሴንሰር ምንቅጥቃጥ ኣንክዩ።';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'ናይ ምዕቃን ምትዕርራይ (calibration Offset)';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'ናይ ሕጂ: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'ኮምፓስካ ብኢድካ ምእራም እንተድኣ ኣድልይዎ ኣስተኻኽሎ። ኣወንታዊ ክብርታት ብኣንፈት ሰዓት ይዘውሩ።';
 
   @override
   String get apply => 'ለውጢ ተግባራዊ ምግባር';
@@ -951,10 +950,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get healthCheckDesc => 'ናይ ጥዕና መርመራታት ኣካይዱ እሞ ኩነታት ስርዓት ርአዩ።';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'ቂብላ ተሰሪዑ';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'ቂብላ ንምርካብ ዘውሩ';
 
   @override
   String get calibrationRequiredFigure8 =>

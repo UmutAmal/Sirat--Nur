@@ -627,16 +627,16 @@ class AppLocalizationsFo extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr bókasavnið';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Broyt mark';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nýtt mark';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsFo extends AppLocalizations {
   String get fastingDebt => 'Føstuskuld';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Nullstilla';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dagar';
 
   @override
   String get premiumIntegrity => 'Fremsta integritet';
@@ -834,23 +834,23 @@ class AppLocalizationsFo extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kumpass Slætting';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Minka um sensorjitter fyri eina støðugari nál.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibreringsforskot';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Núverandi: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Stilla, um kumpassin hevur tørv á manuellari rætting. Jalig virði snúgva seg við klokkuni.';
 
   @override
   String get apply => 'Apply';
@@ -960,10 +960,10 @@ class AppLocalizationsFo extends AppLocalizations {
       'Koyr heilsukanningar og síggj skipanarstøðuna.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla rættað';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Snú fyri at finna Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

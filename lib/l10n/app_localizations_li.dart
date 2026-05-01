@@ -627,16 +627,16 @@ class AppLocalizationsLi extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr-bibliotheek';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Doelwit verandere';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nuuj Doelwit';
 
   @override
   String targetCount(Object target) {
@@ -714,7 +714,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Daag';
 
   @override
   String get premiumIntegrity => 'Premium Integrity';
@@ -834,23 +834,23 @@ class AppLocalizationsLi extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kompassgladde';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Verminder de jitter vaan de sensor veur ‘n stabielere naold.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kalibratie-offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Huidig: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Pas aan es eur kompas ‘n handmatige correctie nuudig heet. Positieve waarde dreije tege de riechting vaan de klok.';
 
   @override
   String get apply => 'Apply';
@@ -963,7 +963,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Dreij um de Qibla te vinde';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -627,16 +627,16 @@ class AppLocalizationsBm extends AppLocalizations {
       'Kuranɛ kalan, ka i ka kalan nɔfɛ, ani ka silamɛya kɔnɔkow sɛgɛsɛgɛ';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr ka gafemarayɔrɔ';
 
   @override
   String get resetCounter => 'Reset Counter (Jatebɔlan) Lasegin';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Yɛlɛma Laɲini';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Laɲini kura';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get fastingDebt => 'Sunɔgɔ juru';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Segin-ka-bɔnye kɛ';
 
   @override
-  String get days => 'Days';
+  String get days => 'Tilew';
 
   @override
   String get premiumIntegrity => 'Premium Integrité (Danfaracogo ɲuman).';
@@ -763,7 +763,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get checkingQuranDb => 'Kuranɛ ka kunnafonidilanw lajɛ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'N SƆNNA';
 
   @override
   String get incomplete => 'Dafabali';
@@ -840,14 +840,14 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Aw bɛ sensɛri jiginni dɔgɔya walasa ka pikirijikɛlan sabatilen sɔrɔ.';
 
   @override
   String get calibrationOffset => 'Calibration Offset (kalibrasiyɔn jiginni).';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Sisan: $offset°';
   }
 
   @override
@@ -962,10 +962,10 @@ class AppLocalizationsBm extends AppLocalizations {
       'Kɛnɛya sɛgɛsɛgɛliw kɛ ani ka sistɛmu cogoya lajɛ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Labɛnna';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Yɛlɛma ka taa Qibla Sɔrɔ';
 
   @override
   String get calibrationRequiredFigure8 =>

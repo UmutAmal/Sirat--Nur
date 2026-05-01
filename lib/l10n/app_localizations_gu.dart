@@ -625,16 +625,16 @@ class AppLocalizationsGu extends AppLocalizations {
       'કુરાન વાંચો, તમારા વાંચનને ટ્રૅક કરો અને ઇસ્લામિક સામગ્રીનું અન્વેષણ કરો';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ધિક્ર પુસ્તકાલય';
 
   @override
   String get resetCounter => 'કાઉન્ટર રીસેટ કરો';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'લક્ષ્ય બદલો';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'નવું લક્ષ્ય';
 
   @override
   String targetCount(Object target) {
@@ -709,10 +709,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get fastingDebt => 'ઉપવાસ દેવું';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'રીસેટ કરો';
 
   @override
-  String get days => 'Days';
+  String get days => 'દિવસો';
 
   @override
   String get premiumIntegrity => 'પ્રીમિયમ અખંડિતતા';
@@ -761,7 +761,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get checkingQuranDb => 'કુરાન ડેટાબેઝ તપાસી રહ્યું છે...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ઠીક છે';
 
   @override
   String get incomplete => 'અપૂર્ણ';
@@ -837,8 +837,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get compassSmoothing => 'હોકાયંત્ર સ્મૂથિંગ';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'સ્થિર સોય માટે સેન્સર જિટર ઘટાડો.';
 
   @override
   String get calibrationOffset => 'કેલિબ્રેશન ઓફસેટ';
@@ -959,10 +958,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get healthCheckDesc => 'આરોગ્ય તપાસો ચલાવો અને સિસ્ટમની સ્થિતિ જુઓ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'કિબલા સંરેખિત';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'કિબલા શોધવા માટે ફેરવો';
 
   @override
   String get calibrationRequiredFigure8 =>

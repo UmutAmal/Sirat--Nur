@@ -630,16 +630,16 @@ class AppLocalizationsFr extends AppLocalizations {
       'Lisez le Coran, suivez votre lecture et explorez le contenu islamique';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Bibliothèque du Dhikr';
 
   @override
   String get resetCounter => 'Réinitialiser le compteur';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Changer la cible';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nouvelle cible';
 
   @override
   String targetCount(Object target) {
@@ -716,10 +716,10 @@ class AppLocalizationsFr extends AppLocalizations {
   String get fastingDebt => 'Dette de jeûne';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Réinitialiser';
 
   @override
-  String get days => 'Days';
+  String get days => 'Jours';
 
   @override
   String get premiumIntegrity => 'Intégrité Premium';
@@ -770,7 +770,7 @@ class AppLocalizationsFr extends AppLocalizations {
       'Vérification de la base de données du Coran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'D\'accord';
 
   @override
   String get incomplete => 'Incomplet';
@@ -847,7 +847,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Réduisez la gigue du capteur pour une aiguille plus stable.';
 
   @override
   String get calibrationOffset => 'Décalage d\'étalonnage';
@@ -972,10 +972,10 @@ class AppLocalizationsFr extends AppLocalizations {
       'Exécutez des vérifications de l’état et affichez l’état du système.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla aligné';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Faites pivoter pour trouver la Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

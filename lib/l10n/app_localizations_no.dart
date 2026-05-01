@@ -626,16 +626,16 @@ class AppLocalizationsNo extends AppLocalizations {
       'Les Koranen, spor lesingen din og utforsk islamsk innhold';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr bibliotek';
 
   @override
   String get resetCounter => 'Tilbakestill telleren';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Endre mål';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nytt mål';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get fastingDebt => 'Fastende gjeld';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Tilbakestill';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dager';
 
   @override
   String get premiumIntegrity => 'Premium integritet';
@@ -839,8 +839,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get compassSmoothing => 'Kompassutjevning';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Reduser sensorjitter for en jevnere nål.';
 
   @override
   String get calibrationOffset => 'Kalibreringsforskyvning';
@@ -961,10 +960,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get healthCheckDesc => 'Kjør helsesjekker og se systemstatus.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla justert';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Roter for å finne Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

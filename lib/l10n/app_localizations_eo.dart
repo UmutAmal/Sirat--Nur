@@ -626,16 +626,16 @@ class AppLocalizationsEo extends AppLocalizations {
       'Legu Koranon, spuru vian legadon kaj esploru islaman enhavon';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Biblioteko Dhikr';
 
   @override
   String get resetCounter => 'Restarigi Nombrilon';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ŝanĝi Celon';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nova Celo';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsEo extends AppLocalizations {
   String get fastingDebt => 'Fasta Ŝuldo';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Restarigi';
 
   @override
-  String get days => 'Days';
+  String get days => 'Tagoj';
 
   @override
   String get premiumIntegrity => 'Supera Integreco';
@@ -763,7 +763,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get checkingQuranDb => 'Kontrolante la Quran-datumbazon...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Bone';
 
   @override
   String get incomplete => 'Nekompleta';
@@ -840,7 +840,7 @@ class AppLocalizationsEo extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Redukti sensilon tremon por pli stabila kudrilo.';
 
   @override
   String get calibrationOffset => 'Kalibrado Ofseto';
@@ -962,10 +962,10 @@ class AppLocalizationsEo extends AppLocalizations {
       'Faru sankontrolojn kaj rigardu sisteman staton.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Vicigita';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Rotaciu por Trovi Kiblon';
 
   @override
   String get calibrationRequiredFigure8 =>

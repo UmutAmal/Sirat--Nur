@@ -770,7 +770,7 @@ class AppLocalizationsNso extends AppLocalizations {
       'Go hlahloba polokelo ya tshedimošo ya Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'GO LOKILE';
 
   @override
   String get incomplete => 'Ga se ya felela';

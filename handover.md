@@ -20273,6 +20273,43 @@
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
 
+## 2026-05-01 TUR-511 - Settings Qibla Zikr Action L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Settings, Qibla ve Zikr yuzeylerinde `okLabel`, `reset`, `days`, `changeTarget`, `newTarget`, `dhikrLibrary`, `reduceSensorJitter`, `rotateToFindQibla`, `qiblaAligned`, `compassSmoothing`, `calibrationOffset`, `currentOffset`, `manualCorrectionDesc` anahtarlari 180+ locale'de genis olcude Ingilizce fallback'e dusuyordu. Bu P1 kalite riskiydi; uygulama ayakta kalir fakat ayar/ibadet akislarinda "tum dillerde tam kapsam" hedefini zedeler.
+- Kanit:
+  - Baslangic raporu: ayni 13 anahtarda same-as-English `1995`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 13 anahtarda same-as-English `495`, missing/empty `0`, placeholder mismatch `0`.
+  - `lib/features/settings/settings_page.dart:173`, `lib/features/settings/settings_page.dart:174`, `lib/features/settings/settings_page.dart:183`, `lib/features/settings/settings_page.dart:462`, `lib/features/settings/settings_page.dart:468` hedef anahtarlari kullanir; bu nedenle fallback kullaniciya gorunurdu.
+  - `lib/l10n/app_sa.arb` ve `lib/l10n/app_ti.arb` uzerindeki cok satirli `इति` / `ዝብል` batch kalintilari temizlendi.
+  - `lib/l10n/app_sd.arb` icindeki `manualCorrectionDesc` tekrarlanan `گھڙي` kosusu tek, anlamli Sindhi cumleye indirildi.
+  - `test/translate_arb_keys_test.dart` icindeki yeni guard debt esigini `<= 495` olarak kilitler; `aa/am/ar/bo/ff/sa/sd/ti/ur/zh_CN` orneklerinde Ingilizce fallback, cok satirli copy ve `{offset}` placeholder kaybi engellenir.
+- Kullanici etkisi: Qibla kalibrasyonu, sensor jitter, Zikr hedef degisimi ve genel aksiyon metinleri daha fazla dilde yerel gorunur; hatali batch debris veya placeholder kaybi paketlenmez.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Hedef 13 anahtar icin kontrollu l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- Sanskrit, Tigrinya ve Sindhi icin batch debris elle temizlendi; `currentOffset` icin `{offset}` placeholder'i tum dillerde korundu.
+- Kalan 495 same-as-English locale-key, ceviri aracinin guvenli ceviremedigi cok dusuk kaynakli dillerde EN fallback olarak birakildi; dini/teknik anlam uydurulmadi.
+
+### TESTER Degisikligi
+- Batch debris/placeholder scan: PASS; hedef 13 anahtarda newline, `which means/means/meaning`, `इति`, `ዝብል`, repeated-run ve placeholder kaybi yok.
+- Targeted l10n tests: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `146/146`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `723/723`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `417d1635-d0d2-4c19-91b3-b1f7876ecf2c`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Settings/Qibla/Zikr 13 anahtarli l10n fallback borcu: `16/25 -> 6/25`.
+- Kalan bilincli risk: Global i18n same-as-English listesinde en yuksek sayilar `prayerRemainingUnavailable`, `duaSourceBukhari`, `duaSourceMuslim`, `duaSourceTirmidhi`, `duaSourceAhmad`, `duaSourceAbuDawud` ve bazi canonical ibadet/label anahtarlarinda toplandi. Kaynak adlari proper-name oldugu icin cevrilmeyebilir; gercek UI cumleleri ayrica skorlanacak.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude canonical source/proper-name ayrimini bozmadan kalan `prayerRemaining*` ve gorunur ibadet label fallback borcunu tara.
+
 ## 2026-05-01 TUR-509 - Ibadah Qaza Dashboard L10n Debt Reduction
 
 ### MASTER Karari

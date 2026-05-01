@@ -626,16 +626,16 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಕುರಾನ್ ಓದಿ, ನಿಮ್ಮ ಓದುವಿಕೆಯನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ ಮತ್ತು ಇಸ್ಲಾಮಿಕ್ ವಿಷಯವನ್ನು ಅನ್ವೇಷಿಸಿ';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ಧಿಕ್ರ್ ಲೈಬ್ರರಿ';
 
   @override
   String get resetCounter => 'ಕೌಂಟರ್ ಅನ್ನು ಮರುಹೊಂದಿಸಿ';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ಗುರಿಯನ್ನು ಬದಲಾಯಿಸಿ';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ಹೊಸ ಗುರಿ';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get fastingDebt => 'ಉಪವಾಸ ಸಾಲ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ಮರುಹೊಂದಿಸಿ';
 
   @override
-  String get days => 'Days';
+  String get days => 'ದಿನಗಳು';
 
   @override
   String get premiumIntegrity => 'ಪ್ರೀಮಿಯಂ ಸಮಗ್ರತೆ';
@@ -764,7 +764,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get checkingQuranDb => 'ಕುರಾನ್ ಡೇಟಾಬೇಸ್ ಅನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ಸರಿ';
 
   @override
   String get incomplete => 'ಅಪೂರ್ಣ';
@@ -841,7 +841,7 @@ class AppLocalizationsKn extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'ಸ್ಥಿರವಾದ ಸೂಜಿಗಾಗಿ ಸಂವೇದಕ ಜಿಟ್ಟರ್ ಅನ್ನು ಕಡಿಮೆ ಮಾಡಿ.';
 
   @override
   String get calibrationOffset => 'ಮಾಪನಾಂಕ ನಿರ್ಣಯ ಆಫ್ಸೆಟ್';
@@ -963,10 +963,10 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಆರೋಗ್ಯ ತಪಾಸಣೆಗಳನ್ನು ರನ್ ಮಾಡಿ ಮತ್ತು ಸಿಸ್ಟಮ್ ಸ್ಥಿತಿಯನ್ನು ವೀಕ್ಷಿಸಿ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'ಕಿಬ್ಲಾ ಜೋಡಿಸಲಾಗಿದೆ';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'ಕಿಬ್ಲಾವನ್ನು ಹುಡುಕಲು ತಿರುಗಿಸಿ';
 
   @override
   String get calibrationRequiredFigure8 =>

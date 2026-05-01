@@ -626,16 +626,16 @@ class AppLocalizationsUz extends AppLocalizations {
       'Qur\'on o\'qing, o\'qishingizni kuzatib boring va islomiy mazmun bilan tanishing';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Zikr kutubxonasi';
 
   @override
   String get resetCounter => 'Hisoblagichni tiklash';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Maqsadni o\'zgartirish';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Yangi maqsad';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get fastingDebt => 'Ro\'za qarzi';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Qayta tiklash';
 
   @override
-  String get days => 'Days';
+  String get days => 'Kunlar';
 
   @override
   String get premiumIntegrity => 'Premium yaxlitlik';
@@ -762,7 +762,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get checkingQuranDb => 'Qur\'on ma\'lumotlar bazasi tekshirilmoqda...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'KELISHDIKMI';
 
   @override
   String get incomplete => 'Tugallanmagan';
@@ -839,7 +839,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Barqaror igna uchun sensor jitterini kamaytiring.';
 
   @override
   String get calibrationOffset => 'Kalibrlash ofset';
@@ -962,10 +962,10 @@ class AppLocalizationsUz extends AppLocalizations {
       'Salomatlik tekshiruvlarini o\'tkazing va tizim holatini ko\'ring.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla tekislangan';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qiblani topish uchun aylantiring';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -626,16 +626,16 @@ class AppLocalizationsAa extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dikr Kitoobah buxa';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Hadaf milaag';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Qusba hadaf';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsAa extends AppLocalizations {
   String get fastingDebt => 'Soom mogo';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Qagitaak qemmis';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ayroora';
 
   @override
   String get premiumIntegrity => 'Naharsi numma';
@@ -761,7 +761,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'MEQEH';
 
   @override
   String get incomplete => 'Kibbiime waytem';
@@ -834,23 +834,22 @@ class AppLocalizationsAa extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'kompaas sahlinih';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Sabhalal le irbah jitter qarramtu daggos.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'maqakkanah maynaqu';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Awayih uddur:$offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'massos ku kompaas manwaal massos faxxek. yeeytâ caddo saaqat kaalibil mermeritta.';
 
   @override
   String get apply => 'Apply';
@@ -960,10 +959,10 @@ class AppLocalizationsAa extends AppLocalizations {
       'Qaafiyat fokkaaqo gexisaay maknay caalat wagita.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla massooweh yan.';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qibla Geytuh Mermerit.';
 
   @override
   String get calibrationRequiredFigure8 =>

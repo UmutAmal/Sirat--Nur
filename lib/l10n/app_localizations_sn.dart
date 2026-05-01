@@ -632,10 +632,10 @@ class AppLocalizationsSn extends AppLocalizations {
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Shandura Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Chitsva Chitsva';
 
   @override
   String targetCount(Object target) {
@@ -713,7 +713,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Mazuva';
 
   @override
   String get premiumIntegrity => 'Premium Kutendeseka';
@@ -838,8 +838,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get compassSmoothing => 'Compass Smoothing';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Deredza sensor jitter yetsono yakasimba.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -961,10 +960,10 @@ class AppLocalizationsSn extends AppLocalizations {
       'Mhanya hutano hunotarisa uye tarisa mamiriro ehurongwa.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Yakagadziriswa';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Tenderedza kuti uwane Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

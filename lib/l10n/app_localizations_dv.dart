@@ -630,16 +630,16 @@ class AppLocalizationsDv extends AppLocalizations {
       'ޤުރުއާން ކިޔައި، ކިޔެވުން ޓްރެކްކޮށް، އިސްލާމީ ކޮންޓެންޓް ހޯދާށެވެ';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ދިއްރު ލައިބްރަރީ';
 
   @override
   String get resetCounter => 'ކައުންޓަރ ރީސެޓްކުރުން';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ޓާގެޓް ބަދަލުކުރުން';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ނިއު ޓާގެޓެވެ';
 
   @override
   String targetCount(Object target) {
@@ -716,10 +716,10 @@ class AppLocalizationsDv extends AppLocalizations {
   String get fastingDebt => 'ރޯދަ ދަރަނި';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ރީސެޓް ކުރުން';
 
   @override
-  String get days => 'Days';
+  String get days => 'ދުވަސްތަކެވެ';
 
   @override
   String get premiumIntegrity => 'ޕްރީމިއަމް އިންޓެގްރިޓީ އެވެ';
@@ -769,7 +769,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get checkingQuranDb => 'ޤުރުއާނުގެ ޑޭޓާބޭސް ޗެކްކުރުން...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'އެންމެ ރަނގަޅު';
 
   @override
   String get incomplete => 'ފުރިހަމައެއް ނޫނެވެ';
@@ -846,7 +846,7 @@ class AppLocalizationsDv extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'ސްޓޭޑިއަރ ނިޑަލް އަށް ސެންސަރ ޖިޓަރ މަދުކުރުން.';
 
   @override
   String get calibrationOffset => 'ކެލިބްރޭޝަން އޮފްސެޓް';
@@ -968,10 +968,10 @@ class AppLocalizationsDv extends AppLocalizations {
       'ހެލްތު ޗެކްތައް ހިންގައި ސިސްޓަމްގެ ހާލަތު ބަލާލުން.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'ޤިބްލާ އެލައިންޑް';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'ޤިބްލާ ހޯދުމަށް އެނބުރޭށެވެ';
 
   @override
   String get calibrationRequiredFigure8 =>

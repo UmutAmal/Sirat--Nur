@@ -628,16 +628,16 @@ class AppLocalizationsSu extends AppLocalizations {
       'Baca Quran, lacak bacaan anjeun, sareng jelajah eusi Islam';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Perpustakaan Dzikir';
 
   @override
   String get resetCounter => 'Reset counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ngarobah Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Target Anyar';
 
   @override
   String targetCount(Object target) {
@@ -716,7 +716,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Poé';
 
   @override
   String get premiumIntegrity => 'Integritas Premium';
@@ -765,7 +765,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get checkingQuranDb => 'Mariksa database Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'OKÉ';
 
   @override
   String get incomplete => 'Teu lengkep';
@@ -842,14 +842,14 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Ngurangan jitter sensor pikeun jarum steadier.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ayeuna: $offset°';
   }
 
   @override
@@ -964,10 +964,10 @@ class AppLocalizationsSu extends AppLocalizations {
       'Jalankeun cék kaséhatan sareng ningali status sistem.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kiblat Dijajar';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Puteran pikeun Milarian Kiblat';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -631,16 +631,16 @@ class AppLocalizationsCa extends AppLocalizations {
       'Llegiu l\'Alcorà, feu un seguiment de la vostra lectura i exploreu contingut islàmic';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Biblioteca Dhikr';
 
   @override
   String get resetCounter => 'Restableix el comptador';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Canvia l\'objectiu';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nou objectiu';
 
   @override
   String targetCount(Object target) {
@@ -716,10 +716,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get fastingDebt => 'Deute de dejuni';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Restableix';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dies';
 
   @override
   String get premiumIntegrity => 'Integritat premium';
@@ -770,7 +770,7 @@ class AppLocalizationsCa extends AppLocalizations {
       'S\'està comprovant la base de dades de l\'Alcorà...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'D\'acord';
 
   @override
   String get incomplete => 'Incomplet';
@@ -847,7 +847,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Redueix la agitació del sensor per obtenir una agulla més estable.';
 
   @override
   String get calibrationOffset => 'Offset de calibració';
@@ -970,10 +970,10 @@ class AppLocalizationsCa extends AppLocalizations {
       'Executeu comprovacions de salut i visualitzeu l\'estat del sistema.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla alineada';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Gira per trobar la Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

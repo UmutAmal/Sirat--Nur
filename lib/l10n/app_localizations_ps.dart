@@ -625,16 +625,16 @@ class AppLocalizationsPs extends AppLocalizations {
       'قرآن ولولئ، خپل لوستل تعقیب کړئ، او اسلامي مواد وپلټئ';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ذکر کتابتون';
 
   @override
   String get resetCounter => 'کاونټر بیا تنظیم کړئ';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'هدف بدل کړئ';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'نوی هدف';
 
   @override
   String targetCount(Object target) {
@@ -709,10 +709,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get fastingDebt => 'روژه پور';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'بیا تنظیم کړئ';
 
   @override
-  String get days => 'Days';
+  String get days => 'ورځې';
 
   @override
   String get premiumIntegrity => 'پریمیم بشپړتیا';
@@ -760,7 +760,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get checkingQuranDb => 'د قرآن ډیټابیس چک کول...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'سمه ده';
 
   @override
   String get incomplete => 'نیمګړی';
@@ -836,8 +836,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get compassSmoothing => 'د کمپاس نرمول';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'د ثابت ستنې لپاره د سینسر جټیټ کم کړئ.';
 
   @override
   String get calibrationOffset => 'کیلیبریشن آفسیټ';
@@ -959,10 +958,10 @@ class AppLocalizationsPs extends AppLocalizations {
       'روغتیایی معاینات ترسره کړئ او د سیسټم حالت وګورئ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'له قبلې سره سمون خوري';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'د قبلې موندلو لپاره وګرځئ';
 
   @override
   String get calibrationRequiredFigure8 =>

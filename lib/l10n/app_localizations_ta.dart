@@ -629,16 +629,16 @@ class AppLocalizationsTa extends AppLocalizations {
       'குர்ஆனைப் படியுங்கள், உங்கள் வாசிப்பைக் கண்காணிக்கவும் மற்றும் இஸ்லாமிய உள்ளடக்கத்தை ஆராயவும்';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'திக்ர் நூலகம்';
 
   @override
   String get resetCounter => 'கவுண்டரை மீட்டமைக்கவும்';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'இலக்கை மாற்றவும்';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'புதிய இலக்கு';
 
   @override
   String targetCount(Object target) {
@@ -716,10 +716,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get fastingDebt => 'நோன்பு கடன்';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'மீட்டமை';
 
   @override
-  String get days => 'Days';
+  String get days => 'நாட்கள்';
 
   @override
   String get premiumIntegrity => 'பிரீமியம் ஒருமைப்பாடு';
@@ -769,7 +769,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get checkingQuranDb => 'குர்ஆன் தரவுத்தளத்தை சரிபார்க்கிறது...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'சரி';
 
   @override
   String get incomplete => 'முழுமையற்றது';
@@ -846,7 +846,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'ஒரு நிலையான ஊசிக்கான சென்சார் நடுக்கத்தைக் குறைக்கவும்.';
 
   @override
   String get calibrationOffset => 'அளவுத்திருத்த ஆஃப்செட்';
@@ -968,10 +968,10 @@ class AppLocalizationsTa extends AppLocalizations {
       'சுகாதார சோதனைகளை இயக்கவும் மற்றும் கணினி நிலையை பார்க்கவும்.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'கிப்லா சீரமைக்கப்பட்டது';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'கிப்லாவைக் கண்டுபிடிக்க சுழற்று';
 
   @override
   String get calibrationRequiredFigure8 =>

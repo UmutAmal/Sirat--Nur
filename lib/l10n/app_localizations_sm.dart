@@ -626,16 +626,16 @@ class AppLocalizationsSm extends AppLocalizations {
       'Faitau le Quran, siaki lau faitauga, ma suʻesuʻe mataupu faʻa-Islam';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Faletusi';
 
   @override
   String get resetCounter => 'Toe seti le Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Suia Sini';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Sini Fou';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get fastingDebt => 'Anapogi aitalafu';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Toe setiina';
 
   @override
-  String get days => 'Days';
+  String get days => 'Aso';
 
   @override
   String get premiumIntegrity => 'Tulaga Fa\'amaoni';
@@ -764,7 +764,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get checkingQuranDb => 'Siaki le Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ua lelei';
 
   @override
   String get incomplete => 'Le atoatoa';
@@ -841,7 +841,7 @@ class AppLocalizationsSm extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Fa\'aiti\'itia le fa\'aoso fa\'alogo mo se nila mautu.';
 
   @override
   String get calibrationOffset => 'Fa\'avasegaina Offset';
@@ -963,10 +963,10 @@ class AppLocalizationsSm extends AppLocalizations {
       'Fa\'atino siaki fa\'alesoifua maloloina ma va\'ai le tulaga o le faiga.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Fa\'atatau Kibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Liliu e Su\'e Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

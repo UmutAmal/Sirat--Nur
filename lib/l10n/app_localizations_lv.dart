@@ -628,16 +628,16 @@ class AppLocalizationsLv extends AppLocalizations {
       'Lasiet Korānu, izsekojiet savu lasīšanu un izpētiet islāma saturu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr bibliotēka';
 
   @override
   String get resetCounter => 'Atiestatīt skaitītāju';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Mainīt mērķi';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Jauns mērķis';
 
   @override
   String targetCount(Object target) {
@@ -713,10 +713,10 @@ class AppLocalizationsLv extends AppLocalizations {
   String get fastingDebt => 'Badošanās parāds';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Atiestatīt';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dienas';
 
   @override
   String get premiumIntegrity => 'Premium integritāte';
@@ -766,7 +766,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get checkingQuranDb => 'Tiek pārbaudīta Korāna datubāze...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Labi';
 
   @override
   String get incomplete => 'Nepabeigts';
@@ -843,7 +843,7 @@ class AppLocalizationsLv extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Samaziniet sensora trīci, lai adata būtu stabilāka.';
 
   @override
   String get calibrationOffset => 'Kalibrēšanas nobīde';
@@ -966,10 +966,10 @@ class AppLocalizationsLv extends AppLocalizations {
       'Veiciet veselības pārbaudes un skatiet sistēmas statusu.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kibla izlīdzināts';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Pagrieziet, lai atrastu Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

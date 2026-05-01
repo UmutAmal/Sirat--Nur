@@ -632,7 +632,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Promijeni cilj';
 
   @override
   String get newTarget => 'New Target';
@@ -714,7 +714,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dani';
 
   @override
   String get premiumIntegrity => 'Premium Integrity';
@@ -840,7 +840,7 @@ class AppLocalizationsBs extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Smanjite podrhtavanje senzora za stabilniju iglu.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -965,7 +965,7 @@ class AppLocalizationsBs extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Rotirajte da biste pronašli Qiblu';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -626,16 +626,16 @@ class AppLocalizationsSw extends AppLocalizations {
       'Soma Kurani, fuatilia usomaji wako, na uchunguze maudhui ya Kiislamu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Maktaba ya Dhikr';
 
   @override
   String get resetCounter => 'Weka upya Kaunta';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Badilisha Lengo';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Lengo Jipya';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsSw extends AppLocalizations {
   String get fastingDebt => 'Kufunga Deni';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Weka upya';
 
   @override
-  String get days => 'Days';
+  String get days => 'Siku';
 
   @override
   String get premiumIntegrity => 'Uadilifu wa hali ya juu';
@@ -764,7 +764,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get checkingQuranDb => 'Inakagua hifadhidata ya Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Sawa';
 
   @override
   String get incomplete => 'Haijakamilika';
@@ -841,7 +841,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Punguza jita ya kihisi ili kupata sindano thabiti.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -963,10 +963,10 @@ class AppLocalizationsSw extends AppLocalizations {
       'Fanya ukaguzi wa afya na uangalie hali ya mfumo.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Imepangiliwa';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Zungusha ili Upate Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

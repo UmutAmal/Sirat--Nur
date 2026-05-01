@@ -630,16 +630,16 @@ class AppLocalizationsGd extends AppLocalizations {
       'Leugh Quran, cùm sùil air do leughadh, agus rannsaich susbaint Ioslamach';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Leabharlann Dhikr';
 
   @override
   String get resetCounter => 'Ath-shuidheachadh Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Atharraich Targaid';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Targaid Ùr';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get fastingDebt => 'Fiachan Fastaidh';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Ath-shuidhich';
 
   @override
-  String get days => 'Days';
+  String get days => 'Làithean';
 
   @override
   String get premiumIntegrity => 'Ionracas Premium';
@@ -767,7 +767,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get checkingQuranDb => 'Luchdaich a-nuas an stòr-dàta Quran. . .';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ceart gu leòr';
 
   @override
   String get incomplete => 'Neo-iomlan';
@@ -844,7 +844,7 @@ class AppLocalizationsGd extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Lùghdaich jitter sensor airson snàthad nas seasmhaiche.';
 
   @override
   String get calibrationOffset => 'Offset Calibration';
@@ -966,10 +966,10 @@ class AppLocalizationsGd extends AppLocalizations {
       'Ruith sgrùdaidhean slàinte agus faic inbhe an t-siostaim.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla co-thaobhadh';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Rothaich gus Qibla a lorg';
 
   @override
   String get calibrationRequiredFigure8 =>

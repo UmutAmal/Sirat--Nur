@@ -626,16 +626,16 @@ class AppLocalizationsFa extends AppLocalizations {
       'قرآن بخوانید، خواندن خود را ردیابی کنید و محتوای اسلامی را کاوش کنید';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'کتابخانه ذکر';
 
   @override
   String get resetCounter => 'تنظیم مجدد شمارنده';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'تغییر هدف';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'هدف جدید';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get fastingDebt => 'قرض روزه';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'بازنشانی کنید';
 
   @override
-  String get days => 'Days';
+  String get days => 'روزها';
 
   @override
   String get premiumIntegrity => 'یکپارچگی حق بیمه';
@@ -762,7 +762,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get checkingQuranDb => 'بررسی پایگاه قرآن ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'باشه';
 
   @override
   String get incomplete => 'ناقص';
@@ -838,8 +838,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get compassSmoothing => 'صاف کردن قطب نما';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'برای سوزن ثابت‌تر، لرزش حسگر را کاهش دهید.';
 
   @override
   String get calibrationOffset => 'کالیبراسیون افست';
@@ -961,10 +960,10 @@ class AppLocalizationsFa extends AppLocalizations {
       'بررسی های سلامت را اجرا کنید و وضعیت سیستم را مشاهده کنید.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'قبله تراز شده';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'برای یافتن قبله بچرخانید';
 
   @override
   String get calibrationRequiredFigure8 =>

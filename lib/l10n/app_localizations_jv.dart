@@ -627,16 +627,16 @@ class AppLocalizationsJv extends AppLocalizations {
       'Maca Quran, lacak wacan, lan jelajahi konten Islam';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Pustaka Dzikir';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ngganti Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Target anyar';
 
   @override
   String targetCount(Object target) {
@@ -714,7 +714,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dina';
 
   @override
   String get premiumIntegrity => 'Integritas Premium';
@@ -840,7 +840,7 @@ class AppLocalizationsJv extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Ngurangi jitter sensor kanggo jarum mantep.';
 
   @override
   String get calibrationOffset => 'Kalibrasi Offset';
@@ -962,10 +962,10 @@ class AppLocalizationsJv extends AppLocalizations {
       'Jalanake mriksa kesehatan lan ndeleng status sistem.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kiblat Sejajar';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Puter kanggo Golek Kiblat';
 
   @override
   String get calibrationRequiredFigure8 =>

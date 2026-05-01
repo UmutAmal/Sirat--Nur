@@ -627,16 +627,16 @@ class AppLocalizationsTn extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Laeborari ya Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Fetola Seikaelelo';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Seikaelelo se sešwa';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsTn extends AppLocalizations {
   String get fastingDebt => 'Sekoloto sa go Itima';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Seta gape';
 
   @override
-  String get days => 'Days';
+  String get days => 'Malatsi';
 
   @override
   String get premiumIntegrity => 'Bothokgami jwa maemo a a kwa godimo';
@@ -764,7 +764,7 @@ class AppLocalizationsTn extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'GO SIAME';
 
   @override
   String get incomplete => 'Ga e a felela';
@@ -837,23 +837,23 @@ class AppLocalizationsTn extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Go borethefatsa Khampase';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Fokotsa sensara jitter bakeng sa nale e tsitsitseng.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Phokotso ya Khaliboreišene';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ga jaana: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Fetola fa khampase ya gago e tlhoka go baakanngwa ka diatla. Dipalopalo tse di siameng di dikologa ka fa letlhakoreng la tshupanako.';
 
   @override
   String get apply => 'Apply';
@@ -963,10 +963,10 @@ class AppLocalizationsTn extends AppLocalizations {
       'Dira ditlhotlhomiso tsa boitekanelo mme o lebe seemo sa tsamaiso.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla e lepalepane';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Dikolosa go Batla Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

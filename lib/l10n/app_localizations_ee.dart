@@ -626,16 +626,16 @@ class AppLocalizationsEe extends AppLocalizations {
       'Xlẽ Quran, lé ŋku ɖe wò nuxexlẽ ŋu, eye nàdzro Islam me nyawo me';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Agbalẽdzraɖoƒe';
 
   @override
   String get resetCounter => 'Gbugbɔ Ðo Xexlẽdzesi';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Trɔ Taɖodzinu';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Taɖodzinu Yeye';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsEe extends AppLocalizations {
   String get fastingDebt => 'Nutsitsidɔ ƒe Fenyinyi';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Gbugbɔ ɖoe';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ŋkekewo';
 
   @override
   String get premiumIntegrity => 'Premium ƒe Fɔmaɖimaɖi';
@@ -764,7 +764,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get checkingQuranDb => 'Quran ƒe nyatakakadzraɖoƒea me dzodzro...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ENYO';
 
   @override
   String get incomplete => 'Mede blibo o';
@@ -841,14 +841,14 @@ class AppLocalizationsEe extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Ðe sensor jitter dzi kpɔtɔ na aŋe si li ke.';
 
   @override
   String get calibrationOffset => 'Dodoɖeŋgɔ ƒe Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Fifia: $offset°';
   }
 
   @override
@@ -963,10 +963,10 @@ class AppLocalizationsEe extends AppLocalizations {
       'Wɔ lãmesẽ dodokpɔwo eye nàkpɔ ɖoɖoa ƒe nɔnɔme.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Wowɔ Ðekae';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Trɔ asi le eŋu be nàdi Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

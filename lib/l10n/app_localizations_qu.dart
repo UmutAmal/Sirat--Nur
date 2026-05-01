@@ -629,16 +629,16 @@ class AppLocalizationsQu extends AppLocalizations {
       'Quranta ñawiriy, ñawirisqaykita qatipay, islammanta contenidota mask’ay';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Biblioteca';
 
   @override
   String get resetCounter => 'Yupaqta kutichiy';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Meta nisqa tikray';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Musuq Meta';
 
   @override
   String targetCount(Object target) {
@@ -714,10 +714,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get fastingDebt => 'Ayuna Manukuy';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Reset nisqa';
 
   @override
-  String get days => 'Days';
+  String get days => 'P’unchawkuna';
 
   @override
   String get premiumIntegrity => 'Integridad de Premium nisqa';
@@ -767,7 +767,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get checkingQuranDb => 'Quranpa willay tantanapi qhawaspa...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'KUSA';
 
   @override
   String get incomplete => 'Mana hunt’asqa';
@@ -844,14 +844,14 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Aswan takyasqa agujapaq sensorpa kuyuriyninta pisiyachiy.';
 
   @override
   String get calibrationOffset => 'Calibración Desplazamiento nisqa';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Kunan pacha: $offset°';
   }
 
   @override
@@ -966,10 +966,10 @@ class AppLocalizationsQu extends AppLocalizations {
       'Salud qhawaykunata purichiy chaymanta sistema estadota qhaway.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Alineado';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Muyuchiy Qibla Tarinapaq';
 
   @override
   String get calibrationRequiredFigure8 =>

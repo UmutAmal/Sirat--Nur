@@ -628,16 +628,16 @@ class AppLocalizationsBr extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Levraoueg Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Cheñch ar pal';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Pal nevez';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsBr extends AppLocalizations {
   String get fastingDebt => 'Dle ar yun';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Adderaouekaat';
 
   @override
-  String get days => 'Days';
+  String get days => 'Deizioù';
 
   @override
   String get premiumIntegrity => 'Eeunded prim';
@@ -763,7 +763,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'MAT EO';
 
   @override
   String get incomplete => 'Diglok';
@@ -836,23 +836,23 @@ class AppLocalizationsBr extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Eeunaat ar c\'hompas';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Digreskiñ ar c\'hrennlavar evit kaout un nadoz stabiloc\'h.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Dilec\'hiañ ar c\'hefluniadur';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Bremañ : $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Kemmañ ma \'z eus ezhomm da reizhañ ho kompas dre zorn. Ar gwerzhioù pozitivel a dremen e tu an eurier.';
 
   @override
   String get apply => 'Apply';
@@ -962,10 +962,10 @@ class AppLocalizationsBr extends AppLocalizations {
       'Ober gwirioù yec\'hed ha sellet ouzh stad ar reizhiad.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kibla Aliet';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Treiñ evit kavout ar c\'hibla';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -626,16 +626,16 @@ class AppLocalizationsSa extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'धिक्र पुस्तकालय';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'लक्ष्यं परिवर्तयन्तु';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'नवीनं लक्ष्यं';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsSa extends AppLocalizations {
   String get fastingDebt => 'उपवास ऋण';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'पुनः स्थापय';
 
   @override
-  String get days => 'Days';
+  String get days => 'दिवसाः';
 
   @override
   String get premiumIntegrity => 'प्रीमियम अखंडता';
@@ -763,7 +763,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ठीकम्';
 
   @override
   String get incomplete => 'अपूर्णम्';
@@ -836,23 +836,23 @@ class AppLocalizationsSa extends AppLocalizations {
   String get qiblaCalibration => 'किब्ला मापन';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'कम्पास स्मूथिंग';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'स्थिरतर-सूच्यर्थं संवेदक-कम्पनं न्यूनीकरोतु।';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'मापन ऑफसेट';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'वर्तमान: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'यदि भवतः कम्पासस्य हस्तशुद्धेः आवश्यकता अस्ति तर्हि समायोजयन्तु। सकारात्मकमूल्यानि घड़ीयानदिशायां परिभ्रमन्ति ।';
 
   @override
   String get apply => 'परिवर्तनं प्रयोजयन्तु';
@@ -962,10 +962,10 @@ class AppLocalizationsSa extends AppLocalizations {
       'स्वास्थ्यपरीक्षां चालयन्तु तथा च प्रणाल्याः स्थितिं पश्यन्तु।';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'किब्ला संरेखिता';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'किब्लां अन्वेष्टुं घुमन्तु';
 
   @override
   String get calibrationRequiredFigure8 =>

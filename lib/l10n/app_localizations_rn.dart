@@ -627,16 +627,16 @@ class AppLocalizationsRn extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Ububiko bw\'ibitabo bwa Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Guhindura Intumbero';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Intumbero nshasha';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsRn extends AppLocalizations {
   String get fastingDebt => 'Ideni ryo kwisonzesha';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Gusubiramwo';
 
   @override
-  String get days => 'Days';
+  String get days => 'Imisi';
 
   @override
   String get premiumIntegrity => 'Ubunyankamugayo bwa mbere';
@@ -763,7 +763,7 @@ class AppLocalizationsRn extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'VYIZA';
 
   @override
   String get incomplete => 'Ntibitunganye';
@@ -836,23 +836,23 @@ class AppLocalizationsRn extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Busole yorosha';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Gabanya jitter y’ibimenyetso kugira ngo urushinge rube rudahinduka.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Gupima';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ubu: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Tunganya nimba busole yawe ikeneye gukosorwa n’amaboko. Ivyiza birazunguruka nk’uko isaha igenda.';
 
   @override
   String get apply => 'Apply';
@@ -962,10 +962,10 @@ class AppLocalizationsRn extends AppLocalizations {
       'Gukoresha ivyigwa vy\'ubuzima no kuraba uko sisitemu imeze.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla itunganye';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Hindukiza kugira uronke Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -631,10 +631,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get resetCounter => 'Återställ räknaren';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ändra mål';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nytt mål';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get fastingDebt => 'Fastande skuld';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Återställ';
 
   @override
-  String get days => 'Days';
+  String get days => 'dagar';
 
   @override
   String get premiumIntegrity => 'Premium Integritet';
@@ -837,8 +837,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get compassSmoothing => 'Kompassutjämning';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Minska sensorjitter för en stadigare nål.';
 
   @override
   String get calibrationOffset => 'Kalibreringsförskjutning';
@@ -959,10 +958,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get healthCheckDesc => 'Kör hälsokontroller och visa systemstatus.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla inriktad';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Rotera för att hitta Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

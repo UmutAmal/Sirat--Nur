@@ -627,16 +627,16 @@ class AppLocalizationsHr extends AppLocalizations {
       'Čitajte Kuran, pratite svoje čitanje i istražujte islamski sadržaj';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Biblioteka Zikr';
 
   @override
   String get resetCounter => 'Poništi brojač';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Promjena cilja';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nova meta';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsHr extends AppLocalizations {
   String get fastingDebt => 'Postni dug';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Resetiraj';
 
   @override
-  String get days => 'Days';
+  String get days => 'dana';
 
   @override
   String get premiumIntegrity => 'Vrhunski integritet';
@@ -764,7 +764,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get checkingQuranDb => 'Provjera baze podataka Kur\'ana...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'U REDU';
 
   @override
   String get incomplete => 'Nepotpun';
@@ -841,7 +841,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Smanjite podrhtavanje senzora za stabilniju iglu.';
 
   @override
   String get calibrationOffset => 'Kalibracijski pomak';
@@ -963,10 +963,10 @@ class AppLocalizationsHr extends AppLocalizations {
       'Pokrenite provjere zdravlja i pogledajte status sustava.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Usklađena Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Okrenite za pronalaženje Qible';
 
   @override
   String get calibrationRequiredFigure8 =>

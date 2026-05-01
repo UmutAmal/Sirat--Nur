@@ -627,16 +627,16 @@ class AppLocalizationsHa extends AppLocalizations {
       'Karanta Al-Qur\'ani, ku bibiyi karatun ku, da kuma bincika abubuwan Musulunci';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Littafin Dhikr';
 
   @override
   String get resetCounter => 'Sake saitin Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Canza Manufar';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Sabon Target';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get fastingDebt => 'Bashin Azumi';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Sake saitin';
 
   @override
-  String get days => 'Days';
+  String get days => 'Kwanaki';
 
   @override
   String get premiumIntegrity => 'Premium Mutunci';
@@ -764,7 +764,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get checkingQuranDb => 'Duba bayanan Al-Qur\'ani...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Yayi';
 
   @override
   String get incomplete => 'Bai cika ba';
@@ -841,7 +841,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Rage jitter firikwensin don madaidaiciyar allura.';
 
   @override
   String get calibrationOffset => 'Daidaita Rarraba';
@@ -963,10 +963,10 @@ class AppLocalizationsHa extends AppLocalizations {
       'Gudanar da duba lafiya kuma duba halin tsarin.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Adaidaitacce';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Juyawa don Nemo Alqibla';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -626,16 +626,16 @@ class AppLocalizationsOs extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Дхикры библиотекæ';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Нысан ивын';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Ног нысан';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsOs extends AppLocalizations {
   String get fastingDebt => 'Комдарæны хæс';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Сног кæнын';
 
   @override
-  String get days => 'Days';
+  String get days => 'Бонтæ';
 
   @override
   String get premiumIntegrity => 'Премиум æнæфæцудгæдзинад';
@@ -761,7 +761,7 @@ class AppLocalizationsOs extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ХОРЗ';
 
   @override
   String get incomplete => 'Æнæххæст';
@@ -834,23 +834,23 @@ class AppLocalizationsOs extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Компасы æмраст кæнын';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Фæкъаддæр кæнут датчикы æнкъуыст, цæмæй æнæфæцудгæдæр уа.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Калибрацион æфсæнвæндаг';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ныртæккæ: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Кæд дæ компас хъæуы къухæй раст кæнын, уæд æй æрнывыл кæн. Æвæрццаг аргъдзинæдтæ зилынц сахаты æрдæм.';
 
   @override
   String get apply => 'Apply';
@@ -960,10 +960,10 @@ class AppLocalizationsOs extends AppLocalizations {
       'Æххæст кæнут æнæниздзинады бæрæггæнæнтæ æмæ фенут системæйы уавæр.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Кибла æмраст';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Зилгæ кæнын, цæмæй ссара Киблæ';
 
   @override
   String get calibrationRequiredFigure8 =>

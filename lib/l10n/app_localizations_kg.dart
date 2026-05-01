@@ -627,16 +627,16 @@ class AppLocalizationsKg extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Biblioteke ya Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Soba lukanu';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Lukanu ya mpa';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsKg extends AppLocalizations {
   String get fastingDebt => 'Mfuka ya Kubuya Kudya';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Kuvutula';
 
   @override
-  String get days => 'Days';
+  String get days => 'Bilumbu';
 
   @override
   String get premiumIntegrity => 'Kukwikama ya Premium';
@@ -836,23 +836,23 @@ class AppLocalizationsKg extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Kukumisa petepete na busole';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Kulumusa jitter ya sensor sambu na ntunga ya kukangama.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Kukatula ya etalonnage';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ntangu yai: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Soba kana busole na nge kele na mfunu ya kuyidika yo na maboko. Ba ntalu ya mbote ke balukaka na ndambu ya ntangu.';
 
   @override
   String get apply => 'Apply';
@@ -962,10 +962,10 @@ class AppLocalizationsKg extends AppLocalizations {
       'Sala bansosa ya mavimpi mpi tala mutindu systeme kele.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla me fwanana';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Baluka sambu na kuzwa Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

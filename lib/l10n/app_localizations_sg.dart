@@ -627,16 +627,16 @@ class AppLocalizationsSg extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Bibliothèque ti Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Changé cible ni';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Fini Cible .';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsSg extends AppLocalizations {
   String get fastingDebt => 'Dette ti jeûne';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Réinitialiser';
 
   @override
-  String get days => 'Days';
+  String get days => 'Alango';
 
   @override
   String get premiumIntegrity => 'Intégrité ti premium';
@@ -764,7 +764,7 @@ class AppLocalizationsSg extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'EN-EN';
 
   @override
   String get incomplete => 'A lingbi kue pëpe';
@@ -837,23 +837,23 @@ class AppLocalizationsSg extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Boussole ti sarango si ye aga nzoni';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'A yeke sara si jitter ti capteur ni aga nzoni.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Étalonnage ti déplacement';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Fadeso: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'A leke ni tongana boussole ti mo ayeke na bezoin ti tene a leke ni na maboko. A-valeur so ayeke nzoni ayeke tourné na mbage ti l’heure.';
 
   @override
   String get apply => 'Apply';
@@ -963,10 +963,10 @@ class AppLocalizationsSg extends AppLocalizations {
       'Sara a-épreuve ti santé na bâ statut ti système ni.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla ayeke na lege ni';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Roté ti wara Qibla .';
 
   @override
   String get calibrationRequiredFigure8 =>

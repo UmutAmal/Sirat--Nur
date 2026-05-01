@@ -627,16 +627,16 @@ class AppLocalizationsTy extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Fare buka Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Taui i te fâ';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Faanahoraa apî';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsTy extends AppLocalizations {
   String get fastingDebt => 'Te tarahu';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Faahou faahou';
 
   @override
-  String get days => 'Days';
+  String get days => 'Te mau mahana';
 
   @override
   String get premiumIntegrity => 'Te taiva ore';
@@ -763,7 +763,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'E';
 
   @override
   String get incomplete => 'Aita i hope';
@@ -836,14 +836,14 @@ class AppLocalizationsTy extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Te haamaitairaa i te tapo\'i';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'A faaiti i te jitter no te hoê arapoa papû a\'e.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Te faaauraa i te faito';
 
   @override
   String currentOffset(Object offset) {
@@ -852,7 +852,7 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'A taui mai te peu e e titauhia te hoê faatitiaifaroraa rima no ta outou afata teata. E taui te mau mana\'o tumu maitai i te pae o te hora.';
 
   @override
   String get apply => 'Apply';
@@ -962,10 +962,10 @@ class AppLocalizationsTy extends AppLocalizations {
       'A hi\'opoa i te oraora - maitai - raa e a hi\'o i te huru o te faanahoraa.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Huri no te imi i te Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

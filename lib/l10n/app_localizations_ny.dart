@@ -628,16 +628,16 @@ class AppLocalizationsNy extends AppLocalizations {
       'Werengani Korani, tsatirani zomwe mwawerenga, ndikuwona zachisilamu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Library ya Dhikr';
 
   @override
   String get resetCounter => 'Bwezerani Kauntala';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Sinthani Cholinga';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Cholinga Chatsopano';
 
   @override
   String targetCount(Object target) {
@@ -714,10 +714,10 @@ class AppLocalizationsNy extends AppLocalizations {
   String get fastingDebt => 'Ngongole Yosala';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Bwezerani';
 
   @override
-  String get days => 'Days';
+  String get days => 'Masiku';
 
   @override
   String get premiumIntegrity => 'Kukhulupirika Kwambiri';
@@ -766,7 +766,7 @@ class AppLocalizationsNy extends AppLocalizations {
   String get checkingQuranDb => 'Kuyang\'ana database ya Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Chabwino';
 
   @override
   String get incomplete => 'Zosakwanira';
@@ -843,7 +843,7 @@ class AppLocalizationsNy extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Chepetsani jitter ya sensor kuti mukhale ndi singano yokhazikika.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -965,10 +965,10 @@ class AppLocalizationsNy extends AppLocalizations {
       'Yendetsani mayendedwe azaumoyo ndikuwona mawonekedwe adongosolo.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Yogwirizana';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Sinthanitsani kuti mupeze Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

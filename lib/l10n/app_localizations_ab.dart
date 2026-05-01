@@ -626,16 +626,16 @@ class AppLocalizationsAb extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Дҳикр абиблиотека';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Иԥсахтәуп ахықәкы';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Ахықәкы ҿыц';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsAb extends AppLocalizations {
   String get fastingDebt => 'Ачгара ауал';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Аиҭашьақәыргылара';
 
   @override
-  String get days => 'Days';
+  String get days => 'Амшқәа';
 
   @override
   String get premiumIntegrity => 'Апремиумтә интегритет';
@@ -761,7 +761,7 @@ class AppLocalizationsAb extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ИБЗИОУП';
 
   @override
   String get incomplete => 'Инагӡам';
@@ -834,23 +834,23 @@ class AppLocalizationsAb extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Акомпас Ариашара';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Еиҳа иҭышәынтәалоу асаба азы ацәанырра аҵысра амаҷра.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Акалибровка аиҭасра';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Уажәтәи: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Укомпас напыла ариашара аҭахызар, еиқәыршәа. Апозитивтә ҵакқәа асааҭ ахь иргьежьуеит.';
 
   @override
   String get apply => 'Apply';
@@ -961,10 +961,10 @@ class AppLocalizationsAb extends AppLocalizations {
       'Агәабзиара агәаҭарақәа мҩаԥыжәга, насгьы асистема аҭагылазаашьа шәахәаԥш.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Ақыбла аиқәыршәара';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Ақыбла аԥшааразы аргьежьра';
 
   @override
   String get calibrationRequiredFigure8 =>

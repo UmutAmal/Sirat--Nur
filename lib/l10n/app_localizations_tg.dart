@@ -626,16 +626,16 @@ class AppLocalizationsTg extends AppLocalizations {
       'Қуръон бихонед, хондани худро пайгирӣ кунед ва мундариҷаи исломиро биомӯзед';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Китобхонаи Зикр';
 
   @override
   String get resetCounter => 'Аз нав танзимкунии ҳисобкунак';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ҳадафро тағир диҳед';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Ҳадафи нав';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get fastingDebt => 'Қарзи рӯзадорӣ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Бозсозӣ';
 
   @override
-  String get days => 'Days';
+  String get days => 'Рӯзҳо';
 
   @override
   String get premiumIntegrity => 'Беайбии Premium';
@@ -762,7 +762,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get checkingQuranDb => 'Санҷиши махзани Қуръон...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Хуб';
 
   @override
   String get incomplete => 'Нопурра';
@@ -839,7 +839,7 @@ class AppLocalizationsTg extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Барои сӯзан устувортар ҷилтерҳои сенсорро кам кунед.';
 
   @override
   String get calibrationOffset => 'Офсети калибрченкунӣ';
@@ -961,10 +961,10 @@ class AppLocalizationsTg extends AppLocalizations {
       'Санҷиши саломатиро иҷро кунед ва ҳолати системаро бубинед.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Қибла мувофиқ';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Барои дарёфти қибла гардиш кунед';
 
   @override
   String get calibrationRequiredFigure8 =>

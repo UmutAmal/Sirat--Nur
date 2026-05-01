@@ -627,16 +627,16 @@ class AppLocalizationsBo extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'དྷི་ཀར་དཔེ་མཛོད་ཁང་།';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'དམིགས་འབེན་བསྒྱུར་བ།';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'དམིགས་འབེན་གསར་པ།';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsBo extends AppLocalizations {
   String get fastingDebt => 'སྨྱུང་གནས་བུ་ལོན།';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'བསྐྱར་སྒྲིག་བྱེད་པ།';
 
   @override
-  String get days => 'Days';
+  String get days => 'ཉིན།';
 
   @override
   String get premiumIntegrity => 'ཆེས་མཐོའི་དྲང་བདེན།';
@@ -763,7 +763,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ཆོག';
 
   @override
   String get incomplete => 'མ་ཚང་བ།';
@@ -836,23 +836,23 @@ class AppLocalizationsBo extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'ཕྱོགས་སྟོན་འཁོར་ལོ་འཇམ་པོ་བཟོ་བ།';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'སྨན་ཁབ་བརྟན་པོ་ཞིག་གི་ཆེད་དུ་ཚོར་བྱེད་ཀྱི་འགུལ་སྐྱོད་ཉུང་དུ་གཏོང་དགོས།';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'ཚད་འཇལ་གྱི་ཕྱིར་འཐེན།';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'ད་ལྟའི་ཆར་$offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'གལ་ཏེ་ཁྱེད་ཀྱི་ཕྱོགས་སྟོན་འཁོར་ལོ་དེ་ལག་ཐོག་ནས་ནོར་བཅོས་བྱེད་དགོས་ན་བསྒྱུར་བཅོས་བྱོས། རིན་ཐང་བཟང་པོ་ཆུ་ཚོད་ཀྱི་ཕྱོགས་སུ་འཁོར་གྱི་ཡོད།';
 
   @override
   String get apply => 'Apply';
@@ -962,10 +962,10 @@ class AppLocalizationsBo extends AppLocalizations {
       'འཕྲོད་བསྟེན་ཞིབ་བཤེར་བྱེད་པ་དང་མ་ལག་གི་གནས་ཚུལ་ལ་ལྟ་བ།';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'ཁིབ་ལ་ཕྲེང་བསྒྲིགས།';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'ཀིབ་ལ་འཚོལ་བར་འཁོར་བ།';
 
   @override
   String get calibrationRequiredFigure8 =>

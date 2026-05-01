@@ -627,16 +627,16 @@ class AppLocalizationsFi extends AppLocalizations {
       'Lue Koraania, seuraa lukemistasi ja tutki islamilaista sisältöä';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr-kirjasto';
 
   @override
   String get resetCounter => 'Nollaa laskuri';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Muuta kohdetta';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Uusi kohde';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get fastingDebt => 'Paastovelka';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Nollaa';
 
   @override
-  String get days => 'Days';
+  String get days => 'päivää';
 
   @override
   String get premiumIntegrity => 'Premium Integrity';
@@ -841,7 +841,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Vähennä anturin tärinää saadaksesi vakaamman neulan.';
 
   @override
   String get calibrationOffset => 'Kalibrointipoikkeama';
@@ -963,10 +963,10 @@ class AppLocalizationsFi extends AppLocalizations {
       'Suorita terveystarkastukset ja tarkastele järjestelmän tilaa.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Tasattu';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Kierrä löytääksesi Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

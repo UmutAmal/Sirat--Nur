@@ -629,16 +629,16 @@ class AppLocalizationsCy extends AppLocalizations {
       'Darllenwch Quran, olrhain eich darllen, ac archwilio cynnwys Islamaidd';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Llyfrgell Dhikr';
 
   @override
   String get resetCounter => 'Ailosod Cownter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Newid Targed';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Targed Newydd';
 
   @override
   String targetCount(Object target) {
@@ -714,10 +714,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get fastingDebt => 'Dyled Ymprydio';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Ailosod';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dyddiau';
 
   @override
   String get premiumIntegrity => 'Uniondeb Premiwm';
@@ -766,7 +766,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get checkingQuranDb => 'Wrthi\'n gwirio cronfa ddata Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'iawn';
 
   @override
   String get incomplete => 'Anghyflawn';
@@ -843,7 +843,7 @@ class AppLocalizationsCy extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Lleihau jitter synhwyrydd ar gyfer nodwydd mwy cyson.';
 
   @override
   String get calibrationOffset => 'Graddnodi Gwrthbwyso';
@@ -965,10 +965,10 @@ class AppLocalizationsCy extends AppLocalizations {
       'Cynnal gwiriadau iechyd a gweld statws system.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Alinio';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Cylchdroi i ddod o hyd i Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

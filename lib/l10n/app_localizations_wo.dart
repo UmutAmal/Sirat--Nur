@@ -626,16 +626,16 @@ class AppLocalizationsWo extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Bibliothèque Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Soppi mébet';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Target bu bees';
 
   @override
   String targetCount(Object target) {
@@ -713,7 +713,7 @@ class AppLocalizationsWo extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Ay fan';
 
   @override
   String get premiumIntegrity => 'Njubte bu njëkk';
@@ -761,7 +761,7 @@ class AppLocalizationsWo extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'BAAX NA';
 
   @override
   String get incomplete => 'mattul';
@@ -834,14 +834,14 @@ class AppLocalizationsWo extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Busol buy nooy';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Wàññil jitter kaptër ngir am puso bu gëna dëgër.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Déplacement d\'étalonnage';
 
   @override
   String currentOffset(Object offset) {
@@ -850,7 +850,7 @@ class AppLocalizationsWo extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Defar ko sudee sa busol dafa soxla ñu defar ko ak loxo. Valeur positif yi dañuy wëreelu ci wàllu montor bi.';
 
   @override
   String get apply => 'Apply';
@@ -960,10 +960,10 @@ class AppLocalizationsWo extends AppLocalizations {
       'Doxal saytu wérgi-yaram ak xool tolluwaayu sistem bi.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'wëlbatiku ngir gis qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

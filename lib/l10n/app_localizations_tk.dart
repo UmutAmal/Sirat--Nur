@@ -628,16 +628,16 @@ class AppLocalizationsTk extends AppLocalizations {
       'Gurhany okaň, okamagyňyzy yzarlaň we yslam mazmunyny öwreniň';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dikr kitaphanasy';
 
   @override
   String get resetCounter => 'Hasaplaýjyny täzeden düzmek';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Maksady üýtgetmek';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Täze maksat';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsTk extends AppLocalizations {
   String get fastingDebt => 'Oraza bergisi';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Täzeden düzmek';
 
   @override
-  String get days => 'Days';
+  String get days => 'Günler';
 
   @override
   String get premiumIntegrity => 'Premium bütewiligi';
@@ -763,7 +763,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get checkingQuranDb => 'Kuran maglumatlar bazasyny barlamak ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Bolýar';
 
   @override
   String get incomplete => 'Doly däl';
@@ -840,7 +840,7 @@ class AppLocalizationsTk extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Dolandyryjy iňňe üçin sensor jitterini azaltmak.';
 
   @override
   String get calibrationOffset => 'Kalibrleme ofset';
@@ -962,10 +962,10 @@ class AppLocalizationsTk extends AppLocalizations {
       'Saglyk barlaglaryny geçiriň we ulgamyň ýagdaýyny görüň.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kibla deňleşdirildi';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Kiblany tapmak üçin aýlaň';
 
   @override
   String get calibrationRequiredFigure8 =>

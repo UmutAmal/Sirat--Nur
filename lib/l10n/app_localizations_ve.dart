@@ -627,16 +627,16 @@ class AppLocalizationsVe extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Laiburari ya Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Shandukisani Tshipikwa';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Tshipikwa tshiswa';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsVe extends AppLocalizations {
   String get fastingDebt => 'Tshikolodo tsha u ḓidzima zwiḽiwa';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Setha hafhu';
 
   @override
-  String get days => 'Days';
+  String get days => 'Maduvha';
 
   @override
   String get premiumIntegrity => 'Vhuḓifulufheli ha Nṱhesa';
@@ -765,7 +765,7 @@ class AppLocalizationsVe extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'EE';
 
   @override
   String get incomplete => 'A zwo ngo fhelela';
@@ -838,23 +838,23 @@ class AppLocalizationsVe extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Khamphasi ya u ṱanḓavhudza';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'U fhungudza jitter ya sensor u itela u wana ṋeleṱe yo dzikaho.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Offset ya u linganisa';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Zwa zwino: $offset°';
   }
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Lugisani arali khamphasi yaṋu i tshi ṱoḓa u lugiswa nga zwanḓa. Zwithu zwavhuḓi zwi tshimbila nga nḓila ya tshifhinga.';
 
   @override
   String get apply => 'Apply';
@@ -965,10 +965,10 @@ class AppLocalizationsVe extends AppLocalizations {
       'Gidimani ṱhoḓisiso dza mutakalo na u vhona tshiimo tsha sisiṱeme.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla yo linganelaho';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'U rembuluwa u itela u wana Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

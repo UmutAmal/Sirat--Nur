@@ -627,16 +627,16 @@ class AppLocalizationsKa extends AppLocalizations {
       'წაიკითხეთ ყურანი, თვალყური ადევნეთ თქვენს კითხვას და შეისწავლეთ ისლამური შინაარსი';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'დჰიქრის ბიბლიოთეკა';
 
   @override
   String get resetCounter => 'მრიცხველის გადატვირთვა';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'შეცვალეთ სამიზნე';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ახალი სამიზნე';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get fastingDebt => 'მარხვის ვალი';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'გადატვირთვა';
 
   @override
-  String get days => 'Days';
+  String get days => 'დღეები';
 
   @override
   String get premiumIntegrity => 'პრემიუმ მთლიანობა';
@@ -841,7 +841,7 @@ class AppLocalizationsKa extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'შეამცირეთ სენსორის ხმაური უფრო სტაბილური ნემსისთვის.';
 
   @override
   String get calibrationOffset => 'კალიბრაციის ოფსეტი';
@@ -966,7 +966,7 @@ class AppLocalizationsKa extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'მოტრიალდით ქიბლას საპოვნელად';
 
   @override
   String get calibrationRequiredFigure8 =>

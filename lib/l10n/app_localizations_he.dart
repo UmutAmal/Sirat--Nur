@@ -624,16 +624,16 @@ class AppLocalizationsHe extends AppLocalizations {
       'קרא את הקוראן, עקוב אחר הקריאה שלך וחקור תוכן אסלאמי';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ספריית Dhikr';
 
   @override
   String get resetCounter => 'אפס את המונה';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'שנה יעד';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'יעד חדש';
 
   @override
   String targetCount(Object target) {
@@ -707,10 +707,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get fastingDebt => 'חוב בצום';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'אפס';
 
   @override
-  String get days => 'Days';
+  String get days => 'ימים';
 
   @override
   String get premiumIntegrity => 'יושרה פרימיום';
@@ -759,7 +759,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get checkingQuranDb => 'בודק את מסד הנתונים של הקוראן...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'בסדר';
 
   @override
   String get incomplete => 'לא שלם';
@@ -835,8 +835,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get compassSmoothing => 'החלקת מצפן';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'הפחת את ריצוד החיישן למחט יציבה יותר.';
 
   @override
   String get calibrationOffset => 'היסט כיול';
@@ -957,10 +956,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get healthCheckDesc => 'הפעל בדיקות תקינות והצג את מצב המערכת.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'קיבלה מיושר';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'סובב כדי למצוא Qibla';
 
   @override
   String get calibrationRequiredFigure8 => 'נדרש כיול. סובב את המכשיר באיור 8.';

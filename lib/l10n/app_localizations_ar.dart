@@ -624,16 +624,16 @@ class AppLocalizationsAr extends AppLocalizations {
       'اقرأ القرآن وتتبع قراءتك واستكشف المحتوى الإسلامي';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'مكتبة الذكر';
 
   @override
   String get resetCounter => 'إعادة ضبط العداد';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'تغيير الهدف';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'هدف جديد';
 
   @override
   String targetCount(Object target) {
@@ -707,10 +707,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get fastingDebt => 'ديون الصيام';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'إعادة تعيين';
 
   @override
-  String get days => 'Days';
+  String get days => 'أيام';
 
   @override
   String get premiumIntegrity => 'النزاهة المتميزة';
@@ -759,7 +759,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get checkingQuranDb => 'التحقق من قاعدة بيانات القرآن الكريم...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'حسنًا';
 
   @override
   String get incomplete => 'غير مكتمل';
@@ -836,7 +836,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'قم بتقليل ارتعاش المستشعر للحصول على إبرة أكثر ثباتًا.';
 
   @override
   String get calibrationOffset => 'إزاحة المعايرة';
@@ -957,10 +957,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get healthCheckDesc => 'قم بإجراء فحوصات السلامة وعرض حالة النظام.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'محاذاة القبلة';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'تدوير للعثور على القبلة';
 
   @override
   String get calibrationRequiredFigure8 =>

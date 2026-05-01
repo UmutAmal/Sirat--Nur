@@ -631,10 +631,10 @@ class AppLocalizationsYo extends AppLocalizations {
   String get resetCounter => 'Tun counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Yi Àkọlé';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Titun Àkọlé';
 
   @override
   String targetCount(Object target) {
@@ -709,10 +709,10 @@ class AppLocalizationsYo extends AppLocalizations {
   String get fastingDebt => 'Ifadowole Aawe';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Tunto';
 
   @override
-  String get days => 'Days';
+  String get days => 'Awọn ọjọ';
 
   @override
   String get premiumIntegrity => 'Ere iyege';
@@ -762,7 +762,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get checkingQuranDb => 'Ṣiṣayẹwo aaye data Al-Qur’an...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'O DARA';
 
   @override
   String get incomplete => 'Ti ko pe';
@@ -838,8 +838,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get compassSmoothing => 'Kompasi Din';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Din jitter sensọ fun abẹrẹ iduro.';
 
   @override
   String get calibrationOffset => 'Idiwọn aiṣedeede';
@@ -960,10 +959,10 @@ class AppLocalizationsYo extends AppLocalizations {
   String get healthCheckDesc => 'Ṣiṣe awọn sọwedowo ilera ati wo ipo eto.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Ni ibamu';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Yi lọ si Wa Qibla';
 
   @override
   String get calibrationRequiredFigure8 => 'Odiwọn nilo. Yiyi ẹrọ ni nọmba-8.';

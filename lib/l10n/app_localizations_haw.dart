@@ -627,16 +627,16 @@ class AppLocalizationsHaw extends AppLocalizations {
       'E heluhelu i ka Quran, e hahai i kāu heluhelu, a e ʻimi i ka ʻike Islam';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Hale Waihona Puke Dhikr';
 
   @override
   String get resetCounter => 'Hoʻoponopono i ka helu helu';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Hoʻololi i ka pahuhopu';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Pahu Hou';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get fastingDebt => 'Aie hookeai';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Hoʻoponopono hou';
 
   @override
-  String get days => 'Days';
+  String get days => 'Nā lā';
 
   @override
   String get premiumIntegrity => 'Pono Pono';
@@ -841,7 +841,7 @@ class AppLocalizationsHaw extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'E hōʻemi i ka ʻike ʻana i ka ʻili no kahi nila paʻa.';
 
   @override
   String get calibrationOffset => 'Hoʻopiʻi Kalibration';
@@ -963,10 +963,10 @@ class AppLocalizationsHaw extends AppLocalizations {
       'E holo i nā nānā olakino a nānā i ke kūlana ʻōnaehana.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Kūlike ʻia Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'E huli i ka Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

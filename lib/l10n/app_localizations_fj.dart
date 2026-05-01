@@ -628,16 +628,16 @@ class AppLocalizationsFj extends AppLocalizations {
       'Read Quran, track your reading, and explore Islamic content';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Valenivolavola ni Dhikr';
 
   @override
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Veisautaka na Takete';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Takete Vou';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsFj extends AppLocalizations {
   String get fastingDebt => 'Dinau ni Lolo';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Vakavoutaka';
 
   @override
-  String get days => 'Days';
+  String get days => 'Siga';
 
   @override
   String get premiumIntegrity => 'Dina cecere';
@@ -764,7 +764,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get checkingQuranDb => 'Checking Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'VINAKA';
 
   @override
   String get incomplete => 'Sega ni taucoko';
@@ -837,14 +837,14 @@ class AppLocalizationsFj extends AppLocalizations {
   String get qiblaCalibration => 'Qibla Calibration';
 
   @override
-  String get compassSmoothing => 'Compass Smoothing';
+  String get compassSmoothing => 'Vakamamadataki ni Kampasi';
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Vakalailaitaka na jitter ni vakasama me baleta e dua na culacula tudei cake.';
 
   @override
-  String get calibrationOffset => 'Calibration Offset';
+  String get calibrationOffset => 'Veisau ni veivakatautauvatataki';
 
   @override
   String currentOffset(Object offset) {
@@ -853,7 +853,7 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+      'Veisautaka kevaka e gadreva na nomu kampasi e dua na veivakadodonutaki ni liga. Na veika vinaka e veisau ena yasa ni kaloko.';
 
   @override
   String get apply => 'Apply';
@@ -963,10 +963,10 @@ class AppLocalizationsFj extends AppLocalizations {
   String get healthCheckDesc => 'Run health checks and view system status.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Vakatautauvatataki ni Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Veisau me kunei na Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -638,10 +638,10 @@ class AppLocalizationsTl extends AppLocalizations {
   String get resetCounter => 'I-reset ang Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Baguhin ang Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Bagong Target';
 
   @override
   String targetCount(Object target) {
@@ -718,10 +718,10 @@ class AppLocalizationsTl extends AppLocalizations {
   String get fastingDebt => 'Pag-aayuno Utang';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'I-reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Mga araw';
 
   @override
   String get premiumIntegrity => 'Premium Integridad';
@@ -848,7 +848,7 @@ class AppLocalizationsTl extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Bawasan ang sensor jitter para sa mas matatag na karayom.';
 
   @override
   String get calibrationOffset => 'Pag-calibrate Offset';
@@ -970,10 +970,10 @@ class AppLocalizationsTl extends AppLocalizations {
       'Magpatakbo ng mga pagsusuri sa kalusugan at tingnan ang status ng system.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Nakahanay sa Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'I-rotate para Maghanap ng Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

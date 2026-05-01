@@ -627,16 +627,16 @@ class AppLocalizationsIs extends AppLocalizations {
       'Lestu Kóraninn, fylgdu lestri þínum og skoðaðu íslamskt efni';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr bókasafn';
 
   @override
   String get resetCounter => 'Endurstilla teljara';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Breyta markmiði';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nýtt skotmark';
 
   @override
   String targetCount(Object target) {
@@ -712,10 +712,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get fastingDebt => 'Fastandi skuld';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Endurstilla';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dagar';
 
   @override
   String get premiumIntegrity => 'Hágæða heiðarleiki';
@@ -764,7 +764,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get checkingQuranDb => 'Athugar gagnagrunn Kóranans...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Allt í lagi';
 
   @override
   String get incomplete => 'Ófullnægjandi';
@@ -841,7 +841,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Dragðu úr titringi í skynjara fyrir stöðugri nál.';
 
   @override
   String get calibrationOffset => 'Kvörðunarjöfnun';
@@ -962,10 +962,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get healthCheckDesc => 'Keyra heilsufarsskoðun og skoða kerfisstöðu.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla samræmd';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Snúðu til að finna Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

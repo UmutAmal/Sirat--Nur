@@ -634,10 +634,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Hanova tanjona';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Tanjona vaovao';
 
   @override
   String targetCount(Object target) {
@@ -714,10 +714,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get fastingDebt => 'Fifadian-kanina trosa';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Avereno';
 
   @override
-  String get days => 'Days';
+  String get days => 'Andro';
 
   @override
   String get premiumIntegrity => 'Premium Integrity';
@@ -844,14 +844,14 @@ class AppLocalizationsMg extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Ampidino ny jitter sensor ho an\'ny fanjaitra tsy miovaova.';
 
   @override
   String get calibrationOffset => 'Kalibration Offset';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Ankehitriny: $offset°';
   }
 
   @override
@@ -966,10 +966,10 @@ class AppLocalizationsMg extends AppLocalizations {
       'Manaova fisavana ara-pahasalamana ary jereo ny satan\'ny rafitra.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla mirindra';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Mihodina mba hahitana Kibla';
 
   @override
   String get calibrationRequiredFigure8 =>

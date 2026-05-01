@@ -630,16 +630,16 @@ class AppLocalizationsRo extends AppLocalizations {
       'Citiți Coranul, urmăriți-vă citirea și explorați conținutul islamic';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Biblioteca Dhikr';
 
   @override
   String get resetCounter => 'Resetează contorul';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Schimbați ținta';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Țintă nouă';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get fastingDebt => 'Datorie de post';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Resetați';
 
   @override
-  String get days => 'Days';
+  String get days => 'Zile';
 
   @override
   String get premiumIntegrity => 'Integritate premium';
@@ -768,7 +768,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get checkingQuranDb => 'Se verifică baza de date a Coranului...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Bine';
 
   @override
   String get incomplete => 'Incomplet';
@@ -845,7 +845,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Reduceți vibrația senzorului pentru un ac mai stabil.';
 
   @override
   String get calibrationOffset => 'Offset de calibrare';
@@ -967,10 +967,10 @@ class AppLocalizationsRo extends AppLocalizations {
       'Executați verificări de sănătate și vedeți starea sistemului.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Aliniată';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Rotiți pentru a găsi Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

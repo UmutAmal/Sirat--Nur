@@ -627,16 +627,16 @@ class AppLocalizationsTw extends AppLocalizations {
       'Kenkan Quran, di w’akenkan akyi, na hwehwɛ Islam mu nsɛm mu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr Nhomakorabea';
 
   @override
   String get resetCounter => 'Reset Counter no bio';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Sesa Botae a Wɔde Si Hɔ';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Botae Foforo';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsTw extends AppLocalizations {
   String get fastingDebt => 'Mmuadadi Ka';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Reset no bio';
 
   @override
-  String get days => 'Days';
+  String get days => 'Nna';
 
   @override
   String get premiumIntegrity => 'Premium Integrity a Wɔde Di Dwuma';
@@ -763,7 +763,7 @@ class AppLocalizationsTw extends AppLocalizations {
   String get checkingQuranDb => 'Worehwɛ Quran database no mu...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'YOO';
 
   @override
   String get incomplete => 'Ɛnyɛ nea edi mũ';
@@ -840,7 +840,7 @@ class AppLocalizationsTw extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Tew sensor jitter so ma needle a ɛyɛ pintinn.';
 
   @override
   String get calibrationOffset => 'Calibration Offset a Wɔde Yɛ Nneɛma';
@@ -964,10 +964,10 @@ class AppLocalizationsTw extends AppLocalizations {
       'Tu akwahosan nhwehwɛmu na hwɛ nhyehyɛe no tebea.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla a Wɔahyehyɛ no';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Di akɔneaba na Hwehwɛ Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

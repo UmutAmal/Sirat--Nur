@@ -633,10 +633,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get resetCounter => 'Reset Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Mutatio Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Novum Target';
 
   @override
   String targetCount(Object target) {
@@ -715,7 +715,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get reset => 'Reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'diebus';
 
   @override
   String get premiumIntegrity => 'Magnum Integritas';
@@ -764,7 +764,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get checkingQuranDb => 'Reprehendo Quran database...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Bene';
 
   @override
   String get incomplete => 'incompletum';
@@ -841,7 +841,7 @@ class AppLocalizationsLa extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Reducere soni jitter ad constantiorem acum.';
 
   @override
   String get calibrationOffset => 'Calibration cinguli';
@@ -965,7 +965,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Gyrari invenire Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

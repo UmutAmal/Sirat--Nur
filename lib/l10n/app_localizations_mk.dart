@@ -627,16 +627,16 @@ class AppLocalizationsMk extends AppLocalizations {
       'Прочитајте го Куранот, следете го вашето читање и истражете ја исламската содржина';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Библиотека Дикр';
 
   @override
   String get resetCounter => 'Ресетирај бројач';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Променете ја целта';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Нова цел';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsMk extends AppLocalizations {
   String get fastingDebt => 'Пост долг';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Ресетирај';
 
   @override
-  String get days => 'Days';
+  String get days => 'Денови';
 
   @override
   String get premiumIntegrity => 'Премиум интегритет';
@@ -764,7 +764,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get checkingQuranDb => 'Проверка на базата на податоци на Куранот...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Во ред';
 
   @override
   String get incomplete => 'Нецелосни';
@@ -841,7 +841,7 @@ class AppLocalizationsMk extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Намалете го нервозата на сензорот за постабилна игла.';
 
   @override
   String get calibrationOffset => 'Поместување на калибрација';
@@ -964,10 +964,10 @@ class AppLocalizationsMk extends AppLocalizations {
       'Извршете здравствени проверки и прегледајте го статусот на системот.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Порамнет кибла';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Ротирајте за да ја пронајдете Кибла';
 
   @override
   String get calibrationRequiredFigure8 =>

@@ -625,16 +625,16 @@ class AppLocalizationsNe extends AppLocalizations {
       'कुरान पढ्नुहोस्, आफ्नो पढाइ ट्र्याक गर्नुहोस्, र इस्लामिक सामग्री अन्वेषण गर्नुहोस्';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'धिकर पुस्तकालय';
 
   @override
   String get resetCounter => 'काउन्टर रिसेट गर्नुहोस्';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'लक्ष्य परिवर्तन गर्नुहोस्';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'नयाँ लक्ष्य';
 
   @override
   String targetCount(Object target) {
@@ -709,10 +709,10 @@ class AppLocalizationsNe extends AppLocalizations {
   String get fastingDebt => 'उपवास ऋण';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'रिसेट गर्नुहोस्';
 
   @override
-  String get days => 'Days';
+  String get days => 'दिनहरू';
 
   @override
   String get premiumIntegrity => 'प्रीमियम अखंडता';
@@ -762,7 +762,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get checkingQuranDb => 'कुरान डाटाबेस जाँच गर्दै...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ठीक छ';
 
   @override
   String get incomplete => 'अपूर्ण';
@@ -838,8 +838,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get compassSmoothing => 'कम्पास स्मूथिङ';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'स्थिर सुईको लागि सेन्सर जिटर घटाउनुहोस्।';
 
   @override
   String get calibrationOffset => 'क्यालिब्रेसन अफसेट';
@@ -961,10 +960,10 @@ class AppLocalizationsNe extends AppLocalizations {
       'स्वास्थ्य जाँचहरू चलाउनुहोस् र प्रणाली स्थिति हेर्नुहोस्।';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'किब्ला पङ्क्तिबद्ध';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qibla पत्ता लगाउन घुमाउनुहोस्';
 
   @override
   String get calibrationRequiredFigure8 =>

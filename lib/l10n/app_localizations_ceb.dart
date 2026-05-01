@@ -636,10 +636,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get resetCounter => 'I-reset ang Counter';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Usba ang Target';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Bag-ong Target';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get fastingDebt => 'Pagpuasa Utang';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'I-reset';
 
   @override
-  String get days => 'Days';
+  String get days => 'Mga adlaw';
 
   @override
   String get premiumIntegrity => 'Premium nga Integridad';
@@ -768,7 +768,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get checkingQuranDb => 'Pagsusi sa database sa Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'OK ra';
 
   @override
   String get incomplete => 'Dili kompleto';
@@ -845,7 +845,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Bawasan ang sensor jitter alang sa usa ka lig-on nga dagom.';
 
   @override
   String get calibrationOffset => 'Pag-calibrate Offset';
@@ -968,10 +968,10 @@ class AppLocalizationsCeb extends AppLocalizations {
       'Pagdalag mga pagsusi sa kahimsog ug tan-awa ang kahimtang sa sistema.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Gi-align sa Qibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'I-rotate aron Makita ang Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

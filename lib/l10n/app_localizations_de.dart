@@ -630,16 +630,16 @@ class AppLocalizationsDe extends AppLocalizations {
       'Lesen Sie den Koran, verfolgen Sie Ihre Lektüre und erkunden Sie islamische Inhalte';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Dhikr-Bibliothek';
 
   @override
   String get resetCounter => 'Zähler zurücksetzen';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Ziel ändern';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Neues Ziel';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get fastingDebt => 'Fastenschulden';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Zurücksetzen';
 
   @override
-  String get days => 'Days';
+  String get days => 'Tage';
 
   @override
   String get premiumIntegrity => 'Premium-Integrität';
@@ -768,7 +768,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get checkingQuranDb => 'Überprüfung der Korandatenbank...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Okay';
 
   @override
   String get incomplete => 'Unvollständig';
@@ -845,7 +845,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Reduzieren Sie Sensorjitter für eine stabilere Nadel.';
 
   @override
   String get calibrationOffset => 'Kalibrierungsoffset';
@@ -967,10 +967,10 @@ class AppLocalizationsDe extends AppLocalizations {
       'Führen Sie Gesundheitsprüfungen durch und zeigen Sie den Systemstatus an.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla ausgerichtet';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Drehen Sie, um Qibla zu finden';
 
   @override
   String get calibrationRequiredFigure8 =>

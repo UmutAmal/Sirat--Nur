@@ -765,7 +765,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get checkingQuranDb => 'Quran database enfiah mek...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'A THA E';
 
   @override
   String get incomplete => 'A kim lo';

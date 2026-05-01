@@ -626,16 +626,16 @@ class AppLocalizationsLo extends AppLocalizations {
       'ອ່ານ Quran​, ຕິດ​ຕາມ​ການ​ອ່ານ​ຂອງ​ທ່ານ​, ແລະ​ສໍາ​ຫຼວດ​ເນື້ອ​ໃນ​ອິດ​ສະ​ລາມ​';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ຫໍສະໝຸດ Dhikr';
 
   @override
   String get resetCounter => 'ຣີເຊັດໂຕນັບ';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ປ່ຽນເປົ້າໝາຍ';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'ເປົ້າໝາຍໃໝ່';
 
   @override
   String targetCount(Object target) {
@@ -710,10 +710,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get fastingDebt => 'ໜີ້ສິນ';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ຣີເຊັດ';
 
   @override
-  String get days => 'Days';
+  String get days => 'ມື້';
 
   @override
   String get premiumIntegrity => 'ຄວາມສົມບູນແບບພຣີມຽມ';
@@ -761,7 +761,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get checkingQuranDb => 'ກຳລັງກວດສອບຖານຂໍ້ມູນ Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ຕົກລົງ';
 
   @override
   String get incomplete => 'ບໍ່ສົມບູນ';
@@ -838,7 +838,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'ຫຼຸດການສັ່ນສະເທືອນຂອງເຊັນເຊີສຳລັບເຂັມທີ່ໝັ້ນຄົງຂຶ້ນ.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -959,10 +959,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get healthCheckDesc => 'ດໍາເນີນການກວດສຸຂະພາບ ແລະເບິ່ງສະຖານະຂອງລະບົບ.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla ຈັດຮຽງ';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'ໝຸນ​ເພື່ອ​ຊອກ​ຫາ Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>

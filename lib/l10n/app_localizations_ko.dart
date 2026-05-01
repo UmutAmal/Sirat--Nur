@@ -619,16 +619,16 @@ class AppLocalizationsKo extends AppLocalizations {
   String get onboarding3Desc => '꾸란을 읽고, 읽은 내용을 추적하고, 이슬람 콘텐츠를 탐색하세요.';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => '디크르 도서관';
 
   @override
   String get resetCounter => '카운터 재설정';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => '대상 변경';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => '새로운 타겟';
 
   @override
   String targetCount(Object target) {
@@ -702,10 +702,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get fastingDebt => '단식 부채';
 
   @override
-  String get reset => 'Reset';
+  String get reset => '재설정';
 
   @override
-  String get days => 'Days';
+  String get days => '일';
 
   @override
   String get premiumIntegrity => '프리미엄 무결성';
@@ -752,7 +752,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get checkingQuranDb => '꾸란 데이터베이스를 확인하는 중...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => '알았어';
 
   @override
   String get incomplete => '미완성';
@@ -828,8 +828,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get compassSmoothing => '나침반 스무딩';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => '안정적인 바늘을 위해 센서 지터를 줄입니다.';
 
   @override
   String get calibrationOffset => '교정 오프셋';
@@ -949,10 +948,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get healthCheckDesc => '상태 확인을 실행하고 시스템 상태를 봅니다.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla 정렬';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => '회전하여 Qibla 찾기';
 
   @override
   String get calibrationRequiredFigure8 => '교정이 필요합니다. 그림-8의 장치를 회전시킵니다.';

@@ -628,16 +628,16 @@ class AppLocalizationsMi extends AppLocalizations {
       'Panuitia te Quran, te whai i to panui, me te tirotiro i nga kaupapa Islamic';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Whare Pukapuka Dhikr';
 
   @override
   String get resetCounter => 'Tautuhi Kaitatau';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Hurihia te Whainga';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Whainga Hou';
 
   @override
   String targetCount(Object target) {
@@ -714,10 +714,10 @@ class AppLocalizationsMi extends AppLocalizations {
   String get fastingDebt => 'Puta Utu';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Tautuhi Anō';
 
   @override
-  String get days => 'Days';
+  String get days => 'Nga ra';
 
   @override
   String get premiumIntegrity => 'Tikanga Moni';
@@ -766,7 +766,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get checkingQuranDb => 'Kei te taki i te pātengi raraunga Quran...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'pai';
 
   @override
   String get incomplete => 'Kare i oti';
@@ -843,7 +843,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Whakaitihia te tangi o te pukoro mo te ngira pumau.';
 
   @override
   String get calibrationOffset => 'Wehenga Whakatau';
@@ -965,10 +965,10 @@ class AppLocalizationsMi extends AppLocalizations {
       'Whakahaerehia nga arowhai hauora me te tiro i te mana o te punaha.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Tirohanga Kibla';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Hurihia ki te Kimi Kibla';
 
   @override
   String get calibrationRequiredFigure8 =>

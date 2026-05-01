@@ -626,16 +626,16 @@ class AppLocalizationsTt extends AppLocalizations {
       'Коръән укыгыз, укуыгызны күзәтегез һәм Ислам эчтәлеген өйрәнегез';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Зикр китапханәсе';
 
   @override
   String get resetCounter => 'Счетчикны яңадан урнаштыру';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Максатны үзгәртү';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Яңа максат';
 
   @override
   String targetCount(Object target) {
@@ -709,10 +709,10 @@ class AppLocalizationsTt extends AppLocalizations {
   String get fastingDebt => 'Ураза бурычы';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Бетерү';
 
   @override
-  String get days => 'Days';
+  String get days => 'Көннәр';
 
   @override
   String get premiumIntegrity => 'Премиум бөтенлеге';
@@ -761,7 +761,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get checkingQuranDb => 'Коръән базасын тикшерү ...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'Ярар';
 
   @override
   String get incomplete => 'Тулы түгел';
@@ -837,8 +837,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get compassSmoothing => 'Компас тигезләү';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Стандарт энә өчен сенсор джитерын киметү.';
 
   @override
   String get calibrationOffset => 'Калибрлау офсеты';
@@ -960,10 +959,10 @@ class AppLocalizationsTt extends AppLocalizations {
       'Сәламәтлекне тикшерегез һәм система торышын карагыз.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Кибла тигезләнде';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Кибланы табу өчен әйләнегез';
 
   @override
   String get calibrationRequiredFigure8 =>

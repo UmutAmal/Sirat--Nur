@@ -631,16 +631,16 @@ class AppLocalizationsKy extends AppLocalizations {
       'Куранды окуңуз, окууңузга көз салып, исламий мазмунду изилдеңиз';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Зикир китепканасы';
 
   @override
   String get resetCounter => 'Эсептегичти баштапкы абалга келтирүү';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Максатты өзгөртүү';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Жаңы Максат';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get fastingDebt => 'Орозо карызы';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Калыбына келтирүү';
 
   @override
-  String get days => 'Days';
+  String get days => 'күндөр';
 
   @override
   String get premiumIntegrity => 'Premium Integrity';
@@ -767,7 +767,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get checkingQuranDb => 'Куран базасы текшерилүүдө...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'макул';
 
   @override
   String get incomplete => 'Толук эмес';
@@ -844,7 +844,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Туруктуураак ийне үчүн сенсордук житти азайтыңыз.';
 
   @override
   String get calibrationOffset => 'Калибрлөө офсет';
@@ -969,7 +969,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get qiblaAligned => 'Qibla Aligned';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Кыбыланы табуу үчүн айлантыңыз';
 
   @override
   String get calibrationRequiredFigure8 =>

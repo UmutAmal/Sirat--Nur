@@ -629,16 +629,16 @@ class AppLocalizationsOm extends AppLocalizations {
       'Qur\'aana dubbisi, dubbisa kee hordofi, qabiyyee Islaamaa qoradhu';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Mana Kitaabaa Dhikr';
 
   @override
   String get resetCounter => 'Lakkaawwii Irra Deebi\'i';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Target Jijjiiramaa';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Target Haaraa';
 
   @override
   String targetCount(Object target) {
@@ -715,10 +715,10 @@ class AppLocalizationsOm extends AppLocalizations {
   String get fastingDebt => 'Liqii Soomanaa';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Reset gochuu';
 
   @override
-  String get days => 'Days';
+  String get days => 'Guyyoota';
 
   @override
   String get premiumIntegrity => 'Integrity Preemiyeemii';
@@ -771,7 +771,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get checkingQuranDb => 'Kuusaa deetaa Qur\'aanaa sakatta\'uu...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'TOLE';
 
   @override
   String get incomplete => 'Guutuu hin taane';
@@ -848,14 +848,14 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Jitter sensor hir\'isuun needle dhaabbataa ta\'eef.';
 
   @override
   String get calibrationOffset => 'Ofseeti Safartuu';
 
   @override
   String currentOffset(Object offset) {
-    return 'Current: $offset°';
+    return 'Amma: $offset°';
   }
 
   @override
@@ -971,10 +971,10 @@ class AppLocalizationsOm extends AppLocalizations {
       'Sakatta\'iinsa fayyaa hojjechuu fi haala sirnaa ilaaluu.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla Hiriira';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Qibla Baruuf Naanna\'aa';
 
   @override
   String get calibrationRequiredFigure8 =>

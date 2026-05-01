@@ -625,16 +625,16 @@ class AppLocalizationsSd extends AppLocalizations {
       'قرآن پڙھو، پنھنجي پڙھڻ کي ٽريڪ ڪريو، ۽ اسلامي مواد جي ڳولا ڪريو';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'ذڪر لائبريري';
 
   @override
   String get resetCounter => 'ري سيٽ ڪريو ڪائونٽر';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'ھدف تبديل ڪريو';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'نئون ھدف';
 
   @override
   String targetCount(Object target) {
@@ -709,10 +709,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get fastingDebt => 'روزو رکڻ وارو قرض';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'ري سيٽ ڪريو';
 
   @override
-  String get days => 'Days';
+  String get days => 'ڏينهن';
 
   @override
   String get premiumIntegrity => 'پريميئم سالميت';
@@ -760,7 +760,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get checkingQuranDb => 'قرآن جي ڊيٽابيس کي چيڪ ڪندي...';
 
   @override
-  String get okLabel => 'OK';
+  String get okLabel => 'ٺيڪ';
 
   @override
   String get incomplete => 'نامڪمل';
@@ -836,8 +836,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get compassSmoothing => 'کمپاس سموٿنگ';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'هڪ مستحڪم سوئي لاء سينسر جٽ کي گھٽايو.';
 
   @override
   String get calibrationOffset => 'ڪليبريشن آفسيٽ';
@@ -849,7 +848,7 @@ class AppLocalizationsSd extends AppLocalizations {
 
   @override
   String get manualCorrectionDesc =>
-      'ترتيب ڏيو جيڪڏهن توهان جي ڪمپاس کي دستي اصلاح جي ضرورت آهي. مثبت قدر گھڙي گھڙي گھڙي.';
+      'ترتيب ڏيو جيڪڏهن توهان جي ڪمپاس کي دستي اصلاح جي ضرورت آهي. مثبت قدر گھڙيال جي رخ ۾ ڦرن ٿا.';
 
   @override
   String get apply => 'تبديليون لاڳو ڪريو';
@@ -958,10 +957,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get healthCheckDesc => 'صحت جي چڪاس کي هلائڻ ۽ سسٽم جي حالت ڏسو.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'قبله ٺھيل';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'قبله ڳولڻ لاءِ گھمايو';
 
   @override
   String get calibrationRequiredFigure8 =>

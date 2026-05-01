@@ -626,16 +626,16 @@ class AppLocalizationsCs extends AppLocalizations {
       'Přečtěte si Korán, sledujte své čtení a prozkoumejte islámský obsah';
 
   @override
-  String get dhikrLibrary => 'Dhikr Library';
+  String get dhikrLibrary => 'Knihovna Dhikr';
 
   @override
   String get resetCounter => 'Resetujte počítadlo';
 
   @override
-  String get changeTarget => 'Change Target';
+  String get changeTarget => 'Změnit cíl';
 
   @override
-  String get newTarget => 'New Target';
+  String get newTarget => 'Nový cíl';
 
   @override
   String targetCount(Object target) {
@@ -711,10 +711,10 @@ class AppLocalizationsCs extends AppLocalizations {
   String get fastingDebt => 'Postní dluh';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Resetovat';
 
   @override
-  String get days => 'Days';
+  String get days => 'Dny';
 
   @override
   String get premiumIntegrity => 'Prémiová integrita';
@@ -840,7 +840,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+      'Snižte chvění snímače pro stabilnější jehlu.';
 
   @override
   String get calibrationOffset => 'Kalibrační offset';
@@ -962,10 +962,10 @@ class AppLocalizationsCs extends AppLocalizations {
       'Spusťte kontroly stavu a zobrazte stav systému.';
 
   @override
-  String get qiblaAligned => 'Qibla Aligned';
+  String get qiblaAligned => 'Qibla zarovnaná';
 
   @override
-  String get rotateToFindQibla => 'Rotate to Find Qibla';
+  String get rotateToFindQibla => 'Otočením vyhledejte Qibla';
 
   @override
   String get calibrationRequiredFigure8 =>
