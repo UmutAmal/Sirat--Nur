@@ -170,7 +170,8 @@ L10nDebtReport buildL10nDebtReport({
       if (currentValue is! String || currentValue.trim().isEmpty) {
         missingOrEmptyLocales.add(locale);
       } else if (englishValue is String &&
-          _isEnglishFallbackEquivalent(currentValue, englishValue)) {
+          _isEnglishFallbackEquivalent(currentValue, englishValue) &&
+          !_isNeutralNonLinguisticValue(englishValue)) {
         sameAsEnglishLocales.add(locale);
       } else if (englishValue is String &&
           !_hasMatchingPlaceholders(currentValue, englishValue)) {
@@ -721,6 +722,10 @@ bool _shouldPreferExistingTranslation({
 bool _isEnglishFallbackEquivalent(String value, String source) {
   return _englishFallbackComparisonToken(value) ==
       _englishFallbackComparisonToken(source);
+}
+
+bool _isNeutralNonLinguisticValue(String value) {
+  return const {'--'}.contains(value.trim());
 }
 
 String _englishFallbackComparisonToken(String value) {

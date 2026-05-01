@@ -21161,3 +21161,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude repo/doctor/analyze/test tabanindan baslayip l10n same-as-English ve runtime smoke onboarding zamanlama risklerini yeniden skorla.
+
+## 2026-05-01 TUR-529 - Neutral Placeholder L10n Debt Report Guard
+
+### MASTER Karari
+- Risk: L10n debt raporu bilincli sembolik `--` degerini same-as-English borcu gibi sayiyordu. `prayerRemainingUnavailable` tum locale'lerde bilincli olarak `--` kalmali; bunu ceviri borcu gibi raporlamak sonraki dongulerde gercek UI metni ile non-linguistic placeholder'i karistirip yanlis ceviri patch'i uretme riski tasiyordu. P1 kalite araci dogruluk riski olarak ele alindi.
+- Kanit:
+  - `test/arb_ui_localization_test.dart:2561` tum ARB dosyalarinda `prayerRemainingUnavailable` degerinin `--` kalmasini zorunlu kiliyor.
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report prayerRemainingUnavailable duaSourceBukhari duaSourceMuslim duaSourceTirmidhi duaSourceAhmad duaSourceAbuDawud` toplam `1170` same-as-English sayiyordu; bunun `195` adedi sembolik `prayerRemainingUnavailable` degerinden geliyordu.
+  - Son durum: `tool/translate_arb_keys.dart:174` same-as-English sayimina girmeden once neutral non-linguistic degerleri disliyor; `tool/translate_arb_keys.dart:727` `--` icin helper tanimli.
+  - Regresyon guard: `test/translate_arb_keys_test.dart:189` `does not count neutral symbolic placeholders as English debt`.
+- Kullanici etkisi: L10n is listesi gercek cevrilebilir metinlere odaklanir; namaz kalan sure placeholder'i her dilde bilincli ve UI-stable `--` olarak korunur.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 5/25.
+- Rollback plani: Bu turdaki `tool/translate_arb_keys.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `buildL10nDebtReport` same-as-English kontrolu, English template degeri neutral non-linguistic ise borc saymayacak sekilde daraltildi.
+- Su an icin yalnizca `--` kapsandi; kapsam genisletilmedi, cunku sembolik olmayan proper-name veya kisa UI metinlerini yanlislikla gizlemek istemiyoruz.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\translate_arb_keys_test.dart --plain-name "does not count neutral symbolic placeholders as English debt" --reporter compact` PASS.
+- Targeted report: `dart run tool\translate_arb_keys.dart --report prayerRemainingUnavailable` PASS; same-as-English `0`, missing/empty `0`, placeholder mismatch `0`.
+- Proper-name/source report: `dart run tool\translate_arb_keys.dart --report prayerRemainingUnavailable duaSourceBukhari duaSourceMuslim duaSourceTirmidhi duaSourceAhmad duaSourceAbuDawud` `1170 -> 975` same-as-English; kalan 975 hadis kaynak proper-name degeridir ve bu turda cevrilmeye zorlanmadi.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `741/741`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `6b834683-cb00-4101-a4d2-fc98cddd8d4b`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- L10n debt report false-positive neutral placeholder riski: `16/25 -> 5/25`.
+- Kalan bilincli risk: Hadis kaynak adlari ve bazi canonical/proper-name dini terimler same-as-English gorunebilir; bunlar ceviri borcu olarak degil proper-name policy kapsaminda ayrica siniflandirilmalidir. Gercek cevrilebilir UI cumleleri icin 23 kritik l10n kumesi ve download/offline kumesi taranmaya devam etmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude proper-name/canonical dini terimleri l10n debt raporundan ayri siniflandirma veya kalan gercek UI same-as-English metinleri icin guvenli batch secimi yap.

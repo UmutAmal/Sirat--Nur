@@ -186,6 +186,22 @@ void main() {
       );
     });
 
+    test('does not count neutral symbolic placeholders as English debt', () {
+      final report = buildL10nDebtReport(
+        keys: ['prayerRemainingUnavailable'],
+        english: {'prayerRemainingUnavailable': '--'},
+        localeArbs: {
+          'en': {'prayerRemainingUnavailable': '--'},
+          'tr': {'prayerRemainingUnavailable': '--'},
+          'ar': {'prayerRemainingUnavailable': '--'},
+        },
+      );
+
+      expect(report.sameAsEnglishCount, 0);
+      expect(report.hasDebt, isFalse);
+      expect(report.format(), contains('No l10n debt found'));
+    });
+
     test('tracks committed low-resource l10n debt reduction', () {
       const keys = [
         'downloadAction',
