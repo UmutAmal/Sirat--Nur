@@ -410,7 +410,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get today => 'Îro';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Sibe';
 
   @override
   String get yesterday => 'Yesterday';
@@ -505,7 +505,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Dema ragihandinê';
 
   @override
   String get beforePrayer => 'minutes before prayer';

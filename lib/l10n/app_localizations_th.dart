@@ -409,7 +409,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get today => 'วันนี้';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'พรุ่งนี้';
 
   @override
   String get yesterday => 'Yesterday';
@@ -485,7 +485,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'ตั้งค่าตำแหน่งจริงของคุณก่อนที่จะใช้เข็มทิศ Qibla เพื่อให้สามารถคำนวณทิศทางได้อย่างแม่นยำ';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
@@ -495,7 +495,7 @@ class AppLocalizationsTh extends AppLocalizations {
       'Prayer time alerts with adhan sound.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'การแจ้งเตือน';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -504,7 +504,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'เวลาแจ้งเตือน';
 
   @override
   String get beforePrayer => 'minutes before prayer';

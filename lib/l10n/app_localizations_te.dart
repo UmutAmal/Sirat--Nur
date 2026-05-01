@@ -410,7 +410,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get today => 'ఈరోజు';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'రేపు';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsTe extends AppLocalizations {
       'అధాన్ ధ్వనితో ప్రార్థన సమయ హెచ్చరికలు.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'నోటిఫికేషన్‌లు';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'నోటిఫికేషన్ సమయం';
 
   @override
   String get beforePrayer => 'minutes before prayer';

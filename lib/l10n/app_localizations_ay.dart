@@ -493,7 +493,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Chiqpach kawkhans jikxatasi ukx janïr brújula Qibla apnaqañkamaw utt’ayañama, ukhamat kawkir sarañas chiqaparu jakt’asiñapataki.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Yatiyawinaka';

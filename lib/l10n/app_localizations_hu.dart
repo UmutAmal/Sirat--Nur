@@ -412,7 +412,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get today => 'Ma';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Holnap';
 
   @override
   String get yesterday => 'Yesterday';
@@ -498,7 +498,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'Az imaidő figyelmeztetések adhan hanggal.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Értesítések';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -507,7 +507,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Értesítési idő';
 
   @override
   String get beforePrayer => 'minutes before prayer';

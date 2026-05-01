@@ -410,7 +410,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get today => 'Namhlanje';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Ngomso';
 
   @override
   String get yesterday => 'Yesterday';
@@ -486,7 +486,7 @@ class AppLocalizationsXh extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Misela indawo yakho yokwenyani phambi kokusebenzisa ikhampasi yeQibla ukuze ulwalathiso lubalwe ngokuchanekileyo.';
 
   @override
   String get adhanNotificationChannelName => 'Izaziso ze-Adhan';
@@ -496,7 +496,7 @@ class AppLocalizationsXh extends AppLocalizations {
       'Izilumkiso zexesha lomthandazo kunye nesandi se-adhan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Izaziso';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Ixesha lesaziso';
 
   @override
   String get beforePrayer => 'minutes before prayer';

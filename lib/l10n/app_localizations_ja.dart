@@ -408,7 +408,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get today => '今日';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => '明日';
 
   @override
   String get yesterday => 'Yesterday';
@@ -492,7 +492,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get adhanNotificationChannelDescription => '礼拝時間はアザーン音でお知らせします。';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => '通知';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -501,7 +501,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => '通知時間';
 
   @override
   String get beforePrayer => 'minutes before prayer';

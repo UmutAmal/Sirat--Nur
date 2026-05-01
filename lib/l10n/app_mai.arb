@@ -229,7 +229,7 @@
   },
   "qiblaSensorUnavailable": "एहि डिवाइस पर कम्पास सेंसर अनुपलब्ध अछि ।",
   "qiblaLocationRequiredTitle": "किबला के लिये स्थान आवश्यक",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "qiblaLocationRequiredBody": "किबला कम्पास के उपयोग करय सं पहिने अपन वास्तविक स्थान सेट करू ताकि दिशा के सही गणना भ सकय.",
   "adhanNotificationChannelName": "अधान अधिसूचना",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "अधिसूचना",

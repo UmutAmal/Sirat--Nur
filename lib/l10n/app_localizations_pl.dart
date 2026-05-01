@@ -411,7 +411,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get today => 'Dzisiaj';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Jutro';
 
   @override
   String get yesterday => 'Yesterday';
@@ -497,7 +497,7 @@ class AppLocalizationsPl extends AppLocalizations {
       'Alerty czasu modlitwy z dźwiękiem Adhan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Powiadomienia';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -506,7 +506,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Czas powiadomienia';
 
   @override
   String get beforePrayer => 'minutes before prayer';

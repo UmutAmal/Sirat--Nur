@@ -411,7 +411,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get today => 'ଆଜି |';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'ଆସନ୍ତାକାଲି |';
 
   @override
   String get yesterday => 'Yesterday';
@@ -498,7 +498,7 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଆଦନ ଧ୍ୱନି ସହିତ ପ୍ରାର୍ଥନା ସମୟ ଆଲର୍ଟ |';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'ବିଜ୍ଞପ୍ତିଗୁଡିକ';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -507,7 +507,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'ବିଜ୍ଞପ୍ତି ସମୟ |';
 
   @override
   String get beforePrayer => 'minutes before prayer';

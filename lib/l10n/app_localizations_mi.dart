@@ -411,7 +411,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get today => 'I tenei ra';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Apopo';
 
   @override
   String get yesterday => 'Yesterday';
@@ -498,7 +498,7 @@ class AppLocalizationsMi extends AppLocalizations {
       'Matohi wa inoi me te tangi azan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Whakamōhiotanga';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -507,7 +507,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Wā Whakamōhiotanga';
 
   @override
   String get beforePrayer => 'minutes before prayer';

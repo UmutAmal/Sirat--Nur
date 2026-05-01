@@ -489,7 +489,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Ikeddengmo ti aktual a lokasionmo sakbay nga usarem ti kompas ti Qibla tapno umiso ti pannakakuenta ti direksion.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';

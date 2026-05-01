@@ -412,7 +412,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get today => 'Kunan';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Paqarin';
 
   @override
   String get yesterday => 'Yesterday';
@@ -488,7 +488,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Qibla brújula nisqawan manaraq llamk\'achkaspa chiqap maypi kasqaykita churay, chaynapi mayman rinaykipaq allinta yupanapaq.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
@@ -498,7 +498,7 @@ class AppLocalizationsQu extends AppLocalizations {
       'Prayer time alerts with adhan sound.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Willakuykuna';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -507,7 +507,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Willakuy pacha';
 
   @override
   String get beforePrayer => 'minutes before prayer';

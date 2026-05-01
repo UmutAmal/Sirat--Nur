@@ -486,7 +486,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Set yu rial ples bifo yu yuz di Qibla kɔmpas so dat dɛn go ebul fɔ kɔl di dairekshɔn kɔrɛkt wan.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';

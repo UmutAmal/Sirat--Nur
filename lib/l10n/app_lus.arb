@@ -229,7 +229,7 @@
   },
   "qiblaSensorUnavailable": "He device ah hian Compass sensor a awm lo.",
   "qiblaLocationRequiredTitle": "Qibla tan hmun mamawh a ni",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "qiblaLocationRequiredBody": "Qibla compass i hman hmain i awmna tak tak kha set la, chutiang chuan direction dik taka chhut theih a ni.",
   "adhanNotificationChannelName": "Adhan Hriattirna",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Hriattirna te",

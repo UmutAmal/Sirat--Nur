@@ -486,7 +486,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Aw ye aw sigiyɔrɔ yɛrɛ sigi sani aw ka baara kɛ ni Qibla boussole ye walasa sira ka se ka jate ka ɲɛ.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';

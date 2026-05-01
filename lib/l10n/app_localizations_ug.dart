@@ -410,7 +410,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get today => 'بۈگۈن';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'ئەتە';
 
   @override
   String get yesterday => 'Yesterday';
@@ -486,7 +486,7 @@ class AppLocalizationsUg extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Qibla كومپاسنى ئىشلىتىشتىن بۇرۇن ئەمەلىي ئورنىڭىزنى بەلگىلەڭ ، يۆنىلىشنى توغرا ھېسابلىغىلى بولىدۇ.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan ئۇقتۇرۇشى';
@@ -496,7 +496,7 @@ class AppLocalizationsUg extends AppLocalizations {
       'ناماز ئاۋازى بىلەن ناماز ۋاقتى ئاگاھلاندۇرۇلىدۇ.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'ئۇقتۇرۇش';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'ئۇقتۇرۇش ۋاقتى';
 
   @override
   String get beforePrayer => 'minutes before prayer';

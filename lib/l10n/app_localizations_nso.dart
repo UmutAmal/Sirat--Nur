@@ -489,7 +489,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Beakanya lefelo la gago la kgonthe pele o diriša khamphase ya Qibla gore tlhahlo e kgone go balwa ka nepo.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';

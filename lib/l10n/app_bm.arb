@@ -229,7 +229,7 @@
   },
   "qiblaSensorUnavailable": "Boussole sensor tɛ sɔrɔ nin minɛn in kan.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "qiblaLocationRequiredBody": "Aw ye aw sigiyɔrɔ yɛrɛ sigi sani aw ka baara kɛ ni Qibla boussole ye walasa sira ka se ka jate ka ɲɛ.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Ladɔnniyaliw",

@@ -411,7 +411,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get today => 'Dnes';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'zajtra';
 
   @override
   String get yesterday => 'Yesterday';
@@ -497,7 +497,7 @@ class AppLocalizationsSk extends AppLocalizations {
       'Upozorňuje na čas modlitby zvukom adhan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Upozornenia';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -506,7 +506,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Čas upozornenia';
 
   @override
   String get beforePrayer => 'minutes before prayer';

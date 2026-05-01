@@ -410,7 +410,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get today => 'היינט';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'מאָרגן';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsYi extends AppLocalizations {
       'תפילה צייט אַלערץ מיט אַדהאַן געזונט.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'נאָוטאַפאַקיישאַנז';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'אָנזאָג צייט';
 
   @override
   String get beforePrayer => 'minutes before prayer';

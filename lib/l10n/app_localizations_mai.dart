@@ -486,7 +486,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'किबला कम्पास के उपयोग करय सं पहिने अपन वास्तविक स्थान सेट करू ताकि दिशा के सही गणना भ सकय.';
 
   @override
   String get adhanNotificationChannelName => 'अधान अधिसूचना';

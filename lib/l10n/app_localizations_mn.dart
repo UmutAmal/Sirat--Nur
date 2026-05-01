@@ -410,7 +410,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get today => 'Өнөөдөр';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Маргааш';
 
   @override
   String get yesterday => 'Yesterday';
@@ -497,7 +497,7 @@ class AppLocalizationsMn extends AppLocalizations {
       'Залбирлын цагийг азаны дуугаар дохио өгдөг.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Мэдэгдэл';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -506,7 +506,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Мэдэгдлийн цаг';
 
   @override
   String get beforePrayer => 'minutes before prayer';

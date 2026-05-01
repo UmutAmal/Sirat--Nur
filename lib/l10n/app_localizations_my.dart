@@ -412,7 +412,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get today => 'ဒီနေ့';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'မနက်ဖြန်';
 
   @override
   String get yesterday => 'Yesterday';
@@ -498,7 +498,7 @@ class AppLocalizationsMy extends AppLocalizations {
       'အဒ်ဟန်အသံဖြင့် ဆုတောင်းချိန်သတိပေးချက်။';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'အသိပေးချက်များ';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -507,7 +507,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'အကြောင်းကြားချက်အချိန်';
 
   @override
   String get beforePrayer => 'minutes before prayer';

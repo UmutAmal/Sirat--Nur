@@ -489,7 +489,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Emohenda nde moõpa oĩ añetehápe reipuru mboyve pe brújula Qibla ikatu hag̃uáicha ojekalkula hekopete pe direksión.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';

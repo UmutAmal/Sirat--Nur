@@ -411,7 +411,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get today => 'Šodien';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'rīt';
 
   @override
   String get yesterday => 'Yesterday';
@@ -497,7 +497,7 @@ class AppLocalizationsLv extends AppLocalizations {
       'Lūgšanu laika brīdinājumi ar Adhan skaņu.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Paziņojumi';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -506,7 +506,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Paziņojuma laiks';
 
   @override
   String get beforePrayer => 'minutes before prayer';

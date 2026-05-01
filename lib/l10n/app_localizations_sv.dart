@@ -409,7 +409,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get today => 'Idag';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Imorgon';
 
   @override
   String get yesterday => 'Yesterday';
@@ -495,7 +495,7 @@ class AppLocalizationsSv extends AppLocalizations {
       'Bönetidslarm med adhan-ljud.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Aviseringar';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -504,7 +504,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Aviseringstid';
 
   @override
   String get beforePrayer => 'minutes before prayer';

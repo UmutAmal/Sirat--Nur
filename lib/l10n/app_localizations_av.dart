@@ -33,7 +33,7 @@ class AppLocalizationsAv extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Хадусеб как .';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -100,7 +100,7 @@ class AppLocalizationsAv extends AppLocalizations {
   String get cacheClearedSuccess => 'Cache cleared successfully';
 
   @override
-  String get location => 'Location';
+  String get location => 'Вугев бакӀ';
 
   @override
   String get language => 'Language';
@@ -118,14 +118,15 @@ class AppLocalizationsAv extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'БакӀалъул хъулухъ гьоркьоб къотӀизабун букӀана.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'БакӀалъул изну кьечӀо.';
 
   @override
   String get locationDetectionFailed =>
-      'Could not detect your location. Please choose a city manually or try again.';
+      'Дур бакӀ лъазе кӀвечӀо. Пожалуйста, выберите город вручную или попробуйте еще раз.';
 
   @override
   String citiesCount(String count) {
@@ -410,7 +411,7 @@ class AppLocalizationsAv extends AppLocalizations {
   String get today => 'Today';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Метер';
 
   @override
   String get yesterday => 'Yesterday';
@@ -486,7 +487,7 @@ class AppLocalizationsAv extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Къиблаялъул компас хӀалтӀизабизегӀан нужерго хӀакъикъияб бакӀ чӀезабе, рахъ мухӀканго хӀисаб гьабизе рес букӀине.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
@@ -496,7 +497,7 @@ class AppLocalizationsAv extends AppLocalizations {
       'Prayer time alerts with adhan sound.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Уведомления';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +506,7 @@ class AppLocalizationsAv extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Лъазабиялъул заман';
 
   @override
   String get beforePrayer => 'minutes before prayer';
@@ -616,7 +617,7 @@ class AppLocalizationsAv extends AppLocalizations {
   String get onboarding2Title => 'Prayer Times';
 
   @override
-  String get onboarding2Desc => 'Accurate prayer times based on your location';
+  String get onboarding2Desc => 'Дур бакӀалда рекъон мухӀканаб какил заман';
 
   @override
   String get onboarding3Title => 'Quran & More';

@@ -33,7 +33,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get settings => 'सेटिंग्स्';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'अग्रिमः प्रार्थना';
 
   @override
   String get prayerTimes => 'प्रार्थना समय';
@@ -100,7 +100,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get cacheClearedSuccess => 'Cache cleared successfully';
 
   @override
-  String get location => 'Location';
+  String get location => 'स्थानीय';
 
   @override
   String get language => 'Language';
@@ -410,7 +410,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get today => 'Today';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'श्वः';
 
   @override
   String get yesterday => 'Yesterday';
@@ -486,7 +486,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Qibla कम्पासस्य उपयोगात् पूर्वं स्वस्य वास्तविकं स्थानं सेट् कुर्वन्तु येन दिशायाः गणना सटीकरूपेण कर्तुं शक्यते ।';
 
   @override
   String get adhanNotificationChannelName => 'अधान अधिसूचना';
@@ -496,7 +496,7 @@ class AppLocalizationsSa extends AppLocalizations {
       'Prayer time alerts with adhan sound.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'अधिसूचनाः';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'अधिसूचना समयः';
 
   @override
   String get beforePrayer => 'minutes before prayer';
@@ -616,7 +616,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get onboarding2Title => 'Prayer Times';
 
   @override
-  String get onboarding2Desc => 'Accurate prayer times based on your location';
+  String get onboarding2Desc => 'भवतः स्थानस्य आधारेण सटीकाः प्रार्थनासमयाः';
 
   @override
   String get onboarding3Title => 'Quran & More';

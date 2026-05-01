@@ -410,7 +410,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get today => 'ມື້ນີ້';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'ມື້ອື່ນ';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsLo extends AppLocalizations {
       'ແຈ້ງເຕືອນເວລາອະທິຖານດ້ວຍສຽງ adhan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'ການແຈ້ງເຕືອນ';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'ເວລາແຈ້ງການ';
 
   @override
   String get beforePrayer => 'minutes before prayer';

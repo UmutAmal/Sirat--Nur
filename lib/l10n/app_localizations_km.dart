@@ -410,7 +410,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get today => 'ថ្ងៃនេះ';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'ថ្ងៃស្អែក';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsKm extends AppLocalizations {
       'ការដាស់តឿនពេលវេលាអធិស្ឋានជាមួយនឹងសំឡេង adhan ។';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'ការជូនដំណឹង';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'ពេលវេលាជូនដំណឹង';
 
   @override
   String get beforePrayer => 'minutes before prayer';

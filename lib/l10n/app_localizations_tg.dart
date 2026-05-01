@@ -410,7 +410,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get today => 'Имруз';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Пагох';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsTg extends AppLocalizations {
       'Огоҳии вақти намоз бо садои азон.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Огоҳиномаҳо';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Вақти огоҳӣ';
 
   @override
   String get beforePrayer => 'minutes before prayer';

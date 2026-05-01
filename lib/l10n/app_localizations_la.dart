@@ -410,7 +410,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get today => 'hodie';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Cras';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsLa extends AppLocalizations {
       'Orationis tempus summis cum adhan sono.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Acta Vicimediorum';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Notification Tempus';
 
   @override
   String get beforePrayer => 'minutes before prayer';

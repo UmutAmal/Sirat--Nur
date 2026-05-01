@@ -407,7 +407,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get today => '오늘';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => '내일';
 
   @override
   String get yesterday => 'Yesterday';
@@ -491,7 +491,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get adhanNotificationChannelDescription => '아단 소리로 기도 시간 알림.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => '알림';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -500,7 +500,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => '알림 시간';
 
   @override
   String get beforePrayer => 'minutes before prayer';

@@ -410,7 +410,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get today => 'Hôm nay';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Ngày mai';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Cảnh báo thời gian cầu nguyện với âm thanh adhan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Thông báo';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Thời gian thông báo';
 
   @override
   String get beforePrayer => 'minutes before prayer';

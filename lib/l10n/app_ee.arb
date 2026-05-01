@@ -229,7 +229,7 @@
   },
   "qiblaSensorUnavailable": "Compass sensor mele mɔ̃ sia dzi o.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "qiblaLocationRequiredBody": "Ðo afi si nèle ŋutɔŋutɔ hafi nàzã Qibla kɔmpasi ale be woate ŋu abu mɔfiame si dzi nàto la nyuie.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Nyatakakawo",

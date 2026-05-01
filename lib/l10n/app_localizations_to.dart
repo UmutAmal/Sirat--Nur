@@ -33,7 +33,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get settings => 'Settings';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Lotu Hoko';
 
   @override
   String get prayerTimes => 'Prayer Times';
@@ -100,7 +100,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get cacheClearedSuccess => 'Cache cleared successfully';
 
   @override
-  String get location => 'Location';
+  String get location => 'Tu\'u\'anga';
 
   @override
   String get language => 'Language';
@@ -118,14 +118,16 @@ class AppLocalizationsTo extends AppLocalizations {
   String get currentLocation => 'Current Location (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled =>
+      'ʻOku fakataʻeʻaongaʻi ʻa e sevesi ʻo e feituʻú.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied =>
+      'Faka\'ikai\'i \'a e ngofua ki he feitu\'u.';
 
   @override
   String get locationDetectionFailed =>
-      'Could not detect your location. Please choose a city manually or try again.';
+      'Na\'e \'ikai lava ke \'ilo\'i ho feitu\'u. Kātaki ʻo fili ha kolo ʻaki ho nimá pe toe feinga.';
 
   @override
   String citiesCount(String count) {
@@ -410,7 +412,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get today => 'Today';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'ʻapongipongi';
 
   @override
   String get yesterday => 'Yesterday';
@@ -486,7 +488,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Seti ho feituʻu moʻoní kimuʻa peá ke fakaʻaongaʻi ʻa e kāpasa Qibla koeʻuhí ke lava ʻo fikaʻi totonu ʻa e fakahinohinó.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
@@ -496,7 +498,7 @@ class AppLocalizationsTo extends AppLocalizations {
       'Prayer time alerts with adhan sound.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Ngaahi Fakatokanga';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +507,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Taimi Fakatokanga';
 
   @override
   String get beforePrayer => 'minutes before prayer';
@@ -616,7 +618,8 @@ class AppLocalizationsTo extends AppLocalizations {
   String get onboarding2Title => 'Prayer Times';
 
   @override
-  String get onboarding2Desc => 'Accurate prayer times based on your location';
+  String get onboarding2Desc =>
+      'Ngaahi taimi lotu totonu makatu\'unga \'i ho feitu\'u \'oku ke \'i ai .';
 
   @override
   String get onboarding3Title => 'Quran & More';

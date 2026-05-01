@@ -486,7 +486,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Postavite svoju stvarnu lokaciju prije korištenja Qibla kompasa kako bi se smjer mogao točno izračunati.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';

@@ -411,7 +411,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get today => 'Androany';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Rahampitso';
 
   @override
   String get yesterday => 'Yesterday';
@@ -497,7 +497,7 @@ class AppLocalizationsMg extends AppLocalizations {
       'Fampandrenesana ny fotoam-bavaka miaraka amin\'ny feon\'ny adhan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Fampandrenesana';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -506,7 +506,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Ora fampahafantarana';
 
   @override
   String get beforePrayer => 'minutes before prayer';

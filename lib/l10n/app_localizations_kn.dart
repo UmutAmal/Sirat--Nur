@@ -410,7 +410,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get today => 'ಇಂದು';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'ನಾಳೆ';
 
   @override
   String get yesterday => 'Yesterday';
@@ -495,7 +495,7 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಅಧಾನ್ ಧ್ವನಿಯೊಂದಿಗೆ ಪ್ರಾರ್ಥನೆ ಸಮಯದ ಎಚ್ಚರಿಕೆಗಳು.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'ಅಧಿಸೂಚನೆಗಳು';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -504,7 +504,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'ಅಧಿಸೂಚನೆ ಸಮಯ';
 
   @override
   String get beforePrayer => 'minutes before prayer';

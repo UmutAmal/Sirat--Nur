@@ -229,7 +229,7 @@
   },
   "qiblaSensorUnavailable": "Sensor de brújula ukax janiw aka dispositivo ukanx utjkiti.",
   "qiblaLocationRequiredTitle": "Qibla markatakix kawkhantix utjki ukax wakisiwa",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "qiblaLocationRequiredBody": "Chiqpach kawkhans jikxatasi ukx janïr brújula Qibla apnaqañkamaw utt’ayañama, ukhamat kawkir sarañas chiqaparu jakt’asiñapataki.",
   "adhanNotificationChannelName": "Adhan Yatiyawinaka",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Yatiyawinaka",

@@ -410,7 +410,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get today => 'I aso nei';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'O taeao';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsSm extends AppLocalizations {
       'Talosaga taimi tatalo ma le leo azan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Fa\'asilasilaga';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Taimi Fa\'asilasilaga';
 
   @override
   String get beforePrayer => 'minutes before prayer';

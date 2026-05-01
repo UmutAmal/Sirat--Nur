@@ -487,7 +487,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+      'Qibla compass i hman hmain i awmna tak tak kha set la, chutiang chuan direction dik taka chhut theih a ni.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Hriattirna';

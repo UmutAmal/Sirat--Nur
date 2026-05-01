@@ -409,7 +409,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get today => 'Nhasi';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Mangwana';
 
   @override
   String get yesterday => 'Yesterday';
@@ -504,7 +504,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Nguva Yekuzivisa';
 
   @override
   String get beforePrayer => 'minutes before prayer';

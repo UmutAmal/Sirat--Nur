@@ -411,7 +411,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get today => 'Bu gün';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Ertir';
 
   @override
   String get yesterday => 'Yesterday';
@@ -497,7 +497,7 @@ class AppLocalizationsTk extends AppLocalizations {
       'Adhan sesi bilen doga wagty duýduryşlary.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Duýduryşlar';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -506,7 +506,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Duýduryş wagty';
 
   @override
   String get beforePrayer => 'minutes before prayer';

@@ -229,7 +229,7 @@
   },
   "qiblaSensorUnavailable": "Níl braiteoir compáis ar fáil ar an ngléas seo.",
   "qiblaLocationRequiredTitle": "Location required for Qibla",
-  "qiblaLocationRequiredBody": "Set your actual location before using the Qibla compass so the direction can be calculated accurately.",
+  "qiblaLocationRequiredBody": "Socraigh do shuíomh iarbhír sula n-úsáideann tú an compás Qibla ionas gur féidir an treo a ríomh go cruinn.",
   "adhanNotificationChannelName": "Adhan Notifications",
   "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
   "notifications": "Fógraí",

@@ -410,7 +410,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get today => 'Bugun';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Ertaga';
 
   @override
   String get yesterday => 'Yesterday';
@@ -496,7 +496,7 @@ class AppLocalizationsUz extends AppLocalizations {
       'Namoz vaqti azon ovozi bilan ogohlantiriladi.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Bildirishnomalar';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -505,7 +505,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Xabar berish vaqti';
 
   @override
   String get beforePrayer => 'minutes before prayer';

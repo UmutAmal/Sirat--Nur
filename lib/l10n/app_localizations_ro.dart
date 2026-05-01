@@ -413,7 +413,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get today => 'Astăzi';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'Mâine';
 
   @override
   String get yesterday => 'Yesterday';
@@ -499,7 +499,7 @@ class AppLocalizationsRo extends AppLocalizations {
       'Alerte de timp de rugăciune cu sunet adhan.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'Notificări';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -508,7 +508,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'Ora de notificare';
 
   @override
   String get beforePrayer => 'minutes before prayer';

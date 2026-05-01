@@ -20273,6 +20273,39 @@
 ### Sonraki Adim
 - Yeni dongude en yuksek kalan riski sec: single-surah runtime download smoke altyapisi, kalan low-resource l10n fallback cluster'i veya resmi kurum bazli ulke profilleri audit'i.
 
+## 2026-05-01 TUR-508 - Home Location Notification Onboarding L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Home, location permission/service, Qibla location requirement, notification timing ve onboarding aciklama metinlerinde dusuk kaynakli locale'lerde Ingilizce fallback yogunlugu vardi. Bu, "tum dillerde esit kapsam" hedefini ve ilk acilis/izin akisi guvenini zayiflatiyordu.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report nextPrayer location locationServiceDisabled locationPermissionDenied locationDetectionFailed qiblaLocationRequiredBody notifications notificationTime onboarding2Desc tomorrow` same-as-English `882`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 10 anahtarda same-as-English `299`, missing/empty `0`, placeholder mismatch `0`.
+  - `lib/l10n/app_gv.arb` icinde `qiblaLocationRequiredBody` icin batch tekrarli/anlamsiz Manx cikti urettigi icin guvenli English fallback korundu; sahte ceviri yerine durust fallback tercih edildi.
+  - `lib/l10n/app_sa.arb` icinde `tomorrow`, `notifications`, `notificationTime` batch prefix/multiline debris'ten arindirildi.
+  - `lib/l10n/app_ti.arb` icinde `tomorrow`, `notifications`, `notificationTime` batch prefix/multiline debris'ten arindirildi.
+- Kullanici etkisi: Ana ekran siradaki namaz, konum hatalari, Qibla konum uyarisi, bildirim zamanlari, onboarding aciklamasi ve yarin etiketi daha fazla dilde yerel gorunur; dusuk kaynakli dillerde uydurma veya kirli metin yerine testli guvenli cikti korunur.
+- Risk skoru: Etki 3 x Olasilik 4 = 12/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `nextPrayer`, `location`, `locationServiceDisabled`, `locationPermissionDenied`, `locationDetectionFailed`, `qiblaLocationRequiredBody`, `notifications`, `notificationTime`, `onboarding2Desc`, `tomorrow` icin kontrollu l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- Batch debris guard'in yakaladigi `gv/sa/ti` degerleri minimal elle duzeltildi; Manx icin guvenilir olmayan dini/konum copy'si uydurulmadi.
+
+### TESTER Degisikligi
+- Targeted l10n tests: `flutter test test\translate_arb_keys_test.dart test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\l10n_generated_sync_test.dart --reporter compact` PASS, `143/143`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `720/720`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `98ff7181-4796-47a2-956e-313179e12c83`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94631818`.
+
+### Risk Degisimi
+- Home/Location/Notification/Onboarding 10 anahtarli low-resource fallback borcu: `12/25 -> 6/25`.
+- Kalan bilincli risk: 299 same-as-English locale-key cok dusuk kaynakli dillerde veya guvenli ceviri uretilemeyen durumlarda korunuyor; bu alanlarda anlamsiz/yanlis dini veya izin metni uretmek yerine English fallback daha guvenli.
+
+### Sonraki Adim
+- Yeni dongude en yuksek kalan riski sec: kalan l10n fallback cluster'lari, resmi kurum/mezhep prayer profile audit'i, notification/OEM exact alarm davranisi veya offline audio storage/runtime surekliligi.
+
 ## 2026-05-01 TUR-506 - Prayer Diagnostics Low-Resource L10n Debt Reduction
 
 ### MASTER Karari

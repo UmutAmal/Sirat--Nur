@@ -410,7 +410,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get today => 'اڄ';
 
   @override
-  String get tomorrow => 'Tomorrow';
+  String get tomorrow => 'سڀاڻي';
 
   @override
   String get yesterday => 'Yesterday';
@@ -495,7 +495,7 @@ class AppLocalizationsSd extends AppLocalizations {
       'اذان جي آواز سان نماز جو وقت خبردار ڪري ٿو.';
 
   @override
-  String get notifications => 'Notifications';
+  String get notifications => 'نوٽيفڪيشن';
 
   @override
   String get prayerNotifications => 'Prayer Notifications';
@@ -504,7 +504,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get enableNotifications => 'Enable Notifications';
 
   @override
-  String get notificationTime => 'Notification Time';
+  String get notificationTime => 'نوٽيفڪيشن جو وقت';
 
   @override
   String get beforePrayer => 'minutes before prayer';
