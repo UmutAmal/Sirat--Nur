@@ -29,6 +29,9 @@ const selectableAudioVoices = [
   sudaisVoice,
 ];
 
+const double _minQiblaOffset = -180.0;
+const double _maxQiblaOffset = 180.0;
+
 String normalizeAudioVoice(String voice) {
   final normalized = voice.trim().toLowerCase();
   switch (normalized) {
@@ -112,6 +115,14 @@ bool isValidLongitude(double? longitude) {
 
 bool hasValidLocationCoordinates(double? latitude, double? longitude) {
   return isValidLatitude(latitude) && isValidLongitude(longitude);
+}
+
+double normalizeQiblaOffset(double? offset) {
+  if (offset == null || !offset.isFinite) {
+    return 0.0;
+  }
+
+  return offset.clamp(_minQiblaOffset, _maxQiblaOffset).toDouble();
 }
 
 void _assertValidLocationCoordinates(double latitude, double longitude) {
@@ -223,6 +234,7 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   SettingsNotifier(this._prefs) : super(_loadSettingsState(_prefs)) {
     _repairStoredLocation();
     _repairStoredTimezone();
+    _repairStoredQiblaOffset();
     _repairStoredCustomAngles();
   }
 
@@ -261,6 +273,18 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
 
     if (storedTimezone != resolvedTimezone) {
       unawaited(_prefs.setString('timezone', resolvedTimezone));
+    }
+  }
+
+  void _repairStoredQiblaOffset() {
+    final storedOffset = _prefs.getDouble('qiblaOffset');
+    if (storedOffset == null) {
+      return;
+    }
+
+    final repairedOffset = normalizeQiblaOffset(storedOffset);
+    if (storedOffset != repairedOffset) {
+      unawaited(_prefs.setDouble('qiblaOffset', repairedOffset));
     }
   }
 
@@ -313,8 +337,9 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
   }
 
   Future<void> updateQiblaOffset(double offset) async {
-    await _prefs.setDouble('qiblaOffset', offset);
-    state = state.copyWith(qiblaOffset: offset);
+    final normalizedOffset = normalizeQiblaOffset(offset);
+    await _prefs.setDouble('qiblaOffset', normalizedOffset);
+    state = state.copyWith(qiblaOffset: normalizedOffset);
   }
 
   Future<void> toggleQiblaSmoothing(bool enabled) async {
@@ -465,7 +490,7 @@ SettingsState _loadSettingsState(SharedPreferences prefs) {
     audioVoice: normalizeAudioVoice(
       prefs.getString('audioVoice') ?? misharyAlafasyVoice,
     ),
-    qiblaOffset: prefs.getDouble('qiblaOffset') ?? 0.0,
+    qiblaOffset: normalizeQiblaOffset(prefs.getDouble('qiblaOffset')),
     qiblaSmoothingEnabled: prefs.getBool('qiblaSmoothingEnabled') ?? true,
     fajrAngle: storedMethod == customPrayerMethod
         ? _loadCustomPrayerAngle(prefs, 'fajrAngle', 18.0)

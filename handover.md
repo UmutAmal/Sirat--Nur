@@ -21471,3 +21471,45 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude runtime cache dayanimi, l10n same-as-English borcu, hardcoded dini icerik ve Supabase/audio source provenance icin yeni risk taramasi baslat.
+
+## 2026-05-01 TUR-538 - Qibla Calibration Offset Numeric Guard
+
+### MASTER Karari
+- Risk: Qibla kalibrasyon offset'i `SharedPreferences` uzerinden dogrudan okunup pusula hesaplarina giriyordu. `NaN`, `Infinity` veya slider araligi disi bir deger, `needleAngle`/`AnimatedRotation` hesaplarini bozarak Qibla ekraninda runtime hata veya yanlis yonlendirme riski olusturabilirdi.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_provider.dart:468` `prefs.getDouble('qiblaOffset') ?? 0.0` ile non-finite ve out-of-range degerleri oldugu gibi state'e aliyordu.
+  - Baslangic: `lib/features/settings/settings_provider.dart:315` `updateQiblaOffset` gelen degeri dogrudan persist ediyordu.
+  - Kullanici etkisi zinciri: `lib/features/qibla/qibla_page.dart:78` bu offset'i Qibla needle angle hesabinda kullaniyor.
+  - Son durum: `lib/features/settings/settings_provider.dart:32` ve `lib/features/settings/settings_provider.dart:33` offset sinirlari `-180..180` olarak merkezi tanimlandi.
+  - Son durum: `lib/features/settings/settings_provider.dart:120` `normalizeQiblaOffset` non-finite degerleri `0.0`, sinir disi degerleri slider araligina cekiyor.
+  - Son durum: `lib/features/settings/settings_provider.dart:237` constructor repair zincirine Qibla offset onarimi eklendi.
+  - Son durum: `lib/features/settings/settings_provider.dart:279` eski bozuk prefs degeri state ile birlikte storage'da da onariliyor.
+  - Son durum: `lib/features/settings/settings_provider.dart:339` `updateQiblaOffset` artik normalize edilmis degeri persist ediyor.
+  - Son durum: `lib/features/settings/settings_provider.dart:493` settings state load yolu normalize fonksiyonunu kullaniyor.
+  - Regresyon guard: `test/settings_provider_test.dart:71` normalizer non-finite ve range davranisini test ediyor.
+  - Regresyon guard: `test/settings_provider_test.dart:402` bozuk stored offset onarimini test ediyor.
+  - Regresyon guard: `test/settings_provider_test.dart:413` update yolunun persisted calibration degerlerini clamp ettigini test ediyor.
+- Kullanici etkisi: Qibla kalibrasyon verisi bozulsa bile pusula hesaplari sonlu ve UI slider ile uyumlu aralikta kalir; kullanici yanlis veya crash ureten kalibrasyon state'i ile baslamaz.
+- Risk skoru: Etki 4 x Olasilik 3 = 12/25 -> 3/25.
+- Rollback plani: Bu turdaki `lib/features/settings/settings_provider.dart`, `test/settings_provider_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Qibla offset icin merkezi normalizasyon eklendi.
+- Settings load, stored preference repair ve update path ayni normalizasyon kuralina baglandi.
+- UI slider araligi korunarak kapsam genisletilmedi; sadece bozuk/dogrudan yazilmis sayisal degerler guvenli hale getirildi.
+
+### TESTER Degisikligi
+- Targeted settings test: `flutter test test\settings_provider_test.dart --reporter compact` PASS, `27/27`.
+- Targeted Qibla widget test: `flutter test test\features\qibla\qibla_page_test.dart --reporter compact` PASS, `8/8`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `754/754`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `a78deddf-cd48-4cb5-afc0-6bf27ebc21a3`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Qibla calibration offset non-finite/out-of-range runtime riski: `12/25 -> 3/25`.
+- Kalan bilincli risk: Diger sayisal user preference degerleri ve async runtime UI yuzeyleri ayni sekilde taranmaya devam edilmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude sayisal preference sanitization, Quran/Juz malformed data guards, l10n kalite borcu ve Supabase/audio source provenance icin yeniden tarama baslat.

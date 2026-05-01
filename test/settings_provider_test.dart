@@ -68,6 +68,18 @@ void main() {
       expect(hasValidLocationCoordinates(41.0082, double.infinity), isFalse);
     });
 
+    test(
+      'qibla offset normalizer rejects non-finite values and clamps range',
+      () {
+        expect(normalizeQiblaOffset(null), 0.0);
+        expect(normalizeQiblaOffset(double.nan), 0.0);
+        expect(normalizeQiblaOffset(double.infinity), 0.0);
+        expect(normalizeQiblaOffset(250.0), 180.0);
+        expect(normalizeQiblaOffset(-250.0), -180.0);
+        expect(normalizeQiblaOffset(12.5), 12.5);
+      },
+    );
+
     test('copyWith creates a new instance with updated values', () {
       final state = SettingsState();
       final updated = state.copyWith(
@@ -385,6 +397,33 @@ void main() {
       expect(notifier.state.ishaAngle, 17.0);
       expect(prefs.getDouble('fajrAngle'), 18.0);
       expect(prefs.getDouble('ishaAngle'), 17.0);
+    });
+
+    test('loads and repairs invalid stored qibla offset', () async {
+      SharedPreferences.setMockInitialValues({'qiblaOffset': double.nan});
+      prefs = await SharedPreferences.getInstance();
+
+      final notifier = SettingsNotifier(prefs);
+      await Future<void>.delayed(Duration.zero);
+
+      expect(notifier.state.qiblaOffset, 0.0);
+      expect(prefs.getDouble('qiblaOffset'), 0.0);
+    });
+
+    test('updateQiblaOffset clamps persisted calibration values', () async {
+      final notifier = SettingsNotifier(prefs);
+
+      await notifier.updateQiblaOffset(250.0);
+      expect(notifier.state.qiblaOffset, 180.0);
+      expect(prefs.getDouble('qiblaOffset'), 180.0);
+
+      await notifier.updateQiblaOffset(-250.0);
+      expect(notifier.state.qiblaOffset, -180.0);
+      expect(prefs.getDouble('qiblaOffset'), -180.0);
+
+      await notifier.updateQiblaOffset(double.nan);
+      expect(notifier.state.qiblaOffset, 0.0);
+      expect(prefs.getDouble('qiblaOffset'), 0.0);
     });
 
     test(
