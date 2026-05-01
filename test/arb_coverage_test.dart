@@ -533,6 +533,40 @@ void main() {
         );
       }
     });
+
+    test('Bihari runtime and diagnostics copy preserve placeholders', () {
+      final arb = _readArb('lib/l10n/app_bh.arb');
+      const expected = {
+        'yesterday': 'बीते काल्हु',
+        'about': 'के बारे में',
+        'targetCount': 'लक्ष्य: {target}',
+        'qazaDebt': 'काजा (कर्ज)',
+        'statusLabel': 'स्थिति: {status}',
+        'missingTurkish': 'लापता तुर्की: {count}',
+        'dbVersion': 'डीबी संस्करण: {version}',
+        'dbPath': 'पथ: {path}',
+        'diagnosticsPrayerCustomProfile': 'कस्टम / {madhab}',
+        'quranAudioSourcesIncomplete':
+            'सत्यापित कुरान ऑडियो पैक अधूरा बा ({available}/{total})। ऑडियो कैटलॉग अपडेट होखला के बाद फेर से कोशिश करीं।',
+      };
+      final debris = RegExp(
+        r'के बारे में बतावल गइल बा| के ह$| के बा[।.]?$| के भइल$',
+      );
+
+      for (final entry in expected.entries) {
+        final value = arb[entry.key] as String;
+        expect(
+          value,
+          entry.value,
+          reason: 'app_bh.arb must keep concise ${entry.key} copy',
+        );
+        expect(
+          value,
+          isNot(contains(debris)),
+          reason: 'app_bh.arb keeps explanatory debris in ${entry.key}',
+        );
+      }
+    });
   });
 }
 

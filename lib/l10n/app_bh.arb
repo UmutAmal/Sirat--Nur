@@ -199,7 +199,7 @@
   "gregorianCalendar": "ग्रेगोरियन कैलेंडर",
   "today": "Today",
   "tomorrow": "काल्हु",
-  "yesterday": "काल्हु के भइल",
+  "yesterday": "बीते काल्हु",
   "specialDays": "Special Days",
   "ramadan": "Ramadan",
   "eidAlFitr": "Eid Al-Fitr",
@@ -241,7 +241,7 @@
   "lightMode": "Light Mode",
   "darkMode": "Dark Mode",
   "systemTheme": "सिस्टम थीम",
-  "about": "About",
+  "about": "के बारे में",
   "version": "Version",
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
@@ -288,7 +288,7 @@
   "resetCounter": "Reset Counter",
   "changeTarget": "लक्ष्य बदलीं",
   "newTarget": "नया लक्ष्य बा",
-  "targetCount": "Target: {target}",
+  "targetCount": "लक्ष्य: {target}",
   "tapToCount": "Tap to count",
   "zikrCompletedMashAllah": "Completed! MashAllah",
   "zikrMeaningSubhanAllah": "Allah is far above every imperfection.",
@@ -298,7 +298,7 @@
   "zikrMeaningAstaghfirullah": "I seek Allah's forgiveness.",
   "zikrMeaningLaHawlaWaLaQuwwata": "There is no power and no strength except through Allah.",
   "dailyChecklist": "रोजाना के चेकलिस्ट बा",
-  "qazaDebt": "काजा (कर्ज) के बा।",
+  "qazaDebt": "काजा (कर्ज)",
   "resetQazaData": "काजा डेटा के रीसेट करीं",
   "resetQazaDebtQuestion": "काजा कर्ज के रीसेट करीं?",
   "rawatib": "Rawatib",
@@ -331,13 +331,13 @@
   "incomplete": "अधूरा बा",
   "notSeeded": "बीज ना लगावल गइल",
   "quranDbStatus": "Quran Database Status",
-  "statusLabel": "Status: {status}",
+  "statusLabel": "स्थिति: {status}",
   "surahsCount": "सूरह: {count} (114 के उम्मीद बा)",
   "ayahsCount": "अयाह: {count} (6236 के उम्मीद बा)",
   "missingArabic": "अरबी गायब बा: {count}",
-  "missingTurkish": "लापता तुर्की: {count} के बा।",
-  "dbVersion": "डीबी संस्करण: {version} बा।",
-  "dbPath": "पथ: {path} के बा।",
+  "missingTurkish": "लापता तुर्की: {count}",
+  "dbVersion": "डीबी संस्करण: {version}",
+  "dbPath": "पथ: {path}",
   "quranCheckFailed": "Quran check failed: {error}",
   "audioVoice": "ऑडियो आवाज बा",
   "audioVoiceMisharyAlafasy": "Male (Mishary Alafasy)",
@@ -358,7 +358,7 @@
   "diagnosticsNotSet": "Not set",
   "diagnosticsPrayerProfile": "प्रार्थना के प्रोफाइल बा",
   "diagnosticsPrayerSource": "प्रार्थना प्राधिकरण",
-  "diagnosticsPrayerCustomProfile": "कस्टम / {madhab} के बा।",
+  "diagnosticsPrayerCustomProfile": "कस्टम / {madhab}",
   "@diagnosticsPrayerCustomProfile": {
     "placeholders": {
       "madhab": {
@@ -593,7 +593,7 @@
     }
   },
   "quranAudioSourcesUnavailable": "Verified Quran audio sources are unavailable right now.",
-  "quranAudioSourcesIncomplete": "Verified Quran audio pack is incomplete ({available}/{total}). Try again after the audio catalog is updated.",
+  "quranAudioSourcesIncomplete": "सत्यापित कुरान ऑडियो पैक अधूरा बा ({available}/{total})। ऑडियो कैटलॉग अपडेट होखला के बाद फेर से कोशिश करीं।",
   "@quranAudioSourcesIncomplete": {
     "placeholders": {
       "available": {

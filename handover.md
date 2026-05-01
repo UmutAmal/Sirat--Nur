@@ -21096,3 +21096,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude tum Bhojpuri/Bihari kalinti taramasini yenile ve dini meaning metinlerine dokunmadan kalan UI label borcunu sirala.
+
+## 2026-05-01 TUR-527 - Bihari Runtime Diagnostics Placeholder Cleanup
+
+### MASTER Karari
+- Risk: `app_bh.arb` icinde runtime/status/diagnostics ve Quran audio eksik kaynak mesajlari hem satir sonu `के बा`/`के भइल` artigi hem de ayni kumede kalan Ingilizce fallback tasiyordu. Bihari locale secen kullanici qaza, hedef, diagnostics ve offline audio hata akislari gibi kritik yuzeylerde karisik/bozuk metin gorebilirdi; P1 l10n kalite borcu olarak ele alindi.
+- Kanit:
+  - Baslangic bulgulari: `lib/l10n/app_bh.arb:202` `काल्हु के भइल`, `lib/l10n/app_bh.arb:244` `About`, `lib/l10n/app_bh.arb:291` `Target: {target}`, `lib/l10n/app_bh.arb:301` `काजा (कर्ज) के बा।`, `lib/l10n/app_bh.arb:334` `Status: {status}`, `lib/l10n/app_bh.arb:338` `लापता तुर्की: {count} के बा।`, `lib/l10n/app_bh.arb:340` `पथ: {path} के बा।`, `lib/l10n/app_bh.arb:361` `कस्टम / {madhab} के बा।`, `lib/l10n/app_bh.arb:596` English `Verified Quran audio pack is incomplete...`.
+  - Son durum: `lib/l10n/app_bh.arb:202` `बीते काल्हु`, `lib/l10n/app_bh.arb:244` `के बारे में`, `lib/l10n/app_bh.arb:291` `लक्ष्य: {target}`, `lib/l10n/app_bh.arb:301` `काजा (कर्ज)`, `lib/l10n/app_bh.arb:334` `स्थिति: {status}`, `lib/l10n/app_bh.arb:338` `लापता तुर्की: {count}`, `lib/l10n/app_bh.arb:340` `पथ: {path}`, `lib/l10n/app_bh.arb:361` `कस्टम / {madhab}`, `lib/l10n/app_bh.arb:596` `सत्यापित कुरान ऑडियो पैक अधूरा बा ({available}/{total})। ...`.
+  - `test/arb_coverage_test.dart` icine eklenen `Bihari runtime and diagnostics copy preserve placeholders` guard'i 10 anahtarda placeholder'lari, kisa copy'yi ve localized Quran audio eksik kaynak mesajini kilitler.
+  - Debris/English taramasi: `rg -n '"(yesterday|about|targetCount|qazaDebt|statusLabel|missingTurkish|dbVersion|dbPath|diagnosticsPrayerCustomProfile|quranAudioSourcesIncomplete)".*(के बा।|के भइल|"About"|"Target:|"Status:|Verified Quran audio pack)' lib\l10n\app_bh.arb` sonucu bos.
+- Kullanici etkisi: Bihari locale'de status, diagnostics, qaza ve Quran audio eksik kaynak durumlari placeholder kaybetmeden yerel ve okunabilir metin gosterir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_bh.arb`, generated `lib/l10n/app_localizations_bh.dart`, `test/arb_coverage_test.dart` guard'i ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 10 Bihari runtime/diagnostics metni guncellendi: `yesterday`, `about`, `targetCount`, `qazaDebt`, `statusLabel`, `missingTurkish`, `dbVersion`, `dbPath`, `diagnosticsPrayerCustomProfile`, `quranAudioSourcesIncomplete`.
+- `flutter gen-l10n` ile `lib/l10n/app_localizations_bh.dart` ARB ile senkronlandi.
+- Scope teknik/runtime copy ile sinirli tutuldu; dini meaning metni veya kaynak icerigi uydurulmadi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\arb_coverage_test.dart --plain-name "Bihari runtime and diagnostics copy preserve placeholders" --reporter compact` PASS.
+- Translation report: `dart run tool\translate_arb_keys.dart yesterday about targetCount qazaDebt statusLabel missingTurkish dbVersion dbPath diagnosticsPrayerCustomProfile quranAudioSourcesIncomplete --report` PASS; missing/empty `0`, placeholder mismatch `0`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `739/739`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: ilk kosuda UiAutomator2 instrumentation `30000ms` timeout verdi; app data ve UiAutomator2 paket temizligi sonrasi tekrar kosu PASS. Gecerli PASS session `c1877f70-dce6-48f4-a9ec-6564106b3a92`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+
+### Risk Degisimi
+- Bihari runtime/diagnostics placeholder + English fallback riski: `16/25 -> 6/25`.
+- Kalan bilincli risk: Appium smoke scriptinde UiAutomator2 instrumentation timeout'u tekrar ediyor ve manuel cleanup ile geciyor. Bu test altyapisi false-negative riski ayri turda ele alinmali; uygulama runtime smoke pass oldugu icin bu turda app kodu etkilenmedi.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Appium smoke altyapi timeout tekrarini skorla veya genis l10n same-as-English debt taramasina gec.

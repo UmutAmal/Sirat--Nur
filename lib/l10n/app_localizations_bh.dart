@@ -414,7 +414,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get tomorrow => 'काल्हु';
 
   @override
-  String get yesterday => 'काल्हु के भइल';
+  String get yesterday => 'बीते काल्हु';
 
   @override
   String get specialDays => 'Special Days';
@@ -524,7 +524,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get systemTheme => 'सिस्टम थीम';
 
   @override
-  String get about => 'About';
+  String get about => 'के बारे में';
 
   @override
   String get version => 'Version';
@@ -640,7 +640,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String targetCount(Object target) {
-    return 'Target: $target';
+    return 'लक्ष्य: $target';
   }
 
   @override
@@ -672,7 +672,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get dailyChecklist => 'रोजाना के चेकलिस्ट बा';
 
   @override
-  String get qazaDebt => 'काजा (कर्ज) के बा।';
+  String get qazaDebt => 'काजा (कर्ज)';
 
   @override
   String get resetQazaData => 'काजा डेटा के रीसेट करीं';
@@ -775,7 +775,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String statusLabel(Object status) {
-    return 'Status: $status';
+    return 'स्थिति: $status';
   }
 
   @override
@@ -795,17 +795,17 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String missingTurkish(Object count) {
-    return 'लापता तुर्की: $count के बा।';
+    return 'लापता तुर्की: $count';
   }
 
   @override
   String dbVersion(Object version) {
-    return 'डीबी संस्करण: $version बा।';
+    return 'डीबी संस्करण: $version';
   }
 
   @override
   String dbPath(Object path) {
-    return 'पथ: $path के बा।';
+    return 'पथ: $path';
   }
 
   @override
@@ -875,7 +875,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String diagnosticsPrayerCustomProfile(String madhab) {
-    return 'कस्टम / $madhab के बा।';
+    return 'कस्टम / $madhab';
   }
 
   @override
@@ -1282,7 +1282,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
-    return 'Verified Quran audio pack is incomplete ($available/$total). Try again after the audio catalog is updated.';
+    return 'सत्यापित कुरान ऑडियो पैक अधूरा बा ($available/$total)। ऑडियो कैटलॉग अपडेट होखला के बाद फेर से कोशिश करीं।';
   }
 
   @override
