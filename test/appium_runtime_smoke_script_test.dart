@@ -67,6 +67,22 @@ void main() {
       expect(script, contains('Current adb devices'));
     });
 
+    test('starts a local Appium server when runtime smoke needs one', () {
+      expect(script, contains(r'[switch]$NoStartAppium'));
+      expect(script, contains('Test-AppiumServerReady'));
+      expect(script, contains('Test-LocalAppiumEndpoint'));
+      expect(script, contains('Start-LocalAppiumServer'));
+      expect(script, contains("Get-Command 'appium.cmd'"));
+      expect(script, contains('appium-server.out.log'));
+      expect(script, contains('appiumServerAutoStarted'));
+      expect(
+        script,
+        contains(
+          'Automatic startup is only supported for local Appium endpoints.',
+        ),
+      );
+    });
+
     test(
       'keeps UiAutomator2 startup timeouts resilient on Windows emulators',
       () {

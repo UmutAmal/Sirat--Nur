@@ -21262,3 +21262,37 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude 23 gercek UI l10n kumesi veya Appium/server preflight ergonomisi yeniden skorlanmali.
+
+## 2026-05-01 TUR-532 - Appium Runtime Smoke Local Server Self-Start
+
+### MASTER Karari
+- Risk: Appium runtime smoke, Appium HTTP server kapaliyken APK build/install isine baslayip sonra `Invoke-RestMethod` ham baglanti hatasiyla dusuyordu. Bu, uygulama runtime regresyonu ile test altyapisi eksigini karistiran ve dogrulama dongusunu gereksiz bloke eden P1 QA altyapi riskidir.
+- Kanit:
+  - Baslangic davranisi: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` Appium server kapaliyken `tool\appium_runtime_smoke.ps1:154` uzerinde `Hedef makine etkin olarak reddetti` hatasiyla dustu.
+  - Son durum: `tool/appium_runtime_smoke.ps1:13` `-NoStartAppium` kacis anahtari ekli; `tool/appium_runtime_smoke.ps1:162` server ready preflight; `tool/appium_runtime_smoke.ps1:171` local endpoint guard; `tool/appium_runtime_smoke.ps1:176` Appium komut cozumleyici; `tool/appium_runtime_smoke.ps1:190` local Appium starter; `tool/appium_runtime_smoke.ps1:560` build/install oncesi self-start akisina giriyor; `tool/appium_runtime_smoke.ps1:668` summary'ye `appiumServerAutoStarted` yaziyor.
+  - Regresyon guard: `test/appium_runtime_smoke_script_test.dart:70` `starts a local Appium server when runtime smoke needs one`.
+- Kullanici etkisi: Android runtime smoke artik kullanicinin Appium server'i elle acmasini beklemeden yerel server'i baslatabiliyor; uzak Appium URL'lerinde ise temiz ve aksiyonlanabilir hata veriyor.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 5/25.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Runtime smoke scriptine yerel Appium server readiness kontrolu, local endpoint tanima, `appium.cmd`/`appium` komut cozumleme ve `build/appium-server.out.log` + `build/appium-server.err.log` loglama eklendi.
+- Server hazir degilse ve endpoint local ise script Appium'u `Start-Process -WindowStyle Hidden` ile baslatip `/status` hazir olana kadar bekliyor.
+- `-NoStartAppium` ile eski "ben server'i kendim yonetecegim" davranisi korunuyor.
+
+### TESTER Degisikligi
+- PowerShell parse: `[scriptblock]::Create((Get-Content -Raw 'tool\appium_runtime_smoke.ps1'))` PASS.
+- Targeted test: `flutter test test\appium_runtime_smoke_script_test.dart --plain-name "starts a local Appium server when runtime smoke needs one" --reporter compact` PASS.
+- Auto-start runtime proof: Appium PID `33772` kapatildi; `.\tool\appium_runtime_smoke.ps1 -BuildMode release` server kapaliyken PASS; summary `sessionId=e448af1b-e3b3-41c3-9a2d-0acd20199989`, `appiumServerAutoStarted=true`, `logcatCrashFree=true`, `failures=[]`.
+- Clean full runtime proof: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `a5d14507-142f-4738-93db-b5ecfe9dcefd`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `744/744`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Appium server kapali oldugunda runtime smoke false-blocker riski: `16/25 -> 5/25`.
+- Kalan bilincli risk: 23 gercek UI anahtarinda `775` same-as-English borc devam ediyor; otomatik `downloadAction` ceviri denemesi yeni dosya degisikligi uretmedi, bu nedenle sahte/guvensiz ceviri yapmadan bir sonraki l10n batch stratejisi yeniden secilmeli.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude l10n borcu icin dogrulanabilir kucuk batch veya baska runtime/test altyapi riski sec.

@@ -9,7 +9,8 @@ param(
   [string]$SmokeLocale = "en",
   [switch]$SkipBuildInstall,
   [switch]$NoReset,
-  [switch]$SkipLogcat
+  [switch]$SkipLogcat,
+  [switch]$NoStartAppium
 )
 
 $ErrorActionPreference = "Stop"
@@ -156,6 +157,65 @@ function Invoke-AppiumJson {
 
   $json = $Body | ConvertTo-Json -Depth 20
   return Invoke-RestMethod -Method $Method -Uri $uri -Body $json -ContentType "application/json" -TimeoutSec $TimeoutSec
+}
+
+function Test-AppiumServerReady {
+  try {
+    $status = Get-AppiumValue (Invoke-AppiumJson -Method "GET" -Path "/status" -TimeoutSec 5)
+    return [bool]$status.ready
+  } catch {
+    return $false
+  }
+}
+
+function Test-LocalAppiumEndpoint {
+  $uri = [Uri]$AppiumUrl
+  return @('127.0.0.1', 'localhost', '::1').Contains($uri.Host)
+}
+
+function Resolve-AppiumCommand {
+  $cmd = Get-Command 'appium.cmd' -ErrorAction SilentlyContinue
+  if ($cmd) {
+    return $cmd.Source
+  }
+
+  $cmd = Get-Command 'appium' -ErrorAction SilentlyContinue
+  if ($cmd) {
+    return $cmd.Source
+  }
+
+  throw 'Appium server is not running and the appium command is not on PATH. Install Appium or start the server manually before running runtime smoke.'
+}
+
+function Start-LocalAppiumServer {
+  param([Parameter(Mandatory = $true)][string]$OutputDir)
+
+  $uri = [Uri]$AppiumUrl
+  $command = Resolve-AppiumCommand
+  $stdout = Join-Path $OutputDir 'appium-server.out.log'
+  $stderr = Join-Path $OutputDir 'appium-server.err.log'
+  $arguments = @(
+    '--address',
+    $uri.Host,
+    '--port',
+    [string]$uri.Port,
+    '--log-timestamp'
+  )
+
+  if (-not [string]::IsNullOrWhiteSpace($uri.AbsolutePath) -and $uri.AbsolutePath -ne '/') {
+    $arguments += @('--base-path', $uri.AbsolutePath.TrimEnd('/'))
+  }
+
+  $process = Start-Process -FilePath $command -ArgumentList $arguments -WindowStyle Hidden -RedirectStandardOutput $stdout -RedirectStandardError $stderr -PassThru
+  $deadline = (Get-Date).AddSeconds(75)
+  do {
+    if (Test-AppiumServerReady) {
+      return $process
+    }
+    Start-Sleep -Seconds 2
+  } while ((Get-Date) -lt $deadline)
+
+  throw "Started local Appium process $($process.Id), but /status did not become ready at $AppiumUrl. See $stdout and $stderr."
 }
 
 function Get-AppiumValue {
@@ -497,6 +557,20 @@ function Wait-ClickAnyDescriptionOrText {
 
 New-Item -ItemType Directory -Force -Path $OutputDir | Out-Null
 
+$appiumServerAutoStarted = $false
+if (-not (Test-AppiumServerReady)) {
+  if ($NoStartAppium) {
+    throw "Appium server is not ready at $AppiumUrl. Start Appium or rerun without -NoStartAppium to let this script start a local server."
+  }
+
+  if (-not (Test-LocalAppiumEndpoint)) {
+    throw "Appium server is not ready at $AppiumUrl. Automatic startup is only supported for local Appium endpoints."
+  }
+
+  Start-LocalAppiumServer -OutputDir $OutputDir | Out-Null
+  $appiumServerAutoStarted = $true
+}
+
 $normalizedSmokeLocale = Resolve-SmokeLocaleTag -Locale $SmokeLocale
 $smokeText = Get-SmokeTextBundle -LocaleTag $normalizedSmokeLocale
 $smokeLocaleParts = $normalizedSmokeLocale.Split('_')
@@ -591,6 +665,7 @@ $summary = [ordered]@{
   smokeLanguage = $smokeLanguage
   smokeRegion = $smokeRegion
   releaseDartDefinesApplied = $releaseDartDefinesApplied
+  appiumServerAutoStarted = $appiumServerAutoStarted
   apkPath = $apkPath
   apkPrepared = $apkPrepared
   apkReinstalledAfterSignatureMismatch = $apkReinstalledAfterSignatureMismatch
