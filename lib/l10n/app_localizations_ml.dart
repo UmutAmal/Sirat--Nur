@@ -173,13 +173,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get delete => 'ഇല്ലാതാക്കുക';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'എഡിറ്റ് ചെയ്യുക';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ശരി';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get page => 'പേജ്';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'വായന';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsMl extends AppLocalizations {
       'പരിശോധിച്ച തഫ്സീർ ഇതുവരെ ഓഫ്‌ലൈനിൽ ലഭ്യമല്ല. ബ്രൗസുചെയ്യുന്നതിന് മുമ്പ് ഒരു ഉറവിട തഫ്‌സിർ ഡാറ്റാസെറ്റ് സമന്വയിപ്പിക്കുക.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'ബുക്ക്മാർക്കുകൾ';
 
   @override
   String get addBookmark => 'ബുക്ക്മാർക്ക് ചേർക്കുക';
@@ -266,7 +266,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get removeBookmark => 'ബുക്ക്മാർക്ക് നീക്കം ചെയ്യുക';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'അവസാനം വായിച്ചത്';
 
   @override
   String get dailyZikr => 'പ്രതിദിന സിക്ർ';
@@ -519,7 +519,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get darkMode => 'ഡാർക്ക് മോഡ്';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'സിസ്റ്റം തീം';
 
   @override
   String get about => 'കുറിച്ച്';
@@ -572,13 +572,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get checkConnection => 'ദയവായി നിങ്ങളുടെ കണക്ഷൻ പരിശോധിക്കുക';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'പ്രീമിയം';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'പ്രോ സവിശേഷതകൾ';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'സ്വാഗതം';
 
   @override
   String get getStarted => 'ആരംഭിക്കുക';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ഒഴിവാക്കുക';
 
   @override
   String get next => 'അടുത്തത്';

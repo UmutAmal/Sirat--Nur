@@ -173,13 +173,13 @@ class AppLocalizationsLt extends AppLocalizations {
   String get delete => 'Ištrinti';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Redaguoti';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Gerai';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get page => 'Puslapis';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Skaitymas';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsLt extends AppLocalizations {
       'Patvirtinta tafsir dar nepasiekiama neprisijungus. Prieš naršydami sinchronizuokite gautą tafsir duomenų rinkinį.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Žymės';
 
   @override
   String get addBookmark => 'Pridėti žymę';
@@ -266,7 +266,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get removeBookmark => 'Pašalinti žymę';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Paskutinis skaitymas';
 
   @override
   String get dailyZikr => 'Dienos Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get darkMode => 'Tamsusis režimas';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Sistemos tema';
 
   @override
   String get about => 'Apie';
@@ -579,7 +579,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro funkcijos';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsLt extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Sveiki atvykę';
 
   @override
   String get getStarted => 'Pradėkite';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Praleisti';
 
   @override
   String get next => 'Kitas';

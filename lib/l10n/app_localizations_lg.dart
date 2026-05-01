@@ -173,13 +173,13 @@ class AppLocalizationsLg extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Okugolola';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'KALE';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get page => 'Omuko';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Okusoma';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsLg extends AppLocalizations {
       'Verified tafsir tennafuna ku mukutu gwa yintaneeti. Sync sourced tafsir dataset nga tonnaba kugenda mu maaso.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Ebiwandiiko ebiraga ebitabo';
 
   @override
   String get addBookmark => 'Yongera ku Bookmark';
@@ -266,7 +266,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get removeBookmark => 'Ggyawo Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Okusoma Okusembayo';
 
   @override
   String get dailyZikr => 'Buli lunaku Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get darkMode => 'Omutindo gw’Ekizikiza';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Omulamwa gw\'enkola';
 
   @override
   String get about => 'Ku';
@@ -574,13 +574,13 @@ class AppLocalizationsLg extends AppLocalizations {
   String get checkConnection => 'Nsaba okebere omukutu gwo';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Sente ezisasilibwa mundagano';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Ebintu bya Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsLg extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Kaale';
 
   @override
   String get getStarted => 'Tandika';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Okubuuka';
 
   @override
   String get next => 'Ekiddako';

@@ -174,7 +174,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get delete => 'Excluir';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Editar';
 
   @override
   String get close => 'Close';
@@ -203,7 +203,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get page => 'Página';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lendo';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsPt extends AppLocalizations {
       'O tafsir verificado ainda não está disponível offline. Sincronize um conjunto de dados tafsir de origem antes de navegar.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Favoritos';
 
   @override
   String get addBookmark => 'Adicionar marcador';
@@ -267,7 +267,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get removeBookmark => 'Remover marcador';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Última leitura';
 
   @override
   String get dailyZikr => 'Zikr diário';
@@ -521,7 +521,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get darkMode => 'Modo escuro';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tema do sistema';
 
   @override
   String get about => 'Sobre';
@@ -574,13 +574,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get checkConnection => 'Verifique sua conexão';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Prêmio';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Recursos profissionais';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Bem vindo';
 
   @override
   String get getStarted => 'Comece';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Pular';
 
   @override
   String get next => 'Próximo';

@@ -201,7 +201,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Kuverenga';
 
   @override
   String get recitation => 'Recitation';
@@ -590,7 +590,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Mauya';
 
   @override
   String get getStarted => 'Tanga';

@@ -179,7 +179,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Bene';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lectio';
 
   @override
   String get recitation => 'Recitation';
@@ -520,7 +520,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get darkMode => 'Tenebris Modus';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Systema Theme';
 
   @override
   String get about => 'De';
@@ -591,7 +591,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Grata';
 
   @override
   String get getStarted => 'Adepto Coepi';

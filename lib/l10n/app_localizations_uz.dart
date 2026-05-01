@@ -173,13 +173,13 @@ class AppLocalizationsUz extends AppLocalizations {
   String get delete => 'Oʻchirish';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Tahrirlash';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'KELISHDIKMI';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get page => 'Sahifa';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'O\'qish';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsUz extends AppLocalizations {
       'Tasdiqlangan tafsir hali oflayn rejimda mavjud emas. Ko‘rishdan oldin manba tafsir ma’lumotlar to‘plamini sinxronlashtiring.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Xatcho‘plar';
 
   @override
   String get addBookmark => 'Xatcho‘p qo‘shish';
@@ -266,7 +266,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get removeBookmark => 'Xatcho‘pni olib tashlash';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Oxirgi o\'qish';
 
   @override
   String get dailyZikr => 'Kundalik Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get darkMode => 'Qorong\'i rejim';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tizim mavzusi';
 
   @override
   String get about => 'Haqida';
@@ -579,7 +579,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro xususiyatlari';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsUz extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Xush kelibsiz';
 
   @override
   String get getStarted => 'Boshlash';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Oʻtkazib yuborish';
 
   @override
   String get next => 'Keyingi';

@@ -202,7 +202,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get page => 'Säit';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Liesen';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsLb extends AppLocalizations {
       'Verifizéiert Tafsir ass nach net offline verfügbar. Synchroniséiert e sourced tafsir Dataset virum Surfen.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Lieszeeche';
 
   @override
   String get addBookmark => 'Bookmark addéieren';
@@ -266,7 +266,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get removeBookmark => 'Bookmark läschen';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Leschten Liesen';
 
   @override
   String get dailyZikr => 'Deeglech Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get darkMode => 'Däischter Modus';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'System Thema';
 
   @override
   String get about => 'Iwwer';
@@ -579,7 +579,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro Fonctiounen';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsLb extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Wëllkomm';
 
   @override
   String get getStarted => 'Fänkt un';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Sprangen';
 
   @override
   String get next => 'Nächst';

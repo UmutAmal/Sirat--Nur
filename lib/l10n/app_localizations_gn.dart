@@ -260,7 +260,7 @@ class AppLocalizationsGn extends AppLocalizations {
       'Verificado tafsir ndojeguerekói gueteri offline. Embojoaju peteĩ tafsir datokuéra ryru oúva eheka mboyve.';
 
   @override
-  String get bookmarks => 'Marcadores rehegua';
+  String get bookmarks => 'Marcadores';
 
   @override
   String get addBookmark => 'Ombojoapy Marcador';
@@ -523,7 +523,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get darkMode => 'Modo Pytũmby';
 
   @override
-  String get systemTheme => 'Tema Sistema rehegua';
+  String get systemTheme => 'Tema del sistema';
 
   @override
   String get about => 'Upéva rehegua';
@@ -582,7 +582,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get upgradeToPro => 'Embopyahu Pro-pe';
 
   @override
-  String get proFeatures => 'Pro Características rehegua';
+  String get proFeatures => 'Pro características';
 
   @override
   String get removeAds => 'Oipe’a umi Anuncios';

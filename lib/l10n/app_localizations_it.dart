@@ -175,13 +175,13 @@ class AppLocalizationsIt extends AppLocalizations {
   String get delete => 'Elimina';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Modifica';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Va bene';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get page => 'Pagina';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lettura';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsIt extends AppLocalizations {
       'Tafsir verificato non è ancora disponibile offline. Sincronizza un set di dati tafsir di origine prima della navigazione.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Segnalibri';
 
   @override
   String get addBookmark => 'Aggiungi segnalibro';
@@ -268,7 +268,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get removeBookmark => 'Rimuovi segnalibro';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ultima lettura';
 
   @override
   String get dailyZikr => 'Zikr giornaliero';
@@ -522,7 +522,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get darkMode => 'Modalità oscura';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tema del sistema';
 
   @override
   String get about => 'Circa';
@@ -575,13 +575,13 @@ class AppLocalizationsIt extends AppLocalizations {
   String get checkConnection => 'Per favore controlla la tua connessione';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Premio';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Funzionalità professionali';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsIt extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Benvenuto';
 
   @override
   String get getStarted => 'Inizia';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Salta';
 
   @override
   String get next => 'Avanti';

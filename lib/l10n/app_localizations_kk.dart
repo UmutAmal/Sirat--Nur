@@ -173,13 +173,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get delete => 'Жою';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Өңдеу';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Жарайды';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get page => 'Бет';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Оқу';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsKk extends AppLocalizations {
       'Расталған тәфсир әлі желіден тыс қолжетімді емес. Шолудан бұрын бастапқы тафсир деректер жинағын синхрондаңыз.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Бетбелгілер';
 
   @override
   String get addBookmark => 'Бетбелгі қосу';
@@ -266,7 +266,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get removeBookmark => 'Бетбелгіні жою';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Соңғы оқылған';
 
   @override
   String get dailyZikr => 'Күнделікті зікір';
@@ -519,7 +519,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get darkMode => 'Қараңғы режим';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Жүйе тақырыбы';
 
   @override
   String get about => 'туралы';
@@ -572,13 +572,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get checkConnection => 'Байланысты тексеріңіз';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Премиум';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro мүмкіндіктері';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Қош келдіңіз';
 
   @override
   String get getStarted => 'Жұмысты бастау';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Өткізіп жіберу';
 
   @override
   String get next => 'Келесі';

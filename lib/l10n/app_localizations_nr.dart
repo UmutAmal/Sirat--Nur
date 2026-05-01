@@ -173,13 +173,13 @@ class AppLocalizationsNr extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Lungisa';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'NGITHOKOZILE';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsNr extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Ukufunda';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsNr extends AppLocalizations {
       'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Amabhukmaki';
 
   @override
   String get addBookmark => 'Add Bookmark';
@@ -266,7 +266,7 @@ class AppLocalizationsNr extends AppLocalizations {
   String get removeBookmark => 'Remove Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ukufunda kokugcina';
 
   @override
   String get dailyZikr => 'I-Zikr yangelanga';
@@ -520,7 +520,7 @@ class AppLocalizationsNr extends AppLocalizations {
   String get darkMode => 'Dark Mode';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Isihloko sesistimu';
 
   @override
   String get about => 'About';
@@ -573,13 +573,13 @@ class AppLocalizationsNr extends AppLocalizations {
   String get checkConnection => 'Please check your connection';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Iphrimiyamu';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Iimfanelo ze-Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsNr extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Siyakwamukela';
 
   @override
   String get getStarted => 'Get Started';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Yeqa';
 
   @override
   String get next => 'Next';

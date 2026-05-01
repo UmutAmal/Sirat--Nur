@@ -173,7 +173,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get delete => 'Tirtir';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Wax ka beddel';
 
   @override
   String get close => 'Close';
@@ -202,7 +202,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get page => 'Bogga';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Akhriska';
 
   @override
   String get recitation => 'Recitation';
@@ -267,7 +267,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get removeBookmark => 'Ka saar Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Akhriso Ugu Danbaysay';
 
   @override
   String get dailyZikr => 'Zikr maalinle ah';
@@ -521,7 +521,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get darkMode => 'Qaab Madow';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Mawduuca Nidaamka';
 
   @override
   String get about => 'Ku saabsan';
@@ -580,7 +580,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Tilmaamaha Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Soo dhawoow';
 
   @override
   String get getStarted => 'Bilow';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Ka bood';
 
   @override
   String get next => 'Xiga';

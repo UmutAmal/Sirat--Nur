@@ -571,7 +571,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get checkConnection => 'يرجى التحقق من اتصالك';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'غالي';
 
   @override
   String get upgradeToPro => 'الترقية إلى Pro';

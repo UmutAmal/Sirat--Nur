@@ -173,13 +173,13 @@ class AppLocalizationsSt extends AppLocalizations {
   String get delete => 'Hlakola';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Fetola';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ho lokile';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get page => 'Leqephe';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Ho bala';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsSt extends AppLocalizations {
       'Tafsir e netefalitsoeng ha e fumanehe kantle ho Marang-rang. Ikamahanya le pokello ea data ea tafsir pele u e bala.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Li-bookmark';
 
   @override
   String get addBookmark => 'Kenya Bookmark';
@@ -268,7 +268,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get removeBookmark => 'Tlosa Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ho Qetela ho Bala';
 
   @override
   String get dailyZikr => 'Zikr ea letsatsi le letsatsi';
@@ -523,7 +523,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get darkMode => 'Mokhoa o Lefifi';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Theme ea Tsamaiso';
 
   @override
   String get about => 'About';
@@ -582,7 +582,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Likarolo tsa Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -594,13 +594,13 @@ class AppLocalizationsSt extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Rea u amohela';
 
   @override
   String get getStarted => 'Qala';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Tlola';
 
   @override
   String get next => 'E latelang';

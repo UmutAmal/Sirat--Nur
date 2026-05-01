@@ -173,13 +173,13 @@ class AppLocalizationsXh extends AppLocalizations {
   String get delete => 'Cima';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Hlela';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'KULUNGILE';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get page => 'Iphepha';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Ukufunda';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsXh extends AppLocalizations {
       'I-tafsir eqinisekisiweyo ayikafumaneki ngaphandle kweintanethi okwangoku. Ngqamanisa isethi yedatha ye-tafsir efunyenweyo phambi kokukhangela.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Iibhukhimaksi';
 
   @override
   String get addBookmark => 'Yongeza iBookmark';
@@ -266,7 +266,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get removeBookmark => 'Susa ibhukumaki';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ukufundwa kokugqibela';
 
   @override
   String get dailyZikr => 'Zikr yosuku';
@@ -520,7 +520,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get darkMode => 'Imo Emnyama';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Umxholo weNkqubo';
 
   @override
   String get about => 'Malunga';
@@ -573,13 +573,13 @@ class AppLocalizationsXh extends AppLocalizations {
   String get checkConnection => 'Nceda ujonge umdibaniso wakho';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Intlawulo yanyanga le';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Iimpawu zePro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsXh extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Wamkelekile';
 
   @override
   String get getStarted => 'Qalisa';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Tsiba';
 
   @override
   String get next => 'Okulandelayo';

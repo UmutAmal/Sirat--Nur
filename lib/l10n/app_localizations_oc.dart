@@ -175,13 +175,13 @@ class AppLocalizationsOc extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Modificar';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ÒC BEN';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lectura';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsOc extends AppLocalizations {
       'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Los marcapaginas';
 
   @override
   String get addBookmark => 'Add Bookmark';
@@ -268,7 +268,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get removeBookmark => 'Remove Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Darrièra lectura';
 
   @override
   String get dailyZikr => 'Zikr quotidian';
@@ -522,7 +522,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get darkMode => 'Dark Mode';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tèma del sistèma';
 
   @override
   String get about => 'About';
@@ -575,13 +575,13 @@ class AppLocalizationsOc extends AppLocalizations {
   String get checkConnection => 'Please check your connection';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Prima';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Caracteristicas professionalas';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsOc extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Benvengut';
 
   @override
   String get getStarted => 'Get Started';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Sautar';
 
   @override
   String get next => 'Next';

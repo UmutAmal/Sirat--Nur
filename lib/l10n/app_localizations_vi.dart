@@ -173,13 +173,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get delete => 'Xóa';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Chỉnh sửa';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'được rồi';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get page => 'Trang';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Đọc';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsVi extends AppLocalizations {
       'Tafsir đã được xác minh chưa khả dụng ngoại tuyến. Đồng bộ hóa tập dữ liệu tafsir có nguồn gốc trước khi duyệt.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Dấu trang';
 
   @override
   String get addBookmark => 'Thêm dấu trang';
@@ -266,7 +266,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get removeBookmark => 'Xóa dấu trang';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Đọc lần cuối';
 
   @override
   String get dailyZikr => 'Zikr hàng ngày';
@@ -520,7 +520,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get darkMode => 'Chế độ tối';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Chủ đề hệ thống';
 
   @override
   String get about => 'Giới thiệu';
@@ -573,13 +573,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get checkConnection => 'Vui lòng kiểm tra kết nối của bạn';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Cao cấp';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Tính năng chuyên nghiệp';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Chào mừng';
 
   @override
   String get getStarted => 'Bắt đầu';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Bỏ qua';
 
   @override
   String get next => 'Tiếp theo';

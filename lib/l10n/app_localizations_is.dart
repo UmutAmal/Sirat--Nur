@@ -173,13 +173,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get delete => 'Eyða';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Breyta';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Allt í lagi';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get page => 'Bls';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lestur';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsIs extends AppLocalizations {
       'Staðfest tafsir er ekki enn í boði án nettengingar. Samstilltu gagnasett af tafsir áður en þú vafrar.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Bókamerki';
 
   @override
   String get addBookmark => 'Bæta við bókamerki';
@@ -266,7 +266,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get removeBookmark => 'Fjarlægja bókamerki';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Síðasta lestur';
 
   @override
   String get dailyZikr => 'Daglegt Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get darkMode => 'Dark Mode';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Kerfisþema';
 
   @override
   String get about => 'Um';
@@ -579,7 +579,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro eiginleikar';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Verið velkomin';
 
   @override
   String get getStarted => 'Byrjaðu';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Sleppa';
 
   @override
   String get next => 'Næst';

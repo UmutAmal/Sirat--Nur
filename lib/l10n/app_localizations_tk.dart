@@ -174,13 +174,13 @@ class AppLocalizationsTk extends AppLocalizations {
   String get delete => 'Öçür';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Redaktirläň';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Bolýar';
 
   @override
   String get yes => 'Yes';
@@ -203,7 +203,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get page => 'Sahypa';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Okamak';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsTk extends AppLocalizations {
       'Barlanylan tafsir entek awtonom görnüşde elýeterli däl. Göz aýlamazdan ozal berlen tafsir maglumat toplumyny sinhronlaň.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Bellikler';
 
   @override
   String get addBookmark => 'Bellik goşuň';
@@ -267,7 +267,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get removeBookmark => 'Belligi aýyryň';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Iň soňky oka';
 
   @override
   String get dailyZikr => 'Gündelik Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get darkMode => 'Garaňky re .im';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Ulgam mowzugy';
 
   @override
   String get about => 'Takmynan';
@@ -580,7 +580,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro aýratynlyklary';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsTk extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Hoş geldiňiz';
 
   @override
   String get getStarted => 'Başla';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Geçmek';
 
   @override
   String get next => 'Indiki';

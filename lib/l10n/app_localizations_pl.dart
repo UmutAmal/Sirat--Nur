@@ -174,7 +174,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get delete => 'Usuń';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Edytuj';
 
   @override
   String get close => 'Close';
@@ -203,7 +203,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get page => 'Strona';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Czytanie';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsPl extends AppLocalizations {
       'Zweryfikowany tafsir nie jest jeszcze dostępny w trybie offline. Przed przeglądaniem zsynchronizuj źródłowy zbiór danych Tafsir.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Zakładki';
 
   @override
   String get addBookmark => 'Dodaj zakładkę';
@@ -267,7 +267,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get removeBookmark => 'Usuń zakładkę';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ostatnia lektura';
 
   @override
   String get dailyZikr => 'Codzienny Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get darkMode => 'Tryb ciemny';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Temat systemu';
 
   @override
   String get about => 'O';
@@ -574,13 +574,13 @@ class AppLocalizationsPl extends AppLocalizations {
   String get checkConnection => 'Sprawdź swoje połączenie';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Premia';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Funkcje profesjonalne';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsPl extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Witamy';
 
   @override
   String get getStarted => 'Rozpocznij';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Pomiń';
 
   @override
   String get next => 'Następny';

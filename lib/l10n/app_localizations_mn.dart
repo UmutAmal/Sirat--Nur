@@ -173,7 +173,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get delete => 'Устгах';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Засварлах';
 
   @override
   String get close => 'Close';
@@ -202,7 +202,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get page => 'Хуудас';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Уншиж байна';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsMn extends AppLocalizations {
       'Баталгаажсан тафсир хараахан офлайнаар байхгүй байна. Хайлтын өмнө эх сурвалжийн тафсир датасетийг синк хийнэ үү.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Хавчуурга';
 
   @override
   String get addBookmark => 'Хавчуурга нэмэх';
@@ -266,7 +266,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get removeBookmark => 'Хавчуурга устгах';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Сүүлд уншсан';
 
   @override
   String get dailyZikr => 'Өдөр тутмын Зикр';
@@ -521,7 +521,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get darkMode => 'Харанхуй горим';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Системийн сэдэв';
 
   @override
   String get about => 'тухай';
@@ -574,13 +574,13 @@ class AppLocalizationsMn extends AppLocalizations {
   String get checkConnection => 'Холболтоо шалгана уу';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Дээд зэрэглэлийн';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro онцлогууд';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsMn extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Тавтай морил';
 
   @override
   String get getStarted => 'Эхлэх';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Алгасах';
 
   @override
   String get next => 'Дараа нь';

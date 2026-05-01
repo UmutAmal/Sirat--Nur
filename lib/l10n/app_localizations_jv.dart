@@ -172,7 +172,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get delete => 'Mbusak';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Sunting';
 
   @override
   String get close => 'Close';
@@ -201,7 +201,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get page => 'kaca';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'maca';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsJv extends AppLocalizations {
       'Tafsir sing diverifikasi durung kasedhiya offline. Nyelarasake dataset tafsir sumber sadurunge browsing.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Tetenger';
 
   @override
   String get addBookmark => 'Tambah Bookmark';
@@ -266,7 +266,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get removeBookmark => 'Mbusak Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Wacan pungkasan';
 
   @override
   String get dailyZikr => 'Zikir saben dina';
@@ -520,7 +520,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get darkMode => 'Mode peteng';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tema Sistem';
 
   @override
   String get about => 'Babagan';
@@ -579,7 +579,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Fitur Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,7 +591,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Sugeng rawuh';
 
   @override
   String get getStarted => 'Miwiti';

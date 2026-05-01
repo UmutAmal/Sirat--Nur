@@ -173,13 +173,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get delete => 'حذف ڪريو';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'ترميم ڪريو';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ٺيڪ';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get page => 'صفحو';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'پڙهڻ';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsSd extends AppLocalizations {
       'تصديق ٿيل تفسير اڃا تائين آف لائن دستياب ناهي. برائوزنگ کان اڳ هڪ sourced tafsir dataset کي هم وقت سازي ڪريو.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'بک مارڪ';
 
   @override
   String get addBookmark => 'بک مارڪ شامل ڪريو';
@@ -266,7 +266,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get removeBookmark => 'بک مارڪ هٽايو';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'آخري دفعو پڙهيو';
 
   @override
   String get dailyZikr => 'روزانه ذڪر';
@@ -519,7 +519,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get darkMode => 'ڊارڪ موڊ';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'سسٽم جو موضوع';
 
   @override
   String get about => 'بابت';
@@ -572,13 +572,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get checkConnection => 'مھرباني ڪري پنھنجو ڪنيڪشن چيڪ ڪريو';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'پريميئم';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'پرو خاصيتون';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ڀليڪار';
 
   @override
   String get getStarted => 'شروع ڪريو';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ڇڏڻ';
 
   @override
   String get next => 'اڳيان';

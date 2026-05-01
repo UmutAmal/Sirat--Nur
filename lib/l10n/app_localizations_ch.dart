@@ -173,13 +173,13 @@ class AppLocalizationsCh extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Na dinanchi';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ESTA';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Manli\'e\'';
 
   @override
   String get recitation => 'Recitation';
@@ -266,7 +266,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get removeBookmark => 'Remove Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Uttimo na Tinaitai';
 
   @override
   String get dailyZikr => 'Zikr kada diha';
@@ -520,7 +520,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get darkMode => 'Dark Mode';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tema gi Sistema';
 
   @override
   String get about => 'About';
@@ -573,7 +573,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get checkConnection => 'Please check your connection';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Mantekuta';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
@@ -591,13 +591,13 @@ class AppLocalizationsCh extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Buen binidu';
 
   @override
   String get getStarted => 'Get Started';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Upus';
 
   @override
   String get next => 'Next';

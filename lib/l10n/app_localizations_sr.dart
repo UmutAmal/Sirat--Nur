@@ -173,13 +173,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Уреди';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ОК';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get page => 'Страница';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Читање';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsSr extends AppLocalizations {
       'Верификовани тафсир још увек није доступан ван мреже. Синхронизујте изворни скуп података тафсира пре прегледавања.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Боокмаркс';
 
   @override
   String get addBookmark => 'Додај обележивач';
@@ -266,7 +266,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get removeBookmark => 'Уклони обележивач';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ласт Реад';
 
   @override
   String get dailyZikr => 'Даили Зикр';
@@ -520,7 +520,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get darkMode => 'Дарк Моде';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Системска тема';
 
   @override
   String get about => 'Абоут';
@@ -573,13 +573,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get checkConnection => 'Проверите своју везу';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Премиум';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Про Феатурес';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsSr extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Добродошли';
 
   @override
   String get getStarted => 'Започните';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Скип';
 
   @override
   String get next => 'Следеће';

@@ -173,13 +173,13 @@ class AppLocalizationsMk extends AppLocalizations {
   String get delete => 'Избриши';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Уреди';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Во ред';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get page => 'Страница';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Читање';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsMk extends AppLocalizations {
       'Потврдениот тафсир сè уште не е достапен офлајн. Синхронизирајте изворна база на податоци за тафсири пред да прелистувате.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Обележувачи';
 
   @override
   String get addBookmark => 'Додадете обележувач';
@@ -266,7 +266,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get removeBookmark => 'Отстранете го обележувачот';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Последно читање';
 
   @override
   String get dailyZikr => 'Дневен зикр';
@@ -520,7 +520,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get darkMode => 'Темен режим';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Системска тема';
 
   @override
   String get about => 'За';
@@ -573,13 +573,13 @@ class AppLocalizationsMk extends AppLocalizations {
   String get checkConnection => 'Ве молиме проверете ја вашата врска';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Премиум';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Про Карактеристики';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsMk extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Добредојдовте';
 
   @override
   String get getStarted => 'Започнете';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Прескокни';
 
   @override
   String get next => 'Следно';

@@ -173,13 +173,13 @@ class AppLocalizationsSm extends AppLocalizations {
   String get delete => 'Aveese';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Fa\'atonu';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ua lelei';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get page => 'Itulau';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Faitauga';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsSm extends AppLocalizations {
       'Fa\'amaonia tafsir e le\'o maua tuimotu. Fa\'asa\'o se fa\'amatalaga fa\'amatalaga fa\'apogai a\'o le\'i su\'esu\'e.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Faailoga tusi';
 
   @override
   String get addBookmark => 'Fa\'aopoopo le Fa\'ailoga';
@@ -266,7 +266,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get removeBookmark => 'Aveese Faailoga Tusi';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Faitau Mulimuli';
 
   @override
   String get dailyZikr => 'Zikr aso uma';
@@ -520,7 +520,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get darkMode => 'Faiga Pogisa';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Autu Faiga';
 
   @override
   String get about => 'E uiga i';
@@ -591,13 +591,13 @@ class AppLocalizationsSm extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Susu maia';
 
   @override
   String get getStarted => 'Amata';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Fa\'ase\'e';
 
   @override
   String get next => 'Sosoo ai';

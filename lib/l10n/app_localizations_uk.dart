@@ -174,13 +174,13 @@ class AppLocalizationsUk extends AppLocalizations {
   String get delete => 'Видалити';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Редагувати';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'добре';
 
   @override
   String get yes => 'Yes';
@@ -203,7 +203,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get page => 'Сторінка';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Читання';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsUk extends AppLocalizations {
       'Перевірений тафсір ще не доступний офлайн. Перед переглядом синхронізуйте отриманий набір даних тафсір.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Закладки';
 
   @override
   String get addBookmark => 'Додати закладку';
@@ -267,7 +267,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get removeBookmark => 'Видалити закладку';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Останнє прочитане';
 
   @override
   String get dailyZikr => 'Щоденний Зікр';
@@ -521,7 +521,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get darkMode => 'Темний режим';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Тема системи';
 
   @override
   String get about => 'про';
@@ -574,13 +574,13 @@ class AppLocalizationsUk extends AppLocalizations {
   String get checkConnection => 'Перевірте підключення';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Преміум';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Професійні функції';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsUk extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Ласкаво просимо';
 
   @override
   String get getStarted => 'Почніть роботу';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Пропустити';
 
   @override
   String get next => 'Далі';

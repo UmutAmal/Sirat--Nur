@@ -175,7 +175,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Femblal';
 
   @override
   String get close => 'Close';
@@ -204,7 +204,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lhaih';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsGv extends AppLocalizations {
       'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Learkyn-leabhar;';
 
   @override
   String get addBookmark => 'Add Bookmark';
@@ -268,7 +268,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get removeBookmark => 'Remove Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Leigh diuish';
 
   @override
   String get dailyZikr => 'Zikr laa as laa';
@@ -522,7 +522,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get darkMode => 'Dark Mode';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Theme System';
 
   @override
   String get about => 'About';
@@ -575,13 +575,13 @@ class AppLocalizationsGv extends AppLocalizations {
   String get checkConnection => 'Please check your connection';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Tailley';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Feeaghyn Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsGv extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Curmish';
 
   @override
   String get getStarted => 'Get Started';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Goaillmagh';
 
   @override
   String get next => 'Next';

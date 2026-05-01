@@ -175,13 +175,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get delete => 'Ștergeți';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Editați';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Bine';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get page => 'Pagina';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Citirea';
 
   @override
   String get recitation => 'Recitation';
@@ -260,7 +260,7 @@ class AppLocalizationsRo extends AppLocalizations {
       'Tafsir verificat nu este încă disponibil offline. Sincronizați un set de date tafsir din sursă înainte de a naviga.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Marcaje';
 
   @override
   String get addBookmark => 'Adăugați marcaj';
@@ -269,7 +269,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get removeBookmark => 'Eliminați marcajul';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ultima citire';
 
   @override
   String get dailyZikr => 'Zikr zilnic';
@@ -523,7 +523,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get darkMode => 'Modul întunecat';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tema sistemului';
 
   @override
   String get about => 'Despre';
@@ -582,7 +582,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Caracteristici Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -594,13 +594,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Bun venit';
 
   @override
   String get getStarted => 'Începeți';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Sari peste';
 
   @override
   String get next => 'În continuare';

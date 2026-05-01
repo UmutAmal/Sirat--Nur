@@ -174,7 +174,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get delete => 'Odstrániť';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Upraviť';
 
   @override
   String get close => 'Close';
@@ -203,7 +203,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get page => 'Stránka';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Čítanie';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsSk extends AppLocalizations {
       'Overený tafsir zatiaľ nie je dostupný offline. Pred prehliadaním synchronizujte zdrojovú množinu údajov tafsir.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Záložky';
 
   @override
   String get addBookmark => 'Pridať záložku';
@@ -267,7 +267,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get removeBookmark => 'Odstrániť záložku';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Naposledy prečítané';
 
   @override
   String get dailyZikr => 'Denný Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get darkMode => 'Tmavý režim';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Téma systému';
 
   @override
   String get about => 'O';
@@ -580,7 +580,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro funkcie';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Vitajte';
 
   @override
   String get getStarted => 'Začíname';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Preskočiť';
 
   @override
   String get next => 'Ďalej';

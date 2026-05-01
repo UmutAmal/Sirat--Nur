@@ -180,7 +180,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get close => 'Tswala';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'GO LOKILE';
 
   @override
   String get yes => 'Ee';
@@ -576,7 +576,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get checkConnection => 'Hle hlahloba kgokagano ya gago';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Premiamo';
 
   @override
   String get upgradeToPro => 'Ntlafatsa go Pro';

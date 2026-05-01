@@ -173,13 +173,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get delete => 'Paarẹ';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Ṣatunkọ';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'O DARA';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get page => 'Oju-iwe';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Kika';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsYo extends AppLocalizations {
       'Tafsir ti o ni idaniloju ko si ni aisinipo sibẹsibẹ. Muṣiṣẹpọ dataset tafsir ti o ti jade ṣaaju lilọ kiri ayelujara.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Awọn bukumaaki';
 
   @override
   String get addBookmark => 'Fi Bukumaaki kun';
@@ -266,7 +266,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get removeBookmark => 'Yọ Bukumaaki kuro';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ka kẹhin';
 
   @override
   String get dailyZikr => 'Ojoojumọ Zikr';
@@ -519,7 +519,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get darkMode => 'Ipo Dudu';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Akori eto';
 
   @override
   String get about => 'Nipa';
@@ -572,13 +572,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get checkConnection => 'Jọwọ ṣayẹwo asopọ rẹ';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Ere';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro Awọn ẹya ara ẹrọ';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsYo extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Kaabo';
 
   @override
   String get getStarted => 'Bẹrẹ';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Rekọja';
 
   @override
   String get next => 'Itele';

@@ -173,13 +173,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get delete => 'ئۆچۈرۈش';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'تەھرىر';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ماقۇل';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get page => 'بەت';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'ئوقۇش';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsUg extends AppLocalizations {
       'دەلىللەنگەن تەفسىر تېخى تورسىز ھالەتتە يوق. كۆرۈشتىن بۇرۇن مەنبەلىك تەفسىر سانلىق مەلۇمات جەدۋىلىنى ماسقەدەملەڭ.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'خەتكۈچلەر';
 
   @override
   String get addBookmark => 'خەتكۈچ قوشۇڭ';
@@ -266,7 +266,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get removeBookmark => 'خەتكۈچنى ئۆچۈرۈڭ';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'ئاخىرقى ئوقۇش';
 
   @override
   String get dailyZikr => 'Daily Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get darkMode => 'قاراڭغۇ ھالەت';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'سىستېما ئۇسلۇبى';
 
   @override
   String get about => 'ھەققىدە';
@@ -591,13 +591,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'خۇش كەپسىز';
 
   @override
   String get getStarted => 'باشلاڭ';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ئاتلاش';
 
   @override
   String get next => 'كېيىنكى';

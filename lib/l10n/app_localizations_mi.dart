@@ -174,13 +174,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get delete => 'Mukua';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Whakatikatika';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'pai';
 
   @override
   String get yes => 'Yes';
@@ -203,7 +203,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get page => 'Whārangi';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Pānui';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsMi extends AppLocalizations {
       'Ko te tafsir kua whakamanahia kaore i te waatea tuimotu. Tukutahia he huinga raraunga tafsir i mua i te tirotiro.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Tohuwāhi';
 
   @override
   String get addBookmark => 'Tāpiri Tohuwāhi';
@@ -267,7 +267,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get removeBookmark => 'Tango Tohuwāhi';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Panui Whakamutunga';
 
   @override
   String get dailyZikr => 'Zikr ia ra';
@@ -522,7 +522,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get darkMode => 'Aratau pouri';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Kaupapa Pūnaha';
 
   @override
   String get about => 'Mō';
@@ -575,13 +575,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get checkConnection => 'Tena koa tirohia to hononga';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Moni';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Āhuatanga Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsMi extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Nau mai haere mai';
 
   @override
   String get getStarted => 'Tīmatahia';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Tīpoka';
 
   @override
   String get next => 'Whai muri';

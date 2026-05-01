@@ -173,13 +173,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get delete => 'ړنګول';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'سمون';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'سمه ده';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get page => 'پاڼه';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'لوستل';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsPs extends AppLocalizations {
       'تصدیق شوی تفسیر لا تر اوسه آفلاین شتون نلري. د لټون کولو دمخه د منبع شوي تفسیر ډیټاسیټ همغږي کړئ.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'بک مارکونه';
 
   @override
   String get addBookmark => 'بک مارک اضافه کړئ';
@@ -266,7 +266,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get removeBookmark => 'بک مارک لرې کړئ';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'وروستی لوستل';
 
   @override
   String get dailyZikr => 'ورځنی ذکر';
@@ -519,7 +519,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get darkMode => 'تیاره حالت';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'د سیسټم موضوع';
 
   @override
   String get about => 'په اړه';
@@ -572,13 +572,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get checkConnection => 'مهرباني وکړئ خپل پیوستون وګورئ';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'پریمیم';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'پرو ځانګړتیاوې';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ښه راغلاست';
 
   @override
   String get getStarted => 'پیل کړئ';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'پریږده';
 
   @override
   String get next => 'بل';

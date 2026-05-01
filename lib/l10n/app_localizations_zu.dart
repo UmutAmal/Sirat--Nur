@@ -173,13 +173,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get delete => 'Susa';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Hlela';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'KULUNGILE';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get page => 'Ikhasi';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Ukufunda';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsZu extends AppLocalizations {
       'I-tafsir eqinisekisiwe ayitholakali ungaxhunyiwe ku-inthanethi okwamanje. Vumelanisa isethi yedatha ye-tafsir etholakala kumthombo ngaphambi kokuphequlula.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Amabhukumaka';
 
   @override
   String get addBookmark => 'Engeza Ibhukhimakhi';
@@ -266,7 +266,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get removeBookmark => 'Susa Ibhukhimakhi';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ukufundwa Kokugcina';
 
   @override
   String get dailyZikr => 'I-Zikr yansuku zonke';
@@ -520,7 +520,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get darkMode => 'Imodi Emnyama';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Itimu Yesistimu';
 
   @override
   String get about => 'Mayelana';
@@ -573,13 +573,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get checkConnection => 'Sicela uhlole ukuxhumana kwakho';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'I-Premium';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Izici ze-Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsZu extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Siyakwamukela';
 
   @override
   String get getStarted => 'Qalisa';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Yeqa';
 
   @override
   String get next => 'Okulandelayo';

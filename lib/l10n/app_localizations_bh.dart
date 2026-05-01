@@ -174,13 +174,13 @@ class AppLocalizationsBh extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'संपादन कईल';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ठीक बा';
 
   @override
   String get yes => 'Yes';
@@ -203,7 +203,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'पढ़ल रहल बानी';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsBh extends AppLocalizations {
       'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'बुकमार्क';
 
   @override
   String get addBookmark => 'Add Bookmark';
@@ -267,7 +267,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get removeBookmark => 'Remove Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'आखिरी बेर पढ़ल गइल';
 
   @override
   String get dailyZikr => 'रोजाना जिक्र के बा';
@@ -521,7 +521,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get darkMode => 'Dark Mode';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'सिस्टम थीम';
 
   @override
   String get about => 'About';
@@ -574,13 +574,13 @@ class AppLocalizationsBh extends AppLocalizations {
   String get checkConnection => 'Please check your connection';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'प्रीमियम';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'प्रो फीचर बा';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsBh extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'स्वागत';
 
   @override
   String get getStarted => 'Get Started';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'छोड़ दऽ';
 
   @override
   String get next => 'Next';

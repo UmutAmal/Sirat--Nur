@@ -258,7 +258,7 @@ class AppLocalizationsBho extends AppLocalizations {
       'सत्यापन तफसिर अभी तक ऑफलाइन उपलब्ध नइखे। ब्राउजिंग से पहिले कवनो सोर्स कइल तफसीर डाटासेट के सिंक करीं।';
 
   @override
-  String get bookmarks => 'बुकमार्क के बारे में बतावल गइल बा';
+  String get bookmarks => 'बुकमार्क';
 
   @override
   String get addBookmark => 'बुकमार्क जोड़ल जाला';
@@ -520,7 +520,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get darkMode => 'डार्क मोड के बा';
 
   @override
-  String get systemTheme => 'सिस्टम के थीम के बारे में बतावल गइल बा';
+  String get systemTheme => 'सिस्टम थीम';
 
   @override
   String get about => 'के बारे में';

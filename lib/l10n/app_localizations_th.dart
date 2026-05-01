@@ -173,13 +173,13 @@ class AppLocalizationsTh extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'แก้ไข';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ตกลง';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get page => 'หน้าหนังสือ';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'การอ่าน';
 
   @override
   String get recitation => 'Recitation';
@@ -256,7 +256,7 @@ class AppLocalizationsTh extends AppLocalizations {
       'tafsir ที่ตรวจสอบแล้วยังไม่พร้อมใช้งานแบบออฟไลน์ ซิงค์ชุดข้อมูล tafsir ที่มาก่อนที่จะเรียกดู';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'บุ๊กมาร์ก';
 
   @override
   String get addBookmark => 'เพิ่มบุ๊กมาร์ก';
@@ -265,7 +265,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get removeBookmark => 'ลบบุ๊กมาร์ก';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'อ่านครั้งสุดท้าย';
 
   @override
   String get dailyZikr => 'ซิกร์รายวัน';
@@ -519,7 +519,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get darkMode => 'โหมดมืด';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'ธีมของระบบ';
 
   @override
   String get about => 'เกี่ยวกับ';
@@ -572,13 +572,13 @@ class AppLocalizationsTh extends AppLocalizations {
   String get checkConnection => 'กรุณาตรวจสอบการเชื่อมต่อของคุณ';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'พรีเมี่ยม';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'คุณสมบัติโปร';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsTh extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ยินดีต้อนรับ';
 
   @override
   String get getStarted => 'เริ่มต้นเลย';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ข้าม';
 
   @override
   String get next => 'ต่อไป';

@@ -173,13 +173,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get delete => 'ລຶບ';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'ແກ້ໄຂ';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ຕົກລົງ';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get page => 'ໜ້າ';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'ການອ່ານ';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsLo extends AppLocalizations {
       'tafsir ທີ່ຢັ້ງຢືນແລ້ວແມ່ນຍັງບໍ່ມີໃຫ້ອອບລາຍເທື່ອ. ຊິ້ງຂໍ້ມູນຊຸດຂໍ້ມູນ tafsir ທີ່ມາກ່ອນການທ່ອງເວັບ.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'ບຸກມາກ';
 
   @override
   String get addBookmark => 'ເພີ່ມບຸກມາກ';
@@ -266,7 +266,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get removeBookmark => 'ເອົາບຸກມາກອອກ';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'ອ່ານຫຼ້າສຸດ';
 
   @override
   String get dailyZikr => 'Zikr ປະຈໍາວັນ';
@@ -520,7 +520,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get darkMode => 'ໂໝດມືດ';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'ຫົວຂໍ້ລະບົບ';
 
   @override
   String get about => 'ກ່ຽວກັບ';
@@ -573,13 +573,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get checkConnection => 'ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ຂອງທ່ານ';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'ພຣີມຽມ';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'ຄຸນ​ນະ​ສົມ​ບັດ Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ຍິນດີຕ້ອນຮັບ';
 
   @override
   String get getStarted => 'ເລີ່ມຕົ້ນ';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ຂ້າມ';
 
   @override
   String get next => 'ຕໍ່ໄປ';

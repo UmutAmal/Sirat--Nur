@@ -527,7 +527,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get darkMode => 'Ch’amaka Modo';
 
   @override
-  String get systemTheme => 'Sistema ukax Tema ukawa';
+  String get systemTheme => 'Sistema tema';
 
   @override
   String get about => 'Ukxata';

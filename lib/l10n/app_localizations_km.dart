@@ -173,13 +173,13 @@ class AppLocalizationsKm extends AppLocalizations {
   String get delete => 'លុប';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'កែសម្រួល';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'យល់ព្រម';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get page => 'ទំព័រ';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'ការអាន';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsKm extends AppLocalizations {
       'tafsir ដែលបានផ្ទៀងផ្ទាត់មិនទាន់មាននៅក្រៅបណ្តាញនៅឡើយទេ។ ធ្វើសមកាលកម្មសំណុំទិន្នន័យ tafsir ដែលមានប្រភពមុនពេលរុករក។';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'ចំណាំ';
 
   @override
   String get addBookmark => 'បន្ថែមចំណាំ';
@@ -266,7 +266,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get removeBookmark => 'លុបចំណាំ';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'អានចុងក្រោយ';
 
   @override
   String get dailyZikr => 'ប្រចាំថ្ងៃ Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get darkMode => 'របៀបងងឹត';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'ប្រធានបទប្រព័ន្ធ';
 
   @override
   String get about => 'អំពី';
@@ -573,13 +573,13 @@ class AppLocalizationsKm extends AppLocalizations {
   String get checkConnection => 'សូមពិនិត្យមើលការតភ្ជាប់របស់អ្នក។';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'បុព្វលាភ';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'លក្ខណៈពិសេសគាំទ្រ';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsKm extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'សូមស្វាគមន៍';
 
   @override
   String get getStarted => 'ចាប់ផ្តើម';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'រំលង';
 
   @override
   String get next => 'បន្ទាប់';

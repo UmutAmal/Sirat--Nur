@@ -173,7 +173,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get delete => 'Padam';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Sunting';
 
   @override
   String get close => 'Tutup';

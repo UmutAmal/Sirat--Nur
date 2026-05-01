@@ -174,13 +174,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get delete => 'நீக்கு';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'திருத்தவும்';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'சரி';
 
   @override
   String get yes => 'Yes';
@@ -203,7 +203,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get page => 'பக்கம்';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'படித்தல்';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsTa extends AppLocalizations {
       'சரிபார்க்கப்பட்ட தஃப்சீர் இன்னும் ஆஃப்லைனில் கிடைக்கவில்லை. உலாவுவதற்கு முன் ஒரு ஆதாரமான tafsir தரவுத்தொகுப்பை ஒத்திசைக்கவும்.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'புக்மார்க்குகள்';
 
   @override
   String get addBookmark => 'புக்மார்க்கைச் சேர்க்கவும்';
@@ -268,7 +268,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get removeBookmark => 'புக்மார்க்கை அகற்று';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'கடைசியாக படித்தது';
 
   @override
   String get dailyZikr => 'தினசரி ஜிக்ர்';
@@ -522,7 +522,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get darkMode => 'இருண்ட பயன்முறை';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'கணினி தீம்';
 
   @override
   String get about => 'பற்றி';
@@ -575,13 +575,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get checkConnection => 'உங்கள் இணைப்பைச் சரிபார்க்கவும்';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'பிரீமியம்';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'ப்ரோ அம்சங்கள்';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'வரவேற்கிறோம்';
 
   @override
   String get getStarted => 'தொடங்குங்கள்';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'தவிர்க்கவும்';
 
   @override
   String get next => 'அடுத்து';

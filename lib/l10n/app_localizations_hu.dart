@@ -175,13 +175,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get delete => 'Törölje';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Szerkesztés';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'RENDBEN';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get page => 'oldal';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Olvasás';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsHu extends AppLocalizations {
       'Az ellenőrzött tafsir még nem érhető el offline módban. Böngészés előtt szinkronizáljon egy forrásból származó tafsir adatkészletet.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Könyvjelzők';
 
   @override
   String get addBookmark => 'Könyvjelző hozzáadása';
@@ -268,7 +268,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get removeBookmark => 'Könyvjelző eltávolítása';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Utolsó olvasás';
 
   @override
   String get dailyZikr => 'Napi Zikr';
@@ -522,7 +522,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get darkMode => 'Sötét mód';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Rendszer téma';
 
   @override
   String get about => 'Körülbelül';
@@ -575,13 +575,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get checkConnection => 'Kérjük, ellenőrizze a kapcsolatot';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Prémium';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro jellemzők';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Üdvözöljük';
 
   @override
   String get getStarted => 'Kezdje el';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Kihagyás';
 
   @override
   String get next => 'Következő';

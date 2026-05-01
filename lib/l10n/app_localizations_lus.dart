@@ -179,7 +179,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get close => 'Khar rawh';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'A THA E';
 
   @override
   String get yes => 'Ni e';

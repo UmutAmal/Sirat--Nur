@@ -173,7 +173,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get delete => 'Slett';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Rediger';
 
   @override
   String get close => 'Close';
@@ -202,7 +202,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get page => 'Side';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lesing';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsNb extends AppLocalizations {
       'Verifisert tafsir er ikke tilgjengelig offline ennå. Synkroniser et hentet tafsir-datasett før du surfer.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Bokmerker';
 
   @override
   String get addBookmark => 'Legg til bokmerke';
@@ -266,7 +266,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get removeBookmark => 'Fjern bokmerke';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Sist lest';
 
   @override
   String get dailyZikr => 'Daglig Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get darkMode => 'Mørk modus';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Systemtema';
 
   @override
   String get about => 'Om';
@@ -579,7 +579,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro-funksjoner';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsNb extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Velkommen';
 
   @override
   String get getStarted => 'Kom i gang';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Hopp over';
 
   @override
   String get next => 'Neste';

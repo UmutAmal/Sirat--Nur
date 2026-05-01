@@ -175,13 +175,13 @@ class AppLocalizationsKy extends AppLocalizations {
   String get delete => 'Жок кылуу';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Түзөтүү';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'макул';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Окуу';
 
   @override
   String get recitation => 'Recitation';
@@ -260,7 +260,7 @@ class AppLocalizationsKy extends AppLocalizations {
       'Текшерилген тафсир азырынча оффлайнда жеткиликтүү эмес. Серептөөдөн мурун булактан алынган тафсир маалымат топтомун синхрондоштуруу.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Кыстармалар';
 
   @override
   String get addBookmark => 'Кыстарма кошуу';
@@ -269,7 +269,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get removeBookmark => 'Кыстарманы алып салуу';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Акыркы окуу';
 
   @override
   String get dailyZikr => 'Күнүмдүк Зикир';
@@ -524,7 +524,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get darkMode => 'Караңгы режим';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Системанын темасы';
 
   @override
   String get about => 'Жөнүндө';
@@ -577,13 +577,13 @@ class AppLocalizationsKy extends AppLocalizations {
   String get checkConnection => 'Сураныч, байланышыңызды текшериңиз';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Премиум';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro өзгөчөлүктөрү';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -595,13 +595,13 @@ class AppLocalizationsKy extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'кош келиңиз';
 
   @override
   String get getStarted => 'Баштоо';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Өткөрүп жибер';
 
   @override
   String get next => 'Кийинки';

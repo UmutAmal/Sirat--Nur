@@ -174,13 +174,13 @@ class AppLocalizationsLv extends AppLocalizations {
   String get delete => 'Dzēst';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Rediģēt';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Labi';
 
   @override
   String get yes => 'Yes';
@@ -203,7 +203,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get page => 'Lapa';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Lasīšana';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsLv extends AppLocalizations {
       'Verified tafsir vēl nav pieejams bezsaistē. Pirms pārlūkošanas sinhronizējiet iegūto tafsir datu kopu.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Grāmatzīmes';
 
   @override
   String get addBookmark => 'Pievienot grāmatzīmi';
@@ -267,7 +267,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get removeBookmark => 'Noņemt grāmatzīmi';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Pēdējā lasīšana';
 
   @override
   String get dailyZikr => 'Dienas Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get darkMode => 'Tumšais režīms';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Sistēmas tēma';
 
   @override
   String get about => 'Par';
@@ -580,7 +580,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro funkcijas';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsLv extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Laipni lūdzam';
 
   @override
   String get getStarted => 'Sāciet darbu';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Izlaist';
 
   @override
   String get next => 'Tālāk';

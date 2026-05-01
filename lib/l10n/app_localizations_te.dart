@@ -173,13 +173,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get delete => 'తొలగించు';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'సవరించు';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'సరే';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get page => 'పేజీ';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'చదవడం';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsTe extends AppLocalizations {
       'ధృవీకరించబడిన తఫ్సీర్ ఇంకా ఆఫ్‌లైన్‌లో అందుబాటులో లేదు. బ్రౌజ్ చేయడానికి ముందు మూలాధారమైన tafsir డేటాసెట్‌ను సమకాలీకరించండి.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'బుక్‌మార్క్‌లు';
 
   @override
   String get addBookmark => 'బుక్‌మార్క్‌ని జోడించండి';
@@ -266,7 +266,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get removeBookmark => 'బుక్‌మార్క్‌ని తీసివేయండి';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'చివరిగా చదివింది';
 
   @override
   String get dailyZikr => 'రోజువారీ జికర్';
@@ -520,7 +520,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get darkMode => 'డార్క్ మోడ్';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'సిస్టమ్ థీమ్';
 
   @override
   String get about => 'గురించి';
@@ -573,13 +573,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get checkConnection => 'దయచేసి మీ కనెక్షన్‌ని తనిఖీ చేయండి';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'ప్రీమియం';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'ప్రో ఫీచర్లు';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'స్వాగతం';
 
   @override
   String get getStarted => 'ప్రారంభించండి';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'దాటవేయి';
 
   @override
   String get next => 'తదుపరి';

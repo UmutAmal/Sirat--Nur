@@ -172,7 +172,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get delete => 'Ta bort';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Redigera';
 
   @override
   String get close => 'Close';
@@ -201,7 +201,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get page => 'Sida';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Läsning';
 
   @override
   String get recitation => 'Recitation';
@@ -256,7 +256,7 @@ class AppLocalizationsSv extends AppLocalizations {
       'Verifierad tafsir är inte tillgänglig offline än. Synkronisera en hämtad tafsir-datauppsättning innan du surfar.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Bokmärken';
 
   @override
   String get addBookmark => 'Lägg till bokmärke';
@@ -265,7 +265,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get removeBookmark => 'Ta bort bokmärke';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Senast läst';
 
   @override
   String get dailyZikr => 'Daglig Zikr';
@@ -519,7 +519,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get darkMode => 'Mörkt läge';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Systemtema';
 
   @override
   String get about => 'Om';
@@ -572,13 +572,13 @@ class AppLocalizationsSv extends AppLocalizations {
   String get checkConnection => 'Kontrollera din anslutning';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Premie';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro-funktioner';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsSv extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Välkommen';
 
   @override
   String get getStarted => 'Kom igång';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Hoppa över';
 
   @override
   String get next => 'Nästa';

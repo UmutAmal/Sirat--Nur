@@ -173,13 +173,13 @@ class AppLocalizationsSw extends AppLocalizations {
   String get delete => 'Futa';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Hariri';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Sawa';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get page => 'Ukurasa';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Kusoma';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsSw extends AppLocalizations {
       'Tafsir iliyothibitishwa bado haipatikani nje ya mtandao. Sawazisha mkusanyiko wa data wa tafsir kabla ya kuvinjari.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Alamisho';
 
   @override
   String get addBookmark => 'Ongeza Alamisho';
@@ -266,7 +266,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get removeBookmark => 'Ondoa Alamisho';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Iliyosomwa Mwisho';
 
   @override
   String get dailyZikr => 'Zikr za kila siku';
@@ -520,7 +520,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get darkMode => 'Hali ya Giza';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Mandhari ya Mfumo';
 
   @override
   String get about => 'Kuhusu';
@@ -579,7 +579,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Vipengele vya Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsSw extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Karibu';
 
   @override
   String get getStarted => 'Anza';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Ruka';
 
   @override
   String get next => 'Inayofuata';

@@ -173,7 +173,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get delete => 'Izbriši';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Uredi';
 
   @override
   String get close => 'Close';
@@ -202,7 +202,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get page => 'Stran';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Branje';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsSl extends AppLocalizations {
       'Preverjeni tafsir še ni na voljo brez povezave. Pred brskanjem sinhronizirajte pridobljeni nabor podatkov tafsir.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Zaznamki';
 
   @override
   String get addBookmark => 'Dodaj zaznamek';
@@ -267,7 +267,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get removeBookmark => 'Odstrani zaznamek';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Zadnje prebrano';
 
   @override
   String get dailyZikr => 'Dnevni Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get darkMode => 'Temni način';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Sistemska tema';
 
   @override
   String get about => 'O tem';
@@ -580,7 +580,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro funkcije';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsSl extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'dobrodošli';
 
   @override
   String get getStarted => 'Začnite';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Preskoči';
 
   @override
   String get next => 'Naprej';

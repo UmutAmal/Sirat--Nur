@@ -173,13 +173,13 @@ class AppLocalizationsId extends AppLocalizations {
   String get delete => 'Hapus';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Sunting';
 
   @override
   String get close => 'Tutup';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Oke';
 
   @override
   String get yes => 'Ya';
@@ -573,7 +573,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get checkConnection => 'Silakan periksa koneksi Anda';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Premi';
 
   @override
   String get upgradeToPro => 'Upgrade ke Pro';

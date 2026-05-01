@@ -173,13 +173,13 @@ class AppLocalizationsOr extends AppLocalizations {
   String get delete => 'ବିଲୋପ କରନ୍ତୁ |';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'ସଂପାଦନା କରନ୍ତୁ |';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ଠିକ ଅଛି |';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get page => 'ପୃଷ୍ଠା';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'ପ Reading ିବା |';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsOr extends AppLocalizations {
       'ଯାଞ୍ଚ ହୋଇଥିବା ତାଫସିର ଏପର୍ଯ୍ୟନ୍ତ ଅଫଲାଇନରେ ଉପଲବ୍ଧ ନାହିଁ | ବ୍ରାଉଜିଂ କରିବା ପୂର୍ବରୁ ଏକ ସୋର୍ସଡ୍ ଟାଫସିର ଡାଟାସେଟକୁ ସିଙ୍କ କରନ୍ତୁ |';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'ବୁକମାର୍କଗୁଡିକ';
 
   @override
   String get addBookmark => 'ବୁକମାର୍କ ଯୋଡନ୍ତୁ |';
@@ -267,7 +267,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get removeBookmark => 'ବୁକମାର୍କ ଅପସାରଣ କରନ୍ତୁ |';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'ଶେଷ ପ Read ଼ନ୍ତୁ |';
 
   @override
   String get dailyZikr => 'ଦ Daily ନିକ ଜିକ୍ର |';
@@ -522,7 +522,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get darkMode => 'ଗା ark ମୋଡ୍ |';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'ସିଷ୍ଟମ୍ ଥିମ୍';
 
   @override
   String get about => 'ବିଷୟରେ';
@@ -575,13 +575,13 @@ class AppLocalizationsOr extends AppLocalizations {
   String get checkConnection => 'ଦୟାକରି ଆପଣଙ୍କର ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ |';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'ପ୍ରିମିୟମ୍';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'ପ୍ରୋ ବ Features ଶିଷ୍ଟ୍ୟଗୁଡିକ';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsOr extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ସ୍ Welcome ାଗତ';
 
   @override
   String get getStarted => 'ଆରମ୍ଭ କର |';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ଛାଡିଦିଅ |';
 
   @override
   String get next => 'ପରବର୍ତ୍ତୀ';

@@ -174,13 +174,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Gulaaluu';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'TOLE';
 
   @override
   String get yes => 'Yes';
@@ -203,7 +203,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get page => 'Fuula';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Dubbisuu';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsOm extends AppLocalizations {
       'Verified tafsir hanga ammaatti offline hin argamu. Daawwachuu dura kuusaa deetaa tafsir madda ta\'e walsimsiisi.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Mallattoolee (bookmarks).';
 
   @override
   String get addBookmark => 'Bookmark Dabaluu';
@@ -268,7 +268,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get removeBookmark => 'Bookmark haqi';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Dubbisa Dhumaa';
 
   @override
   String get dailyZikr => 'Guyyaa guyyaan Zikr';
@@ -522,7 +522,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get darkMode => 'Haala Dukkanaa';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Mata duree Sirna';
 
   @override
   String get about => 'Waa\'ee';
@@ -575,13 +575,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get checkConnection => 'Mee connection keessan ilaalaa';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Hamma kaffaltii waliigalteef ykn baraarsaaf kaffalamu';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Amaloota Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Baga nagaan dhufte';
 
   @override
   String get getStarted => 'Jalqabaa';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Irra darbuu';
 
   @override
   String get next => 'Kan itti aanu';

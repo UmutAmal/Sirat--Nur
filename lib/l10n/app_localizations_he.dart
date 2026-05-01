@@ -173,13 +173,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get delete => 'מחק';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'ערוך';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'בסדר';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get page => 'עמוד';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'קריאה';
 
   @override
   String get recitation => 'Recitation';
@@ -256,7 +256,7 @@ class AppLocalizationsHe extends AppLocalizations {
       'Tafsir מאומת עדיין לא זמין במצב לא מקוון. סנכרן מערך נתונים ממקור tafsir לפני הגלישה.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'סימניות';
 
   @override
   String get addBookmark => 'הוסף סימניה';
@@ -265,7 +265,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get removeBookmark => 'הסר סימניה';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'קריאה אחרונה';
 
   @override
   String get dailyZikr => 'זיקר יומי';
@@ -518,7 +518,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get darkMode => 'מצב כהה';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'ערכת נושא של המערכת';
 
   @override
   String get about => 'אודות';
@@ -571,13 +571,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get checkConnection => 'אנא בדוק את החיבור שלך';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'פרימיום';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'תכונות פרו';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -589,13 +589,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ברוך הבא';
 
   @override
   String get getStarted => 'התחל';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'דלג';
 
   @override
   String get next => 'הבא';

@@ -173,7 +173,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Kokoma';
 
   @override
   String get close => 'Close';
@@ -202,7 +202,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get page => 'Lokasa';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Kotanga';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsLn extends AppLocalizations {
       'Verifié tafsir ezali nanu te hors ligne. Sync ensemble ya ba données ya tafsir sourced avant ya ko naviguer.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Ba marque-pages';
 
   @override
   String get addBookmark => 'Bakisa Marque-page';
@@ -266,7 +266,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get removeBookmark => 'Longola Marque-pages';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Botangi ya nsuka';
 
   @override
   String get dailyZikr => 'Mokolo na mokolo Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get darkMode => 'Mode ya Molili';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Thème ya Système';
 
   @override
   String get about => 'Pene';
@@ -574,13 +574,13 @@ class AppLocalizationsLn extends AppLocalizations {
   String get checkConnection => 'Svp tala connexion na yo';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Prime';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Makambo ya Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsLn extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Boyei malamu';
 
   @override
   String get getStarted => 'Kobanda';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Kokipe te';
 
   @override
   String get next => 'Oyo elandi';

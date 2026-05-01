@@ -173,7 +173,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get delete => 'Jêbirin';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Biguherîne';
 
   @override
   String get close => 'Close';
@@ -202,7 +202,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get page => 'Page';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Xwendin';
 
   @override
   String get recitation => 'Recitation';
@@ -266,7 +266,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get removeBookmark => 'Nîşanê jêbirin';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Dawî Xwendin';
 
   @override
   String get dailyZikr => 'Rojane Zikr';
@@ -520,7 +520,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get darkMode => 'Moda Dark';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Mijara Pergalê';
 
   @override
   String get about => 'About';
@@ -573,13 +573,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get checkConnection => 'Ji kerema xwe pêwendiya xwe kontrol bikin';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Xelat';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Taybetmendiyên Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Bi xêr hatî';
 
   @override
   String get getStarted => 'Dest pê bike';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Hilperkîn';
 
   @override
   String get next => 'Next';

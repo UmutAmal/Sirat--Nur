@@ -175,13 +175,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get delete => 'Delete';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Ruwapay';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'KUSA';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get page => 'P’anqa';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Ñawinchay';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsQu extends AppLocalizations {
       'Verified tafsir manaraqmi mana internetpi tarikunchu. Manaraq maskachkaspa huk pukyuta tafsir willay huñuta tinkiy.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Marcadores';
 
   @override
   String get addBookmark => 'Marcadorta yapay';
@@ -268,7 +268,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get removeBookmark => 'Marcadorta hurquy';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Qhipa Ñawinchay';
 
   @override
   String get dailyZikr => 'Sapa punchaw Zikr';
@@ -522,7 +522,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get darkMode => 'Modo Oscuro';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Sistema tema';
 
   @override
   String get about => 'Sobre';
@@ -575,13 +575,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get checkConnection => 'Ama hina kaspa, tinkisqaykita qhaway';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Sapaq plan';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Propa ruwanakuna';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Allinlla chayaykamuy';
 
   @override
   String get getStarted => 'Qallariy';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Paway';
 
   @override
   String get next => 'Qatiq';

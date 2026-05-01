@@ -173,13 +173,13 @@ class AppLocalizationsIg extends AppLocalizations {
   String get delete => 'Hichapụ';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Dezie';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ọ DỊ MMA';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get page => 'Ibe';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Ọgụgụ';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsIg extends AppLocalizations {
       'Ekwenyere tafsir adịkwaghị na ntanetị. Mekọrịta dataset tafsir ewepụtara tupu ịme nchọgharị.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Ibe edokwubara';
 
   @override
   String get addBookmark => 'Tinye ibe edokọbara';
@@ -266,7 +266,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get removeBookmark => 'Wepu ibe edokọbara';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Ọgụgụ ikpeazụ';
 
   @override
   String get dailyZikr => 'Zikr kwa ụbọchị';
@@ -520,7 +520,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get darkMode => 'Ọnọdụ gbara ọchịchịrị';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Isiokwu Sistemu';
 
   @override
   String get about => 'Ihe gbasara';
@@ -573,13 +573,13 @@ class AppLocalizationsIg extends AppLocalizations {
   String get checkConnection => 'Biko lelee njikọ gị';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'adịchaghị';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Njirimara Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsIg extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Nnọọ';
 
   @override
   String get getStarted => 'Malite';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Mafee';
 
   @override
   String get next => 'Na-esote';

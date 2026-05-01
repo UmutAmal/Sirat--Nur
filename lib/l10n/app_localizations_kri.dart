@@ -573,7 +573,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get checkConnection => 'Duya chɛk yu kɔnɛkshɔn';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Bɛst';
 
   @override
   String get upgradeToPro => 'Ɔpgrɛd to Pro';

@@ -20611,3 +20611,38 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude proper-name/symbol olmayan en yuksek UI label kumesini skorlayip minimal l10n guard ile azalt.
+
+## 2026-05-01 TUR-513 - General Navigation Account L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Genel arayuz ve hesap/navigasyon etiketleri `ok`, `edit`, `premium`, `bookmarks`, `welcome`, `skip`, `proFeatures`, `systemTheme`, `lastRead`, `reading` cok sayida locale'de Ingilizce fallback olarak kaliyordu. Bu dini icerik degil, dogrudan kullaniciya gorunen UI kopyasi oldugu icin sahte dini metin uretmeden guvenli bicimde iyilestirilebilir P1 borc olarak ele alindi.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report ok edit premium bookmarks welcome skip proFeatures systemTheme lastRead reading` same-as-English `1403`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 10 anahtarda same-as-English `416`, missing/empty `0`, placeholder mismatch `0`.
+  - `lib/l10n/app_aa.arb`, `lib/l10n/app_ay.arb`, `lib/l10n/app_bh.arb`, `lib/l10n/app_bho.arb`, `lib/l10n/app_bo.arb`, `lib/l10n/app_gn.arb`, `lib/l10n/app_qu.arb`, `lib/l10n/app_sa.arb`, `lib/l10n/app_th.arb`, `lib/l10n/app_ti.arb` hedef orneklerde bu 10 anahtar artik Ingilizce fallback degil.
+  - `test/translate_arb_keys_test.dart` yeni guard ile same-as-English esigi `<= 417`; ayni ornek locale'lerde Ingilizce fallback, multiline copy ve bilinen batch artigi `इति`, `ዝብል`, `ukax/Ukax`, `के बारे`, `बतावल`, `nisqa`, `rehegua` geri gelirse test kirmak uzere kilitlendi.
+- Kullanici etkisi: Onboarding, temel butonlar, bookmark/reading durumu, premium/pro ve tema etiketleri daha fazla dilde yerel gorunur; uygulama genel UI'sinde Ingilizce kalinti azalir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- `ok`, `edit`, `premium`, `bookmarks`, `welcome`, `skip`, `proFeatures`, `systemTheme`, `lastRead`, `reading` icin kontrollu l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- Batch sonrasi `app_sa.arb` ve `app_ti.arb` cok satirli aciklama kalintilarindan temizlendi.
+- `app_ay.arb`, `app_bh.arb`, `app_bho.arb`, `app_gn.arb`, `app_qu.arb` baglam disi aciklama/ek artigindan arindirildi; `app_qu.arb` `premium` Ingilizce fallback'i `Sapaq plan` olarak duzeltildi.
+
+### TESTER Degisikligi
+- Hedef debris scan: PASS; hedef 10 anahtarda newline, repeated-run, `which means/means`, `इति`, `ዝብል`, `ukax/Ukax`, `के बारे`, `बतावल`, `nisqa`, `rehegua`, CV/resume yanlis baglam izleri yok.
+- Targeted l10n test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `62/62`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `725/725`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: Ilk deneme stale UiAutomator2 instrumentation timeout verdi; crash buffer bos, mevcut summary/logcat uygulama crash'i gostermedi. `io.appium.uiautomator2.server` ve `.server.test` temizlendikten sonra `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `a44632cb-651d-4e57-bd05-70dad76237ad`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94812042`.
+
+### Risk Degisimi
+- Genel UI 10 anahtarli low-resource fallback borcu: `16/25 -> 6/25`.
+- Kalan bilincli risk: 416 locale-key same-as-English kaldi; bunlar cok dusuk kaynakli dillerde ceviri aracinin guvenli cikti uretmedigi ya da teknik/loanword olarak EN ile ayni kalmasi makul olan degerlerdir. Dini terim/proper-name kumesi bir sonraki turda uydurma yapmadan, canonical/transliteration policy ile ayrica ele alinmalidir.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude kalan en yuksek gercek riski sec: canonical dini label kumesi (`rawatib`, `tahajjud`, `ahkab`, `masaail`, `qibla`, `tasbih`, `tafsir`) veya bir sonraki genel UI fallback cluster'i.

@@ -172,13 +172,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get delete => '削除';
 
   @override
-  String get edit => 'Edit';
+  String get edit => '編集';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'わかりました';
 
   @override
   String get yes => 'Yes';
@@ -201,7 +201,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get page => 'ページ';
 
   @override
-  String get reading => 'Reading';
+  String get reading => '読書';
 
   @override
   String get recitation => 'Recitation';
@@ -255,7 +255,7 @@ class AppLocalizationsJa extends AppLocalizations {
       'タフシルはまだオフラインでは利用できないことを確認しました。参照する前に、ソースされたタフシル データセットを同期します。';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'ブックマーク';
 
   @override
   String get addBookmark => 'ブックマークを追加';
@@ -264,7 +264,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get removeBookmark => 'ブックマークを削除';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => '最後に読んだもの';
 
   @override
   String get dailyZikr => 'デイリージクル';
@@ -516,7 +516,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get darkMode => 'ダークモード';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'システムテーマ';
 
   @override
   String get about => 'について';
@@ -569,13 +569,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get checkConnection => '接続を確認してください';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'プレミアム';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'プロの機能';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -587,13 +587,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ようこそ';
 
   @override
   String get getStarted => '始めましょう';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'スキップ';
 
   @override
   String get next => '次へ';

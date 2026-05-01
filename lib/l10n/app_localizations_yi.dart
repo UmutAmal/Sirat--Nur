@@ -173,13 +173,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get delete => 'ויסמעקן';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'רעדאַגירן';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'גוט';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get page => 'בלאַט';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'לייענען';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsYi extends AppLocalizations {
       'וועראַפייד טאַפסיר איז נישט בנימצא אָפפלינע נאָך. סינק אַ מקור דאַטאַבייס איידער בראַוזינג.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'בוקמאַרקס';
 
   @override
   String get addBookmark => 'לייג לייענ - צייכן';
@@ -266,7 +266,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get removeBookmark => 'אַראָפּנעמען לייענ - צייכן';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'לעצטע לייענען';
 
   @override
   String get dailyZikr => 'טעגלעך זיקר';
@@ -520,7 +520,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get darkMode => 'טונקל מאָדע';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'סיסטעם טעמע';
 
   @override
   String get about => 'וועגן';
@@ -573,13 +573,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get checkConnection => 'ביטע טשעק דיין קשר';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'פּרעמיום';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'פּראָ פֿעיִקייטן';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ברוכים הבאים';
 
   @override
   String get getStarted => 'באַקומען סטאַרטעד';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'האָפּקען';
 
   @override
   String get next => 'ווייַטער';

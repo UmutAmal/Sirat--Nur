@@ -173,13 +173,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get delete => 'हटवा';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'संपादित करा';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ठीक आहे';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get page => 'पान';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'वाचन';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsMr extends AppLocalizations {
       'सत्यापित तफसीर अद्याप ऑफलाइन उपलब्ध नाही. ब्राउझिंग करण्यापूर्वी स्रोत तफसीर डेटासेट समक्रमित करा.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'बुकमार्क';
 
   @override
   String get addBookmark => 'बुकमार्क जोडा';
@@ -266,7 +266,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get removeBookmark => 'बुकमार्क काढा';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'शेवटचे वाचले';
 
   @override
   String get dailyZikr => 'रोजचा जिक्र';
@@ -520,7 +520,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get darkMode => 'गडद मोड';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'सिस्टम थीम';
 
   @override
   String get about => 'बद्दल';
@@ -573,13 +573,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get checkConnection => 'कृपया तुमचे कनेक्शन तपासा';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'प्रीमियम';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'प्रो वैशिष्ट्ये';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'स्वागत आहे';
 
   @override
   String get getStarted => 'प्रारंभ करा';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'वगळा';
 
   @override
   String get next => 'पुढे';

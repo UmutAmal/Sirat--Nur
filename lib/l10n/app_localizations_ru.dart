@@ -175,13 +175,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get delete => 'Удалить';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Редактировать';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ОК';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get page => 'Страница';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Чтение';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsRu extends AppLocalizations {
       'Проверенный тафсир пока недоступен в автономном режиме. Перед просмотром синхронизируйте исходный набор данных Тафсир.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Закладки';
 
   @override
   String get addBookmark => 'Добавить закладку';
@@ -268,7 +268,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get removeBookmark => 'Удалить закладку';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Последнее чтение';
 
   @override
   String get dailyZikr => 'Ежедневный Зикр';
@@ -522,7 +522,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get darkMode => 'Темный режим';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Системная тема';
 
   @override
   String get about => 'О';
@@ -575,13 +575,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get checkConnection => 'Пожалуйста, проверьте ваше соединение';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Премиум';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Профессиональные функции';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Добро пожаловать';
 
   @override
   String get getStarted => 'Начать';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Пропустить';
 
   @override
   String get next => 'Далее';

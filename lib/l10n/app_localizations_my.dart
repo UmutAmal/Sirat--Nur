@@ -175,13 +175,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get delete => 'ဖျက်ပါ။';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'တည်းဖြတ်ပါ။';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'အိုကေ';
 
   @override
   String get yes => 'Yes';
@@ -204,7 +204,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get page => 'စာမျက်နှာ';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'စာဖတ်ခြင်း။';
 
   @override
   String get recitation => 'Recitation';
@@ -259,7 +259,7 @@ class AppLocalizationsMy extends AppLocalizations {
       'အတည်ပြုထားသော tafsir ကို အော့ဖ်လိုင်းတွင် မရရှိနိုင်သေးပါ။ ရှာဖွေခြင်းမပြုမီ အရင်းအမြစ်ရရှိထားသော tafsir ဒေတာအတွဲကို စင့်ခ်လုပ်ပါ။';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'ညှပ်';
 
   @override
   String get addBookmark => 'လိပ်စာထည့်ပါ။';
@@ -268,7 +268,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get removeBookmark => 'လိပ်စာကို ဖယ်ရှားပါ။';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'နောက်ဆုံးဖတ်ပါ။';
 
   @override
   String get dailyZikr => 'နေ့စဉ် Zikr';
@@ -522,7 +522,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get darkMode => 'အမှောင်မုဒ်';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'စနစ်အပြင်အဆင်';
 
   @override
   String get about => 'အကြောင်း';
@@ -575,13 +575,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get checkConnection => 'သင့်ချိတ်ဆက်မှုကို စစ်ဆေးပါ။';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'ပရီမီယံ';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Pro အင်္ဂါရပ်များ';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -593,13 +593,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ကြိုဆိုပါတယ်။';
 
   @override
   String get getStarted => 'စတင်လိုက်ပါ။';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ကျော်သွားပါ။';
 
   @override
   String get next => 'နောက်တစ်ခု';

@@ -173,13 +173,13 @@ class AppLocalizationsTt extends AppLocalizations {
   String get delete => 'Бетерү';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Редакцияләү';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Ярар';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get page => 'Бит';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Уку';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsTt extends AppLocalizations {
       'Тикшерелгән тафсир әле оффлайнда юк. Каралганчы, тафсир мәгълүматлар җыелмасын синхронлаштырыгыз.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Кыстармалар';
 
   @override
   String get addBookmark => 'Bookmark өстәргә';
@@ -266,7 +266,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get removeBookmark => 'Кыстарманы бетерегез';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Соңгы уку';
 
   @override
   String get dailyZikr => 'Көн саен Зикр';
@@ -520,7 +520,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get darkMode => 'Караңгы режим';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Система темасы';
 
   @override
   String get about => 'Турында';
@@ -573,13 +573,13 @@ class AppLocalizationsTt extends AppLocalizations {
   String get checkConnection => 'Зинһар, тоташуыгызны тикшерегез';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'Премиум';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Про үзенчәлекләр';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -591,13 +591,13 @@ class AppLocalizationsTt extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Рәхим итегез';
 
   @override
   String get getStarted => 'Башлау';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Сикереп тор';
 
   @override
   String get next => 'Киләсе';

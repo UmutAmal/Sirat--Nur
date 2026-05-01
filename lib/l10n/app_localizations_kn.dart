@@ -173,13 +173,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get delete => 'ಅಳಿಸಿ';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'ಸಂಪಾದಿಸು';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ಸರಿ';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get page => 'ಪುಟ';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'ಓದುವುದು';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsKn extends AppLocalizations {
       'ಪರಿಶೀಲಿಸಿದ ತಫ್ಸಿರ್ ಇನ್ನೂ ಆಫ್‌ಲೈನ್‌ನಲ್ಲಿ ಲಭ್ಯವಿಲ್ಲ. ಬ್ರೌಸ್ ಮಾಡುವ ಮೊದಲು ಮೂಲ ತಫ್ಸಿರ್ ಡೇಟಾಸೆಟ್ ಅನ್ನು ಸಿಂಕ್ ಮಾಡಿ.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳು';
 
   @override
   String get addBookmark => 'ಬುಕ್ಮಾರ್ಕ್ ಸೇರಿಸಿ';
@@ -266,7 +266,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get removeBookmark => 'ಬುಕ್ಮಾರ್ಕ್ ತೆಗೆದುಹಾಕಿ';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'ಕೊನೆಯ ಓದು';
 
   @override
   String get dailyZikr => 'ದೈನಂದಿನ ಜಿಕ್ರ್';
@@ -519,7 +519,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get darkMode => 'ಡಾರ್ಕ್ ಮೋಡ್';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'ಸಿಸ್ಟಮ್ ಥೀಮ್';
 
   @override
   String get about => 'ಬಗ್ಗೆ';
@@ -572,13 +572,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get checkConnection => 'ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ';
 
   @override
-  String get premium => 'Premium';
+  String get premium => 'ಪ್ರೀಮಿಯಂ';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'ಪ್ರೊ ವೈಶಿಷ್ಟ್ಯಗಳು';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -590,13 +590,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'ಸ್ವಾಗತ';
 
   @override
   String get getStarted => 'ಪ್ರಾರಂಭಿಸಿ';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'ಬಿಟ್ಟುಬಿಡಿ';
 
   @override
   String get next => 'ಮುಂದೆ';

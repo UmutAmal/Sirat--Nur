@@ -172,13 +172,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get delete => '삭제';
 
   @override
-  String get edit => 'Edit';
+  String get edit => '편집';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => '알았어';
 
   @override
   String get yes => 'Yes';
@@ -201,7 +201,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get page => '페이지';
 
   @override
-  String get reading => 'Reading';
+  String get reading => '독서';
 
   @override
   String get recitation => 'Recitation';
@@ -255,7 +255,7 @@ class AppLocalizationsKo extends AppLocalizations {
       '인증된 tafsir는 아직 오프라인에서 사용할 수 없습니다. 탐색하기 전에 소스 tafsir 데이터세트를 동기화하세요.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => '북마크';
 
   @override
   String get addBookmark => '북마크 추가';
@@ -264,7 +264,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get removeBookmark => '북마크 제거';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => '마지막 읽기';
 
   @override
   String get dailyZikr => '데일리 지크르';
@@ -515,7 +515,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get darkMode => '다크 모드';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => '시스템 테마';
 
   @override
   String get about => '소개';
@@ -568,13 +568,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get checkConnection => '연결을 확인해주세요';
 
   @override
-  String get premium => 'Premium';
+  String get premium => '프리미엄';
 
   @override
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => '프로 기능';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -586,13 +586,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => '환영합니다';
 
   @override
   String get getStarted => '시작하기';
 
   @override
-  String get skip => 'Skip';
+  String get skip => '건너뛰기';
 
   @override
   String get next => '다음';

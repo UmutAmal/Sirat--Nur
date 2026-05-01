@@ -173,13 +173,13 @@ class AppLocalizationsSu extends AppLocalizations {
   String get delete => 'Hapus';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Édit';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'OKÉ';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get page => 'Kaca';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'bacaan';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsSu extends AppLocalizations {
       'Tafsir anu diverifikasi henteu acan sayogi offline. Nyingkronkeun dataset tafsir sumber samemeh browsing.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Tetengger';
 
   @override
   String get addBookmark => 'Tambahkeun Bookmark';
@@ -267,7 +267,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get removeBookmark => 'Cabut Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Bacaan Panungtungan';
 
   @override
   String get dailyZikr => 'Zikir poean';
@@ -521,7 +521,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get darkMode => 'Mode poék';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Téma Sistim';
 
   @override
   String get about => 'Ngeunaan';
@@ -580,7 +580,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Fitur Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,7 +592,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Wilujeng sumping';
 
   @override
   String get getStarted => 'Mimitian';

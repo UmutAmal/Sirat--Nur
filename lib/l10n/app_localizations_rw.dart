@@ -173,13 +173,13 @@ class AppLocalizationsRw extends AppLocalizations {
   String get delete => 'Siba';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Hindura';
 
   @override
   String get close => 'Close';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Nibyo';
 
   @override
   String get yes => 'Yes';
@@ -202,7 +202,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get page => 'Urupapuro';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Gusoma';
 
   @override
   String get recitation => 'Recitation';
@@ -257,7 +257,7 @@ class AppLocalizationsRw extends AppLocalizations {
       'Tafsir yemejwe ntishobora kuboneka kumurongo. Gereranya na tafsir dataset ikomoka mbere yo gushakisha.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'Ibimenyetso';
 
   @override
   String get addBookmark => 'Ongeraho Ikimenyetso';
@@ -266,7 +266,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get removeBookmark => 'Kuraho Ikimenyetso';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Soma Iheruka';
 
   @override
   String get dailyZikr => 'Buri munsi Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get darkMode => 'Uburyo bwijimye';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Insanganyamatsiko ya Sisitemu';
 
   @override
   String get about => 'Ibyerekeye';
@@ -580,7 +580,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Ibiranga Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsRw extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Murakaza neza';
 
   @override
   String get getStarted => 'Tangira';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Simbuka';
 
   @override
   String get next => 'Ibikurikira';

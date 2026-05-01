@@ -173,7 +173,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get delete => 'Fafao';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Ahitsio';
 
   @override
   String get close => 'Close';
@@ -202,7 +202,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get page => 'Pejy';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Famakiana';
 
   @override
   String get recitation => 'Recitation';
@@ -258,7 +258,7 @@ class AppLocalizationsMg extends AppLocalizations {
       'Mbola tsy misy an-tserasera ny tafsir voamarina. Ampifanaraho ny angon-drakitra misy tafsir alohan\'ny hijerena.';
 
   @override
-  String get bookmarks => 'Bookmarks';
+  String get bookmarks => 'maripejy';
 
   @override
   String get addBookmark => 'Ampio Bookmark';
@@ -267,7 +267,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get removeBookmark => 'Esory Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'Vakiteny farany';
 
   @override
   String get dailyZikr => 'Zikr isan\'andro';
@@ -521,7 +521,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get darkMode => 'Dark Mode';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Lohahevitra momba ny rafitra';
 
   @override
   String get about => 'Momba ny';
@@ -592,13 +592,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Tongasoa';
 
   @override
   String get getStarted => 'Manomboha';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Mifohaza';
 
   @override
   String get next => 'Manaraka';

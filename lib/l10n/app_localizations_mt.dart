@@ -174,7 +174,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get delete => 'Ħassar';
 
   @override
-  String get edit => 'Edit';
+  String get edit => 'Editja';
 
   @override
   String get close => 'Close';
@@ -203,7 +203,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get page => 'Paġna';
 
   @override
-  String get reading => 'Reading';
+  String get reading => 'Qari';
 
   @override
   String get recitation => 'Recitation';
@@ -267,7 +267,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get removeBookmark => 'Neħħi Bookmark';
 
   @override
-  String get lastRead => 'Last Read';
+  String get lastRead => 'L-Aħħar Aqra';
 
   @override
   String get dailyZikr => 'Kuljum Zikr';
@@ -521,7 +521,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get darkMode => 'Mod skur';
 
   @override
-  String get systemTheme => 'System Theme';
+  String get systemTheme => 'Tema tas-Sistema';
 
   @override
   String get about => 'Dwar';
@@ -580,7 +580,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get upgradeToPro => 'Upgrade to Pro';
 
   @override
-  String get proFeatures => 'Pro Features';
+  String get proFeatures => 'Karatteristiċi Pro';
 
   @override
   String get removeAds => 'Remove Ads';
@@ -592,13 +592,13 @@ class AppLocalizationsMt extends AppLocalizations {
   String get exclusiveContent => 'Exclusive Content';
 
   @override
-  String get welcome => 'Welcome';
+  String get welcome => 'Merħba';
 
   @override
   String get getStarted => 'Ibda';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Aqbeż';
 
   @override
   String get next => 'Li jmiss';
