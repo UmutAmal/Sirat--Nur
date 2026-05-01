@@ -558,6 +558,9 @@ $alwaysMatch = @{
   "appium:appActivity" = $Activity
   "appium:noReset" = [bool]$NoReset
   "appium:newCommandTimeout" = 120
+  "appium:uiautomator2ServerInstallTimeout" = 120000
+  "appium:uiautomator2ServerLaunchTimeout" = 120000
+  "appium:adbExecTimeout" = 120000
   "appium:autoGrantPermissions" = $true
   "appium:language" = $smokeLanguage
 }

@@ -21130,3 +21130,34 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Appium smoke altyapi timeout tekrarini skorla veya genis l10n same-as-English debt taramasina gec.
+
+## 2026-05-01 TUR-528 - Appium UiAutomator2 Startup Timeout Hardening
+
+### MASTER Karari
+- Risk: Appium release runtime smoke son iki turda uygulama hatasi olmadan UiAutomator2 instrumentation `30000ms` startup timeout ile false-negative uretti; cleanup sonrasi ayni release APK geciyordu. Bu durum store-ready runtime kapisini guvensiz hale getiriyor ve gercek app regresyonlari ile test altyapi flake'lerini karistiriyordu; P1 test guvenilirligi riski olarak ele alindi.
+- Kanit:
+  - Onceki tur kayitlari: `handover.md` TUR-525 ve TUR-527 Appium release runtime smoke ilk kosularinda `30000ms` UiAutomator2 timeout, cleanup sonrasi PASS olarak kayitli.
+  - Kok dosya: `tool/appium_runtime_smoke.ps1:561` `appium:uiautomator2ServerInstallTimeout = 120000`, `tool/appium_runtime_smoke.ps1:562` `appium:uiautomator2ServerLaunchTimeout = 120000`, `tool/appium_runtime_smoke.ps1:563` `appium:adbExecTimeout = 120000`.
+  - Regresyon guard: `test/appium_runtime_smoke_script_test.dart:71` `keeps UiAutomator2 startup timeouts resilient on Windows emulators`.
+- Kullanici etkisi: Release runtime smoke daha az flake uretir; Quran playback, offline download iptal akisi, onboarding, Places/Analytics/Premium ve crash-free logcat kontrolleri gereksiz tekrar/manuel cleanup ihtiyaci olmadan dogrulanir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 5/25.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium capability setine UiAutomator2 install, launch ve adb exec timeout'lari `120000ms` olarak eklendi.
+- Scope yalnizca test altyapisiyle sinirli tutuldu; uygulama runtime kodu, dini icerik, l10n veya store config degismedi.
+
+### TESTER Degisikligi
+- Targeted test: `flutter test test\appium_runtime_smoke_script_test.dart --plain-name "keeps UiAutomator2 startup timeouts resilient on Windows emulators" --reporter compact` PASS.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `740/740`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `cabca50b-634f-4833-b139-14ef4caa1fe9`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94730122`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Appium UiAutomator2 startup false-negative riski: `16/25 -> 5/25`.
+- Kalan bilincli risk: Genis l10n debt taramasi devam etmeli; ozellikle same-as-English ve dusuk kaliteli makine cevirisi kalintilari dini meaning metinlerinden ayrilarak ele alinmali.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude repo/doctor/analyze/test tabanindan baslayip l10n same-as-English ve runtime smoke onboarding zamanlama risklerini yeniden skorla.

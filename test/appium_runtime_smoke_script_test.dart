@@ -67,6 +67,21 @@ void main() {
       expect(script, contains('Current adb devices'));
     });
 
+    test(
+      'keeps UiAutomator2 startup timeouts resilient on Windows emulators',
+      () {
+        expect(
+          script,
+          contains('"appium:uiautomator2ServerInstallTimeout" = 120000'),
+        );
+        expect(
+          script,
+          contains('"appium:uiautomator2ServerLaunchTimeout" = 120000'),
+        );
+        expect(script, contains('"appium:adbExecTimeout" = 120000'));
+      },
+    );
+
     test('prepares the current workspace apk before starting Appium', () {
       expect(script, contains(r'[string]$BuildMode = "debug"'));
       expect(script, contains(r'[switch]$SkipBuildInstall'));
