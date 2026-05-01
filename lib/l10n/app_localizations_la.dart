@@ -42,7 +42,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get continueReading => 'Continue Reading';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Get Vita Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get selectLanguage => 'Linguae Selectae';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Quaerere 180+ linguas...';
 
   @override
   String get systemDefault => 'Systema Default';
@@ -182,7 +182,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get ok => 'Bene';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ita';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Calendarium Gregorianum';
 
   @override
   String get today => 'hodie';
@@ -413,7 +413,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get tomorrow => 'Cras';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'heri';
 
   @override
   String get specialDays => 'Specialis diebus';
@@ -461,10 +461,10 @@ class AppLocalizationsLa extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'gradus';
 
   @override
-  String get north => 'North';
+  String get north => 'Septentrionalis';
 
   @override
   String get qiblaFound => 'Qibla reperit!';
@@ -502,7 +502,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Admitte Suspendisse';
 
   @override
   String get notificationTime => 'Notification Tempus';
@@ -576,7 +576,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Phasellus ut Pro';
 
   @override
   String get proFeatures => 'Pro Features';
@@ -585,7 +585,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get removeAds => 'Remove Ads';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Reserare omnia Content';
 
   @override
   String get exclusiveContent => 'Exclusive Content';

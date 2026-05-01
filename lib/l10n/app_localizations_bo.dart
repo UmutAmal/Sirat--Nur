@@ -39,10 +39,10 @@ class AppLocalizationsBo extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'མུ་མཐུད་ནས་ཀློགས།';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'མི་ཚེ་གཅིག་གི་ཆེད་ལས་པ་ཐོབ།';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'སྐད་རིགས་180ལྷག་ཙམ་འཚོལ་ཞིབ།';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsBo extends AppLocalizations {
   String get edit => 'རྩོམ་སྒྲིག';
 
   @override
-  String get close => 'Close';
+  String get close => 'གཏན་པ';
 
   @override
   String get ok => 'ཆོག';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ཡིན';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'གྷི་རི་གྷོ་རི་ཡན་ལོ་ཐོ།';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get tomorrow => 'སང་ཉིན';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ཁ་སང';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsBo extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'འབུམ་རམས་པ།';
 
   @override
-  String get north => 'North';
+  String get north => 'བྱང';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'བརྡ་ཁྱབ་ལྕོགས་ཅན་བཟོས།';
 
   @override
   String get notificationTime => 'བརྡ་ཁྱབ་གཏོང་བའི་དུས་ཚོད།';
@@ -576,19 +576,19 @@ class AppLocalizationsBo extends AppLocalizations {
   String get premium => 'ཉེན་སྲུང་རིན་པ';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro ལ་རིམ་སྤོར།';
 
   @override
   String get proFeatures => 'ཁྱད་ཆོས།';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ཁྱབ་བསྒྲགས་མེད་པར་བཟོ་བ།';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ནང་དོན་ཚང་མ་ལྡེ་མིག་ཕྱེ་བ།';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'དམིགས་བསལ་ནང་དོན།';
 
   @override
   String get welcome => 'དགའ་བསུ';

@@ -39,10 +39,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get prayerTimes => 'Modlitebné časy';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Pokračovať v čítaní';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Získajte Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get selectLanguage => 'Vyberte Jazyk';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Hľadaj vo viac ako 180 jazykoch...';
 
   @override
   String get systemDefault => 'Predvolené nastavenie systému';
@@ -177,13 +177,13 @@ class AppLocalizationsSk extends AppLocalizations {
   String get edit => 'Upraviť';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zavrieť';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'áno';
 
   @override
   String get no => 'Nie';
@@ -405,7 +405,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get hijriCalendar => 'Hidžri kalendár';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Gregoriánsky kalendár';
 
   @override
   String get today => 'Dnes';
@@ -414,7 +414,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get tomorrow => 'zajtra';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'včera';
 
   @override
   String get specialDays => 'Špeciálne dni';
@@ -462,10 +462,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'stupňa';
 
   @override
-  String get north => 'North';
+  String get north => 'Severná';
 
   @override
   String get qiblaFound => 'Qibla nájdená!';
@@ -503,7 +503,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Povoliť upozornenia';
 
   @override
   String get notificationTime => 'Čas upozornenia';
@@ -577,19 +577,19 @@ class AppLocalizationsSk extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Inovujte na Pro';
 
   @override
   String get proFeatures => 'Pro funkcie';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Odstrániť reklamy';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Odomknite všetok obsah';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Exkluzívny obsah';
 
   @override
   String get welcome => 'Vitajte';

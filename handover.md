@@ -20646,3 +20646,42 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude kalan en yuksek gercek riski sec: canonical dini label kumesi (`rawatib`, `tahajjud`, `ahkab`, `masaail`, `qibla`, `tasbih`, `tafsir`) veya bir sonraki genel UI fallback cluster'i.
+
+## 2026-05-01 TUR-514 - Settings Utility Premium L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Ayarlar, premium ve genel yardimci UI kopyasi `yes`, `close`, `yesterday`, `searchLanguage`, `continueReading`, `enableNotifications`, `removeAds`, `unlockAll`, `exclusiveContent`, `upgradeToPro`, `getLifetimePro`, `degrees`, `north`, `gregorianCalendar` cok sayida locale'de Ingilizce fallback veya makine ceviri artigi tasiyordu. Bu anahtarlar dogrudan kullaniciya gorunen uygulama copy'si oldugu icin P1 l10n borcu olarak ele alindi.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report yes close yesterday searchLanguage continueReading enableNotifications removeAds unlockAll exclusiveContent upgradeToPro getLifetimePro degrees north gregorianCalendar` same-as-English `1879`, missing/empty `0`, placeholder mismatch `0`.
+  - Son rapor: ayni 14 anahtarda same-as-English `423`, missing/empty `0`, placeholder mismatch `0`.
+  - `lib/l10n/app_sa.arb:13`, `lib/l10n/app_sa.arb:49`, `lib/l10n/app_sa.arb:199`, `lib/l10n/app_sa.arb:273` cok satirli `इति` aciklama kalintisindan temizlendi.
+  - `lib/l10n/app_ti.arb:13`, `lib/l10n/app_ti.arb:49`, `lib/l10n/app_ti.arb:199`, `lib/l10n/app_ti.arb:273` cok satirli `ዝብል` aciklama kalintisindan temizlendi.
+  - `lib/l10n/app_ay.arb:199`, `lib/l10n/app_bh.arb:199`, `lib/l10n/app_bho.arb:219`, `lib/l10n/app_gn.arb:218`, `lib/l10n/app_qu.arb:273` baglam disi `ukax`, `के बारे`, `rehegua`, `nisqa` gibi ek/aciklama kalintilarindan arindirildi.
+  - `lib/l10n/app_aa.arb:273` `removeAds` icin bildirim semantigine kayan guvensiz Afar makine cevirisi yerine bilerek `Remove ads` guvenli fallback olarak birakildi.
+  - `test/translate_arb_keys_test.dart:1826` yeni guard 14 anahtarda debt esigini `<= 423` olarak kilitler; `ay/bh/bho/gn/qu/sa/th/ti` orneklerinde Ingilizce fallback, multiline copy ve bilinen batch artigi geri gelirse test kirmak uzere ayarlandi.
+- Kullanici etkisi: Ayarlar, premium/pro, arama dili, takvim/yon/sayi birimi ve temel aksiyon metinleri daha fazla dilde yerel gorunur; yanlis anlam riski olan Afar `removeAds` degeri ise sahte ceviri yerine durust fallback olarak kalir.
+- Risk skoru: Etki 4 x Olasilik 4 = 16/25 -> 6/25.
+- Rollback plani: Bu turdaki `lib/l10n/app_*.arb`, generated `lib/l10n/app_localizations_*.dart`, `test/translate_arb_keys_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- 14 anahtarli settings utility / premium l10n batch calistirildi.
+- `flutter gen-l10n` ile generated localization dosyalari ARB'lerle senkronlandi.
+- `app_sa.arb` ve `app_ti.arb` multiline aciklama kalintisindan temizlendi.
+- `app_ay.arb`, `app_bh.arb`, `app_bho.arb`, `app_gn.arb`, `app_qu.arb` baglam disi makine ceviri artigindan arindirildi.
+- `app_aa.arb` `removeAds` degeri guvensiz bildirim semantiginden cikartildi ve ceviri kalitesi dogrulanamadigi icin EN fallback'e alindi.
+
+### TESTER Degisikligi
+- Hedef debris scan: PASS; hedef 14 anahtarda newline, `which means/means`, `इति`, `ዝብል`, `ukax/Ukax`, `के बारे`, `बतावल`, `nisqa`, `rehegua`, CV/resume ve ` के बा` kalintisi yok.
+- Targeted l10n test: `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `63/63`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `726/726`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio distribution, analyze ve full test kapilari temiz.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+- Appium release runtime smoke: Ilk deneme stale UiAutomator2 instrumentation timeout verdi; `io.appium.uiautomator2.server` ve `.server.test` temizlendikten sonra son `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `6c1284f8-1b80-4ef8-8c34-006202d8bbdd`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94812042`.
+
+### Risk Degisimi
+- Settings utility / premium 14 anahtarli low-resource fallback borcu: `16/25 -> 6/25`.
+- Kalan bilincli risk: 423 locale-key same-as-English kaldi; bunlar ceviri aracinin guvenli cikti uretmedigi cok dusuk kaynakli dillerde EN fallback olarak korunur. Sahte veya anlamdan kayan ceviri yerine EN fallback tercih edildi.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude proper-name/symbol olmayan en yuksek UI/dini label kumesini skorla. Adaylar: `rawatib`, `tahajjud`, `ahkab`, `masaail`, `qibla`, `tasbih`, `tafsir`, `ramadan`, `eidAlFitr`, `eidAlAdha`; dini terimlerde uydurma yapmadan canonical/transliteration policy kullan.

@@ -39,10 +39,10 @@ class AppLocalizationsKv extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Водзӧ лыддьы .';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Позьӧ босьтны «Лайфтайм Про» .';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsKv extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Корсьны 180+ кыв...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsKv extends AppLocalizations {
   String get edit => 'Бурмӧдны';
 
   @override
-  String get close => 'Close';
+  String get close => 'Пӧдлавны';
 
   @override
   String get ok => 'ЛАДНӦ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Да';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsKv extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Григорианскӧй календар .';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsKv extends AppLocalizations {
   String get tomorrow => 'Аски';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Тӧрыт';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsKv extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'градусъяс';
 
   @override
-  String get north => 'North';
+  String get north => 'Войвыв';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsKv extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Включитны юӧртанторъяс .';
 
   @override
   String get notificationTime => 'Уведомление кад .';
@@ -576,19 +576,19 @@ class AppLocalizationsKv extends AppLocalizations {
   String get premium => 'Вылыс тшупӧда';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Выльмӧдны Pro вылӧ .';
 
   @override
   String get proFeatures => 'Про функцияяс .';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Реклама бырӧдӧм .';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Разблокируйтны став контентсӧ .';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Эксклюзивнӧй контент';
 
   @override
   String get welcome => 'Видза корам';

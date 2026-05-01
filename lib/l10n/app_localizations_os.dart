@@ -39,10 +39,10 @@ class AppLocalizationsOs extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Дарддæр кæсын';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Райсут Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsOs extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Агур 180+ æвзаджы...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsOs extends AppLocalizations {
   String get edit => 'Редакци кæнын';
 
   @override
-  String get close => 'Close';
+  String get close => 'Сæхгæнын';
 
   @override
   String get ok => 'ХОРЗ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ойы';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsOs extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Григорийы къæлиндар';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsOs extends AppLocalizations {
   String get tomorrow => 'Сом';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Знон';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsOs extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'градустæ';
 
   @override
-  String get north => 'North';
+  String get north => 'Цæгат';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsOs extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Хъусынгæнинæгтæ æххæст кæнын';
 
   @override
   String get notificationTime => 'Фидыды рæстæг';
@@ -576,19 +576,19 @@ class AppLocalizationsOs extends AppLocalizations {
   String get premium => 'Премиалон';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Раивын Pro-мæ';
 
   @override
   String get proFeatures => 'Профессионалон æууæлтæ';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Рекламæ аиуварс кæнын';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Æппæт æрмæг байгом кæнын';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Эксклюзивон æрмæг';
 
   @override
   String get welcome => 'Табуафси';

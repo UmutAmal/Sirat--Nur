@@ -39,10 +39,10 @@ class AppLocalizationsMr extends AppLocalizations {
   String get prayerTimes => 'प्रार्थनेच्या वेळा';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'वाचन सुरू ठेवा';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'लाइफटाइम प्रो मिळवा';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get selectLanguage => 'भाषा निवडा';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ भाषा शोधा...';
 
   @override
   String get systemDefault => 'सिस्टम डीफॉल्ट';
@@ -176,13 +176,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get edit => 'संपादित करा';
 
   @override
-  String get close => 'Close';
+  String get close => 'बंद करा';
 
   @override
   String get ok => 'ठीक आहे';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'होय';
 
   @override
   String get no => 'नाही';
@@ -404,7 +404,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get hijriCalendar => 'हिजरी कॅलेंडर';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ग्रेगोरियन कॅलेंडर';
 
   @override
   String get today => 'आज';
@@ -413,7 +413,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get tomorrow => 'उद्या';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'काल';
 
   @override
   String get specialDays => 'विशेष दिवस';
@@ -461,10 +461,10 @@ class AppLocalizationsMr extends AppLocalizations {
   String get compass => 'होकायंत्र';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'अंश';
 
   @override
-  String get north => 'North';
+  String get north => 'उत्तर';
 
   @override
   String get qiblaFound => 'किब्ला सापडला!';
@@ -502,7 +502,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'सूचना सक्षम करा';
 
   @override
   String get notificationTime => 'सूचना वेळ';
@@ -576,19 +576,19 @@ class AppLocalizationsMr extends AppLocalizations {
   String get premium => 'प्रीमियम';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'प्रो वर श्रेणीसुधारित करा';
 
   @override
   String get proFeatures => 'प्रो वैशिष्ट्ये';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'जाहिराती काढा';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'सर्व सामग्री अनलॉक करा';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'अनन्य सामग्री';
 
   @override
   String get welcome => 'स्वागत आहे';

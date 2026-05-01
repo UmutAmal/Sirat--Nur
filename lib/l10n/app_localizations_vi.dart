@@ -39,10 +39,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get prayerTimes => 'Giờ cầu nguyện';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Tiếp tục đọc';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Nhận trọn đời Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get selectLanguage => 'Chọn ngôn ngữ';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Tìm kiếm hơn 180 ngôn ngữ...';
 
   @override
   String get systemDefault => 'Mặc định hệ thống';
@@ -176,13 +176,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get edit => 'Chỉnh sửa';
 
   @override
-  String get close => 'Close';
+  String get close => 'Đóng';
 
   @override
   String get ok => 'được rồi';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Có';
 
   @override
   String get no => 'Không';
@@ -404,7 +404,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get hijriCalendar => 'Lịch Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Lịch Gregory';
 
   @override
   String get today => 'Hôm nay';
@@ -413,7 +413,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get tomorrow => 'Ngày mai';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Hôm qua';
 
   @override
   String get specialDays => 'Ngày đặc biệt';
@@ -461,10 +461,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get compass => 'La bàn';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'độ';
 
   @override
-  String get north => 'North';
+  String get north => 'miền Bắc';
 
   @override
   String get qiblaFound => 'Đã tìm thấy hướng Qibla!';
@@ -502,7 +502,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Bật thông báo';
 
   @override
   String get notificationTime => 'Thời gian thông báo';
@@ -576,19 +576,19 @@ class AppLocalizationsVi extends AppLocalizations {
   String get premium => 'Cao cấp';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Nâng cấp lên Pro';
 
   @override
   String get proFeatures => 'Tính năng chuyên nghiệp';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Xóa quảng cáo';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Mở khóa tất cả nội dung';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Nội dung độc quyền';
 
   @override
   String get welcome => 'Chào mừng';

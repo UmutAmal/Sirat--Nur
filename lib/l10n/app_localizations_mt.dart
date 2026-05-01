@@ -39,10 +39,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get prayerTimes => 'Ħinijiet tat-Talb';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Kompli Aqra';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Ikseb Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get selectLanguage => 'Agħżel Lingwa';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Fittex aktar minn 180 lingwa...';
 
   @override
   String get systemDefault => 'Default tas-Sistema';
@@ -177,13 +177,13 @@ class AppLocalizationsMt extends AppLocalizations {
   String get edit => 'Editja';
 
   @override
-  String get close => 'Close';
+  String get close => 'Agħlaq';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Iva';
 
   @override
   String get no => 'Nru';
@@ -405,7 +405,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get hijriCalendar => 'Kalendarju Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Kalendarju Gregorjan';
 
   @override
   String get today => 'Illum';
@@ -414,7 +414,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get tomorrow => 'Għada';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Ilbieraħ';
 
   @override
   String get specialDays => 'Jiem Speċjali';
@@ -462,10 +462,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get compass => 'Boxxla';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'gradi';
 
   @override
-  String get north => 'North';
+  String get north => 'Tramuntana';
 
   @override
   String get qiblaFound => 'Qibla misjuba!';
@@ -503,7 +503,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Ippermetti Notifiki';
 
   @override
   String get notificationTime => 'Ħin tan-Notifika';
@@ -577,19 +577,19 @@ class AppLocalizationsMt extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Aġġorna għal Pro';
 
   @override
   String get proFeatures => 'Karatteristiċi Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Neħħi r-Reklami';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Nisfruttaw il-Kontenut Kollha';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Kontenut Esklusiv';
 
   @override
   String get welcome => 'Merħba';

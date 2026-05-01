@@ -39,10 +39,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get prayerTimes => 'ናይ ጸሎት ግዜ';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'ንባብ ቀጽል';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'ናይ ሕይወት ፕሮ ርኸብ';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ ቋንቋታት ድለዩ...';
 
   @override
   String get systemDefault => 'System Default';
@@ -175,13 +175,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get edit => 'ኣርትዕ';
 
   @override
-  String get close => 'Close';
+  String get close => 'ዕጸው';
 
   @override
   String get ok => 'እሺ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'እወ';
 
   @override
   String get no => 'አይኮንን';
@@ -400,7 +400,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ጎርጎርዮሳዊ ዓውደ ኣዋርሕ';
 
   @override
   String get today => 'Today';
@@ -409,7 +409,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get tomorrow => 'ጽባሕ';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ትማሊ';
 
   @override
   String get specialDays => 'Special Days';
@@ -457,10 +457,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ዲግሪ';
 
   @override
-  String get north => 'North';
+  String get north => 'ሰሜን';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -497,7 +497,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'መፍለጢታት ኣንቅሕ';
 
   @override
   String get notificationTime => 'ናይ መፍለጢ ግዜ';
@@ -571,19 +571,19 @@ class AppLocalizationsTi extends AppLocalizations {
   String get premium => 'ፕሪሚየም';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'ናብ ፕሮ ኣሐይል';
 
   @override
   String get proFeatures => 'ናይ ፕሮ ባህርያት';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ምልክታት ኣወግድ';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ኩሉ ትሕዝቶ ክፈት';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ፍሉይ ትሕዝቶ';
 
   @override
   String get welcome => 'እንቋዕ ብደሓን መጻእኩም';

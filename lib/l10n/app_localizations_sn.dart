@@ -39,10 +39,10 @@ class AppLocalizationsSn extends AppLocalizations {
   String get prayerTimes => 'Nguva dzekunyengetera';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Ramba Uchiverenga';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Tora Hupenyu hwese Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get selectLanguage => 'Sarudza Mutauro';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Tsvaga mitauro 180+...';
 
   @override
   String get systemDefault => 'System Default';
@@ -181,7 +181,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Hongu';
 
   @override
   String get no => 'Aihwa';
@@ -412,7 +412,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get tomorrow => 'Mangwana';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Nezuro';
 
   @override
   String get specialDays => 'Mazuva Akakosha';
@@ -460,10 +460,10 @@ class AppLocalizationsSn extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'madhigirii';
 
   @override
-  String get north => 'North';
+  String get north => 'Maodzanyemba';
 
   @override
   String get qiblaFound => 'Qibla yakawanikwa!';
@@ -501,7 +501,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Vhura Zviziviso';
 
   @override
   String get notificationTime => 'Nguva Yekuzivisa';
@@ -575,16 +575,16 @@ class AppLocalizationsSn extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Simudzira kuPro';
 
   @override
   String get proFeatures => 'Pro Features';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Bvisa Ads';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Vhura Zvese Zvirimo';
 
   @override
   String get exclusiveContent => 'Exclusive Content';

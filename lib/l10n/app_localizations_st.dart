@@ -39,10 +39,10 @@ class AppLocalizationsSt extends AppLocalizations {
   String get prayerTimes => 'Linako Tsa Thapelo';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Tsoela Pele ho Bala';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Fumana Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get selectLanguage => 'Kgetha Puo';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Batla lipuo tse 180+...';
 
   @override
   String get systemDefault => 'Sistimi ea kamehla';
@@ -176,13 +176,13 @@ class AppLocalizationsSt extends AppLocalizations {
   String get edit => 'Fetola';
 
   @override
-  String get close => 'Close';
+  String get close => 'Koala';
 
   @override
   String get ok => 'Ho lokile';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ee';
 
   @override
   String get no => 'Che';
@@ -406,7 +406,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get hijriCalendar => 'Khalendara ea Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Khalendara ea Gregorian';
 
   @override
   String get today => 'Kajeno';
@@ -415,7 +415,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get tomorrow => 'Hosane';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Maobane';
 
   @override
   String get specialDays => 'Matsatsi a Khethehileng';
@@ -463,10 +463,10 @@ class AppLocalizationsSt extends AppLocalizations {
   String get compass => 'Sesupa-tsela';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'likhato';
 
   @override
-  String get north => 'North';
+  String get north => 'Leboya';
 
   @override
   String get qiblaFound => 'Qibla e fumanoe!';
@@ -505,7 +505,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Numella Litsebiso';
 
   @override
   String get notificationTime => 'Nako ea Tsebiso';
@@ -579,19 +579,19 @@ class AppLocalizationsSt extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Ntlafatsa ho Pro';
 
   @override
   String get proFeatures => 'Likarolo tsa Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Tlosa Lipapatso';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Notlolla Litaba Tsohle';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Litaba tse Ikhethileng';
 
   @override
   String get welcome => 'Rea u amohela';

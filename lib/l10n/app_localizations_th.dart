@@ -39,10 +39,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get prayerTimes => 'เวลาละหมาด';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'อ่านต่อ';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'รับโปรตลอดชีพ';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get selectLanguage => 'เลือกภาษา';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'ค้นหามากกว่า 180 ภาษา...';
 
   @override
   String get systemDefault => 'ค่าเริ่มต้นของระบบ';
@@ -176,13 +176,13 @@ class AppLocalizationsTh extends AppLocalizations {
   String get edit => 'แก้ไข';
 
   @override
-  String get close => 'Close';
+  String get close => 'ปิด';
 
   @override
   String get ok => 'ตกลง';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ใช่';
 
   @override
   String get no => 'เลขที่';
@@ -403,7 +403,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get hijriCalendar => 'ปฏิทินฮิจเราะห์';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ปฏิทินเกรกอเรียน';
 
   @override
   String get today => 'วันนี้';
@@ -412,7 +412,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get tomorrow => 'พรุ่งนี้';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'เมื่อวาน';
 
   @override
   String get specialDays => 'วันพิเศษ';
@@ -460,10 +460,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get compass => 'เข็มทิศ';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'องศา';
 
   @override
-  String get north => 'North';
+  String get north => 'ทิศเหนือ';
 
   @override
   String get qiblaFound => 'พบกิบลัตแล้ว!';
@@ -501,7 +501,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'เปิดใช้งานการแจ้งเตือน';
 
   @override
   String get notificationTime => 'เวลาแจ้งเตือน';
@@ -575,19 +575,19 @@ class AppLocalizationsTh extends AppLocalizations {
   String get premium => 'พรีเมี่ยม';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'อัพเกรดเป็นโปร';
 
   @override
   String get proFeatures => 'คุณสมบัติโปร';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ลบโฆษณา';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ปลดล็อคเนื้อหาทั้งหมด';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'เนื้อหาพิเศษ';
 
   @override
   String get welcome => 'ยินดีต้อนรับ';

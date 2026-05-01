@@ -39,10 +39,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get prayerTimes => 'ప్రార్థన సమయాలు';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'చదవడం కొనసాగించు';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'లైఫ్‌టైమ్ ప్రోని పొందండి';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get selectLanguage => 'భాషను ఎంచుకోండి';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ భాషలను శోధించండి...';
 
   @override
   String get systemDefault => 'సిస్టమ్ డిఫాల్ట్';
@@ -176,13 +176,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get edit => 'సవరించు';
 
   @override
-  String get close => 'Close';
+  String get close => 'మూసివేయి';
 
   @override
   String get ok => 'సరే';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'అవును';
 
   @override
   String get no => 'నం';
@@ -404,7 +404,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get hijriCalendar => 'హిజ్రీ క్యాలెండర్';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'గ్రెగోరియన్ క్యాలెండర్';
 
   @override
   String get today => 'ఈరోజు';
@@ -413,7 +413,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get tomorrow => 'రేపు';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'నిన్న';
 
   @override
   String get specialDays => 'ప్రత్యేక రోజులు';
@@ -461,10 +461,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get compass => 'దిక్సూచి';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'డిగ్రీలు';
 
   @override
-  String get north => 'North';
+  String get north => 'ఉత్తరం';
 
   @override
   String get qiblaFound => 'ఖిబ్లా దొరికింది!';
@@ -502,7 +502,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'నోటిఫికేషన్‌లను ప్రారంభించండి';
 
   @override
   String get notificationTime => 'నోటిఫికేషన్ సమయం';
@@ -576,19 +576,19 @@ class AppLocalizationsTe extends AppLocalizations {
   String get premium => 'ప్రీమియం';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'ప్రోకి అప్‌గ్రేడ్ చేయండి';
 
   @override
   String get proFeatures => 'ప్రో ఫీచర్లు';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ప్రకటనలను తీసివేయండి';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'మొత్తం కంటెంట్‌ను అన్‌లాక్ చేయండి';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ప్రత్యేకమైన కంటెంట్';
 
   @override
   String get welcome => 'స్వాగతం';

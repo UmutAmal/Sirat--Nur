@@ -39,10 +39,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get prayerTimes => 'பிரார்த்தனை நேரங்கள்';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'தொடர்ந்து படிக்கவும்';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'வாழ்நாள் ப்ரோவைப் பெறுங்கள்';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -110,7 +110,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get selectLanguage => 'மொழியைத் தேர்ந்தெடுக்கவும்';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ மொழிகளில் தேடு...';
 
   @override
   String get systemDefault => 'கணினி இயல்புநிலை';
@@ -177,13 +177,13 @@ class AppLocalizationsTa extends AppLocalizations {
   String get edit => 'திருத்தவும்';
 
   @override
-  String get close => 'Close';
+  String get close => 'மூடு';
 
   @override
   String get ok => 'சரி';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ஆம்';
 
   @override
   String get no => 'இல்லை';
@@ -406,7 +406,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get hijriCalendar => 'ஹிஜ்ரி நாட்காட்டி';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'கிரிகோரியன் நாட்காட்டி';
 
   @override
   String get today => 'இன்று';
@@ -415,7 +415,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get tomorrow => 'நாளை';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'நேற்று';
 
   @override
   String get specialDays => 'சிறப்பு நாட்கள்';
@@ -463,10 +463,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get compass => 'திசைகாட்டி';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'பட்டங்கள்';
 
   @override
-  String get north => 'North';
+  String get north => 'வடக்கு';
 
   @override
   String get qiblaFound => 'கிப்லா கிடைத்தது!';
@@ -504,7 +504,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'அறிவிப்புகளை இயக்கு';
 
   @override
   String get notificationTime => 'அறிவிப்பு நேரம்';
@@ -578,19 +578,19 @@ class AppLocalizationsTa extends AppLocalizations {
   String get premium => 'பிரீமியம்';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro ஆக மேம்படுத்தவும்';
 
   @override
   String get proFeatures => 'ப்ரோ அம்சங்கள்';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'விளம்பரங்களை அகற்று';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'அனைத்து உள்ளடக்கத்தையும் திறக்கவும்';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'பிரத்தியேக உள்ளடக்கம்';
 
   @override
   String get welcome => 'வரவேற்கிறோம்';

@@ -39,10 +39,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get prayerTimes => 'Maldos laikai';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Skaityti toliau';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Gaukite Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get selectLanguage => 'Pasirinkite Kalba';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Ieškoti daugiau nei 180 kalbų...';
 
   @override
   String get systemDefault => 'Numatytoji sistema';
@@ -176,13 +176,13 @@ class AppLocalizationsLt extends AppLocalizations {
   String get edit => 'Redaguoti';
 
   @override
-  String get close => 'Close';
+  String get close => 'Uždaryti';
 
   @override
   String get ok => 'Gerai';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Taip';
 
   @override
   String get no => 'Nr';
@@ -404,7 +404,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get hijriCalendar => 'Hijri kalendorius';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Grigaliaus kalendorius';
 
   @override
   String get today => 'Šiandien';
@@ -413,7 +413,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get tomorrow => 'Rytoj';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'vakar';
 
   @override
   String get specialDays => 'Ypatingos dienos';
@@ -461,10 +461,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get compass => 'Kompasas';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'laipsnių';
 
   @override
-  String get north => 'North';
+  String get north => 'Šiaurė';
 
   @override
   String get qiblaFound => 'Qibla rasta!';
@@ -502,7 +502,7 @@ class AppLocalizationsLt extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Įgalinti pranešimus';
 
   @override
   String get notificationTime => 'Pranešimo laikas';
@@ -576,19 +576,19 @@ class AppLocalizationsLt extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Atnaujinkite į Pro';
 
   @override
   String get proFeatures => 'Pro funkcijos';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Pašalinti skelbimus';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Atrakinkite visą turinį';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Išskirtinis turinys';
 
   @override
   String get welcome => 'Sveiki atvykę';

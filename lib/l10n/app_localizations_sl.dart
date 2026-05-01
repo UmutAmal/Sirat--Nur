@@ -39,10 +39,10 @@ class AppLocalizationsSl extends AppLocalizations {
   String get prayerTimes => 'Molitveni časi';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Nadaljujte z branjem';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Pridobite Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get selectLanguage => 'Izberite Jezik';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Iščite v več kot 180 jezikih ...';
 
   @override
   String get systemDefault => 'Sistemsko privzeto';
@@ -176,13 +176,13 @@ class AppLocalizationsSl extends AppLocalizations {
   String get edit => 'Uredi';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zapri';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ja';
 
   @override
   String get no => 'št';
@@ -405,7 +405,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get hijriCalendar => 'Hijri koledar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Gregorijanski koledar';
 
   @override
   String get today => 'Danes';
@@ -414,7 +414,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get tomorrow => 'jutri';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'včeraj';
 
   @override
   String get specialDays => 'Posebni dnevi';
@@ -462,10 +462,10 @@ class AppLocalizationsSl extends AppLocalizations {
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'stopnje';
 
   @override
-  String get north => 'North';
+  String get north => 'sever';
 
   @override
   String get qiblaFound => 'Qibla najdena!';
@@ -503,7 +503,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Omogoči obvestila';
 
   @override
   String get notificationTime => 'Čas obvestila';
@@ -577,19 +577,19 @@ class AppLocalizationsSl extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Nadgradite na Pro';
 
   @override
   String get proFeatures => 'Pro funkcije';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Odstrani oglase';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Odkleni vso vsebino';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Ekskluzivna vsebina';
 
   @override
   String get welcome => 'dobrodošli';

@@ -39,10 +39,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get prayerTimes => 'Ntango ya mabondeli';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Koba Kotanga';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Bozua Pro ya Bomoi mobimba';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get selectLanguage => 'Poná Monoko';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Boluka minoko 180+...';
 
   @override
   String get systemDefault => 'Système na ndenge ya liboso';
@@ -176,13 +176,13 @@ class AppLocalizationsLn extends AppLocalizations {
   String get edit => 'Kokoma';
 
   @override
-  String get close => 'Close';
+  String get close => 'Kokanga';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Iyo';
 
   @override
   String get no => 'Te';
@@ -404,7 +404,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get hijriCalendar => 'Manáka ya Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Manáka ya Grégoire';
 
   @override
   String get today => 'Lelo';
@@ -413,7 +413,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get tomorrow => 'Lobi';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Lobi eleki';
 
   @override
   String get specialDays => 'Mikolo ya sipesiale';
@@ -462,10 +462,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get compass => 'Boussole ya kosala';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'degrés ya kozwa ba degrés';
 
   @override
-  String get north => 'North';
+  String get north => 'Norde';
 
   @override
   String get qiblaFound => 'Qibla ezwami!';
@@ -503,7 +503,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Activer ba Notifications';
 
   @override
   String get notificationTime => 'Ntango ya Koyebisa';
@@ -577,19 +577,20 @@ class AppLocalizationsLn extends AppLocalizations {
   String get premium => 'Prime';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Bosala mise à niveau na Pro';
 
   @override
   String get proFeatures => 'Makambo ya Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Longola ba Piblisite';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Débloquer Contenu Nionso';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent =>
+      'Makambo oyo ezali na kati ya makambo kaka moko';
 
   @override
   String get welcome => 'Boyei malamu';

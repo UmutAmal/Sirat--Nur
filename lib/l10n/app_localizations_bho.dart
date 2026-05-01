@@ -405,7 +405,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get hijriCalendar => 'हिजरी कैलेंडर के बा';
 
   @override
-  String get gregorianCalendar => 'ग्रेगोरियन कैलेंडर के बा';
+  String get gregorianCalendar => 'ग्रेगोरियन कैलेंडर';
 
   @override
   String get today => 'आज के समय में';
@@ -462,10 +462,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get compass => 'कम्पास के बा';
 
   @override
-  String get degrees => 'डिग्री के बा';
+  String get degrees => 'डिग्री';
 
   @override
-  String get north => 'उत्तर के ओर से बा';
+  String get north => 'उत्तर';
 
   @override
   String get qiblaFound => 'किबला मिल गइल!';
@@ -588,7 +588,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get unlockAll => 'सभ सामग्री के अनलॉक करीं';
 
   @override
-  String get exclusiveContent => 'विशेष सामग्री के बारे में बतावल गइल बा';
+  String get exclusiveContent => 'विशेष सामग्री';
 
   @override
   String get welcome => 'स्वागत बा';

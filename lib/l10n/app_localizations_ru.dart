@@ -39,10 +39,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get prayerTimes => 'Время намаза';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Продолжить чтение';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Получите пожизненный Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get selectLanguage => 'Выберите язык';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Поиск на более чем 180 языках...';
 
   @override
   String get systemDefault => 'Системные настройки по умолчанию';
@@ -178,13 +178,13 @@ class AppLocalizationsRu extends AppLocalizations {
   String get edit => 'Редактировать';
 
   @override
-  String get close => 'Close';
+  String get close => 'Закрыть';
 
   @override
   String get ok => 'ОК';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Да';
 
   @override
   String get no => 'Нет';
@@ -406,7 +406,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get hijriCalendar => 'Календарь Хиджры';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Григорианский календарь';
 
   @override
   String get today => 'Сегодня';
@@ -415,7 +415,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get tomorrow => 'Завтра';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Вчера';
 
   @override
   String get specialDays => 'Особые дни';
@@ -463,10 +463,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get compass => 'Компас';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'степени';
 
   @override
-  String get north => 'North';
+  String get north => 'Север';
 
   @override
   String get qiblaFound => 'Кибла найдена!';
@@ -504,7 +504,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Включить уведомления';
 
   @override
   String get notificationTime => 'Время уведомления';
@@ -578,19 +578,19 @@ class AppLocalizationsRu extends AppLocalizations {
   String get premium => 'Премиум';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Обновите до Pro';
 
   @override
   String get proFeatures => 'Профессиональные функции';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Удалить рекламу';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Разблокировать весь контент';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Эксклюзивный контент';
 
   @override
   String get welcome => 'Добро пожаловать';

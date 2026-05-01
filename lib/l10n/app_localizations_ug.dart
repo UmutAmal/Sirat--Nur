@@ -39,10 +39,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get prayerTimes => 'ناماز ۋاقتى';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'داۋاملىق ئوقۇش';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'ئۆمۈرلۈك Pro غا ئېرىشىش';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get selectLanguage => 'تىل تاللاڭ';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ تىلنى ئىزدەڭ ...';
 
   @override
   String get systemDefault => 'سىستېما كۆڭۈلدىكى قىممىتى';
@@ -176,13 +176,13 @@ class AppLocalizationsUg extends AppLocalizations {
   String get edit => 'تەھرىر';
 
   @override
-  String get close => 'Close';
+  String get close => 'تاقاش';
 
   @override
   String get ok => 'ماقۇل';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ھەئە';
 
   @override
   String get no => 'ياق';
@@ -413,7 +413,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get tomorrow => 'ئەتە';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'تۈنۈگۈن';
 
   @override
   String get specialDays => 'ئالاھىدە كۈنلەر';
@@ -461,10 +461,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ئۇنۋان';
 
   @override
-  String get north => 'North';
+  String get north => 'شىمال';
 
   @override
   String get qiblaFound => 'قىبلە تاپتى!';
@@ -502,7 +502,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'ئۇقتۇرۇشنى قوزغىتىش';
 
   @override
   String get notificationTime => 'ئۇقتۇرۇش ۋاقتى';
@@ -576,19 +576,19 @@ class AppLocalizationsUg extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro غا يېڭىلاش';
 
   @override
   String get proFeatures => 'Pro Features';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ئېلاننى ئۆچۈرۈڭ';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'بارلىق مەزمۇننى ئېچىڭ';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ئالاھىدە مەزمۇن';
 
   @override
   String get welcome => 'خۇش كەپسىز';

@@ -39,10 +39,10 @@ class AppLocalizationsTy extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Tamau noa i te tai\'o';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'A farii i te Pro no te oraraa taatoa';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Imi 180+ reo...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsTy extends AppLocalizations {
   String get edit => 'Fārito';
 
   @override
-  String get close => 'Close';
+  String get close => 'Tautea';
 
   @override
   String get ok => 'E';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ae';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Maramataka matahiti Gregorian';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get tomorrow => 'Ananahi';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ʻApaʻau';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsTy extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'te mau titeri';
 
   @override
-  String get north => 'North';
+  String get north => 'Matu\'a';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'A faati\'a i te mau faaararaa';
 
   @override
   String get notificationTime => 'Hora faaararaa';
@@ -576,19 +576,19 @@ class AppLocalizationsTy extends AppLocalizations {
   String get premium => 'Prīmeha';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Faahou i te Pro';
 
   @override
   String get proFeatures => 'Te mau huru Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'A tatara i te mau parau faatiani';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Tatara i te mau mea atoa';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Te mau ihirangi taa ê';
 
   @override
   String get welcome => 'Manava';

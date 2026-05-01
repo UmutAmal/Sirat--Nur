@@ -39,10 +39,10 @@ class AppLocalizationsCe extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Кхин дӀа а еша';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Дахарехь профессионалан мах хадо';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ маттахь леха...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsCe extends AppLocalizations {
   String get edit => 'Тадан';
 
   @override
-  String get close => 'Close';
+  String get close => 'ДӀачӀагӀа';
 
   @override
   String get ok => 'МЕГАР ДУ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ХӀаъ';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Григорианан рузма';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get tomorrow => 'Кхана';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Селхана';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsCe extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'градусаш;';
 
   @override
-  String get north => 'North';
+  String get north => 'Къилбаседа';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Хаамбарш дӀахӀиттаде';
 
   @override
   String get notificationTime => 'Хаам баран хан';
@@ -576,19 +576,19 @@ class AppLocalizationsCe extends AppLocalizations {
   String get premium => 'Уггаре лакхарчу сортан';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro 100 кхаччалц хьалаяккха.';
 
   @override
   String get proFeatures => 'Профессиональни агӀонаш';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Реклама дӀаяккха';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Дерриге а чулацам схьабелла';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Эксклюзивни чулацам';
 
   @override
   String get welcome => 'Марша догӀийла';

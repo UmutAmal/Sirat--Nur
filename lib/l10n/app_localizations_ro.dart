@@ -39,10 +39,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get prayerTimes => 'Timp de rugăciune';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Continuă să citești';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Obțineți Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get selectLanguage => 'Selectați Limbă';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Căutați în peste 180 de limbi...';
 
   @override
   String get systemDefault => 'Implicit sistem';
@@ -178,13 +178,13 @@ class AppLocalizationsRo extends AppLocalizations {
   String get edit => 'Editați';
 
   @override
-  String get close => 'Close';
+  String get close => 'Închide';
 
   @override
   String get ok => 'Bine';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Da';
 
   @override
   String get no => 'Nu';
@@ -407,7 +407,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get hijriCalendar => 'Calendarul Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Calendarul Gregorian';
 
   @override
   String get today => 'Astăzi';
@@ -416,7 +416,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get tomorrow => 'Mâine';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Ieri';
 
   @override
   String get specialDays => 'Zile speciale';
@@ -464,10 +464,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get compass => 'busola';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'grade';
 
   @override
-  String get north => 'North';
+  String get north => 'la nord';
 
   @override
   String get qiblaFound => 'Qibla găsit!';
@@ -505,7 +505,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Activați notificările';
 
   @override
   String get notificationTime => 'Ora de notificare';
@@ -579,19 +579,19 @@ class AppLocalizationsRo extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Faceți upgrade la Pro';
 
   @override
   String get proFeatures => 'Caracteristici Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Eliminați reclamele';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Deblocați tot conținutul';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Conținut exclusiv';
 
   @override
   String get welcome => 'Bun venit';

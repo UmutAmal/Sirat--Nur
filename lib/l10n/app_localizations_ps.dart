@@ -39,10 +39,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get prayerTimes => 'د لمانځه وختونه';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'لوستلو ته دوام ورکړئ';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'د ژوند وخت پرو ترلاسه کړئ';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get selectLanguage => 'ژبه غوره کړئ';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'له 180+ ژبو لټون...';
 
   @override
   String get systemDefault => 'د سیسټم ډیفالټ';
@@ -176,13 +176,13 @@ class AppLocalizationsPs extends AppLocalizations {
   String get edit => 'سمون';
 
   @override
-  String get close => 'Close';
+  String get close => 'تړل';
 
   @override
   String get ok => 'سمه ده';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'هو';
 
   @override
   String get no => 'نه';
@@ -404,7 +404,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get hijriCalendar => 'هجري تقویم';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ګریګوریان تقویم';
 
   @override
   String get today => 'نن';
@@ -413,7 +413,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get tomorrow => 'سبا';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'پرون';
 
   @override
   String get specialDays => 'ځانګړې ورځې';
@@ -461,10 +461,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get compass => 'کمپاس';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'درجې';
 
   @override
-  String get north => 'North';
+  String get north => 'شمال';
 
   @override
   String get qiblaFound => 'قبله وموندله!';
@@ -501,7 +501,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'خبرتیاوې فعال کړئ';
 
   @override
   String get notificationTime => 'د خبرتیا وخت';
@@ -575,19 +575,19 @@ class AppLocalizationsPs extends AppLocalizations {
   String get premium => 'پریمیم';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'پرو ته لوړ کړئ';
 
   @override
   String get proFeatures => 'پرو ځانګړتیاوې';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'اعلانونه لرې کړئ';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ټول مینځپانګه خلاص کړئ';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ځانګړي مواد';
 
   @override
   String get welcome => 'ښه راغلاست';

@@ -42,7 +42,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get continueReading => 'Continue Reading';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Lifetime Pro bistînin';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get selectLanguage => 'Ziman hilbijêrin';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Li 180+ zimanan bigerin...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get edit => 'Biguherîne';
 
   @override
-  String get close => 'Close';
+  String get close => 'Girtin';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Erê';
 
   @override
   String get no => 'Na';
@@ -404,7 +404,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get hijriCalendar => 'Salnameya Hicrî';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Salnameya Gregorî';
 
   @override
   String get today => 'Îro';
@@ -413,7 +413,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get tomorrow => 'Sibe';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Duh';
 
   @override
   String get specialDays => 'Rojên Taybet';
@@ -461,10 +461,10 @@ class AppLocalizationsKu extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'derece';
 
   @override
-  String get north => 'North';
+  String get north => 'Bakur';
 
   @override
   String get qiblaFound => 'Qibla dît!';
@@ -502,7 +502,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Notifications çalak bike';
 
   @override
   String get notificationTime => 'Dema ragihandinê';
@@ -576,19 +576,19 @@ class AppLocalizationsKu extends AppLocalizations {
   String get premium => 'Xelat';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Nûvekirina Pro';
 
   @override
   String get proFeatures => 'Taybetmendiyên Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Reklamên jêbirin';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Hemî naverokê vekin';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Naveroka Exclusive';
 
   @override
   String get welcome => 'Bi xêr hatî';

@@ -39,10 +39,10 @@ class AppLocalizationsSu extends AppLocalizations {
   String get prayerTimes => 'Waktos Sholat';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Teraskeun Maca';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Kéngingkeun Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get selectLanguage => 'Pilih Basa';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Milarian 180+ basa...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsSu extends AppLocalizations {
   String get edit => 'Édit';
 
   @override
-  String get close => 'Close';
+  String get close => 'Tutup';
 
   @override
   String get ok => 'OKÉ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Sumuhun';
 
   @override
   String get no => 'No';
@@ -405,7 +405,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get hijriCalendar => 'Kalender Hijriah';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Kalénder Gregorian';
 
   @override
   String get today => 'Kiwari';
@@ -414,7 +414,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get tomorrow => 'isukan';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Kamari';
 
   @override
   String get specialDays => 'Poé husus';
@@ -462,10 +462,10 @@ class AppLocalizationsSu extends AppLocalizations {
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'darajat';
 
   @override
-  String get north => 'North';
+  String get north => 'Kalér';
 
   @override
   String get qiblaFound => 'Kiblat kapanggih!';
@@ -503,7 +503,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Aktipkeun Bewara';
 
   @override
   String get notificationTime => 'Waktos Bewara';
@@ -577,19 +577,19 @@ class AppLocalizationsSu extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Ningkatkeun ka Pro';
 
   @override
   String get proFeatures => 'Fitur Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Ngahapus Iklan';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Buka konci Sadaya Eusi';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Eusi Eksklusif';
 
   @override
   String get welcome => 'Wilujeng sumping';

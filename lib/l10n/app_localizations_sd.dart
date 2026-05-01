@@ -39,10 +39,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get prayerTimes => 'نماز جا وقت';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'پڙهڻ جاري رکو';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'لائف ٽائيم پرو حاصل ڪريو';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get selectLanguage => 'ٻولي چونڊيو';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ ٻوليون ڳولھيو...';
 
   @override
   String get systemDefault => 'سسٽم ڊفالٽ';
@@ -176,13 +176,13 @@ class AppLocalizationsSd extends AppLocalizations {
   String get edit => 'ترميم ڪريو';
 
   @override
-  String get close => 'Close';
+  String get close => 'بند';
 
   @override
   String get ok => 'ٺيڪ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ها';
 
   @override
   String get no => 'نه';
@@ -404,7 +404,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get hijriCalendar => 'هجري ڪئلينڊر';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'گريگورين ڪئلينڊر';
 
   @override
   String get today => 'اڄ';
@@ -413,7 +413,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get tomorrow => 'سڀاڻي';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ڪالهه';
 
   @override
   String get specialDays => 'خاص ڏينهن';
@@ -461,10 +461,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get compass => 'کمپاس';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'درجا';
 
   @override
-  String get north => 'North';
+  String get north => 'اتر';
 
   @override
   String get qiblaFound => 'قبله مليو!';
@@ -501,7 +501,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'اطلاعن کي فعال ڪريو';
 
   @override
   String get notificationTime => 'نوٽيفڪيشن جو وقت';
@@ -575,19 +575,19 @@ class AppLocalizationsSd extends AppLocalizations {
   String get premium => 'پريميئم';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'پرو ڏانهن اپڊيٽ ڪريو';
 
   @override
   String get proFeatures => 'پرو خاصيتون';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'اشتهار هٽايو';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'سڀ مواد کوليو';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'خاص مواد';
 
   @override
   String get welcome => 'ڀليڪار';

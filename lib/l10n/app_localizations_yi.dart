@@ -39,10 +39,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get prayerTimes => 'תפילה צייט';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'פאָרזעצן לייענען';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'באַקומען Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get selectLanguage => 'אויסקלייַבן שפּראַך';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'זוך איבער 180 שפראכן...';
 
   @override
   String get systemDefault => 'סיסטעם פעליקייַט';
@@ -176,13 +176,13 @@ class AppLocalizationsYi extends AppLocalizations {
   String get edit => 'רעדאַגירן';
 
   @override
-  String get close => 'Close';
+  String get close => 'נאָענט';
 
   @override
   String get ok => 'גוט';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'יא';
 
   @override
   String get no => 'ניין';
@@ -404,7 +404,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get hijriCalendar => 'הידזשרי קאַלענדאַר';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'גרעגאָריאַן קאַלענדאַר';
 
   @override
   String get today => 'היינט';
@@ -413,7 +413,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get tomorrow => 'מאָרגן';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'נעכטן';
 
   @override
   String get specialDays => 'ספּעציעלע טעג';
@@ -461,10 +461,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get compass => 'קאָמפּאַס';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'דיגריז';
 
   @override
-  String get north => 'North';
+  String get north => 'צפון';
 
   @override
   String get qiblaFound => 'קיבלאַ געפונען!';
@@ -502,7 +502,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'געבן נאָוטאַפאַקיישאַנז';
 
   @override
   String get notificationTime => 'אָנזאָג צייט';
@@ -576,19 +576,19 @@ class AppLocalizationsYi extends AppLocalizations {
   String get premium => 'פּרעמיום';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'אַפּגרייד צו פּראָ';
 
   @override
   String get proFeatures => 'פּראָ פֿעיִקייטן';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'אַראָפּנעמען אַדס';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ופשליסן אַלע אינהאַלט';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ויסשליסיק אינהאַלט';
 
   @override
   String get welcome => 'ברוכים הבאים';

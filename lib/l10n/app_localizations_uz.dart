@@ -39,10 +39,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get prayerTimes => 'Namoz vaqtlari';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'O\'qishni davom ettiring';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Lifetime Pro yuklab oling';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get selectLanguage => 'Tilni tanlang';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180 dan ortiq tillarni qidirish...';
 
   @override
   String get systemDefault => 'Tizim standarti';
@@ -176,13 +176,13 @@ class AppLocalizationsUz extends AppLocalizations {
   String get edit => 'Tahrirlash';
 
   @override
-  String get close => 'Close';
+  String get close => 'Yopish';
 
   @override
   String get ok => 'KELISHDIKMI';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ha';
 
   @override
   String get no => 'Yo\'q';
@@ -404,7 +404,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get hijriCalendar => 'Hijriy kalendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Grigoriy kalendar';
 
   @override
   String get today => 'Bugun';
@@ -413,7 +413,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get tomorrow => 'Ertaga';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Kecha';
 
   @override
   String get specialDays => 'Maxsus kunlar';
@@ -461,10 +461,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'daraja';
 
   @override
-  String get north => 'North';
+  String get north => 'Shimoliy';
 
   @override
   String get qiblaFound => 'Qibla topildi!';
@@ -502,7 +502,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Bildirishnomalarni yoqish';
 
   @override
   String get notificationTime => 'Xabar berish vaqti';
@@ -576,19 +576,19 @@ class AppLocalizationsUz extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro versiyasiga yangilang';
 
   @override
   String get proFeatures => 'Pro xususiyatlari';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Reklamalarni olib tashlash';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Barcha tarkibni qulfdan chiqaring';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Eksklyuziv tarkib';
 
   @override
   String get welcome => 'Xush kelibsiz';

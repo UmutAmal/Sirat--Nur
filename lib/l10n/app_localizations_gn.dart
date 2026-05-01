@@ -407,7 +407,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendario rehegua';
 
   @override
-  String get gregorianCalendar => 'Calendario Gregoriano rehegua';
+  String get gregorianCalendar => 'Calendario Gregoriano';
 
   @override
   String get today => 'Ko árape';
@@ -464,7 +464,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get compass => 'Brújula rehegua';
 
   @override
-  String get degrees => 'grados rehegua';
+  String get degrees => 'Grados';
 
   @override
   String get north => 'Yvatévo';
@@ -591,7 +591,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get unlockAll => 'Emboguejy Opaite Contenido';
 
   @override
-  String get exclusiveContent => 'Contenido Exclusivo rehegua';
+  String get exclusiveContent => 'Contenido exclusivo';
 
   @override
   String get welcome => 'Tapeg̃uahẽporãite';

@@ -408,8 +408,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendario ukax mä jach’a uñacht’äwiwa';
 
   @override
-  String get gregorianCalendar =>
-      'Calendario Gregoriano ukax mä jach’a uñacht’äwiwa';
+  String get gregorianCalendar => 'Calendario Gregoriano';
 
   @override
   String get today => 'Jichhüru';
@@ -595,8 +594,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get unlockAll => 'Taqi kunatix utjki ukanak jist’araña';
 
   @override
-  String get exclusiveContent =>
-      'Contenido exclusivo ukax mä juk’a pachanakanwa';
+  String get exclusiveContent => 'Contenido exclusivo';
 
   @override
   String get welcome => 'Aski jutäwi';

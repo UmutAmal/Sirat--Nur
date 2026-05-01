@@ -39,7 +39,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get prayerTimes => 'Yeroo Kadhannaa';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Dubbisuu Itti Fufa';
 
   @override
   String get getLifetimePro => 'Get Lifetime Pro';
@@ -109,7 +109,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get selectLanguage => 'Afaan Filadhu';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Afaanota 180+ barbaadi...';
 
   @override
   String get systemDefault => 'Sirna Durtii';
@@ -177,13 +177,13 @@ class AppLocalizationsOm extends AppLocalizations {
   String get edit => 'Gulaaluu';
 
   @override
-  String get close => 'Close';
+  String get close => 'Cufuu';
 
   @override
   String get ok => 'TOLE';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Eeyyee';
 
   @override
   String get no => 'Lakki';
@@ -406,7 +406,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get hijriCalendar => 'Kaalaandarii Hijrii';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Kaalaandarii Giriigooriyaan';
 
   @override
   String get today => 'Har\'a';
@@ -415,7 +415,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get tomorrow => 'Boor';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Kaleessa';
 
   @override
   String get specialDays => 'Guyyoota Addaa';
@@ -463,10 +463,10 @@ class AppLocalizationsOm extends AppLocalizations {
   String get compass => 'Koompaasii';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'digrii argachuu danda’u';
 
   @override
-  String get north => 'North';
+  String get north => 'Kaaba';
 
   @override
   String get qiblaFound => 'Qiblaan argame!';
@@ -504,7 +504,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Beeksisa Dandeessisi';
 
   @override
   String get notificationTime => 'Yeroo Beeksisa';
@@ -578,19 +578,19 @@ class AppLocalizationsOm extends AppLocalizations {
   String get premium => 'Hamma kaffaltii waliigalteef ykn baraarsaaf kaffalamu';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Gara Pro tti ol guddifadhaa';
 
   @override
   String get proFeatures => 'Amaloota Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Beeksisa Haquu';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Qabiyyee Hundaa Bani';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Qabiyyee Addaa';
 
   @override
   String get welcome => 'Baga nagaan dhufte';

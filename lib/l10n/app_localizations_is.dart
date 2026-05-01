@@ -39,10 +39,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get prayerTimes => 'Bænatímar';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Halda áfram að lesa';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Fáðu þér Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get selectLanguage => 'Veldu Tungumál';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Leita í 180+ tungumálum...';
 
   @override
   String get systemDefault => 'Kerfi Sjálfgefið';
@@ -176,13 +176,13 @@ class AppLocalizationsIs extends AppLocalizations {
   String get edit => 'Breyta';
 
   @override
-  String get close => 'Close';
+  String get close => 'Loka';
 
   @override
   String get ok => 'Allt í lagi';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Já';
 
   @override
   String get no => 'Nei';
@@ -404,7 +404,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get hijriCalendar => 'Hijri dagatal';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'gregoríska dagatalið';
 
   @override
   String get today => 'Í dag';
@@ -413,7 +413,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get tomorrow => 'Á morgun';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Í gær';
 
   @override
   String get specialDays => 'Sérstakir dagar';
@@ -461,10 +461,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get compass => 'Áttaviti';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'gráður';
 
   @override
-  String get north => 'North';
+  String get north => 'Norður';
 
   @override
   String get qiblaFound => 'Qibla fannst!';
@@ -502,7 +502,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Virkja tilkynningar';
 
   @override
   String get notificationTime => 'Tilkynningatími';
@@ -576,19 +576,19 @@ class AppLocalizationsIs extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Uppfærðu í Pro';
 
   @override
   String get proFeatures => 'Pro eiginleikar';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Fjarlægðu auglýsingar';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Opnaðu allt efni';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Einka innihald';
 
   @override
   String get welcome => 'Verið velkomin';

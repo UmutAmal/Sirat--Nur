@@ -39,10 +39,10 @@ class AppLocalizationsSo extends AppLocalizations {
   String get prayerTimes => 'Waqtiyada Salaadda';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Akhriska sii wad';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Hel Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get selectLanguage => 'Dooro Luuqad';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Ka raadi 180+ luqadood...';
 
   @override
   String get systemDefault => 'Nidaamka Default';
@@ -176,13 +176,13 @@ class AppLocalizationsSo extends AppLocalizations {
   String get edit => 'Wax ka beddel';
 
   @override
-  String get close => 'Close';
+  String get close => 'Xir';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Haa';
 
   @override
   String get no => 'Maya';
@@ -405,7 +405,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Kalandarka Gregorian';
 
   @override
   String get today => 'Maanta';
@@ -414,7 +414,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get tomorrow => 'Berrito';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Shalay';
 
   @override
   String get specialDays => 'Maalmaha gaarka ah';
@@ -462,10 +462,10 @@ class AppLocalizationsSo extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'shahaadooyinka';
 
   @override
-  String get north => 'North';
+  String get north => 'Waqooyi';
 
   @override
   String get qiblaFound => 'Qibla la helay!';
@@ -503,7 +503,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Daar Ogeysiinta';
 
   @override
   String get notificationTime => 'Waqtiga Ogeysiinta';
@@ -577,19 +577,19 @@ class AppLocalizationsSo extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'U cusboonaysii Pro';
 
   @override
   String get proFeatures => 'Tilmaamaha Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Ka saar xayeysiisyada';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Fur Dhammaan Waxyaabaha ku jira';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Nuxurka Gaarka ah';
 
   @override
   String get welcome => 'Soo dhawoow';

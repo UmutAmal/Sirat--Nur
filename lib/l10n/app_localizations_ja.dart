@@ -39,10 +39,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get prayerTimes => '礼拝時刻';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => '続きを読む';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => '生涯プロを入手';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get selectLanguage => '言語の選択';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180 以上の言語を検索...';
 
   @override
   String get systemDefault => 'システムのデフォルト';
@@ -175,13 +175,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get edit => '編集';
 
   @override
-  String get close => 'Close';
+  String get close => '閉じる';
 
   @override
   String get ok => 'わかりました';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'はい';
 
   @override
   String get no => 'いいえ';
@@ -402,7 +402,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get hijriCalendar => 'ヒジュラ暦';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'グレゴリオ暦';
 
   @override
   String get today => '今日';
@@ -411,7 +411,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tomorrow => '明日';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => '昨日';
 
   @override
   String get specialDays => '特別な日';
@@ -459,10 +459,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get compass => 'コンパス';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => '度';
 
   @override
-  String get north => 'North';
+  String get north => '北';
 
   @override
   String get qiblaFound => 'キブラ方向を検出しました！';
@@ -498,7 +498,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => '通知を有効にする';
 
   @override
   String get notificationTime => '通知時間';
@@ -572,19 +572,19 @@ class AppLocalizationsJa extends AppLocalizations {
   String get premium => 'プレミアム';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'プロにアップグレード';
 
   @override
   String get proFeatures => 'プロの機能';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => '広告を削除する';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'すべてのコンテンツのロックを解除する';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => '限定コンテンツ';
 
   @override
   String get welcome => 'ようこそ';

@@ -39,10 +39,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get prayerTimes => 'ពេលវេលាអធិស្ឋាន';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'បន្តការអាន';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'ទទួលបាន Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get selectLanguage => 'ជ្រើសរើសភាសា';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'ស្វែងរក 180+ ភាសា...';
 
   @override
   String get systemDefault => 'លំនាំដើមប្រព័ន្ធ';
@@ -176,13 +176,13 @@ class AppLocalizationsKm extends AppLocalizations {
   String get edit => 'កែសម្រួល';
 
   @override
-  String get close => 'Close';
+  String get close => 'បិទ';
 
   @override
   String get ok => 'យល់ព្រម';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'បាទ';
 
   @override
   String get no => 'ទេ';
@@ -404,7 +404,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get hijriCalendar => 'ប្រតិទិន Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ប្រតិទិនហ្គ្រេហ្គោរៀន';
 
   @override
   String get today => 'ថ្ងៃនេះ';
@@ -413,7 +413,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get tomorrow => 'ថ្ងៃស្អែក';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ម្សិលមិញ';
 
   @override
   String get specialDays => 'ថ្ងៃពិសេស';
@@ -461,10 +461,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get compass => 'ត្រីវិស័យ';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ដឺក្រេ';
 
   @override
-  String get north => 'North';
+  String get north => 'ខាងជើង';
 
   @override
   String get qiblaFound => 'Qibla រកឃើញ!';
@@ -502,7 +502,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'បើកការជូនដំណឹង';
 
   @override
   String get notificationTime => 'ពេលវេលាជូនដំណឹង';
@@ -576,19 +576,19 @@ class AppLocalizationsKm extends AppLocalizations {
   String get premium => 'បុព្វលាភ';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'ដំឡើងកំណែទៅ Pro';
 
   @override
   String get proFeatures => 'លក្ខណៈពិសេសគាំទ្រ';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'លុបការផ្សាយពាណិជ្ជកម្ម';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ដោះសោមាតិកាទាំងអស់។';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'មាតិកាផ្តាច់មុខ';
 
   @override
   String get welcome => 'សូមស្វាគមន៍';

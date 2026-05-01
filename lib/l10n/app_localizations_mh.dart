@@ -39,10 +39,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Wōnm̧aanļo̧k wōt im riiti';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Bōk Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Pukot 180+ kajin ko...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsMh extends AppLocalizations {
   String get edit => 'Kajimwe';
 
   @override
-  String get close => 'Close';
+  String get close => 'Kiili';
 
   @override
   String get ok => 'EMMON';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Aet';
 
   @override
   String get no => 'No';
@@ -413,7 +413,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get tomorrow => 'Ilju';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Inne';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'digri ko';
 
   @override
-  String get north => 'North';
+  String get north => 'Eañ';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Kōtlok kōjjelā ko';
 
   @override
   String get notificationTime => 'Iien kōjjelā';
@@ -576,19 +576,19 @@ class AppLocalizationsMh extends AppLocalizations {
   String get premium => 'Nebar';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Kōkōmanmanlok ñan Pro';
 
   @override
   String get proFeatures => 'Pro Features';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Jolok Ad ko';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Kōtlok aolep men ko ie';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Men ko rejenolok';
 
   @override
   String get welcome => 'Karuwainene';

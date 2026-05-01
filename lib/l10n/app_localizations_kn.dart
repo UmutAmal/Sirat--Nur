@@ -39,10 +39,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get prayerTimes => 'ಪ್ರೇಯರ್ ಟೈಮ್ಸ್';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'ಓದುವುದನ್ನು ಮುಂದುವರಿಸಿ';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'ಜೀವಮಾನದ ಪ್ರೊ ಪಡೆಯಿರಿ';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get selectLanguage => 'ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ ಭಾಷೆಗಳನ್ನು ಹುಡುಕಿ...';
 
   @override
   String get systemDefault => 'ಸಿಸ್ಟಮ್ ಡೀಫಾಲ್ಟ್';
@@ -176,13 +176,13 @@ class AppLocalizationsKn extends AppLocalizations {
   String get edit => 'ಸಂಪಾದಿಸು';
 
   @override
-  String get close => 'Close';
+  String get close => 'ಮುಚ್ಚಿ';
 
   @override
   String get ok => 'ಸರಿ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ಹೌದು';
 
   @override
   String get no => 'ಸಂ';
@@ -404,7 +404,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get hijriCalendar => 'ಹಿಜ್ರಿ ಕ್ಯಾಲೆಂಡರ್';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ಗ್ರೆಗೋರಿಯನ್ ಕ್ಯಾಲೆಂಡರ್';
 
   @override
   String get today => 'ಇಂದು';
@@ -413,7 +413,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get tomorrow => 'ನಾಳೆ';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ನಿನ್ನೆ';
 
   @override
   String get specialDays => 'ವಿಶೇಷ ದಿನಗಳು';
@@ -461,10 +461,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get compass => 'ದಿಕ್ಸೂಚಿ';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ಪದವಿಗಳು';
 
   @override
-  String get north => 'North';
+  String get north => 'ಉತ್ತರ';
 
   @override
   String get qiblaFound => 'ಕಿಬ್ಲಾ ಕಂಡುಬಂದಿದೆ!';
@@ -501,7 +501,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'ಅಧಿಸೂಚನೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ';
 
   @override
   String get notificationTime => 'ಅಧಿಸೂಚನೆ ಸಮಯ';
@@ -575,19 +575,19 @@ class AppLocalizationsKn extends AppLocalizations {
   String get premium => 'ಪ್ರೀಮಿಯಂ';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro ಗೆ ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ';
 
   @override
   String get proFeatures => 'ಪ್ರೊ ವೈಶಿಷ್ಟ್ಯಗಳು';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ಜಾಹೀರಾತುಗಳನ್ನು ತೆಗೆದುಹಾಕಿ';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ಎಲ್ಲಾ ವಿಷಯವನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ವಿಶೇಷ ವಿಷಯ';
 
   @override
   String get welcome => 'ಸ್ವಾಗತ';

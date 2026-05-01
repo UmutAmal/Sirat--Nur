@@ -39,10 +39,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get prayerTimes => 'ဆုတောင်းအချိန်များ';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'ဆက်ဖတ်ရန်';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Lifetime Pro ကိုရယူပါ။';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -110,7 +110,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get selectLanguage => 'ဘာသာစကားကို ရွေးပါ။';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'ဘာသာစကား 180+ ကို ရှာပါ...';
 
   @override
   String get systemDefault => 'စနစ် ပုံသေ';
@@ -178,13 +178,13 @@ class AppLocalizationsMy extends AppLocalizations {
   String get edit => 'တည်းဖြတ်ပါ။';
 
   @override
-  String get close => 'Close';
+  String get close => 'ပိတ်လိုက်';
 
   @override
   String get ok => 'အိုကေ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ဟုတ်ကဲ့';
 
   @override
   String get no => 'မရှိ';
@@ -406,7 +406,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get hijriCalendar => 'Hijri ပြက္ခဒိန်';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Gregorian ပြက္ခဒိန်';
 
   @override
   String get today => 'ဒီနေ့';
@@ -415,7 +415,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get tomorrow => 'မနက်ဖြန်';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'မနေ့က';
 
   @override
   String get specialDays => 'အထူးနေ့များ';
@@ -463,10 +463,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get compass => 'သံလိုက်အိမ်မြှောင်';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ဒီဂရီ';
 
   @override
-  String get north => 'North';
+  String get north => 'မြောက်ဦး';
 
   @override
   String get qiblaFound => 'Qibla ကို တွေ့ရှိခဲ့သည်။';
@@ -504,7 +504,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'အကြောင်းကြားချက်များကို ဖွင့်ပါ။';
 
   @override
   String get notificationTime => 'အကြောင်းကြားချက်အချိန်';
@@ -578,19 +578,19 @@ class AppLocalizationsMy extends AppLocalizations {
   String get premium => 'ပရီမီယံ';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro သို့ အဆင့်မြှင့်ပါ။';
 
   @override
   String get proFeatures => 'Pro အင်္ဂါရပ်များ';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ကြော်ငြာများကို ဖယ်ရှားပါ။';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'အကြောင်းအရာအားလုံးကို လော့ခ်ဖွင့်ပါ။';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'သီးသန့်အကြောင်းအရာ';
 
   @override
   String get welcome => 'ကြိုဆိုပါတယ်။';

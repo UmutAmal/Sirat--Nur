@@ -39,10 +39,10 @@ class AppLocalizationsFf extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Jokku Jaŋngude';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Heɓde nguurndam Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Yiylo ko ɓuri 180 ɗemngal...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsFf extends AppLocalizations {
   String get edit => 'Windugo';
 
   @override
-  String get close => 'Close';
+  String get close => 'Mabbugo';
 
   @override
   String get ok => 'TO';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Oho';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Limlebbi Gregori';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get tomorrow => 'Jango';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Kenya';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsFf extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'degereeji';
 
   @override
-  String get north => 'North';
+  String get north => 'Wayla';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Softina Notifikaaji';
 
   @override
   String get notificationTime => 'Waktu humpito';
@@ -576,19 +576,19 @@ class AppLocalizationsFf extends AppLocalizations {
   String get premium => 'Arandere';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Ɓeydu e Pro';
 
   @override
   String get proFeatures => 'Pro Feereeji';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Ittu Ads';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Uddit Lowre ndee fof';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Lowre Keertinnde';
 
   @override
   String get welcome => 'Jabbama';

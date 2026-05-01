@@ -39,10 +39,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get prayerTimes => 'Taimi Tatalo';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Fa\'aauau Faitau';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Maua le Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get selectLanguage => 'Filifili Gagana';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Su\'e 180+ gagana...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsSm extends AppLocalizations {
   String get edit => 'Fa\'atonu';
 
   @override
-  String get close => 'Close';
+  String get close => 'Tapuni';
 
   @override
   String get ok => 'Ua lelei';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ioe';
 
   @override
   String get no => 'Leai';
@@ -404,7 +404,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get hijriCalendar => 'Kalena Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Kalena Gregorian';
 
   @override
   String get today => 'I aso nei';
@@ -413,7 +413,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get tomorrow => 'O taeao';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'O ananafi';
 
   @override
   String get specialDays => 'Aso Faapitoa';
@@ -461,10 +461,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get compass => 'Tapasa';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'tikeri';
 
   @override
-  String get north => 'North';
+  String get north => 'Matu';
 
   @override
   String get qiblaFound => 'Ua maua Qibla!';
@@ -502,7 +502,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Fa\'amalo Fa\'asilasilaga';
 
   @override
   String get notificationTime => 'Taimi Fa\'asilasilaga';
@@ -576,19 +576,19 @@ class AppLocalizationsSm extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Fa\'afou ile Pro';
 
   @override
   String get proFeatures => 'Pro Features';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Aveese Faasalalauga';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Tatala mea uma';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Anotusi Fa\'apitoa';
 
   @override
   String get welcome => 'Susu maia';

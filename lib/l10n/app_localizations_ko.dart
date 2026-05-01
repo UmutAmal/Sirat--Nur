@@ -39,10 +39,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get prayerTimes => '기도 시간';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => '계속 읽기';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => '평생 프로 받기';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get selectLanguage => '언어 선택';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180개 이상의 언어 검색...';
 
   @override
   String get systemDefault => '시스템 기본값';
@@ -175,13 +175,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get edit => '편집';
 
   @override
-  String get close => 'Close';
+  String get close => '닫기';
 
   @override
   String get ok => '알았어';
 
   @override
-  String get yes => 'Yes';
+  String get yes => '예';
 
   @override
   String get no => '아니요';
@@ -401,7 +401,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get hijriCalendar => '회교식 달력';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => '그레고리력';
 
   @override
   String get today => '오늘';
@@ -410,7 +410,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get tomorrow => '내일';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => '어제';
 
   @override
   String get specialDays => '특별한 날';
@@ -458,10 +458,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get compass => '나침반';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => '도';
 
   @override
-  String get north => 'North';
+  String get north => '북쪽';
 
   @override
   String get qiblaFound => '키블라 발견!';
@@ -497,7 +497,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => '알림 활성화';
 
   @override
   String get notificationTime => '알림 시간';
@@ -571,19 +571,19 @@ class AppLocalizationsKo extends AppLocalizations {
   String get premium => '프리미엄';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => '프로로 업그레이드';
 
   @override
   String get proFeatures => '프로 기능';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => '광고 제거';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => '모든 콘텐츠 잠금 해제';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => '독점 콘텐츠';
 
   @override
   String get welcome => '환영합니다';

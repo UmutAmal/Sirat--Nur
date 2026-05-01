@@ -39,10 +39,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get prayerTimes => 'Вакти Намоз';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Хонданро идома диҳед';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Lifetime Pro гиред';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get selectLanguage => 'Забонро интихоб кунед';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Ҷустуҷӯи зиёда аз 180 забон...';
 
   @override
   String get systemDefault => 'Системаи пешфарз';
@@ -176,13 +176,13 @@ class AppLocalizationsTg extends AppLocalizations {
   String get edit => 'Таҳрир';
 
   @override
-  String get close => 'Close';
+  String get close => 'Пӯшед';
 
   @override
   String get ok => 'Хуб';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Бале';
 
   @override
   String get no => 'Не';
@@ -404,7 +404,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get hijriCalendar => 'Тақвими Ҳиҷрӣ';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Тақвими григорианӣ';
 
   @override
   String get today => 'Имруз';
@@ -413,7 +413,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get tomorrow => 'Пагох';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Дируз';
 
   @override
   String get specialDays => 'Рӯзҳои махсус';
@@ -461,10 +461,10 @@ class AppLocalizationsTg extends AppLocalizations {
   String get compass => 'Компас';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'дараҷаҳо';
 
   @override
-  String get north => 'North';
+  String get north => 'Шимол';
 
   @override
   String get qiblaFound => 'Қибла ёфт!';
@@ -502,7 +502,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Огоҳиҳоро фаъол созед';
 
   @override
   String get notificationTime => 'Вақти огоҳӣ';
@@ -576,19 +576,19 @@ class AppLocalizationsTg extends AppLocalizations {
   String get premium => 'Премиум';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Ба Pro навсозӣ кунед';
 
   @override
   String get proFeatures => 'Хусусиятҳои Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Рекламаҳоро нест кунед';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Ҳама мундариҷаро кушоед';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Мундариҷаи истисноӣ';
 
   @override
   String get welcome => 'Хуш омадед';

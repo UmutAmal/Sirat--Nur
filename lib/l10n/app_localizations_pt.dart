@@ -39,10 +39,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get prayerTimes => 'Tempos de oração';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Continuar lendo';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Obtenha o Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get selectLanguage => 'Selecione o idioma';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Pesquise mais de 180 idiomas...';
 
   @override
   String get systemDefault => 'Padrão do sistema';
@@ -177,13 +177,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get edit => 'Editar';
 
   @override
-  String get close => 'Close';
+  String get close => 'Fechar';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Sim';
 
   @override
   String get no => 'Não';
@@ -405,7 +405,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get hijriCalendar => 'Calendário Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Calendário Gregoriano';
 
   @override
   String get today => 'Hoje';
@@ -414,7 +414,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get tomorrow => 'Amanhã';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Ontem';
 
   @override
   String get specialDays => 'Dias especiais';
@@ -462,10 +462,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get compass => 'Bússola';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'graus';
 
   @override
-  String get north => 'North';
+  String get north => 'Norte';
 
   @override
   String get qiblaFound => 'Qibla encontrada!';
@@ -503,7 +503,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Habilitar notificações';
 
   @override
   String get notificationTime => 'Hora da notificação';
@@ -577,19 +577,19 @@ class AppLocalizationsPt extends AppLocalizations {
   String get premium => 'Prêmio';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Atualizar para Pro';
 
   @override
   String get proFeatures => 'Recursos profissionais';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Remover anúncios';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Desbloqueie todo o conteúdo';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Conteúdo Exclusivo';
 
   @override
   String get welcome => 'Bem vindo';

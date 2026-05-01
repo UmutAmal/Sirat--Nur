@@ -39,10 +39,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get prayerTimes => 'പ്രാർത്ഥന സമയം';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'വായന തുടരുക';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'ലൈഫ് ടൈം പ്രോ നേടുക';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get selectLanguage => 'ഭാഷ തിരഞ്ഞെടുക്കുക';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ ഭാഷകൾ തിരയുക...';
 
   @override
   String get systemDefault => 'സിസ്റ്റം ഡിഫോൾട്ട്';
@@ -176,13 +176,13 @@ class AppLocalizationsMl extends AppLocalizations {
   String get edit => 'എഡിറ്റ് ചെയ്യുക';
 
   @override
-  String get close => 'Close';
+  String get close => 'അടയ്ക്കുക';
 
   @override
   String get ok => 'ശരി';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'അതെ';
 
   @override
   String get no => 'ഇല്ല';
@@ -404,7 +404,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get hijriCalendar => 'ഹിജ്രി കലണ്ടർ';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ഗ്രിഗോറിയൻ കലണ്ടർ';
 
   @override
   String get today => 'ഇന്ന്';
@@ -413,7 +413,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get tomorrow => 'നാളെ';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ഇന്നലെ';
 
   @override
   String get specialDays => 'പ്രത്യേക ദിവസങ്ങൾ';
@@ -461,10 +461,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get compass => 'കോമ്പസ്';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ഡിഗ്രികൾ';
 
   @override
-  String get north => 'North';
+  String get north => 'വടക്ക്';
 
   @override
   String get qiblaFound => 'ഖിബ്ല കണ്ടെത്തി!';
@@ -501,7 +501,7 @@ class AppLocalizationsMl extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'അറിയിപ്പുകൾ പ്രവർത്തനക്ഷമമാക്കുക';
 
   @override
   String get notificationTime => 'അറിയിപ്പ് സമയം';
@@ -575,19 +575,19 @@ class AppLocalizationsMl extends AppLocalizations {
   String get premium => 'പ്രീമിയം';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'പ്രോയിലേക്ക് അപ്‌ഗ്രേഡുചെയ്യുക';
 
   @override
   String get proFeatures => 'പ്രോ സവിശേഷതകൾ';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'പരസ്യങ്ങൾ നീക്കം ചെയ്യുക';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'എല്ലാ ഉള്ളടക്കവും അൺലോക്ക് ചെയ്യുക';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'എക്സ്ക്ലൂസീവ് ഉള്ളടക്കം';
 
   @override
   String get welcome => 'സ്വാഗതം';

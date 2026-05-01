@@ -39,10 +39,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get prayerTimes => 'זמני תפילה';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'המשך קריאה';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'קבל את Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get selectLanguage => 'בחר שפה';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'חפש ב-180+ שפות...';
 
   @override
   String get systemDefault => 'מערכת ברירת מחדל';
@@ -176,13 +176,13 @@ class AppLocalizationsHe extends AppLocalizations {
   String get edit => 'ערוך';
 
   @override
-  String get close => 'Close';
+  String get close => 'סגור';
 
   @override
   String get ok => 'בסדר';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'כן';
 
   @override
   String get no => 'לא';
@@ -403,7 +403,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get hijriCalendar => 'לוח השנה ההיג\'רי';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'לוח שנה גרגוריאני';
 
   @override
   String get today => 'היום';
@@ -412,7 +412,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get tomorrow => 'מחר';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'אתמול';
 
   @override
   String get specialDays => 'ימים מיוחדים';
@@ -460,10 +460,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get compass => 'מצפן';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'מעלות';
 
   @override
-  String get north => 'North';
+  String get north => 'צפון';
 
   @override
   String get qiblaFound => 'הקיבלה נמצאה!';
@@ -500,7 +500,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'הפעל התראות';
 
   @override
   String get notificationTime => 'זמן הודעה';
@@ -574,19 +574,19 @@ class AppLocalizationsHe extends AppLocalizations {
   String get premium => 'פרימיום';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'שדרג ל-Pro';
 
   @override
   String get proFeatures => 'תכונות פרו';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'הסר מודעות';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'בטל את הנעילה של כל התוכן';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'תוכן בלעדי';
 
   @override
   String get welcome => 'ברוך הבא';

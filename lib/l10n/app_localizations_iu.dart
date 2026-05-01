@@ -39,10 +39,10 @@ class AppLocalizationsIu extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'ᐅᖃᓕᒫᒃᑲᓐᓂᕆᑦ';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'ᐃᓅᓯᓕᒫᒧᑦ ᐱᓇᓱᐊᕐᓗᑎᑦ';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'ᕿᓂᕐᓗᑎᑦ 180+ ᐅᖃᐅᓯᕐᓂᒃ...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsIu extends AppLocalizations {
   String get edit => 'ᐋᖅᑭᒋᐊᖅᑕᐅᔪᖅ';
 
   @override
-  String get close => 'Close';
+  String get close => 'ᖃᓂᑦᑐᖅ';
 
   @override
   String get ok => 'ᐊᑏ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ᐄ';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ᒍᕆᒍᐊᕆᔭᓐ ᐅᓪᓗᖅᓯᐅᑎ';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get tomorrow => 'ᖃᐅᒃᐸᑦ';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ᐃᑉᐸᒃᓴᖅ';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsIu extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ᓇᓗᓇᐃᒃᑯᑕᖅᑖᖅᑐᑦ';
 
   @override
-  String get north => 'North';
+  String get north => 'ᑕᕐᕋᖅ';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'ᐱᔪᓐᓇᖅᑎᓪᓗᒍ ᖃᐅᔨᒃᑲᐃᔾᔪᑏᑦ';
 
   @override
   String get notificationTime => 'ᖃᐅᔨᒃᑲᐃᔾᔪᑎᐅᑉ ᐃᑲᕐᕋᖓ';
@@ -576,19 +576,19 @@ class AppLocalizationsIu extends AppLocalizations {
   String get premium => 'ᓇᓕᕆᐊᖑᒃᑲᓐᓂᖅᑐᑦ';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'ᓄᑖᙳᕆᐊᕐᓗᒍ Pro-ᒧᑦ';
 
   @override
   String get proFeatures => 'ᐱᐅᓯᕆᔭᐅᔪᑦ';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ᐲᔭᕐᓗᒋᑦ ᓴᖅᑭᔮᖅᑎᑕᐅᔪᑦ';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ᒪᑐᐃᕐᓗᒍ ᐃᓗᓕᓕᒫᖏᑦ';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ᐊᔾᔨᐅᖏᑦᑐᑦ ᐃᓗᓕᖏᑦ';
 
   @override
   String get welcome => 'ᑐᙵᓱᒋᑦ';

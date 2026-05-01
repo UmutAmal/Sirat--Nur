@@ -39,10 +39,10 @@ class AppLocalizationsRw extends AppLocalizations {
   String get prayerTimes => 'Ibihe by\'amasengesho';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Komeza usome';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Kubona Ubuzima Bwose';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get selectLanguage => 'Hitamo Ururimi';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Shakisha indimi 180+ ...';
 
   @override
   String get systemDefault => 'Sisitemu Mburabuzi';
@@ -176,13 +176,13 @@ class AppLocalizationsRw extends AppLocalizations {
   String get edit => 'Hindura';
 
   @override
-  String get close => 'Close';
+  String get close => 'Funga';
 
   @override
   String get ok => 'Nibyo';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Yego';
 
   @override
   String get no => 'Oya';
@@ -404,7 +404,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get hijriCalendar => 'Kalendari ya Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Kalendari ya Geregori';
 
   @override
   String get today => 'Uyu munsi';
@@ -413,7 +413,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get tomorrow => 'Ejo';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Ejo';
 
   @override
   String get specialDays => 'Iminsi idasanzwe';
@@ -461,10 +461,10 @@ class AppLocalizationsRw extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'impamyabumenyi';
 
   @override
-  String get north => 'North';
+  String get north => 'Amajyaruguru';
 
   @override
   String get qiblaFound => 'Qibla yabonetse!';
@@ -503,7 +503,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Gushoboza Kumenyesha';
 
   @override
   String get notificationTime => 'Igihe cyo kumenyesha';
@@ -577,19 +577,19 @@ class AppLocalizationsRw extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Kuzamura Pro';
 
   @override
   String get proFeatures => 'Ibiranga Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Kuraho Amatangazo';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Fungura Ibirimo byose';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Ibirimo bidasanzwe';
 
   @override
   String get welcome => 'Murakaza neza';

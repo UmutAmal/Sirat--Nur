@@ -39,10 +39,10 @@ class AppLocalizationsBr extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Kenderc\'hel da lenn';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Kaout Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Klask ouzhpenn 180 yezh...';
 
   @override
   String get systemDefault => 'System Default';
@@ -178,13 +178,13 @@ class AppLocalizationsBr extends AppLocalizations {
   String get edit => 'Embann';
 
   @override
-  String get close => 'Close';
+  String get close => 'Serriñ';
 
   @override
   String get ok => 'MAT EO';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ya';
 
   @override
   String get no => 'No';
@@ -406,7 +406,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Deiziadur Gregorian';
 
   @override
   String get today => 'Today';
@@ -415,7 +415,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get tomorrow => 'Warc\'hoazh';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Dec\'h';
 
   @override
   String get specialDays => 'Special Days';
@@ -463,10 +463,10 @@ class AppLocalizationsBr extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'derez';
 
   @override
-  String get north => 'North';
+  String get north => 'Norzh';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -504,7 +504,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Gweredekaat ar c\'hemennadennoù';
 
   @override
   String get notificationTime => 'Eur ar c\'hemenn';
@@ -578,19 +578,19 @@ class AppLocalizationsBr extends AppLocalizations {
   String get premium => 'Eus ar c\'hentañ';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Hizivaat da Pro';
 
   @override
   String get proFeatures => 'Perzhioù Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Dilemel bruderezh';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Dibrennañ an holl endalc\'hadoù';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Danvez dibar';
 
   @override
   String get welcome => 'Degemer mat';

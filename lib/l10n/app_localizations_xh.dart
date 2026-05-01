@@ -39,10 +39,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get prayerTimes => 'Amaxesha Omthandazo';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Qhubeka ufunda';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Fumana iPro Lifetime';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get selectLanguage => 'Khetha ulwimi';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Phendla 180+ iilwimi...';
 
   @override
   String get systemDefault => 'Inkqubo eMiselweyo';
@@ -176,13 +176,13 @@ class AppLocalizationsXh extends AppLocalizations {
   String get edit => 'Hlela';
 
   @override
-  String get close => 'Close';
+  String get close => 'Vala';
 
   @override
   String get ok => 'KULUNGILE';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ewe';
 
   @override
   String get no => 'Hayi';
@@ -404,7 +404,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get hijriCalendar => 'Ikhalenda yeHijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Ikhalenda kaGregory';
 
   @override
   String get today => 'Namhlanje';
@@ -413,7 +413,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get tomorrow => 'Ngomso';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Izolo';
 
   @override
   String get specialDays => 'Iintsuku Ezikhethekileyo';
@@ -461,10 +461,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get compass => 'Ikhampasi';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'izidanga';
 
   @override
-  String get north => 'North';
+  String get north => 'Emantla';
 
   @override
   String get qiblaFound => 'IQibla ifunyenwe!';
@@ -502,7 +502,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Yenza Izaziso zisebenze';
 
   @override
   String get notificationTime => 'Ixesha lesaziso';
@@ -576,19 +576,19 @@ class AppLocalizationsXh extends AppLocalizations {
   String get premium => 'Intlawulo yanyanga le';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Nyukela kwiPro';
 
   @override
   String get proFeatures => 'Iimpawu zePro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Susa iintengiso';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'NONE';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Umxholo Okhethekileyo';
 
   @override
   String get welcome => 'Wamkelekile';

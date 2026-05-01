@@ -39,10 +39,10 @@ class AppLocalizationsAa extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Kawsiyyat bisoh ixxic';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Manô waktih pro geya';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ afitte gorrisa...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsAa extends AppLocalizations {
   String get edit => 'Ceesayiyya';
 
   @override
-  String get close => 'Close';
+  String get close => 'Alif';
 
   @override
   String get ok => 'MEQEH';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Yeey';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Girigooriyan Aysali';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get tomorrow => 'Beera';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Kimal';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsAa extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'digritte';
 
   @override
-  String get north => 'North';
+  String get north => 'Kilbata';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Maysaxxagoogi ugsaanam';
 
   @override
   String get notificationTime => 'Maysaxxagah uddur';
@@ -576,19 +576,19 @@ class AppLocalizationsAa extends AppLocalizations {
   String get premium => 'Fayyale mexxale';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro fan maysaasa';
 
   @override
   String get proFeatures => 'poro weeloola';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Remove ads';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Kulli addatino fake';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'dubuh yan addatino';
 
   @override
   String get welcome => 'Arcib';

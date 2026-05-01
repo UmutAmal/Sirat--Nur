@@ -39,10 +39,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get prayerTimes => 'Fotoam-bavaka';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Tohizo ny famakiana';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Makà Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Hikaroka fiteny 180+...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsMg extends AppLocalizations {
   String get edit => 'Ahitsio';
 
   @override
-  String get close => 'Close';
+  String get close => 'Akatona';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Eny';
 
   @override
   String get no => 'tsy misy';
@@ -405,7 +405,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get hijriCalendar => 'Kalandrie Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Kalandrie gregorianina';
 
   @override
   String get today => 'Androany';
@@ -414,7 +414,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get tomorrow => 'Rahampitso';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Omaly';
 
   @override
   String get specialDays => 'Andro manokana';
@@ -462,10 +462,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get compass => 'Kompas';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'diplaoma';
 
   @override
-  String get north => 'North';
+  String get north => 'Avaratra';
 
   @override
   String get qiblaFound => 'Qibla hita!';
@@ -577,19 +577,19 @@ class AppLocalizationsMg extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Havaozina ho Pro';
 
   @override
   String get proFeatures => 'Pro Features';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Esory ny doka';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Sokafy ny votoaty rehetra';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Votoaty miavaka';
 
   @override
   String get welcome => 'Tongasoa';

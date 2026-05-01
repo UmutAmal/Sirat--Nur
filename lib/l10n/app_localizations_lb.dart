@@ -39,10 +39,10 @@ class AppLocalizationsLb extends AppLocalizations {
   String get prayerTimes => 'Gebetszeiten';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Weiderliesen';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Kritt Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get selectLanguage => 'Wielt Sprooch';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Sich 180+ Sproochen ...';
 
   @override
   String get systemDefault => 'System Standard';
@@ -176,13 +176,13 @@ class AppLocalizationsLb extends AppLocalizations {
   String get edit => 'Edit';
 
   @override
-  String get close => 'Close';
+  String get close => 'Zoumaachen';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Jo';
 
   @override
   String get no => 'Nee';
@@ -404,7 +404,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get hijriCalendar => 'Hijri Kalenner';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Gregorianesche Kalenner';
 
   @override
   String get today => 'Haut';
@@ -413,7 +413,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get tomorrow => 'Muer';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Gëschter';
 
   @override
   String get specialDays => 'Spezial Deeg';
@@ -461,10 +461,10 @@ class AppLocalizationsLb extends AppLocalizations {
   String get compass => 'Kompass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'Grad';
 
   @override
-  String get north => 'North';
+  String get north => 'Norden';
 
   @override
   String get qiblaFound => 'Qibla fonnt!';
@@ -502,7 +502,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Aktivéiert Notifikatiounen';
 
   @override
   String get notificationTime => 'Notifikatioun Zäit';
@@ -576,19 +576,19 @@ class AppLocalizationsLb extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Upgrade op Pro';
 
   @override
   String get proFeatures => 'Pro Fonctiounen';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Ewechzehuelen Annoncen';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Spär All Inhalt';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Exklusiv Inhalt';
 
   @override
   String get welcome => 'Wëllkomm';

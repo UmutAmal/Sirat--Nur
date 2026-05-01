@@ -39,10 +39,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get prayerTimes => 'Imaidők';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Olvasás folytatása';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Szerezze be a Lifetime Pro-t';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get selectLanguage => 'Válassza a Nyelv lehetőséget';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Keresés több mint 180 nyelven...';
 
   @override
   String get systemDefault => 'Rendszer alapértelmezett';
@@ -178,13 +178,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get edit => 'Szerkesztés';
 
   @override
-  String get close => 'Close';
+  String get close => 'Bezárás';
 
   @override
   String get ok => 'RENDBEN';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Igen';
 
   @override
   String get no => 'Nem';
@@ -406,7 +406,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get hijriCalendar => 'Hijri naptár';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Gergely-naptár';
 
   @override
   String get today => 'Ma';
@@ -415,7 +415,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get tomorrow => 'Holnap';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'tegnap';
 
   @override
   String get specialDays => 'Különleges napok';
@@ -463,10 +463,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get compass => 'Iránytű';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'fokon';
 
   @override
-  String get north => 'North';
+  String get north => 'Észak';
 
   @override
   String get qiblaFound => 'Qibla megtalálta!';
@@ -504,7 +504,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Értesítések engedélyezése';
 
   @override
   String get notificationTime => 'Értesítési idő';
@@ -578,19 +578,19 @@ class AppLocalizationsHu extends AppLocalizations {
   String get premium => 'Prémium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Frissítsen Pro-ra';
 
   @override
   String get proFeatures => 'Pro jellemzők';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Távolítsa el a hirdetéseket';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Az összes tartalom feloldása';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Exkluzív tartalom';
 
   @override
   String get welcome => 'Üdvözöljük';

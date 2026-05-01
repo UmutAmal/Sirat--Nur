@@ -39,10 +39,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get prayerTimes => 'Часи молитов';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Продовжити читання';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Отримайте Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get selectLanguage => 'Виберіть мову';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Пошук понад 180 мовами...';
 
   @override
   String get systemDefault => 'Системне значення за замовчуванням';
@@ -177,13 +177,13 @@ class AppLocalizationsUk extends AppLocalizations {
   String get edit => 'Редагувати';
 
   @override
-  String get close => 'Close';
+  String get close => 'Закрити';
 
   @override
   String get ok => 'добре';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'так';
 
   @override
   String get no => 'немає';
@@ -405,7 +405,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get hijriCalendar => 'Календар Хіджри';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Григоріанський календар';
 
   @override
   String get today => 'Сьогодні';
@@ -414,7 +414,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get tomorrow => 'завтра';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'вчора';
 
   @override
   String get specialDays => 'Особливі дні';
@@ -462,10 +462,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get compass => 'компас';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ступенів';
 
   @override
-  String get north => 'North';
+  String get north => 'північ';
 
   @override
   String get qiblaFound => 'Кібла знайдена!';
@@ -503,7 +503,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Увімкнути сповіщення';
 
   @override
   String get notificationTime => 'Час сповіщення';
@@ -577,19 +577,19 @@ class AppLocalizationsUk extends AppLocalizations {
   String get premium => 'Преміум';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Оновіть до Pro';
 
   @override
   String get proFeatures => 'Професійні функції';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Видалити рекламу';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Розблокувати весь вміст';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Ексклюзивний контент';
 
   @override
   String get welcome => 'Ласкаво просимо';

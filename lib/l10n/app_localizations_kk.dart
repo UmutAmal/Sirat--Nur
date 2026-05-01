@@ -39,10 +39,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get prayerTimes => 'Намаз уақыттары';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Оқуды жалғастыру';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Lifetime Pro алыңыз';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get selectLanguage => 'Тіл таңдаңыз';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ тілде іздеу...';
 
   @override
   String get systemDefault => 'Жүйе әдепкі';
@@ -176,13 +176,13 @@ class AppLocalizationsKk extends AppLocalizations {
   String get edit => 'Өңдеу';
 
   @override
-  String get close => 'Close';
+  String get close => 'Жабу';
 
   @override
   String get ok => 'Жарайды';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Иә';
 
   @override
   String get no => 'Жоқ';
@@ -404,7 +404,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get hijriCalendar => 'Хижри күнтізбесі';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Григориан күнтізбесі';
 
   @override
   String get today => 'Бүгін';
@@ -413,7 +413,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get tomorrow => 'Ертең';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Кеше';
 
   @override
   String get specialDays => 'Ерекше күндер';
@@ -461,10 +461,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get compass => 'Компас';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'градус';
 
   @override
-  String get north => 'North';
+  String get north => 'Солтүстік';
 
   @override
   String get qiblaFound => 'Қыбла табылды!';
@@ -501,7 +501,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Хабарландыруларды қосыңыз';
 
   @override
   String get notificationTime => 'Хабарландыру уақыты';
@@ -575,19 +575,19 @@ class AppLocalizationsKk extends AppLocalizations {
   String get premium => 'Премиум';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Pro нұсқасына жаңартыңыз';
 
   @override
   String get proFeatures => 'Pro мүмкіндіктері';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Жарнамаларды жою';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Барлық мазмұнды ашыңыз';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Эксклюзивті мазмұн';
 
   @override
   String get welcome => 'Қош келдіңіз';

@@ -39,10 +39,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get prayerTimes => 'ເວລາອະທິຖານ';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'ສືບຕໍ່ການອ່ານ';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'ຮັບ Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get selectLanguage => 'ເລືອກພາສາ';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'ຊອກຫາ 180+ ພາສາ...';
 
   @override
   String get systemDefault => 'ຄ່າເລີ່ມຕົ້ນຂອງລະບົບ';
@@ -176,13 +176,13 @@ class AppLocalizationsLo extends AppLocalizations {
   String get edit => 'ແກ້ໄຂ';
 
   @override
-  String get close => 'Close';
+  String get close => 'ປິດ';
 
   @override
   String get ok => 'ຕົກລົງ';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'ແມ່ນແລ້ວ';
 
   @override
   String get no => 'ບໍ່';
@@ -404,7 +404,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get hijriCalendar => 'ປະຕິທິນ Hijri';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'ປະຕິທິນ Gregorian';
 
   @override
   String get today => 'ມື້ນີ້';
@@ -413,7 +413,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get tomorrow => 'ມື້ອື່ນ';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'ມື້ວານນີ້';
 
   @override
   String get specialDays => 'ວັນພິເສດ';
@@ -461,10 +461,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get compass => 'ເຂັມທິດ';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'ອົງສາ';
 
   @override
-  String get north => 'North';
+  String get north => 'ເໜືອ';
 
   @override
   String get qiblaFound => 'ພົບ Qibla!';
@@ -502,7 +502,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'ເປີດໃຊ້ການແຈ້ງເຕືອນ';
 
   @override
   String get notificationTime => 'ເວລາແຈ້ງການ';
@@ -576,19 +576,19 @@ class AppLocalizationsLo extends AppLocalizations {
   String get premium => 'ພຣີມຽມ';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'ອັບເກຣດເປັນ Pro';
 
   @override
   String get proFeatures => 'ຄຸນ​ນະ​ສົມ​ບັດ Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'ເອົາໂຄສະນາອອກ';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'ປົດລັອກເນື້ອຫາທັງໝົດ';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'ເນື້ອຫາສະເພາະ';
 
   @override
   String get welcome => 'ຍິນດີຕ້ອນຮັບ';

@@ -39,10 +39,10 @@ class AppLocalizationsKg extends AppLocalizations {
   String get prayerTimes => 'Prayer Times';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Landa kutanga';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Baka Pro ya Luzingu ya Mvimba';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get selectLanguage => 'Select Language';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Sosa bandinga kuluta 180...';
 
   @override
   String get systemDefault => 'System Default';
@@ -176,13 +176,13 @@ class AppLocalizationsKg extends AppLocalizations {
   String get edit => 'Kusoba';
 
   @override
-  String get close => 'Close';
+  String get close => 'Kukanga';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Yinga';
 
   @override
   String get no => 'No';
@@ -404,7 +404,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendar';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Manaka ya Gregoire';
 
   @override
   String get today => 'Today';
@@ -413,7 +413,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get tomorrow => 'Mbasi';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Mazono';
 
   @override
   String get specialDays => 'Special Days';
@@ -461,10 +461,10 @@ class AppLocalizationsKg extends AppLocalizations {
   String get compass => 'Compass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'badegre';
 
   @override
-  String get north => 'North';
+  String get north => 'Nordi';
 
   @override
   String get qiblaFound => 'Qibla found!';
@@ -502,7 +502,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Kangula Bansangu';
 
   @override
   String get notificationTime => 'Ntangu ya Kuzabisa';
@@ -576,19 +576,19 @@ class AppLocalizationsKg extends AppLocalizations {
   String get premium => 'Nene';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Kutomisa na Pro';
 
   @override
   String get proFeatures => 'Bikalulu ya Pro';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Katula bansangu';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Kangula mambu yonso';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Mambu ya mfunu';
 
   @override
   String get welcome => 'Kukwisa ya mbote';

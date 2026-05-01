@@ -39,10 +39,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get prayerTimes => 'Mañakuy pachakuna';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Ñawinchayta hinalla';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Wiñaypaq Prota hap\'iy';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get selectLanguage => 'Simita akllay';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => '180+ simikunata maskay...';
 
   @override
   String get systemDefault => 'Sistema Default nisqa';
@@ -178,13 +178,13 @@ class AppLocalizationsQu extends AppLocalizations {
   String get edit => 'Ruwapay';
 
   @override
-  String get close => 'Close';
+  String get close => 'Wichqay';
 
   @override
   String get ok => 'KUSA';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Arí';
 
   @override
   String get no => 'Manam';
@@ -406,7 +406,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get hijriCalendar => 'Hijri Calendario nisqa';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'Gregorio calendario';
 
   @override
   String get today => 'Kunan';
@@ -415,7 +415,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get tomorrow => 'Paqarin';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'Qayna punchaw';
 
   @override
   String get specialDays => 'P’unchawkuna Especial';
@@ -463,10 +463,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get compass => 'Brújula nisqa';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'gradokuna';
 
   @override
-  String get north => 'North';
+  String get north => 'Chincha';
 
   @override
   String get qiblaFound => 'Qibla tarisqa!';
@@ -504,7 +504,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Willakuykunata atichiy';
 
   @override
   String get notificationTime => 'Willakuy pacha';
@@ -578,19 +578,19 @@ class AppLocalizationsQu extends AppLocalizations {
   String get premium => 'Sapaq plan';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Proman yapay';
 
   @override
   String get proFeatures => 'Propa ruwanakuna';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Anunciokunata hurquy';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Tukuy Contenidota kichay';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Sapaq contenido';
 
   @override
   String get welcome => 'Allinlla chayaykamuy';

@@ -39,10 +39,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get prayerTimes => 'Bønnetider';
 
   @override
-  String get continueReading => 'Continue Reading';
+  String get continueReading => 'Fortsett å lese';
 
   @override
-  String get getLifetimePro => 'Get Lifetime Pro';
+  String get getLifetimePro => 'Skaff deg Lifetime Pro';
 
   @override
   String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
@@ -109,7 +109,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get selectLanguage => 'Velg Språk';
 
   @override
-  String get searchLanguage => 'Search 180+ languages...';
+  String get searchLanguage => 'Søk i 180+ språk...';
 
   @override
   String get systemDefault => 'Systemstandard';
@@ -176,13 +176,13 @@ class AppLocalizationsNo extends AppLocalizations {
   String get edit => 'Rediger';
 
   @override
-  String get close => 'Close';
+  String get close => 'Lukk';
 
   @override
   String get ok => 'OK';
 
   @override
-  String get yes => 'Yes';
+  String get yes => 'Ja';
 
   @override
   String get no => 'Nei';
@@ -404,7 +404,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get hijriCalendar => 'Hijri-kalender';
 
   @override
-  String get gregorianCalendar => 'Gregorian Calendar';
+  String get gregorianCalendar => 'gregoriansk kalender';
 
   @override
   String get today => 'I dag';
@@ -413,7 +413,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get tomorrow => 'I morgen';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'I går';
 
   @override
   String get specialDays => 'Spesielle dager';
@@ -461,10 +461,10 @@ class AppLocalizationsNo extends AppLocalizations {
   String get compass => 'Kompass';
 
   @override
-  String get degrees => 'degrees';
+  String get degrees => 'grader';
 
   @override
-  String get north => 'North';
+  String get north => 'Nord';
 
   @override
   String get qiblaFound => 'Qibla funnet!';
@@ -502,7 +502,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get prayerNotifications => 'Prayer Notifications';
 
   @override
-  String get enableNotifications => 'Enable Notifications';
+  String get enableNotifications => 'Aktiver varsler';
 
   @override
   String get notificationTime => 'Varslingstid';
@@ -576,19 +576,19 @@ class AppLocalizationsNo extends AppLocalizations {
   String get premium => 'Premium';
 
   @override
-  String get upgradeToPro => 'Upgrade to Pro';
+  String get upgradeToPro => 'Oppgrader til Pro';
 
   @override
   String get proFeatures => 'Pro-funksjoner';
 
   @override
-  String get removeAds => 'Remove Ads';
+  String get removeAds => 'Fjern annonser';
 
   @override
-  String get unlockAll => 'Unlock All Content';
+  String get unlockAll => 'Lås opp alt innhold';
 
   @override
-  String get exclusiveContent => 'Exclusive Content';
+  String get exclusiveContent => 'Eksklusivt innhold';
 
   @override
   String get welcome => 'Velkommen';
