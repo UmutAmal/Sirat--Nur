@@ -21296,3 +21296,39 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude l10n borcu icin dogrulanabilir kucuk batch veya baska runtime/test altyapi riski sec.
+
+## 2026-05-01 TUR-533 - Analytics Uses Real Tracker Data
+
+### MASTER Karari
+- Risk: Analytics ekrani kullanici ibadet ilerlemesini sabit demo sayilarla gosterdigi icin false-success/false-progress uretiyordu. Bu, dini takip uygulamasinda kullanici guveni ve dogruluk acisindan P1 urun riskiydi.
+- Kanit:
+  - Son durum: `lib/features/analytics/analytics_page.dart:42` `buildAnalyticsSnapshot` haftalik metrikleri persisted tracker anahtarlarindan uretiyor; `lib/features/analytics/analytics_page.dart:60` namaz toplamlarini, `lib/features/analytics/analytics_page.dart:61` Quran sayfa toplamlarini, `lib/features/analytics/analytics_page.dart:62` oruc toplamlarini, `lib/features/analytics/analytics_page.dart:63` zikr toplamlarini okuyor.
+  - Son durum: `lib/features/analytics/analytics_page.dart:184`, `lib/features/analytics/analytics_page.dart:190`, `lib/features/analytics/analytics_page.dart:196`, `lib/features/analytics/analytics_page.dart:202` UI kartlari snapshot degerlerini locale-aware formatla gosteriyor.
+  - Son durum: `lib/features/analytics/analytics_page.dart:262` ve `lib/features/analytics/analytics_page.dart:295` day/best streak degerleri artik snapshot'tan geliyor.
+  - Zikr veri kaydi: `lib/features/zikr/zikr_page.dart:18` daily zikr sayac helper'i; `lib/features/zikr/zikr_page.dart:158` her tap sonrasi persisted daily total'i await ederek artiriyor.
+  - Ortak tarih anahtari: `lib/core/utils/activity_date_key.dart:1` tracker/analytics/zikr icin tek `YYYY-MM-DD` formati; `lib/features/tracker/tracker_page.dart:18` tracker ayni helper'i kullaniyor.
+  - Regresyon guard: `test/features/analytics/analytics_page_test.dart:42` snapshot'in gercek tracker verisini okudugunu test ediyor; `test/features/analytics/analytics_page_test.dart:98`-`100` ve `test/features/analytics/analytics_page_test.dart:132`-`134` eski demo sayilari `23/45/891` icin yokluk guard'i koyuyor; `test/features/zikr/zikr_page_test.dart:24` honest daily zikr persist testini, `test/features/zikr/zikr_page_test.dart:39` corrupt negatif sayac onarimini test ediyor.
+- Kullanici etkisi: Analytics artik demo veya sahte ilerleme gostermiyor; haftalik namaz, Quran sayfasi, oruc, zikr ve streak bilgileri cihazdaki gercek tracker verisinden uretiliyor.
+- Risk skoru: Etki 5 x Olasilik 4 = 20/25 -> 5/25.
+- Rollback plani: Bu turdaki `lib/core/utils/activity_date_key.dart`, `lib/features/analytics/analytics_page.dart`, `lib/features/tracker/tracker_page.dart`, `lib/features/zikr/zikr_page.dart`, `test/features/analytics/analytics_page_test.dart`, `test/features/zikr/zikr_page_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Analytics icin `AnalyticsSnapshot` modeli eklendi; son 7 gunluk tracker verisi `SharedPreferences` uzerinden okunuyor.
+- Namaz JSON'u yalnizca `Fajr/Dhuhr/Asr/Maghrib/Isha` true degerlerini sayiyor; bozuk/eksik JSON 0'a dusuyor.
+- Quran sayfasi ve zikr sayaci negatifse 0'a clamp ediliyor; corrupt negatif zikr daily total sonraki tap'te 1'e onariliyor.
+- Zikr sayfasi mevcut ekrandaki hedef sayacini bozmadan, ayrica daily analytics total'ini persist ediyor.
+
+### TESTER Degisikligi
+- Targeted tests: `flutter test test\features\analytics\analytics_page_test.dart test\features\zikr\zikr_page_test.dart --reporter compact` PASS, `8/8`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `748/748`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `41a6e057-4dc9-4b59-92ba-f71c3990cc62`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Analytics demo/sahte ibadet metrikleri riski: `20/25 -> 5/25`.
+- Kalan bilincli risk: Analytics halen local device persistence'a dayaniyor; ileride multi-device sync istenirse Supabase authenticated user sync ayri bir scope olarak tasarlanmali.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude fake/static UI data, hardcoded fallback ve gercek l10n borcu icin yeni risk taramasi baslat.

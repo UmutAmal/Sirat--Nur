@@ -2,13 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/theme/app_colors.dart';
+import 'package:sirat_i_nur/core/utils/activity_date_key.dart';
 import 'package:sirat_i_nur/core/widgets/premium_card.dart';
+import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 final _zikrCountProvider = StateProvider<int>((ref) => 0);
 final _zikrTargetProvider = StateProvider<int>((ref) => 33);
 final _selectedZikrProvider = StateProvider<int>((ref) => 0);
+
+String zikrDailyCountKey(DateTime date) => 'zikrCount_${activityDateKey(date)}';
+
+Future<bool> incrementDailyZikrCount(SharedPreferences prefs, {DateTime? now}) {
+  final key = zikrDailyCountKey(now ?? DateTime.now());
+  final current = prefs.getInt(key) ?? 0;
+  return prefs.setInt(key, current < 0 ? 1 : current + 1);
+}
 
 String resolveZikrCompletedText(AppLocalizations l10n) {
   return l10n.zikrCompletedMashAllah;
@@ -55,6 +66,7 @@ class ZikrPage extends ConsumerWidget {
     final target = ref.watch(_zikrTargetProvider);
     final selectedIdx = ref.watch(_selectedZikrProvider);
     final zikr = _zikrs[selectedIdx];
+    final prefs = ref.watch(sharedPreferencesProvider);
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final progress = target > 0 ? (count / target).clamp(0.0, 1.0) : 0.0;
     final l10n = AppLocalizations.of(context)!;
@@ -140,9 +152,10 @@ class ZikrPage extends ConsumerWidget {
             const SizedBox(height: 40),
             // Counter circle
             GestureDetector(
-              onTap: () {
+              onTap: () async {
                 if (count < target) {
                   ref.read(_zikrCountProvider.notifier).state++;
+                  await incrementDailyZikrCount(prefs);
                   HapticFeedback.lightImpact();
                 } else {
                   HapticFeedback.heavyImpact();
