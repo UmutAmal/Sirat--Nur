@@ -1,7 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sirat_i_nur/core/constants/app_constants.dart';
+import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 void main() {
   group('ARB coverage', () {
@@ -168,6 +171,28 @@ void main() {
               '${file.path} still exposes the unused missingEnglish API member',
         );
       }
+    });
+
+    test('language picker exposes every generated ARB locale', () {
+      final arbLocales = _arbLocaleCodes();
+      final generatedLocales = AppLocalizations.supportedLocales
+          .map(_localeKey)
+          .toSet();
+      final pickerLocales = supportedLanguages
+          .map((language) => language.code)
+          .toSet();
+
+      expect(
+        generatedLocales,
+        equals(arbLocales),
+        reason: 'Generated localizations must match the ARB locale files.',
+      );
+      expect(
+        pickerLocales,
+        equals(arbLocales),
+        reason:
+            'Every translated locale must be selectable from Settings > Language.',
+      );
     });
 
     test('Bhojpuri core shell labels do not keep explanatory debris', () {
@@ -580,6 +605,25 @@ void main() {
 
 Map<String, dynamic> _readArb(String path) {
   return jsonDecode(File(path).readAsStringSync()) as Map<String, dynamic>;
+}
+
+Set<String> _arbLocaleCodes() {
+  return Directory('lib/l10n')
+      .listSync()
+      .whereType<File>()
+      .where((file) => file.path.endsWith('.arb'))
+      .map((file) => file.uri.pathSegments.last)
+      .where((fileName) => fileName.startsWith('app_'))
+      .map((fileName) => fileName.substring(4, fileName.length - 4))
+      .toSet();
+}
+
+String _localeKey(Locale locale) {
+  final countryCode = locale.countryCode;
+  if (countryCode == null || countryCode.isEmpty) {
+    return locale.languageCode;
+  }
+  return '${locale.languageCode}_$countryCode';
 }
 
 const _allowedMultilineMessageKeys = {'chatbotOfflinePrompt'};

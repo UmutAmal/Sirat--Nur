@@ -1,4 +1,4 @@
-﻿/// All supported languages with native names for the language picker.
+/// All supported languages with native names for the language picker.
 class AppLanguage {
   final String code;
   final String nativeName;
@@ -69,6 +69,7 @@ const List<AppLanguage> supportedLanguages = [
   AppLanguage(code: 'ba', nativeName: 'BA', englishName: 'BA'),
   AppLanguage(code: 'be', nativeName: 'BE', englishName: 'BE'),
   AppLanguage(code: 'bh', nativeName: 'BH', englishName: 'BH'),
+  AppLanguage(code: 'bho', nativeName: 'भोजपुरी', englishName: 'Bhojpuri'),
   AppLanguage(code: 'bi', nativeName: 'BI', englishName: 'BI'),
   AppLanguage(code: 'bm', nativeName: 'BM', englishName: 'BM'),
   AppLanguage(code: 'bo', nativeName: 'BO', englishName: 'BO'),
@@ -111,9 +112,11 @@ const List<AppLanguage> supportedLanguages = [
   AppLanguage(code: 'hz', nativeName: 'HZ', englishName: 'HZ'),
   AppLanguage(code: 'ia', nativeName: 'IA', englishName: 'IA'),
   AppLanguage(code: 'ie', nativeName: 'IE', englishName: 'IE'),
+  AppLanguage(code: 'hmn', nativeName: 'Hmoob', englishName: 'Hmong'),
   AppLanguage(code: 'ig', nativeName: 'IG', englishName: 'IG'),
   AppLanguage(code: 'ii', nativeName: 'II', englishName: 'II'),
   AppLanguage(code: 'ik', nativeName: 'IK', englishName: 'IK'),
+  AppLanguage(code: 'ilo', nativeName: 'Ilokano', englishName: 'Ilocano'),
   AppLanguage(code: 'io', nativeName: 'IO', englishName: 'IO'),
   AppLanguage(code: 'is', nativeName: 'IS', englishName: 'IS'),
   AppLanguage(code: 'iu', nativeName: 'IU', englishName: 'IU'),
@@ -126,6 +129,7 @@ const List<AppLanguage> supportedLanguages = [
   AppLanguage(code: 'km', nativeName: 'KM', englishName: 'KM'),
   AppLanguage(code: 'kn', nativeName: 'KN', englishName: 'KN'),
   AppLanguage(code: 'kr', nativeName: 'KR', englishName: 'KR'),
+  AppLanguage(code: 'kri', nativeName: 'Krio', englishName: 'Krio'),
   AppLanguage(code: 'ks', nativeName: 'KS', englishName: 'KS'),
   AppLanguage(code: 'kv', nativeName: 'KV', englishName: 'KV'),
   AppLanguage(code: 'kw', nativeName: 'KW', englishName: 'KW'),
@@ -138,13 +142,16 @@ const List<AppLanguage> supportedLanguages = [
   AppLanguage(code: 'lo', nativeName: 'LO', englishName: 'LO'),
   AppLanguage(code: 'lt', nativeName: 'LT', englishName: 'LT'),
   AppLanguage(code: 'lu', nativeName: 'LU', englishName: 'LU'),
+  AppLanguage(code: 'lus', nativeName: 'Mizo', englishName: 'Mizo'),
   AppLanguage(code: 'lv', nativeName: 'LV', englishName: 'LV'),
+  AppLanguage(code: 'mai', nativeName: 'मैथिली', englishName: 'Maithili'),
   AppLanguage(code: 'mg', nativeName: 'MG', englishName: 'MG'),
   AppLanguage(code: 'mh', nativeName: 'MH', englishName: 'MH'),
   AppLanguage(code: 'mi', nativeName: 'MI', englishName: 'MI'),
   AppLanguage(code: 'mk', nativeName: 'MK', englishName: 'MK'),
   AppLanguage(code: 'ml', nativeName: 'ML', englishName: 'ML'),
   AppLanguage(code: 'mn', nativeName: 'MN', englishName: 'MN'),
+  AppLanguage(code: 'mni', nativeName: 'Meiteilon', englishName: 'Manipuri'),
   AppLanguage(code: 'mr', nativeName: 'MR', englishName: 'MR'),
   AppLanguage(code: 'mt', nativeName: 'MT', englishName: 'MT'),
   AppLanguage(code: 'my', nativeName: 'MY', englishName: 'MY'),
@@ -156,6 +163,7 @@ const List<AppLanguage> supportedLanguages = [
   AppLanguage(code: 'nn', nativeName: 'NN', englishName: 'NN'),
   AppLanguage(code: 'no', nativeName: 'NO', englishName: 'NO'),
   AppLanguage(code: 'nr', nativeName: 'NR', englishName: 'NR'),
+  AppLanguage(code: 'nso', nativeName: 'Sesotho sa Leboa', englishName: 'Northern Sotho'),
   AppLanguage(code: 'nv', nativeName: 'NV', englishName: 'NV'),
   AppLanguage(code: 'ny', nativeName: 'NY', englishName: 'NY'),
   AppLanguage(code: 'oc', nativeName: 'OC', englishName: 'OC'),
@@ -301,5 +309,4 @@ const List<CityData> globalCities = [
   CityData(name: 'Manama', country: 'Bahrain', countryCode: 'BH', lat: 26.2285, lng: 50.5860, timezone: 'Asia/Bahrain'),
   CityData(name: 'Muscat', country: 'Oman', countryCode: 'OM', lat: 23.5880, lng: 58.3829, timezone: 'Asia/Muscat'),
 ];
-
 

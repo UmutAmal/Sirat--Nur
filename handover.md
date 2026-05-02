@@ -21739,3 +21739,47 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude route/menu/button/settings/language QA envanterini cikart, Appium/widget/static test kapsamini genislet, kapsanmayan her yuzeyi risk olarak sirala ve kapat.
+
+## 2026-05-02 TUR-544 - Settings Language Picker Full Locale Coverage
+
+### MASTER Karari
+- Risk: Uygulama 196 ARB locale dosyasi ve generated localization destegi tasirken Settings dil secici listesi 188 dilde kaliyordu. Bu, bazi cevirilerin kullanici tarafindan hic secilememesi ve "tum diller test edildi" iddiasinin UI giris noktasinda eksik kalmasi demekti.
+- Kanit:
+  - Baslangic: `lib/core/constants/app_constants.dart` `supportedLanguages` listesinde `bho`, `hmn`, `ilo`, `kri`, `lus`, `mai`, `mni`, `nso` eksikti; `lib/l10n/app_*.arb` dosya sayisi 196 idi.
+  - Son durum: `lib/core/constants/app_constants.dart:72` Bhojpuri (`bho`) Settings dil secicisine eklendi.
+  - Son durum: `lib/core/constants/app_constants.dart:115` Hmong (`hmn`) Settings dil secicisine eklendi.
+  - Son durum: `lib/core/constants/app_constants.dart:119` Ilocano (`ilo`) Settings dil secicisine eklendi.
+  - Son durum: `lib/core/constants/app_constants.dart:132` Krio (`kri`) Settings dil secicisine eklendi.
+  - Son durum: `lib/core/constants/app_constants.dart:145` Mizo (`lus`) Settings dil secicisine eklendi.
+  - Son durum: `lib/core/constants/app_constants.dart:147` Maithili (`mai`) Settings dil secicisine eklendi.
+  - Son durum: `lib/core/constants/app_constants.dart:154` Manipuri (`mni`) Settings dil secicisine eklendi.
+  - Son durum: `lib/core/constants/app_constants.dart:166` Northern Sotho (`nso`) Settings dil secicisine eklendi.
+  - Regresyon guard: `test/arb_coverage_test.dart:176` yeni test ARB locale seti, generated `AppLocalizations.supportedLocales` seti ve Settings `supportedLanguages` setini birebir esitliyor.
+  - Regresyon guard: `test/arb_coverage_test.dart:610` `_arbLocaleCodes()` dogrudan `lib/l10n/app_*.arb` dosyalarindan locale setini uretiyor.
+  - Regresyon guard: `test/arb_coverage_test.dart:621` `_localeKey(Locale locale)` language + country varyantlarini generated locale setiyle karsilastirmak icin canonical anahtar uretiyor.
+- Kullanici etkisi: Cevirisi ve generated localization destegi olan her dil artik Settings > Language yuzeyinden secilebilir; bundan sonra yeni ARB dosyasi eklenip Settings listesi unutulursa test kirmiziya duser.
+- Risk skoru: Dil secici locale coverage riski `16/25 -> 2/25`.
+- Rollback plani: Bu turdaki `lib/core/constants/app_constants.dart`, `test/arb_coverage_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Eksik 8 locale `supportedLanguages` listesine eklendi.
+- ARB/generated/UI dil secici esitligini koruyan statik regresyon testi eklendi.
+- Scope sadece dil secici coverage zincirinde tutuldu; ARB iceriklerine veya generated dosyalara dokunulmadi.
+
+### TESTER Degisikligi
+- Targeted ARB coverage test: `flutter test test\arb_coverage_test.dart --reporter compact` PASS, `15/15`.
+- Targeted SettingsPage test: `flutter test test\features\settings\settings_page_test.dart --reporter compact` PASS, `11/11`.
+- Targeted SettingsProvider test: `flutter test test\settings_provider_test.dart --reporter compact` PASS, `30/30`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `769/769`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio GitHub/Cloudflare dagitimi, store belgeleri, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `7c4999b4-f932-4d53-91be-ba85a6f0737a`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan commit oncesi calistirilacak.
+
+### Risk Degisimi
+- Settings dil secicide eksik locale kalma riski kapatildi.
+- "Tum diller gorunur mu?" kontrolu manuel hafizadan otomatik teste tasindi.
+- Kalan bilincli risk: Tum menu/tus/ayar kombinasyonlari icin runtime Appium matrisi henuz smoke seviyesinin uzerine tamamen cikmadi; sonraki dongude Settings aksiyon matrisi ve cok-locale smoke genisletilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude her Settings aksiyonunun (method, madhab, qibla calibration, cache, diagnostics, account/about/share/rate/privacy) persistence ve UI sonucunu widget/Appium tarafinda tek tek otomasyona bagla.
