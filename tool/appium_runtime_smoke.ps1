@@ -559,6 +559,9 @@ function Get-SmokeTextBundle {
     onboarding1Title = Get-ArbString -Messages $messages -Key 'onboarding1Title' -Fallback 'Welcome to Sirat-ı Nur'
     home = Get-ArbString -Messages $messages -Key 'home' -Fallback 'Home'
     settings = Get-ArbString -Messages $messages -Key 'settings' -Fallback 'Settings'
+    language = Get-ArbString -Messages $messages -Key 'language' -Fallback 'Language'
+    selectLanguage = Get-ArbString -Messages $messages -Key 'selectLanguage' -Fallback 'Select Language'
+    systemDefault = Get-ArbString -Messages $messages -Key 'systemDefault' -Fallback 'System Default'
     prayerCalculation = Get-ArbString -Messages $messages -Key 'prayerCalculation' -Fallback 'Prayer Calculation'
     method = Get-ArbString -Messages $messages -Key 'method' -Fallback 'Calculation Method'
     madhab = Get-ArbString -Messages $messages -Key 'madhab' -Fallback 'Asr Juristic Method'
@@ -792,6 +795,11 @@ $summary = [ordered]@{
     containsSettingsTitle = $false
     containsPrayerControls = $false
     containsSettingsDetail = $false
+    clickedLanguage = $false
+    containsLanguagePickerTitle = $false
+    containsLanguageOptions = $false
+    selectedSystemDefaultLanguage = $false
+    languagePickerClosed = $false
     clickedClearCache = $false
     containsCacheClearedMessage = $false
     clickedDiagnostics = $false
@@ -860,6 +868,11 @@ try {
     containsSettingsTitle = $false
     containsPrayerControls = $false
     containsSettingsDetail = $false
+    clickedLanguage = $false
+    containsLanguagePickerTitle = $false
+    containsLanguageOptions = $false
+    selectedSystemDefaultLanguage = $false
+    languagePickerClosed = $false
     clickedClearCache = $false
     containsCacheClearedMessage = $false
     clickedDiagnostics = $false
@@ -875,6 +888,27 @@ try {
     $settingsRuntime.containsPrayerControls = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.prayerCalculation, $smokeText.method, $smokeText.madhab, 'Prayer Calculation', 'Calculation Method', 'Asr Juristic Method'))
     $settingsRuntime.containsSettingsDetail = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.diagnosticsPrayerSource, $smokeText.audioVoice, $smokeText.location, 'Prayer Authority', 'Audio Voice', 'Location'))
     $settingsRuntime.containsAndroidSettings = $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
+    $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
+    if ($settingsRuntime.clickedLanguage) {
+      Start-Sleep -Milliseconds 700
+      $languagePickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-language-picker"
+      $settingsRuntime.containsLanguagePickerTitle = Test-ContainsAny -Source $languagePickerXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.selectLanguage, 'Select Language'))
+      $settingsRuntime.containsLanguageOptions = (Test-ContainsAny -Source $languagePickerXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.systemDefault, 'System Default'))) -and
+        (Test-ContainsAny -Source $languagePickerXml -Needles (Select-NonEmptyUniqueStrings @('English'))) -and
+        (Test-ContainsAny -Source $languagePickerXml -Needles (Select-NonEmptyUniqueStrings @('Turkish')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $languagePickerXml.Contains("Settings suggestions") -or $languagePickerXml.Contains("Android Settings") -or $languagePickerXml.Contains("Alarms & reminders")
+      $settingsRuntime.selectedSystemDefaultLanguage = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.systemDefault, 'System Default')) -Attempts 4
+      if ($settingsRuntime.selectedSystemDefaultLanguage) {
+        for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.languagePickerClosed; $attempt++) {
+          Start-Sleep -Milliseconds 500
+          $languageAfterSelectXml = Get-AppiumSource -SessionId $sessionId
+          $settingsRuntime.languagePickerClosed = (-not (Test-ContainsAny -Source $languageAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.selectLanguage, 'Select Language')))) -and
+            (Test-ContainsAny -Source $languageAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+          $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $languageAfterSelectXml.Contains("Settings suggestions") -or $languageAfterSelectXml.Contains("Android Settings") -or $languageAfterSelectXml.Contains("Alarms & reminders")
+        }
+        Save-AppiumSource -SessionId $sessionId -Name "settings-language-after-select" | Out-Null
+      }
+    }
     $settingsRuntime.clickedClearCache = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.clearCache, 'Clear Cache')) -Attempts 4
     if ($settingsRuntime.clickedClearCache) {
       $cacheClearedNeedles = Select-NonEmptyUniqueStrings @($smokeText.cacheClearedSuccess, 'Cache cleared successfully')
@@ -1106,6 +1140,21 @@ if (-not $summary.settingsRuntime.containsPrayerControls) {
 }
 if (-not $summary.settingsRuntime.containsSettingsDetail) {
   $failures += "Settings runtime smoke did not render localized settings detail rows."
+}
+if (-not $summary.settingsRuntime.clickedLanguage) {
+  $failures += "Settings runtime smoke could not click the localized language action."
+}
+if (-not $summary.settingsRuntime.containsLanguagePickerTitle) {
+  $failures += "Settings runtime smoke did not render the localized language picker title."
+}
+if (-not $summary.settingsRuntime.containsLanguageOptions) {
+  $failures += "Settings runtime smoke did not render expected language picker options."
+}
+if (-not $summary.settingsRuntime.selectedSystemDefaultLanguage) {
+  $failures += "Settings runtime smoke could not select the localized system default language option."
+}
+if (-not $summary.settingsRuntime.languagePickerClosed) {
+  $failures += "Settings runtime smoke did not close the language picker after selecting system default."
 }
 if (-not $summary.settingsRuntime.clickedClearCache) {
   $failures += "Settings runtime smoke could not click the localized clear cache action."

@@ -164,6 +164,9 @@ void main() {
       expect(script, contains(r'smokeLocale = $normalizedSmokeLocale'));
       expect(script, contains(r'$smokeText.quran'));
       expect(script, contains(r'$smokeText.settings'));
+      expect(script, contains(r'$smokeText.language'));
+      expect(script, contains(r'$smokeText.selectLanguage'));
+      expect(script, contains(r'$smokeText.systemDefault'));
       expect(script, contains(r'$smokeText.prayerCalculation'));
       expect(script, contains(r'$smokeText.diagnosticsPrayerSource'));
       expect(script, contains(r'$smokeText.clearCache'));
@@ -185,6 +188,11 @@ void main() {
       expect(script, contains('containsSettingsTitle'));
       expect(script, contains('containsPrayerControls'));
       expect(script, contains('containsSettingsDetail'));
+      expect(script, contains('clickedLanguage'));
+      expect(script, contains('containsLanguagePickerTitle'));
+      expect(script, contains('containsLanguageOptions'));
+      expect(script, contains('selectedSystemDefaultLanguage'));
+      expect(script, contains('languagePickerClosed'));
       expect(script, contains('clickedClearCache'));
       expect(script, contains('containsCacheClearedMessage'));
       expect(script, contains('clickedDiagnostics'));
@@ -206,6 +214,18 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-language-picker"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-language-after-select"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-diagnostics"',
         ),
       );
@@ -219,6 +239,24 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not render localized prayer calculation controls.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized language action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render expected language picker options.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not close the language picker after selecting system default.',
         ),
       );
       expect(

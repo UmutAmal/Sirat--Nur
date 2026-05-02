@@ -21994,3 +21994,55 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings icindeki language picker veya prayer method/madhab selector akisini release Appium runtime matrix'e ekle.
+
+## 2026-05-03 TUR-550 - Settings Language Picker Runtime Guard
+
+### MASTER Karari
+- Risk: Uygulamanin 180+ dil hedefinin ana kapisi olan Settings > Language picker release Appium smoke tarafinda cihazda acilmiyor, seceneklerinin render oldugu ve secim sonrasi sheet'in kapandigi kanitlanmiyordu. Bu, "ayar tusu var ama islem tamamlaniyor mu?" sinifinda P1 localization/runtime bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:207` Language tile'i Settings > Theme bolumunde gosteriyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:216` tile tap ile `_showLanguagePicker(...)` cagiriliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:533` language picker `showModalBottomSheet` olarak aciliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:546` picker basligi `l10n.selectLanguage` ile render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:536` System Default secenegi, `lib/features/settings/settings_page.dart:560` `supportedLanguages.length` kadar dil secenegi uretiyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:562` smoke metin paketine lokalize `language` label'i eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:563` smoke metin paketine lokalize `selectLanguage` label'i eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:564` smoke metin paketine lokalize `systemDefault` label'i eklendi.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:891` release Appium smoke Settings icinde lokalize Language aksiyonunu scroll ederek tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:894` `settings-language-picker` XML artifact'ini build altina yaziyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:895` picker basligini gercek Appium XML kaynaginda dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:896` System Default, English ve Turkish seceneklerinin gorunur oldugunu dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:900` System Default secenegini tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:905` secim sonrasi picker basliginin kayboldugunu ve Settings basliginin geri geldigini dogruluyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1144` Language tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1150` beklenen language picker secenekleri render olmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1156` System Default seciminden sonra picker kapanmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:168` localized language smoke label'larini test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:191` language picker summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:217` language picker XML artifact kaydinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings > Language picker'i cihazda acar, dil seceneklerinin gorunur oldugunu dogrular, System Default secimini calistirir ve modalin kapandigini kanitlar.
+- Risk skoru: Settings Language picker runtime completion boslugu `15/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke metin paketine `language`, `selectLanguage`, `systemDefault` ARB label'lari eklendi.
+- Settings runtime summary'sine `clickedLanguage`, `containsLanguagePickerTitle`, `containsLanguageOptions`, `selectedSystemDefaultLanguage`, `languagePickerClosed` alanlari eklendi.
+- Dil degisikligi sonraki English selector'lari bozmasin diye smoke, idempotent System Default secimini kullanir; buna ragmen picker acilma, secenek gorunurlugu, secim ve kapanma zinciri gercek cihazda tamamlanir.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- PowerShell parse check: `[System.Management.Automation.Language.Parser]::ParseFile(...)` PASS, parse error yok.
+- Diff check: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; store belgeleri, signing, Supabase public content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `631bb4d1-6694-44b0-bf58-28fe7d03b079`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedLanguage=true`, `settingsRuntime.containsLanguagePickerTitle=true`, `settingsRuntime.containsLanguageOptions=true`, `settingsRuntime.selectedSystemDefaultLanguage=true`, `settingsRuntime.languagePickerClosed=true`, `settingsRuntime.clickedClearCache=true`, `settingsRuntime.clickedDiagnostics=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- Not: Flutter/pub komutlari stdout'a `advisoriesUpdated must be a String` pub.dev advisory decode uyarilari yazmaya devam ediyor; exit code 0 ve tum final quality gate'ler PASS.
+
+### Risk Degisimi
+- Settings icinde canli runtime action matrix genisledi: Language picker, Clear Cache ve Diagnostics ayni release smoke zincirinde dogrulaniyor.
+- Localization giris noktasi artik sadece ARB coverage ile degil, cihazdaki modal acilma/secim/kapanma davranisiyla da korunuyor.
+- Kalan bilincli risk: Prayer calculation method, madhab, audio voice, Qibla calibration slider, dark mode switch, About/Privacy/Share/Rate aksiyonlari ve coklu locale Appium kosulari henuz tam runtime matrix'te gezilmiyor; sonraki dongude prayer method/madhab selector akisi secilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings > Prayer Calculation method ve madhab bottom sheet selector'larini release Appium runtime matrix'e ekle.
