@@ -166,6 +166,8 @@ void main() {
       expect(script, contains(r'$smokeText.settings'));
       expect(script, contains(r'$smokeText.prayerCalculation'));
       expect(script, contains(r'$smokeText.diagnosticsPrayerSource'));
+      expect(script, contains(r'$smokeText.clearCache'));
+      expect(script, contains(r'$smokeText.cacheClearedSuccess'));
       expect(script, contains(r'$smokeText.dailyVerse'));
       expect(script, contains(r'$smokeText.offlineQuranAudioPacks'));
       expect(script, contains(r'$smokeText.playSurahAudio'));
@@ -180,9 +182,20 @@ void main() {
       expect(script, contains('containsSettingsTitle'));
       expect(script, contains('containsPrayerControls'));
       expect(script, contains('containsSettingsDetail'));
+      expect(script, contains('clickedClearCache'));
+      expect(script, contains('containsCacheClearedMessage'));
+      expect(script, contains('Click-ScrollableDescriptionContains'));
+      expect(script, contains('Click-ScrollableTextContains'));
+      expect(script, contains('Wait-ClickAnyScrollableText'));
       expect(
         script,
         contains(r'Save-AppiumSource -SessionId $sessionId -Name "settings"'),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-clear-cache"',
+        ),
       );
       expect(
         script,
@@ -194,6 +207,18 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not render localized prayer calculation controls.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized clear cache action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not show the localized cache cleared completion message.',
         ),
       );
       expect(

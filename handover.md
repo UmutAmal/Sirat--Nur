@@ -21901,3 +21901,46 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings icindeki daha derin runtime aksiyonlari veya route/menu/button envanterinde en yuksek riskli eksik yuzey secilip kapatilacak.
+
+## 2026-05-02 TUR-548 - Settings Clear Cache Runtime Action Guard
+
+### MASTER Karari
+- Risk: Settings ekrani TUR-547 ile release Appium smoke'ta aciliyordu, ancak Settings icinde tamamlanabilir bir aksiyon cihazda gercekten calistirilmiyordu. Bu, "tus gorundu ama islem tamamlandi mi?" sinifinda kalan runtime false-success bosluguydu.
+- Kanit:
+  - Baslangic: `tool/appium_runtime_smoke.ps1:867` oncesinde Settings icinde herhangi bir action completion smoke'u yoktu; sadece ekran basligi ve temel satirlar dogrulaniyordu.
+  - Son durum: `tool/appium_runtime_smoke.ps1:568` ARB'den lokalize `clearCache` label'i okunuyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:569` ARB'den lokalize `cacheClearedSuccess` completion mesaji okunuyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:404` Flutter'in `content-desc` agacina uygun scroll helper `Click-ScrollableDescriptionContains` eklendi.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:635` `Wait-ClickAnyScrollableText` helper'i gorunur ve scroll sonrasi description/text aramasini birlikte deniyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:867` release Appium smoke Settings icinde lokalize Clear Cache aksiyonunu scroll ederek tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:873` clear cache sonrasi lokalize snackbar/completion metni kaynak XML'de dogrulaniyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1073` Clear Cache tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1076` completion mesaji gorunmezse smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:185` scriptte `clickedClearCache` alaninin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:187` scriptte description-based scroll helper'in kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:215` clear cache tiklama failure mesajinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings icinde guvenli bir ayar aksiyonunu gercek cihazda calistiriyor ve islemin tamamlanma mesajini dogruluyor.
+- Risk skoru: Settings runtime action completion boslugu `12/25 -> 3/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium helper'i Flutter semantics gercegine uyarlandi: metinler cogunlukla `content-desc` olarak geldigi icin scroll hedefleme descriptionContains ile desteklendi.
+- Settings runtime summary'sine `clickedClearCache` ve `containsCacheClearedMessage` alanlari eklendi.
+- Basarisiz ilk deneme root cause'u: `UiScrollable(...textContains())` Flutter Settings XML'inde hedefi bulamadi, cunku satirlar `text` yerine `content-desc` uzerinden expose ediliyor. Bu nedenle `Click-ScrollableDescriptionContains` eklendi ve yeniden dogrulandi.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release env, Supabase content, Quran audio GitHub/Cloudflare dagitimi, signing, analyze ve full test kapilari temiz.
+- Appium release runtime smoke ilk deneme: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` FAIL; session `4b0345c6-c0f7-4e9c-868f-89bf55d5de2c`, `settingsRuntime.clickedSettings=true`, fakat `clickedClearCache=false`, `containsCacheClearedMessage=false`. Root cause XML incelemesiyle `content-desc`/`text` farki olarak izole edildi.
+- Appium release runtime smoke son dogrulama: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `86774af3-500e-49a2-b7b6-15002d35aa8b`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedSettings=true`, `settingsRuntime.clickedClearCache=true`, `settingsRuntime.containsCacheClearedMessage=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- Not: Flutter/pub komutlari stdout'a `advisoriesUpdated must be a String` pub.dev advisory decode uyarilari yazmaya devam ediyor; exit code 0 ve tum final quality gate'ler PASS.
+
+### Risk Degisimi
+- Settings icinde ilk canli runtime action completion guard'i eklendi.
+- Appium scroll helper'i Flutter content-desc agacina uygun hale geldi; bu sonraki Settings/route action matrix genisletmelerini daha saglam yapacak.
+- Kalan bilincli risk: Method, madhab, language, diagnostics, rate/share/privacy gibi daha yan etkili Settings aksiyonlari cihazda tam matrix olarak henuz gezilmiyor; widget/platform mock testleri var ama Appium matrix kademeli genisletilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings diagnostics route veya language picker gibi bir sonraki yuksek getirili runtime aksiyonu canli Appium matrix'e ekle.

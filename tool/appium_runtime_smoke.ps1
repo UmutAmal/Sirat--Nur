@@ -386,6 +386,36 @@ function Click-TextContains {
   return Click-AppiumElement -SessionId $SessionId -Element $element
 }
 
+function Click-ScrollableTextContains {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string]$Label
+  )
+
+  $selector = "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textContains(`"$Label`"))"
+  $element = Find-AppiumElement -SessionId $SessionId -Using "-android uiautomator" -Selector $selector
+  if ($null -eq $element) {
+    return $false
+  }
+
+  return Click-AppiumElement -SessionId $SessionId -Element $element
+}
+
+function Click-ScrollableDescriptionContains {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string]$Label
+  )
+
+  $selector = "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(`"$Label`"))"
+  $element = Find-AppiumElement -SessionId $SessionId -Using "-android uiautomator" -Selector $selector
+  if ($null -eq $element) {
+    return $false
+  }
+
+  return Click-AppiumElement -SessionId $SessionId -Element $element
+}
+
 function Get-AppiumSource {
   param([Parameter(Mandatory = $true)][string]$SessionId)
 
@@ -535,6 +565,8 @@ function Get-SmokeTextBundle {
     diagnosticsPrayerSource = Get-ArbString -Messages $messages -Key 'diagnosticsPrayerSource' -Fallback 'Prayer Authority'
     audioVoice = Get-ArbString -Messages $messages -Key 'audioVoice' -Fallback 'Audio Voice'
     location = Get-ArbString -Messages $messages -Key 'location' -Fallback 'Location'
+    clearCache = Get-ArbString -Messages $messages -Key 'clearCache' -Fallback 'Clear Cache'
+    cacheClearedSuccess = Get-ArbString -Messages $messages -Key 'cacheClearedSuccess' -Fallback 'Cache cleared successfully'
     quran = Get-ArbString -Messages $messages -Key 'quran' -Fallback 'Quran'
     playSurahAudio = Get-ArbString -Messages $messages -Key 'playSurahAudio' -Fallback 'Play surah audio'
     pauseSurahAudio = Get-ArbString -Messages $messages -Key 'pauseSurahAudio' -Fallback 'Pause surah audio'
@@ -593,6 +625,29 @@ function Wait-ClickAnyDescriptionOrText {
   for ($attempt = 0; $attempt -lt $Attempts; $attempt++) {
     if (Click-AnyDescriptionOrText -SessionId $SessionId -Candidates $Candidates) {
       return $true
+    }
+    Start-Sleep -Milliseconds $DelayMilliseconds
+  }
+
+  return $false
+}
+
+function Wait-ClickAnyScrollableText {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string[]]$Candidates,
+    [int]$Attempts = 5,
+    [int]$DelayMilliseconds = 700
+  )
+
+  for ($attempt = 0; $attempt -lt $Attempts; $attempt++) {
+    foreach ($candidate in $Candidates) {
+      if ((Click-DescriptionContains -SessionId $SessionId -Label $candidate) -or
+          (Click-TextContains -SessionId $SessionId -Label $candidate) -or
+          (Click-ScrollableDescriptionContains -SessionId $SessionId -Label $candidate) -or
+          (Click-ScrollableTextContains -SessionId $SessionId -Label $candidate)) {
+        return $true
+      }
     }
     Start-Sleep -Milliseconds $DelayMilliseconds
   }
@@ -732,6 +787,8 @@ $summary = [ordered]@{
     containsSettingsTitle = $false
     containsPrayerControls = $false
     containsSettingsDetail = $false
+    clickedClearCache = $false
+    containsCacheClearedMessage = $false
     containsAndroidSettings = $false
   }
   bottomNavResults = @()
@@ -795,6 +852,8 @@ try {
     containsSettingsTitle = $false
     containsPrayerControls = $false
     containsSettingsDetail = $false
+    clickedClearCache = $false
+    containsCacheClearedMessage = $false
     containsAndroidSettings = $false
   }
   $settingsRuntime.clickedSettings = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')) -Attempts 6
@@ -805,6 +864,17 @@ try {
     $settingsRuntime.containsPrayerControls = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.prayerCalculation, $smokeText.method, $smokeText.madhab, 'Prayer Calculation', 'Calculation Method', 'Asr Juristic Method'))
     $settingsRuntime.containsSettingsDetail = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.diagnosticsPrayerSource, $smokeText.audioVoice, $smokeText.location, 'Prayer Authority', 'Audio Voice', 'Location'))
     $settingsRuntime.containsAndroidSettings = $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
+    $settingsRuntime.clickedClearCache = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.clearCache, 'Clear Cache')) -Attempts 4
+    if ($settingsRuntime.clickedClearCache) {
+      $cacheClearedNeedles = Select-NonEmptyUniqueStrings @($smokeText.cacheClearedSuccess, 'Cache cleared successfully')
+      for ($attempt = 0; $attempt -lt 6 -and -not $settingsRuntime.containsCacheClearedMessage; $attempt++) {
+        Start-Sleep -Milliseconds 500
+        $settingsActionXml = Get-AppiumSource -SessionId $sessionId
+        $settingsRuntime.containsCacheClearedMessage = Test-ContainsAny -Source $settingsActionXml -Needles $cacheClearedNeedles
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $settingsActionXml.Contains("Settings suggestions") -or $settingsActionXml.Contains("Android Settings") -or $settingsActionXml.Contains("Alarms & reminders")
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-clear-cache" | Out-Null
+    }
     Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
     Start-Sleep -Milliseconds 800
   }
@@ -999,6 +1069,12 @@ if (-not $summary.settingsRuntime.containsPrayerControls) {
 }
 if (-not $summary.settingsRuntime.containsSettingsDetail) {
   $failures += "Settings runtime smoke did not render localized settings detail rows."
+}
+if (-not $summary.settingsRuntime.clickedClearCache) {
+  $failures += "Settings runtime smoke could not click the localized clear cache action."
+}
+if (-not $summary.settingsRuntime.containsCacheClearedMessage) {
+  $failures += "Settings runtime smoke did not show the localized cache cleared completion message."
 }
 if ($summary.settingsRuntime.containsAndroidSettings) {
   $failures += "Settings runtime smoke opened Android Settings."
