@@ -21783,3 +21783,40 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude her Settings aksiyonunun (method, madhab, qibla calibration, cache, diagnostics, account/about/share/rate/privacy) persistence ve UI sonucunu widget/Appium tarafinda tek tek otomasyona bagla.
+
+## 2026-05-02 TUR-545 - Settings Action Matrix Regression Coverage
+
+### MASTER Karari
+- Risk: Settings ekrani kullanicinin namaz profili, mezhep, ses, kible kalibrasyonu, tema, dil, cache ve rota aksiyonlarini topluyor; mevcut widget testleri bu aksiyonlarin cogunu sadece gorunurluk olarak dogruluyordu. Bir tile/switch/dialog tiklamasi sessizce persistence veya route sonucunu bozarsa full suite bunu yakalamayabilirdi.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:82` method picker, `lib/features/settings/settings_page.dart:90` madhab picker, `lib/features/settings/settings_page.dart:140` audio picker, `lib/features/settings/settings_page.dart:170` qibla offset dialog, `lib/features/settings/settings_page.dart:180` qibla smoothing switch, `lib/features/settings/settings_page.dart:197` dark mode switch, `lib/features/settings/settings_page.dart:207` language picker, `lib/features/settings/settings_page.dart:227` cache clear ve `lib/features/settings/settings_page.dart:241` diagnostics route icin tamamlanmis islem guard'i eksikti.
+  - Son durum: `test/features/settings/settings_page_test.dart:38` routed Settings harness eklendi; location ve diagnostics `context.push` sonucunu gercek `GoRouter` ile olcuyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:292` method/madhab/audio picker secimleri SharedPreferences ve gorunen UI uzerinden dogrulaniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:331` qibla offset Save, qibla smoothing switch ve dark mode switch persistence'i dogrulaniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:366` qibla offset Cancel aksiyonunun persisted degeri degistirmedigi dogrulaniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:387` language picker dil secimi ve System Default reset akisi dogrulaniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:410` clear cache snackbar ve Version about dialog gorunur tamamlanma sonucu dogrulaniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:425` Location ve Diagnostics route aksiyonlari hedef sayfaya ulasiyor.
+- Kullanici etkisi: Settings ekraninda kullanicinin bastigi ana ayar/tus aksiyonlari artik "gorundu" seviyesinde degil, gercek sonuc/persistence/route seviyesiyle korunuyor.
+- Risk skoru: Settings action false-success ve test boslugu riski `15/25 -> 3/25`.
+- Rollback plani: Bu turdaki `test/features/settings/settings_page_test.dart` ve bu handover girdisi geri alinabilir; urun kodu degismedi.
+
+### BUILDER Degisikligi
+- Urun kodu degistirilmedi.
+- Settings widget test harness'i SharedPreferences dondurecek sekilde genisletildi.
+- Routed Settings harness eklendi ve Settings ana aksiyon matrisi test edildi.
+
+### TESTER Degisikligi
+- Targeted SettingsPage test: `flutter test test\features\settings\settings_page_test.dart --reporter compact` PASS, `17/17`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `775/775`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release env, Supabase public content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `d3712945-c9a7-4d7e-bcbc-473a6adaf210`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Settings ana aksiyonlarinda false-success ve route/persistence regresyon boslugu kapatildi.
+- Kalan bilincli risk: Rate/share/privacy external plugin cagri sonucunu platform mock ile daha derin olcmek ve Appium script'ini Settings-specific runtime matrix ile genisletmek sonraki dongude ele alinacak.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings external action mocklari veya Appium Settings runtime matrix icin en yuksek getirili kucuk patch'i sec.

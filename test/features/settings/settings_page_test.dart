@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sirat_i_nur/core/services/app_metadata_service.dart';
 import 'package:sirat_i_nur/core/services/prayer_profile_service.dart';
@@ -10,7 +11,7 @@ import 'package:sirat_i_nur/features/settings/settings_page.dart';
 import 'package:sirat_i_nur/features/settings/settings_provider.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
-Future<void> pumpSettingsPage(
+Future<SharedPreferences> pumpSettingsPage(
   WidgetTester tester, {
   required Map<String, Object> prefsValues,
   Locale locale = const Locale('en'),
@@ -31,6 +32,48 @@ Future<void> pumpSettingsPage(
   );
 
   await tester.pumpAndSettle();
+  return prefs;
+}
+
+Future<SharedPreferences> pumpRoutedSettingsPage(
+  WidgetTester tester, {
+  required Map<String, Object> prefsValues,
+}) async {
+  SharedPreferences.setMockInitialValues(prefsValues);
+  final prefs = await SharedPreferences.getInstance();
+  final router = GoRouter(
+    initialLocation: '/settings',
+    routes: [
+      GoRoute(
+        path: '/settings',
+        builder: (context, state) => const SettingsPage(),
+      ),
+      GoRoute(
+        path: '/settings/location',
+        builder: (context, state) =>
+            const Scaffold(body: Text('Location route reached')),
+      ),
+      GoRoute(
+        path: '/settings/diagnostics',
+        builder: (context, state) =>
+            const Scaffold(body: Text('Diagnostics route reached')),
+      ),
+    ],
+  );
+
+  await tester.pumpWidget(
+    ProviderScope(
+      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+      child: MaterialApp.router(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        routerConfig: router,
+      ),
+    ),
+  );
+
+  await tester.pumpAndSettle();
+  return prefs;
 }
 
 void main() {
@@ -244,6 +287,156 @@ void main() {
       expect(find.text('Abdul Rahman Al-Sudais'), findsOneWidget);
     },
   );
+
+  testWidgets(
+    'SettingsPage picker actions persist method madhab and audio voice',
+    (tester) async {
+      final prefs = await pumpSettingsPage(
+        tester,
+        prefsValues: const {
+          'calculationMethod': diyanetPrayerMethod,
+          'madhab': hanafiMadhab,
+          'audioVoice': misharyAlafasyVoice,
+        },
+      );
+
+      await tester.tap(find.text('Calculation Method'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(ummAlQuraPrayerMethod));
+      await tester.pumpAndSettle();
+
+      expect(prefs.getString('calculationMethod'), ummAlQuraPrayerMethod);
+      expect(prefs.getString('madhab'), hanbaliMadhab);
+      expect(find.text(ummAlQuraPrayerMethod), findsWidgets);
+
+      await tester.tap(find.text('Asr Juristic Method'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text("Ja'fari").last);
+      await tester.pumpAndSettle();
+
+      expect(prefs.getString('madhab'), jafariMadhab);
+      expect(find.text("Ja'fari"), findsWidgets);
+
+      await tester.tap(find.text('Audio Voice'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Saoud Al-Shuraim'));
+      await tester.pumpAndSettle();
+
+      expect(prefs.getString('audioVoice'), shuraimVoice);
+      expect(find.text('Saoud Al-Shuraim'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'SettingsPage qibla and theme controls persist completed actions',
+    (tester) async {
+      final prefs = await pumpSettingsPage(
+        tester,
+        prefsValues: const {
+          'qiblaOffset': 0.0,
+          'qiblaSmoothingEnabled': true,
+          'isDarkMode': true,
+        },
+      );
+
+      await tester.ensureVisible(find.text('Calibration Offset'));
+      await tester.tap(find.text('Calibration Offset'));
+      await tester.pumpAndSettle();
+      tester.widget<Slider>(find.byType(Slider)).onChanged!(12.5);
+      await tester.pump();
+      await tester.tap(find.text('Save'));
+      await tester.pumpAndSettle();
+
+      expect(prefs.getDouble('qiblaOffset'), 12.5);
+      expect(find.text('Current: 12.5°'), findsOneWidget);
+
+      await tester.ensureVisible(find.text('Compass Smoothing'));
+      await tester.tap(find.byType(Switch).at(0));
+      await tester.pumpAndSettle();
+      expect(prefs.getBool('qiblaSmoothingEnabled'), isFalse);
+
+      await tester.ensureVisible(find.text('Dark Mode'));
+      await tester.tap(find.byType(Switch).at(1));
+      await tester.pumpAndSettle();
+      expect(prefs.getBool('isDarkMode'), isFalse);
+    },
+  );
+
+  testWidgets(
+    'SettingsPage qibla calibration cancel leaves persisted value untouched',
+    (tester) async {
+      final prefs = await pumpSettingsPage(
+        tester,
+        prefsValues: const {'qiblaOffset': 4.0},
+      );
+
+      await tester.ensureVisible(find.text('Calibration Offset'));
+      await tester.tap(find.text('Calibration Offset'));
+      await tester.pumpAndSettle();
+      tester.widget<Slider>(find.byType(Slider)).onChanged!(25.0);
+      await tester.pump();
+      await tester.tap(find.text('Cancel'));
+      await tester.pumpAndSettle();
+
+      expect(prefs.getDouble('qiblaOffset'), 4.0);
+      expect(find.text('Current: 4.0°'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
+    'SettingsPage language picker persists localized choices and reset',
+    (tester) async {
+      final prefs = await pumpSettingsPage(tester, prefsValues: const {});
+
+      await tester.ensureVisible(find.widgetWithText(ListTile, 'Language'));
+      await tester.tap(find.widgetWithText(ListTile, 'Language'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Türkçe'));
+      await tester.pumpAndSettle();
+
+      expect(prefs.getString('languageCode'), 'tr');
+      expect(find.text('Türkçe (Turkish)'), findsOneWidget);
+
+      await tester.tap(find.widgetWithText(ListTile, 'Language'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('System Default'));
+      await tester.pumpAndSettle();
+
+      expect(prefs.containsKey('languageCode'), isFalse);
+      expect(find.text('System Default'), findsOneWidget);
+    },
+  );
+
+  testWidgets('SettingsPage utility actions complete visibly', (tester) async {
+    await pumpSettingsPage(tester, prefsValues: const {});
+
+    await tester.ensureVisible(find.text('Clear Cache'));
+    await tester.tap(find.text('Clear Cache'));
+    await tester.pump();
+    expect(find.text('Cache cleared successfully'), findsOneWidget);
+
+    await tester.ensureVisible(find.text('Version'));
+    await tester.tap(find.text('Version'));
+    await tester.pumpAndSettle();
+    expect(find.byType(AboutDialog), findsOneWidget);
+    expect(find.text(resolveAppVersion()), findsWidgets);
+  });
+
+  testWidgets('SettingsPage route actions reach their destinations', (
+    tester,
+  ) async {
+    await pumpRoutedSettingsPage(tester, prefsValues: const {});
+
+    await tester.tap(find.widgetWithText(ListTile, 'Location'));
+    await tester.pumpAndSettle();
+    expect(find.text('Location route reached'), findsOneWidget);
+
+    await pumpRoutedSettingsPage(tester, prefsValues: const {});
+    await tester.ensureVisible(find.text('Diagnostics'));
+    await tester.tap(find.text('Diagnostics'));
+    await tester.pumpAndSettle();
+    expect(find.text('Diagnostics route reached'), findsOneWidget);
+  });
 
   test('SettingsPage renders location names from a local snapshot', () {
     final source = File(
