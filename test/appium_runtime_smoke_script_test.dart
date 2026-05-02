@@ -109,6 +109,21 @@ void main() {
       expect(script, contains('apkPrepared'));
     });
 
+    test('clears stale release lint cache before Appium release builds', () {
+      expect(script, contains('Stop-AndroidGradleDaemons'));
+      expect(script, contains('Clear-AppiumReleaseLintCache'));
+      expect(script, contains(r"if ($BuildMode -eq 'release')"));
+      expect(script, contains(r'.\gradlew.bat --stop'));
+      expect(script, contains(r'lint-cache\lintVitalAnalyzeRelease'));
+      expect(script, contains(r'$attempt -le 6'));
+      expect(script, contains('Start-Sleep -Seconds 2'));
+      expect(
+        script,
+        contains('gradle daemon stop before Appium release build'),
+      );
+      expect(script, contains('Appium release lint cache is still locked'));
+    });
+
     test('recovers from debug to release signature mismatch installs', () {
       expect(script, contains('INSTALL_FAILED_UPDATE_INCOMPATIBLE'));
       expect(script, contains(r"$installMessage -replace '\s+', ''"));

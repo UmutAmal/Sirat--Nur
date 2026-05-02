@@ -19,11 +19,12 @@ class SurahDisplayInfo {
 List<SurahDisplayInfo> parseBundledSurahDisplayInfoList(List<dynamic> data) {
   return data
       .whereType<Map>()
-      .map((row) => Map<String, dynamic>.from(row))
+      .map(_stringKeyedMap)
+      .whereType<Map<String, dynamic>>()
       .map(
         (surahData) => resolveSurahDisplayInfo(
           surahData,
-          (surahData['number'] as num?)?.toInt() ?? 0,
+          _readInt(surahData['number']) ?? 0,
         ),
       )
       .where((surah) => surah.number > 0)
@@ -42,19 +43,21 @@ List<SurahDisplayInfo> filterSurahDisplayInfos(
   final rawQuery = trimmedQuery.toLowerCase();
   final normalizedQuery = _normalizeSurahSearch(trimmedQuery);
 
-  return surahs.where((surah) {
-    if (surah.number.toString() == trimmedQuery) {
-      return true;
-    }
+  return surahs
+      .where((surah) {
+        if (surah.number.toString() == trimmedQuery) {
+          return true;
+        }
 
-    return _surahSearchTerms(surah).any((term) {
-      final rawTerm = term.toLowerCase();
-      final normalizedTerm = _normalizeSurahSearch(term);
-      return rawTerm.contains(rawQuery) ||
-          (normalizedQuery.isNotEmpty &&
-              normalizedTerm.contains(normalizedQuery));
-    });
-  }).toList(growable: false);
+        return _surahSearchTerms(surah).any((term) {
+          final rawTerm = term.toLowerCase();
+          final normalizedTerm = _normalizeSurahSearch(term);
+          return rawTerm.contains(rawQuery) ||
+              (normalizedQuery.isNotEmpty &&
+                  normalizedTerm.contains(normalizedQuery));
+        });
+      })
+      .toList(growable: false);
 }
 
 SurahDisplayInfo resolveSurahDisplayInfo(
@@ -76,7 +79,7 @@ SurahDisplayInfo resolveSurahDisplayInfo(
   final normalizedAyahs = ayahs is List ? ayahs.length : 0;
 
   return SurahDisplayInfo(
-    number: (surahData['number'] as num?)?.toInt() ?? surahNumber,
+    number: _readInt(surahData['number']) ?? surahNumber,
     nameArabic: (surahData['name'] ?? '').toString().trim(),
     transliteration: (surahData['englishName'] ?? 'Surah $surahNumber')
         .toString()
@@ -87,6 +90,28 @@ SurahDisplayInfo resolveSurahDisplayInfo(
     ayahCount: normalizedAyahs,
     revelationType: (surahData['revelationType'] ?? '').toString().trim(),
   );
+}
+
+Map<String, dynamic>? _stringKeyedMap(Map<dynamic, dynamic> raw) {
+  final row = <String, dynamic>{};
+  for (final entry in raw.entries) {
+    final key = entry.key;
+    if (key is String) {
+      row[key] = entry.value;
+    }
+  }
+
+  return row.isEmpty ? null : row;
+}
+
+int? _readInt(Object? value) {
+  if (value is num) {
+    return value.toInt();
+  }
+  if (value is String) {
+    return int.tryParse(value.trim());
+  }
+  return null;
 }
 
 Iterable<String> _surahSearchTerms(SurahDisplayInfo surah) sync* {

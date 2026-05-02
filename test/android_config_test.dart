@@ -51,6 +51,25 @@ void main() {
       expect(gradle, contains('abortOnError = true'));
     });
 
+    test('native splash plugin remains on the release classpath', () {
+      final normalizedPubspec = pubspec.replaceAll('\r\n', '\n');
+      final dependencySection = RegExp(
+        r'dependencies:\s*([\s\S]*?)\ndev_dependencies:',
+      ).firstMatch(normalizedPubspec)?.group(1);
+      final devDependencySection = RegExp(
+        r'dev_dependencies:\s*([\s\S]*?)\nflutter:',
+      ).firstMatch(normalizedPubspec)?.group(1);
+
+      expect(
+        dependencySection,
+        contains(RegExp(r'^  flutter_native_splash:', multiLine: true)),
+      );
+      expect(
+        devDependencySection,
+        isNot(contains(RegExp(r'^  flutter_native_splash:', multiLine: true))),
+      );
+    });
+
     test('exact alarm permission uses the revocable runtime flow only', () {
       expect(manifest, contains('android.permission.SCHEDULE_EXACT_ALARM'));
       expect(manifest, isNot(contains('android.permission.USE_EXACT_ALARM')));

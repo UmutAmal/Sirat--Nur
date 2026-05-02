@@ -63,26 +63,35 @@ void main() {
       expect(infos.single.number, 1);
       expect(infos.single.transliteration, 'Al-Faatiha');
     });
-  });
 
-  group('filterSurahDisplayInfos', () {
-    test('matches simplified transliteration, translation, Arabic, and number', () {
-      final surahs = parseBundledSurahDisplayInfoList([
+    test('accepts numeric string numbers without crashing the index', () {
+      final infos = parseBundledSurahDisplayInfoList([
         {
-          'number': 1,
-          'name': 'الفاتحة',
-          'englishName': 'Al-Faatiha',
-          'englishNameTranslation': 'The Opening',
-          'revelationType': 'Meccan',
-          'ayahs': const [
-            {'numberInSurah': 1},
-          ],
-        },
-        {
-          'number': 2,
+          'number': '2',
           'name': 'البقرة',
           'englishName': 'Al-Baqarah',
           'englishNameTranslation': 'The Cow',
+          'revelationType': 'Medinan',
+          'ayahs': const [
+            {'numberInSurah': 1},
+            {'numberInSurah': 2},
+          ],
+        },
+      ]);
+
+      expect(infos.single.number, 2);
+      expect(infos.single.ayahCount, 2);
+    });
+
+    test('skips non-string-key maps instead of crashing the index', () {
+      final infos = parseBundledSurahDisplayInfoList([
+        {1: 'non-string key only'},
+        {
+          'number': 3,
+          9: 'ignored non-string key',
+          'name': 'آل عمران',
+          'englishName': 'Aal-i-Imraan',
+          'englishNameTranslation': 'The Family of Imran',
           'revelationType': 'Medinan',
           'ayahs': const [
             {'numberInSurah': 1},
@@ -90,11 +99,45 @@ void main() {
         },
       ]);
 
-      expect(filterSurahDisplayInfos(surahs, 'fatiha').single.number, 1);
-      expect(filterSurahDisplayInfos(surahs, 'opening').single.number, 1);
-      expect(filterSurahDisplayInfos(surahs, 'البقرة').single.number, 2);
-      expect(filterSurahDisplayInfos(surahs, 'bakara').single.number, 2);
-      expect(filterSurahDisplayInfos(surahs, '2').single.number, 2);
+      expect(infos, hasLength(1));
+      expect(infos.single.number, 3);
+      expect(infos.single.transliteration, 'Aal-i-Imraan');
     });
+  });
+
+  group('filterSurahDisplayInfos', () {
+    test(
+      'matches simplified transliteration, translation, Arabic, and number',
+      () {
+        final surahs = parseBundledSurahDisplayInfoList([
+          {
+            'number': 1,
+            'name': 'الفاتحة',
+            'englishName': 'Al-Faatiha',
+            'englishNameTranslation': 'The Opening',
+            'revelationType': 'Meccan',
+            'ayahs': const [
+              {'numberInSurah': 1},
+            ],
+          },
+          {
+            'number': 2,
+            'name': 'البقرة',
+            'englishName': 'Al-Baqarah',
+            'englishNameTranslation': 'The Cow',
+            'revelationType': 'Medinan',
+            'ayahs': const [
+              {'numberInSurah': 1},
+            ],
+          },
+        ]);
+
+        expect(filterSurahDisplayInfos(surahs, 'fatiha').single.number, 1);
+        expect(filterSurahDisplayInfos(surahs, 'opening').single.number, 1);
+        expect(filterSurahDisplayInfos(surahs, 'البقرة').single.number, 2);
+        expect(filterSurahDisplayInfos(surahs, 'bakara').single.number, 2);
+        expect(filterSurahDisplayInfos(surahs, '2').single.number, 2);
+      },
+    );
   });
 }

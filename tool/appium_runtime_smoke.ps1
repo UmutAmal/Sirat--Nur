@@ -95,6 +95,44 @@ function Assert-AdbDeviceAvailable {
   throw "ADB device '$DeviceName' is not connected and ready. Start the emulator, authorize USB debugging, or pass -DeviceName with a ready adb device before running Appium smoke. Current adb devices: $knownDevicesText"
 }
 
+function Stop-AndroidGradleDaemons {
+  $androidDir = Join-Path $PSScriptRoot '..\android'
+  $gradleWrapper = Join-Path $androidDir 'gradlew.bat'
+  if (-not (Test-Path $gradleWrapper)) {
+    return
+  }
+
+  Push-Location $androidDir
+  try {
+    & .\gradlew.bat --stop | Out-Null
+    Assert-NativeSuccess -Description 'gradle daemon stop before Appium release build'
+  } finally {
+    Pop-Location
+  }
+}
+
+function Clear-AppiumReleaseLintCache {
+  $releaseLintCache = Join-Path $PSScriptRoot '..\build\app\intermediates\lint-cache\lintVitalAnalyzeRelease'
+  $lastError = $null
+  for ($attempt = 1; $attempt -le 6; $attempt++) {
+    if (-not (Test-Path $releaseLintCache)) {
+      return
+    }
+
+    try {
+      Remove-Item -LiteralPath $releaseLintCache -Recurse -Force -ErrorAction Stop
+      return
+    } catch {
+      $lastError = $_
+      if ($attempt -lt 6) {
+        Start-Sleep -Seconds 2
+      }
+    }
+  }
+
+  throw "Appium release lint cache is still locked after Gradle daemon stop: $($lastError.Exception.Message)"
+}
+
 function Install-CurrentWorkspaceApk {
   param(
     [Parameter(Mandatory = $true)][string]$DeviceName,
@@ -592,6 +630,11 @@ if ($requiresLocalAdb) {
 
 if (-not $SkipBuildInstall) {
   Require-Command -Name 'flutter' -InstallHint 'Install Flutter and ensure flutter is on PATH before running the Appium smoke script.'
+
+  if ($BuildMode -eq 'release') {
+    Stop-AndroidGradleDaemons
+    Clear-AppiumReleaseLintCache
+  }
 
   $flutterBuildArgs = @('build', 'apk', "--$BuildMode")
   $dartDefineArgs = Get-ReleaseDartDefineArguments -BuildMode $BuildMode

@@ -21687,3 +21687,55 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude l10n debt, verified content provenance ve kalan runtime parser/cast yuzeylerini tekrar tara.
+
+## 2026-05-02 TUR-543 - Quran Index Row Guard and Release Runtime Smoke Hardening
+
+### MASTER Karari
+- Risk 1: Quran indeks parser'i bundled/cloud benzeri row payload'larinda string-key map ve numeric `number` varsayiyordu. Tek malformed row, Surah listesi gibi core Quran yuzeyini tamamen kirabilirdi.
+- Risk 2: `flutter test` sonrasi uretilen Android `GeneratedPluginRegistrant.java`, `flutter_native_splash` native plugin kaydini iceriyor; paket dev dependency oldugunda release classpath sinifi bulamayip Appium release smoke build'i kirabiliyordu.
+- Risk 3: Store readiness/full test sonrasi Windows Gradle lint cache handle'i kisa sure acik kalabiliyor; Appium release smoke ayni cache'e dokunurken false fail uretiyordu.
+- Kanit:
+  - Baslangic: `lib/features/quran/surah_display_info.dart:22` `Map<String, dynamic>.from(row)` non-string-key map'te throw riski tasiyordu.
+  - Baslangic: `lib/features/quran/surah_display_info.dart:27` ve `lib/features/quran/surah_display_info.dart:82` `number` alanini numeric kabul ediyordu.
+  - Son durum: `lib/features/quran/surah_display_info.dart:22` row parser artik `_stringKeyedMap` uzerinden string-key disi alanlari filtreliyor.
+  - Son durum: `lib/features/quran/surah_display_info.dart:27` ve `lib/features/quran/surah_display_info.dart:82` `number` artik `_readInt` ile numeric string destekli okunuyor.
+  - Son durum: `lib/features/quran/surah_display_info.dart:95` `_stringKeyedMap` non-string-key-only row'lari atliyor.
+  - Son durum: `lib/features/quran/surah_display_info.dart:107` `_readInt` `num` ve trim edilmis numeric string degerleri kabul ediyor.
+  - Son durum: `pubspec.yaml:46` `flutter_native_splash` direct main dependency oldu; `pubspec.lock:383` lockfile `direct main` olarak sabitlendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:98` release smoke oncesi Android Gradle daemon'lari durduruluyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:114` release lint cache sadece Appium release build oncesi temizleniyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:117` cache silme Windows handle gecikmesine karsi 6 denemeli retry ile yapiyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:635` bu temizleme sadece `BuildMode release` icin calisiyor.
+  - Regresyon guard: `test/surah_display_info_test.dart:67` numeric string surah number indeks crash'i yaratmiyor.
+  - Regresyon guard: `test/surah_display_info_test.dart:86` non-string-key map indeks crash'i yaratmiyor.
+  - Regresyon guard: `test/android_config_test.dart:54` native splash plugin'in release classpath'te kalmasi test ediliyor.
+  - Regresyon guard: `test/appium_runtime_smoke_script_test.dart:112` Appium release lint cache self-heal adimi test ediliyor.
+- Kullanici etkisi: Quran ana liste malformed tekil row yuzunden kapanmaz; release smoke ve APK dogrulama test sonrasi stale generated/native plugin veya Windows lint cache kilidiyle yalanci fail uretmez.
+- Risk skoru: Quran index crash `12/25 -> 3/25`; release registrant classpath `16/25 -> 3/25`; Appium lint cache false fail `9/25 -> 2/25`.
+- Rollback plani: Bu turdaki `lib/features/quran/surah_display_info.dart`, `test/surah_display_info_test.dart`, `pubspec.yaml`, `pubspec.lock`, `test/android_config_test.dart`, `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Quran indeks parser'i string-key map ve numeric-string tolerant helper'larla sertlestirildi.
+- `flutter_native_splash` release registrant classpath'i icin main dependency'ye tasindi.
+- Appium release smoke script'i Gradle daemon stop + release lint cache retry temizligi ile Windows handle gecikmesine dayanikli hale getirildi.
+
+### TESTER Degisikligi
+- Targeted Surah display test: `flutter test test\surah_display_info_test.dart --reporter compact` PASS, `6/6`.
+- Targeted Android config test: `flutter test test\android_config_test.dart --reporter compact` PASS, `7/7`.
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `14/14`.
+- Targeted bundled Quran provider test: `flutter test test\features\quran\providers\bundled_quran_provider_test.dart --reporter compact` PASS, `17/17`.
+- Targeted Surah reader test: `flutter test test\features\quran\surah_reading_page_test.dart --reporter compact` PASS, `6/6`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `768/768`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, GitHub/Cloudflare Quran audio dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `7739abe0-c44e-413a-8f90-059633aaaa8b`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `quranPlayback.clickedPlay=true`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Quran index malformed row crash riski kapatildi.
+- Release Appium smoke'un test sonrasi stale generated registrant ve native splash classpath kirmasi kapatildi.
+- Release Appium smoke'un Windows Gradle lint cache file-lock yalanci fail riski self-heal edildi.
+- Kalan bilincli risk: Kullanici talebine gore tum menu/tus/ayar/dil kombinasyonlari icin daha genis runtime QA matrisi cikarilip otomasyona baglanacak.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude route/menu/button/settings/language QA envanterini cikart, Appium/widget/static test kapsamini genislet, kapsanmayan her yuzeyi risk olarak sirala ve kapat.
