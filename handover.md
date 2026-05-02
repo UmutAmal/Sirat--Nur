@@ -22046,3 +22046,60 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings > Prayer Calculation method ve madhab bottom sheet selector'larini release Appium runtime matrix'e ekle.
+
+## 2026-05-03 TUR-551 - Settings Prayer Method And Madhab Runtime Guards
+
+### MASTER Karari
+- Risk: Namaz vakti hesabinin dini dogrulugu icin kritik olan Settings > Calculation Method ve Settings > Madhab selector'lari release Appium smoke'ta cihazda acilmiyor, seceneklerinin render oldugu ve default/guvenli secim sonrasi bottom sheet'in kapandigi kanitlanmiyordu. Bu, core prayer configuration icin P1 runtime completion bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:82` method tile'i `l10n.method` ile render ediyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:87` method tile'i `_showMethodPicker(context, ref)` ile bottom sheet aciyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:385` method picker `selectablePrayerMethods` listesini render ediyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:395` method secimi `updateCalculationMethod(method)` ile state/prefs zincirine baglaniyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:90` madhab tile'i render ediyor ve `lib/features/settings/settings_page.dart:97` `_showMadhabPicker(context, ref)` cagiriyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:410` madhab picker `selectableMadhabs` listesini render ediyor.
+  - Baslangic: `lib/features/settings/settings_provider.dart:361` method update'i resmi profil acilarini ve default madhab'i guncelliyor; `lib/features/settings/settings_provider.dart:379` madhab update'i prefs/state'e yaziyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:798` settings runtime summary'sine prayer method/madhab guard alanlari eklendi.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:907` release Appium smoke lokalize method aksiyonunu tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:910` `settings-prayer-method-picker` XML artifact'ini yaziyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:911` Diyanet/Egyptian/Karachi method seceneklerini gercek XML'de dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:915` default ve dini acidan yan etkisiz Diyanet secimini calistiriyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:920` method picker'in kapandigini gorunur picker seceneklerinin kaybolmasiyla dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:927` lokalize madhab aksiyonunu tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:930` `settings-madhab-picker` XML artifact'ini yaziyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:931` Hanafi/Shafi'i/Maliki seceneklerini gercek XML'de dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:935` default ve yan etkisiz Hanafi secimini calistiriyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1203` method secenekleri render olmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1209` method picker secim sonrasi kapanmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1215` madhab secenekleri render olmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1221` madhab picker secim sonrasi kapanmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:191` method/madhab summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:231` method/madhab XML artifact kayitlarinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik prayer method ve madhab selector'larini gercek cihazda acar, gorunur kurumsal/mezhep seceneklerini dogrular, default Diyanet/Hanafi secimini calistirir ve picker kapanmasini kanitlar.
+- Risk skoru: Prayer method/madhab runtime selector completion boslugu `16/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Settings runtime summary'sine `clickedPrayerMethod`, `containsPrayerMethodOptions`, `selectedDefaultPrayerMethod`, `prayerMethodPickerClosed`, `clickedMadhab`, `containsMadhabOptions`, `selectedDefaultMadhab`, `madhabPickerClosed` alanlari eklendi.
+- Method picker testinde default Diyanet secildi; bu mevcut varsayilan profili koruyarak action completion'i kanitlar.
+- Madhab picker testinde default Hanafi secildi; bu mevcut varsayilan mezhebi koruyarak action completion'i kanitlar.
+- Ilk Appium denemesinde `containsPrayerMethodOptions=false` fail etti; root cause `settings-prayer-method-picker` XML'inde `Muslim World League` satirinin ilk gorunur viewport'un altinda kalmasiydi. Guard, gercek gorunur resmi secenek seti olan Diyanet/Egyptian/Karachi uzerinden daraltildi ve yeniden dogrulandi.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- PowerShell parse check: `[System.Management.Automation.Language.Parser]::ParseFile(...)` PASS, parse error yok.
+- Diff check: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; store belgeleri, signing, Supabase public content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke ilk deneme: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` FAIL; session `54794e4f-d50c-41bb-b193-48778417c0a1`, method click/select/close true fakat `containsPrayerMethodOptions=false`. XML root cause gorunur viewport varsayimi olarak izole edildi.
+- Appium release runtime smoke son dogrulama: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `3f62cf1e-2d8a-4041-8639-597f5dc62138`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedPrayerMethod=true`, `settingsRuntime.containsPrayerMethodOptions=true`, `settingsRuntime.selectedDefaultPrayerMethod=true`, `settingsRuntime.prayerMethodPickerClosed=true`, `settingsRuntime.clickedMadhab=true`, `settingsRuntime.containsMadhabOptions=true`, `settingsRuntime.selectedDefaultMadhab=true`, `settingsRuntime.madhabPickerClosed=true`, `settingsRuntime.clickedLanguage=true`, `settingsRuntime.clickedClearCache=true`, `settingsRuntime.clickedDiagnostics=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- Not: Flutter/pub komutlari stdout'a `advisoriesUpdated must be a String` pub.dev advisory decode uyarilari yazmaya devam ediyor; exit code 0 ve tum final quality gate'ler PASS.
+
+### Risk Degisimi
+- Settings runtime matrix artik prayer method, madhab, language, clear cache ve diagnostics akisini tek release smoke zincirinde dogruluyor.
+- Dini hesaplama profili icin en riskli iki ayar selector'u artik gercek cihazdaki acilma/secenek/secim/kapanma davranisiyla korunuyor.
+- Kalan bilincli risk: Audio voice picker, qibla calibration slider, dark mode/compass smoothing switch'leri, About/Privacy/Share/Rate aksiyonlari ve coklu locale Appium kosulari henuz tam runtime matrix'te gezilmiyor; sonraki dongude audio voice veya qibla calibration selector akisi secilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings > Audio Voice picker veya Qibla calibration dialog akisini release Appium runtime matrix'e ekle.

@@ -795,6 +795,14 @@ $summary = [ordered]@{
     containsSettingsTitle = $false
     containsPrayerControls = $false
     containsSettingsDetail = $false
+    clickedPrayerMethod = $false
+    containsPrayerMethodOptions = $false
+    selectedDefaultPrayerMethod = $false
+    prayerMethodPickerClosed = $false
+    clickedMadhab = $false
+    containsMadhabOptions = $false
+    selectedDefaultMadhab = $false
+    madhabPickerClosed = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -868,6 +876,14 @@ try {
     containsSettingsTitle = $false
     containsPrayerControls = $false
     containsSettingsDetail = $false
+    clickedPrayerMethod = $false
+    containsPrayerMethodOptions = $false
+    selectedDefaultPrayerMethod = $false
+    prayerMethodPickerClosed = $false
+    clickedMadhab = $false
+    containsMadhabOptions = $false
+    selectedDefaultMadhab = $false
+    madhabPickerClosed = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -888,6 +904,46 @@ try {
     $settingsRuntime.containsPrayerControls = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.prayerCalculation, $smokeText.method, $smokeText.madhab, 'Prayer Calculation', 'Calculation Method', 'Asr Juristic Method'))
     $settingsRuntime.containsSettingsDetail = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.diagnosticsPrayerSource, $smokeText.audioVoice, $smokeText.location, 'Prayer Authority', 'Audio Voice', 'Location'))
     $settingsRuntime.containsAndroidSettings = $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
+    $settingsRuntime.clickedPrayerMethod = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.method, 'Calculation Method')) -Attempts 4
+    if ($settingsRuntime.clickedPrayerMethod) {
+      Start-Sleep -Milliseconds 700
+      $methodPickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-prayer-method-picker"
+      $settingsRuntime.containsPrayerMethodOptions = (Test-ContainsAny -Source $methodPickerXml -Needles (Select-NonEmptyUniqueStrings @('Diyanet'))) -and
+        (Test-ContainsAny -Source $methodPickerXml -Needles (Select-NonEmptyUniqueStrings @('Egyptian'))) -and
+        (Test-ContainsAny -Source $methodPickerXml -Needles (Select-NonEmptyUniqueStrings @('Karachi')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $methodPickerXml.Contains("Settings suggestions") -or $methodPickerXml.Contains("Android Settings") -or $methodPickerXml.Contains("Alarms & reminders")
+      $settingsRuntime.selectedDefaultPrayerMethod = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @('Diyanet')) -Attempts 4
+      if ($settingsRuntime.selectedDefaultPrayerMethod) {
+        for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.prayerMethodPickerClosed; $attempt++) {
+          Start-Sleep -Milliseconds 500
+          $methodAfterSelectXml = Get-AppiumSource -SessionId $sessionId
+          $settingsRuntime.prayerMethodPickerClosed = (-not (Test-ContainsAny -Source $methodAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @('Egyptian', 'Karachi')))) -and
+            (Test-ContainsAny -Source $methodAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+          $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $methodAfterSelectXml.Contains("Settings suggestions") -or $methodAfterSelectXml.Contains("Android Settings") -or $methodAfterSelectXml.Contains("Alarms & reminders")
+        }
+        Save-AppiumSource -SessionId $sessionId -Name "settings-prayer-method-after-select" | Out-Null
+      }
+    }
+    $settingsRuntime.clickedMadhab = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.madhab, 'Asr Juristic Method')) -Attempts 4
+    if ($settingsRuntime.clickedMadhab) {
+      Start-Sleep -Milliseconds 700
+      $madhabPickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-madhab-picker"
+      $settingsRuntime.containsMadhabOptions = (Test-ContainsAny -Source $madhabPickerXml -Needles (Select-NonEmptyUniqueStrings @('Hanafi'))) -and
+        (Test-ContainsAny -Source $madhabPickerXml -Needles (Select-NonEmptyUniqueStrings @("Shafi'i"))) -and
+        (Test-ContainsAny -Source $madhabPickerXml -Needles (Select-NonEmptyUniqueStrings @('Maliki')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $madhabPickerXml.Contains("Settings suggestions") -or $madhabPickerXml.Contains("Android Settings") -or $madhabPickerXml.Contains("Alarms & reminders")
+      $settingsRuntime.selectedDefaultMadhab = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @('Hanafi')) -Attempts 4
+      if ($settingsRuntime.selectedDefaultMadhab) {
+        for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.madhabPickerClosed; $attempt++) {
+          Start-Sleep -Milliseconds 500
+          $madhabAfterSelectXml = Get-AppiumSource -SessionId $sessionId
+          $settingsRuntime.madhabPickerClosed = (-not (Test-ContainsAny -Source $madhabAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @("Shafi'i", 'Maliki')))) -and
+            (Test-ContainsAny -Source $madhabAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+          $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $madhabAfterSelectXml.Contains("Settings suggestions") -or $madhabAfterSelectXml.Contains("Android Settings") -or $madhabAfterSelectXml.Contains("Alarms & reminders")
+        }
+        Save-AppiumSource -SessionId $sessionId -Name "settings-madhab-after-select" | Out-Null
+      }
+    }
     $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
     if ($settingsRuntime.clickedLanguage) {
       Start-Sleep -Milliseconds 700
@@ -1140,6 +1196,30 @@ if (-not $summary.settingsRuntime.containsPrayerControls) {
 }
 if (-not $summary.settingsRuntime.containsSettingsDetail) {
   $failures += "Settings runtime smoke did not render localized settings detail rows."
+}
+if (-not $summary.settingsRuntime.clickedPrayerMethod) {
+  $failures += "Settings runtime smoke could not click the localized prayer method action."
+}
+if (-not $summary.settingsRuntime.containsPrayerMethodOptions) {
+  $failures += "Settings runtime smoke did not render expected prayer method options."
+}
+if (-not $summary.settingsRuntime.selectedDefaultPrayerMethod) {
+  $failures += "Settings runtime smoke could not select the default Diyanet prayer method."
+}
+if (-not $summary.settingsRuntime.prayerMethodPickerClosed) {
+  $failures += "Settings runtime smoke did not close the prayer method picker after selecting Diyanet."
+}
+if (-not $summary.settingsRuntime.clickedMadhab) {
+  $failures += "Settings runtime smoke could not click the localized madhab action."
+}
+if (-not $summary.settingsRuntime.containsMadhabOptions) {
+  $failures += "Settings runtime smoke did not render expected madhab options."
+}
+if (-not $summary.settingsRuntime.selectedDefaultMadhab) {
+  $failures += "Settings runtime smoke could not select the default Hanafi madhab."
+}
+if (-not $summary.settingsRuntime.madhabPickerClosed) {
+  $failures += "Settings runtime smoke did not close the madhab picker after selecting Hanafi."
 }
 if (-not $summary.settingsRuntime.clickedLanguage) {
   $failures += "Settings runtime smoke could not click the localized language action."

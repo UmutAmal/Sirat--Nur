@@ -188,6 +188,14 @@ void main() {
       expect(script, contains('containsSettingsTitle'));
       expect(script, contains('containsPrayerControls'));
       expect(script, contains('containsSettingsDetail'));
+      expect(script, contains('clickedPrayerMethod'));
+      expect(script, contains('containsPrayerMethodOptions'));
+      expect(script, contains('selectedDefaultPrayerMethod'));
+      expect(script, contains('prayerMethodPickerClosed'));
+      expect(script, contains('clickedMadhab'));
+      expect(script, contains('containsMadhabOptions'));
+      expect(script, contains('selectedDefaultMadhab'));
+      expect(script, contains('madhabPickerClosed'));
       expect(script, contains('clickedLanguage'));
       expect(script, contains('containsLanguagePickerTitle'));
       expect(script, contains('containsLanguageOptions'));
@@ -220,6 +228,18 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-prayer-method-picker"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-madhab-picker"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-language-after-select"',
         ),
       );
@@ -239,6 +259,30 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not render localized prayer calculation controls.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render expected prayer method options.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not close the prayer method picker after selecting Diyanet.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render expected madhab options.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not close the madhab picker after selecting Hanafi.',
         ),
       );
       expect(
