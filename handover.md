@@ -21820,3 +21820,38 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings external action mocklari veya Appium Settings runtime matrix icin en yuksek getirili kucuk patch'i sec.
+
+## 2026-05-02 TUR-546 - Settings External Action Platform Guards
+
+### MASTER Karari
+- Risk: Settings ekraninda Rate App, Privacy Policy ve Share App tuslari onceki TUR-545 ile UI aksiyon matrisine girdi, fakat external platform kanallarina giden gercek payload dogrulanmiyordu. Yanlis URL, bos share metni veya lokalizasyon disi share copy regresyonu testten kacabilirdi.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:269` Rate App, `lib/features/settings/settings_page.dart:277` Share App ve `lib/features/settings/settings_page.dart:289` Privacy Policy tile'lari platform/plugin sonucuyla test edilmiyordu.
+  - Son durum: `test/features/settings/settings_page_test.dart:426` external URL action testi eklendi.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:430` `plugins.flutter.io/url_launcher` kanali mock'laniyor ve gercek tap sonrasi launch payload'i yakalaniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:453` Rate App tusunun `playStoreUrl` hedefini actigi dogrulaniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:458` Privacy Policy tusunun `privacyPolicyUrl` hedefini actigi dogrulaniyor.
+  - Son durum: `test/features/settings/settings_page_test.dart:461` share action testi eklendi.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:465` `dev.fluttercommunity.plus/share` kanali mock'laniyor.
+  - Regresyon guard: `test/features/settings/settings_page_test.dart:487` Share App tusunun `buildSettingsShareText(AppLocalizations.of(context)!)` ile uretilen lokalize app metadata metnini platforma gonderdigi dogrulaniyor.
+- Kullanici etkisi: Magaza puanlama, gizlilik politikasi ve paylasim tuslari artik sadece ekranda gorunmekle kalmiyor; dogru hedef/metinle platform katmanina gidiyor.
+- Risk skoru: Settings external action payload riski `10/25 -> 2/25`.
+- Rollback plani: Bu turdaki `test/features/settings/settings_page_test.dart` ek testleri ve bu handover girdisi geri alinabilir; urun kodu degismedi.
+
+### BUILDER Degisikligi
+- Urun kodu degistirilmedi.
+- SettingsPage testlerine `MethodChannel` mock'lari eklendi; yeni dependency eklenmedi.
+
+### TESTER Degisikligi
+- Targeted SettingsPage test: `flutter test test\features\settings\settings_page_test.dart --reporter compact` PASS, `19/19`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `777/777`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release env, Supabase public content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz. Not: pub.dev advisory decode icin `advisoriesUpdated must be a String` uyarisi stdout'a dustu ama script exit code 0 ve readiness PASS.
+- Diff checks ve added-line secret scan commit oncesi calistirilacak.
+
+### Risk Degisimi
+- Settings external URL/share payload regresyon boslugu kapatildi.
+- Kalan bilincli risk: Appium runtime script'i Settings ekraninin method/madhab/language/share/rate/privacy aksiyonlarini henuz release cihazda gezmiyor; sonraki dongude Appium Settings matrix genisletmesi degerlendirilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Appium runtime smoke kapsaminda Settings tab/route navigasyonu ve en az bir Settings action smoke guard'i ekle.

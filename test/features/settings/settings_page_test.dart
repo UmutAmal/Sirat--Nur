@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -420,6 +421,70 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(AboutDialog), findsOneWidget);
     expect(find.text(resolveAppVersion()), findsWidgets);
+  });
+
+  testWidgets('SettingsPage external URL actions launch approved targets', (
+    tester,
+  ) async {
+    final launchedUrls = <String>[];
+    const channel = MethodChannel('plugins.flutter.io/url_launcher');
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, (call) async {
+          if (call.method == 'launch') {
+            final args = call.arguments as Map<dynamic, dynamic>;
+            launchedUrls.add(args['url'] as String);
+            return true;
+          }
+          if (call.method == 'canLaunch') {
+            return true;
+          }
+          return null;
+        });
+    addTearDown(
+      () => TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(channel, null),
+    );
+
+    await pumpSettingsPage(tester, prefsValues: const {});
+
+    await tester.ensureVisible(find.widgetWithText(ListTile, 'Rate App'));
+    await tester.tap(find.widgetWithText(ListTile, 'Rate App'));
+    await tester.pumpAndSettle();
+    expect(launchedUrls.last, playStoreUrl);
+
+    await tester.ensureVisible(find.widgetWithText(ListTile, 'Privacy Policy'));
+    await tester.tap(find.widgetWithText(ListTile, 'Privacy Policy'));
+    await tester.pumpAndSettle();
+    expect(launchedUrls.last, privacyPolicyUrl);
+  });
+
+  testWidgets('SettingsPage share action sends localized app metadata', (
+    tester,
+  ) async {
+    Map<dynamic, dynamic>? shareArgs;
+    const channel = MethodChannel('dev.fluttercommunity.plus/share');
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, (call) async {
+          if (call.method == 'share') {
+            shareArgs = call.arguments as Map<dynamic, dynamic>;
+            return 'success';
+          }
+          return null;
+        });
+    addTearDown(
+      () => TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(channel, null),
+    );
+
+    await pumpSettingsPage(tester, prefsValues: const {});
+    final context = tester.element(find.byType(SettingsPage));
+    final expectedText = buildSettingsShareText(AppLocalizations.of(context)!);
+
+    await tester.ensureVisible(find.widgetWithText(ListTile, 'Share App'));
+    await tester.tap(find.widgetWithText(ListTile, 'Share App'));
+    await tester.pumpAndSettle();
+
+    expect(shareArgs?['text'], expectedText);
   });
 
   testWidgets('SettingsPage route actions reach their destinations', (
