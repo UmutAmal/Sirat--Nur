@@ -77,4 +77,17 @@ void main() {
       expect(find.textContaining('ٱللَّهِ'), findsNothing);
     },
   );
+
+  testWidgets('HomePage exposes settings action with localized tooltip', (
+    tester,
+  ) async {
+    await pumpHomePage(
+      tester,
+      dailyAyatOverride: (ref) async =>
+          throw StateError('daily_ayat_unavailable'),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.byTooltip('Settings'), findsOneWidget);
+  });
 }

@@ -29,6 +29,7 @@ void main() {
         'Qibla',
         'Zikr',
         'Calendar',
+        'Settings',
         'Places',
         'Downloads',
         'Analytics',
@@ -162,12 +163,43 @@ void main() {
       expect(script, contains('"appium:locale"'));
       expect(script, contains(r'smokeLocale = $normalizedSmokeLocale'));
       expect(script, contains(r'$smokeText.quran'));
+      expect(script, contains(r'$smokeText.settings'));
+      expect(script, contains(r'$smokeText.prayerCalculation'));
+      expect(script, contains(r'$smokeText.diagnosticsPrayerSource'));
       expect(script, contains(r'$smokeText.dailyVerse'));
       expect(script, contains(r'$smokeText.offlineQuranAudioPacks'));
       expect(script, contains(r'$smokeText.playSurahAudio'));
       expect(script, contains(r'$smokeText.pauseSurahAudio'));
       expect(script, contains(r'$smokeText.downloadAction'));
       expect(script, contains(r'$smokeText.cancelDownloadAction'));
+    });
+
+    test('deep checks settings screen at runtime', () {
+      expect(script, contains('settingsRuntime'));
+      expect(script, contains('clickedSettings'));
+      expect(script, contains('containsSettingsTitle'));
+      expect(script, contains('containsPrayerControls'));
+      expect(script, contains('containsSettingsDetail'));
+      expect(
+        script,
+        contains(r'Save-AppiumSource -SessionId $sessionId -Name "settings"'),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized settings action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render localized prayer calculation controls.',
+        ),
+      );
+      expect(
+        script,
+        contains('Settings runtime smoke opened Android Settings.'),
+      );
     });
 
     test('deep checks Quran surah audio playback at runtime', () {

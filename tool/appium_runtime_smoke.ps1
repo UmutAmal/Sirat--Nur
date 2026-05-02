@@ -528,6 +528,13 @@ function Get-SmokeTextBundle {
     getStarted = Get-ArbString -Messages $messages -Key 'getStarted' -Fallback 'Get Started'
     onboarding1Title = Get-ArbString -Messages $messages -Key 'onboarding1Title' -Fallback 'Welcome to Sirat-ı Nur'
     home = Get-ArbString -Messages $messages -Key 'home' -Fallback 'Home'
+    settings = Get-ArbString -Messages $messages -Key 'settings' -Fallback 'Settings'
+    prayerCalculation = Get-ArbString -Messages $messages -Key 'prayerCalculation' -Fallback 'Prayer Calculation'
+    method = Get-ArbString -Messages $messages -Key 'method' -Fallback 'Calculation Method'
+    madhab = Get-ArbString -Messages $messages -Key 'madhab' -Fallback 'Asr Juristic Method'
+    diagnosticsPrayerSource = Get-ArbString -Messages $messages -Key 'diagnosticsPrayerSource' -Fallback 'Prayer Authority'
+    audioVoice = Get-ArbString -Messages $messages -Key 'audioVoice' -Fallback 'Audio Voice'
+    location = Get-ArbString -Messages $messages -Key 'location' -Fallback 'Location'
     quran = Get-ArbString -Messages $messages -Key 'quran' -Fallback 'Quran'
     playSurahAudio = Get-ArbString -Messages $messages -Key 'playSurahAudio' -Fallback 'Play surah audio'
     pauseSurahAudio = Get-ArbString -Messages $messages -Key 'pauseSurahAudio' -Fallback 'Pause surah audio'
@@ -720,6 +727,13 @@ $summary = [ordered]@{
   homeContainsDailyVerse = $false
   homeContainsDailyVerseUnavailable = $false
   homeContainsNoInternetLegacy = $false
+  settingsRuntime = [ordered]@{
+    clickedSettings = $false
+    containsSettingsTitle = $false
+    containsPrayerControls = $false
+    containsSettingsDetail = $false
+    containsAndroidSettings = $false
+  }
   bottomNavResults = @()
   quranPlayback = [ordered]@{
     clickedQuran = $false
@@ -775,6 +789,26 @@ try {
   $summary.homeContainsDailyVerse = Test-ContainsAny -Source $homeXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.dailyVerse, 'Daily Verse'))
   $summary.homeContainsDailyVerseUnavailable = Test-ContainsAny -Source $homeXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.dailyVerseUnavailableTitle, 'Daily verse unavailable'))
   $summary.homeContainsNoInternetLegacy = Test-ContainsAny -Source $homeXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.noInternet, 'No Internet Connection'))
+
+  $settingsRuntime = [ordered]@{
+    clickedSettings = $false
+    containsSettingsTitle = $false
+    containsPrayerControls = $false
+    containsSettingsDetail = $false
+    containsAndroidSettings = $false
+  }
+  $settingsRuntime.clickedSettings = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')) -Attempts 6
+  if ($settingsRuntime.clickedSettings) {
+    Start-Sleep -Milliseconds 900
+    $settingsXml = Save-AppiumSource -SessionId $sessionId -Name "settings"
+    $settingsRuntime.containsSettingsTitle = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings'))
+    $settingsRuntime.containsPrayerControls = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.prayerCalculation, $smokeText.method, $smokeText.madhab, 'Prayer Calculation', 'Calculation Method', 'Asr Juristic Method'))
+    $settingsRuntime.containsSettingsDetail = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.diagnosticsPrayerSource, $smokeText.audioVoice, $smokeText.location, 'Prayer Authority', 'Audio Voice', 'Location'))
+    $settingsRuntime.containsAndroidSettings = $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
+    Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+    Start-Sleep -Milliseconds 800
+  }
+  $summary.settingsRuntime = $settingsRuntime
 
   $bottomNavTargets = @(
     [ordered]@{ label = 'Quran'; candidates = Select-NonEmptyUniqueStrings @($smokeText.quran, 'Quran') },
@@ -953,6 +987,21 @@ if ($summary.homeContainsDailyVerseUnavailable) {
 }
 if ($summary.homeContainsNoInternetLegacy) {
   $failures += "Home showed legacy No Internet Connection copy."
+}
+if (-not $summary.settingsRuntime.clickedSettings) {
+  $failures += "Settings runtime smoke could not click the localized settings action."
+}
+if (-not $summary.settingsRuntime.containsSettingsTitle) {
+  $failures += "Settings runtime smoke did not render the settings title after opening."
+}
+if (-not $summary.settingsRuntime.containsPrayerControls) {
+  $failures += "Settings runtime smoke did not render localized prayer calculation controls."
+}
+if (-not $summary.settingsRuntime.containsSettingsDetail) {
+  $failures += "Settings runtime smoke did not render localized settings detail rows."
+}
+if ($summary.settingsRuntime.containsAndroidSettings) {
+  $failures += "Settings runtime smoke opened Android Settings."
 }
 foreach ($item in $summary.bottomNavResults) {
   if (-not $item.clicked) {

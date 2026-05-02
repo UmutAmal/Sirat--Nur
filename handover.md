@@ -21855,3 +21855,49 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Appium runtime smoke kapsaminda Settings tab/route navigasyonu ve en az bir Settings action smoke guard'i ekle.
+
+## 2026-05-02 TUR-547 - Settings Runtime Smoke Guard
+
+### MASTER Karari
+- Risk: TUR-545 ve TUR-546 Settings aksiyonlarini widget/platform mock seviyesinde guvenceye aldi, fakat release APK uzerinde Home -> Settings canli navigasyonu ve Settings ekraninin kritik lokalize satirlari Appium runtime smoke tarafinda dogrulanmiyordu. Bu, accessibility etiketi kaybi, route bozulmasi veya Android Settings hijack regresyonunun store oncesi canli smoke'tan kacmasina neden olabilirdi.
+- Kanit:
+  - Baslangic: `tool/appium_runtime_smoke.ps1` onboarding, Home, bottom nav, Quran playback, quick access ve downloads runtime akisini geziyordu; Settings icin `settingsRuntime` summary/failure alani yoktu.
+  - Son durum: `lib/features/home/home_page.dart:92` Settings ikonuna `tooltip: l10n.settings` eklendi; Home appbar aksiyonu lokalize accessibility etiketiyle Appium tarafindan bulunabilir hale geldi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:531` smoke metin paketine lokalize `settings` label'i eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:532` smoke metin paketine lokalize `prayerCalculation` label'i eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:535` smoke metin paketine lokalize `diagnosticsPrayerSource` label'i eklendi.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:730` release smoke summary'sine `settingsRuntime` alani eklendi.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:800` Home uzerinden lokalize Settings aksiyonu tiklaniyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:804` Settings basligi gercek Appium XML kaynaginda dogrulaniyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:805` prayer calculation/method/madhab satirlari runtime'da dogrulaniyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:806` prayer authority/audio voice/location detay satirlari runtime'da dogrulaniyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:991` Settings tiklanamazsa smoke fail ediyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:1003` Settings akisi Android Settings'e kacarsa smoke fail ediyor.
+  - Statik script guard: `test/appium_runtime_smoke_script_test.dart:177` Appium scriptinde Settings runtime guard'inin kalici oldugunu test ediyor.
+  - Widget guard: `test/features/home/home_page_test.dart:81` HomePage Settings aksiyonunun lokalize tooltip ile acik oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings ekranini canli olarak acar, ana ayar satirlarini dogrular ve Android sistem ayarlarina kacis/regresyon riskini yakalar.
+- Risk skoru: Settings runtime navigasyon ve accessibility smoke boslugu `12/25 -> 2/25`.
+- Rollback plani: Bu turdaki `lib/features/home/home_page.dart`, `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart`, `test/features/home/home_page_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Home Settings ikonuna lokalize tooltip eklendi; bu hem erisilebilirlik hem de Appium selector kararliligi saglar.
+- Appium smoke scripti ARB'den Settings/Prayer Calculation/Method/Madhab/Prayer Authority/Audio Voice/Location metinlerini okuyacak sekilde genisletildi.
+- Release smoke akisi Home'dan Settings'e girip baslik, prayer controls, detail rows ve Android Settings hijack durumunu summary/failure zincirine bagliyor.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- Targeted HomePage test: `flutter test test\features\home\home_page_test.dart --reporter compact` PASS, `3/3`.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; Supabase public content, Quran audio GitHub/Cloudflare dagitimi, store belgeleri, signing, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `a54eafad-abd7-4118-834f-ef1b1c185583`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedSettings=true`, `settingsRuntime.containsSettingsTitle=true`, `settingsRuntime.containsPrayerControls=true`, `settingsRuntime.containsSettingsDetail=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Not: Flutter/pub komutlari stdout'a `advisoriesUpdated must be a String` pub.dev advisory decode uyarilari yazmaya devam ediyor; exit code 0 ve tum quality gate'ler PASS.
+
+### Risk Degisimi
+- Settings ekraninin release runtime'da hic gezilmemesi riski kapatildi.
+- Settings ikon accessibility label kaybi artik widget test ve Appium smoke ile yakalanir.
+- Kalan bilincli risk: Runtime Appium matrisi Settings icinde method/madhab/language/cache/diagnostics/share/rate/privacy aksiyonlarini tek tek cihazda henuz gezmiyor; widget/platform mock tarafinda kapali olsa da sonraki dongude canli Settings action matrix genisletmesi yapilabilir.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings icindeki daha derin runtime aksiyonlari veya route/menu/button envanterinde en yuksek riskli eksik yuzey secilip kapatilacak.

@@ -89,6 +89,7 @@ class HomePage extends ConsumerWidget {
         title: Text(l10n.appTitle),
         actions: [
           IconButton(
+            tooltip: l10n.settings,
             icon: const Icon(Icons.settings_rounded),
             onPressed: () => context.push('/settings'),
           ),
