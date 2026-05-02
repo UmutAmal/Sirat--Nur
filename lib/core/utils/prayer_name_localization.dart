@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:sirat_i_nur/core/utils/locale_utils.dart';
 import 'package:sirat_i_nur/l10n/app_localizations.dart';
 
 class PrayerLocalizer {
@@ -69,18 +70,6 @@ class PrayerLocalizer {
   }
 
   static Locale _parseLocale(String languageCode) {
-    final normalized = languageCode.trim().replaceAll('-', '_');
-    if (normalized.isEmpty) {
-      return const Locale('en');
-    }
-
-    final parts = normalized.split('_');
-    final language = parts.first.toLowerCase();
-    if (parts.length == 1) {
-      return Locale(language);
-    }
-
-    final country = parts[1].toUpperCase();
-    return Locale(language, country);
+    return parseLocaleCode(languageCode) ?? const Locale('en');
   }
 }

@@ -37,12 +37,21 @@ void main() {
       expect(PrayerLocalizer.dailyVerseLabel('tr'), 'Günün Ayeti');
     });
 
+    test('honors script and region subtags for widget labels', () {
+      expect(PrayerLocalizer.dailyVerseLabel('zh-Hant-TW'), '每日詩歌');
+      expect(PrayerLocalizer.nextPrayerLabel('zh_Hant_TW'), '下一次禮拜');
+    });
+
     test('falls back to English for unsupported locales', () {
       expect(PrayerLocalizer.notificationTitle('Asr', 'zz'), 'Time for Asr');
       expect(
         PrayerLocalizer.notificationBody('Asr', 'zz'),
         'It is time to pray Asr.',
       );
+    });
+
+    test('falls back to English for malformed locale codes', () {
+      expect(PrayerLocalizer.dailyVerseLabel('tr_bad_extra'), 'Daily Verse');
     });
 
     test('AdhanSchedulerService resolves channel copy through l10n', () {

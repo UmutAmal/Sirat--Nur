@@ -21651,3 +21651,39 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude ARB kalite borcu, verified religious content provenance ve kalan runtime cast yuzeyleri icin taramaya devam et.
+
+## 2026-05-02 TUR-542 - Prayer Widget Locale Subtag Canonicalization
+
+### MASTER Karari
+- Risk: PrayerLocalizer bildirim ve Android widget metinleri icin merkezi locale parser yerine gevsek lokal parser kullaniyordu. `zh-Hant-TW` gibi script+region kodlari country olarak `HANT` kabul edildigi icin generated l10n lookup Tayvan varyantina degil duz `zh` fallback'ine dusuyordu; malformed `tr_bad_extra` gibi kodlar da once `tr` davranisina yaklasabiliyordu.
+- Kanit:
+  - Baslangic: `lib/core/utils/prayer_name_localization.dart:71` `_parseLocale` `replaceAll('-', '_')` sonrasi sadece ikinci parcayi country kabul ediyordu.
+  - Baslangic: `lib/core/utils/prayer_name_localization.dart:82` fazla parca ve malformed locale kodlari reddedilmiyordu.
+  - Son durum: `lib/core/utils/prayer_name_localization.dart:73` `_parseLocale` artik merkezi `parseLocaleCode(languageCode) ?? const Locale('en')` zincirini kullaniyor.
+  - Regresyon guard: `test/prayer_name_localization_test.dart:40` `zh-Hant-TW` ve `zh_Hant_TW` icin Traditional Chinese widget label varyanti dogrulaniyor.
+  - Regresyon guard: `test/prayer_name_localization_test.dart:53` malformed `tr_bad_extra` kodunun English fallback'e dustugu dogrulaniyor.
+- Kullanici etkisi: Android widget ve adhan notification metinleri bolge/script subtags iceren dil ayarlarinda dogru generated locale varyantina gider; malformed locale kodlari yanlis yerel metin secmez.
+- Risk skoru: Etki 3 x Olasilik 3 = 9/25 -> 2/25.
+- Rollback plani: Bu turdaki `lib/core/utils/prayer_name_localization.dart`, `test/prayer_name_localization_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- PrayerLocalizer kendi parser'ini kaldirdi ve `core/utils/locale_utils.dart` icindeki canonical parser'a baglandi.
+- Kod kapsami iki dosyada tutuldu; l10n ARB veya generated dosyalara dokunulmadi.
+
+### TESTER Degisikligi
+- Targeted prayer localizer test: `flutter test test\prayer_name_localization_test.dart --reporter compact` PASS, `8/8`.
+- Targeted locale utils test: `flutter test test\locale_utils_test.dart --reporter compact` PASS, `4/4`.
+- Targeted Android widget localization test: `flutter test test\android_widget_localization_test.dart --reporter compact` PASS, `7/7`.
+- Targeted prayer coordinator test: `flutter test test\prayer_notification_coordinator_test.dart --reporter compact` PASS, `11/11`.
+- Full analyze: `flutter analyze` PASS.
+- Full tests: `flutter test --reporter compact` PASS, `764/764`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release env, Supabase public content, Quran audio GitHub/Cloudflare distribution, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `251b278d-cbe0-45cb-a09c-584b2968c188`, `quranPlayback.clickedPlay=true`, `downloadRuntime.startedDownload=true`, `downloadRuntime.clickedCancel=true`, `logcatCrashFree=true`, `failures=[]`, release APK size `94795658`.
+- Diff checks: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var. Added-line secret scan PASS.
+
+### Risk Degisimi
+- Widget/notification locale subtag drift riski: `9/25 -> 2/25`.
+- Kalan bilincli risk: l10n same-as-English borcu sahte ceviri uretmeden kademeli azaltilmali; runtime JSON/cast yuzeyleri ve religious content provenance taramasi sonraki dongude devam edecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude l10n debt, verified content provenance ve kalan runtime parser/cast yuzeylerini tekrar tara.
