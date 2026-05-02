@@ -168,6 +168,9 @@ void main() {
       expect(script, contains(r'$smokeText.diagnosticsPrayerSource'));
       expect(script, contains(r'$smokeText.clearCache'));
       expect(script, contains(r'$smokeText.cacheClearedSuccess'));
+      expect(script, contains(r'$smokeText.diagnostics'));
+      expect(script, contains(r'$smokeText.diagnosticsPrayerProfile'));
+      expect(script, contains(r'$smokeText.diagnosticsQuranDataset'));
       expect(script, contains(r'$smokeText.dailyVerse'));
       expect(script, contains(r'$smokeText.offlineQuranAudioPacks'));
       expect(script, contains(r'$smokeText.playSurahAudio'));
@@ -184,6 +187,9 @@ void main() {
       expect(script, contains('containsSettingsDetail'));
       expect(script, contains('clickedClearCache'));
       expect(script, contains('containsCacheClearedMessage'));
+      expect(script, contains('clickedDiagnostics'));
+      expect(script, contains('containsDiagnosticsTitle'));
+      expect(script, contains('containsDiagnosticsRows'));
       expect(script, contains('Click-ScrollableDescriptionContains'));
       expect(script, contains('Click-ScrollableTextContains'));
       expect(script, contains('Wait-ClickAnyScrollableText'));
@@ -195,6 +201,12 @@ void main() {
         script,
         contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-clear-cache"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-diagnostics"',
         ),
       );
       expect(
@@ -219,6 +231,18 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not show the localized cache cleared completion message.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized diagnostics action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render expected diagnostics rows.',
         ),
       );
       expect(

@@ -567,6 +567,11 @@ function Get-SmokeTextBundle {
     location = Get-ArbString -Messages $messages -Key 'location' -Fallback 'Location'
     clearCache = Get-ArbString -Messages $messages -Key 'clearCache' -Fallback 'Clear Cache'
     cacheClearedSuccess = Get-ArbString -Messages $messages -Key 'cacheClearedSuccess' -Fallback 'Cache cleared successfully'
+    diagnostics = Get-ArbString -Messages $messages -Key 'diagnostics' -Fallback 'Diagnostics'
+    version = Get-ArbString -Messages $messages -Key 'version' -Fallback 'Version'
+    diagnosticsPrayerProfile = Get-ArbString -Messages $messages -Key 'diagnosticsPrayerProfile' -Fallback 'Prayer Profile'
+    diagnosticsQuranDataset = Get-ArbString -Messages $messages -Key 'diagnosticsQuranDataset' -Fallback 'Quran Dataset'
+    diagnosticsLocalizationLocales = Get-ArbString -Messages $messages -Key 'diagnosticsLocalizationLocales' -Fallback 'Localization Locales'
     quran = Get-ArbString -Messages $messages -Key 'quran' -Fallback 'Quran'
     playSurahAudio = Get-ArbString -Messages $messages -Key 'playSurahAudio' -Fallback 'Play surah audio'
     pauseSurahAudio = Get-ArbString -Messages $messages -Key 'pauseSurahAudio' -Fallback 'Pause surah audio'
@@ -789,6 +794,9 @@ $summary = [ordered]@{
     containsSettingsDetail = $false
     clickedClearCache = $false
     containsCacheClearedMessage = $false
+    clickedDiagnostics = $false
+    containsDiagnosticsTitle = $false
+    containsDiagnosticsRows = $false
     containsAndroidSettings = $false
   }
   bottomNavResults = @()
@@ -854,6 +862,9 @@ try {
     containsSettingsDetail = $false
     clickedClearCache = $false
     containsCacheClearedMessage = $false
+    clickedDiagnostics = $false
+    containsDiagnosticsTitle = $false
+    containsDiagnosticsRows = $false
     containsAndroidSettings = $false
   }
   $settingsRuntime.clickedSettings = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')) -Attempts 6
@@ -874,6 +885,32 @@ try {
         $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $settingsActionXml.Contains("Settings suggestions") -or $settingsActionXml.Contains("Android Settings") -or $settingsActionXml.Contains("Alarms & reminders")
       }
       Save-AppiumSource -SessionId $sessionId -Name "settings-clear-cache" | Out-Null
+    }
+    $settingsRuntime.clickedDiagnostics = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.diagnostics, 'Diagnostics')) -Attempts 4
+    if ($settingsRuntime.clickedDiagnostics) {
+      $diagnosticsTitleNeedles = Select-NonEmptyUniqueStrings @($smokeText.diagnostics, 'Diagnostics')
+      $diagnosticsRowNeedles = Select-NonEmptyUniqueStrings @(
+        $smokeText.version,
+        $smokeText.diagnosticsPrayerProfile,
+        $smokeText.diagnosticsPrayerSource,
+        $smokeText.diagnosticsQuranDataset,
+        $smokeText.diagnosticsLocalizationLocales,
+        'Version',
+        'Prayer Profile',
+        'Prayer Authority',
+        'Quran Dataset',
+        'Localization Locales'
+      )
+      for ($attempt = 0; $attempt -lt 12 -and -not ($settingsRuntime.containsDiagnosticsTitle -and $settingsRuntime.containsDiagnosticsRows); $attempt++) {
+        Start-Sleep -Milliseconds 750
+        $diagnosticsXml = Get-AppiumSource -SessionId $sessionId
+        $settingsRuntime.containsDiagnosticsTitle = Test-ContainsAny -Source $diagnosticsXml -Needles $diagnosticsTitleNeedles
+        $settingsRuntime.containsDiagnosticsRows = Test-ContainsAny -Source $diagnosticsXml -Needles $diagnosticsRowNeedles
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $diagnosticsXml.Contains("Settings suggestions") -or $diagnosticsXml.Contains("Android Settings") -or $diagnosticsXml.Contains("Alarms & reminders")
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-diagnostics" | Out-Null
+      Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+      Start-Sleep -Milliseconds 800
     }
     Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
     Start-Sleep -Milliseconds 800
@@ -1075,6 +1112,15 @@ if (-not $summary.settingsRuntime.clickedClearCache) {
 }
 if (-not $summary.settingsRuntime.containsCacheClearedMessage) {
   $failures += "Settings runtime smoke did not show the localized cache cleared completion message."
+}
+if (-not $summary.settingsRuntime.clickedDiagnostics) {
+  $failures += "Settings runtime smoke could not click the localized diagnostics action."
+}
+if (-not $summary.settingsRuntime.containsDiagnosticsTitle) {
+  $failures += "Settings runtime smoke did not render the diagnostics title after opening."
+}
+if (-not $summary.settingsRuntime.containsDiagnosticsRows) {
+  $failures += "Settings runtime smoke did not render expected diagnostics rows."
 }
 if ($summary.settingsRuntime.containsAndroidSettings) {
   $failures += "Settings runtime smoke opened Android Settings."

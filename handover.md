@@ -21944,3 +21944,53 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings diagnostics route veya language picker gibi bir sonraki yuksek getirili runtime aksiyonu canli Appium matrix'e ekle.
+
+## 2026-05-02 TUR-549 - Settings Diagnostics Runtime Route Guard
+
+### MASTER Karari
+- Risk: Settings icindeki Diagnostics rotasi production icin kritik saglik/icerik dogrulama yuzeyi olmasina ragmen release Appium smoke tarafinda cihazda acilmiyor, baslik ve satir render'i dogrulanmiyordu. Bu, "menu calisiyor gorunuyor ama hedef rota gercekte aciliyor mu?" sinifinda P1 runtime kapsama bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:244` Diagnostics tile'ini gosteriyor ve `lib/features/settings/settings_page.dart:246` `context.push('/settings/diagnostics')` ile rotaya gidiyor.
+  - Baslangic: `lib/features/settings/diagnostics_page.dart:535` Diagnostics sayfa basligini `l10n.diagnostics` ile render ediyor.
+  - Baslangic: `lib/features/settings/diagnostics_page.dart:301` ve devamindaki satirlar version/location/prayer/Quran/localization diagnostik satirlarini uretiyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:570` ARB'den lokalize `diagnostics` label'i okunuyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:572` ARB'den lokalize `diagnosticsPrayerProfile` label'i okunuyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:574` ARB'den lokalize `diagnosticsLocalizationLocales` label'i okunuyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:889` release Appium smoke Settings icinde lokalize Diagnostics aksiyonunu scroll ederek tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:907` Diagnostics basligini gercek Appium XML kaynaginda dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:908` version/prayer/Quran/localization satirlarindan en az birini gercek XML'de dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:911` `settings-diagnostics` XML artifact'ini build altina yaziyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1116` Diagnostics tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1119` Diagnostics basligi render olmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1122` beklenen diagnostik satirlar render olmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:171` scriptte localized diagnostics smoke label'inin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:190` scriptte `clickedDiagnostics`/title/rows summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:203` scriptte `settings-diagnostics` XML artifact kaydinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings > Diagnostics rotasini cihazda acar, baslik ve saglik satirlarinin render oldugunu kanitlar, Android sistem ayarlarina kacis olursa fail eder.
+- Risk skoru: Settings Diagnostics runtime route boslugu `12/25 -> 3/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke metin paketine Diagnostics ve diagnostik satir label'lari eklendi.
+- Settings runtime summary'sine `clickedDiagnostics`, `containsDiagnosticsTitle` ve `containsDiagnosticsRows` alanlari eklendi.
+- Clear Cache completion guard'indan sonra ayni Settings oturumunda Diagnostics tile'i scroll ile tiklaniyor, sayfa XML'i okunuyor, baslik ve satirlar dogrulaniyor, sonra back ile Settings akisi temiz kapatiliyor.
+- Sessiz ilk runtime fail root cause'u: `adb devices` bos oldugu icin `tool/appium_runtime_smoke.ps1:95` hazir cihaz yok hatasina dusuyordu. PATH'teki `emulator` komutu yoktu, bu nedenle `C:\Users\UMUT\AppData\Local\Android\sdk\emulator\emulator.exe` dogrudan kullanilarak `Medium_Phone_API_36.1` baslatildi ve `emulator-5554 boot_completed=1` dogrulandi.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- Diff check: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; store belgeleri, signing, Supabase public content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke ilk deneme: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` FAIL, stdout/stderr bos; root cause `adb devices` listesinin bos olmasi olarak izole edildi.
+- Emulator self-heal: `Medium_Phone_API_36.1` AVD'si `Start-Process` ile baslatildi; `emulator-5554 boot_completed=1` PASS.
+- Appium release runtime smoke son dogrulama: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `02af8fdc-c849-4d18-8978-93f77f7de30c`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedSettings=true`, `settingsRuntime.clickedClearCache=true`, `settingsRuntime.containsCacheClearedMessage=true`, `settingsRuntime.clickedDiagnostics=true`, `settingsRuntime.containsDiagnosticsTitle=true`, `settingsRuntime.containsDiagnosticsRows=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- Not: Flutter/pub komutlari stdout'a `advisoriesUpdated must be a String` pub.dev advisory decode uyarilari yazmaya devam ediyor; exit code 0 ve tum final quality gate'ler PASS.
+
+### Risk Degisimi
+- Settings icindeki ikinci canli runtime action/route guard'i eklendi: Clear Cache aksiyon completion'i + Diagnostics route render'i ayni release smoke zincirinde dogrulaniyor.
+- Diagnostics ekrani app saglik sinyallerinin kullaniciya gorunur olmasi nedeniyle artik route regression'a karsi korunuyor.
+- Kalan bilincli risk: Settings language picker, prayer method/madhab secimleri, About/Privacy/Terms/Share/Rate aksiyonlari ve tum locale kombinasyonlari Appium runtime matrix'te henuz tek tek gezilmiyor; sonraki dongude en yuksek getirili Settings action matrix parcasi secilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings icindeki language picker veya prayer method/madhab selector akisini release Appium runtime matrix'e ekle.
