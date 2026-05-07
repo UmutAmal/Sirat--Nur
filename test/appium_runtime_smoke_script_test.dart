@@ -163,10 +163,12 @@ void main() {
       expect(script, contains('"appium:locale"'));
       expect(script, contains(r'smokeLocale = $normalizedSmokeLocale'));
       expect(script, contains(r'$smokeText.quran'));
+      expect(script, contains(r'$smokeText.appTitle'));
       expect(script, contains(r'$smokeText.settings'));
       expect(script, contains(r'$smokeText.language'));
       expect(script, contains(r'$smokeText.selectLanguage'));
       expect(script, contains(r'$smokeText.systemDefault'));
+      expect(script, contains(r'$smokeText.close'));
       expect(script, contains(r'$smokeText.save'));
       expect(script, contains(r'$smokeText.cancel'));
       expect(script, contains(r'$smokeText.prayerCalculation'));
@@ -215,6 +217,9 @@ void main() {
       expect(script, contains('compassSmoothingStateChanged'));
       expect(script, contains('clickedDarkMode'));
       expect(script, contains('darkModeStateChanged'));
+      expect(script, contains('clickedAboutVersion'));
+      expect(script, contains('containsAboutDialog'));
+      expect(script, contains('closedAboutDialog'));
       expect(script, contains('Click-SwitchForDescriptionContains'));
       expect(script, contains('Get-LabeledSwitchChecked'));
       expect(script, contains('clickedLanguage'));
@@ -315,6 +320,18 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-about-dialog"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-about-after-close"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-diagnostics"',
         ),
       );
@@ -389,6 +406,22 @@ void main() {
         contains(
           'Settings runtime smoke did not observe the dark mode switch state change.',
         ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized version/about action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render the localized about dialog content.',
+        ),
+      );
+      expect(
+        script,
+        contains('Settings runtime smoke did not close the about dialog.'),
       );
       expect(
         script,

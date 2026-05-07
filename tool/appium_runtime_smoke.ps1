@@ -612,12 +612,14 @@ function Get-SmokeTextBundle {
     locale = $LocaleTag
     next = Get-ArbString -Messages $messages -Key 'next' -Fallback 'Next'
     getStarted = Get-ArbString -Messages $messages -Key 'getStarted' -Fallback 'Get Started'
+    appTitle = Get-ArbString -Messages $messages -Key 'appTitle' -Fallback 'Sirat-i Nur'
     onboarding1Title = Get-ArbString -Messages $messages -Key 'onboarding1Title' -Fallback 'Welcome to Sirat-ı Nur'
     home = Get-ArbString -Messages $messages -Key 'home' -Fallback 'Home'
     settings = Get-ArbString -Messages $messages -Key 'settings' -Fallback 'Settings'
     language = Get-ArbString -Messages $messages -Key 'language' -Fallback 'Language'
     selectLanguage = Get-ArbString -Messages $messages -Key 'selectLanguage' -Fallback 'Select Language'
     systemDefault = Get-ArbString -Messages $messages -Key 'systemDefault' -Fallback 'System Default'
+    close = Get-ArbString -Messages $messages -Key 'close' -Fallback 'Close'
     save = Get-ArbString -Messages $messages -Key 'save' -Fallback 'Save'
     cancel = Get-ArbString -Messages $messages -Key 'cancel' -Fallback 'Cancel'
     prayerCalculation = Get-ArbString -Messages $messages -Key 'prayerCalculation' -Fallback 'Prayer Calculation'
@@ -744,6 +746,11 @@ if (-not (Test-AppiumServerReady)) {
 
 $normalizedSmokeLocale = Resolve-SmokeLocaleTag -Locale $SmokeLocale
 $smokeText = Get-SmokeTextBundle -LocaleTag $normalizedSmokeLocale
+$pubspecVersion = '2.0.0+1'
+$pubspecVersionMatch = Select-String -Path (Join-Path (Resolve-Path (Join-Path $PSScriptRoot '..')) 'pubspec.yaml') -Pattern '^\s*version:\s*(\S+)' -ErrorAction SilentlyContinue | Select-Object -First 1
+if ($pubspecVersionMatch -and $pubspecVersionMatch.Matches.Count -gt 0) {
+  $pubspecVersion = $pubspecVersionMatch.Matches[0].Groups[1].Value.Trim()
+}
 $smokeLocaleParts = $normalizedSmokeLocale.Split('_')
 $smokeLanguage = $smokeLocaleParts[0]
 $smokeRegion = if ($smokeLocaleParts.Count -gt 1) { $smokeLocaleParts[1] } else { $null }
@@ -878,6 +885,9 @@ $summary = [ordered]@{
     compassSmoothingStateChanged = $false
     clickedDarkMode = $false
     darkModeStateChanged = $false
+    clickedAboutVersion = $false
+    containsAboutDialog = $false
+    closedAboutDialog = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -971,6 +981,9 @@ try {
     compassSmoothingStateChanged = $false
     clickedDarkMode = $false
     darkModeStateChanged = $false
+    clickedAboutVersion = $false
+    containsAboutDialog = $false
+    closedAboutDialog = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -1104,6 +1117,27 @@ try {
         $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $darkModeAfterXml.Contains("Settings suggestions") -or $darkModeAfterXml.Contains("Android Settings") -or $darkModeAfterXml.Contains("Alarms & reminders")
       }
       Save-AppiumSource -SessionId $sessionId -Name "settings-dark-mode-after-toggle" | Out-Null
+    }
+    $settingsRuntime.clickedAboutVersion = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.version, 'Version')) -Attempts 4
+    if ($settingsRuntime.clickedAboutVersion) {
+      Start-Sleep -Milliseconds 700
+      $aboutDialogXml = Save-AppiumSource -SessionId $sessionId -Name "settings-about-dialog"
+      $settingsRuntime.containsAboutDialog = (Test-ContainsAny -Source $aboutDialogXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.appTitle, 'Sirat-i Nur', 'Sirat'))) -and
+        (Test-ContainsAny -Source $aboutDialogXml -Needles (Select-NonEmptyUniqueStrings @($pubspecVersion, '2.0.0+1'))) -and
+        (Test-ContainsAny -Source $aboutDialogXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.close, 'Close', 'CLOSE')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $aboutDialogXml.Contains("Settings suggestions") -or $aboutDialogXml.Contains("Android Settings") -or $aboutDialogXml.Contains("Alarms & reminders")
+      $closedByButton = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.close, 'Close', 'CLOSE')) -Attempts 3
+      if (-not $closedByButton) {
+        Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+      }
+      for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.closedAboutDialog; $attempt++) {
+        Start-Sleep -Milliseconds 500
+        $aboutAfterCloseXml = Get-AppiumSource -SessionId $sessionId
+        $settingsRuntime.closedAboutDialog = (-not (Test-ContainsAny -Source $aboutAfterCloseXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.close, 'Close', 'CLOSE')))) -and
+          (Test-ContainsAny -Source $aboutAfterCloseXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $aboutAfterCloseXml.Contains("Settings suggestions") -or $aboutAfterCloseXml.Contains("Android Settings") -or $aboutAfterCloseXml.Contains("Alarms & reminders")
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-about-after-close" | Out-Null
     }
     $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
     if ($settingsRuntime.clickedLanguage) {
@@ -1417,6 +1451,15 @@ if (-not $summary.settingsRuntime.clickedDarkMode) {
 }
 if (-not $summary.settingsRuntime.darkModeStateChanged) {
   $failures += "Settings runtime smoke did not observe the dark mode switch state change."
+}
+if (-not $summary.settingsRuntime.clickedAboutVersion) {
+  $failures += "Settings runtime smoke could not click the localized version/about action."
+}
+if (-not $summary.settingsRuntime.containsAboutDialog) {
+  $failures += "Settings runtime smoke did not render the localized about dialog content."
+}
+if (-not $summary.settingsRuntime.closedAboutDialog) {
+  $failures += "Settings runtime smoke did not close the about dialog."
 }
 if (-not $summary.settingsRuntime.clickedLanguage) {
   $failures += "Settings runtime smoke could not click the localized language action."

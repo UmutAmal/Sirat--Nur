@@ -22267,3 +22267,60 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings About/Privacy/Terms/Share/Rate aksiyonlari veya coklu locale runtime smoke risklerinden en yuksek getirili parcayi sec.
+
+## 2026-05-07 TUR-555 - Settings About Dialog Runtime Guard
+
+### MASTER Karari
+- Risk: Settings > About > Version aksiyonu widget testinde aciliyordu ancak release APK Appium smoke gercek cihazda About dialog'unun acildigini, uygulama adi/surum/Close icerigini gosterdigini ve kapandigini kanitlamiyordu. Bu, Settings utility/action matrix icin P1 runtime completion bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:251` About bolumu render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:256` Version satiri `_settingsTile` olarak render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:261` Version tap ile `showAboutDialog` cagiriyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:263` About dialog `l10n.appTitle` kullaniyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:264` About dialog `appVersion` kullaniyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:265` About dialog `resolveAppLegalese(l10n.appTitle)` kullaniyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:411` utility action widget testi Clear Cache ve Version aksiyonlarini kapsiyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:422` widget testi AboutDialog render oldugunu dogruluyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:615` smoke metin paketine lokalize `appTitle` eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:622` smoke metin paketine lokalize `close` eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:749` Appium smoke pubspec `version:` degerini okuyor; surum sabit stringe kilitlenmiyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1121` lokalize Version/About aksiyonunu scroll ederek tikliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1124` `settings-about-dialog` XML artifact'ini yaziyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1125` About dialog icinde app title, pubspec version ve Close aksiyonunu birlikte zorunlu kiliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1129` lokalize Close aksiyonunu tikliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1136` Close sonrasi dialog kapanisini ve Settings basligina donusu dogruluyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1140` `settings-about-after-close` XML artifact'ini yaziyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1455` Version/About aksiyonu tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1458` About dialog icerigi eksikse smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1461` About dialog kapanmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:166` Appium smoke'un `appTitle` label'ini kullandigini test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:171` Appium smoke'un `close` label'ini kullandigini test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:220` About runtime summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:323` About dialog XML artifact kaydinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:413` About fail-fast mesajlarinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings > Version aksiyonunun gercek cihazda dialog acma, app title/surum/close render etme ve kapanma davranisini kanitliyor; sahte "buton var ama tamamlanmiyor" riski azaltiliyor.
+- Risk skoru: Settings About runtime completion boslugu `12/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke localization bundle'ina `appTitle` ve `close` eklendi.
+- Pubspec version runtime tarafinda okunup About dialog icindeki surum metniyle eslestirildi.
+- Settings runtime matrix'e Version/About dialog acma, icerik dogrulama, Close aksiyonuyla kapatma ve kapanis XML artifact'i eklendi.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- PowerShell parse check: `[System.Management.Automation.Language.Parser]::ParseFile(...)` PASS, parse error yok.
+- Release Appium smoke ilk deneme: FAIL; root cause `RepoRoot` degiskeninin script scope'unda henuz set edilmeden kullanilmasiydi. Fix: pubspec path'i `$PSScriptRoot` uzerinden resolve edildi.
+- Release Appium smoke son deneme: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `9a26e33c-f774-4c5d-90b8-6e119b574557`, `settingsRuntime.clickedAboutVersion=true`, `settingsRuntime.containsAboutDialog=true`, `settingsRuntime.closedAboutDialog=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- XML kaniti: `build\appium-runtime-smoke-settings-about-dialog.xml:15` `Sirat-i Nur`, `build\appium-runtime-smoke-settings-about-dialog.xml:16` `2.0.0+1`, `build\appium-runtime-smoke-settings-about-dialog.xml:21` `Close`.
+- XML kaniti: `build\appium-runtime-smoke-settings-about-after-close.xml:12` Settings basligina donus, `build\appium-runtime-smoke-settings-about-after-close.xml:34` Version satiri, `build\appium-runtime-smoke-settings-about-after-close.xml:35` Rate App, `build\appium-runtime-smoke-settings-about-after-close.xml:36` Share App, `build\appium-runtime-smoke-settings-about-after-close.xml:37` Privacy Policy gorundu.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release signing, Supabase verified content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+
+### Risk Degisimi
+- Settings runtime matrix artik prayer method, madhab, audio voice, qibla calibration dialog, compass smoothing, dark mode, about dialog, language, clear cache ve diagnostics akisini tek release smoke zincirinde dogruluyor.
+- Kalan bilincli risk: Rate App, Share App ve Privacy Policy dis aksiyonlari gercek cihazda izole Appium guard'a henuz alinmadi; dis uygulama/browser/share-sheet yan etkileri nedeniyle bir sonraki dongude o akisin guvenli test stratejisi secilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings external action matrix icin dis uygulamaya cikis yan etkisini yakalayan guvenli Appium guard veya URL/share abstraction testlerini genislet.
