@@ -174,6 +174,8 @@ void main() {
       expect(script, contains(r'$smokeText.qiblaCalibration'));
       expect(script, contains(r'$smokeText.calibrationOffset'));
       expect(script, contains(r'$smokeText.manualCorrectionDesc'));
+      expect(script, contains(r'$smokeText.compassSmoothing'));
+      expect(script, contains(r'$smokeText.darkMode'));
       expect(script, contains(r'$smokeText.clearCache'));
       expect(script, contains(r'$smokeText.cacheClearedSuccess'));
       expect(script, contains(r'$smokeText.diagnostics'));
@@ -209,6 +211,12 @@ void main() {
       expect(script, contains('containsQiblaCalibrationDialog'));
       expect(script, contains('savedQiblaCalibration'));
       expect(script, contains('qiblaCalibrationDialogClosed'));
+      expect(script, contains('clickedCompassSmoothing'));
+      expect(script, contains('compassSmoothingStateChanged'));
+      expect(script, contains('clickedDarkMode'));
+      expect(script, contains('darkModeStateChanged'));
+      expect(script, contains('Click-SwitchForDescriptionContains'));
+      expect(script, contains('Get-LabeledSwitchChecked'));
       expect(script, contains('clickedLanguage'));
       expect(script, contains('containsLanguagePickerTitle'));
       expect(script, contains('containsLanguageOptions'));
@@ -283,6 +291,30 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-compass-smoothing-before-toggle"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-compass-smoothing-after-toggle"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-dark-mode-before-toggle"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-dark-mode-after-toggle"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-diagnostics"',
         ),
       );
@@ -344,6 +376,18 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not close the qibla calibration dialog after saving.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not observe the compass smoothing switch state change.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not observe the dark mode switch state change.',
         ),
       );
       expect(

@@ -451,6 +451,62 @@ function Test-ContainsAny {
   return $false
 }
 
+function ConvertTo-XPathLiteral {
+  param([Parameter(Mandatory = $true)][string]$Value)
+
+  if (-not $Value.Contains("'")) {
+    return "'$Value'"
+  }
+
+  return '"' + ($Value -replace '"', '') + '"'
+}
+
+function Scroll-ToDescriptionContains {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string]$Label
+  )
+
+  $selector = "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().descriptionContains(`"$Label`"))"
+  $element = Find-AppiumElement -SessionId $SessionId -Using "-android uiautomator" -Selector $selector
+  return $null -ne $element
+}
+
+function Click-SwitchForDescriptionContains {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string]$Label
+  )
+
+  Scroll-ToDescriptionContains -SessionId $SessionId -Label $Label | Out-Null
+  $literal = ConvertTo-XPathLiteral -Value $Label
+  $selector = "//android.view.View[contains(@content-desc, $literal)]//android.widget.Switch"
+  $element = Find-AppiumElement -SessionId $SessionId -Using "xpath" -Selector $selector
+  if ($null -eq $element) {
+    return $false
+  }
+
+  return Click-AppiumElement -SessionId $SessionId -Element $element
+}
+
+function Get-LabeledSwitchChecked {
+  param(
+    [Parameter(Mandatory = $true)][string]$Source,
+    [Parameter(Mandatory = $true)][string]$Label
+  )
+
+  $escapedLabel = [regex]::Escape($Label)
+  $match = [regex]::Match(
+    $Source,
+    "content-desc=`"[^`"]*$escapedLabel[^`"]*`"[\s\S]*?<android\.widget\.Switch[^>]*checked=`"(true|false)`""
+  )
+  if (-not $match.Success) {
+    return $null
+  }
+
+  return $match.Groups[1].Value -eq 'true'
+}
+
 function Select-NonEmptyUniqueStrings {
   param([string[]]$Values)
 
@@ -572,6 +628,8 @@ function Get-SmokeTextBundle {
     qiblaCalibration = Get-ArbString -Messages $messages -Key 'qiblaCalibration' -Fallback 'Qibla Calibration'
     calibrationOffset = Get-ArbString -Messages $messages -Key 'calibrationOffset' -Fallback 'Calibration Offset'
     manualCorrectionDesc = Get-ArbString -Messages $messages -Key 'manualCorrectionDesc' -Fallback 'Adjust if your compass needs a manual correction. Positive values rotate clockwise.'
+    compassSmoothing = Get-ArbString -Messages $messages -Key 'compassSmoothing' -Fallback 'Compass Smoothing'
+    darkMode = Get-ArbString -Messages $messages -Key 'darkMode' -Fallback 'Dark Mode'
     location = Get-ArbString -Messages $messages -Key 'location' -Fallback 'Location'
     clearCache = Get-ArbString -Messages $messages -Key 'clearCache' -Fallback 'Clear Cache'
     cacheClearedSuccess = Get-ArbString -Messages $messages -Key 'cacheClearedSuccess' -Fallback 'Cache cleared successfully'
@@ -816,6 +874,10 @@ $summary = [ordered]@{
     containsQiblaCalibrationDialog = $false
     savedQiblaCalibration = $false
     qiblaCalibrationDialogClosed = $false
+    clickedCompassSmoothing = $false
+    compassSmoothingStateChanged = $false
+    clickedDarkMode = $false
+    darkModeStateChanged = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -905,6 +967,10 @@ try {
     containsQiblaCalibrationDialog = $false
     savedQiblaCalibration = $false
     qiblaCalibrationDialogClosed = $false
+    clickedCompassSmoothing = $false
+    compassSmoothingStateChanged = $false
+    clickedDarkMode = $false
+    darkModeStateChanged = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -1006,6 +1072,38 @@ try {
         }
         Save-AppiumSource -SessionId $sessionId -Name "settings-qibla-calibration-after-save" | Out-Null
       }
+    }
+    Scroll-ToDescriptionContains -SessionId $sessionId -Label $smokeText.compassSmoothing | Out-Null
+    $compassSmoothingBeforeXml = Save-AppiumSource -SessionId $sessionId -Name "settings-compass-smoothing-before-toggle"
+    $compassSmoothingBefore = Get-LabeledSwitchChecked -Source $compassSmoothingBeforeXml -Label $smokeText.compassSmoothing
+    $settingsRuntime.clickedCompassSmoothing = Click-SwitchForDescriptionContains -SessionId $sessionId -Label $smokeText.compassSmoothing
+    if ($settingsRuntime.clickedCompassSmoothing) {
+      for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.compassSmoothingStateChanged; $attempt++) {
+        Start-Sleep -Milliseconds 500
+        $compassSmoothingAfterXml = Get-AppiumSource -SessionId $sessionId
+        $compassSmoothingAfter = Get-LabeledSwitchChecked -Source $compassSmoothingAfterXml -Label $smokeText.compassSmoothing
+        $settingsRuntime.compassSmoothingStateChanged = ($null -ne $compassSmoothingBefore) -and
+          ($null -ne $compassSmoothingAfter) -and
+          ($compassSmoothingBefore -ne $compassSmoothingAfter)
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $compassSmoothingAfterXml.Contains("Settings suggestions") -or $compassSmoothingAfterXml.Contains("Android Settings") -or $compassSmoothingAfterXml.Contains("Alarms & reminders")
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-compass-smoothing-after-toggle" | Out-Null
+    }
+    Scroll-ToDescriptionContains -SessionId $sessionId -Label $smokeText.darkMode | Out-Null
+    $darkModeBeforeXml = Save-AppiumSource -SessionId $sessionId -Name "settings-dark-mode-before-toggle"
+    $darkModeBefore = Get-LabeledSwitchChecked -Source $darkModeBeforeXml -Label $smokeText.darkMode
+    $settingsRuntime.clickedDarkMode = Click-SwitchForDescriptionContains -SessionId $sessionId -Label $smokeText.darkMode
+    if ($settingsRuntime.clickedDarkMode) {
+      for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.darkModeStateChanged; $attempt++) {
+        Start-Sleep -Milliseconds 500
+        $darkModeAfterXml = Get-AppiumSource -SessionId $sessionId
+        $darkModeAfter = Get-LabeledSwitchChecked -Source $darkModeAfterXml -Label $smokeText.darkMode
+        $settingsRuntime.darkModeStateChanged = ($null -ne $darkModeBefore) -and
+          ($null -ne $darkModeAfter) -and
+          ($darkModeBefore -ne $darkModeAfter)
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $darkModeAfterXml.Contains("Settings suggestions") -or $darkModeAfterXml.Contains("Android Settings") -or $darkModeAfterXml.Contains("Alarms & reminders")
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-dark-mode-after-toggle" | Out-Null
     }
     $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
     if ($settingsRuntime.clickedLanguage) {
@@ -1307,6 +1405,18 @@ if (-not $summary.settingsRuntime.savedQiblaCalibration) {
 }
 if (-not $summary.settingsRuntime.qiblaCalibrationDialogClosed) {
   $failures += "Settings runtime smoke did not close the qibla calibration dialog after saving."
+}
+if (-not $summary.settingsRuntime.clickedCompassSmoothing) {
+  $failures += "Settings runtime smoke could not click the localized compass smoothing switch."
+}
+if (-not $summary.settingsRuntime.compassSmoothingStateChanged) {
+  $failures += "Settings runtime smoke did not observe the compass smoothing switch state change."
+}
+if (-not $summary.settingsRuntime.clickedDarkMode) {
+  $failures += "Settings runtime smoke could not click the localized dark mode switch."
+}
+if (-not $summary.settingsRuntime.darkModeStateChanged) {
+  $failures += "Settings runtime smoke did not observe the dark mode switch state change."
 }
 if (-not $summary.settingsRuntime.clickedLanguage) {
   $failures += "Settings runtime smoke could not click the localized language action."

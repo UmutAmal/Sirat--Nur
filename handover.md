@@ -22204,3 +22204,66 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings > Compass Smoothing ve Dark Mode switch action completion guard'larini ekle.
+
+## 2026-05-07 TUR-554 - Settings Switch Runtime State Guard
+
+### MASTER Karari
+- Risk: Settings > Compass Smoothing ve Dark Mode switch'leri widget seviyesinde toggle ediliyordu ancak release APK Appium smoke gercek cihazda ilgili `android.widget.Switch` node'unu tiklayip state degisiminin tamamlandigini kanitlamiyordu. Bu, ayar ekrani icin P1 runtime completion bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:180` Compass Smoothing `_switchTile` olarak render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:183` Compass Smoothing basligi `l10n.compassSmoothing` ile geliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:197` Dark Mode `_switchTile` olarak render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:200` Dark Mode basligi `l10n.darkMode` ile geliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:372` `_switchTile` gercek `Switch.adaptive` widget'ini trailing olarak kullaniyor.
+  - Baslangic: `lib/features/settings/settings_provider.dart:397` `toggleQiblaSmoothing` SharedPreferences'a `qiblaSmoothingEnabled` yazip state'i guncelliyor.
+  - Baslangic: `lib/features/settings/settings_provider.dart:502` `toggleDarkMode` SharedPreferences'a `isDarkMode` yazip state'i guncelliyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:454` XPath literal escape helper'i eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:464` lokalize label'a scroll helper'i eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:475` label altindaki gercek `android.widget.Switch` node'unu tiklayan helper eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:492` label altindaki switch checked state'ini XML'den okuyan helper eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:631` smoke metin paketine `compassSmoothing` ARB label'i eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:632` smoke metin paketine `darkMode` ARB label'i eklendi.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1076` Compass Smoothing label'ina scroll ediyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1077` `settings-compass-smoothing-before-toggle` XML artifact'ini yaziyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1079` Compass Smoothing switch node'unu tikliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1085` before/after checked state farkini zorunlu kiliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1090` `settings-compass-smoothing-after-toggle` XML artifact'ini yaziyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1092` Dark Mode label'ina scroll ediyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1093` `settings-dark-mode-before-toggle` XML artifact'ini yaziyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1095` Dark Mode switch node'unu tikliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1101` before/after checked state farkini zorunlu kiliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1106` `settings-dark-mode-after-toggle` XML artifact'ini yaziyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1409` lokalize Compass Smoothing switch tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1412` Compass Smoothing state degisimi gorulmezse smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1415` lokalize Dark Mode switch tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1418` Dark Mode state degisimi gorulmezse smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:177` switch label'larinin smoke bundle'da kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:214` switch runtime summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:294` Compass Smoothing before XML artifact kaydini test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:312` Dark Mode after XML artifact kaydini test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings > Compass Smoothing ve Dark Mode switch'lerini gercek cihazda label'a bagli switch node'undan tikliyor, persisted state zincirine giden UI davranisini checked state farkiyla kanitliyor ve sahte basariyi engelliyor.
+- Risk skoru: Settings switch runtime completion boslugu `14/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke'a XPath label escaping, label'a scroll, label altindaki switch'i tiklama ve switch checked state okuma helper'lari eklendi.
+- Settings runtime matrix'e Compass Smoothing ve Dark Mode before/after XML artifact'lari ve state-change guard'lari eklendi.
+- Guard sadece ekrandaki label varligina bakmiyor; gercek `android.widget.Switch` checked degeri degismedikce basarili saymiyor.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- PowerShell parse check: `[System.Management.Automation.Language.Parser]::ParseFile(...)` PASS, parse error yok.
+- Diff check: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release signing, Supabase verified content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `52c33643-fb7e-4581-b9f8-f0effa189d3b`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedCompassSmoothing=true`, `settingsRuntime.compassSmoothingStateChanged=true`, `settingsRuntime.clickedDarkMode=true`, `settingsRuntime.darkModeStateChanged=true`, `settingsRuntime.clickedQiblaCalibration=true`, `settingsRuntime.clickedAudioVoice=true`, `settingsRuntime.clickedLanguage=true`, `settingsRuntime.clickedClearCache=true`, `settingsRuntime.clickedDiagnostics=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- XML kaniti: `build\appium-runtime-smoke-settings-compass-smoothing-before-toggle.xml:28` Compass Smoothing switch `checked="true"`; `build\appium-runtime-smoke-settings-compass-smoothing-after-toggle.xml:28` `checked="false"`.
+- XML kaniti: `build\appium-runtime-smoke-settings-dark-mode-before-toggle.xml:34` Dark Mode switch `checked="true"`; `build\appium-runtime-smoke-settings-dark-mode-after-toggle.xml:34` `checked="false"`.
+
+### Risk Degisimi
+- Settings runtime matrix artik prayer method, madhab, audio voice, qibla calibration dialog, compass smoothing, dark mode, language, clear cache ve diagnostics akisini tek release smoke zincirinde dogruluyor.
+- Kalan bilincli risk: About/Privacy/Terms/Share/Rate aksiyonlari ve coklu locale Appium kosulari henuz tam runtime matrix'te gezilmiyor; sonraki dongude Settings action matrix veya coklu locale smoke parcasi secilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings About/Privacy/Terms/Share/Rate aksiyonlari veya coklu locale runtime smoke risklerinden en yuksek getirili parcayi sec.
