@@ -95,6 +95,76 @@ function Assert-AdbDeviceAvailable {
   throw "ADB device '$DeviceName' is not connected and ready. Start the emulator, authorize USB debugging, or pass -DeviceName with a ready adb device before running Appium smoke. Current adb devices: $knownDevicesText"
 }
 
+function Get-DartConstString {
+  param(
+    [Parameter(Mandatory = $true)][string]$Path,
+    [Parameter(Mandatory = $true)][string]$Name
+  )
+
+  if (-not (Test-Path $Path)) {
+    throw "Dart source file not found while resolving ${Name}: $Path"
+  }
+
+  $source = Get-Content -Raw -Path $Path
+  $pattern = "const\s+String\s+$([regex]::Escape($Name))\s*=\s*'([^']+)';"
+  $match = [regex]::Match($source, $pattern)
+  if (-not $match.Success) {
+    throw "Could not resolve const String $Name from $Path"
+  }
+
+  return $match.Groups[1].Value.Trim()
+}
+
+function New-AndroidIntentResolution {
+  param([Parameter(Mandatory = $true)][string]$Url)
+
+  return [ordered]@{
+    url = $Url
+    resolved = $false
+    activity = ''
+    output = ''
+    exitCode = $null
+  }
+}
+
+function Resolve-AndroidViewIntent {
+  param(
+    [Parameter(Mandatory = $true)][string]$DeviceName,
+    [Parameter(Mandatory = $true)][string]$Url
+  )
+
+  $resolution = New-AndroidIntentResolution -Url $Url
+  if ([string]::IsNullOrWhiteSpace($Url)) {
+    return $resolution
+  }
+
+  $previousErrorActionPreference = $ErrorActionPreference
+  $ErrorActionPreference = 'Continue'
+  try {
+    $output = adb -s $DeviceName shell cmd package resolve-activity --brief -a android.intent.action.VIEW -d $Url 2>&1
+    $exitCode = $LASTEXITCODE
+  } finally {
+    $ErrorActionPreference = $previousErrorActionPreference
+  }
+
+  $outputText = ($output | Out-String).Trim()
+  $activity = ''
+  foreach ($line in $output) {
+    $trimmed = ([string]$line).Trim()
+    if ($trimmed -match '^[A-Za-z0-9_.]+/[A-Za-z0-9_.$]+$') {
+      $activity = $trimmed
+    }
+  }
+
+  $resolution.exitCode = $exitCode
+  $resolution.output = $outputText
+  $resolution.activity = $activity
+  $resolution.resolved = ($exitCode -eq 0) -and
+    (-not [string]::IsNullOrWhiteSpace($activity)) -and
+    (-not $outputText.Contains('No activity found'))
+  return $resolution
+}
+
 function Stop-AndroidGradleDaemons {
   $androidDir = Join-Path $PSScriptRoot '..\android'
   $gradleWrapper = Join-Path $androidDir 'gradlew.bat'
@@ -637,7 +707,9 @@ function Get-SmokeTextBundle {
     cacheClearedSuccess = Get-ArbString -Messages $messages -Key 'cacheClearedSuccess' -Fallback 'Cache cleared successfully'
     diagnostics = Get-ArbString -Messages $messages -Key 'diagnostics' -Fallback 'Diagnostics'
     version = Get-ArbString -Messages $messages -Key 'version' -Fallback 'Version'
+    rateApp = Get-ArbString -Messages $messages -Key 'rateApp' -Fallback 'Rate App'
     shareApp = Get-ArbString -Messages $messages -Key 'shareApp' -Fallback 'Share App'
+    privacyPolicy = Get-ArbString -Messages $messages -Key 'privacyPolicy' -Fallback 'Privacy Policy'
     diagnosticsPrayerProfile = Get-ArbString -Messages $messages -Key 'diagnosticsPrayerProfile' -Fallback 'Prayer Profile'
     diagnosticsQuranDataset = Get-ArbString -Messages $messages -Key 'diagnosticsQuranDataset' -Fallback 'Quran Dataset'
     diagnosticsLocalizationLocales = Get-ArbString -Messages $messages -Key 'diagnosticsLocalizationLocales' -Fallback 'Localization Locales'
@@ -752,6 +824,11 @@ $pubspecVersionMatch = Select-String -Path (Join-Path (Resolve-Path (Join-Path $
 if ($pubspecVersionMatch -and $pubspecVersionMatch.Matches.Count -gt 0) {
   $pubspecVersion = $pubspecVersionMatch.Matches[0].Groups[1].Value.Trim()
 }
+$appMetadataPath = Join-Path (Resolve-Path (Join-Path $PSScriptRoot '..')) 'lib\core\services\app_metadata_service.dart'
+$playStoreRuntimeUrl = Get-DartConstString -Path $appMetadataPath -Name 'playStoreUrl'
+$privacyPolicyRuntimeUrl = Get-DartConstString -Path $appMetadataPath -Name 'privacyPolicyUrl'
+$rateAppIntentResolution = New-AndroidIntentResolution -Url $playStoreRuntimeUrl
+$privacyPolicyIntentResolution = New-AndroidIntentResolution -Url $privacyPolicyRuntimeUrl
 $smokeLocaleParts = $normalizedSmokeLocale.Split('_')
 $smokeLanguage = $smokeLocaleParts[0]
 $smokeRegion = if ($smokeLocaleParts.Count -gt 1) { $smokeLocaleParts[1] } else { $null }
@@ -767,6 +844,8 @@ $requiresLocalAdb = (-not $SkipBuildInstall) -or (-not $SkipLogcat)
 if ($requiresLocalAdb) {
   Require-Command -Name 'adb' -InstallHint 'Install Android platform-tools and ensure adb is on PATH, or pass both -SkipBuildInstall and -SkipLogcat only when using a remote Appium device.'
   Assert-AdbDeviceAvailable -DeviceName $DeviceName
+  $rateAppIntentResolution = Resolve-AndroidViewIntent -DeviceName $DeviceName -Url $playStoreRuntimeUrl
+  $privacyPolicyIntentResolution = Resolve-AndroidViewIntent -DeviceName $DeviceName -Url $privacyPolicyRuntimeUrl
 }
 
 if (-not $SkipBuildInstall) {
@@ -889,9 +968,19 @@ $summary = [ordered]@{
     clickedAboutVersion = $false
     containsAboutDialog = $false
     closedAboutDialog = $false
+    clickedRateApp = $false
+    rateAppIntentResolved = [bool]$rateAppIntentResolution.resolved
+    rateAppResolvedActivity = $rateAppIntentResolution.activity
+    openedRateAppExternal = $false
+    dismissedRateAppExternal = $false
     clickedShareApp = $false
     containsShareSheet = $false
     dismissedShareSheet = $false
+    clickedPrivacyPolicy = $false
+    privacyPolicyIntentResolved = [bool]$privacyPolicyIntentResolution.resolved
+    privacyPolicyResolvedActivity = $privacyPolicyIntentResolution.activity
+    openedPrivacyPolicyExternal = $false
+    dismissedPrivacyPolicyExternal = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -988,9 +1077,19 @@ try {
     clickedAboutVersion = $false
     containsAboutDialog = $false
     closedAboutDialog = $false
+    clickedRateApp = $false
+    rateAppIntentResolved = [bool]$rateAppIntentResolution.resolved
+    rateAppResolvedActivity = $rateAppIntentResolution.activity
+    openedRateAppExternal = $false
+    dismissedRateAppExternal = $false
     clickedShareApp = $false
     containsShareSheet = $false
     dismissedShareSheet = $false
+    clickedPrivacyPolicy = $false
+    privacyPolicyIntentResolved = [bool]$privacyPolicyIntentResolution.resolved
+    privacyPolicyResolvedActivity = $privacyPolicyIntentResolution.activity
+    openedPrivacyPolicyExternal = $false
+    dismissedPrivacyPolicyExternal = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -1146,6 +1245,25 @@ try {
       }
       Save-AppiumSource -SessionId $sessionId -Name "settings-about-after-close" | Out-Null
     }
+    $settingsRuntime.clickedRateApp = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.rateApp, 'Rate App')) -Attempts 4
+    if ($settingsRuntime.clickedRateApp) {
+      Start-Sleep -Milliseconds 1200
+      $rateAppExternalXml = Save-AppiumSource -SessionId $sessionId -Name "settings-rate-app-external"
+      $settingsRuntime.openedRateAppExternal = $rateAppExternalXml.Contains('com.android.intentresolver') -or
+        $rateAppExternalXml.Contains('com.android.vending') -or
+        $rateAppExternalXml.Contains('play.google.com') -or
+        (Test-ContainsAny -Source $rateAppExternalXml -Needles (Select-NonEmptyUniqueStrings @('Google Play', 'Play Store', 'Open with', 'Chrome', 'Sign in to find the latest Android apps')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $rateAppExternalXml.Contains("Settings suggestions") -or $rateAppExternalXml.Contains("Android Settings") -or $rateAppExternalXml.Contains("Alarms & reminders")
+      Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+      for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.dismissedRateAppExternal; $attempt++) {
+        Start-Sleep -Milliseconds 500
+        $rateAppAfterDismissXml = Get-AppiumSource -SessionId $sessionId
+        $settingsRuntime.dismissedRateAppExternal = (Test-ContainsAny -Source $rateAppAfterDismissXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings'))) -and
+          (Test-ContainsAny -Source $rateAppAfterDismissXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.rateApp, 'Rate App')))
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $rateAppAfterDismissXml.Contains("Settings suggestions") -or $rateAppAfterDismissXml.Contains("Android Settings") -or $rateAppAfterDismissXml.Contains("Alarms & reminders")
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-rate-app-after-dismiss" | Out-Null
+    }
     $settingsRuntime.clickedShareApp = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.shareApp, 'Share App')) -Attempts 4
     if ($settingsRuntime.clickedShareApp) {
       Start-Sleep -Milliseconds 1000
@@ -1163,6 +1281,28 @@ try {
         $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $shareAfterDismissXml.Contains("Settings suggestions") -or $shareAfterDismissXml.Contains("Android Settings") -or $shareAfterDismissXml.Contains("Alarms & reminders")
       }
       Save-AppiumSource -SessionId $sessionId -Name "settings-share-after-dismiss" | Out-Null
+    }
+    $settingsRuntime.clickedPrivacyPolicy = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.privacyPolicy, 'Privacy Policy')) -Attempts 4
+    if ($settingsRuntime.clickedPrivacyPolicy) {
+      Start-Sleep -Milliseconds 1500
+      $privacyPolicyExternalXml = Save-AppiumSource -SessionId $sessionId -Name "settings-privacy-policy-external"
+      $settingsRuntime.openedPrivacyPolicyExternal = $privacyPolicyExternalXml.Contains('com.android.chrome') -or
+        $privacyPolicyExternalXml.Contains('raw.githubusercontent.com') -or
+        $privacyPolicyExternalXml.Contains('githubusercontent') -or
+        (Test-ContainsAny -Source $privacyPolicyExternalXml -Needles (Select-NonEmptyUniqueStrings @('Chrome', 'Privacy Policy', 'Open with')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $privacyPolicyExternalXml.Contains("Settings suggestions") -or $privacyPolicyExternalXml.Contains("Android Settings") -or $privacyPolicyExternalXml.Contains("Alarms & reminders")
+      Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+      for ($attempt = 0; $attempt -lt 10 -and -not $settingsRuntime.dismissedPrivacyPolicyExternal; $attempt++) {
+        Start-Sleep -Milliseconds 600
+        $privacyPolicyAfterDismissXml = Get-AppiumSource -SessionId $sessionId
+        $settingsRuntime.dismissedPrivacyPolicyExternal = (Test-ContainsAny -Source $privacyPolicyAfterDismissXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings'))) -and
+          (Test-ContainsAny -Source $privacyPolicyAfterDismissXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.privacyPolicy, 'Privacy Policy')))
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $privacyPolicyAfterDismissXml.Contains("Settings suggestions") -or $privacyPolicyAfterDismissXml.Contains("Android Settings") -or $privacyPolicyAfterDismissXml.Contains("Alarms & reminders")
+        if (-not $settingsRuntime.dismissedPrivacyPolicyExternal -and $attempt -eq 4) {
+          Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+        }
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-privacy-policy-after-dismiss" | Out-Null
     }
     $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
     if ($settingsRuntime.clickedLanguage) {
@@ -1486,6 +1626,18 @@ if (-not $summary.settingsRuntime.containsAboutDialog) {
 if (-not $summary.settingsRuntime.closedAboutDialog) {
   $failures += "Settings runtime smoke did not close the about dialog."
 }
+if (-not $summary.settingsRuntime.rateAppIntentResolved) {
+  $failures += "Settings runtime smoke could not resolve Android VIEW intent for the Rate App URL."
+}
+if (-not $summary.settingsRuntime.clickedRateApp) {
+  $failures += "Settings runtime smoke could not click the localized rate app action."
+}
+if (-not $summary.settingsRuntime.openedRateAppExternal) {
+  $failures += "Settings runtime smoke did not open an external target for Rate App."
+}
+if (-not $summary.settingsRuntime.dismissedRateAppExternal) {
+  $failures += "Settings runtime smoke did not dismiss the Rate App external target back to Settings."
+}
 if (-not $summary.settingsRuntime.clickedShareApp) {
   $failures += "Settings runtime smoke could not click the localized share app action."
 }
@@ -1494,6 +1646,18 @@ if (-not $summary.settingsRuntime.containsShareSheet) {
 }
 if (-not $summary.settingsRuntime.dismissedShareSheet) {
   $failures += "Settings runtime smoke did not dismiss the Android share sheet back to Settings."
+}
+if (-not $summary.settingsRuntime.privacyPolicyIntentResolved) {
+  $failures += "Settings runtime smoke could not resolve Android VIEW intent for the Privacy Policy URL."
+}
+if (-not $summary.settingsRuntime.clickedPrivacyPolicy) {
+  $failures += "Settings runtime smoke could not click the localized privacy policy action."
+}
+if (-not $summary.settingsRuntime.openedPrivacyPolicyExternal) {
+  $failures += "Settings runtime smoke did not open an external target for Privacy Policy."
+}
+if (-not $summary.settingsRuntime.dismissedPrivacyPolicyExternal) {
+  $failures += "Settings runtime smoke did not dismiss the Privacy Policy external target back to Settings."
 }
 if (-not $summary.settingsRuntime.clickedLanguage) {
   $failures += "Settings runtime smoke could not click the localized language action."

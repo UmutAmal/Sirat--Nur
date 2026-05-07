@@ -22377,3 +22377,68 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings Rate App ve Privacy Policy URL runtime guard stratejisini uygula.
+
+## 2026-05-07 TUR-557 - Settings External URL Runtime Guard
+
+### MASTER Karari
+- Risk: Settings > Rate App ve Settings > Privacy Policy aksiyonlari widget testinde mock URL launcher ile dogrulaniyordu, fakat release APK Appium smoke gercek Android cihazda URL intent'inin cozuldugunu, dis hedefe cikildigini ve Settings ekranina geri donuldugunu kanitlamiyordu. Bu, store-ready urunde "tus var ama cihazda tamamlanmiyor" seklinde P1 runtime completion bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:269` Rate App `_settingsTile` olarak render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:274` Rate App tap ile `launchExternalHttpUrl(context, playStoreUrl)` cagiriyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:292` Privacy Policy `_settingsTile` olarak render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:295` Privacy Policy tap ile `launchExternalHttpUrl(context, privacyPolicyUrl)` cagiriyor.
+  - Baslangic: `lib/core/services/app_metadata_service.dart:28` `privacyPolicyUrl` tanimli.
+  - Baslangic: `lib/core/services/app_metadata_service.dart:30` `playStoreUrl` tanimli.
+  - Baslangic: `test/features/settings/settings_page_test.dart:450` widget testi Rate App satirini tikliyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:453` widget testi mock URL'nin `playStoreUrl` oldugunu dogruluyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:455` widget testi Privacy Policy satirini tikliyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:458` widget testi mock URL'nin `privacyPolicyUrl` oldugunu dogruluyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:98` Dart metadata sabitlerini smoke script tarafinda kaynaktan okumak icin `Get-DartConstString` eklendi.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:130` Android `VIEW` intent resolver kontrolu icin `Resolve-AndroidViewIntent` eklendi.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:710` smoke metin paketine lokalize `rateApp` label'i eklendi.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:712` smoke metin paketine lokalize `privacyPolicy` label'i eklendi.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:828` `playStoreUrl` metadata'dan okunuyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:829` `privacyPolicyUrl` metadata'dan okunuyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:847` Rate App URL icin Android VIEW intent'i cozuluyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:848` Privacy Policy URL icin Android VIEW intent'i cozuluyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1248` lokalize Rate App aksiyonunu scroll ederek tikliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1252` Rate App dis hedefini Android resolver, Play Store paketi veya Play Store UI ipuclariyla dogruluyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1285` lokalize Privacy Policy aksiyonunu scroll ederek tikliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1289` Privacy Policy dis hedefini Chrome/githubusercontent/Privacy Policy ipuclariyla dogruluyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1630` Rate App URL Android VIEW intent'i cozulmezse smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1632` Rate App tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1635` Rate App dis hedef acmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1651` Privacy Policy URL Android VIEW intent'i cozulmezse smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1653` Privacy Policy tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1656` Privacy Policy dis hedef acmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:231` Rate App intent summary alaninin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:235` Play Store paketi `com.android.vending` algisinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:366` Rate App external XML artifact kaydinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:384` Privacy Policy external XML artifact kaydinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:532` Privacy Policy intent fail-fast mesajinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings > Rate App ve Settings > Privacy Policy tuslarinin gercek Android ortaminda dis uygulamaya cikabildigini ve kullanici geri dondugunde Settings ekraninin tekrar kullanilabilir kaldigini kanitliyor.
+- Risk skoru: Settings external URL runtime completion boslugu `12/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke script'i app metadata URL sabitlerini Dart kaynagindan okuyacak sekilde genisletildi; URL drift riski azaltildi.
+- Android `cmd package resolve-activity --brief -a android.intent.action.VIEW -d <url>` kontrolleri summary'ye eklendi.
+- Settings runtime matrix'e Rate App dis hedef acma/kapatma ve Privacy Policy dis hedef acma/kapatma guard'lari eklendi.
+- Play Store olmayan veya ilk acilista sign-in gosteren emulatorlerde gercek dis hedef `com.android.vending` ve Chrome ilk kurulum UI'si kanit olarak kabul edildi; Android Settings hijack guard'i aynen korundu.
+
+### TESTER Degisikligi
+- PowerShell parse check ilk deneme: FAIL; root cause `"${Name}"` yerine `"$Name:"` interpolasyonu nedeniyle PowerShell degisken siniri hatasiydi. Fix: `${Name}` kullanildi.
+- PowerShell parse check son deneme: PASS, parse error yok.
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- Release Appium smoke ilk deneme: FAIL; root cause Rate App gercekte `com.android.vending` Play Store paketine acildi ama guard sadece resolver/Chrome/metin ipuclarini kabul ediyordu. Fix: `com.android.vending` ve Play Store sign-in metni kabul edildi.
+- Release Appium smoke son deneme: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `2e20e216-0eea-4a96-bcde-b221902be2df`, `settingsRuntime.clickedRateApp=true`, `settingsRuntime.rateAppIntentResolved=true`, `settingsRuntime.openedRateAppExternal=true`, `settingsRuntime.dismissedRateAppExternal=true`, `settingsRuntime.clickedPrivacyPolicy=true`, `settingsRuntime.privacyPolicyIntentResolved=true`, `settingsRuntime.openedPrivacyPolicyExternal=true`, `settingsRuntime.dismissedPrivacyPolicyExternal=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- XML kaniti: `build\appium-runtime-smoke-settings-rate-app-external.xml:3` package `com.android.vending`; `build\appium-runtime-smoke-settings-rate-app-external.xml:15` Play Store sign-in metni gorundu.
+- XML kaniti: `build\appium-runtime-smoke-settings-rate-app-after-dismiss.xml:12` Settings basligina donus; `build\appium-runtime-smoke-settings-rate-app-after-dismiss.xml:35` Rate App satiri tekrar gorundu.
+- XML kaniti: `build\appium-runtime-smoke-settings-privacy-policy-external.xml:3` package `com.android.chrome`; `build\appium-runtime-smoke-settings-privacy-policy-after-dismiss.xml` Settings'e donus guard'i tarafindan dogrulandi.
+
+### Risk Degisimi
+- Settings runtime matrix artik prayer method, madhab, audio voice, qibla calibration dialog, compass smoothing, dark mode, about dialog, Rate App, Share App, Privacy Policy, language, clear cache ve diagnostics akisini tek release smoke zincirinde dogruluyor.
+- Kalan bilincli risk: L10n taramasinda nadir locale'lerde settings utility/paylasim metinleri icin EN fallback kalintilari goruluyor; AGENTS.md Translation Engine kurallari geregi bir sonraki dongude uydurma yapmadan kaynak-guvenli ceviri/debt guard stratejisiyle ele alinacak.
+
+### Sonraki Adim
+- `flutter analyze`, tam `flutter test`, store-readiness, secret scan ve diff check kapilarini calistir; gecerse commit + push yap. Sonraki dongude l10n fallback debt taramasini ve yanlis/karisik settings metinlerini hedefle.

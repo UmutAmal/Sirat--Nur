@@ -181,7 +181,9 @@ void main() {
       expect(script, contains(r'$smokeText.clearCache'));
       expect(script, contains(r'$smokeText.cacheClearedSuccess'));
       expect(script, contains(r'$smokeText.diagnostics'));
+      expect(script, contains(r'$smokeText.rateApp'));
       expect(script, contains(r'$smokeText.shareApp'));
+      expect(script, contains(r'$smokeText.privacyPolicy'));
       expect(script, contains(r'$smokeText.diagnosticsPrayerProfile'));
       expect(script, contains(r'$smokeText.diagnosticsQuranDataset'));
       expect(script, contains(r'$smokeText.dailyVerse'));
@@ -221,10 +223,28 @@ void main() {
       expect(script, contains('clickedAboutVersion'));
       expect(script, contains('containsAboutDialog'));
       expect(script, contains('closedAboutDialog'));
+      expect(script, contains('Get-DartConstString'));
+      expect(script, contains('playStoreUrl'));
+      expect(script, contains('privacyPolicyUrl'));
+      expect(script, contains('Resolve-AndroidViewIntent'));
+      expect(script, contains('android.intent.action.VIEW'));
+      expect(script, contains('rateAppIntentResolved'));
+      expect(script, contains('clickedRateApp'));
+      expect(script, contains('openedRateAppExternal'));
+      expect(script, contains('dismissedRateAppExternal'));
+      expect(script, contains('com.android.vending'));
+      expect(
+        script,
+        contains('Sign in to find the latest Android apps'),
+      );
       expect(script, contains('clickedShareApp'));
       expect(script, contains('containsShareSheet'));
       expect(script, contains('dismissedShareSheet'));
       expect(script, contains('com.android.intentresolver'));
+      expect(script, contains('privacyPolicyIntentResolved'));
+      expect(script, contains('clickedPrivacyPolicy'));
+      expect(script, contains('openedPrivacyPolicyExternal'));
+      expect(script, contains('dismissedPrivacyPolicyExternal'));
       expect(script, contains('Click-SwitchForDescriptionContains'));
       expect(script, contains('Get-LabeledSwitchChecked'));
       expect(script, contains('clickedLanguage'));
@@ -343,7 +363,31 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-rate-app-external"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-rate-app-after-dismiss"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-share-after-dismiss"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-privacy-policy-external"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-privacy-policy-after-dismiss"',
         ),
       );
       expect(
@@ -443,6 +487,30 @@ void main() {
       expect(
         script,
         contains(
+          'Settings runtime smoke could not resolve Android VIEW intent for the Rate App URL.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized rate app action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not open an external target for Rate App.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not dismiss the Rate App external target back to Settings.',
+        ),
+      );
+      expect(
+        script,
+        contains(
           'Settings runtime smoke could not click the localized share app action.',
         ),
       );
@@ -456,6 +524,30 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not dismiss the Android share sheet back to Settings.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not resolve Android VIEW intent for the Privacy Policy URL.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized privacy policy action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not open an external target for Privacy Policy.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not dismiss the Privacy Policy external target back to Settings.',
         ),
       );
       expect(
