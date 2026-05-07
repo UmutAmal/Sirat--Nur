@@ -562,11 +562,16 @@ function Get-SmokeTextBundle {
     language = Get-ArbString -Messages $messages -Key 'language' -Fallback 'Language'
     selectLanguage = Get-ArbString -Messages $messages -Key 'selectLanguage' -Fallback 'Select Language'
     systemDefault = Get-ArbString -Messages $messages -Key 'systemDefault' -Fallback 'System Default'
+    save = Get-ArbString -Messages $messages -Key 'save' -Fallback 'Save'
+    cancel = Get-ArbString -Messages $messages -Key 'cancel' -Fallback 'Cancel'
     prayerCalculation = Get-ArbString -Messages $messages -Key 'prayerCalculation' -Fallback 'Prayer Calculation'
     method = Get-ArbString -Messages $messages -Key 'method' -Fallback 'Calculation Method'
     madhab = Get-ArbString -Messages $messages -Key 'madhab' -Fallback 'Asr Juristic Method'
     diagnosticsPrayerSource = Get-ArbString -Messages $messages -Key 'diagnosticsPrayerSource' -Fallback 'Prayer Authority'
     audioVoice = Get-ArbString -Messages $messages -Key 'audioVoice' -Fallback 'Audio Voice'
+    qiblaCalibration = Get-ArbString -Messages $messages -Key 'qiblaCalibration' -Fallback 'Qibla Calibration'
+    calibrationOffset = Get-ArbString -Messages $messages -Key 'calibrationOffset' -Fallback 'Calibration Offset'
+    manualCorrectionDesc = Get-ArbString -Messages $messages -Key 'manualCorrectionDesc' -Fallback 'Adjust if your compass needs a manual correction. Positive values rotate clockwise.'
     location = Get-ArbString -Messages $messages -Key 'location' -Fallback 'Location'
     clearCache = Get-ArbString -Messages $messages -Key 'clearCache' -Fallback 'Clear Cache'
     cacheClearedSuccess = Get-ArbString -Messages $messages -Key 'cacheClearedSuccess' -Fallback 'Cache cleared successfully'
@@ -807,6 +812,10 @@ $summary = [ordered]@{
     containsAudioVoiceOptions = $false
     selectedDefaultAudioVoice = $false
     audioVoicePickerClosed = $false
+    clickedQiblaCalibration = $false
+    containsQiblaCalibrationDialog = $false
+    savedQiblaCalibration = $false
+    qiblaCalibrationDialogClosed = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -892,6 +901,10 @@ try {
     containsAudioVoiceOptions = $false
     selectedDefaultAudioVoice = $false
     audioVoicePickerClosed = $false
+    clickedQiblaCalibration = $false
+    containsQiblaCalibrationDialog = $false
+    savedQiblaCalibration = $false
+    qiblaCalibrationDialogClosed = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -910,7 +923,7 @@ try {
     $settingsXml = Save-AppiumSource -SessionId $sessionId -Name "settings"
     $settingsRuntime.containsSettingsTitle = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings'))
     $settingsRuntime.containsPrayerControls = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.prayerCalculation, $smokeText.method, $smokeText.madhab, 'Prayer Calculation', 'Calculation Method', 'Asr Juristic Method'))
-    $settingsRuntime.containsSettingsDetail = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.diagnosticsPrayerSource, $smokeText.audioVoice, $smokeText.location, 'Prayer Authority', 'Audio Voice', 'Location'))
+    $settingsRuntime.containsSettingsDetail = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.diagnosticsPrayerSource, $smokeText.audioVoice, $smokeText.qiblaCalibration, $smokeText.calibrationOffset, $smokeText.location, 'Prayer Authority', 'Audio Voice', 'Qibla Calibration', 'Calibration Offset', 'Location'))
     $settingsRuntime.containsAndroidSettings = $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
     $settingsRuntime.clickedPrayerMethod = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.method, 'Calculation Method')) -Attempts 4
     if ($settingsRuntime.clickedPrayerMethod) {
@@ -970,6 +983,28 @@ try {
           $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $audioVoiceAfterSelectXml.Contains("Settings suggestions") -or $audioVoiceAfterSelectXml.Contains("Android Settings") -or $audioVoiceAfterSelectXml.Contains("Alarms & reminders")
         }
         Save-AppiumSource -SessionId $sessionId -Name "settings-audio-voice-after-select" | Out-Null
+      }
+    }
+    $settingsRuntime.clickedQiblaCalibration = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.calibrationOffset, 'Calibration Offset')) -Attempts 4
+    if ($settingsRuntime.clickedQiblaCalibration) {
+      Start-Sleep -Milliseconds 700
+      $qiblaCalibrationDialogXml = Save-AppiumSource -SessionId $sessionId -Name "settings-qibla-calibration-dialog"
+      $settingsRuntime.containsQiblaCalibrationDialog = (Test-ContainsAny -Source $qiblaCalibrationDialogXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.calibrationOffset, 'Calibration Offset'))) -and
+        (Test-ContainsAny -Source $qiblaCalibrationDialogXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.manualCorrectionDesc, 'manual correction'))) -and
+        (Test-ContainsAny -Source $qiblaCalibrationDialogXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.save, 'Save'))) -and
+        (Test-ContainsAny -Source $qiblaCalibrationDialogXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.cancel, 'Cancel'))) -and
+        (Test-ContainsAny -Source $qiblaCalibrationDialogXml -Needles (Select-NonEmptyUniqueStrings @('0.0')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $qiblaCalibrationDialogXml.Contains("Settings suggestions") -or $qiblaCalibrationDialogXml.Contains("Android Settings") -or $qiblaCalibrationDialogXml.Contains("Alarms & reminders")
+      $settingsRuntime.savedQiblaCalibration = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.save, 'Save')) -Attempts 4
+      if ($settingsRuntime.savedQiblaCalibration) {
+        for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.qiblaCalibrationDialogClosed; $attempt++) {
+          Start-Sleep -Milliseconds 500
+          $qiblaCalibrationAfterSaveXml = Get-AppiumSource -SessionId $sessionId
+          $settingsRuntime.qiblaCalibrationDialogClosed = (-not (Test-ContainsAny -Source $qiblaCalibrationAfterSaveXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.manualCorrectionDesc, 'manual correction')))) -and
+            (Test-ContainsAny -Source $qiblaCalibrationAfterSaveXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+          $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $qiblaCalibrationAfterSaveXml.Contains("Settings suggestions") -or $qiblaCalibrationAfterSaveXml.Contains("Android Settings") -or $qiblaCalibrationAfterSaveXml.Contains("Alarms & reminders")
+        }
+        Save-AppiumSource -SessionId $sessionId -Name "settings-qibla-calibration-after-save" | Out-Null
       }
     }
     $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
@@ -1260,6 +1295,18 @@ if (-not $summary.settingsRuntime.selectedDefaultAudioVoice) {
 }
 if (-not $summary.settingsRuntime.audioVoicePickerClosed) {
   $failures += "Settings runtime smoke did not close the audio voice picker after selecting Mishary Rashid Alafasy."
+}
+if (-not $summary.settingsRuntime.clickedQiblaCalibration) {
+  $failures += "Settings runtime smoke could not click the localized qibla calibration action."
+}
+if (-not $summary.settingsRuntime.containsQiblaCalibrationDialog) {
+  $failures += "Settings runtime smoke did not render the localized qibla calibration dialog controls."
+}
+if (-not $summary.settingsRuntime.savedQiblaCalibration) {
+  $failures += "Settings runtime smoke could not save the qibla calibration dialog."
+}
+if (-not $summary.settingsRuntime.qiblaCalibrationDialogClosed) {
+  $failures += "Settings runtime smoke did not close the qibla calibration dialog after saving."
 }
 if (-not $summary.settingsRuntime.clickedLanguage) {
   $failures += "Settings runtime smoke could not click the localized language action."

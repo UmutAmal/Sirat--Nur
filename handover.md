@@ -22152,3 +22152,55 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings > Qibla calibration dialog veya Settings switch/action matrix guard'i sec.
+
+## 2026-05-07 TUR-553 - Settings Qibla Calibration Runtime Guard
+
+### MASTER Karari
+- Risk: Settings > Qibla Calibration > Calibration Offset dialog'u release Appium smoke'ta cihazda acilmiyor, lokalize dialog iceriginin render oldugu, Save aksiyonunun calistigi ve dialog'un kapandigi kanitlanmiyordu. Bu, Qibla manual correction ayari icin P1 runtime completion bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:165` Qibla Calibration bolumu Settings sayfasinda render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:173` Calibration Offset tile'i `l10n.calibrationOffset` ile gorunuyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:178` tile tap ile `_showQiblaOffsetDialog(context, ref, l10n)` cagiriyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:462` dialog basligi `l10n.calibrationOffset`, `lib/features/settings/settings_page.dart:468` aciklama `l10n.manualCorrectionDesc`, `lib/features/settings/settings_page.dart:485` slider value `tempOffset` uzerinden render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:501` Save aksiyonu `updateQiblaOffset(tempOffset)` cagirip dialog'u kapatiyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:572` smoke metin paketine `qiblaCalibration`, `calibrationOffset`, `manualCorrectionDesc` ARB label'lari eklendi.
+  - Son durum: `tool/appium_runtime_smoke.ps1:815` settings runtime summary'sine `clickedQiblaCalibration`, `containsQiblaCalibrationDialog`, `savedQiblaCalibration`, `qiblaCalibrationDialogClosed` alanlari eklendi.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:926` Settings detail kontrolu artik Qibla Calibration / Calibration Offset anchor'larini da kapsiyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:988` release Appium smoke lokalize Calibration Offset aksiyonunu scroll ederek tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:991` `settings-qibla-calibration-dialog` XML artifact'ini yaziyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:992` dialog basligi, manuel duzeltme aciklamasi, Save, Cancel ve `0.0` slider degerini gercek XML'de dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:998` lokalize Save aksiyonunu tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:1003` Save sonrasi dialog-only manuel duzeltme aciklamasinin kayboldugunu ve Settings basliginin geri geldigini dogruluyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1299` Qibla calibration aksiyonu tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1302` beklenen dialog kontrolleri render olmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1308` Save sonrasi dialog kapanmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:174` Qibla calibration smoke label'larinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:208` Qibla calibration summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:274` Qibla calibration XML artifact kayitlarinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings > Calibration Offset dialog'unu gercek cihazda acar, metinleri ve temel kontrolleri gorur, Save aksiyonunu calistirir ve dialog kapanmasini kanitlar.
+- Risk skoru: Qibla calibration dialog runtime completion boslugu `16/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke metin paketine lokalize Qibla calibration dialog label'lari ve genel Save/Cancel aksiyonlari eklendi.
+- Settings runtime matrix'e Calibration Offset dialog acma, dialog icerigi dogrulama, Save tiklama ve kapanis kaniti eklendi.
+- Kapanis guard'i tile basligi `Calibration Offset` Settings sayfasinda kalabildigi icin baslik yokluguna baglanmadi; dialog-only `manualCorrectionDesc` kaybolmasi + Settings basligi geri gelmesi kullanildi.
+
+### TESTER Degisikligi
+- Targeted Appium script test ilk deneme: FAIL; root cause `qiblaCalibration` label'i bundle'a eklenmis ancak runtime scriptte kullanilmamisti. Test beklentisi gevsetilmedi, Settings detail anchor setine Qibla Calibration/Calibration Offset eklendi.
+- Targeted Appium script test son deneme: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- PowerShell parse check: `[System.Management.Automation.Language.Parser]::ParseFile(...)` PASS, parse error yok.
+- Diff check: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release signing, Supabase verified content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `9c62fd9a-42d5-4257-8edd-0fd7d0d8e8ea`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedQiblaCalibration=true`, `settingsRuntime.containsQiblaCalibrationDialog=true`, `settingsRuntime.savedQiblaCalibration=true`, `settingsRuntime.qiblaCalibrationDialogClosed=true`, `settingsRuntime.clickedAudioVoice=true`, `settingsRuntime.clickedLanguage=true`, `settingsRuntime.clickedClearCache=true`, `settingsRuntime.clickedDiagnostics=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- XML kaniti: `build\appium-runtime-smoke-settings-qibla-calibration-dialog.xml` icinde `Calibration Offset`, `manual correction`, `0.0`, `Cancel`, `Save` gorundu; `build\appium-runtime-smoke-settings-qibla-calibration-after-save.xml` Settings basligina donusu gosterdi.
+
+### Risk Degisimi
+- Settings runtime matrix artik prayer method, madhab, audio voice, qibla calibration dialog, language, clear cache ve diagnostics akisini tek release smoke zincirinde dogruluyor.
+- Qibla manual correction ayari artik cihazda acilma/icerik/save/kapanis davranisiyla korunuyor.
+- Kalan bilincli risk: Dark mode ve compass smoothing switch'leri, About/Privacy/Terms/Share/Rate aksiyonlari ve coklu locale Appium kosulari henuz tam runtime matrix'te gezilmiyor; sonraki dongude Settings switch action matrix secilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings > Compass Smoothing ve Dark Mode switch action completion guard'larini ekle.

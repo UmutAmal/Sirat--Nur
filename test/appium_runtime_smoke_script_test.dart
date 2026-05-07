@@ -167,8 +167,13 @@ void main() {
       expect(script, contains(r'$smokeText.language'));
       expect(script, contains(r'$smokeText.selectLanguage'));
       expect(script, contains(r'$smokeText.systemDefault'));
+      expect(script, contains(r'$smokeText.save'));
+      expect(script, contains(r'$smokeText.cancel'));
       expect(script, contains(r'$smokeText.prayerCalculation'));
       expect(script, contains(r'$smokeText.diagnosticsPrayerSource'));
+      expect(script, contains(r'$smokeText.qiblaCalibration'));
+      expect(script, contains(r'$smokeText.calibrationOffset'));
+      expect(script, contains(r'$smokeText.manualCorrectionDesc'));
       expect(script, contains(r'$smokeText.clearCache'));
       expect(script, contains(r'$smokeText.cacheClearedSuccess'));
       expect(script, contains(r'$smokeText.diagnostics'));
@@ -200,6 +205,10 @@ void main() {
       expect(script, contains('containsAudioVoiceOptions'));
       expect(script, contains('selectedDefaultAudioVoice'));
       expect(script, contains('audioVoicePickerClosed'));
+      expect(script, contains('clickedQiblaCalibration'));
+      expect(script, contains('containsQiblaCalibrationDialog'));
+      expect(script, contains('savedQiblaCalibration'));
+      expect(script, contains('qiblaCalibrationDialogClosed'));
       expect(script, contains('clickedLanguage'));
       expect(script, contains('containsLanguagePickerTitle'));
       expect(script, contains('containsLanguageOptions'));
@@ -262,6 +271,18 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-qibla-calibration-dialog"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-qibla-calibration-after-save"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-diagnostics"',
         ),
       );
@@ -311,6 +332,18 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not close the audio voice picker after selecting Mishary Rashid Alafasy.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render the localized qibla calibration dialog controls.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not close the qibla calibration dialog after saving.',
         ),
       );
       expect(
