@@ -22324,3 +22324,56 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings external action matrix icin dis uygulamaya cikis yan etkisini yakalayan guvenli Appium guard veya URL/share abstraction testlerini genislet.
+
+## 2026-05-07 TUR-556 - Settings Share Sheet Runtime Guard
+
+### MASTER Karari
+- Risk: Settings > Share App aksiyonu widget testinde mock channel ile dogrulaniyordu ancak release APK Appium smoke gercek cihazda Android share sheet'in acildigini, paylasim metnini tasidigini ve geri donusle Settings ekranina kapandigini kanitlamiyordu. Bu, dis aksiyon matrix icin P1 runtime completion bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:277` Share App `_settingsTile` olarak render ediliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:283` Share App tap ile `SharePlus.instance.share(...)` cagiriyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:284` paylasim metni `buildSettingsShareText(l10n)` uzerinden lokalize uretiliyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:623` `buildSettingsShareText` app metadata ve URL ile paylasim metni uretiyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:461` widget testi share action channel'ini mockluyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:483` widget testi Share App satirini tikliyor.
+  - Baslangic: `test/features/settings/settings_page_test.dart:487` widget testi gonderilen metni beklenen lokalize metinle eslestiriyor.
+  - Baslangic: `adb -s emulator-5554 shell cmd package resolve-activity --brief -a android.intent.action.SEND -t text/plain` ciktisi `android/com.android.internal.app.ResolverActivity`; cihazda text share resolver mevcut.
+  - Son durum: `tool/appium_runtime_smoke.ps1:640` smoke metin paketine `shareApp` ARB label'i eklendi.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1149` lokalize Share App aksiyonunu scroll ederek tikliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1152` `settings-share-sheet` XML artifact'ini yaziyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1153` Android intent resolver veya share sheet ipuclarini zorunlu kiliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1157` back ile share sheet'i kapatip Settings'e donusu bekliyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1160` Settings basligi ve Share App satiri geri gorunmeden basarili saymiyor.
+  - Runtime guard: `tool/appium_runtime_smoke.ps1:1164` `settings-share-after-dismiss` XML artifact'ini yaziyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1488` Share App tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1491` Android share sheet acilmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1494` share sheet Settings'e geri kapanmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:184` Appium smoke'un `shareApp` label'ini kullandigini test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:224` Share runtime summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:339` share sheet XML artifact kaydinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:451` Share fail-fast mesajlarinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Share App tusunun gercek Android share sheet'e cikabildigini, paylasim metnini sistem resolver'a verdigini ve kullanici geri dondugunde Settings ekranina dondugunu kanitliyor.
+- Risk skoru: Settings Share App runtime completion boslugu `12/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Appium smoke localization bundle'ina `shareApp` eklendi.
+- Settings runtime matrix'e Share App tiklama, Android resolver/share sheet kaynak XML'i, back ile dismiss ve Settings'e donus guard'i eklendi.
+- Share sheet algisi `com.android.intentresolver`, Android package ve share UI ipuclariyla saglamlastirildi.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- PowerShell parse check: `[System.Management.Automation.Language.Parser]::ParseFile(...)` PASS, parse error yok.
+- Release Appium smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `c0fbc5e7-2bc5-4b8e-ae63-98fa4967721c`, `settingsRuntime.clickedShareApp=true`, `settingsRuntime.containsShareSheet=true`, `settingsRuntime.dismissedShareSheet=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- XML kaniti: `build\appium-runtime-smoke-settings-share-sheet.xml:3` package `com.android.intentresolver`; `build\appium-runtime-smoke-settings-share-sheet.xml:13` `Sharing text`; `build\appium-runtime-smoke-settings-share-sheet.xml:22` lokalize share preview metni; `build\appium-runtime-smoke-settings-share-sheet.xml:23` `Copy text`.
+- XML kaniti: `build\appium-runtime-smoke-settings-share-after-dismiss.xml:12` Settings basligina donus; `build\appium-runtime-smoke-settings-share-after-dismiss.xml:36` Share App satiri tekrar gorundu.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release signing, Supabase verified content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+
+### Risk Degisimi
+- Settings runtime matrix artik prayer method, madhab, audio voice, qibla calibration dialog, compass smoothing, dark mode, about dialog, share sheet, language, clear cache ve diagnostics akisini tek release smoke zincirinde dogruluyor.
+- Kalan bilincli risk: Rate App ve Privacy Policy URL aksiyonlari gercek cihazda izole Appium/intent guard'a henuz alinmadi; bunlar browser/Play Store dis uygulama cikisi nedeniyle bir sonraki dongude ayrica ele alinacak.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings Rate App ve Privacy Policy URL runtime guard stratejisini uygula.

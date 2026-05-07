@@ -637,6 +637,7 @@ function Get-SmokeTextBundle {
     cacheClearedSuccess = Get-ArbString -Messages $messages -Key 'cacheClearedSuccess' -Fallback 'Cache cleared successfully'
     diagnostics = Get-ArbString -Messages $messages -Key 'diagnostics' -Fallback 'Diagnostics'
     version = Get-ArbString -Messages $messages -Key 'version' -Fallback 'Version'
+    shareApp = Get-ArbString -Messages $messages -Key 'shareApp' -Fallback 'Share App'
     diagnosticsPrayerProfile = Get-ArbString -Messages $messages -Key 'diagnosticsPrayerProfile' -Fallback 'Prayer Profile'
     diagnosticsQuranDataset = Get-ArbString -Messages $messages -Key 'diagnosticsQuranDataset' -Fallback 'Quran Dataset'
     diagnosticsLocalizationLocales = Get-ArbString -Messages $messages -Key 'diagnosticsLocalizationLocales' -Fallback 'Localization Locales'
@@ -888,6 +889,9 @@ $summary = [ordered]@{
     clickedAboutVersion = $false
     containsAboutDialog = $false
     closedAboutDialog = $false
+    clickedShareApp = $false
+    containsShareSheet = $false
+    dismissedShareSheet = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -984,6 +988,9 @@ try {
     clickedAboutVersion = $false
     containsAboutDialog = $false
     closedAboutDialog = $false
+    clickedShareApp = $false
+    containsShareSheet = $false
+    dismissedShareSheet = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -1138,6 +1145,24 @@ try {
         $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $aboutAfterCloseXml.Contains("Settings suggestions") -or $aboutAfterCloseXml.Contains("Android Settings") -or $aboutAfterCloseXml.Contains("Alarms & reminders")
       }
       Save-AppiumSource -SessionId $sessionId -Name "settings-about-after-close" | Out-Null
+    }
+    $settingsRuntime.clickedShareApp = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.shareApp, 'Share App')) -Attempts 4
+    if ($settingsRuntime.clickedShareApp) {
+      Start-Sleep -Milliseconds 1000
+      $shareSheetXml = Save-AppiumSource -SessionId $sessionId -Name "settings-share-sheet"
+      $settingsRuntime.containsShareSheet = $shareSheetXml.Contains('com.android.intentresolver') -or
+        $shareSheetXml.Contains('package="android"') -or
+        (Test-ContainsAny -Source $shareSheetXml -Needles (Select-NonEmptyUniqueStrings @('Share with', 'Nearby Share', 'Copy', 'Messages')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $shareSheetXml.Contains("Settings suggestions") -or $shareSheetXml.Contains("Android Settings") -or $shareSheetXml.Contains("Alarms & reminders")
+      Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+      for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.dismissedShareSheet; $attempt++) {
+        Start-Sleep -Milliseconds 500
+        $shareAfterDismissXml = Get-AppiumSource -SessionId $sessionId
+        $settingsRuntime.dismissedShareSheet = (Test-ContainsAny -Source $shareAfterDismissXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings'))) -and
+          (Test-ContainsAny -Source $shareAfterDismissXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.shareApp, 'Share App')))
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $shareAfterDismissXml.Contains("Settings suggestions") -or $shareAfterDismissXml.Contains("Android Settings") -or $shareAfterDismissXml.Contains("Alarms & reminders")
+      }
+      Save-AppiumSource -SessionId $sessionId -Name "settings-share-after-dismiss" | Out-Null
     }
     $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
     if ($settingsRuntime.clickedLanguage) {
@@ -1460,6 +1485,15 @@ if (-not $summary.settingsRuntime.containsAboutDialog) {
 }
 if (-not $summary.settingsRuntime.closedAboutDialog) {
   $failures += "Settings runtime smoke did not close the about dialog."
+}
+if (-not $summary.settingsRuntime.clickedShareApp) {
+  $failures += "Settings runtime smoke could not click the localized share app action."
+}
+if (-not $summary.settingsRuntime.containsShareSheet) {
+  $failures += "Settings runtime smoke did not open the Android share sheet."
+}
+if (-not $summary.settingsRuntime.dismissedShareSheet) {
+  $failures += "Settings runtime smoke did not dismiss the Android share sheet back to Settings."
 }
 if (-not $summary.settingsRuntime.clickedLanguage) {
   $failures += "Settings runtime smoke could not click the localized language action."

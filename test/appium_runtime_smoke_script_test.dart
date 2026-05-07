@@ -181,6 +181,7 @@ void main() {
       expect(script, contains(r'$smokeText.clearCache'));
       expect(script, contains(r'$smokeText.cacheClearedSuccess'));
       expect(script, contains(r'$smokeText.diagnostics'));
+      expect(script, contains(r'$smokeText.shareApp'));
       expect(script, contains(r'$smokeText.diagnosticsPrayerProfile'));
       expect(script, contains(r'$smokeText.diagnosticsQuranDataset'));
       expect(script, contains(r'$smokeText.dailyVerse'));
@@ -220,6 +221,10 @@ void main() {
       expect(script, contains('clickedAboutVersion'));
       expect(script, contains('containsAboutDialog'));
       expect(script, contains('closedAboutDialog'));
+      expect(script, contains('clickedShareApp'));
+      expect(script, contains('containsShareSheet'));
+      expect(script, contains('dismissedShareSheet'));
+      expect(script, contains('com.android.intentresolver'));
       expect(script, contains('Click-SwitchForDescriptionContains'));
       expect(script, contains('Get-LabeledSwitchChecked'));
       expect(script, contains('clickedLanguage'));
@@ -332,6 +337,18 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-share-sheet"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-share-after-dismiss"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-diagnostics"',
         ),
       );
@@ -422,6 +439,24 @@ void main() {
       expect(
         script,
         contains('Settings runtime smoke did not close the about dialog.'),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not click the localized share app action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not open the Android share sheet.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not dismiss the Android share sheet back to Settings.',
+        ),
       );
       expect(
         script,
