@@ -803,6 +803,10 @@ $summary = [ordered]@{
     containsMadhabOptions = $false
     selectedDefaultMadhab = $false
     madhabPickerClosed = $false
+    clickedAudioVoice = $false
+    containsAudioVoiceOptions = $false
+    selectedDefaultAudioVoice = $false
+    audioVoicePickerClosed = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -884,6 +888,10 @@ try {
     containsMadhabOptions = $false
     selectedDefaultMadhab = $false
     madhabPickerClosed = $false
+    clickedAudioVoice = $false
+    containsAudioVoiceOptions = $false
+    selectedDefaultAudioVoice = $false
+    audioVoicePickerClosed = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -942,6 +950,26 @@ try {
           $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $madhabAfterSelectXml.Contains("Settings suggestions") -or $madhabAfterSelectXml.Contains("Android Settings") -or $madhabAfterSelectXml.Contains("Alarms & reminders")
         }
         Save-AppiumSource -SessionId $sessionId -Name "settings-madhab-after-select" | Out-Null
+      }
+    }
+    $settingsRuntime.clickedAudioVoice = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.audioVoice, 'Audio Voice')) -Attempts 4
+    if ($settingsRuntime.clickedAudioVoice) {
+      Start-Sleep -Milliseconds 700
+      $audioVoicePickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-audio-voice-picker"
+      $settingsRuntime.containsAudioVoiceOptions = (Test-ContainsAny -Source $audioVoicePickerXml -Needles (Select-NonEmptyUniqueStrings @('Mishary Rashid Alafasy', 'Mishary Alafasy'))) -and
+        (Test-ContainsAny -Source $audioVoicePickerXml -Needles (Select-NonEmptyUniqueStrings @('Mahmoud Khalil Al-Husary', 'Al-Husary'))) -and
+        (Test-ContainsAny -Source $audioVoicePickerXml -Needles (Select-NonEmptyUniqueStrings @('Abdul Basit (Murattal)', 'Abdul Basit')))
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $audioVoicePickerXml.Contains("Settings suggestions") -or $audioVoicePickerXml.Contains("Android Settings") -or $audioVoicePickerXml.Contains("Alarms & reminders")
+      $settingsRuntime.selectedDefaultAudioVoice = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @('Mishary Rashid Alafasy', 'Mishary Alafasy')) -Attempts 4
+      if ($settingsRuntime.selectedDefaultAudioVoice) {
+        for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.audioVoicePickerClosed; $attempt++) {
+          Start-Sleep -Milliseconds 500
+          $audioVoiceAfterSelectXml = Get-AppiumSource -SessionId $sessionId
+          $settingsRuntime.audioVoicePickerClosed = (-not (Test-ContainsAny -Source $audioVoiceAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @('Mahmoud Khalil Al-Husary', 'Abdul Basit (Murattal)')))) -and
+            (Test-ContainsAny -Source $audioVoiceAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+          $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $audioVoiceAfterSelectXml.Contains("Settings suggestions") -or $audioVoiceAfterSelectXml.Contains("Android Settings") -or $audioVoiceAfterSelectXml.Contains("Alarms & reminders")
+        }
+        Save-AppiumSource -SessionId $sessionId -Name "settings-audio-voice-after-select" | Out-Null
       }
     }
     $settingsRuntime.clickedLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
@@ -1220,6 +1248,18 @@ if (-not $summary.settingsRuntime.selectedDefaultMadhab) {
 }
 if (-not $summary.settingsRuntime.madhabPickerClosed) {
   $failures += "Settings runtime smoke did not close the madhab picker after selecting Hanafi."
+}
+if (-not $summary.settingsRuntime.clickedAudioVoice) {
+  $failures += "Settings runtime smoke could not click the localized audio voice action."
+}
+if (-not $summary.settingsRuntime.containsAudioVoiceOptions) {
+  $failures += "Settings runtime smoke did not render expected Quran audio voice options."
+}
+if (-not $summary.settingsRuntime.selectedDefaultAudioVoice) {
+  $failures += "Settings runtime smoke could not select the default Mishary Rashid Alafasy audio voice."
+}
+if (-not $summary.settingsRuntime.audioVoicePickerClosed) {
+  $failures += "Settings runtime smoke did not close the audio voice picker after selecting Mishary Rashid Alafasy."
 }
 if (-not $summary.settingsRuntime.clickedLanguage) {
   $failures += "Settings runtime smoke could not click the localized language action."

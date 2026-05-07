@@ -196,6 +196,10 @@ void main() {
       expect(script, contains('containsMadhabOptions'));
       expect(script, contains('selectedDefaultMadhab'));
       expect(script, contains('madhabPickerClosed'));
+      expect(script, contains('clickedAudioVoice'));
+      expect(script, contains('containsAudioVoiceOptions'));
+      expect(script, contains('selectedDefaultAudioVoice'));
+      expect(script, contains('audioVoicePickerClosed'));
       expect(script, contains('clickedLanguage'));
       expect(script, contains('containsLanguagePickerTitle'));
       expect(script, contains('containsLanguageOptions'));
@@ -240,7 +244,19 @@ void main() {
       expect(
         script,
         contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-audio-voice-picker"',
+        ),
+      );
+      expect(
+        script,
+        contains(
           r'Save-AppiumSource -SessionId $sessionId -Name "settings-language-after-select"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-audio-voice-after-select"',
         ),
       );
       expect(
@@ -283,6 +299,18 @@ void main() {
         script,
         contains(
           'Settings runtime smoke did not close the madhab picker after selecting Hanafi.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render expected Quran audio voice options.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not close the audio voice picker after selecting Mishary Rashid Alafasy.',
         ),
       );
       expect(

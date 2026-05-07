@@ -22103,3 +22103,52 @@
 
 ### Sonraki Adim
 - Commit + push yap; sonra yeni dongude Settings > Audio Voice picker veya Qibla calibration dialog akisini release Appium runtime matrix'e ekle.
+
+## 2026-05-07 TUR-552 - Settings Audio Voice Runtime Guard
+
+### MASTER Karari
+- Risk: Settings > Audio Voice picker release Appium smoke'ta cihazda acilmiyor, Quran okuyucu seceneklerinin render oldugu, varsayilan okuyucu seciminin calistigi ve bottom sheet'in kapandigi kanitlanmiyordu. Bu, Quran audio preference zinciri icin P1 runtime completion bosluguydu.
+- Kanit:
+  - Baslangic: `lib/features/settings/settings_page.dart:141` Audio Voice tile'i `l10n.audioVoice` ile render ediyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:145` tile tap ile `_showAudioVoicePicker(context, ref)` cagiriyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:431` audio voice picker `selectableAudioVoices` listesini bottom sheet icinde render ediyor.
+  - Baslangic: `lib/features/settings/settings_page.dart:442` secim `updateAudioVoice(voice)` ile settings provider/prefs zincirine baglaniyor.
+  - Baslangic: `lib/features/settings/settings_provider.dart:24` `selectableAudioVoices` alafasy, husary, abdul_basit_murattal, abdul_basit_mujawwad, shuraim ve sudais reciter setini kapsiyor.
+  - Son durum: `tool/appium_runtime_smoke.ps1:806` settings runtime summary'sine `clickedAudioVoice`, `containsAudioVoiceOptions`, `selectedDefaultAudioVoice`, `audioVoicePickerClosed` alanlari eklendi.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:955` release Appium smoke lokalize Audio Voice aksiyonunu tikliyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:958` `settings-audio-voice-picker` XML artifact'ini yaziyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:959` Mishary Rashid Alafasy, Mahmoud Khalil Al-Husary ve Abdul Basit (Murattal) seceneklerini gercek XML'de dogruluyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:963` default ve yan etkisiz Mishary Rashid Alafasy secimini calistiriyor.
+  - Regresyon guard: `tool/appium_runtime_smoke.ps1:968` secim sonrasi picker'in kapandigini diger audio voice seceneklerinin kaybolmasi ve Settings basliginin geri gelmesiyle dogruluyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1252` Audio Voice aksiyonu tiklanamazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1255` beklenen Quran audio voice secenekleri render olmazsa smoke fail ediyor.
+  - Failure guard: `tool/appium_runtime_smoke.ps1:1261` secimden sonra picker kapanmazsa smoke fail ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:199` audio voice summary alanlarinin kalici oldugunu test ediyor.
+  - Statik guard: `test/appium_runtime_smoke_script_test.dart:247` audio voice picker XML artifact kaydinin kalici oldugunu test ediyor.
+- Kullanici etkisi: Release APK smoke artik Settings > Audio Voice picker'i gercek cihazda acar, Quran okuyucu seceneklerini gorur, varsayilan okuyucuyu secer ve sheet kapanmasini kanitlar.
+- Risk skoru: Audio voice runtime selector completion boslugu `16/25 -> 4/25`.
+- Rollback plani: Bu turdaki `tool/appium_runtime_smoke.ps1`, `test/appium_runtime_smoke_script_test.dart` ve bu handover girdisi geri alinabilir.
+
+### BUILDER Degisikligi
+- Settings runtime summary'sine audio voice completion alanlari eklendi.
+- Audio Voice flow'u Settings matrix icinde prayer method ve madhab guard'larindan sonra, language/clear-cache/diagnostics guard'larindan once calisacak sekilde eklendi.
+- Picker kapanis kontrolu default secimin listede kalmasi nedeniyle Mishary satirinin yokluguna baglanmadi; diger picker seceneklerinin kaybolmasi + Settings basliginin geri gelmesi kok sebep odakli kapanis kaniti olarak kullanildi.
+
+### TESTER Degisikligi
+- Targeted Appium script test: `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- PowerShell parse check: `[System.Management.Automation.Language.Parser]::ParseFile(...)` PASS, parse error yok.
+- Diff check: `git diff --check` whitespace error yok; sadece Windows LF->CRLF uyarilari var.
+- Full analyze: `flutter analyze` PASS, no issues found.
+- Full tests: `flutter test --reporter compact` PASS, `779/779`.
+- Store readiness: `.\tool\check_store_readiness.ps1` PASS; release signing, Supabase verified content, Quran audio GitHub/Cloudflare dagitimi, analyze ve full test kapilari temiz.
+- Emulator self-heal: ADB bos oldugu icin `Medium_Phone_API_36.1` AVD baslatildi; `emulator-5554 boot_completed=1` PASS.
+- Appium release runtime smoke: `.\tool\appium_runtime_smoke.ps1 -BuildMode release` PASS; session `6173338d-3339-4f12-83dc-cf58b158f572`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `apkLength=94795658`, `settingsRuntime.clickedAudioVoice=true`, `settingsRuntime.containsAudioVoiceOptions=true`, `settingsRuntime.selectedDefaultAudioVoice=true`, `settingsRuntime.audioVoicePickerClosed=true`, `settingsRuntime.clickedLanguage=true`, `settingsRuntime.clickedClearCache=true`, `settingsRuntime.clickedDiagnostics=true`, `settingsRuntime.containsAndroidSettings=false`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- XML kaniti: `build\appium-runtime-smoke-settings-audio-voice-picker.xml` icinde `Mishary Rashid Alafasy`, `Mahmoud Khalil Al-Husary`, `Abdul Basit (Murattal)` gorundu; `build\appium-runtime-smoke-settings-audio-voice-after-select.xml` Settings basligina donusu gosterdi.
+
+### Risk Degisimi
+- Settings runtime matrix artik prayer method, madhab, audio voice, language, clear cache ve diagnostics akisini tek release smoke zincirinde dogruluyor.
+- Quran audio tercih secimi artik sadece provider/unit seviye degil, cihazda acilma/secenek/secim/kapanma davranisiyla da korunuyor.
+- Kalan bilincli risk: Qibla calibration slider, dark mode/compass smoothing switch'leri, About/Privacy/Terms/Share/Rate aksiyonlari ve coklu locale Appium kosulari henuz tam runtime matrix'te gezilmiyor; sonraki dongude en yuksek getirili Settings action matrix parcasi secilecek.
+
+### Sonraki Adim
+- Commit + push yap; sonra yeni dongude Settings > Qibla calibration dialog veya Settings switch/action matrix guard'i sec.
