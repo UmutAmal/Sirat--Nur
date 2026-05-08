@@ -22942,3 +22942,33 @@
 ### Sonraki Adim
 - Commit + push sonrasi yeni dongude runtime QA ve store-readiness risk taramasina devam et.
 - Siradaki uygun aday: Appium smoke sonrasi gercek APK/artifact store readiness komutlarini ve mevcut Supabase/Cloudflare/GitHub kaynak sagligi kanitlarini yeniden taramak.
+
+## 2026-05-08 TUR-572 - Store Readiness External Source Health Audit
+
+### MASTER Karari
+- Risk: Uygulamanin store-ready kabul edilebilmesi icin APK dis kaynak zinciri (Supabase hafif icerik DB, GitHub/Cloudflare Quran audio dagitimi, privacy URL, Play/App Store dokumanlari) gercek ag ve production env ile tekrar dogrulanmaliydi. Eski gecmis test sonucu tek basina yeterli sayilmadi.
+- Kanit:
+  - Komut: `.\tool\check_store_readiness.ps1 -SkipFlutterValidation` PASS.
+  - GitHub audio probe'lari: `alafasy/001.mp3` ve `abdul_basit_murattal/001.mp3` HTTP 206 ile audio byte dondu.
+  - Cloudflare audio partition: `8.4 GB`, 10 GB limitinin altinda.
+  - Upload dagitim ozeti: Cloudflare 570 dosya, GitHub overflow 114 dosya, GitHub mirror 570 dosya tamam.
+  - Supabase apply ozeti: schema, Quran surah/ayah seed, Quran audio seed, verified dua/education/Asma seed, core seed, hadith seed ve tafsir seed uygulanmis.
+  - Supabase public tablo minimumlari: daily ayat 8/8, live TV 2/2, education categories 7/1, education topics 25/1, audio_files 684/684, duas 8/8, Asma 99/99, Quran surahs 114/114, Quran ayahs 6236/6236, tafsir 18708/6236, hadith 1755/600.
+  - Tum kontrol edilen Supabase kaynak URL'leri approved host listesine uydu; remote privacy policy HTTP 200 dondu.
+- Etki/Olasilik/Risk: Etki 4, olasilik 3, risk `12/25 -> 2/25`. Kod degisikligi gerekmedi; mevcut production kaynak zinciri store build icin saglikli kanitlandi.
+- Rollback plani: Bu tur yalniz `handover.md` audit kaydidir; gerekirse tek docs commit revert edilebilir.
+
+### BUILDER Degisikligi
+- Kod veya config degistirilmedi.
+- `tool\check_store_readiness.ps1` mevcut production env ile ag/içerik sagligi icin calistirildi.
+
+### TESTER Degisikligi
+- Store readiness:
+  - `.\tool\check_store_readiness.ps1 -SkipFlutterValidation` PASS.
+- Bu audit oncesinde ayni dongude son code patch icin final kapilar zaten gecmisti:
+  - `flutter analyze` PASS.
+  - `flutter test --reporter compact` PASS, `791/791`.
+
+### Sonraki Adim
+- Yeni dongude kod tabaninda store-ready kalitesini etkileyebilecek kalan statik riskleri tara.
+- Oncelik adayi: Play/App Store artefact build scriptleri (`tool\build_store_appbundle.ps1`, Android release config, signing/lint ve env validation) yeniden kanitlanabilir mi kontrol et.
