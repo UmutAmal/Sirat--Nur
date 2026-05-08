@@ -22622,3 +22622,29 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude genel dependency drift'i (`go_router 17.2.2 -> 17.2.3`, transitive patch updates) ve kalan l10n same-as-English borclarini ayri riskler olarak skorla.
+
+## 2026-05-08 TUR-562 - Resolvable Dependency Lock Refresh
+
+### MASTER Karari
+- Risk: `pubspec.lock` pub.dev'e gore mevcut constraint'ler icinde 7 eski cozumlenebilir paket tasiyordu. Kullanici etkisi, router/webview/url/storage gibi runtime yuzeylerde patch seviyesinde bugfix ve uyumluluk iyilestirmelerinin geride kalmasiydi.
+- Kanit:
+  - Baslangic `flutter pub outdated`: `go_router 17.2.2 -> 17.2.3`, `gtk 2.1.0 -> 2.2.0`, `sqflite_common 2.5.6+1 -> 2.5.7`, `url_launcher_web 2.4.2 -> 2.4.3`, `vm_service 15.1.0 -> 15.2.0`, `webview_flutter_android 4.11.0 -> 4.12.0`, `webview_flutter_wkwebview 3.24.5 -> 3.25.1`.
+  - Patch sonrasi `flutter pub outdated`: "You are already using the newest resolvable versions listed in the 'Resolvable' column." `latlong2` ve `share_plus` daha yeni major/latest istiyor ama mevcut constraint'lerle resolvable degil.
+- Etki/Olasilik/Risk: Etki 2, olasilik 4, risk `8/25 -> 3/25`. Major constraint genisletme bu turda yapilmadi; yalniz lockfile icinde resolvable patch/minor guncellemeler alindi.
+- Rollback plani: `pubspec.lock` tek dosya olarak onceki commite geri alinabilir.
+
+### BUILDER Degisikligi
+- `flutter pub upgrade` calistirildi.
+- Sadece `pubspec.lock` degisti; `pubspec.yaml` constraint'leri ayni kaldi.
+
+### TESTER Degisikligi
+- Hedefli test:
+  - `flutter test test\app_router_test.dart test\live_tv_page_test.dart test\external_url_test.dart test\features\settings\diagnostics_page_test.dart --reporter compact` PASS.
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude `latlong2` ve `share_plus` major constraint upgrade'i icin once changelog/API etki analizi yap; risk yuksekse ayri branch/ayri patch olarak ele al.
