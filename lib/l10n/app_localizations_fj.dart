@@ -483,24 +483,24 @@ class AppLocalizationsFj extends AppLocalizations {
       'Compass sensor is unavailable on this device.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Vanua e gadrevi me baleta na Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Vakarautaka na nomu vanua dina ni bera ni o vakayagataka na kampasi ni Qibla me rawa ni vakarautaki vakadodonu na veidusimaki.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Na itukutuku ni Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Na gauna ni masu e veivakaroti ena rorogo ni adhan.';
 
   @override
   String get notifications => 'Veivakatakila';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Veivakatakila ni Masu';
 
   @override
   String get enableNotifications => 'Vakatara na itukutuku';

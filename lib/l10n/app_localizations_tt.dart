@@ -482,7 +482,7 @@ class AppLocalizationsTt extends AppLocalizations {
       'Компас сенсоры бу җайланмада мөмкин түгел.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Кибла өчен кирәкле урын';
 
   @override
   String get qiblaLocationRequiredBody =>
@@ -499,7 +499,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get notifications => 'Хәбәрләр';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Дога турында хәбәрләр';
 
   @override
   String get enableNotifications => 'Хәбәрләр кушу';
@@ -508,7 +508,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get notificationTime => 'Хәбәр итү вакыты';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'намазга берничә минут кала';
 
   @override
   String get theme => 'Тема';

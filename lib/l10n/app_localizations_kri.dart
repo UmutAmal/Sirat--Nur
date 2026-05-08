@@ -482,18 +482,18 @@ class AppLocalizationsKri extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Kɔmpas sɛns nɔ de na dis divays.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Lokeshɔn we dɛn nid fɔ de fɔ Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Set yu rial ples bifo yu yuz di Qibla kɔmpas so dat dɛn go ebul fɔ kɔl di dairekshɔn kɔrɛkt wan.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Notis dɛn we dɛn kin gi';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Prea tɛm alert wit adhan sawnd.';
 
   @override
   String get notifications => 'Notis dɛn we dɛn kin gi';

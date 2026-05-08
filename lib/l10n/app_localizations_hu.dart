@@ -501,7 +501,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get notifications => 'Értesítések';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Ima értesítések';
 
   @override
   String get enableNotifications => 'Értesítések engedélyezése';
@@ -510,7 +510,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get notificationTime => 'Értesítési idő';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'percekkel az ima előtt';
 
   @override
   String get theme => 'téma';

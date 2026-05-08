@@ -481,7 +481,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Kompasi sensọ ko si lori ẹrọ yi.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Ipo ti a beere fun Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
@@ -498,7 +498,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get notifications => 'Awọn iwifunni';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Awọn iwifunni Adura';
 
   @override
   String get enableNotifications => 'Mu Awọn iwifunni ṣiṣẹ';
@@ -507,7 +507,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get notificationTime => 'Akoko iwifunni';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'iṣẹju ṣaaju ki adura';
 
   @override
   String get theme => 'Akori';

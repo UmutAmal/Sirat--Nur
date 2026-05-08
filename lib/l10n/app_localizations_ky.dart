@@ -503,7 +503,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get notifications => 'Эскертмелер';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Намаз эскертмелери';
 
   @override
   String get enableNotifications => 'Эскертмелерди иштетүү';
@@ -512,7 +512,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get notificationTime => 'Кабарлоо убактысы';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'намазга чейин мүнөт';
 
   @override
   String get theme => 'Тема';

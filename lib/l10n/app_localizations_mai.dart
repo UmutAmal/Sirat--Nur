@@ -493,7 +493,7 @@ class AppLocalizationsMai extends AppLocalizations {
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'प्रार्थना समय अधान ध्वनि के साथ अलर्ट।';
 
   @override
   String get notifications => 'अधिसूचना';

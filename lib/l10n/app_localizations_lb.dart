@@ -499,7 +499,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get notifications => 'Notifikatiounen';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Gebied Notifikatiounen';
 
   @override
   String get enableNotifications => 'Aktivéiert Notifikatiounen';
@@ -508,7 +508,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get notificationTime => 'Notifikatioun Zäit';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'Minutte virum Gebied';
 
   @override
   String get theme => 'Thema';

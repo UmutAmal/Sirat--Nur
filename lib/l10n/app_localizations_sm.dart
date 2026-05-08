@@ -499,7 +499,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get notifications => 'Fa\'asilasilaga';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Faasilasilaga Tatalo';
 
   @override
   String get enableNotifications => 'Fa\'amalo Fa\'asilasilaga';
@@ -508,7 +508,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get notificationTime => 'Taimi Fa\'asilasilaga';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minute ao lei tatalo';
 
   @override
   String get theme => 'Autu';

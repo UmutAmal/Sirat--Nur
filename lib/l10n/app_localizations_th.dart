@@ -481,24 +481,24 @@ class AppLocalizationsTh extends AppLocalizations {
       'เซ็นเซอร์เข็มทิศไม่พร้อมใช้งานบนอุปกรณ์นี้';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'สถานที่ที่จำเป็นสำหรับ Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'ตั้งค่าตำแหน่งจริงของคุณก่อนที่จะใช้เข็มทิศ Qibla เพื่อให้สามารถคำนวณทิศทางได้อย่างแม่นยำ';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'การแจ้งเตือน Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'แจ้งเตือนเวลาละหมาดพร้อมเสียงอาซาน';
 
   @override
   String get notifications => 'การแจ้งเตือน';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'การแจ้งเตือนคำอธิษฐาน';
 
   @override
   String get enableNotifications => 'เปิดใช้งานการแจ้งเตือน';
@@ -507,7 +507,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get notificationTime => 'เวลาแจ้งเตือน';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'นาทีก่อนสวดมนต์';
 
   @override
   String get theme => 'ธีม';

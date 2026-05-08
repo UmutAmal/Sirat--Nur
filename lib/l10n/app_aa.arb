@@ -171,7 +171,7 @@
   "fasting": "Fasting",
   "quranReading": "Quran Reading",
   "prayers": "Prayers",
-  "prayerRemainingHoursMinutes": "{hours}h {minutes}m",
+  "prayerRemainingHoursMinutes": "{hours}sa {minutes}m",
   "@prayerRemainingHoursMinutes": {
     "placeholders": {
       "hours": {
@@ -228,12 +228,12 @@
     }
   },
   "qiblaSensorUnavailable": "Compass sensor is unavailable on this device.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Qiblah faxxiima arac.",
   "qiblaLocationRequiredBody": "Qibla kompaasat xoqoysimtak naharal elle tan arac massos tonnal afkan gitah yakkem duudah.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Adhan Maysaxxagoogi",
+  "adhanNotificationChannelDescription": "Salat uddur adhan xongolot maabitina.",
   "notifications": "Maysaxxagoogi",
-  "prayerNotifications": "Prayer Notifications",
+  "prayerNotifications": "Dooqah Maysaxxagoogi",
   "enableNotifications": "Maysaxxagoogi ugsaanam",
   "notificationTime": "Maysaxxagah uddur",
   "beforePrayer": "minutes before prayer",

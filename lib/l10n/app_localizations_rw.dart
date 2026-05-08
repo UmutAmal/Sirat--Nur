@@ -500,7 +500,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get notifications => 'Kumenyesha';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Kumenyesha amasengesho';
 
   @override
   String get enableNotifications => 'Gushoboza Kumenyesha';
@@ -509,7 +509,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get notificationTime => 'Igihe cyo kumenyesha';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'iminota mike mbere yo gusenga';
 
   @override
   String get theme => 'Insanganyamatsiko';

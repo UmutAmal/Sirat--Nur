@@ -499,7 +499,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get notifications => 'Огоҳиномаҳо';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Огоҳиномаҳои намоз';
 
   @override
   String get enableNotifications => 'Огоҳиҳоро фаъол созед';
@@ -508,7 +508,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get notificationTime => 'Вақти огоҳӣ';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'дақиқа пеш аз намоз';
 
   @override
   String get theme => 'Мавзӯъ';

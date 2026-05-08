@@ -494,7 +494,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Tawngtai hun alerts chu adhan sound nen.';
 
   @override
   String get notifications => 'Hriattirna te';

@@ -499,7 +499,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get notifications => 'Bildirishnomalar';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Namoz bildirishnomalari';
 
   @override
   String get enableNotifications => 'Bildirishnomalarni yoqish';
@@ -508,7 +508,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get notificationTime => 'Xabar berish vaqti';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'namozdan bir necha daqiqa oldin';
 
   @override
   String get theme => 'Mavzu';

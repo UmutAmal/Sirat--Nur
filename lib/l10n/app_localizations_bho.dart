@@ -482,18 +482,18 @@ class AppLocalizationsBho extends AppLocalizations {
   String get qiblaSensorUnavailable => 'एह डिवाइस पर कम्पास सेंसर उपलब्ध नइखे.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'किबला खातिर लोकेशन के जरूरत बा';
 
   @override
   String get qiblaLocationRequiredBody =>
       'किबला कम्पास के इस्तेमाल से पहिले आपन वास्तविक स्थान सेट करीं ताकि दिशा के सही गणना कईल जा सके।';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'अधान अधिसूचना के बा';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'प्रार्थना के समय अधान आवाज के साथ अलर्ट।';
 
   @override
   String get notifications => 'सूचना दिहल गइल बा';

@@ -500,7 +500,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get notifications => 'Bewara';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Bewara Sholat';
 
   @override
   String get enableNotifications => 'Aktipkeun Bewara';
@@ -509,7 +509,7 @@ class AppLocalizationsSu extends AppLocalizations {
   String get notificationTime => 'Waktos Bewara';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'menit saméméh solat';
 
   @override
   String get theme => 'Téma';

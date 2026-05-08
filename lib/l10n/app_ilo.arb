@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Saan a magun-odan ti compass sensor iti daytoy nga alikamen.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Lokasion ti kasapulan para iti Qibla",
   "qiblaLocationRequiredBody": "Ikeddengmo ti aktual a lokasionmo sakbay nga usarem ti kompas ti Qibla tapno umiso ti pannakakuenta ti direksion.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Dagiti Pakaammo ti Adhan",
+  "adhanNotificationChannelDescription": "Alerto ti oras ti kararag babaen ti adhan sound.",
   "notifications": "Dagiti Pakaammo",
   "prayerNotifications": "Dagiti Pakaammo iti Kararag",
   "enableNotifications": "Pagbalinen a Pakaammo",

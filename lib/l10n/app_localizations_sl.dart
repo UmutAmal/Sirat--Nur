@@ -500,7 +500,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get notifications => 'Obvestila';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Molitvena obvestila';
 
   @override
   String get enableNotifications => 'Omogoči obvestila';
@@ -509,7 +509,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get notificationTime => 'Čas obvestila';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minut pred molitvijo';
 
   @override
   String get theme => 'Tema';

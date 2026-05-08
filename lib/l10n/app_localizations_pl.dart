@@ -500,7 +500,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get notifications => 'Powiadomienia';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Powiadomienia modlitewne';
 
   @override
   String get enableNotifications => 'Włącz powiadomienia';
@@ -509,7 +509,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get notificationTime => 'Czas powiadomienia';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'kilka minut przed modlitwą';
 
   @override
   String get theme => 'Motyw';

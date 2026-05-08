@@ -501,7 +501,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get notifications => 'ବିଜ୍ଞପ୍ତିଗୁଡିକ';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'ପ୍ରାର୍ଥନା ବିଜ୍ଞପ୍ତି |';
 
   @override
   String get enableNotifications => 'ବିଜ୍ଞପ୍ତିକୁ ସକ୍ଷମ କରନ୍ତୁ |';
@@ -510,7 +510,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get notificationTime => 'ବିଜ୍ଞପ୍ତି ସମୟ |';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'ପ୍ରାର୍ଥନାର କିଛି ମିନିଟ୍ ପୂର୍ବରୁ |';
 
   @override
   String get theme => 'ଥିମ୍';

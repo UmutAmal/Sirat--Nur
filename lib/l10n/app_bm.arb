@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Boussole sensor tɛ sɔrɔ nin minɛn in kan.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Yɔrɔ min ka kan ka kɛ Qibla kama",
   "qiblaLocationRequiredBody": "Aw ye aw sigiyɔrɔ yɛrɛ sigi sani aw ka baara kɛ ni Qibla boussole ye walasa sira ka se ka jate ka ɲɛ.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Adhan Laseliw",
+  "adhanNotificationChannelDescription": "Delili waati lasɔminiw ni adhan mankan ye.",
   "notifications": "Ladɔnniyaliw",
   "prayerNotifications": "Delili kunnafoniw",
   "enableNotifications": "Ladɔnniyaliw daminɛ",

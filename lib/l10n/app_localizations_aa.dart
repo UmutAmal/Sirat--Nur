@@ -377,7 +377,7 @@ class AppLocalizationsAa extends AppLocalizations {
 
   @override
   String prayerRemainingHoursMinutes(String hours, String minutes) {
-    return '${hours}h ${minutes}m';
+    return '${hours}sa ${minutes}m';
   }
 
   @override
@@ -482,24 +482,24 @@ class AppLocalizationsAa extends AppLocalizations {
       'Compass sensor is unavailable on this device.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Qiblah faxxiima arac.';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Qibla kompaasat xoqoysimtak naharal elle tan arac massos tonnal afkan gitah yakkem duudah.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Maysaxxagoogi';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Salat uddur adhan xongolot maabitina.';
 
   @override
   String get notifications => 'Maysaxxagoogi';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Dooqah Maysaxxagoogi';
 
   @override
   String get enableNotifications => 'Maysaxxagoogi ugsaanam';

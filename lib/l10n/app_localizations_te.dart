@@ -499,7 +499,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get notifications => 'నోటిఫికేషన్‌లు';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'ప్రార్థన నోటిఫికేషన్‌లు';
 
   @override
   String get enableNotifications => 'నోటిఫికేషన్‌లను ప్రారంభించండి';
@@ -508,7 +508,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get notificationTime => 'నోటిఫికేషన్ సమయం';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'ప్రార్థనకు నిమిషాల ముందు';
 
   @override
   String get theme => 'థీమ్';

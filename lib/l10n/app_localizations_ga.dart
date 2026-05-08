@@ -483,18 +483,18 @@ class AppLocalizationsGa extends AppLocalizations {
       'Níl braiteoir compáis ar fáil ar an ngléas seo.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Suíomh riachtanach do Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Socraigh do shuíomh iarbhír sula n-úsáideann tú an compás Qibla ionas gur féidir an treo a ríomh go cruinn.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Fógraí Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Foláirimh am urnaí le fuaim adhan.';
 
   @override
   String get notifications => 'Fógraí';

@@ -495,7 +495,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get notifications => '通知';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => '祈りの通知';
 
   @override
   String get enableNotifications => '通知を有効にする';
@@ -504,7 +504,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get notificationTime => '通知時間';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => '祈りの数分前';
 
   @override
   String get theme => 'テーマ';

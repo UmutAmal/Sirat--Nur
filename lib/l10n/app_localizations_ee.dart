@@ -481,18 +481,18 @@ class AppLocalizationsEe extends AppLocalizations {
   String get qiblaSensorUnavailable => 'Compass sensor mele mɔ̃ sia dzi o.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Teƒe si wobia tso Qibla si';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Ðo afi si nèle ŋutɔŋutɔ hafi nàzã Qibla kɔmpasi ale be woate ŋu abu mɔfiame si dzi nàto la nyuie.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Nyatakakawo';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Gbedodoɖa ɣeyiɣi xlɔ̃a nu kple adhan gbeɖiɖi.';
 
   @override
   String get notifications => 'Nyatakakawo';

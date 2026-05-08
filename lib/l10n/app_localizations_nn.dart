@@ -499,7 +499,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get notifications => 'Varsler';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Bønnevarsler';
 
   @override
   String get enableNotifications => 'Aktiver varsler';
@@ -508,7 +508,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get notificationTime => 'Varslingstid';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minutter før bønn';
 
   @override
   String get theme => 'Tema';

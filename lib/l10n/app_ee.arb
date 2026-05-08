@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Compass sensor mele mɔ̃ sia dzi o.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Teƒe si wobia tso Qibla si",
   "qiblaLocationRequiredBody": "Ðo afi si nèle ŋutɔŋutɔ hafi nàzã Qibla kɔmpasi ale be woate ŋu abu mɔfiame si dzi nàto la nyuie.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Adhan Nyatakakawo",
+  "adhanNotificationChannelDescription": "Gbedodoɖa ɣeyiɣi xlɔ̃a nu kple adhan gbeɖiɖi.",
   "notifications": "Nyatakakawo",
   "prayerNotifications": "Gbedodoɖa Ŋuti Nyatakakawo",
   "enableNotifications": "Na Nyatakakawo nawɔ dɔ",

@@ -501,7 +501,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get notifications => 'Уведомления';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Молитвенные уведомления';
 
   @override
   String get enableNotifications => 'Включить уведомления';
@@ -510,7 +510,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get notificationTime => 'Время уведомления';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'минут до молитвы';
 
   @override
   String get theme => 'Тема';

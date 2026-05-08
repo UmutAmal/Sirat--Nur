@@ -309,6 +309,10 @@ bool _shouldPreserve(String key, dynamic currentValue, dynamic englishValue) {
     return false;
   }
 
+  if (_hasUnexpectedNumericLiteral(key, englishValue, currentValue)) {
+    return false;
+  }
+
   if (_hasKnownWrongContext(key, currentValue)) {
     return false;
   }
@@ -790,6 +794,10 @@ bool _isUsableTranslationCandidate(
     return false;
   }
 
+  if (_hasUnexpectedNumericLiteral(key, source, trimmed)) {
+    return false;
+  }
+
   if (_mustStaySingleLine(key) && _hasLineBreak(trimmed)) {
     return false;
   }
@@ -799,6 +807,20 @@ bool _isUsableTranslationCandidate(
   }
 
   return true;
+}
+
+bool _hasUnexpectedNumericLiteral(String key, String source, String value) {
+  if (key != 'beforePrayer') {
+    return false;
+  }
+
+  return !_hasNumericLiteral(source) && _hasNumericLiteral(value);
+}
+
+bool _hasNumericLiteral(String value) {
+  return RegExp(
+    r'[0-9\u0660-\u0669\u06F0-\u06F9\u0966-\u096F\u09E6-\u09EF\u0A66-\u0A6F\u0CE6-\u0CEF\u0D66-\u0D6F\u0E50-\u0E59\u0F20-\u0F29]',
+  ).hasMatch(value);
 }
 
 bool _hasKnownWrongContext(String key, String value) {
@@ -1153,6 +1175,10 @@ bool _mustStaySingleLine(String key) {
       key == 'quranAudioSourcesIncomplete' ||
       key == 'adhanNotificationChannelName' ||
       key == 'adhanNotificationChannelDescription' ||
+      key == 'prayerNotifications' ||
+      key == 'beforePrayer' ||
+      key == 'prayerRemainingHoursMinutes' ||
+      key == 'prayerRemainingMinutes' ||
       key == 'manageDatasets' ||
       key == 'freeStorage' ||
       key == 'downloadPreparing' ||

@@ -499,7 +499,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get notifications => 'Notifications';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Agahiyên Nimêjê';
 
   @override
   String get enableNotifications => 'Notifications çalak bike';
@@ -508,7 +508,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get notificationTime => 'Dema ragihandinê';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'deqîqe berî nimêjê';
 
   @override
   String get theme => 'Theme';

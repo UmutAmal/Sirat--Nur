@@ -499,7 +499,7 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Oracion pachax adhan sonidompiw alerta.';
 
   @override
   String get notifications => 'Yatiyawinaka';

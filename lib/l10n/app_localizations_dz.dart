@@ -482,24 +482,24 @@ class AppLocalizationsDz extends AppLocalizations {
       'Compass sensor is unavailable on this device.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'ཀིབ་ལ་ལུ་དགོ་པའི་ས་ཁོངས།';
 
   @override
   String get qiblaLocationRequiredBody =>
       'ཀིབ་ལ་ཕྱོགས་སྟོན་འཕྲུལ་ཆས་ལག་ལེན་མ་འཐབ་པའི་ཧེ་མ་ ཁྱོད་རའི་གནས་ས་ངོ་མ་གཞི་སྒྲིག་འབད་དེ་ ཁ་ཕྱོགས་འདི་ གཏན་གཏན་སྦེ་རྩིས་རྐྱབ་ཚུགས།';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan བརྡ་ཐོ།';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'སྨོན་ལམ་དུས་ཚོད་ཀྱི་ཉེན་བརྡ་ཚུ་ ཨ་དྷན་སྒྲ་དང་གཅིག་ཁར་ཨིན།';
 
   @override
   String get notifications => 'བརྡ་བསྐུལ་ཚུ།';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'སྨོན་ལམ་བརྡ་ཐོ།';
 
   @override
   String get enableNotifications => 'བརྡ་བསྐུལ་ཚུ་ལྕོགས་ཅན་བཟོ།';

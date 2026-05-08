@@ -22708,3 +22708,35 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude kalan yuksek gorunurluklu l10n same-as-English cluster'larini veya Supabase data availability kontrollerini skorla.
+
+## 2026-05-08 TUR-565 - Prayer Notification L10n Drift Guard
+
+### MASTER Karari
+- Risk: Namaz bildirimi ve kalan sure copy kumesinde `prayerRemainingMinutes`, `prayerRemainingHoursMinutes`, `beforePrayer`, `prayerNotifications`, `adhanNotificationChannelName`, `adhanNotificationChannelDescription`, `qiblaLocationRequiredTitle` anahtarlarinda genis app_en fallback borcu vardi. Ilk ceviri denemesi daha tehlikeli bir kok sebep gosterdigi icin kapsam daraltildi: `beforePrayer` kaynagi sayi icermedigi halde bazi adaylar 10/15/25/30 dakika gibi somut sure uyduruyordu.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report prayerRemainingMinutes prayerRemainingHoursMinutes beforePrayer prayerNotifications adhanNotificationChannelName adhanNotificationChannelDescription qiblaLocationRequiredTitle` -> `Same-as-English locales=803`, `Missing/empty=0`, `Placeholder mismatch=0`.
+  - Patch sonrasi rapor: ayni komut -> `Same-as-English locales=436`, `Missing/empty=0`, `Placeholder mismatch=0`.
+  - Numeric drift taramasi: `numericBeforePrayer=0`.
+  - Guard kaniti: `tool\translate_arb_keys.dart` artik `beforePrayer` icin kaynakta sayi yokken aday veya mevcut degerde Unicode digit varsa reddediyor.
+- Etki/Olasilik/Risk: Etki 3, olasilik 4, risk `12/25 -> 5/25`. Kalan 436 fallback, dusuk kaynakli locale/key ciftlerinde uydurma veya sayi icat eden copy kabul edilmedigi icin bilincli korunan app_en fallback borcudur.
+- Rollback plani: Bu turdaki ARB/generated l10n batch'i, `tool\translate_arb_keys.dart` numeric/single-line guard'i ve `test\translate_arb_keys_test.dart` regresyon guard'lari tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- `dart run tool\translate_arb_keys.dart prayerRemainingMinutes prayerRemainingHoursMinutes beforePrayer prayerNotifications adhanNotificationChannelName adhanNotificationChannelDescription qiblaLocationRequiredTitle` calistirildi ve `flutter gen-l10n` ile generated localization dosyalari senkronlandi.
+- `beforePrayer` icin somut dakika sayisi uyduran ceviri adaylari ve kirli mevcut degerleri reddeden numeric literal guard eklendi.
+- `prayerNotifications`, `beforePrayer`, `prayerRemainingHoursMinutes`, `prayerRemainingMinutes` tek satir kalmasi gereken runtime UI copy listesine eklendi.
+- Numeric literal regex'i acik Unicode digit araliklariyla yazildi; boylece guard okunabilir ve farkli runtime dogrulamalarinda range hatasi uretmez.
+
+### TESTER Degisikligi
+- Hedefli guard testi:
+  - `flutter test test\translate_arb_keys_test.dart --plain-name "rejects before-prayer copy that invents concrete minutes" --reporter compact` PASS.
+- Hedefli l10n regresyon seti:
+  - `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude yeni en yuksek risk icin tum proje taramasina don; ozellikle notification pipeline, audio pipeline, Supabase availability ve kalan hardcoded/dini icerik yuzeylerini skorla.

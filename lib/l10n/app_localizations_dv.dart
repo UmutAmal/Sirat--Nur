@@ -485,18 +485,18 @@ class AppLocalizationsDv extends AppLocalizations {
       'މި ޑިވައިސްގައި ކޮމްޕަސް ސެންސަރެއް ނެތެވެ.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'ޤިބްލާއަށް ބޭނުންވާ ލޮކޭޝަން';
 
   @override
   String get qiblaLocationRequiredBody =>
       'ޤިބްލާ ކޮމްޕަސް ބޭނުން ކުރުމުގެ ކުރިން ތިމާގެ އަސްލު ތަން ސެޓް ކުރާނީ މިސްރާބު ޞަރީޙަކޮށް ޙިސާބު ކުރެވޭނެ ގޮތަކަށެވެ.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'އަދާން ނޮޓިފިކޭޝަންސް';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'އަދަން އަޑާއެކު ނަމާދު ވަގުތު އެލާޓް ކުރެއެވެ.';
 
   @override
   String get notifications => 'ނޮޓިފިކޭޝަންތައް';

@@ -482,24 +482,24 @@ class AppLocalizationsBa extends AppLocalizations {
       'Compass sensor is unavailable on this device.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Ҡибла өсөн кәрәкле урын';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Ҡибла компасын ҡулланыр алдынан ысын урынды ҡуйығыҙ, шулай итеп йүнәлеште дөрөҫ иҫәпләп була.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Аҙан тураһында хәбәр итеү';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Намаҙ ваҡытында аҙан тауышы менән иҫкәртә.';
 
   @override
   String get notifications => 'Хәбәр итеүҙәр';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Доға тураһында хәбәрҙәр';
 
   @override
   String get enableNotifications => 'Хәбәр итеүҙәрҙе индереү';

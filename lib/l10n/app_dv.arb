@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "މި ޑިވައިސްގައި ކޮމްޕަސް ސެންސަރެއް ނެތެވެ.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "ޤިބްލާއަށް ބޭނުންވާ ލޮކޭޝަން",
   "qiblaLocationRequiredBody": "ޤިބްލާ ކޮމްޕަސް ބޭނުން ކުރުމުގެ ކުރިން ތިމާގެ އަސްލު ތަން ސެޓް ކުރާނީ މިސްރާބު ޞަރީޙަކޮށް ޙިސާބު ކުރެވޭނެ ގޮތަކަށެވެ.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "އަދާން ނޮޓިފިކޭޝަންސް",
+  "adhanNotificationChannelDescription": "އަދަން އަޑާއެކު ނަމާދު ވަގުތު އެލާޓް ކުރެއެވެ.",
   "notifications": "ނޮޓިފިކޭޝަންތައް",
   "prayerNotifications": "ނަމާދު ނޮޓިފިކޭޝަންސް",
   "enableNotifications": "ނޮޓިފިކޭޝަންތައް އެނެބަލްކުރުން",

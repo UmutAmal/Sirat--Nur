@@ -499,7 +499,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get notifications => 'ការជូនដំណឹង';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'ការជូនដំណឹងអំពីការអធិស្ឋាន';
 
   @override
   String get enableNotifications => 'បើកការជូនដំណឹង';
@@ -508,7 +508,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get notificationTime => 'ពេលវេលាជូនដំណឹង';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'នាទីមុនពេលអធិស្ឋាន';
 
   @override
   String get theme => 'ប្រធានបទ';

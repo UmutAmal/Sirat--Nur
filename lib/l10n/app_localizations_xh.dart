@@ -482,7 +482,7 @@ class AppLocalizationsXh extends AppLocalizations {
       'Isivamvo seCompass asifumaneki kwesi sixhobo.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Indawo efunekayo kwiQibla';
 
   @override
   String get qiblaLocationRequiredBody =>
@@ -499,7 +499,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get notifications => 'Izaziso';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Izaziso zomthandazo';
 
   @override
   String get enableNotifications => 'Yenza Izaziso zisebenze';
@@ -508,7 +508,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get notificationTime => 'Ixesha lesaziso';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'imizuzu ngaphambi komthandazo';
 
   @override
   String get theme => 'Umxholo';

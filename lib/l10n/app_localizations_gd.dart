@@ -486,18 +486,18 @@ class AppLocalizationsGd extends AppLocalizations {
       'Chan eil sensor Compass ri fhaighinn air an inneal seo.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Àite a dhìth airson Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Suidhich d’ fhìor shuidheachadh mus cleachd thu combaist Qibla gus an tèid an stiùireadh obrachadh a-mach gu ceart.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Fios Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Rabhadh àm ùrnaigh le fuaim adhan.';
 
   @override
   String get notifications => 'Brathan';

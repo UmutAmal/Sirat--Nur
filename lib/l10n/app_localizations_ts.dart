@@ -486,24 +486,24 @@ class AppLocalizationsTs extends AppLocalizations {
       'Compass sensor a yi kumeki eka xitirhisiwa lexi.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Ndhawu leyi lavekaka eka Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Seta ndhawu ya wena ya xiviri u nga si tirhisa khampasi ya Qibla leswaku tlhelo ri ta hlayiwa kahle.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Switiviso swa Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Nkarhi wa xikhongelo wu lemukisa hi mpfumawulo wa adhan.';
 
   @override
   String get notifications => 'Switiviso';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Switiviso swa Xikhongelo';
 
   @override
   String get enableNotifications => 'Endla leswaku Switiviso swi tirha';
@@ -512,7 +512,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get notificationTime => 'Nkarhi wa Xitiviso';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'timinete emahlweni ka xikhongelo';
 
   @override
   String get theme => 'Mombo';

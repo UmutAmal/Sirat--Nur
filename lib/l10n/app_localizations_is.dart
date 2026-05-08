@@ -499,7 +499,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get notifications => 'Tilkynningar';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Bænatilkynningar';
 
   @override
   String get enableNotifications => 'Virkja tilkynningar';
@@ -508,7 +508,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get notificationTime => 'Tilkynningatími';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'mínútum fyrir bæn';
 
   @override
   String get theme => 'Þema';

@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Chan eil sensor Compass ri fhaighinn air an inneal seo.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Àite a dhìth airson Qibla",
   "qiblaLocationRequiredBody": "Suidhich d’ fhìor shuidheachadh mus cleachd thu combaist Qibla gus an tèid an stiùireadh obrachadh a-mach gu ceart.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Fios Adhan",
+  "adhanNotificationChannelDescription": "Rabhadh àm ùrnaigh le fuaim adhan.",
   "notifications": "Brathan",
   "prayerNotifications": "Brathan Ùrnaigh",
   "enableNotifications": "Dèan comas air fiosan",

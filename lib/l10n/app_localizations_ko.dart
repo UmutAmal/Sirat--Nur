@@ -494,7 +494,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get notifications => '알림';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => '기도알림';
 
   @override
   String get enableNotifications => '알림 활성화';
@@ -503,7 +503,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get notificationTime => '알림 시간';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => '기도하기 몇 분 전';
 
   @override
   String get theme => '테마';

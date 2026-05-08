@@ -485,18 +485,19 @@ class AppLocalizationsGn extends AppLocalizations {
       'Sensor brújula rehegua ndojeguerekói ko tembipuru’ípe.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle =>
+      'Ubicación oñeikotevêva Qibla-pe guarã';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Emohenda nde moõpa oĩ añetehápe reipuru mboyve pe brújula Qibla ikatu hag̃uáicha ojekalkula hekopete pe direksión.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Marandukuéra';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Oñembo\'e tiempo oalerta adhan sonido reheve.';
 
   @override
   String get notifications => 'Marandukuéra';

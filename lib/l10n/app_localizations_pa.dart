@@ -499,7 +499,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get notifications => 'ਸੂਚਨਾਵਾਂ';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'ਪ੍ਰਾਰਥਨਾ ਸੂਚਨਾਵਾਂ';
 
   @override
   String get enableNotifications => 'ਸੂਚਨਾਵਾਂ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ';
@@ -508,7 +508,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get notificationTime => 'ਸੂਚਨਾ ਸਮਾਂ';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'ਪ੍ਰਾਰਥਨਾ ਤੋਂ ਪਹਿਲਾਂ ਮਿੰਟ';
 
   @override
   String get theme => 'ਥੀਮ';

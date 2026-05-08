@@ -498,7 +498,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get notifications => 'Notifications';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Zviziviso zvemunamato';
 
   @override
   String get enableNotifications => 'Vhura Zviziviso';
@@ -507,7 +507,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get notificationTime => 'Nguva Yekuzivisa';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'maminetsi asati anyengetera';
 
   @override
   String get theme => 'Theme';

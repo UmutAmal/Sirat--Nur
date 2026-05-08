@@ -498,7 +498,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get notifications => 'Хабарландырулар';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Намаз туралы хабарландырулар';
 
   @override
   String get enableNotifications => 'Хабарландыруларды қосыңыз';
@@ -507,7 +507,7 @@ class AppLocalizationsKk extends AppLocalizations {
   String get notificationTime => 'Хабарландыру уақыты';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'намаздан бірнеше минут бұрын';
 
   @override
   String get theme => 'Тақырып';

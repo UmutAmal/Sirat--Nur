@@ -497,7 +497,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get notifications => 'התראות';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'הודעות תפילה';
 
   @override
   String get enableNotifications => 'הפעל התראות';
@@ -506,7 +506,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get notificationTime => 'זמן הודעה';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'דקות לפני התפילה';
 
   @override
   String get theme => 'נושא';

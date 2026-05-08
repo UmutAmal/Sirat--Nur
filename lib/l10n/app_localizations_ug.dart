@@ -482,7 +482,7 @@ class AppLocalizationsUg extends AppLocalizations {
       'بۇ ئۈسكۈنىدە كومپاس سېنزور ئىشلەتكىلى بولمايدۇ.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Qibla ئۈچۈن تەلەپ قىلىنغان ئورۇن';
 
   @override
   String get qiblaLocationRequiredBody =>
@@ -499,7 +499,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get notifications => 'ئۇقتۇرۇش';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'دۇئا ئۇقتۇرۇشى';
 
   @override
   String get enableNotifications => 'ئۇقتۇرۇشنى قوزغىتىش';
@@ -508,7 +508,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get notificationTime => 'ئۇقتۇرۇش ۋاقتى';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'دۇئادىن بىر نەچچە مىنۇت بۇرۇن';
 
   @override
   String get theme => 'باشتېما';

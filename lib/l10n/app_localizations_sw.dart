@@ -499,7 +499,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get notifications => 'Arifa';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Arifa za Maombi';
 
   @override
   String get enableNotifications => 'Washa Arifa';
@@ -508,7 +508,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get notificationTime => 'Muda wa Arifa';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'dakika kabla ya maombi';
 
   @override
   String get theme => 'Mandhari';

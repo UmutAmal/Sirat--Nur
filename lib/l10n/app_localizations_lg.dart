@@ -483,24 +483,24 @@ class AppLocalizationsLg extends AppLocalizations {
       'Sensulo ya kkampasi tesangibwa ku kyuma kino.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Ekifo kyetaagisa ku Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Teeka ekifo kyo ekituufu nga tonnaba kukozesa kkampasi ya Qibla olwo obulagirizi busobole okubalirirwa obulungi.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Ebimanyisibwa';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Obudde bw\'okusaba bulabula n\'eddoboozi lya adhan.';
 
   @override
   String get notifications => 'Ebimanyisibwa';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Okumanyisibwa mu kusaba';
 
   @override
   String get enableNotifications => 'Ssobozesa Okumanyisibwa';
@@ -509,7 +509,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get notificationTime => 'Obudde bw\'okumanyisa';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'ng’ebula eddakiika ntono okusaba';
 
   @override
   String get theme => 'Omulamwa';

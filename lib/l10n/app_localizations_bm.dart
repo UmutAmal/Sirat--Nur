@@ -482,18 +482,18 @@ class AppLocalizationsBm extends AppLocalizations {
       'Boussole sensor tɛ sɔrɔ nin minɛn in kan.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Yɔrɔ min ka kan ka kɛ Qibla kama';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Aw ye aw sigiyɔrɔ yɛrɛ sigi sani aw ka baara kɛ ni Qibla boussole ye walasa sira ka se ka jate ka ɲɛ.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Laseliw';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Delili waati lasɔminiw ni adhan mankan ye.';
 
   @override
   String get notifications => 'Ladɔnniyaliw';

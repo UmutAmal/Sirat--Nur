@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Kɔmpas sɛns nɔ de na dis divays.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Lokeshɔn we dɛn nid fɔ de fɔ Qibla",
   "qiblaLocationRequiredBody": "Set yu rial ples bifo yu yuz di Qibla kɔmpas so dat dɛn go ebul fɔ kɔl di dairekshɔn kɔrɛkt wan.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Adhan Notis dɛn we dɛn kin gi",
+  "adhanNotificationChannelDescription": "Prea tɛm alert wit adhan sawnd.",
   "notifications": "Notis dɛn we dɛn kin gi",
   "prayerNotifications": "Notis fɔ Prea",
   "enableNotifications": "Enable Notis dɛn",

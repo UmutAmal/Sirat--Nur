@@ -500,7 +500,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get notifications => 'Ogeysiisyada';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Ogeysiisyada Ducada';
 
   @override
   String get enableNotifications => 'Daar Ogeysiinta';
@@ -509,7 +509,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get notificationTime => 'Waqtiga Ogeysiinta';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'daqiiqado ka hor salaadda';
 
   @override
   String get theme => 'Dulucda';

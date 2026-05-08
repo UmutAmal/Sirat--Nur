@@ -502,7 +502,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get notifications => 'Notificări';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Notificări de rugăciune';
 
   @override
   String get enableNotifications => 'Activați notificările';
@@ -511,7 +511,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get notificationTime => 'Ora de notificare';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minute înainte de rugăciune';
 
   @override
   String get theme => 'Temă';

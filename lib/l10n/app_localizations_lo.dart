@@ -499,7 +499,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get notifications => 'ການແຈ້ງເຕືອນ';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'ການແຈ້ງເຕືອນການອະທິຖານ';
 
   @override
   String get enableNotifications => 'ເປີດໃຊ້ການແຈ້ງເຕືອນ';
@@ -508,7 +508,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get notificationTime => 'ເວລາແຈ້ງການ';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'ນາທີກ່ອນການອະທິຖານ';
 
   @override
   String get theme => 'ຫົວຂໍ້';

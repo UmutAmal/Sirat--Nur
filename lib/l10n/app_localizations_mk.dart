@@ -499,7 +499,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get notifications => 'Известувања';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Известувања за молитва';
 
   @override
   String get enableNotifications => 'Овозможи известувања';
@@ -508,7 +508,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get notificationTime => 'Време на известување';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'минути пред молитвата';
 
   @override
   String get theme => 'Тема';

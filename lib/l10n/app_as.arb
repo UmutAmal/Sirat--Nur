@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "এই ডিভাইচত কম্পাছ চেন্সৰ উপলব্ধ নহয়।",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "কিবলাৰ বাবে স্থানৰ প্ৰয়োজন",
   "qiblaLocationRequiredBody": "Qibla কম্পাছ ব্যৱহাৰ কৰাৰ আগতে আপোনাৰ প্ৰকৃত অৱস্থান নিৰ্ধাৰণ কৰক যাতে দিশ সঠিকভাৱে গণনা কৰিব পৰা যায়।",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "অধন জাননী",
+  "adhanNotificationChannelDescription": "আধন শব্দৰে প্ৰাৰ্থনাৰ সময়ত সতৰ্কবাণী।",
   "notifications": "জাননীসমূহ",
   "prayerNotifications": "প্ৰাৰ্থনাৰ জাননী",
   "enableNotifications": "জাননীসমূহ সামৰ্থবান কৰক",

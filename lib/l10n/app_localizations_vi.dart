@@ -499,7 +499,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get notifications => 'Thông báo';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Thông báo cầu nguyện';
 
   @override
   String get enableNotifications => 'Bật thông báo';
@@ -508,7 +508,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get notificationTime => 'Thời gian thông báo';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'phút trước khi cầu nguyện';
 
   @override
   String get theme => 'chủ đề';

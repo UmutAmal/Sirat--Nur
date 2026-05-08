@@ -500,7 +500,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get notifications => 'Notifiki';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Notifiki ta\' Talb';
 
   @override
   String get enableNotifications => 'Ippermetti Notifiki';
@@ -509,7 +509,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get notificationTime => 'Ħin tan-Notifika';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minuti qabel it-talb';
 
   @override
   String get theme => 'Tema';

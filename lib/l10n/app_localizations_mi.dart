@@ -501,7 +501,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get notifications => 'Whakamōhiotanga';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Panui Panui';
 
   @override
   String get enableNotifications => 'Whakahohe Whakamōhiotanga';
@@ -510,7 +510,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get notificationTime => 'Wā Whakamōhiotanga';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'meneti i mua i te inoi';
 
   @override
   String get theme => 'Kaupapa';

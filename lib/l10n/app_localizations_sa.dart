@@ -493,13 +493,13 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'प्रार्थना समय अधन ध्वनि से अलर्ट।';
 
   @override
   String get notifications => 'अधिसूचनाः';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'प्रार्थना अधिसूचना';
 
   @override
   String get enableNotifications => 'सूचनाः सक्षमाः कुर्वन्तु';
@@ -508,7 +508,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get notificationTime => 'अधिसूचना समयः';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'प्रार्थनायाः निमेषपूर्वम्';
 
   @override
   String get theme => 'विषयः';

@@ -483,24 +483,24 @@ class AppLocalizationsLn extends AppLocalizations {
       'Capteur ya boussole ezali te na appareil oyo.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Esika esengeli mpo na Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Botia esika na yo ya solo liboso ya kosalela boussole Qibla mpo ete nzela ekoka ko calculer na bosikisiki.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Mayebisi ya Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Tango ya losambo ekebisi na mongongo ya adhan.';
 
   @override
   String get notifications => 'Mayebisi';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Mayebisi ya Libondeli';
 
   @override
   String get enableNotifications => 'Activer ba Notifications';
@@ -509,7 +509,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get notificationTime => 'Ntango ya Koyebisa';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'miniti moke liboso ya libondeli';
 
   @override
   String get theme => 'Moto ya likambo';

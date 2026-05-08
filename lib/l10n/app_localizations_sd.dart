@@ -498,7 +498,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get notifications => 'نوٽيفڪيشن';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'دعا جي اطلاع';
 
   @override
   String get enableNotifications => 'اطلاعن کي فعال ڪريو';
@@ -507,7 +507,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get notificationTime => 'نوٽيفڪيشن جو وقت';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'نماز کان اڳ منٽ';
 
   @override
   String get theme => 'موضوع';

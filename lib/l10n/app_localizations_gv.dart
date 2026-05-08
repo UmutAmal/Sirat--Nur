@@ -484,24 +484,24 @@ class AppLocalizationsGv extends AppLocalizations {
       'Compass sensor is unavailable on this device.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Sushtal ta feme er son Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Focklyn Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Alertyn traa padjer lesh soilshey adhan.';
 
   @override
   String get notifications => 'Focklyn';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Focklyn Padjer';
 
   @override
   String get enableNotifications => 'Cur fysseree er';
@@ -510,7 +510,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get notificationTime => 'Am Foillshey';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'Minid roish y phadjer';
 
   @override
   String get theme => 'Theme';

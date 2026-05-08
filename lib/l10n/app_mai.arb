@@ -231,7 +231,7 @@
   "qiblaLocationRequiredTitle": "किबला के लिये स्थान आवश्यक",
   "qiblaLocationRequiredBody": "किबला कम्पास के उपयोग करय सं पहिने अपन वास्तविक स्थान सेट करू ताकि दिशा के सही गणना भ सकय.",
   "adhanNotificationChannelName": "अधान अधिसूचना",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelDescription": "प्रार्थना समय अधान ध्वनि के साथ अलर्ट।",
   "notifications": "अधिसूचना",
   "prayerNotifications": "प्रार्थना सूचना",
   "enableNotifications": "सूचना सक्षम करू",

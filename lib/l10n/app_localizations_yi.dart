@@ -499,7 +499,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get notifications => 'נאָוטאַפאַקיישאַנז';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'תפילה נאָוטאַפאַקיישאַנז';
 
   @override
   String get enableNotifications => 'געבן נאָוטאַפאַקיישאַנז';
@@ -508,7 +508,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get notificationTime => 'אָנזאָג צייט';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'מינוט פאר דאווענען';
 
   @override
   String get theme => 'טעמע';

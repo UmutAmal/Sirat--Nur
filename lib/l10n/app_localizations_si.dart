@@ -498,7 +498,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get notifications => 'දැනුම්දීම්';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'යාච්ඤා දැනුම්දීම්';
 
   @override
   String get enableNotifications => 'දැනුම්දීම් සබල කරන්න';
@@ -507,7 +507,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get notificationTime => 'දැනුම්දීමේ වේලාව';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'යාච්ඤාවට පෙර විනාඩි';
 
   @override
   String get theme => 'තේමාව';

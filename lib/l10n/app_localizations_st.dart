@@ -502,7 +502,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get notifications => 'Litsebiso';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Litsebiso tsa Thapelo';
 
   @override
   String get enableNotifications => 'Numella Litsebiso';
@@ -511,7 +511,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get notificationTime => 'Nako ea Tsebiso';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'metsotso pele ho thapelo';
 
   @override
   String get theme => 'Sehlooho';

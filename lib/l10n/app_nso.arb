@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Senthara ya khamphase ga e hwetšagale go sedirišwa se.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Lefelo le le nyakegago bakeng sa Qibla",
   "qiblaLocationRequiredBody": "Beakanya lefelo la gago la kgonthe pele o diriša khamphase ya Qibla gore tlhahlo e kgone go balwa ka nepo.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Ditsebišo tša Adhan",
+  "adhanNotificationChannelDescription": "Nako ya thapelo e lemoša ka modumo wa adhan.",
   "notifications": "Ditsebišo",
   "prayerNotifications": "Ditsebišo tša Thapelo",
   "enableNotifications": "Kgontšha Ditsebišo",

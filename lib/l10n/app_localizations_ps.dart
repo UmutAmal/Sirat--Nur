@@ -498,7 +498,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get notifications => 'خبرتیاوې';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'د لمانځه خبرتیاوې';
 
   @override
   String get enableNotifications => 'خبرتیاوې فعال کړئ';
@@ -507,7 +507,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get notificationTime => 'د خبرتیا وخت';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'د لمانځه څخه څو دقیقې مخکې';
 
   @override
   String get theme => 'موضوع';

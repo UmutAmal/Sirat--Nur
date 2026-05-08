@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Sensor brújula rehegua ndojeguerekói ko tembipuru’ípe.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Ubicación oñeikotevêva Qibla-pe guarã",
   "qiblaLocationRequiredBody": "Emohenda nde moõpa oĩ añetehápe reipuru mboyve pe brújula Qibla ikatu hag̃uáicha ojekalkula hekopete pe direksión.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Adhan Marandukuéra",
+  "adhanNotificationChannelDescription": "Oñembo'e tiempo oalerta adhan sonido reheve.",
   "notifications": "Marandukuéra",
   "prayerNotifications": "Ñembo’e Ñe’ẽmondo",
   "enableNotifications": "Emboguata Marandukuéra",

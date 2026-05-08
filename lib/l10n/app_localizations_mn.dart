@@ -500,7 +500,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get notifications => 'Мэдэгдэл';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Залбирлын мэдэгдэл';
 
   @override
   String get enableNotifications => 'Мэдэгдэлийг идэвхжүүлнэ үү';
@@ -509,7 +509,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get notificationTime => 'Мэдэгдлийн цаг';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'залбирлын өмнө минутын өмнө';
 
   @override
   String get theme => 'Сэдэв';

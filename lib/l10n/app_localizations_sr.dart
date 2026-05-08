@@ -482,24 +482,24 @@ class AppLocalizationsSr extends AppLocalizations {
       'Сензор компаса није доступан на овом уређају.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Потребна је локација за Киблу';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Подесите своју стварну локацију пре употребе компаса Кибла тако да се правац може тачно израчунати.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Адхан Нотифицатионс';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Упозорења о времену молитве са звуком езана.';
 
   @override
   String get notifications => 'Обавештења';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Обавештења о молитви';
 
   @override
   String get enableNotifications => 'Омогући обавештења';
@@ -508,7 +508,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get notificationTime => 'Време обавештења';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'минута пре молитве';
 
   @override
   String get theme => 'Тема';

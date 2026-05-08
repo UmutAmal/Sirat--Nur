@@ -268,12 +268,7 @@ void main() {
     });
 
     test('tracks settings about share message l10n debt reduction', () {
-      const keys = [
-        'rateApp',
-        'shareApp',
-        'shareAppMessage',
-        'privacyPolicy',
-      ];
+      const keys = ['rateApp', 'shareApp', 'shareAppMessage', 'privacyPolicy'];
       final english = _readArbFile('lib/l10n/app_en.arb');
       final localeArbs = <String, Map<String, dynamic>>{};
 
@@ -1918,7 +1913,7 @@ void main() {
 
       expect(report.missingOrEmptyCount, 0);
       expect(report.placeholderMismatchCount, 0);
-      expect(report.sameAsEnglishCount, lessThanOrEqualTo(266));
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(264));
       for (final locale in [
         'am',
         'as',
@@ -1957,6 +1952,65 @@ void main() {
           if (key == 'prayerRemainingHoursMinutes') {
             expect(value, contains('{hours}'));
           }
+        }
+      }
+    });
+
+    test('tracks prayer notification shell l10n debt without numeric drift', () {
+      const keys = [
+        'prayerRemainingHoursMinutes',
+        'prayerRemainingMinutes',
+        'beforePrayer',
+        'prayerNotifications',
+        'adhanNotificationChannelName',
+        'adhanNotificationChannelDescription',
+        'qiblaLocationRequiredTitle',
+      ];
+      const copyKeys = [
+        'beforePrayer',
+        'prayerNotifications',
+        'adhanNotificationChannelName',
+        'adhanNotificationChannelDescription',
+        'qiblaLocationRequiredTitle',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(436));
+      final numericLiteral = RegExp(
+        r'[0-9\u0660-\u0669\u06F0-\u06F9\u0966-\u096F\u09E6-\u09EF\u0A66-\u0A6F\u0CE6-\u0CEF\u0D66-\u0D6F\u0E50-\u0E59\u0F20-\u0F29]',
+      );
+      for (final entry in localeArbs.entries) {
+        expect(
+          numericLiteral.hasMatch(entry.value['beforePrayer'] as String),
+          isFalse,
+          reason: 'app_${entry.key}.arb invented a concrete minute value',
+        );
+      }
+      for (final locale in ['ak', 'as', 'bh', 'bho']) {
+        for (final key in copyKeys) {
+          expect(
+            localeArbs[locale]![key],
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
         }
       }
     });
@@ -2628,6 +2682,35 @@ void main() {
 
       expect(streamErrorValue, 'Yayin hatasi');
       expect(checkConnectionValue, 'Lutfen baglantinizi kontrol edin');
+    });
+
+    test('rejects before-prayer copy that invents concrete minutes', () {
+      const source = 'minutes before prayer';
+
+      final freshCandidateValue = resolveTranslatedArbValue(
+        key: 'beforePrayer',
+        source: source,
+        currentValue: source,
+        candidate: '10 minutes before prayer',
+      );
+
+      final pollutedExistingValue = resolveTranslatedArbValue(
+        key: 'beforePrayer',
+        source: source,
+        currentValue: '15 minutes before prayer',
+        candidate: '10 minutes before prayer',
+      );
+
+      final preservedSafeValue = resolveTranslatedArbValue(
+        key: 'beforePrayer',
+        source: source,
+        currentValue: 'dakika önce',
+        candidate: '10 dakika önce',
+      );
+
+      expect(freshCandidateValue, source);
+      expect(pollutedExistingValue, source);
+      expect(preservedSafeValue, 'dakika önce');
     });
 
     test('rejects multiline settings shell output', () {

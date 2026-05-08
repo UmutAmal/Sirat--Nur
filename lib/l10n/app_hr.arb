@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Senzor kompasa nije dostupan na ovom uređaju.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Potrebna lokacija za Qiblu",
   "qiblaLocationRequiredBody": "Postavite svoju stvarnu lokaciju prije korištenja Qibla kompasa kako bi se smjer mogao točno izračunati.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Obavijesti o ezanu",
+  "adhanNotificationChannelDescription": "Obavijesti o vremenu molitve sa zvukom ezana.",
   "notifications": "Obavijesti",
   "prayerNotifications": "Molitvene obavijesti",
   "enableNotifications": "Omogući obavijesti",

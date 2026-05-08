@@ -499,7 +499,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get notifications => 'Acta Vicimediorum';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Orationis Notificaciones';
 
   @override
   String get enableNotifications => 'Admitte Suspendisse';
@@ -508,7 +508,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get notificationTime => 'Notification Tempus';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minutes ante orationem';
 
   @override
   String get theme => 'Theme';

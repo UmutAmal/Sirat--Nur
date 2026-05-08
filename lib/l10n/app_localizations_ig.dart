@@ -499,7 +499,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get notifications => 'Amamọkwa';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Ọkwa ekpere';
 
   @override
   String get enableNotifications => 'Kwado ọkwa';
@@ -508,7 +508,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get notificationTime => 'Oge ngosi';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'nkeji tupu ekpere';
 
   @override
   String get theme => 'Isiokwu';

@@ -498,7 +498,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get notifications => 'Aviseringar';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Bönaviseringar';
 
   @override
   String get enableNotifications => 'Aktivera aviseringar';
@@ -507,7 +507,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get notificationTime => 'Aviseringstid';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minuter före bön';
 
   @override
   String get theme => 'Tema';

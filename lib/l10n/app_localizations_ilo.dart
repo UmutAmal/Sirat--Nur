@@ -485,18 +485,19 @@ class AppLocalizationsIlo extends AppLocalizations {
       'Saan a magun-odan ti compass sensor iti daytoy nga alikamen.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle =>
+      'Lokasion ti kasapulan para iti Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Ikeddengmo ti aktual a lokasionmo sakbay nga usarem ti kompas ti Qibla tapno umiso ti pannakakuenta ti direksion.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Dagiti Pakaammo ti Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Alerto ti oras ti kararag babaen ti adhan sound.';
 
   @override
   String get notifications => 'Dagiti Pakaammo';

@@ -499,7 +499,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get notifications => 'Izaziso';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Izaziso Zomkhuleko';
 
   @override
   String get enableNotifications => 'Nika amandla Izaziso';
@@ -508,7 +508,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get notificationTime => 'Isikhathi Sokwazisa';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'imizuzu ngaphambi komkhuleko';
 
   @override
   String get theme => 'Itimu';

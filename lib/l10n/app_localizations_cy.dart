@@ -484,18 +484,18 @@ class AppLocalizationsCy extends AppLocalizations {
       'Nid yw synhwyrydd cwmpawd ar gael ar y ddyfais hon.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Angen lleoliad ar gyfer Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Gosodwch eich lleoliad go iawn cyn defnyddio\'r cwmpawd Qibla fel bod modd cyfrifo\'r cyfeiriad yn gywir.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Hysbysiadau Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Rhybuddion amser gweddi gyda sain adhan.';
 
   @override
   String get notifications => 'Hysbysiadau';

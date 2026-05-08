@@ -485,18 +485,19 @@ class AppLocalizationsNso extends AppLocalizations {
       'Senthara ya khamphase ga e hwetšagale go sedirišwa se.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle =>
+      'Lefelo le le nyakegago bakeng sa Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Beakanya lefelo la gago la kgonthe pele o diriša khamphase ya Qibla gore tlhahlo e kgone go balwa ka nepo.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Ditsebišo tša Adhan';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Nako ya thapelo e lemoša ka modumo wa adhan.';
 
   @override
   String get notifications => 'Ditsebišo';

@@ -231,7 +231,7 @@
   "qiblaLocationRequiredTitle": "Qibla tan hmun mamawh a ni",
   "qiblaLocationRequiredBody": "Qibla compass i hman hmain i awmna tak tak kha set la, chutiang chuan direction dik taka chhut theih a ni.",
   "adhanNotificationChannelName": "Adhan Hriattirna",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelDescription": "Tawngtai hun alerts chu adhan sound nen.",
   "notifications": "Hriattirna te",
   "prayerNotifications": "Tawngtai Hriattirna",
   "enableNotifications": "Notifications te chu enable rawh",

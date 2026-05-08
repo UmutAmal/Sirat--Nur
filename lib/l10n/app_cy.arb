@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Nid yw synhwyrydd cwmpawd ar gael ar y ddyfais hon.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Angen lleoliad ar gyfer Qibla",
   "qiblaLocationRequiredBody": "Gosodwch eich lleoliad go iawn cyn defnyddio'r cwmpawd Qibla fel bod modd cyfrifo'r cyfeiriad yn gywir.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Hysbysiadau Adhan",
+  "adhanNotificationChannelDescription": "Rhybuddion amser gweddi gyda sain adhan.",
   "notifications": "Hysbysiadau",
   "prayerNotifications": "Hysbysiadau Gweddi",
   "enableNotifications": "Galluogi Hysbysiadau",

@@ -484,24 +484,24 @@ class AppLocalizationsOm extends AppLocalizations {
       'Meeshaa kana irratti sensariin koompaasii hin argamu.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Bakki Qiblaaf barbaachisu';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Kallattii sirritti shallagamuu akka danda\'uuf koompaasii Qibla fayyadamuu dura bakka qabatamaa kee saagi.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Beeksisa';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Yeroo kadhannaa sagalee adhan waliin akeekkachiisa.';
 
   @override
   String get notifications => 'Beeksisa';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Beeksisa Kadhannaa';
 
   @override
   String get enableNotifications => 'Beeksisa Dandeessisi';
@@ -510,7 +510,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get notificationTime => 'Yeroo Beeksisa';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'kadhannaa dura daqiiqaa muraasa';
 
   @override
   String get theme => 'Dhimma haasaa';

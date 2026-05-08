@@ -484,24 +484,24 @@ class AppLocalizationsQu extends AppLocalizations {
       'Kay aparatopiqa mana brújula sensor nisqa kanchu.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Ubicación necesaria para Qibla';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Qibla brújula nisqawan manaraq llamk\'achkaspa chiqap maypi kasqaykita churay, chaynapi mayman rinaykipaq allinta yupanapaq.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Willakuykuna';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Mañakuy pacha alertas adhan t’uqyaywan.';
 
   @override
   String get notifications => 'Willakuykuna';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Mañakuymanta Willakuykuna';
 
   @override
   String get enableNotifications => 'Willakuykunata atichiy';
@@ -510,7 +510,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get notificationTime => 'Willakuy pacha';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minutokuna ñawpaqta mañakuna';
 
   @override
   String get theme => 'Rimay';

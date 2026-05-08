@@ -500,7 +500,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get notifications => 'Paziņojumi';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Lūgšanu paziņojumi';
 
   @override
   String get enableNotifications => 'Iespējot paziņojumus';
@@ -509,7 +509,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get notificationTime => 'Paziņojuma laiks';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minūtes pirms lūgšanas';
 
   @override
   String get theme => 'Tēma';

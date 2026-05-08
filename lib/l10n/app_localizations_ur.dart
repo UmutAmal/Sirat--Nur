@@ -482,7 +482,7 @@ class AppLocalizationsUr extends AppLocalizations {
       'کمپاس سینسر اس ڈیوائس پر دستیاب نہیں ہے۔';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'قبلہ کے لیے مقام درکار ہے۔';
 
   @override
   String get qiblaLocationRequiredBody =>

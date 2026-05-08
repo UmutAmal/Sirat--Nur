@@ -483,7 +483,7 @@ class AppLocalizationsTk extends AppLocalizations {
       'Kompass datçigi bu enjamda elýeterli däl.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Kibla üçin zerur ýer';
 
   @override
   String get qiblaLocationRequiredBody =>
@@ -500,7 +500,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get notifications => 'Duýduryşlar';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Namaz habarnamalary';
 
   @override
   String get enableNotifications => 'Duýduryşlary işjeňleşdiriň';
@@ -509,7 +509,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get notificationTime => 'Duýduryş wagty';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'namazdan birnäçe minut öň';
 
   @override
   String get theme => 'Mowzuk';

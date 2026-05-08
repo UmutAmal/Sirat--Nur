@@ -228,10 +228,10 @@
     }
   },
   "qiblaSensorUnavailable": "Níl braiteoir compáis ar fáil ar an ngléas seo.",
-  "qiblaLocationRequiredTitle": "Location required for Qibla",
+  "qiblaLocationRequiredTitle": "Suíomh riachtanach do Qibla",
   "qiblaLocationRequiredBody": "Socraigh do shuíomh iarbhír sula n-úsáideann tú an compás Qibla ionas gur féidir an treo a ríomh go cruinn.",
-  "adhanNotificationChannelName": "Adhan Notifications",
-  "adhanNotificationChannelDescription": "Prayer time alerts with adhan sound.",
+  "adhanNotificationChannelName": "Fógraí Adhan",
+  "adhanNotificationChannelDescription": "Foláirimh am urnaí le fuaim adhan.",
   "notifications": "Fógraí",
   "prayerNotifications": "Fógraí Urnaí",
   "enableNotifications": "Cumasaigh Fógraí",

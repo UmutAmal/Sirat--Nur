@@ -499,7 +499,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get notifications => 'Kabar';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Kabar Pandonga';
 
   @override
   String get enableNotifications => 'Aktifake Notifikasi';
@@ -508,7 +508,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get notificationTime => 'Wektu Notifikasi';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'menit sadurunge sholat';
 
   @override
   String get theme => 'Tema';

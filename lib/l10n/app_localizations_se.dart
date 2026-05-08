@@ -482,24 +482,24 @@ class AppLocalizationsSe extends AppLocalizations {
       'Compass sensor is unavailable on this device.';
 
   @override
-  String get qiblaLocationRequiredTitle => 'Location required for Qibla';
+  String get qiblaLocationRequiredTitle => 'Báiki mii dárbbašuvvo Qibla várás';
 
   @override
   String get qiblaLocationRequiredBody =>
       'Ásahit duohta báikki ovdal go geavahat Qibla-kompássa nu ahte čujuhus sáhttá rehkenastojuvvot dárkilit.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan-dieđiheamit';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Rohkosáigi dieđiha adhan-jietnadagain.';
 
   @override
   String get notifications => 'Dieđiheamit';
 
   @override
-  String get prayerNotifications => 'Prayer Notifications';
+  String get prayerNotifications => 'Rohkosdieđáhusat';
 
   @override
   String get enableNotifications => 'Aktivere dieđiheami';
@@ -508,7 +508,7 @@ class AppLocalizationsSe extends AppLocalizations {
   String get notificationTime => 'Dieđihanáigi';
 
   @override
-  String get beforePrayer => 'minutes before prayer';
+  String get beforePrayer => 'minuhta ovdal rohkosa';
 
   @override
   String get theme => 'Theme';

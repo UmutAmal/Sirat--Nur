@@ -490,11 +490,11 @@ class AppLocalizationsAk extends AppLocalizations {
       'Hyehye wo beae ankasa ansa na wode Qibla kompas no adi dwuma, sɛnea wɔbɛtumi abu kwan no pɛpɛɛpɛ.';
 
   @override
-  String get adhanNotificationChannelName => 'Adhan Notifications';
+  String get adhanNotificationChannelName => 'Adhan Nsɛm a Wɔka Kyerɛ';
 
   @override
   String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+      'Mpaebɔ bere de adhan nnyigyei bɔ kɔkɔ.';
 
   @override
   String get notifications => 'Amanneɛbɔ ahorow';
