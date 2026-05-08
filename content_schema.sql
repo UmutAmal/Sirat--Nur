@@ -47,6 +47,7 @@ on public.daily_content (content_type, display_date);
 
 alter table public.daily_content enable row level security;
 
+drop policy if exists "Public Read Access" on public.daily_content;
 drop policy if exists "Public read daily content" on public.daily_content;
 create policy "Public read daily content"
 on public.daily_content
@@ -74,6 +75,7 @@ on public.live_tv_channels (short_label);
 
 alter table public.live_tv_channels enable row level security;
 
+drop policy if exists "Public Read Access" on public.live_tv_channels;
 drop policy if exists "Public read live tv channels" on public.live_tv_channels;
 create policy "Public read live tv channels"
 on public.live_tv_channels
@@ -125,6 +127,7 @@ on public.education_categories (sort_order);
 
 alter table public.education_categories enable row level security;
 
+drop policy if exists "Public Read Access" on public.education_categories;
 drop policy if exists "Public read education categories" on public.education_categories;
 create policy "Public read education categories"
 on public.education_categories
@@ -176,6 +179,7 @@ on public.education_topics (category_id, sort_order);
 
 alter table public.education_topics enable row level security;
 
+drop policy if exists "Public Read Access" on public.education_topics;
 drop policy if exists "Public read education topics" on public.education_topics;
 create policy "Public read education topics"
 on public.education_topics

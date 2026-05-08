@@ -22775,3 +22775,36 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude Supabase performance advisor'daki duplicate permissive policy risklerini ve bos/eksik cloud content tablolarini skorla.
+
+## 2026-05-08 TUR-567 - Supabase Duplicate Public Read Policy Consolidation
+
+### MASTER Karari
+- Risk: Supabase performance advisor, `public.daily_content`, `public.education_categories`, `public.education_topics` ve `public.live_tv_channels` tablolarinda ayni role/komut icin iki permissive SELECT policy oldugunu raporladi. Bu, RLS kararlarini `OR` semantigiyle genisletebilir ve her public okuma sorgusunda gereksiz policy degerlendirme maliyeti olusturur.
+- Kanit:
+  - Baslangic advisor bulgusu: `multiple_permissive_policies` WARN, dort tablo icin `Public Read Access` + tabloya ozel `Public read ...` policy ciftlerini raporladi.
+  - `pg_policies` baslangic sorgusu, dort tabloda `Public Read Access` policy'sinin `{public}` role, `SELECT`, `qual=true` ile tabloya ozel policy ile ayni erisimi verdigini gosterdi.
+  - Supabase resmi advisor dokumani `0006_multiple_permissive_policies`, coklu permissive policy'lerin erisimi beklenenden genisletebilecegini ve sorgulari yavaslatabilecegini dogruluyor.
+- Etki/Olasilik/Risk: Etki 2, olasilik 4, risk `8/25 -> 2/25`. Runtime public read davranisi korunur; cunku tabloya ozel `Public read ...` policy'leri ayni `using true` erisimini saglamaya devam eder.
+- Rollback plani: Remote migration `20260508190256_drop_duplicate_public_read_policies` geri alinacaksa dort tabloya `Public Read Access` policy'leri tekrar create edilir. Yerelde `content_schema.sql` ve `test/content_schema_test.dart` diff'i tek commit olarak revert edilebilir.
+
+### BUILDER Degisikligi
+- `content_schema.sql`, dort tablo icin eski jenerik `"Public Read Access"` policy'sini drop edip yalniz tabloya ozel public SELECT policy'yi yeniden olusturacak sekilde netlestirildi.
+- Remote Supabase migration uygulandi: `20260508190256_drop_duplicate_public_read_policies`.
+
+### TESTER Degisikligi
+- Dokuman/dogrulama:
+  - Supabase docs search: `0006_multiple_permissive_policies` remediation kontrol edildi.
+- Remote verification:
+  - Performance advisor sonrasi: `multiple_permissive_policies` WARN artik yok; yalniz mevcut `unused_index` INFO kayitlari kaldi.
+  - `pg_policies` sonrasi: dort tabloda yalniz `Public read daily content`, `Public read education categories`, `Public read education topics`, `Public read live tv channels` policy'leri kaldi.
+  - Migration list: `20260508190256_drop_duplicate_public_read_policies` goruldu.
+- Hedefli test:
+  - `flutter test test\content_schema_test.dart --reporter compact` PASS.
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude Supabase data availability risklerini skorla; ozellikle bos `live_tv_channels` ve bos `education_categories` tablolarinin uygulama ozelliklerini etkileyip etkilemedigini test/kod kanitiyla incele.

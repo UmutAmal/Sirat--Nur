@@ -305,11 +305,23 @@ void main() {
         schema,
         contains('alter table public.daily_content enable row level security;'),
       );
+      expect(
+        schema,
+        contains(
+          'drop policy if exists "Public Read Access" on public.daily_content;',
+        ),
+      );
       expect(schema, contains('create policy "Public read daily content"'));
       expect(
         schema,
         contains(
           'alter table public.live_tv_channels enable row level security;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'drop policy if exists "Public Read Access" on public.live_tv_channels;',
         ),
       );
       expect(schema, contains('create policy "Public read live tv channels"'));
@@ -321,12 +333,24 @@ void main() {
       );
       expect(
         schema,
+        contains(
+          'drop policy if exists "Public Read Access" on public.education_categories;',
+        ),
+      );
+      expect(
+        schema,
         contains('create policy "Public read education categories"'),
       );
       expect(
         schema,
         contains(
           'alter table public.education_topics enable row level security;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'drop policy if exists "Public Read Access" on public.education_topics;',
         ),
       );
       expect(schema, contains('create policy "Public read education topics"'));
