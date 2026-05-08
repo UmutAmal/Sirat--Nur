@@ -139,7 +139,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get searchHint => 'Cuardach...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Níor aimsíodh aon torthaí';
 
   @override
   String get loading => 'Loading...';

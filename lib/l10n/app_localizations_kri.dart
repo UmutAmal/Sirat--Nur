@@ -140,7 +140,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get searchHint => 'Sɔch...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'No rizulyt nɔ de';
 
   @override
   String get loading => 'Loading...';

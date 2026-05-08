@@ -62,7 +62,7 @@
   },
   "search": "ค้นหา",
   "searchHint": "ค้นหา...",
-  "noResults": "No results found",
+  "noResults": "ไม่พบผลลัพธ์",
   "loading": "Loading...",
   "error": "Error",
   "appErrorOccurred": "เกิดข้อผิดพลาด",

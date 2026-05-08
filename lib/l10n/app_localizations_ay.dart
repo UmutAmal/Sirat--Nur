@@ -350,7 +350,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get streamError => 'Jawira pantjasiwi';
 
   @override
-  String get reload => 'Recargar ukax mä juk’a pachanakanwa';
+  String get reload => 'Reload';
 
   @override
   String get openInYoutube => 'YouTube ukan jist’aratawa';

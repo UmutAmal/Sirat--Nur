@@ -139,7 +139,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get searchHint => 'ค้นหา...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'ไม่พบผลลัพธ์';
 
   @override
   String get loading => 'Loading...';

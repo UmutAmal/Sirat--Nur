@@ -62,7 +62,7 @@
   },
   "search": "Тражи",
   "searchHint": "Тражи...",
-  "noResults": "No results found",
+  "noResults": "Нема пронађених резултата",
   "loading": "Loading...",
   "error": "Error",
   "appErrorOccurred": "Дошло је до грешке",

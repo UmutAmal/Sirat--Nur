@@ -141,7 +141,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get searchHint => 'Secha...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ku hava mbuyelo lowu kumiweke';
 
   @override
   String get loading => 'Loading...';

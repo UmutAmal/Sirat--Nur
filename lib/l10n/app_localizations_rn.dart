@@ -139,7 +139,7 @@ class AppLocalizationsRn extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Nta bisubizo vyabonetse';
 
   @override
   String get loading => 'Loading...';
@@ -337,19 +337,19 @@ class AppLocalizationsRn extends AppLocalizations {
   String get namesOfAllah => 'Names of Allah';
 
   @override
-  String get liveTv => 'Live TV';
+  String get liveTv => 'Televiziyo ibaho';
 
   @override
   String get watchLive => 'Watch Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Ikosa ry\'uruzi';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Subiramwo';
 
   @override
-  String get openInYoutube => 'Open in YouTube';
+  String get openInYoutube => 'Gufungura muri YouTube';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';
@@ -570,7 +570,7 @@ class AppLocalizationsRn extends AppLocalizations {
   String get noInternet => 'No Internet Connection';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Ndagusavye usuzume uko uhuye';
 
   @override
   String get premium => 'Umushahara';

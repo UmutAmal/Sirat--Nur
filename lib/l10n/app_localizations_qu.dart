@@ -141,7 +141,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get searchHint => 'Maskay...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Mana ima tarikuykuna tarisqachu';
 
   @override
   String get loading => 'Loading...';

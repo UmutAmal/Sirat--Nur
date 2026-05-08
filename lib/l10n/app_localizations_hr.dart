@@ -139,7 +139,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get searchHint => 'Pretraživanje...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Nema rezultata';
 
   @override
   String get loading => 'Loading...';

@@ -139,7 +139,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get searchHint => 'Okunoonya...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Tewali bivuddemu bizuuliddwa';
 
   @override
   String get loading => 'Loading...';

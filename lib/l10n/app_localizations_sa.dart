@@ -343,10 +343,10 @@ class AppLocalizationsSa extends AppLocalizations {
   String get watchLive => 'Watch Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'धारादोषः';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'पुनः लोड करें';
 
   @override
   String get openInYoutube => 'यूट्यूबे उद्घाटितम्';
@@ -570,7 +570,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get noInternet => 'अन्तर्जालसम्पर्कः नास्ति';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'कृपया स्वस्य संयोजनं पश्यन्तु';
 
   @override
   String get premium => 'प्रीमियम';

@@ -141,7 +141,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get searchHint => 'Jeheka...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ndojejuhúi resultado';
 
   @override
   String get loading => 'Loading...';

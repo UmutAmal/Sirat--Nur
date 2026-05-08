@@ -140,7 +140,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get searchHint => 'Agbirok iti...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Awan ti nasarakan a resulta';
 
   @override
   String get loading => 'Loading...';

@@ -140,7 +140,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get searchHint => 'Barbaaduu...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Bu\'aan hin argamne';
 
   @override
   String get loading => 'Loading...';

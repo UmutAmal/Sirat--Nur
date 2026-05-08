@@ -339,10 +339,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get watchLive => 'Watch Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'ስሕተት ስትሪም';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'ዳግማይ ጽዕነት';
 
   @override
   String get openInYoutube => 'ኣብ ዩቱብ ክፈት';
@@ -565,7 +565,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get noInternet => 'ምትእስሳር ኢንተርነት የለን';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'በጃኹም ርክብኩም ኣረጋግጹ';
 
   @override
   String get premium => 'ፕሪሚየም';

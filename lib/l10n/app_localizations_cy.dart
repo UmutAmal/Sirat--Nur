@@ -140,7 +140,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get searchHint => 'Chwilio...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Heb ganfod canlyniadau';
 
   @override
   String get loading => 'Loading...';

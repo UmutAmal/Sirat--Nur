@@ -140,7 +140,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get searchHint => 'Batla...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Ga go na dipoelo tše di hweditšwego';
 
   @override
   String get loading => 'Loading...';

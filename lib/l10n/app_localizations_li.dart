@@ -139,7 +139,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get searchHint => 'Search...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Gein resultate gevoonde';
 
   @override
   String get loading => 'Loading...';
@@ -343,13 +343,13 @@ class AppLocalizationsLi extends AppLocalizations {
   String get watchLive => 'Watch Live';
 
   @override
-  String get streamError => 'Stream error';
+  String get streamError => 'Stroomfout';
 
   @override
-  String get reload => 'Reload';
+  String get reload => 'Herlaad';
 
   @override
-  String get openInYoutube => 'Open in YouTube';
+  String get openInYoutube => 'Open op YouTube';
 
   @override
   String get ibadahTracker => 'Ibadah Tracker';
@@ -570,7 +570,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get noInternet => 'No Internet Connection';
 
   @override
-  String get checkConnection => 'Please check your connection';
+  String get checkConnection => 'Controleer eur verbinding';
 
   @override
   String get premium => 'Premie';

@@ -139,7 +139,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get searchHint => 'Ɲini...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'O jaabi si ma Sɔrɔ';
 
   @override
   String get loading => 'Loading...';

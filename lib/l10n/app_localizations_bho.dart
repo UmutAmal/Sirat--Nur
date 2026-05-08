@@ -140,7 +140,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get searchHint => 'खोज करीं...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'कवनो रिजल्ट ना मिलल';
 
   @override
   String get loading => 'Loading...';

@@ -139,7 +139,7 @@ class AppLocalizationsAk extends AppLocalizations {
   String get searchHint => 'Hwehwɛ...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Wonhuu nea efii mu bae biara';
 
   @override
   String get loading => 'Loading...';

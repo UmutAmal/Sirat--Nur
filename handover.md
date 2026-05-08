@@ -22648,3 +22648,36 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude `latlong2` ve `share_plus` major constraint upgrade'i icin once changelog/API etki analizi yap; risk yuksekse ayri branch/ayri patch olarak ele al.
+
+## 2026-05-08 TUR-563 - Live TV Runtime L10n Debt Reduction
+
+### MASTER Karari
+- Risk: Live TV ve global bos-durum runtime metinlerinde `noResults`, `liveTv`, `reload`, `openInYoutube`, `streamError`, `checkConnection` anahtarlarinin 180+ locale setinde genis app_en fallback borcu vardi. Kullanici etkisi, yayin veya bos sonuc ekranlarinda secilen dil yerine Ingilizce copy gorunmesiydi.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report noResults liveTv reload openInYoutube streamError checkConnection` -> `Same-as-English locales=422`, `Missing/empty=0`, `Placeholder mismatch=0`.
+  - Patch sonrasi rapor: ayni komut -> `Same-as-English locales=195`, `Missing/empty=0`, `Placeholder mismatch=0`.
+  - `test/translate_arb_keys_test.dart` icinde yeni guard toplam same-as-English borcunu `<=195` ile kilitliyor ve `aa`, `ab`, `bo`, `ff` locale'lerinin bu 6 anahtarda app_en fallback'e donmesini engelliyor.
+- Etki/Olasilik/Risk: Etki 3, olasilik 4, risk `12/25 -> 6/25`. Kalan 195 fallback, translate guard'in guvenilir non-English cikti uretmedigi dusuk kaynakli locale/key ciftleri; uydurma veya force uygulanmadi.
+- Rollback plani: Bu turdaki Live TV/bos durum ARB/generated l10n batch'i ve `test/translate_arb_keys_test.dart` guard'i tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- `dart run tool\translate_arb_keys.dart noResults liveTv reload openInYoutube streamError checkConnection` komutu `--force` olmadan calistirildi.
+- `flutter gen-l10n` ile generated localization siniflari ARB kaynaklariyla senkronlandi.
+- Mevcut iyi ceviriler korunarak yalniz app_en fallback kalan uygun locale/key ciftleri azaltildi.
+
+### TESTER Degisikligi
+- Targeted l10n test:
+  - `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart test\live_tv_page_test.dart --reporter compact` PASS.
+- L10n raporu:
+  - `Same-as-English locales=195`
+  - `Missing/empty locales=0`
+  - `Placeholder mismatch locales=0`
+- Diff hygiene:
+  - `git diff --check` PASS (yalniz CRLF uyarilari).
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude Live TV URL query sertlestirmesi veya kalan yuksek gorunurluklu l10n same-as-English cluster'larini skorla.

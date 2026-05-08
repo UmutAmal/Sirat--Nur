@@ -139,7 +139,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get searchHint => 'Di...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Womekpɔ emetsonu aɖeke o';
 
   @override
   String get loading => 'Loading...';

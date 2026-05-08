@@ -141,7 +141,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get searchHint => 'ހޯދުން...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'އެއްވެސް ނަތީޖާއެއް ނުފެނެއެވެ';
 
   @override
   String get loading => 'Loading...';

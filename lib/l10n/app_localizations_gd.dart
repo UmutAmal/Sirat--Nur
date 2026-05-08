@@ -140,7 +140,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get searchHint => 'Lorg...';
 
   @override
-  String get noResults => 'No results found';
+  String get noResults => 'Cha deach toradh a lorg';
 
   @override
   String get loading => 'Loading...';
