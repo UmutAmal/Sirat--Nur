@@ -542,6 +542,21 @@ function Scroll-ToDescriptionContains {
   return $null -ne $element
 }
 
+function Scroll-ToAnyDescriptionContains {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string[]]$Candidates
+  )
+
+  foreach ($label in (Select-NonEmptyUniqueStrings $Candidates)) {
+    if (Scroll-ToDescriptionContains -SessionId $SessionId -Label $label) {
+      return $true
+    }
+  }
+
+  return $false
+}
+
 function Click-SwitchForDescriptionContains {
   param(
     [Parameter(Mandatory = $true)][string]$SessionId,
@@ -557,6 +572,21 @@ function Click-SwitchForDescriptionContains {
   }
 
   return Click-AppiumElement -SessionId $SessionId -Element $element
+}
+
+function Click-SwitchForAnyDescriptionContains {
+  param(
+    [Parameter(Mandatory = $true)][string]$SessionId,
+    [Parameter(Mandatory = $true)][string[]]$Candidates
+  )
+
+  foreach ($label in (Select-NonEmptyUniqueStrings $Candidates)) {
+    if (Click-SwitchForDescriptionContains -SessionId $SessionId -Label $label) {
+      return $true
+    }
+  }
+
+  return $false
 }
 
 function Get-LabeledSwitchChecked {
@@ -575,6 +605,22 @@ function Get-LabeledSwitchChecked {
   }
 
   return $match.Groups[1].Value -eq 'true'
+}
+
+function Get-AnyLabeledSwitchChecked {
+  param(
+    [Parameter(Mandatory = $true)][string]$Source,
+    [Parameter(Mandatory = $true)][string[]]$Candidates
+  )
+
+  foreach ($label in (Select-NonEmptyUniqueStrings $Candidates)) {
+    $checked = Get-LabeledSwitchChecked -Source $Source -Label $label
+    if ($null -ne $checked) {
+      return $checked
+    }
+  }
+
+  return $null
 }
 
 function Select-NonEmptyUniqueStrings {
@@ -1192,15 +1238,16 @@ try {
         Save-AppiumSource -SessionId $sessionId -Name "settings-qibla-calibration-after-save" | Out-Null
       }
     }
-    Scroll-ToDescriptionContains -SessionId $sessionId -Label $smokeText.compassSmoothing | Out-Null
+    $compassSmoothingLabels = Select-NonEmptyUniqueStrings @($smokeText.compassSmoothing, 'Compass Smoothing')
+    Scroll-ToAnyDescriptionContains -SessionId $sessionId -Candidates $compassSmoothingLabels | Out-Null
     $compassSmoothingBeforeXml = Save-AppiumSource -SessionId $sessionId -Name "settings-compass-smoothing-before-toggle"
-    $compassSmoothingBefore = Get-LabeledSwitchChecked -Source $compassSmoothingBeforeXml -Label $smokeText.compassSmoothing
-    $settingsRuntime.clickedCompassSmoothing = Click-SwitchForDescriptionContains -SessionId $sessionId -Label $smokeText.compassSmoothing
+    $compassSmoothingBefore = Get-AnyLabeledSwitchChecked -Source $compassSmoothingBeforeXml -Candidates $compassSmoothingLabels
+    $settingsRuntime.clickedCompassSmoothing = Click-SwitchForAnyDescriptionContains -SessionId $sessionId -Candidates $compassSmoothingLabels
     if ($settingsRuntime.clickedCompassSmoothing) {
       for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.compassSmoothingStateChanged; $attempt++) {
         Start-Sleep -Milliseconds 500
         $compassSmoothingAfterXml = Get-AppiumSource -SessionId $sessionId
-        $compassSmoothingAfter = Get-LabeledSwitchChecked -Source $compassSmoothingAfterXml -Label $smokeText.compassSmoothing
+        $compassSmoothingAfter = Get-AnyLabeledSwitchChecked -Source $compassSmoothingAfterXml -Candidates $compassSmoothingLabels
         $settingsRuntime.compassSmoothingStateChanged = ($null -ne $compassSmoothingBefore) -and
           ($null -ne $compassSmoothingAfter) -and
           ($compassSmoothingBefore -ne $compassSmoothingAfter)
@@ -1208,15 +1255,16 @@ try {
       }
       Save-AppiumSource -SessionId $sessionId -Name "settings-compass-smoothing-after-toggle" | Out-Null
     }
-    Scroll-ToDescriptionContains -SessionId $sessionId -Label $smokeText.darkMode | Out-Null
+    $darkModeLabels = Select-NonEmptyUniqueStrings @($smokeText.darkMode, 'Dark Mode')
+    Scroll-ToAnyDescriptionContains -SessionId $sessionId -Candidates $darkModeLabels | Out-Null
     $darkModeBeforeXml = Save-AppiumSource -SessionId $sessionId -Name "settings-dark-mode-before-toggle"
-    $darkModeBefore = Get-LabeledSwitchChecked -Source $darkModeBeforeXml -Label $smokeText.darkMode
-    $settingsRuntime.clickedDarkMode = Click-SwitchForDescriptionContains -SessionId $sessionId -Label $smokeText.darkMode
+    $darkModeBefore = Get-AnyLabeledSwitchChecked -Source $darkModeBeforeXml -Candidates $darkModeLabels
+    $settingsRuntime.clickedDarkMode = Click-SwitchForAnyDescriptionContains -SessionId $sessionId -Candidates $darkModeLabels
     if ($settingsRuntime.clickedDarkMode) {
       for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.darkModeStateChanged; $attempt++) {
         Start-Sleep -Milliseconds 500
         $darkModeAfterXml = Get-AppiumSource -SessionId $sessionId
-        $darkModeAfter = Get-LabeledSwitchChecked -Source $darkModeAfterXml -Label $smokeText.darkMode
+        $darkModeAfter = Get-AnyLabeledSwitchChecked -Source $darkModeAfterXml -Candidates $darkModeLabels
         $settingsRuntime.darkModeStateChanged = ($null -ne $darkModeBefore) -and
           ($null -ne $darkModeAfter) -and
           ($darkModeBefore -ne $darkModeAfter)

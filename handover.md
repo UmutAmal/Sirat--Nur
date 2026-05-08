@@ -22841,3 +22841,37 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude kalan same-as-English kumesini gorunurluk/risk skoruyla ele al; uydurma riski yuksekse fallback'i koru ve guard ekle.
+
+## 2026-05-08 TUR-569 - Appium Settings Switch Runtime Smoke Hardening
+
+### MASTER Karari
+- Risk: Release Appium smoke uygulama akisini calistirirken ayarlar ekranindaki `compassSmoothing` ve `darkMode` switch'lerini sadece secilen TR ARB etiketiyle ariyordu. Gercek Android UI dump'i ayni switch'leri `Compass Smoothing` ve `Dark Mode` content-desc ile expose ettigi icin smoke harness false-negative uretip release smoke'u fail ediyordu.
+- Kanit:
+  - Baslangic Appium summary: `settingsRuntime.clickedCompassSmoothing=false`, `compassSmoothingStateChanged=false`, `clickedDarkMode=false`, `darkModeStateChanged=false`, `failures` icinde dort switch hatasi.
+  - XML kaniti: `build\appium-runtime-smoke-settings-compass-smoothing-before-toggle.xml` satirinda `content-desc="Compass Smoothing"` altinda `android.widget.Switch checked="true"` vardi; `build\appium-runtime-smoke-settings-dark-mode-before-toggle.xml` satirinda `content-desc="Dark Mode"` altinda `android.widget.Switch checked="true"` vardi.
+  - Appium log kaniti: `build\appium-server.out.log` XPath sorgulari `Pusula Yumusatma` ve `Koyu Mod` ile arama yapip 404 `no such element` dondu.
+- Etki/Olasilik/Risk: Etki 3, olasilik 4, risk `12/25 -> 2/25`. Uygulama davranisi degismedi; runtime QA harness artik locale etiketi ile guvenli EN fallback'i birlikte dener ve gercek release akisini yanlis negatifle durdurmaz.
+- Rollback plani: `tool\appium_runtime_smoke.ps1` icindeki Any-label switch helper'lari ve `test\appium_runtime_smoke_script_test.dart` guard beklentileri tek commit olarak revert edilebilir.
+
+### BUILDER Degisikligi
+- `tool\appium_runtime_smoke.ps1` icin `Scroll-ToAnyDescriptionContains`, `Click-SwitchForAnyDescriptionContains` ve `Get-AnyLabeledSwitchChecked` helper'lari eklendi.
+- `compassSmoothing` smoke adimi artik `@($smokeText.compassSmoothing, 'Compass Smoothing')` adaylarini kullanarak scroll, click ve checked-state okuma yapiyor.
+- `darkMode` smoke adimi artik `@($smokeText.darkMode, 'Dark Mode')` adaylarini kullanarak scroll, click ve checked-state okuma yapiyor.
+- Devralinan `lib\l10n\app_localizations_ae.dart` farki yalniz generated satir sarma/format drift'i olarak korundu; dini/ceviri icerigi semantik olarak degismedi.
+
+### TESTER Degisikligi
+- PowerShell syntax guard:
+  - `[scriptblock]::Create((Get-Content -Raw -Path tool\appium_runtime_smoke.ps1))` PASS.
+- Hedefli script testi:
+  - `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- Gercek release runtime smoke:
+  - `.\tool\appium_runtime_smoke.ps1 -BuildMode release -SmokeLocale tr` PASS.
+  - Summary: `failures=[]`, `logcatCrashFree=true`, `clickedCompassSmoothing=true`, `compassSmoothingStateChanged=true`, `clickedDarkMode=true`, `darkModeStateChanged=true`, Quran playback ve quick access kontrolleri PASS.
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude gercek cihaz/emulator smoke kapsaminda kalan riskleri skorla; ozellikle download cancel `showedCancellingState=false` alaninin UI icin kabul edilebilir gecici durum mu yoksa kacirilan ara-state mi oldugunu kanitla.

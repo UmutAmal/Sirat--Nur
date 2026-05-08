@@ -258,7 +258,22 @@ void main() {
       expect(script, contains('openedPrivacyPolicyExternal'));
       expect(script, contains('dismissedPrivacyPolicyExternal'));
       expect(script, contains('Click-SwitchForDescriptionContains'));
+      expect(script, contains('Click-SwitchForAnyDescriptionContains'));
       expect(script, contains('Get-LabeledSwitchChecked'));
+      expect(script, contains('Get-AnyLabeledSwitchChecked'));
+      expect(script, contains('Scroll-ToAnyDescriptionContains'));
+      expect(
+        script,
+        contains(
+          r"Select-NonEmptyUniqueStrings @($smokeText.compassSmoothing, 'Compass Smoothing')",
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r"Select-NonEmptyUniqueStrings @($smokeText.darkMode, 'Dark Mode')",
+        ),
+      );
       expect(script, contains('clickedLanguage'));
       expect(script, contains('containsLanguagePickerTitle'));
       expect(script, contains('containsLanguageOptions'));

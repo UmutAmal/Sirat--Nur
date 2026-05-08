@@ -124,8 +124,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get locationPermissionDenied => 'Location permission denied.';
 
   @override
-  String get locationDetectionFailed =>
-      'Could not detect your location. Please choose a city manually or try again.';
+  String get locationDetectionFailed => 'Could not detect your location. Please choose a city manually or try again.';
 
   @override
   String citiesCount(String count) {
@@ -154,8 +153,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get appUnknownError => 'Unknown error';
 
   @override
-  String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+  String get quranLoadFailed => 'Quran content could not be loaded. Please try again.';
 
   @override
   String get retry => 'Retry';
@@ -249,12 +247,10 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+  String get tafsirNoEntriesReturned => 'The selected tafsir source returned no entries.';
 
   @override
-  String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+  String get tafsirCacheUnavailable => 'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -272,36 +268,28 @@ class AppLocalizationsAe extends AppLocalizations {
   String get dailyZikr => 'Daily Zikr';
 
   @override
-  String get duaMeaning1 =>
-      'others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’';
+  String get duaMeaning1 => 'others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’';
 
   @override
-  String get duaMeaning2 =>
-      'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers whatever bad it has done. ‘Lord, do not take us to task if we forget or make mistakes. Lord, do not burden us as You burdened those before us. Lord, do not burden us with more than we have strength to bear. Pardon us, forgive us, and have mercy on us. You are our Protector, so help us against the disbelievers.’';
+  String get duaMeaning2 => 'God does not burden any soul with more than it can bear: each gains whatever good it has done, and suffers whatever bad it has done. ‘Lord, do not take us to task if we forget or make mistakes. Lord, do not burden us as You burdened those before us. Lord, do not burden us with more than we have strength to bear. Pardon us, forgive us, and have mercy on us. You are our Protector, so help us against the disbelievers.’';
 
   @override
-  String get duaMeaning3 =>
-      '‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.';
+  String get duaMeaning3 => '‘Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy: You are the Ever Giving.';
 
   @override
-  String get duaMeaning4 =>
-      'Lord, grant that I and my offspring may keep up the prayer. Our Lord, accept my request.';
+  String get duaMeaning4 => 'Lord, grant that I and my offspring may keep up the prayer. Our Lord, accept my request.';
 
   @override
-  String get duaMeaning5 =>
-      'and lower your wing in humility towards them in kindness and say, ‘Lord, have mercy on them, just as they cared for me when I was little.’';
+  String get duaMeaning5 => 'and lower your wing in humility towards them in kindness and say, ‘Lord, have mercy on them, just as they cared for me when I was little.’';
 
   @override
-  String get duaMeaning6 =>
-      'exalted be God, the one who is truly in control. [Prophet], do not rush to recite before the revelation is fully complete but say, ‘Lord, increase me in knowledge!’';
+  String get duaMeaning6 => 'exalted be God, the one who is truly in control. [Prophet], do not rush to recite before the revelation is fully complete but say, ‘Lord, increase me in knowledge!’';
 
   @override
-  String get duaMeaning7 =>
-      'Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’';
+  String get duaMeaning7 => 'Say [Prophet], ‘Lord, forgive and have mercy: You are the most merciful of all.’';
 
   @override
-  String get duaMeaning8 =>
-      'those who pray, ‘Our Lord, give us joy in our spouses and offspring. Make us good examples to those who are aware of You’.';
+  String get duaMeaning8 => 'those who pray, ‘Our Lord, give us joy in our spouses and offspring. Make us good examples to those who are aware of You’.';
 
   @override
   String get morningZikr => 'Morning Zikr';
@@ -478,22 +466,19 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get qiblaSensorUnavailable =>
-      'Compass sensor is unavailable on this device.';
+  String get qiblaSensorUnavailable => 'Compass sensor is unavailable on this device.';
 
   @override
   String get qiblaLocationRequiredTitle => 'Location required for Qibla';
 
   @override
-  String get qiblaLocationRequiredBody =>
-      'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
+  String get qiblaLocationRequiredBody => 'Set your actual location before using the Qibla compass so the direction can be calculated accurately.';
 
   @override
   String get adhanNotificationChannelName => 'Adhan Notifications';
 
   @override
-  String get adhanNotificationChannelDescription =>
-      'Prayer time alerts with adhan sound.';
+  String get adhanNotificationChannelDescription => 'Prayer time alerts with adhan sound.';
 
   @override
   String get notifications => 'Notifications';
@@ -609,8 +594,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get onboarding1Title => 'Welcome to Sirat-ı Nur';
 
   @override
-  String get onboarding1Desc =>
-      'Your complete Islamic companion app for prayer times, Quran, and more';
+  String get onboarding1Desc => 'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
   String get onboarding2Title => 'Prayer Times';
@@ -622,8 +606,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get onboarding3Title => 'Quran & More';
 
   @override
-  String get onboarding3Desc =>
-      'Read Quran, track your reading, and explore Islamic content';
+  String get onboarding3Desc => 'Read Quran, track your reading, and explore Islamic content';
 
   @override
   String get dhikrLibrary => 'Dhikr Library';
@@ -664,8 +647,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get zikrMeaningAstaghfirullah => 'I seek Allah\'s forgiveness.';
 
   @override
-  String get zikrMeaningLaHawlaWaLaQuwwata =>
-      'There is no power and no strength except through Allah.';
+  String get zikrMeaningLaHawlaWaLaQuwwata => 'There is no power and no strength except through Allah.';
 
   @override
   String get dailyChecklist => 'Daily Checklist';
@@ -836,8 +818,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get compassSmoothing => 'Compass Smoothing';
 
   @override
-  String get reduceSensorJitter =>
-      'Reduce sensor jitter for a steadier needle.';
+  String get reduceSensorJitter => 'Reduce sensor jitter for a steadier needle.';
 
   @override
   String get calibrationOffset => 'Calibration Offset';
@@ -848,8 +829,7 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get manualCorrectionDesc =>
-      'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
+  String get manualCorrectionDesc => 'Adjust if your compass needs a manual correction. Positive values rotate clockwise.';
 
   @override
   String get apply => 'Apply';
@@ -878,8 +858,7 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsPrayerCustomSource =>
-      'Manual custom angles (no institutional source)';
+  String get diagnosticsPrayerCustomSource => 'Manual custom angles (no institutional source)';
 
   @override
   String diagnosticsPrayerHybridSource(String sourceName, String madhab) {
@@ -937,8 +916,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get diagnosticsQuranJuzMetadata => 'Quran Juz Metadata';
 
   @override
-  String get diagnosticsQuranCloudTablesMissing =>
-      'Cloud tables missing in Supabase; bundled fallback active';
+  String get diagnosticsQuranCloudTablesMissing => 'Cloud tables missing in Supabase; bundled fallback active';
 
   @override
   String diagnosticsQuranCloudCheckFailed(String error) {
@@ -946,8 +924,7 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get diagnosticsQuranCloudJuzMissing =>
-      'Cloud juz metadata missing; bundled structural fallback active';
+  String get diagnosticsQuranCloudJuzMissing => 'Cloud juz metadata missing; bundled structural fallback active';
 
   @override
   String diagnosticsQuranCloudStructuralCheckFailed(String error) {
@@ -964,8 +941,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get rotateToFindQibla => 'Rotate to Find Qibla';
 
   @override
-  String get calibrationRequiredFigure8 =>
-      'Calibration required. Rotate device in figure-8.';
+  String get calibrationRequiredFigure8 => 'Calibration required. Rotate device in figure-8.';
 
   @override
   String get dailyVerse => 'Daily Verse';
@@ -974,8 +950,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get dailyVerseUnavailableTitle => 'Daily verse unavailable';
 
   @override
-  String get dailyVerseUnavailableBody =>
-      'Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.';
+  String get dailyVerseUnavailableBody => 'Verified daily verse content is not configured for this build yet. Connect to the cloud source or sync a verified cache before browsing.';
 
   @override
   String get todaysIbadah => 'Today\'s Ibadah';
@@ -1007,8 +982,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get duaUnavailableTitle => 'Verified duas are not available yet';
 
   @override
-  String get duaUnavailableBody =>
-      'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
+  String get duaUnavailableBody => 'Verified daily duas have not been synced to this device yet. Connect to the cloud source to load sourced duas instead of an unverified fallback.';
 
   @override
   String get duaCategoryQuranic => 'Quranic dua';
@@ -1065,24 +1039,19 @@ class AppLocalizationsAe extends AppLocalizations {
   String get hadithSourcePending => 'Verified source pending';
 
   @override
-  String get hadithUnavailableTitle =>
-      'Verified hadith collections are not available yet';
+  String get hadithUnavailableTitle => 'Verified hadith collections are not available yet';
 
   @override
-  String get hadithUnavailableBody =>
-      'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
+  String get hadithUnavailableBody => 'This build still depends on an unverified external hadith feed. Hadith browsing stays disabled until a sourced dataset is synced.';
 
   @override
-  String get paywallUnlockAll =>
-      'Unlock all features for your spiritual journey';
+  String get paywallUnlockAll => 'Unlock all features for your spiritual journey';
 
   @override
-  String get premiumProductUnavailable =>
-      'Premium product is not available right now. Please try again later.';
+  String get premiumProductUnavailable => 'Premium product is not available right now. Please try again later.';
 
   @override
-  String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+  String get premiumPurchaseFailed => 'Purchase could not be completed. Please try again.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';
@@ -1180,24 +1149,19 @@ class AppLocalizationsAe extends AppLocalizations {
   String get zakatInvestmentZakat => 'Investment Zakat';
 
   @override
-  String get chatbotGreeting =>
-      'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
+  String get chatbotGreeting => 'Assalamu Alaikum! I am your Islamic assistant. Ask me about prayer, fasting, zakat, or any Islamic topic.';
 
   @override
-  String get chatbotLimitReached =>
-      'Daily query limit reached. Upgrade to Premium for unlimited.';
+  String get chatbotLimitReached => 'Daily query limit reached. Upgrade to Premium for unlimited.';
 
   @override
-  String get chatbotErrorMsg =>
-      'I could not generate a response. Please try again.';
+  String get chatbotErrorMsg => 'I could not generate a response. Please try again.';
 
   @override
-  String get chatbotOfflinePrompt =>
-      'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
+  String get chatbotOfflinePrompt => 'The verified offline Islamic knowledge base is still being curated. You can enable offline fallback now, but it will only show limited safe messages until the sourced dataset is ready.\n\nWould you like to enable offline fallback?';
 
   @override
-  String get chatbotOfflineSwitched =>
-      'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
+  String get chatbotOfflineSwitched => 'Offline fallback enabled. Verified local Islamic answers are not ready yet.';
 
   @override
   String get chatbotOfflineDownloadLabel => 'Enable Offline Fallback';
@@ -1211,8 +1175,7 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get downloadCompleted =>
-      'All surahs already downloaded for this reciter.';
+  String get downloadCompleted => 'All surahs already downloaded for this reciter.';
 
   @override
   String get offlineQuranAudioPacks => 'Offline Quran Audio Packs';
@@ -1256,12 +1219,7 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String downloadPartiallyFinishedForReciter(
-    String reciter,
-    String downloaded,
-    String total,
-    String failed,
-  ) {
+  String downloadPartiallyFinishedForReciter(String reciter, String downloaded, String total, String failed) {
     return 'Download finished for $reciter with $failed failed surahs ($downloaded/$total downloaded).';
   }
 
@@ -1271,12 +1229,10 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get quranAudioSourcesUnavailable =>
-      'Verified Quran audio sources are unavailable right now.';
+  String get quranAudioSourcesUnavailable => 'Verified Quran audio sources are unavailable right now.';
 
   @override
-  String get quranAudioPlaybackErrorWithConnectionHint =>
-      'Audio playback failed. Please check your connection.';
+  String get quranAudioPlaybackErrorWithConnectionHint => 'Audio playback failed. Please check your connection.';
 
   @override
   String quranAudioSourcesIncomplete(String available, String total) {
@@ -1314,8 +1270,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get sukunUnavailableTitle => 'Soundscapes unavailable';
 
   @override
-  String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+  String get sukunUnavailableBody => 'This build does not include the required Sukun soundscape assets yet.';
 
   @override
   String get prayerCompletion => 'Prayer Completion';
@@ -1347,12 +1302,10 @@ class AppLocalizationsAe extends AppLocalizations {
   }
 
   @override
-  String get chatbotCloudNotConfigured =>
-      'Cloud API is not configured. Verified offline Islamic guidance is not available yet.';
+  String get chatbotCloudNotConfigured => 'Cloud API is not configured. Verified offline Islamic guidance is not available yet.';
 
   @override
-  String get chatbotLocalNoInfo =>
-      '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
+  String get chatbotLocalNoInfo => '[OFFLINE] Verified local Islamic guidance is not available yet. Switch to Cloud AI for sourced answers.';
 
   @override
   String get mosques => 'Mosques';
@@ -1391,22 +1344,19 @@ class AppLocalizationsAe extends AppLocalizations {
   String get placesLocationRequiredTitle => 'Location required';
 
   @override
-  String get placesLocationRequiredBody =>
-      'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
+  String get placesLocationRequiredBody => 'Set a location first so nearby mosques, halal food, and Islamic schools can be searched accurately.';
 
   @override
   String get placesMapTilesUnavailableTitle => 'Map tiles unavailable';
 
   @override
-  String get placesMapTilesUnavailableBody =>
-      'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
+  String get placesMapTilesUnavailableBody => 'A verified map tile source is not configured for this build yet. Nearby places can still load from your saved location.';
 
   @override
   String get placesDataSourceUnavailableTitle => 'Places data unavailable';
 
   @override
-  String get placesDataSourceUnavailableBody =>
-      'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
+  String get placesDataSourceUnavailableBody => 'A verified places data endpoint is not configured for this build yet. Set PLACES_OVERPASS_API_URL to an approved proxy or provider before enabling nearby search.';
 
   @override
   String get unknownPlaceName => 'Unknown Name';
@@ -1433,15 +1383,13 @@ class AppLocalizationsAe extends AppLocalizations {
   String get asmaMeaning6 => 'The Giver of Security';
 
   @override
-  String get asmaMeaning7 =>
-      'The Watchful Guardian, who observes and safeguards all creation.';
+  String get asmaMeaning7 => 'The Watchful Guardian, who observes and safeguards all creation.';
 
   @override
   String get asmaMeaning8 => 'The Precious / The Most Mighty';
 
   @override
-  String get asmaMeaning9 =>
-      'The Restorer and Irresistible, whose will prevails with perfect power.';
+  String get asmaMeaning9 => 'The Restorer and Irresistible, whose will prevails with perfect power.';
 
   @override
   String get asmaMeaning10 => 'The Greatest';
@@ -1474,12 +1422,10 @@ class AppLocalizationsAe extends AppLocalizations {
   String get asmaMeaning19 => 'The Knower of All';
 
   @override
-  String get asmaMeaning20 =>
-      'The Withholder, who narrows and restrains by wisdom.';
+  String get asmaMeaning20 => 'The Withholder, who narrows and restrains by wisdom.';
 
   @override
-  String get asmaMeaning21 =>
-      'The Expander, who opens, eases, and grants abundance by wisdom.';
+  String get asmaMeaning21 => 'The Expander, who opens, eases, and grants abundance by wisdom.';
 
   @override
   String get asmaMeaning22 => 'The Abaser';
@@ -1647,8 +1593,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get asmaMeaning76 => 'The Hidden';
 
   @override
-  String get asmaMeaning77 =>
-      'The Protecting Patron, who governs and cares for all creation.';
+  String get asmaMeaning77 => 'The Protecting Patron, who governs and cares for all creation.';
 
   @override
   String get asmaMeaning78 => 'The Supreme One';
@@ -1666,8 +1611,7 @@ class AppLocalizationsAe extends AppLocalizations {
   String get asmaMeaning82 => 'The Forgiver';
 
   @override
-  String get asmaMeaning83 =>
-      'The Most Kind and Compassionate, full of tender mercy.';
+  String get asmaMeaning83 => 'The Most Kind and Compassionate, full of tender mercy.';
 
   @override
   String get asmaMeaning84 => 'The Owner / Sovereign of All';
@@ -1715,6 +1659,5 @@ class AppLocalizationsAe extends AppLocalizations {
   String get asmaMeaning98 => 'The Most Righteous Guide';
 
   @override
-  String get asmaMeaning99 =>
-      'The Patient, who does not hasten punishment and acts with perfect forbearance.';
+  String get asmaMeaning99 => 'The Patient, who does not hasten punishment and acts with perfect forbearance.';
 }
