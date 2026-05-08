@@ -1060,7 +1060,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Educacion islamica';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

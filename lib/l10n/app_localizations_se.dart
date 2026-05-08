@@ -1055,7 +1055,7 @@ class AppLocalizationsSe extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Islamlaš oahpahus';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

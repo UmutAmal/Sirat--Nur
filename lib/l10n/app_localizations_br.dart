@@ -1057,7 +1057,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Deskadurezh islamek';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

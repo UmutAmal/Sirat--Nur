@@ -1055,7 +1055,7 @@ class AppLocalizationsFo extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Islamsk útbúgving';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

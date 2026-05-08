@@ -1059,7 +1059,7 @@ class AppLocalizationsSg extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Fango ye ti Islam';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

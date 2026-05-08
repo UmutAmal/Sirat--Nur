@@ -2084,6 +2084,44 @@ void main() {
       }
     });
 
+    test('tracks Islamic education title l10n debt reduction', () {
+      const key = 'islamicEducation';
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: const [key],
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(29));
+      for (final locale in ['aa', 'ab', 'bo', 'ff', 'fo']) {
+        final value = localeArbs[locale]![key] as String;
+        expect(
+          value,
+          isNot(english[key]),
+          reason: 'app_$locale.arb still uses English for $key',
+        );
+        expect(
+          value.contains('\n') || value.contains('\r'),
+          isFalse,
+          reason: 'app_$locale.arb has multiline title copy for $key',
+        );
+      }
+    });
+
     test('tracks settings utility and premium l10n debt reduction', () {
       const keys = [
         'yes',
@@ -2652,6 +2690,33 @@ void main() {
       expect(sourceResidueValue, source);
       expect(explanatoryValue, source);
       expect(validValue, 'Ffordd Goleuni Islamaidd');
+    });
+
+    test('rejects weak Islamic education title output', () {
+      const source = 'Islamic Education';
+
+      final explanatoryValue = resolveTranslatedArbValue(
+        key: 'islamicEducation',
+        source: source,
+        currentValue: source,
+        candidate: 'इस्लामी शिक्षा के बारे में बतावल गइल बा',
+      );
+      final trailingPunctuationValue = resolveTranslatedArbValue(
+        key: 'islamicEducation',
+        source: source,
+        currentValue: source,
+        candidate: 'Исламияб тарбия .',
+      );
+      final validValue = resolveTranslatedArbValue(
+        key: 'islamicEducation',
+        source: source,
+        currentValue: source,
+        candidate: 'Jaŋde Lislaam',
+      );
+
+      expect(explanatoryValue, source);
+      expect(trailingPunctuationValue, source);
+      expect(validValue, 'Jaŋde Lislaam');
     });
 
     test('rejects multiline ibadah tracker output', () {

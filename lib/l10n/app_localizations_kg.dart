@@ -1058,7 +1058,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Malongi ya kiislamu';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

@@ -1056,7 +1056,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get duaSourceAhmad => 'Ahmad';
 
   @override
-  String get islamicEducation => 'Islamic Education';
+  String get islamicEducation => 'Jaŋde Lislaam';
 
   @override
   String get sukunAudioTitle => 'Sukun Soundscapes';

@@ -22808,3 +22808,36 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude Supabase data availability risklerini skorla; ozellikle bos `live_tv_channels` ve bos `education_categories` tablolarinin uygulama ozelliklerini etkileyip etkilemedigini test/kod kanitiyla incele.
+
+## 2026-05-08 TUR-568 - Islamic Education Visible Title L10n Hardening
+
+### MASTER Karari
+- Risk: `islamicEducation` basligi kutuphane ve harita yuzeylerinde gorunur olmasina ragmen 63 locale'de app_en fallback ile birebir ayniydi. Bu, tum diller hedefinde gorunur UI kalitesi ve locale guveni riskidir.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report islamicEducation` -> `Same-as-English locales=63`, `Missing/empty=0`, `Placeholder mismatch=0`.
+  - Ilk batch sonrasi bazi dusuk kaynakli adaylarda baslik yerine aciklama cumlesi (`के बारे में`, `बतावल`) ve bozuk bosluk-nokta (` .`) goruldu; bu adaylar uydurma/yanlis baglam riski nedeniyle kabul edilmedi.
+  - Patch sonrasi rapor: ayni komut -> `Same-as-English locales=29`, `Missing/empty=0`, `Placeholder mismatch=0`.
+- Etki/Olasilik/Risk: Etki 2, olasilik 4, risk `8/25 -> 3/25`. Kalan 29 fallback, guard'in guvenilir kisa baslik uretemedigi dusuk kaynakli locale'lerde bilincli olarak korunur.
+- Rollback plani: Bu turdaki ARB/generated l10n batch'i, `tool\translate_arb_keys.dart` short-label debris guard'i ve `test\translate_arb_keys_test.dart` regresyon guard'lari tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- `dart run tool\translate_arb_keys.dart islamicEducation` calistirildi ve `flutter gen-l10n` ile generated localization siniflari senkronlandi.
+- `islamicEducation` icin aciklama cumlesi gibi davranan veya bozuk trailing ` .` tasiyan adaylari reddeden short-label guard eklendi.
+- Dilde guvenli gorunen dort baslikte yalniz bozuk noktalama/yanlis baglam temizlendi: `app_av`, `app_bh`, `app_ce`, `app_kv`.
+
+### TESTER Degisikligi
+- Store readiness kaniti:
+  - `.\tool\check_store_readiness.ps1 -SkipNetwork -SkipFlutterValidation` PASS.
+  - `.\tool\check_store_readiness.ps1 -SkipFlutterValidation` PASS; GitHub/Cloudflare audio probe'lari HTTP 206 dondu, Supabase public tablo minimumlari ve approved source URL kontrolleri gecti.
+- Hedefli l10n guard:
+  - `flutter test test\translate_arb_keys_test.dart --name "Islamic education" --reporter compact` PASS.
+- L10n regresyon seti:
+  - `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude kalan same-as-English kumesini gorunurluk/risk skoruyla ele al; uydurma riski yuksekse fallback'i koru ve guard ekle.

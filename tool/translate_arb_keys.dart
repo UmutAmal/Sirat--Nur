@@ -879,6 +879,10 @@ bool _hasKnownWrongContext(String key, String value) {
         ).contains(_englishFallbackComparisonToken('Islamic Way of Light'));
   }
 
+  if (key == 'islamicEducation') {
+    return _isWeakIslamicEducationCopy(value);
+  }
+
   return false;
 }
 
@@ -905,6 +909,12 @@ bool _isWeakDistanceAwayCopy(String value) {
     '{distance} emakhilomitha',
     '{distance} dikilometara',
   }.contains(value.trim().toLowerCase());
+}
+
+bool _isWeakIslamicEducationCopy(String value) {
+  final trimmed = value.trim();
+  return _containsAny(trimmed, _knownShortLabelTranslationDebris) ||
+      RegExp(r'\s+\.$').hasMatch(trimmed);
 }
 
 bool _isPrayerMethodOrNameKey(String key) {
@@ -1019,6 +1029,8 @@ const _knownGeneralTranslationDebris = [
   'Ukax mä juk’a pachanakanwa',
   'ukax mä juk’a pachanakanwa',
 ];
+
+const _knownShortLabelTranslationDebris = ['के बारे में', 'बतावल', ' के बा'];
 
 const _knownPrayerMethodOrNameDebris = [
   'Método Jurídico',
