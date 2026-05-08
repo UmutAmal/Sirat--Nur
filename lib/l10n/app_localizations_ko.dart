@@ -21,7 +21,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get quran => '꾸란';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => '키블라';
 
   @override
   String get zikr => '지크르';

@@ -12,22 +12,22 @@ class AppLocalizationsCe extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Исламан серлонан некъ';
 
   @override
-  String get home => 'Home';
+  String get home => 'ЦӀа';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'Къуръан .';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'Къибла';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => 'Зикр';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Рузма';
 
   @override
   String get settings => 'Settings';

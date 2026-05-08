@@ -12,22 +12,22 @@ class AppLocalizationsCv extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Ислам ҫутӑ ҫулӗ';
 
   @override
-  String get home => 'Home';
+  String get home => 'Кил';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'Коран';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'Кибла';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => 'Зикр';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Календарь';
 
   @override
   String get settings => 'Settings';

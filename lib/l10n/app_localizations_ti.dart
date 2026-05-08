@@ -21,13 +21,13 @@ class AppLocalizationsTi extends AppLocalizations {
   String get quran => 'ቁርኣን';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'ቂብላ';
 
   @override
   String get zikr => 'ዚክሪ';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'ዓውደ ኣዋርሕ';
 
   @override
   String get settings => 'ቅጥዕታት';

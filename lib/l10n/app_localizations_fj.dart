@@ -12,22 +12,22 @@ class AppLocalizationsFj extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Sala ni Rarama ni Islam';
 
   @override
-  String get home => 'Home';
+  String get home => 'Vale';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'Koran';
 
   @override
   String get qibla => 'Qibla';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => 'Sikiri';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Kaleda';
 
   @override
   String get settings => 'Settings';

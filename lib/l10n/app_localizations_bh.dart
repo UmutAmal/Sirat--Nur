@@ -15,19 +15,19 @@ class AppLocalizationsBh extends AppLocalizations {
   String get splashTagline => 'Islamic Way of Light';
 
   @override
-  String get home => 'Home';
+  String get home => 'घर';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'कुरान के ह';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'किबला के बा';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => 'जिक्र के बा';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'कैलेंडर के बा';
 
   @override
   String get settings => 'Settings';

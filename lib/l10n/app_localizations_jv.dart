@@ -21,7 +21,7 @@ class AppLocalizationsJv extends AppLocalizations {
   String get quran => 'Quran';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'Kiblat';
 
   @override
   String get zikr => 'Zikir';

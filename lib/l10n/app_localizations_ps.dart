@@ -21,7 +21,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get quran => 'قرآن';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'قبله';
 
   @override
   String get zikr => 'ذکر';

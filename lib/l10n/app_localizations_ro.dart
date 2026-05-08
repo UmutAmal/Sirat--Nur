@@ -27,7 +27,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Calendaristic';
 
   @override
   String get settings => 'Setări';

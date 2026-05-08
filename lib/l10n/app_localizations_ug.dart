@@ -21,7 +21,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get quran => 'قۇرئان';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'قىبلە';
 
   @override
   String get zikr => 'Zikr';

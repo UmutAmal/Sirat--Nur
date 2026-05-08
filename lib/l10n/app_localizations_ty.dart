@@ -12,10 +12,10 @@ class AppLocalizationsTy extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Te e\'a no te maramarama Islama';
 
   @override
-  String get home => 'Home';
+  String get home => 'Fare';
 
   @override
   String get quran => 'Quran';
@@ -27,7 +27,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Maramataka';
 
   @override
   String get settings => 'Settings';

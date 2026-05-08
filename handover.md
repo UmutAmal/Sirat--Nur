@@ -23002,3 +23002,36 @@
 ### Sonraki Adim
 - Yeni dongude build artefact sonrasi kalan riskleri tara.
 - Oncelik adayi: generated release artefact ile APK/App Bundle runtime config'in Dart tarafinda gercek endpointleri kullandigini statik/manifest veya runtime smoke ile capraz dogrula.
+
+## 2026-05-08 TUR-574 - Core Navigation L10n Fallback Reduction
+
+### MASTER Karari
+- Risk: Dil secicisi 196 locale sunarken ana navigasyon ve splash metinlerinde gorunen Ingilizce fallback'ler kullanicida "ceviri var" beklentisini bozuyor. Bu, ozellikle ilk acilis ve alt navigasyon icin P1 UI kalite/l10n riskiydi.
+- Kanit:
+  - Audit komutu: `dart run tool/translate_arb_keys.dart --report splashTagline home quran qibla zikr calendar`.
+  - Patch oncesi 6 cekirdek anahtar icin `Same-as-English locales: 582`.
+  - Patch sonrasi ayni raporda `Same-as-English locales: 385`.
+  - `flutter gen-l10n` sonrasi uretilen Dart siniflari da guncellendi; ornekler: `lib\l10n\app_localizations_aa.dart` artik `home => 'Buxa'`, `lib\l10n\app_localizations_ja.dart` artik `qibla => 'キブラ'`, `lib\l10n\app_localizations_ru.dart` artik `qibla => 'Кибла'` donduruyor.
+  - Tum `lib\l10n\app_*.arb` dosyalari JSON parse kontrolunden gecti.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 10/25`. Cekirdek gorunur yuzeyde 197 fallback degeri kaldirildi; desteklenmeyen/guvenilir ceviri uretilemeyen locale'ler uydurma ceviriyle doldurulmadi.
+- Rollback plani: Bu tur sadece `lib\l10n\app_*.arb` ve uretilen `lib\l10n\app_localizations_*.dart` degisiklikleridir; gerekirse tek i18n commit revert edilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` ile sadece 6 gorunur UI anahtari cevrildi: `splashTagline`, `home`, `quran`, `qibla`, `zikr`, `calendar`.
+- Dini kaynak metni, Quran/hadith/dua icerigi veya meal verisi uretilmedi ya da degistirilmedi.
+- `flutter gen-l10n` calistirildi ve ARB degisiklikleri runtime localizations siniflarina tasindi.
+
+### TESTER Degisikligi
+- ARB JSON parse gate:
+  - `Get-ChildItem lib\l10n\app_*.arb | ConvertFrom-Json` PASS.
+- L10n debt tekrar olcumu:
+  - `dart run tool/translate_arb_keys.dart --report splashTagline home quran qibla zikr calendar` PASS.
+  - Same-as-English debt `582 -> 385`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Kalan l10n borcu buyuk: genel audit `196` ARB dosyasi, `521` template anahtari ve `33584` same-as-English deger raporladi. Siradaki dongude bunu parca parca, guvenilir ceviri uretilebilen anahtar/dil gruplariyla azalt.
+- Dil secicide `nativeName` degerleri `AA`, `AB` gibi placeholder kalan locale'ler icin ayrica denetlenecek; uydurma isim yazmadan resmi/CLDR tabanli isimle duzelt ya da desteklenmeyen locale icin durumu handover'a kanitla.

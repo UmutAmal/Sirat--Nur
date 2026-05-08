@@ -12,22 +12,22 @@ class AppLocalizationsFf extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Laawol Lislaam Annoore';
 
   @override
-  String get home => 'Home';
+  String get home => 'Saare';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'Quraana';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'Kibla';
 
   @override
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Limlebbi';
 
   @override
   String get settings => 'Settings';

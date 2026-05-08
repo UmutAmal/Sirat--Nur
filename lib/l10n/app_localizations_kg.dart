@@ -12,22 +12,22 @@ class AppLocalizationsKg extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Nzila ya nsemo ya Islam';
 
   @override
-  String get home => 'Home';
+  String get home => 'Nzo';
 
   @override
-  String get quran => 'Quran';
+  String get quran => 'Quoran';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'Kibla';
 
   @override
   String get zikr => 'Zikr';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Manaka';
 
   @override
   String get settings => 'Settings';

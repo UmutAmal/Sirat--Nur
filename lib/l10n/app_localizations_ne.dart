@@ -21,7 +21,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get quran => 'कुरान';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'किब्ला';
 
   @override
   String get zikr => 'जिक्र';

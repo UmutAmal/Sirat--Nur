@@ -21,7 +21,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get quran => 'Kuranɛ';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'Qibla ye';
 
   @override
   String get zikr => 'Zikr';

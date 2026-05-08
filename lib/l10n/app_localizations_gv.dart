@@ -12,10 +12,10 @@ class AppLocalizationsGv extends AppLocalizations {
   String get appTitle => 'Sirat-ı Nur';
 
   @override
-  String get splashTagline => 'Islamic Way of Light';
+  String get splashTagline => 'Raad Islamagh y Soilshey';
 
   @override
-  String get home => 'Home';
+  String get home => 'Thie';
 
   @override
   String get quran => 'Quran';
@@ -24,10 +24,10 @@ class AppLocalizationsGv extends AppLocalizations {
   String get qibla => 'Qibla';
 
   @override
-  String get zikr => 'Zikr';
+  String get zikr => 'Zikr;';
 
   @override
-  String get calendar => 'Calendar';
+  String get calendar => 'Calendar;';
 
   @override
   String get settings => 'Settings';

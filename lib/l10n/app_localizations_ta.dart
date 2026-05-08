@@ -21,7 +21,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get quran => 'குர்ஆன்';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'கிப்லா';
 
   @override
   String get zikr => 'ஜிக்ர்';

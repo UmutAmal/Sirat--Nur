@@ -15,7 +15,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get splashTagline => 'Riya Îslamî ya Ronahî';
 
   @override
-  String get home => 'Home';
+  String get home => 'Xane';
 
   @override
   String get quran => 'Quran';

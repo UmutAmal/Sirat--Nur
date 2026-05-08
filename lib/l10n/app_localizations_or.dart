@@ -21,7 +21,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get quran => 'କୁରାନ';
 
   @override
-  String get qibla => 'Qibla';
+  String get qibla => 'କିବଲା |';
 
   @override
   String get zikr => 'ଜିକ୍ର';
