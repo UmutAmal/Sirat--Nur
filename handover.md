@@ -23057,11 +23057,14 @@
   - `test\arb_coverage_test.dart` icinde `language picker does not expose raw ISO codes as language names` eklendi.
 - Hedefli test:
   - `flutter test test\arb_coverage_test.dart --reporter compact` PASS, `16/16`.
-- Final kapilar bu kayittan sonra calistirilacak:
-  - `git diff --check`
-  - `flutter analyze`
-  - `flutter test --reporter compact`
+- Final kapilar:
+  - `git diff --check` PASS; yalniz CRLF uyarisi.
+  - `flutter analyze` PASS, `No issues found`.
+  - `flutter test --reporter compact` PASS, `792/792`.
+- Appium release runtime smoke:
+  - `.\tool\appium_runtime_smoke.ps1 -BuildMode release -SmokeLocale tr` PASS.
+  - Summary: `failures=[]`, `releaseDartDefinesApplied=True`, `clickedSmokeLanguage=True`, `containsSmokeLanguageOptions=True`, `selectedSmokeLanguage=True`, `settingsLocalizedForSmokeLocale=True`, `logcatCrashFree=True`.
+  - Runtime akislari: onboarding, Settings controls, language picker, bottom nav, Quran playback, quick access, offline download cancel feedback ve external intents dogrulandi.
 
 ### Sonraki Adim
-- Tam kapilar gecerse commit + push yap.
-- Siradaki dongude kalan l10n same-as-English borcunu daha fazla azaltmak icin once en gorunur ayarlar, onboarding, hata/empty-state anahtarlarini parcali batch'ler halinde ele al.
+- Commit + push sonrasi yeni dongude kalan l10n same-as-English borcunu daha fazla azaltmak icin once en gorunur ayarlar, onboarding, hata/empty-state anahtarlarini parcali batch'ler halinde ele al.
