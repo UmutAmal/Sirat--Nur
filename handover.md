@@ -22972,3 +22972,33 @@
 ### Sonraki Adim
 - Yeni dongude kod tabaninda store-ready kalitesini etkileyebilecek kalan statik riskleri tara.
 - Oncelik adayi: Play/App Store artefact build scriptleri (`tool\build_store_appbundle.ps1`, Android release config, signing/lint ve env validation) yeniden kanitlanabilir mi kontrol et.
+
+## 2026-05-08 TUR-573 - Production App Bundle Build Gate Audit
+
+### MASTER Karari
+- Risk: Store-ready iddiasi yalniz script/test varligiyle degil, production env ve release signing kullanilarak gercek `.aab` artefact uretimiyle kanitlanmaliydi. Onceki appbundle artefact tarihi eskiydi; guncel kaynak, env ve keystore ile yeniden build edilmesi gerekiyordu.
+- Kanit:
+  - Config gate: `.\tool\build_store_appbundle.ps1 -NoBuild` PASS; `.env.store` yuklendi ve `Store release configuration is present.` dondu.
+  - Production build: `.\tool\build_store_appbundle.ps1` PASS; `flutter build appbundle --release` `bundleRelease` gorevini calistirdi ve `build\app\outputs\bundle\release\app-release.aab` uretti.
+  - Artefact: `A:\Way of Allah\sirat_i_nur\build\app\outputs\bundle\release\app-release.aab`, `64707804` byte, LastWriteTime `2026-05-08 23:45:50`.
+  - Signing verification: `jarsigner -verify -verbose -certs build\app\outputs\bundle\release\app-release.aab` exit 0 ve `jar verified.` cikti.
+  - Signer: `CN=Sirat-i Nur, OU=Release, O=Umut Amal, L=Istanbul, ST=Istanbul, C=TR`, RSA 4096-bit, certificate valid `2026-04-17` -> `2053-09-02`.
+  - `jarsigner` self-signed/invalid chain warning'i upload keystore icin beklenen turde; imza dogrulamasi basarili ve debug signing kullanilmadi.
+- Etki/Olasilik/Risk: Etki 5, olasilik 3, risk `15/25 -> 2/25`. Kod degisikligi gerekmedi; store artefact build zinciri guncel env ve signing ile kanitlandi.
+- Rollback plani: Bu tur yalniz `handover.md` audit kaydidir; gerekirse docs commit revert edilebilir. Uretilen `build\...app-release.aab` tracked degildir.
+
+### BUILDER Degisikligi
+- Kod veya config degistirilmedi.
+- `tool\build_store_appbundle.ps1` hem `-NoBuild` hem de gercek build modunda calistirildi.
+
+### TESTER Degisikligi
+- Store config gate:
+  - `.\tool\build_store_appbundle.ps1 -NoBuild` PASS.
+- Store artefact build:
+  - `.\tool\build_store_appbundle.ps1` PASS.
+- Signing verification:
+  - `jarsigner -verify -verbose -certs build\app\outputs\bundle\release\app-release.aab` PASS, `jar verified.`.
+
+### Sonraki Adim
+- Yeni dongude build artefact sonrasi kalan riskleri tara.
+- Oncelik adayi: generated release artefact ile APK/App Bundle runtime config'in Dart tarafinda gercek endpointleri kullandigini statik/manifest veya runtime smoke ile capraz dogrula.
