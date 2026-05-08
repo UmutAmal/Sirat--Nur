@@ -11,6 +11,13 @@ const Set<String> expectedSukunSoundTypes = {
   'ocean',
 };
 
+const Map<String, String> defaultSukunAudioAssets = {
+  'rain': 'assets/audio/ui/rain.wav',
+  'forest': 'assets/audio/ui/forest.wav',
+  'night': 'assets/audio/ui/night.wav',
+  'ocean': 'assets/audio/ui/ocean.wav',
+};
+
 bool isRemoteAudioSource(String source) {
   final uri = Uri.tryParse(source.trim());
   if (uri == null) {
@@ -189,7 +196,7 @@ class AudioSovereigntyService {
 final audioSovereigntyServiceProvider = Provider<AudioSovereigntyService>((
   ref,
 ) {
-  final service = AudioSovereigntyService();
+  final service = AudioSovereigntyService(sukunAssets: defaultSukunAudioAssets);
   ref.onDispose(service.dispose);
   return service;
 });

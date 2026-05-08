@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sirat_i_nur/core/network/supabase_config.dart';
 import 'package:sirat_i_nur/core/services/audio_sovereignty_service.dart';
@@ -42,6 +44,19 @@ class FakeSovereignAudioEngine implements SovereignAudioEngine {
 
 void main() {
   group('AudioSovereigntyService', () {
+    test('ships first-party fallback assets for every sukun sound type', () {
+      expect(defaultSukunAudioAssets.keys.toSet(), expectedSukunSoundTypes);
+
+      for (final entry in defaultSukunAudioAssets.entries) {
+        expect(entry.value, startsWith('assets/audio/ui/'));
+        expect(
+          File(entry.value).existsSync(),
+          isTrue,
+          reason: '${entry.key} fallback asset is missing',
+        );
+      }
+    });
+
     test('plays quran assets through the injected engine', () async {
       final engine = FakeSovereignAudioEngine();
       final service = AudioSovereigntyService(engine: engine);

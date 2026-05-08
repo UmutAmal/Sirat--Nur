@@ -22555,3 +22555,37 @@
   - `test/translate_arb_keys_test.dart` icine `preserves existing localized share message over machine churn` guard'i eklendi.
 - Hedefli dogrulama: `flutter test test\features\settings\settings_page_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
 - Final dogrulama: `flutter analyze` PASS; `flutter test --reporter compact` PASS, `782/782`.
+
+## 2026-05-08 TUR-560 - Sukun Audio First-Party Fallback Closure
+
+### MASTER Karari
+- Risk: Sukun audio sayfasi Supabase `audio_files` icinde `sukun/nature` kaydi olmadiginda ve yerel asset map bos geldiginde uretimde tamamen "Soundscapes unavailable" durumuna dusuyordu.
+- Kanit:
+  - `assets/audio/ui/` baslangicta sadece UI/adhan yardimci seslerini iceriyordu; `rain.wav`, `forest.wav`, `night.wav`, `ocean.wav` yoktu.
+  - `lib/core/services/audio_sovereignty_service.dart` provider'i `AudioSovereigntyService()` ile bos `_sukunAssets` kuruyordu.
+  - Supabase canlı sorgu: `public.audio_files` tip dagilimi yalniz `quran_surah=684`; `sukun/nature=0`.
+  - Supabase storage: `audio-sukun` bucket public read policy'ye sahip, ama `storage.objects` mevcut tabloda `0` satir raporladi; anonim upload policy yok.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 4/25`. Kullanici artik cloud kaydi olmasa bile first-party bundled Sukun ambience fallbacklerini gorur; cloud Supabase URL geldiginde mevcut kod onu local assetten once kullanmaya devam eder.
+- Rollback plani: `assets/audio/ui/{rain,forest,night,ocean}.wav`, `lib/core/services/audio_sovereignty_service.dart` default map'i ve iki test dosyasindaki guard'lar tek committe geri alinabilir.
+
+### BUILDER Degisikligi
+- Telifsiz/first-party, deterministik uretilmis kisa WAV fallbackleri eklendi: `rain.wav`, `forest.wav`, `night.wav`, `ocean.wav`.
+- `defaultSukunAudioAssets` eklendi ve `audioSovereigntyServiceProvider` bu map ile servis kuracak sekilde baglandi.
+- Cloud onceligi korunuyor: `resolveSukunSource` once dogrulanmis Supabase storage URL'sini, yoksa bundled fallback assetini seciyor.
+
+### TESTER Degisikligi
+- Yeni guard:
+  - `test/audio_sovereignty_service_test.dart` tum `expectedSukunSoundTypes` icin first-party fallback asset dosyasinin varligini dogruluyor.
+  - `test/sukun_audio_page_test.dart` cloud bosken bundled Sukun seslerinin sayfada gorundugunu ve play akisini tetikledigini dogruluyor.
+- Hedefli dogrulama:
+  - `flutter test test\audio_sovereignty_service_test.dart test\sukun_audio_page_test.dart test\features\settings\diagnostics_page_test.dart --reporter compact` PASS.
+  - `flutter test test\features\settings\diagnostics_page_test.dart --reporter compact` PASS, `17/17`.
+- Diff hygiene: `git diff --check` PASS (yalniz CRLF uyarilari).
+- Final dogrulama:
+  - `flutter analyze` PASS, no issues found.
+  - `flutter test --reporter compact` PASS, `784/784`.
+
+### Sonraki Adim
+- Commit + push yap.
+- Sonraki dongude `sukunUnavailableTitle` ve ilgili unavailable body l10n fallback borcunu raporla; uydurma yapmadan guvenli locale batch'i varsa azalt.
+- Supabase tarafinda service-role/upload yetkisi saglandiginda ayni WAV'lar veya daha kaliteli lisansli first-party ambience dosyalari `audio-sukun` bucket'ina yuklenmeli ve `public.audio_files` icine `type='sukun'/'nature'` satirlari eklenmeli. Mevcut app kodu o anda cloud kayitlarini local fallbackten once kullanacaktir.

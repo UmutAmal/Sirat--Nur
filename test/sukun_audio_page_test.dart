@@ -114,6 +114,43 @@ void main() {
     expect(find.textContaining('Now playing:'), findsNothing);
   });
 
+  testWidgets('shows bundled first-party sukun sounds when cloud is empty', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(800, 1200));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    final service = FakePageAudioService(
+      true,
+      sukunAssets: defaultSukunAudioAssets,
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          audioSovereigntyServiceProvider.overrideWithValue(service),
+          sukunAudioSourcesProvider.overrideWith((ref) async => const {}),
+        ],
+        child: MaterialApp(
+          locale: const Locale('en'),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const SukunAudioPage(),
+        ),
+      ),
+    );
+    await tester.pump();
+
+    expect(find.text('Soundscapes unavailable'), findsNothing);
+    expect(find.text('Rain of Mercy'), findsOneWidget);
+
+    await tester.tap(find.text('Rain of Mercy'));
+    await tester.pump();
+
+    expect(service.requestedType, 'rain');
+    expect(service.requestedCloudSources, isEmpty);
+  });
+
   testWidgets('uses cloud sukun sources when Supabase audio rows exist', (
     tester,
   ) async {
