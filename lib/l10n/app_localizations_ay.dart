@@ -1314,8 +1314,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get chatbotThinking => 'Amuyt’añataki...';
 
   @override
-  String get sukunMixerSubtitle =>
-      'Naturaleza & Qur’an Mixer ukax mä juk’a pachanakanwa';
+  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';

@@ -1294,32 +1294,32 @@ class AppLocalizationsBo extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'རང་བྱུང་ཁམས་དང་ཁ་ཆེའི་གསུང་རབ་བསྲེས་ཆས།';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
 
   @override
-  String get sukunNatureLabel => 'Sukun (Nature)';
+  String get sukunNatureLabel => 'སུ་ཀུན་༼རང་བྱུང་ཁམས་༽';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'སྙིང་རྗེའི་ཆར་ཆུ།';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'ཞི་བདེའི་ལྡུམ་ར།';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'མཚན་གུང་ལྷིང་འཇགས།';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'རྒྱ་མཚོའི་ཏའོ་ཧིད།';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'སྒྲ་དབྱངས་མཛེས་ལྗོངས་མེད་པ།';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'བཟོ་སྐྲུན་འདིའི་ནང་དུ་དགོས་མཁོའི་སུ་ཀུན་སྒྲ་སྒམ་གྱི་རྒྱུ་ནོར་ད་དུང་ཚུད་མེད་པ་རེད།';
 
   @override
   String get prayerCompletion => 'སྨོན་ལམ་མཇུག་སྒྲིལ།';

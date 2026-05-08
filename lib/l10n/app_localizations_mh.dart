@@ -1300,23 +1300,23 @@ class AppLocalizationsMh extends AppLocalizations {
   String get sukunNatureLabel => 'Sukun (Nature)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'Wōt in tiriamo';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'Jikin Kallib in Ainemõn';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'Kalmenlokjen ilo lukwon boñ';
 
   @override
   String get sukunOceanTawheed => 'Ocean Tawheed';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'Soundscape ko rejjab maroñ in walok';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'Build in ejjab kobaik Sukun soundscape assets ko rej aikuji kiõ.';
 
   @override
   String get prayerCompletion => 'Kajemlok jar';

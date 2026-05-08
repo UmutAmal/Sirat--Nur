@@ -1294,7 +1294,7 @@ class AppLocalizationsGv extends AppLocalizations {
   String get chatbotThinking => 'Thinking...';
 
   @override
-  String get sukunMixerSubtitle => 'Nature & Qur\'an Mixer';
+  String get sukunMixerSubtitle => 'Meassaghey Nature & Coran';
 
   @override
   String get audioPlayFailed => 'Audio playback failed';
@@ -1303,23 +1303,23 @@ class AppLocalizationsGv extends AppLocalizations {
   String get sukunNatureLabel => 'Sukun (Nature)';
 
   @override
-  String get sukunRainOfMercy => 'Rain of Mercy';
+  String get sukunRainOfMercy => 'Floo dy Mighin';
 
   @override
-  String get sukunGardenOfPeace => 'Garden of Peace';
+  String get sukunGardenOfPeace => 'Gardyn y Slane';
 
   @override
-  String get sukunMidnightCalm => 'Midnight Calm';
+  String get sukunMidnightCalm => 'Calm Mean-oie';
 
   @override
-  String get sukunOceanTawheed => 'Ocean Tawheed';
+  String get sukunOceanTawheed => 'Tawheed y Cheayn';
 
   @override
-  String get sukunUnavailableTitle => 'Soundscapes unavailable';
+  String get sukunUnavailableTitle => 'Scapeyn soilshey cha nel ad ry gheddyn';
 
   @override
   String get sukunUnavailableBody =>
-      'This build does not include the required Sukun soundscape assets yet.';
+      'Ta\'n towse shoh ry-gheddyn rish ny h-earrooyn soundscape Sukun ry-gheddyn foast.';
 
   @override
   String get prayerCompletion => 'Cur-my-ner Padjer';

@@ -22589,3 +22589,36 @@
 - Commit + push yap.
 - Sonraki dongude `sukunUnavailableTitle` ve ilgili unavailable body l10n fallback borcunu raporla; uydurma yapmadan guvenli locale batch'i varsa azalt.
 - Supabase tarafinda service-role/upload yetkisi saglandiginda ayni WAV'lar veya daha kaliteli lisansli first-party ambience dosyalari `audio-sukun` bucket'ina yuklenmeli ve `public.audio_files` icine `type='sukun'/'nature'` satirlari eklenmeli. Mevcut app kodu o anda cloud kayitlarini local fallbackten once kullanacaktir.
+
+## 2026-05-08 TUR-561 - Sukun Audio L10n Residual Reduction
+
+### MASTER Karari
+- Risk: Sukun audio ekranindaki 8 runtime metin anahtari 180+ locale setinde genis capli app_en fallback tasiyordu. Kullanici etkisi, Sukun sayfasinda dil secimi yerellestirilmisken ses/mixer/unavailable copy'sinin Ingilizce gorunmesiydi.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report sukunUnavailableTitle sukunUnavailableBody sukunRainOfMercy sukunGardenOfPeace sukunMidnightCalm sukunOceanTawheed sukunNatureLabel sukunMixerSubtitle` -> `Same-as-English locales=561`, `Missing/empty=0`, `Placeholder mismatch=0`.
+  - Patch sonrasi rapor: ayni komut -> `Same-as-English locales=297`, `Missing/empty=0`, `Placeholder mismatch=0`.
+  - `test/translate_arb_keys_test.dart` icinde yeni Sukun l10n debt guard'i toplam same-as-English borcunu `<=297` ile kilitliyor ve `aa`, `ab`, `bo`, `ff`, `iu` locale'lerinin bu 8 anahtarda app_en fallback'e donmesini engelliyor.
+- Etki/Olasilik/Risk: Etki 3, olasilik 4, risk `12/25 -> 6/25`. Kalan 297 fallback dusuk kaynakli veya translator'in guvenilir non-English cikti uretmedigi locale/key ciftleri; uydurma yapmamak icin force/manual tahmin uygulanmadi.
+- Rollback plani: Bu turdaki Sukun ARB/generated l10n batch'i ve `test/translate_arb_keys_test.dart` guard'i tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- `dart run tool\translate_arb_keys.dart sukunUnavailableTitle sukunUnavailableBody sukunRainOfMercy sukunGardenOfPeace sukunMidnightCalm sukunOceanTawheed sukunNatureLabel sukunMixerSubtitle` komutu `--force` olmadan calistirildi.
+- `flutter gen-l10n` ile generated localization siniflari ARB kaynaklariyla senkronlandi.
+- Mevcut iyi ceviriler korunarak yalniz app_en fallback kalan uygun locale/key ciftleri azaltildi.
+
+### TESTER Degisikligi
+- Targeted l10n test:
+  - `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
+- L10n raporu:
+  - `Same-as-English locales=297`
+  - `Missing/empty locales=0`
+  - `Placeholder mismatch locales=0`
+- Diff hygiene:
+  - `git diff --check` PASS (yalniz CRLF uyarilari).
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude genel dependency drift'i (`go_router 17.2.2 -> 17.2.3`, transitive patch updates) ve kalan l10n same-as-English borclarini ayri riskler olarak skorla.
