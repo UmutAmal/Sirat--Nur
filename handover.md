@@ -23035,3 +23035,33 @@
 ### Sonraki Adim
 - Kalan l10n borcu buyuk: genel audit `196` ARB dosyasi, `521` template anahtari ve `33584` same-as-English deger raporladi. Siradaki dongude bunu parca parca, guvenilir ceviri uretilebilen anahtar/dil gruplariyla azalt.
 - Dil secicide `nativeName` degerleri `AA`, `AB` gibi placeholder kalan locale'ler icin ayrica denetlenecek; uydurma isim yazmadan resmi/CLDR tabanli isimle duzelt ya da desteklenmeyen locale icin durumu handover'a kanitla.
+
+## 2026-05-08 TUR-575 - Language Picker CLDR Name Cleanup
+
+### MASTER Karari
+- Risk: Settings > Language listesi tum ARB locale'lerini gosterirken 144 dil satiri `AA`, `AB`, `HE`, `VI` gibi ham ISO kodlarini hem `nativeName` hem `englishName` olarak sunuyordu. Bu durum kullanicinin dili secmesini zorlastiriyor ve "tam ceviri" iddiasini zedeliyordu.
+- Kanit:
+  - Eski kod taramasi: `git show HEAD:lib/core/constants/app_constants.dart | rg "AppLanguage\(code: '[^']+', nativeName: '[A-Z]{2,3}', englishName: '[A-Z]{2,3}'\)"` -> `144`.
+  - Yeni kod taramasi: ayni regex `lib\core\constants\app_constants.dart` uzerinde `0`.
+  - `node`/ICU `Intl.DisplayNames` kullanilarak CLDR dil adlari uretildi; `resolvedOptions().locale` istenen locale'e dusmediginde uydurma endonym yerine Ingilizce CLDR adi kullanildi.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 3/25`. Dil secicide ham kod gorunumu kapatildi ve tekrarini engelleyen test eklendi.
+- Rollback plani: `lib\core\constants\app_constants.dart`, `test\arb_coverage_test.dart` ve bu handover kaydi tek commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `supportedLanguages` fallback bolumu `AA/AB/...` placeholder degerlerinden CLDR/ICU dil adlarina tasindi.
+- Kod yorumuyla politika netlestirildi: ICU endonym uretmiyorsa ham ISO kodu degil, Ingilizce dil adi gosterilir.
+- `dart format` ile `lib\core\constants\app_constants.dart` ve `test\arb_coverage_test.dart` bicimlendirildi.
+
+### TESTER Degisikligi
+- Yeni guard:
+  - `test\arb_coverage_test.dart` icinde `language picker does not expose raw ISO codes as language names` eklendi.
+- Hedefli test:
+  - `flutter test test\arb_coverage_test.dart --reporter compact` PASS, `16/16`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam kapilar gecerse commit + push yap.
+- Siradaki dongude kalan l10n same-as-English borcunu daha fazla azaltmak icin once en gorunur ayarlar, onboarding, hata/empty-state anahtarlarini parcali batch'ler halinde ele al.

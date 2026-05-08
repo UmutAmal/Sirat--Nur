@@ -195,6 +195,25 @@ void main() {
       );
     });
 
+    test('language picker does not expose raw ISO codes as language names', () {
+      final placeholderNamePattern = RegExp(r'^[A-Z]{2,3}$');
+
+      for (final language in supportedLanguages) {
+        expect(
+          placeholderNamePattern.hasMatch(language.nativeName),
+          isFalse,
+          reason:
+              '${language.code} nativeName must be a CLDR language name, not a raw ISO code.',
+        );
+        expect(
+          placeholderNamePattern.hasMatch(language.englishName),
+          isFalse,
+          reason:
+              '${language.code} englishName must be a CLDR language name, not a raw ISO code.',
+        );
+      }
+    });
+
     test('Bhojpuri core shell labels do not keep explanatory debris', () {
       final arb = _readArb('lib/l10n/app_bho.arb');
       const expected = {
