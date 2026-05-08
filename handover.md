@@ -22681,3 +22681,30 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude Live TV URL query sertlestirmesi veya kalan yuksek gorunurluklu l10n same-as-English cluster'larini skorla.
+
+## 2026-05-08 TUR-564 - Live TV URL Secret Query Hardening
+
+### MASTER Karari
+- Risk: Live TV URL filtresi HTTPS + YouTube host kontrolu yapiyordu ancak `token`, `api_key`, `secret`, `signature`, `sig` gibi hassas query anahtarlarini ozel olarak reddetmiyordu. Cloud satiri bozulursa WebView veya harici acma zinciri secret tasiyan URL'yi gecilebilir aday sayabilirdi.
+- Kanit:
+  - `lib/features/tv/live_tv_page.dart` icinde `_isAllowedLiveTvUrl` yalniz `isExternalHttpUri(uri)`, `uri.scheme == 'https'` ve `_isTrustedLiveTvHost(uri.host)` kosullarini kullaniyordu.
+  - `test/live_tv_page_test.dart` user-info ve fragment reddini test ediyordu, ama secret query parametresi guard'i yoktu.
+- Etki/Olasilik/Risk: Etki 2, olasilik 3, risk `6/25 -> 2/25`. Mevcut Supabase seed satirlari `channel`, `autoplay`, `mute`, `playsinline` gibi public parametreler kullandigi icin runtime yayin akisi korunur.
+- Rollback plani: `lib/features/tv/live_tv_page.dart` ve `test/live_tv_page_test.dart` icindeki query hardening diff'i tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- `_hasUnsafeLiveTvQuery` eklendi; API key/token/secret/password/signature/sig varyantlarini query key veya decode edilebilir raw query icinden reddediyor.
+- `_isAllowedLiveTvUrl` bu kontrolu ortak aday, navigation ve external resolver zincirine dahil edecek sekilde daraltildi.
+
+### TESTER Degisikligi
+- Yeni guard'lar:
+  - External resolver `?token=secret` tasiyan YouTube URL'sini reddediyor.
+  - WebView navigation guard `?api_key=secret` tasiyan YouTube embed URL'sini reddediyor.
+  - Candidate resolver `?sig=secret` tasiyan fallback'i oynatilabilir aday saymiyor.
+  - Production seed bicimi olan `live_stream?channel=...&autoplay=1&mute=1&playsinline=1` korunuyor.
+- Hedefli test:
+  - `flutter test test\live_tv_page_test.dart --reporter compact` PASS.
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude kalan yuksek gorunurluklu l10n same-as-English cluster'larini veya Supabase data availability kontrollerini skorla.

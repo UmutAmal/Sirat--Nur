@@ -86,6 +86,12 @@ void main() {
         }),
         isNull,
       );
+      expect(
+        resolveLiveTvExternalUri({
+          'external_url': 'https://www.youtube.com/watch?v=abc&token=secret',
+        }),
+        isNull,
+      );
     });
 
     test('webview navigation guard prevents non-YouTube escapes', () {
@@ -117,6 +123,12 @@ void main() {
         isSafeLiveTvNavigationUrl('https://www.youtube.com/embed/live#secret'),
         isFalse,
       );
+      expect(
+        isSafeLiveTvNavigationUrl(
+          'https://www.youtube.com/embed/live?api_key=secret',
+        ),
+        isFalse,
+      );
       expect(isSafeLiveTvNavigationUrl('javascript:alert(1)'), isFalse);
     });
 
@@ -141,6 +153,26 @@ void main() {
         expect(candidateUri.queryParameters['mute'], '1');
       },
     );
+
+    test('candidate resolver accepts public channel live stream params', () {
+      final candidates = resolveLiveTvCandidateUrls({
+        'embed_url':
+            'https://www.youtube.com/embed/live_stream?channel=abc&autoplay=1&mute=1&playsinline=1',
+        'fallback_embed_url':
+            'https://www.youtube-nocookie.com/embed/live_stream?channel=abc&autoplay=1&mute=1&playsinline=1',
+        'muted_by_default': true,
+      });
+
+      expect(candidates, hasLength(2));
+      for (final candidate in candidates.map(Uri.parse)) {
+        expect(candidate.scheme, 'https');
+        expect(candidate.path, '/embed/live_stream');
+        expect(candidate.queryParameters['channel'], 'abc');
+        expect(candidate.queryParameters['autoplay'], '1');
+        expect(candidate.queryParameters['mute'], '1');
+        expect(candidate.queryParameters['playsinline'], '1');
+      }
+    });
 
     test(
       'candidate resolver falls back to external web URL when embeds fail',
@@ -176,7 +208,7 @@ void main() {
         resolveLiveTvCandidateUrls({
           'embed_url': 'https://token@www.youtube.com/embed/live',
           'fallback_embed_url': 'https://www.youtube.com/embed/live#secret',
-          'external_url': 'https://www.youtube.com/watch?v=abc#secret',
+          'external_url': 'https://www.youtube.com/watch?v=abc&sig=secret',
         }),
         isEmpty,
       );

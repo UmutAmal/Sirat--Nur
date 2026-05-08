@@ -24,7 +24,8 @@ String? _readLiveTvString(Object? value) {
 bool _isAllowedLiveTvUrl(Uri uri) {
   return isExternalHttpUri(uri) &&
       uri.scheme == 'https' &&
-      _isTrustedLiveTvHost(uri.host);
+      _isTrustedLiveTvHost(uri.host) &&
+      !_hasUnsafeLiveTvQuery(uri);
 }
 
 bool _isTrustedLiveTvHost(String host) {
@@ -33,6 +34,38 @@ bool _isTrustedLiveTvHost(String host) {
       normalizedHost.endsWith('.youtube.com') ||
       normalizedHost == 'youtube-nocookie.com' ||
       normalizedHost.endsWith('.youtube-nocookie.com');
+}
+
+bool _hasUnsafeLiveTvQuery(Uri uri) {
+  if (!uri.hasQuery) {
+    return false;
+  }
+
+  const unsafeQueryKeys = {
+    'apikey',
+    'api-key',
+    'api_key',
+    'token',
+    'secret',
+    'password',
+    'signature',
+    'sig',
+  };
+
+  for (final key in uri.queryParametersAll.keys) {
+    if (unsafeQueryKeys.contains(key.trim().toLowerCase())) {
+      return true;
+    }
+  }
+
+  try {
+    return RegExp(
+      r'(^|[&;])\s*(api[_-]?key|token|secret|password|signature|sig)\s*=',
+      caseSensitive: false,
+    ).hasMatch(Uri.decodeFull(uri.query));
+  } catch (_) {
+    return true;
+  }
 }
 
 bool _isLiveTvSearchResultUrl(Uri uri) {
