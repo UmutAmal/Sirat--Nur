@@ -6,19 +6,21 @@ import 'package:translator/translator.dart';
 const _forceFlag = '--force';
 const _reportFlag = '--report';
 const _dryRunFlag = '--dry-run';
+const _allKeysFlag = '--all';
 const _helpFlag = '--help';
 const _shortHelpFlag = '-h';
 const _optionFlags = <String>{
   _forceFlag,
   _reportFlag,
   _dryRunFlag,
+  _allKeysFlag,
   _helpFlag,
   _shortHelpFlag,
 };
 
 String translateArbKeysUsage() {
   return 'Usage: dart run tool/translate_arb_keys.dart '
-      '[--force] [--report|--dry-run] <key> [<key> ...]';
+      '[--force] [--report|--dry-run] [--all|<key> [<key> ...]]';
 }
 
 bool isTranslateArbKeysHelpRequest(List<String> arguments) {
@@ -34,9 +36,21 @@ Future<void> main(List<String> arguments) async {
   final force = arguments.contains(_forceFlag);
   final reportOnly =
       arguments.contains(_reportFlag) || arguments.contains(_dryRunFlag);
-  final keys = arguments
-      .where((argument) => !_optionFlags.contains(argument))
-      .toSetPreservingOrder();
+  final english = _readArb('lib/l10n/app_en.arb');
+  final turkish = _readArb('lib/l10n/app_tr.arb');
+  late final List<String> keys;
+  try {
+    keys = resolveRequestedTranslationKeys(
+      arguments: arguments,
+      english: english,
+      reportOnly: reportOnly,
+    );
+  } on FormatException catch (error) {
+    stderr.writeln(error.message);
+    stderr.writeln(translateArbKeysUsage());
+    exitCode = 64;
+    return;
+  }
 
   if (keys.isEmpty) {
     stderr.writeln(translateArbKeysUsage());
@@ -44,8 +58,6 @@ Future<void> main(List<String> arguments) async {
     return;
   }
 
-  final english = _readArb('lib/l10n/app_en.arb');
-  final turkish = _readArb('lib/l10n/app_tr.arb');
   final arbFiles =
       Directory('lib/l10n')
           .listSync()
@@ -132,6 +144,33 @@ Future<void> main(List<String> arguments) async {
       stdout.writeln('Unchanged ${file.path}');
     }
   }
+}
+
+List<String> resolveRequestedTranslationKeys({
+  required List<String> arguments,
+  required Map<String, dynamic> english,
+  required bool reportOnly,
+}) {
+  final allKeys = arguments.contains(_allKeysFlag);
+  final explicitKeys = arguments
+      .where((argument) => !_optionFlags.contains(argument))
+      .toSetPreservingOrder();
+
+  if (allKeys && explicitKeys.isNotEmpty) {
+    throw const FormatException('Use --all without explicit key names.');
+  }
+  if (allKeys && !reportOnly) {
+    throw const FormatException(
+      '--all is report-only; pass --report or --dry-run.',
+    );
+  }
+  if (!allKeys) {
+    return explicitKeys;
+  }
+
+  return english.keys
+      .where((key) => !key.startsWith('@@') && !key.startsWith('@'))
+      .toList(growable: false);
 }
 
 Map<String, dynamic> _readArb(String path) {

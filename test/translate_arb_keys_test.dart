@@ -107,6 +107,42 @@ void main() {
       expect(isTranslateArbKeysHelpRequest(['--report']), isFalse);
       expect(translateArbKeysUsage(), contains('translate_arb_keys.dart'));
       expect(translateArbKeysUsage(), contains('[--report|--dry-run]'));
+      expect(translateArbKeysUsage(), contains('[--all|<key>'));
+    });
+
+    test('resolves --all only for report-only l10n debt audits', () {
+      const english = {
+        '@@locale': 'en',
+        'home': 'Home',
+        '@home': {},
+        'settings': 'Settings',
+        'qibla': 'Qibla',
+      };
+
+      expect(
+        resolveRequestedTranslationKeys(
+          arguments: const ['--all', '--report'],
+          english: english,
+          reportOnly: true,
+        ),
+        const ['home', 'settings', 'qibla'],
+      );
+      expect(
+        () => resolveRequestedTranslationKeys(
+          arguments: const ['--all'],
+          english: english,
+          reportOnly: false,
+        ),
+        throwsFormatException,
+      );
+      expect(
+        () => resolveRequestedTranslationKeys(
+          arguments: const ['--all', '--report', 'home'],
+          english: english,
+          reportOnly: true,
+        ),
+        throwsFormatException,
+      );
     });
 
     test('uses language-neutral placeholder tokens for provider calls', () {

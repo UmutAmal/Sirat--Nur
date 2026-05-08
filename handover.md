@@ -23068,3 +23068,37 @@
 
 ### Sonraki Adim
 - Commit + push sonrasi yeni dongude kalan l10n same-as-English borcunu daha fazla azaltmak icin once en gorunur ayarlar, onboarding, hata/empty-state anahtarlarini parcali batch'ler halinde ele al.
+
+## 2026-05-09 TUR-576 - Full L10n Debt Report Gate
+
+### MASTER Karari
+- Risk: Kalan l10n borcu daha once PowerShell ad-hoc taramasi ile olculuyordu; bu yontem tekrar edilebilir degildi ve yeni dongulerde hangi anahtar/dil grubunun oncelikli oldugunu sistematik secmeyi zorlastiriyordu.
+- Kanit:
+  - Yeni audit komutu: `dart run tool/translate_arb_keys.dart --all --report`.
+  - Rapor: `Keys: 521`, `Same-as-English locales: 33387`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - Guvenlik guard'i: `dart run tool/translate_arb_keys.dart --all` exit `64`; `--all` yalniz `--report` veya `--dry-run` ile calisiyor.
+- Etki/Olasilik/Risk: Etki 3, olasilik 4, risk `12/25 -> 4/25`. Kalan ceviri borcu artik repo icindeki standart aracla olculuyor; yanlislikla tum anahtarlari toplu cevirecek riskli bir execution yolu kapali.
+- Rollback plani: `tool\translate_arb_keys.dart`, `test\translate_arb_keys_test.dart` ve bu handover kaydi tek commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` icin `--all` flag'i eklendi.
+- `--all` explicit keylerle birlikte kullanilamaz.
+- `--all` raporsuz/cevirili modda kullanilamaz; sadece `--report` veya `--dry-run` audit icin gecerlidir.
+- `resolveRequestedTranslationKeys` helper'i eklendi ve metadata anahtarlarini (`@@`, `@key`) tum-key raporundan disarida birakti.
+
+### TESTER Degisikligi
+- Yeni unit guard:
+  - `test\translate_arb_keys_test.dart` icinde `resolves --all only for report-only l10n debt audits` eklendi.
+- Hedefli test:
+  - `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `76/76`.
+- Gercek arac smoke:
+  - `dart run tool/translate_arb_keys.dart --all --report` PASS.
+  - `dart run tool/translate_arb_keys.dart --all` beklenen sekilde exit `64`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Bu gate ile her yeni l10n dongusunde once `--all --report` basligini al, sonra same-as-English borcu en gorunur ve guvenilir sekilde azalabilecek anahtar batch'ini sec.
+- Siradaki uygulama degisikligi adayi: `settings`, `ok`, `close`, `searchLanguage`, onboarding ve empty-state copy gruplarini desteklenen locale'lerde parcali ve testli azaltmak.
