@@ -155,6 +155,11 @@ void main() {
       expect(script, contains('Resolve-SmokeLocaleTag'));
       expect(script, contains('Read-ArbMessages'));
       expect(script, contains('Get-SmokeTextBundle'));
+      expect(script, contains('Get-SmokeLanguageOptionCandidates'));
+      expect(
+        script,
+        contains(r'lib\core\constants\app_constants.dart'),
+      );
       expect(script, contains(r'app_$LocaleTag.arb'));
       expect(script, contains("app_en.arb"));
       expect(script, contains(r'[int]$TimeoutSec = 60'));
@@ -162,6 +167,12 @@ void main() {
       expect(script, contains(r'"appium:language" = $smokeLanguage'));
       expect(script, contains('"appium:locale"'));
       expect(script, contains(r'smokeLocale = $normalizedSmokeLocale'));
+      expect(
+        script,
+        contains(
+          r'smokeLanguageOptionCandidates = $smokeLanguageOptionCandidates',
+        ),
+      );
       expect(script, contains(r'$smokeText.quran'));
       expect(script, contains(r'$smokeText.appTitle'));
       expect(script, contains(r'$smokeText.settings'));
@@ -223,6 +234,8 @@ void main() {
       expect(script, contains('clickedAboutVersion'));
       expect(script, contains('containsAboutDialog'));
       expect(script, contains('closedAboutDialog'));
+      expect(script, contains(r'if (-not $settingsRuntime.closedAboutDialog)'));
+      expect(script, contains(r'$aboutAfterBackXml = Get-AppiumSource'));
       expect(script, contains('Get-DartConstString'));
       expect(script, contains('playStoreUrl'));
       expect(script, contains('privacyPolicyUrl'));
@@ -257,6 +270,12 @@ void main() {
       expect(script, contains('clickedPrivacyPolicy'));
       expect(script, contains('openedPrivacyPolicyExternal'));
       expect(script, contains('dismissedPrivacyPolicyExternal'));
+      expect(script, contains('clickedSmokeLanguage'));
+      expect(script, contains('containsSmokeLanguagePickerTitle'));
+      expect(script, contains('containsSmokeLanguageOptions'));
+      expect(script, contains('selectedSmokeLanguage'));
+      expect(script, contains('smokeLanguagePickerClosed'));
+      expect(script, contains('settingsLocalizedForSmokeLocale'));
       expect(script, contains('Click-SwitchForDescriptionContains'));
       expect(script, contains('Click-SwitchForAnyDescriptionContains'));
       expect(script, contains('Get-LabeledSwitchChecked'));
@@ -290,6 +309,18 @@ void main() {
       expect(
         script,
         contains(r'Save-AppiumSource -SessionId $sessionId -Name "settings"'),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-language-picker-for-smoke-locale"',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          r'Save-AppiumSource -SessionId $sessionId -Name "settings-smoke-locale-after-select"',
+        ),
       );
       expect(
         script,
@@ -427,6 +458,18 @@ void main() {
         script,
         contains(
           'Settings runtime smoke could not click the localized settings action.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke could not select the requested smoke locale language option.',
+        ),
+      );
+      expect(
+        script,
+        contains(
+          'Settings runtime smoke did not render Settings in the requested smoke locale after selection.',
         ),
       );
       expect(

@@ -790,6 +790,28 @@ function Get-SmokeTextBundle {
   }
 }
 
+function Get-SmokeLanguageOptionCandidates {
+  param([Parameter(Mandatory = $true)][string]$LocaleTag)
+
+  $normalized = Resolve-SmokeLocaleTag -Locale $LocaleTag
+  $languageOnly = $normalized.Split('_')[0]
+  $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
+  $constantsPath = Join-Path $repoRoot 'lib\core\constants\app_constants.dart'
+  if (Test-Path $constantsPath) {
+    $constantsSource = Get-Content -Raw -Path $constantsPath
+    foreach ($code in (Select-NonEmptyUniqueStrings @($normalized, $languageOnly))) {
+      $escapedCode = [regex]::Escape($code)
+      $pattern = "AppLanguage\(code:\s*'$escapedCode',\s*nativeName:\s*'([^']*)',\s*englishName:\s*'([^']*)'\)"
+      $match = [regex]::Match($constantsSource, $pattern)
+      if ($match.Success) {
+        return Select-NonEmptyUniqueStrings @($match.Groups[1].Value, $match.Groups[2].Value, $code)
+      }
+    }
+  }
+
+  return Select-NonEmptyUniqueStrings @($normalized, $languageOnly)
+}
+
 function Click-AnyDescriptionOrText {
   param(
     [Parameter(Mandatory = $true)][string]$SessionId,
@@ -865,6 +887,7 @@ if (-not (Test-AppiumServerReady)) {
 
 $normalizedSmokeLocale = Resolve-SmokeLocaleTag -Locale $SmokeLocale
 $smokeText = Get-SmokeTextBundle -LocaleTag $normalizedSmokeLocale
+$smokeLanguageOptionCandidates = Get-SmokeLanguageOptionCandidates -LocaleTag $normalizedSmokeLocale
 $pubspecVersion = '2.0.0+1'
 $pubspecVersionMatch = Select-String -Path (Join-Path (Resolve-Path (Join-Path $PSScriptRoot '..')) 'pubspec.yaml') -Pattern '^\s*version:\s*(\S+)' -ErrorAction SilentlyContinue | Select-Object -First 1
 if ($pubspecVersionMatch -and $pubspecVersionMatch.Matches.Count -gt 0) {
@@ -973,6 +996,7 @@ $summary = [ordered]@{
   smokeLocale = $normalizedSmokeLocale
   smokeLanguage = $smokeLanguage
   smokeRegion = $smokeRegion
+  smokeLanguageOptionCandidates = $smokeLanguageOptionCandidates
   releaseDartDefinesApplied = $releaseDartDefinesApplied
   appiumServerAutoStarted = $appiumServerAutoStarted
   apkPath = $apkPath
@@ -1027,6 +1051,12 @@ $summary = [ordered]@{
     privacyPolicyResolvedActivity = $privacyPolicyIntentResolution.activity
     openedPrivacyPolicyExternal = $false
     dismissedPrivacyPolicyExternal = $false
+    clickedSmokeLanguage = $false
+    containsSmokeLanguagePickerTitle = $false
+    containsSmokeLanguageOptions = $false
+    selectedSmokeLanguage = $false
+    smokeLanguagePickerClosed = $false
+    settingsLocalizedForSmokeLocale = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -1136,6 +1166,12 @@ try {
     privacyPolicyResolvedActivity = $privacyPolicyIntentResolution.activity
     openedPrivacyPolicyExternal = $false
     dismissedPrivacyPolicyExternal = $false
+    clickedSmokeLanguage = $false
+    containsSmokeLanguagePickerTitle = $false
+    containsSmokeLanguageOptions = $false
+    selectedSmokeLanguage = $false
+    smokeLanguagePickerClosed = $false
+    settingsLocalizedForSmokeLocale = $false
     clickedLanguage = $false
     containsLanguagePickerTitle = $false
     containsLanguageOptions = $false
@@ -1152,11 +1188,37 @@ try {
   if ($settingsRuntime.clickedSettings) {
     Start-Sleep -Milliseconds 900
     $settingsXml = Save-AppiumSource -SessionId $sessionId -Name "settings"
+    $settingsRuntime.containsAndroidSettings = $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
+    $settingsRuntime.clickedSmokeLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.language, 'Language')) -Attempts 4
+    if ($settingsRuntime.clickedSmokeLanguage) {
+      Start-Sleep -Milliseconds 700
+      $smokeLanguagePickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-language-picker-for-smoke-locale"
+      $settingsRuntime.containsSmokeLanguagePickerTitle = Test-ContainsAny -Source $smokeLanguagePickerXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.selectLanguage, 'Select Language'))
+      $settingsRuntime.containsSmokeLanguageOptions = Test-ContainsAny -Source $smokeLanguagePickerXml -Needles $smokeLanguageOptionCandidates
+      $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $smokeLanguagePickerXml.Contains("Settings suggestions") -or $smokeLanguagePickerXml.Contains("Android Settings") -or $smokeLanguagePickerXml.Contains("Alarms & reminders")
+      $settingsRuntime.selectedSmokeLanguage = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates $smokeLanguageOptionCandidates -Attempts 4
+      if (-not $settingsRuntime.selectedSmokeLanguage) {
+        $settingsRuntime.selectedSmokeLanguage = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates $smokeLanguageOptionCandidates -Attempts 4
+      }
+      if ($settingsRuntime.selectedSmokeLanguage) {
+        for ($attempt = 0; $attempt -lt 10 -and -not $settingsRuntime.smokeLanguagePickerClosed; $attempt++) {
+          Start-Sleep -Milliseconds 600
+          $smokeLanguageAfterSelectXml = Get-AppiumSource -SessionId $sessionId
+          $settingsRuntime.smokeLanguagePickerClosed = (-not (Test-ContainsAny -Source $smokeLanguageAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.selectLanguage, 'Select Language')))) -and
+            (Test-ContainsAny -Source $smokeLanguageAfterSelectXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+          $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $smokeLanguageAfterSelectXml.Contains("Settings suggestions") -or $smokeLanguageAfterSelectXml.Contains("Android Settings") -or $smokeLanguageAfterSelectXml.Contains("Alarms & reminders")
+        }
+        Save-AppiumSource -SessionId $sessionId -Name "settings-smoke-locale-after-select" | Out-Null
+        $settingsXml = Save-AppiumSource -SessionId $sessionId -Name "settings"
+        $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
+      }
+    }
     $settingsRuntime.containsSettingsTitle = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings'))
+    $settingsRuntime.settingsLocalizedForSmokeLocale = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings))
     $settingsRuntime.containsPrayerControls = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.prayerCalculation, $smokeText.method, $smokeText.madhab, 'Prayer Calculation', 'Calculation Method', 'Asr Juristic Method'))
     $settingsRuntime.containsSettingsDetail = Test-ContainsAny -Source $settingsXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.diagnosticsPrayerSource, $smokeText.audioVoice, $smokeText.qiblaCalibration, $smokeText.calibrationOffset, $smokeText.location, 'Prayer Authority', 'Audio Voice', 'Qibla Calibration', 'Calibration Offset', 'Location'))
-    $settingsRuntime.containsAndroidSettings = $settingsXml.Contains("Settings suggestions") -or $settingsXml.Contains("Android Settings") -or $settingsXml.Contains("Alarms & reminders")
-    $settingsRuntime.clickedPrayerMethod = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.method, 'Calculation Method')) -Attempts 4
+    $settingsRuntime.clickedPrayerMethod = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.method, 'Calculation Method')) -Attempts 4
+    $settingsRuntime.containsPrayerControls = $settingsRuntime.containsPrayerControls -or $settingsRuntime.clickedPrayerMethod
     if ($settingsRuntime.clickedPrayerMethod) {
       Start-Sleep -Milliseconds 700
       $methodPickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-prayer-method-picker"
@@ -1176,7 +1238,8 @@ try {
         Save-AppiumSource -SessionId $sessionId -Name "settings-prayer-method-after-select" | Out-Null
       }
     }
-    $settingsRuntime.clickedMadhab = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.madhab, 'Asr Juristic Method')) -Attempts 4
+    $settingsRuntime.clickedMadhab = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.madhab, 'Asr Juristic Method')) -Attempts 4
+    $settingsRuntime.containsPrayerControls = $settingsRuntime.containsPrayerControls -or $settingsRuntime.clickedMadhab
     if ($settingsRuntime.clickedMadhab) {
       Start-Sleep -Milliseconds 700
       $madhabPickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-madhab-picker"
@@ -1196,7 +1259,8 @@ try {
         Save-AppiumSource -SessionId $sessionId -Name "settings-madhab-after-select" | Out-Null
       }
     }
-    $settingsRuntime.clickedAudioVoice = Wait-ClickAnyDescriptionOrText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.audioVoice, 'Audio Voice')) -Attempts 4
+    $settingsRuntime.clickedAudioVoice = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.audioVoice, 'Audio Voice')) -Attempts 4
+    $settingsRuntime.containsSettingsDetail = $settingsRuntime.containsSettingsDetail -or $settingsRuntime.clickedAudioVoice
     if ($settingsRuntime.clickedAudioVoice) {
       Start-Sleep -Milliseconds 700
       $audioVoicePickerXml = Save-AppiumSource -SessionId $sessionId -Name "settings-audio-voice-picker"
@@ -1217,6 +1281,7 @@ try {
       }
     }
     $settingsRuntime.clickedQiblaCalibration = Wait-ClickAnyScrollableText -SessionId $sessionId -Candidates (Select-NonEmptyUniqueStrings @($smokeText.calibrationOffset, 'Calibration Offset')) -Attempts 4
+    $settingsRuntime.containsSettingsDetail = $settingsRuntime.containsSettingsDetail -or $settingsRuntime.clickedQiblaCalibration
     if ($settingsRuntime.clickedQiblaCalibration) {
       Start-Sleep -Milliseconds 700
       $qiblaCalibrationDialogXml = Save-AppiumSource -SessionId $sessionId -Name "settings-qibla-calibration-dialog"
@@ -1243,6 +1308,7 @@ try {
     $compassSmoothingBeforeXml = Save-AppiumSource -SessionId $sessionId -Name "settings-compass-smoothing-before-toggle"
     $compassSmoothingBefore = Get-AnyLabeledSwitchChecked -Source $compassSmoothingBeforeXml -Candidates $compassSmoothingLabels
     $settingsRuntime.clickedCompassSmoothing = Click-SwitchForAnyDescriptionContains -SessionId $sessionId -Candidates $compassSmoothingLabels
+    $settingsRuntime.containsSettingsDetail = $settingsRuntime.containsSettingsDetail -or $settingsRuntime.clickedCompassSmoothing
     if ($settingsRuntime.clickedCompassSmoothing) {
       for ($attempt = 0; $attempt -lt 8 -and -not $settingsRuntime.compassSmoothingStateChanged; $attempt++) {
         Start-Sleep -Milliseconds 500
@@ -1290,6 +1356,16 @@ try {
         $settingsRuntime.closedAboutDialog = (-not (Test-ContainsAny -Source $aboutAfterCloseXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.close, 'Close', 'CLOSE')))) -and
           (Test-ContainsAny -Source $aboutAfterCloseXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
         $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $aboutAfterCloseXml.Contains("Settings suggestions") -or $aboutAfterCloseXml.Contains("Android Settings") -or $aboutAfterCloseXml.Contains("Alarms & reminders")
+      }
+      if (-not $settingsRuntime.closedAboutDialog) {
+        Invoke-AppiumJson -Method "POST" -Path "/session/$sessionId/back" -Body @{} | Out-Null
+        for ($attempt = 0; $attempt -lt 6 -and -not $settingsRuntime.closedAboutDialog; $attempt++) {
+          Start-Sleep -Milliseconds 500
+          $aboutAfterBackXml = Get-AppiumSource -SessionId $sessionId
+          $settingsRuntime.closedAboutDialog = (-not (Test-ContainsAny -Source $aboutAfterBackXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.close, 'Close', 'CLOSE')))) -and
+            (Test-ContainsAny -Source $aboutAfterBackXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.settings, 'Settings')))
+          $settingsRuntime.containsAndroidSettings = $settingsRuntime.containsAndroidSettings -or $aboutAfterBackXml.Contains("Settings suggestions") -or $aboutAfterBackXml.Contains("Android Settings") -or $aboutAfterBackXml.Contains("Alarms & reminders")
+        }
       }
       Save-AppiumSource -SessionId $sessionId -Name "settings-about-after-close" | Out-Null
     }
@@ -1598,6 +1674,24 @@ if (-not $summary.settingsRuntime.clickedSettings) {
 }
 if (-not $summary.settingsRuntime.containsSettingsTitle) {
   $failures += "Settings runtime smoke did not render the settings title after opening."
+}
+if (-not $summary.settingsRuntime.clickedSmokeLanguage) {
+  $failures += "Settings runtime smoke could not open the language picker before localized runtime checks."
+}
+if (-not $summary.settingsRuntime.containsSmokeLanguagePickerTitle) {
+  $failures += "Settings runtime smoke did not render the language picker before selecting the smoke locale."
+}
+if (-not $summary.settingsRuntime.containsSmokeLanguageOptions) {
+  $failures += "Settings runtime smoke did not render the requested smoke locale language option."
+}
+if (-not $summary.settingsRuntime.selectedSmokeLanguage) {
+  $failures += "Settings runtime smoke could not select the requested smoke locale language option."
+}
+if (-not $summary.settingsRuntime.smokeLanguagePickerClosed) {
+  $failures += "Settings runtime smoke did not close the smoke locale language picker after selection."
+}
+if (-not $summary.settingsRuntime.settingsLocalizedForSmokeLocale) {
+  $failures += "Settings runtime smoke did not render Settings in the requested smoke locale after selection."
 }
 if (-not $summary.settingsRuntime.containsPrayerControls) {
   $failures += "Settings runtime smoke did not render localized prayer calculation controls."

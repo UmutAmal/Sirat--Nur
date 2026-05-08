@@ -22875,3 +22875,38 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude gercek cihaz/emulator smoke kapsaminda kalan riskleri skorla; ozellikle download cancel `showedCancellingState=false` alaninin UI icin kabul edilebilir gecici durum mu yoksa kacirilan ara-state mi oldugunu kanitla.
+
+## 2026-05-08 TUR-570 - Appium Runtime Locale Selection Hardening
+
+### MASTER Karari
+- Risk: `.\tool\appium_runtime_smoke.ps1 -BuildMode release -SmokeLocale tr` Appium capability olarak `appium:language=tr` gonderse bile emulatorde sistem locale `en-US` kalabiliyor ve uygulama per-app locale bos (`cmd locale get-app-locales ... -> []`) donuyordu. Bu durumda runtime smoke Turkce beklerken UI'nin Ingilizce kalmasi fark edilmeyebilir ve l10n runtime guvencesi zayiflardi.
+- Kanit:
+  - Baslangic Android kaniti: `adb -s emulator-5554 shell getprop persist.sys.locale` -> `en-US`; `adb -s emulator-5554 shell cmd locale get-app-locales com.umutamal.sirat_i_nur` -> `[]`.
+  - Manifest kaniti: `android/app/src/main/AndroidManifest.xml` icinde `android:localeConfig` yok; bu nedenle smoke icin dis capability tek basina gercek uygulama dilini garanti etmiyor.
+  - Runtime XML kaniti: patch sonrasi `build\appium-runtime-smoke-settings-smoke-locale-after-select.xml` icinde `pane-title="Ayarlar"` ve `content-desc="Dil&#10;Turkce (Turkish)"` goruldu.
+  - Ilk runtime denemede Hakkinda dialogu Turkce `Kapat` overlay node'una takilip kapanmadi; `build\appium-runtime-smoke-settings-about-after-close.xml` icinde dialog halen acikti. Bu da script'in alt ayar aksiyonlarina gecmesini engelleyebiliyordu.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 3/25`. Uygulama kodu degismedi; release QA harness artik hedef dili uygulamanin kendi Ayarlar > Dil akisiyle seciyor, Ayarlar'in hedef locale'de render edildigini kanitliyor ve Hakkinda dialogu kapanmazsa back fallback ile kurtariyor.
+- Rollback plani: `tool\appium_runtime_smoke.ps1` icindeki smoke locale language picker helper/guard bloklari, about-dialog back fallback'i ve `test\appium_runtime_smoke_script_test.dart` statik guard beklentileri tek commit olarak revert edilebilir.
+
+### BUILDER Degisikligi
+- `Get-SmokeLanguageOptionCandidates` helper'i eklendi; smoke locale icin `lib\core\constants\app_constants.dart` icindeki `AppLanguage` native/English/code adaylari okunuyor.
+- Release smoke artik Ayarlar ekraninda dil seciciyi acar, hedef dili (`tr` icin `Turkce`, `Turkish`, `tr`) secer, `settingsLocalizedForSmokeLocale=true` ile hedef locale basligini dogrular.
+- Hakkinda dialogu icin `Kapat/Close` tiklamasi dialogu kapatmazsa Appium `back` fallback'i devreye giriyor ve kapanis tekrar dogrulaniyor.
+- Ayarlar kontrol snapshot'i dil seciminden sonra kaymis liste konumuna bagli kalmasin diye `containsPrayerControls` ve `containsSettingsDetail` guard'lari gercek satir etkileisimleriyle de besleniyor.
+
+### TESTER Degisikligi
+- PowerShell syntax guard:
+  - `[scriptblock]::Create((Get-Content -Raw -Path tool\appium_runtime_smoke.ps1))` PASS.
+- Hedefli script testi:
+  - `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- Gercek release runtime smoke:
+  - `.\tool\appium_runtime_smoke.ps1 -BuildMode release -SmokeLocale tr` PASS.
+  - Summary: `failures=[]`, `settingsRuntime.settingsLocalizedForSmokeLocale=true`, `settingsRuntime.selectedSmokeLanguage=true`, `settingsRuntime.closedAboutDialog=true`, `logcatCrashFree=true`, Quran playback PASS, offline download cancel PASS (`containsCanceledMessage=true`).
+- Final kapilar:
+  - `git diff --check` PASS; yalniz CRLF uyarisi.
+  - `flutter analyze` PASS, `No issues found`.
+  - `flutter test --reporter compact` PASS, `791/791`.
+
+### Sonraki Adim
+- Commit + push sonrasi yeni dongude runtime QA kapsaminda kalan UI/icerik risklerini tara.
+- Oncelik adayi: Appium smoke sonucu `downloadRuntime.showedCancellingState=false` fakat `containsCanceledMessage=true`; uygulama false-success gostermiyor, ancak ozet alanina birleşik `cancelFeedbackObserved` gibi daha acik bir metrik eklenebilir.
