@@ -541,10 +541,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get contactUs => 'Kontaktieren Sie uns';
 
   @override
-  String get rateApp => 'App bewerten';
+  String get rateApp => 'Bewerten Sie diese App';
 
   @override
-  String get shareApp => 'App teilen';
+  String get shareApp => 'Teilen Sie diese App';
 
   @override
   String shareAppMessage(String appName, String url) {

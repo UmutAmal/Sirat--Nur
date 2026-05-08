@@ -243,11 +243,11 @@
   "systemTheme": "Система темаһы",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Хосуси сәйәсәт",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Был ҡушымтаға баһа бирегеҙ",
+  "shareApp": "Был ҡушымтаны бүлешергә",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

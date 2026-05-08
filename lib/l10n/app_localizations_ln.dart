@@ -539,10 +539,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get contactUs => 'Bokutana na Biso';
 
   @override
-  String get rateApp => 'Taux App';
+  String get rateApp => 'Bopesa cote na app oyo';
 
   @override
-  String get shareApp => 'Kokabola App';
+  String get shareApp => 'Bokabola app oyo';
 
   @override
   String shareAppMessage(String appName, String url) {

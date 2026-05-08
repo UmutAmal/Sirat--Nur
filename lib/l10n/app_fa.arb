@@ -246,8 +246,8 @@
   "privacyPolicy": "سیاست حفظ حریم خصوصی",
   "termsOfService": "شرایط خدمات",
   "contactUs": "تماس با ما",
-  "rateApp": "رتبه‌بندی برنامه",
-  "shareApp": "اشتراک‌گذاری برنامه",
+  "rateApp": "به این برنامه امتیاز دهید",
+  "shareApp": "این برنامه را به اشتراک بگذارید",
   "shareAppMessage": "{appName} را بررسی کنید: برنامه سبک زندگی اسلامی نهایی! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -246,8 +246,8 @@
   "privacyPolicy": "Privacy Policy",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Ratidza iyi app",
+  "shareApp": "Govera iyi app",
   "shareAppMessage": "Tarisa uone {appName}: Yekupedzisira mararamiro echiIslam app! {url}",
   "@shareAppMessage": {
     "placeholders": {

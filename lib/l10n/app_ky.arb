@@ -246,8 +246,8 @@
   "privacyPolicy": "Купуялык саясаты",
   "termsOfService": "Тейлөө шарттары",
   "contactUs": "Биз менен байланышыңыз",
-  "rateApp": "Колдонмого баа берүү",
-  "shareApp": "Колдонмону бөлүшүү",
+  "rateApp": "Бул колдонмону баалаңыз",
+  "shareApp": "Бул колдонмону бөлүшүңүз",
   "shareAppMessage": "{appName} карап көрүңүз: Исламдык жашоо образынын эң сонун колдонмосу! {url}",
   "@shareAppMessage": {
     "placeholders": {

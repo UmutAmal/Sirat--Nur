@@ -539,10 +539,10 @@ class AppLocalizationsMn extends AppLocalizations {
   String get contactUs => 'Бидэнтэй холбоо барина уу';
 
   @override
-  String get rateApp => 'Аппликейшнийг үнэлэх';
+  String get rateApp => 'Энэ апп-г үнэлнэ үү';
 
   @override
-  String get shareApp => 'Аппликешн хуваалцах';
+  String get shareApp => 'Энэ програмыг хуваалцаарай';
 
   @override
   String shareAppMessage(String appName, String url) {

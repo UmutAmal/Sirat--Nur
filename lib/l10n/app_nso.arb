@@ -243,11 +243,11 @@
   "systemTheme": "Sehlogo sa Tshepedišo",
   "about": "Mabapi le",
   "version": "Phetolelo",
-  "privacyPolicy": "Pholisi ya Sephiri",
+  "privacyPolicy": "Pholisi ya sephiri",
   "termsOfService": "Melawana ya Tirelo",
   "contactUs": "Ikgokaganye le Rena",
-  "rateApp": "Sekhahla App",
-  "shareApp": "Share App",
+  "rateApp": "Lekanyetša tirišo ye",
+  "shareApp": "Abelana ka tiriso ye",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

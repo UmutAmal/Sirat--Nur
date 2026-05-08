@@ -538,10 +538,10 @@ class AppLocalizationsPa extends AppLocalizations {
   String get contactUs => 'ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ';
 
   @override
-  String get rateApp => 'ਐਪ ਨੂੰ ਰੇਟ ਕਰੋ';
+  String get rateApp => 'ਇਸ ਐਪ ਨੂੰ ਦਰਜਾ ਦਿਓ';
 
   @override
-  String get shareApp => 'ਐਪ ਸ਼ੇਅਰ ਕਰੋ';
+  String get shareApp => 'ਇਸ ਐਪ ਨੂੰ ਸਾਂਝਾ ਕਰੋ';
 
   @override
   String shareAppMessage(String appName, String url) {

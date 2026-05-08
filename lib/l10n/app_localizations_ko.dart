@@ -533,10 +533,10 @@ class AppLocalizationsKo extends AppLocalizations {
   String get contactUs => '문의하기';
 
   @override
-  String get rateApp => '앱 평가';
+  String get rateApp => '이 앱을 평가해 주세요';
 
   @override
-  String get shareApp => '앱 공유';
+  String get shareApp => '이 앱을 공유하세요';
 
   @override
   String shareAppMessage(String appName, String url) {

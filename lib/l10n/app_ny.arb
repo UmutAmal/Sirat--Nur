@@ -243,11 +243,11 @@
   "systemTheme": "System Theme",
   "about": "Za",
   "version": "Baibulo",
-  "privacyPolicy": "mfundo zazinsinsi",
+  "privacyPolicy": "Mfundo zachinsinsi",
   "termsOfService": "Terms of Service",
   "contactUs": "Lumikizanani nafe",
-  "rateApp": "Rate App",
-  "shareApp": "Gawani App",
+  "rateApp": "Voterani pulogalamuyi",
+  "shareApp": "Gawani pulogalamuyi",
   "shareAppMessage": "Onani {appName}: Pulogalamu yabwino kwambiri yachisilamu! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -528,7 +528,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get version => 'අනුවාදය';
 
   @override
-  String get privacyPolicy => 'රහස්‍යතා ප්‍රතිපත්තිය';
+  String get privacyPolicy => 'පෞද්ගලිකත්ව ප්රතිපත්තිය';
 
   @override
   String get termsOfService => 'සේවා කොන්දේසි';
@@ -537,10 +537,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get contactUs => 'අප අමතන්න';
 
   @override
-  String get rateApp => 'යෙදුම අගයන්න';
+  String get rateApp => 'මෙම යෙදුම අගයන්න';
 
   @override
-  String get shareApp => 'යෙදුම බෙදාගන්න';
+  String get shareApp => 'මෙම යෙදුම බෙදාගන්න';
 
   @override
   String shareAppMessage(String appName, String url) {

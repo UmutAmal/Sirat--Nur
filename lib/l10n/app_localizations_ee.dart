@@ -528,7 +528,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get version => 'Nukpɔkpɔ';
 
   @override
-  String get privacyPolicy => 'Ameŋunyatakakawo Ŋuti Ðoɖo';
+  String get privacyPolicy => 'Ameŋunyatakakawo ŋuti ɖoɖo';
 
   @override
   String get termsOfService => 'Subɔsubɔdɔ ƒe Ðoɖowo';
@@ -537,10 +537,10 @@ class AppLocalizationsEe extends AppLocalizations {
   String get contactUs => 'Te Ðe Mía Ŋu';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'De dzesi dɔwɔnu sia';
 
   @override
-  String get shareApp => 'Mamã ƒe App';
+  String get shareApp => 'Ma dɔwɔnu sia';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -524,7 +524,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get version => 'ስሪት እዩ።';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'ፖሊሲ ውልቃዊ ሓበሬታ';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -533,10 +533,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'ነዛ ኣፕ ደረጃ ሃባ';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'ሼር ኣፕ';
 
   @override
   String shareAppMessage(String appName, String url) {

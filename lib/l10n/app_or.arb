@@ -246,8 +246,8 @@
   "privacyPolicy": "ଗୋପନୀୟତା ନୀତି",
   "termsOfService": "ସେବା ସର୍ତ୍ତାବଳୀ",
   "contactUs": "ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ |",
-  "rateApp": "ରେଟ୍ ଆପ୍ |",
-  "shareApp": "ଆପ୍ ଅଂଶୀଦାର କରନ୍ତୁ |",
+  "rateApp": "ଏହି ଆପକୁ ମୂଲ୍ୟାଙ୍କନ କର |",
+  "shareApp": "ଏହି ଆପ୍ ଅଂଶୀଦାର କରନ୍ତୁ |",
   "shareAppMessage": "{appName} ଦେଖନ୍ତୁ: ଚରମ ଇସଲାମ ଜୀବନଶ lifestyle ଳୀ ଆପ୍! {url}",
   "@shareAppMessage": {
     "placeholders": {

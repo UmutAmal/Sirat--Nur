@@ -537,10 +537,10 @@ class AppLocalizationsMl extends AppLocalizations {
   String get contactUs => 'ഞങ്ങളെ ബന്ധപ്പെടുക';
 
   @override
-  String get rateApp => 'ആപ്പ് റേറ്റ് ചെയ്യുക';
+  String get rateApp => 'ഈ ആപ്പ് റേറ്റുചെയ്യുക';
 
   @override
-  String get shareApp => 'ആപ്പ് പങ്കിടുക';
+  String get shareApp => 'ഈ ആപ്പ് പങ്കിടുക';
 
   @override
   String shareAppMessage(String appName, String url) {

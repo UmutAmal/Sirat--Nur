@@ -544,10 +544,10 @@ class AppLocalizationsAy extends AppLocalizations {
   String get contactUs => 'Jiwasampiw aruskipt’apxañäni';
 
   @override
-  String get rateApp => 'Tarifa ukax App';
+  String get rateApp => 'Aka app ukarux uñt’ayañamawa';
 
   @override
-  String get shareApp => 'Compartir App ukax mä juk’a pachanakanwa';
+  String get shareApp => 'Aka app ukar uñt’ayañamawa';
 
   @override
   String shareAppMessage(String appName, String url) {

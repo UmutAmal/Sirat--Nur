@@ -592,6 +592,14 @@ String _translationPromptSourceForKey(String key, String source) {
       return 'Checking the Quran database...';
     case 'resetOnboarding':
       return 'Reset intro setup';
+    case 'rateApp':
+      return 'Rate this app';
+    case 'shareApp':
+      return 'Share this app';
+    case 'shareAppMessage':
+      return 'Check out {appName}: The ultimate Islamic lifestyle app! {url}';
+    case 'privacyPolicy':
+      return 'Privacy policy';
     case 'resumeDownload':
       return 'Continue download';
     default:

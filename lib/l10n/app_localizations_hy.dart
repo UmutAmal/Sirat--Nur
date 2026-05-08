@@ -541,10 +541,10 @@ class AppLocalizationsHy extends AppLocalizations {
   String get contactUs => 'Կապ մեզ հետ';
 
   @override
-  String get rateApp => 'Գնահատեք հավելվածը';
+  String get rateApp => 'Գնահատեք այս հավելվածը';
 
   @override
-  String get shareApp => 'Համօգտագործել հավելվածը';
+  String get shareApp => 'Կիսվեք այս հավելվածով';
 
   @override
   String shareAppMessage(String appName, String url) {

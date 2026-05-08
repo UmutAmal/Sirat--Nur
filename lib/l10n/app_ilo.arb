@@ -243,11 +243,11 @@
   "systemTheme": "Tema ti Sistema",
   "about": "Maipapan iti",
   "version": "Bersion",
-  "privacyPolicy": "Pagannurotan iti Kinapribado",
+  "privacyPolicy": "Pagannurotan ti kinapribado",
   "termsOfService": "Dagiti Kondision ti Serbisio",
   "contactUs": "Kontaken Kadakami",
-  "rateApp": "Rate ti App",
-  "shareApp": "Ibinglay ti App",
+  "rateApp": "Rate daytoy nga app",
+  "shareApp": "Ibinglay daytoy nga app",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

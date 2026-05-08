@@ -538,10 +538,10 @@ class AppLocalizationsLt extends AppLocalizations {
   String get contactUs => 'Susisiekite su mumis';
 
   @override
-  String get rateApp => 'Įvertinkite programą';
+  String get rateApp => 'Įvertinkite šią programą';
 
   @override
-  String get shareApp => 'Bendrinti programą';
+  String get shareApp => 'Bendrinkite šią programą';
 
   @override
   String shareAppMessage(String appName, String url) {

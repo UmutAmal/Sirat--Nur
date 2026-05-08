@@ -246,8 +246,8 @@
   "privacyPolicy": "رازداري پاليسي",
   "termsOfService": "سروس جا شرط",
   "contactUs": "اسان سان رابطو ڪريو",
-  "rateApp": "شرح ايپ",
-  "shareApp": "حصيداري ڪريو ايپ",
+  "rateApp": "هن ائپ جي شرح",
+  "shareApp": "هن ايپ کي حصيداري ڪريو",
   "shareAppMessage": "چيڪ آئوٽ ڪريو {appName}: انتهائي اسلامي طرز زندگي ايپ! {url}",
   "@shareAppMessage": {
     "placeholders": {

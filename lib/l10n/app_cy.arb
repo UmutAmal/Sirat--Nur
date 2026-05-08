@@ -243,11 +243,11 @@
   "systemTheme": "Thema System",
   "about": "Ynghylch",
   "version": "Fersiwn",
-  "privacyPolicy": "Polisi Preifatrwydd",
+  "privacyPolicy": "Polisi preifatrwydd",
   "termsOfService": "Telerau Gwasanaeth",
   "contactUs": "Cysylltwch â Ni",
-  "rateApp": "App Cyfradd",
-  "shareApp": "Rhannu App",
+  "rateApp": "Graddiwch yr app hon",
+  "shareApp": "Rhannwch yr app hon",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -538,10 +538,10 @@ class AppLocalizationsKm extends AppLocalizations {
   String get contactUs => 'ទាក់ទងមកយើងខ្ញុំ';
 
   @override
-  String get rateApp => 'វាយតម្លៃកម្មវិធី';
+  String get rateApp => 'វាយតម្លៃកម្មវិធីនេះ';
 
   @override
-  String get shareApp => 'ចែករំលែកកម្មវិធី';
+  String get shareApp => 'ចែករំលែកកម្មវិធីនេះ';
 
   @override
   String shareAppMessage(String appName, String url) {

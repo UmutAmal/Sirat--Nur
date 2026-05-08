@@ -530,7 +530,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get version => 'Ekika';
 
   @override
-  String get privacyPolicy => 'Enkola y’Ebyama';
+  String get privacyPolicy => 'Enkola y’eby’ekyama';
 
   @override
   String get termsOfService => 'Ebiragiro by’Empeereza';
@@ -539,10 +539,10 @@ class AppLocalizationsLg extends AppLocalizations {
   String get contactUs => 'Tukwasaganye';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Teeka app eno ekipimo';
 
   @override
-  String get shareApp => 'Gabana App';
+  String get shareApp => 'Gabana app eno';
 
   @override
   String shareAppMessage(String appName, String url) {

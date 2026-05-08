@@ -530,7 +530,7 @@ class AppLocalizationsAk extends AppLocalizations {
   String get version => 'Ɔfa';
 
   @override
-  String get privacyPolicy => 'Kokoam Nsɛm Ho Nhyehyɛe';
+  String get privacyPolicy => 'Kokoam nsɛm ho nhyehyɛe';
 
   @override
   String get termsOfService => 'Ɔsom Ho Nhyehyɛe';
@@ -539,10 +539,10 @@ class AppLocalizationsAk extends AppLocalizations {
   String get contactUs => 'Di Yɛn Nkitahodi';
 
   @override
-  String get rateApp => 'Rate App no ​​ho';
+  String get rateApp => 'Rate saa app yi';
 
   @override
-  String get shareApp => 'Kyɛ App no';
+  String get shareApp => 'Kyɛ saa app yi';
 
   @override
   String shareAppMessage(String appName, String url) {

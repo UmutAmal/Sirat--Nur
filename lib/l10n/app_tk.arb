@@ -246,8 +246,8 @@
   "privacyPolicy": "Gizlinlik syýasaty",
   "termsOfService": "Hyzmat şertleri",
   "contactUs": "Biz bilen habarlaşyň",
-  "rateApp": "Programma bahasy",
-  "shareApp": "Programmany paýlaş",
+  "rateApp": "Bu programma baha beriň",
+  "shareApp": "Bu programmany paýlaşyň",
   "shareAppMessage": "{appName} gözden geçiriň: Yslam durmuşynyň iň soňky programmasy! {url}",
   "@shareAppMessage": {
     "placeholders": {

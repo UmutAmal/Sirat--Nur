@@ -243,11 +243,11 @@
   "systemTheme": "Tèm sistèm",
   "about": "Konsènan",
   "version": "Version",
-  "privacyPolicy": "Règleman sou enfòmasyon prive",
+  "privacyPolicy": "Règ sou enfòmasyon prive",
   "termsOfService": "Regleman Sèvis",
   "contactUs": "Kontakte nou",
-  "rateApp": "To App",
-  "shareApp": "Pataje App",
+  "rateApp": "Evalye aplikasyon sa a",
+  "shareApp": "Pataje app sa a",
   "shareAppMessage": "Tcheke {appName}: Aplikasyon ultim nan vi Islamik! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -243,11 +243,11 @@
   "systemTheme": "Tiitoonde Siistem",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Politik sirlu",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Toɓɓere ndee app",
+  "shareApp": "Renndinde ndee app",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

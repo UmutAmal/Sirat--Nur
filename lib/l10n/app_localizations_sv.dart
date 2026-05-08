@@ -528,7 +528,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Sekretesspolicy';
+  String get privacyPolicy => 'Integritetspolicy';
 
   @override
   String get termsOfService => 'Användarvillkor';
@@ -537,10 +537,10 @@ class AppLocalizationsSv extends AppLocalizations {
   String get contactUs => 'Kontakta oss';
 
   @override
-  String get rateApp => 'Betygsätt App';
+  String get rateApp => 'Betygsätt den här appen';
 
   @override
-  String get shareApp => 'Dela appen';
+  String get shareApp => 'Dela den här appen';
 
   @override
   String shareAppMessage(String appName, String url) {

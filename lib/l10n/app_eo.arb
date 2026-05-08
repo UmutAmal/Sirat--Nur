@@ -243,11 +243,11 @@
   "systemTheme": "Sistema Temo",
   "about": "Pri",
   "version": "Versio",
-  "privacyPolicy": "Privateca Politiko",
+  "privacyPolicy": "Privateca politiko",
   "termsOfService": "Servokondiĉoj",
   "contactUs": "Kontaktu Nin",
-  "rateApp": "Tarifa Apo",
-  "shareApp": "Kunhavigi Apon",
+  "rateApp": "Tatu ĉi tiun apon",
+  "shareApp": "Kunhavigu ĉi tiun apon",
   "shareAppMessage": "Rigardu {appName}: La finfina apo pri islama vivstilo! {url}",
   "@shareAppMessage": {
     "placeholders": {

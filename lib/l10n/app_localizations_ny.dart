@@ -530,7 +530,7 @@ class AppLocalizationsNy extends AppLocalizations {
   String get version => 'Baibulo';
 
   @override
-  String get privacyPolicy => 'mfundo zazinsinsi';
+  String get privacyPolicy => 'Mfundo zachinsinsi';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -539,10 +539,10 @@ class AppLocalizationsNy extends AppLocalizations {
   String get contactUs => 'Lumikizanani nafe';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Voterani pulogalamuyi';
 
   @override
-  String get shareApp => 'Gawani App';
+  String get shareApp => 'Gawani pulogalamuyi';
 
   @override
   String shareAppMessage(String appName, String url) {

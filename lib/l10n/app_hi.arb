@@ -246,8 +246,8 @@
   "privacyPolicy": "गोपनीयता नीति",
   "termsOfService": "सेवा की शर्तें",
   "contactUs": "हमसे संपर्क करें",
-  "rateApp": "ऐप को रेट करें",
-  "shareApp": "ऐप शेयर करें",
+  "rateApp": "इस ऐप को रेट करें",
+  "shareApp": "इस ऐप को साझा करें",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

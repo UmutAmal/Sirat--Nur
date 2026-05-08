@@ -538,10 +538,10 @@ class AppLocalizationsUz extends AppLocalizations {
   String get contactUs => 'Biz bilan bog\'laning';
 
   @override
-  String get rateApp => 'Ilovani baholang';
+  String get rateApp => 'Ushbu ilovani baholang';
 
   @override
-  String get shareApp => 'Ilovani ulashish';
+  String get shareApp => 'Ushbu ilovani ulashing';
 
   @override
   String shareAppMessage(String appName, String url) {

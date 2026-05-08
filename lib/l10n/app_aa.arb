@@ -243,11 +243,11 @@
   "systemTheme": "maknay ximmo",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Cankâ pooliisi",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Ta assabaltah caddo ucuy",
+  "shareApp": "Ta assabalta tabis",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

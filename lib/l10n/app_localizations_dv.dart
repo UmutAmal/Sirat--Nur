@@ -541,10 +541,10 @@ class AppLocalizationsDv extends AppLocalizations {
   String get contactUs => 'ކޮންޓެކްޓް އަސް';
 
   @override
-  String get rateApp => 'ރޭޓް އެޕް';
+  String get rateApp => 'މި އެޕް ރޭޓް ކުރާށެވެ';
 
   @override
-  String get shareApp => 'ޝެއާ އެޕް';
+  String get shareApp => 'މި އެޕް ޝެއާ ކޮށްލައްވާށެވެ';
 
   @override
   String shareAppMessage(String appName, String url) {

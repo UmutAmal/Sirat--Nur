@@ -246,8 +246,8 @@
   "privacyPolicy": "Politika zasebnosti",
   "termsOfService": "Pogoji storitve",
   "contactUs": "Kontaktirajte nas",
-  "rateApp": "Ocenite aplikacijo",
-  "shareApp": "Deli aplikacijo",
+  "rateApp": "Ocenite to aplikacijo",
+  "shareApp": "Delite to aplikacijo",
   "shareAppMessage": "Oglejte si {appName}: Najboljša aplikacija za islamski življenjski slog! {url}",
   "@shareAppMessage": {
     "placeholders": {

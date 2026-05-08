@@ -243,11 +243,11 @@
   "systemTheme": "Система тема .",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Конфиденциальность йылысь политика .",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Донъялӧй тайӧ приложениесӧ .",
+  "shareApp": "Делитчӧй тайӧ приложениеӧн .",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -243,11 +243,11 @@
   "systemTheme": "Sistɛmu barokun",
   "about": "Kan",
   "version": "Wɛrisiyɔn",
-  "privacyPolicy": "Kunnafoni dogolenw maracogo",
+  "privacyPolicy": "Kunnafoni dogolenw ka sariya",
   "termsOfService": "Baarakɛcogo sariyaw",
   "contactUs": "Aw ye ɲɔgɔn sɔrɔ Anw fɛ",
-  "rateApp": "Tarifu App ye",
-  "shareApp": "Share App",
+  "rateApp": "Aw ye nin appli in jate",
+  "shareApp": "Aw ye nin appli in tila ɲɔgɔn na",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

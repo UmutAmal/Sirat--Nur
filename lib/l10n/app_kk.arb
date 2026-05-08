@@ -246,8 +246,8 @@
   "privacyPolicy": "Құпиялық саясаты",
   "termsOfService": "Қызмет көрсету шарттары",
   "contactUs": "Бізбен байланысыңыз",
-  "rateApp": "Қолданбаны бағалаңыз",
-  "shareApp": "Қолданбаны бөлісу",
+  "rateApp": "Осы қолданбаны бағалаңыз",
+  "shareApp": "Осы қолданбаны бөлісіңіз",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -530,7 +530,7 @@ class AppLocalizationsAv extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Щаклъи гьечӀолъиялъул политика';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -539,10 +539,10 @@ class AppLocalizationsAv extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Гьаб приложениялъул къимат кье';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Гьаб приложение гьоркьоб лъезе';
 
   @override
   String shareAppMessage(String appName, String url) {

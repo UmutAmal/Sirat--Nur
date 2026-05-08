@@ -243,11 +243,11 @@
   "systemTheme": "Jigon tsarin",
   "about": "Game da",
   "version": "Sigar",
-  "privacyPolicy": "takardar kebantawa",
+  "privacyPolicy": "Manufar keɓantawa",
   "termsOfService": "SharuÉ—É—an Sabis",
   "contactUs": "Tuntube Mu",
-  "rateApp": "Rate App",
-  "shareApp": "Raba App",
+  "rateApp": "Rate wannan app",
+  "shareApp": "Raba wannan app",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

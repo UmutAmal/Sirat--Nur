@@ -243,11 +243,11 @@
   "systemTheme": "Systema fáddá",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Persovdnasuodjaluspolitihkka",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Árvvoštallat dán áppa",
+  "shareApp": "Juogat dán áppa",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

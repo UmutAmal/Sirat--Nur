@@ -2575,6 +2575,24 @@ void main() {
       );
     });
 
+    test('uses contextual prompts for settings about actions', () {
+      final source = File('tool/translate_arb_keys.dart').readAsStringSync();
+
+      expect(source, contains("case 'rateApp':"));
+      expect(source, contains('Rate this app'));
+      expect(source, contains("case 'shareApp':"));
+      expect(source, contains('Share this app'));
+      expect(source, contains("case 'shareAppMessage':"));
+      expect(
+        source,
+        contains(
+          'Check out {appName}: The ultimate Islamic lifestyle app! {url}',
+        ),
+      );
+      expect(source, contains("case 'privacyPolicy':"));
+      expect(source, contains('Privacy policy'));
+    });
+
     test('rejects multiline premium error output', () {
       final productUnavailableValue = resolveTranslatedArbValue(
         key: 'premiumProductUnavailable',

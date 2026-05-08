@@ -534,10 +534,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get contactUs => 'ያግኙን';
 
   @override
-  String get rateApp => 'መተግበሪያ ደረጃ ይስጡ';
+  String get rateApp => 'ለዚህ መተግበሪያ ደረጃ ይስጡት።';
 
   @override
-  String get shareApp => 'መተግበሪያ አጋራ';
+  String get shareApp => 'ይህን መተግበሪያ አጋራ';
 
   @override
   String shareAppMessage(String appName, String url) {

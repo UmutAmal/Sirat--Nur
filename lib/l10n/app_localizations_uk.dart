@@ -539,10 +539,10 @@ class AppLocalizationsUk extends AppLocalizations {
   String get contactUs => 'Зв\'яжіться з нами';
 
   @override
-  String get rateApp => 'Оцініть додаток';
+  String get rateApp => 'Оцініть цю програму';
 
   @override
-  String get shareApp => 'Поділитися додатком';
+  String get shareApp => 'Поділіться цією програмою';
 
   @override
   String shareAppMessage(String appName, String url) {

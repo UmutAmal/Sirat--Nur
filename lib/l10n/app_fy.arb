@@ -246,8 +246,8 @@
   "privacyPolicy": "Privacybelied",
   "termsOfService": "Terms of Service",
   "contactUs": "Kontakt mei ús opnimme",
-  "rateApp": "Rate App",
-  "shareApp": "Diele App",
+  "rateApp": "Beoardielje dizze app",
+  "shareApp": "Diel dizze app",
   "shareAppMessage": "Besjoch {appName}: De ultime app foar islamityske libbensstyl! {url}",
   "@shareAppMessage": {
     "placeholders": {

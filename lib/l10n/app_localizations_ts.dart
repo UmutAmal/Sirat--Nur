@@ -533,7 +533,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get version => 'Nkandziyiso';
 
   @override
-  String get privacyPolicy => 'Pholisi ya Vuhlayiseki bya Swihundla';
+  String get privacyPolicy => 'Pholisi ya vuhlayiseki bya vuxokoxoko';
 
   @override
   String get termsOfService => 'Mimpimanyeto ya Ntirho';
@@ -542,10 +542,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get contactUs => 'Tihlanganise na Hina';
 
   @override
-  String get rateApp => 'Xiringanyeto xa App';
+  String get rateApp => 'Rate app leyi';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Share app leyi';
 
   @override
   String shareAppMessage(String appName, String url) {

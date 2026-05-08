@@ -246,8 +246,8 @@
   "privacyPolicy": "தனியுரிமைக் கொள்கை",
   "termsOfService": "சேவை விதிமுறைகள்",
   "contactUs": "எங்களை தொடர்பு கொள்ளவும்",
-  "rateApp": "பயன்பாட்டை மதிப்பிடவும்",
-  "shareApp": "ஆப்ஸைப் பகிரவும்",
+  "rateApp": "இந்த பயன்பாட்டை மதிப்பிடவும்",
+  "shareApp": "இந்த பயன்பாட்டைப் பகிரவும்",
   "shareAppMessage": "{appName} ஐப் பார்க்கவும்: இறுதி இஸ்லாமிய வாழ்க்கை முறை பயன்பாடு! {url}",
   "@shareAppMessage": {
     "placeholders": {

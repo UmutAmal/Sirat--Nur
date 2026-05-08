@@ -246,8 +246,8 @@
   "privacyPolicy": "Pulitica di privacy",
   "termsOfService": "Termini di serviziu",
   "contactUs": "Cuntatta ci",
-  "rateApp": "Tariffa App",
-  "shareApp": "Share App",
+  "rateApp": "Vota sta app",
+  "shareApp": "Condividi sta app",
   "shareAppMessage": "Scuprite {appName}: L'ultima app di stile di vita islamicu! {url}",
   "@shareAppMessage": {
     "placeholders": {

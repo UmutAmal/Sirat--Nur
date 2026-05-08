@@ -243,11 +243,11 @@
   "systemTheme": "Autu Faiga",
   "about": "E uiga i",
   "version": "Fa'aliliuga",
-  "privacyPolicy": "Faiga Fa'alilolilo",
+  "privacyPolicy": "Faiga fa'alilolilo",
   "termsOfService": "Tuutuuga o Auaunaga",
   "contactUs": "Fa'afeso'ota'i matou",
-  "rateApp": "Fua o le App",
-  "shareApp": "Fa'asoa le App",
+  "rateApp": "Fa'ailoga lenei app",
+  "shareApp": "Faasoa atu lenei app",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

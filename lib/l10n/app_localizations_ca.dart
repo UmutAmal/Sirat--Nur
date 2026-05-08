@@ -542,10 +542,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get contactUs => 'Contacta amb nosaltres';
 
   @override
-  String get rateApp => 'Valora l\'aplicació';
+  String get rateApp => 'Valora aquesta aplicació';
 
   @override
-  String get shareApp => 'Comparteix l\'aplicació';
+  String get shareApp => 'Comparteix aquesta aplicació';
 
   @override
   String shareAppMessage(String appName, String url) {

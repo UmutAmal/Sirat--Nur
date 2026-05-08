@@ -246,8 +246,8 @@
   "privacyPolicy": "د محرمیت پالیسي",
   "termsOfService": "د خدمت شرایط",
   "contactUs": "موږ سره اړیکه ونیسئ",
-  "rateApp": "د اپلیکیشن درجه بندي کړئ",
-  "shareApp": "اپلیکیشن شریک کړئ",
+  "rateApp": "دا اپلیکیشن درجه بندي کړئ",
+  "shareApp": "دا اپلیکیشن شریک کړئ",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

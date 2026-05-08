@@ -243,11 +243,11 @@
   "systemTheme": "Sistemaren gaia",
   "about": "Buruz",
   "version": "Bertsioa",
-  "privacyPolicy": "Pribatutasun-politika",
+  "privacyPolicy": "Pribatutasun politika",
   "termsOfService": "Zerbitzu-baldintzak",
   "contactUs": "Jarri gurekin harremanetan",
-  "rateApp": "Tarifa aplikazioa",
-  "shareApp": "Partekatu aplikazioa",
+  "rateApp": "Baloratu aplikazio hau",
+  "shareApp": "Partekatu aplikazio hau",
   "shareAppMessage": "Begiratu {appName}: Islamiar bizimoduaren azken aplikazioa! {url}",
   "@shareAppMessage": {
     "placeholders": {

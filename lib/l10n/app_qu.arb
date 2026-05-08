@@ -246,8 +246,8 @@
   "privacyPolicy": "Sapanchasqa willakuy",
   "termsOfService": "Serviciomanta kamachiykuna",
   "contactUs": "Ñoqaykuwan rimanakuy",
-  "rateApp": "Tarifa App",
-  "shareApp": "Compartir App",
+  "rateApp": "Kay appta chaninchay",
+  "shareApp": "Kay appta rakinakuy",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

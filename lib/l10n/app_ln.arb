@@ -246,8 +246,8 @@
   "privacyPolicy": "Politiki ya kobatela makambo ya moto ye moko",
   "termsOfService": "Mibeko ya Mosala",
   "contactUs": "Bokutana na Biso",
-  "rateApp": "Taux App",
-  "shareApp": "Kokabola App",
+  "rateApp": "Bopesa cote na app oyo",
+  "shareApp": "Bokabola app oyo",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

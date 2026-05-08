@@ -538,10 +538,10 @@ class AppLocalizationsXh extends AppLocalizations {
   String get contactUs => 'Qhagamshelana nathi';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Thelekelela le app';
 
   @override
-  String get shareApp => 'Yabelana ngeApp';
+  String get shareApp => 'Yabelana ngale app';
 
   @override
   String shareAppMessage(String appName, String url) {

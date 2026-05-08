@@ -529,7 +529,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'གསང་བའི་སྲིད་ཇུས།';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -538,10 +538,10 @@ class AppLocalizationsBo extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'མཉེན་ཆས་འདི་ལ་ཚད་གཞི་བཟོས།';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'མཉེན་ཆས་འདི་མཉམ་སྤྱོད།';
 
   @override
   String shareAppMessage(String appName, String url) {

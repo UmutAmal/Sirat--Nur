@@ -529,7 +529,7 @@ class AppLocalizationsTy extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Ture no te oraraa taa ê';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -538,10 +538,10 @@ class AppLocalizationsTy extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'A faito i teie faanahoraa';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'A faaite i teie faanahoraa';
 
   @override
   String shareAppMessage(String appName, String url) {

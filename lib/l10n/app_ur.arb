@@ -246,8 +246,8 @@
   "privacyPolicy": "رازداری کی پالیسی",
   "termsOfService": "_SERVICE کی شرائط",
   "contactUs": "ہم سے رابطہ کریں",
-  "rateApp": "ایپ کو ریٹ کریں",
-  "shareApp": "ایپ شیئر کریں",
+  "rateApp": "اس ایپ کی درجہ بندی کریں۔",
+  "shareApp": "اس ایپ کو شیئر کریں۔",
   "shareAppMessage": "چیک کریں {appName}: بہترین اسلامی طرز زندگی ایپ! {url}",
   "@shareAppMessage": {
     "placeholders": {

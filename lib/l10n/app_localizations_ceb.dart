@@ -532,7 +532,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get version => 'Bersyon';
 
   @override
-  String get privacyPolicy => 'Patakaran sa Pagkapribado';
+  String get privacyPolicy => 'Polisiya sa pagkapribado';
 
   @override
   String get termsOfService => 'Mga Termino sa Serbisyo';
@@ -541,10 +541,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get contactUs => 'Kontaka Kami';
 
   @override
-  String get rateApp => 'Rate nga App';
+  String get rateApp => 'I-rate kini nga app';
 
   @override
-  String get shareApp => 'Ipakigbahin ang App';
+  String get shareApp => 'Ipakigbahin kini nga app';
 
   @override
   String shareAppMessage(String appName, String url) {

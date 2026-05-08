@@ -532,7 +532,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get version => 'Je\'eháicha';
 
   @override
-  String get privacyPolicy => 'Polítika Privasida rehegua';
+  String get privacyPolicy => 'Política privacidad rehegua';
 
   @override
   String get termsOfService => 'Términos de Servicio rehegua';
@@ -541,10 +541,10 @@ class AppLocalizationsGn extends AppLocalizations {
   String get contactUs => 'Eñe\'ẽ orendive';
 
   @override
-  String get rateApp => 'Tasa App rehegua';
+  String get rateApp => 'Embohape ko app';
 
   @override
-  String get shareApp => 'Compartir App';
+  String get shareApp => 'Embohasa ko app';
 
   @override
   String shareAppMessage(String appName, String url) {

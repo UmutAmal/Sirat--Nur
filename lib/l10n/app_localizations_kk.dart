@@ -537,10 +537,10 @@ class AppLocalizationsKk extends AppLocalizations {
   String get contactUs => 'Бізбен байланысыңыз';
 
   @override
-  String get rateApp => 'Қолданбаны бағалаңыз';
+  String get rateApp => 'Осы қолданбаны бағалаңыз';
 
   @override
-  String get shareApp => 'Қолданбаны бөлісу';
+  String get shareApp => 'Осы қолданбаны бөлісіңіз';
 
   @override
   String shareAppMessage(String appName, String url) {

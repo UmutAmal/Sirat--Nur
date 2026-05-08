@@ -243,11 +243,11 @@
   "systemTheme": "Sistem Tim",
   "about": "Bɔt",
   "version": "Vɛshɔn we dɛn mek",
-  "privacyPolicy": "Prayvesi Polisi",
+  "privacyPolicy": "Prayvesi polisi",
   "termsOfService": "Di Tɛm dɛn fɔ di Savis",
   "contactUs": "Kɔntakt Wi",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Rayt dis ap",
+  "shareApp": "Sheb dis ap",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

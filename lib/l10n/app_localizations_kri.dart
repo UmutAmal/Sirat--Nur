@@ -529,7 +529,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get version => 'Vɛshɔn we dɛn mek';
 
   @override
-  String get privacyPolicy => 'Prayvesi Polisi';
+  String get privacyPolicy => 'Prayvesi polisi';
 
   @override
   String get termsOfService => 'Di Tɛm dɛn fɔ di Savis';
@@ -538,10 +538,10 @@ class AppLocalizationsKri extends AppLocalizations {
   String get contactUs => 'Kɔntakt Wi';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Rayt dis ap';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Sheb dis ap';
 
   @override
   String shareAppMessage(String appName, String url) {

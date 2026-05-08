@@ -538,10 +538,10 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get contactUs => 'Kāhea iā mā˚ou';
 
   @override
-  String get rateApp => 'Loko App';
+  String get rateApp => 'E helu i kēia polokalamu';
 
   @override
-  String get shareApp => 'Kaʻana like App';
+  String get shareApp => 'Kaʻana like i kēia polokalamu';
 
   @override
   String shareAppMessage(String appName, String url) {

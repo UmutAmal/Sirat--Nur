@@ -529,7 +529,7 @@ class AppLocalizationsEu extends AppLocalizations {
   String get version => 'Bertsioa';
 
   @override
-  String get privacyPolicy => 'Pribatutasun-politika';
+  String get privacyPolicy => 'Pribatutasun politika';
 
   @override
   String get termsOfService => 'Zerbitzu-baldintzak';
@@ -538,10 +538,10 @@ class AppLocalizationsEu extends AppLocalizations {
   String get contactUs => 'Jarri gurekin harremanetan';
 
   @override
-  String get rateApp => 'Tarifa aplikazioa';
+  String get rateApp => 'Baloratu aplikazio hau';
 
   @override
-  String get shareApp => 'Partekatu aplikazioa';
+  String get shareApp => 'Partekatu aplikazio hau';
 
   @override
   String shareAppMessage(String appName, String url) {

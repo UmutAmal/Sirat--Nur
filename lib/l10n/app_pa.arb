@@ -246,8 +246,8 @@
   "privacyPolicy": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",
   "termsOfService": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
   "contactUs": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
-  "rateApp": "ਐਪ ਨੂੰ ਰੇਟ ਕਰੋ",
-  "shareApp": "ਐਪ ਸ਼ੇਅਰ ਕਰੋ",
+  "rateApp": "ਇਸ ਐਪ ਨੂੰ ਦਰਜਾ ਦਿਓ",
+  "shareApp": "ਇਸ ਐਪ ਨੂੰ ਸਾਂਝਾ ਕਰੋ",
   "shareAppMessage": "{appName} ਦੇਖੋ: ਅਤਿਅੰਤ ਇਸਲਾਮੀ ਜੀਵਨ ਸ਼ੈਲੀ ਐਪ! {url}",
   "@shareAppMessage": {
     "placeholders": {

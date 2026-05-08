@@ -534,7 +534,7 @@ class AppLocalizationsTl extends AppLocalizations {
   String get version => 'Bersyon';
 
   @override
-  String get privacyPolicy => 'Patakaran sa Privacy';
+  String get privacyPolicy => 'Patakaran sa privacy';
 
   @override
   String get termsOfService => 'Mga Tuntunin ng Serbisyo';
@@ -543,10 +543,10 @@ class AppLocalizationsTl extends AppLocalizations {
   String get contactUs => 'Makipag-ugnayan sa Amin';
 
   @override
-  String get rateApp => 'I-rate ang App';
+  String get rateApp => 'I-rate ang app na ito';
 
   @override
-  String get shareApp => 'Ibahagi ang App';
+  String get shareApp => 'Ibahagi ang app na ito';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -529,7 +529,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Txoj Cai Tswjfwm Ntiag Tug';
+  String get privacyPolicy => 'Txoj cai ntiag tug';
 
   @override
   String get termsOfService => 'Cov ntsiab lus ntawm Kev Pabcuam';
@@ -538,10 +538,10 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get contactUs => 'Tiv tauj peb';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Rate no app';
 
   @override
-  String get shareApp => 'Qhia App';
+  String get shareApp => 'Qhia tawm no app';
 
   @override
   String shareAppMessage(String appName, String url) {

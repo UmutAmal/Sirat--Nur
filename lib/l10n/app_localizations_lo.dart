@@ -538,10 +538,10 @@ class AppLocalizationsLo extends AppLocalizations {
   String get contactUs => 'ຕິດຕໍ່ພວກເຮົາ';
 
   @override
-  String get rateApp => 'ໃຫ້ຄະແນນ App';
+  String get rateApp => 'ໃຫ້ຄະແນນແອັບນີ້';
 
   @override
-  String get shareApp => 'ແບ່ງປັນແອັບ';
+  String get shareApp => 'ແບ່ງ​ປັນ app ນີ້​';
 
   @override
   String shareAppMessage(String appName, String url) {

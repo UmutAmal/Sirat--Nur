@@ -538,10 +538,10 @@ class AppLocalizationsTt extends AppLocalizations {
   String get contactUs => 'Безнең белән элемтәгә керегез';
 
   @override
-  String get rateApp => 'Кушымта бәясе';
+  String get rateApp => 'Бу кушымтаны бәяләгез';
 
   @override
-  String get shareApp => 'Кушымта бүлешү';
+  String get shareApp => 'Бу кушымтаны бүлешегез';
 
   @override
   String shareAppMessage(String appName, String url) {

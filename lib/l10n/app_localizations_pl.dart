@@ -539,10 +539,10 @@ class AppLocalizationsPl extends AppLocalizations {
   String get contactUs => 'Skontaktuj się z nami';
 
   @override
-  String get rateApp => 'Oceń aplikację';
+  String get rateApp => 'Oceń tę aplikację';
 
   @override
-  String get shareApp => 'Udostępnij aplikację';
+  String get shareApp => 'Udostępnij tę aplikację';
 
   @override
   String shareAppMessage(String appName, String url) {

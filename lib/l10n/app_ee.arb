@@ -243,11 +243,11 @@
   "systemTheme": "System ƒe Tanya",
   "about": "Ku ɖe",
   "version": "Nukpɔkpɔ",
-  "privacyPolicy": "Ameŋunyatakakawo Ŋuti Ðoɖo",
+  "privacyPolicy": "Ameŋunyatakakawo ŋuti ɖoɖo",
   "termsOfService": "Subɔsubɔdɔ ƒe Ðoɖowo",
   "contactUs": "Te Ðe Mía Ŋu",
-  "rateApp": "Rate App",
-  "shareApp": "Mamã ƒe App",
+  "rateApp": "De dzesi dɔwɔnu sia",
+  "shareApp": "Ma dɔwɔnu sia",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -246,8 +246,8 @@
   "privacyPolicy": "គោលការណ៍ឯកជនភាព",
   "termsOfService": "លក្ខខណ្ឌនៃសេវាកម្ម",
   "contactUs": "ទាក់ទងមកយើងខ្ញុំ",
-  "rateApp": "វាយតម្លៃកម្មវិធី",
-  "shareApp": "ចែករំលែកកម្មវិធី",
+  "rateApp": "វាយតម្លៃកម្មវិធីនេះ",
+  "shareApp": "ចែករំលែកកម្មវិធីនេះ",
   "shareAppMessage": "ពិនិត្យមើល {appName}៖ កម្មវិធីរបៀបរស់នៅបែបឥស្លាមចុងក្រោយ! {url}",
   "@shareAppMessage": {
     "placeholders": {

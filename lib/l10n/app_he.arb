@@ -246,8 +246,8 @@
   "privacyPolicy": "מדיניות פרטיות",
   "termsOfService": "תנאים והגבלות",
   "contactUs": "צור קשר",
-  "rateApp": "דרג את האפליקציה",
-  "shareApp": "שתף את האפליקציה",
+  "rateApp": "דרג את האפליקציה הזו",
+  "shareApp": "שתף את האפליקציה הזו",
   "shareAppMessage": "בדוק את {appName}: אפליקציית סגנון החיים האיסלאמי האולטימטיבית! {url}",
   "@shareAppMessage": {
     "placeholders": {

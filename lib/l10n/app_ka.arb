@@ -246,8 +246,8 @@
   "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",
   "termsOfService": "მომსახურების პირობები",
   "contactUs": "დაგვიკავშირდით",
-  "rateApp": "შეაფასეთ აპლიკაცია",
-  "shareApp": "აპის გაზიარება",
+  "rateApp": "შეაფასეთ ეს აპლიკაცია",
+  "shareApp": "გააზიარეთ ეს აპლიკაცია",
   "shareAppMessage": "შეამოწმეთ {appName}: ისლამური ცხოვრების სტილის საბოლოო აპლიკაცია! {url}",
   "@shareAppMessage": {
     "placeholders": {

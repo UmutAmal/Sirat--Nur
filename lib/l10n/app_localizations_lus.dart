@@ -539,7 +539,7 @@ class AppLocalizationsLus extends AppLocalizations {
   String get contactUs => 'Min rawn biak theih reng e';
 
   @override
-  String get rateApp => 'Rate App a ni';
+  String get rateApp => 'He app hi rate rawh';
 
   @override
   String get shareApp => 'Share App tih hi a ni';

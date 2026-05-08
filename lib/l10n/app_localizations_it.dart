@@ -540,10 +540,10 @@ class AppLocalizationsIt extends AppLocalizations {
   String get contactUs => 'Contattaci';
 
   @override
-  String get rateApp => 'Valuta l\'app';
+  String get rateApp => 'Valuta questa app';
 
   @override
-  String get shareApp => 'Condividi l\'app';
+  String get shareApp => 'Condividi questa app';
 
   @override
   String shareAppMessage(String appName, String url) {

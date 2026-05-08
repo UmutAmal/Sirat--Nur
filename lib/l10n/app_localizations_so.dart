@@ -530,7 +530,7 @@ class AppLocalizationsSo extends AppLocalizations {
   String get version => 'Nooca';
 
   @override
-  String get privacyPolicy => 'Siyaasadda Qarsoonnimada';
+  String get privacyPolicy => 'Siyaasada gaarka ah';
 
   @override
   String get termsOfService => 'Shuruudaha Adeegga';
@@ -539,10 +539,10 @@ class AppLocalizationsSo extends AppLocalizations {
   String get contactUs => 'Nala Soo Xidhiidh';
 
   @override
-  String get rateApp => 'Qiimaynta App';
+  String get rateApp => 'Qiimee abkan';
 
   @override
-  String get shareApp => 'La wadaag App-ka';
+  String get shareApp => 'La wadaag abkan';
 
   @override
   String shareAppMessage(String appName, String url) {

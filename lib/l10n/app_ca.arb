@@ -246,8 +246,8 @@
   "privacyPolicy": "Política de privadesa",
   "termsOfService": "Condicions del servei",
   "contactUs": "Contacta amb nosaltres",
-  "rateApp": "Valora l'aplicació",
-  "shareApp": "Comparteix l'aplicació",
+  "rateApp": "Valora aquesta aplicació",
+  "shareApp": "Comparteix aquesta aplicació",
   "shareAppMessage": "Fes una ullada a {appName}: l'aplicació d'estil de vida islàmica definitiva! {url}",
   "@shareAppMessage": {
     "placeholders": {

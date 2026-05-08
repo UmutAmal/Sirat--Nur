@@ -537,10 +537,10 @@ class AppLocalizationsSd extends AppLocalizations {
   String get contactUs => 'اسان سان رابطو ڪريو';
 
   @override
-  String get rateApp => 'شرح ايپ';
+  String get rateApp => 'هن ائپ جي شرح';
 
   @override
-  String get shareApp => 'حصيداري ڪريو ايپ';
+  String get shareApp => 'هن ايپ کي حصيداري ڪريو';
 
   @override
   String shareAppMessage(String appName, String url) {

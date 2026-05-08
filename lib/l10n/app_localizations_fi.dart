@@ -539,10 +539,10 @@ class AppLocalizationsFi extends AppLocalizations {
   String get contactUs => 'Ota yhteyttä';
 
   @override
-  String get rateApp => 'Arvioi sovellus';
+  String get rateApp => 'Arvioi tämä sovellus';
 
   @override
-  String get shareApp => 'Jaa sovellus';
+  String get shareApp => 'Jaa tämä sovellus';
 
   @override
   String shareAppMessage(String appName, String url) {

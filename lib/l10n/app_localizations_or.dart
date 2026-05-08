@@ -540,10 +540,10 @@ class AppLocalizationsOr extends AppLocalizations {
   String get contactUs => 'ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ |';
 
   @override
-  String get rateApp => 'ରେଟ୍ ଆପ୍ |';
+  String get rateApp => 'ଏହି ଆପକୁ ମୂଲ୍ୟାଙ୍କନ କର |';
 
   @override
-  String get shareApp => 'ଆପ୍ ଅଂଶୀଦାର କରନ୍ତୁ |';
+  String get shareApp => 'ଏହି ଆପ୍ ଅଂଶୀଦାର କରନ୍ତୁ |';
 
   @override
   String shareAppMessage(String appName, String url) {

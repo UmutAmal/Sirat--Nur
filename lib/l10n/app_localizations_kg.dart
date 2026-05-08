@@ -529,7 +529,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Nsiku ya kinsweki';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -538,10 +538,10 @@ class AppLocalizationsKg extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Note ya application yayi';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Kabula application yayi';
 
   @override
   String shareAppMessage(String appName, String url) {

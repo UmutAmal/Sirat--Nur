@@ -246,8 +246,8 @@
   "privacyPolicy": "Personvernerklæring",
   "termsOfService": "Vilkår for bruk",
   "contactUs": "Kontakt oss",
-  "rateApp": "Vurder appen",
-  "shareApp": "Del appen",
+  "rateApp": "Vurder denne appen",
+  "shareApp": "Del denne appen",
   "shareAppMessage": "Sjekk ut {appName}: Den ultimate islamske livsstilsappen! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -243,11 +243,11 @@
   "systemTheme": "Mawduuca Nidaamka",
   "about": "Ku saabsan",
   "version": "Nooca",
-  "privacyPolicy": "Siyaasadda Qarsoonnimada",
+  "privacyPolicy": "Siyaasada gaarka ah",
   "termsOfService": "Shuruudaha Adeegga",
   "contactUs": "Nala Soo Xidhiidh",
-  "rateApp": "Qiimaynta App",
-  "shareApp": "La wadaag App-ka",
+  "rateApp": "Qiimee abkan",
+  "shareApp": "La wadaag abkan",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

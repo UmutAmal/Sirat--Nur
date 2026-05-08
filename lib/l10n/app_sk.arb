@@ -246,8 +246,8 @@
   "privacyPolicy": "Zásady ochrany osobných údajov",
   "termsOfService": "Zmluvné podmienky",
   "contactUs": "Kontaktujte nás",
-  "rateApp": "Hodnotiť aplikáciu",
-  "shareApp": "Zdieľať aplikáciu",
+  "rateApp": "Ohodnoťte túto aplikáciu",
+  "shareApp": "Zdieľajte túto aplikáciu",
   "shareAppMessage": "Vyskúšajte {appName}: Najlepšia aplikácia pre islamský životný štýl! {url}",
   "@shareAppMessage": {
     "placeholders": {

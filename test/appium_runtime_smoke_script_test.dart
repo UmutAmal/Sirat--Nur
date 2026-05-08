@@ -229,6 +229,12 @@ void main() {
       expect(script, contains('Resolve-AndroidViewIntent'));
       expect(script, contains('android.intent.action.VIEW'));
       expect(script, contains('rateAppIntentResolved'));
+      expect(
+        script,
+        contains(
+          r'(-not $summary.settingsRuntime.rateAppIntentResolved) -and (-not $summary.settingsRuntime.openedRateAppExternal)',
+        ),
+      );
       expect(script, contains('clickedRateApp'));
       expect(script, contains('openedRateAppExternal'));
       expect(script, contains('dismissedRateAppExternal'));
@@ -242,6 +248,12 @@ void main() {
       expect(script, contains('dismissedShareSheet'));
       expect(script, contains('com.android.intentresolver'));
       expect(script, contains('privacyPolicyIntentResolved'));
+      expect(
+        script,
+        contains(
+          r'(-not $summary.settingsRuntime.privacyPolicyIntentResolved) -and (-not $summary.settingsRuntime.openedPrivacyPolicyExternal)',
+        ),
+      );
       expect(script, contains('clickedPrivacyPolicy'));
       expect(script, contains('openedPrivacyPolicyExternal'));
       expect(script, contains('dismissedPrivacyPolicyExternal'));

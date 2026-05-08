@@ -539,10 +539,10 @@ class AppLocalizationsTk extends AppLocalizations {
   String get contactUs => 'Biz bilen habarlaşyň';
 
   @override
-  String get rateApp => 'Programma bahasy';
+  String get rateApp => 'Bu programma baha beriň';
 
   @override
-  String get shareApp => 'Programmany paýlaş';
+  String get shareApp => 'Bu programmany paýlaşyň';
 
   @override
   String shareAppMessage(String appName, String url) {

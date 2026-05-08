@@ -530,7 +530,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Politika momba ny fiainana manokana';
+  String get privacyPolicy => 'Politika manokana';
 
   @override
   String get termsOfService => 'Fepetran\'ny serivisy';
@@ -539,10 +539,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get contactUs => 'Mifandraisa aminay';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Omeo naoty ity app ity';
 
   @override
-  String get shareApp => 'Mizara App';
+  String get shareApp => 'Zarao ity app ity';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -537,10 +537,10 @@ class AppLocalizationsGu extends AppLocalizations {
   String get contactUs => 'અમારો સંપર્ક કરો';
 
   @override
-  String get rateApp => 'એપ્લિકેશનને રેટ કરો';
+  String get rateApp => 'આ એપ્લિકેશનને રેટ કરો';
 
   @override
-  String get shareApp => 'એપ શેર કરો';
+  String get shareApp => 'આ એપ શેર કરો';
 
   @override
   String shareAppMessage(String appName, String url) {

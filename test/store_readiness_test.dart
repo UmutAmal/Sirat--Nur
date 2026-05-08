@@ -175,6 +175,7 @@ void main() {
       expect(script, contains('Get-SupabaseRestCount'));
       expect(script, contains('Get-SupabaseRestRows'));
       expect(script, contains('Assert-HttpAudioProbe'));
+      expect(script, contains('Add-Type -AssemblyName System.Net.Http'));
       expect(script, contains('Test-PublicR2Host'));
       expect(script, contains('GitHub Quran audio mirror probe'));
       expect(script, contains('GitHub Quran audio overflow probe'));

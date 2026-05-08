@@ -246,8 +246,8 @@
   "privacyPolicy": "Privatsphär Politik",
   "termsOfService": "Konditioune vum Service",
   "contactUs": "Kontaktéiert eis",
-  "rateApp": "Bewäertung App",
-  "shareApp": "Deelen App",
+  "rateApp": "Bewäert dës App",
+  "shareApp": "Deelt dës App",
   "shareAppMessage": "Préift {appName}: Déi ultimativ islamesch Lifestyle App! {url}",
   "@shareAppMessage": {
     "placeholders": {

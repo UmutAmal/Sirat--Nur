@@ -538,10 +538,10 @@ class AppLocalizationsVi extends AppLocalizations {
   String get contactUs => 'Liên hệ với chúng tôi';
 
   @override
-  String get rateApp => 'Đánh giá ứng dụng';
+  String get rateApp => 'Đánh giá ứng dụng này';
 
   @override
-  String get shareApp => 'Chia sẻ ứng dụng';
+  String get shareApp => 'Chia sẻ ứng dụng này';
 
   @override
   String shareAppMessage(String appName, String url) {

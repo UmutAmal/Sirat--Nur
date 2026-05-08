@@ -538,10 +538,10 @@ class AppLocalizationsCo extends AppLocalizations {
   String get contactUs => 'Cuntatta ci';
 
   @override
-  String get rateApp => 'Tariffa App';
+  String get rateApp => 'Vota sta app';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Condividi sta app';
 
   @override
   String shareAppMessage(String appName, String url) {

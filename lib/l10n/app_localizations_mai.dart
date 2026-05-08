@@ -538,7 +538,7 @@ class AppLocalizationsMai extends AppLocalizations {
   String get contactUs => 'हमसे संपर्क करें';
 
   @override
-  String get rateApp => 'दर एप्लिकेशन';
+  String get rateApp => 'एहि ऐप के रेट करू';
 
   @override
   String get shareApp => 'शेयर ऐप';

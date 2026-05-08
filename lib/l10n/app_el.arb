@@ -243,11 +243,11 @@
   "systemTheme": "Θέμα συστήματος",
   "about": "Για",
   "version": "Εκδοχή",
-  "privacyPolicy": "Πολιτική Απορρήτου",
+  "privacyPolicy": "Πολιτική απορρήτου",
   "termsOfService": "Όροι Παροχής Υπηρεσιών",
   "contactUs": "Επικοινωνήστε μαζί μας",
-  "rateApp": "Βαθμολογήστε την εφαρμογή",
-  "shareApp": "Κοινή χρήση εφαρμογής",
+  "rateApp": "Βαθμολογήστε αυτήν την εφαρμογή",
+  "shareApp": "Μοιραστείτε αυτήν την εφαρμογή",
   "shareAppMessage": "Δείτε {appName}: Η απόλυτη εφαρμογή ισλαμικού τρόπου ζωής! {url}",
   "@shareAppMessage": {
     "placeholders": {

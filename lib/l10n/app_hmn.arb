@@ -243,11 +243,11 @@
   "systemTheme": "Lub ntsiab lus",
   "about": "Txog",
   "version": "Version",
-  "privacyPolicy": "Txoj Cai Tswjfwm Ntiag Tug",
+  "privacyPolicy": "Txoj cai ntiag tug",
   "termsOfService": "Cov ntsiab lus ntawm Kev Pabcuam",
   "contactUs": "Tiv tauj peb",
-  "rateApp": "Rate App",
-  "shareApp": "Qhia App",
+  "rateApp": "Rate no app",
+  "shareApp": "Qhia tawm no app",
   "shareAppMessage": "Mus saib {appName}: Qhov kawg Islamic lub neej app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -246,8 +246,8 @@
   "privacyPolicy": "Maxfiylik siyosati",
   "termsOfService": "Xizmat shartlari",
   "contactUs": "Biz bilan bog'laning",
-  "rateApp": "Ilovani baholang",
-  "shareApp": "Ilovani ulashish",
+  "rateApp": "Ushbu ilovani baholang",
+  "shareApp": "Ushbu ilovani ulashing",
   "shareAppMessage": "{appName} ni ko‘ring: Islomiy hayot tarziga oid so‘nggi ilova! {url}",
   "@shareAppMessage": {
     "placeholders": {

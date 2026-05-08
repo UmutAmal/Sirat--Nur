@@ -243,11 +243,11 @@
   "systemTheme": "Tema ng System",
   "about": "Tungkol sa",
   "version": "Bersyon",
-  "privacyPolicy": "Patakaran sa Privacy",
+  "privacyPolicy": "Patakaran sa privacy",
   "termsOfService": "Mga Tuntunin ng Serbisyo",
   "contactUs": "Makipag-ugnayan sa Amin",
-  "rateApp": "I-rate ang App",
-  "shareApp": "Ibahagi ang App",
+  "rateApp": "I-rate ang app na ito",
+  "shareApp": "Ibahagi ang app na ito",
   "shareAppMessage": "Tingnan ang {appName}: Ang ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

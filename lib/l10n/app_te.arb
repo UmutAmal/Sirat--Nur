@@ -246,8 +246,8 @@
   "privacyPolicy": "గోప్యతా విధానం",
   "termsOfService": "సేవా నిబంధనలు",
   "contactUs": "మమ్మల్ని సంప్రదించండి",
-  "rateApp": "యాప్‌ని రేట్ చేయండి",
-  "shareApp": "యాప్‌ను భాగస్వామ్యం చేయండి",
+  "rateApp": "ఈ యాప్‌ను రేట్ చేయండి",
+  "shareApp": "ఈ యాప్‌ను భాగస్వామ్యం చేయండి",
   "shareAppMessage": "{appName}ని తనిఖీ చేయండి: అంతిమ ఇస్లామిక్ జీవనశైలి యాప్! {url}",
   "@shareAppMessage": {
     "placeholders": {

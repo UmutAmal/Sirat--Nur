@@ -530,7 +530,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get version => 'Inyandiko';
 
   @override
-  String get privacyPolicy => 'Politiki Yibanga';
+  String get privacyPolicy => 'Politiki y’ibanga';
 
   @override
   String get termsOfService => 'Amasezerano ya serivisi';
@@ -539,10 +539,10 @@ class AppLocalizationsRw extends AppLocalizations {
   String get contactUs => 'Twandikire';
 
   @override
-  String get rateApp => 'Igipimo cya porogaramu';
+  String get rateApp => 'Gereranya iyi porogaramu';
 
   @override
-  String get shareApp => 'Sangira Porogaramu';
+  String get shareApp => 'Sangira iyi porogaramu';
 
   @override
   String shareAppMessage(String appName, String url) {

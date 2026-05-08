@@ -537,10 +537,10 @@ class AppLocalizationsKn extends AppLocalizations {
   String get contactUs => 'ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ';
 
   @override
-  String get rateApp => 'ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ';
+  String get rateApp => 'ಈ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ';
 
   @override
-  String get shareApp => 'ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ';
+  String get shareApp => 'ಈ ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ';
 
   @override
   String shareAppMessage(String appName, String url) {

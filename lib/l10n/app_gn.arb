@@ -243,11 +243,11 @@
   "systemTheme": "Tema del sistema",
   "about": "Upéva rehegua",
   "version": "Je'eháicha",
-  "privacyPolicy": "Polítika Privasida rehegua",
+  "privacyPolicy": "Política privacidad rehegua",
   "termsOfService": "Términos de Servicio rehegua",
   "contactUs": "Eñe'ẽ orendive",
-  "rateApp": "Tasa App rehegua",
-  "shareApp": "Compartir App",
+  "rateApp": "Embohape ko app",
+  "shareApp": "Embohasa ko app",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -538,10 +538,10 @@ class AppLocalizationsUg extends AppLocalizations {
   String get contactUs => 'بىز بىلەن ئالاقىلىشىڭ';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'بۇ ئەپكە باھا بېرىڭ';
 
   @override
-  String get shareApp => 'ئورتاقلىشىش دېتالى';
+  String get shareApp => 'بۇ ئەپنى ھەمبەھىرلەڭ';
 
   @override
   String shareAppMessage(String appName, String url) {

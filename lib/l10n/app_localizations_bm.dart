@@ -529,7 +529,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get version => 'Wɛrisiyɔn';
 
   @override
-  String get privacyPolicy => 'Kunnafoni dogolenw maracogo';
+  String get privacyPolicy => 'Kunnafoni dogolenw ka sariya';
 
   @override
   String get termsOfService => 'Baarakɛcogo sariyaw';
@@ -538,10 +538,10 @@ class AppLocalizationsBm extends AppLocalizations {
   String get contactUs => 'Aw ye ɲɔgɔn sɔrɔ Anw fɛ';
 
   @override
-  String get rateApp => 'Tarifu App ye';
+  String get rateApp => 'Aw ye nin appli in jate';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Aw ye nin appli in tila ɲɔgɔn na';
 
   @override
   String shareAppMessage(String appName, String url) {

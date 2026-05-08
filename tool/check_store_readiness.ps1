@@ -112,29 +112,48 @@ function Assert-HttpAudioProbe {
     [Parameter(Mandatory = $true)][string]$Description
   )
 
+  $handler = $null
+  $client = $null
+  $request = $null
+  $response = $null
+  $stream = $null
   try {
-    $response = Invoke-WebRequest -UseBasicParsing -Uri $Url -Method Get -Headers @{ Range = 'bytes=0-15' } -MaximumRedirection 5 -TimeoutSec 30
-    if ($response.StatusCode -ne 200 -and $response.StatusCode -ne 206) {
-      Add-Failure "$Description failed with HTTP $($response.StatusCode)."
+    Add-Type -AssemblyName System.Net.Http
+    $handler = [System.Net.Http.HttpClientHandler]::new()
+    $handler.AllowAutoRedirect = $true
+    $handler.MaxAutomaticRedirections = 5
+    $client = [System.Net.Http.HttpClient]::new($handler)
+    $client.Timeout = [TimeSpan]::FromSeconds(30)
+    $request = [System.Net.Http.HttpRequestMessage]::new([System.Net.Http.HttpMethod]::Get, $Url)
+    $request.Headers.Range = [System.Net.Http.Headers.RangeHeaderValue]::new(0, 15)
+    $response = $client.SendAsync(
+      $request,
+      [System.Net.Http.HttpCompletionOption]::ResponseHeadersRead
+    ).GetAwaiter().GetResult()
+    $statusCode = [int]$response.StatusCode
+    if ($statusCode -ne 200 -and $statusCode -ne 206) {
+      Add-Failure "$Description failed with HTTP $statusCode."
       return
     }
 
-    $length = if ($response.RawContentLength -gt 0) {
-      [int64]$response.RawContentLength
-    } elseif ($response.Content -is [byte[]]) {
-      [int64]$response.Content.Count
-    } else {
-      [int64]([string]$response.Content).Length
-    }
+    $stream = $response.Content.ReadAsStreamAsync().GetAwaiter().GetResult()
+    $buffer = [byte[]]::new(16)
+    $length = [int64]$stream.Read($buffer, 0, $buffer.Length)
 
     if ($length -le 0) {
       Add-Failure "$Description returned an empty response."
       return
     }
 
-    Add-Pass "$Description returned HTTP $($response.StatusCode) with audio bytes."
+    Add-Pass "$Description returned HTTP $statusCode with audio bytes."
   } catch {
     Add-Failure "$Description failed: $($_.Exception.Message)"
+  } finally {
+    if ($null -ne $stream) { $stream.Dispose() }
+    if ($null -ne $response) { $response.Dispose() }
+    if ($null -ne $request) { $request.Dispose() }
+    if ($null -ne $client) { $client.Dispose() }
+    if ($null -ne $handler) { $handler.Dispose() }
   }
 }
 

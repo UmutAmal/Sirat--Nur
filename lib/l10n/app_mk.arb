@@ -246,8 +246,8 @@
   "privacyPolicy": "Политика за приватност",
   "termsOfService": "Услови за користење",
   "contactUs": "Контактирајте со нас",
-  "rateApp": "Оцени апликација",
-  "shareApp": "Сподели апликација",
+  "rateApp": "Оцени ја оваа апликација",
+  "shareApp": "Споделете ја оваа апликација",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

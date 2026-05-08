@@ -243,11 +243,11 @@
   "systemTheme": "පද්ධති තේමාව",
   "about": "ගැන",
   "version": "අනුවාදය",
-  "privacyPolicy": "රහස්‍යතා ප්‍රතිපත්තිය",
+  "privacyPolicy": "පෞද්ගලිකත්ව ප්රතිපත්තිය",
   "termsOfService": "සේවා කොන්දේසි",
   "contactUs": "අප අමතන්න",
-  "rateApp": "යෙදුම අගයන්න",
-  "shareApp": "යෙදුම බෙදාගන්න",
+  "rateApp": "මෙම යෙදුම අගයන්න",
+  "shareApp": "මෙම යෙදුම බෙදාගන්න",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

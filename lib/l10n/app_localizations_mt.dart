@@ -530,7 +530,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get version => 'Verżjoni';
 
   @override
-  String get privacyPolicy => 'Politika ta\' Privatezza';
+  String get privacyPolicy => 'Politika ta\' privatezza';
 
   @override
   String get termsOfService => 'Termini tas-Servizz';
@@ -539,10 +539,10 @@ class AppLocalizationsMt extends AppLocalizations {
   String get contactUs => 'Ikkuntattjana';
 
   @override
-  String get rateApp => 'Rata App';
+  String get rateApp => 'Rata din l-app';
 
   @override
-  String get shareApp => 'Aqsam l-App';
+  String get shareApp => 'Aqsam din l-app';
 
   @override
   String shareAppMessage(String appName, String url) {

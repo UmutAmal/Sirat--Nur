@@ -532,7 +532,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get version => 'Phetolelo';
 
   @override
-  String get privacyPolicy => 'Pholisi ya Sephiri';
+  String get privacyPolicy => 'Pholisi ya sephiri';
 
   @override
   String get termsOfService => 'Melawana ya Tirelo';
@@ -541,10 +541,10 @@ class AppLocalizationsNso extends AppLocalizations {
   String get contactUs => 'Ikgokaganye le Rena';
 
   @override
-  String get rateApp => 'Sekhahla App';
+  String get rateApp => 'Lekanyetša tirišo ye';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Abelana ka tiriso ye';
 
   @override
   String shareAppMessage(String appName, String url) {

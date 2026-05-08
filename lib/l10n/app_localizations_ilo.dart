@@ -532,7 +532,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get version => 'Bersion';
 
   @override
-  String get privacyPolicy => 'Pagannurotan iti Kinapribado';
+  String get privacyPolicy => 'Pagannurotan ti kinapribado';
 
   @override
   String get termsOfService => 'Dagiti Kondision ti Serbisio';
@@ -541,10 +541,10 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get contactUs => 'Kontaken Kadakami';
 
   @override
-  String get rateApp => 'Rate ti App';
+  String get rateApp => 'Rate daytoy nga app';
 
   @override
-  String get shareApp => 'Ibinglay ti App';
+  String get shareApp => 'Ibinglay daytoy nga app';
 
   @override
   String shareAppMessage(String appName, String url) {

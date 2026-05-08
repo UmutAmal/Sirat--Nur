@@ -243,11 +243,11 @@
   "systemTheme": "Cuspair an t-siostam",
   "about": "Mu dheidhinn",
   "version": "Tionndadh",
-  "privacyPolicy": "Poileasaidh Dìomhaireachd",
+  "privacyPolicy": "Poileasaidh prìobhaideachd",
   "termsOfService": "Teirmean seirbheis",
   "contactUs": "Cuir fios thugainn",
-  "rateApp": "App astar",
-  "shareApp": "Co-roinn App",
+  "rateApp": "Dèan measadh air an aplacaid seo",
+  "shareApp": "Roinn an aplacaid seo",
   "shareAppMessage": "Thoir sùil air {appName}: An app dòigh-beatha Ioslamach mu dheireadh! {url}",
   "@shareAppMessage": {
     "placeholders": {

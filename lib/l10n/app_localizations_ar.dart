@@ -536,10 +536,10 @@ class AppLocalizationsAr extends AppLocalizations {
   String get contactUs => 'اتصل بنا';
 
   @override
-  String get rateApp => 'قيّم التطبيق';
+  String get rateApp => 'قيم هذا التطبيق';
 
   @override
-  String get shareApp => 'مشاركة التطبيق';
+  String get shareApp => 'مشاركة هذا التطبيق';
 
   @override
   String shareAppMessage(String appName, String url) {

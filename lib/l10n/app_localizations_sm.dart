@@ -529,7 +529,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get version => 'Fa\'aliliuga';
 
   @override
-  String get privacyPolicy => 'Faiga Fa\'alilolilo';
+  String get privacyPolicy => 'Faiga fa\'alilolilo';
 
   @override
   String get termsOfService => 'Tuutuuga o Auaunaga';
@@ -538,10 +538,10 @@ class AppLocalizationsSm extends AppLocalizations {
   String get contactUs => 'Fa\'afeso\'ota\'i matou';
 
   @override
-  String get rateApp => 'Fua o le App';
+  String get rateApp => 'Fa\'ailoga lenei app';
 
   @override
-  String get shareApp => 'Fa\'asoa le App';
+  String get shareApp => 'Faasoa atu lenei app';
 
   @override
   String shareAppMessage(String appName, String url) {

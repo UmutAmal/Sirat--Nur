@@ -246,8 +246,8 @@
   "privacyPolicy": "የግላዊነት ፖሊሲ",
   "termsOfService": "የአገልግሎት ውል",
   "contactUs": "ያግኙን",
-  "rateApp": "መተግበሪያ ደረጃ ይስጡ",
-  "shareApp": "መተግበሪያ አጋራ",
+  "rateApp": "ለዚህ መተግበሪያ ደረጃ ይስጡት።",
+  "shareApp": "ይህን መተግበሪያ አጋራ",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

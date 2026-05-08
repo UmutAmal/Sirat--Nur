@@ -246,8 +246,8 @@
   "privacyPolicy": "นโยบายความเป็นส่วนตัว",
   "termsOfService": "ข้อกำหนดในการให้บริการ",
   "contactUs": "ติดต่อเรา",
-  "rateApp": "ให้คะแนนแอป",
-  "shareApp": "แชร์แอป",
+  "rateApp": "ให้คะแนนแอปนี้",
+  "shareApp": "แชร์แอพนี้",
   "shareAppMessage": "ลองดู {appName}: สุดยอดแอปไลฟ์สไตล์อิสลาม! {url}",
   "@shareAppMessage": {
     "placeholders": {

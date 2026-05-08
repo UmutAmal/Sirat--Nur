@@ -531,7 +531,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get version => 'Εκδοχή';
 
   @override
-  String get privacyPolicy => 'Πολιτική Απορρήτου';
+  String get privacyPolicy => 'Πολιτική απορρήτου';
 
   @override
   String get termsOfService => 'Όροι Παροχής Υπηρεσιών';
@@ -540,10 +540,10 @@ class AppLocalizationsEl extends AppLocalizations {
   String get contactUs => 'Επικοινωνήστε μαζί μας';
 
   @override
-  String get rateApp => 'Βαθμολογήστε την εφαρμογή';
+  String get rateApp => 'Βαθμολογήστε αυτήν την εφαρμογή';
 
   @override
-  String get shareApp => 'Κοινή χρήση εφαρμογής';
+  String get shareApp => 'Μοιραστείτε αυτήν την εφαρμογή';
 
   @override
   String shareAppMessage(String appName, String url) {

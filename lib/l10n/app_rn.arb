@@ -243,11 +243,11 @@
   "systemTheme": "Insiguro ya Sisitemu",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Amabwirizwa y'ubuzima bwite",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Guha igiciro iyi porogaramu",
+  "shareApp": "Sangira iyi porogaramu",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

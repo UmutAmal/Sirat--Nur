@@ -246,8 +246,8 @@
   "privacyPolicy": "Privaatsuspoliitika",
   "termsOfService": "Kasutustingimused",
   "contactUs": "Võtke meiega ühendust",
-  "rateApp": "Hinda rakendust",
-  "shareApp": "Jaga rakendust",
+  "rateApp": "Hinda seda rakendust",
+  "shareApp": "Jaga seda rakendust",
   "shareAppMessage": "Vaadake {appName}: ülim islami elustiilirakendus! {url}",
   "@shareAppMessage": {
     "placeholders": {

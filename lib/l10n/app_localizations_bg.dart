@@ -541,10 +541,10 @@ class AppLocalizationsBg extends AppLocalizations {
   String get contactUs => 'Свържете се с нас';
 
   @override
-  String get rateApp => 'Оценете приложението';
+  String get rateApp => 'Оценете това приложение';
 
   @override
-  String get shareApp => 'Приложение за споделяне';
+  String get shareApp => 'Споделете това приложение';
 
   @override
   String shareAppMessage(String appName, String url) {

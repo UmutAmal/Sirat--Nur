@@ -541,10 +541,10 @@ class AppLocalizationsBe extends AppLocalizations {
   String get contactUs => 'Звяжыцеся з намі';
 
   @override
-  String get rateApp => 'Ацаніць дадатак';
+  String get rateApp => 'Ацаніце гэта дадатак';
 
   @override
-  String get shareApp => 'Падзяліцца праграмай';
+  String get shareApp => 'Падзяліцеся гэтай праграмай';
 
   @override
   String shareAppMessage(String appName, String url) {

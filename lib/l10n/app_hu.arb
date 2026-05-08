@@ -246,8 +246,8 @@
   "privacyPolicy": "Adatvédelmi szabályzat",
   "termsOfService": "Szolgáltatási feltételek",
   "contactUs": "Lépjen kapcsolatba velünk",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Értékelje ezt az alkalmazást",
+  "shareApp": "Ossza meg ezt az alkalmazást",
   "shareAppMessage": "Nézze meg a {appName}: A tökéletes iszlám életmód alkalmazást! {url}",
   "@shareAppMessage": {
     "placeholders": {

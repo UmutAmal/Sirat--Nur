@@ -243,11 +243,11 @@
   "systemTheme": "Theme ea Tsamaiso",
   "about": "About",
   "version": "Phetolelo",
-  "privacyPolicy": "Leano la Lekunutu",
+  "privacyPolicy": "Leano la lekunutu",
   "termsOfService": "Melao ea Ts'ebeletso",
   "contactUs": "Ikopanye le Rona",
-  "rateApp": "Reita App",
-  "shareApp": "Arolelana App",
+  "rateApp": "Reita sesebelisoa sena",
+  "shareApp": "Arolelana sesebelisoa sena",
   "shareAppMessage": "Sheba {appName}: Sesebelisoa sa ho qetela sa bophelo sa Islamic! {url}",
   "@shareAppMessage": {
     "placeholders": {

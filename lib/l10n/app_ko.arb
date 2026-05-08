@@ -246,8 +246,8 @@
   "privacyPolicy": "개인 정보 보호 정책",
   "termsOfService": "서비스 약관",
   "contactUs": "문의하기",
-  "rateApp": "앱 평가",
-  "shareApp": "앱 공유",
+  "rateApp": "이 앱을 평가해 주세요",
+  "shareApp": "이 앱을 공유하세요",
   "shareAppMessage": "{appName}을 확인해 보세요: 최고의 이슬람 라이프스타일 앱! {url}",
   "@shareAppMessage": {
     "placeholders": {

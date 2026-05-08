@@ -243,11 +243,11 @@
   "systemTheme": "Lohahevitra momba ny rafitra",
   "about": "Momba ny",
   "version": "Version",
-  "privacyPolicy": "Politika momba ny fiainana manokana",
+  "privacyPolicy": "Politika manokana",
   "termsOfService": "Fepetran'ny serivisy",
   "contactUs": "Mifandraisa aminay",
-  "rateApp": "Rate App",
-  "shareApp": "Mizara App",
+  "rateApp": "Omeo naoty ity app ity",
+  "shareApp": "Zarao ity app ity",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -243,12 +243,12 @@
   "systemTheme": "सिस्टम थीम",
   "about": "के बारे में",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "गोपनीयता नीति",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "rateApp": "ऐप रेट करीं",
+  "shareApp": "ऐप शेयर करीं",
+  "shareAppMessage": "ई {appName} देखीं: बेहतरीन इस्लामी जीवनशैली ऐप! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

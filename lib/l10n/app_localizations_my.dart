@@ -540,10 +540,10 @@ class AppLocalizationsMy extends AppLocalizations {
   String get contactUs => 'ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ။';
 
   @override
-  String get rateApp => 'အက်ပ်ကို အဆင့်သတ်မှတ်ပါ။';
+  String get rateApp => 'ဤအက်ပ်ကို အဆင့်သတ်မှတ်ပါ။';
 
   @override
-  String get shareApp => 'အက်ပ်ကို မျှဝေပါ။';
+  String get shareApp => 'ဤအက်ပ်ကိုမျှဝေပါ။';
 
   @override
   String shareAppMessage(String appName, String url) {

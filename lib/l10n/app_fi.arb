@@ -246,8 +246,8 @@
   "privacyPolicy": "Tietosuojakäytäntö",
   "termsOfService": "Palveluehdot",
   "contactUs": "Ota yhteyttä",
-  "rateApp": "Arvioi sovellus",
-  "shareApp": "Jaa sovellus",
+  "rateApp": "Arvioi tämä sovellus",
+  "shareApp": "Jaa tämä sovellus",
   "shareAppMessage": "Tutustu {appName}: äärimmäisen islamilaisen elämäntavan sovellus! {url}",
   "@shareAppMessage": {
     "placeholders": {

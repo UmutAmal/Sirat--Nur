@@ -531,7 +531,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Tu\'utu\'uni fakalukufua';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -540,10 +540,10 @@ class AppLocalizationsTo extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Fakafuofua\'i \'a e app ko \'eni';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Vahevahe \'a e app ko \'eni';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -246,8 +246,8 @@
   "privacyPolicy": "സ്വകാര്യതാ നയം",
   "termsOfService": "സേവന നിബന്ധനകൾ",
   "contactUs": "ഞങ്ങളെ ബന്ധപ്പെടുക",
-  "rateApp": "ആപ്പ് റേറ്റ് ചെയ്യുക",
-  "shareApp": "ആപ്പ് പങ്കിടുക",
+  "rateApp": "ഈ ആപ്പ് റേറ്റുചെയ്യുക",
+  "shareApp": "ഈ ആപ്പ് പങ്കിടുക",
   "shareAppMessage": "{appName} പരിശോധിക്കുക: പരമമായ ഇസ്ലാമിക ജീവിതശൈലി ആപ്പ്! {url}",
   "@shareAppMessage": {
     "placeholders": {

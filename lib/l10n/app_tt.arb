@@ -246,8 +246,8 @@
   "privacyPolicy": "Хосусыйлык политикасы",
   "termsOfService": "Хезмәт шартлары",
   "contactUs": "Безнең белән элемтәгә керегез",
-  "rateApp": "Кушымта бәясе",
-  "shareApp": "Кушымта бүлешү",
+  "rateApp": "Бу кушымтаны бәяләгез",
+  "shareApp": "Бу кушымтаны бүлешегез",
   "shareAppMessage": "{appName} карагыз: Ислам тормышының соңгы кушымтасы! {url}",
   "@shareAppMessage": {
     "placeholders": {

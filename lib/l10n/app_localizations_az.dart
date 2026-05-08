@@ -529,7 +529,7 @@ class AppLocalizationsAz extends AppLocalizations {
   String get version => 'Versiya';
 
   @override
-  String get privacyPolicy => 'Məxfilik Siyasəti';
+  String get privacyPolicy => 'Məxfilik siyasəti';
 
   @override
   String get termsOfService => 'Xidmət Şərtləri';
@@ -538,10 +538,10 @@ class AppLocalizationsAz extends AppLocalizations {
   String get contactUs => 'Bizimlə əlaqə saxlayın';
 
   @override
-  String get rateApp => 'Qiymətləndirmə Tətbiqi';
+  String get rateApp => 'Bu proqramı qiymətləndirin';
 
   @override
-  String get shareApp => 'Tətbiqi paylaşın';
+  String get shareApp => 'Bu proqramı paylaşın';
 
   @override
   String shareAppMessage(String appName, String url) {

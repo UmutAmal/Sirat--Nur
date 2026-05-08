@@ -243,11 +243,11 @@
   "systemTheme": "Mata duree Sirna",
   "about": "Waa'ee",
   "version": "Gosa",
-  "privacyPolicy": "Imaammata Dhuunfaa",
+  "privacyPolicy": "Imaammata dhuunfaa",
   "termsOfService": "Haala Tajaajilaa",
   "contactUs": "Nu Qunnamaa",
-  "rateApp": "Sadarkaa App",
-  "shareApp": "Share App",
+  "rateApp": "Appii kanaaf sadarkaa kenni",
+  "shareApp": "Appii kana share godhaa",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -246,8 +246,8 @@
   "privacyPolicy": "Persónuverndarstefna",
   "termsOfService": "Þjónustuskilmálar",
   "contactUs": "Hafðu samband",
-  "rateApp": "Gefa app",
-  "shareApp": "Deila app",
+  "rateApp": "Gefðu þessu forriti einkunn",
+  "shareApp": "Deildu þessu forriti",
   "shareAppMessage": "Skoðaðu {appName}: Fullkomið íslamska lífsstílsforritið! {url}",
   "@shareAppMessage": {
     "placeholders": {

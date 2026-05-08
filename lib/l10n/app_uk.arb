@@ -246,8 +246,8 @@
   "privacyPolicy": "Політика конфіденційності",
   "termsOfService": "Умови обслуговування",
   "contactUs": "Зв'яжіться з нами",
-  "rateApp": "Оцініть додаток",
-  "shareApp": "Поділитися додатком",
+  "rateApp": "Оцініть цю програму",
+  "shareApp": "Поділіться цією програмою",
   "shareAppMessage": "Перегляньте {appName}: найкращий додаток для ісламського способу життя! {url}",
   "@shareAppMessage": {
     "placeholders": {

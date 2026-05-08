@@ -539,10 +539,10 @@ class AppLocalizationsSl extends AppLocalizations {
   String get contactUs => 'Kontaktirajte nas';
 
   @override
-  String get rateApp => 'Ocenite aplikacijo';
+  String get rateApp => 'Ocenite to aplikacijo';
 
   @override
-  String get shareApp => 'Deli aplikacijo';
+  String get shareApp => 'Delite to aplikacijo';
 
   @override
   String shareAppMessage(String appName, String url) {

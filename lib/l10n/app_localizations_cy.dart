@@ -531,7 +531,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get version => 'Fersiwn';
 
   @override
-  String get privacyPolicy => 'Polisi Preifatrwydd';
+  String get privacyPolicy => 'Polisi preifatrwydd';
 
   @override
   String get termsOfService => 'Telerau Gwasanaeth';
@@ -540,10 +540,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get contactUs => 'Cysylltwch â Ni';
 
   @override
-  String get rateApp => 'App Cyfradd';
+  String get rateApp => 'Graddiwch yr app hon';
 
   @override
-  String get shareApp => 'Rhannu App';
+  String get shareApp => 'Rhannwch yr app hon';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -243,11 +243,11 @@
   "systemTheme": "Tema do sistema",
   "about": "Sobre",
   "version": "Versão",
-  "privacyPolicy": "Política de Privacidade",
+  "privacyPolicy": "Política de privacidade",
   "termsOfService": "Termos de Serviço",
   "contactUs": "Contate-nos",
-  "rateApp": "Avaliar o aplicativo",
-  "shareApp": "Compartilhar o aplicativo",
+  "rateApp": "Avalie este aplicativo",
+  "shareApp": "Compartilhe este aplicativo",
   "shareAppMessage": "Confira {appName}: O melhor aplicativo de estilo de vida islâmico! {url}",
   "@shareAppMessage": {
     "placeholders": {

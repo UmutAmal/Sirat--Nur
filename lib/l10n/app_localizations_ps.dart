@@ -537,10 +537,10 @@ class AppLocalizationsPs extends AppLocalizations {
   String get contactUs => 'موږ سره اړیکه ونیسئ';
 
   @override
-  String get rateApp => 'د اپلیکیشن درجه بندي کړئ';
+  String get rateApp => 'دا اپلیکیشن درجه بندي کړئ';
 
   @override
-  String get shareApp => 'اپلیکیشن شریک کړئ';
+  String get shareApp => 'دا اپلیکیشن شریک کړئ';
 
   @override
   String shareAppMessage(String appName, String url) {

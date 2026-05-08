@@ -538,10 +538,10 @@ class AppLocalizationsEt extends AppLocalizations {
   String get contactUs => 'Võtke meiega ühendust';
 
   @override
-  String get rateApp => 'Hinda rakendust';
+  String get rateApp => 'Hinda seda rakendust';
 
   @override
-  String get shareApp => 'Jaga rakendust';
+  String get shareApp => 'Jaga seda rakendust';
 
   @override
   String shareAppMessage(String appName, String url) {

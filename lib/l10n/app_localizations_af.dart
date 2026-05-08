@@ -538,10 +538,10 @@ class AppLocalizationsAf extends AppLocalizations {
   String get contactUs => 'Kontak ons';
 
   @override
-  String get rateApp => 'Beoordeel App';
+  String get rateApp => 'Beoordeel hierdie toepassing';
 
   @override
-  String get shareApp => 'Deel App';
+  String get shareApp => 'Deel hierdie toepassing';
 
   @override
   String shareAppMessage(String appName, String url) {

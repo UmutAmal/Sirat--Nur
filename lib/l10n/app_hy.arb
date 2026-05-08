@@ -246,8 +246,8 @@
   "privacyPolicy": "Գաղտնիության քաղաքականություն",
   "termsOfService": "Ծառայության պայմաններ",
   "contactUs": "Կապ մեզ հետ",
-  "rateApp": "Գնահատեք հավելվածը",
-  "shareApp": "Համօգտագործել հավելվածը",
+  "rateApp": "Գնահատեք այս հավելվածը",
+  "shareApp": "Կիսվեք այս հավելվածով",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

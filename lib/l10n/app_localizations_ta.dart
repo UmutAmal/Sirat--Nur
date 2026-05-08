@@ -540,10 +540,10 @@ class AppLocalizationsTa extends AppLocalizations {
   String get contactUs => 'எங்களை தொடர்பு கொள்ளவும்';
 
   @override
-  String get rateApp => 'பயன்பாட்டை மதிப்பிடவும்';
+  String get rateApp => 'இந்த பயன்பாட்டை மதிப்பிடவும்';
 
   @override
-  String get shareApp => 'ஆப்ஸைப் பகிரவும்';
+  String get shareApp => 'இந்த பயன்பாட்டைப் பகிரவும்';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -531,7 +531,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get version => 'Gosa';
 
   @override
-  String get privacyPolicy => 'Imaammata Dhuunfaa';
+  String get privacyPolicy => 'Imaammata dhuunfaa';
 
   @override
   String get termsOfService => 'Haala Tajaajilaa';
@@ -540,10 +540,10 @@ class AppLocalizationsOm extends AppLocalizations {
   String get contactUs => 'Nu Qunnamaa';
 
   @override
-  String get rateApp => 'Sadarkaa App';
+  String get rateApp => 'Appii kanaaf sadarkaa kenni';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Appii kana share godhaa';
 
   @override
   String shareAppMessage(String appName, String url) {

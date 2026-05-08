@@ -246,8 +246,8 @@
   "privacyPolicy": "Amụma nzuzo",
   "termsOfService": "Usoro ọrụ",
   "contactUs": "Kpọtụrụ anyị",
-  "rateApp": "Ọnụ ego ngwa",
-  "shareApp": "Kekọrịta ngwa",
+  "rateApp": "Họrọ ngwa a",
+  "shareApp": "Kekọrịta ngwa a",
   "shareAppMessage": "Lelee {appName}: Ngwa kacha ebi ndụ islam! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -538,10 +538,10 @@ class AppLocalizationsHi extends AppLocalizations {
   String get contactUs => 'हमसे संपर्क करें';
 
   @override
-  String get rateApp => 'ऐप को रेट करें';
+  String get rateApp => 'इस ऐप को रेट करें';
 
   @override
-  String get shareApp => 'ऐप शेयर करें';
+  String get shareApp => 'इस ऐप को साझा करें';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -528,7 +528,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get version => 'Ẹya';
 
   @override
-  String get privacyPolicy => 'Asiri Afihan';
+  String get privacyPolicy => 'Ilana asiri';
 
   @override
   String get termsOfService => 'Awọn ofin ti Service';
@@ -537,10 +537,10 @@ class AppLocalizationsYo extends AppLocalizations {
   String get contactUs => 'Kan si Wa';
 
   @override
-  String get rateApp => 'Oṣuwọn App';
+  String get rateApp => 'Oṣuwọn ohun elo yii';
 
   @override
-  String get shareApp => 'Pin App';
+  String get shareApp => 'Pin yi app';
 
   @override
   String shareAppMessage(String appName, String url) {

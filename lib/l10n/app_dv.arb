@@ -246,8 +246,8 @@
   "privacyPolicy": "ޕްރައިވެސީ ޕޮލިސީ",
   "termsOfService": "ޚިދުމަތުގެ ޝަރުތުތައް",
   "contactUs": "ކޮންޓެކްޓް އަސް",
-  "rateApp": "ރޭޓް އެޕް",
-  "shareApp": "ޝެއާ އެޕް",
+  "rateApp": "މި އެޕް ރޭޓް ކުރާށެވެ",
+  "shareApp": "މި އެޕް ޝެއާ ކޮށްލައްވާށެވެ",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

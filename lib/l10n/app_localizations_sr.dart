@@ -538,10 +538,10 @@ class AppLocalizationsSr extends AppLocalizations {
   String get contactUs => 'Контактирајте нас';
 
   @override
-  String get rateApp => 'Оцените апликацију';
+  String get rateApp => 'Оцените ову апликацију';
 
   @override
-  String get shareApp => 'Делите апликацију';
+  String get shareApp => 'Поделите ову апликацију';
 
   @override
   String shareAppMessage(String appName, String url) {

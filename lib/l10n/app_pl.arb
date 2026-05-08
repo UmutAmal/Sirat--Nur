@@ -246,8 +246,8 @@
   "privacyPolicy": "Polityka prywatności",
   "termsOfService": "Warunki świadczenia usług",
   "contactUs": "Skontaktuj się z nami",
-  "rateApp": "Oceń aplikację",
-  "shareApp": "Udostępnij aplikację",
+  "rateApp": "Oceń tę aplikację",
+  "shareApp": "Udostępnij tę aplikację",
   "shareAppMessage": "Sprawdź {appName}: najlepszą islamską aplikację lifestylową! {url}",
   "@shareAppMessage": {
     "placeholders": {

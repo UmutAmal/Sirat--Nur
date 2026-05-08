@@ -534,10 +534,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get contactUs => 'お問い合わせ';
 
   @override
-  String get rateApp => 'アプリを評価';
+  String get rateApp => 'このアプリを評価する';
 
   @override
-  String get shareApp => 'アプリを共有';
+  String get shareApp => 'このアプリを共有する';
 
   @override
   String shareAppMessage(String appName, String url) {

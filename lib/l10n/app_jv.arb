@@ -243,11 +243,11 @@
   "systemTheme": "Tema Sistem",
   "about": "Babagan",
   "version": "Versi",
-  "privacyPolicy": "Kebijakan Privasi",
+  "privacyPolicy": "Kebijakan privasi",
   "termsOfService": "Katentuan Pangginaan supados langkung Service",
   "contactUs": "Hubungi Kita",
-  "rateApp": "Rate App",
-  "shareApp": "Nuduhake App",
+  "rateApp": "Rate app iki",
+  "shareApp": "Nuduhake app iki",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

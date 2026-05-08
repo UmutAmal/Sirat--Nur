@@ -243,11 +243,11 @@
   "systemTheme": "Tema Sistem",
   "about": "Tentang",
   "version": "Versi",
-  "privacyPolicy": "Dasar Privasi",
+  "privacyPolicy": "Dasar privasi",
   "termsOfService": "Terma Perkhidmatan",
   "contactUs": "Hubungi Kami",
-  "rateApp": "Nilai Aplikasi",
-  "shareApp": "Kongsikan Aplikasi",
+  "rateApp": "Nilaikan apl ini",
+  "shareApp": "Kongsi aplikasi ini",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

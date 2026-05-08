@@ -529,7 +529,7 @@ class AppLocalizationsHa extends AppLocalizations {
   String get version => 'Sigar';
 
   @override
-  String get privacyPolicy => 'takardar kebantawa';
+  String get privacyPolicy => 'Manufar keɓantawa';
 
   @override
   String get termsOfService => 'SharuÉ—É—an Sabis';
@@ -538,10 +538,10 @@ class AppLocalizationsHa extends AppLocalizations {
   String get contactUs => 'Tuntube Mu';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Rate wannan app';
 
   @override
-  String get shareApp => 'Raba App';
+  String get shareApp => 'Raba wannan app';
 
   @override
   String shareAppMessage(String appName, String url) {

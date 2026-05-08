@@ -529,7 +529,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get version => 'Versi';
 
   @override
-  String get privacyPolicy => 'Kebijakan Privasi';
+  String get privacyPolicy => 'Kebijakan privasi';
 
   @override
   String get termsOfService => 'Ketentuan Layanan';
@@ -538,10 +538,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get contactUs => 'Hubungi Kami';
 
   @override
-  String get rateApp => 'Beri Rating';
+  String get rateApp => 'Nilai aplikasi ini';
 
   @override
-  String get shareApp => 'Bagikan Aplikasi';
+  String get shareApp => 'Bagikan aplikasi ini';
 
   @override
   String shareAppMessage(String appName, String url) {

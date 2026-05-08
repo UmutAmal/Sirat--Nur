@@ -537,10 +537,10 @@ class AppLocalizationsAs extends AppLocalizations {
   String get contactUs => 'আমাৰ সৈতে যোগাযোগ কৰক';
 
   @override
-  String get rateApp => 'ৰেট এপ';
+  String get rateApp => 'এই এপটোক ৰেটিং দিয়ক';
 
   @override
-  String get shareApp => 'শ্বেয়াৰ এপ';
+  String get shareApp => 'এই এপটো শ্বেয়াৰ কৰক';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -531,7 +531,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'Politikerezh prevezded';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -540,10 +540,10 @@ class AppLocalizationsBr extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Priziañ an arload-mañ';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Rannañ an arload-mañ';
 
   @override
   String shareAppMessage(String appName, String url) {

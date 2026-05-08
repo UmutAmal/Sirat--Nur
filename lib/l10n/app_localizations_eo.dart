@@ -529,7 +529,7 @@ class AppLocalizationsEo extends AppLocalizations {
   String get version => 'Versio';
 
   @override
-  String get privacyPolicy => 'Privateca Politiko';
+  String get privacyPolicy => 'Privateca politiko';
 
   @override
   String get termsOfService => 'Servokondiĉoj';
@@ -538,10 +538,10 @@ class AppLocalizationsEo extends AppLocalizations {
   String get contactUs => 'Kontaktu Nin';
 
   @override
-  String get rateApp => 'Tarifa Apo';
+  String get rateApp => 'Tatu ĉi tiun apon';
 
   @override
-  String get shareApp => 'Kunhavigi Apon';
+  String get shareApp => 'Kunhavigu ĉi tiun apon';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -529,7 +529,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get version => 'Toleo';
 
   @override
-  String get privacyPolicy => 'Sera ya Faragha';
+  String get privacyPolicy => 'Sera ya faragha';
 
   @override
   String get termsOfService => 'Masharti ya Huduma';
@@ -538,10 +538,10 @@ class AppLocalizationsSw extends AppLocalizations {
   String get contactUs => 'Wasiliana Nasi';
 
   @override
-  String get rateApp => 'Kadiria Programu';
+  String get rateApp => 'Kadiria programu hii';
 
   @override
-  String get shareApp => 'Shiriki Programu';
+  String get shareApp => 'Shiriki programu hii';
 
   @override
   String shareAppMessage(String appName, String url) {

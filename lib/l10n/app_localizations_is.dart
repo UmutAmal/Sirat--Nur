@@ -538,10 +538,10 @@ class AppLocalizationsIs extends AppLocalizations {
   String get contactUs => 'Hafðu samband';
 
   @override
-  String get rateApp => 'Gefa app';
+  String get rateApp => 'Gefðu þessu forriti einkunn';
 
   @override
-  String get shareApp => 'Deila app';
+  String get shareApp => 'Deildu þessu forriti';
 
   @override
   String shareAppMessage(String appName, String url) {

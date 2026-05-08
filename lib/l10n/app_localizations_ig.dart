@@ -538,10 +538,10 @@ class AppLocalizationsIg extends AppLocalizations {
   String get contactUs => 'Kpọtụrụ anyị';
 
   @override
-  String get rateApp => 'Ọnụ ego ngwa';
+  String get rateApp => 'Họrọ ngwa a';
 
   @override
-  String get shareApp => 'Kekọrịta ngwa';
+  String get shareApp => 'Kekọrịta ngwa a';
 
   @override
   String shareAppMessage(String appName, String url) {

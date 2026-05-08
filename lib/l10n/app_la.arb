@@ -243,11 +243,11 @@
   "systemTheme": "Systema Theme",
   "about": "De",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Secretum consilium",
   "termsOfService": "Termini servitii",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Rate hoc app",
+  "shareApp": "Participes app",
   "shareAppMessage": "Reprehendo sicco {appName}: Ultimus vivendi ratio islamica app! {url}",
   "@shareAppMessage": {
     "placeholders": {

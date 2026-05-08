@@ -530,7 +530,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get version => 'Version';
 
   @override
-  String get privacyPolicy => 'Privacy Policy';
+  String get privacyPolicy => 'गोपनीयता नीति';
 
   @override
   String get termsOfService => 'Terms of Service';
@@ -539,14 +539,14 @@ class AppLocalizationsBh extends AppLocalizations {
   String get contactUs => 'Contact Us';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'ऐप रेट करीं';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'ऐप शेयर करीं';
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'ई $appName देखीं: बेहतरीन इस्लामी जीवनशैली ऐप! $url';
   }
 
   @override

@@ -246,8 +246,8 @@
   "privacyPolicy": "プライバシーポリシー",
   "termsOfService": "利用規約",
   "contactUs": "お問い合わせ",
-  "rateApp": "アプリを評価",
-  "shareApp": "アプリを共有",
+  "rateApp": "このアプリを評価する",
+  "shareApp": "このアプリを共有する",
   "shareAppMessage": "{appName} をチェックしてください: 究極のイスラム ライフスタイル アプリ! {url}",
   "@shareAppMessage": {
     "placeholders": {

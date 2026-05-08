@@ -243,11 +243,11 @@
   "systemTheme": "Setlhogo sa Tsamaiso",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Pholisi ya polokodiphiri",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "Naya tiriswa eno maduo",
+  "shareApp": "Abelana tiriswa eno",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -246,8 +246,8 @@
   "privacyPolicy": "ಗೌಪ್ಯತೆ ನೀತಿ",
   "termsOfService": "ಸೇವಾ ನಿಯಮಗಳು",
   "contactUs": "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
-  "rateApp": "ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ",
-  "shareApp": "ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ",
+  "rateApp": "ಈ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ರೇಟ್ ಮಾಡಿ",
+  "shareApp": "ಈ ಅಪ್ಲಿಕೇಶನ್ ಹಂಚಿಕೊಳ್ಳಿ",
   "shareAppMessage": "{appName} ಪರಿಶೀಲಿಸಿ: ಅಂತಿಮ ಇಸ್ಲಾಮಿಕ್ ಜೀವನಶೈಲಿ ಅಪ್ಲಿಕೇಶನ್! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -243,11 +243,11 @@
   "systemTheme": "Téama an Chórais",
   "about": "Maidir",
   "version": "Leagan",
-  "privacyPolicy": "Beartas Príobháideachta",
+  "privacyPolicy": "Beartas príobháideachta",
   "termsOfService": "Téarmaí Seirbhíse",
   "contactUs": "Déan Teagmháil Linn",
-  "rateApp": "App Ráta",
-  "shareApp": "Comhroinn App",
+  "rateApp": "Déan rátáil ar an aip seo",
+  "shareApp": "Roinn an aip seo",
   "shareAppMessage": "Amharc ar {appName}: An aip stíl mhaireachtála Ioslamach deiridh! {url}",
   "@shareAppMessage": {
     "placeholders": {

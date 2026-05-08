@@ -541,10 +541,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get contactUs => 'Contactați-ne';
 
   @override
-  String get rateApp => 'Evaluați aplicația';
+  String get rateApp => 'Evaluează această aplicație';
 
   @override
-  String get shareApp => 'Partajați aplicația';
+  String get shareApp => 'Distribuiți această aplicație';
 
   @override
   String shareAppMessage(String appName, String url) {

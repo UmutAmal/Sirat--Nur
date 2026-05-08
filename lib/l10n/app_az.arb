@@ -243,11 +243,11 @@
   "systemTheme": "Sistem mövzusu",
   "about": "Haqqında",
   "version": "Versiya",
-  "privacyPolicy": "Məxfilik Siyasəti",
+  "privacyPolicy": "Məxfilik siyasəti",
   "termsOfService": "Xidmət Şərtləri",
   "contactUs": "Bizimlə əlaqə saxlayın",
-  "rateApp": "Qiymətləndirmə Tətbiqi",
-  "shareApp": "Tətbiqi paylaşın",
+  "rateApp": "Bu proqramı qiymətləndirin",
+  "shareApp": "Bu proqramı paylaşın",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -540,10 +540,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get contactUs => 'Lépjen kapcsolatba velünk';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Értékelje ezt az alkalmazást';
 
   @override
-  String get shareApp => 'Share App';
+  String get shareApp => 'Ossza meg ezt az alkalmazást';
 
   @override
   String shareAppMessage(String appName, String url) {

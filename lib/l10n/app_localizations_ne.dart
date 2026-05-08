@@ -537,10 +537,10 @@ class AppLocalizationsNe extends AppLocalizations {
   String get contactUs => 'हामीलाई सम्पर्क गर्नुहोस्';
 
   @override
-  String get rateApp => 'मूल्याङ्कन एप';
+  String get rateApp => 'यो एपलाई मूल्याङ्कन गर्नुहोस्';
 
   @override
-  String get shareApp => 'सेयर एप';
+  String get shareApp => 'यो एप साझा गर्नुहोस्';
 
   @override
   String shareAppMessage(String appName, String url) {

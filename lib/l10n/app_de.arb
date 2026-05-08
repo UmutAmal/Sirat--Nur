@@ -246,8 +246,8 @@
   "privacyPolicy": "Datenschutzrichtlinie",
   "termsOfService": "Nutzungsbedingungen",
   "contactUs": "Kontaktieren Sie uns",
-  "rateApp": "App bewerten",
-  "shareApp": "App teilen",
+  "rateApp": "Bewerten Sie diese App",
+  "shareApp": "Teilen Sie diese App",
   "shareAppMessage": "Schauen Sie sich {appName} an: Die ultimative islamische Lifestyle-App! {url}",
   "@shareAppMessage": {
     "placeholders": {

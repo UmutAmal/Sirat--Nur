@@ -538,10 +538,10 @@ class AppLocalizationsKa extends AppLocalizations {
   String get contactUs => 'დაგვიკავშირდით';
 
   @override
-  String get rateApp => 'შეაფასეთ აპლიკაცია';
+  String get rateApp => 'შეაფასეთ ეს აპლიკაცია';
 
   @override
-  String get shareApp => 'აპის გაზიარება';
+  String get shareApp => 'გააზიარეთ ეს აპლიკაცია';
 
   @override
   String shareAppMessage(String appName, String url) {

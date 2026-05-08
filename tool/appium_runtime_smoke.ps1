@@ -1626,7 +1626,7 @@ if (-not $summary.settingsRuntime.containsAboutDialog) {
 if (-not $summary.settingsRuntime.closedAboutDialog) {
   $failures += "Settings runtime smoke did not close the about dialog."
 }
-if (-not $summary.settingsRuntime.rateAppIntentResolved) {
+if ((-not $summary.settingsRuntime.rateAppIntentResolved) -and (-not $summary.settingsRuntime.openedRateAppExternal)) {
   $failures += "Settings runtime smoke could not resolve Android VIEW intent for the Rate App URL."
 }
 if (-not $summary.settingsRuntime.clickedRateApp) {
@@ -1647,7 +1647,7 @@ if (-not $summary.settingsRuntime.containsShareSheet) {
 if (-not $summary.settingsRuntime.dismissedShareSheet) {
   $failures += "Settings runtime smoke did not dismiss the Android share sheet back to Settings."
 }
-if (-not $summary.settingsRuntime.privacyPolicyIntentResolved) {
+if ((-not $summary.settingsRuntime.privacyPolicyIntentResolved) -and (-not $summary.settingsRuntime.openedPrivacyPolicyExternal)) {
   $failures += "Settings runtime smoke could not resolve Android VIEW intent for the Privacy Policy URL."
 }
 if (-not $summary.settingsRuntime.clickedPrivacyPolicy) {

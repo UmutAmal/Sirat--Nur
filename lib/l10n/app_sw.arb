@@ -243,11 +243,11 @@
   "systemTheme": "Mandhari ya Mfumo",
   "about": "Kuhusu",
   "version": "Toleo",
-  "privacyPolicy": "Sera ya Faragha",
+  "privacyPolicy": "Sera ya faragha",
   "termsOfService": "Masharti ya Huduma",
   "contactUs": "Wasiliana Nasi",
-  "rateApp": "Kadiria Programu",
-  "shareApp": "Shiriki Programu",
+  "rateApp": "Kadiria programu hii",
+  "shareApp": "Shiriki programu hii",
   "shareAppMessage": "Angalia {appName}: Programu bora zaidi ya mtindo wa maisha ya Kiislamu! {url}",
   "@shareAppMessage": {
     "placeholders": {

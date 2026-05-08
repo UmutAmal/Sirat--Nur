@@ -246,8 +246,8 @@
   "privacyPolicy": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",
   "termsOfService": "ເງື່ອນໄຂການໃຫ້ບໍລິການ",
   "contactUs": "ຕິດຕໍ່ພວກເຮົາ",
-  "rateApp": "ໃຫ້ຄະແນນ App",
-  "shareApp": "ແບ່ງປັນແອັບ",
+  "rateApp": "ໃຫ້ຄະແນນແອັບນີ້",
+  "shareApp": "ແບ່ງ​ປັນ app ນີ້​",
   "shareAppMessage": "ກວດເບິ່ງ {appName}: ສຸດຍອດແອັບວິຖີຊີວິດອິດສະລາມ! {url}",
   "@shareAppMessage": {
     "placeholders": {

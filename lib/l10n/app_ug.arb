@@ -246,8 +246,8 @@
   "privacyPolicy": "مەخپىيەتلىك تۈزۈمى",
   "termsOfService": "مۇلازىمەت شەرتلىرى",
   "contactUs": "بىز بىلەن ئالاقىلىشىڭ",
-  "rateApp": "Rate App",
-  "shareApp": "ئورتاقلىشىش دېتالى",
+  "rateApp": "بۇ ئەپكە باھا بېرىڭ",
+  "shareApp": "بۇ ئەپنى ھەمبەھىرلەڭ",
   "shareAppMessage": "{appName} نى تەكشۈرۈپ بېقىڭ: ئەڭ ئاخىرقى ئىسلام تۇرمۇش ئۇسۇلى! {url}",
   "@shareAppMessage": {
     "placeholders": {

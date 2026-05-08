@@ -243,11 +243,11 @@
   "systemTheme": "Systemtema",
   "about": "Om",
   "version": "Version",
-  "privacyPolicy": "Sekretesspolicy",
+  "privacyPolicy": "Integritetspolicy",
   "termsOfService": "Användarvillkor",
   "contactUs": "Kontakta oss",
-  "rateApp": "Betygsätt App",
-  "shareApp": "Dela appen",
+  "rateApp": "Betygsätt den här appen",
+  "shareApp": "Dela den här appen",
   "shareAppMessage": "Kolla in {appName}: Den ultimata islamiska livsstilsappen! {url}",
   "@shareAppMessage": {
     "placeholders": {

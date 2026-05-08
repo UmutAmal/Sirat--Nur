@@ -243,11 +243,11 @@
   "systemTheme": "Itimu Yesistimu",
   "about": "Mayelana",
   "version": "Inguqulo",
-  "privacyPolicy": "Inqubomgomo Yobumfihlo",
+  "privacyPolicy": "Inqubomgomo yobumfihlo",
   "termsOfService": "Imigomo Yesevisi",
   "contactUs": "Xhumana nathi",
-  "rateApp": "Linganisa uhlelo lokusebenza",
-  "shareApp": "Yabelana ngohlelo lokusebenza",
+  "rateApp": "Linganisa lolu hlelo lokusebenza",
+  "shareApp": "Yabelana ngalolu hlelo lokusebenza",
   "shareAppMessage": "Hlola {appName}: Uhlelo lokusebenza oluhle kakhulu lwendlela yokuphila yamaSulumane! {url}",
   "@shareAppMessage": {
     "placeholders": {

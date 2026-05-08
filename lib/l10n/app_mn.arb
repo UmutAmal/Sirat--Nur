@@ -246,8 +246,8 @@
   "privacyPolicy": "Нууцлалын бодлого",
   "termsOfService": "Үйлчилгээний нөхцөл",
   "contactUs": "Бидэнтэй холбоо барина уу",
-  "rateApp": "Аппликейшнийг үнэлэх",
-  "shareApp": "Аппликешн хуваалцах",
+  "rateApp": "Энэ апп-г үнэлнэ үү",
+  "shareApp": "Энэ програмыг хуваалцаарай",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

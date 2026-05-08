@@ -538,10 +538,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get contactUs => 'ہم سے رابطہ کریں';
 
   @override
-  String get rateApp => 'ایپ کو ریٹ کریں';
+  String get rateApp => 'اس ایپ کی درجہ بندی کریں۔';
 
   @override
-  String get shareApp => 'ایپ شیئر کریں';
+  String get shareApp => 'اس ایپ کو شیئر کریں۔';
 
   @override
   String shareAppMessage(String appName, String url) {

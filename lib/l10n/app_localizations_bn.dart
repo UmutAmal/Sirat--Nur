@@ -538,10 +538,10 @@ class AppLocalizationsBn extends AppLocalizations {
   String get contactUs => 'যোগাযোগ করুন';
 
   @override
-  String get rateApp => 'অ্যাপ রেট করুন';
+  String get rateApp => 'এই অ্যাপ্লিকেশন রেট';
 
   @override
-  String get shareApp => 'অ্যাশ শেয়ার করুন';
+  String get shareApp => 'এই অ্যাপটি শেয়ার করুন';
 
   @override
   String shareAppMessage(String appName, String url) {

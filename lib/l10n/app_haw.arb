@@ -246,8 +246,8 @@
   "privacyPolicy": "Kulekele pilikino",
   "termsOfService": "Kūlana o ka lawelawe",
   "contactUs": "Kāhea iā mā˚ou",
-  "rateApp": "Loko App",
-  "shareApp": "Kaʻana like App",
+  "rateApp": "E helu i kēia polokalamu",
+  "shareApp": "Kaʻana like i kēia polokalamu",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

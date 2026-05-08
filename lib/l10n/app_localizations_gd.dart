@@ -533,7 +533,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get version => 'Tionndadh';
 
   @override
-  String get privacyPolicy => 'Poileasaidh Dìomhaireachd';
+  String get privacyPolicy => 'Poileasaidh prìobhaideachd';
 
   @override
   String get termsOfService => 'Teirmean seirbheis';
@@ -542,10 +542,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get contactUs => 'Cuir fios thugainn';
 
   @override
-  String get rateApp => 'App astar';
+  String get rateApp => 'Dèan measadh air an aplacaid seo';
 
   @override
-  String get shareApp => 'Co-roinn App';
+  String get shareApp => 'Roinn an aplacaid seo';
 
   @override
   String shareAppMessage(String appName, String url) {

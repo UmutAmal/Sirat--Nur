@@ -246,8 +246,8 @@
   "privacyPolicy": "Politika e privatësisë",
   "termsOfService": "Kushtet e Shërbimit",
   "contactUs": "Na kontaktoni",
-  "rateApp": "Vlerësoni aplikacionin",
-  "shareApp": "Ndani aplikacionin",
+  "rateApp": "Vlerësoni këtë aplikacion",
+  "shareApp": "Ndani këtë aplikacion",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

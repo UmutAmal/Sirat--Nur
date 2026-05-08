@@ -246,8 +246,8 @@
   "privacyPolicy": "Politica de confidențialitate",
   "termsOfService": "Termeni și condiții",
   "contactUs": "Contactați-ne",
-  "rateApp": "Evaluați aplicația",
-  "shareApp": "Partajați aplicația",
+  "rateApp": "Evaluează această aplicație",
+  "shareApp": "Distribuiți această aplicație",
   "shareAppMessage": "Consultați {appName}: Aplicația supremă pentru stilul de viață islamic! {url}",
   "@shareAppMessage": {
     "placeholders": {

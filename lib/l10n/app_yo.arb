@@ -243,11 +243,11 @@
   "systemTheme": "Akori eto",
   "about": "Nipa",
   "version": "Ẹya",
-  "privacyPolicy": "Asiri Afihan",
+  "privacyPolicy": "Ilana asiri",
   "termsOfService": "Awọn ofin ti Service",
   "contactUs": "Kan si Wa",
-  "rateApp": "Oṣuwọn App",
-  "shareApp": "Pin App",
+  "rateApp": "Oṣuwọn ohun elo yii",
+  "shareApp": "Pin yi app",
   "shareAppMessage": "Ṣayẹwo {appName}: Ohun elo igbesi aye Islam ti o ga julọ! {url}",
   "@shareAppMessage": {
     "placeholders": {

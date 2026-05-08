@@ -540,10 +540,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get contactUs => 'Свяжитесь с нами';
 
   @override
-  String get rateApp => 'Оцените приложение';
+  String get rateApp => 'Оцените это приложение';
 
   @override
-  String get shareApp => 'Поделиться приложением';
+  String get shareApp => 'Поделитесь этим приложением';
 
   @override
   String shareAppMessage(String appName, String url) {

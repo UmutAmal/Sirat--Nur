@@ -538,10 +538,10 @@ class AppLocalizationsYi extends AppLocalizations {
   String get contactUs => 'קאָנטאַקט אונדז';
 
   @override
-  String get rateApp => 'קורס אַפּ';
+  String get rateApp => 'אָפּשאַצן דעם אַפּ';
 
   @override
-  String get shareApp => 'ייַנטיילן אַפּ';
+  String get shareApp => 'ייַנטיילן דעם אַפּ';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -246,8 +246,8 @@
   "privacyPolicy": "Privatumo politika",
   "termsOfService": "Paslaugų teikimo sąlygos",
   "contactUs": "Susisiekite su mumis",
-  "rateApp": "Įvertinkite programą",
-  "shareApp": "Bendrinti programą",
+  "rateApp": "Įvertinkite šią programą",
+  "shareApp": "Bendrinkite šią programą",
   "shareAppMessage": "Peržiūrėkite {appName}: geriausią islamiško gyvenimo būdo programą! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -539,10 +539,10 @@ class AppLocalizationsSk extends AppLocalizations {
   String get contactUs => 'Kontaktujte nás';
 
   @override
-  String get rateApp => 'Hodnotiť aplikáciu';
+  String get rateApp => 'Ohodnoťte túto aplikáciu';
 
   @override
-  String get shareApp => 'Zdieľať aplikáciu';
+  String get shareApp => 'Zdieľajte túto aplikáciu';
 
   @override
   String shareAppMessage(String appName, String url) {

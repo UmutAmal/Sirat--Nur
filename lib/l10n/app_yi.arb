@@ -246,8 +246,8 @@
   "privacyPolicy": "פּריוואַטקייט פּאָליטיק",
   "termsOfService": "תּנאָים פון סערוויס",
   "contactUs": "קאָנטאַקט אונדז",
-  "rateApp": "קורס אַפּ",
-  "shareApp": "ייַנטיילן אַפּ",
+  "rateApp": "אָפּשאַצן דעם אַפּ",
+  "shareApp": "ייַנטיילן דעם אַפּ",
   "shareAppMessage": "טשעק {appName}: די לעצט יסלאַמיק לייפסטייל אַפּ! {url}",
   "@shareAppMessage": {
     "placeholders": {

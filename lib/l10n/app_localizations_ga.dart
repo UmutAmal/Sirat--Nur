@@ -530,7 +530,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get version => 'Leagan';
 
   @override
-  String get privacyPolicy => 'Beartas Príobháideachta';
+  String get privacyPolicy => 'Beartas príobháideachta';
 
   @override
   String get termsOfService => 'Téarmaí Seirbhíse';
@@ -539,10 +539,10 @@ class AppLocalizationsGa extends AppLocalizations {
   String get contactUs => 'Déan Teagmháil Linn';
 
   @override
-  String get rateApp => 'App Ráta';
+  String get rateApp => 'Déan rátáil ar an aip seo';
 
   @override
-  String get shareApp => 'Comhroinn App';
+  String get shareApp => 'Roinn an aip seo';
 
   @override
   String shareAppMessage(String appName, String url) {

@@ -540,10 +540,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get contactUs => 'Ñoqaykuwan rimanakuy';
 
   @override
-  String get rateApp => 'Tarifa App';
+  String get rateApp => 'Kay appta chaninchay';
 
   @override
-  String get shareApp => 'Compartir App';
+  String get shareApp => 'Kay appta rakinakuy';
 
   @override
   String shareAppMessage(String appName, String url) {

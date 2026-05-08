@@ -538,10 +538,10 @@ class AppLocalizationsTe extends AppLocalizations {
   String get contactUs => 'మమ్మల్ని సంప్రదించండి';
 
   @override
-  String get rateApp => 'యాప్‌ని రేట్ చేయండి';
+  String get rateApp => 'ఈ యాప్‌ను రేట్ చేయండి';
 
   @override
-  String get shareApp => 'యాప్‌ను భాగస్వామ్యం చేయండి';
+  String get shareApp => 'ఈ యాప్‌ను భాగస్వామ్యం చేయండి';
 
   @override
   String shareAppMessage(String appName, String url) {

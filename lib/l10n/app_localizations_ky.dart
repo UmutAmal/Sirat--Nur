@@ -542,10 +542,10 @@ class AppLocalizationsKy extends AppLocalizations {
   String get contactUs => 'Биз менен байланышыңыз';
 
   @override
-  String get rateApp => 'Колдонмого баа берүү';
+  String get rateApp => 'Бул колдонмону баалаңыз';
 
   @override
-  String get shareApp => 'Колдонмону бөлүшүү';
+  String get shareApp => 'Бул колдонмону бөлүшүңүз';
 
   @override
   String shareAppMessage(String appName, String url) {

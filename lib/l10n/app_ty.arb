@@ -243,11 +243,11 @@
   "systemTheme": "Te tumu parau o te faanahoraa",
   "about": "About",
   "version": "Version",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "Ture no te oraraa taa ê",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "A faito i teie faanahoraa",
+  "shareApp": "A faaite i teie faanahoraa",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

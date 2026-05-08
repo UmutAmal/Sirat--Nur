@@ -243,11 +243,11 @@
   "systemTheme": "Kaupapa Pūnaha",
   "about": "Mō",
   "version": "Putanga",
-  "privacyPolicy": "Kaupapahere Tūmataiti",
+  "privacyPolicy": "Kaupapahere tūmataiti",
   "termsOfService": "Nga Ture Ratonga",
   "contactUs": "Whakapā mai",
-  "rateApp": "Reiti App",
-  "shareApp": "Tiria App",
+  "rateApp": "Whakatauria tenei taupānga",
+  "shareApp": "Tiria tenei taupānga",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

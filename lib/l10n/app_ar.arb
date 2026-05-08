@@ -246,8 +246,8 @@
   "privacyPolicy": "سياسة الخصوصية",
   "termsOfService": "شروط الخدمة",
   "contactUs": "اتصل بنا",
-  "rateApp": "قيّم التطبيق",
-  "shareApp": "مشاركة التطبيق",
+  "rateApp": "قيم هذا التطبيق",
+  "shareApp": "مشاركة هذا التطبيق",
   "shareAppMessage": "اطلع على {appName}: تطبيق أسلوب الحياة الإسلامي المثالي! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -246,8 +246,8 @@
   "privacyPolicy": "Сиёсати махфият",
   "termsOfService": "Шартҳои хизматрасонӣ",
   "contactUs": "Бо мо тамос гиред",
-  "rateApp": "Барномаи нархгузорӣ",
-  "shareApp": "Мубодилаи барнома",
+  "rateApp": "Ба ин барнома баҳо диҳед",
+  "shareApp": "Ин барномаро мубодила кунед",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

@@ -246,8 +246,8 @@
   "privacyPolicy": "गोपनीयता धोरण",
   "termsOfService": "सेवा अटी",
   "contactUs": "आमच्याशी संपर्क साधा",
-  "rateApp": "ॲपला रेट करा",
-  "shareApp": "ॲप शेअर करा",
+  "rateApp": "या ॲपला रेट करा",
+  "shareApp": "हे ॲप शेअर करा",
   "shareAppMessage": "{appName} पहा: अंतिम इस्लामिक जीवनशैली ॲप! {url}",
   "@shareAppMessage": {
     "placeholders": {

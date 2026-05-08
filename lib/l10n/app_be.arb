@@ -246,8 +246,8 @@
   "privacyPolicy": "Палітыка прыватнасці",
   "termsOfService": "Умовы абслугоўвання",
   "contactUs": "Звяжыцеся з намі",
-  "rateApp": "Ацаніць дадатак",
-  "shareApp": "Падзяліцца праграмай",
+  "rateApp": "Ацаніце гэта дадатак",
+  "shareApp": "Падзяліцеся гэтай праграмай",
   "shareAppMessage": "Праверце {appName}: лепшае прыкладанне для ісламскага ладу жыцця! {url}",
   "@shareAppMessage": {
     "placeholders": {

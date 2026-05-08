@@ -246,8 +246,8 @@
   "privacyPolicy": "Umgaqo-nkqubo wabucala",
   "termsOfService": "Imigaqo yeNkonzo",
   "contactUs": "Qhagamshelana nathi",
-  "rateApp": "Rate App",
-  "shareApp": "Yabelana ngeApp",
+  "rateApp": "Thelekelela le app",
+  "shareApp": "Yabelana ngale app",
   "shareAppMessage": "Jonga {appName}: Eyona app yokuphila yamaSilamsi! {url}",
   "@shareAppMessage": {
     "placeholders": {

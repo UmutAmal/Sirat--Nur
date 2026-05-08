@@ -243,11 +243,11 @@
   "systemTheme": "प्रणालीविषयः",
   "about": "About",
   "version": "संस्करणम्",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicy": "गोपनीयता नीति",
   "termsOfService": "Terms of Service",
   "contactUs": "Contact Us",
-  "rateApp": "Rate App",
-  "shareApp": "Share App",
+  "rateApp": "अस्य एप् इत्यस्य मूल्याङ्कनं कुर्वन्तु",
+  "shareApp": "एतत् एप् साझां कुर्वन्तु",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

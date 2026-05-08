@@ -243,11 +243,11 @@
   "systemTheme": "Tema tas-Sistema",
   "about": "Dwar",
   "version": "Verżjoni",
-  "privacyPolicy": "Politika ta' Privatezza",
+  "privacyPolicy": "Politika ta' privatezza",
   "termsOfService": "Termini tas-Servizz",
   "contactUs": "Ikkuntattjana",
-  "rateApp": "Rata App",
-  "shareApp": "Aqsam l-App",
+  "rateApp": "Rata din l-app",
+  "shareApp": "Aqsam din l-app",
   "shareAppMessage": "Ara {appName}: L-app aħħarija tal-istil tal-ħajja Iżlamiku! {url}",
   "@shareAppMessage": {
     "placeholders": {

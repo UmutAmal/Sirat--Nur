@@ -22442,3 +22442,73 @@
 
 ### Sonraki Adim
 - `flutter analyze`, tam `flutter test`, store-readiness, secret scan ve diff check kapilarini calistir; gecerse commit + push yap. Sonraki dongude l10n fallback debt taramasini ve yanlis/karisik settings metinlerini hedefle.
+
+## 2026-05-07 TUR-558 - Settings About L10n + Store/Appium Probe Hardening
+
+### MASTER Karari
+- Risk 1: Settings about/paylasim aksiyonlari icin `rateApp`, `shareApp`, `privacyPolicy` ve `shareAppMessage` l10n batch'i 180+ locale'de UI baglamindan kopabiliyordu. Kisa buton label'lari bazen aciklama cumlesine donuyor, paylasim mesaji ise kanonik pazarlama metninden uzaklasabiliyordu.
+- Kanit:
+  - `tool/translate_arb_keys.dart:595` artik `rateApp` icin "Rate this app" baglamini kullaniyor.
+  - `tool/translate_arb_keys.dart:597` artik `shareApp` icin "Share this app" baglamini kullaniyor.
+  - `tool/translate_arb_keys.dart:599` `shareAppMessage` icin kanonik `Check out {appName}: The ultimate Islamic lifestyle app! {url}` metnini koruyor.
+  - `tool/translate_arb_keys.dart:601` `privacyPolicy` icin "Privacy policy" baglamini kullaniyor.
+  - `lib/l10n/app_bh.arb:246` Bihari `privacyPolicy` kisa UI label'i olarak duzeltildi.
+  - `lib/l10n/app_bh.arb:249` Bihari `rateApp` kisa UI label'i olarak duzeltildi.
+  - `lib/l10n/app_bh.arb:250` Bihari `shareApp` kisa UI label'i olarak duzeltildi.
+  - `lib/l10n/app_bh.arb:251` Bihari share mesajinda `{appName}` ve `{url}` placeholder'lari korundu.
+  - `lib/l10n/app_bho.arb:246` Bhojpuri `privacyPolicy` kisa UI label'i olarak duzeltildi.
+  - `lib/l10n/app_bho.arb:249` Bhojpuri `rateApp` kisa UI label'i olarak duzeltildi.
+  - `lib/l10n/app_bho.arb:250` Bhojpuri `shareApp` kisa UI label'i olarak duzeltildi.
+  - `lib/l10n/app_bho.arb:251` Bhojpuri share mesajinda `{appName}` ve `{url}` placeholder'lari korundu.
+  - `test/translate_arb_keys_test.dart:2578` settings about action prompt guard'i eklendi.
+- Risk 2: Store readiness audio mirror probe'u Windows PowerShell'de `Range` header'ini `Invoke-WebRequest -Headers` ile set ettigi icin probe false-failure uretiyordu.
+- Kanit:
+  - Baslangic failure: `tool/check_store_readiness.ps1` GitHub `alafasy/001.mp3` ve `abdul_basit_murattal/001.mp3` probe'larinda `'Range' üst bilgisi uygun özellik veya metot kullanılarak değiştirilmelidir` hatasi verdi.
+  - `tool/check_store_readiness.ps1:121` `System.Net.Http` assembly'si acikca yukleniyor.
+  - `tool/check_store_readiness.ps1:128` Range header artik resmi `System.Net.Http.Headers.RangeHeaderValue` API'siyle set ediliyor.
+  - `tool/check_store_readiness.ps1:131` probe `ResponseHeadersRead` ile sadece gerekli audio byte araligini okuyor.
+  - `test/store_readiness_test.dart:178` `System.Net.Http` assembly yukleme guard'i eklendi.
+- Risk 3: Appium external URL guard'i, gercek runtime'da Chrome acilmasina ragmen preflight intent resolver false-negative urettiginde release smoke'u gereksiz fail ediyordu.
+- Kanit:
+  - Baslangic Appium failure session `f4d7c7e8-7fbc-4e17-a56e-765588ab9a6d`: `settingsRuntime.openedPrivacyPolicyExternal=true`, `dismissedPrivacyPolicyExternal=true`, ancak `privacyPolicyIntentResolved=false`.
+  - XML kaniti: `build\appium-runtime-smoke-settings-privacy-policy-external.xml:3` package `com.android.chrome` olarak acildi.
+  - `tool/appium_runtime_smoke.ps1:1629` Rate App intent failure artik sadece preflight resolve yoksa ve runtime external hedef acilmadiysa failure uretiyor.
+  - `tool/appium_runtime_smoke.ps1:1650` Privacy Policy intent failure artik sadece preflight resolve yoksa ve runtime external hedef acilmadiysa failure uretiyor.
+  - `test/appium_runtime_smoke_script_test.dart:235` Rate App false-negative guard mantigi statik teste baglandi.
+  - `test/appium_runtime_smoke_script_test.dart:254` Privacy Policy false-negative guard mantigi statik teste baglandi.
+- Kullanici etkisi: Settings about aksiyonlari daha dogru lokalize ediliyor; store readiness Windows'ta gercek audio probe'u false fail etmeden calisiyor; Appium release smoke gercek kullanici sonucunu, yani dis hedefin acilip Settings'e donmesini, preflight false-negative ustunde daha guvenilir kabul ediyor.
+- Risk skoru: Settings about l10n baglam drift'i `12/25 -> 6/25`; store audio probe false-failure `16/25 -> 3/25`; Appium external URL false-negative `12/25 -> 3/25`.
+- Rollback plani: Bu turdaki `tool/translate_arb_keys.dart`, `tool/check_store_readiness.ps1`, `tool/appium_runtime_smoke.ps1`, ilgili test dosyalari ve l10n/generated l10n batch'i geri alinabilir. Audio/store/Appium kod degisikligi uygulama runtime is mantigina dokunmadigi icin rollback yalitiktir.
+
+### BUILDER Degisikligi
+- `rateApp`, `shareApp`, `shareAppMessage`, `privacyPolicy` icin ceviri prompt baglami eklendi; `shareAppMessage` kanonik kaynak metinden uzaklastirilmayacak sekilde korundu.
+- Bihari/Bhojpuri settings about etiketleri aciklama cumlesinden kisa UI label'ina cekildi ve generated localization dosyalari `flutter gen-l10n` ile senkronlandi.
+- Store readiness audio probe'u `HttpClient` + `RangeHeaderValue` + stream okuma ile Windows PowerShell uyumlu hale getirildi.
+- Appium smoke external URL failure kosulu, gercek runtime external acilisi kanitlandiginda preflight false-negative'i blocker yapmayacak sekilde daraltildi.
+
+### TESTER Degisikligi
+- Ilk hedefli l10n test: FAIL; `app_bho.arb` `privacyPolicy`, `rateApp`, `shareApp` kisa etiket guard'lari aciklama cumlesi drift'ini yakaladi. Fix: ilgili degerler kisa UI label'ina cekildi.
+- Ilk tam test: FAIL; `SettingsPage builds localized share text in French` kanonik share mesajindan sapmayi yakaladi. Fix: `shareAppMessage` prompt'u kanonik EN kaynak metne geri cekildi ve drift topluca toparlandi.
+- Store readiness ilk deneme: FAIL; PowerShell Range header hatasi. Fix: `System.Net.Http` tabanli probe.
+- Store readiness ikinci deneme: FAIL; `System.Net.Http` assembly otomatik yuklenmedi. Fix: `Add-Type -AssemblyName System.Net.Http`.
+- Release Appium smoke ilk deneme: FAIL; Privacy Policy gercek Chrome acilisi oldugu halde preflight resolver false-negative. Fix: failure kosulu runtime external acilisi da dikkate aliyor.
+- Targeted tests:
+  - `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
+  - `flutter test test\features\settings\settings_page_test.dart test\store_readiness_test.dart test\translate_arb_keys_test.dart test\arb_ui_localization_test.dart --reporter compact` PASS.
+  - `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+  - `flutter test test\store_readiness_test.dart --reporter compact` PASS, `10/10`.
+- L10n report: `dart run tool\translate_arb_keys.dart --report rateApp shareApp shareAppMessage privacyPolicy` PASS; `Missing/empty locales=0`, `Placeholder mismatch locales=0`, same-as-English residual `195` olarak kayit altina alindi. Bu residual'in buyuk kismi dusuk kaynakli fallback veya share mesajinda onceki kanonik fallback degerleri; sonraki dongude uydurma yapmadan ayrica azaltilecek.
+- Store readiness: `powershell -ExecutionPolicy Bypass -File tool\check_store_readiness.ps1` PASS; GitHub mirror `alafasy/001.mp3` HTTP 206, GitHub overflow `abdul_basit_murattal/001.mp3` HTTP 206, Cloudflare/GitHub audio dagitimi, Supabase verified content, analyze ve full test kapilari temiz.
+- Final analyze: `flutter analyze` PASS, no issues found.
+- Final full test: `flutter test --reporter compact` PASS, `780/780`.
+- Release Appium smoke: `powershell -ExecutionPolicy Bypass -File tool\appium_runtime_smoke.ps1 -BuildMode release -DeviceName emulator-5554` PASS; session `c70335ec-cfd6-4bb9-a25f-78c63973f6ec`, `releaseDartDefinesApplied=true`, `apkPrepared=true`, `settingsRuntime.clickedRateApp=true`, `openedRateAppExternal=true`, `clickedShareApp=true`, `containsShareSheet=true`, `clickedPrivacyPolicy=true`, `openedPrivacyPolicyExternal=true`, `quranPlayback.containsPauseControl=true`, `downloadRuntime.containsCanceledMessage=true`, `logcatCrashFree=true`, `failures=[]`.
+- Diff hygiene: `git diff --check` PASS (yalniz CRLF uyarilari); refined secret scan `git diff -U0 -- . ':!lib/l10n' | rg ...` no matches.
+
+### Risk Degisimi
+- Settings about/paylasim copy artik daha guvenli ceviri baglamina sahip ve generated runtime dosyalariyla senkron.
+- Store readiness Windows makinede gercek GitHub audio byte probe'u yapabiliyor; false-success degil, HTTP 206 ve pozitif byte okuma kanitlandi.
+- Appium release smoke gercek son kullanici davranisini daha iyi olcuyor: preflight resolver kararsiz olsa bile dis hedef acilisi ve Settings'e donus kanitlandiginda akisi geciriyor.
+- Kalan bilincli risk: `shareAppMessage` icin 100+ locale'de kanonik EN fallback duruyor. Bu turda zayif/yanlis otomatik drift commit edilmedi; sonraki dongude ayni prompt guard'lariyla ve placeholder testleriyle daha kucuk, guvenli batch'ler halinde azalt.
+
+### Sonraki Adim
+- Commit + push yap. Sonraki dongude AGENTS.md loop'una don: l10n residual shareAppMessage fallback'lerini guvenli batch'lerle azalt, Appium smoke summary'de preflight/runtime intent ayrimini daha acik raporlamayi degerlendir, sonra yeni P1/P2 risk taramasina devam et.

@@ -538,10 +538,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get contactUs => 'تماس با ما';
 
   @override
-  String get rateApp => 'رتبه‌بندی برنامه';
+  String get rateApp => 'به این برنامه امتیاز دهید';
 
   @override
-  String get shareApp => 'اشتراک‌گذاری برنامه';
+  String get shareApp => 'این برنامه را به اشتراک بگذارید';
 
   @override
   String shareAppMessage(String appName, String url) {

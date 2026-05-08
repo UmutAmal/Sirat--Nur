@@ -246,8 +246,8 @@
   "privacyPolicy": "ગોપનીયતા નીતિ",
   "termsOfService": "સેવાની શરતો",
   "contactUs": "અમારો સંપર્ક કરો",
-  "rateApp": "એપ્લિકેશનને રેટ કરો",
-  "shareApp": "એપ શેર કરો",
+  "rateApp": "આ એપ્લિકેશનને રેટ કરો",
+  "shareApp": "આ એપ શેર કરો",
   "shareAppMessage": "{appName} તપાસો: અંતિમ ઇસ્લામિક જીવનશૈલી એપ્લિકેશન! {url}",
   "@shareAppMessage": {
     "placeholders": {

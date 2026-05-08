@@ -538,10 +538,10 @@ class AppLocalizationsFy extends AppLocalizations {
   String get contactUs => 'Kontakt mei ús opnimme';
 
   @override
-  String get rateApp => 'Rate App';
+  String get rateApp => 'Beoardielje dizze app';
 
   @override
-  String get shareApp => 'Diele App';
+  String get shareApp => 'Diel dizze app';
 
   @override
   String shareAppMessage(String appName, String url) {

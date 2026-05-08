@@ -243,11 +243,11 @@
   "systemTheme": "System Asɛmti",
   "about": "Fa ho",
   "version": "Ɔfa",
-  "privacyPolicy": "Kokoam Nsɛm Ho Nhyehyɛe",
+  "privacyPolicy": "Kokoam nsɛm ho nhyehyɛe",
   "termsOfService": "Ɔsom Ho Nhyehyɛe",
   "contactUs": "Di Yɛn Nkitahodi",
-  "rateApp": "Rate App no ​​ho",
-  "shareApp": "Kyɛ App no",
+  "rateApp": "Rate saa app yi",
+  "shareApp": "Kyɛ saa app yi",
   "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {

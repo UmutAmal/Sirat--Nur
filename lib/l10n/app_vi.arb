@@ -246,8 +246,8 @@
   "privacyPolicy": "Chính sách bảo mật",
   "termsOfService": "Điều khoản dịch vụ",
   "contactUs": "Liên hệ với chúng tôi",
-  "rateApp": "Đánh giá ứng dụng",
-  "shareApp": "Chia sẻ ứng dụng",
+  "rateApp": "Đánh giá ứng dụng này",
+  "shareApp": "Chia sẻ ứng dụng này",
   "shareAppMessage": "Hãy xem {appName}: Ứng dụng phong cách sống Hồi giáo tối ưu! {url}",
   "@shareAppMessage": {
     "placeholders": {

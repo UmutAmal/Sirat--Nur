@@ -246,8 +246,8 @@
   "privacyPolicy": "Privātuma politika",
   "termsOfService": "Pakalpojuma noteikumi",
   "contactUs": "Sazinieties ar mums",
-  "rateApp": "Novērtēt lietotni",
-  "shareApp": "Kopīgot lietotni",
+  "rateApp": "Novērtējiet šo lietotni",
+  "shareApp": "Kopīgojiet šo lietotni",
   "shareAppMessage": "Apskatiet {appName}: labāko islāma dzīvesveida lietotni! {url}",
   "@shareAppMessage": {
     "placeholders": {
