@@ -545,7 +545,7 @@ class AppLocalizationsUz extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '$appName ni ko‘ring: Islomiy hayot tarziga oid so‘nggi ilova! $url';
+    return '$appName ni ko\'ring: Islomiy hayot tarziga oid so\'nggi ilova! $url';
   }
 
   @override

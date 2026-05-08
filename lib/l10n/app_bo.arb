@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "མཉེན་ཆས་འདི་ལ་ཚད་གཞི་བཟོས།",
   "shareApp": "མཉེན་ཆས་འདི་མཉམ་སྤྱོད།",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName} ལ་ལྟོས་དང་། མཐའ་མའི་ཨིསི་ལམ་གྱི་འཚོ་བའི་མཉེན་ཆས་དེ་ཡིན། {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

@@ -545,7 +545,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Hãy xem $appName: Ứng dụng phong cách sống Hồi giáo tối ưu! $url';
+    return 'Hãy xem $appName: Ứng dụng phong cách sống Hồi giáo tuyệt đỉnh! $url';
   }
 
   @override

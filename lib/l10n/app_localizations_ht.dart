@@ -545,7 +545,7 @@ class AppLocalizationsHt extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Tcheke $appName: Aplikasyon ultim nan vi Islamik! $url';
+    return 'Tcheke $appName: Aplikasyon ultim vi Islamik la! $url';
   }
 
   @override

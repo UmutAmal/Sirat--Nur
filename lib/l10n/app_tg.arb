@@ -248,7 +248,7 @@
   "contactUs": "Бо мо тамос гиред",
   "rateApp": "Ба ин барнома баҳо диҳед",
   "shareApp": "Ин барномаро мубодила кунед",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName}-ро санҷед: Барномаи ниҳоии тарзи ҳаёти исломӣ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

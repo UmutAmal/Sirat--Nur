@@ -545,7 +545,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'ពិនិត្យមើល $appName៖ កម្មវិធីរបៀបរស់នៅបែបឥស្លាមចុងក្រោយ! $url';
+    return 'ពិនិត្យមើល $appName៖ កម្មវិធីរបៀបរស់នៅអ៊ីស្លាមចុងក្រោយ! $url';
   }
 
   @override

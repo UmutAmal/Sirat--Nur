@@ -545,7 +545,7 @@ class AppLocalizationsHa extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Duba $appName: Mafi kyawun tsarin rayuwar Musulunci! $url';
   }
 
   @override

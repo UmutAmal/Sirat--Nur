@@ -248,7 +248,7 @@
   "contactUs": "Tuntube Mu",
   "rateApp": "Rate wannan app",
   "shareApp": "Raba wannan app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Duba {appName}: Mafi kyawun tsarin rayuwar Musulunci! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

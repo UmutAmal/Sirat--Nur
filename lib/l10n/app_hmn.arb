@@ -248,7 +248,7 @@
   "contactUs": "Tiv tauj peb",
   "rateApp": "Rate no app",
   "shareApp": "Qhia tawm no app",
-  "shareAppMessage": "Mus saib {appName}: Qhov kawg Islamic lub neej app! {url}",
+  "shareAppMessage": "Mus saib {appName}: Qhov kawg Islamic lub neej app! {url} ib",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

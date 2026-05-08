@@ -547,7 +547,7 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Agachatz $appName: L\'aplicacion d\'estil de vida islamic definitiva! $url';
   }
 
   @override

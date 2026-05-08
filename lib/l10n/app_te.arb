@@ -248,7 +248,7 @@
   "contactUs": "మమ్మల్ని సంప్రదించండి",
   "rateApp": "ఈ యాప్‌ను రేట్ చేయండి",
   "shareApp": "ఈ యాప్‌ను భాగస్వామ్యం చేయండి",
-  "shareAppMessage": "{appName}ని తనిఖీ చేయండి: అంతిమ ఇస్లామిక్ జీవనశైలి యాప్! {url}",
+  "shareAppMessage": "{appName} తనిఖీ చేయండి: అంతిమ ఇస్లామిక్ జీవనశైలి యాప్! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

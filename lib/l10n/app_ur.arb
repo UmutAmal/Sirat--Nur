@@ -248,7 +248,7 @@
   "contactUs": "ہم سے رابطہ کریں",
   "rateApp": "اس ایپ کی درجہ بندی کریں۔",
   "shareApp": "اس ایپ کو شیئر کریں۔",
-  "shareAppMessage": "چیک کریں {appName}: بہترین اسلامی طرز زندگی ایپ! {url}",
+  "shareAppMessage": "چیک کریں {appName}: حتمی اسلامی طرز زندگی ایپ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

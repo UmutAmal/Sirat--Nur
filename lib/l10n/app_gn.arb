@@ -248,7 +248,7 @@
   "contactUs": "Eñe'ẽ orendive",
   "rateApp": "Embohape ko app",
   "shareApp": "Embohasa ko app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "¡Ehecha {appName}: ¡Pe app estilo de vida islámico paha! {url} rehegua.",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

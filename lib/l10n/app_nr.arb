@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Nikela i-app le",
   "shareApp": "Yabelana nge-app le",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Hlola i-{appName}: I-app yendlela yokuphila ye-Islam! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

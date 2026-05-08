@@ -544,7 +544,7 @@ class AppLocalizationsEe extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Kpɔ $appName: Islamtɔwo ƒe agbenɔnɔ ƒe dɔwɔnu mamlɛtɔ! $url ƒe xexlẽme.';
   }
 
   @override

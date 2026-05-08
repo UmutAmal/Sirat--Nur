@@ -248,7 +248,7 @@
   "contactUs": "যোগাযোগ করুন",
   "rateApp": "এই অ্যাপ্লিকেশন রেট",
   "shareApp": "এই অ্যাপটি শেয়ার করুন",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName} দেখুন: চূড়ান্ত ইসলামিক জীবনধারা অ্যাপ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

@@ -248,7 +248,7 @@
   "contactUs": "Kontaktéiert eis",
   "rateApp": "Bewäert dës App",
   "shareApp": "Deelt dës App",
-  "shareAppMessage": "Préift {appName}: Déi ultimativ islamesch Lifestyle App! {url}",
+  "shareAppMessage": "Préift {appName}: Déi ultimativ islamesch Liewensstil App! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

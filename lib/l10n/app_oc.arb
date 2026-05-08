@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Valoratz aquesta aplicacion",
   "shareApp": "Partejatz aquesta aplicacion",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Agachatz {appName}: L'aplicacion d'estil de vida islamic definitiva! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

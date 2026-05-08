@@ -248,7 +248,7 @@
   "contactUs": "Di Yɛn Nkitahodi",
   "rateApp": "Rate saa app yi",
   "shareApp": "Kyɛ saa app yi",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Hwɛ {appName}: Islamfoɔ asetena mu app a ɛtwa toɔ! {url} na ɛyɛ.",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

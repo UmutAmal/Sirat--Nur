@@ -267,6 +267,48 @@ void main() {
       expect(report.hasDebt, isFalse);
     });
 
+    test('tracks settings about share message l10n debt reduction', () {
+      const keys = [
+        'rateApp',
+        'shareApp',
+        'shareAppMessage',
+        'privacyPolicy',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(134));
+      expect(
+        localeArbs['aa']!['shareAppMessage'],
+        isNot(english['shareAppMessage']),
+      );
+      expect(
+        localeArbs['hi']!['shareAppMessage'],
+        isNot(english['shareAppMessage']),
+      );
+      expect(
+        localeArbs['zh']!['shareAppMessage'],
+        isNot(english['shareAppMessage']),
+      );
+    });
+
     test('tracks committed low-resource l10n debt reduction', () {
       const keys = [
         'downloadAction',
@@ -2572,6 +2614,23 @@ void main() {
       expect(
         shareAppMessageValue,
         '{appName} uygulamasina goz atin: En kapsamli Islami yasam uygulamasi! {url}',
+      );
+    });
+
+    test('preserves existing localized share message over machine churn', () {
+      final value = resolveTranslatedArbValue(
+        key: 'shareAppMessage',
+        source:
+            'Check out {appName}: The ultimate Islamic lifestyle app! {url}',
+        currentValue:
+            "Découvrez {appName} : l'application ultime pour le mode de vie islamique ! {url}",
+        candidate:
+            "Découvrez {appName} : l'application ultime de style de vie islamique ! {url}",
+      );
+
+      expect(
+        value,
+        "Découvrez {appName} : l'application ultime pour le mode de vie islamique ! {url}",
       );
     });
 

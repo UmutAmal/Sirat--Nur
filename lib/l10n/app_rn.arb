@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Guha igiciro iyi porogaramu",
   "shareApp": "Sangira iyi porogaramu",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Raba {appName}: Porogarama y'ubuzima bw'ubuyisilamu y'agaciro! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

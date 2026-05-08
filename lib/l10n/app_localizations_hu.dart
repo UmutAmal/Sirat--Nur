@@ -547,7 +547,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Nézze meg a $appName: A tökéletes iszlám életmód alkalmazást! $url';
+    return 'Nézze meg a $appName: A végső iszlám életmód alkalmazást! $url';
   }
 
   @override

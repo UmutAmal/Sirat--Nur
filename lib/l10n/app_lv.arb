@@ -248,7 +248,7 @@
   "contactUs": "Sazinieties ar mums",
   "rateApp": "Novērtējiet šo lietotni",
   "shareApp": "Kopīgojiet šo lietotni",
-  "shareAppMessage": "Apskatiet {appName}: labāko islāma dzīvesveida lietotni! {url}",
+  "shareAppMessage": "Apskatiet {appName}: izcilāko islāma dzīvesveida lietotni! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

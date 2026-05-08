@@ -548,7 +548,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Hlahloba $appName: Tiriso ya mafelelo ya mokgwa wa bophelo wa Boiselamo! $url 1 .';
   }
 
   @override

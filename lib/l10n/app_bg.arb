@@ -248,7 +248,7 @@
   "contactUs": "Свържете се с нас",
   "rateApp": "Оценете това приложение",
   "shareApp": "Споделете това приложение",
-  "shareAppMessage": "Разгледайте {appName}: Най-доброто приложение за ислямски начин на живот! {url}",
+  "shareAppMessage": "Вижте {appName}: Най-доброто приложение за ислямски начин на живот! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

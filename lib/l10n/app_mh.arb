@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Kōlla app in",
   "shareApp": "Kwalok app in",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Lale {appName}: App in mour in Islam eo emman tata! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

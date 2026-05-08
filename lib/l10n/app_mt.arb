@@ -248,7 +248,7 @@
   "contactUs": "Ikkuntattjana",
   "rateApp": "Rata din l-app",
   "shareApp": "Aqsam din l-app",
-  "shareAppMessage": "Ara {appName}: L-app aħħarija tal-istil tal-ħajja Iżlamiku! {url}",
+  "shareAppMessage": "Iċċekkja {appName}: L-app aħħarija tal-istil tal-ħajja Iżlamiku! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

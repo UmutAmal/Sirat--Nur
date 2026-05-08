@@ -545,7 +545,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'ກວດເບິ່ງ $appName: ສຸດຍອດແອັບວິຖີຊີວິດອິດສະລາມ! $url';
+    return 'ກວດເບິ່ງ $appName: ແອັບວິຖີຊີວິດອິດສະລາມສູງສຸດ! $url';
   }
 
   @override

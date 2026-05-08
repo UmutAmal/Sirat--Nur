@@ -248,7 +248,7 @@
   "contactUs": "Ota yhteyttä",
   "rateApp": "Arvioi tämä sovellus",
   "shareApp": "Jaa tämä sovellus",
-  "shareAppMessage": "Tutustu {appName}: äärimmäisen islamilaisen elämäntavan sovellus! {url}",
+  "shareAppMessage": "Katso {appName}: Äärimmäinen islamilainen elämäntapasovellus! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

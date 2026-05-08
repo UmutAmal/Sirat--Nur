@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "App una nalileruk",
   "shareApp": "App una avitseqatigiissutigiuk",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Takuuk {appName}: Islamimi inuunermi app-i pitsaanerpaaq! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

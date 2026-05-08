@@ -545,7 +545,7 @@ class AppLocalizationsKu extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Binihêrin $appName: Serlêdana herî dawî ya şêwaza jiyanê ya Îslamî! $url';
+    return 'Binihêrin $appName: Serlêdana herî dawî ya şêwaza jiyana îslamî! $url';
   }
 
   @override

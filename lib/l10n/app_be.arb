@@ -248,7 +248,7 @@
   "contactUs": "Звяжыцеся з намі",
   "rateApp": "Ацаніце гэта дадатак",
   "shareApp": "Падзяліцеся гэтай праграмай",
-  "shareAppMessage": "Праверце {appName}: лепшае прыкладанне для ісламскага ладу жыцця! {url}",
+  "shareAppMessage": "Праверце {appName}: найлепшае прыкладанне для ісламскага ладу жыцця! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

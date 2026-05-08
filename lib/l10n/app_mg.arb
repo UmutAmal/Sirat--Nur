@@ -248,7 +248,7 @@
   "contactUs": "Mifandraisa aminay",
   "rateApp": "Omeo naoty ity app ity",
   "shareApp": "Zarao ity app ity",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Jereo {appName}: Ny fampiharana fomba fiaina Islamika farany indrindra! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

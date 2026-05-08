@@ -545,7 +545,7 @@ class AppLocalizationsHmn extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Mus saib $appName: Qhov kawg Islamic lub neej app! $url';
+    return 'Mus saib $appName: Qhov kawg Islamic lub neej app! $url ib';
   }
 
   @override

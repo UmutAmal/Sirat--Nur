@@ -248,7 +248,7 @@
   "contactUs": "Kāhea iā mā˚ou",
   "rateApp": "E helu i kēia polokalamu",
   "shareApp": "Kaʻana like i kēia polokalamu",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "E nānā iā {appName}: ʻO ka app ola Islam hope loa! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

@@ -248,7 +248,7 @@
   "contactUs": "Ñoqaykuwan rimanakuy",
   "rateApp": "Kay appta chaninchay",
   "shareApp": "Kay appta rakinakuy",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "¡Qhawariy {appName}: ¡Islam kawsaypaq qhipa kaq app! {url} nisqa.",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

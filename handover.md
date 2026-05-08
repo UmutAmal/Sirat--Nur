@@ -22512,3 +22512,46 @@
 
 ### Sonraki Adim
 - Commit + push yap. Sonraki dongude AGENTS.md loop'una don: l10n residual shareAppMessage fallback'lerini guvenli batch'lerle azalt, Appium smoke summary'de preflight/runtime intent ayrimini daha acik raporlamayi degerlendir, sonra yeni P1/P2 risk taramasina devam et.
+
+## 2026-05-08 TUR-559 - Settings Share Message L10n Residual Reduction
+
+### MASTER Karari
+- Risk: `shareAppMessage` settings-about paylasim copy'si 100+ locale'de app_en fallback olarak kalmisti. Kullanici etkisi, paylasim aksiyonunda cok sayida dilde uygulama UI dili yerellestirilmis olsa bile paylasim metninin Ingilizce gorunmesiydi.
+- Kanit:
+  - Baslangic raporu: `dart run tool\translate_arb_keys.dart --report rateApp shareApp shareAppMessage privacyPolicy` -> `Same-as-English locales=195`, `shareAppMessage` icin 107 locale app_en ile ayniydi.
+  - Patch sonrasi rapor: ayni komut -> `Same-as-English locales=134`, `shareAppMessage` icin 46 locale app_en ile ayni kaldi.
+  - `Missing/empty locales=0` ve `Placeholder mismatch locales=0` iki raporda da korundu.
+  - `test/translate_arb_keys_test.dart` icindeki yeni guard, settings-about dort anahtar icin toplam same-as-English borcunu `<=134` ile kilitliyor ve `aa`, `hi`, `zh` `shareAppMessage` degerlerinin app_en fallback'e donmesini engelliyor.
+- Etki/Olasilik/Risk: Etki 3, olasilik 4, risk `12/25 -> 8/25`. Kalan 46 `shareAppMessage` locale'i dusuk kaynakli veya translator tarafindan guvenilir cikti uretilemeyen diller; uydurma yapmamak icin fallback birakildi.
+- Rollback plani: Bu turdaki `shareAppMessage` ARB/generated l10n batch'i ve `test/translate_arb_keys_test.dart` guard'i tek commit olarak geri alinabilir.
+
+### BUILDER Degisikligi
+- Sadece `shareAppMessage` anahtari `dart run tool\translate_arb_keys.dart --force shareAppMessage` ile yeniden isletildi.
+- `flutter gen-l10n` calistirilarak generated `app_localizations_*.dart` dosyalari ARB kaynaklariyla senkronlandi.
+- `rateApp`, `shareApp`, `privacyPolicy` degerlerine dokunulmadi; kapsam tek riskte tutuldu.
+
+### TESTER Degisikligi
+- Targeted l10n testleri:
+  - `flutter test test\arb_coverage_test.dart test\arb_ui_localization_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
+- L10n raporu:
+  - `Same-as-English locales=134`
+  - `Missing/empty locales=0`
+  - `Placeholder mismatch locales=0`
+- Diff hygiene:
+  - `git diff --check` PASS (yalniz CRLF uyarilari).
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude kalan 46 `shareAppMessage` locale'i ile `rateApp/shareApp/privacyPolicy` dusuk kaynak fallback'lerini uydurma yapmadan, kaynak destegi veya guvenli manuel mapping varsa daha kucuk batch'lerle azalt.
+
+### TUR-559 Self-Heal Notu
+- Ilk full test: FAIL; `test/features/settings/settings_page_test.dart` Fransizca share text guard'i, `app_fr.arb` `shareAppMessage` degerinin onayli "mode de vie islamique" metninden makine ceviri varyanti olan "style de vie islamique" metnine suruklendigini yakaladi.
+- Fix:
+  - `lib/l10n/app_fr.arb` onayli Fransizca metne geri alindi ve `flutter gen-l10n` ile runtime dosyasi senkronlandi.
+  - `tool/translate_arb_keys.dart` icinde `shareAppMessage` icin mevcut guclu non-English ceviriyi yeni makine ceviri varyantina karsi koruyan tercih kurali eklendi.
+  - `test/translate_arb_keys_test.dart` icine `preserves existing localized share message over machine churn` guard'i eklendi.
+- Hedefli dogrulama: `flutter test test\features\settings\settings_page_test.dart test\translate_arb_keys_test.dart --reporter compact` PASS.
+- Final dogrulama: `flutter analyze` PASS; `flutter test --reporter compact` PASS, `782/782`.

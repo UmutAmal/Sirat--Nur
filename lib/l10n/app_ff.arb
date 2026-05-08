@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Toɓɓere ndee app",
   "shareApp": "Renndinde ndee app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Ƴeew {appName}: App nguurndam lislaam timmuɗo! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

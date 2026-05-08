@@ -248,7 +248,7 @@
   "contactUs": "Lépjen kapcsolatba velünk",
   "rateApp": "Értékelje ezt az alkalmazást",
   "shareApp": "Ossza meg ezt az alkalmazást",
-  "shareAppMessage": "Nézze meg a {appName}: A tökéletes iszlám életmód alkalmazást! {url}",
+  "shareAppMessage": "Nézze meg a {appName}: A végső iszlám életmód alkalmazást! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

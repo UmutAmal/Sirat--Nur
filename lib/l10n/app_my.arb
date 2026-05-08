@@ -248,7 +248,7 @@
   "contactUs": "ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ။",
   "rateApp": "ဤအက်ပ်ကို အဆင့်သတ်မှတ်ပါ။",
   "shareApp": "ဤအက်ပ်ကိုမျှဝေပါ။",
-  "shareAppMessage": "{appName} ကိုကြည့်ပါ- အဆုံးစွန်သော အစ္စလာမ့်လူနေမှုပုံစံအက်ပ်။ {url}",
+  "shareAppMessage": "{appName} ကြည့်ပါ- အဆုံးစွန်သော အစ္စလာမ့်လူနေမှုပုံစံအက်ပ်။ {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

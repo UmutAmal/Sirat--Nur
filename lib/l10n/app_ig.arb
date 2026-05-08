@@ -248,7 +248,7 @@
   "contactUs": "Kpọtụrụ anyị",
   "rateApp": "Họrọ ngwa a",
   "shareApp": "Kekọrịta ngwa a",
-  "shareAppMessage": "Lelee {appName}: Ngwa kacha ebi ndụ islam! {url}",
+  "shareAppMessage": "Lelee {appName}: ngwa kacha ebi ndụ islam! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

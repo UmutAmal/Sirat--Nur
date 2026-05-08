@@ -533,7 +533,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '查看$appName：终极伊斯兰生活方式应用程序！ $url';
+    return '查看 $appName：终极伊斯兰生活方式应用程序！ $url';
   }
 
   @override
@@ -2208,7 +2208,7 @@ class AppLocalizationsZhCn extends AppLocalizationsZh {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '查看$appName：终极伊斯兰生活方式应用程序！ $url';
+    return '查看 $appName：终极伊斯兰生活方式应用程序！ $url';
   }
 
   @override
@@ -3883,7 +3883,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '請參閱$appName：終極伊斯蘭生活方式應用程式！ $url';
+    return '請參閱 $appName：終極伊斯蘭生活方式應用程式！ $url';
   }
 
   @override

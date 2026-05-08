@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Beoordeel deze app",
   "shareApp": "Deil deze app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Bekiek {appName}: De ultieme islamitische levensstijl-app! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

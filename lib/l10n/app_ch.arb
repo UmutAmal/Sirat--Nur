@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Na'i este na app grado",
   "shareApp": "Na'i este na app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Atan {appName}: I mas maolek na app put i lina'la' Islam! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

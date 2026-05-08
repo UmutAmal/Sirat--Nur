@@ -248,7 +248,7 @@
   "contactUs": "ያግኙን",
   "rateApp": "ለዚህ መተግበሪያ ደረጃ ይስጡት።",
   "shareApp": "ይህን መተግበሪያ አጋራ",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName}ን ይመልከቱ፡ የመጨረሻው ኢስላማዊ የአኗኗር ዘይቤ መተግበሪያ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

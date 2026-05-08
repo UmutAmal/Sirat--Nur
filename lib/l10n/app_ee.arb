@@ -248,7 +248,7 @@
   "contactUs": "Te Ðe Mía Ŋu",
   "rateApp": "De dzesi dɔwɔnu sia",
   "shareApp": "Ma dɔwɔnu sia",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Kpɔ {appName}: Islamtɔwo ƒe agbenɔnɔ ƒe dɔwɔnu mamlɛtɔ! {url} ƒe xexlẽme.",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

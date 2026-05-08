@@ -546,7 +546,7 @@ class AppLocalizationsFi extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Tutustu $appName: äärimmäisen islamilaisen elämäntavan sovellus! $url';
+    return 'Katso $appName: Äärimmäinen islamilainen elämäntapasovellus! $url';
   }
 
   @override

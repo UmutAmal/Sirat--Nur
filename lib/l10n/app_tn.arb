@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Naya tiriswa eno maduo",
   "shareApp": "Abelana tiriswa eno",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Leba {appName}: Tiriswa e e kwa godimo ya mokgwa wa botshelo wa Boiselamo! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

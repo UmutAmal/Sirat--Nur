@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Árvvoštallat dán áppa",
   "shareApp": "Juogat dán áppa",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Geahča {appName}: Dat buoremus islamalaš eallindábiid áppa! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

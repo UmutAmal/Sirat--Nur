@@ -248,7 +248,7 @@
   "contactUs": "Hafðu samband",
   "rateApp": "Gefðu þessu forriti einkunn",
   "shareApp": "Deildu þessu forriti",
-  "shareAppMessage": "Skoðaðu {appName}: Fullkomið íslamska lífsstílsforritið! {url}",
+  "shareAppMessage": "Skoðaðu {appName}: Fullkomið íslamska lífsstílsappið! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

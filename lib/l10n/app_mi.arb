@@ -248,7 +248,7 @@
   "contactUs": "Whakapā mai",
   "rateApp": "Whakatauria tenei taupānga",
   "shareApp": "Tiria tenei taupānga",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Tirohia {appName}: Ko te tino kaupapa noho a Ihirama! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

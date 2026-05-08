@@ -248,7 +248,7 @@
   "contactUs": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
   "rateApp": "ਇਸ ਐਪ ਨੂੰ ਦਰਜਾ ਦਿਓ",
   "shareApp": "ਇਸ ਐਪ ਨੂੰ ਸਾਂਝਾ ਕਰੋ",
-  "shareAppMessage": "{appName} ਦੇਖੋ: ਅਤਿਅੰਤ ਇਸਲਾਮੀ ਜੀਵਨ ਸ਼ੈਲੀ ਐਪ! {url}",
+  "shareAppMessage": "{appName} ਦੀ ਜਾਂਚ ਕਰੋ: ਅੰਤਮ ਇਸਲਾਮੀ ਜੀਵਨ ਸ਼ੈਲੀ ਐਪ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

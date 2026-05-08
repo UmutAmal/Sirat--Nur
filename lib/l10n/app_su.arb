@@ -248,7 +248,7 @@
   "contactUs": "Kontak Kami",
   "rateApp": "Peunteun aplikasi ieu",
   "shareApp": "Bagikeun aplikasi ieu",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Pariksa {appName}: Aplikasi gaya hirup Islam pamungkas! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

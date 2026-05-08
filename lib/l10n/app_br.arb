@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Priziañ an arload-mañ",
   "shareApp": "Rannañ an arload-mañ",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Sellit ouzh {appName}: An arload gwellañ evit ar mod da vevañ islamek ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

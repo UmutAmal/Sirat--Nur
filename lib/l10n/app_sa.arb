@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "अस्य एप् इत्यस्य मूल्याङ्कनं कुर्वन्तु",
   "shareApp": "एतत् एप् साझां कुर्वन्तु",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName}: परम इस्लामिक जीवनशैली एप्लिकेशनं पश्यन्तु! {url} इति ।",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

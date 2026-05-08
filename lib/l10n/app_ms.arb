@@ -248,7 +248,7 @@
   "contactUs": "Hubungi Kami",
   "rateApp": "Nilaikan apl ini",
   "shareApp": "Kongsi aplikasi ini",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Lihat {appName}: Aplikasi gaya hidup Islam yang terbaik! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

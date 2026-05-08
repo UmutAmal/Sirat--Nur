@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Ta assabaltah caddo ucuy",
   "shareApp": "Ta assabalta tabis",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "cubbus {appName}: ellecabo islaaminna manoh gurrah assabalta! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

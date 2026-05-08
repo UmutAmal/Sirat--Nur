@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Note ya application yayi",
   "shareApp": "Kabula application yayi",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Tala {appName}: Application ya nsuka ya luzingu ya Islam! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

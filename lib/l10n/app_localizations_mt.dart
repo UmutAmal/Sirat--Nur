@@ -546,7 +546,7 @@ class AppLocalizationsMt extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Ara $appName: L-app aħħarija tal-istil tal-ħajja Iżlamiku! $url';
+    return 'Iċċekkja $appName: L-app aħħarija tal-istil tal-ħajja Iżlamiku! $url';
   }
 
   @override

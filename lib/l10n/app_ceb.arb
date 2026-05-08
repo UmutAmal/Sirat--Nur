@@ -248,7 +248,7 @@
   "contactUs": "Kontaka Kami",
   "rateApp": "I-rate kini nga app",
   "shareApp": "Ipakigbahin kini nga app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Tan-awa ang {appName}: Ang kinatas-ang Islamic lifestyle app! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

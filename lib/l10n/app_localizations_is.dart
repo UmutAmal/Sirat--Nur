@@ -545,7 +545,7 @@ class AppLocalizationsIs extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Skoðaðu $appName: Fullkomið íslamska lífsstílsforritið! $url';
+    return 'Skoðaðu $appName: Fullkomið íslamska lífsstílsappið! $url';
   }
 
   @override

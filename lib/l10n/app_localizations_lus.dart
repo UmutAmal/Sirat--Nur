@@ -546,7 +546,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return '$appName: Islamic nunphung app tha ber chu en rawh! $url a ni.';
   }
 
   @override

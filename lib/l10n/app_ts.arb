@@ -248,7 +248,7 @@
   "contactUs": "Tihlanganise na Hina",
   "rateApp": "Rate app leyi",
   "shareApp": "Share app leyi",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Languta {appName}: App yo hetelela ya vutomi bya Xiislam! {url} .",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

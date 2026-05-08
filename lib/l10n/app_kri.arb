@@ -248,7 +248,7 @@
   "contactUs": "Kɔntakt Wi",
   "rateApp": "Rayt dis ap",
   "shareApp": "Sheb dis ap",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Check out {appName}: Di ɔltimat Islamik layf stayl ap! {url} na di .",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

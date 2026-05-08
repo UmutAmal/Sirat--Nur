@@ -545,7 +545,7 @@ class AppLocalizationsIg extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Lelee $appName: Ngwa kacha ebi ndụ islam! $url';
+    return 'Lelee $appName: ngwa kacha ebi ndụ islam! $url';
   }
 
   @override

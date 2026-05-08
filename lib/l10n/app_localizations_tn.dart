@@ -545,7 +545,7 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Leba $appName: Tiriswa e e kwa godimo ya mokgwa wa botshelo wa Boiselamo! $url';
   }
 
   @override

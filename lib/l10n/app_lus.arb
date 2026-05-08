@@ -248,7 +248,7 @@
   "contactUs": "Min rawn biak theih reng e",
   "rateApp": "He app hi rate rawh",
   "shareApp": "Share App tih hi a ni",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName}: Islamic nunphung app tha ber chu en rawh! {url} a ni.",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

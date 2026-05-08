@@ -248,7 +248,7 @@
   "contactUs": "Kontaken Kadakami",
   "rateApp": "Rate daytoy nga app",
   "shareApp": "Ibinglay daytoy nga app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Kitaen ti {appName}: Ti ultimo nga Islamiko nga estilo ti panagbiag nga app! {url} nga .",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

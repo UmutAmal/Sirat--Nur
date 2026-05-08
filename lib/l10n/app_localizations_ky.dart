@@ -549,7 +549,7 @@ class AppLocalizationsKy extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '$appName карап көрүңүз: Исламдык жашоо образынын эң сонун колдонмосу! $url';
+    return '$appName карап көрүңүз: Ислам жашоо образынын эң сонун колдонмосу! $url';
   }
 
   @override

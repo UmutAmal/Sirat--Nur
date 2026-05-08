@@ -545,7 +545,7 @@ class AppLocalizationsAa extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'cubbus $appName: ellecabo islaaminna manoh gurrah assabalta! $url';
   }
 
   @override

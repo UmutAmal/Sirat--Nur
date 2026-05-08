@@ -545,7 +545,7 @@ class AppLocalizationsZu extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Hlola $appName: Uhlelo lokusebenza oluhle kakhulu lwendlela yokuphila yamaSulumane! $url';
+    return 'Bheka i-$appName: Uhlelo lokusebenza oluhle kakhulu lwendlela yokuphila yamaSulumane! $url';
   }
 
   @override

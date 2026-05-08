@@ -548,7 +548,7 @@ class AppLocalizationsIlo extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Kitaen ti $appName: Ti ultimo nga Islamiko nga estilo ti panagbiag nga app! $url nga .';
   }
 
   @override

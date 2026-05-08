@@ -248,7 +248,7 @@
   "contactUs": "Ikgokaganye le Rena",
   "rateApp": "Lekanyetša tirišo ye",
   "shareApp": "Abelana ka tiriso ye",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Hlahloba {appName}: Tiriso ya mafelelo ya mokgwa wa bophelo wa Boiselamo! {url} 1 .",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

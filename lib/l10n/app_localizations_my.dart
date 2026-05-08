@@ -547,7 +547,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '$appName ကိုကြည့်ပါ- အဆုံးစွန်သော အစ္စလာမ့်လူနေမှုပုံစံအက်ပ်။ $url';
+    return '$appName ကြည့်ပါ- အဆုံးစွန်သော အစ္စလာမ့်လူနေမှုပုံစံအက်ပ်။ $url';
   }
 
   @override

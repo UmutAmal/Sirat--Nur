@@ -248,7 +248,7 @@
   "contactUs": "Fa'afeso'ota'i matou",
   "rateApp": "Fa'ailoga lenei app",
   "shareApp": "Faasoa atu lenei app",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Siaki {appName}: Le mea sili mo le olaga fa'a-Islam! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

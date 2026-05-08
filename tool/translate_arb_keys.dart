@@ -728,12 +728,17 @@ bool _shouldPreferExistingTranslation({
   required String existing,
   required String candidate,
 }) {
-  if (key != 'downloadAction') {
+  if (!_isUsableTranslationCandidate(key, source, existing) ||
+      _isEnglishFallbackEquivalent(existing, source)) {
     return false;
   }
 
-  if (!_isUsableTranslationCandidate(key, source, existing) ||
-      _isEnglishFallbackEquivalent(existing, source)) {
+  if (key == 'shareAppMessage') {
+    return _isUsableTranslationCandidate(key, source, candidate) &&
+        !_isEnglishFallbackEquivalent(candidate, source);
+  }
+
+  if (key != 'downloadAction') {
     return false;
   }
 

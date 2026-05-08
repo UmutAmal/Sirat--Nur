@@ -248,7 +248,7 @@
   "contactUs": "Bokutana na Biso",
   "rateApp": "Bopesa cote na app oyo",
   "shareApp": "Bokabola app oyo",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Tala {appName}: Application ya suka ya mode de vie islamique! {url} Ezali na .",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

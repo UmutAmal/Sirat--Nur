@@ -548,7 +548,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Разгледайте $appName: Най-доброто приложение за ислямски начин на живот! $url';
+    return 'Вижте $appName: Най-доброто приложение за ислямски начин на живот! $url';
   }
 
   @override

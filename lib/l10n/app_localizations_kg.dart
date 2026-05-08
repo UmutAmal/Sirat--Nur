@@ -545,7 +545,7 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Tala $appName: Application ya nsuka ya luzingu ya Islam! $url';
   }
 
   @override

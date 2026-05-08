@@ -248,7 +248,7 @@
   "contactUs": "Биз менен байланышыңыз",
   "rateApp": "Бул колдонмону баалаңыз",
   "shareApp": "Бул колдонмону бөлүшүңүз",
-  "shareAppMessage": "{appName} карап көрүңүз: Исламдык жашоо образынын эң сонун колдонмосу! {url}",
+  "shareAppMessage": "{appName} карап көрүңүз: Ислам жашоо образынын эң сонун колдонмосу! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

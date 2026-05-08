@@ -545,7 +545,7 @@ class AppLocalizationsTe extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '$appNameని తనిఖీ చేయండి: అంతిమ ఇస్లామిక్ జీవనశైలి యాప్! $url';
+    return '$appName తనిఖీ చేయండి: అంతిమ ఇస్లామిక్ జీవనశైలి యాప్! $url';
   }
 
   @override

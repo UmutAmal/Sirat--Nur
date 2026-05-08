@@ -248,7 +248,7 @@
   "contactUs": "موږ سره اړیکه ونیسئ",
   "rateApp": "دا اپلیکیشن درجه بندي کړئ",
   "shareApp": "دا اپلیکیشن شریک کړئ",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "وګوره {appName}: د ژوند غوره اسلامي اپلیکیشن! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

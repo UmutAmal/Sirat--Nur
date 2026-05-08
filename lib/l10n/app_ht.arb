@@ -248,7 +248,7 @@
   "contactUs": "Kontakte nou",
   "rateApp": "Evalye aplikasyon sa a",
   "shareApp": "Pataje app sa a",
-  "shareAppMessage": "Tcheke {appName}: Aplikasyon ultim nan vi Islamik! {url}",
+  "shareAppMessage": "Tcheke {appName}: Aplikasyon ultim vi Islamik la! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

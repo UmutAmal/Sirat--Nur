@@ -547,7 +547,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Descubre $appName: ¡la aplicación definitiva para el estilo de vida islámico! $url';
+    return 'Echa un vistazo a $appName: ¡la mejor aplicación de estilo de vida islámico! $url';
   }
 
   @override

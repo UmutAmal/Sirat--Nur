@@ -546,7 +546,7 @@ class AppLocalizationsSk extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Vyskúšajte $appName: Najlepšia aplikácia pre islamský životný štýl! $url';
+    return 'Pozrite si $appName: Najlepšia aplikácia pre islamský životný štýl! $url';
   }
 
   @override

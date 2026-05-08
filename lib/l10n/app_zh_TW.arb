@@ -248,7 +248,7 @@
   "contactUs": "聯絡我們",
   "rateApp": "評價這個應用程式",
   "shareApp": "分享這個應用程式",
-  "shareAppMessage": "請參閱{appName}：終極伊斯蘭生活方式應用程式！ {url}",
+  "shareAppMessage": "請參閱 {appName}：終極伊斯蘭生活方式應用程式！ {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

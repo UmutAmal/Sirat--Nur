@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "Fakafuofua'i 'a e app ko 'eni",
   "shareApp": "Vahevahe 'a e app ko 'eni",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Vakai ki he {appName}: Ko e app 'o e to'onga mo'ui faka'Isilami taupotu taha! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

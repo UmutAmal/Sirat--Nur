@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "ነዛ ኣፕ ደረጃ ሃባ",
   "shareApp": "ሼር ኣፕ",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName}: ናይ መወዳእታ እስላማዊ ኣነባብራ ኣፕ ርኣዩ! {url} ዝብል እዩ።",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

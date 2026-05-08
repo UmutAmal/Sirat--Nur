@@ -248,7 +248,7 @@
   "contactUs": "ຕິດຕໍ່ພວກເຮົາ",
   "rateApp": "ໃຫ້ຄະແນນແອັບນີ້",
   "shareApp": "ແບ່ງ​ປັນ app ນີ້​",
-  "shareAppMessage": "ກວດເບິ່ງ {appName}: ສຸດຍອດແອັບວິຖີຊີວິດອິດສະລາມ! {url}",
+  "shareAppMessage": "ກວດເບິ່ງ {appName}: ແອັບວິຖີຊີວິດອິດສະລາມສູງສຸດ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

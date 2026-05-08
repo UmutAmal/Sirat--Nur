@@ -545,7 +545,7 @@ class AppLocalizationsLb extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Préift $appName: Déi ultimativ islamesch Lifestyle App! $url';
+    return 'Préift $appName: Déi ultimativ islamesch Liewensstil App! $url';
   }
 
   @override

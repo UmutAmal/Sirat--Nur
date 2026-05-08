@@ -248,7 +248,7 @@
   "contactUs": "ഞങ്ങളെ ബന്ധപ്പെടുക",
   "rateApp": "ഈ ആപ്പ് റേറ്റുചെയ്യുക",
   "shareApp": "ഈ ആപ്പ് പങ്കിടുക",
-  "shareAppMessage": "{appName} പരിശോധിക്കുക: പരമമായ ഇസ്ലാമിക ജീവിതശൈലി ആപ്പ്! {url}",
+  "shareAppMessage": "{appName} പരിശോധിക്കുക: ആത്യന്തിക ഇസ്ലാമിക ജീവിതശൈലി ആപ്പ്! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

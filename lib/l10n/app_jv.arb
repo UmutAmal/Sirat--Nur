@@ -248,7 +248,7 @@
   "contactUs": "Hubungi Kita",
   "rateApp": "Rate app iki",
   "shareApp": "Nuduhake app iki",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Priksa {appName}: Aplikasi gaya urip Islam sing paling apik! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

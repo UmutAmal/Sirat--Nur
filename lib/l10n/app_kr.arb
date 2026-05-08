@@ -248,7 +248,7 @@
   "contactUs": "Contact Us",
   "rateApp": "App adəga darajatə",
   "shareApp": "Manhaja adə yayaktə",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Kulashi {appName}: App kənənga Islambe dareramma! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

@@ -248,7 +248,7 @@
   "contactUs": "Nu Qunnamaa",
   "rateApp": "Appii kanaaf sadarkaa kenni",
   "shareApp": "Appii kana share godhaa",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName}: Appii jireenya Islaamaa isa dhumaa ilaalaa! {url} jechuun ni danda'ama.",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

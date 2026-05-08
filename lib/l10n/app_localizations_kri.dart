@@ -545,7 +545,7 @@ class AppLocalizationsKri extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Check out $appName: Di ɔltimat Islamik layf stayl ap! $url na di .';
   }
 
   @override

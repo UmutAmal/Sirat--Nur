@@ -248,7 +248,7 @@
   "contactUs": "Nala Soo Xidhiidh",
   "rateApp": "Qiimee abkan",
   "shareApp": "La wadaag abkan",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Fiiri {appName}: App-ka ugu dambeeya qaab nololeedka Islaamka! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

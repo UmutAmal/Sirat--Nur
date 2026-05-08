@@ -248,7 +248,7 @@
   "contactUs": "Cysylltwch â Ni",
   "rateApp": "Graddiwch yr app hon",
   "shareApp": "Rhannwch yr app hon",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Edrychwch ar {appName}: Yr ap ffordd o fyw Islamaidd eithaf! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

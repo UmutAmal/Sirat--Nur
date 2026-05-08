@@ -545,7 +545,7 @@ class AppLocalizationsFy extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Besjoch $appName: De ultime app foar islamityske libbensstyl! $url';
+    return 'Besjoch $appName: De ultime islamityske libbensstyl-app! $url';
   }
 
   @override

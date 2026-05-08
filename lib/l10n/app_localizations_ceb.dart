@@ -548,7 +548,7 @@ class AppLocalizationsCeb extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Tan-awa ang $appName: Ang kinatas-ang Islamic lifestyle app! $url';
   }
 
   @override

@@ -545,7 +545,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '$appName ਦੇਖੋ: ਅਤਿਅੰਤ ਇਸਲਾਮੀ ਜੀਵਨ ਸ਼ੈਲੀ ਐਪ! $url';
+    return '$appName ਦੀ ਜਾਂਚ ਕਰੋ: ਅੰਤਮ ਇਸਲਾਮੀ ਜੀਵਨ ਸ਼ੈਲੀ ਐਪ! $url';
   }
 
   @override

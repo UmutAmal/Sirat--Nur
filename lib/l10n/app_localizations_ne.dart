@@ -544,7 +544,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return '$appName को जाँच गर्नुहोस्: परम इस्लामी जीवन शैली एप! $url';
+    return '$appName जाँच गर्नुहोस्: परम इस्लामी जीवन शैली एप! $url';
   }
 
   @override

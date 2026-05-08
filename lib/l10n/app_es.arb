@@ -248,7 +248,7 @@
   "contactUs": "Contáctenos",
   "rateApp": "Califica esta aplicación",
   "shareApp": "Comparte esta aplicación",
-  "shareAppMessage": "Descubre {appName}: ¡la aplicación definitiva para el estilo de vida islámico! {url}",
+  "shareAppMessage": "Echa un vistazo a {appName}: ¡la mejor aplicación de estilo de vida islámico! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

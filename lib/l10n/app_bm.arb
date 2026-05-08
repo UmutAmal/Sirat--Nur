@@ -248,7 +248,7 @@
   "contactUs": "Aw ye ɲɔgɔn sɔrɔ Anw fɛ",
   "rateApp": "Aw ye nin appli in jate",
   "shareApp": "Aw ye nin appli in tila ɲɔgɔn na",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Aw ye {appName} lajɛ: Silamɛya ɲɛnamaya kɛcogo app laban! {url} ye .",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

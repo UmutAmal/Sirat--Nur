@@ -248,7 +248,7 @@
   "contactUs": "Kontaktujte nás",
   "rateApp": "Ohodnoťte túto aplikáciu",
   "shareApp": "Zdieľajte túto aplikáciu",
-  "shareAppMessage": "Vyskúšajte {appName}: Najlepšia aplikácia pre islamský životný štýl! {url}",
+  "shareAppMessage": "Pozrite si {appName}: Najlepšia aplikácia pre islamský životný štýl! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

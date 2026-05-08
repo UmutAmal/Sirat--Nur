@@ -248,7 +248,7 @@
   "contactUs": "আমাৰ সৈতে যোগাযোগ কৰক",
   "rateApp": "এই এপটোক ৰেটিং দিয়ক",
   "shareApp": "এই এপটো শ্বেয়াৰ কৰক",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName} চাওক: চূড়ান্ত ইছলামিক জীৱনশৈলী এপ! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

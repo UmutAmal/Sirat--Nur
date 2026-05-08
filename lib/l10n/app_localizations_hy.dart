@@ -548,7 +548,7 @@ class AppLocalizationsHy extends AppLocalizations {
 
   @override
   String shareAppMessage(String appName, String url) {
-    return 'Check out $appName: The ultimate Islamic lifestyle app! $url';
+    return 'Ստուգեք $appName. Իսլամական ապրելակերպի վերջնական հավելվածը: $url';
   }
 
   @override

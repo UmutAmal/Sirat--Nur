@@ -248,7 +248,7 @@
   "contactUs": "Liên hệ với chúng tôi",
   "rateApp": "Đánh giá ứng dụng này",
   "shareApp": "Chia sẻ ứng dụng này",
-  "shareAppMessage": "Hãy xem {appName}: Ứng dụng phong cách sống Hồi giáo tối ưu! {url}",
+  "shareAppMessage": "Hãy xem {appName}: Ứng dụng phong cách sống Hồi giáo tuyệt đỉnh! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

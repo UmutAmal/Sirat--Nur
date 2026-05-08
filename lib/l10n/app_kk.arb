@@ -248,7 +248,7 @@
   "contactUs": "Бізбен байланысыңыз",
   "rateApp": "Осы қолданбаны бағалаңыз",
   "shareApp": "Осы қолданбаны бөлісіңіз",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "{appName} қараңыз: Исламдық өмір салтын көрсететін соңғы қолданба! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

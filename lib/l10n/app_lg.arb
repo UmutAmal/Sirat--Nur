@@ -248,7 +248,7 @@
   "contactUs": "Tukwasaganye",
   "rateApp": "Teeka app eno ekipimo",
   "shareApp": "Gabana app eno",
-  "shareAppMessage": "Check out {appName}: The ultimate Islamic lifestyle app! {url}",
+  "shareAppMessage": "Laba {appName}: App y'obulamu bw'Obusiraamu esinga! {url} .",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {

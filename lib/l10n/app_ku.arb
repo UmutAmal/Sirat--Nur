@@ -248,7 +248,7 @@
   "contactUs": "Têkilî Bi me re",
   "rateApp": "Vê sepanê binirxînin",
   "shareApp": "Vê sepanê parve bikin",
-  "shareAppMessage": "Binihêrin {appName}: Serlêdana herî dawî ya şêwaza jiyanê ya Îslamî! {url}",
+  "shareAppMessage": "Binihêrin {appName}: Serlêdana herî dawî ya şêwaza jiyana îslamî! {url}",
   "@shareAppMessage": {
     "placeholders": {
       "appName": {
