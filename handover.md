@@ -22910,3 +22910,35 @@
 ### Sonraki Adim
 - Commit + push sonrasi yeni dongude runtime QA kapsaminda kalan UI/icerik risklerini tara.
 - Oncelik adayi: Appium smoke sonucu `downloadRuntime.showedCancellingState=false` fakat `containsCanceledMessage=true`; uygulama false-success gostermiyor, ancak ozet alanina birleşik `cancelFeedbackObserved` gibi daha acik bir metrik eklenebilir.
+
+## 2026-05-08 TUR-571 - Appium Download Cancel Feedback Metric
+
+### MASTER Karari
+- Risk: Release Appium smoke offline indirme iptalinde gercek kullanici geri bildirimi gorulmesine ragmen ozet iki ayri ara/son durum alanina bolunuyordu: `showedCancellingState=false`, `containsCanceledMessage=true`. Bu uygulama false-success hatasi degildi, fakat rapor okuyan sonraki agent icin "iptal geri bildirimi goruldu mu?" sorusunu gereksiz belirsiz birakiyordu.
+- Kanit:
+  - TUR-570 sonrasi summary: `downloadRuntime.showedCancellingState=false`, `downloadRuntime.containsCanceledMessage=true`, `failures=[]`.
+  - Runtime davranis kaniti: `build\appium-runtime-smoke-summary.json` patch sonrasi `downloadRuntime.cancelFeedbackObserved=True`, `containsCanceledMessage=True`, `failures=0`, `logcatCrashFree=True`.
+- Etki/Olasilik/Risk: Etki 2, olasilik 4, risk `8/25 -> 2/25`. Uygulama kodu degismedi; QA harness raporu artik ara state hizli kaybolsa bile son iptal mesajinin basariyla goruldugunu tek boolean ile kanitliyor.
+- Rollback plani: `tool\appium_runtime_smoke.ps1` icindeki `cancelFeedbackObserved` alani ve `test\appium_runtime_smoke_script_test.dart` statik guard beklentileri tek commit olarak revert edilebilir.
+
+### BUILDER Degisikligi
+- `downloadRuntime` ozetine `cancelFeedbackObserved` eklendi.
+- Iptal sonrasi XML kontrolu `showedCancellingState -or containsCanceledMessage` sonucunu bu alana yaziyor.
+- Failure guard artik iki ayri alanin kosulunu tekrar yazmak yerine `cancelFeedbackObserved` ile karar veriyor.
+
+### TESTER Degisikligi
+- PowerShell syntax guard:
+  - `[scriptblock]::Create((Get-Content -Raw -Path tool\appium_runtime_smoke.ps1))` PASS.
+- Hedefli script testi:
+  - `flutter test test\appium_runtime_smoke_script_test.dart --reporter compact` PASS, `15/15`.
+- Gercek release runtime smoke:
+  - `.\tool\appium_runtime_smoke.ps1 -BuildMode release -SmokeLocale tr` PASS.
+  - Summary: `failures=0`, `downloadRuntime.cancelFeedbackObserved=True`, `downloadRuntime.containsCanceledMessage=True`, `settingsRuntime.settingsLocalizedForSmokeLocale=True`, `logcatCrashFree=True`.
+- Final kapilar:
+  - `git diff --check` PASS; yalniz CRLF uyarisi.
+  - `flutter analyze` PASS, `No issues found`.
+  - `flutter test --reporter compact` PASS, `791/791`.
+
+### Sonraki Adim
+- Commit + push sonrasi yeni dongude runtime QA ve store-readiness risk taramasina devam et.
+- Siradaki uygun aday: Appium smoke sonrasi gercek APK/artifact store readiness komutlarini ve mevcut Supabase/Cloudflare/GitHub kaynak sagligi kanitlarini yeniden taramak.

@@ -1088,6 +1088,7 @@ $summary = [ordered]@{
     clickedCancel = $false
     showedCancellingState = $false
     containsCanceledMessage = $false
+    cancelFeedbackObserved = $false
     containsAndroidSettings = $false
   }
   logcatCrashFree = $true
@@ -1591,6 +1592,7 @@ try {
         clickedCancel = $false
         showedCancellingState = $false
         containsCanceledMessage = $false
+        cancelFeedbackObserved = $false
         containsAndroidSettings = $false
       }
 
@@ -1621,6 +1623,7 @@ try {
             $afterCancelXml = Save-AppiumSource -SessionId $sessionId -Name "downloads-after-cancel"
             $downloadRuntime.showedCancellingState = Test-ContainsAny -Source $afterCancelXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.downloadCancelling, 'Cancelling'))
             $downloadRuntime.containsCanceledMessage = Test-ContainsAny -Source $afterCancelXml -Needles (Select-NonEmptyUniqueStrings @($smokeText.downloadCanceledForReciterPrefix, 'Download canceled'))
+            $downloadRuntime.cancelFeedbackObserved = $downloadRuntime.showedCancellingState -or $downloadRuntime.containsCanceledMessage
             $downloadRuntime.containsAndroidSettings = $downloadRuntime.containsAndroidSettings -or $afterCancelXml.Contains("Settings suggestions") -or $afterCancelXml.Contains("Android Settings") -or $afterCancelXml.Contains("Alarms & reminders")
           }
       }
@@ -1878,7 +1881,7 @@ if (-not $summary.downloadRuntime.showedActiveProgress) {
 if (-not $summary.downloadRuntime.clickedCancel) {
   $failures += "Download runtime smoke could not click the localized cancel download control."
 }
-if (-not $summary.downloadRuntime.showedCancellingState -and -not $summary.downloadRuntime.containsCanceledMessage) {
+if (-not $summary.downloadRuntime.cancelFeedbackObserved) {
   $failures += "Download runtime smoke did not show the cancelling or canceled state after cancel was requested."
 }
 if ($summary.downloadRuntime.containsAndroidSettings) {

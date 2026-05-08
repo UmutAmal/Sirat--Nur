@@ -697,6 +697,13 @@ void main() {
       expect(script, contains('downloads-active'));
       expect(script, contains('downloads-after-cancel'));
       expect(script, contains('cancelDownloadAction'));
+      expect(script, contains('cancelFeedbackObserved'));
+      expect(
+        script,
+        contains(
+          r'$downloadRuntime.cancelFeedbackObserved = $downloadRuntime.showedCancellingState -or $downloadRuntime.containsCanceledMessage',
+        ),
+      );
       expect(script, contains('Download runtime smoke could not click'));
       expect(script, contains('Download runtime smoke could not start'));
       expect(
