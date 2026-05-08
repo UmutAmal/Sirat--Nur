@@ -577,30 +577,23 @@ on conflict (id) do update
 set public = excluded.public;
 
 drop policy if exists "Public read quran audio bucket" on storage.objects;
-
 drop policy if exists "Public read sukun audio bucket" on storage.objects;
-create policy "Public read sukun audio bucket"
-on storage.objects
-for select
-using (bucket_id = 'audio-sukun');
-
 drop policy if exists "Public read dua audio bucket" on storage.objects;
-create policy "Public read dua audio bucket"
-on storage.objects
-for select
-using (bucket_id = 'audio-dua');
-
 drop policy if exists "Public read adhan audio bucket" on storage.objects;
-create policy "Public read adhan audio bucket"
-on storage.objects
-for select
-using (bucket_id = 'audio-adhan');
-
 drop policy if exists "Public read asma audio bucket" on storage.objects;
-create policy "Public read asma audio bucket"
-on storage.objects
-for select
-using (bucket_id = 'audio-asma');
+drop policy if exists "Public Access to sirat_assets" on storage.objects;
+
+-- Public buckets can serve object URLs without a broad storage.objects SELECT
+-- policy. Keeping those policies would allow clients to list every object in
+-- the bucket, which Supabase's security advisor flags as external exposure.
+
+do $$
+begin
+  if to_regprocedure('public.rls_auto_enable()') is not null then
+    revoke execute on function public.rls_auto_enable() from public, anon, authenticated;
+    grant execute on function public.rls_auto_enable() to service_role;
+  end if;
+end $$;
 
 -- Supabase REST uses PostgREST's schema cache. Reload it after DDL so
 -- store-readiness checks can see newly-created tables and columns immediately.

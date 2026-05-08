@@ -22740,3 +22740,38 @@
 ### Sonraki Adim
 - Tam analyze + full test gecerse commit + push yap.
 - Sonraki dongude yeni en yuksek risk icin tum proje taramasina don; ozellikle notification pipeline, audio pipeline, Supabase availability ve kalan hardcoded/dini icerik yuzeylerini skorla.
+
+## 2026-05-08 TUR-566 - Supabase Public Storage Listing and SECURITY DEFINER Hardening
+
+### MASTER Karari
+- Risk: Supabase security advisor remote projede 5 public Storage bucket icin genis `storage.objects SELECT` politikasi ve `public.rls_auto_enable()` SECURITY DEFINER fonksiyonunun `anon`/`authenticated` tarafindan execute edilebilmesini raporladi. Bu, bilinen object URL kullanimi disinda bucket dosya listesinin enumerate edilmesi ve admin amacli helper fonksiyonun public RPC yuzeyinden cagrilabilmesi riskidir.
+- Kanit:
+  - Security advisor baslangic bulgulari: `public_bucket_allows_listing` (`audio-adhan`, `audio-asma`, `audio-dua`, `audio-sukun`, `sirat_assets`) ve `anon_security_definer_function_executable` / `authenticated_security_definer_function_executable` (`public.rls_auto_enable()`).
+  - `pg_policies` baslangic sorgusu: `storage.objects` uzerinde 5 bucket-only public SELECT politikasi vardi.
+  - Fonksiyon ACL baslangic sorgusu: `proacl={=X/postgres,postgres=X/postgres,anon=X/postgres,authenticated=X/postgres,service_role=X/postgres}`.
+  - Supabase resmi advisor dokumani `0025_public_bucket_allows_listing`, public object URL'lerinin SELECT policy olmadan calismaya devam edecegini dogruluyor.
+- Etki/Olasilik/Risk: Etki 4, olasilik 3, risk `12/25 -> 2/25`. Runtime audio/public object URL akisi korunur; yalniz listeleme ve public SECURITY DEFINER execute yuzeyi kapandi.
+- Rollback plani: Remote migration `20260508042529_harden_public_storage_listing_and_rls_helper` geri alinacaksa ilgili storage SELECT policy'leri tekrar create edilir ve `rls_auto_enable()` icin anon/authenticated execute grant'i geri verilir. Yerelde `content_schema.sql` ve `test/content_schema_test.dart` diff'i tek commit olarak revert edilebilir.
+
+### BUILDER Degisikligi
+- `content_schema.sql` public audio bucket'lari public birakiyor ama `storage.objects` uzerinde `Public read * audio bucket` ve `Public Access to sirat_assets` policy'lerini create etmeyi birakti; bootstrap artik bu politikalarin hepsini drop ediyor.
+- `content_schema.sql` `public.rls_auto_enable()` varsa `public`, `anon`, `authenticated` execute yetkilerini revoke edip `service_role` execute yetkisini koruyor.
+- Remote Supabase migration uygulandi: `20260508042529_harden_public_storage_listing_and_rls_helper`.
+
+### TESTER Degisikligi
+- Dokuman/dogrulama:
+  - Supabase docs search: `0025_public_bucket_allows_listing`, `0028/0029 SECURITY DEFINER` remediation kontrol edildi.
+- Remote verification:
+  - Security advisor sonrasi: `lints=[]`.
+  - `pg_policies` bucket listing policy sorgusu: `[]`.
+  - `rls_auto_enable()` ACL sonrasi: `proacl={postgres=X/postgres,service_role=X/postgres}`.
+- Hedefli test:
+  - `flutter test test\content_schema_test.dart --reporter compact` PASS.
+- Final kapilar commit oncesi tekrar calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Tam analyze + full test gecerse commit + push yap.
+- Sonraki dongude Supabase performance advisor'daki duplicate permissive policy risklerini ve bos/eksik cloud content tablolarini skorla.

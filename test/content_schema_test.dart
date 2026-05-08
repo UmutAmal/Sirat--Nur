@@ -378,18 +378,56 @@ void main() {
       expect(schema, isNot(contains("using (bucket_id = 'quran-audio');")));
       expect(
         schema,
-        contains('create policy "Public read sukun audio bucket"'),
+        contains('drop policy if exists "Public read sukun audio bucket"'),
       );
-      expect(schema, contains("using (bucket_id = 'audio-sukun');"));
-      expect(schema, contains('create policy "Public read dua audio bucket"'));
-      expect(schema, contains("using (bucket_id = 'audio-dua');"));
       expect(
         schema,
-        contains('create policy "Public read adhan audio bucket"'),
+        isNot(contains('create policy "Public read sukun audio bucket"')),
       );
-      expect(schema, contains("using (bucket_id = 'audio-adhan');"));
-      expect(schema, contains('create policy "Public read asma audio bucket"'));
-      expect(schema, contains("using (bucket_id = 'audio-asma');"));
+      expect(
+        schema,
+        contains('drop policy if exists "Public read dua audio bucket"'),
+      );
+      expect(
+        schema,
+        isNot(contains('create policy "Public read dua audio bucket"')),
+      );
+      expect(
+        schema,
+        contains('drop policy if exists "Public read adhan audio bucket"'),
+      );
+      expect(
+        schema,
+        isNot(contains('create policy "Public read adhan audio bucket"')),
+      );
+      expect(
+        schema,
+        contains('drop policy if exists "Public read asma audio bucket"'),
+      );
+      expect(
+        schema,
+        isNot(contains('create policy "Public read asma audio bucket"')),
+      );
+      expect(
+        schema,
+        contains('drop policy if exists "Public Access to sirat_assets"'),
+      );
+      expect(schema, isNot(contains("using (bucket_id = 'audio-sukun');")));
+      expect(schema, isNot(contains("using (bucket_id = 'audio-dua');")));
+      expect(schema, isNot(contains("using (bucket_id = 'audio-adhan');")));
+      expect(schema, isNot(contains("using (bucket_id = 'audio-asma');")));
+      expect(
+        schema,
+        contains(
+          'revoke execute on function public.rls_auto_enable() from public, anon, authenticated;',
+        ),
+      );
+      expect(
+        schema,
+        contains(
+          'grant execute on function public.rls_auto_enable() to service_role;',
+        ),
+      );
       expect(schema, contains("notify pgrst, 'reload schema';"));
     });
   });
