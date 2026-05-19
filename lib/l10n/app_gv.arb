@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Data as Stoo",
+  "clearCache": "Slane Cache",
   "cacheClearedSuccess": "Ta'n cache er ny ghlenney dy mie",
   "location": "Jalloo",
   "language": "Chengey",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Ta'n seirveish location er ny ghleiy.",
   "locationPermissionDenied": "Ta'n cead 'sy 'nnyd er ny ymmyrkey.",
   "locationDetectionFailed": "Cha b'aashagh do location y hoiggal. Taght ard-valley lesh laue ny feddyn magh reesht.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} caayryn",
   "@citiesCount": {
     "placeholders": {
       "count": {

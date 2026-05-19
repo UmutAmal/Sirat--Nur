@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Ladenan lokasi ditumpurkeun.",
   "locationPermissionDenied": "Idin lokasi ditolak.",
   "locationDetectionFailed": "Teu bisa ngadeteksi lokasi anjeun. Mangga pilih kota sacara manual atawa cobian deui.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} kota",
   "@citiesCount": {
     "placeholders": {
       "count": {

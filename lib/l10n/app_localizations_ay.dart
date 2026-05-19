@@ -91,7 +91,7 @@ class AppLocalizationsAy extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Datos & Almacenamiento ukax mä juk’a pachanakanwa';
+  String get dataStorage => 'Data & Storage';
 
   @override
   String get clearCache => 'Caché ukax q’umachaña';
@@ -127,11 +127,11 @@ class AppLocalizationsAy extends AppLocalizations {
 
   @override
   String get locationDetectionFailed =>
-      'Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.';
+      'Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Mä marka amparampi ajlliñamawa jan ukaxa mayampi yant’añamawa.';
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count markanaka';
   }
 
   @override

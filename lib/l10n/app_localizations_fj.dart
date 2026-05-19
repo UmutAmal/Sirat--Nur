@@ -91,10 +91,10 @@ class AppLocalizationsFj extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Itukutuku & Maroroi';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Bokoca na Cache';
 
   @override
   String get cacheClearedSuccess => 'Sa vakasavasavataki vinaka na Cache';
@@ -130,7 +130,7 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count koro lelevu';
   }
 
   @override

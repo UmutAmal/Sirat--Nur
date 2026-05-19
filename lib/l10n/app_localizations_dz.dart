@@ -91,10 +91,10 @@ class AppLocalizationsDz extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'གནད་སྡུད་དང་གསོག་ཆས།';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'འདྲ་མཛོད་བསལ།';
 
   @override
   String get cacheClearedSuccess => 'འདྲ་མཛོད་མཐར་འཁྱོལ་ཅན་སྦེ་བསལ་ཡོདཔ།';
@@ -129,7 +129,7 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count གྲོང་ཁྱེར།';
   }
 
   @override

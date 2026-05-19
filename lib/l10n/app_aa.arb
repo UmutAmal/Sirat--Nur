@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Oyti kee kobxiseyna",
+  "clearCache": "Kaache fiya",
   "cacheClearedSuccess": "kobxiseyna agdaabele gurral fiyteh",
   "location": "Ku araca",
   "language": "Afa yaaba",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Mohoodo ayfaf mali.",
   "locationPermissionDenied": "Mohoodo idini cinnimteh.",
   "locationDetectionFailed": "ku arac yaaxigem maduuda. Ku maganak magaala doorit hinnay qagitak gibbat.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} magaalol",
   "@citiesCount": {
     "placeholders": {
       "count": {

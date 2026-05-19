@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Wɔayɛ beaeɛ som adwuma no adwuma.",
   "locationPermissionDenied": "Wɔapow beae ho kwan.",
   "locationDetectionFailed": "Antumi anhu baabi a wowɔ. Yɛsrɛ sɛ fa nsa paw kurow bi anaa sɔ hwɛ bio.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} nkuropɔn mu",
   "@citiesCount": {
     "placeholders": {
       "count": {

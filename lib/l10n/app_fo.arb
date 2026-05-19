@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Dátur og goymsla",
+  "clearCache": "Rudda goymslu",
   "cacheClearedSuccess": "Goymslan er ruddað",
   "location": "Staður",
   "language": "Mál",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Staðsetingartænastan er sløkt.",
   "locationPermissionDenied": "Staðsetingarloyvi noktað.",
   "locationDetectionFailed": "Kundi ikki uppdaga tína staðseting. Vinarliga vel ein bý manuelt ella royn umaftur.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} býir",
   "@citiesCount": {
     "placeholders": {
       "count": {

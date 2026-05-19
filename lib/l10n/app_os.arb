@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Бæрæггæнæнтæ æмæ æвæрæнтæ",
+  "clearCache": "Кэш ссыгъдæг кæнын",
   "cacheClearedSuccess": "Кэш æнтыстджынæй ссыгъдæг ис",
   "location": "Бынат",
   "language": "Æвзаг",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Бынаты лæггад æхгæд у.",
   "locationPermissionDenied": "Бынаты барлæвæрд нæ райстой.",
   "locationDetectionFailed": "Дæ бынат нæ рабæрæг. Дæ хорзæхæй, равзар горæт къухæй кæнæ та ногæй бафæлвар.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} горæттæ",
   "@citiesCount": {
     "placeholders": {
       "count": {

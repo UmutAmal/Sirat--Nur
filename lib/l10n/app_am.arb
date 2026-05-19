@@ -52,7 +52,7 @@
   "locationServiceDisabled": "የአካባቢ አገልግሎት ተሰናክሏል።",
   "locationPermissionDenied": "የአካባቢ ፈቃድ ተከልክሏል።",
   "locationDetectionFailed": "አካባቢህን ማወቅ አልተቻለም። እባክዎ ከተማን እራስዎ ይምረጡ ወይም እንደገና ይሞክሩ።",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ከተሞች",
   "@citiesCount": {
     "placeholders": {
       "count": {

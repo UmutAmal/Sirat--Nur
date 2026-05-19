@@ -23172,3 +23172,38 @@
 ### Sonraki Adim
 - Final kapilar ve push sonrasi yeni dongude `no` anahtarini aceleyle otomatik cevirmek yerine dil bazli net "Hayir/No" baglam guard'lariyla ele al.
 - Ayrica kalan yuksek gorunurlukteki empty-state ve location permission copy gruplari icin ayni parcali audit/translate/test dongusunu uygula.
+
+## 2026-05-19 TUR-579 - Location and Storage Shell L10n Fallback Reduction
+
+### MASTER Karari
+- Risk: Konum izni/algilama ve data-cache ayarlari birden cok kritik akista gorunuyor. Bu yuzeyde hem Ingilizce fallback hem de karisik dil debris'i vardi; ornek olarak `app_ay.arb` ve `app_bg.arb` icinde `locationDetectionFailed` metni kismen Ingilizce kalabiliyordu.
+- Kanit:
+  - Patch oncesi audit: `dart run tool/translate_arb_keys.dart --report locationServiceDisabled locationPermissionDenied locationDetectionFailed citiesCount currentLocation searchHint noResults dataStorage clearCache cacheClearedSuccess`.
+  - Patch oncesi `Same-as-English locales: 426`.
+  - Uygulanan guvenli batch: `locationServiceDisabled`, `locationPermissionDenied`, `locationDetectionFailed`, `citiesCount`, `dataStorage`, `clearCache`, `cacheClearedSuccess`.
+  - Patch sonrasi audit: `dart run tool/translate_arb_keys.dart --report locationServiceDisabled locationPermissionDenied locationDetectionFailed citiesCount dataStorage clearCache cacheClearedSuccess`.
+  - Patch sonrasi `Same-as-English locales: 216`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - Mixed-English grep: `rg -n 'Please choose a city manually|Could not detect your location\\. [^\\\"]*[А-Яа-я]|\\. Please choose a city manually' lib\l10n -g 'app_*.arb'` artik sadece bilincli tam Ingilizce fallback locale'lerini ve `app_en.arb` kaynak satirini gosteriyor; `ay/bg/hr` karisik cümleleri temizlendi.
+  - ARB JSON parse gate: `Get-ChildItem lib\l10n\app_*.arb | ConvertFrom-Json` PASS.
+  - `flutter gen-l10n` calistirildi ve generated localization siniflari ARB ile senkronlandi.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 8/25`. Konum hata/izin ve cache ayarlari yuzeyinde fallback borcu azaldi; karisik Ingilizce cümlelerin tekrar girmesi tool guard'i ve test ile engellendi.
+- Rollback plani: Bu turdaki `lib\l10n\app_*.arb`, generated `lib\l10n\app_localizations_*.dart`, `tool\translate_arb_keys.dart`, `test\translate_arb_keys_test.dart` ve bu handover kaydi tek commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` icindeki genel debris listesine location detection icin karisik Ingilizce kaliplari eklendi: `Could not detect your location.` ve `Please choose a city manually or try again.`.
+- `tool\translate_arb_keys.dart` ile yalniz konum/storage UI anahtarlari cevrildi: `locationServiceDisabled`, `locationPermissionDenied`, `locationDetectionFailed`, `citiesCount`, `dataStorage`, `clearCache`, `cacheClearedSuccess`.
+- Dini kaynak metni, Quran/hadith/dua icerigi veya meal verisi uretilmedi ya da degistirilmedi.
+
+### TESTER Degisikligi
+- Yeni guard'lar:
+  - `test\translate_arb_keys_test.dart` icinde `tracks location and storage shell l10n debt reduction` eklendi.
+  - `test\translate_arb_keys_test.dart` icinde `rejects mixed English location detection debris` eklendi.
+- Hedefli test:
+  - `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `81/81`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Final kapilar ve push sonrasi yeni dongude kalan yuksek gorunurlukteki `quranLoadFailed`, bookmark, empty-state ve onboarding/error copy gruplari icin ayni parcali audit/translate/test dongusunu uygula.

@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Te mau haamaramaramaraa e te vahi tape'araa",
+  "clearCache": "Tatara i te vahi ta'oto",
   "cacheClearedSuccess": "Ua tamâ - maitai - hia te Cache",
   "location": "Tā'ata'amu",
   "language": "Reo",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Ua opanihia te taviniraa vahi.",
   "locationPermissionDenied": "Ua patoihia te vahi.",
   "locationDetectionFailed": "Aita i ti'a ia itehia to outou vahi. A maiti i te hoê oire na roto i te rima aore ra a tamata faahou.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} oire",
   "@citiesCount": {
     "placeholders": {
       "count": {

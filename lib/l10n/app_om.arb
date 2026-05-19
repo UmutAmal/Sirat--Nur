@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Tajaajilli bakka hojii ni hin hojjenne.",
   "locationPermissionDenied": "Hayyamni iddoo dhorkame.",
   "locationDetectionFailed": "Bakka jirtu adda baasuu hin dandeenye. Maaloo magaalaa harkaan filadhu ykn irra deebi'ii yaali.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} magaalota",
   "@citiesCount": {
     "placeholders": {
       "count": {

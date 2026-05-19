@@ -129,7 +129,7 @@ class AppLocalizationsSo extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count magaalooyinka';
   }
 
   @override

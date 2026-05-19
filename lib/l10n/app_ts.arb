@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Vukorhokeri bya ndhawu byi pfaleriwile.",
   "locationPermissionDenied": "Mpfumelelo wa ndhawu wu ariwile.",
   "locationDetectionFailed": "A swi swi kotanga ku vona ndhawu ya wena. Hi kombela u hlawula doroba hi voko kutani u ringeta nakambe.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} madoroba",
   "@citiesCount": {
     "placeholders": {
       "count": {

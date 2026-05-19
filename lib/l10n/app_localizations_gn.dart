@@ -131,7 +131,7 @@ class AppLocalizationsGn extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count táva kuéra';
   }
 
   @override

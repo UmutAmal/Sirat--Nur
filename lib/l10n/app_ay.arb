@@ -40,7 +40,7 @@
       }
     }
   },
-  "dataStorage": "Datos & Almacenamiento ukax mä juk’a pachanakanwa",
+  "dataStorage": "Data & Storage",
   "clearCache": "Caché ukax q’umachaña",
   "cacheClearedSuccess": "Caché ukax wali suma q’umachatawa",
   "location": "Kawkhachiqa",
@@ -51,8 +51,8 @@
   "currentLocation": "Jichha pachanx (GPS) .",
   "locationServiceDisabled": "Servicio de ubicación ukax jan ch’amanchatawa.",
   "locationPermissionDenied": "Uka chiqanx permiso ukax janiw satawa.",
-  "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.",
-  "citiesCount": "{count} cities",
+  "locationDetectionFailed": "Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Mä marka amparampi ajlliñamawa jan ukaxa mayampi yant’añamawa.",
+  "citiesCount": "{count} markanaka",
   "@citiesCount": {
     "placeholders": {
       "count": {

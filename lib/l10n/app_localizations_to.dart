@@ -91,10 +91,10 @@ class AppLocalizationsTo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Fakamatala & Tauhi\'anga';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Fakamaʻa ʻa e Cache';
 
   @override
   String get cacheClearedSuccess => 'Kuo lavame\'a hono fakama\'a \'o e cache';
@@ -131,7 +131,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ngaahi kolo';
   }
 
   @override

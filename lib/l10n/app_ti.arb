@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "ዳታን መኽዘንን",
+  "clearCache": "Cache ምጽራይ",
   "cacheClearedSuccess": "ካሸ ብዓወት ተጸሪጉ",
   "location": "ኣንፈት",
   "language": "ቋንቋ",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "ኣገልግሎት ኣቀማምጣ ተሰናኺሉ ኣሎ።",
   "locationPermissionDenied": "ናይ ቦታ ፍቓድ ተኸልኪሉ።",
   "locationDetectionFailed": "ኣቀማምጣኻ ክፈልጥ ኣይከኣለን። በጃኹም ብኢድኩም ከተማ ምረጹ ወይ ድማ እንደገና ፈትኑ።",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ከተማታት",
   "@citiesCount": {
     "placeholders": {
       "count": {

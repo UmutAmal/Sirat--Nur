@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Donadas e emmagazinatge",
+  "clearCache": "Escafar l'escobilhièr",
   "cacheClearedSuccess": "Cache escafat amb succès",
   "location": "Endrech",
   "language": "Lenga",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Lo servici de localizacion es desactivat.",
   "locationPermissionDenied": "L'autorizacion de l'emplaçament refusada.",
   "locationDetectionFailed": "Impossible de detectar vòstre emplaçament. Causissètz una vila manualament o ensajatz tornarmai.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} vilas",
   "@citiesCount": {
     "placeholders": {
       "count": {

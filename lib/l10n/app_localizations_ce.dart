@@ -91,10 +91,10 @@ class AppLocalizationsCe extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Даташ а, Ӏалашдар а';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Кэш дӀаяккха';
 
   @override
   String get cacheClearedSuccess => 'Кэш кхиамца дӀаяьккхина';
@@ -121,11 +121,11 @@ class AppLocalizationsCe extends AppLocalizations {
   String get locationServiceDisabled => 'Меттиг лелоран сервис дӀаяьккхина ю.';
 
   @override
-  String get locationPermissionDenied => 'Location permission denied.';
+  String get locationPermissionDenied => 'Меттиг дӀаяккха бакъо ца елла.';
 
   @override
   String get locationDetectionFailed =>
-      'Could not detect your location. Please choose a city manually or try again.';
+      'Хьан меттиг къасто аьтто ца баьлла. Дехар ду, гӀала куьйга харжа я юха хьажа.';
 
   @override
   String citiesCount(String count) {

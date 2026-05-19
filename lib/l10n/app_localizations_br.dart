@@ -91,10 +91,10 @@ class AppLocalizationsBr extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Roadennoù ha stokañ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Diverkañ ar c\'hrubuilh';
 
   @override
   String get cacheClearedSuccess => 'Diverket ar c\'hrubuilh gant berzh';
@@ -131,7 +131,7 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count kêrioù';
   }
 
   @override

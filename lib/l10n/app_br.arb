@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Roadennoù ha stokañ",
+  "clearCache": "Diverkañ ar c'hrubuilh",
   "cacheClearedSuccess": "Diverket ar c'hrubuilh gant berzh",
   "location": "Lec'h",
   "language": "Yezh",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Diweredekaet eo ar servij lec'hiadur.",
   "locationPermissionDenied": "Nac'het eo bet an aotre lec'hiadur.",
   "locationDetectionFailed": "N'haller ket detektiñ ho lec'hiadur. Dibabit ur gêr dre zorn pe klaskit en-dro.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} kêrioù",
   "@citiesCount": {
     "placeholders": {
       "count": {

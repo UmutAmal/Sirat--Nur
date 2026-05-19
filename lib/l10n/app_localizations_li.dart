@@ -91,10 +91,10 @@ class AppLocalizationsLi extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Data & Opslaag';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache wies';
 
   @override
   String get cacheClearedSuccess => 'Cache succesvol wies';
@@ -129,7 +129,7 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count stede';
   }
 
   @override

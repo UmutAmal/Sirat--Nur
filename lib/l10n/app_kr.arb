@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Bayanna-a Gǝnatǝ-a",
+  "clearCache": "Cache cin",
   "cacheClearedSuccess": "Cachedǝ kǝnasartǝna",
   "location": "Na",
   "language": "Təlam",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Sabis nabedǝ sǝtǝnyi.",
   "locationPermissionDenied": "Izǝnyi naye tǝmatǝnyi.",
   "locationDetectionFailed": "Na kǝnǝnganǝmbe asutinba. Martəgəne bərni muskon karne au waltə jarabne.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} bǝrni-a",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Dowlaaji & Desorɗe",
+  "clearCache": "Laɓɓin Kaɓirgal",
   "cacheClearedSuccess": "Cache laɓɓinaama no moƴƴi",
   "location": "Wakere",
   "language": "Wolde",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Sarwiis nokku oo ina muusi.",
   "locationPermissionDenied": "Jaɓde nokku oo saliima.",
   "locationDetectionFailed": "Waawaa yiytude nokku maa. Suɓo wuro e junngo walla enndit.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} gure",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -91,10 +91,10 @@ class AppLocalizationsTn extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Tshedimosetso le Polokelo';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Phimola polokelotlaleletso';
 
   @override
   String get cacheClearedSuccess => 'Polokelotlaleletso e phimotswe ka katlego';
@@ -129,7 +129,7 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ditoropo';
   }
 
   @override

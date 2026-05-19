@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Datha na Vhudzulo",
+  "clearCache": "Kha vha bvise Cache",
   "cacheClearedSuccess": "Cache yo phumulwa zwavhudi",
   "location": "Vhupo",
   "language": "Luambo",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Tshumelo ya fhethu yo thivhelwa.",
   "locationPermissionDenied": "Thendelo ya fhethu yo hanelwa.",
   "locationDetectionFailed": "A ri koni u vhona fhethu hune na vha hone. Kha vha khethe ḓorobo nga tshanḓa kana vha lingedze hafhu.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} miḓi",
   "@citiesCount": {
     "placeholders": {
       "count": {

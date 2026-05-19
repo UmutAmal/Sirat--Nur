@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Даташ а, Ӏалашдар а",
+  "clearCache": "Кэш дӀаяккха",
   "cacheClearedSuccess": "Кэш кхиамца дӀаяьккхина",
   "location": "Лаьтта меттиг",
   "language": "Мотт",
@@ -50,8 +50,8 @@
   "systemDefault": "Системан стандарт",
   "currentLocation": "Карарчу хенахь йолу меттиг (GPS)",
   "locationServiceDisabled": "Меттиг лелоран сервис дӀаяьккхина ю.",
-  "locationPermissionDenied": "Location permission denied.",
-  "locationDetectionFailed": "Could not detect your location. Please choose a city manually or try again.",
+  "locationPermissionDenied": "Меттиг дӀаяккха бакъо ца елла.",
+  "locationDetectionFailed": "Хьан меттиг къасто аьтто ца баьлла. Дехар ду, гӀала куьйга харжа я юха хьажа.",
   "citiesCount": "{count} cities",
   "@citiesCount": {
     "placeholders": {

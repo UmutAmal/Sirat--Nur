@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Location service chu tihtawp a ni.",
   "locationPermissionDenied": "Hmun phalna pek a ni lo.",
   "locationDetectionFailed": "I awmna hmun a detect thei lo. Khawpui pakhat chu manual-in thlang la, a nih loh leh han tum leh rawh.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} khawpui te",
   "@citiesCount": {
     "placeholders": {
       "count": {

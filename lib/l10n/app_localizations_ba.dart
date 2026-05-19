@@ -91,10 +91,10 @@ class AppLocalizationsBa extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Мәғлүмәттәр һәм һаҡлау';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Кэшты таҙартыу';
 
   @override
   String get cacheClearedSuccess => 'Кэш уңышлы таҙартылды';

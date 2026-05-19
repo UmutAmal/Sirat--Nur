@@ -91,10 +91,10 @@ class AppLocalizationsCv extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Даннӑйсем тата упрамалли вырӑн';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Кэша тасат';
 
   @override
   String get cacheClearedSuccess => 'Кэш ӑнӑҫлӑн тасатнӑ';
@@ -129,7 +129,7 @@ class AppLocalizationsCv extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count хуласем';
   }
 
   @override

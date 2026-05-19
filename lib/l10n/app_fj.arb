@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Itukutuku & Maroroi",
+  "clearCache": "Bokoca na Cache",
   "cacheClearedSuccess": "Sa vakasavasavataki vinaka na Cache",
   "location": "Vanua",
   "language": "Vosa",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "E vakaleqai na veiqaravi ni vanua.",
   "locationPermissionDenied": "E sega ni vakadonui na veivakadonui ni vanua.",
   "locationDetectionFailed": "E sega ni rawa ni kilai na nomu vanua. Yalovinaka digitaka e dua na koro ena liga se tovolea tale.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} koro lelevu",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -41,7 +41,7 @@
     }
   },
   "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "clearCache": "Jolok Cache",
   "cacheClearedSuccess": "Eṃōj an karreoik cache eo ilo tōprak",
   "location": "Jikin",
   "language": "Kajin",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Jerbal in lale jikin ej bōjrak.",
   "locationPermissionDenied": "Kar bōbrae mālim in jikin eo.",
   "locationDetectionFailed": "Ejjab maroñ in kile ia eo kwoj bed ie. Jouj im kālet juon jikin kwelok ilo am make ak bar kajeoñ.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} jikin kwelok ko",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -131,7 +131,7 @@ class AppLocalizationsQu extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count llaqtakuna';
   }
 
   @override

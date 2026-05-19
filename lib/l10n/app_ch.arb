@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Dåta yan Inadahin",
+  "clearCache": "Na'suha i Cache",
   "cacheClearedSuccess": "Ma na'suha i cache",
   "location": "Lugat",
   "language": "Linguahi",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Ma na'suha i setbisio put i lugat.",
   "locationPermissionDenied": "Ma na'suha i permiso para i lugat.",
   "locationDetectionFailed": "Ti siña hu li'e' i lugat-mu. På'go, cho'gue i siudå-mu gi i kannai-mu pat pruba ta'lo.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} siudat siha",
   "@citiesCount": {
     "placeholders": {
       "count": {

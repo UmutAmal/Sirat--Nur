@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Wotu teƒe ƒe subɔsubɔdɔa nuwɔametɔe.",
   "locationPermissionDenied": "Wogbe mɔɖeɖe ɖe teƒea ŋu.",
   "locationDetectionFailed": "Mete ŋu de dzesi afi si nèle o. Taflatse tia du aɖe kple asi alo nàgadze agbagba ake.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} duwo me",
   "@citiesCount": {
     "placeholders": {
       "count": {

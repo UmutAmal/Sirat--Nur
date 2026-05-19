@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Asango na ndo ti batango",
+  "clearCache": "Zia Cache",
   "cacheClearedSuccess": "A zi cache ni nzoni",
   "location": "Louengo ni",
   "language": "Yanga",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Service ti ndo ni ayeke dä pëpe.",
   "locationPermissionDenied": "A mû lege na ndo ni pëpe.",
   "locationDetectionFailed": "A lingbi ti hinga ndo so mo yeke dä pëpe. Pardon, soro mbeni gbata na maboko wala tara ni encore.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} agbata",
   "@citiesCount": {
     "placeholders": {
       "count": {

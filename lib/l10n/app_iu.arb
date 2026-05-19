@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "ᑐᑭᓯᒋᐊᕈᑎᑦ ᐊᒻᒪ ᑐᖅᑯᐃᕕᒃ",
+  "clearCache": "ᐲᔭᕐᓗᒍ ᑐᖅᑯᖅᑕᐅᓯᒪᔪᖅ",
   "cacheClearedSuccess": "ᑐᖅᑯᖅᑕᐅᓯᒪᔪᖅ ᐲᔭᖅᑕᐅᑦᑎᐊᖅᑐᖅ",
   "location": "ᐃᓂᒋᔭᐅᔪᖅ",
   "language": "ᐅᖃᐅᓯᖅᑕᖅ",
@@ -49,10 +49,10 @@
   "searchLanguage": "ᕿᓂᕐᓗᑎᑦ 180+ ᐅᖃᐅᓯᕐᓂᒃ...",
   "systemDefault": "ᐋᖅᑭᒃᓯᒪᓂᖓ",
   "currentLocation": "ᒫᓐᓇᐅᔪᖅ ᐃᓂᒋᔭᖓ (GPS)",
-  "locationServiceDisabled": "Location service is disabled.",
+  "locationServiceDisabled": "ᐃᓂᒃᓴᖓᓄᑦ ᐱᔨᑦᑎᕋᕐᓂᖅ ᓄᖅᑲᖅᑎᑕᐅᓯᒪᕗᖅ.",
   "locationPermissionDenied": "ᐃᓂᒃᓴᖓᓄᑦ ᐱᔪᓐᓇᐅᑎ ᐋᒡᒑᖅᑕᐅᔪᖅ.",
   "locationDetectionFailed": "ᖃᐅᔨᔭᐅᔪᓐᓇᙱᓚᖅ ᐃᓂᒋᔭᐃᑦ. ᐊᑏ ᓂᕈᐊᕆᑦ ᓄᓇᓕᐸᐅᔭᕐᒥᒃ ᓇᖕᒥᓂᖅ ᐅᕝᕙᓘᓐᓃᑦ ᐆᒃᑐᒃᑲᓐᓂᕆᑦ.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ᓄᓇᓕᐸᐅᔭᐃᑦ",
   "@citiesCount": {
     "placeholders": {
       "count": {

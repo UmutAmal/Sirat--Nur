@@ -125,7 +125,7 @@ class AppLocalizationsHr extends AppLocalizations {
 
   @override
   String get locationDetectionFailed =>
-      'Nije moguće otkriti vašu lokaciju. Please choose a city manually or try again.';
+      'Nije moguće otkriti vašu lokaciju. Odaberite grad ručno ili pokušajte ponovno.';
 
   @override
   String citiesCount(String count) {

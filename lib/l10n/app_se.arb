@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Dieđut ja vurken",
+  "clearCache": "Buhtis cache",
   "cacheClearedSuccess": "Cache buhtistuvvui lihkostuvvan",
   "location": "Sajádat",
   "language": "Giella",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Báikebálvalus lea deaktiverejuvvon.",
   "locationPermissionDenied": "Báikelohpi hilgojuvvon.",
   "locationDetectionFailed": "Ii sáhttán gávdnat du báikki. Vállje gávpoga gieđaiguin dahje geahččal fas.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} gávpogat",
   "@citiesCount": {
     "placeholders": {
       "count": {

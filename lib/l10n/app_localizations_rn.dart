@@ -91,10 +91,10 @@ class AppLocalizationsRn extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Amakuru n\'ububiko';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Kuraho ububiko';
 
   @override
   String get cacheClearedSuccess => 'Ububiko bwakuweho neza';
@@ -129,7 +129,7 @@ class AppLocalizationsRn extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ibisagara';
   }
 
   @override

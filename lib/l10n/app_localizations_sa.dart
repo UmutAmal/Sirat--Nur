@@ -91,10 +91,10 @@ class AppLocalizationsSa extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'डाटा एवं भण्डारण';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Cache स्वच्छं कुर्वन्तु';
 
   @override
   String get cacheClearedSuccess => 'कैश सफलतया स्वच्छः अभवत्';

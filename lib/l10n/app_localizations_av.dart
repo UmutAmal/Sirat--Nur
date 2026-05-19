@@ -91,13 +91,13 @@ class AppLocalizationsAv extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Данные и хранение';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Кэш бацӀцӀад гьабе';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Кэш бергьенлъиялда бацӀцӀана';
 
   @override
   String get location => 'Вугев бакӀ';

@@ -51,7 +51,7 @@
   "currentLocation": "Trenutna lokacija (GPS)",
   "locationServiceDisabled": "Usluga lokacije je onemogućena.",
   "locationPermissionDenied": "Dopuštenje za lokaciju odbijeno.",
-  "locationDetectionFailed": "Nije moguće otkriti vašu lokaciju. Please choose a city manually or try again.",
+  "locationDetectionFailed": "Nije moguće otkriti vašu lokaciju. Odaberite grad ručno ili pokušajte ponovno.",
   "citiesCount": "{count} gradova",
   "@citiesCount": {
     "placeholders": {

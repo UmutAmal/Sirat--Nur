@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Servicio de ubicación oñembogue.",
   "locationPermissionDenied": "Oñembotove permiso ubicación rehegua.",
   "locationDetectionFailed": "Ndaikatúi ohechakuaa moõpa reime. Eiporavo peteĩ táva nde po rupive térã eñeha’ã jey.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} táva kuéra",
   "@citiesCount": {
     "placeholders": {
       "count": {

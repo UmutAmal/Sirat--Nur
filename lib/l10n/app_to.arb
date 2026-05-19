@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Fakamatala & Tauhi'anga",
+  "clearCache": "Fakamaʻa ʻa e Cache",
   "cacheClearedSuccess": "Kuo lavame'a hono fakama'a 'o e cache",
   "location": "Tu'u'anga",
   "language": "Lea fakafonua",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "ʻOku fakataʻeʻaongaʻi ʻa e sevesi ʻo e feituʻú.",
   "locationPermissionDenied": "Faka'ikai'i 'a e ngofua ki he feitu'u.",
   "locationDetectionFailed": "Na'e 'ikai lava ke 'ilo'i ho feitu'u. Kātaki ʻo fili ha kolo ʻaki ho nimá pe toe feinga.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ngaahi kolo",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -2326,6 +2326,68 @@ void main() {
       }
     });
 
+    test('tracks location and storage shell l10n debt reduction', () {
+      const keys = [
+        'locationServiceDisabled',
+        'locationPermissionDenied',
+        'locationDetectionFailed',
+        'citiesCount',
+        'dataStorage',
+        'clearCache',
+        'cacheClearedSuccess',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(216));
+      for (final locale in ['aa', 'ab', 'bo', 'ti']) {
+        for (final key in keys) {
+          final value = localeArbs[locale]![key] as String;
+          expect(
+            value,
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason:
+                'app_$locale.arb has multiline location/storage copy for $key',
+          );
+        }
+      }
+      for (final locale in ['ay', 'bg', 'hr']) {
+        final value = localeArbs[locale]!['locationDetectionFailed'] as String;
+        expect(
+          value,
+          isNot(contains('Could not detect your location')),
+          reason: 'app_$locale.arb keeps mixed English location prefix',
+        );
+        expect(
+          value,
+          isNot(contains('Please choose a city manually')),
+          reason: 'app_$locale.arb keeps mixed English location suffix',
+        );
+      }
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',
@@ -2700,6 +2762,25 @@ void main() {
       expect(settingsValue, 'Settings');
       expect(pageValue, 'Page');
       expect(quranValue, 'Quran');
+    });
+
+    test('rejects mixed English location detection debris', () {
+      const source =
+          'Could not detect your location. Please choose a city manually or try again.';
+      for (final candidate in [
+        'Janiw kawkhans jikxataskta uk uñt’ayañjamäkänti. Please choose a city manually or try again.',
+        'Could not detect your location. Моля, изберете град ръчно или опитайте отново.',
+      ]) {
+        expect(
+          resolveTranslatedArbValue(
+            key: 'locationDetectionFailed',
+            source: source,
+            currentValue: '',
+            candidate: candidate,
+          ),
+          source,
+        );
+      }
     });
 
     test('rejects known prayer method and name debris', () {

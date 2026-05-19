@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Tshedimosetso le Polokelo",
+  "clearCache": "Phimola polokelotlaleletso",
   "cacheClearedSuccess": "Polokelotlaleletso e phimotswe ka katlego",
   "location": "Lefelo",
   "language": "Puo",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Tirelo ya lefelo e thibetswe.",
   "locationPermissionDenied": "Tetla ya lefelo e gannwe.",
   "locationDetectionFailed": "Ga e kgone go lemoga lefelo la gago. Tsweetswee tlhopha toropo ka seatla kgotsa leka gape.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ditoropo",
   "@citiesCount": {
     "placeholders": {
       "count": {

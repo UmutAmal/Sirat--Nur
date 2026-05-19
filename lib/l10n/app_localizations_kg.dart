@@ -91,10 +91,10 @@ class AppLocalizationsKg extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Bansangu & Kubumba';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Katula mambu ya me bumbana';
 
   @override
   String get cacheClearedSuccess => 'Bo me katula mbote-mbote cache';
@@ -129,7 +129,7 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count bambanza';
   }
 
   @override

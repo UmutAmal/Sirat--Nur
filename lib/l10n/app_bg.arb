@@ -51,7 +51,7 @@
   "currentLocation": "Текущо местоположение (GPS)",
   "locationServiceDisabled": "Услугата за местоположение е деактивирана.",
   "locationPermissionDenied": "Разрешението за местоположение е отказано.",
-  "locationDetectionFailed": "Could not detect your location. Моля, изберете град ръчно или опитайте отново.",
+  "locationDetectionFailed": "Не може да се открие местоположението ви. Моля, изберете град ръчно или опитайте отново.",
   "citiesCount": "{count} града",
   "@citiesCount": {
     "placeholders": {

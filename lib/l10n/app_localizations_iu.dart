@@ -91,10 +91,10 @@ class AppLocalizationsIu extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'ᑐᑭᓯᒋᐊᕈᑎᑦ ᐊᒻᒪ ᑐᖅᑯᐃᕕᒃ';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'ᐲᔭᕐᓗᒍ ᑐᖅᑯᖅᑕᐅᓯᒪᔪᖅ';
 
   @override
   String get cacheClearedSuccess => 'ᑐᖅᑯᖅᑕᐅᓯᒪᔪᖅ ᐲᔭᖅᑕᐅᑦᑎᐊᖅᑐᖅ';
@@ -118,7 +118,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get currentLocation => 'ᒫᓐᓇᐅᔪᖅ ᐃᓂᒋᔭᖓ (GPS)';
 
   @override
-  String get locationServiceDisabled => 'Location service is disabled.';
+  String get locationServiceDisabled => 'ᐃᓂᒃᓴᖓᓄᑦ ᐱᔨᑦᑎᕋᕐᓂᖅ ᓄᖅᑲᖅᑎᑕᐅᓯᒪᕗᖅ.';
 
   @override
   String get locationPermissionDenied => 'ᐃᓂᒃᓴᖓᓄᑦ ᐱᔪᓐᓇᐅᑎ ᐋᒡᒑᖅᑕᐅᔪᖅ.';
@@ -129,7 +129,7 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count ᓄᓇᓕᐸᐅᔭᐃᑦ';
   }
 
   @override

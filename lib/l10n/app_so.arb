@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Adeegga goobta waa naafo",
   "locationPermissionDenied": "Ogolaanshiyaha goobta waa la diiday.",
   "locationDetectionFailed": "Lama ogaan karo goobtaada Fadlan gacanta ku dooro magaalo ama isku day mar kale.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} magaalooyinka",
   "@citiesCount": {
     "placeholders": {
       "count": {

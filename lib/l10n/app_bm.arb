@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Yɔrɔ baara bɛ bali.",
   "locationPermissionDenied": "Yɔrɔ yamaruya banna.",
   "locationDetectionFailed": "A ma se k’i sigiyɔrɔ dɔn. Aw ye dugu dɔ sugandi aw bolo fɛ walima aw k’a lajɛ kokura.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} dugubaw kɔnɔ",
   "@citiesCount": {
     "placeholders": {
       "count": {

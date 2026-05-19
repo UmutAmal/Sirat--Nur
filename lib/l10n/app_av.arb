@@ -40,9 +40,9 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
-  "cacheClearedSuccess": "Cache cleared successfully",
+  "dataStorage": "Данные и хранение",
+  "clearCache": "Кэш бацӀцӀад гьабе",
+  "cacheClearedSuccess": "Кэш бергьенлъиялда бацӀцӀана",
   "location": "Вугев бакӀ",
   "language": "МацӀ",
   "selectLanguage": "ТӀаса бище мацӀ",

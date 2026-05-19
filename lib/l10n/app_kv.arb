@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Даннӧйяс да видзанін",
+  "clearCache": "Кэш бырӧдӧм .",
   "cacheClearedSuccess": "Кэш бурӧн бырӧдӧма .",
   "location": "Ин",
   "language": "Кыв",

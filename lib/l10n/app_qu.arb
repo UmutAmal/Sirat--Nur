@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Maypi tarikuy servicioqa mana llamk'achisqa kachkan.",
   "locationPermissionDenied": "Maypi kasqanmanta permisota mana chaskisqachu.",
   "locationDetectionFailed": "Mana maypi kasqaykita riqsiyta atirqanchu. Ama hina kaspa, makiwan huk llaqtata akllay icha musuqmanta kallpachakuy.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} llaqtakuna",
   "@citiesCount": {
     "placeholders": {
       "count": {

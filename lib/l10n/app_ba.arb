@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Мәғлүмәттәр һәм һаҡлау",
+  "clearCache": "Кэшты таҙартыу",
   "cacheClearedSuccess": "Кэш уңышлы таҙартылды",
   "location": "Урынлашыуы",
   "language": "Тел",

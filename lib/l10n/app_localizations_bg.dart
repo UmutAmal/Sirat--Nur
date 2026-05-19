@@ -127,7 +127,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get locationDetectionFailed =>
-      'Could not detect your location. Моля, изберете град ръчно или опитайте отново.';
+      'Не може да се открие местоположението ви. Моля, изберете град ръчно или опитайте отново.';
 
   @override
   String citiesCount(String count) {

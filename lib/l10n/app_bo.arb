@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "གཞི་གྲངས་དང་གསོག་འཇོག",
+  "clearCache": "མཛོད་བསུབ་པ།",
   "cacheClearedSuccess": "མཛོད་ལམ་ལྷོངས་བྱུང་།",
   "location": "གནས་ཡུལ",
   "language": "སྐད་རིགས",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "ས་གནས་ཞབས་ཞུ་བཀག་འགོག་བྱས་ཡོད།",
   "locationPermissionDenied": "ས་གནས་ཀྱི་ཆོག་མཆན་མ་སྤྲད་པ་རེད།",
   "locationDetectionFailed": "ཁྱེད་རང་གི་གནས་ཡུལ་ཤེས་རྟོགས་ཐུབ་མ་སོང་། ལག་ཐོག་ནས་གྲོང་ཁྱེར་ཞིག་འདེམས་པའམ་ཡང་ན་བསྐྱར་དུ་ཚོད་ལྟ་བྱེད་རོགས།",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count}གྲོང་ཁྱེར།",
   "@citiesCount": {
     "placeholders": {
       "count": {

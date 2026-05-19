@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Amakuru n'ububiko",
+  "clearCache": "Kuraho ububiko",
   "cacheClearedSuccess": "Ububiko bwakuweho neza",
   "location": "Ikibanza",
   "language": "Ururimi",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Servisi y'ahantu irazimye.",
   "locationPermissionDenied": "Uruhusha rw'ahantu rwaranse.",
   "locationDetectionFailed": "Ntiyashobora kumenya aho uri. Hitamwo igisagara n'amaboko canke wongere ugerageze.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ibisagara",
   "@citiesCount": {
     "placeholders": {
       "count": {

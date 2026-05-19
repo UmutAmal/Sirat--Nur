@@ -91,10 +91,10 @@ class AppLocalizationsWo extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Done ak dencukaay';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Futti cache';
 
   @override
   String get cacheClearedSuccess => 'Cache bi jeexna';

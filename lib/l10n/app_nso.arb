@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Tirelo ya lefelo e šitišitšwe.",
   "locationPermissionDenied": "Tumelelo ya lefelo e gannwe.",
   "locationDetectionFailed": "Ga se ya kgona go lemoga lefelo la gago. Hle kgetha motse ka seatla goba o leke gape.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} metse",
   "@citiesCount": {
     "placeholders": {
       "count": {

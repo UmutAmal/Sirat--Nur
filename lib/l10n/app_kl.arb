@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Data & toqqorsiviit",
+  "clearCache": "Cache-mik piiaaneq",
   "cacheClearedSuccess": "Cache iluatsilluartumik piiarneqarpoq",
   "location": "Sumiiffia",
   "language": "Oqaatsit",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Sumiiffimmi sullissineq atorneqanngilaq.",
   "locationPermissionDenied": "Sumiiffimmut akuersissut itigartinneqarpoq.",
   "locationDetectionFailed": "Sumiiffiit paasiniarsinnaanngilara. Illoqarfik manuelt toqqaruk imaluunniit misiliigit.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} illoqarfiit",
   "@citiesCount": {
     "placeholders": {
       "count": {

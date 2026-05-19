@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Idatha nesitoreji",
+  "clearCache": "Sula isilondolozi",
   "cacheClearedSuccess": "Isilondolozi sisulwe ngempumelelo",
   "location": "Indawo",
   "language": "Ilimi",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Isevisi yendawo ivaliwe.",
   "locationPermissionDenied": "Imvumo yendawo inqatshiwe.",
   "locationDetectionFailed": "Angeze sakwazi ukuthola indawo yakho. Sibawa ukhethe idorobha ngesandla nofana uzame godu.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} amadorobha",
   "@citiesCount": {
     "placeholders": {
       "count": {

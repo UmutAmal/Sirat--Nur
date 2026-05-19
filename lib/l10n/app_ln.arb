@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Service ya esika ezali désactivé.",
   "locationPermissionDenied": "Ndingisa ya esika eboyamaki.",
   "locationDetectionFailed": "Ekokaki te ko détecter esika ozali. Svp pona engumba moko na maboko to meka lisusu.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} bingumba",
   "@citiesCount": {
     "placeholders": {
       "count": {

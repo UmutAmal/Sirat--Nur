@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "डाटा एंड स्टोरेज के बारे में बतावल गइल बा",
+  "clearCache": "कैश के साफ कर दिहल जाव",
   "cacheClearedSuccess": "कैश सफलतापूर्वक साफ हो गइल",
   "location": "अस्थान",
   "language": "भाखा",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "लोकेशन सेवा अक्षम बा।",
   "locationPermissionDenied": "लोकेशन के अनुमति से इनकार कर दिहल गइल.",
   "locationDetectionFailed": "राउर लोकेशन के पता ना चल पावल. कृपया कवनो शहर के मैन्युअल रूप से चुनीं या फिर से कोशिश करीं।",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} शहरन के बा",
   "@citiesCount": {
     "placeholders": {
       "count": {

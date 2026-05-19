@@ -52,7 +52,7 @@
   "locationServiceDisabled": "An kashe sabis na wurin.",
   "locationPermissionDenied": "An ƙi izinin wurin.",
   "locationDetectionFailed": "An kasa gano wurin ku. Da fatan za a zaɓi birni da hannu ko a sake gwadawa.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} garuruwa",
   "@citiesCount": {
     "placeholders": {
       "count": {

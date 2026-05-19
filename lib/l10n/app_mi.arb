@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Kua monoa te ratonga tauwāhi.",
   "locationPermissionDenied": "I whakakorehia te whakaaetanga waahi.",
   "locationDetectionFailed": "Kaore i kitea to waahi. Kōwhiria ā-ringatia tētahi tāone ka ngana anō rānei.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} taone",
   "@citiesCount": {
     "placeholders": {
       "count": {

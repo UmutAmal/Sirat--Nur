@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Bansangu & Kubumba",
+  "clearCache": "Katula mambu ya me bumbana",
   "cacheClearedSuccess": "Bo me katula mbote-mbote cache",
   "location": "Kisika",
   "language": "Ndinga",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Kisalu ya kisika me kangama.",
   "locationPermissionDenied": "Bo me buyisa nswa ya kisika.",
   "locationDetectionFailed": "Ka lenda zaya fulu kiaku ko. Pona mbanza mosi na maboko to meka diaka.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} bambanza",
   "@citiesCount": {
     "placeholders": {
       "count": {

@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "डाटा एवं भण्डारण",
+  "clearCache": "Cache स्वच्छं कुर्वन्तु",
   "cacheClearedSuccess": "कैश सफलतया स्वच्छः अभवत्",
   "location": "स्थानीय",
   "language": "भाषा",

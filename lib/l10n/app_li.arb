@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Data & Opslaag",
+  "clearCache": "Cache wies",
   "cacheClearedSuccess": "Cache succesvol wies",
   "location": "Lokasie",
   "language": "Taal",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Locatieservice is oetgeschakeld.",
   "locationPermissionDenied": "Locatietoestemming geweigerd.",
   "locationDetectionFailed": "Kon eur locatie neet detectere. Kies ‘n stad handmatig of probeer ‘t nog ‘ns.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} stede",
   "@citiesCount": {
     "placeholders": {
       "count": {

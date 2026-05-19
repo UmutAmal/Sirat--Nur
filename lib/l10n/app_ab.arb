@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Адыррақәеи аҵәахырҭақәеи",
+  "clearCache": "Аҵәахырҭа рыцқьатәуп",
   "cacheClearedSuccess": "Акеш қәҿиарала ирыцқьоуп",
   "location": "Иахьыҟоу аҭыԥ",
   "language": "Абызшәа",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Аҭыԥ амаҵзура аҿыхуп.",
   "locationPermissionDenied": "Аҭыԥ азы азин мап ацәкуп.",
   "locationDetectionFailed": "Уахьыҟоу аилкаара ауам. Ҳаҳәоит, ақалақь напыла иалышәх ма даҽазнык шәҽазышәшәа.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ақалақьқәа",
   "@citiesCount": {
     "placeholders": {
       "count": {

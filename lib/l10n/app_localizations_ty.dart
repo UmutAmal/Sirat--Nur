@@ -91,10 +91,10 @@ class AppLocalizationsTy extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Te mau haamaramaramaraa e te vahi tape\'araa';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Tatara i te vahi ta\'oto';
 
   @override
   String get cacheClearedSuccess => 'Ua tamâ - maitai - hia te Cache';
@@ -129,7 +129,7 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count oire';
   }
 
   @override

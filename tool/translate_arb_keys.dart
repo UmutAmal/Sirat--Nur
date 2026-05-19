@@ -1069,6 +1069,8 @@ const _knownWeakDownloadActionCandidates = [
 ];
 
 const _knownGeneralTranslationDebris = [
+  'Could not detect your location.',
+  'Please choose a city manually or try again.',
   'Ukax mä juk’a pachanakanwa',
   'ukax mä juk’a pachanakanwa',
 ];

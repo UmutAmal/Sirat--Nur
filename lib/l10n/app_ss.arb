@@ -40,8 +40,8 @@
       }
     }
   },
-  "dataStorage": "Data & Storage",
-  "clearCache": "Clear Cache",
+  "dataStorage": "Idatha & Sitoreji",
+  "clearCache": "Susa ikheshi",
   "cacheClearedSuccess": "I-cache isuswe ngemphumelelo",
   "location": "Indzawo",
   "language": "Lulimi",
@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Insizakalo yendzawo ikhubatekile.",
   "locationPermissionDenied": "Imvume yendzawo iyancishwa.",
   "locationDetectionFailed": "Ayikhoni kutfola indzawo yakho. Sicela ukhetse lidolobha ngesandla nobe uphindze uzame.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} emadolobha",
   "@citiesCount": {
     "placeholders": {
       "count": {

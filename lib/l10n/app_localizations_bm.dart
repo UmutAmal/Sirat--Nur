@@ -129,7 +129,7 @@ class AppLocalizationsBm extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count dugubaw kɔnɔ';
   }
 
   @override

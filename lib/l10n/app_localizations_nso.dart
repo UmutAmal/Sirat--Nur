@@ -130,7 +130,7 @@ class AppLocalizationsNso extends AppLocalizations {
 
   @override
   String citiesCount(String count) {
-    return '$count cities';
+    return '$count metse';
   }
 
   @override

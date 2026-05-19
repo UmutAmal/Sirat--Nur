@@ -52,7 +52,7 @@
   "locationServiceDisabled": "Empeereza y'ekifo eremeddwa.",
   "locationPermissionDenied": "Olukusa lw'ekifo lugaaniddwa.",
   "locationDetectionFailed": "Teyasobodde kuzuula kifo kyo. Nsaba olonde ekibuga mu ngalo oba ddamu ogezeeko.",
-  "citiesCount": "{count} cities",
+  "citiesCount": "{count} ebibuga",
   "@citiesCount": {
     "placeholders": {
       "count": {

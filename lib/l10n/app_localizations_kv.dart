@@ -91,10 +91,10 @@ class AppLocalizationsKv extends AppLocalizations {
   }
 
   @override
-  String get dataStorage => 'Data & Storage';
+  String get dataStorage => 'Даннӧйяс да видзанін';
 
   @override
-  String get clearCache => 'Clear Cache';
+  String get clearCache => 'Кэш бырӧдӧм .';
 
   @override
   String get cacheClearedSuccess => 'Кэш бурӧн бырӧдӧма .';
