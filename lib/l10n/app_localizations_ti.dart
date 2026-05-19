@@ -97,7 +97,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'ካሸ ብዓወት ተጸሪጉ';
 
   @override
   String get location => 'ኣንፈት';
@@ -136,7 +136,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get search => 'ድለዩ።';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ምድላይ...';
 
   @override
   String get noResults => 'ዝኾነ ውጽኢት ኣይተረኽበን።';
@@ -157,16 +157,16 @@ class AppLocalizationsTi extends AppLocalizations {
   String get quranLoadFailed => 'ትሕዝቶ ቁርኣን ክጽዓን ኣይከኣለን። በጃኹም ደጊምኩም ፈትኑ።';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ዳግማይ ፈትን።';
 
   @override
   String get refreshAction => 'ምሕዳስ';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ሰርዝ';
 
   @override
-  String get save => 'Save';
+  String get save => 'ምቑጣብ';
 
   @override
   String get delete => 'ምድምሳስ';

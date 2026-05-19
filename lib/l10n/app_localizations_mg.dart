@@ -145,7 +145,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Error';
+  String get error => 'fahadisoana';
 
   @override
   String get appErrorOccurred => 'Nisy hadisoana nitranga';

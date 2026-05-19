@@ -97,7 +97,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'kobxiseyna agdaabele gurral fiyteh';
 
   @override
   String get location => 'Ku araca';
@@ -133,44 +133,44 @@ class AppLocalizationsAa extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Gorana';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Gorana...';
 
   @override
   String get noResults => 'Xalitte mageytimta';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'quuki...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Qellata';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Hoxi yekke';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Amixxige sinni qellat';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Qagitaak gibbata';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Uqusbus';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Bayis';
 
   @override
-  String get save => 'Save';
+  String get save => 'Wadiyya';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Bayis';
 
   @override
   String get edit => 'Ceesayiyya';
@@ -185,7 +185,7 @@ class AppLocalizationsAa extends AppLocalizations {
   String get yes => 'Yeey';
 
   @override
-  String get no => 'No';
+  String get no => 'bale';
 
   @override
   String get surah => 'Surah';
@@ -1083,7 +1083,7 @@ class AppLocalizationsAa extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Xaamiyyi gaba kalam maduuda. Ku maganak qagitaak gibbat.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

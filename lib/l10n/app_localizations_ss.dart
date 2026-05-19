@@ -97,7 +97,7 @@ class AppLocalizationsSs extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'I-cache isuswe ngemphumelelo';
 
   @override
   String get location => 'Indzawo';
@@ -133,44 +133,44 @@ class AppLocalizationsSs extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Cinga';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Cinga...';
 
   @override
   String get noResults => 'Kute imiphumela letfolakele';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Kulayisha...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Liphutsa';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Kwenteke liphutsa';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Liphutsa lelingatiwa';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Phindza uzame';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Vuselela';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Khansela';
 
   @override
-  String get save => 'Save';
+  String get save => 'Gcina';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Sula';
 
   @override
   String get edit => 'Hlela';
@@ -185,7 +185,7 @@ class AppLocalizationsSs extends AppLocalizations {
   String get yes => 'Yebo';
 
   @override
-  String get no => 'No';
+  String get no => 'Cha';
 
   @override
   String get surah => 'Surah';
@@ -1086,7 +1086,7 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Kutsenga akuzange kucedvwe. Sicela uphindze uzame.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

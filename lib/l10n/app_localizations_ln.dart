@@ -142,10 +142,10 @@ class AppLocalizationsLn extends AppLocalizations {
   String get noResults => 'Ba résultats ezwami te';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ezali ko charger...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Libunga';
 
   @override
   String get appErrorOccurred => 'Libunga moko esalemaki';
@@ -161,7 +161,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get retry => 'Meká lisusu';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Bozongisa sika';
 
   @override
   String get cancel => 'Kolongola';
@@ -170,7 +170,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get save => 'Kobikisa';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Boma';
 
   @override
   String get edit => 'Kokoma';

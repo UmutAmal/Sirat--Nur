@@ -142,10 +142,10 @@ class AppLocalizationsEe extends AppLocalizations {
   String get noResults => 'Womekpɔ emetsonu aɖeke o';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Wole agba tsɔm...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Vodada';
 
   @override
   String get appErrorOccurred => 'Vodada aɖe dzɔ';
@@ -161,7 +161,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get retry => 'Gadze agbagba ake';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Gbugbɔgadzɔ';
 
   @override
   String get cancel => 'Te fli ɖe eme';
@@ -170,7 +170,7 @@ class AppLocalizationsEe extends AppLocalizations {
   String get save => 'Dzrae ɖo';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Ɖe ɖa';
 
   @override
   String get edit => 'Wɔ tɔtrɔ';

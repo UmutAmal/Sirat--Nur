@@ -142,10 +142,10 @@ class AppLocalizationsGa extends AppLocalizations {
   String get noResults => 'Níor aimsíodh aon torthaí';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Á lódáil...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Earráid';
 
   @override
   String get appErrorOccurred => 'Tharla earráid';
@@ -161,7 +161,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get retry => 'Bain triail eile as';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Athnuaigh';
 
   @override
   String get cancel => 'Cealaigh';
@@ -170,7 +170,7 @@ class AppLocalizationsGa extends AppLocalizations {
   String get save => 'Sábháil';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Scrios';
 
   @override
   String get edit => 'Cuir in eagar';

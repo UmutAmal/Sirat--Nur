@@ -875,6 +875,10 @@ bool _hasKnownWrongContext(String key, String value) {
     return _containsAny(value, const ['入职']);
   }
 
+  if (key == 'no') {
+    return const {'br', 'бр'}.contains(value.trim().toLowerCase());
+  }
+
   if (_isPremiumSubscriptionKey(key)) {
     return _containsAny(value, const ['Prämie', '保费', 'قسط']);
   }

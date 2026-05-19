@@ -97,7 +97,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache escafat amb succès';
 
   @override
   String get location => 'Endrech';
@@ -135,44 +135,44 @@ class AppLocalizationsOc extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Cercar';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Cercar...';
 
   @override
   String get noResults => 'Cap de resultat trobat';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'En cargament...';
 
   @override
   String get error => 'Error';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Una error s\'es producha';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Error desconeguda';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Tornatz ensajar';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Actualizar';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Anullar';
 
   @override
-  String get save => 'Save';
+  String get save => 'Salvar';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Escafar';
 
   @override
   String get edit => 'Modificar';
@@ -187,7 +187,7 @@ class AppLocalizationsOc extends AppLocalizations {
   String get yes => 'Òc';
 
   @override
-  String get no => 'No';
+  String get no => 'Non';
 
   @override
   String get surah => 'Surah';
@@ -1089,7 +1089,7 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'La crompa a pas pogut èsser completada. Ensajatz tornarmai.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

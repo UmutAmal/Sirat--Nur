@@ -143,10 +143,10 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get noResults => 'Awan ti nasarakan a resulta';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Karga ti...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Biddut';
 
   @override
   String get appErrorOccurred => 'Napasamak ti biddut';
@@ -162,7 +162,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get retry => 'Padasem manen';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Refresh ti';
 
   @override
   String get cancel => 'Kanselaen';
@@ -171,7 +171,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get save => 'Idulin';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Ikkaten';
 
   @override
   String get edit => 'Urnosen ti';

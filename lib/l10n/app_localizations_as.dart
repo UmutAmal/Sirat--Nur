@@ -142,10 +142,10 @@ class AppLocalizationsAs extends AppLocalizations {
   String get noResults => 'কোনো ফলাফল পোৱা নগ’ল';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'লোড হচ্ছে...';
 
   @override
-  String get error => 'Error';
+  String get error => 'আঁসোৱাহ';
 
   @override
   String get appErrorOccurred => 'এটা ভুল হ’ল';
@@ -161,7 +161,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get retry => 'পুনৰ চেষ্টা কৰক';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'সতেজ কৰক';
 
   @override
   String get cancel => 'বাতিল কৰক';
@@ -170,7 +170,7 @@ class AppLocalizationsAs extends AppLocalizations {
   String get save => 'সঞ্চয় কৰা';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'বিলোপ';
 
   @override
   String get edit => 'সম্পাদনা কৰক';

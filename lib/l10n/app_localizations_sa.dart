@@ -97,7 +97,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'कैश सफलतया स्वच्छः अभवत्';
 
   @override
   String get location => 'स्थानीय';
@@ -136,7 +136,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get search => 'अन्वेषणम्';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'अन्वेषण...';
 
   @override
   String get noResults => 'न परिणामः प्राप्तः';
@@ -158,16 +158,16 @@ class AppLocalizationsSa extends AppLocalizations {
       'कुरान सामग्री लोड् कर्तुं न शक्यते स्म। कृपया पुनः प्रयासं कुर्वन्तु।';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'पुनः प्रयासं कुर्वन्तु';
 
   @override
   String get refreshAction => 'ताजगी';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'निरसयतु';
 
   @override
-  String get save => 'Save';
+  String get save => 'रक्ष्';
 
   @override
   String get delete => 'विलोपयतु';

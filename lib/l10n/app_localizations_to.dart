@@ -97,7 +97,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Kuo lavame\'a hono fakama\'a \'o e cache';
 
   @override
   String get location => 'Tu\'u\'anga';
@@ -135,44 +135,44 @@ class AppLocalizationsTo extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Kumi';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Kumi...';
 
   @override
   String get noResults => '\'Ikai ke ma\'u ha ola';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Uta...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Hala';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Na\'e hoko ha fehalaaki';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Hala \'oku \'ikai \'ilo\'i';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Toe feinga';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Fakafo\'ou';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Kaniseli';
 
   @override
-  String get save => 'Save';
+  String get save => 'Fakahaofi';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Tamate\'i';
 
   @override
   String get edit => 'Fakatonutonu';
@@ -187,7 +187,7 @@ class AppLocalizationsTo extends AppLocalizations {
   String get yes => 'ʻIo';
 
   @override
-  String get no => 'No';
+  String get no => 'ʻIkai';
 
   @override
   String get surah => 'Surah';
@@ -1090,7 +1090,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Naʻe ʻikai lava ke fakakakato ʻa e fakataú. Kātaki ʻo toe feinga.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

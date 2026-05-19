@@ -145,7 +145,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Filijuru';
 
   @override
   String get appErrorOccurred => 'Misali dɔ kɛra';
@@ -161,7 +161,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get retry => 'Aw ye a lajɛ kokura';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Lakurayali';
 
   @override
   String get cancel => 'ka dankari';
@@ -170,7 +170,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get save => 'Ka mara';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Ka jɔsi';
 
   @override
   String get edit => 'Ka korize';

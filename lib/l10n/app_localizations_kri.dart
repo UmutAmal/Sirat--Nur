@@ -143,10 +143,10 @@ class AppLocalizationsKri extends AppLocalizations {
   String get noResults => 'No rizulyt nɔ de';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'We yu de lod...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Mistek';
 
   @override
   String get appErrorOccurred => 'Wan mistek bin apin';
@@ -162,7 +162,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get retry => 'Tray bak';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Rifresh yu';
 
   @override
   String get cancel => 'Kansel';
@@ -171,7 +171,7 @@ class AppLocalizationsKri extends AppLocalizations {
   String get save => 'Sev am';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Dilit';
 
   @override
   String get edit => 'Ɛdit';

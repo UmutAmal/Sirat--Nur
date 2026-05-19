@@ -23136,3 +23136,39 @@
 
 ### Sonraki Adim
 - Bu commit push edildikten sonra yeni dongude tam audit basligini tekrar al ve kalan `Same-as-English` borcunu en yuksek gorunurlukteki onboarding/empty-state/error copy batch'leriyle parcali azalt.
+
+## 2026-05-19 TUR-578 - Generic Action and Error Shell L10n Fallback Reduction
+
+### MASTER Karari
+- Risk: Genel hata/eylem metinleri (`loading`, `retry`, `cancel`, `save`, `delete`, `search`, `premiumPurchaseFailed` vb.) uygulamanin birden cok ekraninda gorunuyor ve 196 locale icinde genis Ingilizce fallback birakiyordu. Bu, hata aninda veya temel UI aksiyonlarinda kullanici guvenini dusuren P1 l10n/UX riskiydi.
+- Kanit:
+  - Patch oncesi audit: `dart run tool/translate_arb_keys.dart --report loading error appErrorOccurred appUnknownError retry refreshAction cancel save delete no search searchHint noResults cacheClearedSuccess premiumPurchaseFailed`.
+  - Patch oncesi `Same-as-English locales: 1040`.
+  - `no` anahtari ilk batch'te bazi dillerde "number abbreviation" baglamina kayabildigi icin bu turdan cikarildi ve eski degerlerine geri alindi.
+  - Patch sonrasi guvenli 14 anahtar auditi: `dart run tool/translate_arb_keys.dart --report loading error appErrorOccurred appUnknownError retry refreshAction cancel save delete search searchHint noResults cacheClearedSuccess premiumPurchaseFailed`.
+  - Patch sonrasi `Same-as-English locales: 436`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - `no` ozel kontrolu: `dart run tool/translate_arb_keys.dart --report no` hala yalniz takip ediliyor; bu turda ceviri uygulanmadi.
+  - ARB JSON parse gate: `Get-ChildItem lib\l10n\app_*.arb | ConvertFrom-Json` PASS.
+  - `flutter gen-l10n` calistirildi ve generated localization siniflari ARB ile senkronlandi.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 8/25`. Genel UI/hata yuzeyindeki same-as-English borcu 14 guvenli anahtarda `1040 -> 436` seviyesine indi; `no` gibi baglam riski yuksek kisa anahtar ayrica guard ile korunmaya alindi.
+- Rollback plani: Bu turdaki `lib\l10n\app_*.arb`, generated `lib\l10n\app_localizations_*.dart`, `tool\translate_arb_keys.dart`, `test\translate_arb_keys_test.dart` ve bu handover kaydi tek commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` icine `no` anahtari icin `br/бр` gibi "number abbreviation" yanlis baglamlarini reddeden guard eklendi.
+- `tool\translate_arb_keys.dart` ile yalniz genel UI/hata anahtarlari cevrildi: `loading`, `error`, `appErrorOccurred`, `appUnknownError`, `retry`, `refreshAction`, `cancel`, `save`, `delete`, `search`, `searchHint`, `noResults`, `cacheClearedSuccess`, `premiumPurchaseFailed`.
+- Dini kaynak metni, Quran/hadith/dua icerigi veya meal verisi uretilmedi ya da degistirilmedi.
+
+### TESTER Degisikligi
+- Yeni guard'lar:
+  - `test\translate_arb_keys_test.dart` icinde `tracks generic action and error shell l10n debt reduction` eklendi.
+  - `test\translate_arb_keys_test.dart` icinde `rejects no translations that mean number abbreviation` eklendi.
+- Hedefli test:
+  - `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `79/79`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Final kapilar ve push sonrasi yeni dongude `no` anahtarini aceleyle otomatik cevirmek yerine dil bazli net "Hayir/No" baglam guard'lariyla ele al.
+- Ayrica kalan yuksek gorunurlukteki empty-state ve location permission copy gruplari icin ayni parcali audit/translate/test dongusunu uygula.

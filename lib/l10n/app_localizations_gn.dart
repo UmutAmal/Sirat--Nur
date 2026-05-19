@@ -144,10 +144,10 @@ class AppLocalizationsGn extends AppLocalizations {
   String get noResults => 'Ndojejuhúi resultado';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ojekarga hína...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Jejavy';
 
   @override
   String get appErrorOccurred => 'Oiko peteĩ jejavy';
@@ -163,7 +163,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get retry => 'Eñeha’ã jey';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Embopyahu';
 
   @override
   String get cancel => 'Heja';
@@ -172,7 +172,7 @@ class AppLocalizationsGn extends AppLocalizations {
   String get save => 'Pysyrõ';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Mboje\'oha';
 
   @override
   String get edit => 'Moambue';

@@ -142,10 +142,10 @@ class AppLocalizationsSr extends AppLocalizations {
   String get noResults => 'Нема пронађених резултата';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Учитавање...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Грешка';
 
   @override
   String get appErrorOccurred => 'Дошло је до грешке';
@@ -161,7 +161,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get retry => 'Покушајте поново';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Освежи';
 
   @override
   String get cancel => 'Откажи';
@@ -170,7 +170,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get save => 'Сачувај';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Избриши';
 
   @override
   String get edit => 'Уреди';

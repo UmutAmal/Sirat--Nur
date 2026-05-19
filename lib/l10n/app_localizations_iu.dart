@@ -97,7 +97,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'ᑐᖅᑯᖅᑕᐅᓯᒪᔪᖅ ᐲᔭᖅᑕᐅᑦᑎᐊᖅᑐᖅ';
 
   @override
   String get location => 'ᐃᓂᒋᔭᐅᔪᖅ';
@@ -133,44 +133,44 @@ class AppLocalizationsIu extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'ᕿᓂᕐᓂᖅ';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'ᕿᓂᕐᓂᖅ...';
 
   @override
   String get noResults => 'ᖃᐅᔨᔭᐅᔪᖃᙱᑦᑐᖅ';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ᐅᓯᔭᐅᔪᖅ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ᑕᒻᒪᖅᑐᖅ';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'ᑕᒻᒪᖅᑐᖃᖅᑐᖅ';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'ᖃᐅᔨᒪᔭᐅᙱᑦᑐᖅ ᑕᒻᒪᖅᓯᒪᔪᖅ';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'ᐆᒃᑐᒃᑲᓐᓂᕆᑦ';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'ᓄᑖᙳᕆᐊᖅᑎᑦᑎᓂᖅ';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'ᖁᔭᓈᕐᓂᖅ';
 
   @override
-  String get save => 'Save';
+  String get save => 'ᐱᐅᓕᒃᖠᓂᖅ';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ᐲᔭᖅᑕᐅᔪᖅ';
 
   @override
   String get edit => 'ᐋᖅᑭᒋᐊᖅᑕᐅᔪᖅ';
@@ -185,7 +185,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get yes => 'ᐄ';
 
   @override
-  String get no => 'No';
+  String get no => 'ᐋᒃᑲ';
 
   @override
   String get surah => 'Surah';
@@ -1083,8 +1083,7 @@ class AppLocalizationsIu extends AppLocalizations {
       'Premium product is not available right now. Please try again later.';
 
   @override
-  String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+  String get premiumPurchaseFailed => 'ᓂᐅᕕᕐᓂᖅ ᐱᔭᕇᖅᑕᐅᔪᓐᓇᓚᐅᙱᓚᖅ. ᐆᑦᑐᑲᓐᓂᕆᑦ.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

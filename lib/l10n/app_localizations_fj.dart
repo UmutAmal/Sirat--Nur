@@ -97,7 +97,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Sa vakasavasavataki vinaka na Cache';
 
   @override
   String get location => 'Vanua';
@@ -134,44 +134,44 @@ class AppLocalizationsFj extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Vakasaqaqara';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Vakasaqaqara...';
 
   @override
   String get noResults => 'Sega ni kune e dua na macala';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Vakavodoki tiko...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Cala';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Sa yaco e dua na cala';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Cala sega ni kilai';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Tovolea tale';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Vakavoui';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Biuta laivi';
 
   @override
-  String get save => 'Save';
+  String get save => 'Maroroi';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Bokoca';
 
   @override
   String get edit => 'Veisautaka';
@@ -186,7 +186,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get yes => 'Io';
 
   @override
-  String get no => 'No';
+  String get no => 'Sega';
 
   @override
   String get surah => 'Surah';
@@ -1087,7 +1087,7 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'E sega ni rawa ni vakacavari na volivoli. Kerekere mo tovolea tale.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

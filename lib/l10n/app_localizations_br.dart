@@ -97,7 +97,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Diverket ar c\'hrubuilh gant berzh';
 
   @override
   String get location => 'Lec\'h';
@@ -135,44 +135,44 @@ class AppLocalizationsBr extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Klask';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Klask...';
 
   @override
   String get noResults => 'Disoc\'h ebet bet kavet';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'O kargañ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Fazi';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Degouezhet ez eus bet ur fazi';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Fazi dianav';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Klask en-dro';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Freskaat';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Nullañ';
 
   @override
-  String get save => 'Save';
+  String get save => 'Saveteiñ';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Dilemel';
 
   @override
   String get edit => 'Embann';
@@ -187,7 +187,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get yes => 'Ya';
 
   @override
-  String get no => 'No';
+  String get no => 'Ket';
 
   @override
   String get surah => 'Surah';
@@ -1086,7 +1086,7 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'N\'hall ket bezañ echuet ar prenadenn. Klaskit en-dro mar plij.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

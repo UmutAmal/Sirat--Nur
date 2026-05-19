@@ -97,7 +97,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache succesvol wies';
 
   @override
   String get location => 'Lokasie';
@@ -133,44 +133,44 @@ class AppLocalizationsLi extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Zeuke';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Zeuke...';
 
   @override
   String get noResults => 'Gein resultate gevoonde';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Laden...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Fout';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'D\'r is \'n fout opgetreie';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Onbekende fout';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Probeer nog ummer';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Verfrisse';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Annulere';
 
   @override
-  String get save => 'Save';
+  String get save => 'Opsjloon';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Verwijdere';
 
   @override
   String get edit => 'Bewirke';
@@ -185,7 +185,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get yes => 'Joa';
 
   @override
-  String get no => 'No';
+  String get no => 'Nei';
 
   @override
   String get surah => 'Surah';
@@ -1084,7 +1084,7 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'De aankoop koos neet weure voltooid. Probeer nog ummer.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

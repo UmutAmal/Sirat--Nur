@@ -97,7 +97,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Eṃōj an karreoik cache eo ilo tōprak';
 
   @override
   String get location => 'Jikin';
@@ -133,10 +133,10 @@ class AppLocalizationsMh extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Kabōk';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Kabōk...';
 
   @override
   String get noResults => 'Ejelok tokjen ko rar walok';
@@ -145,32 +145,32 @@ class AppLocalizationsMh extends AppLocalizations {
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Bōd';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Ear walok juon bōd';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Bōd eo ejelok jella kake';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Bar kajeoñ';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Kōkāāl';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Jolok';
 
   @override
-  String get save => 'Save';
+  String get save => 'Kakwōne';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Jeere';
 
   @override
   String get edit => 'Kajimwe';
@@ -185,7 +185,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get yes => 'Aet';
 
   @override
-  String get no => 'No';
+  String get no => 'Jab';
 
   @override
   String get surah => 'Surah';
@@ -1083,7 +1083,7 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Ear jab maroñ dedelok wia eo. Jouj im bar kajeoñ.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

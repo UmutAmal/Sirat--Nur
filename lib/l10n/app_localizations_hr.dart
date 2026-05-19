@@ -142,10 +142,10 @@ class AppLocalizationsHr extends AppLocalizations {
   String get noResults => 'Nema rezultata';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Učitavanje...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Greška';
 
   @override
   String get appErrorOccurred => 'Došlo je do pogreške';
@@ -161,7 +161,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get retry => 'Pokušaj ponovo';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Osvježiti';
 
   @override
   String get cancel => 'Otkazati';
@@ -170,7 +170,7 @@ class AppLocalizationsHr extends AppLocalizations {
   String get save => 'Uštedjeti';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Izbrisati';
 
   @override
   String get edit => 'Uredi';

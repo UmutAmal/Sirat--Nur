@@ -97,7 +97,7 @@ class AppLocalizationsKl extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache iluatsilluartumik piiarneqarpoq';
 
   @override
   String get location => 'Sumiiffia';
@@ -135,44 +135,44 @@ class AppLocalizationsKl extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Ujaasineq';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Ujaasineq...';
 
   @override
   String get noResults => 'Inerneqanngilaq';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ikkussuussineq...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Ajutoorneq';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Kukkusoqarpoq';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Ilisimaneqanngitsoq kukkuneq';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Misilittariaqarpat';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Nutarterineq';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'taamaatippaa';
 
   @override
-  String get save => 'Save';
+  String get save => 'Toqqorpaa';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Nunguterpaa';
 
   @override
   String get edit => 'Aaqqissuineq';
@@ -187,7 +187,7 @@ class AppLocalizationsKl extends AppLocalizations {
   String get yes => 'Aap';
 
   @override
-  String get no => 'No';
+  String get no => 'Naamik';
 
   @override
   String get surah => 'Surah';
@@ -1089,7 +1089,7 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Pisiniarneq naammassineqarsinnaasimanngilaq. Misilittariaqarpat.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

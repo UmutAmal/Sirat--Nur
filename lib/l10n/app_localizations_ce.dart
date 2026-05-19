@@ -97,7 +97,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Кэш кхиамца дӀаяьккхина';
 
   @override
   String get location => 'Лаьтта меттиг';
@@ -133,44 +133,44 @@ class AppLocalizationsCe extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Лахар';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Лахар...';
 
   @override
   String get noResults => 'Цхьа а жамӀ ца карийна .';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Загрузка...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ГӀалат';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'ГӀалат даьлла .';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Ца девзаш долу гӀалат .';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Юха хьажа';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Карладаккха';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'дӀадакха';
 
   @override
-  String get save => 'Save';
+  String get save => 'Ӏалашдан';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ДӀадаккха';
 
   @override
   String get edit => 'Тадан';
@@ -185,7 +185,7 @@ class AppLocalizationsCe extends AppLocalizations {
   String get yes => 'ХӀаъ';
 
   @override
-  String get no => 'No';
+  String get no => 'ХӀан-хӀа';
 
   @override
   String get surah => 'Surah';
@@ -1084,7 +1084,7 @@ class AppLocalizationsCe extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Эцар чекхдаккха аьтто ца баьлла. Юха хьажахьара ахь.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

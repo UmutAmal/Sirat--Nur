@@ -97,7 +97,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Ma na\'suha i cache';
 
   @override
   String get location => 'Lugat';
@@ -133,44 +133,44 @@ class AppLocalizationsCh extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Aligao';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Aligao...';
 
   @override
   String get noResults => 'Ti ma sodda\' i risulta siha';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ma\'a\'agang...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Linachi';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Guaha error ma susedi';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Ti ma tungo\' na isao';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Prueba ta\'lo';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Na\'lå\'la\' ta\'lo';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Kansela';
 
   @override
-  String get save => 'Save';
+  String get save => 'Satba';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Funas';
 
   @override
   String get edit => 'Na dinanchi';
@@ -185,7 +185,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get yes => 'Hunggan';
 
   @override
-  String get no => 'No';
+  String get no => 'Ahi\'';
 
   @override
   String get surah => 'Surah';
@@ -1087,7 +1087,7 @@ class AppLocalizationsCh extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Ti siña ma kumple i fina\'tinas. På\'go, prutehi ta\'lo.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

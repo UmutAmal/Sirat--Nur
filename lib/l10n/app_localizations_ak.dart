@@ -145,7 +145,7 @@ class AppLocalizationsAk extends AppLocalizations {
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Mfomsoɔ';
 
   @override
   String get appErrorOccurred => 'Mfomso bi sii';
@@ -161,7 +161,7 @@ class AppLocalizationsAk extends AppLocalizations {
   String get retry => 'San bɔ mmɔden bio';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Fa foforo hyɛ mu';
 
   @override
   String get cancel => 'Twam';
@@ -170,7 +170,7 @@ class AppLocalizationsAk extends AppLocalizations {
   String get save => 'Kora';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Pepa';
 
   @override
   String get edit => 'Sa mu';

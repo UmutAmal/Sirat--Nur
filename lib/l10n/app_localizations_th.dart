@@ -142,10 +142,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get noResults => 'ไม่พบผลลัพธ์';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'กำลังโหลด...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ข้อผิดพลาด';
 
   @override
   String get appErrorOccurred => 'เกิดข้อผิดพลาด';
@@ -161,7 +161,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get retry => 'ลองอีกครั้ง';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'รีเฟรช';
 
   @override
   String get cancel => 'ยกเลิก';
@@ -170,7 +170,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get save => 'บันทึก';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ลบ';
 
   @override
   String get edit => 'แก้ไข';

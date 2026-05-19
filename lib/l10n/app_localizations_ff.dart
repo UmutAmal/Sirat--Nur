@@ -97,7 +97,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache laɓɓinaama no moƴƴi';
 
   @override
   String get location => 'Wakere';
@@ -133,44 +133,44 @@ class AppLocalizationsFf extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Teffol';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Teffol...';
 
   @override
   String get noResults => 'Alaa ko heɓaa heen';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ina loowa...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Harbol';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Juumre waɗii';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Juumre nde anndaaka';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Enndu kadi';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Hesɗitin';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Willugo';
 
   @override
-  String get save => 'Save';
+  String get save => 'Hisugo';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Wilugo';
 
   @override
   String get edit => 'Windugo';
@@ -185,7 +185,7 @@ class AppLocalizationsFf extends AppLocalizations {
   String get yes => 'Oho';
 
   @override
-  String get no => 'No';
+  String get no => 'Kay';
 
   @override
   String get surah => 'Surah';
@@ -1085,7 +1085,7 @@ class AppLocalizationsFf extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Coodgu nguu waawaa timminde. Tiiɗno enndu kadi.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

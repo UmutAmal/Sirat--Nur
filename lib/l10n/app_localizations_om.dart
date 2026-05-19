@@ -143,10 +143,10 @@ class AppLocalizationsOm extends AppLocalizations {
   String get noResults => 'Bu\'aan hin argamne';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Fe\'amaa jira...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Dogoggora';
 
   @override
   String get appErrorOccurred => 'Dogoggorri uumame';
@@ -162,7 +162,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get retry => 'Irra deebi\'ii yaali';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Haaromsi';
 
   @override
   String get cancel => 'Haquu';
@@ -171,7 +171,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get save => 'Qusachuu';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Haquu';
 
   @override
   String get edit => 'Gulaaluu';

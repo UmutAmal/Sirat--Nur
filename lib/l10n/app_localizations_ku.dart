@@ -133,7 +133,7 @@ class AppLocalizationsKu extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Gerr';
 
   @override
   String get searchHint => 'Lêgerîn...';
@@ -145,7 +145,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get loading => 'Barkirin...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Şaşî';
 
   @override
   String get appErrorOccurred => 'Çewtiyek derket';
@@ -161,13 +161,13 @@ class AppLocalizationsKu extends AppLocalizations {
   String get retry => 'Ji nû ve biceribîne';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Hênikkirin';
 
   @override
   String get cancel => 'Betal bike';
 
   @override
-  String get save => 'Save';
+  String get save => 'Rizgarkirin';
 
   @override
   String get delete => 'Jêbirin';

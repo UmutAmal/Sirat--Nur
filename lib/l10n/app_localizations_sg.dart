@@ -97,7 +97,7 @@ class AppLocalizationsSg extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'A zi cache ni nzoni';
 
   @override
   String get location => 'Louengo ni';
@@ -133,44 +133,44 @@ class AppLocalizationsSg extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Gingo ti ba';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Gingo ti ba...';
 
   @override
   String get noResults => 'A wara mbeni ye ti pekoni pëpe';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'A yeke zia...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Tene ti mvene';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Mbeni faute asi';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Faute so a hinga ni pëpe';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Kiri mo tara';
 
   @override
   String get refreshAction => 'Refresh';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'zi ni';
 
   @override
-  String get save => 'Save';
+  String get save => 'Bata';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Zi ni';
 
   @override
   String get edit => 'Fa na le ti zo kue';
@@ -185,7 +185,7 @@ class AppLocalizationsSg extends AppLocalizations {
   String get yes => 'En';
 
   @override
-  String get no => 'No';
+  String get no => 'En-en';
 
   @override
   String get surah => 'Surah';
@@ -1088,7 +1088,7 @@ class AppLocalizationsSg extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'A lingbi ti hunzi vongo ye ni pëpe. Pardon, kiri mo tara ni.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

@@ -143,10 +143,10 @@ class AppLocalizationsBho extends AppLocalizations {
   String get noResults => 'कवनो रिजल्ट ना मिलल';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'लोड हो रहल बा...';
 
   @override
-  String get error => 'Error';
+  String get error => 'त्रुटि';
 
   @override
   String get appErrorOccurred => 'एगो त्रुटि हो गइल';
@@ -162,7 +162,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get retry => 'दोबारा कोशिश करीं';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'ताज़ा कर दिहल जाव';
 
   @override
   String get cancel => 'रद्द कर दिहल जाव';
@@ -171,7 +171,7 @@ class AppLocalizationsBho extends AppLocalizations {
   String get save => 'बचाईं';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'हटाईं';
 
   @override
   String get edit => 'संपादन कइल जाला';

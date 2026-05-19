@@ -97,7 +97,7 @@ class AppLocalizationsVe extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Cache yo phumulwa zwavhudi';
 
   @override
   String get location => 'Vhupo';
@@ -133,44 +133,44 @@ class AppLocalizationsVe extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Ṱoḓa';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Ṱoḓa...';
 
   @override
   String get noResults => 'Ahuna mvelelo dzo wanalaho';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ri khou ḓadza...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Phoswo';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Ho itea vhukhakhi';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Vhukhakhi vhu sa ḓivhei';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Lingedzani hafhu';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'U vusuludza';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Thutha';
 
   @override
-  String get save => 'Save';
+  String get save => 'Vhulunga';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Thutha';
 
   @override
   String get edit => 'Dzudzanya';
@@ -185,7 +185,7 @@ class AppLocalizationsVe extends AppLocalizations {
   String get yes => 'Ee';
 
   @override
-  String get no => 'No';
+  String get no => 'Hai';
 
   @override
   String get surah => 'Surah';
@@ -1089,7 +1089,7 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'U renga a zwo ngo kona u fhela. Ndi khou humbela uri ni lingedze hafhu.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

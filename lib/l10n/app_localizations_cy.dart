@@ -143,10 +143,10 @@ class AppLocalizationsCy extends AppLocalizations {
   String get noResults => 'Heb ganfod canlyniadau';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Wrthi\'n llwytho...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Gwall';
 
   @override
   String get appErrorOccurred => 'Digwyddodd gwall';
@@ -162,7 +162,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get retry => 'Ceisiwch eto';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Adnewyddu';
 
   @override
   String get cancel => 'Canslo';
@@ -171,7 +171,7 @@ class AppLocalizationsCy extends AppLocalizations {
   String get save => 'Arbed';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Dileu';
 
   @override
   String get edit => 'Golygu';

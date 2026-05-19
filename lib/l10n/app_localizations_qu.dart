@@ -144,10 +144,10 @@ class AppLocalizationsQu extends AppLocalizations {
   String get noResults => 'Mana ima tarikuykuna tarisqachu';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Cargachkanki...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Pantay';
 
   @override
   String get appErrorOccurred => 'Huk pantaymi rikurirqa';
@@ -163,7 +163,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get retry => 'Wakmanta kallpachakuy';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Refrescar';
 
   @override
   String get cancel => 'Sayachiy';
@@ -172,7 +172,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get save => 'Waqaychay';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Chinkachiy';
 
   @override
   String get edit => 'Ruwapay';

@@ -97,7 +97,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'कैश सफलतापूर्वक साफ हो गइल';
 
   @override
   String get location => 'अस्थान';
@@ -134,44 +134,44 @@ class AppLocalizationsBh extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'तलाशी';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'तलाशी...';
 
   @override
   String get noResults => 'कवनो रिजल्ट ना मिलल';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'लोड हो रहल बा...';
 
   @override
-  String get error => 'Error';
+  String get error => 'त्रुटि';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'एगो त्रुटि हो गइल';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'अज्ञात त्रुटि हो गइल बा';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'दोबारा कोशिश करीं';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'ताज़ा कर दिहल जाव';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'मना कइ दीं';
 
   @override
-  String get save => 'Save';
+  String get save => 'बचावल';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'हटाईं';
 
   @override
   String get edit => 'संपादन कईल';
@@ -186,7 +186,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get yes => 'हॅंं';
 
   @override
-  String get no => 'No';
+  String get no => 'ना';
 
   @override
   String get surah => 'Surah';
@@ -1084,7 +1084,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'खरीददारी पूरा ना हो पावल। कृपया दोबारा कोशिश करीं।';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

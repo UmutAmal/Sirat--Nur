@@ -144,10 +144,10 @@ class AppLocalizationsTs extends AppLocalizations {
   String get noResults => 'Ku hava mbuyelo lowu kumiweke';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Ku layicha...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Xihoxo';
 
   @override
   String get appErrorOccurred => 'Ku humelerile xihoxo';
@@ -163,7 +163,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get retry => 'Ringeta nakambe';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Pfuxeta';
 
   @override
   String get cancel => 'Khansela';
@@ -172,7 +172,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get save => 'Hlayisa';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Sula';
 
   @override
   String get edit => 'Hlela';

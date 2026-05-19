@@ -142,10 +142,10 @@ class AppLocalizationsLg extends AppLocalizations {
   String get noResults => 'Tewali bivuddemu bizuuliddwa';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Okutikka...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Ensobi';
 
   @override
   String get appErrorOccurred => 'Ensobi ebaddewo';
@@ -161,7 +161,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get retry => 'Ddamu gezaako';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Okuzza obuggya';
 
   @override
   String get cancel => 'okusazaamu';
@@ -170,7 +170,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get save => 'Okununula';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Okusiimuula';
 
   @override
   String get edit => 'Okugolola';

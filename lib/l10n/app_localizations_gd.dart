@@ -143,10 +143,10 @@ class AppLocalizationsGd extends AppLocalizations {
   String get noResults => 'Cha deach toradh a lorg';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'A\' luchdachadh...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Mearachd';
 
   @override
   String get appErrorOccurred => 'Thachair mearachd';
@@ -162,7 +162,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get retry => 'Feuch a-rithist';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Ùraich';
 
   @override
   String get cancel => 'Sguir dheth';
@@ -171,7 +171,7 @@ class AppLocalizationsGd extends AppLocalizations {
   String get save => 'Sàbhail';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Sguab às';
 
   @override
   String get edit => 'Deasaich';

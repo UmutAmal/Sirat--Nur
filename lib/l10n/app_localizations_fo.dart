@@ -97,7 +97,7 @@ class AppLocalizationsFo extends AppLocalizations {
   String get clearCache => 'Clear Cache';
 
   @override
-  String get cacheClearedSuccess => 'Cache cleared successfully';
+  String get cacheClearedSuccess => 'Goymslan er ruddað';
 
   @override
   String get location => 'Staður';
@@ -133,44 +133,44 @@ class AppLocalizationsFo extends AppLocalizations {
   }
 
   @override
-  String get search => 'Search';
+  String get search => 'Leita';
 
   @override
-  String get searchHint => 'Search...';
+  String get searchHint => 'Leita...';
 
   @override
   String get noResults => 'Eingi úrslit funnin';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'Heinta...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Feilur';
 
   @override
-  String get appErrorOccurred => 'An error occurred';
+  String get appErrorOccurred => 'Ein feilur hendi.';
 
   @override
-  String get appUnknownError => 'Unknown error';
+  String get appUnknownError => 'Ókendur feilur';
 
   @override
   String get quranLoadFailed =>
       'Quran content could not be loaded. Please try again.';
 
   @override
-  String get retry => 'Retry';
+  String get retry => 'Royn aftur';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Fríska upp';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'strika';
 
   @override
-  String get save => 'Save';
+  String get save => 'Bjarga';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Strúka burtur';
 
   @override
   String get edit => 'Rætta';
@@ -185,7 +185,7 @@ class AppLocalizationsFo extends AppLocalizations {
   String get yes => 'Ja';
 
   @override
-  String get no => 'No';
+  String get no => 'Nei';
 
   @override
   String get surah => 'Surah';
@@ -1083,7 +1083,7 @@ class AppLocalizationsFo extends AppLocalizations {
 
   @override
   String get premiumPurchaseFailed =>
-      'Purchase could not be completed. Please try again.';
+      'Keypið kundi ikki gerast liðugt. Vinarliga royn aftur.';
 
   @override
   String get paywallFeature1Title => 'Neural Assistant Plus';

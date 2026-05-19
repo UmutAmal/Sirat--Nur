@@ -146,7 +146,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get loading => 'Loading...';
 
   @override
-  String get error => 'Error';
+  String get error => 'Phošo';
 
   @override
   String get appErrorOccurred => 'Go ile gwa direga phošo';
@@ -162,7 +162,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get retry => 'Leka gape';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'Lapološa';
 
   @override
   String get cancel => 'Khansela';
@@ -171,7 +171,7 @@ class AppLocalizationsNso extends AppLocalizations {
   String get save => 'Boloka';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'Phumola';
 
   @override
   String get edit => 'Edita';

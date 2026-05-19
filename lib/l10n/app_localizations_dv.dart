@@ -144,10 +144,10 @@ class AppLocalizationsDv extends AppLocalizations {
   String get noResults => 'އެއްވެސް ނަތީޖާއެއް ނުފެނެއެވެ';
 
   @override
-  String get loading => 'Loading...';
+  String get loading => 'ލޯޑިންގ...';
 
   @override
-  String get error => 'Error';
+  String get error => 'ކުށް';
 
   @override
   String get appErrorOccurred => 'ގޯހެއް ދިމާވިއެވެ';
@@ -163,7 +163,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get retry => 'އަލުން މަސައްކަތް ކުރާށެވެ';
 
   @override
-  String get refreshAction => 'Refresh';
+  String get refreshAction => 'ރިފްރެޝް ކޮށްލާށެވެ';
 
   @override
   String get cancel => 'ކެންސަލް';
@@ -172,7 +172,7 @@ class AppLocalizationsDv extends AppLocalizations {
   String get save => 'ރައްކާކުރުން';
 
   @override
-  String get delete => 'Delete';
+  String get delete => 'ޑިލީޓް';
 
   @override
   String get edit => 'ބަދަލު ގެނައުން';
