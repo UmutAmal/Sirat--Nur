@@ -30,13 +30,13 @@ class AppLocalizationsRn extends AppLocalizations {
   String get calendar => 'Ikirangamisi';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Amagenamiterere';
 
   @override
   String get nextPrayer => 'Isengesho rikurikira';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Igihe c\'amasengesho';
 
   @override
   String get continueReading => 'Bandanya usoma';
@@ -103,19 +103,19 @@ class AppLocalizationsRn extends AppLocalizations {
   String get location => 'Ikibanza';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ururimi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Hitamwo ururimi';
 
   @override
   String get searchLanguage => 'Gushaka indimi 180+...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Sisitemu mburabuzi';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Aho uri ubu (GPS)';
 
   @override
   String get locationServiceDisabled => 'Servisi y\'ahantu irazimye.';

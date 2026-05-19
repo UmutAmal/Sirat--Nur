@@ -30,13 +30,13 @@ class AppLocalizationsGv extends AppLocalizations {
   String get calendar => 'Calendar;';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Roishtyn';
 
   @override
   String get nextPrayer => 'Padjer er-gerrey';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Traaghyn Padjer';
 
   @override
   String get continueReading => 'Lesh Lesh';
@@ -103,19 +103,19 @@ class AppLocalizationsGv extends AppLocalizations {
   String get location => 'Jalloo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Chengey';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Reih yn Çhengey';
 
   @override
   String get searchLanguage => 'Clasht 180+ çhengey...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'System ry-hoi';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Sushtal nish (GPS)';
 
   @override
   String get locationServiceDisabled =>

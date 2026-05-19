@@ -30,13 +30,13 @@ class AppLocalizationsWo extends AppLocalizations {
   String get calendar => 'Almanak';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Jekkal';
 
   @override
   String get nextPrayer => 'Ñaan bu ci topp';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Waxtu ñaan';
 
   @override
   String get continueReading => 'Wéyal jàng';
@@ -103,19 +103,19 @@ class AppLocalizationsWo extends AppLocalizations {
   String get location => 'Bërab';
 
   @override
-  String get language => 'Language';
+  String get language => 'Kalamaa';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Tannal làkk wi';
 
   @override
   String get searchLanguage => 'Seetal 180+ làkk...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Sistem biñ jagleel';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Barab bi nga nekk leegi (GPS)';
 
   @override
   String get locationServiceDisabled => 'Serwiisu barab bi dafa dellu ginaaw.';

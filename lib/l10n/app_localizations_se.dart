@@ -30,13 +30,13 @@ class AppLocalizationsSe extends AppLocalizations {
   String get calendar => 'Kaleandar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Ásahusat';
 
   @override
   String get nextPrayer => 'Boahtte rohkos';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Rohkosáiggit';
 
   @override
   String get continueReading => 'Joatkit lohkama';
@@ -103,19 +103,19 @@ class AppLocalizationsSe extends AppLocalizations {
   String get location => 'Sajádat';
 
   @override
-  String get language => 'Language';
+  String get language => 'Giella';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Vállje giela';
 
   @override
   String get searchLanguage => 'Ohcat 180+ giela...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Systema standárda';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Dálá báiki (GPS)';
 
   @override
   String get locationServiceDisabled => 'Báikebálvalus lea deaktiverejuvvon.';

@@ -30,7 +30,7 @@ class AppLocalizationsMg extends AppLocalizations {
   String get calendar => 'Kalandrie';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Fikirana';
 
   @override
   String get nextPrayer => 'Vavaka manaraka';

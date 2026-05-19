@@ -30,13 +30,13 @@ class AppLocalizationsKl extends AppLocalizations {
   String get calendar => 'Kalender';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Inniminniinerit';
 
   @override
-  String get nextPrayer => 'Next Prayer';
+  String get nextPrayer => 'Qinnuteqaat tulleq';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Qinusarnermi piffissat';
 
   @override
   String get continueReading => 'Atuarneq ingerlateqqiguk';
@@ -103,19 +103,19 @@ class AppLocalizationsKl extends AppLocalizations {
   String get location => 'Sumiiffia';
 
   @override
-  String get language => 'Language';
+  String get language => 'Oqaatsit';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Oqaatsit toqqaruk';
 
   @override
   String get searchLanguage => 'Oqaatsit 180+ ujarlugit...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Systemip atorneqarnera';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ullumikkut sumiiffik (GPS)';
 
   @override
   String get locationServiceDisabled =>

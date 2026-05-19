@@ -103,19 +103,19 @@ class AppLocalizationsTi extends AppLocalizations {
   String get location => 'ኣንፈት';
 
   @override
-  String get language => 'Language';
+  String get language => 'ቋንቋ';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'ቋንቋ ምረጽ';
 
   @override
   String get searchLanguage => '180+ ቋንቋታት ድለዩ...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'ስርዓት ነባሪ';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'ህሉው ቦታ (GPS)';
 
   @override
   String get locationServiceDisabled => 'ኣገልግሎት ኣቀማምጣ ተሰናኺሉ ኣሎ።';

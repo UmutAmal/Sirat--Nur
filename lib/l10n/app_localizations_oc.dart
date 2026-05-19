@@ -30,13 +30,13 @@ class AppLocalizationsOc extends AppLocalizations {
   String get calendar => 'Calendièr';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Paramètres';
 
   @override
   String get nextPrayer => 'Pregària seguenta';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Temps de pregària';
 
   @override
   String get continueReading => 'Contunhar la lectura';
@@ -103,19 +103,19 @@ class AppLocalizationsOc extends AppLocalizations {
   String get location => 'Endrech';
 
   @override
-  String get language => 'Language';
+  String get language => 'Lenga';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Seleccionar Lenga';
 
   @override
   String get searchLanguage => 'Cercar mai de 180 lengas...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Per defaut del sistèma';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Emplaçament actual (GPS)';
 
   @override
   String get locationServiceDisabled =>

@@ -30,13 +30,13 @@ class AppLocalizationsFj extends AppLocalizations {
   String get calendar => 'Kaleda';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Tuvatuva';
 
   @override
   String get nextPrayer => 'Masu ka tarava';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Gauna ni Masumasu .';
 
   @override
   String get continueReading => 'Tomana na Wiliwili';
@@ -103,19 +103,19 @@ class AppLocalizationsFj extends AppLocalizations {
   String get location => 'Vanua';
 
   @override
-  String get language => 'Language';
+  String get language => 'Vosa';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Digitaka na Vosa';
 
   @override
   String get searchLanguage => 'Vakasaqara e 180+ na vosa...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'ivakarau ni ivakarau';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Vanua ena gauna oqo (GPS)';
 
   @override
   String get locationServiceDisabled => 'E vakaleqai na veiqaravi ni vanua.';

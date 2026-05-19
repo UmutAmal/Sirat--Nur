@@ -2220,6 +2220,57 @@ void main() {
       }
     });
 
+    test('tracks settings and language shell l10n debt reduction', () {
+      const keys = [
+        'settings',
+        'nextPrayer',
+        'prayerTimes',
+        'continueReading',
+        'language',
+        'selectLanguage',
+        'searchLanguage',
+        'systemDefault',
+        'currentLocation',
+        'location',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(312));
+      for (final locale in ['aa', 'bo', 'ti']) {
+        for (final key in keys) {
+          final value = localeArbs[locale]![key] as String;
+          expect(
+            value,
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason: 'app_$locale.arb has multiline shell copy for $key',
+          );
+        }
+      }
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',

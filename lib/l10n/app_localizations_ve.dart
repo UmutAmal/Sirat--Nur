@@ -30,13 +30,13 @@ class AppLocalizationsVe extends AppLocalizations {
   String get calendar => 'Khalenda';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Zwishumiswa';
 
   @override
   String get nextPrayer => 'Thabelo i tevhelaho';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Zwifhinga zwa Thabelo';
 
   @override
   String get continueReading => 'Bvelani Phanḓa U Vhala';
@@ -103,19 +103,19 @@ class AppLocalizationsVe extends AppLocalizations {
   String get location => 'Vhupo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Luambo';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Khethani Luambo';
 
   @override
   String get searchLanguage => 'Setsha nyambo dza 180+...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Tshivhumbeo tsha Sisiṱeme';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Fhethu ha zwino (GPS)';
 
   @override
   String get locationServiceDisabled => 'Tshumelo ya fhethu yo thivhelwa.';

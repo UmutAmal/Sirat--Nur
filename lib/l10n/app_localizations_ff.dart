@@ -30,13 +30,13 @@ class AppLocalizationsFf extends AppLocalizations {
   String get calendar => 'Limlebbi';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Dottaaɗe';
 
   @override
   String get nextPrayer => 'Duwaawu garoowo';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Wakkatiiji Duwaawu';
 
   @override
   String get continueReading => 'Jokku Jaŋngude';
@@ -103,19 +103,19 @@ class AppLocalizationsFf extends AppLocalizations {
   String get location => 'Wakere';
 
   @override
-  String get language => 'Language';
+  String get language => 'Wolde';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Suɓo Ɗemngal';
 
   @override
   String get searchLanguage => 'Yiylo ko ɓuri 180 ɗemngal...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Siistem Defaare';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Nokku jooni oo (GPS)';
 
   @override
   String get locationServiceDisabled => 'Sarwiis nokku oo ina muusi.';

@@ -30,13 +30,13 @@ class AppLocalizationsSg extends AppLocalizations {
   String get calendar => 'Calendrier';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Paramètres';
 
   @override
   String get nextPrayer => 'Sambela ti peko';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Ngoi ti sambela .';
 
   @override
   String get continueReading => 'Ngbâ ti diko ni .';
@@ -103,19 +103,19 @@ class AppLocalizationsSg extends AppLocalizations {
   String get location => 'Louengo ni';
 
   @override
-  String get language => 'Language';
+  String get language => 'Yanga';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Soro yanga ti kodoro .';
 
   @override
   String get searchLanguage => 'Gi na ayanga ti kodoro 180+...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Système ti defaut';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ndo so mo yeke dä fadeso (GPS)';
 
   @override
   String get locationServiceDisabled => 'Service ti ndo ni ayeke dä pëpe.';

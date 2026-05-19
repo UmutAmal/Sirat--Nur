@@ -23102,3 +23102,37 @@
 ### Sonraki Adim
 - Bu gate ile her yeni l10n dongusunde once `--all --report` basligini al, sonra same-as-English borcu en gorunur ve guvenilir sekilde azalabilecek anahtar batch'ini sec.
 - Siradaki uygulama degisikligi adayi: `settings`, `ok`, `close`, `searchLanguage`, onboarding ve empty-state copy gruplarini desteklenen locale'lerde parcali ve testli azaltmak.
+
+## 2026-05-19 TUR-577 - Settings and Language Shell L10n Fallback Reduction
+
+### MASTER Karari
+- Risk: Settings/language/location/next-prayer kabuk metinleri 196 locale listesinde gorunur yuzeyde Ingilizce fallback birakiyordu. Dil secici ve ana ekran gibi ilk temas yuzeylerinde bu, tam l10n beklentisini bozuyordu.
+- Kanit:
+  - Patch oncesi audit: `dart run tool/translate_arb_keys.dart --report settings nextPrayer prayerTimes continueReading language selectLanguage searchLanguage systemDefault currentLocation location`.
+  - Patch oncesi `Same-as-English locales: 524`.
+  - Patch sonrasi ayni audit `Same-as-English locales: 312`.
+  - Patch sonrasi `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - `flutter gen-l10n` calistirildi ve uretilen `lib\l10n\app_localizations_*.dart` siniflari ARB ile senkronlandi.
+  - ARB JSON parse gate: `Get-ChildItem lib\l10n\app_*.arb | ConvertFrom-Json` PASS.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 9/25`. Gorunur settings/language kabuk yuzeyinde 212 Ingilizce fallback degeri kaldirildi; dini kaynak metni, Quran/hadith/dua icerigi veya meal verisi uretilmedi.
+- Rollback plani: Bu turdaki `lib\l10n\app_*.arb`, uretilen `lib\l10n\app_localizations_*.dart`, `test\translate_arb_keys_test.dart` ve bu handover kaydi tek i18n commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` ile sadece 10 UI kabuk anahtari cevrildi: `settings`, `nextPrayer`, `prayerTimes`, `continueReading`, `language`, `selectLanguage`, `searchLanguage`, `systemDefault`, `currentLocation`, `location`.
+- Uydurma dini bilgi uretilmemesi icin kapsam yalniz sekuler UI etiketlerinde tutuldu.
+- `flutter gen-l10n` ile generated localization siniflari guncellendi.
+
+### TESTER Degisikligi
+- Yeni guard:
+  - `test\translate_arb_keys_test.dart` icinde `tracks settings and language shell l10n debt reduction` eklendi.
+  - Test `sameAsEnglishCount <= 312`, `missingOrEmptyCount == 0`, `placeholderMismatchCount == 0` ve `aa/bo/ti` smoke locale'lerinde multiline olmayan lokalize degerleri kontrol ediyor.
+- Hedefli audit:
+  - `dart run tool/translate_arb_keys.dart --report settings nextPrayer prayerTimes continueReading language selectLanguage searchLanguage systemDefault currentLocation location` PASS.
+  - Same-as-English debt `524 -> 312`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Bu commit push edildikten sonra yeni dongude tam audit basligini tekrar al ve kalan `Same-as-English` borcunu en yuksek gorunurlukteki onboarding/empty-state/error copy batch'leriyle parcali azalt.

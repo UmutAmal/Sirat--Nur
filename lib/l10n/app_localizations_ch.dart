@@ -30,13 +30,13 @@ class AppLocalizationsCh extends AppLocalizations {
   String get calendar => 'Kalendario';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Setbisio siha';
 
   @override
   String get nextPrayer => 'Mamaila\' na Tinayuyot';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Oras Tinayuyot';
 
   @override
   String get continueReading => 'Sige Manli\'e\'';
@@ -103,19 +103,19 @@ class AppLocalizationsCh extends AppLocalizations {
   String get location => 'Lugat';
 
   @override
-  String get language => 'Language';
+  String get language => 'Linguahi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Pili i Lengguåhi';
 
   @override
   String get searchLanguage => 'Li\'e\' 180+ na lengguåhi siha...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Sisteman Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'På\'go na Lugat (GPS)';
 
   @override
   String get locationServiceDisabled => 'Ma na\'suha i setbisio put i lugat.';

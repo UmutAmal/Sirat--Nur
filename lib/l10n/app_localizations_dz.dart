@@ -30,13 +30,13 @@ class AppLocalizationsDz extends AppLocalizations {
   String get calendar => 'ཟླ་ཐོ།';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'སྒྲིག་སྟངས་ཚུ།';
 
   @override
   String get nextPrayer => 'སྨོན་ལམ་རྗེས་མ།';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'སྨོན་ལམ་དུས་ཚོད།';
 
   @override
   String get continueReading => 'འཕྲོ་མཐུད་ལྷག།';
@@ -103,19 +103,19 @@ class AppLocalizationsDz extends AppLocalizations {
   String get location => 'ས་གནས';
 
   @override
-  String get language => 'Language';
+  String get language => 'སྐད༌ཡིག';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'སྐད་ཡིག་སེལ་འཐུ་འབད།';
 
   @override
   String get searchLanguage => 'སྐད་ཡིག་༡༨༠+ འཚོལ་ཞིབ་འབད།...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'རིམ་ལུགས་སྔོན་སྒྲིག།';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'ད་ལྟོའི་ས་གནས་ (ཇི་པི་ཨེསི་)།';
 
   @override
   String get locationServiceDisabled => 'ས་གནས་ཞབས་ཏོག་ལྕོགས་མིན་བཟོ་ཡོདཔ།';

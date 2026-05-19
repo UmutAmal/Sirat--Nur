@@ -30,13 +30,13 @@ class AppLocalizationsMh extends AppLocalizations {
   String get calendar => 'Kalentōr';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Kōttōpar ko';
 
   @override
   String get nextPrayer => 'Jar eo tok juon';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Iien jar';
 
   @override
   String get continueReading => 'Wōnm̧aanļo̧k wōt im riiti';
@@ -103,10 +103,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get location => 'Jikin';
 
   @override
-  String get language => 'Language';
+  String get language => 'Kajin';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Kālet Kajin';
 
   @override
   String get searchLanguage => 'Pukot 180+ kajin ko...';
@@ -115,7 +115,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get systemDefault => 'System Default';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Jikin eo kiō (GPS)';
 
   @override
   String get locationServiceDisabled => 'Jerbal in lale jikin ej bōjrak.';

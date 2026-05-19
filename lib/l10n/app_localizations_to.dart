@@ -30,13 +30,13 @@ class AppLocalizationsTo extends AppLocalizations {
   String get calendar => 'Tohimāhina';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Ngaahi fokotuʻutuʻu';
 
   @override
   String get nextPrayer => 'Lotu Hoko';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Taimi Lotu .';
 
   @override
   String get continueReading => 'Hokohoko atu hono lau';
@@ -103,19 +103,19 @@ class AppLocalizationsTo extends AppLocalizations {
   String get location => 'Tu\'u\'anga';
 
   @override
-  String get language => 'Language';
+  String get language => 'Lea fakafonua';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Fili ʻa e Leá';
 
   @override
   String get searchLanguage => 'Fekumi ki he ngaahi lea \'e 180+...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Faka\'aonga\'i \'o e sisitemi';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Feituʻu Lolotonga (GPS)';
 
   @override
   String get locationServiceDisabled =>

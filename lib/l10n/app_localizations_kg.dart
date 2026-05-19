@@ -30,13 +30,13 @@ class AppLocalizationsKg extends AppLocalizations {
   String get calendar => 'Manaka';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Baparametre';
 
   @override
   String get nextPrayer => 'Kisambu ya ke landa';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Ntangu ya kisambu';
 
   @override
   String get continueReading => 'Landa kutanga';
@@ -103,19 +103,19 @@ class AppLocalizationsKg extends AppLocalizations {
   String get location => 'Kisika';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ndinga';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Pona ndinga';
 
   @override
   String get searchLanguage => 'Sosa bandinga kuluta 180...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Systeme ya luyantiku';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Kisika ya sesepi (GPS)';
 
   @override
   String get locationServiceDisabled => 'Kisalu ya kisika me kangama.';

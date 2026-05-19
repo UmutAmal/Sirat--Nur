@@ -30,13 +30,13 @@ class AppLocalizationsNr extends AppLocalizations {
   String get calendar => 'Ikhalenda';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Amasethingi';
 
   @override
   String get nextPrayer => 'Umthandazo olandelako';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Isikhathi sokuthandaza';
 
   @override
   String get continueReading => 'Ragela phambili ngokufunda';
@@ -103,19 +103,19 @@ class AppLocalizationsNr extends AppLocalizations {
   String get location => 'Indawo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Ilimi';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Khetha ilimi';
 
   @override
   String get searchLanguage => 'Sesha amalimi angaphezu kwe-180...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Okuzenzakalelayo kweSistimu';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Indawo yamanje (i-GPS)';
 
   @override
   String get locationServiceDisabled => 'Isevisi yendawo ivaliwe.';

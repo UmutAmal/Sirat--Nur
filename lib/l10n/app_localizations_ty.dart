@@ -30,13 +30,13 @@ class AppLocalizationsTy extends AppLocalizations {
   String get calendar => 'Maramataka';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Te mau faanahoraa';
 
   @override
   String get nextPrayer => 'Pure i muri nei';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Te mau taime pure';
 
   @override
   String get continueReading => 'Tamau noa i te tai\'o';
@@ -103,19 +103,19 @@ class AppLocalizationsTy extends AppLocalizations {
   String get location => 'Tā\'ata\'amu';
 
   @override
-  String get language => 'Language';
+  String get language => 'Reo';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Ma\'iti i te reo';
 
   @override
   String get searchLanguage => 'Imi 180+ reo...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Faanahoraa';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Te vahi i teie nei (GPS)';
 
   @override
   String get locationServiceDisabled => 'Ua opanihia te taviniraa vahi.';

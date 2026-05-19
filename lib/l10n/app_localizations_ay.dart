@@ -112,7 +112,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get searchLanguage => '180+ arunaka thaqhaña...';
 
   @override
-  String get systemDefault => 'Sistema Default ukax mä juk’a pachanakanwa';
+  String get systemDefault => 'System Default';
 
   @override
   String get currentLocation => 'Jichha pachanx (GPS) .';

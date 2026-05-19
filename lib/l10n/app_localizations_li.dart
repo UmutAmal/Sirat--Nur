@@ -30,13 +30,13 @@ class AppLocalizationsLi extends AppLocalizations {
   String get calendar => 'Agenda';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Instellinge';
 
   @override
   String get nextPrayer => 'Volgende gebed';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Gebedstieje';
 
   @override
   String get continueReading => 'Lees door';
@@ -103,19 +103,19 @@ class AppLocalizationsLi extends AppLocalizations {
   String get location => 'Lokasie';
 
   @override
-  String get language => 'Language';
+  String get language => 'Taal';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Taol kies';
 
   @override
   String get searchLanguage => 'Zoek mie es 180 taole...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Systeem standaard';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Huidige locatie (GPS)';
 
   @override
   String get locationServiceDisabled => 'Locatieservice is oetgeschakeld.';

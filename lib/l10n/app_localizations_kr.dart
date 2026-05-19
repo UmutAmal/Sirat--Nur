@@ -30,13 +30,13 @@ class AppLocalizationsKr extends AppLocalizations {
   String get calendar => 'Kalanda';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Setin';
 
   @override
   String get nextPrayer => 'Sala Fuwube';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Loktu Salabe';
 
   @override
   String get continueReading => 'Kǝra Gozǝgǝ kowo';
@@ -103,19 +103,19 @@ class AppLocalizationsKr extends AppLocalizations {
   String get location => 'Na';
 
   @override
-  String get language => 'Language';
+  String get language => 'Təlam';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Təlam karne';
 
   @override
   String get searchLanguage => 'Təlamma 180+ kulasne...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Fasal Defaultbe';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Na Kǝrmabe (GPS)';
 
   @override
   String get locationServiceDisabled => 'Sabis nabedǝ sǝtǝnyi.';

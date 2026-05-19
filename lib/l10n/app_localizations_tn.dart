@@ -30,13 +30,13 @@ class AppLocalizationsTn extends AppLocalizations {
   String get calendar => 'Calendar';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Diseting';
 
   @override
   String get nextPrayer => 'Thapelo e e latelang';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Dinako tsa Thapelo';
 
   @override
   String get continueReading => 'Tswelela go Buisa';
@@ -103,19 +103,19 @@ class AppLocalizationsTn extends AppLocalizations {
   String get location => 'Lefelo';
 
   @override
-  String get language => 'Language';
+  String get language => 'Puo';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Tlhopha Puo';
 
   @override
   String get searchLanguage => 'Batla dipuo di le 180+...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Thulaganyetsoruri ya Tsamaiso';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Lefelo la Gajaana (GPS)';
 
   @override
   String get locationServiceDisabled => 'Tirelo ya lefelo e thibetswe.';

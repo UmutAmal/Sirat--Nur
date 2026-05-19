@@ -30,13 +30,13 @@ class AppLocalizationsBh extends AppLocalizations {
   String get calendar => 'कैलेंडर के बा';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'सेटिंग्स के बारे में बतावल गइल बा';
 
   @override
   String get nextPrayer => 'अगिला प्रार्थना बा';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'प्रार्थना के समय बा';
 
   @override
   String get continueReading => 'पढ़ल जारी राखीं';
@@ -103,19 +103,19 @@ class AppLocalizationsBh extends AppLocalizations {
   String get location => 'अस्थान';
 
   @override
-  String get language => 'Language';
+  String get language => 'भाखा';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'भाषा के चयन करीं';
 
   @override
   String get searchLanguage => '180+ भाषा के खोज करीं...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'सिस्टम डिफ़ॉल्ट बा';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'वर्तमान स्थान (जीपीएस) के बा।';
 
   @override
   String get locationServiceDisabled => 'लोकेशन सेवा अक्षम बा।';

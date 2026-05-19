@@ -30,13 +30,13 @@ class AppLocalizationsFo extends AppLocalizations {
   String get calendar => 'Kalendari';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Innstillingar';
 
   @override
   String get nextPrayer => 'Næsta bøn';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Bønartíðir';
 
   @override
   String get continueReading => 'Halt áfram at lesa';
@@ -103,19 +103,19 @@ class AppLocalizationsFo extends AppLocalizations {
   String get location => 'Staður';
 
   @override
-  String get language => 'Language';
+  String get language => 'Mál';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Vel mál';
 
   @override
   String get searchLanguage => 'Leita eftir 180+ málum...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Forsett skipan';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Núverandi staðseting (GPS)';
 
   @override
   String get locationServiceDisabled => 'Staðsetingartænastan er sløkt.';

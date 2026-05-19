@@ -30,13 +30,13 @@ class AppLocalizationsBr extends AppLocalizations {
   String get calendar => 'Deiziadur';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Arventennoù';
 
   @override
   String get nextPrayer => 'Pedenn da heul';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Amzer ar bedenn';
 
   @override
   String get continueReading => 'Kenderc\'hel da lenn';
@@ -103,19 +103,19 @@ class AppLocalizationsBr extends AppLocalizations {
   String get location => 'Lec\'h';
 
   @override
-  String get language => 'Language';
+  String get language => 'Yezh';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Dibab Yezh';
 
   @override
   String get searchLanguage => 'Klask ouzhpenn 180 yezh...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Dre ziouer ar reizhiad';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Lec\'hiadur bremañ (GPS)';
 
   @override
   String get locationServiceDisabled =>

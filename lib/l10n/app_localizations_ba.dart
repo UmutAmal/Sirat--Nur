@@ -30,13 +30,13 @@ class AppLocalizationsBa extends AppLocalizations {
   String get calendar => 'Календарь';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Көйләүҙәр';
 
   @override
   String get nextPrayer => 'Киләһе доға .';
 
   @override
-  String get prayerTimes => 'Prayer Times';
+  String get prayerTimes => 'Намаҙ ваҡыты .';
 
   @override
   String get continueReading => 'Артабан уҡыу';
@@ -103,19 +103,19 @@ class AppLocalizationsBa extends AppLocalizations {
   String get location => 'Урынлашыуы';
 
   @override
-  String get language => 'Language';
+  String get language => 'Тел';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'Телде һайлағыҙ';
 
   @override
   String get searchLanguage => '180-дән ашыу телдә эҙләү...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'Система ғәҙәте';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'Ағымдағы урын (GPS)';
 
   @override
   String get locationServiceDisabled => 'Урынлаштырыу хеҙмәте өҙөлгән.';

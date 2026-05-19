@@ -103,19 +103,19 @@ class AppLocalizationsSa extends AppLocalizations {
   String get location => 'स्थानीय';
 
   @override
-  String get language => 'Language';
+  String get language => 'भाषा';
 
   @override
-  String get selectLanguage => 'Select Language';
+  String get selectLanguage => 'भाषां चिनोतु';
 
   @override
   String get searchLanguage => '१८०+ भाषाः अन्विष्यताम्...';
 
   @override
-  String get systemDefault => 'System Default';
+  String get systemDefault => 'प्रणाली पूर्वनिर्धारित';
 
   @override
-  String get currentLocation => 'Current Location (GPS)';
+  String get currentLocation => 'वर्तमान स्थान (GPS) .';
 
   @override
   String get locationServiceDisabled => 'स्थानसेवा अक्षमम् अस्ति।';
