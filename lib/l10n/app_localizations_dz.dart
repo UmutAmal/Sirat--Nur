@@ -155,7 +155,7 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Quran ནང་དོན་མངོན་གསལ་འབད་མ་ཚུགས། ལོག་སྟེ་འབད་རྩོལ་བསྐྱེད་གནང་།';
 
   @override
   String get retry => 'ཡང་བསྐྱར་འབད་རྩོལ་བསྐྱེད།';
@@ -214,24 +214,24 @@ class AppLocalizationsDz extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'ཏཕ་སིར་མངོན་གསལ་འབད་དོ།...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'སུ་ར་འདི་གི་དོན་ལུ་ ཏཕ་སིར་མ་ཐོབ།';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return '$ayah གི་དོན་ལུ་ ཏཕ་སིར་མ་ཐོབ།';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir མངོན་གསལ་འབད་མ་ཚུགས།';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'འདི་གི་དོན་ལུ་ tafsir ཚིག་ཡིག་མེད།';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsDz extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'ཊཕ་སིར་འབྱུང་ཁུངས་ཀྱིས་ HTTP $statusCode འཛོལ་བ་ཅིག་སླར་ལོག་འབད་ཡི།';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'སེལ་འཐུ་འབད་ཡོད་པའི་ཊཕ་སིར་འབྱུང་ཁུངས་འདི་གིས་ ཐོ་བཀོད་ཚུ་སླར་ལོག་མ་འབད་བས།';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'བདེན་དཔྱད་འབད་ཡོད་པའི་ tafsir འདི་ ད་ལྟོ་ཡང་ ཕྱི་ཁར་འཐོབ་མི་ཚུགས། བརྡ་འཚོལ་མ་འབད་བའི་ཧེ་མ་ འབྱུང་ཁུངས་ཡོད་པའི་ ཊཕ་སིར་གནད་སྡུད་ཆ་ཚན་ཅིག་ མཉམ་འབྱུང་འབད།';
 
   @override
   String get bookmarks => 'དེབ་རྟགས།';

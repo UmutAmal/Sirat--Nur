@@ -96,7 +96,7 @@
   "tafsirLoading": "Loading ny tafsir...",
   "tafsirSourceLabel": "Loharanon'ny Tafsir",
   "tafsirNoSurahFound": "Tsy nisy tafsir hita tamin'ity surah ity.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoAyahFound": "Tsy nisy tafsir hita ho an'i ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {

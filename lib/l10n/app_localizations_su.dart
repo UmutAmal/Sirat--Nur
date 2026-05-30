@@ -225,7 +225,7 @@ class AppLocalizationsSu extends AppLocalizations {
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Teu aya tafsir anu kapendak pikeun ayah $ayah.';
   }
 
   @override

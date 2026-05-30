@@ -67,7 +67,7 @@
   "error": "Cala",
   "appErrorOccurred": "Sa yaco e dua na cala",
   "appUnknownError": "Cala sega ni kilai",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "E sega ni rawa ni vakavodoki na itukutuku ni Quran. Kerekere mo tovolea tale.",
   "retry": "Tovolea tale",
   "refreshAction": "Vakavoui",
   "cancel": "Biuta laivi",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Vakavodoki tiko na tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "E sega ni kune e dua na tafsir me baleta na sura oqo.",
+  "tafsirNoAyahFound": "No hay tafsir encontrado para aya {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "E sega ni rawa ni vakavodoki na Tafsir.",
+  "tafsirNoTextForAyah": "Sega ni dua na ivola ni tafsir me baleta na aya oqo.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Na ivurevure ni tafsir digitaki e sega ni vakasuka mai e dua na icurucuru.",
+  "tafsirCacheUnavailable": "Tafsir vakadeitaki e se bera ni rawa ena initaneti. Vakatautauvatataka e dua na itukutuku ni tafsir ni bera ni o raica.",
   "bookmarks": "Vakatakilakila",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

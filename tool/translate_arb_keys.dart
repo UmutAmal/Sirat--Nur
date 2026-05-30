@@ -1073,6 +1073,8 @@ const _knownGeneralTranslationDebris = [
   'Please choose a city manually or try again.',
   'Ukax mä juk’a pachanakanwa',
   'ukax mä juk’a pachanakanwa',
+  'Chargement tafsir ka',
+  'Lochargement tafsir',
 ];
 
 const _knownShortLabelTranslationDebris = ['के बारे में', 'बतावल', ' के बा'];

@@ -155,7 +155,7 @@ class AppLocalizationsKv extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Коран содержаниесӧ эз позь лэдзны. Please try again.';
 
   @override
   String get retry => 'Перепробуйте';
@@ -214,24 +214,24 @@ class AppLocalizationsKv extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Загрузка тафсир...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Тайӧ сураысь некутшӧм тафсир эз аддзыны.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Некутшӧм тафсир эз аддзыны аят $ayah вылӧ.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Тафсир эз вермы тыртны.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Тайӧ аят вылӧ тафсир текст абу.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsKv extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Тафсир источник сетіс HTTP $statusCode ӧшыбка.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Бӧрйӧм тафсир источникысь нинӧм эз бергӧд.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Вердӧм тафсир офлайн ногӧн абу на. Синхронизируйтны источникысь тафсир даннӧйяс чукӧр видлалӧм бӧрын.';
 
   @override
   String get bookmarks => 'Закладкаяс';

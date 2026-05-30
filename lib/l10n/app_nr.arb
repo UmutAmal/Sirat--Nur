@@ -67,7 +67,7 @@
   "error": "Iphoso",
   "appErrorOccurred": "Kwenzeke iphutha",
   "appUnknownError": "Iphutha elingaziwako",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Okuqukethwe yi-Quran akwazanga ukulayishwa. Sibawa ulinge godu.",
   "retry": "Linga godu",
   "refreshAction": "Vuselela",
   "cancel": "Sula",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Ukulayisha i-tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Akukho tafsir etholakalako ye-surah le.",
+  "tafsirNoAyahFound": "Akukho tafsir etholakalako ye-ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "I-Tafsir ayikwazanga ukulayishwa.",
+  "tafsirNoTextForAyah": "Akunamtlolo we-tafsir wale-ayah.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Umthombo we-Tafsir ubuyisele iphutha le-HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Umthombo we-tafsir okhethiweko awubuyiselanga okufakiweko.",
+  "tafsirCacheUnavailable": "I-tafsir eqinisekisiweko ayikatholakali ngaphandle kwe-inthanethi. Vumelanisa isethi yedatha ye-tafsir ngaphambi kokuphequlula.",
   "bookmarks": "Amabhukmaki",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

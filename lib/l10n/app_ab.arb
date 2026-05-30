@@ -67,7 +67,7 @@
   "error": "Агха",
   "appErrorOccurred": "Агха ҟалеит",
   "appUnknownError": "Идырым агха",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Аҟәырҟан аҵакы аҭагалара ауам. Ҳаҳәоит даҽазнык шәҽазышәшәа.",
   "retry": "Аиҭаԥышәара",
   "refreshAction": "Арҿыцра",
   "cancel": "Аԥыхра",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Атафсир аҭагалара...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ари асура азы тафсир ҳԥыхьамшәеит.",
+  "tafsirNoAyahFound": "Аиа {ayah} азы атафсир ҳԥыхьамшәеит.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Тафсир аҭагалара залшомызт.",
+  "tafsirNoTextForAyah": "Ари аиа азы атафсиртә текст ыҟам.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Тафсир ахыҵхырҭа HTTP {statusCode} агха шьҭнахит.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Иалху атафсир ахыҵхырҭа ҭагаларақәак рхынҳәӡом.",
+  "tafsirCacheUnavailable": "Игәаҭоу атафсир макьана офлаин иҟаӡам. Аԥшаара аламҭалазы ахыҵхырҭатә тафсир адатасет асинхронизациа.",
   "bookmarks": "Адыргақәа",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

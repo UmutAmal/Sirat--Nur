@@ -67,7 +67,7 @@
   "error": "Feilur",
   "appErrorOccurred": "Ein feilur hendi.",
   "appUnknownError": "Ókendur feilur",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Innihaldið í Koranini kundi ikki heintast. Vinarliga royn aftur.",
   "retry": "Royn aftur",
   "refreshAction": "Fríska upp",
   "cancel": "strika",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Heinta tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Eingin tafsir funnin fyri hesa sura.",
+  "tafsirNoAyahFound": "Eingin tafsir funnin fyri aya {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir kundu ikki lastast.",
+  "tafsirNoTextForAyah": "Eingin tafsir tekstur til hesa aya.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir keldan gav aftur ein HTTP {statusCode} feil.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Valda tafsir keldan gav ongar upplýsingar aftur.",
+  "tafsirCacheUnavailable": "Staðfest tafsir er ikki tøkt offline enn. Synkronisera eitt keldu tafsir dátusetti áðrenn tú kagar.",
   "bookmarks": "Bókamerki",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

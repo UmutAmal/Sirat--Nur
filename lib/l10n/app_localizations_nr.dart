@@ -155,7 +155,7 @@ class AppLocalizationsNr extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Okuqukethwe yi-Quran akwazanga ukulayishwa. Sibawa ulinge godu.';
 
   @override
   String get retry => 'Linga godu';
@@ -214,24 +214,24 @@ class AppLocalizationsNr extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Ukulayisha i-tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Akukho tafsir etholakalako ye-surah le.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Akukho tafsir etholakalako ye-ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'I-Tafsir ayikwazanga ukulayishwa.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Akunamtlolo we-tafsir wale-ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsNr extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Umthombo we-Tafsir ubuyisele iphutha le-HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Umthombo we-tafsir okhethiweko awubuyiselanga okufakiweko.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'I-tafsir eqinisekisiweko ayikatholakali ngaphandle kwe-inthanethi. Vumelanisa isethi yedatha ye-tafsir ngaphambi kokuphequlula.';
 
   @override
   String get bookmarks => 'Amabhukmaki';

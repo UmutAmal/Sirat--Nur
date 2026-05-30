@@ -154,8 +154,7 @@ class AppLocalizationsKg extends AppLocalizations {
   String get appUnknownError => 'Kifu ya kuzabana ve';
 
   @override
-  String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+  String get quranLoadFailed => 'Mambu ya Quran lendaka kukota ve. Meka diaka.';
 
   @override
   String get retry => 'Meka diaka';
@@ -214,24 +213,25 @@ class AppLocalizationsKg extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Kutula tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Ke vena tafsir ko yasololwa muna surah yayi.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ata tafsir mosi ve me monana sambu na aya $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir ke lendaka ve kukangama.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ka vena sono kia tafsir ko kia ayah yayi.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsKg extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Ntu-dyambu ya Tafsir kuvutulaka kifu ya HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'E nsunzula ya tafsir yasolwa ke yavutula nsangu ko.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir ya bo me zikisa kele ntete ve na nganda ya Internet. Synchroniser un source de données tafsir avant de naviger.';
 
   @override
   String get bookmarks => 'Ba marque-pages';

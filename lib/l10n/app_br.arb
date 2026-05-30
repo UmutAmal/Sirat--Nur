@@ -67,7 +67,7 @@
   "error": "Fazi",
   "appErrorOccurred": "Degouezhet ez eus bet ur fazi",
   "appUnknownError": "Fazi dianav",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "N'haller ket kargañ endalc'had ar C'horan. Klaskit en-dro mar plij.",
   "retry": "Klask en-dro",
   "refreshAction": "Freskaat",
   "cancel": "Nullañ",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "O kargañ tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Tafsir ebet evit ar soura-mañ.",
+  "tafsirNoAyahFound": "Tafsir ebet evit an ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "N'haller ket kargañ Tafsir.",
+  "tafsirNoTextForAyah": "Testenn tafsir ebet evit an ayah-mañ.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Distroet eo bet ur fazi HTTP {statusCode} gant mammenn Tafsir.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "N'eus bet distroet enankad ebet gant ar vammenn tafsir diuzet.",
+  "tafsirCacheUnavailable": "N'eo ket hegerz an tafsir gwiriekaet ezlinenn c'hoazh. Sinkronisañ un dastumad roadennoù tafsir orin a-raok merdeiñ.",
   "bookmarks": "Sinedoù",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

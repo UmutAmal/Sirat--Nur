@@ -67,7 +67,7 @@
   "error": "Neuchiartys",
   "appErrorOccurred": "Ta foill er jeet",
   "appUnknownError": "Fault neu-enmyssit",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Cha row y Quran ry-loadaghey. Feayrish reesht, my yeearree.",
   "retry": "Reayll reesht",
   "refreshAction": "Ashaghey",
   "cancel": "cur ass",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Tafsir y lhoobey...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Cha nel tafsir erbee er ny gheddyn son y surah shoh.",
+  "tafsirNoAyahFound": "Cha nel tafsir erbee er ny gheddyn son ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir cha row eh ry-load.",
+  "tafsirNoTextForAyah": "Cha nel text tafsir ec y ayah shoh.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir t'er n'yannoo HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Ta'n source tafsir roshtyn ry-gheddyn.",
+  "tafsirCacheUnavailable": "Tafsir verify cha nel eh ry-gheddyn offline foast. Sync y ghraih tafsir ry-gheddyn roish y ghraih.",
   "bookmarks": "Learkyn-leabhar;",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

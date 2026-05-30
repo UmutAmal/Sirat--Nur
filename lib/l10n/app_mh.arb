@@ -67,7 +67,7 @@
   "error": "Bōd",
   "appErrorOccurred": "Ear walok juon bōd",
   "appUnknownError": "Bōd eo ejelok jella kake",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Men ko ilo Quran rar jab maroñ in bōk. Jouj im bar kajeoñ.",
   "retry": "Bar kajeoñ",
   "refreshAction": "Kōkāāl",
   "cancel": "Jolok",
@@ -95,8 +95,8 @@
   "tafsir": "Tafsir",
   "tafsirLoading": "Loading tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ejelok tafsir ñan surah in.",
+  "tafsirNoAyahFound": "Ejelok tafsir ñan ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir ear jab maroñ in bōk jikin.",
+  "tafsirNoTextForAyah": "Ejelok tafsir text ñan ayah in.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir source ear jeblak juon HTTP {statusCode} bōd.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Tafsir eo kar kālete ear jab jeblaktok jabdewōt men ko.",
+  "tafsirCacheUnavailable": "Tafsir eo emol ejjab maroñ in bed ilo offline kiõ. Kōmman juon tafsir dataset mokta jen am browse.",
   "bookmarks": "Bookmark ko",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

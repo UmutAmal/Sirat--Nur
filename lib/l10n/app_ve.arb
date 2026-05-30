@@ -67,7 +67,7 @@
   "error": "Phoswo",
   "appErrorOccurred": "Ho itea vhukhakhi",
   "appUnknownError": "Vhukhakhi vhu sa ḓivhei",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Zwi re ngomu ha Quran a zwo ngo kona u ḓadzwa. Ndi khou humbela uri ni lingedze hafhu.",
   "retry": "Lingedzani hafhu",
   "refreshAction": "U vusuludza",
   "cancel": "Thutha",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "U ḓadza tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ahuna tafsir yo wanalaho kha surah iyi.",
+  "tafsirNoAyahFound": "A hu na tafsir yo wanalaho ya aya {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir yo vha i sa koni u hwaliwa.",
+  "tafsirNoTextForAyah": "Ahuna manwalo a tafsir a ayah iyi.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tshisima tsha Tafsir tsho vhuisa vhukhakhi ha HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Tshisima tsha tafsir tsho khethiwaho a tsho ngo vhuisa zwithu.",
+  "tafsirCacheUnavailable": "Tafsir yo khwaṱhisedzwaho a i athu wanala offline. U ṱanganya dataset ya tafsir yo bveledzwaho phanḓa ha musi u tshi ṱola.",
   "bookmarks": "Zwiga zwa bugu",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

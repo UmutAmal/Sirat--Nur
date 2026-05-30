@@ -67,7 +67,7 @@
   "error": "Harbol",
   "appErrorOccurred": "Juumre waɗii",
   "appUnknownError": "Juumre nde anndaaka",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Ko woni e Quraan koo waawaa loowde. Tiiɗno enndu kadi.",
   "retry": "Enndu kadi",
   "refreshAction": "Hesɗitin",
   "cancel": "Willugo",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Lowre tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Alaa tafsiir tawaa e ndeeɗoo suura.",
+  "tafsirNoAyahFound": "Alaa tafsiir tawaa e aaye {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir waawaano loowde.",
+  "tafsirNoTextForAyah": "Alaa binndol tafsir wonande ndeeɗoo aaya.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Iwdi Tafsir artirii majjere HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Fuɗɗoode tafsir cuɓaande ndee artiraani hay naatgol gootol.",
+  "tafsirCacheUnavailable": "Tafsir hoolkisaaɗo oo heɓaaka tawo e laylaytol. Sinkronisaa doggol tafsir gonngol e lowre ndee hade maa ƴeewndaade.",
   "bookmarks": "Maandeeji defte",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

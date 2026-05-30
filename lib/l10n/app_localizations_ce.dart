@@ -155,7 +155,7 @@ class AppLocalizationsCe extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Къуръанан чулацам чубаккха аьтто ца баьлла. Юха хьажахьара ахь.';
 
   @override
   String get retry => 'Юха хьажа';
@@ -214,24 +214,24 @@ class AppLocalizationsCe extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Тафсир чудоккхуш...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Цхьа а тафсир ца карийна хӀокху суратна.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return '$ayah аят тӀехь тафсир ца карийна.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Тафсир лоад ян йиш яцара.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Цхьа а тафсир текст яц оцу аятна.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsCe extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Тафсир хьостано HTTP $statusCode гӀалат юхадерзийна.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Хаьржинчу тафсиран хьостано цхьа а яздар юха ца делира.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Таллам бина тафсир офлайнехь яц цкъачунна. Синхронизаци ян хьастан тафсиран даннийн набор лехале хьалха.';
 
   @override
   String get bookmarks => 'Закладкаш';

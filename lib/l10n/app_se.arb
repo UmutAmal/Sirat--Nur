@@ -67,7 +67,7 @@
   "error": "Feaila",
   "appErrorOccurred": "Dáhpáhuvai meattáhus",
   "appUnknownError": "Dovddameahttun meattáhus",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Korana sisdoallu ii sáhttán biddjojuvvot. Geahččal fas.",
   "retry": "Geahččal ođđasit",
   "refreshAction": "Ođasmahttit",
   "cancel": "Bisset",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Lassin tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Dán sura ii gávdnon tafsir.",
+  "tafsirNoAyahFound": "Ii gávdnon tafsir ayah {ayah} ovddas.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir ii sáhttán biddjojuvvot.",
+  "tafsirNoTextForAyah": "Ii leat tafsir-teaksta dán ayah:ii.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir-gáldu máhcahii HTTP {statusCode} meattáhusa.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Válljejuvvon tafsir-gáldu ii máhcahan makkárge sisačállosiid.",
+  "tafsirCacheUnavailable": "Duođaštuvvon tafsir ii leat vuos gávdnamis offline. Synkronisere tafsir-diehtovuođu ovdal go geahččat.",
   "bookmarks": "Girjemearkkat",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

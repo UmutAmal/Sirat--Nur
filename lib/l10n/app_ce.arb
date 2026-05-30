@@ -67,7 +67,7 @@
   "error": "ГӀалат",
   "appErrorOccurred": "ГӀалат даьлла .",
   "appUnknownError": "Ца девзаш долу гӀалат .",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Къуръанан чулацам чубаккха аьтто ца баьлла. Юха хьажахьара ахь.",
   "retry": "Юха хьажа",
   "refreshAction": "Карладаккха",
   "cancel": "дӀадакха",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Тафсир чудоккхуш...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Цхьа а тафсир ца карийна хӀокху суратна.",
+  "tafsirNoAyahFound": "{ayah} аят тӀехь тафсир ца карийна.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Тафсир лоад ян йиш яцара.",
+  "tafsirNoTextForAyah": "Цхьа а тафсир текст яц оцу аятна.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Тафсир хьостано HTTP {statusCode} гӀалат юхадерзийна.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Хаьржинчу тафсиран хьостано цхьа а яздар юха ца делира.",
+  "tafsirCacheUnavailable": "Таллам бина тафсир офлайнехь яц цкъачунна. Синхронизаци ян хьастан тафсиран даннийн набор лехале хьалха.",
   "bookmarks": "Закладкаш",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

@@ -157,7 +157,7 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Naʻe ʻikai lava ke uta ʻa e kakano ʻo e Quran. Kātaki ʻo toe feinga.';
 
   @override
   String get retry => 'Toe feinga';
@@ -216,24 +216,26 @@ class AppLocalizationsTo extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Uta \'a e tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      '\'Oku \'ikai ke ma\'u ha tafsir ki he surah ko \'eni.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return '\'Oku \'ikai ke ma\'u ha tafsir ki he \'aia $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Naʻe ʻikai lava ke uta ʻa e Tafsir.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah =>
+      '\'Ikai ha tohi tafsir ki he ayah ko \'eni.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,16 +249,16 @@ class AppLocalizationsTo extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Na\'e fakafoki mai \'e he ma\'u\'anga fakamatala Tafsir ha HTTP $statusCode hala.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Na\'e \'ikai ke fakafoki mai \'e he ma\'u\'anga tokoni tafsir kuo fili ha ngaahi hū.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      '\'Oku te\'eki ke ma\'u \'a e tafsir kuo fakamo\'oni\'i \'i he offline. Sync ha dataset tafsir ma\'u\'anga tokoni kimu\'a pea toki vakai\'i.';
 
   @override
   String get bookmarks => 'Ngaahi fakaʻilonga tohi';

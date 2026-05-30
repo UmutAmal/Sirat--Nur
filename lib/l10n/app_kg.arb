@@ -67,7 +67,7 @@
   "error": "Kifu",
   "appErrorOccurred": "Kifu me salama",
   "appUnknownError": "Kifu ya kuzabana ve",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Mambu ya Quran lendaka kukota ve. Meka diaka.",
   "retry": "Meka diaka",
   "refreshAction": "Vutula",
   "cancel": "Kukatula",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Kutula tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ke vena tafsir ko yasololwa muna surah yayi.",
+  "tafsirNoAyahFound": "Ata tafsir mosi ve me monana sambu na aya {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir ke lendaka ve kukangama.",
+  "tafsirNoTextForAyah": "Ka vena sono kia tafsir ko kia ayah yayi.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Ntu-dyambu ya Tafsir kuvutulaka kifu ya HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "E nsunzula ya tafsir yasolwa ke yavutula nsangu ko.",
+  "tafsirCacheUnavailable": "Tafsir ya bo me zikisa kele ntete ve na nganda ya Internet. Synchroniser un source de données tafsir avant de naviger.",
   "bookmarks": "Ba marque-pages",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

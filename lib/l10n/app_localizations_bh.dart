@@ -156,7 +156,7 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'कुरान के सामग्री लोड ना हो पावल। कृपया दोबारा कोशिश करीं।';
 
   @override
   String get retry => 'दोबारा कोशिश करीं';
@@ -215,24 +215,24 @@ class AppLocalizationsBh extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'तफसीर लोड हो रहल बा...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'एह सूरह खातिर कवनो तफसीर ना मिलल.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'आयत $ayah खातिर कवनो तफसीर ना मिलल।';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'तफसीर के लोड ना हो पावल।';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'एह आयत खातिर कवनो तफसीर पाठ नइखे.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -246,16 +246,16 @@ class AppLocalizationsBh extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'तफसीर स्रोत एगो HTTP $statusCode त्रुटि वापस कइले बा।';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'चुनल तफसीर स्रोत कवनो प्रविष्टि ना लवटा दिहलसि.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'सत्यापन तफसिर अभी तक ऑफलाइन उपलब्ध नइखे। ब्राउजिंग से पहिले कवनो सोर्स कइल तफसीर डाटासेट के सिंक करीं।';
 
   @override
   String get bookmarks => 'बुकमार्क';

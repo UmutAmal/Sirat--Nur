@@ -157,7 +157,7 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Lo contengut de l\'Alcoran a pas pogut èsser cargat. Ensajatz tornarmai.';
 
   @override
   String get retry => 'Tornatz ensajar';
@@ -216,24 +216,24 @@ class AppLocalizationsOc extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'En cargament de tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Cap de tafsir trobat per aquesta sura.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Cap de tafsir pas trobat per ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir a pas pogut èsser cargat.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Pas de tèxte tafsir per aqueste ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,16 +247,16 @@ class AppLocalizationsOc extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'La font Tafsir a retornat una error HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'La font tafsir seleccionada a renviat pas cap d\'entrada.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Lo tafsir verificat es pas encara disponible fòra linha. Sincronizatz un ensemble de donadas tafsir font abans de navigar.';
 
   @override
   String get bookmarks => 'Los marcapaginas';

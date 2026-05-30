@@ -67,7 +67,7 @@
   "error": "Ikosa",
   "appErrorOccurred": "Ikosa ryabaye",
   "appUnknownError": "Ikosa ritazwi",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Ibiri muri Korowani ntivyashoboye gushirwako. Ndagusavye wongere ugerageze.",
   "retry": "Subira ugerageze",
   "refreshAction": "Gusubiramwo",
   "cancel": "Guhagarika",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Gushiramwo tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Nta tafsir yabonetse kuri iyi sura.",
+  "tafsirNoAyahFound": "Nta tafsiri yabonetse ku majambo {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir ntiyashobora gushirwako.",
+  "tafsirNoTextForAyah": "Nta canditswe ca tafsir c’iyi ayah.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Inkomoko ya Tafsir yagarutse ikosa HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Isoko ya tafsir yatowe nta n’imwe yagarutse.",
+  "tafsirCacheUnavailable": "Tafsir yagenzuwe ntiraboneka hanze y’umurongo. Gukoranya amakuru ya tafsir imbere yo gusura.",
   "bookmarks": "Ibimenyetso",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

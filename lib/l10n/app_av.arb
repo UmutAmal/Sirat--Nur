@@ -67,7 +67,7 @@
   "error": "ГъалатӀ",
   "appErrorOccurred": "ГӀалатӀ ккана .",
   "appUnknownError": "Лъалареб гъалатӀ .",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Не удалось загрузить содержание Корана. Цоги нухалъ хӀалбихье.",
   "retry": "ЦӀидасан хӀалбихье",
   "refreshAction": "ЦӀигьабизе",
   "cancel": "къайзе",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Загрузка тафсира...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Гьаб сураталъул тафсир батичӀо.",
+  "tafsirNoAyahFound": "Ая {ayah} тафсир батичӀо.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Тафсир юк баччизе кӀвечӀо.",
+  "tafsirNoTextForAyah": "Гьаб аяталъул тафсиралъул текст гьечӀо.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Тафсиралъул источникалъ HTTP {statusCode} гъалатӀ кьуна.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "ТӀаса бищараб тафсиралъул источникалъ щибго хъвай-хъвагӀай нахъбуссинабичӀо.",
+  "tafsirCacheUnavailable": "Проверенный тафсир еще не доступен в офлайне. Синхронизация источника данных тафсира перед просмотром.",
   "bookmarks": "Закладки",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

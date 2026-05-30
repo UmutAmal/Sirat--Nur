@@ -23207,3 +23207,38 @@
 
 ### Sonraki Adim
 - Final kapilar ve push sonrasi yeni dongude kalan yuksek gorunurlukteki `quranLoadFailed`, bookmark, empty-state ve onboarding/error copy gruplari icin ayni parcali audit/translate/test dongusunu uygula.
+
+## 2026-05-31 TUR-580 - Quran and Tafsir Runtime Shell L10n Fallback Reduction
+
+### MASTER Karari
+- Risk: Quran yukleme hatasi ve tafsir runtime hata/empty-state metinleri, kaynak dini metin degil UI durumu olmasina ragmen 196 locale icinde genis Ingilizce fallback birakiyordu. Tafsir akisinda kullanici hata aldiginda yerel dil yerine Ingilizce gormesi P1 l10n/UX riskiydi.
+- Kanit:
+  - Patch oncesi audit: `dart run tool/translate_arb_keys.dart --report quranLoadFailed tafsirLoading tafsirLoadFailed tafsirNoSurahFound tafsirNoAyahFound tafsirNoTextForAyah tafsirApiStatusError tafsirNoEntriesReturned tafsirCacheUnavailable`.
+  - Patch oncesi `Same-as-English locales: 582`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - Patch sirasinda kalite ornegi: `app_wo.arb` icinde `tafsirLoading` icin `Lochargement tafsir...`, `app_bm.arb` icinde `Chargement tafsir ka...` karisik dil/debris olarak yakalandi.
+  - Bu iki deger guvenli kaynak fallback'e (`Loading tafsir...`) cekildi ve `tool\translate_arb_keys.dart` debris listesine eklendi.
+  - Patch sonrasi audit: ayni 9 anahtarda `Same-as-English locales: 275`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - ARB JSON parse gate: `Get-ChildItem lib\l10n\app_*.arb | ConvertFrom-Json` PASS.
+  - `flutter gen-l10n` calistirildi ve generated localization siniflari ARB ile senkronlandi.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 8/25`. Tafsir/Quran runtime UI yuzeyindeki fallback borcu azaldi; karisik Fransizca/yanlis loading debris'i tekrar girmeyecek sekilde arac ve test guard'i eklendi.
+- Rollback plani: Bu turdaki `lib\l10n\app_*.arb`, generated `lib\l10n\app_localizations_*.dart`, `tool\translate_arb_keys.dart`, `test\translate_arb_keys_test.dart` ve bu handover kaydi tek commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` icindeki genel debris listesine `Chargement tafsir ka` ve `Lochargement tafsir` eklendi.
+- `tool\translate_arb_keys.dart` ile yalniz Quran/tafsir runtime UI anahtarlari cevrildi: `quranLoadFailed`, `tafsirLoading`, `tafsirLoadFailed`, `tafsirNoSurahFound`, `tafsirNoAyahFound`, `tafsirNoTextForAyah`, `tafsirApiStatusError`, `tafsirNoEntriesReturned`, `tafsirCacheUnavailable`.
+- Dini kaynak metni, Quran ayeti, meal, hadis, dua veya tafsir icerigi uretilmedi ya da degistirilmedi.
+
+### TESTER Degisikligi
+- Yeni guard'lar:
+  - `test\translate_arb_keys_test.dart` icinde `tracks Quran and tafsir runtime shell l10n debt reduction` eklendi.
+  - `test\translate_arb_keys_test.dart` icindeki genel debris testi `Chargement tafsir ka...` ve `Lochargement tafsir...` ciktilarini reddedecek sekilde genisletildi.
+- Hedefli audit:
+  - `dart run tool/translate_arb_keys.dart --report quranLoadFailed tafsirLoading tafsirLoadFailed tafsirNoSurahFound tafsirNoAyahFound tafsirNoTextForAyah tafsirApiStatusError tafsirNoEntriesReturned tafsirCacheUnavailable` PASS.
+  - Same-as-English debt `582 -> 275`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Final kapilar ve push sonrasi yeni dongude bookmark/empty-state/onboarding runtime copy gruplarini ayni parcali audit/translate/test akisi ile ele al.

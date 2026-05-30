@@ -67,7 +67,7 @@
   "error": "Ajutoorneq",
   "appErrorOccurred": "Kukkusoqarpoq",
   "appUnknownError": "Ilisimaneqanngitsoq kukkuneq",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Koranimi imarisaq ikkussorneqarsinnaasimanngilaq. Misilittariaqarpat.",
   "retry": "Misilittariaqarpat",
   "refreshAction": "Nutarterineq",
   "cancel": "taamaatippaa",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Tafsir-imik ikkussineq...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Surah-mut tassunga tafsir nassaarineqanngilaq.",
+  "tafsirNoAyahFound": "Ayah {ayah}-mut tafsir nassaarineqanngilaq.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir-imik ikkussorneqarsinnaasimanngilaq.",
+  "tafsirNoTextForAyah": "Ayah-mut tassunga tafsir-imik allassimasoqanngilaq.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir-ip killiffia HTTP {statusCode}-mik kukkuneq utertippaa.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Tafsir-imik toqqarneqarsimasoq allagartanik utertitsivoq.",
+  "tafsirCacheUnavailable": "Tafsir uppernarsarneqarsimasoq suli offline-imi pissarsiarineqarsinnaanngilaq. Tafsir-datasæt-imik pissarsiarineqarsimasumik synkroniseqarit browserneq sioqqullugu.",
   "bookmarks": "Atuagassiat",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

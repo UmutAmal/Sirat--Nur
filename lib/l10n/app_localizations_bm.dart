@@ -214,7 +214,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get tafsir => 'Tafsir ye';
 
   @override
-  String get tafsirLoading => 'Chargement tafsir ka...';
+  String get tafsirLoading => 'Loading tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir sɔrɔyɔrɔ';

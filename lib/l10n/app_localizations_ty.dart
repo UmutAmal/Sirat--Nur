@@ -155,7 +155,7 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Aita i ti\'a ia faauta i te mau mea e vai ra i roto i te Quran. A tamata faahou na.';
 
   @override
   String get retry => 'A tamata faahou';
@@ -214,24 +214,24 @@ class AppLocalizationsTy extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Te faautaraa i te tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Aita e tafsir i itehia no teie surah.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Aita e tafsir i itehia no te ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Aita ta Tafsir i nehenehe e faautahia.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Aita e parau tafsir no teie ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsTy extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Ua faaho\'i mai te puna Tafsir i te hoê hape HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Aita te pu tafsir i maitihia i faaho\'i mai i te mau parau.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Aita â te tafsir haapapuhia i roaa mai i nia i te Internet. Hou a hi\'opo\'a ai, a faaau i te hoê haamaramaramaraa no ni\'a i te tafsir.';
 
   @override
   String get bookmarks => 'Ngā tapa\'o buka';

@@ -155,7 +155,7 @@ class AppLocalizationsOs extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Хъуыраны мидис нæ бантыст æрбакæнын. Дæ хорзæхæй, ногæй бафæлвар.';
 
   @override
   String get retry => 'Ногæй бафæлвар';
@@ -214,24 +214,24 @@ class AppLocalizationsOs extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Загрузка тафсир...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Ацы сурæйæн тафсир нæ ссардтой.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Аят $ayah-æн тафсир нæ ссардтой.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Тафсир æрбакæнын нæ бантыст.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Нæй тафсиры текст ацы аятæн.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsOs extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir-ы равзæрæн æрбаздæхта HTTP $statusCode рæдыд.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Æвзæрст тафсиры равзæрæн ницы æрбаздæхта.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Бæлвырдгонд tafsir нырма офлайны нæй. Синхронизаци кæнут æвзæрст tafsir бæрæггæнæнты æмбырдгонд æркасты размæ.';
 
   @override
   String get bookmarks => 'Нысантæ';

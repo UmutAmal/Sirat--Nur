@@ -155,7 +155,7 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Inhoud vaan de koran koos neet weure gelaod. Probeer nog ummer.';
 
   @override
   String get retry => 'Probeer nog ummer';
@@ -214,24 +214,25 @@ class AppLocalizationsLi extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Tafsir laden...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'D’r is gein tafsir gevoonde veur deze soerah.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Geen tafsir gevoonde veur ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir koos neet weure gelaoje.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Geen tafsir-teks veur deze ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +246,16 @@ class AppLocalizationsLi extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir-bron heet un HTTP $statusCode fout geretourneerd.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'De geselecteerde tafsir-bron retourneerde gein invoere.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Gecontroleerde tafsir is nog neet offline besjikbaar. Synchroniseer un tafsir-gegevensset veurtot ge browst.';
 
   @override
   String get bookmarks => 'Boekmerke';

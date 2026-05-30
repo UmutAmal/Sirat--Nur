@@ -67,7 +67,7 @@
   "error": "ནོར་འཁྲུལ",
   "appErrorOccurred": "ནོར་འཁྲུལ་བྱུང་བ།",
   "appUnknownError": "མ་ཤེས་པའི་ནོར་འཁྲུལ།",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "ཁ་ཆེའི་དཔེ་ཆའི་ནང་དོན་མངོན་ཐུབ་མ་སོང་། ཡང་བསྐྱར་ཚོད་ལྟ་གནང་རོགས།",
   "retry": "ཡང་བསྐྱར་ཚོད་ལྟ་བྱེད་པ།",
   "refreshAction": "གསར་བརྗེ།",
   "cancel": "འདོར་བ",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "ཏཕ་སིར་མངོན་བཞིན་པ།",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "སུ་ར་འདིའི་ཆེད་དུ་ཏ་ཕ་སིར་མ་རྙེད།",
+  "tafsirNoAyahFound": "ཨ་ཡ་ཧ་{ayah} ལ་ཏ་ཕ་སིར་རྙེད་མ་སོང་།",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir བླུགས་ཐུབ་མ་སོང་།",
+  "tafsirNoTextForAyah": "ཨ་ཡ་ཡ་འདིའི་ཆེད་དུ་ཏ་ཕ་སིར་ཡིག་ཆ་མེད།",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "ཏ་ཕི་སིར་འབྱུང་ཁུངས་ཀྱིས་HTTP {statusCode} ནོར་འཁྲུལ་སླར་ལོག་བྱས།",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "འདེམས་སྒྲུག་བྱས་པའི་ཏ་ཕི་སིར་གྱི་ཐོན་ཁུངས་ཀྱིས་ཐོ་འགོད་གང་ཡང་སླར་ལོག་མ་བྱས།",
+  "tafsirCacheUnavailable": "བདེན་དཔང་བྱས་པའི་ཏ་ཕི་སིར་ད་དུང་དྲ་རྒྱའི་ཕྱི་རོལ་དུ་ཐོབ་ཐུབ་ཀྱི་མེད། དྲ་འཚོལ་མ་བྱེད་གོང་དུ་ཐོན་ཁུངས་ཏ་ཕི་སིར་གྱི་གཞི་གྲངས་ཆ་ཚང་དུས་མཉམ་དུ་བཟོས།",
   "bookmarks": "དེབ་རྟགས།",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

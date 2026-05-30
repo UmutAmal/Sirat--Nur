@@ -155,7 +155,7 @@ class AppLocalizationsAb extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Аҟәырҟан аҵакы аҭагалара ауам. Ҳаҳәоит даҽазнык шәҽазышәшәа.';
 
   @override
   String get retry => 'Аиҭаԥышәара';
@@ -214,24 +214,24 @@ class AppLocalizationsAb extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Атафсир аҭагалара...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Ари асура азы тафсир ҳԥыхьамшәеит.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Аиа $ayah азы атафсир ҳԥыхьамшәеит.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Тафсир аҭагалара залшомызт.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ари аиа азы атафсиртә текст ыҟам.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsAb extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Тафсир ахыҵхырҭа HTTP $statusCode агха шьҭнахит.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Иалху атафсир ахыҵхырҭа ҭагаларақәак рхынҳәӡом.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Игәаҭоу атафсир макьана офлаин иҟаӡам. Аԥшаара аламҭалазы ахыҵхырҭатә тафсир адатасет асинхронизациа.';
 
   @override
   String get bookmarks => 'Адыргақәа';

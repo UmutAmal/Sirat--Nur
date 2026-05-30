@@ -67,7 +67,7 @@
   "error": "Error",
   "appErrorOccurred": "Una error s'es producha",
   "appUnknownError": "Error desconeguda",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Lo contengut de l'Alcoran a pas pogut èsser cargat. Ensajatz tornarmai.",
   "retry": "Tornatz ensajar",
   "refreshAction": "Actualizar",
   "cancel": "Anullar",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "En cargament de tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Cap de tafsir trobat per aquesta sura.",
+  "tafsirNoAyahFound": "Cap de tafsir pas trobat per ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir a pas pogut èsser cargat.",
+  "tafsirNoTextForAyah": "Pas de tèxte tafsir per aqueste ayah.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "La font Tafsir a retornat una error HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "La font tafsir seleccionada a renviat pas cap d'entrada.",
+  "tafsirCacheUnavailable": "Lo tafsir verificat es pas encara disponible fòra linha. Sincronizatz un ensemble de donadas tafsir font abans de navigar.",
   "bookmarks": "Los marcapaginas",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

@@ -154,8 +154,7 @@ class AppLocalizationsWo extends AppLocalizations {
   String get appUnknownError => 'Njuumte buñu xamul';
 
   @override
-  String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+  String get quranLoadFailed => 'Mënu ñu sarse ëmbiitu Al Quran. Jéemaat.';
 
   @override
   String get retry => 'Jéemaat';
@@ -220,18 +219,18 @@ class AppLocalizationsWo extends AppLocalizations {
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Amul benn tafsir buñ gis ci surah bii.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Tafsir gisu ñu ci aaya $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir mënu ñu ko sarse.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Amul mbindu tafsir ci aaya bii.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +244,16 @@ class AppLocalizationsWo extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir source bi delloona ab njuumte HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Source tafsir biñ tànn delloowul dara.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir buñ firndeel nekkagul ci net bi ba leegi. Senkronise ab done tafsir laata ngay seet.';
 
   @override
   String get bookmarks => 'Marke-pages';

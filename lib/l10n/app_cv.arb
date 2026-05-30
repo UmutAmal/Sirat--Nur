@@ -67,7 +67,7 @@
   "error": "Йӑнӑш",
   "appErrorOccurred": "Йӑнӑш пулнӑ",
   "appUnknownError": "Паллӑ мар йӑнӑш",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Коран содержанине илме май килмерӗ. Тархасшӑн, тепӗр хут тытӑнса пӑхӑр.",
   "retry": "Тепӗр хут тытӑнса пӑхӑр",
   "refreshAction": "Ҫӗнет",
   "cancel": "Пӑрахӑç ту",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Тафсир загрузка...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ку сура валли тафсир тупӑнман.",
+  "tafsirNoAyahFound": "Аят {ayah} валли тафсир тупӑнман.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Тафсир тиеме май килмерӗ.",
+  "tafsirNoTextForAyah": "Ку ая валли тафсир текстӗ ҫук.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir ҫӑлкуҫӗ HTTP {statusCode} йӑнӑш тавӑрнӑ.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Суйласа илнӗ tafsir ҫӑлкуҫӗ нимӗнле ҫыру та тавӑрса паман.",
+  "tafsirCacheUnavailable": "Тӗрӗсленӗ tafsir хальлӗхе офлайнра ҫук. Браузер умӗн ҫӑлкуҫран илнӗ tafsir даннӑйсен пуххине синхронизацилӗр.",
   "bookmarks": "Закладкӑсем",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

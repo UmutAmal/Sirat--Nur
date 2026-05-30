@@ -67,7 +67,7 @@
   "error": "Рæдыд",
   "appErrorOccurred": "Æрцыд рæдыд",
   "appUnknownError": "Æбæрæг рæдыд",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Хъуыраны мидис нæ бантыст æрбакæнын. Дæ хорзæхæй, ногæй бафæлвар.",
   "retry": "Ногæй бафæлвар",
   "refreshAction": "Сног кæнын",
   "cancel": "аивын",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Загрузка тафсир...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ацы сурæйæн тафсир нæ ссардтой.",
+  "tafsirNoAyahFound": "Аят {ayah}-æн тафсир нæ ссардтой.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Тафсир æрбакæнын нæ бантыст.",
+  "tafsirNoTextForAyah": "Нæй тафсиры текст ацы аятæн.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir-ы равзæрæн æрбаздæхта HTTP {statusCode} рæдыд.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Æвзæрст тафсиры равзæрæн ницы æрбаздæхта.",
+  "tafsirCacheUnavailable": "Бæлвырдгонд tafsir нырма офлайны нæй. Синхронизаци кæнут æвзæрст tafsir бæрæггæнæнты æмбырдгонд æркасты размæ.",
   "bookmarks": "Нысантæ",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

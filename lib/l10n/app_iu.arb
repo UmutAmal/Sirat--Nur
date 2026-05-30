@@ -67,7 +67,7 @@
   "error": "ᑕᒻᒪᖅᑐᖅ",
   "appErrorOccurred": "ᑕᒻᒪᖅᑐᖃᖅᑐᖅ",
   "appUnknownError": "ᖃᐅᔨᒪᔭᐅᙱᑦᑐᖅ ᑕᒻᒪᖅᓯᒪᔪᖅ",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "ᑯᕌᓐ ᐃᓗᓕᖏᑦ ᖃᕆᑕᐅᔭᕐᒨᖅᑕᐅᔪᓐᓇᓚᐅᙱᓚᑦ. ᐆᑦᑐᑲᓐᓂᕆᑦ.",
   "retry": "ᐆᒃᑐᒃᑲᓐᓂᕆᑦ",
   "refreshAction": "ᓄᑖᙳᕆᐊᖅᑎᑦᑎᓂᖅ",
   "cancel": "ᖁᔭᓈᕐᓂᖅ",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "ᐅᓯᑲᑦᑕᕐᓂᖅ ᑕᕝᓯᕐᒥᒃ...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "ᑕᕝᓯᕐ ᓇᓂᔭᐅᓚᐅᙱᓚᖅ ᑖᔅᓱᒧᖓ ᓱᕋᒧᑦ.",
+  "tafsirNoAyahFound": "ᑕᕝᓯᕐ ᓇᓂᔭᐅᓚᐅᙱᑦᑐᖅ ᐊᐃᔭᒧᑦ {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "ᑕᕝᓯᕐ ᐅᓯᔭᐅᔪᓐᓇᓚᐅᙱᒻᒪᑦ.",
+  "tafsirNoTextForAyah": "ᑕᕝᓯᐅᕐ ᑎᑎᕋᖅᓯᒪᔪᖃᙱᓚᖅ ᑖᔅᓱᒧᖓ ᐊᔭᒧᑦ.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "ᑕᕝᕙᓯᐅᑉ ᑐᖅᑯᐃᕕᖓ ᐅᑎᖅᑎᑦᑎᓚᐅᖅᑐᖅ HTTP {statusCode} ᑕᒻᒪᖅᓯᒪᔪᒥᒃ.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "ᓂᕈᐊᖅᑕᐅᓯᒪᔪᖅ ᑕᕝᓯᐅᕐᕕᒃ ᐅᑎᖅᑎᑦᑎᓚᐅᙱᓚᖅ ᑎᑎᕋᖅᓯᒪᔪᓂᒃ.",
+  "tafsirCacheUnavailable": "ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᑕᕝᕙ ᓱᓕ ᐊᑐᐃᓐᓇᐅᙱᓚᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ. ᑐᑭᓕᐊᖅᑎᑦᑎᓗᑎᑦ ᓇᑭᙶᖅᑐᒥᒃ ᑕᕝᓯᕐᒥᒃ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᓂᒃ ᕿᓂᓚᐅᙱᓐᓂᕐᓂ.",
   "bookmarks": "ᐅᖃᓕᒫᒐᕐᓄᑦ ᓇᓗᓇᐃᒃᑯᑕᐃᑦ",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

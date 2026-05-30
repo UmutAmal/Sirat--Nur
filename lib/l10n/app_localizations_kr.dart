@@ -155,7 +155,7 @@ class AppLocalizationsKr extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Awo suro Quranben dagənadə raktə təkkinba. Martǝne waltǝ jarabne.';
 
   @override
   String get retry => 'Waltǝm jarabne';
@@ -214,24 +214,24 @@ class AppLocalizationsKr extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Tafsir ikko...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Tafsir surah adəro təbandənyi.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Tafsir aya $ayah ye lan bawo.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir raktǝ tǝkǝnyi.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ayat adəlan kitawu tafsirbe ba.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,15 @@ class AppLocalizationsKr extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsirbe furtunzədə waltə HTTP $statusCode taltə suwudəna.';
   }
 
   @override
-  String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+  String get tafsirNoEntriesReturned => 'Tafsir kartənadə awo gade waltəgəna.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir tawattəgənadə kuwami yaye offline lan bawo. Kawu bayan tafsirbe fəletənadəga kəltəgə.';
 
   @override
   String get bookmarks => 'Alamawa kitawube';

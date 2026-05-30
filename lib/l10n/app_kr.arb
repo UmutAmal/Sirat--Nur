@@ -67,7 +67,7 @@
   "error": "Tare",
   "appErrorOccurred": "Taltǝ wagǝzǝna",
   "appUnknownError": "Taltǝ notǝnyi",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Awo suro Quranben dagənadə raktə təkkinba. Martǝne waltǝ jarabne.",
   "retry": "Waltǝm jarabne",
   "refreshAction": "Bǝlintǝgǝ",
   "cancel": "Dawartə",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Tafsir ikko...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Tafsir surah adəro təbandənyi.",
+  "tafsirNoAyahFound": "Tafsir aya {ayah} ye lan bawo.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir raktǝ tǝkǝnyi.",
+  "tafsirNoTextForAyah": "Ayat adəlan kitawu tafsirbe ba.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsirbe furtunzədə waltə HTTP {statusCode} taltə suwudəna.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Tafsir kartənadə awo gade waltəgəna.",
+  "tafsirCacheUnavailable": "Tafsir tawattəgənadə kuwami yaye offline lan bawo. Kawu bayan tafsirbe fəletənadəga kəltəgə.",
   "bookmarks": "Alamawa kitawube",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

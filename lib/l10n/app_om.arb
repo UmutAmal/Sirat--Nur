@@ -96,7 +96,7 @@
   "tafsirLoading": "Tafsir fe'amaa jira...",
   "tafsirSourceLabel": "Tafsir madda",
   "tafsirNoSurahFound": "Suuraa kanaaf tafsiirri hin argamne.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoAyahFound": "Ayah {ayah} tafsiirri hin argamne.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {

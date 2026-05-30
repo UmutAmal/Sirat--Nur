@@ -67,7 +67,7 @@
   "error": "Tene ti mvene",
   "appErrorOccurred": "Mbeni faute asi",
   "appUnknownError": "Faute so a hinga ni pëpe",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "A lingbi ti zia na yâ ti Coran pëpe. Pardon, kiri mo tara ni.",
   "retry": "Kiri mo tara",
   "refreshAction": "Refresh",
   "cancel": "zi ni",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Tafsir ti chargement...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "A wara mbeni tafsir pëpe teti surah so.",
+  "tafsirNoAyahFound": "A wara mbeni tafsir oko pëpe teti aye {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir alingbi ti charge pëpe.",
+  "tafsirNoTextForAyah": "Mbeni mbeti ti tafsir pëpe teti ayah so.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir alondo na mbeni HTTP {statusCode} ti faute.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Azo so a soro ala ti sara tafsir akiri na ambeni tënë pëpe.",
+  "tafsirCacheUnavailable": "Tafsir so a vérifié ni ayeke dä pëpe. Synchronisé mbeni source ti tafsir kozoni si mo sara browsing.",
   "bookmarks": "Marque-page",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

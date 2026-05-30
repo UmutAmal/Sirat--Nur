@@ -67,7 +67,7 @@
   "error": "Liphutsa",
   "appErrorOccurred": "Kwenteke liphutsa",
   "appUnknownError": "Liphutsa lelingatiwa",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Lokucuketfwe yi-Quran akuzange kulayishwe. Sicela uphindze uzame.",
   "retry": "Phindza uzame",
   "refreshAction": "Vuselela",
   "cancel": "Khansela",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Kulayisha i-tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Kute tafsir letfolakele kule surah.",
+  "tafsirNoAyahFound": "Kute i-tafsir letfolakele ye-ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir akazange akwati kulayishwa.",
+  "tafsirNoTextForAyah": "Kute umbhalo we-tafsir wale ayah.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Umtfombo we-tafsir lokhetsiwe awuzange ubuyisele lokufakiwe.",
+  "tafsirCacheUnavailable": "I-tafsir lecinisekisiwe ayikatfolakali ngaphandle kwe-inthanethi. Vumelanisa idathaset ye-tafsir letfolwe ngaphambi kwekutsi uphenye.",
   "bookmarks": "Emabhukhimaki",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

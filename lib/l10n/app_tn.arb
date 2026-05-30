@@ -67,7 +67,7 @@
   "error": "Phoso",
   "appErrorOccurred": "Go diragetse phoso",
   "appUnknownError": "Phoso e e sa itsiweng",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Diteng tsa Quran ga di a kgona go laisiwa. Tsweetswee leka gape.",
   "retry": "Leka gape",
   "refreshAction": "Lapolosa",
   "cancel": "Phimola",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Go laisa tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ga go na tafsir e e bonweng ya surah eno.",
+  "tafsirNoAyahFound": "Ga go na tafsir e e bonweng ya aya {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir e ne e sa kgone go laisiwa.",
+  "tafsirNoTextForAyah": "Ga go na mokwalo wa tafsir wa ayah eno.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Motswedi wa Tafsir o busitse phoso ya HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Motswedi o o tlhophilweng wa tafsir ga o a busetsa ditsenngwa dipe.",
+  "tafsirCacheUnavailable": "Tafsir e e netefaditsweng ga e ise e nne teng kwa ntle ga inthanete. Amahanya dataset ya tafsir e e tswang motsweding pele ga o batlisisa.",
   "bookmarks": "Matshwaotsebe",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

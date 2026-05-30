@@ -67,7 +67,7 @@
   "error": "Fout",
   "appErrorOccurred": "D'r is 'n fout opgetreie",
   "appUnknownError": "Onbekende fout",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Inhoud vaan de koran koos neet weure gelaod. Probeer nog ummer.",
   "retry": "Probeer nog ummer",
   "refreshAction": "Verfrisse",
   "cancel": "Annulere",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Tafsir laden...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "D’r is gein tafsir gevoonde veur deze soerah.",
+  "tafsirNoAyahFound": "Geen tafsir gevoonde veur ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir koos neet weure gelaoje.",
+  "tafsirNoTextForAyah": "Geen tafsir-teks veur deze ayah.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir-bron heet un HTTP {statusCode} fout geretourneerd.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "De geselecteerde tafsir-bron retourneerde gein invoere.",
+  "tafsirCacheUnavailable": "Gecontroleerde tafsir is nog neet offline besjikbaar. Synchroniseer un tafsir-gegevensset veurtot ge browst.",
   "bookmarks": "Boekmerke",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

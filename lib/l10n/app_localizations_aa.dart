@@ -155,7 +155,7 @@ class AppLocalizationsAa extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Kur\'aan addatino quukam maduudumta. Ku maganak qagitaak gibbat.';
 
   @override
   String get retry => 'Qagitaak gibbata';
@@ -214,24 +214,24 @@ class AppLocalizationsAa extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Tafsiir quuki...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Ta suurat tafsiir mageytima.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'tafsiir mageytiminna aayat $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir quukam maduuda.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ta aayat tafsir kutbe matan.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -250,11 +250,11 @@ class AppLocalizationsAa extends AppLocalizations {
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'doorimteh tan tafsir raceena culma mataduura.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Diggooweh yan tafsir awakâ fanah gitak iroh mageytima. tafsiir raceenah oytih daffeyna golisak naharal celsis.';
 
   @override
   String get bookmarks => 'Kitab Asta';

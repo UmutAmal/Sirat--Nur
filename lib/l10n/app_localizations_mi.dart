@@ -225,7 +225,7 @@ class AppLocalizationsMi extends AppLocalizations {
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Karekau he tafsir i kitea mo papa $ayah.';
   }
 
   @override

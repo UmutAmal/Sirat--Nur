@@ -96,7 +96,7 @@
   "tafsirLoading": "Loading tafsir...",
   "tafsirSourceLabel": "Sumber Tafsir",
   "tafsirNoSurahFound": "Ora ana tafsir sing ditemokake kanggo surat iki.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoAyahFound": "Ora ana tafsir sing ditemokake kanggo ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {

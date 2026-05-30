@@ -96,7 +96,7 @@
   "tafsirLoading": "Тафсирыг ачаалж байна...",
   "tafsirSourceLabel": "Тафсир эх сурвалж",
   "tafsirNoSurahFound": "Энэ судрын тафсир олдсонгүй.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoAyahFound": "{ayah} аятай холбоотой тафсир олдсонгүй.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {

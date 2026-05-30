@@ -225,7 +225,7 @@ class AppLocalizationsOm extends AppLocalizations {
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ayah $ayah tafsiirri hin argamne.';
   }
 
   @override

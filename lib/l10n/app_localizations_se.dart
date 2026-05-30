@@ -155,7 +155,7 @@ class AppLocalizationsSe extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Korana sisdoallu ii sáhttán biddjojuvvot. Geahččal fas.';
 
   @override
   String get retry => 'Geahččal ođđasit';
@@ -214,24 +214,24 @@ class AppLocalizationsSe extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Lassin tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Dán sura ii gávdnon tafsir.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ii gávdnon tafsir ayah $ayah ovddas.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir ii sáhttán biddjojuvvot.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ii leat tafsir-teaksta dán ayah:ii.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsSe extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir-gáldu máhcahii HTTP $statusCode meattáhusa.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Válljejuvvon tafsir-gáldu ii máhcahan makkárge sisačállosiid.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Duođaštuvvon tafsir ii leat vuos gávdnamis offline. Synkronisere tafsir-diehtovuođu ovdal go geahččat.';
 
   @override
   String get bookmarks => 'Girjemearkkat';

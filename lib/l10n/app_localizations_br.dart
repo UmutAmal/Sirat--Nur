@@ -157,7 +157,7 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'N\'haller ket kargañ endalc\'had ar C\'horan. Klaskit en-dro mar plij.';
 
   @override
   String get retry => 'Klask en-dro';
@@ -216,24 +216,24 @@ class AppLocalizationsBr extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'O kargañ tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Tafsir ebet evit ar soura-mañ.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Tafsir ebet evit an ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'N\'haller ket kargañ Tafsir.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Testenn tafsir ebet evit an ayah-mañ.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,16 +247,16 @@ class AppLocalizationsBr extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Distroet eo bet ur fazi HTTP $statusCode gant mammenn Tafsir.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'N\'eus bet distroet enankad ebet gant ar vammenn tafsir diuzet.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'N\'eo ket hegerz an tafsir gwiriekaet ezlinenn c\'hoazh. Sinkronisañ un dastumad roadennoù tafsir orin a-raok merdeiñ.';
 
   @override
   String get bookmarks => 'Sinedoù';

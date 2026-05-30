@@ -155,7 +155,7 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Zwi re ngomu ha Quran a zwo ngo kona u ḓadzwa. Ndi khou humbela uri ni lingedze hafhu.';
 
   @override
   String get retry => 'Lingedzani hafhu';
@@ -214,24 +214,24 @@ class AppLocalizationsVe extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'U ḓadza tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Ahuna tafsir yo wanalaho kha surah iyi.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'A hu na tafsir yo wanalaho ya aya $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir yo vha i sa koni u hwaliwa.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ahuna manwalo a tafsir a ayah iyi.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsVe extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tshisima tsha Tafsir tsho vhuisa vhukhakhi ha HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Tshisima tsha tafsir tsho khethiwaho a tsho ngo vhuisa zwithu.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir yo khwaṱhisedzwaho a i athu wanala offline. U ṱanganya dataset ya tafsir yo bveledzwaho phanḓa ha musi u tshi ṱola.';
 
   @override
   String get bookmarks => 'Zwiga zwa bugu';

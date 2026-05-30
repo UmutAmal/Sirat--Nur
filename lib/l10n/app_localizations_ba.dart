@@ -155,7 +155,7 @@ class AppLocalizationsBa extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Ҡөрьән йөкмәткеһен тейәп булманы. Зинһар, тағы ла тырышығыҙ.';
 
   @override
   String get retry => 'Ҡабаттан ҡара';
@@ -214,24 +214,24 @@ class AppLocalizationsBa extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Тәфсир тейәү...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Был сүрәгә тәфсир табылмаған.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return '$ayah аят өсөн тәфсир табылмаған.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Тәфсирҙе тейәп булманы.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Был аят өсөн тәфсир тексы юҡ.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsBa extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Тафсир сығанағы HTTP $statusCode хатаһын ҡайтарҙы.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Һайланған тәфсир сығанағы бер ниндәй ҙә яҙмалар ҡайтарманы.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Тикшерелгән тәфсир әлегә офлайн режимда юҡ. Синхронизация сығанаҡ тафсир мәғлүмәттәр йыйылмаһы браузер алдынан.';
 
   @override
   String get bookmarks => 'Закладкалар';

@@ -155,7 +155,7 @@ class AppLocalizationsRn extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Ibiri muri Korowani ntivyashoboye gushirwako. Ndagusavye wongere ugerageze.';
 
   @override
   String get retry => 'Subira ugerageze';
@@ -214,24 +214,24 @@ class AppLocalizationsRn extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Gushiramwo tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Nta tafsir yabonetse kuri iyi sura.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Nta tafsiri yabonetse ku majambo $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir ntiyashobora gushirwako.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Nta canditswe ca tafsir c’iyi ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsRn extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Inkomoko ya Tafsir yagarutse ikosa HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Isoko ya tafsir yatowe nta n’imwe yagarutse.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir yagenzuwe ntiraboneka hanze y’umurongo. Gukoranya amakuru ya tafsir imbere yo gusura.';
 
   @override
   String get bookmarks => 'Ibimenyetso';

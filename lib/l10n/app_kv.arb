@@ -67,7 +67,7 @@
   "error": "Шыбӧль",
   "appErrorOccurred": "Ӧшыбка лоис",
   "appUnknownError": "Тӧдтӧм ӧшыбка .",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Коран содержаниесӧ эз позь лэдзны. Please try again.",
   "retry": "Перепробуйте",
   "refreshAction": "Выльмӧдны",
   "cancel": "Киритӧм",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Загрузка тафсир...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Тайӧ сураысь некутшӧм тафсир эз аддзыны.",
+  "tafsirNoAyahFound": "Некутшӧм тафсир эз аддзыны аят {ayah} вылӧ.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Тафсир эз вермы тыртны.",
+  "tafsirNoTextForAyah": "Тайӧ аят вылӧ тафсир текст абу.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Тафсир источник сетіс HTTP {statusCode} ӧшыбка.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Бӧрйӧм тафсир источникысь нинӧм эз бергӧд.",
+  "tafsirCacheUnavailable": "Вердӧм тафсир офлайн ногӧн абу на. Синхронизируйтны источникысь тафсир даннӧйяс чукӧр видлалӧм бӧрын.",
   "bookmarks": "Закладкаяс",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

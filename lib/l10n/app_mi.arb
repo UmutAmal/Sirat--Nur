@@ -96,7 +96,7 @@
   "tafsirLoading": "Uta ana tafsir...",
   "tafsirSourceLabel": "puna Tafsir",
   "tafsirNoSurahFound": "Kaore i kitea he tafsir mo tenei surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoAyahFound": "Karekau he tafsir i kitea mo papa {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {

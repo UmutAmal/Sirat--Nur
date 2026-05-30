@@ -67,7 +67,7 @@
   "error": "Linachi",
   "appErrorOccurred": "Guaha error ma susedi",
   "appUnknownError": "Ti ma tungo' na isao",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Ti siña ma'a'atan i tinige' gi i Quran. På'go, prutehi ta'lo.",
   "retry": "Prueba ta'lo",
   "refreshAction": "Na'lå'la' ta'lo",
   "cancel": "Kansela",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Ma'a'agang i tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Ti ma sodda' tafsir para este na surah.",
+  "tafsirNoAyahFound": "Ti ma sodda' tafsir para ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Ti siña ma'a'agang i Tafsir.",
+  "tafsirNoTextForAyah": "Ti guaha tinige' tafsir para este na ayah.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "I Tafsir na fuetsa ha na'hånao un HTTP {statusCode} na error.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "I tafsir ni' ma selekta ti ha na'hånao i entri siha.",
+  "tafsirCacheUnavailable": "Ti ma'ayek i tafsir ni' ma'ayek gi i internet på'go. Sinkronisa i setbesan tafsir ni' ma sodda' antes di un li'e'.",
   "bookmarks": "Bookmarks",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

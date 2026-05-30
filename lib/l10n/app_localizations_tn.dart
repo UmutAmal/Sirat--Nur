@@ -155,7 +155,7 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Diteng tsa Quran ga di a kgona go laisiwa. Tsweetswee leka gape.';
 
   @override
   String get retry => 'Leka gape';
@@ -214,24 +214,24 @@ class AppLocalizationsTn extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Go laisa tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Ga go na tafsir e e bonweng ya surah eno.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ga go na tafsir e e bonweng ya aya $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir e ne e sa kgone go laisiwa.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ga go na mokwalo wa tafsir wa ayah eno.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsTn extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Motswedi wa Tafsir o busitse phoso ya HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Motswedi o o tlhophilweng wa tafsir ga o a busetsa ditsenngwa dipe.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir e e netefaditsweng ga e ise e nne teng kwa ntle ga inthanete. Amahanya dataset ya tafsir e e tswang motsweding pele ga o batlisisa.';
 
   @override
   String get bookmarks => 'Matshwaotsebe';

@@ -67,7 +67,7 @@
   "error": "Njuumte",
   "appErrorOccurred": "Dafa am njuumte",
   "appUnknownError": "Njuumte buñu xamul",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Mënu ñu sarse ëmbiitu Al Quran. Jéemaat.",
   "retry": "Jéemaat",
   "refreshAction": "Yeesal",
   "cancel": "Bàyyi",
@@ -95,8 +95,8 @@
   "tafsir": "Tafsir",
   "tafsirLoading": "Loading tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Amul benn tafsir buñ gis ci surah bii.",
+  "tafsirNoAyahFound": "Tafsir gisu ñu ci aaya {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Tafsir mënu ñu ko sarse.",
+  "tafsirNoTextForAyah": "Amul mbindu tafsir ci aaya bii.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Tafsir source bi delloona ab njuumte HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Source tafsir biñ tànn delloowul dara.",
+  "tafsirCacheUnavailable": "Tafsir buñ firndeel nekkagul ci net bi ba leegi. Senkronise ab done tafsir laata ngay seet.",
   "bookmarks": "Marke-pages",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

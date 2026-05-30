@@ -67,7 +67,7 @@
   "error": "त्रुटि",
   "appErrorOccurred": "एगो त्रुटि हो गइल",
   "appUnknownError": "अज्ञात त्रुटि हो गइल बा",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "कुरान के सामग्री लोड ना हो पावल। कृपया दोबारा कोशिश करीं।",
   "retry": "दोबारा कोशिश करीं",
   "refreshAction": "ताज़ा कर दिहल जाव",
   "cancel": "मना कइ दीं",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "तफसीर लोड हो रहल बा...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "एह सूरह खातिर कवनो तफसीर ना मिलल.",
+  "tafsirNoAyahFound": "आयत {ayah} खातिर कवनो तफसीर ना मिलल।",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "तफसीर के लोड ना हो पावल।",
+  "tafsirNoTextForAyah": "एह आयत खातिर कवनो तफसीर पाठ नइखे.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "तफसीर स्रोत एगो HTTP {statusCode} त्रुटि वापस कइले बा।",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "चुनल तफसीर स्रोत कवनो प्रविष्टि ना लवटा दिहलसि.",
+  "tafsirCacheUnavailable": "सत्यापन तफसिर अभी तक ऑफलाइन उपलब्ध नइखे। ब्राउजिंग से पहिले कवनो सोर्स कइल तफसीर डाटासेट के सिंक करीं।",
   "bookmarks": "बुकमार्क",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

@@ -67,7 +67,7 @@
   "error": "Хата",
   "appErrorOccurred": "Хата килеп сыҡты",
   "appUnknownError": "Билдәһеҙ хата",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Ҡөрьән йөкмәткеһен тейәп булманы. Зинһар, тағы ла тырышығыҙ.",
   "retry": "Ҡабаттан ҡара",
   "refreshAction": "Яңыртыу",
   "cancel": "Юҡҡа сығарырға",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Тәфсир тейәү...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Был сүрәгә тәфсир табылмаған.",
+  "tafsirNoAyahFound": "{ayah} аят өсөн тәфсир табылмаған.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Тәфсирҙе тейәп булманы.",
+  "tafsirNoTextForAyah": "Был аят өсөн тәфсир тексы юҡ.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Тафсир сығанағы HTTP {statusCode} хатаһын ҡайтарҙы.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Һайланған тәфсир сығанағы бер ниндәй ҙә яҙмалар ҡайтарманы.",
+  "tafsirCacheUnavailable": "Тикшерелгән тәфсир әлегә офлайн режимда юҡ. Синхронизация сығанаҡ тафсир мәғлүмәттәр йыйылмаһы браузер алдынан.",
   "bookmarks": "Закладкалар",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

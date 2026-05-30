@@ -155,7 +155,7 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Men ko ilo Quran rar jab maroñ in bōk. Jouj im bar kajeoñ.';
 
   @override
   String get retry => 'Bar kajeoñ';
@@ -220,18 +220,18 @@ class AppLocalizationsMh extends AppLocalizations {
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Ejelok tafsir ñan surah in.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ejelok tafsir ñan ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir ear jab maroñ in bōk jikin.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Ejelok tafsir text ñan ayah in.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +245,16 @@ class AppLocalizationsMh extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir source ear jeblak juon HTTP $statusCode bōd.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Tafsir eo kar kālete ear jab jeblaktok jabdewōt men ko.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir eo emol ejjab maroñ in bed ilo offline kiõ. Kōmman juon tafsir dataset mokta jen am browse.';
 
   @override
   String get bookmarks => 'Bookmark ko';

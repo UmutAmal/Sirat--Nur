@@ -157,7 +157,7 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Koranimi imarisaq ikkussorneqarsinnaasimanngilaq. Misilittariaqarpat.';
 
   @override
   String get retry => 'Misilittariaqarpat';
@@ -216,24 +216,26 @@ class AppLocalizationsKl extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Tafsir-imik ikkussineq...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Surah-mut tassunga tafsir nassaarineqanngilaq.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Ayah $ayah-mut tafsir nassaarineqanngilaq.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir-imik ikkussorneqarsinnaasimanngilaq.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah =>
+      'Ayah-mut tassunga tafsir-imik allassimasoqanngilaq.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,16 +249,16 @@ class AppLocalizationsKl extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir-ip killiffia HTTP $statusCode-mik kukkuneq utertippaa.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Tafsir-imik toqqarneqarsimasoq allagartanik utertitsivoq.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir uppernarsarneqarsimasoq suli offline-imi pissarsiarineqarsinnaanngilaq. Tafsir-datasæt-imik pissarsiarineqarsimasumik synkroniseqarit browserneq sioqqullugu.';
 
   @override
   String get bookmarks => 'Atuagassiat';

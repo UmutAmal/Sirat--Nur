@@ -2388,6 +2388,61 @@ void main() {
       }
     });
 
+    test('tracks Quran and tafsir runtime shell l10n debt reduction', () {
+      const keys = [
+        'quranLoadFailed',
+        'tafsirLoading',
+        'tafsirLoadFailed',
+        'tafsirNoSurahFound',
+        'tafsirNoAyahFound',
+        'tafsirNoTextForAyah',
+        'tafsirApiStatusError',
+        'tafsirNoEntriesReturned',
+        'tafsirCacheUnavailable',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(275));
+      for (final locale in ['bo', 'ms', 'su']) {
+        for (final key in keys) {
+          final value = localeArbs[locale]![key] as String;
+          expect(
+            value,
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason: 'app_$locale.arb has multiline tafsir copy for $key',
+          );
+        }
+      }
+      for (final locale in ['bm', 'wo']) {
+        final value = localeArbs[locale]!['tafsirLoading'] as String;
+        expect(value, isNot(contains('Chargement tafsir ka')));
+        expect(value, isNot(contains('Lochargement tafsir')));
+      }
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',
@@ -2759,9 +2814,25 @@ void main() {
         candidate: 'Quran ukax mä juk’a pachanakanwa',
       );
 
+      final bambaraTafsirValue = resolveTranslatedArbValue(
+        key: 'tafsirLoading',
+        source: 'Loading tafsir...',
+        currentValue: 'Chargement tafsir ka...',
+        candidate: 'Chargement tafsir ka...',
+      );
+
+      final wolofTafsirValue = resolveTranslatedArbValue(
+        key: 'tafsirLoading',
+        source: 'Loading tafsir...',
+        currentValue: 'Lochargement tafsir...',
+        candidate: 'Lochargement tafsir...',
+      );
+
       expect(settingsValue, 'Settings');
       expect(pageValue, 'Page');
       expect(quranValue, 'Quran');
+      expect(bambaraTafsirValue, 'Loading tafsir...');
+      expect(wolofTafsirValue, 'Loading tafsir...');
     });
 
     test('rejects mixed English location detection debris', () {

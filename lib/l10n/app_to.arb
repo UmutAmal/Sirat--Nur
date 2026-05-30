@@ -67,7 +67,7 @@
   "error": "Hala",
   "appErrorOccurred": "Na'e hoko ha fehalaaki",
   "appUnknownError": "Hala 'oku 'ikai 'ilo'i",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Naʻe ʻikai lava ke uta ʻa e kakano ʻo e Quran. Kātaki ʻo toe feinga.",
   "retry": "Toe feinga",
   "refreshAction": "Fakafo'ou",
   "cancel": "Kaniseli",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Uta 'a e tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "'Oku 'ikai ke ma'u ha tafsir ki he surah ko 'eni.",
+  "tafsirNoAyahFound": "'Oku 'ikai ke ma'u ha tafsir ki he 'aia {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Naʻe ʻikai lava ke uta ʻa e Tafsir.",
+  "tafsirNoTextForAyah": "'Ikai ha tohi tafsir ki he ayah ko 'eni.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Na'e fakafoki mai 'e he ma'u'anga fakamatala Tafsir ha HTTP {statusCode} hala.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Na'e 'ikai ke fakafoki mai 'e he ma'u'anga tokoni tafsir kuo fili ha ngaahi hū.",
+  "tafsirCacheUnavailable": "'Oku te'eki ke ma'u 'a e tafsir kuo fakamo'oni'i 'i he offline. Sync ha dataset tafsir ma'u'anga tokoni kimu'a pea toki vakai'i.",
   "bookmarks": "Ngaahi fakaʻilonga tohi",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

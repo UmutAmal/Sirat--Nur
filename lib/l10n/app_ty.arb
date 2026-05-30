@@ -67,7 +67,7 @@
   "error": "Māuruuru",
   "appErrorOccurred": "Ua tupu te hoê hape",
   "appUnknownError": "Hapa aita i itehia",
-  "quranLoadFailed": "Quran content could not be loaded. Please try again.",
+  "quranLoadFailed": "Aita i ti'a ia faauta i te mau mea e vai ra i roto i te Quran. A tamata faahou na.",
   "retry": "A tamata faahou",
   "refreshAction": "Faahou",
   "cancel": "Tautea",
@@ -93,10 +93,10 @@
   "recitation": "Recitation",
   "translation": "Translation",
   "tafsir": "Tafsir",
-  "tafsirLoading": "Loading tafsir...",
+  "tafsirLoading": "Te faautaraa i te tafsir...",
   "tafsirSourceLabel": "Tafsir source",
-  "tafsirNoSurahFound": "No tafsir found for this surah.",
-  "tafsirNoAyahFound": "No tafsir found for ayah {ayah}.",
+  "tafsirNoSurahFound": "Aita e tafsir i itehia no teie surah.",
+  "tafsirNoAyahFound": "Aita e tafsir i itehia no te ayah {ayah}.",
   "@tafsirNoAyahFound": {
     "placeholders": {
       "ayah": {
@@ -104,8 +104,8 @@
       }
     }
   },
-  "tafsirLoadFailed": "Tafsir could not be loaded.",
-  "tafsirNoTextForAyah": "No tafsir text for this ayah.",
+  "tafsirLoadFailed": "Aita ta Tafsir i nehenehe e faautahia.",
+  "tafsirNoTextForAyah": "Aita e parau tafsir no teie ayah.",
   "tafsirDownloadingProgress": "Downloading tafsir {current}/{total}",
   "@tafsirDownloadingProgress": {
     "placeholders": {
@@ -128,7 +128,7 @@
       }
     }
   },
-  "tafsirApiStatusError": "Tafsir source returned an HTTP {statusCode} error.",
+  "tafsirApiStatusError": "Ua faaho'i mai te puna Tafsir i te hoê hape HTTP {statusCode}.",
   "@tafsirApiStatusError": {
     "placeholders": {
       "statusCode": {
@@ -136,8 +136,8 @@
       }
     }
   },
-  "tafsirNoEntriesReturned": "The selected tafsir source returned no entries.",
-  "tafsirCacheUnavailable": "Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.",
+  "tafsirNoEntriesReturned": "Aita te pu tafsir i maitihia i faaho'i mai i te mau parau.",
+  "tafsirCacheUnavailable": "Aita â te tafsir haapapuhia i roaa mai i nia i te Internet. Hou a hi'opo'a ai, a faaau i te hoê haamaramaramaraa no ni'a i te tafsir.",
   "bookmarks": "Ngā tapa'o buka",
   "addBookmark": "Add Bookmark",
   "removeBookmark": "Remove Bookmark",

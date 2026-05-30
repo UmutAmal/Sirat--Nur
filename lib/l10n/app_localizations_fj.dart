@@ -156,7 +156,7 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'E sega ni rawa ni vakavodoki na itukutuku ni Quran. Kerekere mo tovolea tale.';
 
   @override
   String get retry => 'Tovolea tale';
@@ -215,24 +215,26 @@ class AppLocalizationsFj extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Vakavodoki tiko na tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'E sega ni kune e dua na tafsir me baleta na sura oqo.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'No hay tafsir encontrado para aya $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'E sega ni rawa ni vakavodoki na Tafsir.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah =>
+      'Sega ni dua na ivola ni tafsir me baleta na aya oqo.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -251,11 +253,11 @@ class AppLocalizationsFj extends AppLocalizations {
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Na ivurevure ni tafsir digitaki e sega ni vakasuka mai e dua na icurucuru.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir vakadeitaki e se bera ni rawa ena initaneti. Vakatautauvatataka e dua na itukutuku ni tafsir ni bera ni o raica.';
 
   @override
   String get bookmarks => 'Vakatakilakila';

@@ -154,8 +154,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get appUnknownError => 'ᖃᐅᔨᒪᔭᐅᙱᑦᑐᖅ ᑕᒻᒪᖅᓯᒪᔪᖅ';
 
   @override
-  String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+  String get quranLoadFailed => 'ᑯᕌᓐ ᐃᓗᓕᖏᑦ ᖃᕆᑕᐅᔭᕐᒨᖅᑕᐅᔪᓐᓇᓚᐅᙱᓚᑦ. ᐆᑦᑐᑲᓐᓂᕆᑦ.';
 
   @override
   String get retry => 'ᐆᒃᑐᒃᑲᓐᓂᕆᑦ';
@@ -214,24 +213,24 @@ class AppLocalizationsIu extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'ᐅᓯᑲᑦᑕᕐᓂᖅ ᑕᕝᓯᕐᒥᒃ...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'ᑕᕝᓯᕐ ᓇᓂᔭᐅᓚᐅᙱᓚᖅ ᑖᔅᓱᒧᖓ ᓱᕋᒧᑦ.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'ᑕᕝᓯᕐ ᓇᓂᔭᐅᓚᐅᙱᑦᑐᖅ ᐊᐃᔭᒧᑦ $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'ᑕᕝᓯᕐ ᐅᓯᔭᐅᔪᓐᓇᓚᐅᙱᒻᒪᑦ.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'ᑕᕝᓯᐅᕐ ᑎᑎᕋᖅᓯᒪᔪᖃᙱᓚᖅ ᑖᔅᓱᒧᖓ ᐊᔭᒧᑦ.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -245,16 +244,16 @@ class AppLocalizationsIu extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'ᑕᕝᕙᓯᐅᑉ ᑐᖅᑯᐃᕕᖓ ᐅᑎᖅᑎᑦᑎᓚᐅᖅᑐᖅ HTTP $statusCode ᑕᒻᒪᖅᓯᒪᔪᒥᒃ.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'ᓂᕈᐊᖅᑕᐅᓯᒪᔪᖅ ᑕᕝᓯᐅᕐᕕᒃ ᐅᑎᖅᑎᑦᑎᓚᐅᙱᓚᖅ ᑎᑎᕋᖅᓯᒪᔪᓂᒃ.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᑕᕝᕙ ᓱᓕ ᐊᑐᐃᓐᓇᐅᙱᓚᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ. ᑐᑭᓕᐊᖅᑎᑦᑎᓗᑎᑦ ᓇᑭᙶᖅᑐᒥᒃ ᑕᕝᓯᕐᒥᒃ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᓂᒃ ᕿᓂᓚᐅᙱᓐᓂᕐᓂ.';
 
   @override
   String get bookmarks => 'ᐅᖃᓕᒫᒐᕐᓄᑦ ᓇᓗᓇᐃᒃᑯᑕᐃᑦ';

@@ -157,7 +157,7 @@ class AppLocalizationsGv extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Cha row y Quran ry-loadaghey. Feayrish reesht, my yeearree.';
 
   @override
   String get retry => 'Reayll reesht';
@@ -216,24 +216,25 @@ class AppLocalizationsGv extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Tafsir y lhoobey...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound =>
+      'Cha nel tafsir erbee er ny gheddyn son y surah shoh.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Cha nel tafsir erbee er ny gheddyn son ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir cha row eh ry-load.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Cha nel text tafsir ec y ayah shoh.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -247,16 +248,16 @@ class AppLocalizationsGv extends AppLocalizations {
 
   @override
   String tafsirApiStatusError(String statusCode) {
-    return 'Tafsir source returned an HTTP $statusCode error.';
+    return 'Tafsir t\'er n\'yannoo HTTP $statusCode.';
   }
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Ta\'n source tafsir roshtyn ry-gheddyn.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'Tafsir verify cha nel eh ry-gheddyn offline foast. Sync y ghraih tafsir ry-gheddyn roish y ghraih.';
 
   @override
   String get bookmarks => 'Learkyn-leabhar;';

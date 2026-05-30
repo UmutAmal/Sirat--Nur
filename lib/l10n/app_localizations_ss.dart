@@ -155,7 +155,7 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String get quranLoadFailed =>
-      'Quran content could not be loaded. Please try again.';
+      'Lokucuketfwe yi-Quran akuzange kulayishwe. Sicela uphindze uzame.';
 
   @override
   String get retry => 'Phindza uzame';
@@ -214,24 +214,24 @@ class AppLocalizationsSs extends AppLocalizations {
   String get tafsir => 'Tafsir';
 
   @override
-  String get tafsirLoading => 'Loading tafsir...';
+  String get tafsirLoading => 'Kulayisha i-tafsir...';
 
   @override
   String get tafsirSourceLabel => 'Tafsir source';
 
   @override
-  String get tafsirNoSurahFound => 'No tafsir found for this surah.';
+  String get tafsirNoSurahFound => 'Kute tafsir letfolakele kule surah.';
 
   @override
   String tafsirNoAyahFound(String ayah) {
-    return 'No tafsir found for ayah $ayah.';
+    return 'Kute i-tafsir letfolakele ye-ayah $ayah.';
   }
 
   @override
-  String get tafsirLoadFailed => 'Tafsir could not be loaded.';
+  String get tafsirLoadFailed => 'Tafsir akazange akwati kulayishwa.';
 
   @override
-  String get tafsirNoTextForAyah => 'No tafsir text for this ayah.';
+  String get tafsirNoTextForAyah => 'Kute umbhalo we-tafsir wale ayah.';
 
   @override
   String tafsirDownloadingProgress(String current, String total) {
@@ -250,11 +250,11 @@ class AppLocalizationsSs extends AppLocalizations {
 
   @override
   String get tafsirNoEntriesReturned =>
-      'The selected tafsir source returned no entries.';
+      'Umtfombo we-tafsir lokhetsiwe awuzange ubuyisele lokufakiwe.';
 
   @override
   String get tafsirCacheUnavailable =>
-      'Verified tafsir is not available offline yet. Sync a sourced tafsir dataset before browsing.';
+      'I-tafsir lecinisekisiwe ayikatfolakali ngaphandle kwe-inthanethi. Vumelanisa idathaset ye-tafsir letfolwe ngaphambi kwekutsi uphenye.';
 
   @override
   String get bookmarks => 'Emabhukhimaki';
