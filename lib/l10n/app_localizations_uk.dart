@@ -206,7 +206,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get reading => 'Читання';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Декламація';
 
   @override
   String get translation => 'Переклад';

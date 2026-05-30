@@ -192,7 +192,7 @@ class AppLocalizationsLg extends AppLocalizations {
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'Ayah $ayah .';
   }
 
   @override
@@ -205,7 +205,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get reading => 'Okusoma';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Okusoma';
 
   @override
   String get translation => 'Okuvvuunula';

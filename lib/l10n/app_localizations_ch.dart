@@ -199,16 +199,16 @@ class AppLocalizationsCh extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Pahina';
 
   @override
   String get reading => 'Manli\'e\'';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Resitasion';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Traduksion';
 
   @override
   String get tafsir => 'Tafsir';
@@ -261,10 +261,10 @@ class AppLocalizationsCh extends AppLocalizations {
   String get bookmarks => 'Bookmarks';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Na\'i Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Na\'suha i Bookmark';
 
   @override
   String get lastRead => 'Uttimo na Tinaitai';

@@ -79,7 +79,7 @@
   "yes": "heẽ",
   "no": "nahániri",
   "surah": "Surah rehegua",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} rehegua.",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {

@@ -78,8 +78,8 @@
   "ok": "ठीक बा",
   "yes": "हॅंं",
   "no": "ना",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "सूरह के बा",
+  "ayahLabel": "आह {ayah} के बा।",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "जुज के बा",
+  "page": "पन्ना के बा",
   "reading": "पढ़ल रहल बानी",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "पाठ कइल जाला",
+  "translation": "अनुवाद के बा",
   "tafsir": "Tafsir",
   "tafsirLoading": "तफसीर लोड हो रहल बा...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "चुनल तफसीर स्रोत कवनो प्रविष्टि ना लवटा दिहलसि.",
   "tafsirCacheUnavailable": "सत्यापन तफसिर अभी तक ऑफलाइन उपलब्ध नइखे। ब्राउजिंग से पहिले कवनो सोर्स कइल तफसीर डाटासेट के सिंक करीं।",
   "bookmarks": "बुकमार्क",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "बुकमार्क जोड़ल जाला",
+  "removeBookmark": "बुकमार्क के हटा दिहल जाव",
   "lastRead": "आखिरी बेर पढ़ल गइल",
   "dailyZikr": "रोजाना जिक्र",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

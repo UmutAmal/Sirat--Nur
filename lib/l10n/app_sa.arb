@@ -78,8 +78,8 @@
   "ok": "ठीकम्",
   "yes": "आम्",
   "no": "नहि",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "सूरः",
+  "ayahLabel": "अयः {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -87,10 +87,10 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "जुज",
+  "page": "पृष्ठ",
   "reading": "पठनम्",
-  "recitation": "Recitation",
+  "recitation": "पाठः",
   "translation": "अनुवाद",
   "tafsir": "Tafsir",
   "tafsirLoading": "लोडिंग तफसिर...",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "चयनितः tafsir स्रोतः कोऽपि प्रविष्टिः न प्रत्यागच्छत् ।",
   "tafsirCacheUnavailable": "सत्यापितं tafsir अद्यापि अफलाइनरूपेण उपलब्धं नास्ति। ब्राउजिंग् करणात् पूर्वं स्रोतः tafsir दत्तांशसमूहं समन्वययन्तु ।",
   "bookmarks": "पुस्तकचिह्नानि",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "बुकमार्कं योजयतु",
+  "removeBookmark": "बुकमार्कं निष्कासयन्तु",
   "lastRead": "अन्तिमपठनम्",
   "dailyZikr": "दैनिक जिक्र",
   "duaMeaning1": "अन्ये प्रार्थयन्ति, ‘भगवन् अस्मान् इह लोके परत्र च भद्रं देहि, अग्निपीडनात् रक्ष नः’ इति ।",

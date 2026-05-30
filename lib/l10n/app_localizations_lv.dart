@@ -206,7 +206,7 @@ class AppLocalizationsLv extends AppLocalizations {
   String get reading => 'Lasīšana';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Deklamēšana';
 
   @override
   String get translation => 'Tulkošana';

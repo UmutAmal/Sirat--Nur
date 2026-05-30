@@ -192,7 +192,7 @@ class AppLocalizationsAk extends AppLocalizations {
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'Ayah $ayah na ɛyɛ.';
   }
 
   @override

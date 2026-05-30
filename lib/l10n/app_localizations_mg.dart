@@ -205,10 +205,10 @@ class AppLocalizationsMg extends AppLocalizations {
   String get reading => 'Famakiana';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Fanononana';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Fandikan-teny';
 
   @override
   String get tafsir => 'Tafsir';

@@ -205,7 +205,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get reading => 'Lectio';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Recitatio';
 
   @override
   String get translation => 'Translation';

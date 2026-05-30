@@ -78,7 +78,7 @@
   "ok": "ЛАДНӦ",
   "yes": "Да",
   "no": "Абу",
-  "surah": "Surah",
+  "surah": "Сура",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Джуз",
+  "page": "Страница.",
   "reading": "Лыддьысьӧм",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Декламация",
+  "translation": "Вуджӧдӧм",
   "tafsir": "Tafsir",
   "tafsirLoading": "Загрузка тафсир...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Бӧрйӧм тафсир источникысь нинӧм эз бергӧд.",
   "tafsirCacheUnavailable": "Вердӧм тафсир офлайн ногӧн абу на. Синхронизируйтны источникысь тафсир даннӧйяс чукӧр видлалӧм бӧрын.",
   "bookmarks": "Закладкаяс",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Содты закладка .",
+  "removeBookmark": "Закладка бырӧдӧм .",
   "lastRead": "Бӧръя лыддьӧм",
   "dailyZikr": "Быд лун Зикр .",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

@@ -205,7 +205,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get reading => 'చదవడం';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'పారాయణం';
 
   @override
   String get translation => 'అనువాదం';

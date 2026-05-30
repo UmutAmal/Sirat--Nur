@@ -2443,6 +2443,71 @@ void main() {
       }
     });
 
+    test('tracks Quran reading and bookmark shell l10n debt reduction', () {
+      const keys = [
+        'bookmarks',
+        'addBookmark',
+        'removeBookmark',
+        'lastRead',
+        'reading',
+        'recitation',
+        'translation',
+        'surah',
+        'ayahLabel',
+        'juz',
+        'page',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(544));
+      for (final locale in ['aa', 'bo']) {
+        for (final key in keys) {
+          final value = localeArbs[locale]![key] as String;
+          expect(
+            value,
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason: 'app_$locale.arb has multiline Quran reading copy for $key',
+          );
+        }
+      }
+      for (final locale in ['sa', 'ti']) {
+        for (final key in ['ayahLabel', 'recitation']) {
+          final value = localeArbs[locale]![key] as String;
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason: 'app_$locale.arb has multiline Quran reading copy for $key',
+          );
+          expect(value, isNot(contains('ዝብል ቃል ንምርካብ')));
+          expect(value, isNot(contains('इति .')));
+        }
+      }
+      expect(localeArbs['bm']!['page'], 'Ɲɛ');
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',
@@ -2828,11 +2893,19 @@ void main() {
         candidate: 'Lochargement tafsir...',
       );
 
+      final tigrinyaRecitationValue = resolveTranslatedArbValue(
+        key: 'recitation',
+        source: 'Recitation',
+        currentValue: 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nንባብ',
+        candidate: 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nንባብ',
+      );
+
       expect(settingsValue, 'Settings');
       expect(pageValue, 'Page');
       expect(quranValue, 'Quran');
       expect(bambaraTafsirValue, 'Loading tafsir...');
       expect(wolofTafsirValue, 'Loading tafsir...');
+      expect(tigrinyaRecitationValue, 'Recitation');
     });
 
     test('rejects mixed English location detection debris', () {

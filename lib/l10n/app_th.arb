@@ -79,7 +79,7 @@
   "yes": "ใช่",
   "no": "เลขที่",
   "surah": "ซูเราะห์",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "อร๊าย {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "จูซ",
   "page": "หน้าหนังสือ",
   "reading": "การอ่าน",
-  "recitation": "Recitation",
+  "recitation": "บทสวด",
   "translation": "การแปล",
   "tafsir": "Tafsir",
   "tafsirLoading": "กำลังโหลดทาฟเซอร์...",

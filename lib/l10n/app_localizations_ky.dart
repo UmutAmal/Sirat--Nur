@@ -207,7 +207,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get reading => 'Окуу';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Окуу';
 
   @override
   String get translation => 'Котормо';

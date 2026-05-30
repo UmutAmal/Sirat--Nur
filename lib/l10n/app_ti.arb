@@ -78,8 +78,8 @@
   "ok": "እሺ",
   "yes": "እወ",
   "no": "አይኮንን",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "ሱራ",
+  "ayahLabel": "ኣያ {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -87,10 +87,10 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "ጁዝ",
+  "page": "ገጽ",
   "reading": "ንባብ",
-  "recitation": "Recitation",
+  "recitation": "ንባብ",
   "translation": "ትርጉም",
   "tafsir": "Tafsir",
   "tafsirLoading": "ኣብ ምጽዓን tafsir...",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "እቲ ዝተመርጸ ምንጪ ታፍሲር ዝኾነ ምእታው ኣይመለሰን።",
   "tafsirCacheUnavailable": "Verified tafsir ገና ካብ መስመር ወጻኢ ኣይርከብን። ቅድሚ ምድህሳስ ምንጪ ዘለዎ tafsir ዳታሴት ምትእስሳር።",
   "bookmarks": "ምልክታት ገጽ",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "ዕልባ ምልክት ምውሳኽ",
+  "removeBookmark": "ዕልባት ኣወግድ",
   "lastRead": "መወዳእታ ዝተነበበ",
   "dailyZikr": "መዓልታዊ ዚክሪ",
   "duaMeaning1": "ካልኦት ድማ ‘ጐይታና ኣብ ዓለምን ኣብ ኣኼራን ሰናይ ሃበና፡ ካብ ስቓይ ሓዊ ሓልወና’ ኢሎም ይጽልዩ።",

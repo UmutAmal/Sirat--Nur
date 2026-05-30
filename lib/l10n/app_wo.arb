@@ -78,7 +78,7 @@
   "ok": "BAAX NA",
   "yes": "Waaw",
   "no": "Déedéet",
-  "surah": "Surah",
+  "surah": "Sarah",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Xët",
   "reading": "Jàng",
   "recitation": "Recitation",
-  "translation": "Translation",
+  "translation": "Tekki làkk",
   "tafsir": "Tafsir",
   "tafsirLoading": "Loading tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Source tafsir biñ tànn delloowul dara.",
   "tafsirCacheUnavailable": "Tafsir buñ firndeel nekkagul ci net bi ba leegi. Senkronise ab done tafsir laata ngay seet.",
   "bookmarks": "Marke-pages",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Yokk marque-page",
+  "removeBookmark": "Dindi bookmark",
   "lastRead": "Li ñu mujjee jàng",
   "dailyZikr": "Zikr bis bu nekk",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

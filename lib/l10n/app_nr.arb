@@ -78,7 +78,7 @@
   "ok": "NGITHOKOZILE",
   "yes": "Iye",
   "no": "Awa",
-  "surah": "Surah",
+  "surah": "I-Sura",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Ikhasi",
   "reading": "Ukufunda",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Ukuphindaphinda",
+  "translation": "Ukutjhugulula",
   "tafsir": "Tafsir",
   "tafsirLoading": "Ukulayisha i-tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Umthombo we-tafsir okhethiweko awubuyiselanga okufakiweko.",
   "tafsirCacheUnavailable": "I-tafsir eqinisekisiweko ayikatholakali ngaphandle kwe-inthanethi. Vumelanisa isethi yedatha ye-tafsir ngaphambi kokuphequlula.",
   "bookmarks": "Amabhukmaki",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Faka ibhukhimaka",
+  "removeBookmark": "Susa ibhukmaka",
   "lastRead": "Ukufunda kokugcina",
   "dailyZikr": "I-Zikr yangelanga",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

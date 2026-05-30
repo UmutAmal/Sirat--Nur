@@ -193,7 +193,7 @@ class AppLocalizationsBho extends AppLocalizations {
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'आह $ayah के बा।';
   }
 
   @override

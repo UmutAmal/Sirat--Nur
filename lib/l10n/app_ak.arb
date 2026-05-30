@@ -79,7 +79,7 @@
   "yes": "Aane",
   "no": "Daabi",
   "surah": "Surah a ɛwɔ hɔ",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} na ɛyɛ.",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {

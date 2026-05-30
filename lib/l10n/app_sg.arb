@@ -78,8 +78,8 @@
   "ok": "EN-EN",
   "yes": "En",
   "no": "En-en",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Sourage",
+  "ayahLabel": "Ayâ {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Page 1 .",
   "reading": "Dikongo mbeti",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Dikongo mbeti",
+  "translation": "Traduction",
   "tafsir": "Tafsir",
   "tafsirLoading": "Tafsir ti chargement...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Azo so a soro ala ti sara tafsir akiri na ambeni tënë pëpe.",
   "tafsirCacheUnavailable": "Tafsir so a vérifié ni ayeke dä pëpe. Synchronisé mbeni source ti tafsir kozoni si mo sara browsing.",
   "bookmarks": "Marque-page",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Zia Marque-page",
+  "removeBookmark": "Zia Marque-page ni .",
   "lastRead": "Ndangba dikongo ye",
   "dailyZikr": "Zikr ti lâ oko oko",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

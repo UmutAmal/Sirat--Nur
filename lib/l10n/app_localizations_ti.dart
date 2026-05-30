@@ -187,24 +187,24 @@ class AppLocalizationsTi extends AppLocalizations {
   String get no => 'አይኮንን';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'ሱራ';
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣያ $ayah';
   }
 
   @override
-  String get juz => 'Juz';
+  String get juz => 'ጁዝ';
 
   @override
-  String get page => 'Page';
+  String get page => 'ገጽ';
 
   @override
   String get reading => 'ንባብ';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nንባብ';
 
   @override
   String get translation => 'ትርጉም';
@@ -258,10 +258,10 @@ class AppLocalizationsTi extends AppLocalizations {
   String get bookmarks => 'ምልክታት ገጽ';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'ዕልባ ምልክት ምውሳኽ';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'ዕልባት ኣወግድ';
 
   @override
   String get lastRead => 'መወዳእታ ዝተነበበ';

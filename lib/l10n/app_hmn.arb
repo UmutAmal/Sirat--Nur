@@ -79,7 +79,7 @@
   "yes": "Yog lawm",
   "no": "Tsis muaj",
   "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Aw {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {

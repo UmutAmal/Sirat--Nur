@@ -205,7 +205,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get reading => 'ئوقۇش';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'قىرائەت';
 
   @override
   String get translation => 'تەرجىمە';

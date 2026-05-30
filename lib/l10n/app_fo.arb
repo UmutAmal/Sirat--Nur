@@ -78,8 +78,8 @@
   "ok": "OK",
   "yes": "Ja",
   "no": "Nei",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Sura",
+  "ayahLabel": "Aja {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Síða 11 .",
   "reading": "Lesing",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Upplestur",
+  "translation": "Týðing",
   "tafsir": "Tafsir",
   "tafsirLoading": "Heinta tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Valda tafsir keldan gav ongar upplýsingar aftur.",
   "tafsirCacheUnavailable": "Staðfest tafsir er ikki tøkt offline enn. Synkronisera eitt keldu tafsir dátusetti áðrenn tú kagar.",
   "bookmarks": "Bókamerki",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Legg bókamerki til",
+  "removeBookmark": "Strika bókamerki",
   "lastRead": "Seinast lisið",
   "dailyZikr": "Dagliga Zikr",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

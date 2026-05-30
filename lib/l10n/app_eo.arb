@@ -79,7 +79,7 @@
   "yes": "Jes",
   "no": "Ne",
   "surah": "Surao",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Aja {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {

@@ -79,7 +79,7 @@
   "yes": "ແມ່ນແລ້ວ",
   "no": "ບໍ່",
   "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "ອາຢາ {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Juz",
   "page": "ໜ້າ",
   "reading": "ການອ່ານ",
-  "recitation": "Recitation",
+  "recitation": "ການບັນຍາຍ",
   "translation": "ການແປ",
   "tafsir": "Tafsir",
   "tafsirLoading": "ກຳລັງໂຫລດ tafsir...",

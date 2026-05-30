@@ -199,7 +199,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Rûpel';
 
   @override
   String get reading => 'Xwendin';

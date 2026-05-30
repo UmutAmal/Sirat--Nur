@@ -205,7 +205,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get reading => 'Читање';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Рецитовање';
 
   @override
   String get translation => 'Превод';

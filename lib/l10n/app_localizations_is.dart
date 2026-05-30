@@ -205,7 +205,7 @@ class AppLocalizationsIs extends AppLocalizations {
   String get reading => 'Lestur';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Upplestur';
 
   @override
   String get translation => 'Þýðing';

@@ -205,7 +205,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get reading => 'پڙهڻ';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'تلاوت';
 
   @override
   String get translation => 'ترجمو';

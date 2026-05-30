@@ -79,7 +79,7 @@
   "yes": "هو",
   "no": "نه",
   "surah": "سورت",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "آیه {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "جوز",
   "page": "پاڼه",
   "reading": "لوستل",
-  "recitation": "Recitation",
+  "recitation": "تلاوت",
   "translation": "ژباړه",
   "tafsir": "Tafsir",
   "tafsirLoading": "د تفسیر بارول...",

@@ -190,7 +190,7 @@ class AppLocalizationsKl extends AppLocalizations {
   String get no => 'Naamik';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'Sura';
 
   @override
   String ayahLabel(String ayah) {
@@ -201,16 +201,16 @@ class AppLocalizationsKl extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Qupperneq';
 
   @override
   String get reading => 'Atuarneq';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Oqaluttuarisaaneq';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Nutserineq';
 
   @override
   String get tafsir => 'Tafsir';
@@ -264,10 +264,10 @@ class AppLocalizationsKl extends AppLocalizations {
   String get bookmarks => 'Atuagassiat';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Ilanngukkit Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Bookmark-imik peerlugu';
 
   @override
   String get lastRead => 'Kingullermik Atuarneqartoq';

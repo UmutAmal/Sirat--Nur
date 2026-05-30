@@ -1075,6 +1075,7 @@ const _knownGeneralTranslationDebris = [
   'ukax mä juk’a pachanakanwa',
   'Chargement tafsir ka',
   'Lochargement tafsir',
+  'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ',
 ];
 
 const _knownShortLabelTranslationDebris = ['के बारे में', 'बतावल', ' के बा'];
@@ -1166,12 +1167,18 @@ bool _mustStaySingleLine(String key) {
       key == 'retry' ||
       key == 'save' ||
       key == 'no' ||
+      key == 'bookmarks' ||
       key == 'addBookmark' ||
       key == 'removeBookmark' ||
+      key == 'lastRead' ||
+      key == 'reading' ||
+      key == 'recitation' ||
+      key == 'translation' ||
       key == 'downloading' ||
       key == 'prayerTimes' ||
       key == 'quran' ||
       key == 'surah' ||
+      key == 'ayahLabel' ||
       key == 'surahs' ||
       key == 'ayahs' ||
       key == 'juz' ||

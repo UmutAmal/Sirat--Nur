@@ -205,7 +205,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get reading => 'Faitauga';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Faitauga';
 
   @override
   String get translation => 'Fa\'aliliuga';

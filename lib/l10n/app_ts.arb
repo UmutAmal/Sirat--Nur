@@ -79,7 +79,7 @@
   "yes": "Ina",
   "no": "E-e",
   "surah": "Surah ya xirhendzevutani",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} .",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Yuz",
   "page": "Tluka",
   "reading": "Ku hlaya",
-  "recitation": "Recitation",
+  "recitation": "Ku hlayela",
   "translation": "Vuhundzuluxi",
   "tafsir": "Tafsir",
   "tafsirLoading": "Ku layicha tafsir...",

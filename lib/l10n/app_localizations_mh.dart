@@ -199,7 +199,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Peij';
 
   @override
   String get reading => 'Riit';
@@ -208,7 +208,7 @@ class AppLocalizationsMh extends AppLocalizations {
   String get recitation => 'Recitation';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Ukok';
 
   @override
   String get tafsir => 'Tafsir';
@@ -260,10 +260,10 @@ class AppLocalizationsMh extends AppLocalizations {
   String get bookmarks => 'Bookmark ko';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Kobaik Bookmark';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Jolok Bookmark eo';
 
   @override
   String get lastRead => 'Riit eo eliktata';

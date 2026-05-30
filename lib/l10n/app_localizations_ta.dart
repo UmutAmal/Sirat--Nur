@@ -206,7 +206,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get reading => 'படித்தல்';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'பாராயணம்';
 
   @override
   String get translation => 'மொழிபெயர்ப்பு';

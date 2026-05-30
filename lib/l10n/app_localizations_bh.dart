@@ -189,27 +189,27 @@ class AppLocalizationsBh extends AppLocalizations {
   String get no => 'ना';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'सूरह के बा';
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'आह $ayah के बा।';
   }
 
   @override
-  String get juz => 'Juz';
+  String get juz => 'जुज के बा';
 
   @override
-  String get page => 'Page';
+  String get page => 'पन्ना के बा';
 
   @override
   String get reading => 'पढ़ल रहल बानी';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'पाठ कइल जाला';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'अनुवाद के बा';
 
   @override
   String get tafsir => 'Tafsir';
@@ -261,10 +261,10 @@ class AppLocalizationsBh extends AppLocalizations {
   String get bookmarks => 'बुकमार्क';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'बुकमार्क जोड़ल जाला';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'बुकमार्क के हटा दिहल जाव';
 
   @override
   String get lastRead => 'आखिरी बेर पढ़ल गइल';

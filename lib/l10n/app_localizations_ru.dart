@@ -207,7 +207,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get reading => 'Чтение';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Декламация';
 
   @override
   String get translation => 'Перевод';

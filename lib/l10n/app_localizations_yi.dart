@@ -205,7 +205,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get reading => 'לייענען';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'רעציטאַציע';
 
   @override
   String get translation => 'איבערזעצונג';

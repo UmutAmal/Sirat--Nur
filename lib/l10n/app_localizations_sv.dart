@@ -204,7 +204,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get reading => 'Läsning';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Deklamation';
 
   @override
   String get translation => 'Översättning';

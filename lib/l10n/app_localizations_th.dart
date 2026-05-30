@@ -192,7 +192,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'อร๊าย $ayah';
   }
 
   @override
@@ -205,7 +205,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get reading => 'การอ่าน';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'บทสวด';
 
   @override
   String get translation => 'การแปล';

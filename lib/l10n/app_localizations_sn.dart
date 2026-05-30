@@ -204,7 +204,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get reading => 'Kuverenga';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Kudzokorora';
 
   @override
   String get translation => 'Shanduro';

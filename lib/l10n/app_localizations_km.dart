@@ -205,7 +205,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get reading => 'ការអាន';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'ការសូត្រ';
 
   @override
   String get translation => 'ការបកប្រែ';

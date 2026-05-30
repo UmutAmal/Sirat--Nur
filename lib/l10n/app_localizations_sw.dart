@@ -205,7 +205,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get reading => 'Kusoma';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Kukariri';
 
   @override
   String get translation => 'Tafsiri';

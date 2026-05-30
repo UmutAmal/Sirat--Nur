@@ -78,7 +78,7 @@
   "ok": "ÒC BEN",
   "yes": "Òc",
   "no": "Non",
-  "surah": "Surah",
+  "surah": "Sora",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Pagina",
   "reading": "Lectura",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Recitacion",
+  "translation": "Traduccion",
   "tafsir": "Tafsir",
   "tafsirLoading": "En cargament de tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "La font tafsir seleccionada a renviat pas cap d'entrada.",
   "tafsirCacheUnavailable": "Lo tafsir verificat es pas encara disponible fòra linha. Sincronizatz un ensemble de donadas tafsir font abans de navigar.",
   "bookmarks": "Los marcapaginas",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Ajustar un marcapagina",
+  "removeBookmark": "Suprimir lo marcapagina",
   "lastRead": "Darrièra lectura",
   "dailyZikr": "Zikr quotidian",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

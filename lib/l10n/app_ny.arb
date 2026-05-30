@@ -79,7 +79,7 @@
   "yes": "Inde",
   "no": "Ayi",
   "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayi {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {

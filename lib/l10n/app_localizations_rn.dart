@@ -188,27 +188,27 @@ class AppLocalizationsRn extends AppLocalizations {
   String get no => 'Oya';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'Sura';
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'Aya $ayah';
   }
 
   @override
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Urupapuro';
 
   @override
   String get reading => 'Gusoma';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Gusubiramwo';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Ubuhinduzi';
 
   @override
   String get tafsir => 'Tafsir';
@@ -260,10 +260,10 @@ class AppLocalizationsRn extends AppLocalizations {
   String get bookmarks => 'Ibimenyetso';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Kwongera akamenyetso';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Kuraho akamenyetso';
 
   @override
   String get lastRead => 'Ubwanyuma gusoma';

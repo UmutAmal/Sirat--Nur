@@ -78,7 +78,7 @@
   "ok": "МЕГАР ДУ",
   "yes": "ХӀаъ",
   "no": "ХӀан-хӀа",
-  "surah": "Surah",
+  "surah": "Сура.",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Жуз",
+  "page": "АгӀо.",
   "reading": "Дешар",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Дешар",
+  "translation": "Гочдар",
   "tafsir": "Tafsir",
   "tafsirLoading": "Тафсир чудоккхуш...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Хаьржинчу тафсиран хьостано цхьа а яздар юха ца делира.",
   "tafsirCacheUnavailable": "Таллам бина тафсир офлайнехь яц цкъачунна. Синхронизаци ян хьастан тафсиран даннийн набор лехале хьалха.",
   "bookmarks": "Закладкаш",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Закладка тӀетоха",
+  "removeBookmark": "Закладка дӀаяккха",
   "lastRead": "ТӀаьххьара ешна",
   "dailyZikr": "Daily Zikr",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

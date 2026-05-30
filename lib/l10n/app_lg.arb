@@ -79,7 +79,7 @@
   "yes": "Yee",
   "no": "Nedda",
   "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} .",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Juzu",
   "page": "Omuko",
   "reading": "Okusoma",
-  "recitation": "Recitation",
+  "recitation": "Okusoma",
   "translation": "Okuvvuunula",
   "tafsir": "Tafsir",
   "tafsirLoading": "Okutikka tafsir...",

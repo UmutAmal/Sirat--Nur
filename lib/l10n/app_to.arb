@@ -78,8 +78,8 @@
   "ok": "SAI",
   "yes": "ʻIo",
   "no": "ʻIkai",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Sula",
+  "ayahLabel": "ʻAia {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Peesi 1 .",
   "reading": "Laukonga",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Ko hono lau",
+  "translation": "Liliu",
   "tafsir": "Tafsir",
   "tafsirLoading": "Uta 'a e tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Na'e 'ikai ke fakafoki mai 'e he ma'u'anga tokoni tafsir kuo fili ha ngaahi hū.",
   "tafsirCacheUnavailable": "'Oku te'eki ke ma'u 'a e tafsir kuo fakamo'oni'i 'i he offline. Sync ha dataset tafsir ma'u'anga tokoni kimu'a pea toki vakai'i.",
   "bookmarks": "Ngaahi fakaʻilonga tohi",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Tānaki atu ʻa e Fakaʻilonga Tohí",
+  "removeBookmark": "Toʻo ʻa e Fakaʻilonga Tohí",
   "lastRead": "Lau Fakamuimuitaha",
   "dailyZikr": "Zikr Faka'aho",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

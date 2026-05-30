@@ -78,8 +78,8 @@
   "ok": "ХОРЗ",
   "yes": "Ойы",
   "no": "Нæйы",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Сура",
+  "ayahLabel": "Айах {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Джуз",
+  "page": "Фарс",
   "reading": "Фарст",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Дзурын",
+  "translation": "Тæлмац",
   "tafsir": "Tafsir",
   "tafsirLoading": "Загрузка тафсир...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Æвзæрст тафсиры равзæрæн ницы æрбаздæхта.",
   "tafsirCacheUnavailable": "Бæлвырдгонд tafsir нырма офлайны нæй. Синхронизаци кæнут æвзæрст tafsir бæрæггæнæнты æмбырдгонд æркасты размæ.",
   "bookmarks": "Нысантæ",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Бафтауын нысан",
+  "removeBookmark": "Нысан аиуварс кæнын",
   "lastRead": "Фæстаг бакаст",
   "dailyZikr": "Æрвылбонон Зикр",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

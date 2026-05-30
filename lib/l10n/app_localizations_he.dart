@@ -205,7 +205,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get reading => 'קריאה';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'דִקלוּם';
 
   @override
   String get translation => 'תִרגוּם';

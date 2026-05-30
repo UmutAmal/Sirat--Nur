@@ -205,7 +205,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get reading => 'Ukufunda';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Ukuphindaphinda';
 
   @override
   String get translation => 'Ukuhumusha';

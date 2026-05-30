@@ -78,8 +78,8 @@
   "ok": "TO",
   "yes": "Oho",
   "no": "Kay",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Suura",
+  "ayahLabel": "Ayya ​​{ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Hello",
   "reading": "Jaangirde",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Janngude",
+  "translation": "Firo",
   "tafsir": "Tafsir",
   "tafsirLoading": "Lowre tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Fuɗɗoode tafsir cuɓaande ndee artiraani hay naatgol gootol.",
   "tafsirCacheUnavailable": "Tafsir hoolkisaaɗo oo heɓaaka tawo e laylaytol. Sinkronisaa doggol tafsir gonngol e lowre ndee hade maa ƴeewndaade.",
   "bookmarks": "Maandeeji defte",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Ɓeydu Maande",
+  "removeBookmark": "Ittu Maande",
   "lastRead": "Janngugol cakkitiingol",
   "dailyZikr": "Zikr ñalnde kala",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

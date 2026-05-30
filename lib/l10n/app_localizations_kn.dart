@@ -205,7 +205,7 @@ class AppLocalizationsKn extends AppLocalizations {
   String get reading => 'ಓದುವುದು';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'ಪಠಣ';
 
   @override
   String get translation => 'ಅನುವಾದ';

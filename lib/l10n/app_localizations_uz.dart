@@ -205,7 +205,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get reading => 'O\'qish';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Qiroat';
 
   @override
   String get translation => 'Tarjima';

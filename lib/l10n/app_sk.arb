@@ -79,7 +79,7 @@
   "yes": "áno",
   "no": "Nie",
   "surah": "súra",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Áno {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Juz",
   "page": "Stránka",
   "reading": "Čítanie",
-  "recitation": "Recitation",
+  "recitation": "Prednes",
   "translation": "Preklad",
   "tafsir": "Tafsir",
   "tafsirLoading": "Načítava sa tafsir...",

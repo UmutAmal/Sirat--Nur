@@ -205,7 +205,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get reading => 'Gusoma';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Gusoma';
 
   @override
   String get translation => 'Ubuhinduzi';

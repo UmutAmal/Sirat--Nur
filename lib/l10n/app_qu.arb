@@ -79,7 +79,7 @@
   "yes": "Arí",
   "no": "Manam",
   "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} .",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Juz",
   "page": "P’anqa",
   "reading": "Ñawinchay",
-  "recitation": "Recitation",
+  "recitation": "Recitación nisqa",
   "translation": "Traducción",
   "tafsir": "Tafsir",
   "tafsirLoading": "Cargando tafsir...",

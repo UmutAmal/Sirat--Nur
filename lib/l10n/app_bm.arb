@@ -79,7 +79,7 @@
   "yes": "Awɔ",
   "no": "Ayi",
   "surah": "Sura",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} ye .",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,7 +88,7 @@
     }
   },
   "juz": "Juz",
-  "page": "Ɲɛ 10nan na",
+  "page": "Ɲɛ",
   "reading": "Gafekalan",
   "recitation": "Kalanjɛ ni sɛbɛnni",
   "translation": "Bamanankan baarakɛcogo",

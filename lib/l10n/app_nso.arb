@@ -79,7 +79,7 @@
   "yes": "Ee",
   "no": "Aowa",
   "surah": "Surah ya",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} .",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {

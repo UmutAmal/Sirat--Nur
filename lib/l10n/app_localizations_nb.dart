@@ -205,7 +205,7 @@ class AppLocalizationsNb extends AppLocalizations {
   String get reading => 'Lesing';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Resitasjon';
 
   @override
   String get translation => 'Oversettelse';

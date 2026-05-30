@@ -199,16 +199,16 @@ class AppLocalizationsTy extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Api';
 
   @override
   String get reading => 'Ha\'amata';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Te tai\'oraa';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Te iritiraa';
 
   @override
   String get tafsir => 'Tafsir';
@@ -260,10 +260,10 @@ class AppLocalizationsTy extends AppLocalizations {
   String get bookmarks => 'Ngā tapa\'o buka';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Tāpiri i te tapa\'o buka';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'A tatara i te tapa\'o buka';
 
   @override
   String get lastRead => 'Tai\'oraa hopea';

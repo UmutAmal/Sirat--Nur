@@ -205,7 +205,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get reading => 'Đọc';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Niệm';
 
   @override
   String get translation => 'Dịch thuật';

@@ -189,7 +189,7 @@ class AppLocalizationsFj extends AppLocalizations {
   String get no => 'Sega';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'Sura';
 
   @override
   String ayahLabel(String ayah) {
@@ -200,16 +200,16 @@ class AppLocalizationsFj extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Tabana';
 
   @override
   String get reading => 'Wilivola';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Cavuti';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Vakadewa';
 
   @override
   String get tafsir => 'Tafsir';
@@ -263,10 +263,10 @@ class AppLocalizationsFj extends AppLocalizations {
   String get bookmarks => 'Vakatakilakila';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Kuria na ivakatakilakila';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Kauta laivi na ivakatakilakila';
 
   @override
   String get lastRead => 'iOtioti ni Wilika';

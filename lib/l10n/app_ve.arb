@@ -78,7 +78,7 @@
   "ok": "EE",
   "yes": "Ee",
   "no": "Hai",
-  "surah": "Surah",
+  "surah": "Sura",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Siaṱari",
   "reading": "Vhala",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "U dovholola",
+  "translation": "Ṱhalutshedzelo",
   "tafsir": "Tafsir",
   "tafsirLoading": "U ḓadza tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Tshisima tsha tafsir tsho khethiwaho a tsho ngo vhuisa zwithu.",
   "tafsirCacheUnavailable": "Tafsir yo khwaṱhisedzwaho a i athu wanala offline. U ṱanganya dataset ya tafsir yo bveledzwaho phanḓa ha musi u tshi ṱola.",
   "bookmarks": "Zwiga zwa bugu",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Engedza Luswayo",
+  "removeBookmark": "Bvisani Bugu",
   "lastRead": "U vhala lwa u fhedzisela",
   "dailyZikr": "Zikr ya duvha na duvha",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

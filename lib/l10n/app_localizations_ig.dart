@@ -205,7 +205,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get reading => 'Ọgụgụ';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Ngụgharị';
 
   @override
   String get translation => 'Ntụgharị asụsụ';

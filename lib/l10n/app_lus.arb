@@ -79,7 +79,7 @@
   "yes": "Ni e",
   "no": "Ni lo",
   "surah": "Surah chuan",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} a ni.",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {

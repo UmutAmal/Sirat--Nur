@@ -205,7 +205,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get reading => 'Хондан';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Қироат';
 
   @override
   String get translation => 'Тарҷума';

@@ -205,7 +205,7 @@ class AppLocalizationsMk extends AppLocalizations {
   String get reading => 'Читање';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Рецитирање';
 
   @override
   String get translation => 'Превод';

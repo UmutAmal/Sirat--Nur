@@ -78,7 +78,7 @@
   "ok": "ЮРӖ",
   "yes": "Çапла",
   "no": "Çук",
-  "surah": "Surah",
+  "surah": "Сура",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Юз",
+  "page": "Страница",
   "reading": "Вулани",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Декламаци",
+  "translation": "Куҫару",
   "tafsir": "Tafsir",
   "tafsirLoading": "Тафсир загрузка...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Суйласа илнӗ tafsir ҫӑлкуҫӗ нимӗнле ҫыру та тавӑрса паман.",
   "tafsirCacheUnavailable": "Тӗрӗсленӗ tafsir хальлӗхе офлайнра ҫук. Браузер умӗн ҫӑлкуҫран илнӗ tafsir даннӑйсен пуххине синхронизацилӗр.",
   "bookmarks": "Закладкӑсем",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Закладка хушӑр",
+  "removeBookmark": "Закладкӑна кӑларса пӑрахӑр",
   "lastRead": "Юлашки хут вуланӑ",
   "dailyZikr": "Кулленхи Зикр",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

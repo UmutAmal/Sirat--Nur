@@ -192,7 +192,7 @@ class AppLocalizationsLus extends AppLocalizations {
 
   @override
   String ayahLabel(String ayah) {
-    return 'Ayah $ayah';
+    return 'Ayah $ayah a ni.';
   }
 
   @override

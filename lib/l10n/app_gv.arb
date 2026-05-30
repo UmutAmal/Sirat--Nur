@@ -78,7 +78,7 @@
   "ok": "OK",
   "yes": "Ta",
   "no": "Cha nel.",
-  "surah": "Surah",
+  "surah": "Surah;",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Duillag",
   "reading": "Lhaih",
   "recitation": "Recitation",
-  "translation": "Translation",
+  "translation": "Ayrnyn",
   "tafsir": "Tafsir",
   "tafsirLoading": "Tafsir y lhoobey...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Ta'n source tafsir roshtyn ry-gheddyn.",
   "tafsirCacheUnavailable": "Tafsir verify cha nel eh ry-gheddyn offline foast. Sync y ghraih tafsir ry-gheddyn roish y ghraih.",
   "bookmarks": "Learkyn-leabhar;",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Cur Leabhar rish",
+  "removeBookmark": "Cur magh Bookmark",
   "lastRead": "Leigh diuish",
   "dailyZikr": "Zikr laa as laa",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

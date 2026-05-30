@@ -205,7 +205,7 @@ class AppLocalizationsTt extends AppLocalizations {
   String get reading => 'Уку';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Уку';
 
   @override
   String get translation => 'Тәрҗемә';

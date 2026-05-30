@@ -78,8 +78,8 @@
   "ok": "MEQEH",
   "yes": "Yeey",
   "no": "bale",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Suura",
+  "ayahLabel": "Aayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Juuz",
+  "page": "Gali",
   "reading": "Kawsiyya",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Kawsi",
+  "translation": "Maqnisso",
   "tafsir": "Tafsir",
   "tafsirLoading": "Tafsiir quuki...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "doorimteh tan tafsir raceena culma mataduura.",
   "tafsirCacheUnavailable": "Diggooweh yan tafsir awakâ fanah gitak iroh mageytima. tafsiir raceenah oytih daffeyna golisak naharal celsis.",
   "bookmarks": "Kitab Asta",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Kitab asta edde osis",
+  "removeBookmark": "Kitab asta kala",
   "lastRead": "Illacaboh kawsa",
   "dailyZikr": "Ayro Zikr",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

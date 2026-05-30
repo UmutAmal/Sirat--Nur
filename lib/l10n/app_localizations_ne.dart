@@ -205,7 +205,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get reading => 'पढ्दै';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'वाचन';
 
   @override
   String get translation => 'अनुवाद';

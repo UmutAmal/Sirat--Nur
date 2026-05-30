@@ -201,16 +201,16 @@ class AppLocalizationsBr extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Pajenn';
 
   @override
   String get reading => 'O lenn';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Rezitañ';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Troidigezh';
 
   @override
   String get tafsir => 'Tafsir';
@@ -262,10 +262,10 @@ class AppLocalizationsBr extends AppLocalizations {
   String get bookmarks => 'Sinedoù';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Ouzhpennañ ur sined';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Dilemel ar sinedoù';
 
   @override
   String get lastRead => 'Lennadenn ziwezhañ';

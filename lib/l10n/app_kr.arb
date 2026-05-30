@@ -78,7 +78,7 @@
   "ok": "YO",
   "yes": "Aa",
   "no": "A'a",
-  "surah": "Surah",
+  "surah": "sura",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Warak",
   "reading": "Kəra",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Kǝra",
+  "translation": "Fasari",
   "tafsir": "Tafsir",
   "tafsirLoading": "Tafsir ikko...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Tafsir kartənadə awo gade waltəgəna.",
   "tafsirCacheUnavailable": "Tafsir tawattəgənadə kuwami yaye offline lan bawo. Kawu bayan tafsirbe fəletənadəga kəltəgə.",
   "bookmarks": "Alamawa kitawube",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Alama kitawube yira",
+  "removeBookmark": "Alama kitawube tuluwuye",
   "lastRead": "Kǝra Dareye",
   "dailyZikr": "Zikr kullumye",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

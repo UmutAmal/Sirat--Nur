@@ -78,7 +78,7 @@
   "ok": "VINAKA",
   "yes": "Io",
   "no": "Sega",
-  "surah": "Surah",
+  "surah": "Sura",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Tabana",
   "reading": "Wilivola",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Cavuti",
+  "translation": "Vakadewa",
   "tafsir": "Tafsir",
   "tafsirLoading": "Vakavodoki tiko na tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Na ivurevure ni tafsir digitaki e sega ni vakasuka mai e dua na icurucuru.",
   "tafsirCacheUnavailable": "Tafsir vakadeitaki e se bera ni rawa ena initaneti. Vakatautauvatataka e dua na itukutuku ni tafsir ni bera ni o raica.",
   "bookmarks": "Vakatakilakila",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Kuria na ivakatakilakila",
+  "removeBookmark": "Kauta laivi na ivakatakilakila",
   "lastRead": "iOtioti ni Wilika",
   "dailyZikr": "Zikr ena veisiga",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

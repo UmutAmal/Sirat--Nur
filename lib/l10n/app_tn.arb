@@ -78,8 +78,8 @@
   "ok": "GO SIAME",
   "yes": "ee",
   "no": "nnyaa",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Sura",
+  "ayahLabel": "Aya {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Tsebe",
   "reading": "A buisa",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Go boeletsa",
+  "translation": "Thanolo",
   "tafsir": "Tafsir",
   "tafsirLoading": "Go laisa tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Motswedi o o tlhophilweng wa tafsir ga o a busetsa ditsenngwa dipe.",
   "tafsirCacheUnavailable": "Tafsir e e netefaditsweng ga e ise e nne teng kwa ntle ga inthanete. Amahanya dataset ya tafsir e e tswang motsweding pele ga o batlisisa.",
   "bookmarks": "Matshwaotsebe",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Tsenya Letshwaotsebe",
+  "removeBookmark": "Tlosa Letshwaotsebe",
   "lastRead": "Puiso ya bofelo",
   "dailyZikr": "Zikr ya letsatsi le letsatsi",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

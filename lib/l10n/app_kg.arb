@@ -78,8 +78,8 @@
   "ok": "OK",
   "yes": "Yinga",
   "no": "Ve",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Sura",
+  "ayahLabel": "Ya {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Mukanda",
   "reading": "Kutanga",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Kuvutukila",
+  "translation": "Kubalula",
   "tafsir": "Tafsir",
   "tafsirLoading": "Kutula tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "E nsunzula ya tafsir yasolwa ke yavutula nsangu ko.",
   "tafsirCacheUnavailable": "Tafsir ya bo me zikisa kele ntete ve na nganda ya Internet. Synchroniser un source de données tafsir avant de naviger.",
   "bookmarks": "Ba marque-pages",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Yika Marque-page",
+  "removeBookmark": "Katula Marque-page",
   "lastRead": "Tanga ya nsuka",
   "dailyZikr": "Zikr ya konso kilumbu",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

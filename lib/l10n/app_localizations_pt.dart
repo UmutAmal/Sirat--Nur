@@ -206,7 +206,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get reading => 'Lendo';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Recitação';
 
   @override
   String get translation => 'Tradução';

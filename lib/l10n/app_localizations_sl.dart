@@ -205,7 +205,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get reading => 'Branje';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Recitacija';
 
   @override
   String get translation => 'Prevajanje';

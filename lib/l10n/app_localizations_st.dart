@@ -205,7 +205,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get reading => 'Ho bala';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Poeletso';
 
   @override
   String get translation => 'Phetolelo';

@@ -205,7 +205,7 @@ class AppLocalizationsOr extends AppLocalizations {
   String get reading => 'ପ Reading ିବା |';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'ପାଠ';
 
   @override
   String get translation => 'ଅନୁବାଦ';

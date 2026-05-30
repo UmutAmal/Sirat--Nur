@@ -79,7 +79,7 @@
   "yes": "Тиймээ",
   "no": "Үгүй",
   "surah": "Сура",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ая {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Жуз",
   "page": "Хуудас",
   "reading": "Уншиж байна",
-  "recitation": "Recitation",
+  "recitation": "Уншлага",
   "translation": "Орчуулга",
   "tafsir": "Tafsir",
   "tafsirLoading": "Тафсирыг ачаалж байна...",

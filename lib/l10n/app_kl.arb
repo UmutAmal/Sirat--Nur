@@ -78,7 +78,7 @@
   "ok": "OK",
   "yes": "Aap",
   "no": "Naamik",
-  "surah": "Surah",
+  "surah": "Sura",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Qupperneq",
   "reading": "Atuarneq",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Oqaluttuarisaaneq",
+  "translation": "Nutserineq",
   "tafsir": "Tafsir",
   "tafsirLoading": "Tafsir-imik ikkussineq...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Tafsir-imik toqqarneqarsimasoq allagartanik utertitsivoq.",
   "tafsirCacheUnavailable": "Tafsir uppernarsarneqarsimasoq suli offline-imi pissarsiarineqarsinnaanngilaq. Tafsir-datasæt-imik pissarsiarineqarsimasumik synkroniseqarit browserneq sioqqullugu.",
   "bookmarks": "Atuagassiat",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Ilanngukkit Bookmark",
+  "removeBookmark": "Bookmark-imik peerlugu",
   "lastRead": "Kingullermik Atuarneqartoq",
   "dailyZikr": "Ullormut Zikr",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

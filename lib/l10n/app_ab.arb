@@ -78,7 +78,7 @@
   "ok": "ИБЗИОУП",
   "yes": "Ааи",
   "no": "Мамоу",
-  "surah": "Surah",
+  "surah": "Асура",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Жуз",
+  "page": "Адаҟьа",
   "reading": "Аԥхьара",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Аиҭаҳәара",
+  "translation": "Аиҭагара",
   "tafsir": "Tafsir",
   "tafsirLoading": "Атафсир аҭагалара...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Иалху атафсир ахыҵхырҭа ҭагаларақәак рхынҳәӡом.",
   "tafsirCacheUnavailable": "Игәаҭоу атафсир макьана офлаин иҟаӡам. Аԥшаара аламҭалазы ахыҵхырҭатә тафсир адатасет асинхронизациа.",
   "bookmarks": "Адыргақәа",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Иацҵатәуп анҵамҭа",
+  "removeBookmark": "Иаԥыхтәуп Аҭынҵа",
   "lastRead": "Аҵыхәтәантәи аԥхьара",
   "dailyZikr": "Есыҽнытәи азикр",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

@@ -78,8 +78,8 @@
   "ok": "བཏུབ",
   "yes": "ཨིན",
   "no": "མིང༌དགོ༌",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "སུ་ར།",
+  "ayahLabel": "ཨ་ཡ་ {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "ཇུཛ།",
+  "page": "ཤོག་ངོས།",
   "reading": "ལྷག་ནི",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "བཟླས་པ།",
+  "translation": "ཡིག་སྒྱུར།",
   "tafsir": "Tafsir",
   "tafsirLoading": "ཏཕ་སིར་མངོན་གསལ་འབད་དོ།...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "སེལ་འཐུ་འབད་ཡོད་པའི་ཊཕ་སིར་འབྱུང་ཁུངས་འདི་གིས་ ཐོ་བཀོད་ཚུ་སླར་ལོག་མ་འབད་བས།",
   "tafsirCacheUnavailable": "བདེན་དཔྱད་འབད་ཡོད་པའི་ tafsir འདི་ ད་ལྟོ་ཡང་ ཕྱི་ཁར་འཐོབ་མི་ཚུགས། བརྡ་འཚོལ་མ་འབད་བའི་ཧེ་མ་ འབྱུང་ཁུངས་ཡོད་པའི་ ཊཕ་སིར་གནད་སྡུད་ཆ་ཚན་ཅིག་ མཉམ་འབྱུང་འབད།",
   "bookmarks": "དེབ་རྟགས།",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "དེབ་རྟགས་ཁ་སྐོང་རྐྱབས།",
+  "removeBookmark": "དེབ་རྟགས་རྩ་བསྐྲད་གཏང་།",
   "lastRead": "མཐའ་མའི་ཀློག།",
   "dailyZikr": "ཉིན་རེའི་ཟིཀར།",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

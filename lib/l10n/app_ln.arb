@@ -79,7 +79,7 @@
   "yes": "Iyo",
   "no": "Te",
   "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayah {ayah} Ezali ndenge moko na .",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Juz",
   "page": "Lokasa",
   "reading": "Kotanga",
-  "recitation": "Recitation",
+  "recitation": "Kotánga maloba",
   "translation": "Bobongoli",
   "tafsir": "Tafsir",
   "tafsirLoading": "Ezali ko charger tafsir...",

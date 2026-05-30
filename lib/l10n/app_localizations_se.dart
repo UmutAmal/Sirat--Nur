@@ -199,16 +199,16 @@ class AppLocalizationsSe extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Siidu';
 
   @override
   String get reading => 'Lohkan';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Lohkan';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Jorgaleapmi';
 
   @override
   String get tafsir => 'Tafsir';
@@ -260,10 +260,10 @@ class AppLocalizationsSe extends AppLocalizations {
   String get bookmarks => 'Girjemearkkat';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Lasit girjemearkka';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Váldde eret girjemearkka';
 
   @override
   String get lastRead => 'Maŋimuš lohkan';

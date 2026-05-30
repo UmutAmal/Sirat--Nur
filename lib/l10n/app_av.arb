@@ -78,7 +78,7 @@
   "ok": "АГЬА",
   "yes": "у",
   "no": "ууна",
-  "surah": "Surah",
+  "surah": "Сура",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Жуз",
+  "page": "Страница",
   "reading": "ЦӀали",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "ЦӀали",
+  "translation": "Таржама",
   "tafsir": "Tafsir",
   "tafsirLoading": "Загрузка тафсира...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "ТӀаса бищараб тафсиралъул источникалъ щибго хъвай-хъвагӀай нахъбуссинабичӀо.",
   "tafsirCacheUnavailable": "Проверенный тафсир еще не доступен в офлайне. Синхронизация источника данных тафсира перед просмотром.",
   "bookmarks": "Закладки",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Добавить закладку",
+  "removeBookmark": "Закладка бахъе",
   "lastRead": "Ахирисеб цӀалараб",
   "dailyZikr": "Щибаб къоялъул зикру",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

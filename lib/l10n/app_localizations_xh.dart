@@ -205,7 +205,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get reading => 'Ukufunda';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Ucengcelezo';
 
   @override
   String get translation => 'Uguqulo';

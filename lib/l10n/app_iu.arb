@@ -78,7 +78,7 @@
   "ok": "ᐊᑏ",
   "yes": "ᐄ",
   "no": "ᐋᒃᑲ",
-  "surah": "Surah",
+  "surah": "ᓲᕋ",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "ᔫᔅ",
+  "page": "ᒪᒃᐱᒐᖅ",
   "reading": "ᐅᖃᓕᒫᕐᓂᖅ",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "ᐅᖃᓕᒫᕐᓂᖅ",
+  "translation": "ᐃᓄᒃᑎᑑᓕᖅᑎᑦᑎᓂᖅ",
   "tafsir": "Tafsir",
   "tafsirLoading": "ᐅᓯᑲᑦᑕᕐᓂᖅ ᑕᕝᓯᕐᒥᒃ...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "ᓂᕈᐊᖅᑕᐅᓯᒪᔪᖅ ᑕᕝᓯᐅᕐᕕᒃ ᐅᑎᖅᑎᑦᑎᓚᐅᙱᓚᖅ ᑎᑎᕋᖅᓯᒪᔪᓂᒃ.",
   "tafsirCacheUnavailable": "ᓇᓗᓇᐃᖅᑕᐅᓯᒪᔪᖅ ᑕᕝᕙ ᓱᓕ ᐊᑐᐃᓐᓇᐅᙱᓚᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ. ᑐᑭᓕᐊᖅᑎᑦᑎᓗᑎᑦ ᓇᑭᙶᖅᑐᒥᒃ ᑕᕝᓯᕐᒥᒃ ᑐᑭᓯᒋᐊᕈᑎᒃᓴᓂᒃ ᕿᓂᓚᐅᙱᓐᓂᕐᓂ.",
   "bookmarks": "ᐅᖃᓕᒫᒐᕐᓄᑦ ᓇᓗᓇᐃᒃᑯᑕᐃᑦ",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "ᐃᓚᓕᐅᑎᓗᒍ ᓇᓗᓇᐃᒃᑯᑕᖅ",
+  "removeBookmark": "ᐲᕐᓗᒍ ᓇᓗᓇᐃᒃᑯᑕᖅ",
   "lastRead": "ᑭᖑᓪᓕᖅᐹᒥ ᐅᖃᓕᒫᖅᑕᐅᔪᖅ",
   "dailyZikr": "ᖃᐅᑕᒫᑦ ᔨᒃ",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

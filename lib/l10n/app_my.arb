@@ -79,7 +79,7 @@
   "yes": "ဟုတ်ကဲ့",
   "no": "မရှိ",
   "surah": "စူရဟ်",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "အာယာ {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Juz",
   "page": "စာမျက်နှာ",
   "reading": "စာဖတ်ခြင်း။",
-  "recitation": "Recitation",
+  "recitation": "ရွတ်ဆိုခြင်း။",
   "translation": "ဘာသာပြန်ခြင်း။",
   "tafsir": "Tafsir",
   "tafsirLoading": "တက်ဖ်ဆာကို ဖွင့်နေသည်...",

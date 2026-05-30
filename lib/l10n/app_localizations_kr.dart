@@ -188,7 +188,7 @@ class AppLocalizationsKr extends AppLocalizations {
   String get no => 'A\'a';
 
   @override
-  String get surah => 'Surah';
+  String get surah => 'sura';
 
   @override
   String ayahLabel(String ayah) {
@@ -199,16 +199,16 @@ class AppLocalizationsKr extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Page';
+  String get page => 'Warak';
 
   @override
   String get reading => 'Kəra';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Kǝra';
 
   @override
-  String get translation => 'Translation';
+  String get translation => 'Fasari';
 
   @override
   String get tafsir => 'Tafsir';
@@ -259,10 +259,10 @@ class AppLocalizationsKr extends AppLocalizations {
   String get bookmarks => 'Alamawa kitawube';
 
   @override
-  String get addBookmark => 'Add Bookmark';
+  String get addBookmark => 'Alama kitawube yira';
 
   @override
-  String get removeBookmark => 'Remove Bookmark';
+  String get removeBookmark => 'Alama kitawube tuluwuye';
 
   @override
   String get lastRead => 'Kǝra Dareye';

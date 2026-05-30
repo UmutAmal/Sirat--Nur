@@ -204,7 +204,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get reading => '독서';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => '암송';
 
   @override
   String get translation => '번역';

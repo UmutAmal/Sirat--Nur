@@ -206,7 +206,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get reading => 'Pānui';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Takotoranga';
 
   @override
   String get translation => 'Whakamaoritanga';

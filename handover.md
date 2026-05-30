@@ -23242,3 +23242,39 @@
 
 ### Sonraki Adim
 - Final kapilar ve push sonrasi yeni dongude bookmark/empty-state/onboarding runtime copy gruplarini ayni parcali audit/translate/test akisi ile ele al.
+
+## 2026-05-31 TUR-581 - Quran Reading and Bookmark Shell L10n Fallback Reduction
+
+### MASTER Karari
+- Risk: Quran okuma ve yer imi UI kabugundaki `bookmarks`, `addBookmark`, `removeBookmark`, `lastRead`, `reading`, `recitation`, `translation`, `surah`, `ayahLabel`, `juz`, `page` anahtarlari 881 locale'de Ingilizce fallback borcu tasiyordu. Bu metinler dini kaynak icerigi degil, kullanici arayuzu etiketi oldugu icin guvenli parcali l10n batch'i olarak ele alindi.
+- Kanit:
+  - Patch oncesi audit: `dart run tool/translate_arb_keys.dart --report bookmarks addBookmark removeBookmark lastRead reading recitation translation surah ayahLabel juz page`.
+  - Patch oncesi `Same-as-English locales: 881`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - Patch sirasinda kalite ornegi: `app_ti.arb` icinde `recitation` ve `ayahLabel` icin cok satirli `ዝብል ቃል...` debris'i, `app_sa.arb` icinde `इति .\n...` debris'i ve `app_bm.arb` icinde `page` icin uydurma numeric `Ɲɛ 10nan na` yakalandi.
+  - Bu degerler kisa UI etiketi olarak duzeltildi: Tigrinya `ኣያ {ayah}` / `ንባብ`, Sanskrit `अयः {ayah}` / `पाठः`, Bambara `Ɲɛ`.
+  - Patch sonrasi audit: ayni 11 anahtarda `Same-as-English locales: 544`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - ARB JSON parse gate: `Get-ChildItem lib\l10n\app_*.arb | ConvertFrom-Json` PASS.
+  - Cok satirli okuma etiketi grep'i: `rg -n '"(bookmarks|addBookmark|removeBookmark|lastRead|reading|recitation|translation|surah|ayahLabel|juz|page)":.*\\n' lib\l10n -g 'app_*.arb'` temiz.
+  - `flutter gen-l10n` calistirildi ve generated localization siniflari ARB ile senkronlandi.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 8/25`. Quran okuma ve bookmark UI yuzeyindeki fallback borcu azaldi; cok satirli ve uydurma sayili kisa etiketlerin tekrar girmesi tool guard'i ve test ile engellendi.
+- Rollback plani: Bu turdaki `lib\l10n\app_*.arb`, generated `lib\l10n\app_localizations_*.dart`, `tool\translate_arb_keys.dart`, `test\translate_arb_keys_test.dart` ve bu handover kaydi tek commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` icinde `bookmarks`, `lastRead`, `reading`, `recitation`, `translation`, `ayahLabel` kisa UI etiketi olarak tek satir guard'ina alindi.
+- `tool\translate_arb_keys.dart` genel debris listesine Tigrinya cok satirli makine kalintisi eklendi.
+- `tool\translate_arb_keys.dart` ile yalniz Quran okuma/bookmark UI anahtarlari cevrildi.
+- Dini kaynak metni, Quran ayeti, meal, hadis, dua veya tafsir icerigi uretilmedi ya da degistirilmedi.
+
+### TESTER Degisikligi
+- Yeni guard'lar:
+  - `test\translate_arb_keys_test.dart` icinde `tracks Quran reading and bookmark shell l10n debt reduction` eklendi.
+  - `test\translate_arb_keys_test.dart` icindeki genel debris testi Tigrinya cok satirli recitation kalintisini reddedecek sekilde genisletildi.
+- Hedefli test:
+  - `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `83/83`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Final kapilar ve push sonrasi yeni dongude kalan empty-state/onboarding/runtime copy gruplarini ve halihazirda grep ile gorunen eski Aymara/Bhojpuri/Guarani makine debris risklerini ayni parcali audit/translate/test akisi ile ele al.

@@ -78,8 +78,8 @@
   "ok": "VYIZA",
   "yes": "Egome",
   "no": "Oya",
-  "surah": "Surah",
-  "ayahLabel": "Ayah {ayah}",
+  "surah": "Sura",
+  "ayahLabel": "Aya {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -88,10 +88,10 @@
     }
   },
   "juz": "Juz",
-  "page": "Page",
+  "page": "Urupapuro",
   "reading": "Gusoma",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Gusubiramwo",
+  "translation": "Ubuhinduzi",
   "tafsir": "Tafsir",
   "tafsirLoading": "Gushiramwo tafsir...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Isoko ya tafsir yatowe nta n’imwe yagarutse.",
   "tafsirCacheUnavailable": "Tafsir yagenzuwe ntiraboneka hanze y’umurongo. Gukoranya amakuru ya tafsir imbere yo gusura.",
   "bookmarks": "Ibimenyetso",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Kwongera akamenyetso",
+  "removeBookmark": "Kuraho akamenyetso",
   "lastRead": "Ubwanyuma gusoma",
   "dailyZikr": "Zikr y'umusi",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",

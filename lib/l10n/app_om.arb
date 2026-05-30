@@ -79,7 +79,7 @@
   "yes": "Eeyyee",
   "no": "Lakki",
   "surah": "Suuraa",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "Ayyaana {ayah} .",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "Juz",
   "page": "Fuula",
   "reading": "Dubbisuu",
-  "recitation": "Recitation",
+  "recitation": "Dubbii dubbisuu",
   "translation": "Hiikaa",
   "tafsir": "Tafsir",
   "tafsirLoading": "Tafsir fe'amaa jira...",

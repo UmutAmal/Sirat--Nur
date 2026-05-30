@@ -79,7 +79,7 @@
   "yes": "ਹਾਂ",
   "no": "ਨੰ",
   "surah": "ਸੂਰਾ",
-  "ayahLabel": "Ayah {ayah}",
+  "ayahLabel": "ਅਯਾਹ {ayah}",
   "@ayahLabel": {
     "placeholders": {
       "ayah": {
@@ -90,7 +90,7 @@
   "juz": "ਜੁਜ਼",
   "page": "ਪੰਨਾ",
   "reading": "ਪੜ੍ਹਨਾ",
-  "recitation": "Recitation",
+  "recitation": "ਪਾਠ",
   "translation": "ਅਨੁਵਾਦ",
   "tafsir": "Tafsir",
   "tafsirLoading": "ਤਫ਼ਸੀਰ ਨੂੰ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",

@@ -206,7 +206,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get reading => 'Okamak';
 
   @override
-  String get recitation => 'Recitation';
+  String get recitation => 'Oka';
 
   @override
   String get translation => 'Terjime';

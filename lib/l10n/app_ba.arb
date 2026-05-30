@@ -78,7 +78,7 @@
   "ok": "ЯРАР",
   "yes": "Эйе",
   "no": "Юҡ",
-  "surah": "Surah",
+  "surah": "22-се сүрә.",
   "ayahLabel": "Ayah {ayah}",
   "@ayahLabel": {
     "placeholders": {
@@ -87,11 +87,11 @@
       }
     }
   },
-  "juz": "Juz",
-  "page": "Page",
+  "juz": "Джуз",
+  "page": "2-се бит.",
   "reading": "Уҡыу",
-  "recitation": "Recitation",
-  "translation": "Translation",
+  "recitation": "Һөйләү",
+  "translation": "Тәржемә",
   "tafsir": "Tafsir",
   "tafsirLoading": "Тәфсир тейәү...",
   "tafsirSourceLabel": "Tafsir source",
@@ -139,8 +139,8 @@
   "tafsirNoEntriesReturned": "Һайланған тәфсир сығанағы бер ниндәй ҙә яҙмалар ҡайтарманы.",
   "tafsirCacheUnavailable": "Тикшерелгән тәфсир әлегә офлайн режимда юҡ. Синхронизация сығанаҡ тафсир мәғлүмәттәр йыйылмаһы браузер алдынан.",
   "bookmarks": "Закладкалар",
-  "addBookmark": "Add Bookmark",
-  "removeBookmark": "Remove Bookmark",
+  "addBookmark": "Закладка өҫтәү",
+  "removeBookmark": "Закладканы юйырға",
   "lastRead": "Һуңғы уҡыу",
   "dailyZikr": "Көндәлек зикр",
   "duaMeaning1": "others pray, ‘Our Lord, give us good in this world and in the Hereafter, and protect us from the torment of the Fire.’",
