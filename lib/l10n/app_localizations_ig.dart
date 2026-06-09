@@ -45,7 +45,7 @@ class AppLocalizationsIg extends AppLocalizations {
   String get getLifetimePro => 'Nweta Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Mepee Tajweed na atụmatụ dị elu';
 
   @override
   String get prayerCalculation => 'Ngụkọ ekpere';

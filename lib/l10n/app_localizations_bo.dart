@@ -45,7 +45,7 @@ class AppLocalizationsBo extends AppLocalizations {
   String get getLifetimePro => 'མི་ཚེ་གཅིག་གི་ཆེད་ལས་པ་ཐོབ།';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ཏཱ་ཇི་ཝིད་དང་ཡར་ཐོན་ཅན་གྱི་ཁྱད་ཆོས་ལྡེ་མིག་ཕྱེ།';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -606,21 +606,21 @@ class AppLocalizationsBo extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Sirat-ı Nur ལ་ཕེབས་པར་དགའ་བསུ་ཞུ།';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'སྨོན་ལམ་དུས་ཚོད།';
 
   @override
   String get onboarding2Desc =>
       'གནས་ཡུལ་ལ་གཞིགས་ནས་སྨོན་ལམ་དུས་ཚོད་ཏག་ཏག་གཏོང་བ།';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'ཀུ་རཱན་དང་གཞན་ཡང་།';
 
   @override
   String get onboarding3Desc =>
@@ -1089,25 +1089,25 @@ class AppLocalizationsBo extends AppLocalizations {
       'ཉོ་སྒྲུབ་མཇུག་སྒྲིལ་མ་ཐུབ། ཡང་བསྐྱར་ཚོད་ལྟ་གནང་རོགས།';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'དབང་རྩའི་རོགས་རམ་པ།';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'ཚད་མེད་དྲ་རྒྱའི་ཕྱི་རོལ་དུ།';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'དམིགས་བསལ་གྱི་བཟོ་བཀོད།';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'ཁྱབ་བསྒྲགས་མེད་པ།';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

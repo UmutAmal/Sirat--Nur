@@ -45,7 +45,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get getLifetimePro => 'Obtenha o Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Desbloquear Tajweed e recursos avançados';
 
   @override
   String get prayerCalculation => 'Cálculo dos horários de oração';

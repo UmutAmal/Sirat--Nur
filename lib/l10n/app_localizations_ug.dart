@@ -45,7 +45,7 @@ class AppLocalizationsUg extends AppLocalizations {
   String get getLifetimePro => 'ئۆمۈرلۈك Pro غا ئېرىشىش';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed & Advanced ئىقتىدارلىرىنى ئېچىڭ';
 
   @override
   String get prayerCalculation => 'ناماز ھېسابلاش';

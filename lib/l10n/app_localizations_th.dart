@@ -45,7 +45,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get getLifetimePro => 'รับโปรตลอดชีพ';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ปลดล็อค Tajweed และคุณสมบัติขั้นสูง';
 
   @override
   String get prayerCalculation => 'การคำนวณคำอธิษฐาน';

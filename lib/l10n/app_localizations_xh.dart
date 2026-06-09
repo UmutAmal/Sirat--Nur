@@ -45,7 +45,7 @@ class AppLocalizationsXh extends AppLocalizations {
   String get getLifetimePro => 'Fumana iPro Lifetime';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Vula iTajweed kunye neMicimbi ePhakamileyo';
 
   @override
   String get prayerCalculation => 'Umthandazo wokubala';

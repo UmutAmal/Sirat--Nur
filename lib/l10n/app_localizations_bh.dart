@@ -45,7 +45,7 @@ class AppLocalizationsBh extends AppLocalizations {
   String get getLifetimePro => 'लाइफटाइम प्रो मिल जाला';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'तजवीद अउर एडवांस फीचर के अनलॉक करीं';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -607,20 +607,20 @@ class AppLocalizationsBh extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'सिरात-ı नूर में राउर स्वागत बा';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'प्रार्थना के समय बा';
 
   @override
   String get onboarding2Desc => 'आपके स्थान के आधार पर सही प्रार्थना के समय';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'कुरान अउर अउरी बहुत कुछ';
 
   @override
   String get onboarding3Desc =>
@@ -1087,25 +1087,25 @@ class AppLocalizationsBh extends AppLocalizations {
       'खरीददारी पूरा ना हो पावल। कृपया दोबारा कोशिश करीं।';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'न्यूरल असिस्टेंट प्लस के बा';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'असीमित ऑफलाइन बा';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'एक्सक्लूसिव डिजाइन के बा';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'विज्ञापन मुक्त बा';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

@@ -45,7 +45,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get getLifetimePro => 'లైఫ్‌టైమ్ ప్రోని పొందండి';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'తాజ్‌వీడ్ & అధునాతన ఫీచర్‌లను అన్‌లాక్ చేయండి';
 
   @override
   String get prayerCalculation => 'ప్రార్థన గణన';

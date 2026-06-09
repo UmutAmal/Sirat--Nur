@@ -45,7 +45,7 @@ class AppLocalizationsSn extends AppLocalizations {
   String get getLifetimePro => 'Tora Hupenyu hwese Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Vhura Tajweed & Yepamberi Zvimiro';
 
   @override
   String get prayerCalculation => 'Kuverenga munamato';

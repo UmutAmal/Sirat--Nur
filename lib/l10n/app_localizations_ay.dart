@@ -626,7 +626,7 @@ class AppLocalizationsAy extends AppLocalizations {
       'Kawkhantï jikjjataskta ukarjamaw kuna horasas oración lurañapa uk cheqaparjam qhanañchaña';
 
   @override
-  String get onboarding3Title => 'Quran & More ukat juk’ampinaka';
+  String get onboarding3Title => 'Quran ukat juk’ampinaka';
 
   @override
   String get onboarding3Desc =>
@@ -1106,7 +1106,7 @@ class AppLocalizationsAy extends AppLocalizations {
       'Alañax janiw tukuyañjamäkänti. Ukhamaraki, mayampi yant’apxañani.';
 
   @override
-  String get paywallFeature1Title => 'Yanapt’ir Neural ukax Plus';
+  String get paywallFeature1Title => 'Yanapt’iri Neural Plus';
 
   @override
   String get paywallFeature1Desc => 'Jan limitat AI-mp ch’amanchata Q&A';
@@ -1124,7 +1124,7 @@ class AppLocalizationsAy extends AppLocalizations {
   String get paywallFeature3Desc => 'Temas & fuentes premium ukanak uñt’ayaña';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free ukax janiw utjkiti';
+  String get paywallFeature4Title => 'Yatiyawinakas jan utjiri';
 
   @override
   String get paywallFeature4Desc => 'Cero anuncios ukanaka';

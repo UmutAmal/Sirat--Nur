@@ -45,7 +45,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get getLifetimePro => 'ናይ ሕይወት ፕሮ ርኸብ';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ታጅዊድን ምዕቡል ባህርያትን ምኽፋት።';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -191,7 +191,7 @@ class AppLocalizationsTi extends AppLocalizations {
 
   @override
   String ayahLabel(String ayah) {
-    return 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nኣያ $ayah';
+    return 'ኣያ $ayah';
   }
 
   @override
@@ -204,7 +204,7 @@ class AppLocalizationsTi extends AppLocalizations {
   String get reading => 'ንባብ';
 
   @override
-  String get recitation => 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nንባብ';
+  String get recitation => 'ንባብ';
 
   @override
   String get translation => 'ትርጉም';
@@ -608,13 +608,13 @@ class AppLocalizationsTi extends AppLocalizations {
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'ናይ ጸሎት ግዜ';
 
   @override
   String get onboarding2Desc => 'ልክዕ ናይ ጸሎት ግዜ ብመሰረት ኣብ ዘለኻዮ ቦታ';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'ቁርኣን & ካልእ';
 
   @override
   String get onboarding3Desc =>

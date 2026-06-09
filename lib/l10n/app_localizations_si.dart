@@ -45,7 +45,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get getLifetimePro => 'Lifetime Pro ලබා ගන්න';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed සහ උසස් විශේෂාංග අගුළු හරින්න';
 
   @override
   String get prayerCalculation => 'යාච්ඤාව ගණනය කිරීම';

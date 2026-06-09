@@ -45,7 +45,7 @@ class AppLocalizationsSr extends AppLocalizations {
   String get getLifetimePro => 'Набавите Лифетиме Про';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Откључајте Тајвеед и напредне функције';
 
   @override
   String get prayerCalculation => 'Калкулација молитве';

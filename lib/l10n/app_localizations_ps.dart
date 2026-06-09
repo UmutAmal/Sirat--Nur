@@ -45,7 +45,7 @@ class AppLocalizationsPs extends AppLocalizations {
   String get getLifetimePro => 'د ژوند وخت پرو ترلاسه کړئ';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'د تجوید او پرمختللي بڼې خلاص کړئ';
 
   @override
   String get prayerCalculation => 'د لمانځه حساب';

@@ -45,7 +45,7 @@ class AppLocalizationsTs extends AppLocalizations {
   String get getLifetimePro => 'Kuma Vutomi Hinkwabyo Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Pfula Tajweed & Swihlawulekisi swa le Henhla';
 
   @override
   String get prayerCalculation => 'Xibalo xa Xikhongelo';

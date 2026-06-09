@@ -45,7 +45,7 @@ class AppLocalizationsMt extends AppLocalizations {
   String get getLifetimePro => 'Ikseb Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Nisfruttaw Tajweed & Karatteristiċi Avvanzati';
 
   @override
   String get prayerCalculation => 'Kalkolu tat-Talb';

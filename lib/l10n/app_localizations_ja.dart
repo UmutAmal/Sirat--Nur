@@ -45,7 +45,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get getLifetimePro => '生涯プロを入手';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed と高度な機能のロックを解除する';
 
   @override
   String get prayerCalculation => '礼拝時刻の計算';

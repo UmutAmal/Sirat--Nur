@@ -45,7 +45,7 @@ class AppLocalizationsFo extends AppLocalizations {
   String get getLifetimePro => 'Fá Lívstíðar Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Læs Tajweed upp og framkomnar funkur';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -606,21 +606,21 @@ class AppLocalizationsFo extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Vælkomin í Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Bønartíðir';
 
   @override
   String get onboarding2Desc =>
       'Nágreiniligar bønartíðir grundaðar á tína staðseting';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Koranin og annað';
 
   @override
   String get onboarding3Desc =>
@@ -1086,25 +1086,25 @@ class AppLocalizationsFo extends AppLocalizations {
       'Keypið kundi ikki gerast liðugt. Vinarliga royn aftur.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Nervahjálpari Pluss';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Óavmarkað uttannet';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Einkult snið';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Lýsingafrítt';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

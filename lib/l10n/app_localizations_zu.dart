@@ -45,7 +45,7 @@ class AppLocalizationsZu extends AppLocalizations {
   String get getLifetimePro => 'Thola i-Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Vula i-Tajweed nezici ezithuthukile';
 
   @override
   String get prayerCalculation => 'Umthandazo wokubala';

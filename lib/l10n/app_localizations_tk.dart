@@ -45,7 +45,7 @@ class AppLocalizationsTk extends AppLocalizations {
   String get getLifetimePro => 'Ömürboýy Pro alyň';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed we ösen aýratynlyklary açyň';
 
   @override
   String get prayerCalculation => 'Namazyň hasaplamasy';

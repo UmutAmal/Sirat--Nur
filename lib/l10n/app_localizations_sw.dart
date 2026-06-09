@@ -45,7 +45,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get getLifetimePro => 'Pata Pro wa Maisha';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Fungua Tajweed & Sifa za Juu';
 
   @override
   String get prayerCalculation => 'Hesabu ya Maombi';

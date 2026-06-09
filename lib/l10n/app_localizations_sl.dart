@@ -45,7 +45,7 @@ class AppLocalizationsSl extends AppLocalizations {
   String get getLifetimePro => 'Pridobite Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Odkleni Tajweed in napredne funkcije';
 
   @override
   String get prayerCalculation => 'Izračun molitve';

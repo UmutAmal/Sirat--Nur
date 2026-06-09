@@ -45,7 +45,7 @@ class AppLocalizationsQu extends AppLocalizations {
   String get getLifetimePro => 'Wiñaypaq Prota hap\'iy';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Desbloquear Tajweed & Características Avanzadas';
 
   @override
   String get prayerCalculation => 'Mañakuy Yupay';

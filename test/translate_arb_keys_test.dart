@@ -2508,6 +2508,75 @@ void main() {
       expect(localeArbs['bm']!['page'], 'Ɲɛ');
     });
 
+    test('tracks onboarding and paywall shell l10n debt reduction', () {
+      const keys = [
+        'continueReading',
+        'getLifetimePro',
+        'unlockTajweed',
+        'onboarding1Title',
+        'onboarding2Title',
+        'onboarding3Title',
+        'proFeatures',
+        'paywallFeature1Title',
+        'paywallFeature2Title',
+        'paywallFeature3Title',
+        'paywallFeature4Title',
+      ];
+      final english = _readArbFile('lib/l10n/app_en.arb');
+      final localeArbs = <String, Map<String, dynamic>>{};
+
+      for (final file in Directory('lib/l10n').listSync().whereType<File>()) {
+        final name = file.uri.pathSegments.last;
+        if (!name.startsWith('app_') || !name.endsWith('.arb')) {
+          continue;
+        }
+        final locale = name.replaceFirst('app_', '').replaceFirst('.arb', '');
+        localeArbs[locale] = _readArbFile(file.path);
+      }
+
+      final report = buildL10nDebtReport(
+        keys: keys,
+        english: english,
+        localeArbs: localeArbs,
+      );
+
+      expect(report.missingOrEmptyCount, 0);
+      expect(report.placeholderMismatchCount, 0);
+      expect(report.sameAsEnglishCount, lessThanOrEqualTo(399));
+      for (final locale in ['bo', 'sa', 'ti']) {
+        for (final key in keys) {
+          final value = localeArbs[locale]![key] as String;
+          expect(
+            value,
+            isNot(english[key]),
+            reason: 'app_$locale.arb still uses English for $key',
+          );
+          expect(
+            value.contains('\n') || value.contains('\r'),
+            isFalse,
+            reason: 'app_$locale.arb has multiline paywall copy for $key',
+          );
+        }
+      }
+      expect(
+        localeArbs['aa']!['unlockTajweed'],
+        english['unlockTajweed'],
+        reason: 'app_aa.arb keeps source fallback instead of known bad debris',
+      );
+      expect(
+        localeArbs['ay']!['onboarding3Title'],
+        isNot(contains('Quran & More')),
+      );
+      expect(
+        localeArbs['ay']!['paywallFeature1Title'],
+        isNot(contains('ukax')),
+      );
+      expect(
+        localeArbs['ay']!['paywallFeature4Title'],
+        isNot(contains('Ad-Free')),
+      );
+    });
+
     test('rejects multiline chatbot runtime output', () {
       final value = resolveTranslatedArbValue(
         key: 'chatbotGreeting',
@@ -2900,12 +2969,36 @@ void main() {
         candidate: 'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ።\nንባብ',
       );
 
+      final aymaraOnboardingValue = resolveTranslatedArbValue(
+        key: 'onboarding3Title',
+        source: 'Quran & More',
+        currentValue: 'Quran & More ukat juk’ampinaka',
+        candidate: 'Quran & More ukat juk’ampinaka',
+      );
+
+      final aymaraAdFreeValue = resolveTranslatedArbValue(
+        key: 'paywallFeature4Title',
+        source: 'Ad-Free',
+        currentValue: 'Ad-Free ukax janiw utjkiti',
+        candidate: 'Ad-Free ukax janiw utjkiti',
+      );
+
+      final afarTajweedValue = resolveTranslatedArbValue(
+        key: 'unlockTajweed',
+        source: 'Unlock Tajweed & Advanced Features',
+        currentValue: 'Tajweed fake kee fooca fan tan caaloota',
+        candidate: 'Tajweed fake kee fooca fan tan caaloota',
+      );
+
       expect(settingsValue, 'Settings');
       expect(pageValue, 'Page');
       expect(quranValue, 'Quran');
       expect(bambaraTafsirValue, 'Loading tafsir...');
       expect(wolofTafsirValue, 'Loading tafsir...');
       expect(tigrinyaRecitationValue, 'Recitation');
+      expect(aymaraOnboardingValue, 'Quran & More');
+      expect(aymaraAdFreeValue, 'Ad-Free');
+      expect(afarTajweedValue, 'Unlock Tajweed & Advanced Features');
     });
 
     test('rejects mixed English location detection debris', () {

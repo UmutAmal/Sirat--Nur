@@ -45,7 +45,7 @@ class AppLocalizationsSg extends AppLocalizations {
   String get getLifetimePro => 'Ge Pro ti fini kue .';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Zia Tajweed & akota ye .';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -607,21 +607,21 @@ class AppLocalizationsSg extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Azo ti Sirat-ı Nur .';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Ngoi ti sambela .';
 
   @override
   String get onboarding2Desc =>
       'Ngoi ti sambela so ayeke tâ na lege ni alingbi na ndo so mo yeke dä .';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Coran na ambeni ye nde';
 
   @override
   String get onboarding3Desc =>
@@ -1091,25 +1091,26 @@ class AppLocalizationsSg extends AppLocalizations {
       'A lingbi ti hunzi vongo ye ni pëpe. Pardon, kiri mo tara ni.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Assistant neuronal Plus';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title =>
+      'Na lege ti Internet so ayeke na limite pëpe';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Adessin so ayeke nde';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Publicité senge';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

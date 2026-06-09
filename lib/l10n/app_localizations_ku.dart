@@ -45,7 +45,7 @@ class AppLocalizationsKu extends AppLocalizations {
   String get getLifetimePro => 'Lifetime Pro bistînin';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed & Taybetmendiyên Pêşkeftî vekin';
 
   @override
   String get prayerCalculation => 'Hesabkirina Nimêjê';

@@ -45,7 +45,7 @@ class AppLocalizationsCv extends AppLocalizations {
   String get getLifetimePro => 'Lifetime Pro илӗр';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Таджвид тата ҫӗнӗ функцисене уҫӑр';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -606,20 +606,20 @@ class AppLocalizationsCv extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Сират-и Нур хулине хапӑл туса кӗтетпӗр';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Кӗлӗ вӑхӑчӗ';
 
   @override
   String get onboarding2Desc => 'Сирӗн вырӑна кура тӗрӗс кӗлӗ вӑхӑчӗсем';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Коран тата ытти те';
 
   @override
   String get onboarding3Desc =>
@@ -1086,25 +1086,25 @@ class AppLocalizationsCv extends AppLocalizations {
       'Туянӑва вӗҫлеме май килмерӗ. Тархасшӑн, тепӗр хут тытӑнса пӑхӑр.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Нейрон пулӑшуҫи Плюс';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Чикӗсӗр офлайн';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Эксклюзивлӑ дизайнсем';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Рекламасӑр';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

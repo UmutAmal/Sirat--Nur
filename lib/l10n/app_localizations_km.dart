@@ -45,7 +45,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get getLifetimePro => 'ទទួលបាន Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ដោះសោ Tajweed & លក្ខណៈពិសេសកម្រិតខ្ពស់';
 
   @override
   String get prayerCalculation => 'ការគណនាការអធិស្ឋាន';

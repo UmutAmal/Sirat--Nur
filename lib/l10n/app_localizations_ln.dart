@@ -45,7 +45,7 @@ class AppLocalizationsLn extends AppLocalizations {
   String get getLifetimePro => 'Bozua Pro ya Bomoi mobimba';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Débloquer Tajweed & Makambo ya liboso';
 
   @override
   String get prayerCalculation => 'Calcul ya losambo';

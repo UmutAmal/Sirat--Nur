@@ -45,7 +45,7 @@ class AppLocalizationsYi extends AppLocalizations {
   String get getLifetimePro => 'באַקומען Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ופשליסן Tajweed און אַוואַנסירטע פֿעיִקייטן';
 
   @override
   String get prayerCalculation => 'תפילה קאַלקולאַטיאָן';

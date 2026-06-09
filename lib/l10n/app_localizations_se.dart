@@ -45,7 +45,7 @@ class AppLocalizationsSe extends AppLocalizations {
   String get getLifetimePro => 'Oaččut Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Raba Tajweed & ovdánan doaimmat';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -606,20 +606,20 @@ class AppLocalizationsSe extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Bures boahtin Sirat-ı Nur:ii';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Rohkosáiggit';
 
   @override
   String get onboarding2Desc => 'Dárkilis rohkosáiggit du báikki vuođul';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Korana ja eanet';
 
   @override
   String get onboarding3Desc =>
@@ -1087,25 +1087,25 @@ class AppLocalizationsSe extends AppLocalizations {
       'Oastit ii sáhttán čađahuvvot. Geahččal fas.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Neurala veahkki Plus';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Ráddjekeahtes offline';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Erenoamáš hábmen';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Reklámafriddja';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

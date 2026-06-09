@@ -45,7 +45,7 @@ class AppLocalizationsUz extends AppLocalizations {
   String get getLifetimePro => 'Lifetime Pro yuklab oling';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajvid va kengaytirilgan funksiyalarni oching';
 
   @override
   String get prayerCalculation => 'Namozni hisoblash';

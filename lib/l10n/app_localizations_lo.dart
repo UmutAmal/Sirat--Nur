@@ -45,7 +45,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get getLifetimePro => 'ຮັບ Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ປົດລັອກ Tajweed & ຄຸນສົມບັດຂັ້ນສູງ';
 
   @override
   String get prayerCalculation => 'ການຄິດໄລ່ການອະທິຖານ';

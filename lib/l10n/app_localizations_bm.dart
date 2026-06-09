@@ -199,7 +199,7 @@ class AppLocalizationsBm extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get page => 'Ɲɛ 10nan na';
+  String get page => 'Ɲɛ';
 
   @override
   String get reading => 'Gafekalan';

@@ -45,7 +45,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get getLifetimePro => 'Nhận trọn đời Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Mở khóa Tajweed và các tính năng nâng cao';
 
   @override
   String get prayerCalculation => 'Tính giờ lễ nguyện';

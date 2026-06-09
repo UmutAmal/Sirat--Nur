@@ -1076,6 +1076,9 @@ const _knownGeneralTranslationDebris = [
   'Chargement tafsir ka',
   'Lochargement tafsir',
   'ዝብል ቃል ንምርካብ ኣብዚ ንጠውቅ',
+  'Quran & More',
+  'Ad-Free ukax',
+  'Tajweed fake',
 ];
 
 const _knownShortLabelTranslationDebris = ['के बारे में', 'बतावल', ' के बा'];

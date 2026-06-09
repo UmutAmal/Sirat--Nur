@@ -45,7 +45,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get getLifetimePro => 'आजीवन-प्रो प्राप्नुयात्';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ताजवीद एवं उन्नत सुविधाएँ अनलॉक करें';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -192,7 +192,7 @@ class AppLocalizationsSa extends AppLocalizations {
 
   @override
   String ayahLabel(String ayah) {
-    return 'इति .\nअयः $ayah .';
+    return 'अयः $ayah';
   }
 
   @override
@@ -205,7 +205,7 @@ class AppLocalizationsSa extends AppLocalizations {
   String get reading => 'पठनम्';
 
   @override
-  String get recitation => 'इति .\nपाठः';
+  String get recitation => 'पाठः';
 
   @override
   String get translation => 'अनुवाद';
@@ -613,13 +613,13 @@ class AppLocalizationsSa extends AppLocalizations {
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'प्रार्थना समय';
 
   @override
   String get onboarding2Desc => 'भवतः स्थानस्य आधारेण सटीकाः प्रार्थनासमयाः';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'कुरान एवं अधिक';
 
   @override
   String get onboarding3Desc =>

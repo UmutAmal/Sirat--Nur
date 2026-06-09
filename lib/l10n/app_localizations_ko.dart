@@ -45,7 +45,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get getLifetimePro => '평생 프로 받기';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed 및 고급 기능 잠금 해제';
 
   @override
   String get prayerCalculation => '기도 계산';

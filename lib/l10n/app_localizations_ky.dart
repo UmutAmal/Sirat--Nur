@@ -45,7 +45,7 @@ class AppLocalizationsKy extends AppLocalizations {
   String get getLifetimePro => 'Lifetime Pro алыңыз';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed & Advanced Features кулпусун ачуу';
 
   @override
   String get prayerCalculation => 'Намаз эсептөө';

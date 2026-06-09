@@ -45,7 +45,7 @@ class AppLocalizationsSm extends AppLocalizations {
   String get getLifetimePro => 'Maua le Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tatala Tajweed & Advanced Features';
 
   @override
   String get prayerCalculation => 'Fa\'atatau ole Tatalo';

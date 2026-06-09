@@ -45,7 +45,7 @@ class AppLocalizationsRn extends AppLocalizations {
   String get getLifetimePro => 'Kuronka ubuzima bwose Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Gufungura Tajweed & Ibiranga biteye imbere';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -606,21 +606,21 @@ class AppLocalizationsRn extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Ikaze muri Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Igihe c\'amasengesho';
 
   @override
   String get onboarding2Desc =>
       'Ibihe vy\'amasengesho vy\'ukuri bishingiye aho uri .';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Korowani n\'ibindi';
 
   @override
   String get onboarding3Desc =>
@@ -1089,25 +1089,25 @@ class AppLocalizationsRn extends AppLocalizations {
       'Gugura ntikwashoboye kurangira. Ndagusavye wongere ugerageze.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Umufasha w\'imitsi';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Udafise aho ugarukira kuri interineti';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Imigenzo yihariye';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Kwamamaza-Ubuntu';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

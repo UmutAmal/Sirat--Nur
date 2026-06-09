@@ -45,7 +45,7 @@ class AppLocalizationsNn extends AppLocalizations {
   String get getLifetimePro => 'Skaff deg Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Lås opp Tajweed og avanserte funksjoner';
 
   @override
   String get prayerCalculation => 'Beregning av bønnetider';

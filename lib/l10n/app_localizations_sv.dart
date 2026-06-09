@@ -45,7 +45,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get getLifetimePro => 'Skaffa Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Lås upp Tajweed och avancerade funktioner';
 
   @override
   String get prayerCalculation => 'Bönberäkning';

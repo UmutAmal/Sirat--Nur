@@ -23278,3 +23278,38 @@
 
 ### Sonraki Adim
 - Final kapilar ve push sonrasi yeni dongude kalan empty-state/onboarding/runtime copy gruplarini ve halihazirda grep ile gorunen eski Aymara/Bhojpuri/Guarani makine debris risklerini ayni parcali audit/translate/test akisi ile ele al.
+
+## 2026-06-10 TUR-582 - Onboarding and Paywall Shell L10n Fallback Reduction
+
+### MASTER Karari
+- Risk: Ana ekran devam okuma, lifetime pro, Tajweed kilidi, onboarding basliklari ve paywall ozellik basliklari yuksek gorunurlukte olmasina ragmen 738 locale'de Ingilizce fallback borcu tasiyordu. Bu yuzey urun arayuzu metnidir; dini kaynak metin degildir.
+- Kanit:
+  - Patch oncesi audit: `dart run tool/translate_arb_keys.dart --report continueReading getLifetimePro unlockTajweed onboarding1Title onboarding2Title onboarding3Title proFeatures paywallFeature1Title paywallFeature2Title paywallFeature3Title paywallFeature4Title`.
+  - Patch oncesi `Same-as-English locales: 738`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - Patch sonrasi audit: ayni 11 anahtarda `Same-as-English locales: 399`, `Missing/empty locales: 0`, `Placeholder mismatch locales: 0`.
+  - Kalite ornegi: `app_ay.arb` icinde `onboarding3Title` icin `Quran & More...`, `paywallFeature4Title` icin `Ad-Free ukax...` karisik Ingilizce/Aymara kalintisi yakalandi ve kisa UI degerlerine cekildi. `app_aa.arb` icindeki `unlockTajweed` icin `Tajweed fake...` forbidden debris'i yakalandi ve guvenli kaynak fallback'e cekildi.
+  - ARB JSON parse gate: `Get-ChildItem lib\l10n\app_*.arb | ConvertFrom-Json` PASS.
+  - Cok satirli hedef metin grep'i: `rg -n '"(continueReading|getLifetimePro|unlockTajweed|onboarding1Title|onboarding2Title|onboarding3Title|proFeatures|paywallFeature1Title|paywallFeature2Title|paywallFeature3Title|paywallFeature4Title)":.*\\n' lib\l10n -g 'app_*.arb'` temiz.
+  - `flutter gen-l10n` calistirildi ve generated localization siniflari ARB ile senkronlandi.
+- Etki/Olasilik/Risk: Etki 4, olasilik 4, risk `16/25 -> 8/25`. Ilk acilis ve premium karar ekranlarinda Ingilizce fallback ve karisik makine kalintisi azaldi.
+- Rollback plani: Bu turdaki `lib\l10n\app_*.arb`, generated `lib\l10n\app_localizations_*.dart`, `tool\translate_arb_keys.dart`, `test\translate_arb_keys_test.dart` ve bu handover kaydi tek commit revert ile geri alinabilir.
+
+### BUILDER Degisikligi
+- `tool\translate_arb_keys.dart` genel debris listesine `Quran & More`, `Ad-Free ukax` ve `Tajweed fake` kaliplari eklendi.
+- `app_ay.arb` icindeki karisik onboarding/paywall basliklari temizlendi.
+- `tool\translate_arb_keys.dart` ile yalniz home/onboarding/paywall UI baslik anahtarlari cevrildi.
+- Dini kaynak metni, Quran ayeti, meal, hadis, dua veya tafsir icerigi uretilmedi ya da degistirilmedi.
+
+### TESTER Degisikligi
+- Yeni guard'lar:
+  - `test\translate_arb_keys_test.dart` icinde `tracks onboarding and paywall shell l10n debt reduction` eklendi.
+  - `test\translate_arb_keys_test.dart` icindeki genel debris testi Aymara `Quran & More`, `Ad-Free ukax` ve Afar `Tajweed fake` kalintilarini reddedecek sekilde genisletildi.
+- Hedefli test:
+  - `flutter test test\translate_arb_keys_test.dart --reporter compact` PASS, `84/84`.
+- Final kapilar bu kayittan sonra calistirilacak:
+  - `git diff --check`
+  - `flutter analyze`
+  - `flutter test --reporter compact`
+
+### Sonraki Adim
+- Final kapilar ve push sonrasi yeni dongude kalan yüksek gorunurlukteki prayer/home/navigation fallback gruplarini ve eski Aymara/Bhojpuri/Guarani debris kalintilarini parcali audit/translate/test akisi ile ele al.

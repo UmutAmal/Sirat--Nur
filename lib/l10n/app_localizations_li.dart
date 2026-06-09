@@ -45,7 +45,7 @@ class AppLocalizationsLi extends AppLocalizations {
   String get getLifetimePro => 'Get Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed & Geavanseerde functies ontgrendele';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -607,21 +607,21 @@ class AppLocalizationsLi extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Welkom in Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Gebedstieje';
 
   @override
   String get onboarding2Desc =>
       'Nauwkeurige gebedstieje gebaseerd op eur locatie';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Koran & Meer';
 
   @override
   String get onboarding3Desc =>
@@ -1094,13 +1094,13 @@ class AppLocalizationsLi extends AppLocalizations {
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Onbeperk offline';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Exclusieve ontwerpe';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';

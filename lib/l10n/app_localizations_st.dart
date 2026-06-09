@@ -45,7 +45,7 @@ class AppLocalizationsSt extends AppLocalizations {
   String get getLifetimePro => 'Fumana Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Notlolla Tajweed & Advanced Features';
 
   @override
   String get prayerCalculation => 'Thapelo Palo';

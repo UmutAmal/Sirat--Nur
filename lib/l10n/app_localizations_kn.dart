@@ -45,7 +45,8 @@ class AppLocalizationsKn extends AppLocalizations {
   String get getLifetimePro => 'ಜೀವಮಾನದ ಪ್ರೊ ಪಡೆಯಿರಿ';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed =>
+      'ತಾಜ್ವೀಡ್ ಮತ್ತು ಸುಧಾರಿತ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ';
 
   @override
   String get prayerCalculation => 'ಪ್ರಾರ್ಥನೆ ಲೆಕ್ಕಾಚಾರ';

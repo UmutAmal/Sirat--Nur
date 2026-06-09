@@ -45,7 +45,7 @@ class AppLocalizationsSd extends AppLocalizations {
   String get getLifetimePro => 'لائف ٽائيم پرو حاصل ڪريو';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'تاجويد ۽ ترقي يافته خصوصيتن کي کوليو';
 
   @override
   String get prayerCalculation => 'نماز جو حساب';

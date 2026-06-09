@@ -45,7 +45,7 @@ class AppLocalizationsLb extends AppLocalizations {
   String get getLifetimePro => 'Kritt Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Spär Tajweed & Advanced Features op';
 
   @override
   String get prayerCalculation => 'Gebied Berechnung';

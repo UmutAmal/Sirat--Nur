@@ -45,7 +45,7 @@ class AppLocalizationsMn extends AppLocalizations {
   String get getLifetimePro => 'Lifetime Pro аваарай';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed болон дэвшилтэт функцуудыг нээх';
 
   @override
   String get prayerCalculation => 'Залбирлын тооцоо';

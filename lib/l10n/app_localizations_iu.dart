@@ -45,7 +45,7 @@ class AppLocalizationsIu extends AppLocalizations {
   String get getLifetimePro => 'ᐃᓅᓯᓕᒫᒧᑦ ᐱᓇᓱᐊᕐᓗᑎᑦ';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'ᒪᑐᐃᖅᓯᓂᖅ ᑕᔾᕘᑦᒥᒃ ᐊᒻᒪ ᓯᕗᒧᐊᒃᓯᒪᔪᓂᒃ ᐱᐅᓯᒋᐊᕈᑎᓂᒃ';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -605,20 +605,20 @@ class AppLocalizationsIu extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'ᑐᙵᓱᒋᑦ ᓯᕋᑦ-ᐃ ᓄᐊᕐᒧᑦ';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'ᑐᒃᓯᐊᕐᓇᐃᑦ';
 
   @override
   String get onboarding2Desc => 'ᑕᒻᒪᖅᓯᒪᙱᑦᑐᑦ ᑐᒃᓯᐊᕐᓇᐅᑉ ᐃᑲᕐᕋᖏᑦ ᒪᓕᒃᖢᒋᑦ ᐃᓂᒋᔭᐃᑦ';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'ᑯᕌᓐ ᐊᓯᖏᓪᓗ';
 
   @override
   String get onboarding3Desc =>
@@ -1085,25 +1085,25 @@ class AppLocalizationsIu extends AppLocalizations {
   String get premiumPurchaseFailed => 'ᓂᐅᕕᕐᓂᖅ ᐱᔭᕇᖅᑕᐅᔪᓐᓇᓚᐅᙱᓚᖅ. ᐆᑦᑐᑲᓐᓂᕆᑦ.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'ᖃᕋᓴᐅᑉ ᐃᑲᔪᖅᑎᖓ';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'ᐃᓱᓕᕝᕕᖃᙱᑦᑐᖅ ᖃᕆᑕᐅᔭᒃᑯᑦ';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'ᐊᔾᔨᐅᖏᑦᑐᑦ ᑎᑎᕋᐅᔭᖅᓯᒪᔪᑦ';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'ᓴᖅᑭᔮᖅᑎᑦᑎᔾᔪᑎᖃᙱᑦᑐᖅ';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

@@ -45,7 +45,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get getLifetimePro => 'ലൈഫ് ടൈം പ്രോ നേടുക';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed =>
+      'താജ്‌വീഡും വിപുലമായ ഫീച്ചറുകളും അൺലോക്ക് ചെയ്യുക';
 
   @override
   String get prayerCalculation => 'പ്രാർത്ഥന കണക്കുകൂട്ടൽ';

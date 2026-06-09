@@ -45,7 +45,7 @@ class AppLocalizationsYo extends AppLocalizations {
   String get getLifetimePro => 'Gba igbesi aye Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Ṣii Tajweed & Awọn ẹya To ti ni ilọsiwaju';
 
   @override
   String get prayerCalculation => 'Iṣiro Adura';

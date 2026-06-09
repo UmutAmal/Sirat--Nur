@@ -45,7 +45,7 @@ class AppLocalizationsCh extends AppLocalizations {
   String get getLifetimePro => 'Na\'i Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Na\'lå\'la\' i Tajweed yan i Manma\'gås-ta';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -607,21 +607,21 @@ class AppLocalizationsCh extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Magof na matto gi Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Oras Tinayuyot';
 
   @override
   String get onboarding2Desc =>
       'I tiempon tinayuyot ni\' siña ma\'usa gi i lugat-mu';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Quran yan Mas';
 
   @override
   String get onboarding3Desc =>
@@ -1103,13 +1103,13 @@ class AppLocalizationsCh extends AppLocalizations {
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Disision Eksklusibu';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Sin Ad-Free';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

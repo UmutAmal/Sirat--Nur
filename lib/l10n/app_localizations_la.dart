@@ -45,7 +45,7 @@ class AppLocalizationsLa extends AppLocalizations {
   String get getLifetimePro => 'Get Vita Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Basem Tajweed & Features Advanced';
 
   @override
   String get prayerCalculation => 'Oratio Calculus';

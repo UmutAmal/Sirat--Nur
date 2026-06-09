@@ -45,7 +45,7 @@ class AppLocalizationsBr extends AppLocalizations {
   String get getLifetimePro => 'Kaout Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Dibrennañ Tajweed & Perzhioù araokaet';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -608,20 +608,20 @@ class AppLocalizationsBr extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Degemer mat e Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Amzer ar bedenn';
 
   @override
   String get onboarding2Desc => 'Eurioù pediñ reizh diouzh ho lec\'hiadur';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Koran & Muioc\'h';
 
   @override
   String get onboarding3Desc =>
@@ -1089,25 +1089,25 @@ class AppLocalizationsBr extends AppLocalizations {
       'N\'hall ket bezañ echuet ar prenadenn. Klaskit en-dro mar plij.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Skoazeller nervel ouzhpenn';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Ezlinenn didermen';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Tresadennoù dibar';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Digoust bruderezh';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

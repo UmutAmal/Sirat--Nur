@@ -45,7 +45,7 @@ class AppLocalizationsRw extends AppLocalizations {
   String get getLifetimePro => 'Kubona Ubuzima Bwose';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Fungura Tajweed & Ibiranga Iterambere';
 
   @override
   String get prayerCalculation => 'Kubara Amasengesho';

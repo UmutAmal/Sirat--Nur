@@ -45,7 +45,7 @@ class AppLocalizationsTg extends AppLocalizations {
   String get getLifetimePro => 'Lifetime Pro гиред';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Таҷвид ва хусусиятҳои пешрафтаро кушоед';
 
   @override
   String get prayerCalculation => 'Ҳисоб кардани намоз';

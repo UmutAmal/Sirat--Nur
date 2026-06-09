@@ -45,7 +45,7 @@ class AppLocalizationsMi extends AppLocalizations {
   String get getLifetimePro => 'Tikina Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Wewete Tajweed & Ahuatanga Ake';
 
   @override
   String get prayerCalculation => 'Tatau Karakia';

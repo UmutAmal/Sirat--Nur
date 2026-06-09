@@ -45,7 +45,7 @@ class AppLocalizationsWo extends AppLocalizations {
   String get getLifetimePro => 'Am Pro Dundu';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tijji Tajweed & Man-mani Avancé';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -605,20 +605,20 @@ class AppLocalizationsWo extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Dalal jàmm ci Sirat-ı Nur';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Waxtu ñaan';
 
   @override
   String get onboarding2Desc => 'Waxtu ñaan yi gëna jubal ci barab bi nga nekk';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Al Quran ak leneen';
 
   @override
   String get onboarding3Desc =>
@@ -1085,25 +1085,25 @@ class AppLocalizationsWo extends AppLocalizations {
   String get premiumPurchaseFailed => 'Mënu ñu woon jeexal jënd gi. Jéemaat.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Jàppalekat Neural Plus';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Offline bu amul àpp';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Design yu wuute';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Amul yëgle';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

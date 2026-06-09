@@ -45,7 +45,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get getLifetimePro => 'Получите пожизненный Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Разблокируйте Таджвид и расширенные функции';
 
   @override
   String get prayerCalculation => 'Расчет времени намаза';

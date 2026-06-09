@@ -606,20 +606,20 @@ class AppLocalizationsAa extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Sirat-ı Nur fan unkaq muquk temeetem';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Salat wakti';
 
   @override
   String get onboarding2Desc => 'ku aracal rakitak gitat yan salat uddur';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Kur\'aan kee Ossotinah';
 
   @override
   String get onboarding3Desc =>
@@ -1086,25 +1086,25 @@ class AppLocalizationsAa extends AppLocalizations {
       'Xaamiyyi gaba kalam maduuda. Ku maganak qagitaak gibbat.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Qarransis cateyna ossotinah';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'waado sinni firtak iroh';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Baxsale goolissoosa';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Maysaxxaga-Currik';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

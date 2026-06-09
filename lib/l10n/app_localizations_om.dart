@@ -45,7 +45,7 @@ class AppLocalizationsOm extends AppLocalizations {
   String get getLifetimePro => 'Get Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed & Amaloota Sadarkaa Ol\'aanaa Unlock';
 
   @override
   String get prayerCalculation => 'Shallaggii Kadhannaa';

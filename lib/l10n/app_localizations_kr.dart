@@ -45,7 +45,7 @@ class AppLocalizationsKr extends AppLocalizations {
   String get getLifetimePro => 'Kǝnǝnga Probe';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Tajweed-a awowa fuwuzana-a kazə';
 
   @override
   String get prayerCalculation => 'Prayer Calculation';
@@ -605,20 +605,20 @@ class AppLocalizationsKr extends AppLocalizations {
   String get done => 'Done';
 
   @override
-  String get onboarding1Title => 'Welcome to Sirat-ı Nur';
+  String get onboarding1Title => 'Sirat-ı Nurro njilartəgə';
 
   @override
   String get onboarding1Desc =>
       'Your complete Islamic companion app for prayer times, Quran, and more';
 
   @override
-  String get onboarding2Title => 'Prayer Times';
+  String get onboarding2Title => 'Loktu Salabe';
 
   @override
   String get onboarding2Desc => 'Loktu salabe kalkaldə nadən kara';
 
   @override
-  String get onboarding3Title => 'Quran & More';
+  String get onboarding3Title => 'Quran-a Gade-a';
 
   @override
   String get onboarding3Desc =>
@@ -1083,25 +1083,25 @@ class AppLocalizationsKr extends AppLocalizations {
       'Yiwodə tamotinba. Martǝne waltǝ jarabne.';
 
   @override
-  String get paywallFeature1Title => 'Neural Assistant Plus';
+  String get paywallFeature1Title => 'Banama Neuralbe Plus';
 
   @override
   String get paywallFeature1Desc => 'Unlimited AI-powered Q&A';
 
   @override
-  String get paywallFeature2Title => 'Unlimited Offline';
+  String get paywallFeature2Title => 'Offline lan datəgəram ba';
 
   @override
   String get paywallFeature2Desc => 'Download all recitations';
 
   @override
-  String get paywallFeature3Title => 'Exclusive Designs';
+  String get paywallFeature3Title => 'Zayewa Musamma';
 
   @override
   String get paywallFeature3Desc => 'Premium themes & fonts';
 
   @override
-  String get paywallFeature4Title => 'Ad-Free';
+  String get paywallFeature4Title => 'Ad-Bǝlin';
 
   @override
   String get paywallFeature4Desc => 'Zero advertisements';

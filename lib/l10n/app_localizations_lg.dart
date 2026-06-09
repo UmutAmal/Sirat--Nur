@@ -45,7 +45,7 @@ class AppLocalizationsLg extends AppLocalizations {
   String get getLifetimePro => 'Funa Lifetime Pro';
 
   @override
-  String get unlockTajweed => 'Unlock Tajweed & Advanced Features';
+  String get unlockTajweed => 'Sumulula Tajweed & Ebintu eby\'omulembe';
 
   @override
   String get prayerCalculation => 'Okubala Okusaba';
